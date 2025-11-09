@@ -1,0 +1,46 @@
+use rocket::{State, serde::json::Json};
+use crate::db::DbPool;
+use super::model::{User, CreateUser, UpdateUser};
+use super::service::UserService;
+
+#[get("/users")]
+pub async fn get_users(pool: &State<DbPool>) -> Result<Json<Vec<User>>, String> {
+    let users = UserService::get_all_users(pool).await?;
+    Ok(Json(users))
+}
+
+#[get("/users/<id>")]
+pub async fn get_user(pool: &State<DbPool>, id: i32) -> Result<Json<Option<User>>, String> {
+    let user = UserService::get_user_by_id(pool, id).await?;
+    Ok(Json(user))
+}
+
+#[get("/users/clerk/<clerk_id>")]
+pub async fn get_user_by_clerk_id(pool: &State<DbPool>, clerk_id: String) -> Result<Json<Option<User>>, String> {
+    let user = UserService::get_user_by_clerk_id(pool, &clerk_id).await?;
+    Ok(Json(user))
+}
+
+#[get("/users/email/<email>")]
+pub async fn get_user_by_email(pool: &State<DbPool>, email: String) -> Result<Json<Option<User>>, String> {
+    let user = UserService::get_user_by_email(pool, &email).await?;
+    Ok(Json(user))
+}
+
+#[post("/users", data = "<user>")]
+pub async fn create_user(pool: &State<DbPool>, user: Json<CreateUser>) -> Result<Json<i32>, String> {
+    let id = UserService::create_user(pool, user.into_inner()).await?;
+    Ok(Json(id))
+}
+
+#[put("/users/<id>", data = "<user>")]
+pub async fn update_user(pool: &State<DbPool>, id: i32, user: Json<UpdateUser>) -> Result<Json<u64>, String> {
+    let rows = UserService::update_user(pool, id, user.into_inner()).await?;
+    Ok(Json(rows))
+}
+
+#[delete("/users/<id>")]
+pub async fn delete_user(pool: &State<DbPool>, id: i32) -> Result<Json<u64>, String> {
+    let rows = UserService::delete_user(pool, id).await?;
+    Ok(Json(rows))
+}
