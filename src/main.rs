@@ -4,6 +4,7 @@ extern crate rocket;
 mod artist;
 mod composer;
 mod concert;
+mod config;
 mod db;
 mod piece;
 mod user;
@@ -21,6 +22,8 @@ async fn rocket() -> _ {
     rocket::build().manage(pool).mount(
         "/api",
         routes![
+            // config
+            config::favicon,
             // Composer routes
             composer::get_composers,
             composer::get_composer,
