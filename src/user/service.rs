@@ -153,11 +153,11 @@ impl UserService {
                     match UserRepository::find_by_clerk_id(pool, &event.data.id).await {
                         Ok(Some(user)) => user,
                         Ok(None) => {
-                            Logger::warn(
+                            Logger::error(
                                 "WEBHOOK",
                                 &format!("User not found for deletion: {}", event.data.id),
                             );
-                            return Ok(()); // 이미 삭제됨
+                            return Err("User not found".into());
                         }
                         Err(e) => {
                             Logger::error("WEBHOOK", &format!("Failed to find user: {}", e));
@@ -204,11 +204,11 @@ impl UserService {
         let existing_user = match UserRepository::find_by_clerk_id(pool, &event.data.id).await {
             Ok(Some(user)) => user,
             Ok(None) => {
-                Logger::warn(
+                Logger::error(
                     "WEBHOOK",
                     &format!("User not found for deletion: {}", event.data.id),
                 );
-                return Ok(()); // 이미 삭제됨
+                return Err("User not found".into());
             }
             Err(e) => {
                 Logger::error("WEBHOOK", &format!("Failed to find user: {}", e));
