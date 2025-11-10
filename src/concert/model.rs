@@ -2,6 +2,7 @@ use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 
 #[derive(Debug, Serialize, Deserialize, FromRow)]
+#[serde(rename_all = "camelCase")]
 pub struct Concert {
     pub id: i32,
     pub title: String,
@@ -15,6 +16,7 @@ pub struct Concert {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct CreateConcert {
     pub title: String,
     pub composer_info: Option<String>,
