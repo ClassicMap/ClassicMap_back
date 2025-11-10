@@ -6,8 +6,6 @@ pub struct User {
     pub id: i32,
     pub clerk_id: String,
     pub email: String,
-    pub first_name: Option<String>,
-    pub last_name: Option<String>,
     pub favorite_era: Option<String>,
 }
 
@@ -15,15 +13,11 @@ pub struct User {
 pub struct CreateUser {
     pub clerk_id: String,
     pub email: String,
-    pub first_name: Option<String>,
-    pub last_name: Option<String>,
     pub favorite_era: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct UpdateUser {
-    pub first_name: Option<String>,
-    pub last_name: Option<String>,
     pub favorite_era: Option<String>,
 }
 
@@ -36,10 +30,9 @@ pub struct ClerkWebhookEvent {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ClerkUserData {
     pub id: String,
-    pub first_name: Option<String>,
-    pub last_name: Option<String>,
     pub email_addresses: Vec<ClerkEmailAddress>,
     pub primary_email_address_id: Option<String>,
+    pub deleted: Option<bool>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]

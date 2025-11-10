@@ -1,6 +1,6 @@
 use colored::Colorize;
 use std::fmt;
-use chrono::Local;
+use chrono::{FixedOffset, Utc};
 
 pub struct Logger;
 
@@ -11,7 +11,8 @@ impl Logger {
     }
 
     fn timestamp() -> String {
-        Local::now().format("%Y-%m-%d %H:%M:%S").to_string()
+        let kst = FixedOffset::east_opt(9 * 3600).unwrap();
+        Utc::now().with_timezone(&kst).format("%Y-%m-%d %H:%M:%S").to_string()
     }
 
     pub fn info(module: &str, message: &str) {
