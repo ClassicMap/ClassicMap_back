@@ -2,6 +2,7 @@ use super::model::{ClerkWebhookEvent, CreateUser, UpdateUser, User};
 use super::repository::UserRepository;
 use crate::db::DbPool;
 use crate::logger::Logger;
+use crate::user::model::ClerkDeleteWebhookEvent;
 
 pub struct UserService;
 
@@ -182,6 +183,48 @@ impl UserService {
                     &format!("Unhandled event type: {}", event.r#type),
                 );
                 Ok(())
+            }
+        }
+    }
+
+    pub async fn handle_clerk_delete_webhook(
+        pool: &DbPool,
+        event: ClerkDeleteWebhookEvent,
+    ) -> Result<(), String> {
+        Logger::webhook(
+            &event.r#type,
+            format!(
+                "clerk_id: {}, deleted: {}",
+                event.data.id, event.data.deleted
+            ),
+        );
+        Logger::info("WEBHOOK", "Processing user.deleted event");
+
+        // 유저 존재 확인
+        let existing_user = match UserRepository::find_by_clerk_id(pool, &event.data.id).await {
+            Ok(Some(user)) => user,
+            Ok(None) => {
+                Logger::warn(
+                    "WEBHOOK",
+                    &format!("User not found for deletion: {}", event.data.id),
+                );
+                return Ok(()); // 이미 삭제됨
+            }
+            Err(e) => {
+                Logger::error("WEBHOOK", &format!("Failed to find user: {}", e));
+                return Err(e.to_string());
+            }
+        };
+
+        match UserRepository::delete(pool, existing_user.id).await {
+            Ok(rows) => {
+                Logger::success("WEBHOOK", &format!("User deleted (rows: {})", rows));
+                Logger::db("DELETE", &format!("users (clerk_id: {})", event.data.id));
+                Ok(())
+            }
+            Err(e) => {
+                Logger::error("WEBHOOK", &format!("Failed to delete user: {}", e));
+                Err(e.to_string())
             }
         }
     }

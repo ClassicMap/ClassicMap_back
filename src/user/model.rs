@@ -28,11 +28,24 @@ pub struct ClerkWebhookEvent {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
+pub struct ClerkDeleteWebhookEvent {
+    pub data: ClerkDeleteData,
+    pub r#type: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
 pub struct ClerkUserData {
     pub id: String,
     pub email_addresses: Vec<ClerkEmailAddress>,
     pub primary_email_address_id: Option<String>,
     pub deleted: Option<bool>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct ClerkDeleteData {
+    pub id: String,
+    pub deleted: bool,
+    pub object: String,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
