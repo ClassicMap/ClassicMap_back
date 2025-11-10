@@ -32,22 +32,6 @@ impl UserService {
             .map_err(|e| e.to_string())
     }
 
-    pub async fn create_user(pool: &DbPool, user: CreateUser) -> Result<i32, String> {
-        // 비즈니스 로직: 중복 이메일 체크
-        if let Ok(Some(_)) = UserRepository::find_by_email(pool, &user.email).await {
-            return Err("Email already exists".to_string());
-        }
-
-        // 비즈니스 로직: 중복 clerk_id 체크
-        if let Ok(Some(_)) = UserRepository::find_by_clerk_id(pool, &user.clerk_id).await {
-            return Err("Clerk ID already exists".to_string());
-        }
-
-        UserRepository::create(pool, user)
-            .await
-            .map_err(|e| e.to_string())
-    }
-
     pub async fn update_user(pool: &DbPool, id: i32, user: UpdateUser) -> Result<u64, String> {
         // 비즈니스 로직: 존재하는 유저인지 확인
         if UserRepository::find_by_id(pool, id)
@@ -75,6 +59,8 @@ impl UserService {
     ) -> Result<(), String> {
         match event.r#type.as_str() {
             "user.created" => {
+                // 한 사용자가 여러 email을 소유할 수 있음으로 primary_email_address_id를
+                // 우선적으로 사용
                 let email = match event
                     .data
                     .email_addresses
