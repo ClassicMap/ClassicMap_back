@@ -11,6 +11,7 @@ pub struct Concert {
     pub concert_date: String,
     pub concert_time: Option<String>,
     pub price_info: Option<String>,
+    pub poster_url: Option<String>,
     pub is_recommended: bool,
     pub status: String,
 }
@@ -28,6 +29,8 @@ pub struct CreateConcert {
     pub concert_time: Option<String>,
     #[serde(alias = "priceInfo")]
     pub price_info: Option<String>,
+    #[serde(alias = "posterUrl")]
+    pub poster_url: Option<String>,
     #[serde(alias = "isRecommended")]
     pub is_recommended: bool,
     pub status: String,
