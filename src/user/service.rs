@@ -66,15 +66,16 @@ impl UserService {
                 Logger::info("WEBHOOK", "Processing user.created event");
 
                 // 중복 가입 방지
-                if UserRepository::find_by_clerk_id(pool, event.data.id.as_str())
-                    .await
-                    .is_ok()
+                if let Ok(res) =
+                    UserRepository::find_by_clerk_id(pool, event.data.id.as_str()).await
                 {
-                    Logger::warn(
-                        "WEBHOOK",
-                        &format!("User already exists: {}", event.data.id),
-                    );
-                    return Err("User Exist".into());
+                    if res.is_some() {
+                        Logger::warn(
+                            "WEBHOOK",
+                            &format!("User already exists: {}", event.data.id),
+                        );
+                        return Err("User Exist".into());
+                    }
                 }
 
                 // 한 사용자가 여러 email을 소유할 수 있음으로 primary_email_address_id를
