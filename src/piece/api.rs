@@ -1,34 +1,60 @@
-use rocket::{State, serde::json::Json};
+use rocket::{State, serde::json::Json, http::Status};
 use crate::db::DbPool;
+use crate::logger::Logger;
 use super::model::{Piece, CreatePiece};
 use super::service::PieceService;
 
 #[get("/pieces")]
-pub async fn get_pieces(pool: &State<DbPool>) -> Result<Json<Vec<Piece>>, String> {
-    let pieces = PieceService::get_all_pieces(pool).await?;
-    Ok(Json(pieces))
+pub async fn get_pieces(pool: &State<DbPool>) -> Result<Json<Vec<Piece>>, Status> {
+    match PieceService::get_all_pieces(pool).await {
+        Ok(pieces) => Ok(Json(pieces)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to get pieces: {}", e));
+            Err(Status::InternalServerError)
+        }
+    }
 }
 
 #[get("/pieces/<id>")]
-pub async fn get_piece(pool: &State<DbPool>, id: i32) -> Result<Json<Option<Piece>>, String> {
-    let piece = PieceService::get_piece_by_id(pool, id).await?;
-    Ok(Json(piece))
+pub async fn get_piece(pool: &State<DbPool>, id: i32) -> Result<Json<Option<Piece>>, Status> {
+    match PieceService::get_piece_by_id(pool, id).await {
+        Ok(piece) => Ok(Json(piece)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to get piece {}: {}", id, e));
+            Err(Status::InternalServerError)
+        }
+    }
 }
 
 #[get("/composers/<composer_id>/pieces")]
-pub async fn get_pieces_by_composer(pool: &State<DbPool>, composer_id: i32) -> Result<Json<Vec<Piece>>, String> {
-    let pieces = PieceService::get_pieces_by_composer(pool, composer_id).await?;
-    Ok(Json(pieces))
+pub async fn get_pieces_by_composer(pool: &State<DbPool>, composer_id: i32) -> Result<Json<Vec<Piece>>, Status> {
+    match PieceService::get_pieces_by_composer(pool, composer_id).await {
+        Ok(pieces) => Ok(Json(pieces)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to get pieces for composer {}: {}", composer_id, e));
+            Err(Status::InternalServerError)
+        }
+    }
 }
 
 #[post("/pieces", data = "<piece>")]
-pub async fn create_piece(pool: &State<DbPool>, piece: Json<CreatePiece>) -> Result<Json<i32>, String> {
-    let id = PieceService::create_piece(pool, piece.into_inner()).await?;
-    Ok(Json(id))
+pub async fn create_piece(pool: &State<DbPool>, piece: Json<CreatePiece>) -> Result<Json<i32>, Status> {
+    match PieceService::create_piece(pool, piece.into_inner()).await {
+        Ok(id) => Ok(Json(id)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to create piece: {}", e));
+            Err(Status::InternalServerError)
+        }
+    }
 }
 
 #[delete("/pieces/<id>")]
-pub async fn delete_piece(pool: &State<DbPool>, id: i32) -> Result<Json<u64>, String> {
-    let rows = PieceService::delete_piece(pool, id).await?;
-    Ok(Json(rows))
+pub async fn delete_piece(pool: &State<DbPool>, id: i32) -> Result<Json<u64>, Status> {
+    match PieceService::delete_piece(pool, id).await {
+        Ok(rows) => Ok(Json(rows)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to delete piece {}: {}", id, e));
+            Err(Status::InternalServerError)
+        }
+    }
 }
