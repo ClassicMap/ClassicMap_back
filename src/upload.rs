@@ -71,7 +71,7 @@ impl UploadService {
     }
 
     pub fn validate_image_extension(filename: &str) -> bool {
-        let valid_extensions = ["jpg", "jpeg", "png", "webp", "gif"];
+        let valid_extensions = ["jpg", "jpeg", "png", "webp", "gif", "heic", "heif"];
         if let Some(ext) = filename.split('.').last() {
             valid_extensions.contains(&ext.to_lowercase().as_str())
         } else {
