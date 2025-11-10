@@ -40,6 +40,7 @@ async fn rocket() -> _ {
                 composer::get_composers,
                 composer::get_composer,
                 composer::create_composer,
+                composer::update_composer,
                 composer::delete_composer,
                 // Piece routes
                 piece::get_pieces,
@@ -51,11 +52,13 @@ async fn rocket() -> _ {
                 artist::get_artists,
                 artist::get_artist,
                 artist::create_artist,
+                artist::update_artist,
                 artist::delete_artist,
                 // Concert routes
                 concert::get_concerts,
                 concert::get_concert,
                 concert::create_concert,
+                concert::update_concert,
                 concert::delete_concert,
                 // User routes
                 user::get_users,

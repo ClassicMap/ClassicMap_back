@@ -1,7 +1,7 @@
 use rocket::{State, serde::json::Json, http::Status};
 use crate::db::DbPool;
 use crate::logger::Logger;
-use super::model::{Artist, CreateArtist};
+use super::model::{Artist, CreateArtist, UpdateArtist};
 use super::service::ArtistService;
 
 #[get("/artists")]
@@ -32,6 +32,17 @@ pub async fn create_artist(pool: &State<DbPool>, artist: Json<CreateArtist>) -> 
         Ok(id) => Ok(Json(id)),
         Err(e) => {
             Logger::error("API", &format!("Failed to create artist: {}", e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+#[put("/artists/<id>", data = "<artist>")]
+pub async fn update_artist(pool: &State<DbPool>, id: i32, artist: Json<UpdateArtist>) -> Result<Json<u64>, Status> {
+    match ArtistService::update_artist(pool, id, artist.into_inner()).await {
+        Ok(rows) => Ok(Json(rows)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to update artist {}: {}", id, e));
             Err(Status::InternalServerError)
         }
     }

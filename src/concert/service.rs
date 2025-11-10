@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Concert, CreateConcert};
+use super::model::{Concert, CreateConcert, UpdateConcert};
 use super::repository::ConcertRepository;
 
 pub struct ConcertService;
@@ -19,6 +19,12 @@ impl ConcertService {
 
     pub async fn create_concert(pool: &DbPool, concert: CreateConcert) -> Result<i32, String> {
         ConcertRepository::create(pool, concert)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn update_concert(pool: &DbPool, id: i32, concert: UpdateConcert) -> Result<u64, String> {
+        ConcertRepository::update(pool, id, concert)
             .await
             .map_err(|e| e.to_string())
     }
