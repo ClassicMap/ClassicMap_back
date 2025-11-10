@@ -8,6 +8,7 @@ mod config;
 mod db;
 mod logger;
 mod piece;
+mod recording;
 mod upload;
 mod user;
 
@@ -76,6 +77,13 @@ async fn rocket() -> _ {
                 concert::create_concert,
                 concert::update_concert,
                 concert::delete_concert,
+                // Recording routes
+                recording::get_recordings,
+                recording::get_recording,
+                recording::get_artist_recordings,
+                recording::create_recording,
+                recording::update_recording,
+                recording::delete_recording,
                 // User routes
                 user::get_users,
                 user::get_user,
