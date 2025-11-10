@@ -6,5 +6,6 @@ pub mod artist;
 pub mod composer;
 pub mod concert;
 pub mod db;
+pub mod logger;
 pub mod piece;
 pub mod user;

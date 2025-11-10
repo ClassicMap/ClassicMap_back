@@ -6,18 +6,26 @@ mod composer;
 mod concert;
 mod config;
 mod db;
+mod logger;
 mod piece;
 mod user;
 
 use dotenv::dotenv;
+use logger::Logger;
 
 #[launch]
 async fn rocket() -> _ {
     dotenv().ok();
+    Logger::init();
+
+    Logger::info("SYSTEM", "Starting ClassicMap API Server...");
 
     let pool = db::create_pool()
         .await
         .expect("Failed to create database pool");
+
+    Logger::success("DATABASE", "Connection pool created");
+    Logger::info("SERVER", "Mounting routes...");
 
     rocket::build()
         .manage(pool)
