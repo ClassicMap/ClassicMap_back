@@ -35,7 +35,7 @@ impl UserRepository {
     pub async fn create(pool: &DbPool, user: CreateUser) -> Result<i32, Error> {
         let result = sqlx::query(
             "INSERT INTO users (clerk_id, email, favorite_era) 
-             VALUES (?, ?, ?, ?, ?)",
+             VALUES (?, ?, ?)",
         )
         .bind(&user.clerk_id)
         .bind(&user.email)
