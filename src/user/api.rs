@@ -54,6 +54,8 @@ pub async fn clerk_webhook(
     pool: &State<DbPool>,
     event: Json<ClerkWebhookEvent>,
 ) -> Result<Json<String>, String> {
-    UserService::handle_clerk_webhook(pool, event.into_inner()).await?;
-    Ok(Json("Webhook processed successfully".to_string()))
+    match UserService::handle_clerk_webhook(pool, event.into_inner()).await {
+        Ok(_) => Ok(Json("Webhook handled successfully".to_string())),
+        Err(e) => Err(e),
+    }
 }
