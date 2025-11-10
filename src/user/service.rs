@@ -59,6 +59,13 @@ impl UserService {
     ) -> Result<(), String> {
         match event.r#type.as_str() {
             "user.created" => {
+                // 중복 가입 방지
+                if UserRepository::find_by_clerk_id(pool, event.data.id.as_str())
+                    .await
+                    .is_ok()
+                {
+                    return Err("User Exist".into());
+                }
                 // 한 사용자가 여러 email을 소유할 수 있음으로 primary_email_address_id를
                 // 우선적으로 사용
                 let email = match event
