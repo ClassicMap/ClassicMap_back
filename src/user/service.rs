@@ -59,20 +59,23 @@ impl UserService {
         event: ClerkWebhookEvent,
     ) -> Result<(), String> {
         Logger::webhook(&event.r#type, format!("clerk_id: {}", event.data.id));
-        
+
         match event.r#type.as_str() {
             "user.created" => {
                 Logger::info("WEBHOOK", "Processing user.created event");
-                
+
                 // 중복 가입 방지
                 if UserRepository::find_by_clerk_id(pool, event.data.id.as_str())
                     .await
                     .is_ok()
                 {
-                    Logger::warn("WEBHOOK", &format!("User already exists: {}", event.data.id));
+                    Logger::warn(
+                        "WEBHOOK",
+                        &format!("User already exists: {}", event.data.id),
+                    );
                     return Err("User Exist".into());
                 }
-                
+
                 // 한 사용자가 여러 email을 소유할 수 있음으로 primary_email_address_id를
                 // 우선적으로 사용
                 let email = match event
@@ -95,8 +98,6 @@ impl UserService {
                 let create_user = CreateUser {
                     clerk_id: event.data.id.clone(),
                     email,
-                    first_name: event.data.first_name,
-                    last_name: event.data.last_name,
                     favorite_era: None,
                 };
 
@@ -112,8 +113,74 @@ impl UserService {
                     }
                 }
             }
+            "user.updated" => {
+                Logger::info("WEBHOOK", "Processing user.updated event");
+
+                // 유저 존재 확인
+                let existing_user =
+                    match UserRepository::find_by_clerk_id(pool, &event.data.id).await {
+                        Ok(Some(user)) => user,
+                        Ok(None) => {
+                            Logger::error("WEBHOOK", &format!("User not found: {}", event.data.id));
+                            return Err("User not found".into());
+                        }
+                        Err(e) => {
+                            Logger::error("WEBHOOK", &format!("Failed to find user: {}", e));
+                            return Err(e.to_string());
+                        }
+                    };
+
+                let update_user = UpdateUser { favorite_era: None };
+
+                match UserRepository::update(pool, existing_user.id, update_user).await {
+                    Ok(rows) => {
+                        Logger::success("WEBHOOK", &format!("User updated (rows: {})", rows));
+                        Logger::db("UPDATE", &format!("users (clerk_id: {})", event.data.id));
+                        Ok(())
+                    }
+                    Err(e) => {
+                        Logger::error("WEBHOOK", &format!("Failed to update user: {}", e));
+                        Err(e.to_string())
+                    }
+                }
+            }
+            "user.deleted" => {
+                Logger::info("WEBHOOK", "Processing user.deleted event");
+
+                // 유저 존재 확인
+                let existing_user =
+                    match UserRepository::find_by_clerk_id(pool, &event.data.id).await {
+                        Ok(Some(user)) => user,
+                        Ok(None) => {
+                            Logger::warn(
+                                "WEBHOOK",
+                                &format!("User not found for deletion: {}", event.data.id),
+                            );
+                            return Ok(()); // 이미 삭제됨
+                        }
+                        Err(e) => {
+                            Logger::error("WEBHOOK", &format!("Failed to find user: {}", e));
+                            return Err(e.to_string());
+                        }
+                    };
+
+                match UserRepository::delete(pool, existing_user.id).await {
+                    Ok(rows) => {
+                        Logger::success("WEBHOOK", &format!("User deleted (rows: {})", rows));
+                        Logger::db("DELETE", &format!("users (clerk_id: {})", event.data.id));
+                        Ok(())
+                    }
+                    Err(e) => {
+                        Logger::error("WEBHOOK", &format!("Failed to delete user: {}", e));
+                        Err(e.to_string())
+                    }
+                }
+            }
             _ => {
-                Logger::warn("WEBHOOK", &format!("Unhandled event type: {}", event.r#type));
+                Logger::warn(
+                    "WEBHOOK",
+                    &format!("Unhandled event type: {}", event.r#type),
+                );
                 Ok(())
             }
         }
