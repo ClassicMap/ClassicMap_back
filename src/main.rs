@@ -14,6 +14,8 @@ mod user;
 use dotenv::dotenv;
 use logger::Logger;
 use rocket::fs::FileServer;
+use rocket::http::Method;
+use rocket_cors::{AllowedOrigins, CorsOptions};
 
 #[launch]
 async fn rocket() -> _ {
@@ -29,8 +31,22 @@ async fn rocket() -> _ {
     Logger::success("DATABASE", "Connection pool created");
     Logger::info("SERVER", "Mounting routes...");
 
+    // CORS 설정
+    let cors = CorsOptions::default()
+        .allowed_origins(AllowedOrigins::all())
+        .allowed_methods(
+            vec![Method::Get, Method::Post, Method::Put, Method::Delete, Method::Options]
+                .into_iter()
+                .map(From::from)
+                .collect(),
+        )
+        .allow_credentials(true)
+        .to_cors()
+        .expect("Failed to create CORS");
+
     rocket::build()
         .manage(pool)
+        .attach(cors)
         .mount("/", routes![config::favicon])
         .mount("/uploads", FileServer::from("static/uploads"))
         .mount(
