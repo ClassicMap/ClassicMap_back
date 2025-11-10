@@ -1,4 +1,4 @@
-use super::model::{ClerkWebhookEvent, UpdateUser, User};
+use super::model::{ClerkDeleteWebhookEvent, ClerkWebhookEvent, UpdateUser, User};
 use super::service::UserService;
 use crate::db::DbPool;
 use crate::logger::Logger;
@@ -35,7 +35,10 @@ pub async fn get_user_by_clerk_id(
     match UserService::get_user_by_clerk_id(pool, &clerk_id).await {
         Ok(user) => Ok(Json(user)),
         Err(e) => {
-            Logger::error("API", &format!("Failed to get user by clerk_id {}: {}", clerk_id, e));
+            Logger::error(
+                "API",
+                &format!("Failed to get user by clerk_id {}: {}", clerk_id, e),
+            );
             Err(Status::InternalServerError)
         }
     }
@@ -49,7 +52,10 @@ pub async fn get_user_by_email(
     match UserService::get_user_by_email(pool, &email).await {
         Ok(user) => Ok(Json(user)),
         Err(e) => {
-            Logger::error("API", &format!("Failed to get user by email {}: {}", email, e));
+            Logger::error(
+                "API",
+                &format!("Failed to get user by email {}: {}", email, e),
+            );
             Err(Status::InternalServerError)
         }
     }
@@ -84,13 +90,41 @@ pub async fn delete_user(pool: &State<DbPool>, id: i32) -> Result<Json<u64>, Sta
 #[post("/users/webhook", data = "<event>")]
 pub async fn clerk_webhook(
     pool: &State<DbPool>,
-    event: Json<ClerkWebhookEvent>,
+    event: Json<serde_json::Value>,
 ) -> Result<Json<String>, Status> {
-    match UserService::handle_clerk_webhook(pool, event.into_inner()).await {
-        Ok(_) => Ok(Json("Webhook handled successfully".to_string())),
-        Err(e) => {
-            Logger::error("API", &format!("Webhook error: {}", e));
-            Err(Status::InternalServerError)
+    let event_value = event.into_inner();
+    let event_type = event_value["type"].as_str().unwrap_or("");
+
+    match event_type {
+        "user.deleted" => {
+            let delete_event: ClerkDeleteWebhookEvent = serde_json::from_value(event_value)
+                .map_err(|e| {
+                    Logger::error("API", &format!("Failed to parse delete event: {}", e));
+                    Status::BadRequest
+                })?;
+
+            match UserService::handle_clerk_delete_webhook(pool, delete_event).await {
+                Ok(_) => Ok(Json("Webhook handled successfully".to_string())),
+                Err(e) => {
+                    Logger::error("API", &format!("Webhook error: {}", e));
+                    Err(Status::InternalServerError)
+                }
+            }
+        }
+        _ => {
+            let webhook_event: ClerkWebhookEvent =
+                serde_json::from_value(event_value).map_err(|e| {
+                    Logger::error("API", &format!("Failed to parse webhook event: {}", e));
+                    Status::BadRequest
+                })?;
+
+            match UserService::handle_clerk_webhook(pool, webhook_event).await {
+                Ok(_) => Ok(Json("Webhook handled successfully".to_string())),
+                Err(e) => {
+                    Logger::error("API", &format!("Webhook error: {}", e));
+                    Err(Status::InternalServerError)
+                }
+            }
         }
     }
 }
