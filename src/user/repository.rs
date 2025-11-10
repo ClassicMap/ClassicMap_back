@@ -34,13 +34,11 @@ impl UserRepository {
 
     pub async fn create(pool: &DbPool, user: CreateUser) -> Result<i32, Error> {
         let result = sqlx::query(
-            "INSERT INTO users (clerk_id, email, first_name, last_name, favorite_era) 
+            "INSERT INTO users (clerk_id, email, favorite_era) 
              VALUES (?, ?, ?, ?, ?)",
         )
         .bind(&user.clerk_id)
         .bind(&user.email)
-        .bind(&user.first_name)
-        .bind(&user.last_name)
         .bind(&user.favorite_era)
         .execute(pool)
         .await?;
@@ -49,15 +47,11 @@ impl UserRepository {
     }
 
     pub async fn update(pool: &DbPool, id: i32, user: UpdateUser) -> Result<u64, Error> {
-        let result = sqlx::query(
-            "UPDATE users SET first_name = ?, last_name = ?, favorite_era = ? WHERE id = ?",
-        )
-        .bind(&user.first_name)
-        .bind(&user.last_name)
-        .bind(&user.favorite_era)
-        .bind(id)
-        .execute(pool)
-        .await?;
+        let result = sqlx::query("UPDATE users SET favorite_era = ? WHERE id = ?")
+            .bind(&user.favorite_era)
+            .bind(id)
+            .execute(pool)
+            .await?;
 
         Ok(result.rows_affected())
     }
