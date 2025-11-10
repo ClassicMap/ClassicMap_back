@@ -1,22 +1,30 @@
 use colored::Colorize;
 use std::fmt;
+use chrono::Local;
 
 pub struct Logger;
 
 impl Logger {
     pub fn init() {
-        // tracing 사용하지 않고 직접 출력
+        // 환경변수로 Rust/SQLx 로그 끄기
+        std::env::set_var("RUST_LOG", "off");
+    }
+
+    fn timestamp() -> String {
+        Local::now().format("%Y-%m-%d %H:%M:%S").to_string()
     }
 
     pub fn info(module: &str, message: &str) {
-        println!("{} {}", 
+        println!("{} {} {}", 
+            Self::timestamp().dimmed(),
             format!("[{}]", module).bright_cyan().bold(), 
             message
         );
     }
 
     pub fn success(module: &str, message: &str) {
-        println!("{} {} {}", 
+        println!("{} {} {} {}", 
+            Self::timestamp().dimmed(),
             format!("[{}]", module).bright_cyan().bold(), 
             "✓".green().bold(),
             message.green()
@@ -24,7 +32,8 @@ impl Logger {
     }
 
     pub fn warn(module: &str, message: &str) {
-        eprintln!("{} {} {}", 
+        eprintln!("{} {} {} {}", 
+            Self::timestamp().dimmed(),
             format!("[{}]", module).bright_yellow().bold(), 
             "⚠".yellow().bold(),
             message.yellow()
@@ -32,7 +41,8 @@ impl Logger {
     }
 
     pub fn error(module: &str, message: &str) {
-        eprintln!("{} {} {}", 
+        eprintln!("{} {} {} {}", 
+            Self::timestamp().dimmed(),
             format!("[{}]", module).bright_red().bold(), 
             "✗".red().bold(),
             message.red()
@@ -40,7 +50,8 @@ impl Logger {
     }
 
     pub fn debug(module: &str, message: &str) {
-        println!("{} {} {}", 
+        println!("{} {} {} {}", 
+            Self::timestamp().dimmed(),
             format!("[{}]", module).bright_magenta().bold(), 
             "⚙".magenta(),
             message.dimmed()
@@ -48,7 +59,8 @@ impl Logger {
     }
 
     pub fn webhook(event_type: &str, data: impl fmt::Display) {
-        println!("{} {} {}\n{}", 
+        println!("{} {} {} {}\n{}", 
+            Self::timestamp().dimmed(),
             "[WEBHOOK]".bright_purple().bold(),
             "→".bright_purple(),
             event_type.bright_white().bold(),
@@ -57,7 +69,8 @@ impl Logger {
     }
 
     pub fn db(operation: &str, details: &str) {
-        println!("{} {} {}", 
+        println!("{} {} {} {}", 
+            Self::timestamp().dimmed(),
             "[DB]".bright_blue().bold(),
             operation.bright_white(),
             details.dimmed()
@@ -72,7 +85,8 @@ impl Logger {
             _ => format!("{}", status).white(),
         };
 
-        println!("{} {} {} {}", 
+        println!("{} {} {} {} {}", 
+            Self::timestamp().dimmed(),
             "[API]".bright_green().bold(),
             method.bright_white().bold(),
             path,
