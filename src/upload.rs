@@ -1,6 +1,7 @@
 use rocket::fs::TempFile;
 use rocket::http::Status;
 use rocket::serde::json::Json;
+use rocket::form::Form;
 use serde::{Deserialize, Serialize};
 use std::path::PathBuf;
 use crate::logger::Logger;
@@ -82,7 +83,7 @@ impl UploadService {
 
 // Composer Avatar Upload
 #[post("/upload/composer/avatar", data = "<file>")]
-pub async fn upload_composer_avatar(mut file: TempFile<'_>) -> Result<Json<UploadResponse>, Status> {
+pub async fn upload_composer_avatar(mut file: Form<TempFile<'_>>) -> Result<Json<UploadResponse>, Status> {
     let filename = file.name().unwrap_or("unknown").to_string();
     
     if !UploadService::validate_image_extension(&filename) {
@@ -110,7 +111,7 @@ pub async fn upload_composer_avatar(mut file: TempFile<'_>) -> Result<Json<Uploa
 
 // Composer Cover Upload
 #[post("/upload/composer/cover", data = "<file>")]
-pub async fn upload_composer_cover(mut file: TempFile<'_>) -> Result<Json<UploadResponse>, Status> {
+pub async fn upload_composer_cover(mut file: Form<TempFile<'_>>) -> Result<Json<UploadResponse>, Status> {
     let filename = file.name().unwrap_or("unknown").to_string();
     
     if !UploadService::validate_image_extension(&filename) {
@@ -138,7 +139,7 @@ pub async fn upload_composer_cover(mut file: TempFile<'_>) -> Result<Json<Upload
 
 // Artist Avatar Upload
 #[post("/upload/artist/avatar", data = "<file>")]
-pub async fn upload_artist_avatar(mut file: TempFile<'_>) -> Result<Json<UploadResponse>, Status> {
+pub async fn upload_artist_avatar(mut file: Form<TempFile<'_>>) -> Result<Json<UploadResponse>, Status> {
     let filename = file.name().unwrap_or("unknown").to_string();
     
     if !UploadService::validate_image_extension(&filename) {
@@ -166,7 +167,7 @@ pub async fn upload_artist_avatar(mut file: TempFile<'_>) -> Result<Json<UploadR
 
 // Artist Cover Upload
 #[post("/upload/artist/cover", data = "<file>")]
-pub async fn upload_artist_cover(mut file: TempFile<'_>) -> Result<Json<UploadResponse>, Status> {
+pub async fn upload_artist_cover(mut file: Form<TempFile<'_>>) -> Result<Json<UploadResponse>, Status> {
     let filename = file.name().unwrap_or("unknown").to_string();
     
     if !UploadService::validate_image_extension(&filename) {
@@ -194,7 +195,7 @@ pub async fn upload_artist_cover(mut file: TempFile<'_>) -> Result<Json<UploadRe
 
 // Concert Poster Upload
 #[post("/upload/concert/poster", data = "<file>")]
-pub async fn upload_concert_poster(mut file: TempFile<'_>) -> Result<Json<UploadResponse>, Status> {
+pub async fn upload_concert_poster(mut file: Form<TempFile<'_>>) -> Result<Json<UploadResponse>, Status> {
     let filename = file.name().unwrap_or("unknown").to_string();
     
     if !UploadService::validate_image_extension(&filename) {
