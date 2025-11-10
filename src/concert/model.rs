@@ -13,6 +13,8 @@ pub struct Concert {
     pub price_info: Option<String>,
     #[serde(rename = "posterUrl")]
     pub poster_url: Option<String>,
+    #[serde(rename = "ticketUrl")]
+    pub ticket_url: Option<String>,
     pub is_recommended: bool,
     pub status: String,
 }
@@ -32,6 +34,8 @@ pub struct CreateConcert {
     pub price_info: Option<String>,
     #[serde(alias = "posterUrl")]
     pub poster_url: Option<String>,
+    #[serde(alias = "ticketUrl")]
+    pub ticket_url: Option<String>,
     #[serde(alias = "isRecommended")]
     pub is_recommended: bool,
     pub status: String,
