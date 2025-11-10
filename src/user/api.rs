@@ -1,6 +1,7 @@
 use super::model::{ClerkWebhookEvent, UpdateUser, User};
 use super::service::UserService;
 use crate::db::DbPool;
+use rocket::http::Status;
 use rocket::{serde::json::Json, State};
 
 #[get("/users")]
@@ -53,9 +54,9 @@ pub async fn delete_user(pool: &State<DbPool>, id: i32) -> Result<Json<u64>, Str
 pub async fn clerk_webhook(
     pool: &State<DbPool>,
     event: Json<ClerkWebhookEvent>,
-) -> Result<Json<String>, String> {
+) -> Result<Json<String>, Status> {
     match UserService::handle_clerk_webhook(pool, event.into_inner()).await {
         Ok(_) => Ok(Json("Webhook handled successfully".to_string())),
-        Err(e) => Err(e),
+        Err(e) => Err(Status::InternalServerError),
     }
 }
