@@ -6,6 +6,8 @@ pub struct User {
     pub id: i32,
     pub clerk_id: String,
     pub email: String,
+    pub role: String,
+    pub is_first_visit: bool,
     pub favorite_era: Option<String>,
 }
 
@@ -13,11 +15,13 @@ pub struct User {
 pub struct CreateUser {
     pub clerk_id: String,
     pub email: String,
+    pub role: Option<String>,
     pub favorite_era: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct UpdateUser {
+    pub is_first_visit: Option<bool>,
     pub favorite_era: Option<String>,
 }
 

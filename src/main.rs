@@ -8,10 +8,12 @@ mod config;
 mod db;
 mod logger;
 mod piece;
+mod upload;
 mod user;
 
 use dotenv::dotenv;
 use logger::Logger;
+use rocket::fs::FileServer;
 
 #[launch]
 async fn rocket() -> _ {
@@ -30,6 +32,7 @@ async fn rocket() -> _ {
     rocket::build()
         .manage(pool)
         .mount("/", routes![config::favicon])
+        .mount("/uploads", FileServer::from("static/uploads"))
         .mount(
             "/api",
             routes![
@@ -62,6 +65,12 @@ async fn rocket() -> _ {
                 user::update_user,
                 user::delete_user,
                 user::clerk_webhook,
+                // Upload routes
+                upload::upload_composer_avatar,
+                upload::upload_composer_cover,
+                upload::upload_artist_avatar,
+                upload::upload_artist_cover,
+                upload::upload_concert_poster,
             ],
         )
 }

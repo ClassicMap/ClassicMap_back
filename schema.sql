@@ -245,11 +245,14 @@ CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     clerk_id VARCHAR(100) UNIQUE NOT NULL COMMENT 'Clerk User ID',
     email VARCHAR(255) NOT NULL,
+    role ENUM('user', 'moderator', 'admin') NOT NULL DEFAULT 'user' COMMENT '권한: 사용자, 중간관리자, 관리자',
+    is_first_visit BOOLEAN DEFAULT TRUE COMMENT '처음 방문 여부',
     favorite_era VARCHAR(50) COMMENT '선호 시대',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     INDEX idx_email (email),
-    INDEX idx_clerk_id (clerk_id)
+    INDEX idx_clerk_id (clerk_id),
+    INDEX idx_role (role)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
