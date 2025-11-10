@@ -21,23 +21,17 @@ pub struct Composer {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct CreateComposer {
     pub name: String,
-    #[serde(alias = "fullName")]
     pub full_name: String,
-    #[serde(alias = "englishName")]
     pub english_name: String,
     pub period: String,
-    #[serde(alias = "birthYear")]
     pub birth_year: i32,
-    #[serde(alias = "deathYear")]
     pub death_year: i32,
     pub nationality: String,
-    #[serde(alias = "imageUrl")]
     pub image_url: Option<String>,
-    #[serde(alias = "avatarUrl")]
     pub avatar_url: Option<String>,
-    #[serde(alias = "coverImageUrl")]
     pub cover_image_url: Option<String>,
     pub bio: Option<String>,
     pub style: Option<String>,
