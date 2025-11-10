@@ -1,28 +1,22 @@
 use colored::Colorize;
 use std::fmt;
-use tracing::{info, warn, error, debug};
 
 pub struct Logger;
 
 impl Logger {
     pub fn init() {
-        tracing_subscriber::fmt()
-            .with_target(false)
-            .with_thread_ids(false)
-            .with_level(true)
-            .with_ansi(true)
-            .init();
+        // tracing 사용하지 않고 직접 출력
     }
 
     pub fn info(module: &str, message: &str) {
-        info!("{} {}", 
+        println!("{} {}", 
             format!("[{}]", module).bright_cyan().bold(), 
             message
         );
     }
 
     pub fn success(module: &str, message: &str) {
-        info!("{} {} {}", 
+        println!("{} {} {}", 
             format!("[{}]", module).bright_cyan().bold(), 
             "✓".green().bold(),
             message.green()
@@ -30,7 +24,7 @@ impl Logger {
     }
 
     pub fn warn(module: &str, message: &str) {
-        warn!("{} {} {}", 
+        eprintln!("{} {} {}", 
             format!("[{}]", module).bright_yellow().bold(), 
             "⚠".yellow().bold(),
             message.yellow()
@@ -38,7 +32,7 @@ impl Logger {
     }
 
     pub fn error(module: &str, message: &str) {
-        error!("{} {} {}", 
+        eprintln!("{} {} {}", 
             format!("[{}]", module).bright_red().bold(), 
             "✗".red().bold(),
             message.red()
@@ -46,7 +40,7 @@ impl Logger {
     }
 
     pub fn debug(module: &str, message: &str) {
-        debug!("{} {} {}", 
+        println!("{} {} {}", 
             format!("[{}]", module).bright_magenta().bold(), 
             "⚙".magenta(),
             message.dimmed()
@@ -54,7 +48,7 @@ impl Logger {
     }
 
     pub fn webhook(event_type: &str, data: impl fmt::Display) {
-        info!("{} {} {}\n{}", 
+        println!("{} {} {}\n{}", 
             "[WEBHOOK]".bright_purple().bold(),
             "→".bright_purple(),
             event_type.bright_white().bold(),
@@ -63,7 +57,7 @@ impl Logger {
     }
 
     pub fn db(operation: &str, details: &str) {
-        info!("{} {} {}", 
+        println!("{} {} {}", 
             "[DB]".bright_blue().bold(),
             operation.bright_white(),
             details.dimmed()
@@ -78,7 +72,7 @@ impl Logger {
             _ => format!("{}", status).white(),
         };
 
-        info!("{} {} {} {}", 
+        println!("{} {} {} {}", 
             "[API]".bright_green().bold(),
             method.bright_white().bold(),
             path,
