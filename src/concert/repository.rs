@@ -10,7 +10,7 @@ impl ConcertRepository {
             "SELECT id, title, composer_info, venue_id, 
              DATE_FORMAT(concert_date, '%Y-%m-%d') as concert_date,
              TIME_FORMAT(concert_time, '%H:%i:%s') as concert_time,
-             price_info, poster_url, is_recommended, status 
+             price_info, poster_url, ticket_url, is_recommended, status 
              FROM concerts"
         )
             .fetch_all(pool)
@@ -22,7 +22,7 @@ impl ConcertRepository {
             "SELECT id, title, composer_info, venue_id, 
              DATE_FORMAT(concert_date, '%Y-%m-%d') as concert_date,
              TIME_FORMAT(concert_time, '%H:%i:%s') as concert_time,
-             price_info, poster_url, is_recommended, status 
+             price_info, poster_url, ticket_url, is_recommended, status 
              FROM concerts WHERE id = ?"
         )
             .bind(id)
@@ -32,8 +32,8 @@ impl ConcertRepository {
 
     pub async fn create(pool: &DbPool, concert: CreateConcert) -> Result<i32, Error> {
         let result = sqlx::query(
-            "INSERT INTO concerts (title, composer_info, venue_id, concert_date, concert_time, price_info, poster_url, is_recommended, status) 
-             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            "INSERT INTO concerts (title, composer_info, venue_id, concert_date, concert_time, price_info, poster_url, ticket_url, is_recommended, status) 
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         )
         .bind(&concert.title)
         .bind(&concert.composer_info)
@@ -42,6 +42,7 @@ impl ConcertRepository {
         .bind(&concert.concert_time)
         .bind(&concert.price_info)
         .bind(&concert.poster_url)
+        .bind(&concert.ticket_url)
         .bind(concert.is_recommended)
         .bind(&concert.status)
         .execute(pool)
