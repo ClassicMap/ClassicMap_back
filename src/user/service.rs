@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{User, CreateUser, UpdateUser};
+use super::model::{ClerkWebhookEvent, CreateUser, UpdateUser, User};
 use super::repository::UserRepository;
 
 pub struct UserService;
@@ -60,5 +60,32 @@ impl UserService {
         UserRepository::delete(pool, id)
             .await
             .map_err(|e| e.to_string())
+    }
+
+    pub async fn handle_clerk_webhook(pool: &DbPool, event: ClerkWebhookEvent) -> Result<(), String> {
+        match event.r#type.as_str() {
+            "user.created" => {
+                let primary_email = event.data.email_addresses
+                    .iter()
+                    .find(|e| Some(e.id.clone()) == event.data.primary_email_address_id)
+                    .or_else(|| event.data.email_addresses.first())
+                    .ok_or("No email address found")?;
+
+                let create_user = CreateUser {
+                    clerk_id: event.data.id,
+                    email: primary_email.email_address.clone(),
+                    first_name: event.data.first_name,
+                    last_name: event.data.last_name,
+                    favorite_era: None,
+                };
+
+                UserRepository::create(pool, create_user)
+                    .await
+                    .map_err(|e| e.to_string())?;
+
+                Ok(())
+            }
+            _ => Ok(())
+        }
     }
 }

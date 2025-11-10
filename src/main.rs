@@ -54,6 +54,7 @@ async fn rocket() -> _ {
                 user::create_user,
                 user::update_user,
                 user::delete_user,
+                user::clerk_webhook,
             ],
         )
 }
