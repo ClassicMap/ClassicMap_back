@@ -9,15 +9,12 @@ pub struct UserService;
 
 impl UserService {
     fn get_user_role(email: &str) -> String {
-        println!("Determining role for email: {}", email);
         let admin_emails_str = env::var("ADMIN_EMAILS").unwrap_or_default();
         let admin_emails: Vec<&str> = admin_emails_str.split(',').map(|s| s.trim()).collect();
-        println!("Admin emails: {:?}", admin_emails);
 
         let moderator_emails_str = env::var("MODERATOR_EMAILS").unwrap_or_default();
         let moderator_emails: Vec<&str> =
             moderator_emails_str.split(',').map(|s| s.trim()).collect();
-        println!("Moderator emails: {:?}", moderator_emails);
 
         if admin_emails.contains(&email) {
             Logger::info("USER", &format!("Admin account detected: {}", email));
