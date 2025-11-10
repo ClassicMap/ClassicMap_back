@@ -9,18 +9,16 @@ pub struct UserService;
 
 impl UserService {
     fn get_user_role(email: &str) -> String {
+        println!("Determining role for email: {}", email);
         let admin_emails_str = env::var("ADMIN_EMAILS").unwrap_or_default();
-        let admin_emails: Vec<&str> = admin_emails_str
-            .split(',')
-            .map(|s| s.trim())
-            .collect();
-        
+        let admin_emails: Vec<&str> = admin_emails_str.split(',').map(|s| s.trim()).collect();
+        println!("Admin emails: {:?}", admin_emails);
+
         let moderator_emails_str = env::var("MODERATOR_EMAILS").unwrap_or_default();
-        let moderator_emails: Vec<&str> = moderator_emails_str
-            .split(',')
-            .map(|s| s.trim())
-            .collect();
-        
+        let moderator_emails: Vec<&str> =
+            moderator_emails_str.split(',').map(|s| s.trim()).collect();
+        println!("Moderator emails: {:?}", moderator_emails);
+
         if admin_emails.contains(&email) {
             Logger::info("USER", &format!("Admin account detected: {}", email));
             "admin".to_string()
@@ -31,7 +29,7 @@ impl UserService {
             "user".to_string()
         }
     }
-    
+
     pub async fn get_all_users(pool: &DbPool) -> Result<Vec<User>, String> {
         UserRepository::find_all(pool)
             .await
@@ -160,9 +158,9 @@ impl UserService {
                         }
                     };
 
-                let update_user = UpdateUser { 
+                let update_user = UpdateUser {
                     is_first_visit: None,
-                    favorite_era: None 
+                    favorite_era: None,
                 };
 
                 match UserRepository::update(pool, existing_user.id, update_user).await {
