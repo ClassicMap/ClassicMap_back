@@ -8,4 +8,5 @@ pub mod concert;
 pub mod db;
 pub mod logger;
 pub mod piece;
+pub mod recording;
 pub mod user;
