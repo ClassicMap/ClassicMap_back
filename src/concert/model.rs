@@ -11,6 +11,7 @@ pub struct Concert {
     pub concert_date: String,
     pub concert_time: Option<String>,
     pub price_info: Option<String>,
+    #[serde(rename = "posterUrl")]
     pub poster_url: Option<String>,
     pub is_recommended: bool,
     pub status: String,
