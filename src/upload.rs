@@ -72,6 +72,11 @@ impl UploadService {
     }
 
     pub fn validate_image_extension(filename: &str) -> bool {
+        // 확장자가 없으면 jpg로 간주 (아이폰 이슈)
+        if !filename.contains('.') {
+            return true;
+        }
+        
         let valid_extensions = ["jpg", "jpeg", "png", "webp", "gif", "heic", "heif"];
         if let Some(ext) = filename.split('.').last() {
             valid_extensions.contains(&ext.to_lowercase().as_str())
@@ -79,17 +84,29 @@ impl UploadService {
             false
         }
     }
+    
+    pub fn get_filename_with_extension(filename: &str) -> String {
+        // 확장자가 없으면 .jpg 추가
+        if !filename.contains('.') {
+            format!("{}.jpg", filename)
+        } else {
+            filename.to_string()
+        }
+    }
 }
 
 // Composer Avatar Upload
 #[post("/upload/composer/avatar", data = "<file>")]
 pub async fn upload_composer_avatar(mut file: Form<TempFile<'_>>) -> Result<Json<UploadResponse>, Status> {
-    let filename = file.name().unwrap_or("unknown").to_string();
+    let mut filename = file.name().unwrap_or("unknown").to_string();
     
     if !UploadService::validate_image_extension(&filename) {
         Logger::error("UPLOAD", &format!("Invalid file extension: {}", filename));
         return Err(Status::BadRequest);
     }
+    
+    // 확장자 없으면 추가
+    filename = UploadService::get_filename_with_extension(&filename);
 
     let kst = chrono::FixedOffset::east_opt(9 * 3600).unwrap();
     let timestamp = chrono::Utc::now().with_timezone(&kst).timestamp();
@@ -112,12 +129,15 @@ pub async fn upload_composer_avatar(mut file: Form<TempFile<'_>>) -> Result<Json
 // Composer Cover Upload
 #[post("/upload/composer/cover", data = "<file>")]
 pub async fn upload_composer_cover(mut file: Form<TempFile<'_>>) -> Result<Json<UploadResponse>, Status> {
-    let filename = file.name().unwrap_or("unknown").to_string();
+    let mut filename = file.name().unwrap_or("unknown").to_string();
     
     if !UploadService::validate_image_extension(&filename) {
         Logger::error("UPLOAD", &format!("Invalid file extension: {}", filename));
         return Err(Status::BadRequest);
     }
+    
+    // 확장자 없으면 추가
+    filename = UploadService::get_filename_with_extension(&filename);
 
     let kst = chrono::FixedOffset::east_opt(9 * 3600).unwrap();
     let timestamp = chrono::Utc::now().with_timezone(&kst).timestamp();
@@ -140,12 +160,15 @@ pub async fn upload_composer_cover(mut file: Form<TempFile<'_>>) -> Result<Json<
 // Artist Avatar Upload
 #[post("/upload/artist/avatar", data = "<file>")]
 pub async fn upload_artist_avatar(mut file: Form<TempFile<'_>>) -> Result<Json<UploadResponse>, Status> {
-    let filename = file.name().unwrap_or("unknown").to_string();
+    let mut filename = file.name().unwrap_or("unknown").to_string();
     
     if !UploadService::validate_image_extension(&filename) {
         Logger::error("UPLOAD", &format!("Invalid file extension: {}", filename));
         return Err(Status::BadRequest);
     }
+    
+    // 확장자 없으면 추가
+    filename = UploadService::get_filename_with_extension(&filename);
 
     let kst = chrono::FixedOffset::east_opt(9 * 3600).unwrap();
     let timestamp = chrono::Utc::now().with_timezone(&kst).timestamp();
@@ -168,12 +191,15 @@ pub async fn upload_artist_avatar(mut file: Form<TempFile<'_>>) -> Result<Json<U
 // Artist Cover Upload
 #[post("/upload/artist/cover", data = "<file>")]
 pub async fn upload_artist_cover(mut file: Form<TempFile<'_>>) -> Result<Json<UploadResponse>, Status> {
-    let filename = file.name().unwrap_or("unknown").to_string();
+    let mut filename = file.name().unwrap_or("unknown").to_string();
     
     if !UploadService::validate_image_extension(&filename) {
         Logger::error("UPLOAD", &format!("Invalid file extension: {}", filename));
         return Err(Status::BadRequest);
     }
+    
+    // 확장자 없으면 추가
+    filename = UploadService::get_filename_with_extension(&filename);
 
     let kst = chrono::FixedOffset::east_opt(9 * 3600).unwrap();
     let timestamp = chrono::Utc::now().with_timezone(&kst).timestamp();
@@ -196,12 +222,15 @@ pub async fn upload_artist_cover(mut file: Form<TempFile<'_>>) -> Result<Json<Up
 // Concert Poster Upload
 #[post("/upload/concert/poster", data = "<file>")]
 pub async fn upload_concert_poster(mut file: Form<TempFile<'_>>) -> Result<Json<UploadResponse>, Status> {
-    let filename = file.name().unwrap_or("unknown").to_string();
+    let mut filename = file.name().unwrap_or("unknown").to_string();
     
     if !UploadService::validate_image_extension(&filename) {
         Logger::error("UPLOAD", &format!("Invalid file extension: {}", filename));
         return Err(Status::BadRequest);
     }
+    
+    // 확장자 없으면 추가
+    filename = UploadService::get_filename_with_extension(&filename);
 
     let kst = chrono::FixedOffset::east_opt(9 * 3600).unwrap();
     let timestamp = chrono::Utc::now().with_timezone(&kst).timestamp();
