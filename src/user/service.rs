@@ -3,10 +3,35 @@ use super::repository::UserRepository;
 use crate::db::DbPool;
 use crate::logger::Logger;
 use crate::user::model::ClerkDeleteWebhookEvent;
+use std::env;
 
 pub struct UserService;
 
 impl UserService {
+    fn get_user_role(email: &str) -> String {
+        let admin_emails_str = env::var("ADMIN_EMAILS").unwrap_or_default();
+        let admin_emails: Vec<&str> = admin_emails_str
+            .split(',')
+            .map(|s| s.trim())
+            .collect();
+        
+        let moderator_emails_str = env::var("MODERATOR_EMAILS").unwrap_or_default();
+        let moderator_emails: Vec<&str> = moderator_emails_str
+            .split(',')
+            .map(|s| s.trim())
+            .collect();
+        
+        if admin_emails.contains(&email) {
+            Logger::info("USER", &format!("Admin account detected: {}", email));
+            "admin".to_string()
+        } else if moderator_emails.contains(&email) {
+            Logger::info("USER", &format!("Moderator account detected: {}", email));
+            "moderator".to_string()
+        } else {
+            "user".to_string()
+        }
+    }
+    
     pub async fn get_all_users(pool: &DbPool) -> Result<Vec<User>, String> {
         UserRepository::find_all(pool)
             .await
@@ -97,9 +122,12 @@ impl UserService {
                     }
                 };
 
+                let role = Self::get_user_role(&email);
+
                 let create_user = CreateUser {
                     clerk_id: event.data.id.clone(),
                     email,
+                    role: Some(role),
                     favorite_era: None,
                 };
 
@@ -132,7 +160,10 @@ impl UserService {
                         }
                     };
 
-                let update_user = UpdateUser { favorite_era: None };
+                let update_user = UpdateUser { 
+                    is_first_visit: None,
+                    favorite_era: None 
+                };
 
                 match UserRepository::update(pool, existing_user.id, update_user).await {
                     Ok(rows) => {
