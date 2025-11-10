@@ -51,7 +51,6 @@ async fn rocket() -> _ {
                 user::get_user,
                 user::get_user_by_clerk_id,
                 user::get_user_by_email,
-                user::create_user,
                 user::update_user,
                 user::delete_user,
                 user::clerk_webhook,
