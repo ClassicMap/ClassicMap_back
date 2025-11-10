@@ -1,6 +1,7 @@
 use super::model::{ClerkWebhookEvent, CreateUser, UpdateUser, User};
 use super::repository::UserRepository;
 use crate::db::DbPool;
+use crate::logger::Logger;
 
 pub struct UserService;
 
@@ -57,18 +58,21 @@ impl UserService {
         pool: &DbPool,
         event: ClerkWebhookEvent,
     ) -> Result<(), String> {
+        Logger::webhook(&event.r#type, format!("clerk_id: {}", event.data.id));
+        
         match event.r#type.as_str() {
             "user.created" => {
+                Logger::info("WEBHOOK", "Processing user.created event");
+                
                 // 중복 가입 방지
-                println!("??");
                 if UserRepository::find_by_clerk_id(pool, event.data.id.as_str())
                     .await
                     .is_ok()
                 {
-                    println!("??");
+                    Logger::warn("WEBHOOK", &format!("User already exists: {}", event.data.id));
                     return Err("User Exist".into());
                 }
-                println!("??");
+                
                 // 한 사용자가 여러 email을 소유할 수 있음으로 primary_email_address_id를
                 // 우선적으로 사용
                 let email = match event
@@ -78,23 +82,40 @@ impl UserService {
                     .find(|e| Some(e.id.clone()) == event.data.primary_email_address_id)
                     .or_else(|| event.data.email_addresses.first())
                 {
-                    Some(email) => email.email_address.clone(),
-                    None => "None".to_string(),
+                    Some(email) => {
+                        Logger::debug("WEBHOOK", &format!("Email: {}", email.email_address));
+                        email.email_address.clone()
+                    }
+                    None => {
+                        Logger::warn("WEBHOOK", "No email found, using placeholder");
+                        "None".to_string()
+                    }
                 };
 
                 let create_user = CreateUser {
-                    clerk_id: event.data.id,
+                    clerk_id: event.data.id.clone(),
                     email,
+                    first_name: event.data.first_name,
+                    last_name: event.data.last_name,
                     favorite_era: None,
                 };
 
-                UserRepository::create(pool, create_user)
-                    .await
-                    .map_err(|e| e.to_string())?;
-
+                match UserRepository::create(pool, create_user).await {
+                    Ok(user_id) => {
+                        Logger::success("WEBHOOK", &format!("User created with ID: {}", user_id));
+                        Logger::db("INSERT", &format!("users (clerk_id: {})", event.data.id));
+                        Ok(())
+                    }
+                    Err(e) => {
+                        Logger::error("WEBHOOK", &format!("Failed to create user: {}", e));
+                        Err(e.to_string())
+                    }
+                }
+            }
+            _ => {
+                Logger::warn("WEBHOOK", &format!("Unhandled event type: {}", event.r#type));
                 Ok(())
             }
-            _ => Ok(()),
         }
     }
 }
