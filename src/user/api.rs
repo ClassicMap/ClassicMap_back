@@ -1,4 +1,4 @@
-use super::model::{CreateUser, UpdateUser, User};
+use super::model::{ClerkWebhookEvent, UpdateUser, User};
 use super::service::UserService;
 use crate::db::DbPool;
 use rocket::{serde::json::Json, State};
@@ -33,13 +33,6 @@ pub async fn get_user_by_email(
     Ok(Json(user))
 }
 
-#[post("/users/webhook", data = "<user>")]
-pub async fn create_user(pool: &State<DbPool>, user: Json<String>) -> Result<Json<i32>, String> {
-    println!("{user:?}");
-    //let id = UserService::create_user(pool, user.into_inner()).await?;
-    Ok(Json(0))
-}
-
 #[put("/users/<id>", data = "<user>")]
 pub async fn update_user(
     pool: &State<DbPool>,
@@ -54,4 +47,13 @@ pub async fn update_user(
 pub async fn delete_user(pool: &State<DbPool>, id: i32) -> Result<Json<u64>, String> {
     let rows = UserService::delete_user(pool, id).await?;
     Ok(Json(rows))
+}
+
+#[post("/users/webhook", data = "<event>")]
+pub async fn clerk_webhook(
+    pool: &State<DbPool>,
+    event: Json<ClerkWebhookEvent>,
+) -> Result<Json<String>, String> {
+    UserService::handle_clerk_webhook(pool, event.into_inner()).await?;
+    Ok(Json("Webhook processed successfully".to_string()))
 }
