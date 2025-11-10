@@ -22,16 +22,19 @@ pub struct Artist {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
 pub struct CreateArtist {
     pub name: String,
+    #[serde(alias = "englishName")]
     pub english_name: String,
     pub category: String,
     pub tier: String,
     pub nationality: String,
     pub rating: Option<f64>,
+    #[serde(alias = "imageUrl")]
     pub image_url: Option<String>,
+    #[serde(alias = "coverImageUrl")]
     pub cover_image_url: Option<String>,
+    #[serde(alias = "birthYear")]
     pub birth_year: Option<String>,
     pub bio: Option<String>,
     pub style: Option<String>,

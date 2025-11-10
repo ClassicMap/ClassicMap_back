@@ -16,14 +16,19 @@ pub struct Concert {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
 pub struct CreateConcert {
     pub title: String,
+    #[serde(alias = "composerInfo")]
     pub composer_info: Option<String>,
+    #[serde(alias = "venueId")]
     pub venue_id: i32,
+    #[serde(alias = "concertDate")]
     pub concert_date: String,
+    #[serde(alias = "concertTime")]
     pub concert_time: Option<String>,
+    #[serde(alias = "priceInfo")]
     pub price_info: Option<String>,
+    #[serde(alias = "isRecommended")]
     pub is_recommended: bool,
     pub status: String,
 }
