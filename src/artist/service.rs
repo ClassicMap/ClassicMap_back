@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Artist, CreateArtist};
+use super::model::{Artist, CreateArtist, UpdateArtist};
 use super::repository::ArtistRepository;
 
 pub struct ArtistService;
@@ -19,6 +19,12 @@ impl ArtistService {
 
     pub async fn create_artist(pool: &DbPool, artist: CreateArtist) -> Result<i32, String> {
         ArtistRepository::create(pool, artist)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn update_artist(pool: &DbPool, id: i32, artist: UpdateArtist) -> Result<u64, String> {
+        ArtistRepository::update(pool, id, artist)
             .await
             .map_err(|e| e.to_string())
     }

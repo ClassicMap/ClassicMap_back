@@ -1,7 +1,7 @@
 use rocket::{State, serde::json::Json, http::Status};
 use crate::db::DbPool;
 use crate::logger::Logger;
-use super::model::{Composer, CreateComposer};
+use super::model::{Composer, CreateComposer, UpdateComposer};
 use super::service::ComposerService;
 
 #[get("/composers")]
@@ -32,6 +32,17 @@ pub async fn create_composer(pool: &State<DbPool>, composer: Json<CreateComposer
         Ok(id) => Ok(Json(id)),
         Err(e) => {
             Logger::error("API", &format!("Failed to create composer: {}", e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+#[put("/composers/<id>", data = "<composer>")]
+pub async fn update_composer(pool: &State<DbPool>, id: i32, composer: Json<UpdateComposer>) -> Result<Json<u64>, Status> {
+    match ComposerService::update_composer(pool, id, composer.into_inner()).await {
+        Ok(rows) => Ok(Json(rows)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to update composer {}: {}", id, e));
             Err(Status::InternalServerError)
         }
     }

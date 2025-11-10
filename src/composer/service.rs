@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Composer, CreateComposer};
+use super::model::{Composer, CreateComposer, UpdateComposer};
 use super::repository::ComposerRepository;
 
 pub struct ComposerService;
@@ -19,6 +19,12 @@ impl ComposerService {
 
     pub async fn create_composer(pool: &DbPool, composer: CreateComposer) -> Result<i32, String> {
         ComposerRepository::create(pool, composer)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn update_composer(pool: &DbPool, id: i32, composer: UpdateComposer) -> Result<u64, String> {
+        ComposerRepository::update(pool, id, composer)
             .await
             .map_err(|e| e.to_string())
     }

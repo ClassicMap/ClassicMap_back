@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Concert, CreateConcert};
+use super::model::{Concert, CreateConcert, UpdateConcert};
 use sqlx::Error;
 
 pub struct ConcertRepository;
@@ -49,6 +49,36 @@ impl ConcertRepository {
         .await?;
 
         Ok(result.last_insert_id() as i32)
+    }
+
+    pub async fn update(pool: &DbPool, id: i32, concert: UpdateConcert) -> Result<u64, Error> {
+        let current = Self::find_by_id(pool, id).await?;
+        if current.is_none() {
+            return Ok(0);
+        }
+        let current = current.unwrap();
+
+        let result = sqlx::query(
+            "UPDATE concerts SET title = ?, composer_info = ?, venue_id = ?, 
+             concert_date = ?, concert_time = ?, price_info = ?, poster_url = ?, 
+             ticket_url = ?, is_recommended = ?, status = ?
+             WHERE id = ?"
+        )
+        .bind(concert.title.unwrap_or(current.title))
+        .bind(concert.composer_info.or(current.composer_info))
+        .bind(concert.venue_id.unwrap_or(current.venue_id))
+        .bind(concert.concert_date.unwrap_or(current.concert_date))
+        .bind(concert.concert_time.or(current.concert_time))
+        .bind(concert.price_info.or(current.price_info))
+        .bind(concert.poster_url.or(current.poster_url))
+        .bind(concert.ticket_url.or(current.ticket_url))
+        .bind(concert.is_recommended.unwrap_or(current.is_recommended))
+        .bind(concert.status.unwrap_or(current.status))
+        .bind(id)
+        .execute(pool)
+        .await?;
+
+        Ok(result.rows_affected())
     }
 
     pub async fn delete(pool: &DbPool, id: i32) -> Result<u64, Error> {

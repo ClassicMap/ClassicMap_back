@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Composer, CreateComposer};
+use super::model::{Composer, CreateComposer, UpdateComposer};
 use sqlx::Error;
 
 pub struct ComposerRepository;
@@ -40,6 +40,39 @@ impl ComposerRepository {
         .await?;
 
         Ok(result.last_insert_id() as i32)
+    }
+
+    pub async fn update(pool: &DbPool, id: i32, composer: UpdateComposer) -> Result<u64, Error> {
+        let current = Self::find_by_id(pool, id).await?;
+        if current.is_none() {
+            return Ok(0);
+        }
+        let current = current.unwrap();
+
+        let result = sqlx::query(
+            "UPDATE composers SET name = ?, full_name = ?, english_name = ?, period = ?, 
+             birth_year = ?, death_year = ?, nationality = ?, image_url = ?, avatar_url = ?, 
+             cover_image_url = ?, bio = ?, style = ?, influence = ?
+             WHERE id = ?"
+        )
+        .bind(composer.name.unwrap_or(current.name))
+        .bind(composer.full_name.unwrap_or(current.full_name))
+        .bind(composer.english_name.unwrap_or(current.english_name))
+        .bind(composer.period.unwrap_or(current.period))
+        .bind(composer.birth_year.unwrap_or(current.birth_year))
+        .bind(composer.death_year.unwrap_or(current.death_year))
+        .bind(composer.nationality.unwrap_or(current.nationality))
+        .bind(composer.image_url.or(current.image_url))
+        .bind(composer.avatar_url.or(current.avatar_url))
+        .bind(composer.cover_image_url.or(current.cover_image_url))
+        .bind(composer.bio.or(current.bio))
+        .bind(composer.style.or(current.style))
+        .bind(composer.influence.or(current.influence))
+        .bind(id)
+        .execute(pool)
+        .await?;
+
+        Ok(result.rows_affected())
     }
 
     pub async fn delete(pool: &DbPool, id: i32) -> Result<u64, Error> {
