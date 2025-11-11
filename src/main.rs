@@ -12,6 +12,7 @@ mod piece;
 mod recording;
 mod upload;
 mod user;
+mod venue;
 
 use dotenv::dotenv;
 use logger::Logger;
@@ -101,6 +102,12 @@ async fn rocket() -> _ {
                 user::update_user,
                 user::delete_user,
                 user::clerk_webhook,
+                // Venue routes
+                venue::get_venues,
+                venue::get_venue,
+                venue::create_venue,
+                venue::update_venue,
+                venue::delete_venue,
                 // Upload routes
                 upload::upload_composer_avatar,
                 upload::upload_composer_cover,
