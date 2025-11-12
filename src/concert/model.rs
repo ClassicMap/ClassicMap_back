@@ -12,9 +12,12 @@ pub struct Concert {
     pub concert_time: Option<String>,
     pub price_info: Option<String>,
     pub poster_url: Option<String>,
+    pub program: Option<String>,
     pub ticket_url: Option<String>,
     pub is_recommended: bool,
     pub status: String,
+    pub rating: Option<f64>,
+    pub rating_count: Option<i32>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -27,6 +30,7 @@ pub struct CreateConcert {
     pub concert_time: Option<String>,
     pub price_info: Option<String>,
     pub poster_url: Option<String>,
+    pub program: Option<String>,
     pub ticket_url: Option<String>,
     pub is_recommended: bool,
     pub status: String,
@@ -42,6 +46,7 @@ pub struct UpdateConcert {
     pub concert_time: Option<String>,
     pub price_info: Option<String>,
     pub poster_url: Option<String>,
+    pub program: Option<String>,
     pub ticket_url: Option<String>,
     pub is_recommended: Option<bool>,
     pub status: Option<String>,

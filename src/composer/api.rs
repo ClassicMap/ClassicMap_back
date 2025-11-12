@@ -2,7 +2,7 @@ use rocket::{State, serde::json::Json, http::Status};
 use crate::auth::ModeratorUser;
 use crate::db::DbPool;
 use crate::logger::Logger;
-use super::model::{Composer, CreateComposer, UpdateComposer};
+use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces};
 use super::service::ComposerService;
 
 #[get("/composers")]
@@ -17,7 +17,7 @@ pub async fn get_composers(pool: &State<DbPool>) -> Result<Json<Vec<Composer>>, 
 }
 
 #[get("/composers/<id>")]
-pub async fn get_composer(pool: &State<DbPool>, id: i32) -> Result<Json<Option<Composer>>, Status> {
+pub async fn get_composer(pool: &State<DbPool>, id: i32) -> Result<Json<Option<ComposerWithMajorPieces>>, Status> {
     match ComposerService::get_composer_by_id(pool, id).await {
         Ok(composer) => Ok(Json(composer)),
         Err(e) => {
