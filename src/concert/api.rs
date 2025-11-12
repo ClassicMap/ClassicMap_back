@@ -1,9 +1,9 @@
-use rocket::{State, serde::json::Json, http::Status};
-use crate::auth::{ModeratorUser, AuthenticatedUser};
+use super::model::{Concert, CreateConcert, SubmitRating, UpdateConcert};
+use super::service::ConcertService;
+use crate::auth::{AuthenticatedUser, ModeratorUser};
 use crate::db::DbPool;
 use crate::logger::Logger;
-use super::model::{Concert, CreateConcert, UpdateConcert, SubmitRating};
-use super::service::ConcertService;
+use rocket::{http::Status, serde::json::Json, State};
 use rust_decimal::Decimal;
 
 #[get("/concerts")]
@@ -81,10 +81,13 @@ pub async fn submit_rating(
     rating: Json<SubmitRating>,
     user: AuthenticatedUser,
 ) -> Result<Status, Status> {
-    match ConcertService::submit_rating(pool, user.user_id, id, rating.rating).await {
+    match ConcertService::submit_rating(pool, user.user.id, id, rating.rating).await {
         Ok(_) => Ok(Status::Ok),
         Err(e) => {
-            Logger::error("API", &format!("Failed to submit rating for concert {}: {}", id, e));
+            Logger::error(
+                "API",
+                &format!("Failed to submit rating for concert {}: {}", id, e),
+            );
             Err(Status::InternalServerError)
         }
     }
@@ -96,10 +99,13 @@ pub async fn get_user_rating(
     id: i32,
     user: AuthenticatedUser,
 ) -> Result<Json<Option<Decimal>>, Status> {
-    match ConcertService::get_user_rating(pool, user.user_id, id).await {
+    match ConcertService::get_user_rating(pool, user.user.id, id).await {
         Ok(rating) => Ok(Json(rating)),
         Err(e) => {
-            Logger::error("API", &format!("Failed to get user rating for concert {}: {}", id, e));
+            Logger::error(
+                "API",
+                &format!("Failed to get user rating for concert {}: {}", id, e),
+            );
             Err(Status::InternalServerError)
         }
     }
