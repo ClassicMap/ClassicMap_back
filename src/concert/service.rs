@@ -17,6 +17,12 @@ impl ConcertService {
             .map_err(|e| e.to_string())
     }
 
+    pub async fn get_concerts_by_artist(pool: &DbPool, artist_id: i32) -> Result<Vec<Concert>, String> {
+        ConcertRepository::find_by_artist(pool, artist_id)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
     pub async fn create_concert(pool: &DbPool, concert: CreateConcert) -> Result<i32, String> {
         ConcertRepository::create(pool, concert)
             .await

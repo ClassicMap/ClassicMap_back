@@ -1,6 +1,8 @@
 use super::model::{Artist, CreateArtist, UpdateArtist};
 use super::service::ArtistService;
 use crate::auth::ModeratorUser;
+use crate::concert::model::Concert;
+use crate::concert::service::ConcertService;
 use crate::db::DbPool;
 use crate::logger::Logger;
 use rocket::{http::Status, serde::json::Json, State};
@@ -68,6 +70,17 @@ pub async fn delete_artist(
         Ok(rows) => Ok(Json(rows)),
         Err(e) => {
             Logger::error("API", &format!("Failed to delete artist {}: {}", id, e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+#[get("/artists/<id>/concerts")]
+pub async fn get_artist_concerts(pool: &State<DbPool>, id: i32) -> Result<Json<Vec<Concert>>, Status> {
+    match ConcertService::get_concerts_by_artist(pool, id).await {
+        Ok(concerts) => Ok(Json(concerts)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to get concerts for artist {}: {}", id, e));
             Err(Status::InternalServerError)
         }
     }
