@@ -40,8 +40,9 @@ CREATE TABLE composers (
     full_name VARCHAR(200) NOT NULL COMMENT '전체 한글명',
     english_name VARCHAR(200) NOT NULL COMMENT '영문명',
     period ENUM('바로크', '고전주의', '낭만주의', '근현대') NOT NULL COMMENT '시대',
+    tier ENUM('S', 'A', 'B', 'C') DEFAULT 'B' COMMENT '티어',
     birth_year INT NOT NULL,
-    death_year INT NOT NULL,
+    death_year INT,
     nationality VARCHAR(50) NOT NULL COMMENT '국적',
     image_url VARCHAR(500) COMMENT '프로필 이미지 URL',
     avatar_url VARCHAR(500) COMMENT '아바타 이미지 URL',
@@ -52,6 +53,7 @@ CREATE TABLE composers (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     INDEX idx_period (period),
+    INDEX idx_tier (tier),
     INDEX idx_birth_year (birth_year)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -67,6 +69,9 @@ CREATE TABLE pieces (
     composition_year INT COMMENT '작곡 연도',
     difficulty_level INT COMMENT '난이도 (1-10)',
     duration_minutes INT COMMENT '연주 시간 (분)',
+    spotify_url VARCHAR(500) COMMENT 'Spotify 링크',
+    apple_music_url VARCHAR(500) COMMENT 'Apple Music 링크',
+    youtube_music_url VARCHAR(500) COMMENT 'YouTube Music 링크',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (composer_id) REFERENCES composers(id) ON DELETE CASCADE,
@@ -153,6 +158,10 @@ CREATE TABLE recordings (
     year VARCHAR(10) NOT NULL COMMENT '발매 연도',
     label VARCHAR(100) COMMENT '레이블',
     cover_url VARCHAR(500) COMMENT '커버 이미지 URL',
+    spotify_url VARCHAR(500) COMMENT 'Spotify 링크',
+    apple_music_url VARCHAR(500) COMMENT 'Apple Music 링크',
+    youtube_music_url VARCHAR(500) COMMENT 'YouTube Music 링크',
+    external_url VARCHAR(500) COMMENT '기타 외부 링크',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE,
@@ -191,12 +200,15 @@ CREATE TABLE concerts (
     is_recommended BOOLEAN DEFAULT FALSE COMMENT '추천 공연 여부',
     ticket_url VARCHAR(500) COMMENT '예매 링크',
     status ENUM('upcoming', 'ongoing', 'completed', 'cancelled') DEFAULT 'upcoming',
+    rating DECIMAL(2,1) DEFAULT 0.0 COMMENT '평균 평점 (0.0-5.0)',
+    rating_count INT DEFAULT 0 COMMENT '평점 개수',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (venue_id) REFERENCES venues(id) ON DELETE RESTRICT,
     INDEX idx_concert_date (concert_date),
     INDEX idx_status (status),
-    INDEX idx_recommended (is_recommended)
+    INDEX idx_recommended (is_recommended),
+    INDEX idx_rating (rating)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
@@ -314,6 +326,23 @@ CREATE TABLE popular_comparisons (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
+-- 17. 사용자 공연 평점 (User Concert Ratings) 테이블
+-- ============================================
+CREATE TABLE user_concert_ratings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    concert_id INT NOT NULL,
+    rating DECIMAL(2,1) NOT NULL COMMENT '평점 (0.0-5.0)',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (concert_id) REFERENCES concerts(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_user_concert (user_id, concert_id),
+    INDEX idx_user_id (user_id),
+    INDEX idx_concert_id (concert_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ============================================
 -- 샘플 데이터 삽입
 -- ============================================
 
@@ -416,7 +445,7 @@ CREATE VIEW v_artists_full AS
 SELECT 
     a.*,
     GROUP_CONCAT(DISTINCT s.specialty ORDER BY s.specialty SEPARATOR '|') as specialties,
-    GROUP_CONCAT(DISTINCT CONCAT(aw.year, ':', aw.award_name) ORDER BY aw.year DESC SEPARATOR '|') as awards
+    GROUP_CONCAT(DISTINCT CONCAT(aw.year, ':', aw.award_name) ORDER BY aw.display_order SEPARATOR '|') as awards
 FROM artists a
 LEFT JOIN artist_specialties s ON a.id = s.artist_id
 LEFT JOIN artist_awards aw ON a.id = aw.artist_id

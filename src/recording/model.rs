@@ -10,6 +10,10 @@ pub struct Recording {
     pub year: String,
     pub label: Option<String>,
     pub cover_url: Option<String>,
+    pub spotify_url: Option<String>,
+    pub apple_music_url: Option<String>,
+    pub youtube_music_url: Option<String>,
+    pub external_url: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -20,6 +24,10 @@ pub struct CreateRecording {
     pub year: String,
     pub label: Option<String>,
     pub cover_url: Option<String>,
+    pub spotify_url: Option<String>,
+    pub apple_music_url: Option<String>,
+    pub youtube_music_url: Option<String>,
+    pub external_url: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -29,4 +37,8 @@ pub struct UpdateRecording {
     pub year: Option<String>,
     pub label: Option<String>,
     pub cover_url: Option<String>,
+    pub spotify_url: Option<String>,
+    pub apple_music_url: Option<String>,
+    pub youtube_music_url: Option<String>,
+    pub external_url: Option<String>,
 }

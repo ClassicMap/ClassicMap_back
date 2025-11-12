@@ -27,8 +27,8 @@ impl PieceRepository {
 
     pub async fn create(pool: &DbPool, piece: CreatePiece) -> Result<i32, Error> {
         let result = sqlx::query(
-            "INSERT INTO pieces (composer_id, title, description, opus_number, composition_year, difficulty_level, duration_minutes) 
-             VALUES (?, ?, ?, ?, ?, ?, ?)"
+            "INSERT INTO pieces (composer_id, title, description, opus_number, composition_year, difficulty_level, duration_minutes, spotify_url, apple_music_url, youtube_music_url)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         )
         .bind(piece.composer_id)
         .bind(&piece.title)
@@ -37,6 +37,9 @@ impl PieceRepository {
         .bind(piece.composition_year)
         .bind(piece.difficulty_level)
         .bind(piece.duration_minutes)
+        .bind(&piece.spotify_url)
+        .bind(&piece.apple_music_url)
+        .bind(&piece.youtube_music_url)
         .execute(pool)
         .await?;
 

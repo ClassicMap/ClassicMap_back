@@ -12,6 +12,9 @@ pub struct Piece {
     pub composition_year: Option<i32>,
     pub difficulty_level: Option<i32>,
     pub duration_minutes: Option<i32>,
+    pub spotify_url: Option<String>,
+    pub apple_music_url: Option<String>,
+    pub youtube_music_url: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -24,4 +27,7 @@ pub struct CreatePiece {
     pub composition_year: Option<i32>,
     pub difficulty_level: Option<i32>,
     pub duration_minutes: Option<i32>,
+    pub spotify_url: Option<String>,
+    pub apple_music_url: Option<String>,
+    pub youtube_music_url: Option<String>,
 }

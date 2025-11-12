@@ -7,7 +7,7 @@ pub struct RecordingRepository;
 impl RecordingRepository {
     pub async fn find_all(pool: &DbPool) -> Result<Vec<Recording>, Error> {
         sqlx::query_as::<_, Recording>(
-            "SELECT id, artist_id, title, year, label, cover_url FROM recordings ORDER BY year DESC"
+            "SELECT id, artist_id, title, year, label, cover_url, spotify_url, apple_music_url, youtube_music_url, external_url FROM recordings ORDER BY year DESC"
         )
         .fetch_all(pool)
         .await
@@ -15,7 +15,7 @@ impl RecordingRepository {
 
     pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<Recording>, Error> {
         sqlx::query_as::<_, Recording>(
-            "SELECT id, artist_id, title, year, label, cover_url FROM recordings WHERE id = ?"
+            "SELECT id, artist_id, title, year, label, cover_url, spotify_url, apple_music_url, youtube_music_url, external_url FROM recordings WHERE id = ?"
         )
         .bind(id)
         .fetch_optional(pool)
@@ -24,7 +24,7 @@ impl RecordingRepository {
 
     pub async fn find_by_artist(pool: &DbPool, artist_id: i32) -> Result<Vec<Recording>, Error> {
         sqlx::query_as::<_, Recording>(
-            "SELECT id, artist_id, title, year, label, cover_url FROM recordings WHERE artist_id = ? ORDER BY year DESC"
+            "SELECT id, artist_id, title, year, label, cover_url, spotify_url, apple_music_url, youtube_music_url, external_url FROM recordings WHERE artist_id = ? ORDER BY year DESC"
         )
         .bind(artist_id)
         .fetch_all(pool)
@@ -33,13 +33,17 @@ impl RecordingRepository {
 
     pub async fn create(pool: &DbPool, recording: CreateRecording) -> Result<u64, Error> {
         let result = sqlx::query(
-            "INSERT INTO recordings (artist_id, title, year, label, cover_url) VALUES (?, ?, ?, ?, ?)"
+            "INSERT INTO recordings (artist_id, title, year, label, cover_url, spotify_url, apple_music_url, youtube_music_url, external_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
         )
         .bind(recording.artist_id)
         .bind(recording.title)
         .bind(recording.year)
         .bind(recording.label)
         .bind(recording.cover_url)
+        .bind(recording.spotify_url)
+        .bind(recording.apple_music_url)
+        .bind(recording.youtube_music_url)
+        .bind(recording.external_url)
         .execute(pool)
         .await?;
 
@@ -54,12 +58,16 @@ impl RecordingRepository {
         let current = current.unwrap();
 
         let result = sqlx::query(
-            "UPDATE recordings SET title = ?, year = ?, label = ?, cover_url = ? WHERE id = ?"
+            "UPDATE recordings SET title = ?, year = ?, label = ?, cover_url = ?, spotify_url = ?, apple_music_url = ?, youtube_music_url = ?, external_url = ? WHERE id = ?"
         )
         .bind(recording.title.unwrap_or(current.title))
         .bind(recording.year.unwrap_or(current.year))
         .bind(recording.label.or(current.label))
         .bind(recording.cover_url.or(current.cover_url))
+        .bind(recording.spotify_url.or(current.spotify_url))
+        .bind(recording.apple_music_url.or(current.apple_music_url))
+        .bind(recording.youtube_music_url.or(current.youtube_music_url))
+        .bind(recording.external_url.or(current.external_url))
         .bind(id)
         .execute(pool)
         .await?;

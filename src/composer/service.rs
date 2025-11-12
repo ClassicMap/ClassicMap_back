@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Composer, CreateComposer, UpdateComposer};
+use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces};
 use super::repository::ComposerRepository;
 
 pub struct ComposerService;
@@ -11,7 +11,7 @@ impl ComposerService {
             .map_err(|e| e.to_string())
     }
 
-    pub async fn get_composer_by_id(pool: &DbPool, id: i32) -> Result<Option<Composer>, String> {
+    pub async fn get_composer_by_id(pool: &DbPool, id: i32) -> Result<Option<ComposerWithMajorPieces>, String> {
         ComposerRepository::find_by_id(pool, id)
             .await
             .map_err(|e| e.to_string())

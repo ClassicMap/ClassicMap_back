@@ -5,29 +5,22 @@ use sqlx::Error;
 pub struct ArtistRepository;
 
 impl ArtistRepository {
-    pub async fn find_all(pool: &DbPool) -> Result<Vec<Artist>, Error> {
-        sqlx::query_as::<_, Artist>(
-            "SELECT id, name, english_name, category, tier, CAST(rating AS DOUBLE) as rating, 
-             image_url, cover_image_url, birth_year, nationality, bio, style, 
-             concert_count, country_count, album_count 
-             FROM artists"
-        )
-            .fetch_all(pool)
-            .await
-    }
-
-    pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<Artist>, Error> {
-        sqlx::query_as::<_, Artist>(
-            "SELECT id, name, english_name, category, tier, CAST(rating AS DOUBLE) as rating, 
-             image_url, cover_image_url, birth_year, nationality, bio, style, 
-             concert_count, country_count, album_count 
-             FROM artists WHERE id = ?"
-        )
+        pub async fn find_all(pool: &DbPool) -> Result<Vec<Artist>, Error> {
+            sqlx::query_as::<_, Artist>(
+                "SELECT * FROM v_artists_full"
+            )
+                .fetch_all(pool)
+                .await
+        }
+    
+        pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<Artist>, Error> {
+            sqlx::query_as::<_, Artist>(
+                "SELECT * FROM v_artists_full WHERE id = ?"
+            )
             .bind(id)
             .fetch_optional(pool)
             .await
-    }
-
+        }
     pub async fn create(pool: &DbPool, artist: CreateArtist) -> Result<i32, Error> {
         let result = sqlx::query(
             "INSERT INTO artists (name, english_name, category, tier, nationality, rating, image_url, cover_image_url, birth_year, bio, style, concert_count, country_count, album_count)
