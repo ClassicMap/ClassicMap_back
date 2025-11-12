@@ -33,7 +33,10 @@ pub async fn get_user_by_clerk_id(
     clerk_id: String,
 ) -> Result<Json<Option<User>>, Status> {
     match UserService::get_user_by_clerk_id(pool, &clerk_id).await {
-        Ok(user) => Ok(Json(user)),
+        Ok(user) => {
+            Logger::info("API", &format!("user: {}", user.clone().unwrap().email));
+            Ok(Json(user))
+        }
         Err(e) => {
             Logger::error(
                 "API",
