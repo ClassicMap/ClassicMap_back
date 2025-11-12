@@ -35,6 +35,9 @@ pub struct CreateArtist {
     pub birth_year: Option<String>,
     pub bio: Option<String>,
     pub style: Option<String>,
+    pub concert_count: Option<i32>,
+    pub country_count: Option<i32>,
+    pub album_count: Option<i32>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
