@@ -1,9 +1,10 @@
 use rocket::{State, serde::json::Json, http::Status};
-use crate::auth::ModeratorUser;
+use crate::auth::{ModeratorUser, AuthenticatedUser};
 use crate::db::DbPool;
 use crate::logger::Logger;
-use super::model::{Concert, CreateConcert, UpdateConcert};
+use super::model::{Concert, CreateConcert, UpdateConcert, SubmitRating};
 use super::service::ConcertService;
+use rust_decimal::Decimal;
 
 #[get("/concerts")]
 pub async fn get_concerts(pool: &State<DbPool>) -> Result<Json<Vec<Concert>>, Status> {
@@ -68,6 +69,37 @@ pub async fn delete_concert(
         Ok(rows) => Ok(Json(rows)),
         Err(e) => {
             Logger::error("API", &format!("Failed to delete concert {}: {}", id, e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+#[post("/concerts/<id>/rating", data = "<rating>")]
+pub async fn submit_rating(
+    pool: &State<DbPool>,
+    id: i32,
+    rating: Json<SubmitRating>,
+    user: AuthenticatedUser,
+) -> Result<Status, Status> {
+    match ConcertService::submit_rating(pool, user.user_id, id, rating.rating).await {
+        Ok(_) => Ok(Status::Ok),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to submit rating for concert {}: {}", id, e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+#[get("/concerts/<id>/user-rating")]
+pub async fn get_user_rating(
+    pool: &State<DbPool>,
+    id: i32,
+    user: AuthenticatedUser,
+) -> Result<Json<Option<Decimal>>, Status> {
+    match ConcertService::get_user_rating(pool, user.user_id, id).await {
+        Ok(rating) => Ok(Json(rating)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to get user rating for concert {}: {}", id, e));
             Err(Status::InternalServerError)
         }
     }

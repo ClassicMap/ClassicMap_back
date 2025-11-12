@@ -89,6 +89,8 @@ async fn rocket() -> _ {
                 concert::create_concert,
                 concert::update_concert,
                 concert::delete_concert,
+                concert::submit_rating,
+                concert::get_user_rating,
                 // Performance routes
                 performance::get_performances,
                 performance::get_performances_by_piece,

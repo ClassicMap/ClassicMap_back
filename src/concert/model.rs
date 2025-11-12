@@ -21,6 +21,21 @@ pub struct Concert {
     pub rating_count: Option<i32>,
 }
 
+#[derive(Debug, Serialize, Deserialize, FromRow)]
+#[serde(rename_all = "camelCase")]
+pub struct UserConcertRating {
+    pub id: i32,
+    pub user_id: i32,
+    pub concert_id: i32,
+    pub rating: Decimal,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct SubmitRating {
+    pub rating: f32,
+}
+
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct CreateConcert {

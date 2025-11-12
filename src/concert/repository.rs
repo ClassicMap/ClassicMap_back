@@ -1,6 +1,7 @@
 use crate::db::DbPool;
-use super::model::{Concert, CreateConcert, UpdateConcert};
+use super::model::{Concert, CreateConcert, UpdateConcert, UserConcertRating};
 use sqlx::Error;
+use rust_decimal::Decimal;
 
 pub struct ConcertRepository;
 
@@ -107,5 +108,52 @@ impl ConcertRepository {
             .await?;
 
         Ok(result.rows_affected())
+    }
+
+    pub async fn submit_rating(pool: &DbPool, user_id: i32, concert_id: i32, rating: f32) -> Result<(), Error> {
+        sqlx::query(
+            "INSERT INTO user_concert_ratings (user_id, concert_id, rating)
+             VALUES (?, ?, ?)
+             ON DUPLICATE KEY UPDATE rating = ?, updated_at = CURRENT_TIMESTAMP"
+        )
+        .bind(user_id)
+        .bind(concert_id)
+        .bind(rating)
+        .bind(rating)
+        .execute(pool)
+        .await?;
+
+        // 평균 평점 업데이트
+        Self::update_average_rating(pool, concert_id).await?;
+
+        Ok(())
+    }
+
+    pub async fn get_user_rating(pool: &DbPool, user_id: i32, concert_id: i32) -> Result<Option<Decimal>, Error> {
+        let result: Option<(Decimal,)> = sqlx::query_as(
+            "SELECT rating FROM user_concert_ratings WHERE user_id = ? AND concert_id = ?"
+        )
+        .bind(user_id)
+        .bind(concert_id)
+        .fetch_optional(pool)
+        .await?;
+
+        Ok(result.map(|(rating,)| rating))
+    }
+
+    async fn update_average_rating(pool: &DbPool, concert_id: i32) -> Result<(), Error> {
+        sqlx::query(
+            "UPDATE concerts c
+             SET rating = (SELECT AVG(rating) FROM user_concert_ratings WHERE concert_id = ?),
+                 rating_count = (SELECT COUNT(*) FROM user_concert_ratings WHERE concert_id = ?)
+             WHERE id = ?"
+        )
+        .bind(concert_id)
+        .bind(concert_id)
+        .bind(concert_id)
+        .execute(pool)
+        .await?;
+
+        Ok(())
     }
 }
