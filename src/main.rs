@@ -19,7 +19,7 @@ use dotenv::dotenv;
 use logger::Logger;
 use rocket::fs::FileServer;
 use rocket::http::Method;
-use rocket_cors::{AllowedOrigins, AllowedHeaders, CorsOptions};
+use rocket_cors::{AllowedHeaders, AllowedOrigins, CorsOptions};
 
 #[launch]
 async fn rocket() -> _ {
@@ -39,10 +39,16 @@ async fn rocket() -> _ {
     let cors = CorsOptions::default()
         .allowed_origins(AllowedOrigins::all())
         .allowed_methods(
-            vec![Method::Get, Method::Post, Method::Put, Method::Delete, Method::Options]
-                .into_iter()
-                .map(From::from)
-                .collect(),
+            vec![
+                Method::Get,
+                Method::Post,
+                Method::Put,
+                Method::Delete,
+                Method::Options,
+            ]
+            .into_iter()
+            .map(From::from)
+            .collect(),
         )
         .allowed_headers(AllowedHeaders::all())
         .allow_credentials(true)
@@ -54,7 +60,7 @@ async fn rocket() -> _ {
         .manage(pool)
         .attach(cors)
         .mount("/", routes![config::favicon])
-        .mount("/uploads", FileServer::from("static/uploads"))
+        .mount("/api/uploads", FileServer::from("static/uploads"))
         .mount(
             "/api",
             routes![
