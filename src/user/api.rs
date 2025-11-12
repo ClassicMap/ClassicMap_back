@@ -30,9 +30,9 @@ pub async fn get_user(pool: &State<DbPool>, id: i32) -> Result<Json<Option<User>
 #[get("/users/clerk/<clerk_id>")]
 pub async fn get_user_by_clerk_id(
     pool: &State<DbPool>,
-    clerk_id: String,
+    clerk_id: &str,
 ) -> Result<Json<Option<User>>, Status> {
-    match UserService::get_user_by_clerk_id(pool, &clerk_id).await {
+    match UserService::get_user_by_clerk_id(pool, clerk_id).await {
         Ok(user) => {
             Logger::info("API", &format!("user: {}", user.clone().unwrap().email));
             Ok(Json(user))
@@ -50,9 +50,9 @@ pub async fn get_user_by_clerk_id(
 #[get("/users/email/<email>")]
 pub async fn get_user_by_email(
     pool: &State<DbPool>,
-    email: String,
+    email: &str,
 ) -> Result<Json<Option<User>>, Status> {
-    match UserService::get_user_by_email(pool, &email).await {
+    match UserService::get_user_by_email(pool, email).await {
         Ok(user) => Ok(Json(user)),
         Err(e) => {
             Logger::error(
