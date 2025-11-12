@@ -1,3 +1,4 @@
+use rust_decimal::Decimal;
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 
@@ -16,7 +17,7 @@ pub struct Concert {
     pub ticket_url: Option<String>,
     pub is_recommended: bool,
     pub status: String,
-    pub rating: Option<f64>,
+    pub rating: Option<Decimal>,
     pub rating_count: Option<i32>,
 }
 
