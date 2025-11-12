@@ -420,11 +420,50 @@ INSERT INTO artist_awards (artist_id, year, award_name, display_order) VALUES
 (1, '2011', '차이콥스키 국제 콩쿠르 3위', 2),
 (2, '2022', '반 클라이번 국제 피아노 콩쿠르 1위', 1);
 
--- 공연 샘플 데이터
-INSERT INTO concerts (title, composer_info, venue_id, concert_date, concert_time, price_info, is_recommended, status) VALUES
-('조성진 피아노 리사이틀', '쇼팽, 라벨', 1, '2025-03-15', '19:30:00', '100,000원~', TRUE, 'upcoming'),
-('베를린 필하모닉 내한공연', '말러 교향곡 5번', 2, '2025-04-20', '19:00:00', '150,000원~', TRUE, 'upcoming'),
-('임윤찬과 서울시향', '라흐마니노프 피아노 협주곡 2번', 1, '2025-05-10', '20:00:00', '80,000원~', FALSE, 'upcoming');
+
+  -- ============================================
+  -- 아티스트 앨범 (Recordings) 샘플 데이터
+  -- ============================================
+
+  -- 조성진 음반
+  INSERT INTO recordings (artist_id, title, year, label, spotify_url, apple_music_url) VALUES
+  (1, 'Chopin: Piano Concerto No.1', '2016', 'Deutsche Grammophon', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
+  (1, 'Chopin: Ballades & Scherzos', '2017', 'Deutsche Grammophon', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
+  (1, 'Debussy', '2019', 'Deutsche Grammophon', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
+  (1, 'Mozart: Piano Concertos Nos. 20 & 21', '2020', 'Deutsche Grammophon', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
+  (1, 'The Wanderer', '2021', 'Deutsche Grammophon', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...');
+
+  -- 임윤찬 음반
+  INSERT INTO recordings (artist_id, title, year, label, spotify_url, apple_music_url) VALUES
+  (2, 'Cliburn 2022: Yunchan Lim', '2022', 'Decca', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
+  (2, 'Chopin: Etudes', '2023', 'Decca', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
+  (2, 'Liszt: Transcendental Etudes', '2024', 'Decca', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...');
+
+  -- ============================================
+  -- 공연-아티스트 연결 데이터
+  -- ============================================
+
+  -- 기존 공연에 아티스트 연결
+  INSERT INTO concert_artists (concert_id, artist_id, role) VALUES
+  (1, 1, 'solo'),      -- 조성진 피아노 리사이틀
+  (3, 2, 'solo');      -- 임윤찬과 서울시향
+
+  -- ============================================
+  -- 추가 공연 샘플 데이터 (최근 공연 더 추가)
+  -- ============================================
+
+  INSERT INTO concerts (title, composer_info, venue_id, concert_date, concert_time, price_info, is_recommended, status) VALUES
+  ('조성진 드뷔시 스페셜', '드뷔시, 라벨', 2, '2025-02-20', '19:30:00', '90,000원~', FALSE, 'upcoming'),
+  ('임윤찬 베토벤 소나타 전곡', '베토벤 피아노 소나타', 1, '2025-06-15', '19:00:00', '120,000원~', TRUE, 'upcoming'),
+  ('조성진 & 바이에른 방송교향악단', '모차르트 피아노 협주곡 23번', 3, '2024-12-10', '20:00:00', '150,000원~', FALSE, 'completed'),
+  ('임윤찬 리사이틀', '라흐마니노프, 쇼팽', 2, '2024-11-05', '19:30:00', '100,000원~', FALSE, 'completed');
+
+  -- 추가 공연에 아티스트 연결
+  INSERT INTO concert_artists (concert_id, artist_id, role) VALUES
+  (4, 1, 'solo'),      -- 조성진 드뷔시 스페셜
+  (5, 2, 'solo'),      -- 임윤찬 베토벤 소나타 전곡
+  (6, 1, 'solo'),      -- 조성진 & 바이에른 방송교향악단
+  (7, 2, 'solo');      -- 임윤찬 리사이틀
 
 -- ============================================
 -- API용 뷰 (Views) 생성

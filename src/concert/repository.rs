@@ -19,14 +19,30 @@ impl ConcertRepository {
 
     pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<Concert>, Error> {
         sqlx::query_as::<_, Concert>(
-            "SELECT id, title, composer_info, venue_id, 
+            "SELECT id, title, composer_info, venue_id,
              DATE_FORMAT(concert_date, '%Y-%m-%d') as concert_date,
              TIME_FORMAT(concert_time, '%H:%i:%s') as concert_time,
-             price_info, poster_url, program, ticket_url, is_recommended, status, rating, rating_count 
+             price_info, poster_url, program, ticket_url, is_recommended, status, rating, rating_count
              FROM concerts WHERE id = ?"
         )
             .bind(id)
             .fetch_optional(pool)
+            .await
+    }
+
+    pub async fn find_by_artist(pool: &DbPool, artist_id: i32) -> Result<Vec<Concert>, Error> {
+        sqlx::query_as::<_, Concert>(
+            "SELECT c.id, c.title, c.composer_info, c.venue_id,
+             DATE_FORMAT(c.concert_date, '%Y-%m-%d') as concert_date,
+             TIME_FORMAT(c.concert_time, '%H:%i:%s') as concert_time,
+             c.price_info, c.poster_url, c.program, c.ticket_url, c.is_recommended, c.status, c.rating, c.rating_count
+             FROM concerts c
+             INNER JOIN concert_artists ca ON c.id = ca.concert_id
+             WHERE ca.artist_id = ?
+             ORDER BY c.concert_date DESC"
+        )
+            .bind(artist_id)
+            .fetch_all(pool)
             .await
     }
 
