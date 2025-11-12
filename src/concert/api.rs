@@ -1,4 +1,5 @@
 use rocket::{State, serde::json::Json, http::Status};
+use crate::auth::ModeratorUser;
 use crate::db::DbPool;
 use crate::logger::Logger;
 use super::model::{Concert, CreateConcert, UpdateConcert};
@@ -27,7 +28,11 @@ pub async fn get_concert(pool: &State<DbPool>, id: i32) -> Result<Json<Option<Co
 }
 
 #[post("/concerts", data = "<concert>")]
-pub async fn create_concert(pool: &State<DbPool>, concert: Json<CreateConcert>) -> Result<Json<i32>, Status> {
+pub async fn create_concert(
+    pool: &State<DbPool>,
+    concert: Json<CreateConcert>,
+    _moderator: ModeratorUser,
+) -> Result<Json<i32>, Status> {
     match ConcertService::create_concert(pool, concert.into_inner()).await {
         Ok(id) => Ok(Json(id)),
         Err(e) => {
@@ -38,7 +43,12 @@ pub async fn create_concert(pool: &State<DbPool>, concert: Json<CreateConcert>) 
 }
 
 #[put("/concerts/<id>", data = "<concert>")]
-pub async fn update_concert(pool: &State<DbPool>, id: i32, concert: Json<UpdateConcert>) -> Result<Json<u64>, Status> {
+pub async fn update_concert(
+    pool: &State<DbPool>,
+    id: i32,
+    concert: Json<UpdateConcert>,
+    _moderator: ModeratorUser,
+) -> Result<Json<u64>, Status> {
     match ConcertService::update_concert(pool, id, concert.into_inner()).await {
         Ok(rows) => Ok(Json(rows)),
         Err(e) => {
@@ -49,7 +59,11 @@ pub async fn update_concert(pool: &State<DbPool>, id: i32, concert: Json<UpdateC
 }
 
 #[delete("/concerts/<id>")]
-pub async fn delete_concert(pool: &State<DbPool>, id: i32) -> Result<Json<u64>, Status> {
+pub async fn delete_concert(
+    pool: &State<DbPool>,
+    id: i32,
+    _moderator: ModeratorUser,
+) -> Result<Json<u64>, Status> {
     match ConcertService::delete_concert(pool, id).await {
         Ok(rows) => Ok(Json(rows)),
         Err(e) => {

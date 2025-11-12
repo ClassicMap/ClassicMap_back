@@ -2,6 +2,7 @@
 extern crate rocket;
 
 mod artist;
+mod auth;
 mod composer;
 mod concert;
 mod config;
