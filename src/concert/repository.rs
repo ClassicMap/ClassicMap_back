@@ -10,7 +10,7 @@ impl ConcertRepository {
             "SELECT id, title, composer_info, venue_id, 
              DATE_FORMAT(concert_date, '%Y-%m-%d') as concert_date,
              TIME_FORMAT(concert_time, '%H:%i:%s') as concert_time,
-             price_info, poster_url, ticket_url, is_recommended, status 
+             price_info, poster_url, program, ticket_url, is_recommended, status, rating, rating_count 
              FROM concerts"
         )
             .fetch_all(pool)
@@ -22,7 +22,7 @@ impl ConcertRepository {
             "SELECT id, title, composer_info, venue_id, 
              DATE_FORMAT(concert_date, '%Y-%m-%d') as concert_date,
              TIME_FORMAT(concert_time, '%H:%i:%s') as concert_time,
-             price_info, poster_url, ticket_url, is_recommended, status 
+             price_info, poster_url, program, ticket_url, is_recommended, status, rating, rating_count 
              FROM concerts WHERE id = ?"
         )
             .bind(id)
@@ -32,8 +32,8 @@ impl ConcertRepository {
 
     pub async fn create(pool: &DbPool, concert: CreateConcert) -> Result<i32, Error> {
         let result = sqlx::query(
-            "INSERT INTO concerts (title, composer_info, venue_id, concert_date, concert_time, price_info, poster_url, ticket_url, is_recommended, status) 
-             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            "INSERT INTO concerts (title, composer_info, venue_id, concert_date, concert_time, price_info, poster_url, program, ticket_url, is_recommended, status) 
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         )
         .bind(&concert.title)
         .bind(&concert.composer_info)
@@ -42,6 +42,7 @@ impl ConcertRepository {
         .bind(&concert.concert_time)
         .bind(&concert.price_info)
         .bind(&concert.poster_url)
+        .bind(&concert.program)
         .bind(&concert.ticket_url)
         .bind(concert.is_recommended)
         .bind(&concert.status)
@@ -61,7 +62,7 @@ impl ConcertRepository {
         let result = sqlx::query(
             "UPDATE concerts SET title = ?, composer_info = ?, venue_id = ?, 
              concert_date = ?, concert_time = ?, price_info = ?, poster_url = ?, 
-             ticket_url = ?, is_recommended = ?, status = ?
+             program = ?, ticket_url = ?, is_recommended = ?, status = ?
              WHERE id = ?"
         )
         .bind(concert.title.unwrap_or(current.title))
@@ -71,6 +72,7 @@ impl ConcertRepository {
         .bind(concert.concert_time.or(current.concert_time))
         .bind(concert.price_info.or(current.price_info))
         .bind(concert.poster_url.or(current.poster_url))
+        .bind(concert.program.or(current.program))
         .bind(concert.ticket_url.or(current.ticket_url))
         .bind(concert.is_recommended.unwrap_or(current.is_recommended))
         .bind(concert.status.unwrap_or(current.status))
