@@ -39,6 +39,7 @@ impl ConcertRepository {
              FROM concerts c
              INNER JOIN concert_artists ca ON c.id = ca.concert_id
              WHERE ca.artist_id = ?
+             AND c.concert_date >= DATE_SUB(CURDATE(), INTERVAL 2 MONTH)
              ORDER BY c.concert_date DESC"
         )
             .bind(artist_id)
