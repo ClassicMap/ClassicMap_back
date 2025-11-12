@@ -60,7 +60,7 @@ async fn rocket() -> _ {
         .manage(pool)
         .attach(cors)
         .mount("/", routes![config::favicon])
-        .mount("/api/uploads", FileServer::from("static/uploads"))
+        .mount("/uploads", FileServer::from("static/uploads"))
         .mount(
             "/api",
             routes![
