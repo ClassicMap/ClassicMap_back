@@ -1,3 +1,4 @@
+use rust_decimal::Decimal;
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 
@@ -9,7 +10,7 @@ pub struct Artist {
     pub english_name: String,
     pub category: String,
     pub tier: String,
-    pub rating: Option<f64>,
+    pub rating: Option<Decimal>,
     pub image_url: Option<String>,
     pub cover_image_url: Option<String>,
     pub birth_year: Option<String>,
@@ -31,7 +32,7 @@ pub struct CreateArtist {
     pub category: String,
     pub tier: String,
     pub nationality: String,
-    pub rating: Option<f64>,
+    pub rating: Option<Decimal>,
     pub image_url: Option<String>,
     pub cover_image_url: Option<String>,
     pub birth_year: Option<String>,
@@ -50,7 +51,7 @@ pub struct UpdateArtist {
     pub category: Option<String>,
     pub tier: Option<String>,
     pub nationality: Option<String>,
-    pub rating: Option<f64>,
+    pub rating: Option<Decimal>,
     pub image_url: Option<String>,
     pub cover_image_url: Option<String>,
     pub birth_year: Option<String>,
