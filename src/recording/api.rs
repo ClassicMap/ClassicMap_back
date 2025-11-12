@@ -1,4 +1,5 @@
 use crate::db::DbPool;
+use crate::auth::ModeratorUser;
 use crate::logger::Logger;
 use super::model::{Recording, CreateRecording, UpdateRecording};
 use super::service::RecordingService;
@@ -40,7 +41,11 @@ pub async fn get_artist_recordings(pool: &State<DbPool>, artist_id: i32) -> Resu
 }
 
 #[post("/recordings", data = "<recording>")]
-pub async fn create_recording(pool: &State<DbPool>, recording: Json<CreateRecording>) -> Result<Json<u64>, Status> {
+pub async fn create_recording(
+    pool: &State<DbPool>,
+    recording: Json<CreateRecording>,
+    _moderator: ModeratorUser,
+) -> Result<Json<u64>, Status> {
     match RecordingService::create_recording(pool, recording.into_inner()).await {
         Ok(id) => {
             Logger::success("API", &format!("Recording created with id: {}", id));
@@ -54,7 +59,12 @@ pub async fn create_recording(pool: &State<DbPool>, recording: Json<CreateRecord
 }
 
 #[put("/recordings/<id>", data = "<recording>")]
-pub async fn update_recording(pool: &State<DbPool>, id: i32, recording: Json<UpdateRecording>) -> Result<Json<u64>, Status> {
+pub async fn update_recording(
+    pool: &State<DbPool>,
+    id: i32,
+    recording: Json<UpdateRecording>,
+    _moderator: ModeratorUser,
+) -> Result<Json<u64>, Status> {
     match RecordingService::update_recording(pool, id, recording.into_inner()).await {
         Ok(rows) if rows > 0 => {
             Logger::success("API", &format!("Recording {} updated", id));
@@ -69,7 +79,11 @@ pub async fn update_recording(pool: &State<DbPool>, id: i32, recording: Json<Upd
 }
 
 #[delete("/recordings/<id>")]
-pub async fn delete_recording(pool: &State<DbPool>, id: i32) -> Result<Json<u64>, Status> {
+pub async fn delete_recording(
+    pool: &State<DbPool>,
+    id: i32,
+    _moderator: ModeratorUser,
+) -> Result<Json<u64>, Status> {
     match RecordingService::delete_recording(pool, id).await {
         Ok(rows) if rows > 0 => {
             Logger::success("API", &format!("Recording {} deleted", id));

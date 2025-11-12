@@ -1,8 +1,9 @@
-use rocket::{State, serde::json::Json, http::Status};
-use crate::db::DbPool;
-use crate::logger::Logger;
 use super::model::{Artist, CreateArtist, UpdateArtist};
 use super::service::ArtistService;
+use crate::auth::ModeratorUser;
+use crate::db::DbPool;
+use crate::logger::Logger;
+use rocket::{http::Status, serde::json::Json, State};
 
 #[get("/artists")]
 pub async fn get_artists(pool: &State<DbPool>) -> Result<Json<Vec<Artist>>, Status> {
@@ -27,7 +28,11 @@ pub async fn get_artist(pool: &State<DbPool>, id: i32) -> Result<Json<Option<Art
 }
 
 #[post("/artists", data = "<artist>")]
-pub async fn create_artist(pool: &State<DbPool>, artist: Json<CreateArtist>) -> Result<Json<i32>, Status> {
+pub async fn create_artist(
+    pool: &State<DbPool>,
+    artist: Json<CreateArtist>,
+    _moderator: ModeratorUser,
+) -> Result<Json<i32>, Status> {
     match ArtistService::create_artist(pool, artist.into_inner()).await {
         Ok(id) => Ok(Json(id)),
         Err(e) => {
@@ -38,7 +43,12 @@ pub async fn create_artist(pool: &State<DbPool>, artist: Json<CreateArtist>) -> 
 }
 
 #[put("/artists/<id>", data = "<artist>")]
-pub async fn update_artist(pool: &State<DbPool>, id: i32, artist: Json<UpdateArtist>) -> Result<Json<u64>, Status> {
+pub async fn update_artist(
+    pool: &State<DbPool>,
+    id: i32,
+    artist: Json<UpdateArtist>,
+    _moderator: ModeratorUser,
+) -> Result<Json<u64>, Status> {
     match ArtistService::update_artist(pool, id, artist.into_inner()).await {
         Ok(rows) => Ok(Json(rows)),
         Err(e) => {
@@ -49,7 +59,11 @@ pub async fn update_artist(pool: &State<DbPool>, id: i32, artist: Json<UpdateArt
 }
 
 #[delete("/artists/<id>")]
-pub async fn delete_artist(pool: &State<DbPool>, id: i32) -> Result<Json<u64>, Status> {
+pub async fn delete_artist(
+    pool: &State<DbPool>,
+    id: i32,
+    _moderator: ModeratorUser,
+) -> Result<Json<u64>, Status> {
     match ArtistService::delete_artist(pool, id).await {
         Ok(rows) => Ok(Json(rows)),
         Err(e) => {

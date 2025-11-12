@@ -1,4 +1,5 @@
 use rocket::{State, serde::json::Json, http::Status};
+use crate::auth::ModeratorUser;
 use crate::db::DbPool;
 use crate::logger::Logger;
 use super::model::{Piece, CreatePiece};
@@ -38,7 +39,11 @@ pub async fn get_pieces_by_composer(pool: &State<DbPool>, composer_id: i32) -> R
 }
 
 #[post("/pieces", data = "<piece>")]
-pub async fn create_piece(pool: &State<DbPool>, piece: Json<CreatePiece>) -> Result<Json<i32>, Status> {
+pub async fn create_piece(
+    pool: &State<DbPool>,
+    piece: Json<CreatePiece>,
+    _moderator: ModeratorUser,
+) -> Result<Json<i32>, Status> {
     match PieceService::create_piece(pool, piece.into_inner()).await {
         Ok(id) => Ok(Json(id)),
         Err(e) => {
@@ -49,7 +54,11 @@ pub async fn create_piece(pool: &State<DbPool>, piece: Json<CreatePiece>) -> Res
 }
 
 #[delete("/pieces/<id>")]
-pub async fn delete_piece(pool: &State<DbPool>, id: i32) -> Result<Json<u64>, Status> {
+pub async fn delete_piece(
+    pool: &State<DbPool>,
+    id: i32,
+    _moderator: ModeratorUser,
+) -> Result<Json<u64>, Status> {
     match PieceService::delete_piece(pool, id).await {
         Ok(rows) => Ok(Json(rows)),
         Err(e) => {

@@ -1,4 +1,5 @@
 use crate::db::DbPool;
+use crate::auth::ModeratorUser;
 use crate::logger::Logger;
 use super::model::{Performance, CreatePerformance, UpdatePerformance};
 use super::service::PerformanceService;
@@ -51,7 +52,11 @@ pub async fn get_artist_performances(pool: &State<DbPool>, artist_id: i32) -> Re
 }
 
 #[post("/performances", data = "<performance>")]
-pub async fn create_performance(pool: &State<DbPool>, performance: Json<CreatePerformance>) -> Result<Json<u64>, Status> {
+pub async fn create_performance(
+    pool: &State<DbPool>,
+    performance: Json<CreatePerformance>,
+    _moderator: ModeratorUser,
+) -> Result<Json<u64>, Status> {
     match PerformanceService::create_performance(pool, performance.into_inner()).await {
         Ok(id) => {
             Logger::success("API", &format!("Performance created with id: {}", id));
@@ -65,7 +70,12 @@ pub async fn create_performance(pool: &State<DbPool>, performance: Json<CreatePe
 }
 
 #[put("/performances/<id>", data = "<performance>")]
-pub async fn update_performance(pool: &State<DbPool>, id: i32, performance: Json<UpdatePerformance>) -> Result<Json<u64>, Status> {
+pub async fn update_performance(
+    pool: &State<DbPool>,
+    id: i32,
+    performance: Json<UpdatePerformance>,
+    _moderator: ModeratorUser,
+) -> Result<Json<u64>, Status> {
     match PerformanceService::update_performance(pool, id, performance.into_inner()).await {
         Ok(rows) if rows > 0 => {
             Logger::success("API", &format!("Performance {} updated", id));
@@ -80,7 +90,11 @@ pub async fn update_performance(pool: &State<DbPool>, id: i32, performance: Json
 }
 
 #[delete("/performances/<id>")]
-pub async fn delete_performance(pool: &State<DbPool>, id: i32) -> Result<Json<u64>, Status> {
+pub async fn delete_performance(
+    pool: &State<DbPool>,
+    id: i32,
+    _moderator: ModeratorUser,
+) -> Result<Json<u64>, Status> {
     match PerformanceService::delete_performance(pool, id).await {
         Ok(rows) if rows > 0 => {
             Logger::success("API", &format!("Performance {} deleted", id));
