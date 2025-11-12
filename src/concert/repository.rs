@@ -1,7 +1,7 @@
+use super::model::{Concert, CreateConcert, UpdateConcert};
 use crate::db::DbPool;
-use super::model::{Concert, CreateConcert, UpdateConcert, UserConcertRating};
-use sqlx::Error;
 use rust_decimal::Decimal;
+use sqlx::Error;
 
 pub struct ConcertRepository;
 
@@ -81,7 +81,7 @@ impl ConcertRepository {
             "UPDATE concerts SET title = ?, composer_info = ?, venue_id = ?, 
              concert_date = ?, concert_time = ?, price_info = ?, poster_url = ?, 
              program = ?, ticket_url = ?, is_recommended = ?, status = ?
-             WHERE id = ?"
+             WHERE id = ?",
         )
         .bind(concert.title.unwrap_or(current.title))
         .bind(concert.composer_info.or(current.composer_info))
@@ -110,11 +110,16 @@ impl ConcertRepository {
         Ok(result.rows_affected())
     }
 
-    pub async fn submit_rating(pool: &DbPool, user_id: i32, concert_id: i32, rating: f32) -> Result<(), Error> {
+    pub async fn submit_rating(
+        pool: &DbPool,
+        user_id: i32,
+        concert_id: i32,
+        rating: f32,
+    ) -> Result<(), Error> {
         sqlx::query(
             "INSERT INTO user_concert_ratings (user_id, concert_id, rating)
              VALUES (?, ?, ?)
-             ON DUPLICATE KEY UPDATE rating = ?, updated_at = CURRENT_TIMESTAMP"
+             ON DUPLICATE KEY UPDATE rating = ?, updated_at = CURRENT_TIMESTAMP",
         )
         .bind(user_id)
         .bind(concert_id)
@@ -129,9 +134,13 @@ impl ConcertRepository {
         Ok(())
     }
 
-    pub async fn get_user_rating(pool: &DbPool, user_id: i32, concert_id: i32) -> Result<Option<Decimal>, Error> {
+    pub async fn get_user_rating(
+        pool: &DbPool,
+        user_id: i32,
+        concert_id: i32,
+    ) -> Result<Option<Decimal>, Error> {
         let result: Option<(Decimal,)> = sqlx::query_as(
-            "SELECT rating FROM user_concert_ratings WHERE user_id = ? AND concert_id = ?"
+            "SELECT rating FROM user_concert_ratings WHERE user_id = ? AND concert_id = ?",
         )
         .bind(user_id)
         .bind(concert_id)
@@ -146,7 +155,7 @@ impl ConcertRepository {
             "UPDATE concerts c
              SET rating = (SELECT AVG(rating) FROM user_concert_ratings WHERE concert_id = ?),
                  rating_count = (SELECT COUNT(*) FROM user_concert_ratings WHERE concert_id = ?)
-             WHERE id = ?"
+             WHERE id = ?",
         )
         .bind(concert_id)
         .bind(concert_id)
