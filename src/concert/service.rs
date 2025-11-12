@@ -1,6 +1,7 @@
 use crate::db::DbPool;
 use super::model::{Concert, CreateConcert, UpdateConcert};
 use super::repository::ConcertRepository;
+use rust_decimal::Decimal;
 
 pub struct ConcertService;
 
@@ -37,6 +38,21 @@ impl ConcertService {
 
     pub async fn delete_concert(pool: &DbPool, id: i32) -> Result<u64, String> {
         ConcertRepository::delete(pool, id)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn submit_rating(pool: &DbPool, user_id: i32, concert_id: i32, rating: f32) -> Result<(), String> {
+        if rating < 0.0 || rating > 5.0 {
+            return Err("Rating must be between 0.0 and 5.0".to_string());
+        }
+        ConcertRepository::submit_rating(pool, user_id, concert_id, rating)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn get_user_rating(pool: &DbPool, user_id: i32, concert_id: i32) -> Result<Option<Decimal>, String> {
+        ConcertRepository::get_user_rating(pool, user_id, concert_id)
             .await
             .map_err(|e| e.to_string())
     }
