@@ -19,7 +19,7 @@ use dotenv::dotenv;
 use logger::Logger;
 use rocket::fs::FileServer;
 use rocket::http::Method;
-use rocket_cors::{AllowedOrigins, CorsOptions};
+use rocket_cors::{AllowedOrigins, AllowedHeaders, CorsOptions};
 
 #[launch]
 async fn rocket() -> _ {
@@ -44,7 +44,9 @@ async fn rocket() -> _ {
                 .map(From::from)
                 .collect(),
         )
+        .allowed_headers(AllowedHeaders::all())
         .allow_credentials(true)
+        .max_age(Some(3600))
         .to_cors()
         .expect("Failed to create CORS");
 
