@@ -1,4 +1,4 @@
-use super::model::{Concert, CreateConcert, UpdateConcert};
+use super::model::{Concert, CreateConcert, UpdateConcert, ConcertWithArtists, ConcertArtist};
 use crate::db::DbPool;
 use rust_decimal::Decimal;
 use sqlx::Error;
@@ -8,21 +8,46 @@ pub struct ConcertRepository;
 impl ConcertRepository {
     pub async fn find_all(pool: &DbPool) -> Result<Vec<Concert>, Error> {
         sqlx::query_as::<_, Concert>(
-            "SELECT id, title, composer_info, venue_id, 
+            "SELECT id, title, composer_info, venue_id,
              DATE_FORMAT(concert_date, '%Y-%m-%d') as concert_date,
-             TIME_FORMAT(concert_time, '%H:%i:%s') as concert_time,
-             price_info, poster_url, program, ticket_url, is_recommended, status, rating, rating_count 
+             TIME_FORMAT(concert_time, '%H:%i') as concert_time,
+             price_info, poster_url, program, ticket_url, is_recommended, status, rating, rating_count
              FROM concerts"
         )
             .fetch_all(pool)
             .await
     }
 
+    pub async fn find_all_with_artists(pool: &DbPool) -> Result<Vec<ConcertWithArtists>, Error> {
+        let concerts = Self::find_all(pool).await?;
+        let mut result = Vec::new();
+
+        for concert in concerts {
+            let artists = Self::find_artists_by_concert(pool, concert.id).await?;
+            result.push(ConcertWithArtists { concert, artists });
+        }
+
+        Ok(result)
+    }
+
+    pub async fn find_artists_by_concert(pool: &DbPool, concert_id: i32) -> Result<Vec<ConcertArtist>, Error> {
+        sqlx::query_as::<_, ConcertArtist>(
+            "SELECT ca.id, ca.concert_id, ca.artist_id, a.name as artist_name, ca.role
+             FROM concert_artists ca
+             INNER JOIN artists a ON ca.artist_id = a.id
+             WHERE ca.concert_id = ?
+             ORDER BY ca.id"
+        )
+        .bind(concert_id)
+        .fetch_all(pool)
+        .await
+    }
+
     pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<Concert>, Error> {
         sqlx::query_as::<_, Concert>(
             "SELECT id, title, composer_info, venue_id,
              DATE_FORMAT(concert_date, '%Y-%m-%d') as concert_date,
-             TIME_FORMAT(concert_time, '%H:%i:%s') as concert_time,
+             TIME_FORMAT(concert_time, '%H:%i') as concert_time,
              price_info, poster_url, program, ticket_url, is_recommended, status, rating, rating_count
              FROM concerts WHERE id = ?"
         )
@@ -31,11 +56,22 @@ impl ConcertRepository {
             .await
     }
 
+    pub async fn find_by_id_with_artists(pool: &DbPool, id: i32) -> Result<Option<ConcertWithArtists>, Error> {
+        let concert_opt = Self::find_by_id(pool, id).await?;
+
+        if let Some(concert) = concert_opt {
+            let artists = Self::find_artists_by_concert(pool, id).await?;
+            Ok(Some(ConcertWithArtists { concert, artists }))
+        } else {
+            Ok(None)
+        }
+    }
+
     pub async fn find_by_artist(pool: &DbPool, artist_id: i32) -> Result<Vec<Concert>, Error> {
         sqlx::query_as::<_, Concert>(
             "SELECT c.id, c.title, c.composer_info, c.venue_id,
              DATE_FORMAT(c.concert_date, '%Y-%m-%d') as concert_date,
-             TIME_FORMAT(c.concert_time, '%H:%i:%s') as concert_time,
+             TIME_FORMAT(c.concert_time, '%H:%i') as concert_time,
              c.price_info, c.poster_url, c.program, c.ticket_url, c.is_recommended, c.status, c.rating, c.rating_count
              FROM concerts c
              INNER JOIN concert_artists ca ON c.id = ca.concert_id
