@@ -50,14 +50,14 @@ impl PieceRepository {
         let result = sqlx::query(
             "UPDATE pieces SET
                 title = COALESCE(?, title),
-                description = ?,
-                opus_number = ?,
-                composition_year = ?,
-                difficulty_level = ?,
-                duration_minutes = ?,
-                spotify_url = ?,
-                apple_music_url = ?,
-                youtube_music_url = ?
+                description = COALESCE(?, description),
+                opus_number = COALESCE(?, opus_number),
+                composition_year = COALESCE(?, composition_year),
+                difficulty_level = COALESCE(?, difficulty_level),
+                duration_minutes = COALESCE(?, duration_minutes),
+                spotify_url = COALESCE(?, spotify_url),
+                apple_music_url = COALESCE(?, apple_music_url),
+                youtube_music_url = COALESCE(?, youtube_music_url)
              WHERE id = ?"
         )
         .bind(&piece.title)
