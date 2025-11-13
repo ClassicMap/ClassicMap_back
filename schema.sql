@@ -111,6 +111,7 @@ CREATE TABLE artists (
     nationality VARCHAR(50) NOT NULL COMMENT '국적',
     bio TEXT COMMENT '소개',
     style TEXT COMMENT '연주 스타일',
+    awards TEXT COMMENT '수상 경력 (형식: year:name|year:name)',
     concert_count INT DEFAULT 0 COMMENT '공연 횟수',
     country_count INT DEFAULT 0 COMMENT '공연 국가 수',
     album_count INT DEFAULT 0 COMMENT '음반 수',

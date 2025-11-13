@@ -23,8 +23,8 @@ impl ArtistRepository {
         }
     pub async fn create(pool: &DbPool, artist: CreateArtist) -> Result<i32, Error> {
         let result = sqlx::query(
-            "INSERT INTO artists (name, english_name, category, tier, nationality, rating, image_url, cover_image_url, birth_year, bio, style, concert_count, country_count, album_count)
-             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            "INSERT INTO artists (name, english_name, category, tier, nationality, rating, image_url, cover_image_url, birth_year, bio, style, awards, concert_count, country_count, album_count)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         )
         .bind(&artist.name)
         .bind(&artist.english_name)
@@ -37,6 +37,7 @@ impl ArtistRepository {
         .bind(&artist.birth_year)
         .bind(&artist.bio)
         .bind(&artist.style)
+        .bind(&artist.awards)
         .bind(artist.concert_count.unwrap_or(0))
         .bind(artist.country_count.unwrap_or(0))
         .bind(artist.album_count.unwrap_or(0))
@@ -54,8 +55,8 @@ impl ArtistRepository {
         let current = current.unwrap();
 
         let result = sqlx::query(
-            "UPDATE artists SET name = ?, english_name = ?, category = ?, tier = ?, nationality = ?, 
-             rating = ?, image_url = ?, cover_image_url = ?, birth_year = ?, bio = ?, style = ?,
+            "UPDATE artists SET name = ?, english_name = ?, category = ?, tier = ?, nationality = ?,
+             rating = ?, image_url = ?, cover_image_url = ?, birth_year = ?, bio = ?, style = ?, awards = ?,
              concert_count = ?, country_count = ?, album_count = ?
              WHERE id = ?"
         )
@@ -70,6 +71,7 @@ impl ArtistRepository {
         .bind(artist.birth_year.or(current.birth_year))
         .bind(artist.bio.or(current.bio))
         .bind(artist.style.or(current.style))
+        .bind(artist.awards.or(current.awards))
         .bind(artist.concert_count.unwrap_or(current.concert_count))
         .bind(artist.country_count.unwrap_or(current.country_count))
         .bind(artist.album_count.unwrap_or(current.album_count))
