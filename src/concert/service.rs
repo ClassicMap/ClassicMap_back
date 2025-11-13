@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Concert, CreateConcert, UpdateConcert};
+use super::model::{Concert, CreateConcert, UpdateConcert, ConcertWithArtists};
 use super::repository::ConcertRepository;
 use rust_decimal::Decimal;
 
@@ -12,8 +12,20 @@ impl ConcertService {
             .map_err(|e| e.to_string())
     }
 
+    pub async fn get_all_concerts_with_artists(pool: &DbPool) -> Result<Vec<ConcertWithArtists>, String> {
+        ConcertRepository::find_all_with_artists(pool)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
     pub async fn get_concert_by_id(pool: &DbPool, id: i32) -> Result<Option<Concert>, String> {
         ConcertRepository::find_by_id(pool, id)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn get_concert_by_id_with_artists(pool: &DbPool, id: i32) -> Result<Option<ConcertWithArtists>, String> {
+        ConcertRepository::find_by_id_with_artists(pool, id)
             .await
             .map_err(|e| e.to_string())
     }

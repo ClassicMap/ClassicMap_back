@@ -1,4 +1,4 @@
-use super::model::{Concert, CreateConcert, SubmitRating, UpdateConcert};
+use super::model::{Concert, CreateConcert, SubmitRating, UpdateConcert, ConcertWithArtists};
 use super::service::ConcertService;
 use crate::auth::{AuthenticatedUser, ModeratorUser};
 use crate::db::DbPool;
@@ -7,8 +7,8 @@ use rocket::{http::Status, serde::json::Json, State};
 use rust_decimal::Decimal;
 
 #[get("/concerts")]
-pub async fn get_concerts(pool: &State<DbPool>) -> Result<Json<Vec<Concert>>, Status> {
-    match ConcertService::get_all_concerts(pool).await {
+pub async fn get_concerts(pool: &State<DbPool>) -> Result<Json<Vec<ConcertWithArtists>>, Status> {
+    match ConcertService::get_all_concerts_with_artists(pool).await {
         Ok(concerts) => Ok(Json(concerts)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get concerts: {}", e));
@@ -18,8 +18,8 @@ pub async fn get_concerts(pool: &State<DbPool>) -> Result<Json<Vec<Concert>>, St
 }
 
 #[get("/concerts/<id>")]
-pub async fn get_concert(pool: &State<DbPool>, id: i32) -> Result<Json<Option<Concert>>, Status> {
-    match ConcertService::get_concert_by_id(pool, id).await {
+pub async fn get_concert(pool: &State<DbPool>, id: i32) -> Result<Json<Option<ConcertWithArtists>>, Status> {
+    match ConcertService::get_concert_by_id_with_artists(pool, id).await {
         Ok(concert) => Ok(Json(concert)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get concert {}: {}", id, e));

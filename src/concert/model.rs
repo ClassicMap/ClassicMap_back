@@ -23,6 +23,24 @@ pub struct Concert {
 
 #[derive(Debug, Serialize, Deserialize, FromRow)]
 #[serde(rename_all = "camelCase")]
+pub struct ConcertArtist {
+    pub id: i32,
+    pub concert_id: i32,
+    pub artist_id: i32,
+    pub artist_name: String,
+    pub role: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ConcertWithArtists {
+    #[serde(flatten)]
+    pub concert: Concert,
+    pub artists: Vec<ConcertArtist>,
+}
+
+#[derive(Debug, Serialize, Deserialize, FromRow)]
+#[serde(rename_all = "camelCase")]
 pub struct UserConcertRating {
     pub id: i32,
     pub user_id: i32,
