@@ -197,7 +197,6 @@ CREATE TABLE concerts (
     price_info VARCHAR(200) COMMENT '가격 정보',
     poster_url VARCHAR(500) COMMENT '포스터 이미지 URL',
     program TEXT COMMENT '프로그램 상세',
-    is_recommended BOOLEAN DEFAULT FALSE COMMENT '추천 공연 여부',
     ticket_url VARCHAR(500) COMMENT '예매 링크',
     status ENUM('upcoming', 'ongoing', 'completed', 'cancelled') DEFAULT 'upcoming',
     rating DECIMAL(2,1) DEFAULT 0.0 COMMENT '평균 평점 (0.0-5.0)',
@@ -207,7 +206,6 @@ CREATE TABLE concerts (
     FOREIGN KEY (venue_id) REFERENCES venues(id) ON DELETE RESTRICT,
     INDEX idx_concert_date (concert_date),
     INDEX idx_status (status),
-    INDEX idx_recommended (is_recommended),
     INDEX idx_rating (rating)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 

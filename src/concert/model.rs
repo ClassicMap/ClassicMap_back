@@ -15,7 +15,6 @@ pub struct Concert {
     pub poster_url: Option<String>,
     pub program: Option<String>,
     pub ticket_url: Option<String>,
-    pub is_recommended: bool,
     pub status: String,
     pub rating: Option<Decimal>,
     pub rating_count: Option<i32>,
@@ -66,7 +65,6 @@ pub struct CreateConcert {
     pub poster_url: Option<String>,
     pub program: Option<String>,
     pub ticket_url: Option<String>,
-    pub is_recommended: bool,
     pub status: String,
 }
 
@@ -82,6 +80,5 @@ pub struct UpdateConcert {
     pub poster_url: Option<String>,
     pub program: Option<String>,
     pub ticket_url: Option<String>,
-    pub is_recommended: Option<bool>,
     pub status: Option<String>,
 }
