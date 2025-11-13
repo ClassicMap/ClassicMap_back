@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Artist, CreateArtist, UpdateArtist};
+use super::model::{Artist, CreateArtist, UpdateArtist, ArtistWithAwards, ArtistAward, CreateArtistAward};
 use sqlx::Error;
 
 pub struct ArtistRepository;
@@ -23,8 +23,8 @@ impl ArtistRepository {
         }
     pub async fn create(pool: &DbPool, artist: CreateArtist) -> Result<i32, Error> {
         let result = sqlx::query(
-            "INSERT INTO artists (name, english_name, category, tier, nationality, rating, image_url, cover_image_url, birth_year, bio, style, awards, concert_count, country_count, album_count)
-             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            "INSERT INTO artists (name, english_name, category, tier, nationality, rating, image_url, cover_image_url, birth_year, bio, style, concert_count, country_count, album_count)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         )
         .bind(&artist.name)
         .bind(&artist.english_name)
@@ -37,7 +37,6 @@ impl ArtistRepository {
         .bind(&artist.birth_year)
         .bind(&artist.bio)
         .bind(&artist.style)
-        .bind(&artist.awards)
         .bind(artist.concert_count.unwrap_or(0))
         .bind(artist.country_count.unwrap_or(0))
         .bind(artist.album_count.unwrap_or(0))
@@ -56,7 +55,7 @@ impl ArtistRepository {
 
         let result = sqlx::query(
             "UPDATE artists SET name = ?, english_name = ?, category = ?, tier = ?, nationality = ?,
-             rating = ?, image_url = ?, cover_image_url = ?, birth_year = ?, bio = ?, style = ?, awards = ?,
+             rating = ?, image_url = ?, cover_image_url = ?, birth_year = ?, bio = ?, style = ?,
              concert_count = ?, country_count = ?, album_count = ?
              WHERE id = ?"
         )
@@ -71,7 +70,6 @@ impl ArtistRepository {
         .bind(artist.birth_year.or(current.birth_year))
         .bind(artist.bio.or(current.bio))
         .bind(artist.style.or(current.style))
-        .bind(artist.awards.or(current.awards))
         .bind(artist.concert_count.unwrap_or(current.concert_count))
         .bind(artist.country_count.unwrap_or(current.country_count))
         .bind(artist.album_count.unwrap_or(current.album_count))
@@ -85,6 +83,61 @@ impl ArtistRepository {
     pub async fn delete(pool: &DbPool, id: i32) -> Result<u64, Error> {
         let result = sqlx::query("DELETE FROM artists WHERE id = ?")
             .bind(id)
+            .execute(pool)
+            .await?;
+
+        Ok(result.rows_affected())
+    }
+
+    // Artist with awards
+    pub async fn find_by_id_with_awards(pool: &DbPool, id: i32) -> Result<Option<ArtistWithAwards>, Error> {
+        let artist_opt = Self::find_by_id(pool, id).await?;
+
+        if let Some(artist) = artist_opt {
+            let awards = Self::find_awards_by_artist(pool, id).await?;
+            Ok(Some(ArtistWithAwards { artist, awards }))
+        } else {
+            Ok(None)
+        }
+    }
+
+    // Award CRUD
+    pub async fn find_awards_by_artist(pool: &DbPool, artist_id: i32) -> Result<Vec<ArtistAward>, Error> {
+        sqlx::query_as::<_, ArtistAward>(
+            "SELECT * FROM artist_awards WHERE artist_id = ? ORDER BY display_order, year DESC"
+        )
+        .bind(artist_id)
+        .fetch_all(pool)
+        .await
+    }
+
+    pub async fn create_award(pool: &DbPool, artist_id: i32, award: CreateArtistAward) -> Result<i32, Error> {
+        let result = sqlx::query(
+            "INSERT INTO artist_awards (artist_id, year, award_name, display_order)
+             VALUES (?, ?, ?, ?)"
+        )
+        .bind(artist_id)
+        .bind(&award.year)
+        .bind(&award.award_name)
+        .bind(award.display_order.unwrap_or(0))
+        .execute(pool)
+        .await?;
+
+        Ok(result.last_insert_id() as i32)
+    }
+
+    pub async fn delete_award(pool: &DbPool, award_id: i32) -> Result<u64, Error> {
+        let result = sqlx::query("DELETE FROM artist_awards WHERE id = ?")
+            .bind(award_id)
+            .execute(pool)
+            .await?;
+
+        Ok(result.rows_affected())
+    }
+
+    pub async fn delete_awards_by_artist(pool: &DbPool, artist_id: i32) -> Result<u64, Error> {
+        let result = sqlx::query("DELETE FROM artist_awards WHERE artist_id = ?")
+            .bind(artist_id)
             .execute(pool)
             .await?;
 
