@@ -83,6 +83,8 @@ async fn rocket() -> _ {
                 artist::create_artist,
                 artist::update_artist,
                 artist::delete_artist,
+                artist::create_artist_award,
+                artist::delete_artist_award,
                 // Concert routes
                 concert::get_concerts,
                 concert::get_concert,

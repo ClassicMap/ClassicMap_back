@@ -21,7 +21,24 @@ pub struct Artist {
     pub country_count: i32,
     pub album_count: i32,
     pub specialties: Option<String>,
-    pub awards: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize, FromRow)]
+#[serde(rename_all = "camelCase")]
+pub struct ArtistAward {
+    pub id: i32,
+    pub artist_id: i32,
+    pub year: String,
+    pub award_name: String,
+    pub display_order: i32,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ArtistWithAwards {
+    #[serde(flatten)]
+    pub artist: Artist,
+    pub awards: Vec<ArtistAward>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -38,7 +55,6 @@ pub struct CreateArtist {
     pub birth_year: Option<String>,
     pub bio: Option<String>,
     pub style: Option<String>,
-    pub awards: Option<String>,
     pub concert_count: Option<i32>,
     pub country_count: Option<i32>,
     pub album_count: Option<i32>,
@@ -58,8 +74,15 @@ pub struct UpdateArtist {
     pub birth_year: Option<String>,
     pub bio: Option<String>,
     pub style: Option<String>,
-    pub awards: Option<String>,
     pub concert_count: Option<i32>,
     pub country_count: Option<i32>,
     pub album_count: Option<i32>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct CreateArtistAward {
+    pub year: String,
+    pub award_name: String,
+    pub display_order: Option<i32>,
 }
