@@ -2,7 +2,7 @@ use rocket::{State, serde::json::Json, http::Status};
 use crate::auth::ModeratorUser;
 use crate::db::DbPool;
 use crate::logger::Logger;
-use super::model::{Piece, CreatePiece};
+use super::model::{Piece, CreatePiece, UpdatePiece};
 use super::service::PieceService;
 
 #[get("/pieces")]
@@ -48,6 +48,22 @@ pub async fn create_piece(
         Ok(id) => Ok(Json(id)),
         Err(e) => {
             Logger::error("API", &format!("Failed to create piece: {}", e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+#[put("/pieces/<id>", data = "<piece>")]
+pub async fn update_piece(
+    pool: &State<DbPool>,
+    id: i32,
+    piece: Json<UpdatePiece>,
+    _moderator: ModeratorUser,
+) -> Result<Json<u64>, Status> {
+    match PieceService::update_piece(pool, id, piece.into_inner()).await {
+        Ok(rows) => Ok(Json(rows)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to update piece {}: {}", id, e));
             Err(Status::InternalServerError)
         }
     }

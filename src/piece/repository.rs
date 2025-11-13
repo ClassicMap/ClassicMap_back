@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Piece, CreatePiece};
+use super::model::{Piece, CreatePiece, UpdatePiece};
 use sqlx::Error;
 
 pub struct PieceRepository;
@@ -44,6 +44,36 @@ impl PieceRepository {
         .await?;
 
         Ok(result.last_insert_id() as i32)
+    }
+
+    pub async fn update(pool: &DbPool, id: i32, piece: UpdatePiece) -> Result<u64, Error> {
+        let result = sqlx::query(
+            "UPDATE pieces SET
+                title = COALESCE(?, title),
+                description = ?,
+                opus_number = ?,
+                composition_year = ?,
+                difficulty_level = ?,
+                duration_minutes = ?,
+                spotify_url = ?,
+                apple_music_url = ?,
+                youtube_music_url = ?
+             WHERE id = ?"
+        )
+        .bind(&piece.title)
+        .bind(&piece.description)
+        .bind(&piece.opus_number)
+        .bind(piece.composition_year)
+        .bind(piece.difficulty_level)
+        .bind(piece.duration_minutes)
+        .bind(&piece.spotify_url)
+        .bind(&piece.apple_music_url)
+        .bind(&piece.youtube_music_url)
+        .bind(id)
+        .execute(pool)
+        .await?;
+
+        Ok(result.rows_affected())
     }
 
     pub async fn delete(pool: &DbPool, id: i32) -> Result<u64, Error> {

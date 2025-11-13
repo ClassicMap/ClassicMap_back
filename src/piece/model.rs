@@ -31,3 +31,17 @@ pub struct CreatePiece {
     pub apple_music_url: Option<String>,
     pub youtube_music_url: Option<String>,
 }
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct UpdatePiece {
+    pub title: Option<String>,
+    pub description: Option<String>,
+    pub opus_number: Option<String>,
+    pub composition_year: Option<i32>,
+    pub difficulty_level: Option<i32>,
+    pub duration_minutes: Option<i32>,
+    pub spotify_url: Option<String>,
+    pub apple_music_url: Option<String>,
+    pub youtube_music_url: Option<String>,
+}
