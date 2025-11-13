@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Piece, CreatePiece};
+use super::model::{Piece, CreatePiece, UpdatePiece};
 use super::repository::PieceRepository;
 
 pub struct PieceService;
@@ -25,6 +25,12 @@ impl PieceService {
 
     pub async fn create_piece(pool: &DbPool, piece: CreatePiece) -> Result<i32, String> {
         PieceRepository::create(pool, piece)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn update_piece(pool: &DbPool, id: i32, piece: UpdatePiece) -> Result<u64, String> {
+        PieceRepository::update(pool, id, piece)
             .await
             .map_err(|e| e.to_string())
     }

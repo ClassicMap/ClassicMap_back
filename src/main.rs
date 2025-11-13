@@ -75,6 +75,7 @@ async fn rocket() -> _ {
                 piece::get_piece,
                 piece::get_pieces_by_composer,
                 piece::create_piece,
+                piece::update_piece,
                 piece::delete_piece,
                 // Artist routes
                 artist::get_artists,
