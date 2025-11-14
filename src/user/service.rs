@@ -172,38 +172,6 @@ impl UserService {
                     }
                 }
             }
-            "user.deleted" => {
-                Logger::info("WEBHOOK", "Processing user.deleted event");
-
-                // 유저 존재 확인
-                let existing_user =
-                    match UserRepository::find_by_clerk_id(pool, &event.data.id).await {
-                        Ok(Some(user)) => user,
-                        Ok(None) => {
-                            Logger::error(
-                                "WEBHOOK",
-                                &format!("User not found for deletion: {}", event.data.id),
-                            );
-                            return Err("User not found".into());
-                        }
-                        Err(e) => {
-                            Logger::error("WEBHOOK", &format!("Failed to find user: {}", e));
-                            return Err(e.to_string());
-                        }
-                    };
-
-                match UserRepository::delete(pool, existing_user.id).await {
-                    Ok(rows) => {
-                        Logger::success("WEBHOOK", &format!("User deleted (rows: {})", rows));
-                        Logger::db("DELETE", &format!("users (clerk_id: {})", event.data.id));
-                        Ok(())
-                    }
-                    Err(e) => {
-                        Logger::error("WEBHOOK", &format!("Failed to delete user: {}", e));
-                        Err(e.to_string())
-                    }
-                }
-            }
             _ => {
                 Logger::warn(
                     "WEBHOOK",
