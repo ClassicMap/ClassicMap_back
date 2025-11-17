@@ -7,6 +7,7 @@ pub struct Piece {
     pub id: i32,
     pub composer_id: i32,
     pub title: String,
+    pub title_en: Option<String>,
     pub description: Option<String>,
     pub opus_number: Option<String>,
     pub composition_year: Option<i32>,
@@ -22,6 +23,7 @@ pub struct Piece {
 pub struct CreatePiece {
     pub composer_id: i32,
     pub title: String,
+    pub title_en: Option<String>,
     pub description: Option<String>,
     pub opus_number: Option<String>,
     pub composition_year: Option<i32>,
@@ -36,6 +38,7 @@ pub struct CreatePiece {
 #[serde(rename_all = "camelCase")]
 pub struct UpdatePiece {
     pub title: Option<String>,
+    pub title_en: Option<String>,
     pub description: Option<String>,
     pub opus_number: Option<String>,
     pub composition_year: Option<i32>,
