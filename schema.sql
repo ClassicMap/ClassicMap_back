@@ -64,6 +64,7 @@ CREATE TABLE pieces (
     id INT AUTO_INCREMENT PRIMARY KEY,
     composer_id INT NOT NULL,
     title VARCHAR(300) NOT NULL COMMENT '곡 제목',
+    title_en VARCHAR(300) COMMENT '곡 영문 제목',
     description TEXT COMMENT '곡 설명',
     opus_number VARCHAR(50) COMMENT 'Opus 번호',
     composition_year INT COMMENT '작곡 연도',
