@@ -8,6 +8,8 @@ pub struct Piece {
     pub composer_id: i32,
     pub title: String,
     pub title_en: Option<String>,
+    #[serde(rename = "type")]
+    pub r#type: String,
     pub description: Option<String>,
     pub opus_number: Option<String>,
     pub composition_year: Option<i32>,
@@ -24,6 +26,8 @@ pub struct CreatePiece {
     pub composer_id: i32,
     pub title: String,
     pub title_en: Option<String>,
+    #[serde(rename = "type")]
+    pub r#type: String,
     pub description: Option<String>,
     pub opus_number: Option<String>,
     pub composition_year: Option<i32>,
@@ -39,6 +43,8 @@ pub struct CreatePiece {
 pub struct UpdatePiece {
     pub title: Option<String>,
     pub title_en: Option<String>,
+    #[serde(rename = "type")]
+    pub r#type: Option<String>,
     pub description: Option<String>,
     pub opus_number: Option<String>,
     pub composition_year: Option<i32>,
