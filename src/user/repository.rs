@@ -34,7 +34,7 @@ impl UserRepository {
 
     pub async fn create(pool: &DbPool, user: CreateUser) -> Result<i32, Error> {
         let role = user.role.as_deref().unwrap_or("user");
-        
+
         let result = sqlx::query(
             "INSERT INTO users (clerk_id, email, role, favorite_era) 
              VALUES (?, ?, ?, ?)",

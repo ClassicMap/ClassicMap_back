@@ -11,13 +11,11 @@ mod logger;
 mod performance;
 mod piece;
 mod recording;
-mod upload;
 mod user;
 mod venue;
 
 use dotenv::dotenv;
 use logger::Logger;
-use rocket::fs::FileServer;
 use rocket::http::Method;
 use rocket_cors::{AllowedHeaders, AllowedOrigins, CorsOptions};
 
@@ -60,7 +58,6 @@ async fn rocket() -> _ {
         .manage(pool)
         .attach(cors)
         .mount("/", routes![config::favicon])
-        .mount("/uploads", FileServer::from("static/uploads"))
         .mount(
             "/api",
             routes![
@@ -123,12 +120,6 @@ async fn rocket() -> _ {
                 venue::create_venue,
                 venue::update_venue,
                 venue::delete_venue,
-                // Upload routes
-                upload::upload_composer_avatar,
-                upload::upload_composer_cover,
-                upload::upload_artist_avatar,
-                upload::upload_artist_cover,
-                upload::upload_concert_poster,
             ],
         )
 }
