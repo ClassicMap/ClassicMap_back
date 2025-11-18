@@ -65,6 +65,7 @@ CREATE TABLE pieces (
     composer_id INT NOT NULL,
     title VARCHAR(300) NOT NULL COMMENT '곡 제목',
     title_en VARCHAR(300) COMMENT '곡 영문 제목',
+    type ENUM('album', 'song') NOT NULL DEFAULT 'song' COMMENT '곡 타입 (album: 앨범/모음집, song: 단일곡)',
     description TEXT COMMENT '곡 설명',
     opus_number VARCHAR(50) COMMENT 'Opus 번호',
     composition_year INT COMMENT '작곡 연도',
@@ -77,6 +78,7 @@ CREATE TABLE pieces (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (composer_id) REFERENCES composers(id) ON DELETE CASCADE,
     INDEX idx_composer_id (composer_id),
+    INDEX idx_type (type),
     INDEX idx_difficulty_level (difficulty_level)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -504,7 +506,7 @@ GROUP BY c.id;
 
 -- 곡과 연주 정보 뷰
 CREATE VIEW v_pieces_with_performances AS
-SELECT 
+SELECT
     p.*,
     c.name as composer_name,
     c.period as composer_period,
@@ -513,4 +515,12 @@ FROM pieces p
 JOIN composers c ON p.composer_id = c.id
 LEFT JOIN performances perf ON p.id = perf.piece_id
 GROUP BY p.id;
+
+-- ============================================
+-- ALTER 문: 기존 테이블에 type 컬럼 추가
+-- ============================================
+-- pieces 테이블에 type 컬럼 추가 (기존 테이블 수정 시 사용)
+ALTER TABLE pieces
+ADD COLUMN type ENUM('album', 'song') NOT NULL DEFAULT 'song' COMMENT '곡 타입 (album: 앨범/모음집, song: 단일곡)' AFTER title_en,
+ADD INDEX idx_type (type);
 

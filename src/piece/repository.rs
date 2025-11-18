@@ -27,12 +27,13 @@ impl PieceRepository {
 
     pub async fn create(pool: &DbPool, piece: CreatePiece) -> Result<i32, Error> {
         let result = sqlx::query(
-            "INSERT INTO pieces (composer_id, title, title_en, description, opus_number, composition_year, difficulty_level, duration_minutes, spotify_url, apple_music_url, youtube_music_url)
-             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            "INSERT INTO pieces (composer_id, title, title_en, type, description, opus_number, composition_year, difficulty_level, duration_minutes, spotify_url, apple_music_url, youtube_music_url)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         )
         .bind(piece.composer_id)
         .bind(&piece.title)
         .bind(&piece.title_en)
+        .bind(&piece.r#type)
         .bind(&piece.description)
         .bind(&piece.opus_number)
         .bind(piece.composition_year)
@@ -52,6 +53,7 @@ impl PieceRepository {
             "UPDATE pieces SET
                 title = COALESCE(?, title),
                 title_en = COALESCE(?, title_en),
+                type = COALESCE(?, type),
                 description = COALESCE(?, description),
                 opus_number = COALESCE(?, opus_number),
                 composition_year = COALESCE(?, composition_year),
@@ -64,6 +66,7 @@ impl PieceRepository {
         )
         .bind(&piece.title)
         .bind(&piece.title_en)
+        .bind(&piece.r#type)
         .bind(&piece.description)
         .bind(&piece.opus_number)
         .bind(piece.composition_year)
