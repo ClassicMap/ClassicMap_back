@@ -44,7 +44,6 @@ CREATE TABLE composers (
     birth_year INT NOT NULL,
     death_year INT,
     nationality VARCHAR(50) NOT NULL COMMENT '국적',
-    image_url VARCHAR(500) COMMENT '프로필 이미지 URL',
     avatar_url VARCHAR(500) COMMENT '아바타 이미지 URL',
     cover_image_url VARCHAR(500) COMMENT '커버 이미지 URL',
     bio TEXT COMMENT '소개',
