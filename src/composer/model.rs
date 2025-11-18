@@ -18,6 +18,7 @@ pub struct Composer {
     pub bio: Option<String>,
     pub style: Option<String>,
     pub influence: Option<String>,
+    pub piece_count: Option<i64>,
 }
 
 #[derive(Debug, Serialize, Deserialize, FromRow)]
