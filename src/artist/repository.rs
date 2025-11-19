@@ -23,7 +23,7 @@ impl ArtistRepository {
         }
     pub async fn create(pool: &DbPool, artist: CreateArtist) -> Result<i32, Error> {
         let result = sqlx::query(
-            "INSERT INTO artists (name, english_name, category, tier, nationality, rating, image_url, cover_image_url, birth_year, bio, style, concert_count, country_count, album_count)
+            "INSERT INTO artists (name, english_name, category, tier, nationality, rating, image_url, cover_image_url, birth_year, bio, style, concert_count, album_count, top_award_id)
              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         )
         .bind(&artist.name)
@@ -38,8 +38,8 @@ impl ArtistRepository {
         .bind(&artist.bio)
         .bind(&artist.style)
         .bind(artist.concert_count.unwrap_or(0))
-        .bind(artist.country_count.unwrap_or(0))
         .bind(artist.album_count.unwrap_or(0))
+        .bind(artist.top_award_id)
         .execute(pool)
         .await?;
 
@@ -56,7 +56,7 @@ impl ArtistRepository {
         let result = sqlx::query(
             "UPDATE artists SET name = ?, english_name = ?, category = ?, tier = ?, nationality = ?,
              rating = ?, image_url = ?, cover_image_url = ?, birth_year = ?, bio = ?, style = ?,
-             concert_count = ?, country_count = ?, album_count = ?
+             concert_count = ?, album_count = ?, top_award_id = ?
              WHERE id = ?"
         )
         .bind(artist.name.unwrap_or(current.name))
@@ -71,8 +71,8 @@ impl ArtistRepository {
         .bind(artist.bio.or(current.bio))
         .bind(artist.style.or(current.style))
         .bind(artist.concert_count.unwrap_or(current.concert_count))
-        .bind(artist.country_count.unwrap_or(current.country_count))
         .bind(artist.album_count.unwrap_or(current.album_count))
+        .bind(artist.top_award_id.or(current.top_award_id))
         .bind(id)
         .execute(pool)
         .await?;
@@ -113,12 +113,18 @@ impl ArtistRepository {
 
     pub async fn create_award(pool: &DbPool, artist_id: i32, award: CreateArtistAward) -> Result<i32, Error> {
         let result = sqlx::query(
-            "INSERT INTO artist_awards (artist_id, year, award_name, display_order)
-             VALUES (?, ?, ?, ?)"
+            "INSERT INTO artist_awards (artist_id, year, award_name, award_type, organization, category, ranking, source, notes, display_order)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         )
         .bind(artist_id)
         .bind(&award.year)
         .bind(&award.award_name)
+        .bind(&award.award_type)
+        .bind(&award.organization)
+        .bind(&award.category)
+        .bind(&award.ranking)
+        .bind(&award.source)
+        .bind(&award.notes)
         .bind(award.display_order.unwrap_or(0))
         .execute(pool)
         .await?;

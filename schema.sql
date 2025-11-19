@@ -114,13 +114,14 @@ CREATE TABLE artists (
     bio TEXT COMMENT '소개',
     style TEXT COMMENT '연주 스타일',
     concert_count INT DEFAULT 0 COMMENT '공연 횟수',
-    country_count INT DEFAULT 0 COMMENT '공연 국가 수',
     album_count INT DEFAULT 0 COMMENT '음반 수',
+    top_award_id INT COMMENT '대표 수상 ID',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     INDEX idx_category (category),
     INDEX idx_tier (tier),
-    INDEX idx_rating (rating)
+    INDEX idx_rating (rating),
+    INDEX idx_top_award (top_award_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
@@ -143,11 +144,18 @@ CREATE TABLE artist_awards (
     artist_id INT NOT NULL,
     year VARCHAR(10) NOT NULL COMMENT '수상 연도',
     award_name VARCHAR(300) NOT NULL COMMENT '상 이름',
+    award_type VARCHAR(100) COMMENT '수상 타입 (Competition, Industry Award 등)',
+    organization VARCHAR(200) COMMENT '주관 기관 (Grammy, Chopin Institute 등)',
+    category VARCHAR(300) COMMENT '수상 부문 (Best Classical Instrumental Solo 등)',
+    ranking VARCHAR(50) COMMENT '순위 정보 (1st Prize, Gold Medal, Winner 등)',
+    source VARCHAR(100) DEFAULT 'Manual Entry' COMMENT '데이터 출처 (MusicBrainz, Manual Entry 등)',
+    notes TEXT COMMENT '추가 정보',
     display_order INT DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE,
     INDEX idx_artist_id (artist_id),
-    INDEX idx_year (year)
+    INDEX idx_year (year),
+    INDEX idx_award_type (award_type)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
@@ -157,18 +165,45 @@ CREATE TABLE recordings (
     id INT AUTO_INCREMENT PRIMARY KEY,
     artist_id INT NOT NULL,
     title VARCHAR(300) NOT NULL COMMENT '음반 제목',
-    year VARCHAR(10) NOT NULL COMMENT '발매 연도',
+    year VARCHAR(10) NOT NULL COMMENT '발매 연도 (레거시, release_date 권장)',
+    release_date DATE COMMENT '발매일',
     label VARCHAR(100) COMMENT '레이블',
     cover_url VARCHAR(500) COMMENT '커버 이미지 URL',
+
+    -- 식별자
+    upc VARCHAR(20) COMMENT 'Universal Product Code',
+    apple_music_id VARCHAR(100) COMMENT 'Apple Music 앨범 ID',
+
+    -- 트랙 정보
+    track_count INT COMMENT '트랙 수',
+
+    -- 플래그
+    is_single BOOLEAN DEFAULT FALSE COMMENT '싱글 여부',
+    is_compilation BOOLEAN DEFAULT FALSE COMMENT '컴필레이션 여부',
+
+    -- 메타데이터
+    genre_names JSON COMMENT '장르 목록',
+    copyright TEXT COMMENT '저작권 정보',
+    editorial_notes TEXT COMMENT '앨범 설명',
+
+    -- 아트워크
+    artwork_width INT COMMENT '아트워크 너비',
+    artwork_height INT COMMENT '아트워크 높이',
+
+    -- 스트리밍 링크
     spotify_url VARCHAR(500) COMMENT 'Spotify 링크',
     apple_music_url VARCHAR(500) COMMENT 'Apple Music 링크',
     youtube_music_url VARCHAR(500) COMMENT 'YouTube Music 링크',
     external_url VARCHAR(500) COMMENT '기타 외부 링크',
+
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE,
     INDEX idx_artist_id (artist_id),
-    INDEX idx_year (year)
+    INDEX idx_year (year),
+    INDEX idx_release_date (release_date),
+    INDEX idx_apple_music_id (apple_music_id),
+    INDEX idx_upc (upc)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
@@ -394,16 +429,16 @@ INSERT INTO composer_major_pieces (composer_id, piece_id, display_order) VALUES
 (3, 9, 3);
 
 -- 아티스트 샘플 데이터
-INSERT INTO artists (name, english_name, category, tier, rating, nationality, bio, style, concert_count, country_count, album_count) VALUES
+INSERT INTO artists (name, english_name, category, tier, rating, nationality, bio, style, concert_count, album_count, top_award_id) VALUES
 ('조성진', 'Seong-Jin Cho', '피아니스트', 'S', 4.9, '대한민국',
  '2015년 쇼팽 콩쿠르 우승자로, 섬세하고 깊이 있는 해석으로 전 세계 클래식 음악 팬들의 사랑을 받고 있습니다.',
  '섬세하고 시적인 표현, 명료한 터치, 깊이 있는 음악성',
- 120, 35, 8),
+ 120, 8, NULL),
 
 ('임윤찬', 'Yunchan Lim', '피아니스트', 'Rising', 4.8, '대한민국',
  '2022년 반 클라이번 콩쿠르 최연소 우승자. 압도적인 기교와 깊은 음악성으로 세계를 놀라게 한 신성입니다.',
  '압도적 기교, 성숙한 음악성, 깊이 있는 해석',
- 50, 15, 2);
+ 50, 2, NULL);
 
 -- 아티스트 전문 분야
 INSERT INTO artist_specialties (artist_id, specialty) VALUES
@@ -415,10 +450,14 @@ INSERT INTO artist_specialties (artist_id, specialty) VALUES
 (2, '리스트');
 
 -- 아티스트 수상 내역
-INSERT INTO artist_awards (artist_id, year, award_name, display_order) VALUES
-(1, '2015', '쇼팽 국제 피아노 콩쿠르 1위', 1),
-(1, '2011', '차이콥스키 국제 콩쿠르 3위', 2),
-(2, '2022', '반 클라이번 국제 피아노 콩쿠르 1위', 1);
+INSERT INTO artist_awards (artist_id, year, award_name, award_type, organization, category, ranking, display_order) VALUES
+(1, '2015', '쇼팽 국제 피아노 콩쿠르 1위', 'Competition', 'Chopin Institute', 'Piano Competition', '1st Prize', 1),
+(1, '2011', '차이콥스키 국제 콩쿠르 3위', 'Competition', 'Tchaikovsky Foundation', 'Piano Competition', '3rd Prize', 2),
+(2, '2022', '반 클라이번 국제 피아노 콩쿠르 1위', 'Competition', 'Van Cliburn Foundation', 'Piano Competition', '1st Prize', 1);
+
+-- 아티스트 대표 수상 설정 (top_award_id 업데이트)
+UPDATE artists SET top_award_id = 1 WHERE id = 1; -- 조성진 -> 쇼팽 콩쿠르 1위
+UPDATE artists SET top_award_id = 3 WHERE id = 2; -- 임윤찬 -> 반 클라이번 1위
 
 
   -- ============================================
@@ -426,18 +465,18 @@ INSERT INTO artist_awards (artist_id, year, award_name, display_order) VALUES
   -- ============================================
 
   -- 조성진 음반
-  INSERT INTO recordings (artist_id, title, year, label, spotify_url, apple_music_url) VALUES
-  (1, 'Chopin: Piano Concerto No.1', '2016', 'Deutsche Grammophon', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
-  (1, 'Chopin: Ballades & Scherzos', '2017', 'Deutsche Grammophon', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
-  (1, 'Debussy', '2019', 'Deutsche Grammophon', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
-  (1, 'Mozart: Piano Concertos Nos. 20 & 21', '2020', 'Deutsche Grammophon', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
-  (1, 'The Wanderer', '2021', 'Deutsche Grammophon', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...');
+  INSERT INTO recordings (artist_id, title, year, release_date, label, track_count, is_single, genre_names, spotify_url, apple_music_url) VALUES
+  (1, 'Chopin: Piano Concerto No.1', '2016', '2016-01-01', 'Deutsche Grammophon', 8, FALSE, '["Classical", "Concerto"]', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
+  (1, 'Chopin: Ballades & Scherzos', '2017', '2017-01-01', 'Deutsche Grammophon', 8, FALSE, '["Classical", "Piano"]', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
+  (1, 'Debussy', '2019', '2019-10-18', 'Deutsche Grammophon', 15, FALSE, '["Classical", "Impressionist"]', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
+  (1, 'Mozart: Piano Concertos Nos. 20 & 21', '2020', '2020-09-04', 'Deutsche Grammophon', 6, FALSE, '["Classical", "Concerto"]', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
+  (1, 'The Wanderer', '2021', '2021-10-22', 'Deutsche Grammophon', 11, FALSE, '["Classical", "Piano"]', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...');
 
   -- 임윤찬 음반
-  INSERT INTO recordings (artist_id, title, year, label, spotify_url, apple_music_url) VALUES
-  (2, 'Cliburn 2022: Yunchan Lim', '2022', 'Decca', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
-  (2, 'Chopin: Etudes', '2023', 'Decca', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
-  (2, 'Liszt: Transcendental Etudes', '2024', 'Decca', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...');
+  INSERT INTO recordings (artist_id, title, year, release_date, label, track_count, is_single, genre_names, spotify_url, apple_music_url) VALUES
+  (2, 'Cliburn 2022: Yunchan Lim', '2022', '2022-08-26', 'Decca', 12, FALSE, '["Classical", "Piano"]', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
+  (2, 'Chopin: Etudes', '2023', '2023-03-10', 'Decca', 24, FALSE, '["Classical", "Etude"]', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...'),
+  (2, 'Liszt: Transcendental Etudes', '2024', '2024-02-16', 'Decca', 12, FALSE, '["Classical", "Etude"]', 'https://open.spotify.com/album/...', 'https://music.apple.com/album/...');
 
   -- ============================================
   -- 공연-아티스트 연결 데이터
@@ -481,13 +520,17 @@ GROUP BY c.id;
 
 -- 아티스트 전체 정보 뷰
 CREATE VIEW v_artists_full AS
-SELECT 
+SELECT
     a.*,
     GROUP_CONCAT(DISTINCT s.specialty ORDER BY s.specialty SEPARATOR '|') as specialties,
-    GROUP_CONCAT(DISTINCT CONCAT(aw.year, ':', aw.award_name) ORDER BY aw.display_order SEPARATOR '|') as awards
+    GROUP_CONCAT(DISTINCT CONCAT(aw.year, ':', aw.award_name) ORDER BY aw.display_order SEPARATOR '|') as awards,
+    top_aw.award_name as top_award_name,
+    top_aw.year as top_award_year,
+    top_aw.ranking as top_award_ranking
 FROM artists a
 LEFT JOIN artist_specialties s ON a.id = s.artist_id
 LEFT JOIN artist_awards aw ON a.id = aw.artist_id
+LEFT JOIN artist_awards top_aw ON a.top_award_id = top_aw.id
 GROUP BY a.id;
 
 -- 공연 전체 정보 뷰

@@ -18,8 +18,8 @@ pub struct Artist {
     pub bio: Option<String>,
     pub style: Option<String>,
     pub concert_count: i32,
-    pub country_count: i32,
     pub album_count: i32,
+    pub top_award_id: Option<i32>,
     pub specialties: Option<String>,
 }
 
@@ -30,6 +30,12 @@ pub struct ArtistAward {
     pub artist_id: i32,
     pub year: String,
     pub award_name: String,
+    pub award_type: Option<String>,
+    pub organization: Option<String>,
+    pub category: Option<String>,
+    pub ranking: Option<String>,
+    pub source: Option<String>,
+    pub notes: Option<String>,
     pub display_order: i32,
 }
 
@@ -56,8 +62,8 @@ pub struct CreateArtist {
     pub bio: Option<String>,
     pub style: Option<String>,
     pub concert_count: Option<i32>,
-    pub country_count: Option<i32>,
     pub album_count: Option<i32>,
+    pub top_award_id: Option<i32>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -75,8 +81,8 @@ pub struct UpdateArtist {
     pub bio: Option<String>,
     pub style: Option<String>,
     pub concert_count: Option<i32>,
-    pub country_count: Option<i32>,
     pub album_count: Option<i32>,
+    pub top_award_id: Option<i32>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -84,5 +90,11 @@ pub struct UpdateArtist {
 pub struct CreateArtistAward {
     pub year: String,
     pub award_name: String,
+    pub award_type: Option<String>,
+    pub organization: Option<String>,
+    pub category: Option<String>,
+    pub ranking: Option<String>,
+    pub source: Option<String>,
+    pub notes: Option<String>,
     pub display_order: Option<i32>,
 }
