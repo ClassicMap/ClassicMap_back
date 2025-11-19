@@ -41,6 +41,13 @@ impl RecordingRepository {
     }
 
     pub async fn create(pool: &DbPool, recording: CreateRecording) -> Result<u64, Error> {
+        use sqlx::types::chrono::NaiveDate;
+
+        // release_date 문자열을 NaiveDate로 파싱
+        let release_date_parsed = recording.release_date
+            .as_ref()
+            .and_then(|s| NaiveDate::parse_from_str(s, "%Y-%m-%d").ok());
+
         let result = sqlx::query(
             "INSERT INTO recordings (artist_id, title, year, release_date, label, cover_url, upc, apple_music_id,
              track_count, is_single, is_compilation, genre_names, copyright, editorial_notes,
@@ -50,7 +57,7 @@ impl RecordingRepository {
         .bind(recording.artist_id)
         .bind(recording.title)
         .bind(recording.year)
-        .bind(recording.release_date)
+        .bind(release_date_parsed)
         .bind(recording.label)
         .bind(recording.cover_url)
         .bind(recording.upc)
@@ -74,11 +81,18 @@ impl RecordingRepository {
     }
 
     pub async fn update(pool: &DbPool, id: i32, recording: UpdateRecording) -> Result<u64, Error> {
+        use sqlx::types::chrono::NaiveDate;
+
         let current = Self::find_by_id(pool, id).await?;
         if current.is_none() {
             return Ok(0);
         }
         let current = current.unwrap();
+
+        // release_date 문자열을 NaiveDate로 파싱
+        let release_date_parsed = recording.release_date
+            .as_ref()
+            .and_then(|s| NaiveDate::parse_from_str(s, "%Y-%m-%d").ok());
 
         let result = sqlx::query(
             "UPDATE recordings SET title = ?, year = ?, release_date = ?, label = ?, cover_url = ?,
@@ -89,7 +103,7 @@ impl RecordingRepository {
         )
         .bind(recording.title.unwrap_or(current.title))
         .bind(recording.year.unwrap_or(current.year))
-        .bind(recording.release_date.or(current.release_date))
+        .bind(if recording.release_date.is_some() { release_date_parsed } else { current.release_date })
         .bind(recording.label.or(current.label))
         .bind(recording.cover_url.or(current.cover_url))
         .bind(recording.upc.or(current.upc))
