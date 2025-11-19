@@ -42,11 +42,17 @@ impl RecordingRepository {
 
     pub async fn create(pool: &DbPool, recording: CreateRecording) -> Result<u64, Error> {
         use sqlx::types::chrono::NaiveDate;
+        use sqlx::types::JsonValue;
 
         // release_date 문자열을 NaiveDate로 파싱
         let release_date_parsed = recording.release_date
             .as_ref()
             .and_then(|s| NaiveDate::parse_from_str(s, "%Y-%m-%d").ok());
+
+        // genre_names 문자열을 JSON으로 파싱
+        let genre_names_json: Option<JsonValue> = recording.genre_names
+            .as_ref()
+            .and_then(|s| serde_json::from_str(s).ok());
 
         let result = sqlx::query(
             "INSERT INTO recordings (artist_id, title, year, release_date, label, cover_url, upc, apple_music_id,
@@ -65,7 +71,7 @@ impl RecordingRepository {
         .bind(recording.track_count)
         .bind(recording.is_single)
         .bind(recording.is_compilation)
-        .bind(recording.genre_names)
+        .bind(genre_names_json)
         .bind(recording.copyright)
         .bind(recording.editorial_notes)
         .bind(recording.artwork_width)
@@ -82,6 +88,7 @@ impl RecordingRepository {
 
     pub async fn update(pool: &DbPool, id: i32, recording: UpdateRecording) -> Result<u64, Error> {
         use sqlx::types::chrono::NaiveDate;
+        use sqlx::types::JsonValue;
 
         let current = Self::find_by_id(pool, id).await?;
         if current.is_none() {
@@ -93,6 +100,11 @@ impl RecordingRepository {
         let release_date_parsed = recording.release_date
             .as_ref()
             .and_then(|s| NaiveDate::parse_from_str(s, "%Y-%m-%d").ok());
+
+        // genre_names 문자열을 JSON으로 파싱
+        let genre_names_json: Option<JsonValue> = recording.genre_names
+            .as_ref()
+            .and_then(|s| serde_json::from_str(s).ok());
 
         let result = sqlx::query(
             "UPDATE recordings SET title = ?, year = ?, release_date = ?, label = ?, cover_url = ?,
@@ -111,7 +123,7 @@ impl RecordingRepository {
         .bind(recording.track_count.or(current.track_count))
         .bind(recording.is_single.or(current.is_single))
         .bind(recording.is_compilation.or(current.is_compilation))
-        .bind(recording.genre_names.or(current.genre_names))
+        .bind(if recording.genre_names.is_some() { genre_names_json } else { current.genre_names })
         .bind(recording.copyright.or(current.copyright))
         .bind(recording.editorial_notes.or(current.editorial_notes))
         .bind(recording.artwork_width.or(current.artwork_width))

@@ -1,6 +1,7 @@
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 use sqlx::types::chrono::NaiveDate;
+use sqlx::types::JsonValue;
 
 #[derive(Debug, Serialize, Deserialize, FromRow)]
 #[serde(rename_all = "camelCase")]
@@ -18,7 +19,7 @@ pub struct Recording {
     pub track_count: Option<i32>,
     pub is_single: Option<bool>,
     pub is_compilation: Option<bool>,
-    pub genre_names: Option<String>,
+    pub genre_names: Option<JsonValue>,
     pub copyright: Option<String>,
     pub editorial_notes: Option<String>,
     pub artwork_width: Option<i32>,
