@@ -22,6 +22,7 @@ DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS performances;
 DROP TABLE IF EXISTS concert_artists;
 DROP TABLE IF EXISTS concerts;
+DROP TABLE IF EXISTS halls;
 DROP TABLE IF EXISTS venues;
 DROP TABLE IF EXISTS recordings;
 DROP TABLE IF EXISTS artist_awards;
@@ -220,16 +221,59 @@ CREATE TABLE recordings (
 -- 8. 공연장 (Venues) 테이블
 -- ============================================
 CREATE TABLE venues (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    -- 기본 정보
+    id INT AUTO_INCREMENT PRIMARY KEY COMMENT '공연장 ID (자동증가)',
+    kopis_id VARCHAR(20) UNIQUE COMMENT 'KOPIS 공연장 ID (예: FC000517)',
     name VARCHAR(200) NOT NULL COMMENT '공연장명',
-    address VARCHAR(500) COMMENT '주소',
-    city VARCHAR(100) COMMENT '도시',
-    country VARCHAR(50) COMMENT '국가',
-    capacity INT COMMENT '수용 인원',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    INDEX idx_city (city)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+    -- 위치 정보
+    address VARCHAR(500) COMMENT '상세 주소',
+    city VARCHAR(100) COMMENT '시/군/구',
+    province VARCHAR(100) COMMENT '시/도',
+    country VARCHAR(50) DEFAULT '대한민국' COMMENT '국가',
+
+    -- 시설 정보
+    seats INT COMMENT '좌석수',
+    hall_count INT DEFAULT 1 COMMENT '공연장 수',
+    opening_year YEAR COMMENT '개관 연도',
+
+    -- 메타 정보
+    is_active BOOLEAN DEFAULT TRUE COMMENT '운영 여부',
+    data_source VARCHAR(20) DEFAULT 'KOPIS' COMMENT '데이터 출처 (KOPIS, MANUAL 등)',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '생성일시',
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '수정일시',
+
+    -- 인덱스
+    INDEX idx_kopis_id (kopis_id),
+    INDEX idx_name (name),
+    INDEX idx_location (country, province, city),
+    INDEX idx_data_source (data_source)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='공연장 정보 테이블';
+
+-- ============================================
+-- 8-1. 공연홀 (Halls) 테이블 (선택사항: 한 공연장에 여러 홀이 있는 경우)
+-- ============================================
+CREATE TABLE halls (
+    id INT AUTO_INCREMENT PRIMARY KEY COMMENT '공연홀 ID',
+    venue_id INT NOT NULL COMMENT '공연장 ID',
+    kopis_id VARCHAR(20) UNIQUE COMMENT 'KOPIS 공연홀 ID (예: PA0001)',
+    name VARCHAR(200) NOT NULL COMMENT '공연홀명',
+
+    -- 시설 정보
+    seats INT COMMENT '좌석수',
+
+    -- 메타 정보
+    is_active BOOLEAN DEFAULT TRUE COMMENT '운영 여부',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '생성일시',
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '수정일시',
+
+    -- 외래키 및 인덱스
+    FOREIGN KEY (venue_id) REFERENCES venues(id) ON DELETE CASCADE,
+    INDEX idx_venue_id (venue_id),
+    INDEX idx_kopis_id (kopis_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='공연홀 정보 테이블 (한 공연장 내 여러 홀)';
 
 -- ============================================
 -- 9. 공연 (Concerts) 테이블
@@ -392,10 +436,10 @@ CREATE TABLE user_concert_ratings (
 -- ============================================
 
 -- 공연장 샘플 데이터
-INSERT INTO venues (name, city, country, capacity) VALUES
-('롯데콘서트홀', '서울', '대한민국', 2036),
-('예술의전당 콘서트홀', '서울', '대한민국', 2600),
-('세종문화회관', '서울', '대한민국', 3822);
+INSERT INTO venues (kopis_id, name, address, city, province, country, seats, hall_count, opening_year, data_source) VALUES
+(NULL, '롯데콘서트홀', '서울특별시 송파구 올림픽로 240', '송파구', '서울특별시', '대한민국', 2036, 1, 2016, 'MANUAL'),
+(NULL, '예술의전당 콘서트홀', '서울특별시 서초구 남부순환로 2406', '서초구', '서울특별시', '대한민국', 2600, 1, 1988, 'MANUAL'),
+(NULL, '세종문화회관', '서울특별시 종로구 세종대로 175', '종로구', '서울특별시', '대한민국', 3822, 1, 1978, 'MANUAL');
 
 -- 작곡가 샘플 데이터
 INSERT INTO composers (name, full_name, english_name, period, birth_year, death_year, nationality, bio, style, influence) VALUES
@@ -568,11 +612,4 @@ JOIN composers c ON p.composer_id = c.id
 LEFT JOIN performances perf ON p.id = perf.piece_id
 GROUP BY p.id;
 
--- ============================================
--- ALTER 문: 기존 테이블에 type 컬럼 추가
--- ============================================
--- pieces 테이블에 type 컬럼 추가 (기존 테이블 수정 시 사용)
-ALTER TABLE pieces
-ADD COLUMN type ENUM('album', 'song') NOT NULL DEFAULT 'song' COMMENT '곡 타입 (album: 앨범/모음집, song: 단일곡)' AFTER title_en,
-ADD INDEX idx_type (type);
 
