@@ -29,7 +29,7 @@ impl ConcertRepository {
     }
 
     // List view with only essential fields for performance
-    pub async fn find_all_list_view(pool: &DbPool) -> Result<Vec<ConcertListItem>, Error> {
+    pub async fn find_all_list_view(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<ConcertListItem>, Error> {
         sqlx::query_as::<_, ConcertListItem>(
             "SELECT id, title, venue_id,
              DATE_FORMAT(start_date, '%Y-%m-%d') as start_date,
@@ -38,8 +38,11 @@ impl ConcertRepository {
              poster_url, status, rating, rating_count,
              genre, area, facility_name, is_open_run, is_visit, is_festival
              FROM concerts
-             ORDER BY start_date DESC"
+             ORDER BY start_date DESC
+             LIMIT ? OFFSET ?"
         )
+            .bind(limit)
+            .bind(offset)
             .fetch_all(pool)
             .await
     }
