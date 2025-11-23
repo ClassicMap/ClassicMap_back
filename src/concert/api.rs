@@ -1,4 +1,4 @@
-use super::model::{Concert, CreateConcert, SubmitRating, UpdateConcert, ConcertWithArtists};
+use super::model::{Concert, CreateConcert, SubmitRating, UpdateConcert, ConcertWithArtists, ConcertWithDetails, ConcertListItem};
 use super::service::ConcertService;
 use crate::auth::{AuthenticatedUser, ModeratorUser};
 use crate::db::DbPool;
@@ -7,8 +7,8 @@ use rocket::{http::Status, serde::json::Json, State};
 use rust_decimal::Decimal;
 
 #[get("/concerts")]
-pub async fn get_concerts(pool: &State<DbPool>) -> Result<Json<Vec<ConcertWithArtists>>, Status> {
-    match ConcertService::get_all_concerts_with_artists(pool).await {
+pub async fn get_concerts(pool: &State<DbPool>) -> Result<Json<Vec<ConcertListItem>>, Status> {
+    match ConcertService::get_all_concerts_list_view(pool).await {
         Ok(concerts) => Ok(Json(concerts)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get concerts: {}", e));
@@ -18,8 +18,8 @@ pub async fn get_concerts(pool: &State<DbPool>) -> Result<Json<Vec<ConcertWithAr
 }
 
 #[get("/concerts/<id>")]
-pub async fn get_concert(pool: &State<DbPool>, id: i32) -> Result<Json<Option<ConcertWithArtists>>, Status> {
-    match ConcertService::get_concert_by_id_with_artists(pool, id).await {
+pub async fn get_concert(pool: &State<DbPool>, id: i32) -> Result<Json<Option<ConcertWithDetails>>, Status> {
+    match ConcertService::get_concert_with_details(pool, id).await {
         Ok(concert) => Ok(Json(concert)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get concert {}: {}", id, e));
@@ -106,6 +106,57 @@ pub async fn get_user_rating(
                 "API",
                 &format!("Failed to get user rating for concert {}: {}", id, e),
             );
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+// ============================================
+// New Enhanced Endpoints
+// ============================================
+
+#[get("/concerts/featured?<area_code>&<limit>")]
+pub async fn get_featured_concerts(
+    pool: &State<DbPool>,
+    area_code: Option<String>,
+    limit: Option<i32>,
+) -> Result<Json<Vec<ConcertWithDetails>>, Status> {
+    match ConcertService::get_featured_concerts(pool, area_code, limit).await {
+        Ok(concerts) => Ok(Json(concerts)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to get featured concerts: {}", e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+#[get("/concerts/upcoming?<sort>&<limit>")]
+pub async fn get_upcoming_concerts(
+    pool: &State<DbPool>,
+    sort: Option<String>,
+    limit: Option<i32>,
+) -> Result<Json<Vec<ConcertListItem>>, Status> {
+    match ConcertService::get_upcoming_concerts(pool, sort, limit).await {
+        Ok(concerts) => Ok(Json(concerts)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to get upcoming concerts: {}", e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+#[get("/concerts/search?<genre>&<area>&<is_visit>&<is_festival>")]
+pub async fn search_concerts(
+    pool: &State<DbPool>,
+    genre: Option<String>,
+    area: Option<String>,
+    is_visit: Option<bool>,
+    is_festival: Option<bool>,
+) -> Result<Json<Vec<ConcertListItem>>, Status> {
+    match ConcertService::search_concerts(pool, genre, area, is_visit, is_festival).await {
+        Ok(concerts) => Ok(Json(concerts)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to search concerts: {}", e));
             Err(Status::InternalServerError)
         }
     }

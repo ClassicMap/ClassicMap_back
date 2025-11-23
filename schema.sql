@@ -280,29 +280,121 @@ COMMENT='공연홀 정보 테이블 (한 공연장 내 여러 홀)';
 -- 9. 공연 (Concerts) 테이블
 -- ============================================
 CREATE TABLE concerts (
+    -- 기본 정보
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(300) NOT NULL COMMENT '공연 제목',
     composer_info TEXT COMMENT '작곡가/곡목',
     venue_id INT NOT NULL COMMENT '공연장 ID',
-    concert_date DATE NOT NULL COMMENT '공연 날짜',
+
+    -- 날짜 정보 (KOPIS: prfpdfrom, prfpdto)
+    start_date DATE NOT NULL COMMENT '공연 시작일',
+    end_date DATE COMMENT '공연 종료일',
     concert_time TIME COMMENT '공연 시간',
-    price_info VARCHAR(200) COMMENT '가격 정보',
+
+    -- KOPIS 동기화 정보
+    kopis_id VARCHAR(20) UNIQUE COMMENT 'KOPIS 공연ID (mt20id, 예: PF123456)',
+    kopis_updated_at DATETIME COMMENT 'KOPIS 최종수정일 (updatedate)',
+    data_source VARCHAR(20) DEFAULT 'MANUAL' COMMENT '데이터 출처 (KOPIS, MANUAL)',
+    venue_kopis_id VARCHAR(20) COMMENT 'KOPIS 공연시설ID (mt10id)',
+
+    -- 공연 기본 정보 (KOPIS)
+    genre VARCHAR(100) COMMENT '공연 장르명 (genrenm)',
+    area VARCHAR(100) COMMENT '공연 지역 (area)',
+    facility_name VARCHAR(200) COMMENT '공연시설명 캐시 (fcltynm)',
+    is_open_run BOOLEAN DEFAULT FALSE COMMENT '오픈런 여부 (openrun)',
+
+    -- 출연진 및 제작진 (KOPIS)
+    cast TEXT COMMENT '공연 출연진 (prfcast)',
+    crew TEXT COMMENT '공연 제작진 (prfcrew)',
+
+    -- 공연 상세 정보 (KOPIS)
+    runtime VARCHAR(50) COMMENT '공연 런타임 (prfruntime)',
+    age_restriction VARCHAR(50) COMMENT '관람 연령 (prfage)',
+    synopsis TEXT COMMENT '줄거리/소개 (sty)',
+    performance_schedule TEXT COMMENT '공연 시간 상세 (dtguidance)',
+
+    -- 제작사 정보 (KOPIS)
+    production_company VARCHAR(200) COMMENT '기획제작사 (entrpsnm)',
+    production_company_plan VARCHAR(200) COMMENT '제작사 (entrpsnmP)',
+    production_company_agency VARCHAR(200) COMMENT '기획사 (entrpsnmA)',
+    production_company_host VARCHAR(200) COMMENT '주최 (entrpsnmH)',
+    production_company_sponsor VARCHAR(200) COMMENT '주관 (entrpsnmS)',
+
+    -- 가격 및 미디어 정보
+    price_info TEXT COMMENT '가격 정보 (pcseguidance)',
     poster_url VARCHAR(500) COMMENT '포스터 이미지 URL',
     program TEXT COMMENT '프로그램 상세',
-    ticket_url VARCHAR(500) COMMENT '예매 링크',
-    status ENUM('upcoming', 'ongoing', 'completed', 'cancelled') DEFAULT 'upcoming',
+    ticket_url VARCHAR(500) COMMENT '예매 링크 (대표)',
+
+    -- 공연 분류 플래그 (KOPIS)
+    is_visit BOOLEAN DEFAULT FALSE COMMENT '내한공연 여부 (visit)',
+    is_child BOOLEAN DEFAULT FALSE COMMENT '아동공연 여부 (child)',
+    is_daehakro BOOLEAN DEFAULT FALSE COMMENT '대학로공연 여부 (daehakro)',
+    is_festival BOOLEAN DEFAULT FALSE COMMENT '축제공연 여부 (festival)',
+
+    -- 상태 및 평점
+    status ENUM('upcoming', 'ongoing', 'completed', 'cancelled', '공연예정', '공연중', '공연완료') DEFAULT 'upcoming' COMMENT '공연 상태',
     rating DECIMAL(2,1) DEFAULT 0.0 COMMENT '평균 평점 (0.0-5.0)',
     rating_count INT DEFAULT 0 COMMENT '평점 개수',
+
+    -- 메타 정보
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    -- 외래키 및 인덱스
     FOREIGN KEY (venue_id) REFERENCES venues(id) ON DELETE RESTRICT,
-    INDEX idx_concert_date (concert_date),
+    INDEX idx_start_date (start_date),
+    INDEX idx_end_date (end_date),
     INDEX idx_status (status),
-    INDEX idx_rating (rating)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    INDEX idx_rating (rating),
+    INDEX idx_kopis_id (kopis_id),
+    INDEX idx_data_source (data_source),
+    INDEX idx_venue_kopis_id (venue_kopis_id),
+    INDEX idx_genre (genre),
+    INDEX idx_area (area),
+    INDEX idx_is_open_run (is_open_run),
+    INDEX idx_is_visit (is_visit),
+    INDEX idx_is_child (is_child),
+    INDEX idx_is_daehakro (is_daehakro),
+    INDEX idx_is_festival (is_festival)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='공연 정보 테이블 (KOPIS API 연동 지원)';
 
 -- ============================================
--- 10. 공연-아티스트 연결 (Concert Artists) 테이블
+-- 10. 공연 예매처 (Concert Ticket Vendors) 테이블
+-- ============================================
+CREATE TABLE concert_ticket_vendors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    concert_id INT NOT NULL COMMENT '공연 ID',
+    vendor_name VARCHAR(200) COMMENT '예매처명 (relatenm)',
+    vendor_url VARCHAR(500) NOT NULL COMMENT '예매처 URL (relateurl)',
+    display_order INT DEFAULT 0 COMMENT '표시 순서',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (concert_id) REFERENCES concerts(id) ON DELETE CASCADE,
+    INDEX idx_concert_id (concert_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='공연 예매처 정보 테이블 (KOPIS relates)';
+
+-- ============================================
+-- 11. 공연 이미지 (Concert Images) 테이블
+-- ============================================
+CREATE TABLE concert_images (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    concert_id INT NOT NULL COMMENT '공연 ID',
+    image_url VARCHAR(500) NOT NULL COMMENT '이미지 URL (styurl)',
+    image_type ENUM('introduction', 'poster', 'other') DEFAULT 'introduction' COMMENT '이미지 타입',
+    display_order INT DEFAULT 0 COMMENT '표시 순서',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (concert_id) REFERENCES concerts(id) ON DELETE CASCADE,
+    INDEX idx_concert_id (concert_id),
+    INDEX idx_image_type (image_type)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='공연 소개 이미지 테이블 (KOPIS styurls)';
+
+-- ============================================
+-- 12. 공연-아티스트 연결 (Concert Artists) 테이블
 -- ============================================
 CREATE TABLE concert_artists (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -317,7 +409,7 @@ CREATE TABLE concert_artists (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
--- 11. 연주 영상 (Performances) 테이블
+-- 13. 연주 영상 (Performances) 테이블
 -- ============================================
 CREATE TABLE performances (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -341,7 +433,7 @@ CREATE TABLE performances (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
--- 12. 사용자 (Users) 테이블 - Clerk 연동용 추가 프로필
+-- 14. 사용자 (Users) 테이블 - Clerk 연동용 추가 프로필
 -- ============================================
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -358,7 +450,7 @@ CREATE TABLE users (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
--- 13. 사용자 즐겨찾기 - 작곡가 (User Favorite Composers)
+-- 15. 사용자 즐겨찾기 - 작곡가 (User Favorite Composers)
 -- ============================================
 CREATE TABLE user_favorite_composers (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -372,7 +464,7 @@ CREATE TABLE user_favorite_composers (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
--- 14. 사용자 즐겨찾기 - 아티스트 (User Favorite Artists)
+-- 16. 사용자 즐겨찾기 - 아티스트 (User Favorite Artists)
 -- ============================================
 CREATE TABLE user_favorite_artists (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -386,7 +478,7 @@ CREATE TABLE user_favorite_artists (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
--- 15. 사용자 즐겨찾기 - 곡 (User Favorite Pieces)
+-- 17. 사용자 즐겨찾기 - 곡 (User Favorite Pieces)
 -- ============================================
 CREATE TABLE user_favorite_pieces (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -400,7 +492,7 @@ CREATE TABLE user_favorite_pieces (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
--- 16. 인기 비교 (Popular Comparisons) 테이블
+-- 18. 인기 비교 (Popular Comparisons) 테이블
 -- ============================================
 CREATE TABLE popular_comparisons (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -416,7 +508,7 @@ CREATE TABLE popular_comparisons (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
--- 17. 사용자 공연 평점 (User Concert Ratings) 테이블
+-- 19. 사용자 공연 평점 (User Concert Ratings) 테이블
 -- ============================================
 CREATE TABLE user_concert_ratings (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -433,11 +525,56 @@ CREATE TABLE user_concert_ratings (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
--- 18. 동기화 메타데이터 (Sync Metadata) 테이블
+-- 20. 공연 예매 순위 (Concert Boxoffice Rankings) 테이블
+-- ============================================
+CREATE TABLE concert_boxoffice_rankings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    concert_id INT NOT NULL COMMENT '공연 ID',
+
+    -- KOPIS 예매상황판 정보
+    kopis_genre_code VARCHAR(10) COMMENT 'KOPIS 장르 코드 (AAAA=연극, GGGA=뮤지컬, CCCA=클래식 등)',
+    genre_name VARCHAR(50) COMMENT '장르명 (연극, 뮤지컬, 클래식, 오페라, 무용, 국악, 복합)',
+    kopis_area_code VARCHAR(10) COMMENT 'KOPIS 지역 코드 (11=서울, 28=인천 등)',
+    area_name VARCHAR(50) COMMENT '지역명 (서울, 경기, 인천 등)',
+
+    -- 순위 정보
+    ranking INT NOT NULL COMMENT '순위 (1-3만 저장)',
+    seat_scale VARCHAR(20) COMMENT '좌석규모 (100, 300, 500, 1000, 5000, 10000)',
+
+    -- KOPIS 예매상황판 응답 데이터
+    performance_count INT DEFAULT 0 COMMENT '상연횟수 (prfdtcnt)',
+    venue_name VARCHAR(200) COMMENT '공연장명 캐시 (prfplcnm)',
+    seat_count INT COMMENT '좌석수 (seatcnt)',
+
+    -- 동기화 정보
+    sync_start_date DATE NOT NULL COMMENT 'KOPIS 조회 시작일 (stdate)',
+    sync_end_date DATE NOT NULL COMMENT 'KOPIS 조회 종료일 (eddate)',
+    synced_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '동기화 시각',
+
+    -- 메타 정보
+    is_featured BOOLEAN DEFAULT TRUE COMMENT '주목 공연 여부 (TOP 3는 항상 true)',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    -- 외래키 및 인덱스
+    FOREIGN KEY (concert_id) REFERENCES concerts(id) ON DELETE CASCADE,
+    INDEX idx_concert_id (concert_id),
+    INDEX idx_genre_area (kopis_genre_code, kopis_area_code),
+    INDEX idx_ranking (ranking),
+    INDEX idx_sync_dates (sync_start_date, sync_end_date),
+    INDEX idx_featured (is_featured),
+
+    -- 동일 기간/장르/지역에 대해 하나의 순위만 존재하도록
+    UNIQUE KEY unique_ranking_period (concert_id, kopis_genre_code, kopis_area_code, sync_start_date, sync_end_date)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='KOPIS 예매상황판 TOP 3 공연 순위 정보';
+
+-- ============================================
+-- 21. 동기화 메타데이터 (Sync Metadata) 테이블
 -- ============================================
 CREATE TABLE sync_metadata (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    sync_type VARCHAR(50) NOT NULL COMMENT '동기화 타입 (venues, concerts 등)',
+    sync_type VARCHAR(50) NOT NULL COMMENT '동기화 타입 (venues, concerts, boxoffice 등)',
     last_sync_date DATE NOT NULL COMMENT '마지막 동기화 날짜 (KOPIS afterdate 파라미터용)',
     last_sync_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '마지막 동기화 시각',
     status ENUM('success', 'failed', 'in_progress') DEFAULT 'success' COMMENT '동기화 상태',
@@ -453,7 +590,9 @@ CREATE TABLE sync_metadata (
 
 -- 초기 sync_metadata 데이터
 INSERT INTO sync_metadata (sync_type, last_sync_date, status) VALUES
-('venues', '2020-01-01', 'success');
+('venues', '2020-01-01', 'success'),
+('concerts', '2020-01-01', 'success'),
+('boxoffice', '2020-01-01', 'success');
 
 -- ============================================
 -- 샘플 데이터 삽입
@@ -569,11 +708,11 @@ UPDATE artists SET top_award_id = 3 WHERE id = 2; -- 임윤찬 -> 반 클라이�
   -- 추가 공연 샘플 데이터 (최근 공연 더 추가)
   -- ============================================
 
-  INSERT INTO concerts (title, composer_info, venue_id, concert_date, concert_time, price_info, is_recommended, status) VALUES
-  ('조성진 드뷔시 스페셜', '드뷔시, 라벨', 2, '2025-02-20', '19:30:00', '90,000원~', FALSE, 'upcoming'),
-  ('임윤찬 베토벤 소나타 전곡', '베토벤 피아노 소나타', 1, '2025-06-15', '19:00:00', '120,000원~', TRUE, 'upcoming'),
-  ('조성진 & 바이에른 방송교향악단', '모차르트 피아노 협주곡 23번', 3, '2024-12-10', '20:00:00', '150,000원~', FALSE, 'completed'),
-  ('임윤찬 리사이틀', '라흐마니노프, 쇼팽', 2, '2024-11-05', '19:30:00', '100,000원~', FALSE, 'completed');
+  INSERT INTO concerts (title, composer_info, venue_id, start_date, end_date, concert_time, price_info, status) VALUES
+  ('조성진 드뷔시 스페셜', '드뷔시, 라벨', 2, '2025-02-20', '2025-02-20', '19:30:00', '90,000원~', 'upcoming'),
+  ('임윤찬 베토벤 소나타 전곡', '베토벤 피아노 소나타', 1, '2025-06-15', '2025-06-15', '19:00:00', '120,000원~', 'upcoming'),
+  ('조성진 & 바이에른 방송교향악단', '모차르트 피아노 협주곡 23번', 3, '2024-12-10', '2024-12-10', '20:00:00', '150,000원~', 'completed'),
+  ('임윤찬 리사이틀', '라흐마니노프, 쇼팽', 2, '2024-11-05', '2024-11-05', '19:30:00', '100,000원~', 'completed');
 
   -- 추가 공연에 아티스트 연결
   INSERT INTO concert_artists (concert_id, artist_id, role) VALUES
@@ -613,11 +752,14 @@ GROUP BY a.id;
 
 -- 공연 전체 정보 뷰
 CREATE VIEW v_concerts_full AS
-SELECT 
+SELECT
     c.*,
     v.name as venue_name,
     v.city as venue_city,
-    GROUP_CONCAT(DISTINCT a.name ORDER BY a.name SEPARATOR ', ') as artists
+    v.kopis_id as venue_kopis_id_ref,
+    GROUP_CONCAT(DISTINCT a.name ORDER BY a.name SEPARATOR ', ') as artists,
+    (SELECT COUNT(*) FROM concert_ticket_vendors ctv WHERE ctv.concert_id = c.id) as ticket_vendor_count,
+    (SELECT COUNT(*) FROM concert_images ci WHERE ci.concert_id = c.id AND ci.image_type = 'introduction') as introduction_image_count
 FROM concerts c
 JOIN venues v ON c.venue_id = v.id
 LEFT JOIN concert_artists ca ON c.id = ca.concert_id
