@@ -14,6 +14,7 @@ DROP VIEW IF EXISTS v_concerts_full;
 DROP VIEW IF EXISTS v_artists_full;
 DROP VIEW IF EXISTS v_composers_full;
 
+DROP TABLE IF EXISTS sync_metadata;
 DROP TABLE IF EXISTS popular_comparisons;
 DROP TABLE IF EXISTS user_favorite_pieces;
 DROP TABLE IF EXISTS user_favorite_artists;
@@ -430,6 +431,29 @@ CREATE TABLE user_concert_ratings (
     INDEX idx_user_id (user_id),
     INDEX idx_concert_id (concert_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ============================================
+-- 18. 동기화 메타데이터 (Sync Metadata) 테이블
+-- ============================================
+CREATE TABLE sync_metadata (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sync_type VARCHAR(50) NOT NULL COMMENT '동기화 타입 (venues, concerts 등)',
+    last_sync_date DATE NOT NULL COMMENT '마지막 동기화 날짜 (KOPIS afterdate 파라미터용)',
+    last_sync_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '마지막 동기화 시각',
+    status ENUM('success', 'failed', 'in_progress') DEFAULT 'success' COMMENT '동기화 상태',
+    items_added INT DEFAULT 0 COMMENT '추가된 항목 수',
+    items_updated INT DEFAULT 0 COMMENT '업데이트된 항목 수',
+    error_message TEXT COMMENT '에러 메시지',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    UNIQUE KEY unique_sync_type (sync_type),
+    INDEX idx_sync_type (sync_type),
+    INDEX idx_last_sync_date (last_sync_date)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 초기 sync_metadata 데이터
+INSERT INTO sync_metadata (sync_type, last_sync_date, status) VALUES
+('venues', '2020-01-01', 'success');
 
 -- ============================================
 -- 샘플 데이터 삽입

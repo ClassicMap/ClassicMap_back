@@ -7,6 +7,8 @@ mod composer;
 mod concert;
 mod config;
 mod db;
+mod hall;
+mod kopis;
 mod logger;
 mod performance;
 mod piece;
@@ -31,6 +33,11 @@ async fn rocket() -> _ {
         .expect("Failed to create database pool");
 
     Logger::success("DATABASE", "Connection pool created");
+
+    // KOPIS 공연장 동기화 스케줄러 시작
+    Logger::info("SCHEDULER", "Initializing KOPIS venue sync scheduler...");
+    kopis::VenueSyncScheduler::start(pool.clone()).await;
+
     Logger::info("SERVER", "Mounting routes...");
 
     // CORS 설정
@@ -120,6 +127,8 @@ async fn rocket() -> _ {
                 venue::create_venue,
                 venue::update_venue,
                 venue::delete_venue,
+                // KOPIS routes
+                kopis::trigger_venue_sync,
             ],
         )
 }
