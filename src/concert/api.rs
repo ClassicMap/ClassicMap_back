@@ -6,9 +6,13 @@ use crate::logger::Logger;
 use rocket::{http::Status, serde::json::Json, State};
 use rust_decimal::Decimal;
 
-#[get("/concerts")]
-pub async fn get_concerts(pool: &State<DbPool>) -> Result<Json<Vec<ConcertListItem>>, Status> {
-    match ConcertService::get_all_concerts_list_view(pool).await {
+#[get("/concerts?<offset>&<limit>")]
+pub async fn get_concerts(
+    pool: &State<DbPool>,
+    offset: Option<i64>,
+    limit: Option<i64>,
+) -> Result<Json<Vec<ConcertListItem>>, Status> {
+    match ConcertService::get_all_concerts_list_view(pool, offset, limit).await {
         Ok(concerts) => Ok(Json(concerts)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get concerts: {}", e));

@@ -73,8 +73,10 @@ impl ConcertService {
     // New methods for enhanced features
     // ============================================
 
-    pub async fn get_all_concerts_list_view(pool: &DbPool) -> Result<Vec<ConcertListItem>, String> {
-        ConcertRepository::find_all_list_view(pool)
+    pub async fn get_all_concerts_list_view(pool: &DbPool, offset: Option<i64>, limit: Option<i64>) -> Result<Vec<ConcertListItem>, String> {
+        let offset_val = offset.unwrap_or(0);
+        let limit_val = limit.unwrap_or(20);
+        ConcertRepository::find_all_list_view(pool, offset_val, limit_val)
             .await
             .map_err(|e| e.to_string())
     }
