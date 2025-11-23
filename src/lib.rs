@@ -4,6 +4,7 @@ extern crate rocket;
 
 pub mod artist;
 pub mod auth;
+pub mod boxoffice;
 pub mod composer;
 pub mod concert;
 pub mod db;

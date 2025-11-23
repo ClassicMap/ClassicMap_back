@@ -3,6 +3,7 @@ extern crate rocket;
 
 mod artist;
 mod auth;
+mod boxoffice;
 mod composer;
 mod concert;
 mod config;
@@ -37,6 +38,10 @@ async fn rocket() -> _ {
     // KOPIS 공연장 동기화 스케줄러 시작
     Logger::info("SCHEDULER", "Initializing KOPIS venue sync scheduler...");
     kopis::VenueSyncScheduler::start(pool.clone()).await;
+
+    // KOPIS 공연 동기화 스케줄러 시작 (공연장 동기화 후)
+    Logger::info("SCHEDULER", "Initializing KOPIS concert sync scheduler...");
+    kopis::ConcertSyncScheduler::start(pool.clone()).await;
 
     Logger::info("SERVER", "Mounting routes...");
 
@@ -93,6 +98,9 @@ async fn rocket() -> _ {
                 // Concert routes
                 concert::get_concerts,
                 concert::get_concert,
+                concert::get_featured_concerts,
+                concert::get_upcoming_concerts,
+                concert::search_concerts,
                 concert::create_concert,
                 concert::update_concert,
                 concert::delete_concert,

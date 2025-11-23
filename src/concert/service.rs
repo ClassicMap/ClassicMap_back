@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Concert, CreateConcert, UpdateConcert, ConcertWithArtists};
+use super::model::{Concert, CreateConcert, UpdateConcert, ConcertWithArtists, ConcertWithDetails, ConcertListItem};
 use super::repository::ConcertRepository;
 use rust_decimal::Decimal;
 
@@ -67,5 +67,54 @@ impl ConcertService {
         ConcertRepository::get_user_rating(pool, user_id, concert_id)
             .await
             .map_err(|e| e.to_string())
+    }
+
+    // ============================================
+    // New methods for enhanced features
+    // ============================================
+
+    pub async fn get_all_concerts_list_view(pool: &DbPool) -> Result<Vec<ConcertListItem>, String> {
+        ConcertRepository::find_all_list_view(pool)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn get_concert_with_details(pool: &DbPool, id: i32) -> Result<Option<ConcertWithDetails>, String> {
+        ConcertRepository::find_by_id_with_details(pool, id)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn get_featured_concerts(pool: &DbPool, area_code: Option<String>, limit: Option<i32>) -> Result<Vec<ConcertWithDetails>, String> {
+        let limit_val = limit.unwrap_or(3);
+        ConcertRepository::find_featured_concerts(pool, area_code.as_deref(), limit_val)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn get_upcoming_concerts(pool: &DbPool, sort_by: Option<String>, limit: Option<i32>) -> Result<Vec<ConcertListItem>, String> {
+        let sort = sort_by.as_deref().unwrap_or("date");
+        let limit_val = limit.unwrap_or(20);
+        ConcertRepository::find_upcoming_concerts(pool, sort, limit_val)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn search_concerts(
+        pool: &DbPool,
+        genre: Option<String>,
+        area: Option<String>,
+        is_visit: Option<bool>,
+        is_festival: Option<bool>,
+    ) -> Result<Vec<ConcertListItem>, String> {
+        ConcertRepository::search_concerts(
+            pool,
+            genre.as_deref(),
+            area.as_deref(),
+            is_visit,
+            is_festival,
+        )
+        .await
+        .map_err(|e| e.to_string())
     }
 }
