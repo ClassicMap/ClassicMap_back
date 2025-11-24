@@ -1,6 +1,6 @@
 use super::model::{
-    Concert, CreateConcert, UpdateConcert, ConcertWithArtists, ConcertArtist,
-    ConcertListItem, ConcertWithDetails, ConcertTicketVendor, ConcertImage, ConcertBoxofficeRanking
+    Concert, ConcertArtist, ConcertBoxofficeRanking, ConcertImage, ConcertListItem,
+    ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails, CreateConcert, UpdateConcert,
 };
 use crate::db::DbPool;
 use rust_decimal::Decimal;
@@ -29,7 +29,11 @@ impl ConcertRepository {
     }
 
     // List view with only essential fields for performance
-    pub async fn find_all_list_view(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<ConcertListItem>, Error> {
+    pub async fn find_all_list_view(
+        pool: &DbPool,
+        offset: i64,
+        limit: i64,
+    ) -> Result<Vec<ConcertListItem>, Error> {
         sqlx::query_as::<_, ConcertListItem>(
             "SELECT c.id, c.title, c.venue_id,
              DATE_FORMAT(c.start_date, '%Y-%m-%d') as start_date,
@@ -41,12 +45,12 @@ impl ConcertRepository {
              FROM concerts c
              LEFT JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
              ORDER BY c.start_date DESC
-             LIMIT ? OFFSET ?"
+             LIMIT ? OFFSET ?",
         )
-            .bind(limit)
-            .bind(offset)
-            .fetch_all(pool)
-            .await
+        .bind(limit)
+        .bind(offset)
+        .fetch_all(pool)
+        .await
     }
 
     pub async fn find_all_with_artists(pool: &DbPool) -> Result<Vec<ConcertWithArtists>, Error> {
@@ -61,13 +65,16 @@ impl ConcertRepository {
         Ok(result)
     }
 
-    pub async fn find_artists_by_concert(pool: &DbPool, concert_id: i32) -> Result<Vec<ConcertArtist>, Error> {
+    pub async fn find_artists_by_concert(
+        pool: &DbPool,
+        concert_id: i32,
+    ) -> Result<Vec<ConcertArtist>, Error> {
         sqlx::query_as::<_, ConcertArtist>(
             "SELECT ca.id, ca.concert_id, ca.artist_id, a.name as artist_name, ca.role
              FROM concert_artists ca
              INNER JOIN artists a ON ca.artist_id = a.id
              WHERE ca.concert_id = ?
-             ORDER BY ca.id"
+             ORDER BY ca.id",
         )
         .bind(concert_id)
         .fetch_all(pool)
@@ -94,7 +101,10 @@ impl ConcertRepository {
             .await
     }
 
-    pub async fn find_by_id_with_artists(pool: &DbPool, id: i32) -> Result<Option<ConcertWithArtists>, Error> {
+    pub async fn find_by_id_with_artists(
+        pool: &DbPool,
+        id: i32,
+    ) -> Result<Option<ConcertWithArtists>, Error> {
         let concert_opt = Self::find_by_id(pool, id).await?;
 
         if let Some(concert) = concert_opt {
@@ -111,7 +121,7 @@ impl ConcertRepository {
              DATE_FORMAT(c.start_date, '%Y-%m-%d') as start_date,
              DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
              c.concert_time,
-             c.price_info, c.poster_url, c.program, c.ticket_url, c.status, c.rating, c.rating_count,
+             c.price_info, c.poster_url, c.program, c.status, c.rating, c.rating_count,
              c.kopis_id, DATE_FORMAT(c.kopis_updated_at, '%Y-%m-%d %H:%i:%s') as kopis_updated_at, c.data_source, c.venue_kopis_id,
              c.genre, c.area, c.facility_name, c.is_open_run,
              c.cast, c.crew, c.runtime, c.age_restriction, c.synopsis, c.performance_schedule,
@@ -271,13 +281,14 @@ impl ConcertRepository {
     }
 
     /// venue의 kopis_id로 venue_id 조회
-    pub async fn get_venue_id_by_kopis_id(pool: &DbPool, venue_kopis_id: &str) -> Result<Option<i32>, Error> {
-        let result: Option<(i32,)> = sqlx::query_as(
-            "SELECT id FROM venues WHERE kopis_id = ?"
-        )
-        .bind(venue_kopis_id)
-        .fetch_optional(pool)
-        .await?;
+    pub async fn get_venue_id_by_kopis_id(
+        pool: &DbPool,
+        venue_kopis_id: &str,
+    ) -> Result<Option<i32>, Error> {
+        let result: Option<(i32,)> = sqlx::query_as("SELECT id FROM venues WHERE kopis_id = ?")
+            .bind(venue_kopis_id)
+            .fetch_optional(pool)
+            .await?;
 
         Ok(result.map(|(id,)| id))
     }
@@ -338,7 +349,7 @@ impl ConcertRepository {
                  production_company_sponsor = ?,
                  is_visit = ?, is_child = ?, is_daehakro = ?, is_festival = ?,
                  updated_at = CURRENT_TIMESTAMP
-                 WHERE kopis_id = ?"
+                 WHERE kopis_id = ?",
             )
             .bind(title)
             .bind(composer_info)
@@ -405,7 +416,7 @@ impl ConcertRepository {
                     ?,
                     ?, ?, ?, ?,
                     'KOPIS'
-                )"
+                )",
             )
             .bind(kopis_id)
             .bind(title)
@@ -450,12 +461,15 @@ impl ConcertRepository {
     // Ticket Vendors 관련 메소드
     // ============================================
 
-    pub async fn find_ticket_vendors_by_concert(pool: &DbPool, concert_id: i32) -> Result<Vec<ConcertTicketVendor>, Error> {
+    pub async fn find_ticket_vendors_by_concert(
+        pool: &DbPool,
+        concert_id: i32,
+    ) -> Result<Vec<ConcertTicketVendor>, Error> {
         sqlx::query_as::<_, ConcertTicketVendor>(
             "SELECT id, concert_id, vendor_name, vendor_url, display_order
              FROM concert_ticket_vendors
              WHERE concert_id = ?
-             ORDER BY display_order"
+             ORDER BY display_order",
         )
         .bind(concert_id)
         .fetch_all(pool)
@@ -466,12 +480,15 @@ impl ConcertRepository {
     // Concert Images 관련 메소드
     // ============================================
 
-    pub async fn find_images_by_concert(pool: &DbPool, concert_id: i32) -> Result<Vec<ConcertImage>, Error> {
+    pub async fn find_images_by_concert(
+        pool: &DbPool,
+        concert_id: i32,
+    ) -> Result<Vec<ConcertImage>, Error> {
         sqlx::query_as::<_, ConcertImage>(
             "SELECT id, concert_id, image_url, image_type, display_order
              FROM concert_images
              WHERE concert_id = ?
-             ORDER BY display_order"
+             ORDER BY display_order",
         )
         .bind(concert_id)
         .fetch_all(pool)
@@ -482,7 +499,10 @@ impl ConcertRepository {
     // Boxoffice Rankings 관련 메소드
     // ============================================
 
-    pub async fn find_boxoffice_ranking_by_concert(pool: &DbPool, concert_id: i32) -> Result<Option<ConcertBoxofficeRanking>, Error> {
+    pub async fn find_boxoffice_ranking_by_concert(
+        pool: &DbPool,
+        concert_id: i32,
+    ) -> Result<Option<ConcertBoxofficeRanking>, Error> {
         sqlx::query_as::<_, ConcertBoxofficeRanking>(
             "SELECT id, concert_id, kopis_genre_code, genre_name, kopis_area_code, area_name,
              ranking, seat_scale, performance_count, venue_name, seat_count,
@@ -492,7 +512,7 @@ impl ConcertRepository {
              FROM concert_boxoffice_rankings
              WHERE concert_id = ?
              ORDER BY synced_at DESC
-             LIMIT 1"
+             LIMIT 1",
         )
         .bind(concert_id)
         .fetch_optional(pool)
@@ -503,7 +523,10 @@ impl ConcertRepository {
     // With Details (Full Data) 메소드
     // ============================================
 
-    pub async fn find_by_id_with_details(pool: &DbPool, id: i32) -> Result<Option<ConcertWithDetails>, Error> {
+    pub async fn find_by_id_with_details(
+        pool: &DbPool,
+        id: i32,
+    ) -> Result<Option<ConcertWithDetails>, Error> {
         let concert_opt = Self::find_by_id(pool, id).await?;
 
         if let Some(concert) = concert_opt {
@@ -528,7 +551,11 @@ impl ConcertRepository {
     // Featured Concerts (예매 순위 TOP)
     // ============================================
 
-    pub async fn find_featured_concerts(pool: &DbPool, area_code: Option<&str>, limit: i32) -> Result<Vec<ConcertWithDetails>, Error> {
+    pub async fn find_featured_concerts(
+        pool: &DbPool,
+        area_code: Option<&str>,
+        limit: i32,
+    ) -> Result<Vec<ConcertWithDetails>, Error> {
         let query = if let Some(code) = area_code {
             format!(
                 "SELECT DISTINCT c.id
@@ -559,10 +586,7 @@ impl ConcertRepository {
                 .fetch_all(pool)
                 .await?
         } else {
-            sqlx::query_as(&query)
-                .bind(limit)
-                .fetch_all(pool)
-                .await?
+            sqlx::query_as(&query).bind(limit).fetch_all(pool).await?
         };
 
         let mut result = Vec::new();
@@ -579,7 +603,11 @@ impl ConcertRepository {
     // Upcoming Concerts (다가오는 공연)
     // ============================================
 
-    pub async fn find_upcoming_concerts(pool: &DbPool, sort_by: &str, limit: i32) -> Result<Vec<ConcertListItem>, Error> {
+    pub async fn find_upcoming_concerts(
+        pool: &DbPool,
+        sort_by: &str,
+        limit: i32,
+    ) -> Result<Vec<ConcertListItem>, Error> {
         let order_clause = match sort_by {
             "rating" => "ORDER BY c.rating DESC, c.start_date ASC",
             "date" | _ => "ORDER BY c.start_date ASC",
@@ -629,7 +657,7 @@ impl ConcertRepository {
              cbr.ranking as boxoffice_ranking
              FROM concerts c
              LEFT JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
-             WHERE 1=1"
+             WHERE 1=1",
         );
 
         if genre.is_some() {
@@ -722,7 +750,7 @@ impl ConcertRepository {
         for (idx, image_url) in image_urls.iter().enumerate() {
             sqlx::query(
                 "INSERT INTO concert_images (concert_id, image_url, image_type, display_order)
-                 VALUES (?, ?, ?, ?)"
+                 VALUES (?, ?, ?, ?)",
             )
             .bind(concert_id)
             .bind(image_url)
