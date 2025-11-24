@@ -20,7 +20,6 @@ pub struct Artist {
     pub concert_count: i32,
     pub album_count: i32,
     pub top_award_id: Option<i32>,
-    pub specialties: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize, FromRow)]
