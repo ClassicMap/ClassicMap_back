@@ -184,6 +184,7 @@ pub struct ConcertListItem {
     pub end_date: Option<String>,
     pub concert_time: Option<String>,
     pub poster_url: Option<String>,
+    pub ticket_url: Option<String>,  // 예매 링크 (첫 번째 vendor 우선, 없으면 기본 ticket_url)
     pub status: String,
     pub rating: Option<Decimal>,
     pub rating_count: Option<i32>,
@@ -193,6 +194,7 @@ pub struct ConcertListItem {
     pub is_open_run: Option<bool>,
     pub is_visit: Option<bool>,
     pub is_festival: Option<bool>,
+    pub boxoffice_ranking: Option<i32>,  // 박스오피스 순위 (1, 2, 3 등)
 }
 
 // Full detail response with all related data

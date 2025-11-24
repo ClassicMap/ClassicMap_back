@@ -31,14 +31,23 @@ impl ConcertRepository {
     // List view with only essential fields for performance
     pub async fn find_all_list_view(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<ConcertListItem>, Error> {
         sqlx::query_as::<_, ConcertListItem>(
-            "SELECT id, title, venue_id,
-             DATE_FORMAT(start_date, '%Y-%m-%d') as start_date,
-             DATE_FORMAT(end_date, '%Y-%m-%d') as end_date,
-             TIME_FORMAT(concert_time, '%H:%i') as concert_time,
-             poster_url, status, rating, rating_count,
-             genre, area, facility_name, is_open_run, is_visit, is_festival
-             FROM concerts
-             ORDER BY start_date DESC
+            "SELECT c.id, c.title, c.venue_id,
+             DATE_FORMAT(c.start_date, '%Y-%m-%d') as start_date,
+             DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
+             TIME_FORMAT(c.concert_time, '%H:%i') as concert_time,
+             c.poster_url,
+             COALESCE(
+               (SELECT vendor_url FROM concert_ticket_vendors
+                WHERE concert_id = c.id
+                ORDER BY display_order LIMIT 1),
+               c.ticket_url
+             ) as ticket_url,
+             c.status, c.rating, c.rating_count,
+             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival,
+             cbr.ranking as boxoffice_ranking
+             FROM concerts c
+             LEFT JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
+             ORDER BY c.start_date DESC
              LIMIT ? OFFSET ?"
         )
             .bind(limit)
@@ -590,9 +599,18 @@ impl ConcertRepository {
              DATE_FORMAT(c.start_date, '%Y-%m-%d') as start_date,
              DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
              TIME_FORMAT(c.concert_time, '%H:%i') as concert_time,
-             c.poster_url, c.status, c.rating, c.rating_count,
-             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival
+             c.poster_url,
+             COALESCE(
+               (SELECT vendor_url FROM concert_ticket_vendors
+                WHERE concert_id = c.id
+                ORDER BY display_order LIMIT 1),
+               c.ticket_url
+             ) as ticket_url,
+             c.status, c.rating, c.rating_count,
+             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival,
+             cbr.ranking as boxoffice_ranking
              FROM concerts c
+             LEFT JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
              WHERE c.start_date >= CURDATE()
              AND c.status IN ('upcoming', 'ongoing', '공연예정', '공연중')
              {}
@@ -622,9 +640,18 @@ impl ConcertRepository {
              DATE_FORMAT(c.start_date, '%Y-%m-%d') as start_date,
              DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
              TIME_FORMAT(c.concert_time, '%H:%i') as concert_time,
-             c.poster_url, c.status, c.rating, c.rating_count,
-             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival
+             c.poster_url,
+             COALESCE(
+               (SELECT vendor_url FROM concert_ticket_vendors
+                WHERE concert_id = c.id
+                ORDER BY display_order LIMIT 1),
+               c.ticket_url
+             ) as ticket_url,
+             c.status, c.rating, c.rating_count,
+             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival,
+             cbr.ranking as boxoffice_ranking
              FROM concerts c
+             LEFT JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
              WHERE 1=1"
         );
 
