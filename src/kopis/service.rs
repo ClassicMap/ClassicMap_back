@@ -373,7 +373,7 @@ impl KopisService {
                                                 venue_id,
                                                 &start_date_str,
                                                 end_date_str.as_deref(),
-                                                None, // concert_time
+                                                detail.performance_schedule.as_deref(), // concert_time (KOPIS dtguidance)
                                                 detail.poster.as_deref(),
                                                 detail.synopsis.as_deref(),
                                                 detail.price_info.as_deref(),

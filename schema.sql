@@ -9,25 +9,23 @@ USE classicmap;
 -- ============================================
 -- 기존 테이블 및 뷰 삭제
 -- ============================================
-DROP VIEW IF EXISTS v_pieces_with_performances;
-DROP VIEW IF EXISTS v_concerts_full;
 DROP VIEW IF EXISTS v_artists_full;
 DROP VIEW IF EXISTS v_composers_full;
 
 DROP TABLE IF EXISTS sync_metadata;
-DROP TABLE IF EXISTS popular_comparisons;
-DROP TABLE IF EXISTS user_favorite_pieces;
-DROP TABLE IF EXISTS user_favorite_artists;
-DROP TABLE IF EXISTS user_favorite_composers;
+DROP TABLE IF EXISTS user_favorite_pieces; -- 미사용
+DROP TABLE IF EXISTS user_favorite_artists; -- 미사용
+DROP TABLE IF EXISTS user_favorite_composers; -- 미사용
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS performances;
-DROP TABLE IF EXISTS concert_artists;
 DROP TABLE IF EXISTS concerts;
+DROP TABLE IF EXISTS concert_images;
+DROP TABLE IF EXISTS concert_ticket_vendors;
+DROP TABLE IF EXISTS concert_boxoffice_rankings;
 DROP TABLE IF EXISTS halls;
 DROP TABLE IF EXISTS venues;
 DROP TABLE IF EXISTS recordings;
 DROP TABLE IF EXISTS artist_awards;
-DROP TABLE IF EXISTS artist_specialties;
 DROP TABLE IF EXISTS artists;
 DROP TABLE IF EXISTS composer_major_pieces;
 DROP TABLE IF EXISTS pieces;
@@ -126,17 +124,6 @@ CREATE TABLE artists (
     INDEX idx_top_award (top_award_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- ============================================
--- 5. 아티스트 전문 분야 (Artist Specialties) 테이블
--- ============================================
-CREATE TABLE artist_specialties (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    artist_id INT NOT NULL,
-    specialty VARCHAR(100) NOT NULL COMMENT '전문 작곡가/레퍼토리',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE,
-    INDEX idx_artist_id (artist_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
 -- 6. 아티스트 수상 내역 (Artist Awards) 테이블
@@ -289,7 +276,7 @@ CREATE TABLE concerts (
     -- 날짜 정보 (KOPIS: prfpdfrom, prfpdto)
     start_date DATE NOT NULL COMMENT '공연 시작일',
     end_date DATE COMMENT '공연 종료일',
-    concert_time TIME COMMENT '공연 시간',
+    concert_time VARCHAR(100) COMMENT '공연 시간 (예: 목요일(19:30))',
 
     -- KOPIS 동기화 정보
     kopis_id VARCHAR(20) UNIQUE COMMENT 'KOPIS 공연ID (mt20id, 예: PF123456)',
@@ -324,7 +311,6 @@ CREATE TABLE concerts (
     price_info TEXT COMMENT '가격 정보 (pcseguidance)',
     poster_url VARCHAR(500) COMMENT '포스터 이미지 URL',
     program TEXT COMMENT '프로그램 상세',
-    ticket_url VARCHAR(500) COMMENT '예매 링크 (대표)',
 
     -- 공연 분류 플래그 (KOPIS)
     is_visit BOOLEAN DEFAULT FALSE COMMENT '내한공연 여부 (visit)',
@@ -393,20 +379,6 @@ CREATE TABLE concert_images (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
 COMMENT='공연 소개 이미지 테이블 (KOPIS styurls)';
 
--- ============================================
--- 12. 공연-아티스트 연결 (Concert Artists) 테이블
--- ============================================
-CREATE TABLE concert_artists (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    concert_id INT NOT NULL,
-    artist_id INT NOT NULL,
-    role VARCHAR(100) COMMENT '역할 (solo, conductor, ensemble 등)',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (concert_id) REFERENCES concerts(id) ON DELETE CASCADE,
-    FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE,
-    INDEX idx_concert_id (concert_id),
-    INDEX idx_artist_id (artist_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
 -- 13. 연주 영상 (Performances) 테이블
@@ -491,21 +463,6 @@ CREATE TABLE user_favorite_pieces (
     INDEX idx_user_id (user_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- ============================================
--- 18. 인기 비교 (Popular Comparisons) 테이블
--- ============================================
-CREATE TABLE popular_comparisons (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    piece_id INT NOT NULL,
-    comparison_title VARCHAR(300) NOT NULL COMMENT '비교 제목 (예: 아르헤리치 vs 임윤찬)',
-    view_count INT DEFAULT 0 COMMENT '조회수',
-    is_featured BOOLEAN DEFAULT FALSE COMMENT '메인 노출 여부',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (piece_id) REFERENCES pieces(id) ON DELETE CASCADE,
-    INDEX idx_view_count (view_count),
-    INDEX idx_featured (is_featured)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
 -- 19. 사용자 공연 평점 (User Concert Ratings) 테이블
@@ -657,14 +614,6 @@ INSERT INTO artists (name, english_name, category, tier, rating, nationality, bi
  '압도적 기교, 성숙한 음악성, 깊이 있는 해석',
  50, 2, NULL);
 
--- 아티스트 전문 분야
-INSERT INTO artist_specialties (artist_id, specialty) VALUES
-(1, '쇼팽'),
-(1, '드뷔시'),
-(1, '라벨'),
-(2, '라흐마니노프'),
-(2, '베토벤'),
-(2, '리스트');
 
 -- 아티스트 수상 내역
 INSERT INTO artist_awards (artist_id, year, award_name, award_type, organization, category, ranking, display_order) VALUES
@@ -699,10 +648,6 @@ UPDATE artists SET top_award_id = 3 WHERE id = 2; -- 임윤찬 -> 반 클라이�
   -- 공연-아티스트 연결 데이터
   -- ============================================
 
-  -- 기존 공연에 아티스트 연결
-  INSERT INTO concert_artists (concert_id, artist_id, role) VALUES
-  (1, 1, 'solo'),      -- 조성진 피아노 리사이틀
-  (3, 2, 'solo');      -- 임윤찬과 서울시향
 
   -- ============================================
   -- 추가 공연 샘플 데이터 (최근 공연 더 추가)
@@ -714,12 +659,6 @@ UPDATE artists SET top_award_id = 3 WHERE id = 2; -- 임윤찬 -> 반 클라이�
   ('조성진 & 바이에른 방송교향악단', '모차르트 피아노 협주곡 23번', 3, '2024-12-10', '2024-12-10', '20:00:00', '150,000원~', 'completed'),
   ('임윤찬 리사이틀', '라흐마니노프, 쇼팽', 2, '2024-11-05', '2024-11-05', '19:30:00', '100,000원~', 'completed');
 
-  -- 추가 공연에 아티스트 연결
-  INSERT INTO concert_artists (concert_id, artist_id, role) VALUES
-  (4, 1, 'solo'),      -- 조성진 드뷔시 스페셜
-  (5, 2, 'solo'),      -- 임윤찬 베토벤 소나타 전곡
-  (6, 1, 'solo'),      -- 조성진 & 바이에른 방송교향악단
-  (7, 2, 'solo');      -- 임윤찬 리사이틀
 
 -- ============================================
 -- API용 뷰 (Views) 생성
@@ -739,43 +678,14 @@ GROUP BY c.id;
 CREATE VIEW v_artists_full AS
 SELECT
     a.*,
-    GROUP_CONCAT(DISTINCT s.specialty ORDER BY s.specialty SEPARATOR '|') as specialties,
     GROUP_CONCAT(DISTINCT CONCAT(aw.year, ':', aw.award_name) ORDER BY aw.display_order SEPARATOR '|') as awards,
     top_aw.award_name as top_award_name,
     top_aw.year as top_award_year,
     top_aw.ranking as top_award_ranking
 FROM artists a
-LEFT JOIN artist_specialties s ON a.id = s.artist_id
 LEFT JOIN artist_awards aw ON a.id = aw.artist_id
 LEFT JOIN artist_awards top_aw ON a.top_award_id = top_aw.id
 GROUP BY a.id;
 
--- 공연 전체 정보 뷰
-CREATE VIEW v_concerts_full AS
-SELECT
-    c.*,
-    v.name as venue_name,
-    v.city as venue_city,
-    v.kopis_id as venue_kopis_id_ref,
-    GROUP_CONCAT(DISTINCT a.name ORDER BY a.name SEPARATOR ', ') as artists,
-    (SELECT COUNT(*) FROM concert_ticket_vendors ctv WHERE ctv.concert_id = c.id) as ticket_vendor_count,
-    (SELECT COUNT(*) FROM concert_images ci WHERE ci.concert_id = c.id AND ci.image_type = 'introduction') as introduction_image_count
-FROM concerts c
-JOIN venues v ON c.venue_id = v.id
-LEFT JOIN concert_artists ca ON c.id = ca.concert_id
-LEFT JOIN artists a ON ca.artist_id = a.id
-GROUP BY c.id;
-
--- 곡과 연주 정보 뷰
-CREATE VIEW v_pieces_with_performances AS
-SELECT
-    p.*,
-    c.name as composer_name,
-    c.period as composer_period,
-    COUNT(DISTINCT perf.id) as performance_count
-FROM pieces p
-JOIN composers c ON p.composer_id = c.id
-LEFT JOIN performances perf ON p.id = perf.piece_id
-GROUP BY p.id;
 
 

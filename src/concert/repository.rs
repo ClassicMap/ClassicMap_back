@@ -14,8 +14,8 @@ impl ConcertRepository {
             "SELECT id, title, composer_info, venue_id,
              DATE_FORMAT(start_date, '%Y-%m-%d') as start_date,
              DATE_FORMAT(end_date, '%Y-%m-%d') as end_date,
-             TIME_FORMAT(concert_time, '%H:%i') as concert_time,
-             price_info, poster_url, program, ticket_url, status, rating, rating_count,
+             concert_time,
+             price_info, poster_url, program, status, rating, rating_count,
              kopis_id, DATE_FORMAT(kopis_updated_at, '%Y-%m-%d %H:%i:%s') as kopis_updated_at, data_source, venue_kopis_id,
              genre, area, facility_name, is_open_run,
              cast, crew, runtime, age_restriction, synopsis, performance_schedule,
@@ -34,15 +34,8 @@ impl ConcertRepository {
             "SELECT c.id, c.title, c.venue_id,
              DATE_FORMAT(c.start_date, '%Y-%m-%d') as start_date,
              DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
-             TIME_FORMAT(c.concert_time, '%H:%i') as concert_time,
-             c.poster_url,
-             COALESCE(
-               (SELECT vendor_url FROM concert_ticket_vendors
-                WHERE concert_id = c.id
-                ORDER BY display_order LIMIT 1),
-               c.ticket_url
-             ) as ticket_url,
-             c.status, c.rating, c.rating_count,
+             c.concert_time,
+             c.poster_url, c.status, c.rating, c.rating_count,
              c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival,
              cbr.ranking as boxoffice_ranking
              FROM concerts c
@@ -86,8 +79,8 @@ impl ConcertRepository {
             "SELECT id, title, composer_info, venue_id,
              DATE_FORMAT(start_date, '%Y-%m-%d') as start_date,
              DATE_FORMAT(end_date, '%Y-%m-%d') as end_date,
-             TIME_FORMAT(concert_time, '%H:%i') as concert_time,
-             price_info, poster_url, program, ticket_url, status, rating, rating_count,
+             concert_time,
+             price_info, poster_url, program, status, rating, rating_count,
              kopis_id, DATE_FORMAT(kopis_updated_at, '%Y-%m-%d %H:%i:%s') as kopis_updated_at, data_source, venue_kopis_id,
              genre, area, facility_name, is_open_run,
              cast, crew, runtime, age_restriction, synopsis, performance_schedule,
@@ -117,7 +110,7 @@ impl ConcertRepository {
             "SELECT c.id, c.title, c.composer_info, c.venue_id,
              DATE_FORMAT(c.start_date, '%Y-%m-%d') as start_date,
              DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
-             TIME_FORMAT(c.concert_time, '%H:%i') as concert_time,
+             c.concert_time,
              c.price_info, c.poster_url, c.program, c.ticket_url, c.status, c.rating, c.rating_count,
              c.kopis_id, DATE_FORMAT(c.kopis_updated_at, '%Y-%m-%d %H:%i:%s') as kopis_updated_at, c.data_source, c.venue_kopis_id,
              c.genre, c.area, c.facility_name, c.is_open_run,
@@ -138,8 +131,8 @@ impl ConcertRepository {
 
     pub async fn create(pool: &DbPool, concert: CreateConcert) -> Result<i32, Error> {
         let result = sqlx::query(
-            "INSERT INTO concerts (title, composer_info, venue_id, start_date, end_date, concert_time, price_info, poster_url, program, ticket_url, status, data_source)
-             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'MANUAL')"
+            "INSERT INTO concerts (title, composer_info, venue_id, start_date, end_date, concert_time, price_info, poster_url, program, status, data_source)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'MANUAL')"
         )
         .bind(&concert.title)
         .bind(&concert.composer_info)
@@ -150,7 +143,6 @@ impl ConcertRepository {
         .bind(&concert.price_info)
         .bind(&concert.poster_url)
         .bind(&concert.program)
-        .bind(&concert.ticket_url)
         .bind(&concert.status)
         .execute(pool)
         .await?;
@@ -168,7 +160,7 @@ impl ConcertRepository {
         let result = sqlx::query(
             "UPDATE concerts SET title = ?, composer_info = ?, venue_id = ?,
              start_date = ?, end_date = ?, concert_time = ?, price_info = ?, poster_url = ?,
-             program = ?, ticket_url = ?, status = ?
+             program = ?, status = ?
              WHERE id = ?",
         )
         .bind(concert.title.unwrap_or(current.title))
@@ -180,7 +172,6 @@ impl ConcertRepository {
         .bind(concert.price_info.or(current.price_info))
         .bind(concert.poster_url.or(current.poster_url))
         .bind(concert.program.or(current.program))
-        .bind(concert.ticket_url.or(current.ticket_url))
         .bind(concert.status.unwrap_or(current.status))
         .bind(id)
         .execute(pool)
@@ -264,8 +255,8 @@ impl ConcertRepository {
             "SELECT id, title, composer_info, venue_id,
              DATE_FORMAT(start_date, '%Y-%m-%d') as start_date,
              DATE_FORMAT(end_date, '%Y-%m-%d') as end_date,
-             TIME_FORMAT(concert_time, '%H:%i') as concert_time,
-             price_info, poster_url, program, ticket_url, status, rating, rating_count,
+             concert_time,
+             price_info, poster_url, program, status, rating, rating_count,
              kopis_id, DATE_FORMAT(kopis_updated_at, '%Y-%m-%d %H:%i:%s') as kopis_updated_at, data_source, venue_kopis_id,
              genre, area, facility_name, is_open_run,
              cast, crew, runtime, age_restriction, synopsis, performance_schedule,
@@ -598,15 +589,8 @@ impl ConcertRepository {
             "SELECT c.id, c.title, c.venue_id,
              DATE_FORMAT(c.start_date, '%Y-%m-%d') as start_date,
              DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
-             TIME_FORMAT(c.concert_time, '%H:%i') as concert_time,
-             c.poster_url,
-             COALESCE(
-               (SELECT vendor_url FROM concert_ticket_vendors
-                WHERE concert_id = c.id
-                ORDER BY display_order LIMIT 1),
-               c.ticket_url
-             ) as ticket_url,
-             c.status, c.rating, c.rating_count,
+             c.concert_time,
+             c.poster_url, c.status, c.rating, c.rating_count,
              c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival,
              cbr.ranking as boxoffice_ranking
              FROM concerts c
@@ -639,15 +623,8 @@ impl ConcertRepository {
             "SELECT c.id, c.title, c.venue_id,
              DATE_FORMAT(c.start_date, '%Y-%m-%d') as start_date,
              DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
-             TIME_FORMAT(c.concert_time, '%H:%i') as concert_time,
-             c.poster_url,
-             COALESCE(
-               (SELECT vendor_url FROM concert_ticket_vendors
-                WHERE concert_id = c.id
-                ORDER BY display_order LIMIT 1),
-               c.ticket_url
-             ) as ticket_url,
-             c.status, c.rating, c.rating_count,
+             c.concert_time,
+             c.poster_url, c.status, c.rating, c.rating_count,
              c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival,
              cbr.ranking as boxoffice_ranking
              FROM concerts c
