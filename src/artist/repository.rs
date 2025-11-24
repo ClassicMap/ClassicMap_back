@@ -5,10 +5,12 @@ use sqlx::Error;
 pub struct ArtistRepository;
 
 impl ArtistRepository {
-        pub async fn find_all(pool: &DbPool) -> Result<Vec<Artist>, Error> {
+        pub async fn find_all(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<Artist>, Error> {
             sqlx::query_as::<_, Artist>(
-                "SELECT * FROM v_artists_full"
+                "SELECT * FROM v_artists_full LIMIT ? OFFSET ?"
             )
+                .bind(limit)
+                .bind(offset)
                 .fetch_all(pool)
                 .await
         }

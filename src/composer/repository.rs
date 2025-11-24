@@ -5,13 +5,16 @@ use sqlx::Error;
 pub struct ComposerRepository;
 
 impl ComposerRepository {
-    pub async fn find_all(pool: &DbPool) -> Result<Vec<Composer>, Error> {
+    pub async fn find_all(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<Composer>, Error> {
         sqlx::query_as::<_, Composer>(
             "SELECT c.*, COUNT(p.id) as piece_count
              FROM composers c
              LEFT JOIN pieces p ON c.id = p.composer_id
-             GROUP BY c.id"
+             GROUP BY c.id
+             LIMIT ? OFFSET ?"
         )
+            .bind(limit)
+            .bind(offset)
             .fetch_all(pool)
             .await
     }

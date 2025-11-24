@@ -7,9 +7,16 @@ use crate::db::DbPool;
 use crate::logger::Logger;
 use rocket::{http::Status, serde::json::Json, State};
 
-#[get("/artists")]
-pub async fn get_artists(pool: &State<DbPool>) -> Result<Json<Vec<Artist>>, Status> {
-    match ArtistService::get_all_artists(pool).await {
+#[get("/artists?<offset>&<limit>")]
+pub async fn get_artists(
+    pool: &State<DbPool>,
+    offset: Option<i64>,
+    limit: Option<i64>,
+) -> Result<Json<Vec<Artist>>, Status> {
+    let offset = offset.unwrap_or(0);
+    let limit = limit.unwrap_or(20);
+
+    match ArtistService::get_all_artists(pool, offset, limit).await {
         Ok(artists) => Ok(Json(artists)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get artists: {}", e));
