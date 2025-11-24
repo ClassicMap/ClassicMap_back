@@ -5,9 +5,16 @@ use crate::logger::Logger;
 use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces};
 use super::service::ComposerService;
 
-#[get("/composers")]
-pub async fn get_composers(pool: &State<DbPool>) -> Result<Json<Vec<Composer>>, Status> {
-    match ComposerService::get_all_composers(pool).await {
+#[get("/composers?<offset>&<limit>")]
+pub async fn get_composers(
+    pool: &State<DbPool>,
+    offset: Option<i64>,
+    limit: Option<i64>,
+) -> Result<Json<Vec<Composer>>, Status> {
+    let offset = offset.unwrap_or(0);
+    let limit = limit.unwrap_or(20);
+
+    match ComposerService::get_all_composers(pool, offset, limit).await {
         Ok(composers) => Ok(Json(composers)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get composers: {}", e));

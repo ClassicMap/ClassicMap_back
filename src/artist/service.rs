@@ -5,8 +5,8 @@ use super::repository::ArtistRepository;
 pub struct ArtistService;
 
 impl ArtistService {
-    pub async fn get_all_artists(pool: &DbPool) -> Result<Vec<Artist>, String> {
-        ArtistRepository::find_all(pool)
+    pub async fn get_all_artists(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<Artist>, String> {
+        ArtistRepository::find_all(pool, offset, limit)
             .await
             .map_err(|e| e.to_string())
     }

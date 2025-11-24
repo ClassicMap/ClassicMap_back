@@ -5,8 +5,8 @@ use super::repository::ComposerRepository;
 pub struct ComposerService;
 
 impl ComposerService {
-    pub async fn get_all_composers(pool: &DbPool) -> Result<Vec<Composer>, String> {
-        ComposerRepository::find_all(pool)
+    pub async fn get_all_composers(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<Composer>, String> {
+        ComposerRepository::find_all(pool, offset, limit)
             .await
             .map_err(|e| e.to_string())
     }
