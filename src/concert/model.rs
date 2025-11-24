@@ -19,7 +19,6 @@ pub struct Concert {
     pub price_info: Option<String>,
     pub poster_url: Option<String>,
     pub program: Option<String>,
-    pub ticket_url: Option<String>,  // deprecated, use ticket_vendors table
     pub status: String,
     pub rating: Option<Decimal>,
     pub rating_count: Option<i32>,
@@ -105,7 +104,6 @@ pub struct CreateConcert {
     pub price_info: Option<String>,
     pub poster_url: Option<String>,
     pub program: Option<String>,
-    pub ticket_url: Option<String>,
     pub status: String,
 }
 
@@ -121,7 +119,6 @@ pub struct UpdateConcert {
     pub price_info: Option<String>,
     pub poster_url: Option<String>,
     pub program: Option<String>,
-    pub ticket_url: Option<String>,
     pub status: Option<String>,
 }
 
