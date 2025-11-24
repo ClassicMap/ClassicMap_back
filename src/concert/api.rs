@@ -1,4 +1,4 @@
-use super::model::{Concert, CreateConcert, SubmitRating, UpdateConcert, ConcertWithArtists, ConcertWithDetails, ConcertListItem};
+use super::model::{Concert, CreateConcert, SubmitRating, UpdateConcert, ConcertWithArtists, ConcertWithDetails, ConcertListItem, ConcertTicketVendor};
 use super::service::ConcertService;
 use crate::auth::{AuthenticatedUser, ModeratorUser};
 use crate::db::DbPool;
@@ -173,6 +173,20 @@ pub async fn search_concerts(
         Ok(concerts) => Ok(Json(concerts)),
         Err(e) => {
             Logger::error("API", &format!("Failed to search concerts: {}", e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+#[get("/concerts/<id>/ticket-vendors")]
+pub async fn get_ticket_vendors(
+    pool: &State<DbPool>,
+    id: i32,
+) -> Result<Json<Vec<ConcertTicketVendor>>, Status> {
+    match ConcertService::get_ticket_vendors(pool, id).await {
+        Ok(vendors) => Ok(Json(vendors)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to get ticket vendors for concert {}: {}", id, e));
             Err(Status::InternalServerError)
         }
     }
