@@ -13,7 +13,14 @@ pub async fn get_concerts(
     limit: Option<i64>,
 ) -> Result<Json<Vec<ConcertListItem>>, Status> {
     match ConcertService::get_all_concerts_list_view(pool, offset, limit).await {
-        Ok(concerts) => Ok(Json(concerts)),
+        Ok(concerts) => {
+            // 첫 번째 공연 데이터 로깅 (있으면)
+            if let Some(first) = concerts.first() {
+                Logger::info("API_RESPONSE", &format!("First concert: {}", serde_json::to_string_pretty(first).unwrap_or_else(|_| "Failed to serialize".to_string())));
+            }
+            Logger::info("API_RESPONSE", &format!("Total concerts returned: {}", concerts.len()));
+            Ok(Json(concerts))
+        },
         Err(e) => {
             Logger::error("API", &format!("Failed to get concerts: {}", e));
             Err(Status::InternalServerError)
@@ -24,7 +31,12 @@ pub async fn get_concerts(
 #[get("/concerts/<id>")]
 pub async fn get_concert(pool: &State<DbPool>, id: i32) -> Result<Json<Option<ConcertWithDetails>>, Status> {
     match ConcertService::get_concert_with_details(pool, id).await {
-        Ok(concert) => Ok(Json(concert)),
+        Ok(concert) => {
+            if let Some(ref c) = concert {
+                Logger::info("API_RESPONSE", &format!("Concert detail {}: {}", id, serde_json::to_string_pretty(c).unwrap_or_else(|_| "Failed to serialize".to_string())));
+            }
+            Ok(Json(concert))
+        },
         Err(e) => {
             Logger::error("API", &format!("Failed to get concert {}: {}", id, e));
             Err(Status::InternalServerError)
