@@ -404,6 +404,55 @@ impl KopisService {
                                             .await
                                             {
                                                 Ok(concert_id) => {
+                                                    // Ticket Vendors 저장
+                                                    if let Some(vendor_list) = &detail.ticket_vendors {
+                                                        let vendors: Vec<(Option<String>, String)> = vendor_list
+                                                            .vendors
+                                                            .iter()
+                                                            .map(|v| (v.vendor_name.clone(), v.vendor_url.clone()))
+                                                            .collect();
+
+                                                        if !vendors.is_empty() {
+                                                            if let Err(e) = ConcertRepository::upsert_ticket_vendors(
+                                                                pool,
+                                                                concert_id,
+                                                                vendors,
+                                                            )
+                                                            .await
+                                                            {
+                                                                Logger::warn(
+                                                                    "KOPIS",
+                                                                    &format!(
+                                                                        "Failed to save ticket vendors for concert {}: {}",
+                                                                        detail.performance_name, e
+                                                                    ),
+                                                                );
+                                                            }
+                                                        }
+                                                    }
+
+                                                    // Concert Images 저장 (소개 이미지)
+                                                    if let Some(intro_images) = &detail.intro_images {
+                                                        if !intro_images.images.is_empty() {
+                                                            if let Err(e) = ConcertRepository::upsert_concert_images(
+                                                                pool,
+                                                                concert_id,
+                                                                intro_images.images.clone(),
+                                                                "introduction",
+                                                            )
+                                                            .await
+                                                            {
+                                                                Logger::warn(
+                                                                    "KOPIS",
+                                                                    &format!(
+                                                                        "Failed to save intro images for concert {}: {}",
+                                                                        detail.performance_name, e
+                                                                    ),
+                                                                );
+                                                            }
+                                                        }
+                                                    }
+
                                                     // 기존 공연 여부 확인
                                                     if ConcertRepository::get_by_kopis_id(
                                                         pool,
