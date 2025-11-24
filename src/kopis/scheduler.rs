@@ -7,14 +7,10 @@ use super::service::KopisService;
 pub struct VenueSyncScheduler;
 
 impl VenueSyncScheduler {
-    /// 스케줄러 시작 (서버 시작 시 즉시 실행 + 매일 새벽 2시 실행)
+    /// 스케줄러 시작 (매일 새벽 2시 실행)
     pub async fn start(pool: MySqlPool) {
         Logger::info("SCHEDULER", "Starting KOPIS venue sync scheduler");
-        Logger::info("SCHEDULER", "Schedule: Immediate execution + Daily at 2:00 AM");
-
-        // 서버 시작 시 즉시 1회 실행
-        Logger::info("SCHEDULER", "Running initial venue sync...");
-        Self::run_sync(&pool).await;
+        Logger::info("SCHEDULER", "Schedule: Daily at 2:00 AM");
 
         // 백그라운드 태스크로 스케줄러 시작
         tokio::spawn(async move {
