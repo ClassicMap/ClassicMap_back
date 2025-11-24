@@ -687,4 +687,74 @@ impl ConcertRepository {
 
         sql_query.fetch_all(pool).await
     }
+
+    // ============================================
+    // Ticket Vendors 저장 로직
+    // ============================================
+
+    /// concert_ticket_vendors 테이블에 예매처 정보 일괄 저장
+    /// 기존 데이터는 삭제하고 새로 삽입
+    pub async fn upsert_ticket_vendors(
+        pool: &DbPool,
+        concert_id: i32,
+        vendors: Vec<(Option<String>, String)>, // (vendor_name, vendor_url)
+    ) -> Result<(), Error> {
+        // 1. 기존 데이터 삭제
+        sqlx::query("DELETE FROM concert_ticket_vendors WHERE concert_id = ?")
+            .bind(concert_id)
+            .execute(pool)
+            .await?;
+
+        // 2. 새 데이터 삽입
+        for (idx, (vendor_name, vendor_url)) in vendors.iter().enumerate() {
+            sqlx::query(
+                "INSERT INTO concert_ticket_vendors (concert_id, vendor_name, vendor_url, display_order)
+                 VALUES (?, ?, ?, ?)"
+            )
+            .bind(concert_id)
+            .bind(vendor_name)
+            .bind(vendor_url)
+            .bind(idx as i32)
+            .execute(pool)
+            .await?;
+        }
+
+        Ok(())
+    }
+
+    // ============================================
+    // Concert Images 저장 로직
+    // ============================================
+
+    /// concert_images 테이블에 소개 이미지 정보 일괄 저장
+    /// 기존 데이터는 삭제하고 새로 삽입
+    pub async fn upsert_concert_images(
+        pool: &DbPool,
+        concert_id: i32,
+        image_urls: Vec<String>,
+        image_type: &str, // "introduction", "poster", "other"
+    ) -> Result<(), Error> {
+        // 1. 기존 동일 타입 이미지 삭제
+        sqlx::query("DELETE FROM concert_images WHERE concert_id = ? AND image_type = ?")
+            .bind(concert_id)
+            .bind(image_type)
+            .execute(pool)
+            .await?;
+
+        // 2. 새 이미지 삽입
+        for (idx, image_url) in image_urls.iter().enumerate() {
+            sqlx::query(
+                "INSERT INTO concert_images (concert_id, image_url, image_type, display_order)
+                 VALUES (?, ?, ?, ?)"
+            )
+            .bind(concert_id)
+            .bind(image_url)
+            .bind(image_type)
+            .bind(idx as i32)
+            .execute(pool)
+            .await?;
+        }
+
+        Ok(())
+    }
 }
