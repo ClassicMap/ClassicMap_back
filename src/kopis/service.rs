@@ -595,11 +595,25 @@ impl KopisService {
         // 클래식 장르만
         let genre_codes = vec!["CCCA"]; // 클래식
 
-        // 주요 지역 코드
+        // 전국 17개 시도 + 전체
         let area_codes = vec![
             Some("11"), // 서울
+            Some("26"), // 부산
+            Some("27"), // 대구
             Some("28"), // 인천
+            Some("29"), // 광주
+            Some("30"), // 대전
+            Some("31"), // 울산
+            Some("36"), // 세종
             Some("41"), // 경기
+            Some("42"), // 강원
+            Some("43"), // 충북
+            Some("44"), // 충남
+            Some("45"), // 전북
+            Some("46"), // 전남
+            Some("47"), // 경북
+            Some("48"), // 경남
+            Some("50"), // 제주
             None,       // 전체
         ];
 

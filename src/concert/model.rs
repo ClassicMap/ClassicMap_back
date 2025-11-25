@@ -190,7 +190,6 @@ pub struct ConcertListItem {
     pub is_open_run: Option<bool>,
     pub is_visit: Option<bool>,
     pub is_festival: Option<bool>,
-    pub boxoffice_ranking: Option<i32>, // 박스오피스 순위 (1, 2, 3 등)
 }
 
 // Full detail response with all related data
