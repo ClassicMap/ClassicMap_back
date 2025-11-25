@@ -695,6 +695,88 @@ impl ConcertRepository {
         sql_query.fetch_all(pool).await
     }
 
+    /// Full-text search across concerts with pagination
+    pub async fn search_concerts_by_text(
+        pool: &DbPool,
+        search_query: Option<&str>,
+        genre: Option<&str>,
+        area: Option<&str>,
+        status: Option<&str>,
+        offset: i64,
+        limit: i64,
+    ) -> Result<Vec<ConcertListItem>, Error> {
+        // Prepare search pattern early to avoid lifetime issues
+        let search_pattern = search_query
+            .filter(|q| !q.trim().is_empty())
+            .map(|q| format!("%{}%", q));
+
+        let mut query = String::from(
+            "SELECT c.id, c.title, c.venue_id,
+             DATE_FORMAT(c.start_date, '%Y-%m-%d') as start_date,
+             DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
+             c.concert_time,
+             c.poster_url, c.status, c.rating, c.rating_count,
+             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival,
+             cbr.ranking as boxoffice_ranking
+             FROM concerts c
+             LEFT JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
+             WHERE 1=1",
+        );
+
+        // Text search across multiple fields
+        if search_pattern.is_some() {
+            query.push_str(
+                " AND (c.title LIKE ? OR c.composer_info LIKE ? OR c.cast LIKE ? OR c.facility_name LIKE ?)"
+            );
+        }
+
+        // Additional filters
+        if genre.is_some() {
+            query.push_str(" AND c.genre = ?");
+        }
+        if area.is_some() {
+            query.push_str(" AND c.area = ?");
+        }
+        if status.is_some() {
+            query.push_str(" AND c.status = ?");
+        }
+
+        // Sort by proximity to today (upcoming first, then past)
+        query.push_str(
+            " ORDER BY
+               CASE WHEN c.start_date >= CURDATE() THEN 0 ELSE 1 END,
+               ABS(DATEDIFF(c.start_date, CURDATE())) ASC
+             LIMIT ? OFFSET ?",
+        );
+
+        let mut sql_query = sqlx::query_as::<_, ConcertListItem>(&query);
+
+        // Bind search query with wildcards
+        if let Some(ref pattern) = search_pattern {
+            sql_query = sql_query
+                .bind(pattern) // title
+                .bind(pattern) // composer_info
+                .bind(pattern) // cast
+                .bind(pattern); // facility_name
+        }
+
+        // Bind filter parameters
+        if let Some(g) = genre {
+            sql_query = sql_query.bind(g);
+        }
+        if let Some(a) = area {
+            sql_query = sql_query.bind(a);
+        }
+        if let Some(s) = status {
+            sql_query = sql_query.bind(s);
+        }
+
+        // Bind pagination
+        sql_query = sql_query.bind(limit).bind(offset);
+
+        sql_query.fetch_all(pool).await
+    }
+
     // ============================================
     // Ticket Vendors 저장 로직
     // ============================================

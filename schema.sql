@@ -329,6 +329,9 @@ CREATE TABLE concerts (
 
     -- 외래키 및 인덱스
     FOREIGN KEY (venue_id) REFERENCES venues(id) ON DELETE RESTRICT,
+    INDEX idx_title (title),
+    INDEX ids_facility_name (facility_name),
+    INDEX idx_composer_info (composer_info(255)),
     INDEX idx_start_date (start_date),
     INDEX idx_end_date (end_date),
     INDEX idx_status (status),
