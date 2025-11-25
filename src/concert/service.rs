@@ -150,4 +150,10 @@ impl ConcertService {
             .await
             .map_err(|e| e.to_string())
     }
+
+    pub async fn get_available_areas(pool: &DbPool) -> Result<Vec<String>, String> {
+        ConcertRepository::get_distinct_areas(pool)
+            .await
+            .map_err(|e| e.to_string())
+    }
 }
