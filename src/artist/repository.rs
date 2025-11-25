@@ -151,4 +151,71 @@ impl ArtistRepository {
 
         Ok(result.rows_affected())
     }
+
+    /// Full-text search across artists with pagination
+    pub async fn search_artists_by_text(
+        pool: &DbPool,
+        search_query: Option<&str>,
+        tier: Option<&str>,
+        category: Option<&str>,
+        offset: i64,
+        limit: i64,
+    ) -> Result<Vec<Artist>, Error> {
+        // Prepare search pattern early to avoid lifetime issues
+        let search_pattern = search_query
+            .filter(|q| !q.trim().is_empty())
+            .map(|q| format!("%{}%", q));
+
+        let mut query = String::from(
+            "SELECT * FROM v_artists_full WHERE 1=1"
+        );
+
+        // Text search across multiple fields
+        if search_pattern.is_some() {
+            query.push_str(
+                " AND (name LIKE ? OR english_name LIKE ? OR category LIKE ? OR nationality LIKE ? OR bio LIKE ? OR style LIKE ?)"
+            );
+        }
+
+        // Tier filter
+        if tier.is_some() {
+            query.push_str(" AND tier = ?");
+        }
+
+        // Category filter
+        if category.is_some() {
+            query.push_str(" AND category = ?");
+        }
+
+        // Order by rating and tier
+        query.push_str(" ORDER BY rating DESC, tier ASC LIMIT ? OFFSET ?");
+
+        let mut sql_query = sqlx::query_as::<_, Artist>(&query);
+
+        // Bind search query with wildcards
+        if let Some(ref pattern) = search_pattern {
+            sql_query = sql_query
+                .bind(pattern) // name
+                .bind(pattern) // english_name
+                .bind(pattern) // category
+                .bind(pattern) // nationality
+                .bind(pattern) // bio
+                .bind(pattern); // style
+        }
+
+        // Bind tier filter
+        if let Some(t) = tier {
+            sql_query = sql_query.bind(t);
+        }
+
+        // Bind category filter
+        if let Some(c) = category {
+            sql_query = sql_query.bind(c);
+        }
+
+        // Bind pagination
+        sql_query = sql_query.bind(limit).bind(offset);
+
+        sql_query.fetch_all(pool).await
+    }
 }

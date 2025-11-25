@@ -90,6 +90,7 @@ async fn rocket() -> _ {
                 artist::get_artists,
                 artist::get_artist,
                 artist::get_artist_concerts,
+                artist::search_artists,
                 artist::create_artist,
                 artist::update_artist,
                 artist::delete_artist,
