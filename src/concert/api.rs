@@ -183,15 +183,8 @@ pub async fn get_ticket_vendors(
     pool: &State<DbPool>,
     id: i32,
 ) -> Result<Json<Vec<ConcertTicketVendor>>, Status> {
-    Logger::info("API", &format!("GET /concerts/{}/ticket-vendors", id));
     match ConcertService::get_ticket_vendors(pool, id).await {
-        Ok(vendors) => {
-            Logger::info("API", &format!("Found {} ticket vendors for concert {}", vendors.len(), id));
-            if !vendors.is_empty() {
-                Logger::debug("API", &format!("Vendors: {:?}", vendors));
-            }
-            Ok(Json(vendors))
-        },
+        Ok(vendors) => Ok(Json(vendors)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get ticket vendors for concert {}: {}", id, e));
             Err(Status::InternalServerError)
