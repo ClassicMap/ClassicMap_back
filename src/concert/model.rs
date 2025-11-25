@@ -1,6 +1,7 @@
 use rust_decimal::Decimal;
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
+use chrono::NaiveDateTime;
 
 #[derive(Debug, Serialize, Deserialize, FromRow)]
 #[serde(rename_all = "camelCase")]
@@ -162,7 +163,7 @@ pub struct ConcertBoxofficeRanking {
     pub seat_count: Option<i32>,
     pub sync_start_date: String,
     pub sync_end_date: String,
-    pub synced_at: Option<String>,
+    pub synced_at: Option<NaiveDateTime>,
     pub is_featured: Option<bool>,
 }
 
