@@ -13,7 +13,6 @@ impl ConcertSyncScheduler {
         Logger::info("SCHEDULER", "Starting KOPIS concert sync scheduler");
         Logger::info("SCHEDULER", "Schedule: Daily at 3:00 AM");
 
-        Self::run_sync(&pool).await;
         // 백그라운드 태스크로 스케줄러 시작
         tokio::spawn(async move {
             loop {
