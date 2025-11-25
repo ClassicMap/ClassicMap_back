@@ -44,7 +44,9 @@ impl ConcertRepository {
              cbr.ranking as boxoffice_ranking
              FROM concerts c
              LEFT JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
-             ORDER BY c.start_date DESC
+             ORDER BY
+               CASE WHEN c.start_date >= CURDATE() THEN 0 ELSE 1 END,
+               ABS(DATEDIFF(c.start_date, CURDATE())) ASC
              LIMIT ? OFFSET ?",
         )
         .bind(limit)
@@ -465,11 +467,7 @@ impl ConcertRepository {
         pool: &DbPool,
         concert_id: i32,
     ) -> Result<Vec<ConcertTicketVendor>, Error> {
-        use crate::logger::Logger;
-
-        Logger::debug("REPOSITORY", &format!("Querying ticket vendors for concert_id: {}", concert_id));
-
-        let result = sqlx::query_as::<_, ConcertTicketVendor>(
+        sqlx::query_as::<_, ConcertTicketVendor>(
             "SELECT id, concert_id, vendor_name, vendor_url, display_order
              FROM concert_ticket_vendors
              WHERE concert_id = ?
@@ -477,18 +475,7 @@ impl ConcertRepository {
         )
         .bind(concert_id)
         .fetch_all(pool)
-        .await;
-
-        match &result {
-            Ok(vendors) => {
-                Logger::debug("REPOSITORY", &format!("Query returned {} vendors", vendors.len()));
-            }
-            Err(e) => {
-                Logger::error("REPOSITORY", &format!("Query failed: {}", e));
-            }
-        }
-
-        result
+        .await
     }
 
     // ============================================
