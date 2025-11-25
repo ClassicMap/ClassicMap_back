@@ -1,4 +1,7 @@
-use super::model::{Concert, CreateConcert, SubmitRating, UpdateConcert, ConcertWithArtists, ConcertWithDetails, ConcertListItem, ConcertTicketVendor};
+use super::model::{
+    ConcertListItem, ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails, CreateConcert,
+    SubmitRating, UpdateConcert,
+};
 use super::service::ConcertService;
 use crate::auth::{AuthenticatedUser, ModeratorUser};
 use crate::db::DbPool;
@@ -13,14 +16,8 @@ pub async fn get_concerts(
     limit: Option<i64>,
 ) -> Result<Json<Vec<ConcertListItem>>, Status> {
     match ConcertService::get_all_concerts_list_view(pool, offset, limit).await {
-        Ok(concerts) => {
-            // 첫 번째 공연 데이터 로깅 (있으면)
-            if let Some(first) = concerts.first() {
-                Logger::info("API_RESPONSE", &format!("First concert: {}", serde_json::to_string_pretty(first).unwrap_or_else(|_| "Failed to serialize".to_string())));
-            }
-            Logger::info("API_RESPONSE", &format!("Total concerts returned: {}", concerts.len()));
-            Ok(Json(concerts))
-        },
+        Ok(concerts) => Ok(Json(concerts)),
+
         Err(e) => {
             Logger::error("API", &format!("Failed to get concerts: {}", e));
             Err(Status::InternalServerError)
@@ -29,14 +26,25 @@ pub async fn get_concerts(
 }
 
 #[get("/concerts/<id>")]
-pub async fn get_concert(pool: &State<DbPool>, id: i32) -> Result<Json<Option<ConcertWithDetails>>, Status> {
+pub async fn get_concert(
+    pool: &State<DbPool>,
+    id: i32,
+) -> Result<Json<Option<ConcertWithDetails>>, Status> {
     match ConcertService::get_concert_with_details(pool, id).await {
         Ok(concert) => {
             if let Some(ref c) = concert {
-                Logger::info("API_RESPONSE", &format!("Concert detail {}: {}", id, serde_json::to_string_pretty(c).unwrap_or_else(|_| "Failed to serialize".to_string())));
+                Logger::info(
+                    "API_RESPONSE",
+                    &format!(
+                        "Concert detail {}: {}",
+                        id,
+                        serde_json::to_string_pretty(c)
+                            .unwrap_or_else(|_| "Failed to serialize".to_string())
+                    ),
+                );
             }
             Ok(Json(concert))
-        },
+        }
         Err(e) => {
             Logger::error("API", &format!("Failed to get concert {}: {}", id, e));
             Err(Status::InternalServerError)
@@ -171,23 +179,15 @@ pub async fn search_concerts(
     offset: Option<i64>,
     limit: Option<i64>,
 ) -> Result<Json<Vec<ConcertListItem>>, Status> {
-    // If search query is provided, use text search
-    if q.is_some() && q.as_ref().unwrap().trim().len() > 0 {
-        match ConcertService::search_concerts_by_text(pool, q, genre, area, status, offset, limit).await {
-            Ok(concerts) => Ok(Json(concerts)),
-            Err(e) => {
-                Logger::error("API", &format!("Failed to search concerts by text: {}", e));
-                Err(Status::InternalServerError)
-            }
-        }
-    } else {
-        // Fallback to old filter-only search (for backward compatibility)
-        match ConcertService::search_concerts(pool, genre, area, None, None).await {
-            Ok(concerts) => Ok(Json(concerts)),
-            Err(e) => {
-                Logger::error("API", &format!("Failed to search concerts: {}", e));
-                Err(Status::InternalServerError)
-            }
+    // Always use search_concerts_by_text for pagination support
+    // It handles both text search and filter-only search
+    match ConcertService::search_concerts_by_text(pool, q, genre, area, status, offset, limit)
+        .await
+    {
+        Ok(concerts) => Ok(Json(concerts)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to search concerts: {}", e));
+            Err(Status::InternalServerError)
         }
     }
 }
@@ -200,7 +200,10 @@ pub async fn get_ticket_vendors(
     match ConcertService::get_ticket_vendors(pool, id).await {
         Ok(vendors) => Ok(Json(vendors)),
         Err(e) => {
-            Logger::error("API", &format!("Failed to get ticket vendors for concert {}: {}", id, e));
+            Logger::error(
+                "API",
+                &format!("Failed to get ticket vendors for concert {}: {}", id, e),
+            );
             Err(Status::InternalServerError)
         }
     }
