@@ -161,19 +161,33 @@ pub async fn get_upcoming_concerts(
     }
 }
 
-#[get("/concerts/search?<genre>&<area>&<is_visit>&<is_festival>")]
+#[get("/concerts/search?<q>&<genre>&<area>&<status>&<offset>&<limit>")]
 pub async fn search_concerts(
     pool: &State<DbPool>,
+    q: Option<String>,
     genre: Option<String>,
     area: Option<String>,
-    is_visit: Option<bool>,
-    is_festival: Option<bool>,
+    status: Option<String>,
+    offset: Option<i64>,
+    limit: Option<i64>,
 ) -> Result<Json<Vec<ConcertListItem>>, Status> {
-    match ConcertService::search_concerts(pool, genre, area, is_visit, is_festival).await {
-        Ok(concerts) => Ok(Json(concerts)),
-        Err(e) => {
-            Logger::error("API", &format!("Failed to search concerts: {}", e));
-            Err(Status::InternalServerError)
+    // If search query is provided, use text search
+    if q.is_some() && q.as_ref().unwrap().trim().len() > 0 {
+        match ConcertService::search_concerts_by_text(pool, q, genre, area, status, offset, limit).await {
+            Ok(concerts) => Ok(Json(concerts)),
+            Err(e) => {
+                Logger::error("API", &format!("Failed to search concerts by text: {}", e));
+                Err(Status::InternalServerError)
+            }
+        }
+    } else {
+        // Fallback to old filter-only search (for backward compatibility)
+        match ConcertService::search_concerts(pool, genre, area, None, None).await {
+            Ok(concerts) => Ok(Json(concerts)),
+            Err(e) => {
+                Logger::error("API", &format!("Failed to search concerts: {}", e));
+                Err(Status::InternalServerError)
+            }
         }
     }
 }
