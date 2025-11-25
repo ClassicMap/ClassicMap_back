@@ -208,3 +208,14 @@ pub async fn get_ticket_vendors(
         }
     }
 }
+
+#[get("/concerts/areas")]
+pub async fn get_areas(pool: &State<DbPool>) -> Result<Json<Vec<String>>, Status> {
+    match ConcertService::get_available_areas(pool).await {
+        Ok(areas) => Ok(Json(areas)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to get areas: {}", e));
+            Err(Status::InternalServerError)
+        }
+    }
+}

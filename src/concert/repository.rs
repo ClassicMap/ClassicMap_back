@@ -778,6 +778,22 @@ impl ConcertRepository {
     }
 
     // ============================================
+    // Get Distinct Areas
+    // ============================================
+
+    pub async fn get_distinct_areas(pool: &DbPool) -> Result<Vec<String>, Error> {
+        let areas = sqlx::query_scalar::<_, String>(
+            "SELECT DISTINCT area FROM concerts
+             WHERE area IS NOT NULL AND area != ''
+             ORDER BY area"
+        )
+        .fetch_all(pool)
+        .await?;
+
+        Ok(areas)
+    }
+
+    // ============================================
     // Ticket Vendors 저장 로직
     // ============================================
 
