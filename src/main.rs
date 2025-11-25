@@ -108,6 +108,8 @@ async fn rocket() -> _ {
                 concert::delete_concert,
                 concert::submit_rating,
                 concert::get_user_rating,
+                // Boxoffice routes
+                boxoffice::api::get_top3,
                 // Performance routes
                 performance::get_performances,
                 performance::get_performances_by_piece,
