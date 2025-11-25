@@ -510,7 +510,7 @@ impl ConcertRepository {
              ranking, seat_scale, performance_count, venue_name, seat_count,
              DATE_FORMAT(sync_start_date, '%Y-%m-%d') as sync_start_date,
              DATE_FORMAT(sync_end_date, '%Y-%m-%d') as sync_end_date,
-             DATE_FORMAT(synced_at, '%Y-%m-%d %H:%i:%s') as synced_at, is_featured
+             synced_at, is_featured
              FROM concert_boxoffice_rankings
              WHERE concert_id = ?
              ORDER BY synced_at DESC

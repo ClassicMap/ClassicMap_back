@@ -509,7 +509,7 @@ CREATE TABLE concert_boxoffice_rankings (
     -- 동기화 정보
     sync_start_date DATE NOT NULL COMMENT 'KOPIS 조회 시작일 (stdate)',
     sync_end_date DATE NOT NULL COMMENT 'KOPIS 조회 종료일 (eddate)',
-    synced_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '동기화 시각',
+    synced_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '동기화 시각',
 
     -- 메타 정보
     is_featured BOOLEAN DEFAULT TRUE COMMENT '주목 공연 여부 (TOP 3는 항상 true)',
