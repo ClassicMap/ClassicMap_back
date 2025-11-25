@@ -124,3 +124,33 @@ pub async fn delete_artist_award(
         }
     }
 }
+
+#[get("/artists/search?<q>&<tier>&<category>&<offset>&<limit>")]
+pub async fn search_artists(
+    pool: &State<DbPool>,
+    q: Option<String>,
+    tier: Option<String>,
+    category: Option<String>,
+    offset: Option<i64>,
+    limit: Option<i64>,
+) -> Result<Json<Vec<Artist>>, Status> {
+    // If search query is provided, use text search
+    if q.is_some() && q.as_ref().unwrap().trim().len() > 0 {
+        match ArtistService::search_artists(pool, q, tier, category, offset, limit).await {
+            Ok(artists) => Ok(Json(artists)),
+            Err(e) => {
+                Logger::error("API", &format!("Failed to search artists: {}", e));
+                Err(Status::InternalServerError)
+            }
+        }
+    } else {
+        // Fallback to filter-only search
+        match ArtistService::search_artists(pool, None, tier, category, offset, limit).await {
+            Ok(artists) => Ok(Json(artists)),
+            Err(e) => {
+                Logger::error("API", &format!("Failed to filter artists: {}", e));
+                Err(Status::InternalServerError)
+            }
+        }
+    }
+}

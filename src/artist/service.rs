@@ -52,4 +52,27 @@ impl ArtistService {
             .await
             .map_err(|e| e.to_string())
     }
+
+    pub async fn search_artists(
+        pool: &DbPool,
+        search_query: Option<String>,
+        tier: Option<String>,
+        category: Option<String>,
+        offset: Option<i64>,
+        limit: Option<i64>,
+    ) -> Result<Vec<Artist>, String> {
+        let offset_val = offset.unwrap_or(0);
+        let limit_val = limit.unwrap_or(20);
+
+        ArtistRepository::search_artists_by_text(
+            pool,
+            search_query.as_deref(),
+            tier.as_deref(),
+            category.as_deref(),
+            offset_val,
+            limit_val,
+        )
+        .await
+        .map_err(|e| e.to_string())
+    }
 }
