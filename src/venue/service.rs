@@ -48,4 +48,20 @@ impl VenueService {
         Logger::success("VENUE", &format!("Deleted {} row(s)", rows));
         Ok(rows)
     }
+
+    pub async fn search_venues(
+        pool: &DbPool,
+        search_query: Option<String>,
+        offset: i64,
+        limit: i64,
+    ) -> Result<Vec<Venue>, String> {
+        VenueRepository::search_venues(
+            pool,
+            search_query.as_deref(),
+            offset,
+            limit
+        )
+        .await
+        .map_err(|e| format!("Failed to search venues: {}", e))
+    }
 }

@@ -828,6 +828,38 @@ impl ConcertRepository {
     }
 
     // ============================================
+    // Concert Artists 저장 로직
+    // ============================================
+
+    /// concert_artists 테이블에 아티스트-공연 관계 일괄 저장
+    /// 기존 데이터는 삭제하고 새로 삽입
+    pub async fn upsert_concert_artists(
+        pool: &DbPool,
+        concert_id: i32,
+        artist_ids: Vec<i32>,
+    ) -> Result<(), Error> {
+        // 1. 기존 데이터 삭제
+        sqlx::query("DELETE FROM concert_artists WHERE concert_id = ?")
+            .bind(concert_id)
+            .execute(pool)
+            .await?;
+
+        // 2. 새 데이터 삽입
+        for artist_id in artist_ids {
+            sqlx::query(
+                "INSERT INTO concert_artists (concert_id, artist_id, role)
+                 VALUES (?, ?, NULL)"
+            )
+            .bind(concert_id)
+            .bind(artist_id)
+            .execute(pool)
+            .await?;
+        }
+
+        Ok(())
+    }
+
+    // ============================================
     // Concert Images 저장 로직
     // ============================================
 

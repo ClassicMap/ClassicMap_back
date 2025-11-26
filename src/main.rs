@@ -140,6 +140,7 @@ async fn rocket() -> _ {
                 venue::create_venue,
                 venue::update_venue,
                 venue::delete_venue,
+                venue::search_venues,
                 // KOPIS routes
                 kopis::trigger_venue_sync,
             ],

@@ -174,4 +174,45 @@ impl VenueRepository {
 
         Ok(result.rows_affected())
     }
+
+    /// Full-text search across venues with pagination
+    pub async fn search_venues(
+        pool: &MySqlPool,
+        search_query: Option<&str>,
+        offset: i64,
+        limit: i64,
+    ) -> Result<Vec<Venue>, sqlx::Error> {
+        let search_pattern = search_query
+            .filter(|q| !q.trim().is_empty())
+            .map(|q| format!("%{}%", q));
+
+        let mut query = String::from(
+            "SELECT * FROM venues WHERE 1=1"
+        );
+
+        // Text search across multiple fields
+        if search_pattern.is_some() {
+            query.push_str(
+                " AND (name LIKE ? OR address LIKE ? OR city LIKE ?)"
+            );
+        }
+
+        // Order by name
+        query.push_str(" ORDER BY name ASC LIMIT ? OFFSET ?");
+
+        let mut sql_query = sqlx::query_as::<_, Venue>(&query);
+
+        // Bind search query with wildcards
+        if let Some(ref pattern) = search_pattern {
+            sql_query = sql_query
+                .bind(pattern) // name
+                .bind(pattern) // address
+                .bind(pattern); // city
+        }
+
+        // Bind pagination
+        sql_query = sql_query.bind(limit).bind(offset);
+
+        sql_query.fetch_all(pool).await
+    }
 }

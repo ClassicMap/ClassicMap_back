@@ -218,4 +218,18 @@ impl ArtistRepository {
 
         sql_query.fetch_all(pool).await
     }
+
+    /// 아티스트 이름으로 검색 (한국어 이름 또는 영어 이름)
+    /// cast 필드에서 추출한 이름으로 매칭할 때 사용
+    pub async fn find_by_name(pool: &DbPool, name: &str) -> Result<Option<Artist>, Error> {
+        sqlx::query_as::<_, Artist>(
+            "SELECT * FROM v_artists_full
+             WHERE name = ? OR english_name = ?
+             LIMIT 1"
+        )
+        .bind(name)
+        .bind(name)
+        .fetch_optional(pool)
+        .await
+    }
 }
