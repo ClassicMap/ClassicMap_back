@@ -1,3 +1,4 @@
+use chrono::NaiveDateTime;
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 
@@ -12,7 +13,7 @@ pub struct Performance {
     pub start_time: i32,
     pub end_time: i32,
     pub characteristic: Option<String>,
-    pub recording_date: Option<String>,
+    pub recording_date: Option<NaiveDateTime>,
     pub view_count: i32,
     pub rating: f64,
 }
@@ -27,7 +28,7 @@ pub struct CreatePerformance {
     pub start_time: i32,
     pub end_time: i32,
     pub characteristic: Option<String>,
-    pub recording_date: Option<String>,
+    pub recording_date: Option<NaiveDateTime>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -38,7 +39,7 @@ pub struct UpdatePerformance {
     pub start_time: Option<i32>,
     pub end_time: Option<i32>,
     pub characteristic: Option<String>,
-    pub recording_date: Option<String>,
+    pub recording_date: Option<NaiveDateTime>,
     pub view_count: Option<i32>,
     pub rating: Option<f64>,
 }
