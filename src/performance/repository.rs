@@ -8,7 +8,7 @@ impl PerformanceRepository {
     pub async fn find_all(pool: &DbPool) -> Result<Vec<Performance>, Error> {
         sqlx::query_as::<_, Performance>(
             "SELECT id, piece_id, artist_id, video_platform, video_id, start_time, end_time, 
-             characteristic, recording_date, view_count, CAST(rating AS DOUBLE) as rating 
+             characteristic, view_count, CAST(rating AS DOUBLE) as rating 
              FROM performances ORDER BY id DESC",
         )
         .fetch_all(pool)
@@ -18,7 +18,7 @@ impl PerformanceRepository {
     pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<Performance>, Error> {
         sqlx::query_as::<_, Performance>(
             "SELECT id, piece_id, artist_id, video_platform, video_id, start_time, end_time, 
-             characteristic, recording_date, view_count, CAST(rating AS DOUBLE) as rating 
+             characteristic, view_count, CAST(rating AS DOUBLE) as rating 
              FROM performances WHERE id = ?",
         )
         .bind(id)
@@ -29,7 +29,7 @@ impl PerformanceRepository {
     pub async fn find_by_piece(pool: &DbPool, piece_id: i32) -> Result<Vec<Performance>, Error> {
         sqlx::query_as::<_, Performance>(
             "SELECT id, piece_id, artist_id, video_platform, video_id, start_time, end_time, 
-             characteristic, recording_date, view_count, CAST(rating AS DOUBLE) as rating 
+             characteristic, view_count, CAST(rating AS DOUBLE) as rating 
              FROM performances WHERE piece_id = ? ORDER BY rating DESC",
         )
         .bind(piece_id)
@@ -40,7 +40,7 @@ impl PerformanceRepository {
     pub async fn find_by_artist(pool: &DbPool, artist_id: i32) -> Result<Vec<Performance>, Error> {
         sqlx::query_as::<_, Performance>(
             "SELECT id, piece_id, artist_id, video_platform, video_id, start_time, end_time, 
-             characteristic, recording_date, view_count, CAST(rating AS DOUBLE) as rating 
+             characteristic, view_count, CAST(rating AS DOUBLE) as rating 
              FROM performances WHERE artist_id = ? ORDER BY id DESC",
         )
         .bind(artist_id)
