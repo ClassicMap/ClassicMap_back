@@ -17,6 +17,12 @@ impl PerformanceService {
             .map_err(|e| e.to_string())
     }
 
+    pub async fn get_performances_by_sector(pool: &DbPool, sector_id: i32) -> Result<Vec<Performance>, String> {
+        PerformanceRepository::find_by_sector(pool, sector_id)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
     pub async fn get_performances_by_piece(pool: &DbPool, piece_id: i32) -> Result<Vec<Performance>, String> {
         PerformanceRepository::find_by_piece(pool, piece_id)
             .await

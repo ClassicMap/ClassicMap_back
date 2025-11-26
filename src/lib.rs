@@ -10,6 +10,7 @@ pub mod concert;
 pub mod db;
 pub mod logger;
 pub mod performance;
+pub mod performance_sector;
 pub mod piece;
 pub mod recording;
 pub mod user;

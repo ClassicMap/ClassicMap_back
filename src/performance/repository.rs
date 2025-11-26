@@ -7,8 +7,8 @@ pub struct PerformanceRepository;
 impl PerformanceRepository {
     pub async fn find_all(pool: &DbPool) -> Result<Vec<Performance>, Error> {
         sqlx::query_as::<_, Performance>(
-            "SELECT id, piece_id, artist_id, video_platform, video_id, start_time, end_time, 
-             characteristic, view_count, CAST(rating AS DOUBLE) as rating 
+            "SELECT id, sector_id, piece_id, artist_id, video_platform, video_id, start_time, end_time,
+             characteristic, view_count, CAST(rating AS DOUBLE) as rating
              FROM performances ORDER BY id DESC",
         )
         .fetch_all(pool)
@@ -17,8 +17,8 @@ impl PerformanceRepository {
 
     pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<Performance>, Error> {
         sqlx::query_as::<_, Performance>(
-            "SELECT id, piece_id, artist_id, video_platform, video_id, start_time, end_time, 
-             characteristic, view_count, CAST(rating AS DOUBLE) as rating 
+            "SELECT id, sector_id, piece_id, artist_id, video_platform, video_id, start_time, end_time,
+             characteristic, view_count, CAST(rating AS DOUBLE) as rating
              FROM performances WHERE id = ?",
         )
         .bind(id)
@@ -26,10 +26,21 @@ impl PerformanceRepository {
         .await
     }
 
+    pub async fn find_by_sector(pool: &DbPool, sector_id: i32) -> Result<Vec<Performance>, Error> {
+        sqlx::query_as::<_, Performance>(
+            "SELECT id, sector_id, piece_id, artist_id, video_platform, video_id, start_time, end_time,
+             characteristic, view_count, CAST(rating AS DOUBLE) as rating
+             FROM performances WHERE sector_id = ? ORDER BY rating DESC",
+        )
+        .bind(sector_id)
+        .fetch_all(pool)
+        .await
+    }
+
     pub async fn find_by_piece(pool: &DbPool, piece_id: i32) -> Result<Vec<Performance>, Error> {
         sqlx::query_as::<_, Performance>(
-            "SELECT id, piece_id, artist_id, video_platform, video_id, start_time, end_time, 
-             characteristic, view_count, CAST(rating AS DOUBLE) as rating 
+            "SELECT id, sector_id, piece_id, artist_id, video_platform, video_id, start_time, end_time,
+             characteristic, view_count, CAST(rating AS DOUBLE) as rating
              FROM performances WHERE piece_id = ? ORDER BY rating DESC",
         )
         .bind(piece_id)
@@ -39,8 +50,8 @@ impl PerformanceRepository {
 
     pub async fn find_by_artist(pool: &DbPool, artist_id: i32) -> Result<Vec<Performance>, Error> {
         sqlx::query_as::<_, Performance>(
-            "SELECT id, piece_id, artist_id, video_platform, video_id, start_time, end_time, 
-             characteristic, view_count, CAST(rating AS DOUBLE) as rating 
+            "SELECT id, sector_id, piece_id, artist_id, video_platform, video_id, start_time, end_time,
+             characteristic, view_count, CAST(rating AS DOUBLE) as rating
              FROM performances WHERE artist_id = ? ORDER BY id DESC",
         )
         .bind(artist_id)
@@ -50,10 +61,11 @@ impl PerformanceRepository {
 
     pub async fn create(pool: &DbPool, performance: CreatePerformance) -> Result<u64, Error> {
         let result = sqlx::query(
-            "INSERT INTO performances (piece_id, artist_id, video_platform, video_id, 
-             start_time, end_time, characteristic, view_count, rating) 
-             VALUES (?, ?, ?, ?, ?, ?, ?, 0, 0.0)",
+            "INSERT INTO performances (sector_id, piece_id, artist_id, video_platform, video_id,
+             start_time, end_time, characteristic, view_count, rating)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0, 0.0)",
         )
+        .bind(performance.sector_id)
         .bind(performance.piece_id)
         .bind(performance.artist_id)
         .bind(performance.video_platform)

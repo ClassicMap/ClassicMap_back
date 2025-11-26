@@ -12,6 +12,7 @@ mod hall;
 mod kopis;
 mod logger;
 mod performance;
+mod performance_sector;
 mod piece;
 mod recording;
 mod user;
@@ -111,8 +112,15 @@ async fn rocket() -> _ {
                 concert::get_user_rating,
                 // Boxoffice routes
                 boxoffice::api::get_top3,
+                // Performance Sector routes
+                performance_sector::get_sectors_by_piece,
+                performance_sector::get_sector,
+                performance_sector::create_sector,
+                performance_sector::update_sector,
+                performance_sector::delete_sector,
                 // Performance routes
                 performance::get_performances,
+                performance::get_performances_by_sector,
                 performance::get_performances_by_piece,
                 performance::get_performances_by_artist,
                 performance::get_performance,
