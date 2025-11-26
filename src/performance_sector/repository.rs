@@ -8,7 +8,10 @@ pub struct PerformanceSectorRepository;
 
 impl PerformanceSectorRepository {
     /// 특정 곡의 모든 섹터 조회 (display_order순)
-    pub async fn find_by_piece(pool: &DbPool, piece_id: i32) -> Result<Vec<PerformanceSector>, Error> {
+    pub async fn find_by_piece(
+        pool: &DbPool,
+        piece_id: i32,
+    ) -> Result<Vec<PerformanceSector>, Error> {
         sqlx::query_as!(
             PerformanceSector,
             r#"
@@ -33,7 +36,7 @@ impl PerformanceSectorRepository {
             piece_id: i32,
             sector_name: String,
             description: Option<String>,
-            display_order: i32,
+            display_order: Option<i32>,
             performance_count: i32,
         }
 
@@ -128,7 +131,7 @@ impl PerformanceSectorRepository {
         // 변경되지 않은 필드는 기존 값 유지
         let sector_name = sector.sector_name.unwrap_or(existing.sector_name);
         let description = sector.description.or(existing.description);
-        let display_order = sector.display_order.unwrap_or(existing.display_order);
+        let display_order = Some(sector.display_order).unwrap_or(existing.display_order);
 
         let result = sqlx::query!(
             r#"
