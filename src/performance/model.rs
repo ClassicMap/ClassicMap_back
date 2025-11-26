@@ -5,6 +5,7 @@ use sqlx::FromRow;
 #[serde(rename_all = "camelCase")]
 pub struct Performance {
     pub id: i32,
+    pub sector_id: i32,
     pub piece_id: i32,
     pub artist_id: i32,
     pub video_platform: String,
@@ -19,7 +20,8 @@ pub struct Performance {
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct CreatePerformance {
-    pub piece_id: i32,
+    pub sector_id: i32,
+    pub piece_id: i32, // 하위 호환성 유지
     pub artist_id: i32,
     pub video_platform: String,
     pub video_id: String,

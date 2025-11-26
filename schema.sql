@@ -18,6 +18,7 @@ DROP TABLE IF EXISTS user_favorite_artists; -- 미사용
 DROP TABLE IF EXISTS user_favorite_composers; -- 미사용
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS performances;
+DROP TABLE IF EXISTS performance_sectors;
 DROP TABLE IF EXISTS concerts;
 DROP TABLE IF EXISTS concert_images;
 DROP TABLE IF EXISTS concert_ticket_vendors;
@@ -384,11 +385,30 @@ COMMENT='공연 소개 이미지 테이블 (KOPIS styurls)';
 
 
 -- ============================================
+-- 12-1. 연주 섹터 (Performance Sectors) 테이블
+-- ============================================
+CREATE TABLE performance_sectors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    piece_id INT NOT NULL,
+    sector_name VARCHAR(200) NOT NULL COMMENT '섹터명 (예: 1악장, 빠른 템포, 라이브 버전)',
+    description TEXT COMMENT '섹터 설명',
+    display_order INT DEFAULT 0 COMMENT '표시 순서',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (piece_id) REFERENCES pieces(id) ON DELETE CASCADE,
+    INDEX idx_piece_id (piece_id),
+    INDEX idx_display_order (display_order),
+    INDEX idx_piece_sector_order (piece_id, display_order)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='연주 섹터/악장 테이블 - 곡의 섹터별 연주 그룹화';
+
+-- ============================================
 -- 13. 연주 영상 (Performances) 테이블
 -- ============================================
 CREATE TABLE performances (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    piece_id INT NOT NULL,
+    sector_id INT NOT NULL COMMENT '섹터 ID (FK to performance_sectors)',
+    piece_id INT NOT NULL COMMENT '곡 ID (하위 호환성)',
     artist_id INT NOT NULL,
     video_platform ENUM('youtube', 'vimeo', 'other') DEFAULT 'youtube',
     video_id VARCHAR(100) NOT NULL COMMENT '플랫폼별 비디오 ID',
@@ -399,11 +419,14 @@ CREATE TABLE performances (
     rating DECIMAL(2,1) DEFAULT 0.0 COMMENT '평점',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (sector_id) REFERENCES performance_sectors(id) ON DELETE CASCADE,
     FOREIGN KEY (piece_id) REFERENCES pieces(id) ON DELETE CASCADE,
     FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE,
+    INDEX idx_sector_id (sector_id),
     INDEX idx_piece_id (piece_id),
     INDEX idx_artist_id (artist_id),
-    INDEX idx_rating (rating)
+    INDEX idx_rating (rating),
+    INDEX idx_piece_sector (piece_id, sector_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================

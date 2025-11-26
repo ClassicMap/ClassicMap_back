@@ -16,6 +16,17 @@ pub async fn get_performances(pool: &State<DbPool>) -> Result<Json<Vec<Performan
     }
 }
 
+#[get("/sectors/<sector_id>/performances")]
+pub async fn get_performances_by_sector(pool: &State<DbPool>, sector_id: i32) -> Result<Json<Vec<Performance>>, Status> {
+    match PerformanceService::get_performances_by_sector(pool, sector_id).await {
+        Ok(performances) => Ok(Json(performances)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to get performances for sector {}: {}", sector_id, e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
 #[get("/pieces/<piece_id>/performances")]
 pub async fn get_performances_by_piece(pool: &State<DbPool>, piece_id: i32) -> Result<Json<Vec<Performance>>, Status> {
     match PerformanceService::get_performances_by_piece(pool, piece_id).await {
