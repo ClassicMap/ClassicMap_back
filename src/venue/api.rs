@@ -46,3 +46,18 @@ pub async fn delete_venue(
     let rows = VenueService::delete_venue(pool, id).await?;
     Ok(Json(rows))
 }
+
+/// GET /venues/search?q=<query>&offset=<offset>&limit=<limit>
+#[get("/venues/search?<q>&<offset>&<limit>")]
+pub async fn search_venues(
+    pool: &State<DbPool>,
+    q: Option<String>,
+    offset: Option<i64>,
+    limit: Option<i64>,
+) -> Result<Json<Vec<Venue>>, String> {
+    let offset = offset.unwrap_or(0);
+    let limit = limit.unwrap_or(20);
+
+    let venues = VenueService::search_venues(pool, q, offset, limit).await?;
+    Ok(Json(venues))
+}

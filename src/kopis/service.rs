@@ -1,4 +1,5 @@
 use super::client::KopisClient;
+use crate::artist::repository::ArtistRepository;
 use crate::boxoffice::BoxofficeRepository;
 use crate::concert::repository::ConcertRepository;
 use crate::hall::{CreateHall, HallRepository};
@@ -263,6 +264,55 @@ impl KopisService {
     }
 
     // ============================================
+    // 아티스트 매칭 헬퍼 함수
+    // ============================================
+
+    /// cast 문자열을 파싱하여 아티스트 ID 목록 반환
+    /// 예: "손열음, 홍혜란, 김효나" -> [189, 234, ...]
+    async fn parse_and_match_artists(pool: &MySqlPool, cast: Option<&str>) -> Vec<i32> {
+        let mut artist_ids = Vec::new();
+
+        if let Some(cast_str) = cast {
+            // 쉼표나 띄어쓰기 등으로 분리
+            let names: Vec<&str> = cast_str
+                .split(&[',', '·', '/', '\n'][..])
+                .map(|s| s.trim())
+                .filter(|s| !s.is_empty() && s.len() > 1) // 너무 짧은 이름 제외
+                .collect();
+
+            for name in names {
+                // " 등" 제거
+                let clean_name = name.trim_end_matches(" 등").trim_end_matches("등").trim();
+
+                // DB에서 아티스트 검색
+                match ArtistRepository::find_by_name(pool, clean_name).await {
+                    Ok(Some(artist)) => {
+                        artist_ids.push(artist.id);
+                        Logger::debug(
+                            "KOPIS",
+                            &format!("Matched artist: {} (ID: {})", clean_name, artist.id),
+                        );
+                    }
+                    Ok(None) => {
+                        Logger::debug(
+                            "KOPIS",
+                            &format!("Artist not found in DB: {}", clean_name),
+                        );
+                    }
+                    Err(e) => {
+                        Logger::warn(
+                            "KOPIS",
+                            &format!("Failed to search artist '{}': {}", clean_name, e),
+                        );
+                    }
+                }
+            }
+        }
+
+        artist_ids
+    }
+
+    // ============================================
     // 공연 동기화
     // ============================================
 
@@ -450,6 +500,35 @@ impl KopisService {
                                                                     ),
                                                                 );
                                                             }
+                                                        }
+                                                    }
+
+                                                    // 아티스트 매칭 및 저장
+                                                    let artist_ids = Self::parse_and_match_artists(pool, detail.cast.as_deref()).await;
+                                                    if !artist_ids.is_empty() {
+                                                        if let Err(e) = ConcertRepository::upsert_concert_artists(
+                                                            pool,
+                                                            concert_id,
+                                                            artist_ids.clone(),
+                                                        )
+                                                        .await
+                                                        {
+                                                            Logger::warn(
+                                                                "KOPIS",
+                                                                &format!(
+                                                                    "Failed to save concert artists for {}: {}",
+                                                                    detail.performance_name, e
+                                                                ),
+                                                            );
+                                                        } else {
+                                                            Logger::success(
+                                                                "KOPIS",
+                                                                &format!(
+                                                                    "Matched {} artists for concert: {}",
+                                                                    artist_ids.len(),
+                                                                    detail.performance_name
+                                                                ),
+                                                            );
                                                         }
                                                     }
 
