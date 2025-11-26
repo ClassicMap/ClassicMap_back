@@ -395,7 +395,6 @@ CREATE TABLE performances (
     start_time INT DEFAULT 0 COMMENT '시작 시간 (초)',
     end_time INT DEFAULT 0 COMMENT '종료 시간 (초)',
     characteristic TEXT COMMENT '연주 특징',
-    recording_date DATE COMMENT '녹음/녹화 날짜',
     view_count INT DEFAULT 0 COMMENT '조회수',
     rating DECIMAL(2,1) DEFAULT 0.0 COMMENT '평점',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

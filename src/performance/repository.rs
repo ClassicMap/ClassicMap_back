@@ -1,5 +1,5 @@
+use super::model::{CreatePerformance, Performance, UpdatePerformance};
 use crate::db::DbPool;
-use super::model::{Performance, CreatePerformance, UpdatePerformance};
 use sqlx::Error;
 
 pub struct PerformanceRepository;
@@ -9,7 +9,7 @@ impl PerformanceRepository {
         sqlx::query_as::<_, Performance>(
             "SELECT id, piece_id, artist_id, video_platform, video_id, start_time, end_time, 
              characteristic, recording_date, view_count, CAST(rating AS DOUBLE) as rating 
-             FROM performances ORDER BY id DESC"
+             FROM performances ORDER BY id DESC",
         )
         .fetch_all(pool)
         .await
@@ -19,7 +19,7 @@ impl PerformanceRepository {
         sqlx::query_as::<_, Performance>(
             "SELECT id, piece_id, artist_id, video_platform, video_id, start_time, end_time, 
              characteristic, recording_date, view_count, CAST(rating AS DOUBLE) as rating 
-             FROM performances WHERE id = ?"
+             FROM performances WHERE id = ?",
         )
         .bind(id)
         .fetch_optional(pool)
@@ -30,7 +30,7 @@ impl PerformanceRepository {
         sqlx::query_as::<_, Performance>(
             "SELECT id, piece_id, artist_id, video_platform, video_id, start_time, end_time, 
              characteristic, recording_date, view_count, CAST(rating AS DOUBLE) as rating 
-             FROM performances WHERE piece_id = ? ORDER BY rating DESC"
+             FROM performances WHERE piece_id = ? ORDER BY rating DESC",
         )
         .bind(piece_id)
         .fetch_all(pool)
@@ -41,7 +41,7 @@ impl PerformanceRepository {
         sqlx::query_as::<_, Performance>(
             "SELECT id, piece_id, artist_id, video_platform, video_id, start_time, end_time, 
              characteristic, recording_date, view_count, CAST(rating AS DOUBLE) as rating 
-             FROM performances WHERE artist_id = ? ORDER BY id DESC"
+             FROM performances WHERE artist_id = ? ORDER BY id DESC",
         )
         .bind(artist_id)
         .fetch_all(pool)
@@ -51,8 +51,8 @@ impl PerformanceRepository {
     pub async fn create(pool: &DbPool, performance: CreatePerformance) -> Result<u64, Error> {
         let result = sqlx::query(
             "INSERT INTO performances (piece_id, artist_id, video_platform, video_id, 
-             start_time, end_time, characteristic, recording_date, view_count, rating) 
-             VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0, 0.0)"
+             start_time, end_time, characteristic, view_count, rating) 
+             VALUES (?, ?, ?, ?, ?, ?, ?, 0, 0.0)",
         )
         .bind(performance.piece_id)
         .bind(performance.artist_id)
@@ -61,14 +61,17 @@ impl PerformanceRepository {
         .bind(performance.start_time)
         .bind(performance.end_time)
         .bind(performance.characteristic)
-        .bind(performance.recording_date)
         .execute(pool)
         .await?;
 
         Ok(result.last_insert_id())
     }
 
-    pub async fn update(pool: &DbPool, id: i32, performance: UpdatePerformance) -> Result<u64, Error> {
+    pub async fn update(
+        pool: &DbPool,
+        id: i32,
+        performance: UpdatePerformance,
+    ) -> Result<u64, Error> {
         let current = Self::find_by_id(pool, id).await?;
         if current.is_none() {
             return Ok(0);
@@ -77,15 +80,14 @@ impl PerformanceRepository {
 
         let result = sqlx::query(
             "UPDATE performances SET video_platform = ?, video_id = ?, start_time = ?, 
-             end_time = ?, characteristic = ?, recording_date = ?, view_count = ?, rating = ? 
-             WHERE id = ?"
+             end_time = ?, characteristic = ?, view_count = ?, rating = ? 
+             WHERE id = ?",
         )
         .bind(performance.video_platform.unwrap_or(current.video_platform))
         .bind(performance.video_id.unwrap_or(current.video_id))
         .bind(performance.start_time.unwrap_or(current.start_time))
         .bind(performance.end_time.unwrap_or(current.end_time))
         .bind(performance.characteristic.or(current.characteristic))
-        .bind(performance.recording_date.or(current.recording_date))
         .bind(performance.view_count.unwrap_or(current.view_count))
         .bind(performance.rating.unwrap_or(current.rating))
         .bind(id)
