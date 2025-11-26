@@ -8,7 +8,7 @@ pub struct PerformanceSector {
     pub piece_id: i32,
     pub sector_name: String,
     pub description: Option<String>,
-    pub display_order: i32,
+    pub display_order: Option<i32>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
