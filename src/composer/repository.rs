@@ -11,6 +11,7 @@ impl ComposerRepository {
              FROM composers c
              LEFT JOIN pieces p ON c.id = p.composer_id
              GROUP BY c.id
+             ORDER BY c.birth_year ASC
              LIMIT ? OFFSET ?"
         )
             .bind(limit)
@@ -135,7 +136,7 @@ impl ComposerRepository {
             sql.push_str(&format!(" WHERE {}", where_clauses.join(" AND ")));
         }
 
-        sql.push_str(" GROUP BY c.id ORDER BY c.name LIMIT ? OFFSET ?");
+        sql.push_str(" GROUP BY c.id ORDER BY c.birth_year ASC LIMIT ? OFFSET ?");
 
         // Build query with dynamic bindings
         let mut query = sqlx::query_as::<_, Composer>(&sql);
