@@ -31,20 +31,7 @@ pub async fn get_concert(
     id: i32,
 ) -> Result<Json<Option<ConcertWithDetails>>, Status> {
     match ConcertService::get_concert_with_details(pool, id).await {
-        Ok(concert) => {
-            if let Some(ref c) = concert {
-                Logger::info(
-                    "API_RESPONSE",
-                    &format!(
-                        "Concert detail {}: {}",
-                        id,
-                        serde_json::to_string_pretty(c)
-                            .unwrap_or_else(|_| "Failed to serialize".to_string())
-                    ),
-                );
-            }
-            Ok(Json(concert))
-        }
+        Ok(concert) => Ok(Json(concert)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get concert {}: {}", id, e));
             Err(Status::InternalServerError)
@@ -181,8 +168,7 @@ pub async fn search_concerts(
 ) -> Result<Json<Vec<ConcertListItem>>, Status> {
     // Always use search_concerts_by_text for pagination support
     // It handles both text search and filter-only search
-    match ConcertService::search_concerts_by_text(pool, q, genre, area, status, offset, limit)
-        .await
+    match ConcertService::search_concerts_by_text(pool, q, genre, area, status, offset, limit).await
     {
         Ok(concerts) => Ok(Json(concerts)),
         Err(e) => {

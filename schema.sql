@@ -546,8 +546,8 @@ CREATE TABLE concert_boxoffice_rankings (
     INDEX idx_sync_dates (sync_start_date, sync_end_date),
     INDEX idx_featured (is_featured),
 
-    -- 동일 기간/장르/지역에 대해 하나의 순위만 존재하도록
-    UNIQUE KEY unique_ranking_period (concert_id, kopis_genre_code, kopis_area_code, sync_start_date, sync_end_date)
+    -- 장르/지역별로 1, 2, 3등 슬롯을 고정 (공연은 업데이트됨)
+    UNIQUE KEY unique_ranking_slot (kopis_genre_code, kopis_area_code, ranking)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
 COMMENT='KOPIS 예매상황판 TOP 3 공연 순위 정보';
 
