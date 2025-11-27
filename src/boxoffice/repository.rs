@@ -35,7 +35,7 @@ impl BoxofficeRepository {
         Ok(result.rows_affected())
     }
 
-    /// 순위 데이터 삽입
+    /// 순위 데이터 삽입 (DEPRECATED: upsert_ranking 사용 권장)
     pub async fn insert_ranking(
         pool: &DbPool,
         concert_id: i32,
@@ -76,6 +76,61 @@ impl BoxofficeRepository {
         .await?;
 
         Ok(result.last_insert_id() as i64)
+    }
+
+    /// 순위 데이터 UPSERT (장르/지역별 1, 2, 3등 슬롯 업데이트)
+    pub async fn upsert_ranking(
+        pool: &DbPool,
+        concert_id: i32,
+        kopis_genre_code: Option<&str>,
+        genre_name: Option<&str>,
+        kopis_area_code: Option<&str>,
+        area_name: Option<&str>,
+        ranking: i32,
+        seat_scale: Option<&str>,
+        performance_count: i32,
+        venue_name: Option<&str>,
+        seat_count: Option<i32>,
+        sync_start_date: &str,
+        sync_end_date: &str,
+    ) -> Result<u64, Error> {
+        let result = sqlx::query(
+            "INSERT INTO concert_boxoffice_rankings (
+                concert_id, kopis_genre_code, genre_name,
+                kopis_area_code, area_name, ranking, seat_scale,
+                performance_count, venue_name, seat_count,
+                sync_start_date, sync_end_date, is_featured
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON DUPLICATE KEY UPDATE
+                concert_id = VALUES(concert_id),
+                genre_name = VALUES(genre_name),
+                area_name = VALUES(area_name),
+                seat_scale = VALUES(seat_scale),
+                performance_count = VALUES(performance_count),
+                venue_name = VALUES(venue_name),
+                seat_count = VALUES(seat_count),
+                sync_start_date = VALUES(sync_start_date),
+                sync_end_date = VALUES(sync_end_date),
+                is_featured = VALUES(is_featured),
+                synced_at = CURRENT_TIMESTAMP"
+        )
+        .bind(concert_id)
+        .bind(kopis_genre_code)
+        .bind(genre_name)
+        .bind(kopis_area_code)
+        .bind(area_name)
+        .bind(ranking)
+        .bind(seat_scale)
+        .bind(performance_count)
+        .bind(venue_name)
+        .bind(seat_count)
+        .bind(sync_start_date)
+        .bind(sync_end_date)
+        .bind(ranking <= 3) // TOP 3만 featured
+        .execute(pool)
+        .await?;
+
+        Ok(result.rows_affected())
     }
 
     /// 장르/지역별 현재 주목 공연 (TOP 3) 조회

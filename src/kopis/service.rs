@@ -713,25 +713,14 @@ impl KopisService {
                     .await
                 {
                     Ok(response) => {
-                        // 기존 순위 데이터 삭제
-                        BoxofficeRepository::delete_rankings_for_period(
-                            pool,
-                            &start_date,
-                            &end_date,
-                            Some(genre_code),
-                            *area_code,
-                        )
-                        .await
-                        .ok();
-
-                        // TOP 3만 저장
+                        // TOP 3만 UPSERT (1, 2, 3등 슬롯 업데이트)
                         for item in response.boxof.iter().take(3) {
                             // performance_id로 concert_id 찾기
                             match ConcertRepository::get_by_kopis_id(pool, &item.performance_id)
                                 .await
                             {
                                 Ok(Some(concert)) => {
-                                    match BoxofficeRepository::insert_ranking(
+                                    match BoxofficeRepository::upsert_ranking(
                                         pool,
                                         concert.id,
                                         Some(genre_code),
@@ -753,7 +742,7 @@ impl KopisService {
                                             Logger::success(
                                                 "KOPIS",
                                                 &format!(
-                                                    "Added ranking #{} for concert: {}",
+                                                    "Updated ranking #{} for concert: {}",
                                                     item.ranking, item.performance_name
                                                 ),
                                             );
@@ -762,7 +751,7 @@ impl KopisService {
                                             Logger::error(
                                                 "KOPIS",
                                                 &format!(
-                                                    "Failed to insert ranking for {}: {}",
+                                                    "Failed to upsert ranking for {}: {}",
                                                     item.performance_name, e
                                                 ),
                                             );
