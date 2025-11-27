@@ -91,4 +91,63 @@ impl ComposerRepository {
 
         Ok(result.rows_affected())
     }
+
+    pub async fn search_composers(
+        pool: &DbPool,
+        query: Option<String>,
+        period: Option<String>,
+        offset: i64,
+        limit: i64,
+    ) -> Result<Vec<Composer>, Error> {
+        let mut sql = String::from(
+            "SELECT c.*, COUNT(p.id) as piece_count
+             FROM composers c
+             LEFT JOIN pieces p ON c.id = p.composer_id"
+        );
+
+        let mut where_clauses = Vec::new();
+        let mut bind_values: Vec<String> = Vec::new();
+
+        // Add search condition if query provided
+        if let Some(q) = query {
+            let trimmed = q.trim();
+            if !trimmed.is_empty() {
+                where_clauses.push(
+                    "(c.name LIKE ? OR c.full_name LIKE ? OR c.english_name LIKE ?)".to_string()
+                );
+                let search_pattern = format!("%{}%", trimmed);
+                bind_values.push(search_pattern.clone());
+                bind_values.push(search_pattern.clone());
+                bind_values.push(search_pattern);
+            }
+        }
+
+        // Add period filter if provided and not 'all'
+        if let Some(p) = period {
+            if p != "all" {
+                where_clauses.push("c.period = ?".to_string());
+                bind_values.push(p);
+            }
+        }
+
+        // Append WHERE clause if conditions exist
+        if !where_clauses.is_empty() {
+            sql.push_str(&format!(" WHERE {}", where_clauses.join(" AND ")));
+        }
+
+        sql.push_str(" GROUP BY c.id ORDER BY c.name LIMIT ? OFFSET ?");
+
+        // Build query with dynamic bindings
+        let mut query = sqlx::query_as::<_, Composer>(&sql);
+
+        // Bind all search/filter values
+        for value in bind_values {
+            query = query.bind(value);
+        }
+
+        // Bind limit and offset
+        query = query.bind(limit).bind(offset);
+
+        query.fetch_all(pool).await
+    }
 }

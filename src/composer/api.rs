@@ -5,16 +5,32 @@ use crate::logger::Logger;
 use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces};
 use super::service::ComposerService;
 
-#[get("/composers?<offset>&<limit>")]
-pub async fn get_composers(
+#[get("/composers/search?<q>&<period>&<offset>&<limit>")]
+pub async fn search_composers(
     pool: &State<DbPool>,
+    q: Option<String>,
+    period: Option<String>,
     offset: Option<i64>,
     limit: Option<i64>,
 ) -> Result<Json<Vec<Composer>>, Status> {
-    let offset = offset.unwrap_or(0);
-    let limit = limit.unwrap_or(20);
+    match ComposerService::search_composers(pool, q, period, offset, limit).await {
+        Ok(composers) => Ok(Json(composers)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to search composers: {}", e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
 
-    match ComposerService::get_all_composers(pool, offset, limit).await {
+#[get("/composers?<period>&<offset>&<limit>")]
+pub async fn get_composers(
+    pool: &State<DbPool>,
+    period: Option<String>,
+    offset: Option<i64>,
+    limit: Option<i64>,
+) -> Result<Json<Vec<Composer>>, Status> {
+    // Use search_composers with no query (filter only)
+    match ComposerService::search_composers(pool, None, period, offset, limit).await {
         Ok(composers) => Ok(Json(composers)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get composers: {}", e));
