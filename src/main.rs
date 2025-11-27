@@ -75,6 +75,7 @@ async fn rocket() -> _ {
             "/api",
             routes![
                 // Composer routes
+                composer::search_composers,
                 composer::get_composers,
                 composer::get_composer,
                 composer::create_composer,

@@ -34,4 +34,19 @@ impl ComposerService {
             .await
             .map_err(|e| e.to_string())
     }
+
+    pub async fn search_composers(
+        pool: &DbPool,
+        query: Option<String>,
+        period: Option<String>,
+        offset: Option<i64>,
+        limit: Option<i64>,
+    ) -> Result<Vec<Composer>, String> {
+        let offset = offset.unwrap_or(0);
+        let limit = limit.unwrap_or(20);
+
+        ComposerRepository::search_composers(pool, query, period, offset, limit)
+            .await
+            .map_err(|e| e.to_string())
+    }
 }
