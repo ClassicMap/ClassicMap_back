@@ -45,8 +45,8 @@ impl ConcertRepository {
              FROM concerts c
              LEFT JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
              ORDER BY
-               CASE WHEN c.start_date >= CURDATE() THEN 0 ELSE 1 END,
-               ABS(DATEDIFF(c.start_date, CURDATE())) ASC
+               CASE WHEN c.start_date >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00')) THEN 0 ELSE 1 END,
+               ABS(DATEDIFF(c.start_date, DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00')))) ASC
              LIMIT ? OFFSET ?",
         )
         .bind(limit)
@@ -133,7 +133,7 @@ impl ConcertRepository {
              FROM concerts c
              INNER JOIN concert_artists ca ON c.id = ca.concert_id
              WHERE ca.artist_id = ?
-             AND c.start_date >= DATE_SUB(CURDATE(), INTERVAL 2 MONTH)
+             AND c.start_date >= DATE_SUB(DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00')), INTERVAL 2 MONTH)
              ORDER BY c.start_date DESC"
         )
             .bind(artist_id)
@@ -565,7 +565,7 @@ impl ConcertRepository {
                  INNER JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
                  WHERE cbr.is_featured = true
                  AND cbr.kopis_area_code = ?
-                 AND c.start_date >= CURDATE()
+                 AND c.start_date >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00'))
                  ORDER BY cbr.ranking ASC
                  LIMIT ?"
             )
@@ -575,7 +575,7 @@ impl ConcertRepository {
                  FROM concerts c
                  INNER JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
                  WHERE cbr.is_featured = true
-                 AND c.start_date >= CURDATE()
+                 AND c.start_date >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00'))
                  ORDER BY cbr.ranking ASC
                  LIMIT ?"
             )
@@ -625,7 +625,7 @@ impl ConcertRepository {
              cbr.ranking as boxoffice_ranking
              FROM concerts c
              LEFT JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
-             WHERE c.start_date >= CURDATE()
+             WHERE c.start_date >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00'))
              AND c.status IN ('upcoming', 'ongoing', '공연예정', '공연중')
              {}
              LIMIT ?",
@@ -744,8 +744,8 @@ impl ConcertRepository {
         // Sort by proximity to today (upcoming first, then past)
         query.push_str(
             " ORDER BY
-               CASE WHEN c.start_date >= CURDATE() THEN 0 ELSE 1 END,
-               ABS(DATEDIFF(c.start_date, CURDATE())) ASC
+               CASE WHEN c.start_date >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00')) THEN 0 ELSE 1 END,
+               ABS(DATEDIFF(c.start_date, DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00')))) ASC
              LIMIT ? OFFSET ?",
         );
 
