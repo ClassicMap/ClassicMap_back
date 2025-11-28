@@ -158,9 +158,14 @@ impl BoxofficeRepository {
             bindings.push(genre.to_string());
         }
 
+        // Area filter
         if let Some(area) = area_code {
+            // 특정 지역 필터
             query.push_str(" AND cbr.kopis_area_code = ?");
             bindings.push(area.to_string());
+        } else {
+            // area_code가 없으면 전국 순위만 (area_code가 NULL인 레코드)
+            query.push_str(" AND cbr.kopis_area_code IS NULL");
         }
 
         query.push_str(" ORDER BY cbr.ranking ASC LIMIT ?");
