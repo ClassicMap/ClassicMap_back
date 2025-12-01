@@ -294,10 +294,7 @@ impl KopisService {
                         );
                     }
                     Ok(None) => {
-                        Logger::debug(
-                            "KOPIS",
-                            &format!("Artist not found in DB: {}", clean_name),
-                        );
+                        Logger::debug("KOPIS", &format!("Artist not found in DB: {}", clean_name));
                     }
                     Err(e) => {
                         Logger::warn(
@@ -455,12 +452,20 @@ impl KopisService {
                                             {
                                                 Ok(concert_id) => {
                                                     // Ticket Vendors 저장
-                                                    if let Some(vendor_list) = &detail.ticket_vendors {
-                                                        let vendors: Vec<(Option<String>, String)> = vendor_list
-                                                            .vendors
-                                                            .iter()
-                                                            .map(|v| (v.vendor_name.clone(), v.vendor_url.clone()))
-                                                            .collect();
+                                                    if let Some(vendor_list) =
+                                                        &detail.ticket_vendors
+                                                    {
+                                                        let vendors: Vec<(Option<String>, String)> =
+                                                            vendor_list
+                                                                .vendors
+                                                                .iter()
+                                                                .map(|v| {
+                                                                    (
+                                                                        v.vendor_name.clone(),
+                                                                        v.vendor_url.clone(),
+                                                                    )
+                                                                })
+                                                                .collect();
 
                                                         if !vendors.is_empty() {
                                                             if let Err(e) = ConcertRepository::upsert_ticket_vendors(
@@ -482,7 +487,8 @@ impl KopisService {
                                                     }
 
                                                     // Concert Images 저장 (소개 이미지)
-                                                    if let Some(intro_images) = &detail.intro_images {
+                                                    if let Some(intro_images) = &detail.intro_images
+                                                    {
                                                         if !intro_images.images.is_empty() {
                                                             if let Err(e) = ConcertRepository::upsert_concert_images(
                                                                 pool,
@@ -504,7 +510,11 @@ impl KopisService {
                                                     }
 
                                                     // 아티스트 매칭 및 저장
-                                                    let artist_ids = Self::parse_and_match_artists(pool, detail.cast.as_deref()).await;
+                                                    let artist_ids = Self::parse_and_match_artists(
+                                                        pool,
+                                                        detail.cast.as_deref(),
+                                                    )
+                                                    .await;
                                                     if !artist_ids.is_empty() {
                                                         if let Err(e) = ConcertRepository::upsert_concert_artists(
                                                             pool,
