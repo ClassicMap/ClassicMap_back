@@ -1,6 +1,6 @@
 use crate::db::DbPool;
-use sqlx::Error;
 use chrono::NaiveDate;
+use sqlx::Error;
 
 pub struct BoxofficeRepository;
 
@@ -57,7 +57,7 @@ impl BoxofficeRepository {
                 kopis_area_code, area_name, ranking, seat_scale,
                 performance_count, venue_name, seat_count,
                 sync_start_date, sync_end_date, is_featured
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
         )
         .bind(concert_id)
         .bind(kopis_genre_code)
@@ -112,12 +112,12 @@ impl BoxofficeRepository {
                 sync_start_date = VALUES(sync_start_date),
                 sync_end_date = VALUES(sync_end_date),
                 is_featured = VALUES(is_featured),
-                synced_at = CURRENT_TIMESTAMP"
+                synced_at = CURRENT_TIMESTAMP",
         )
         .bind(concert_id)
         .bind(kopis_genre_code)
         .bind(genre_name)
-        .bind(kopis_area_code)
+        .bind(kopis_area_code.unwrap_or("00"))
         .bind(area_name)
         .bind(ranking)
         .bind(seat_scale)
@@ -148,7 +148,7 @@ impl BoxofficeRepository {
                 c.title, c.poster_url, c.start_date, c.end_date
              FROM concert_boxoffice_rankings cbr
              JOIN concerts c ON cbr.concert_id = c.id
-             WHERE cbr.is_featured = TRUE"
+             WHERE cbr.is_featured = TRUE",
         );
 
         let mut bindings: Vec<String> = Vec::new();
