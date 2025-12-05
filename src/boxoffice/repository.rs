@@ -35,49 +35,6 @@ impl BoxofficeRepository {
         Ok(result.rows_affected())
     }
 
-    /// 순위 데이터 삽입 (DEPRECATED: upsert_ranking 사용 권장)
-    pub async fn insert_ranking(
-        pool: &DbPool,
-        concert_id: i32,
-        kopis_genre_code: Option<&str>,
-        genre_name: Option<&str>,
-        kopis_area_code: Option<&str>,
-        area_name: Option<&str>,
-        ranking: i32,
-        seat_scale: Option<&str>,
-        performance_count: i32,
-        venue_name: Option<&str>,
-        seat_count: Option<i32>,
-        sync_start_date: &str,
-        sync_end_date: &str,
-    ) -> Result<i64, Error> {
-        let result = sqlx::query(
-            "INSERT INTO concert_boxoffice_rankings (
-                concert_id, kopis_genre_code, genre_name,
-                kopis_area_code, area_name, ranking, seat_scale,
-                performance_count, venue_name, seat_count,
-                sync_start_date, sync_end_date, is_featured
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-        )
-        .bind(concert_id)
-        .bind(kopis_genre_code)
-        .bind(genre_name)
-        .bind(kopis_area_code)
-        .bind(area_name)
-        .bind(ranking)
-        .bind(seat_scale)
-        .bind(performance_count)
-        .bind(venue_name)
-        .bind(seat_count)
-        .bind(sync_start_date)
-        .bind(sync_end_date)
-        .bind(ranking <= 3) // TOP 3만 featured
-        .execute(pool)
-        .await?;
-
-        Ok(result.last_insert_id() as i64)
-    }
-
     /// 순위 데이터 UPSERT (장르/지역별 1, 2, 3등 슬롯 업데이트)
     pub async fn upsert_ranking(
         pool: &DbPool,
@@ -129,6 +86,14 @@ impl BoxofficeRepository {
         .bind(ranking <= 3) // TOP 3만 featured
         .execute(pool)
         .await?;
+
+        println!(
+            "concert_id: {}, kopis_genre_code: {:?}, kopis_area_code: {:?}, ranking: {}",
+            concert_id,
+            kopis_genre_code,
+            kopis_area_code.unwrap_or("00"),
+            ranking,
+        );
 
         Ok(result.rows_affected())
     }
