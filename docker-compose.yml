@@ -1,12 +1,11 @@
-version: "3.8"
-
 services:
   classicmap_mysql:
     image: mysql:8.0
     container_name: classicmap_mysql
     restart: always
+    env_file:
+      - .env
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
@@ -29,14 +28,8 @@ services:
       dockerfile: Dockerfile
     container_name: classicmap_backend
     restart: always
-    environment:
-      - DATABASE_URL=${DATABASE_URL}
-      - RUST_LOG=${RUST_LOG}
-      - SQLX_LOG=${SQLX_LOG}
-      - ADMIN_EMAILS=${ADMIN_EMAILS}
-      - MODERATOR_EMAILS=${MODERATOR_EMAILS}
-      - CLERK_PEM_PUBLIC_KEY=${CLERK_PEM_PUBLIC_KEY}
-      - KOPIS_API_KEY=${KOPIS_API_KEY}
+    env_file:
+      - .env
     ports:
       - "1037:1037"
     depends_on:
