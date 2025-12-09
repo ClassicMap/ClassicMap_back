@@ -8,7 +8,9 @@ impl Logger {
     pub fn init() {
         // 환경변수로 Rust/SQLx 로그 끄기
         std::env::set_var("RUST_LOG", "off");
-        // 도커 환경에서도 색상 출력 활성화
+        // 도커 환경에서도 색상 출력 강제 활성화
+        std::env::set_var("FORCE_COLOR", "1");
+        std::env::set_var("CLICOLOR_FORCE", "1");
         colored::control::set_override(true);
     }
 
