@@ -1,15 +1,15 @@
 
 [default]
 address = "0.0.0.0"
-port = 1027
+port = 1037
 log_level = "normal"
 
 [debug]
 address = "0.0.0.0"
-port = 1028
+port = 1038
 log_level = "normal"
 
 [release]
 address = "0.0.0.0"
-port = 1027
+port = 1037
 log_level = "normal"
