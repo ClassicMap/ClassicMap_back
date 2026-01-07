@@ -48,7 +48,7 @@ impl BoxofficeService {
         bindings.push(genre);
 
         // Area filter
-        if area_code {
+        if let Some(area) = area_code {
             // 특정 지역 필터
             query.push_str(" AND cbr.kopis_area_code = ?");
             bindings.push(area);
