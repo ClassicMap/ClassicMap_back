@@ -39,8 +39,7 @@ impl PerformanceSectorRepository {
             display_order: Option<i32>,
             performance_count: i32,
         }
-
-        let results = sqlx::query_as!(
+        let results: Vec<SectorWithCount> = sqlx::query_as!(
             SectorWithCount,
             r#"
             SELECT
