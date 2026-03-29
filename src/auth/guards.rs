@@ -41,16 +41,13 @@ impl<'r> FromRequest<'r> for AuthenticatedUser {
             }
         };
 
-        // TODO: 데이터 다 넣으면 풀기.
-        // 아무리 해도 한 10분? 20분? 지나면 Expired가 되어버.
-
         // JWT 검증
-        //        let claims = match verify_clerk_token(token) {
-        //            Ok(claims) => claims,
-        //            Err(e) => {
-        //                return Outcome::Error((Status::Unauthorized, format!("Invalid token: {}", e)))
-        //            }
-        //        };
+        let claims = match verify_clerk_token(token) {
+            Ok(claims) => claims,
+            Err(e) => {
+                return Outcome::Error((Status::Unauthorized, format!("Invalid token: {}", e)))
+            }
+        };
 
         // DB에서 사용자 정보 조회
         let pool = match request.guard::<&State<MySqlPool>>().await {
@@ -66,8 +63,7 @@ impl<'r> FromRequest<'r> for AuthenticatedUser {
         let user = match sqlx::query_as::<_, User>(
             "SELECT id, clerk_id, email, role, is_first_visit, favorite_era FROM users WHERE clerk_id = ?"
         )
-            // TODO: claims.sub으로 치환.
-        .bind("user_35NYfqpGQFoKj9DW8qPVpYLGQrm")
+        .bind(&claims.sub)
         .fetch_one(pool.inner())
         .await
         {
@@ -81,8 +77,7 @@ impl<'r> FromRequest<'r> for AuthenticatedUser {
         };
 
         Outcome::Success(AuthenticatedUser {
-            // TODO: claims.sub으로 치환.
-            clerk_id: "user_35NYfqpGQFoKj9DW8qPVpYLGQrm".to_string(),
+            clerk_id: claims.sub,
             user,
         })
     }
