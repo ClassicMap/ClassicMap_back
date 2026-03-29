@@ -1,5 +1,6 @@
 use super::model::{ClerkDeleteWebhookEvent, ClerkWebhookEvent, UpdateUser, User};
 use super::service::UserService;
+use crate::auth::AdminUser;
 use crate::db::DbPool;
 use crate::logger::Logger;
 use rocket::http::Status;
@@ -67,6 +68,7 @@ pub async fn get_user_by_email(
 #[put("/users/<id>", data = "<user>")]
 pub async fn update_user(
     pool: &State<DbPool>,
+    _admin: AdminUser,
     id: i32,
     user: Json<UpdateUser>,
 ) -> Result<Json<u64>, Status> {
@@ -80,7 +82,7 @@ pub async fn update_user(
 }
 
 #[delete("/users/<id>")]
-pub async fn delete_user(pool: &State<DbPool>, id: i32) -> Result<Json<u64>, Status> {
+pub async fn delete_user(pool: &State<DbPool>, _admin: AdminUser, id: i32) -> Result<Json<u64>, Status> {
     match UserService::delete_user(pool, id).await {
         Ok(rows) => Ok(Json(rows)),
         Err(e) => {
