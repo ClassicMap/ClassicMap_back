@@ -155,6 +155,7 @@ impl ComposerRepository {
     pub async fn find_with_performances(pool: &DbPool, limit: i64) -> Result<Vec<ComposerWithPerformance>, Error> {
         sqlx::query_as::<_, ComposerWithPerformance>(
             "SELECT c.id AS composer_id, c.name AS composer_name,
+                    c.avatar_url AS composer_avatar_url,
                     p.id AS piece_id, p.title AS piece_title,
                     COUNT(pf.id) AS performance_count
              FROM composers c
