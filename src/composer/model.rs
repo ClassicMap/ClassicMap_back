@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+use serde::ser::SerializeSeq;
 use sqlx::FromRow;
 
 #[derive(Debug, Serialize, Deserialize, FromRow)]
@@ -50,6 +51,21 @@ pub struct ComposerWithPerformance {
     pub piece_id: i32,
     pub piece_title: String,
     pub performance_count: i64,
+    #[serde(serialize_with = "serialize_comma_separated")]
+    pub artist_names: Option<String>,
+}
+
+fn serialize_comma_separated<S>(value: &Option<String>, serializer: S) -> Result<S::Ok, S::Error>
+where
+    S: serde::Serializer,
+{
+    match value {
+        Some(s) => {
+            let names: Vec<&str> = s.split(',').collect();
+            names.serialize(serializer)
+        }
+        None => serializer.serialize_seq(Some(0))?.end(),
+    }
 }
 
 #[derive(Debug, Serialize, Deserialize)]
