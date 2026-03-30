@@ -157,12 +157,13 @@ impl ComposerRepository {
             "SELECT c.id AS composer_id, c.name AS composer_name,
                     c.avatar_url AS composer_avatar_url,
                     p.id AS piece_id, p.title AS piece_title,
-                    COUNT(pf.id) AS performance_count
+                    COUNT(pf.id) AS performance_count,
+                    GROUP_CONCAT(DISTINCT a.name) AS artist_names
              FROM composers c
              JOIN pieces p ON p.composer_id = c.id
              JOIN performances pf ON pf.piece_id = p.id
-             GROUP BY c.id, c.name, p.id, p.title
-             HAVING COUNT(pf.id) > 0
+             JOIN artists a ON a.id = pf.artist_id
+             GROUP BY c.id, c.name, c.avatar_url, p.id, p.title
              ORDER BY RAND()
              LIMIT ?"
         )
