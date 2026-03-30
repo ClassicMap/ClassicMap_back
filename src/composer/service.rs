@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces};
+use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces, ComposerWithPerformance};
 use super::repository::ComposerRepository;
 
 pub struct ComposerService;
@@ -31,6 +31,16 @@ impl ComposerService {
 
     pub async fn delete_composer(pool: &DbPool, id: i32) -> Result<u64, String> {
         ComposerRepository::delete(pool, id)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn get_composers_with_performances(
+        pool: &DbPool,
+        limit: Option<i64>,
+    ) -> Result<Vec<ComposerWithPerformance>, String> {
+        let limit = limit.unwrap_or(10);
+        ComposerRepository::find_with_performances(pool, limit)
             .await
             .map_err(|e| e.to_string())
     }
