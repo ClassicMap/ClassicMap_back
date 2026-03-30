@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces};
+use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces, ComposerWithPerformance};
 use sqlx::Error;
 
 pub struct ComposerRepository;
@@ -150,5 +150,23 @@ impl ComposerRepository {
         query = query.bind(limit).bind(offset);
 
         query.fetch_all(pool).await
+    }
+
+    pub async fn find_with_performances(pool: &DbPool, limit: i64) -> Result<Vec<ComposerWithPerformance>, Error> {
+        sqlx::query_as::<_, ComposerWithPerformance>(
+            "SELECT c.id AS composer_id, c.name AS composer_name,
+                    p.id AS piece_id, p.title AS piece_title,
+                    COUNT(pf.id) AS performance_count
+             FROM composers c
+             JOIN pieces p ON p.composer_id = c.id
+             JOIN performances pf ON pf.piece_id = p.id
+             GROUP BY c.id, c.name, p.id, p.title
+             HAVING COUNT(pf.id) > 0
+             ORDER BY RAND()
+             LIMIT ?"
+        )
+        .bind(limit)
+        .fetch_all(pool)
+        .await
     }
 }

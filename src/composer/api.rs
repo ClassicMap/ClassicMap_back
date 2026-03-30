@@ -2,8 +2,22 @@ use rocket::{State, serde::json::Json, http::Status};
 use crate::auth::ModeratorUser;
 use crate::db::DbPool;
 use crate::logger::Logger;
-use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces};
+use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces, ComposerWithPerformance};
 use super::service::ComposerService;
+
+#[get("/composers/with-performances?<limit>")]
+pub async fn get_composers_with_performances(
+    pool: &State<DbPool>,
+    limit: Option<i64>,
+) -> Result<Json<Vec<ComposerWithPerformance>>, Status> {
+    match ComposerService::get_composers_with_performances(pool, limit).await {
+        Ok(composers) => Ok(Json(composers)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to get composers with performances: {}", e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
 
 #[get("/composers/search?<q>&<period>&<offset>&<limit>")]
 pub async fn search_composers(
