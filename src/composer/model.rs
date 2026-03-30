@@ -46,6 +46,7 @@ pub struct ComposerWithMajorPieces {
 pub struct ComposerWithPerformance {
     pub composer_id: i32,
     pub composer_name: String,
+    pub composer_avatar_url: Option<String>,
     pub piece_id: i32,
     pub piece_title: String,
     pub performance_count: i64,
