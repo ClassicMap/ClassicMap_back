@@ -52,31 +52,56 @@ impl ImageProxyService {
             return Ok((bytes, content_type));
         }
 
-        // 캐시 미스 → 위키피디아에서 다운로드
+        // 캐시 미스 → 위키피디아에서 다운로드 (429 시 재시도)
         let client = reqwest::Client::new();
-        let response = client
-            .get(url)
-            .header("User-Agent", "ClassicMapBot/1.0 (https://classicmap.app; contact@classicmap.app)")
-            .send()
-            .await
-            .map_err(|e| format!("이미지 다운로드 실패: {}", e))?;
+        let max_retries = 3;
+        let mut last_error = String::new();
 
-        if !response.status().is_success() {
-            return Err(format!("이미지 요청 실패: {}", response.status()));
-        }
+        let (bytes, content_type) = 'retry: {
+            for attempt in 0..max_retries {
+                if attempt > 0 {
+                    tokio::time::sleep(std::time::Duration::from_millis(500 * (1 << attempt))).await;
+                }
 
-        let content_type = response
-            .headers()
-            .get("content-type")
-            .and_then(|v| v.to_str().ok())
-            .unwrap_or("image/jpeg")
-            .to_string();
+                let response = match client
+                    .get(url)
+                    .header("User-Agent", "ClassicMapBot/1.0 (https://classicmap.app; contact@classicmap.app)")
+                    .send()
+                    .await
+                {
+                    Ok(r) => r,
+                    Err(e) => {
+                        last_error = format!("이미지 다운로드 실패: {}", e);
+                        continue;
+                    }
+                };
 
-        let bytes = response
-            .bytes()
-            .await
-            .map_err(|e| format!("이미지 읽기 실패: {}", e))?
-            .to_vec();
+                if response.status() == reqwest::StatusCode::TOO_MANY_REQUESTS {
+                    last_error = "429 Too Many Requests".to_string();
+                    continue;
+                }
+
+                if !response.status().is_success() {
+                    return Err(format!("이미지 요청 실패: {}", response.status()));
+                }
+
+                let ct = response
+                    .headers()
+                    .get("content-type")
+                    .and_then(|v| v.to_str().ok())
+                    .unwrap_or("image/jpeg")
+                    .to_string();
+
+                let data = response
+                    .bytes()
+                    .await
+                    .map_err(|e| format!("이미지 읽기 실패: {}", e))?
+                    .to_vec();
+
+                break 'retry (data, ct);
+            }
+            return Err(format!("재시도 초과: {}", last_error));
+        };
 
         // 캐시 디렉토리 생성 후 저장
         fs::create_dir_all(CACHE_DIR)
