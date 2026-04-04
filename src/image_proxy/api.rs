@@ -1,7 +1,6 @@
 use rocket::http::{ContentType, Status};
 use rocket::serde::json::Json;
 use rocket::State;
-use crate::auth::AdminUser;
 use crate::db::DbPool;
 use crate::logger::Logger;
 use super::service::{ImageProxyService, WarmupResult};
@@ -22,11 +21,17 @@ pub async fn image_proxy(url: String) -> Result<(ContentType, Vec<u8>), Status> 
     }
 }
 
-#[post("/image-proxy/warmup")]
+#[post("/image-proxy/warmup?<key>")]
 pub async fn warmup_image_cache(
     pool: &State<DbPool>,
-    _admin: AdminUser,
+    key: String,
 ) -> Result<Json<WarmupResult>, Status> {
+    let internal_key = std::env::var("INTERNAL_API_KEY").unwrap_or_default();
+
+    if key.is_empty() || key != internal_key {
+        return Err(Status::Unauthorized);
+    }
+
     match ImageProxyService::warmup_cache(pool).await {
         Ok(result) => Ok(Json(result)),
         Err(e) => {
