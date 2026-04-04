@@ -2,6 +2,8 @@ use std::collections::hash_map::DefaultHasher;
 use std::hash::{Hash, Hasher};
 use std::path::{Path, PathBuf};
 use tokio::fs;
+use crate::db::DbPool;
+use crate::logger::Logger;
 
 const CACHE_DIR: &str = "cache/images";
 const ALLOWED_DOMAINS: &[&str] = &[
@@ -10,6 +12,20 @@ const ALLOWED_DOMAINS: &[&str] = &[
     "en.wikipedia.org",
     "ko.wikipedia.org",
 ];
+
+#[derive(sqlx::FromRow)]
+struct ImageUrl {
+    url: String,
+}
+
+#[derive(serde::Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct WarmupResult {
+    pub total: u32,
+    pub cached: u32,
+    pub skipped: u32,
+    pub failed: u32,
+}
 
 pub struct ImageProxyService;
 
@@ -113,6 +129,67 @@ impl ImageProxyService {
             .map_err(|e| format!("캐시 저장 실패: {}", e))?;
 
         Ok((bytes, content_type))
+    }
+
+    pub async fn warmup_cache(pool: &DbPool) -> Result<WarmupResult, String> {
+        // DB에서 위키피디아 이미지 URL 전부 수집
+        let rows = sqlx::query_as::<_, ImageUrl>(
+            "SELECT avatar_url AS url FROM composers WHERE avatar_url IS NOT NULL
+             UNION
+             SELECT cover_image_url AS url FROM composers WHERE cover_image_url IS NOT NULL
+             UNION
+             SELECT image_url AS url FROM artists WHERE image_url IS NOT NULL
+             UNION
+             SELECT cover_image_url AS url FROM artists WHERE cover_image_url IS NOT NULL"
+        )
+        .fetch_all(pool)
+        .await
+        .map_err(|e| format!("DB 조회 실패: {}", e))?;
+
+        // 위키피디아 도메인만 필터
+        let urls: Vec<String> = rows
+            .into_iter()
+            .filter(|r| Self::validate_url(&r.url).is_ok())
+            .map(|r| r.url)
+            .collect();
+
+        let total = urls.len();
+        let mut cached = 0u32;
+        let mut skipped = 0u32;
+        let mut failed = 0u32;
+
+        Logger::info("CACHE", &format!("캐시 워밍업 시작: {} 개 이미지", total));
+
+        for (i, url) in urls.iter().enumerate() {
+            let path = Self::cache_path(url);
+
+            // 이미 캐시돼 있으면 스킵
+            if path.exists() {
+                skipped += 1;
+                continue;
+            }
+
+            match Self::get_or_fetch(url).await {
+                Ok(_) => {
+                    cached += 1;
+                    Logger::info("CACHE", &format!("[{}/{}] 캐싱 완료: {}", i + 1, total, url));
+                }
+                Err(e) => {
+                    failed += 1;
+                    Logger::error("CACHE", &format!("[{}/{}] 캐싱 실패: {} - {}", i + 1, total, url, e));
+                }
+            }
+
+            // 429 방지: 요청 간 200ms 딜레이
+            tokio::time::sleep(std::time::Duration::from_millis(200)).await;
+        }
+
+        Logger::success("CACHE", &format!(
+            "캐시 워밍업 완료: 총 {} / 신규 {} / 기존 {} / 실패 {}",
+            total, cached, skipped, failed
+        ));
+
+        Ok(WarmupResult { total: total as u32, cached, skipped, failed })
     }
 
     fn guess_content_type(path: &Path) -> String {
