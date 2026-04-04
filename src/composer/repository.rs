@@ -136,7 +136,12 @@ impl ComposerRepository {
             sql.push_str(&format!(" WHERE {}", where_clauses.join(" AND ")));
         }
 
-        sql.push_str(" GROUP BY c.id ORDER BY c.birth_year ASC LIMIT ? OFFSET ?");
+        sql.push_str(" GROUP BY c.id ORDER BY c.birth_year ASC");
+
+        // limit=0이면 전체 반환, 아니면 페이징
+        if limit > 0 {
+            sql.push_str(" LIMIT ? OFFSET ?");
+        }
 
         // Build query with dynamic bindings
         let mut query = sqlx::query_as::<_, Composer>(&sql);
@@ -147,7 +152,9 @@ impl ComposerRepository {
         }
 
         // Bind limit and offset
-        query = query.bind(limit).bind(offset);
+        if limit > 0 {
+            query = query.bind(limit).bind(offset);
+        }
 
         query.fetch_all(pool).await
     }
