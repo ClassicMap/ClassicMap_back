@@ -32,6 +32,8 @@ services:
       - .env
     ports:
       - "1037:1037"
+    volumes:
+      - image_cache:/app/cache/images
     depends_on:
       classicmap_mysql:
         condition: service_healthy
@@ -44,3 +46,4 @@ networks:
 
 volumes:
   mysql_data:
+  image_cache:

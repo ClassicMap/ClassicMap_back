@@ -9,6 +9,7 @@ mod concert;
 mod config;
 mod db;
 mod hall;
+mod image_proxy;
 mod kopis;
 mod logger;
 mod performance;
@@ -151,6 +152,8 @@ async fn rocket() -> _ {
                 venue::update_venue,
                 venue::delete_venue,
                 venue::search_venues,
+                // Image Proxy routes
+                image_proxy::image_proxy,
                 // KOPIS routes
                 kopis::trigger_venue_sync,
             ],

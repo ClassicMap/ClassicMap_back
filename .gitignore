@@ -18,3 +18,5 @@ target
 *.lock
 
 .sqlx
+
+cache/
