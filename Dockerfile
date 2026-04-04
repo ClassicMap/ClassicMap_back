@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy Cargo files for dependency caching
 COPY Cargo.toml Cargo.lock ./
 
-# Copy .sqlx for offline mode (ÀÖ´Ù¸é)
+# Copy .sqlx for offline mode (ï¿½Ö´Ù¸ï¿½)
 COPY .sqlx ./.sqlx
 
 # Create dummy main.rs for dependency cache
@@ -40,11 +40,14 @@ RUN useradd -r -s /bin/false appuser
 # Set working directory
 WORKDIR /app
 
-# Copy the binary (¿ø·¡ ÀÌ¸§ ±×´ë·Î!)
+# Copy the binary (ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½×´ï¿½ï¿½!)
 COPY --from=builder /app/target/release/ClassicMap_back /app/ClassicMap_back
 
 # Copy configuration files
 COPY --from=builder /app/Rocket.toml ./Rocket.toml
+
+# Create cache directory
+RUN mkdir -p /app/cache/images
 
 # Change ownership to app user
 RUN chown -R appuser:appuser /app
@@ -54,5 +57,5 @@ USER appuser
 # Expose port
 EXPOSE 1037
 
-# Run the application (¿ø·¡ ÀÌ¸§ ±×´ë·Î!)
+# Run the application (ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½×´ï¿½ï¿½!)
 CMD ["./ClassicMap_back"]
