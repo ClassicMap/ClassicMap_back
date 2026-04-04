@@ -154,6 +154,7 @@ async fn rocket() -> _ {
                 venue::search_venues,
                 // Image Proxy routes
                 image_proxy::image_proxy,
+                image_proxy::warmup_image_cache,
                 // KOPIS routes
                 kopis::trigger_venue_sync,
             ],
