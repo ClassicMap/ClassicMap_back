@@ -7,7 +7,7 @@ pub fn favicon() -> (ContentType, &'static [u8]) {
     (ContentType::new("image", "x-icon"), FAVICON)
 }
 
-#[get("/classicmap/delete-account")]
+#[get("/delete-account")]
 pub fn delete_account() -> (ContentType, &'static str) {
     (ContentType::HTML, r#"<!DOCTYPE html>
 <html lang="ko">
