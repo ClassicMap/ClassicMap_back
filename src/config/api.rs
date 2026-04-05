@@ -52,7 +52,7 @@ pub fn delete_account() -> (ContentType, &'static str) {
 
         <div class="info">
             <p><strong>문의</strong></p>
-            <p>이메일: <a href="mailto:kangdh1027@gmail.com">kangdh1027@gmail.com</a></p>
+            <p>이메일: <a href="mailto:kang3171611@naver.com">kang3171611@naver.com</a></p>
         </div>
     </div>
 </body>
