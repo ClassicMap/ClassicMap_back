@@ -71,7 +71,7 @@ async fn rocket() -> _ {
     rocket::build()
         .manage(pool)
         .attach(cors)
-        .mount("/", routes![config::favicon])
+        .mount("/", routes![config::favicon, config::delete_account])
         .mount(
             "/api",
             routes![
