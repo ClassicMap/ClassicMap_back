@@ -10,7 +10,7 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
-      - "3307:3306"
+      - "127.0.0.1:3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
       - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
@@ -31,7 +31,7 @@ services:
     env_file:
       - .env
     ports:
-      - "1037:1037"
+      - "127.0.0.1:1037:1037"
     volumes:
       - image_cache:/app/cache/images
     depends_on:
