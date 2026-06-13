@@ -13,9 +13,12 @@ DROP VIEW IF EXISTS v_artists_full;
 DROP VIEW IF EXISTS v_composers_full;
 
 DROP TABLE IF EXISTS sync_metadata;
-DROP TABLE IF EXISTS user_favorite_pieces; -- 미사용
-DROP TABLE IF EXISTS user_favorite_artists; -- 미사용
-DROP TABLE IF EXISTS user_favorite_composers; -- 미사용
+DROP TABLE IF EXISTS user_public_profiles;
+DROP TABLE IF EXISTS user_concert_ratings;
+DROP TABLE IF EXISTS user_favorite_concerts;
+DROP TABLE IF EXISTS user_favorite_pieces;
+DROP TABLE IF EXISTS user_favorite_artists;
+DROP TABLE IF EXISTS user_favorite_composers;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS performances;
 DROP TABLE IF EXISTS performance_sectors;
@@ -490,7 +493,40 @@ CREATE TABLE user_favorite_pieces (
 
 
 -- ============================================
--- 19. 사용자 공연 평점 (User Concert Ratings) 테이블
+-- 18. 사용자 즐겨찾기 - 공연 (User Favorite Concerts)
+-- ============================================
+CREATE TABLE user_favorite_concerts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    concert_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (concert_id) REFERENCES concerts(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_user_concert_favorite (user_id, concert_id),
+    INDEX idx_user_id (user_id),
+    INDEX idx_concert_id (concert_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ============================================
+-- 19. 사용자 공개 프로필 (User Public Profiles)
+-- ============================================
+CREATE TABLE user_public_profiles (
+    user_id INT PRIMARY KEY,
+    display_name VARCHAR(100),
+    bio VARCHAR(300),
+    avatar_url VARCHAR(500),
+    summary_public BOOLEAN NOT NULL DEFAULT TRUE,
+    ratings_public BOOLEAN NOT NULL DEFAULT FALSE,
+    favorites_public BOOLEAN NOT NULL DEFAULT FALSE,
+    collections_public BOOLEAN NOT NULL DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    INDEX idx_summary_public (summary_public)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ============================================
+-- 20. 사용자 공연 평점 (User Concert Ratings) 테이블
 -- ============================================
 CREATE TABLE user_concert_ratings (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -507,7 +543,7 @@ CREATE TABLE user_concert_ratings (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
--- 20. 공연 예매 순위 (Concert Boxoffice Rankings) 테이블
+-- 21. 공연 예매 순위 (Concert Boxoffice Rankings) 테이블
 -- ============================================
 CREATE TABLE concert_boxoffice_rankings (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -711,6 +747,4 @@ FROM artists a
 LEFT JOIN artist_awards aw ON a.id = aw.artist_id
 LEFT JOIN artist_awards top_aw ON a.top_award_id = top_aw.id
 GROUP BY a.id;
-
-
 
