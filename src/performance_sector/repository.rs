@@ -12,16 +12,15 @@ impl PerformanceSectorRepository {
         pool: &DbPool,
         piece_id: i32,
     ) -> Result<Vec<PerformanceSector>, Error> {
-        sqlx::query_as!(
-            PerformanceSector,
+        sqlx::query_as::<_, PerformanceSector>(
             r#"
             SELECT id, piece_id, sector_name, description, display_order
             FROM performance_sectors
             WHERE piece_id = ?
             ORDER BY display_order ASC, id ASC
             "#,
-            piece_id
         )
+        .bind(piece_id)
         .fetch_all(pool)
         .await
     }
@@ -31,16 +30,16 @@ impl PerformanceSectorRepository {
         pool: &DbPool,
         piece_id: i32,
     ) -> Result<Vec<(PerformanceSector, i32)>, Error> {
+        #[derive(sqlx::FromRow)]
         struct SectorWithCount {
             id: i32,
             piece_id: i32,
             sector_name: String,
             description: Option<String>,
             display_order: Option<i32>,
-            performance_count: i32,
+            performance_count: i64,
         }
-        let results: Vec<SectorWithCount> = sqlx::query_as!(
-            SectorWithCount,
+        let results: Vec<SectorWithCount> = sqlx::query_as::<_, SectorWithCount>(
             r#"
             SELECT
                 ps.id,
@@ -48,15 +47,15 @@ impl PerformanceSectorRepository {
                 ps.sector_name,
                 ps.description,
                 ps.display_order,
-                COALESCE(COUNT(p.id), 0) as `performance_count!: i32`
+                COALESCE(COUNT(p.id), 0) as performance_count
             FROM performance_sectors ps
             LEFT JOIN performances p ON ps.id = p.sector_id
             WHERE ps.piece_id = ?
             GROUP BY ps.id, ps.piece_id, ps.sector_name, ps.description, ps.display_order
             ORDER BY ps.display_order ASC, ps.id ASC
             "#,
-            piece_id
         )
+        .bind(piece_id)
         .fetch_all(pool)
         .await?;
 
@@ -71,7 +70,7 @@ impl PerformanceSectorRepository {
                         description: r.description,
                         display_order: r.display_order,
                     },
-                    r.performance_count,
+                    r.performance_count as i32,
                 )
             })
             .collect())
@@ -79,15 +78,14 @@ impl PerformanceSectorRepository {
 
     /// ID로 섹터 조회
     pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<PerformanceSector>, Error> {
-        sqlx::query_as!(
-            PerformanceSector,
+        sqlx::query_as::<_, PerformanceSector>(
             r#"
             SELECT id, piece_id, sector_name, description, display_order
             FROM performance_sectors
             WHERE id = ?
             "#,
-            id
         )
+        .bind(id)
         .fetch_optional(pool)
         .await
     }
@@ -96,16 +94,16 @@ impl PerformanceSectorRepository {
     pub async fn create(pool: &DbPool, sector: CreatePerformanceSector) -> Result<u64, Error> {
         let display_order = sector.display_order.unwrap_or(0);
 
-        let result = sqlx::query!(
+        let result = sqlx::query(
             r#"
             INSERT INTO performance_sectors (piece_id, sector_name, description, display_order)
             VALUES (?, ?, ?, ?)
             "#,
-            sector.piece_id,
-            sector.sector_name,
-            sector.description,
-            display_order
         )
+        .bind(sector.piece_id)
+        .bind(sector.sector_name)
+        .bind(sector.description)
+        .bind(display_order)
         .execute(pool)
         .await?;
 
@@ -130,19 +128,19 @@ impl PerformanceSectorRepository {
         // 변경되지 않은 필드는 기존 값 유지
         let sector_name = sector.sector_name.unwrap_or(existing.sector_name);
         let description = sector.description.or(existing.description);
-        let display_order = Some(sector.display_order).unwrap_or(existing.display_order);
+        let display_order = sector.display_order.or(existing.display_order);
 
-        let result = sqlx::query!(
+        let result = sqlx::query(
             r#"
             UPDATE performance_sectors
             SET sector_name = ?, description = ?, display_order = ?
             WHERE id = ?
             "#,
-            sector_name,
-            description,
-            display_order,
-            id
         )
+        .bind(sector_name)
+        .bind(description)
+        .bind(display_order)
+        .bind(id)
         .execute(pool)
         .await?;
 
@@ -151,13 +149,13 @@ impl PerformanceSectorRepository {
 
     /// 섹터 삭제 (CASCADE로 연결된 performances도 자동 삭제)
     pub async fn delete(pool: &DbPool, id: i32) -> Result<u64, Error> {
-        let result = sqlx::query!(
+        let result = sqlx::query(
             r#"
             DELETE FROM performance_sectors
             WHERE id = ?
             "#,
-            id
         )
+        .bind(id)
         .execute(pool)
         .await?;
 
@@ -166,17 +164,17 @@ impl PerformanceSectorRepository {
 
     /// 특정 곡의 섹터 개수
     pub async fn count_by_piece(pool: &DbPool, piece_id: i32) -> Result<i64, Error> {
-        let result = sqlx::query!(
+        let result: (i64,) = sqlx::query_as(
             r#"
-            SELECT COUNT(*) as `count!: i64`
+            SELECT COUNT(*) as count
             FROM performance_sectors
             WHERE piece_id = ?
             "#,
-            piece_id
         )
+        .bind(piece_id)
         .fetch_one(pool)
         .await?;
 
-        Ok(result.count)
+        Ok(result.0)
     }
 }
