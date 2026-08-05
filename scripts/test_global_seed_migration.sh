@@ -147,7 +147,7 @@ assert_sql \
   "0"
 assert_sql \
   "SELECT COUNT(*) FROM classicmap._sqlx_migrations WHERE success=1;" \
-  "9"
+  "10"
 
 docker exec --interactive --env MYSQL_PWD="$database_password" "$container_name" \
   mysql --user=root "$database_name" \
