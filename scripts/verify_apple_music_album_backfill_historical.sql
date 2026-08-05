@@ -1,4 +1,4 @@
--- 2025-12-09 historical backup을 복원하고 001, 002, 003, 005, 006 migration을
+-- 2025-12-09 historical backup을 복원하고 001~006 migration을
 -- 순서대로 적용한 전용 테스트 데이터베이스에서만 실행합니다.
 
 DROP PROCEDURE IF EXISTS verify_apple_music_album_backfill_historical;
