@@ -69,7 +69,7 @@ uv run classicmap-seed snapshot-wikidata \
 
 이 API collector는 작은 live 검증, 파일럿, 증분 보강용입니다. 수만 명 이상의 전세계 공개 seed를 반복 생성하는 주 경로로 WDQS/API를 사용하지 않습니다. 전체 공개 목표는 공식 Wikidata dump를 고정 버전으로 내려받아 동일한 raw `SourceRecord` 계약으로 변환하는 별도 ingestion job이 필요합니다. dump checksum, 배포일, 재시작 가능한 partition cursor를 manifest에 남긴 뒤 이 파이프라인의 normalize 이후 단계를 재사용해야 합니다.
 
-레거시 `composers`와 `artists` 행은 필요한 표시 필드가 공식 원본에서 모두 검증된 경우에만 생성합니다. 작곡가 시대 정보가 원본에 없을 때는 검증된 출생연도를 기준으로 `<1400 중세`, `<1600 르네상스`, `<1750 바로크`, `<1820 고전주의`, `<1900 낭만주의`, 그 외 `근현대` 규칙을 적용하고 bundle evidence에 `birth_year_boundaries_v1`을 남깁니다. 국가 표시명, 영어 이름, 연주 분야 등 필수값이 없거나 여러 값으로 충돌하면 임의 기본값을 만들지 않고 `review_queue`로 보냅니다.
+레거시 `composers`와 `artists` 행은 필요한 표시 필드가 공식 원본에서 모두 검증된 경우에만 생성합니다. 작곡가 시대 정보가 원본에 없을 때는 검증된 출생연도를 기준으로 `<1400 중세`, `<1600 르네상스`, `<1750 바로크`, `<1810 고전주의`, `<1860 낭만주의`, 그 외 `근현대` 규칙을 적용하고 bundle evidence에 `birth_year_boundaries_v1`을 남깁니다. 국가 표시명, 영어 이름, 연주 분야 등 필수값이 없거나 여러 값으로 충돌하면 임의 기본값을 만들지 않고 `review_queue`로 보냅니다. Commons 이미지는 파일별 저작자와 라이선스가 검증되기 전에는 `entity_images.REVIEW_REQUIRED`에만 두며 레거시 공개 이미지 필드로 투영하지 않습니다.
 
 ```bash
 uv run classicmap-seed normalize \
