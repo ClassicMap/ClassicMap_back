@@ -7,10 +7,14 @@ const LEGACY_PERFORMANCE_BACKFILL: &str =
     include_str!("../migrations/202608050003_backfill_legacy_performances.sql");
 const CLIP_ASSET_LOADER_SCHEMA: &str =
     include_str!("../migrations/202608050004_clip_asset_loader_contract.sql");
+const COMPOSER_PERIOD_SCHEMA: &str =
+    include_str!("../migrations/202608050005_expand_composer_periods.sql");
+const APPLE_MUSIC_BACKFILL: &str =
+    include_str!("../migrations/202608050006_backfill_apple_music_album_links.sql");
 
 #[test]
 fn migrator_embeds_all_global_seed_migrations() {
-    assert_eq!(MIGRATOR.iter().count(), 4);
+    assert_eq!(MIGRATOR.iter().count(), 6);
 }
 
 #[test]
@@ -68,4 +72,8 @@ fn global_seed_migration_contains_required_contracts() {
     assert!(CLIP_ASSET_LOADER_SCHEMA.contains("ADD COLUMN asset_validated_at"));
     assert!(CLIP_ASSET_LOADER_SCHEMA.contains("ADD COLUMN range_verified_at"));
     assert!(CLIP_ASSET_LOADER_SCHEMA.contains("uq_clip_assets_performance_storage"));
+    assert!(COMPOSER_PERIOD_SCHEMA.contains("'중세'"));
+    assert!(COMPOSER_PERIOD_SCHEMA.contains("'르네상스'"));
+    assert!(APPLE_MUSIC_BACKFILL.contains("INSERT INTO platform_links"));
+    assert!(!APPLE_MUSIC_BACKFILL.contains("INSERT IGNORE INTO"));
 }
