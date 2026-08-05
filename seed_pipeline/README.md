@@ -75,6 +75,21 @@ uv run classicmap-seed link-streaming \
 
 `resolve`는 안정적 외부 식별자를 공유한 후보만 자동 병합합니다. 이름만 같은 후보는 항상 `REVIEW_REQUIRED`로 분류합니다.
 
+## DB 적재 계약
+
+canonical과 streaming 결과의 모든 행에는 `db_contract_version: global-seed-v1`과 같은 `seed_run_id`가 포함됩니다. CLI의 사람이 읽는 `run-id`는 UUIDv5 기반의 결정적 `seed_run_id`로 변환됩니다. 따라서 동일한 run을 재실행해도 DB 식별자가 바뀌지 않습니다.
+
+출력의 `table`은 추상 엔티티명이 아니라 migration의 실제 적재 대상입니다. 인물·단체는 `authority_entities`와 `entity_names`, `entity_roles`, `entity_instruments`, `entity_countries`, `entity_images`, `external_identifiers`로 나뉩니다. 작품은 `pieces`, `piece_aliases`, `piece_identifiers`, `piece_parts`, `piece_relations`, `piece_instrumentation`으로 나뉩니다.
+
+AUTO_INCREMENT 또는 기존 정수 PK는 JSON 값으로 임의 생성하지 않습니다. 각 행의 `natural_key`와 `foreign_keys`가 다음 정보를 명시합니다.
+
+- 적재 시 채울 FK 컬럼
+- 참조할 실제 DB 테이블
+- 참조 대상의 결정적 natural key
+- 현재 bundle 안에서 반드시 해석할지, 기존 DB 행까지 허용할지
+
+이 패키지는 해당 계약을 검증한 JSONL만 생성합니다. 실제 PK 조회, upsert, transaction은 별도 staging loader 책임이며 운영 DB에는 직접 쓰지 않습니다.
+
 ## 스트리밍 export 입력
 
 `link-streaming`은 Spotify 또는 Apple Music의 공식 API/export 결과를 JSONL로 받은 뒤 처리합니다. 이 명령은 토큰을 받거나 외부 API를 직접 호출하지 않습니다.

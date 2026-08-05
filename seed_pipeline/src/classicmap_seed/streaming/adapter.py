@@ -5,9 +5,12 @@ import unicodedata
 from pathlib import Path
 from uuid import NAMESPACE_URL, uuid5
 
+from classicmap_seed.load import canonical_seed_run_id
 from classicmap_seed.models import (
     CanonicalLoadRecord,
+    ForeignKeyResolution,
     JsonValue,
+    LoadForeignKey,
     LoadTable,
     SourceMetadata,
     SourceName,
@@ -51,7 +54,23 @@ def build_streaming_load_bundle(
     *,
     run_id: str,
 ) -> list[CanonicalLoadRecord]:
-    records: list[CanonicalLoadRecord] = []
+    seed_run_id = canonical_seed_run_id(run_id)
+    records: list[CanonicalLoadRecord] = [
+        CanonicalLoadRecord(
+            seed_run_id=seed_run_id,
+            table=LoadTable.SEED_RUNS,
+            natural_key=seed_run_id,
+            values={
+                "id": seed_run_id,
+                "run_kind": "streaming_links",
+                "command": f"classicmap-seed ingest-streaming --run-id {run_id}",
+                "status": "PENDING",
+                "dry_run": True,
+                "manifest": {"db_contract_version": "global-seed-v1", "run_slug": run_id},
+                "summary": {},
+            },
+        )
+    ]
     source_signatures: dict[str, tuple[str, tuple[str, ...], int]] = {}
     for candidate in sorted(candidates, key=_candidate_sort_key):
         source_signature = (
@@ -104,16 +123,28 @@ def evaluate_streaming_match(candidate: StreamingLinkCandidate) -> StreamingMatc
 
 def _track_record(candidate: StreamingLinkCandidate, run_id: str) -> CanonicalLoadRecord:
     return CanonicalLoadRecord(
+        seed_run_id=canonical_seed_run_id(run_id),
         table=LoadTable.RECORDING_TRACKS,
-        natural_key=candidate.track_id,
+        natural_key=_track_natural_key(candidate),
         values={
-            "id": candidate.track_id,
-            "run_id": run_id,
+            "track_key": candidate.track_id,
+            "disc_number": candidate.disc_number,
+            "track_number": candidate.track_number,
             "title": candidate.source_title,
             "isrc": candidate.source_isrc,
-            "artist_names": _json_strings(candidate.source_artist_names),
             "duration_ms": candidate.source_duration_ms,
+            "origin": "seed",
+            "editor_locked": False,
         },
+        foreign_keys=(
+            LoadForeignKey(
+                column="recording_id",
+                target_table=LoadTable.RECORDINGS,
+                target_natural_key=candidate.recording_natural_key,
+                resolution=ForeignKeyResolution.BUNDLE_OR_EXISTING,
+            ),
+        ),
+        evidence={"artist_names": _json_strings(candidate.source_artist_names)},
     )
 
 
@@ -127,19 +158,27 @@ def _platform_link_record(
         f"{platform_track.platform}:{platform_track.storefront}:{platform_track.platform_track_id}"
     )
     return CanonicalLoadRecord(
+        seed_run_id=canonical_seed_run_id(run_id),
         table=LoadTable.PLATFORM_LINKS,
         natural_key=natural_key,
         values={
-            "run_id": run_id,
-            "track_id": candidate.track_id,
-            "target_type": "recording_track",
             "platform": platform_track.platform,
-            "platform_track_id": platform_track.platform_track_id,
+            "platform_id": platform_track.platform_track_id,
             "storefront": platform_track.storefront,
-            "track_url": platform_track.track_url,
+            "url": platform_track.track_url,
+            "isrc": platform_track.isrc,
+            "verified_at": platform_track.checked_at.isoformat(),
+        },
+        foreign_keys=(
+            LoadForeignKey(
+                column="track_id",
+                target_table=LoadTable.RECORDING_TRACKS,
+                target_natural_key=_track_natural_key(candidate),
+            ),
+        ),
+        evidence={
             "source_isrc": candidate.source_isrc,
             "target_isrc": platform_track.isrc,
-            "checked_at": platform_track.checked_at.isoformat(),
             "match_status": decision.status,
             "album_id": platform_track.album_id,
         },
@@ -159,19 +198,30 @@ def _review_record(
     )
     review_id = str(uuid5(NAMESPACE_URL, f"classicmap-streaming-review:{identity}"))
     return CanonicalLoadRecord(
+        seed_run_id=canonical_seed_run_id(run_id),
         table=LoadTable.REVIEW_QUEUE,
         natural_key=review_id,
         values={
-            "id": review_id,
-            "run_id": run_id,
-            "status": "REVIEW_REQUIRED",
-            "reason_codes": _json_strings(decision.reason_codes),
-            "track_id": candidate.track_id,
-            "platform": platform_track.platform,
-            "platform_track_id": platform_track.platform_track_id,
-            "source_isrc": candidate.source_isrc,
-            "target_isrc": platform_track.isrc,
+            "seed_run_id": canonical_seed_run_id(run_id),
+            "target_type": "recording_track",
+            "target_id": _track_natural_key(candidate),
+            "reason_code": decision.reason_codes[0],
+            "status": "OPEN",
+            "evidence": {
+                "reason_codes": _json_strings(decision.reason_codes),
+                "platform": platform_track.platform,
+                "platform_id": platform_track.platform_track_id,
+                "source_isrc": candidate.source_isrc,
+                "target_isrc": platform_track.isrc,
+            },
         },
+        foreign_keys=(
+            LoadForeignKey(
+                column="seed_run_id",
+                target_table=LoadTable.SEED_RUNS,
+                target_natural_key=canonical_seed_run_id(run_id),
+            ),
+        ),
     )
 
 
@@ -189,6 +239,10 @@ def _candidate_sort_key(candidate: StreamingLinkCandidate) -> tuple[str, str, st
         candidate.source_isrc,
         candidate.source_duration_ms,
     )
+
+
+def _track_natural_key(candidate: StreamingLinkCandidate) -> str:
+    return f"{candidate.recording_natural_key}:{candidate.track_id}"
 
 
 def _json_strings(values: tuple[str, ...]) -> list[JsonValue]:

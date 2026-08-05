@@ -1,42 +1,87 @@
+from classicmap_seed.load import canonical_seed_run_id
 from classicmap_seed.models import (
     CanonicalLoadRecord,
+    ForeignKeyResolution,
+    JsonObject,
+    LoadForeignKey,
     LoadTable,
     ValidationRuleCode,
     ValidationRuleResult,
 )
 from classicmap_seed.validate import validate_canonical_bundle
 
+_SEED_RUN_ID = canonical_seed_run_id("run-1")
+
+
+def _fk(
+    column: str,
+    table: LoadTable,
+    natural_key: str,
+    resolution: ForeignKeyResolution = ForeignKeyResolution.BUNDLE,
+) -> LoadForeignKey:
+    return LoadForeignKey(
+        column=column,
+        target_table=table,
+        target_natural_key=natural_key,
+        resolution=resolution,
+    )
+
 
 def _record(
     table: LoadTable,
     natural_key: str,
-    values: dict[str, str],
+    values: JsonObject,
+    *,
+    foreign_keys: tuple[LoadForeignKey, ...] = (),
+    evidence: JsonObject | None = None,
 ) -> CanonicalLoadRecord:
-    return CanonicalLoadRecord(table=table, natural_key=natural_key, values=values)
+    return CanonicalLoadRecord(
+        seed_run_id=_SEED_RUN_ID,
+        table=table,
+        natural_key=natural_key,
+        values=values,
+        foreign_keys=foreign_keys,
+        evidence=evidence or {},
+    )
 
 
 def _valid_records() -> list[CanonicalLoadRecord]:
     return [
         _record(
             LoadTable.SEED_RUNS,
-            "run-1",
-            {"run_id": "run-1", "status": "DISCOVERED"},
+            _SEED_RUN_ID,
+            {
+                "id": _SEED_RUN_ID,
+                "run_kind": "global_seed",
+                "command": "test",
+                "status": "PENDING",
+                "dry_run": True,
+            },
         ),
         _record(
             LoadTable.SOURCE_SNAPSHOTS,
-            "snapshot-1",
-            {"sha256": "snapshot-1"},
+            "wikidata:snapshot-1",
+            {"sha256": "a" * 64},
+            foreign_keys=(_fk("seed_run_id", LoadTable.SEED_RUNS, _SEED_RUN_ID),),
         ),
         _record(
             LoadTable.SOURCE_RECORDS,
-            "wikidata:Q1",
-            {"snapshot_sha256": "snapshot-1", "candidate_id": "candidate-1"},
+            "wikidata:snapshot-1:Q1",
+            {"source_record_id": "Q1", "entity_type": "person"},
+            foreign_keys=(_fk("snapshot_id", LoadTable.SOURCE_SNAPSHOTS, "wikidata:snapshot-1"),),
         ),
         _record(
             LoadTable.AUTHORITY_ENTITIES,
             "entity-1",
-            {
-                "preferred_name": "Composer",
+            {"entity_kind": "person", "editorial_status": "IDENTIFIERS_MATCHED"},
+            foreign_keys=(
+                _fk(
+                    "canonical_source_record_id",
+                    LoadTable.SOURCE_RECORDS,
+                    "wikidata:snapshot-1:Q1",
+                ),
+            ),
+            evidence={
                 "resolution_action": "create",
                 "resolution_reason_code": "NO_MATCHING_STABLE_IDENTIFIER",
             },
@@ -44,12 +89,24 @@ def _valid_records() -> list[CanonicalLoadRecord]:
         _record(
             LoadTable.EXTERNAL_IDENTIFIERS,
             "wikidata:Q1",
-            {"entity_id": "entity-1", "namespace": "wikidata", "value": "Q1"},
+            {"namespace": "wikidata", "external_id": "Q1"},
+            foreign_keys=(
+                _fk("authority_entity_id", LoadTable.AUTHORITY_ENTITIES, "entity-1"),
+                _fk("source_record_id", LoadTable.SOURCE_RECORDS, "wikidata:snapshot-1:Q1"),
+            ),
         ),
         _record(
             LoadTable.FIELD_PROVENANCE,
-            "entity-1:preferred_name:wikidata:Q1",
-            {"entity_id": "entity-1", "field_name": "preferred_name"},
+            "authority_entities:entity-1:canonical_name:wikidata:Q1",
+            {
+                "target_table": "authority_entities",
+                "target_id": "entity-1",
+                "field_name": "canonical_name",
+            },
+            foreign_keys=(
+                _fk("seed_run_id", LoadTable.SEED_RUNS, _SEED_RUN_ID),
+                _fk("source_record_id", LoadTable.SOURCE_RECORDS, "wikidata:snapshot-1:Q1"),
+            ),
         ),
     ]
 
@@ -82,7 +139,10 @@ def test_duplicate_external_identifier_and_orphan_are_blocking() -> None:
         _record(
             LoadTable.EXTERNAL_IDENTIFIERS,
             "wikidata:Q1",
-            {"entity_id": "missing-entity", "namespace": "wikidata", "value": "Q1"},
+            {"namespace": "wikidata", "external_id": "Q1"},
+            foreign_keys=(
+                _fk("authority_entity_id", LoadTable.AUTHORITY_ENTITIES, "missing-entity"),
+            ),
         )
     )
 
@@ -102,8 +162,8 @@ def test_name_only_auto_match_and_missing_provenance_are_blocking() -> None:
     records[entity_index] = _record(
         LoadTable.AUTHORITY_ENTITIES,
         "entity-1",
-        {
-            "preferred_name": "Composer",
+        {"entity_kind": "person"},
+        evidence={
             "resolution_action": "auto_match",
             "resolution_reason_code": "NAME_ONLY_MATCH_FORBIDDEN",
         },
@@ -119,19 +179,30 @@ def test_streaming_isrc_mismatch_and_direct_work_link_are_blocking() -> None:
         [
             _record(
                 LoadTable.RECORDING_TRACKS,
-                "track-1",
-                {"id": "track-1", "isrc": "USAAA0000001"},
+                "recording-1:track-1",
+                {"track_key": "track-1", "isrc": "USAAA0000001"},
+                foreign_keys=(
+                    _fk(
+                        "recording_id",
+                        LoadTable.RECORDINGS,
+                        "recording-1",
+                        ForeignKeyResolution.BUNDLE_OR_EXISTING,
+                    ),
+                ),
             ),
             _record(
                 LoadTable.PLATFORM_LINKS,
                 "spotify:KR:track-1",
                 {
-                    "track_id": "track-1",
-                    "target_type": "work",
+                    "platform": "spotify",
+                    "platform_id": "track-1",
+                    "storefront": "KR",
+                    "verified_at": "2026-08-05T00:00:00Z",
+                },
+                foreign_keys=(_fk("piece_id", LoadTable.PIECES, "piece-1"),),
+                evidence={
                     "source_isrc": "USAAA0000001",
                     "target_isrc": "USAAA0000002",
-                    "storefront": "KR",
-                    "checked_at": "2026-08-05T00:00:00Z",
                     "match_status": "auto_confirmed",
                 },
             ),

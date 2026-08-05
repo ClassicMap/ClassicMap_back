@@ -5,6 +5,7 @@ from collections import Counter, defaultdict
 from classicmap_seed.models import (
     CanonicalLoadRecord,
     DataOrigin,
+    ForeignKeyResolution,
     LoadTable,
     ValidationRuleCode,
     ValidationRuleResult,
@@ -13,7 +14,7 @@ from classicmap_seed.models import (
 
 _ENTITY_TABLES = {
     LoadTable.AUTHORITY_ENTITIES,
-    LoadTable.WORKS,
+    LoadTable.PIECES,
     LoadTable.RECORDINGS,
 }
 
@@ -40,7 +41,9 @@ def validate_canonical_bundle(
 
 
 def _artifact_integrity(records: list[CanonicalLoadRecord]) -> ValidationRuleResult:
-    return _result(ValidationRuleCode.ARTIFACT_INTEGRITY, len(records), [])
+    seed_run_ids = {record.seed_run_id for record in records}
+    violations = [] if len(seed_run_ids) <= 1 else ["multiple_seed_run_ids"]
+    return _result(ValidationRuleCode.ARTIFACT_INTEGRITY, len(records), violations)
 
 
 def _external_identifiers_unique(
@@ -52,15 +55,22 @@ def _external_identifiers_unique(
         for record in records
         if record.table in {LoadTable.EXTERNAL_IDENTIFIERS, LoadTable.PLATFORM_LINKS}
     ]
-    entity_ids_by_key: dict[str, set[str]] = defaultdict(set)
+    subject_ids_by_key: dict[str, set[str]] = defaultdict(set)
     counts: Counter[str] = Counter()
     for record in identifiers:
-        entity_id = _string(record, "entity_id")
+        subject_id = next(
+            (
+                foreign_key.target_natural_key
+                for foreign_key in record.foreign_keys
+                if foreign_key.column in {"authority_entity_id", "track_id", "recording_id"}
+            ),
+            None,
+        )
         counts[record.natural_key] += 1
-        if entity_id is not None:
-            entity_ids_by_key[record.natural_key].add(entity_id)
+        if subject_id is not None:
+            subject_ids_by_key[record.natural_key].add(subject_id)
     violations = [
-        key for key, count in counts.items() if count > 1 or len(entity_ids_by_key[key]) > 1
+        key for key, count in counts.items() if count > 1 or len(subject_ids_by_key[key]) > 1
     ]
     return _result(
         ValidationRuleCode.EXTERNAL_ID_UNIQUE,
@@ -74,31 +84,15 @@ def _foreign_keys_present(
     records: list[CanonicalLoadRecord],
     example_limit: int,
 ) -> ValidationRuleResult:
-    entity_ids = {record.natural_key for record in records if record.table in _ENTITY_TABLES}
-    snapshot_ids = {
-        record.natural_key for record in records if record.table is LoadTable.SOURCE_SNAPSHOTS
-    }
-    track_ids = {
-        record.natural_key for record in records if record.table is LoadTable.RECORDING_TRACKS
-    }
+    available = {(record.table, record.natural_key) for record in records}
     violations: list[str] = []
     checked = 0
     for record in records:
-        if record.table in {LoadTable.EXTERNAL_IDENTIFIERS, LoadTable.FIELD_PROVENANCE}:
+        for foreign_key in record.foreign_keys:
             checked += 1
-            entity_id = _string(record, "entity_id")
-            if entity_id is None or entity_id not in entity_ids:
-                violations.append(f"{record.table}:{record.natural_key}:entity_id")
-        elif record.table is LoadTable.SOURCE_RECORDS:
-            checked += 1
-            snapshot_id = _string(record, "snapshot_sha256")
-            if snapshot_id is None or snapshot_id not in snapshot_ids:
-                violations.append(f"source_records:{record.natural_key}:snapshot_sha256")
-        elif record.table in {LoadTable.PLATFORM_LINKS, LoadTable.TRACK_PIECE_LINKS}:
-            checked += 1
-            track_id = _string(record, "track_id")
-            if track_id is None or track_id not in track_ids:
-                violations.append(f"{record.table}:{record.natural_key}:track_id")
+            target = (foreign_key.target_table, foreign_key.target_natural_key)
+            if foreign_key.resolution is ForeignKeyResolution.BUNDLE and target not in available:
+                violations.append(f"{record.table}:{record.natural_key}:{foreign_key.column}")
     return _result(
         ValidationRuleCode.FOREIGN_KEYS_PRESENT,
         checked,
@@ -114,8 +108,8 @@ def _no_name_only_auto_match(
     entities = [record for record in records if record.table in _ENTITY_TABLES]
     violations: list[str] = []
     for record in entities:
-        action = _string(record, "resolution_action")
-        reason = _string(record, "resolution_reason_code")
+        action = _evidence_string(record, "resolution_action")
+        reason = _evidence_string(record, "resolution_reason_code")
         valid_create = action == "create" and reason == "NO_MATCHING_STABLE_IDENTIFIER"
         valid_auto_match = action == "auto_match" and reason == "SHARED_STRONG_EXTERNAL_IDENTIFIER"
         if not valid_create and not valid_auto_match:
@@ -132,23 +126,25 @@ def _public_fields_have_provenance(
     records: list[CanonicalLoadRecord],
     example_limit: int,
 ) -> ValidationRuleResult:
-    entity_ids = {record.natural_key for record in records if record.table in _ENTITY_TABLES}
+    entities = [record for record in records if record.table in _ENTITY_TABLES]
     provenance_fields: set[tuple[str, str]] = set()
     for record in records:
         if record.table is not LoadTable.FIELD_PROVENANCE:
             continue
-        entity_id = _string(record, "entity_id")
+        target_table = _string(record, "target_table")
+        target_id = _string(record, "target_id")
         field_name = _string(record, "field_name")
-        if entity_id is not None and field_name is not None:
-            provenance_fields.add((entity_id, field_name))
-    violations = [
-        f"{entity_id}:preferred_name"
-        for entity_id in entity_ids
-        if (entity_id, "preferred_name") not in provenance_fields
-    ]
+        if target_table is not None and target_id is not None and field_name is not None:
+            provenance_fields.add((f"{target_table}:{target_id}", field_name))
+    violations: list[str] = []
+    for entity in entities:
+        field_name = "title" if entity.table is LoadTable.PIECES else "canonical_name"
+        identity = f"{entity.table}:{entity.natural_key}"
+        if (identity, field_name) not in provenance_fields:
+            violations.append(f"{identity}:{field_name}")
     return _result(
         ValidationRuleCode.PUBLIC_FIELDS_HAVE_PROVENANCE,
-        len(entity_ids),
+        len(entities),
         violations,
         example_limit,
     )
@@ -161,11 +157,11 @@ def _streaming_isrc_matches(
     links = [record for record in records if record.table is LoadTable.PLATFORM_LINKS]
     violations: list[str] = []
     for record in links:
-        source_isrc = _string(record, "source_isrc")
-        target_isrc = _string(record, "target_isrc")
+        source_isrc = _evidence_string(record, "source_isrc")
+        target_isrc = _evidence_string(record, "target_isrc")
         storefront = _string(record, "storefront")
-        checked_at = _string(record, "checked_at")
-        match_status = _string(record, "match_status")
+        checked_at = _string(record, "verified_at")
+        match_status = _evidence_string(record, "match_status")
         if match_status == "auto_confirmed" and (
             source_isrc is None
             or target_isrc is None
@@ -189,14 +185,22 @@ def _no_direct_album_work_links(
     violations: list[str] = []
     checked = 0
     for record in records:
-        if record.table is LoadTable.WORKS:
+        if record.table is LoadTable.PIECES:
             checked += 1
             forbidden_fields = {"spotify_url", "apple_music_url", "album_id"}
             if forbidden_fields.intersection(record.values):
                 violations.append(record.natural_key)
         elif record.table is LoadTable.PLATFORM_LINKS:
             checked += 1
-            if _string(record, "target_type") != "recording_track":
+            subject_foreign_keys = [
+                foreign_key
+                for foreign_key in record.foreign_keys
+                if foreign_key.column in {"track_id", "recording_id"}
+            ]
+            if len(subject_foreign_keys) != 1 or subject_foreign_keys[0].target_table not in {
+                LoadTable.RECORDING_TRACKS,
+                LoadTable.RECORDINGS,
+            }:
                 violations.append(record.natural_key)
     return _result(
         ValidationRuleCode.NO_DIRECT_ALBUM_WORK_LINK,
@@ -245,6 +249,11 @@ def _review_queue_is_empty(
 
 def _string(record: CanonicalLoadRecord, field: str) -> str | None:
     value = record.values.get(field)
+    return value if isinstance(value, str) and value else None
+
+
+def _evidence_string(record: CanonicalLoadRecord, field: str) -> str | None:
+    value = record.evidence.get(field)
     return value if isinstance(value, str) and value else None
 
 
