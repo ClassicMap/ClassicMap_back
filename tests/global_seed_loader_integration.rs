@@ -355,6 +355,32 @@ fn valid_bundle() -> Vec<Value> {
         ),
         record(
             RUN_ID,
+            "piece_identifiers",
+            "iswc:T-000.000.001-0",
+            json!({
+                "namespace": "iswc",
+                "external_id": "T-000.000.001-0"
+            }),
+            vec![
+                foreign_key("piece_id", "pieces", "musicbrainz_work:work-mbid", "bundle"),
+                foreign_key("source_record_id", "source_records", &work_source, "bundle"),
+            ],
+        ),
+        record(
+            RUN_ID,
+            "piece_identifiers",
+            "iswc:T-000.000.002-0",
+            json!({
+                "namespace": "iswc",
+                "external_id": "T-000.000.002-0"
+            }),
+            vec![
+                foreign_key("piece_id", "pieces", "musicbrainz_work:work-mbid", "bundle"),
+                foreign_key("source_record_id", "source_records", &work_source, "bundle"),
+            ],
+        ),
+        record(
+            RUN_ID,
             "field_provenance",
             "pieces:musicbrainz_work:work-mbid:title:W-WORK",
             json!({
@@ -453,6 +479,15 @@ async fn canonical_bundle_is_atomic_manual_safe_and_idempotent() {
     .await
     .expect("stable key duplicate");
     assert_eq!(duplicate_counts, (1, 1, 1));
+    let multiple_piece_namespace_ids = sqlx::query_scalar::<_, i64>(
+        "SELECT COUNT(*) FROM piece_identifiers identifier
+         JOIN pieces piece ON piece.id = identifier.piece_id
+         WHERE piece.title = 'Fixture Concerto' AND identifier.namespace = 'iswc'",
+    )
+    .fetch_one(&pool)
+    .await
+    .expect("작품 동일 namespace 복수 ID");
+    assert_eq!(multiple_piece_namespace_ids, 2);
     let multiple_namespace_ids = sqlx::query_scalar::<_, i64>(
         "SELECT COUNT(*) FROM external_identifiers
          WHERE authority_entity_id = ? AND namespace = 'gnd'",

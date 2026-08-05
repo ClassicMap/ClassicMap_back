@@ -17,10 +17,12 @@ const BINARY_NORMALIZED_NAME_IDENTITY: &str =
     include_str!("../migrations/202608050008_binary_normalized_name_identity.sql");
 const MULTIPLE_AUTHORITY_IDS: &str =
     include_str!("../migrations/202608050009_allow_multiple_authority_ids_per_namespace.sql");
+const MULTIPLE_PIECE_IDS: &str =
+    include_str!("../migrations/202608050010_allow_multiple_piece_ids_per_namespace.sql");
 
 #[test]
 fn migrator_embeds_all_global_seed_migrations() {
-    assert_eq!(MIGRATOR.iter().count(), 9);
+    assert_eq!(MIGRATOR.iter().count(), 10);
 }
 
 #[test]
@@ -94,4 +96,7 @@ fn global_seed_migration_contains_required_contracts() {
     assert!(MULTIPLE_AUTHORITY_IDS.contains("DROP INDEX uq_external_identifiers_entity_namespace"));
     assert!(MULTIPLE_AUTHORITY_IDS.contains("ADD INDEX idx_external_identifiers_entity"));
     assert!(!MULTIPLE_AUTHORITY_IDS.contains("DROP INDEX uq_external_identifiers_namespace_value"));
+    assert!(MULTIPLE_PIECE_IDS.contains("DROP INDEX uq_piece_identifiers_piece_namespace"));
+    assert!(MULTIPLE_PIECE_IDS.contains("uq_piece_identifiers_piece_namespace_value"));
+    assert!(!MULTIPLE_PIECE_IDS.contains("DROP INDEX uq_piece_identifiers_namespace_value"));
 }

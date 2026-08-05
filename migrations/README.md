@@ -46,3 +46,7 @@ scripts/test_global_seed_canonical_bundle.sh /absolute/path/to/canonical.jsonl
 기존 수동 composer/artist를 authority에 명시 연결하는 JSONL 계약과 안전한
 `authority bootstrap → explicit link → full canonical` 순서는
 `docs/legacy-authority-linkage.md`를 따릅니다. 이름 자동 매칭은 사용하지 않습니다.
+
+MusicBrainz 작품은 ISWC 등 같은 namespace의 식별자를 여러 개 가질 수 있습니다.
+`202608050010_allow_multiple_piece_ids_per_namespace.sql`은 작품별 namespace 단일값
+제약만 완화하며 `namespace + external_id`의 전역 unique 소유권은 유지합니다.
