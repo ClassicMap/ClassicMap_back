@@ -206,6 +206,7 @@ def test_localized_names_and_verified_composer_projection_use_real_db_fields() -
     assert composer.values["name"] == "루트비히 판 베토벤"
     assert composer.values["nationality"] == "독일"
     assert composer.values["period"] == "고전주의"
+    assert "avatar_url" not in composer.values
     assert composer.evidence["derived_fields"] == {
         "period": {"rule": "birth_year_boundaries_v1", "birth_year": 1770}
     }
@@ -232,6 +233,31 @@ def test_verified_performer_projection_requires_instrument_and_country_labels() 
     assert artist.natural_key == "musicbrainz_artist:mbid-beethoven"
     assert artist.values["category"] == "피아노"
     assert artist.values["nationality"] == "독일"
+    assert "image_url" not in artist.values
+
+
+def test_birth_year_period_fallback_keeps_chopin_and_debussy_out_of_classical() -> None:
+    for birth_year, expected_period in ((1810, "낭만주의"), (1862, "근현대")):
+        raw = _wikidata_projection_raw(scope="composers")
+        payload = dict(raw.payload)
+        payload["date_of_birth"] = f"+{birth_year}-01-01T00:00:00Z"
+        dated_raw = raw.model_copy(update={"payload": payload})
+        candidate = normalize_records([dated_raw])[0]
+        decision = ResolutionDecision(
+            decision_id=f"decision-period-{birth_year}",
+            action=ResolutionAction.CREATE,
+            candidate_ids=(candidate.candidate_id,),
+            reason_code="NO_MATCHING_STABLE_IDENTIFIER",
+        )
+        bundle = build_canonical_load_bundle(
+            run_id=f"run-period-{birth_year}",
+            source_manifest=_manifest(),
+            raw_records=[dated_raw],
+            candidates=[candidate],
+            decisions=[decision],
+        )
+        composer = next(record for record in bundle if record.table is LoadTable.COMPOSERS)
+        assert composer.values["period"] == expected_period
 
 
 def test_missing_verified_legacy_fields_are_reviewed_without_fake_defaults() -> None:
