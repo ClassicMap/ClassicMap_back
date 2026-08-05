@@ -1,4 +1,10 @@
 from classicmap_seed.sources.factory import build_connector, build_musicbrainz_work_connector
+from classicmap_seed.sources.musicbrainz_work_exact import fetch_exact_work_request_page
+from classicmap_seed.sources.musicbrainz_work_exact_input import (
+    MusicBrainzWorkEntityRequest,
+    extract_comparison_candidate_work_requests,
+    read_musicbrainz_work_entity_requests,
+)
 from classicmap_seed.sources.musicbrainz_works import MusicBrainzWorkConnector
 from classicmap_seed.sources.wikidata import WikidataConnector
 from classicmap_seed.sources.wikidata_exact import fetch_exact_request_page
@@ -10,11 +16,15 @@ from classicmap_seed.sources.wikidata_exact_input import (
 
 __all__ = [
     "MusicBrainzWorkConnector",
+    "MusicBrainzWorkEntityRequest",
     "WikidataConnector",
     "WikidataEntityRequest",
     "build_connector",
     "build_musicbrainz_work_connector",
     "extract_comparison_candidate_requests",
+    "extract_comparison_candidate_work_requests",
     "fetch_exact_request_page",
+    "fetch_exact_work_request_page",
+    "read_musicbrainz_work_entity_requests",
     "read_wikidata_entity_requests",
 ]
