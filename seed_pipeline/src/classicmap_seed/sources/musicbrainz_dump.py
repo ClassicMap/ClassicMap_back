@@ -16,14 +16,16 @@ from typing import IO, ClassVar, Literal
 
 from pydantic import Field, ValidationError, field_validator, model_validator
 
-from classicmap_seed.artifacts import JsonlArtifactStore, read_artifact
+from classicmap_seed.artifacts import JsonlArtifactStore, read_manifest
 from classicmap_seed.models import (
     ArtifactStage,
+    ArtifactWriteResult,
     CommandReport,
     EntityKind,
     InputFileProvenance,
     JsonObject,
     JsonValue,
+    SnapshotManifest,
     SourceMetadata,
     SourceName,
     SourceRecord,
@@ -87,7 +89,7 @@ class MusicBrainzDumpMalformedReview(StrictModel):
     review_kind: Literal["malformed"] = "malformed"
     entity_kind: EntityKind
     musicbrainz_internal_id: int = Field(ge=1)
-    entity_ordinal: int = Field(ge=0)
+    entity_ordinal: int | None = Field(default=None, ge=0)
     member_name: str
     row_number: int = Field(ge=1)
     reason_code: str
@@ -98,8 +100,8 @@ class MusicBrainzDumpUnresolvedReview(StrictModel):
     review_kind: Literal["unresolved"] = "unresolved"
     entity_kind: EntityKind
     musicbrainz_internal_id: int = Field(ge=1)
-    entity_mbid: str
-    entity_ordinal: int = Field(ge=0)
+    entity_mbid: str | None = None
+    entity_ordinal: int | None = Field(default=None, ge=0)
     reason_code: str
     evidence: JsonObject
 
@@ -117,6 +119,7 @@ class MusicBrainzDumpCheckpoint(StrictModel):
     record_count: int = Field(default=0, ge=0)
     malformed_count: int = Field(default=0, ge=0)
     unresolved_count: int = Field(default=0, ge=0)
+    orphan_reviews_emitted: bool = False
     complete: bool = False
 
 
@@ -146,9 +149,12 @@ class MusicBrainzDumpCommandReport(CommandReport):
 
 @dataclass(frozen=True, slots=True)
 class MusicBrainzDumpCollectionResult:
-    records: tuple[SourceRecord, ...]
-    malformed_reviews: tuple[MusicBrainzDumpMalformedReview, ...]
-    unresolved_reviews: tuple[MusicBrainzDumpUnresolvedReview, ...]
+    record_artifact: ArtifactWriteResult
+    malformed_artifact: ArtifactWriteResult | None
+    unresolved_artifact: ArtifactWriteResult | None
+    record_count: int
+    malformed_count: int
+    unresolved_count: int
     next_ordinal: int
     scanned_entity_count: int
     resumed_record_count: int
@@ -170,6 +176,27 @@ class _EntityResult:
     record: SourceRecord | None
     malformed: tuple[MusicBrainzDumpMalformedReview, ...]
     unresolved: tuple[MusicBrainzDumpUnresolvedReview, ...]
+
+
+class _JsonlDigest:
+    def __init__(self) -> None:
+        self._digest = hashlib.sha256()
+        self.row_count = 0
+
+    def add(self, record: StrictModel) -> None:
+        content = f"{record.model_dump_json(exclude_none=True)}\n".encode()
+        self._digest.update(content)
+        self.row_count += 1
+
+    def update_bytes(self, content: bytes) -> None:
+        self._digest.update(content)
+
+    def add_rows(self, row_count: int) -> None:
+        self.row_count += row_count
+
+    @property
+    def sha256(self) -> str:
+        return self._digest.hexdigest()
 
 
 def read_musicbrainz_dump_release_metadata(path: Path) -> MusicBrainzDumpReleaseMetadata:
@@ -355,7 +382,7 @@ def _json_objects(values: Iterable[JsonObject]) -> list[JsonValue]:
 
 class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
     _MEMBERS: ClassVar[dict[str, str]] = {
-        "mbdump/SCHEMA_SEQUENCE": "schema_sequence",
+        "SCHEMA_SEQUENCE": "schema_sequence",
         "mbdump/artist": "artist",
         "mbdump/artist_credit": "artist_credit",
         "mbdump/artist_credit_name": "artist_credit_name",
@@ -365,6 +392,8 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
         "mbdump/iswc": "iswc",
         "mbdump/work_type": "work_type",
         "mbdump/link": "link",
+        "mbdump/link_attribute": "link_attribute",
+        "mbdump/link_attribute_type": "link_attribute_type",
         "mbdump/link_type": "link_type",
         "mbdump/l_recording_work": "l_recording_work",
         "mbdump/l_artist_work": "l_artist_work",
@@ -389,6 +418,7 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
             index_path.parent.mkdir(parents=True, exist_ok=True)
         self._connection = sqlite3.connect(index_path)
         self._connection.row_factory = sqlite3.Row
+        self._schema_sequence_row_count = 0
         try:
             self._initialize_schema()
             self._build_or_resume()
@@ -482,14 +512,35 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
             );
             CREATE TABLE IF NOT EXISTS links (
               internal_id INTEGER PRIMARY KEY,
-              link_type_id INTEGER NOT NULL
+              link_type_id INTEGER NOT NULL,
+              begin_date_year INTEGER,
+              begin_date_month INTEGER,
+              begin_date_day INTEGER,
+              end_date_year INTEGER,
+              end_date_month INTEGER,
+              end_date_day INTEGER,
+              ended INTEGER NOT NULL
             );
+            CREATE TABLE IF NOT EXISTS link_attribute_types (
+              internal_id INTEGER PRIMARY KEY,
+              mbid TEXT NOT NULL,
+              name TEXT NOT NULL
+            );
+            CREATE TABLE IF NOT EXISTS link_attributes (
+              link_id INTEGER NOT NULL,
+              attribute_type_id INTEGER NOT NULL,
+              PRIMARY KEY (link_id, attribute_type_id)
+            ) WITHOUT ROWID;
+            CREATE INDEX IF NOT EXISTS link_attributes_link_idx
+              ON link_attributes(link_id);
             CREATE TABLE IF NOT EXISTS recording_work_relations (
               relation_id INTEGER PRIMARY KEY,
               link_id INTEGER NOT NULL,
               recording_id INTEGER NOT NULL,
               work_id INTEGER NOT NULL,
-              link_order INTEGER NOT NULL
+              link_order INTEGER NOT NULL,
+              entity0_credit TEXT,
+              entity1_credit TEXT
             );
             CREATE INDEX IF NOT EXISTS recording_work_recording_idx
               ON recording_work_relations(recording_id);
@@ -498,7 +549,9 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
               link_id INTEGER NOT NULL,
               artist_id INTEGER NOT NULL,
               work_id INTEGER NOT NULL,
-              link_order INTEGER NOT NULL
+              link_order INTEGER NOT NULL,
+              entity0_credit TEXT,
+              entity1_credit TEXT
             );
             CREATE INDEX IF NOT EXISTS artist_work_work_idx
               ON artist_work_relations(work_id);
@@ -571,6 +624,11 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
         missing = set(self._MEMBERS) - seen_members
         if missing:
             raise ValueError(f"MusicBrainz core dump member 누락: {', '.join(sorted(missing))}")
+        schema_sequence = self._connection.execute(
+            "SELECT value FROM metadata WHERE key = 'dump_schema_sequence'"
+        ).fetchone()
+        if schema_sequence is None or int(schema_sequence["value"]) != _EXPECTED_SCHEMA_SEQUENCE:
+            raise ValueError("MusicBrainz SCHEMA_SEQUENCE가 없거나 지원 계약과 다릅니다.")
         self._connection.execute(
             "INSERT OR REPLACE INTO metadata(key, value) VALUES ('complete', '1')"
         )
@@ -629,12 +687,19 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
         self, member_name: str, row_number: int, fields: list[str | None]
     ) -> None:
         del member_name, row_number
+        self._schema_sequence_row_count += 1
+        if self._schema_sequence_row_count != 1:
+            raise ValueError("MusicBrainz SCHEMA_SEQUENCE에는 정확히 한 행만 있어야 합니다.")
         schema_sequence = _required_nonnegative_int(fields, 0, "SCHEMA_SEQUENCE")
         if schema_sequence != _EXPECTED_SCHEMA_SEQUENCE:
             raise ValueError(
                 "지원하지 않는 MusicBrainz schema sequence: "
                 f"expected={_EXPECTED_SCHEMA_SEQUENCE} actual={schema_sequence}"
             )
+        self._connection.execute(
+            "INSERT OR REPLACE INTO metadata(key, value) VALUES ('dump_schema_sequence', ?)",
+            (str(schema_sequence),),
+        )
 
     def _index_artist_credit(
         self, member_name: str, row_number: int, fields: list[str | None]
@@ -835,9 +900,61 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
         del member_name, row_number
         internal_id = _required_int(fields, 0, "link.id")
         link_type_id = _required_int(fields, 1, "link.link_type")
+        dates = [
+            _optional_nonnegative_int(fields, index, f"link.{field_name}")
+            for index, field_name in (
+                (2, "begin_date_year"),
+                (3, "begin_date_month"),
+                (4, "begin_date_day"),
+                (5, "end_date_year"),
+                (6, "end_date_month"),
+                (7, "end_date_day"),
+            )
+        ]
+        ended_raw = _required_text(fields, 10, "link.ended")
+        if ended_raw not in {"t", "f"}:
+            raise ValueError("boolean 형식 오류: link.ended")
         self._connection.execute(
-            "INSERT OR REPLACE INTO links(internal_id, link_type_id) VALUES (?, ?)",
-            (internal_id, link_type_id),
+            """
+            INSERT OR REPLACE INTO links(
+              internal_id, link_type_id,
+              begin_date_year, begin_date_month, begin_date_day,
+              end_date_year, end_date_month, end_date_day, ended
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (internal_id, link_type_id, *dates, int(ended_raw == "t")),
+        )
+
+    def _index_link_attribute_type(
+        self, member_name: str, row_number: int, fields: list[str | None]
+    ) -> None:
+        del member_name, row_number
+        internal_id = _required_int(fields, 0, "link_attribute_type.id")
+        mbid = _require_mbid(
+            _required_text(fields, 4, "link_attribute_type.gid"),
+            "link_attribute_type.gid",
+        )
+        name = _required_text(fields, 5, "link_attribute_type.name")
+        self._connection.execute(
+            """
+            INSERT OR REPLACE INTO link_attribute_types(internal_id, mbid, name)
+            VALUES (?, ?, ?)
+            """,
+            (internal_id, mbid, name),
+        )
+
+    def _index_link_attribute(
+        self, member_name: str, row_number: int, fields: list[str | None]
+    ) -> None:
+        del member_name, row_number
+        link_id = _required_int(fields, 0, "link_attribute.link")
+        attribute_type_id = _required_int(fields, 1, "link_attribute.attribute_type")
+        self._connection.execute(
+            """
+            INSERT OR REPLACE INTO link_attributes(link_id, attribute_type_id)
+            VALUES (?, ?)
+            """,
+            (link_id, attribute_type_id),
         )
 
     def _index_l_recording_work(
@@ -849,13 +966,24 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
         recording_id = _required_int(fields, 2, "l_recording_work.entity0")
         work_id = _required_int(fields, 3, "l_recording_work.entity1")
         link_order = _optional_nonnegative_int(fields, 6, "l_recording_work.link_order") or 0
+        entity0_credit = fields[7] if len(fields) > 7 else None
+        entity1_credit = fields[8] if len(fields) > 8 else None
         self._connection.execute(
             """
             INSERT OR REPLACE INTO recording_work_relations(
-              relation_id, link_id, recording_id, work_id, link_order
-            ) VALUES (?, ?, ?, ?, ?)
+              relation_id, link_id, recording_id, work_id, link_order,
+              entity0_credit, entity1_credit
+            ) VALUES (?, ?, ?, ?, ?, ?, ?)
             """,
-            (relation_id, link_id, recording_id, work_id, link_order),
+            (
+                relation_id,
+                link_id,
+                recording_id,
+                work_id,
+                link_order,
+                entity0_credit,
+                entity1_credit,
+            ),
         )
 
     def _index_l_artist_work(
@@ -867,13 +995,24 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
         artist_id = _required_int(fields, 2, "l_artist_work.entity0")
         work_id = _required_int(fields, 3, "l_artist_work.entity1")
         link_order = _optional_nonnegative_int(fields, 6, "l_artist_work.link_order") or 0
+        entity0_credit = fields[7] if len(fields) > 7 else None
+        entity1_credit = fields[8] if len(fields) > 8 else None
         self._connection.execute(
             """
             INSERT OR REPLACE INTO artist_work_relations(
-              relation_id, link_id, artist_id, work_id, link_order
-            ) VALUES (?, ?, ?, ?, ?)
+              relation_id, link_id, artist_id, work_id, link_order,
+              entity0_credit, entity1_credit
+            ) VALUES (?, ?, ?, ?, ?, ?, ?)
             """,
-            (relation_id, link_id, artist_id, work_id, link_order),
+            (
+                relation_id,
+                link_id,
+                artist_id,
+                work_id,
+                link_order,
+                entity0_credit,
+                entity1_credit,
+            ),
         )
 
     def iter_entities(self) -> Iterator[_IndexedEntity]:
@@ -892,6 +1031,126 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
                     internal_id=int(row["internal_id"]),
                 )
                 ordinal += 1
+
+    def orphan_reviews(
+        self,
+    ) -> tuple[
+        tuple[MusicBrainzDumpMalformedReview, ...],
+        tuple[MusicBrainzDumpUnresolvedReview, ...],
+    ]:
+        malformed: list[MusicBrainzDumpMalformedReview] = []
+        unresolved: list[MusicBrainzDumpUnresolvedReview] = []
+        for kind, table_name in (
+            (EntityKind.WORK, "works"),
+            (EntityKind.RECORDING, "recordings"),
+        ):
+            rows = self._connection.execute(
+                f"""
+                SELECT issue.internal_id, issue.member_name, issue.row_number,
+                       issue.reason_code, issue.evidence_json
+                FROM issues AS issue
+                LEFT JOIN {table_name} AS entity ON entity.internal_id = issue.internal_id
+                WHERE issue.entity_kind = ? AND issue.category = 'malformed'
+                  AND entity.internal_id IS NULL
+                ORDER BY issue.internal_id, issue.member_name, issue.row_number, issue.reason_code
+                """,
+                (kind.value,),
+            )
+            for row in rows:
+                evidence = json.loads(str(row["evidence_json"]))
+                if not isinstance(evidence, dict):
+                    raise ValueError("orphan issue evidence가 object가 아닙니다.")
+                malformed.append(
+                    MusicBrainzDumpMalformedReview(
+                        entity_kind=kind,
+                        musicbrainz_internal_id=int(row["internal_id"]),
+                        member_name=str(row["member_name"]),
+                        row_number=int(row["row_number"]),
+                        reason_code=str(row["reason_code"]),
+                        evidence=evidence,
+                    )
+                )
+        orphan_specs = (
+            (
+                EntityKind.RECORDING,
+                """
+                SELECT relation.recording_id AS internal_id, relation.relation_id,
+                       relation.link_id, relation.work_id
+                FROM recording_work_relations AS relation
+                LEFT JOIN recordings AS recording
+                  ON recording.internal_id = relation.recording_id
+                WHERE recording.internal_id IS NULL
+                ORDER BY relation.recording_id, relation.relation_id
+                """,
+                "ORPHAN_RECORDING_WORK_RELATION",
+            ),
+            (
+                EntityKind.WORK,
+                """
+                SELECT relation.work_id AS internal_id, relation.relation_id,
+                       relation.link_id, relation.artist_id
+                FROM artist_work_relations AS relation
+                LEFT JOIN works AS work ON work.internal_id = relation.work_id
+                WHERE work.internal_id IS NULL
+                ORDER BY relation.work_id, relation.relation_id
+                """,
+                "ORPHAN_ARTIST_WORK_RELATION",
+            ),
+        )
+        for kind, query, reason_code in orphan_specs:
+            for row in self._connection.execute(query):
+                orphan_evidence: JsonObject = {
+                    key: int(row[key])
+                    for key in row
+                    if key != "internal_id" and row[key] is not None
+                }
+                unresolved.append(
+                    MusicBrainzDumpUnresolvedReview(
+                        entity_kind=kind,
+                        musicbrainz_internal_id=int(row["internal_id"]),
+                        entity_mbid=None,
+                        reason_code=reason_code,
+                        evidence=orphan_evidence,
+                    )
+                )
+        for kind, child_table, child_id, root_table, root_id, value_field, reason_code in (
+            (
+                EntityKind.RECORDING,
+                "isrcs",
+                "recording_id",
+                "recordings",
+                "internal_id",
+                "isrc",
+                "ORPHAN_ISRC_RECORDING",
+            ),
+            (
+                EntityKind.WORK,
+                "iswcs",
+                "work_id",
+                "works",
+                "internal_id",
+                "iswc",
+                "ORPHAN_ISWC_WORK",
+            ),
+        ):
+            query = f"""
+                SELECT child.{child_id} AS internal_id, child.{value_field} AS identifier
+                FROM {child_table} AS child
+                LEFT JOIN {root_table} AS root ON root.{root_id} = child.{child_id}
+                WHERE root.{root_id} IS NULL
+                ORDER BY child.{child_id}, child.{value_field}
+            """
+            for row in self._connection.execute(query):
+                unresolved.append(
+                    MusicBrainzDumpUnresolvedReview(
+                        entity_kind=kind,
+                        musicbrainz_internal_id=int(row["internal_id"]),
+                        entity_mbid=None,
+                        reason_code=reason_code,
+                        evidence={value_field: str(row["identifier"])},
+                    )
+                )
+        return tuple(malformed), tuple(unresolved)
 
     def build_entity(self, entity: _IndexedEntity) -> _EntityResult:
         if entity.entity_kind is EntityKind.WORK:
@@ -986,10 +1245,13 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
         relation_rows = self._connection.execute(
             """
             SELECT relation.relation_id, relation.link_id, relation.link_order,
-                   relation.artist_id, artist.mbid AS artist_mbid,
+                   relation.artist_id, relation.entity0_credit, relation.entity1_credit,
+                   artist.mbid AS artist_mbid,
                    link.link_type_id, link_type.mbid AS relation_type_mbid,
                    link_type.entity_type0, link_type.entity_type1,
-                   link_type.name AS relation_type_name, link_type.is_deprecated
+                   link_type.name AS relation_type_name, link_type.is_deprecated,
+                   link.begin_date_year, link.begin_date_month, link.begin_date_day,
+                   link.end_date_year, link.end_date_month, link.end_date_day, link.ended
             FROM artist_work_relations AS relation
             LEFT JOIN artists AS artist ON artist.internal_id = relation.artist_id
             LEFT JOIN links AS link ON link.internal_id = relation.link_id
@@ -1018,6 +1280,9 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
                     relation_payload[key] = value
             deprecated = bool(relation["is_deprecated"] or False)
             relation_payload["is_deprecated"] = deprecated
+            self._add_link_qualifiers(relation_payload, relation)
+            attributes, attributes_complete = self._link_attributes(int(relation["link_id"]))
+            relation_payload["attributes"] = attributes
             artist_relations.append(relation_payload)
             artist_mbid = relation["artist_mbid"]
             type_mbid = relation["relation_type_mbid"]
@@ -1031,6 +1296,15 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
                     )
                 )
                 continue
+            if not attributes_complete:
+                unresolved.append(
+                    self._unresolved_review(
+                        entity,
+                        mbid,
+                        "LINK_ATTRIBUTE_TYPE_UNRESOLVED",
+                        relation_payload,
+                    )
+                )
             is_composer = type_mbid == _COMPOSER_RELATION_TYPE_MBID
             exact_orientation = (
                 relation["entity_type0"] == "artist" and relation["entity_type1"] == "work"
@@ -1216,10 +1490,13 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
         rows = self._connection.execute(
             """
             SELECT relation.relation_id, relation.link_id, relation.link_order,
-                   relation.work_id, work.mbid AS work_mbid,
+                   relation.work_id, relation.entity0_credit, relation.entity1_credit,
+                   work.mbid AS work_mbid,
                    link.link_type_id, link_type.mbid AS relation_type_mbid,
                    link_type.entity_type0, link_type.entity_type1,
-                   link_type.name AS relation_type_name, link_type.is_deprecated
+                   link_type.name AS relation_type_name, link_type.is_deprecated,
+                   link.begin_date_year, link.begin_date_month, link.begin_date_day,
+                   link.end_date_year, link.end_date_month, link.end_date_day, link.ended
             FROM recording_work_relations AS relation
             LEFT JOIN works AS work ON work.internal_id = relation.work_id
             LEFT JOIN links AS link ON link.internal_id = relation.link_id
@@ -1248,6 +1525,9 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
                     payload[key] = value
             deprecated = bool(row["is_deprecated"] or False)
             payload["is_deprecated"] = deprecated
+            self._add_link_qualifiers(payload, row)
+            attributes, attributes_complete = self._link_attributes(int(row["link_id"]))
+            payload["attributes"] = attributes
             relations.append(payload)
             work_mbid = row["work_mbid"]
             type_mbid = row["relation_type_mbid"]
@@ -1257,6 +1537,25 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
                         entity,
                         entity_mbid,
                         "RECORDING_WORK_RELATION_FK_UNRESOLVED",
+                        payload,
+                    )
+                )
+                continue
+            if not attributes_complete:
+                unresolved.append(
+                    self._unresolved_review(
+                        entity,
+                        entity_mbid,
+                        "LINK_ATTRIBUTE_TYPE_UNRESOLVED",
+                        payload,
+                    )
+                )
+            if not isinstance(work_mbid, str) or not _MBID_PATTERN.fullmatch(work_mbid):
+                unresolved.append(
+                    self._unresolved_review(
+                        entity,
+                        entity_mbid,
+                        "RECORDING_WORK_TARGET_MBID_INVALID",
                         payload,
                     )
                 )
@@ -1272,9 +1571,57 @@ class _MusicBrainzDumpIndex(AbstractContextManager["_MusicBrainzDumpIndex"]):
                         payload,
                     )
                 )
-            elif is_performance and isinstance(work_mbid, str):
+            elif (
+                is_performance and isinstance(work_mbid, str) and _MBID_PATTERN.fullmatch(work_mbid)
+            ):
                 performance_work_mbids.add(work_mbid)
         return relations, sorted(performance_work_mbids)
+
+    @staticmethod
+    def _add_link_qualifiers(payload: JsonObject, row: sqlite3.Row) -> None:
+        date_fields = (
+            "begin_date_year",
+            "begin_date_month",
+            "begin_date_day",
+            "end_date_year",
+            "end_date_month",
+            "end_date_day",
+        )
+        dates: JsonObject = {}
+        for field in date_fields:
+            if row[field] is not None:
+                dates[field] = int(row[field])
+        if dates:
+            payload["dates"] = dates
+        payload["ended"] = bool(row["ended"] or False)
+        for field in ("entity0_credit", "entity1_credit"):
+            if isinstance(row[field], str) and row[field]:
+                payload[field] = row[field]
+
+    def _link_attributes(self, link_id: int) -> tuple[list[JsonValue], bool]:
+        attributes: list[JsonValue] = []
+        complete = True
+        rows = self._connection.execute(
+            """
+            SELECT attribute.attribute_type_id, attribute_type.mbid, attribute_type.name
+            FROM link_attributes AS attribute
+            LEFT JOIN link_attribute_types AS attribute_type
+              ON attribute_type.internal_id = attribute.attribute_type_id
+            WHERE attribute.link_id = ?
+            ORDER BY attribute.attribute_type_id
+            """,
+            (link_id,),
+        )
+        for row in rows:
+            value: JsonObject = {"attribute_type_internal_id": int(row["attribute_type_id"])}
+            if isinstance(row["mbid"], str):
+                value["attribute_type_mbid"] = row["mbid"]
+            else:
+                complete = False
+            if isinstance(row["name"], str):
+                value["name"] = row["name"]
+            attributes.append(value)
+        return attributes, complete
 
 
 def collect_musicbrainz_dump(
@@ -1303,9 +1650,9 @@ def collect_musicbrainz_dump(
         partition_end_ordinal=end_ordinal,
         next_ordinal=start_ordinal,
     )
-    records: list[SourceRecord] = []
-    malformed: list[MusicBrainzDumpMalformedReview] = []
-    unresolved: list[MusicBrainzDumpUnresolvedReview] = []
+    record_digest = _JsonlDigest()
+    malformed_digest = _JsonlDigest()
+    unresolved_digest = _JsonlDigest()
     if checkpoint_path.exists():
         if not resume:
             raise ValueError(
@@ -1319,46 +1666,42 @@ def collect_musicbrainz_dump(
             start_ordinal,
             end_ordinal,
         )
-        records = _read_checkpoint_artifacts(
+        record_digest = _load_checkpoint_digest(
             artifacts_root,
             checkpoint.record_manifest_paths,
-            SourceRecord,
+            run_id=run_id,
+            provenance=provenance,
         )
-        malformed = _read_checkpoint_artifacts(
+        malformed_digest = _load_checkpoint_digest(
             artifacts_root,
             checkpoint.malformed_manifest_paths,
-            MusicBrainzDumpMalformedReview,
+            run_id=run_id,
+            provenance=provenance,
         )
-        unresolved = _read_checkpoint_artifacts(
+        unresolved_digest = _load_checkpoint_digest(
             artifacts_root,
             checkpoint.unresolved_manifest_paths,
-            MusicBrainzDumpUnresolvedReview,
+            run_id=run_id,
+            provenance=provenance,
         )
         if (
-            len(records) != checkpoint.record_count
-            or len(malformed) != checkpoint.malformed_count
-            or len(unresolved) != checkpoint.unresolved_count
+            record_digest.row_count != checkpoint.record_count
+            or malformed_digest.row_count != checkpoint.malformed_count
+            or unresolved_digest.row_count != checkpoint.unresolved_count
         ):
             raise ValueError("MusicBrainz dump checkpoint count와 page artifact가 다릅니다.")
-        if len(records) + len(malformed) + len(unresolved) > limit:
+        if (
+            checkpoint.record_count + checkpoint.malformed_count + checkpoint.unresolved_count
+            > limit
+        ):
             raise ValueError("--limit은 checkpoint의 기존 누적 결과보다 작을 수 없습니다.")
 
-    resumed_record_count = len(records)
-    resumed_malformed_count = len(malformed)
-    resumed_unresolved_count = len(unresolved)
-    if checkpoint.complete or len(records) + len(malformed) + len(unresolved) >= limit:
-        return MusicBrainzDumpCollectionResult(
-            records=tuple(records),
-            malformed_reviews=tuple(malformed),
-            unresolved_reviews=tuple(unresolved),
-            next_ordinal=checkpoint.next_ordinal,
-            scanned_entity_count=0,
-            resumed_record_count=resumed_record_count,
-            resumed_malformed_count=resumed_malformed_count,
-            resumed_unresolved_count=resumed_unresolved_count,
-            artifact_mutation_count=0,
-            complete=checkpoint.complete,
-        )
+    record_count = checkpoint.record_count
+    malformed_count = checkpoint.malformed_count
+    unresolved_count = checkpoint.unresolved_count
+    resumed_record_count = record_count
+    resumed_malformed_count = malformed_count
+    resumed_unresolved_count = unresolved_count
 
     metadata = musicbrainz_dump_metadata(provenance)
     retrieved_at = musicbrainz_dump_retrieved_at(provenance)
@@ -1371,7 +1714,33 @@ def collect_musicbrainz_dump(
     next_ordinal = checkpoint.next_ordinal
     scanned_entity_count = 0
     artifact_mutation_count = 0
-    complete = False
+    complete = checkpoint.complete
+    orphan_reviews_emitted = checkpoint.orphan_reviews_emitted
+
+    if complete or record_count + malformed_count + unresolved_count >= limit:
+        return _finalize_collection(
+            run_id=run_id,
+            metadata=metadata,
+            provenance=provenance,
+            retrieved_at=retrieved_at,
+            artifact_store=artifact_store,
+            artifacts_root=artifacts_root,
+            dry_run=dry_run,
+            resume=resume,
+            record_paths=record_paths,
+            malformed_paths=malformed_paths,
+            unresolved_paths=unresolved_paths,
+            record_digest=record_digest,
+            malformed_digest=malformed_digest,
+            unresolved_digest=unresolved_digest,
+            next_ordinal=next_ordinal,
+            scanned_entity_count=0,
+            resumed_record_count=resumed_record_count,
+            resumed_malformed_count=resumed_malformed_count,
+            resumed_unresolved_count=resumed_unresolved_count,
+            artifact_mutation_count=0,
+            complete=complete,
+        )
 
     with _MusicBrainzDumpIndex(
         input_path=input_path,
@@ -1379,7 +1748,27 @@ def collect_musicbrainz_dump(
         artifacts_root=artifacts_root,
         dry_run=dry_run,
     ) as index:
-        for entity in index.iter_entities():
+        if start_ordinal == 0 and not orphan_reviews_emitted:
+            orphan_malformed, orphan_unresolved = index.orphan_reviews()
+            page_malformed.extend(orphan_malformed)
+            page_unresolved.extend(orphan_unresolved)
+            for malformed_review in orphan_malformed:
+                malformed_digest.add(malformed_review)
+            for unresolved_review in orphan_unresolved:
+                unresolved_digest.add(unresolved_review)
+            orphan_reviews_emitted = True
+        orphan_limit_reached = (
+            record_count
+            + malformed_count
+            + unresolved_count
+            + len(page_malformed)
+            + len(page_unresolved)
+            >= limit
+        )
+        entities: Iterator[_IndexedEntity] = (
+            iter(()) if orphan_limit_reached else index.iter_entities()
+        )
+        for entity in entities:
             if entity.ordinal < next_ordinal:
                 continue
             if end_ordinal is not None and entity.ordinal >= end_ordinal:
@@ -1391,12 +1780,17 @@ def collect_musicbrainz_dump(
             next_ordinal = entity.ordinal + 1
             if result.record is not None:
                 page_records.append(result.record)
+                record_digest.add(result.record)
             page_malformed.extend(result.malformed)
             page_unresolved.extend(result.unresolved)
+            for malformed_review in result.malformed:
+                malformed_digest.add(malformed_review)
+            for unresolved_review in result.unresolved:
+                unresolved_digest.add(unresolved_review)
             emitted_count = (
-                len(records)
-                + len(malformed)
-                + len(unresolved)
+                record_count
+                + malformed_count
+                + unresolved_count
                 + len(page_records)
                 + len(page_malformed)
                 + len(page_unresolved)
@@ -1405,13 +1799,16 @@ def collect_musicbrainz_dump(
             should_checkpoint = scanned_entity_count % checkpoint_every == 0
             if should_stop or should_checkpoint:
                 if dry_run:
-                    records.extend(page_records)
-                    malformed.extend(page_malformed)
-                    unresolved.extend(page_unresolved)
+                    record_count += len(page_records)
+                    malformed_count += len(page_malformed)
+                    unresolved_count += len(page_unresolved)
                     page_records.clear()
                     page_malformed.clear()
                     page_unresolved.clear()
                 else:
+                    record_count += len(page_records)
+                    malformed_count += len(page_malformed)
+                    unresolved_count += len(page_unresolved)
                     artifact_mutation_count += _flush_page(
                         run_id=run_id,
                         metadata=metadata,
@@ -1419,9 +1816,6 @@ def collect_musicbrainz_dump(
                         retrieved_at=retrieved_at,
                         artifact_store=artifact_store,
                         artifacts_root=artifacts_root,
-                        records=records,
-                        malformed=malformed,
-                        unresolved=unresolved,
                         page_records=page_records,
                         page_malformed=page_malformed,
                         page_unresolved=page_unresolved,
@@ -1432,13 +1826,17 @@ def collect_musicbrainz_dump(
                         start_ordinal=start_ordinal,
                         end_ordinal=end_ordinal,
                         next_ordinal=next_ordinal,
+                        record_count=record_count,
+                        malformed_count=malformed_count,
+                        unresolved_count=unresolved_count,
+                        orphan_reviews_emitted=orphan_reviews_emitted,
                         complete=False,
                         resume=resume,
                     )
                 if should_stop:
                     break
         else:
-            complete = True
+            complete = not orphan_limit_reached
 
     if (
         page_records
@@ -1447,10 +1845,13 @@ def collect_musicbrainz_dump(
         or (not dry_run and complete != checkpoint.complete)
     ):
         if dry_run:
-            records.extend(page_records)
-            malformed.extend(page_malformed)
-            unresolved.extend(page_unresolved)
+            record_count += len(page_records)
+            malformed_count += len(page_malformed)
+            unresolved_count += len(page_unresolved)
         else:
+            record_count += len(page_records)
+            malformed_count += len(page_malformed)
+            unresolved_count += len(page_unresolved)
             artifact_mutation_count += _flush_page(
                 run_id=run_id,
                 metadata=metadata,
@@ -1458,9 +1859,6 @@ def collect_musicbrainz_dump(
                 retrieved_at=retrieved_at,
                 artifact_store=artifact_store,
                 artifacts_root=artifacts_root,
-                records=records,
-                malformed=malformed,
-                unresolved=unresolved,
                 page_records=page_records,
                 page_malformed=page_malformed,
                 page_unresolved=page_unresolved,
@@ -1471,14 +1869,35 @@ def collect_musicbrainz_dump(
                 start_ordinal=start_ordinal,
                 end_ordinal=end_ordinal,
                 next_ordinal=next_ordinal,
+                record_count=record_count,
+                malformed_count=malformed_count,
+                unresolved_count=unresolved_count,
+                orphan_reviews_emitted=orphan_reviews_emitted,
                 complete=complete,
                 resume=resume,
             )
 
-    return MusicBrainzDumpCollectionResult(
-        records=tuple(records),
-        malformed_reviews=tuple(malformed),
-        unresolved_reviews=tuple(unresolved),
+    if (
+        record_count != record_digest.row_count
+        or malformed_count != malformed_digest.row_count
+        or unresolved_count != unresolved_digest.row_count
+    ):
+        raise ValueError("MusicBrainz dump output digest count가 checkpoint count와 다릅니다.")
+    return _finalize_collection(
+        run_id=run_id,
+        metadata=metadata,
+        provenance=provenance,
+        retrieved_at=retrieved_at,
+        artifact_store=artifact_store,
+        artifacts_root=artifacts_root,
+        dry_run=dry_run,
+        resume=resume,
+        record_paths=record_paths,
+        malformed_paths=malformed_paths,
+        unresolved_paths=unresolved_paths,
+        record_digest=record_digest,
+        malformed_digest=malformed_digest,
+        unresolved_digest=unresolved_digest,
         next_ordinal=next_ordinal,
         scanned_entity_count=scanned_entity_count,
         resumed_record_count=resumed_record_count,
@@ -1514,20 +1933,187 @@ def _require_checkpoint_identity(
         )
 
 
-def _read_checkpoint_artifacts[RecordT: StrictModel](
+def _load_checkpoint_digest(
     artifacts_root: Path,
     manifest_paths: Sequence[str],
-    record_type: type[RecordT],
-) -> list[RecordT]:
+    *,
+    run_id: str,
+    provenance: InputFileProvenance,
+) -> _JsonlDigest:
     root = artifacts_root.resolve()
-    records: list[RecordT] = []
+    digest = _JsonlDigest()
+    seen: set[str] = set()
     for relative_path in manifest_paths:
+        if relative_path in seen:
+            raise ValueError("checkpoint manifest 경로가 중복됩니다.")
+        seen.add(relative_path)
         manifest_path = (artifacts_root / relative_path).resolve()
         if not manifest_path.is_relative_to(root):
             raise ValueError("checkpoint manifest가 artifact 루트 밖을 가리킵니다.")
-        _, page_records = read_artifact(manifest_path, record_type)
-        records.extend(page_records)
-    return records
+        manifest = read_manifest(manifest_path)
+        expected = {
+            "run_id": run_id,
+            "stage": ArtifactStage.RAW,
+            "source": SourceName.MUSICBRAINZ_DUMP,
+            "source_uri": provenance.source_url,
+            "input_provenance": provenance,
+        }
+        for field, value in expected.items():
+            if getattr(manifest, field) != value:
+                raise ValueError(f"checkpoint page manifest provenance 불일치: field={field}")
+        data_path = manifest_path.parent / manifest.relative_data_path
+        part_digest = hashlib.sha256()
+        newline_count = 0
+        with data_path.open("rb") as source:
+            while chunk := source.read(_HASH_CHUNK_SIZE):
+                part_digest.update(chunk)
+                digest.update_bytes(chunk)
+                newline_count += chunk.count(b"\n")
+        if part_digest.hexdigest() != manifest.sha256:
+            raise ValueError(f"checkpoint page artifact SHA-256 불일치: {data_path}")
+        if newline_count != manifest.row_count:
+            raise ValueError(f"checkpoint page artifact row_count 불일치: {data_path}")
+        digest.add_rows(manifest.row_count)
+    return digest
+
+
+def _finalize_collection(
+    *,
+    run_id: str,
+    metadata: SourceMetadata,
+    provenance: InputFileProvenance,
+    retrieved_at: datetime,
+    artifact_store: JsonlArtifactStore,
+    artifacts_root: Path,
+    dry_run: bool,
+    resume: bool,
+    record_paths: Sequence[str],
+    malformed_paths: Sequence[str],
+    unresolved_paths: Sequence[str],
+    record_digest: _JsonlDigest,
+    malformed_digest: _JsonlDigest,
+    unresolved_digest: _JsonlDigest,
+    next_ordinal: int,
+    scanned_entity_count: int,
+    resumed_record_count: int,
+    resumed_malformed_count: int,
+    resumed_unresolved_count: int,
+    artifact_mutation_count: int,
+    complete: bool,
+) -> MusicBrainzDumpCollectionResult:
+    if dry_run:
+        record_artifact = _predicted_artifact(
+            artifacts_root, run_id, metadata, provenance, retrieved_at, record_digest
+        )
+        malformed_artifact = (
+            _predicted_artifact(
+                artifacts_root, run_id, metadata, provenance, retrieved_at, malformed_digest
+            )
+            if malformed_digest.row_count
+            else None
+        )
+        unresolved_artifact = (
+            _predicted_artifact(
+                artifacts_root, run_id, metadata, provenance, retrieved_at, unresolved_digest
+            )
+            if unresolved_digest.row_count
+            else None
+        )
+        predicted_mutations = record_artifact.mutation_count
+        if malformed_artifact is not None:
+            predicted_mutations += malformed_artifact.mutation_count
+        if unresolved_artifact is not None:
+            predicted_mutations += unresolved_artifact.mutation_count
+        artifact_mutation_count = max(artifact_mutation_count, predicted_mutations)
+    else:
+        record_artifact = artifact_store.combine_parts(
+            run_id=run_id,
+            stage=ArtifactStage.RAW,
+            metadata=metadata,
+            part_manifest_paths=tuple(artifacts_root / path for path in record_paths),
+            retrieved_at=retrieved_at,
+            input_provenance=provenance,
+        )
+        malformed_artifact = (
+            artifact_store.combine_parts(
+                run_id=run_id,
+                stage=ArtifactStage.RAW,
+                metadata=metadata,
+                part_manifest_paths=tuple(artifacts_root / path for path in malformed_paths),
+                retrieved_at=retrieved_at,
+                input_provenance=provenance,
+            )
+            if malformed_digest.row_count
+            else None
+        )
+        unresolved_artifact = (
+            artifact_store.combine_parts(
+                run_id=run_id,
+                stage=ArtifactStage.RAW,
+                metadata=metadata,
+                part_manifest_paths=tuple(artifacts_root / path for path in unresolved_paths),
+                retrieved_at=retrieved_at,
+                input_provenance=provenance,
+            )
+            if unresolved_digest.row_count
+            else None
+        )
+        combined_mutations = record_artifact.mutation_count
+        if malformed_artifact is not None:
+            combined_mutations += malformed_artifact.mutation_count
+        if unresolved_artifact is not None:
+            combined_mutations += unresolved_artifact.mutation_count
+        artifact_mutation_count = max(artifact_mutation_count, combined_mutations)
+    return MusicBrainzDumpCollectionResult(
+        record_artifact=record_artifact,
+        malformed_artifact=malformed_artifact,
+        unresolved_artifact=unresolved_artifact,
+        record_count=record_digest.row_count,
+        malformed_count=malformed_digest.row_count,
+        unresolved_count=unresolved_digest.row_count,
+        next_ordinal=next_ordinal,
+        scanned_entity_count=scanned_entity_count,
+        resumed_record_count=resumed_record_count,
+        resumed_malformed_count=resumed_malformed_count,
+        resumed_unresolved_count=resumed_unresolved_count,
+        artifact_mutation_count=artifact_mutation_count,
+        complete=complete,
+    )
+
+
+def _predicted_artifact(
+    artifacts_root: Path,
+    run_id: str,
+    metadata: SourceMetadata,
+    provenance: InputFileProvenance,
+    retrieved_at: datetime,
+    digest: _JsonlDigest,
+) -> ArtifactWriteResult:
+    directory = artifacts_root / run_id / ArtifactStage.RAW / metadata.source
+    data_path = directory / f"{digest.sha256}.jsonl"
+    manifest_path = directory / f"{digest.sha256}.manifest.json"
+    manifest = SnapshotManifest(
+        run_id=run_id,
+        stage=ArtifactStage.RAW,
+        source=metadata.source,
+        snapshot_id=digest.sha256,
+        retrieved_at=retrieved_at,
+        source_uri=metadata.source_uri,
+        license=metadata.license,
+        license_uri=metadata.license_uri,
+        sha256=digest.sha256,
+        row_count=digest.row_count,
+        relative_data_path=data_path.name,
+        tool_version="dry-run-prediction",
+        input_provenance=provenance,
+    )
+    return ArtifactWriteResult(
+        manifest=manifest,
+        data_path=data_path,
+        manifest_path=manifest_path,
+        created=False,
+        mutation_count=(0 if data_path.exists() and manifest_path.exists() else digest.row_count),
+    )
 
 
 def _flush_page(
@@ -1538,9 +2124,6 @@ def _flush_page(
     retrieved_at: datetime,
     artifact_store: JsonlArtifactStore,
     artifacts_root: Path,
-    records: list[SourceRecord],
-    malformed: list[MusicBrainzDumpMalformedReview],
-    unresolved: list[MusicBrainzDumpUnresolvedReview],
     page_records: list[SourceRecord],
     page_malformed: list[MusicBrainzDumpMalformedReview],
     page_unresolved: list[MusicBrainzDumpUnresolvedReview],
@@ -1551,6 +2134,10 @@ def _flush_page(
     start_ordinal: int,
     end_ordinal: int | None,
     next_ordinal: int,
+    record_count: int,
+    malformed_count: int,
+    unresolved_count: int,
+    orphan_reviews_emitted: bool,
     complete: bool,
     resume: bool,
 ) -> int:
@@ -1562,7 +2149,6 @@ def _flush_page(
         artifact_store=artifact_store,
         artifacts_root=artifacts_root,
         page=page_records,
-        aggregate=records,
         paths=record_paths,
         resume=resume,
     )
@@ -1574,7 +2160,6 @@ def _flush_page(
         artifact_store=artifact_store,
         artifacts_root=artifacts_root,
         page=page_malformed,
-        aggregate=malformed,
         paths=malformed_paths,
         resume=resume,
     )
@@ -1586,7 +2171,6 @@ def _flush_page(
         artifact_store=artifact_store,
         artifacts_root=artifacts_root,
         page=page_unresolved,
-        aggregate=unresolved,
         paths=unresolved_paths,
         resume=resume,
     )
@@ -1599,9 +2183,10 @@ def _flush_page(
         record_manifest_paths=tuple(record_paths),
         malformed_manifest_paths=tuple(malformed_paths),
         unresolved_manifest_paths=tuple(unresolved_paths),
-        record_count=len(records),
-        malformed_count=len(malformed),
-        unresolved_count=len(unresolved),
+        record_count=record_count,
+        malformed_count=malformed_count,
+        unresolved_count=unresolved_count,
+        orphan_reviews_emitted=orphan_reviews_emitted,
         complete=complete,
     )
     _write_checkpoint(checkpoint_path, checkpoint)
@@ -1617,7 +2202,6 @@ def _write_page_records[RecordT: StrictModel](
     artifact_store: JsonlArtifactStore,
     artifacts_root: Path,
     page: list[RecordT],
-    aggregate: list[RecordT],
     paths: list[str],
     resume: bool,
 ) -> int:
@@ -1636,7 +2220,6 @@ def _write_page_records[RecordT: StrictModel](
     relative = result.manifest_path.relative_to(artifacts_root).as_posix()
     if relative not in paths:
         paths.append(relative)
-    aggregate.extend(page)
     page.clear()
     return result.mutation_count
 

@@ -153,6 +153,118 @@ class JsonlArtifactStore:
             mutation_count=mutation_count,
         )
 
+    def combine_parts(
+        self,
+        *,
+        run_id: str,
+        stage: ArtifactStage,
+        metadata: SourceMetadata,
+        part_manifest_paths: Sequence[Path],
+        retrieved_at: datetime,
+        input_provenance: InputFileProvenance | None = None,
+    ) -> ArtifactWriteResult:
+        """검증된 JSONL page artifact를 메모리에 적재하지 않고 하나로 결합합니다."""
+        directory = self._root / run_id / stage / metadata.source
+        directory.mkdir(parents=True, exist_ok=True)
+        digest = hashlib.sha256()
+        row_count = 0
+        with NamedTemporaryFile(dir=directory, delete=False) as temporary_file:
+            temporary_path = Path(temporary_file.name)
+            for manifest_path in part_manifest_paths:
+                manifest = read_manifest(manifest_path)
+                self._verify_part_manifest(
+                    manifest,
+                    run_id=run_id,
+                    stage=stage,
+                    metadata=metadata,
+                    input_provenance=input_provenance,
+                )
+                data_path = manifest_path.parent / manifest.relative_data_path
+                part_digest = hashlib.sha256()
+                with data_path.open("rb") as source:
+                    while chunk := source.read(1024 * 1024):
+                        part_digest.update(chunk)
+                        digest.update(chunk)
+                        temporary_file.write(chunk)
+                if part_digest.hexdigest() != manifest.sha256:
+                    raise ArtifactIntegrityError(f"page artifact SHA-256 불일치: {data_path}")
+                row_count += manifest.row_count
+        content_sha256 = digest.hexdigest()
+        data_path = directory / f"{content_sha256}.jsonl"
+        manifest_path = directory / f"{content_sha256}.manifest.json"
+        manifest = SnapshotManifest(
+            run_id=run_id,
+            stage=stage,
+            source=metadata.source,
+            snapshot_id=content_sha256,
+            retrieved_at=retrieved_at,
+            source_uri=metadata.source_uri,
+            license=metadata.license,
+            license_uri=metadata.license_uri,
+            sha256=content_sha256,
+            row_count=row_count,
+            relative_data_path=data_path.name,
+            tool_version=self._tool_version,
+            input_provenance=input_provenance,
+        )
+        data_exists = data_path.exists()
+        manifest_exists = manifest_path.exists()
+        try:
+            if data_exists:
+                self._verify_file_sha256(data_path, content_sha256)
+            else:
+                try:
+                    os.link(temporary_path, data_path)
+                except FileExistsError:
+                    self._verify_file_sha256(data_path, content_sha256)
+            if manifest_exists:
+                existing_manifest = read_manifest(manifest_path)
+                self._verify_existing_manifest(existing_manifest, manifest)
+                manifest = existing_manifest
+            else:
+                manifest_content = f"{manifest.model_dump_json(indent=2)}\n".encode()
+                self._write_immutable(manifest_path, manifest_content)
+        finally:
+            temporary_path.unlink(missing_ok=True)
+        return ArtifactWriteResult(
+            manifest=manifest,
+            data_path=data_path,
+            manifest_path=manifest_path,
+            created=not (data_exists and manifest_exists),
+            mutation_count=0 if data_exists and manifest_exists else row_count,
+        )
+
+    @staticmethod
+    def _verify_part_manifest(
+        manifest: SnapshotManifest,
+        *,
+        run_id: str,
+        stage: ArtifactStage,
+        metadata: SourceMetadata,
+        input_provenance: InputFileProvenance | None,
+    ) -> None:
+        expected = {
+            "run_id": run_id,
+            "stage": stage,
+            "source": metadata.source,
+            "source_uri": metadata.source_uri,
+            "license": metadata.license,
+            "license_uri": metadata.license_uri,
+            "input_provenance": input_provenance,
+        }
+        for field, value in expected.items():
+            if getattr(manifest, field) != value:
+                raise ArtifactIntegrityError(f"page artifact provenance 불일치: field={field}")
+
+    @staticmethod
+    def _verify_file_sha256(path: Path, expected_sha256: str) -> None:
+        digest = hashlib.sha256()
+        with path.open("rb") as source:
+            while chunk := source.read(1024 * 1024):
+                digest.update(chunk)
+        if digest.hexdigest() != expected_sha256:
+            raise ArtifactIntegrityError(f"artifact SHA-256 불일치: {path}")
+
     @staticmethod
     def _write_immutable(destination: Path, content: bytes) -> None:
         with NamedTemporaryFile(dir=destination.parent, delete=False) as temporary_file:

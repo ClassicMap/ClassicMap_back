@@ -50,8 +50,6 @@ from classicmap_seed.sources.collector import collect_paginated
 from classicmap_seed.sources.musicbrainz_dump import (
     MusicBrainzDumpCommandReport,
     collect_musicbrainz_dump,
-    musicbrainz_dump_metadata,
-    musicbrainz_dump_retrieved_at,
     read_musicbrainz_dump_release_metadata,
     verify_musicbrainz_dump_input,
 )
@@ -170,8 +168,6 @@ def snapshot_musicbrainz_dump(
         artifacts_dir / options.run_id / "checkpoints" / f"musicbrainz-dump-{partition_name}.json"
     )
     store = _store(artifacts_dir)
-    metadata = musicbrainz_dump_metadata(provenance)
-    retrieved_at = musicbrainz_dump_retrieved_at(provenance)
     try:
         collection = collect_musicbrainz_dump(
             input_path=input_path,
@@ -190,45 +186,9 @@ def snapshot_musicbrainz_dump(
     except ValueError as error:
         raise typer.BadParameter(str(error), param_hint="--input") from error
 
-    snapshot_result = store.write(
-        run_id=options.run_id,
-        stage=ArtifactStage.RAW,
-        metadata=metadata,
-        records=collection.records,
-        retrieved_at=retrieved_at,
-        dry_run=options.dry_run,
-        resume=options.resume,
-        input_provenance=provenance,
-    )
-    malformed_result = None
-    if collection.malformed_reviews:
-        malformed_result = store.write(
-            run_id=options.run_id,
-            stage=ArtifactStage.RAW,
-            metadata=metadata,
-            records=collection.malformed_reviews,
-            retrieved_at=retrieved_at,
-            dry_run=options.dry_run,
-            resume=options.resume,
-            input_provenance=provenance,
-        )
-    unresolved_result = None
-    if collection.unresolved_reviews:
-        unresolved_result = store.write(
-            run_id=options.run_id,
-            stage=ArtifactStage.RAW,
-            metadata=metadata,
-            records=collection.unresolved_reviews,
-            retrieved_at=retrieved_at,
-            dry_run=options.dry_run,
-            resume=options.resume,
-            input_provenance=provenance,
-        )
-    aggregate_mutation_count = snapshot_result.mutation_count
-    if malformed_result is not None:
-        aggregate_mutation_count += malformed_result.mutation_count
-    if unresolved_result is not None:
-        aggregate_mutation_count += unresolved_result.mutation_count
+    snapshot_result = collection.record_artifact
+    malformed_result = collection.malformed_artifact
+    unresolved_result = collection.unresolved_artifact
     report = MusicBrainzDumpCommandReport(
         run_id=options.run_id,
         dry_run=options.dry_run,
@@ -242,13 +202,13 @@ def snapshot_musicbrainz_dump(
         complete=collection.complete,
         scanned_entity_count=collection.scanned_entity_count,
         input_count=collection.scanned_entity_count,
-        output_count=len(collection.records),
-        malformed_count=len(collection.malformed_reviews),
-        unresolved_count=len(collection.unresolved_reviews),
+        output_count=collection.record_count,
+        malformed_count=collection.malformed_count,
+        unresolved_count=collection.unresolved_count,
         resumed_output_count=collection.resumed_record_count,
         resumed_malformed_count=collection.resumed_malformed_count,
         resumed_unresolved_count=collection.resumed_unresolved_count,
-        mutation_count=max(collection.artifact_mutation_count, aggregate_mutation_count),
+        mutation_count=collection.artifact_mutation_count,
         data_path=str(snapshot_result.data_path),
         manifest_path=str(snapshot_result.manifest_path),
         malformed_data_path=(
