@@ -220,6 +220,20 @@ WDQS에는 canonical UUID만 `VALUES ?mbid { ... }`로 전달하고 `?entity wdt
 
 각 WDQS batch는 immutable artifact로 남고 checkpoint는 그 manifest 경로와 처리한 MBID prefix만 보관합니다. 같은 입력과 `--limit`으로 `--resume`하면 외부 요청과 mutation이 모두 0이어야 합니다. `--dry-run`은 조회와 예상 mutation 계산만 수행하며 artifact, checkpoint, JSON report를 쓰지 않습니다.
 
+누락 작곡가 중 공식 식별자로 해소되지 않은 항목이 있으면 원본 작품 bundle 전체를 loader에 전달하지 않습니다. 먼저 적재할 composer canonical manifest들을 명시해 발행 가능한 작품 bundle을 만듭니다.
+
+```bash
+.venv/bin/classicmap-seed prepare-publishable-works \
+  --run-id sample-works-20260805 \
+  --work-manifest artifacts/sample-works-20260805/canonical/musicbrainz-works/<sha256>.manifest.json \
+  --composer-manifest artifacts/sample-composers-a/canonical/wikidata/<sha256>.manifest.json \
+  --composer-manifest artifacts/sample-work-composer-dependencies-20260805/canonical/wikidata/<sha256>.manifest.json \
+  --limit 100000 \
+  --json-report reports/sample-works-publishable.json
+```
+
+이 명령은 `composers` canonical natural key가 정확히 준비된 작품만 유지합니다. 미해소 작품과 그 alias, identifier, part, relation, provenance는 함께 제외하고 `WORK_COMPOSER_UNAVAILABLE` review로 바꿉니다. 이름과 작품 제목은 연결에 사용하지 않습니다. composer manifest 사이 natural key가 중복되거나 작품에 composer FK가 정확히 하나가 아니면 전체를 거부합니다.
+
 ```bash
 uv run classicmap-seed normalize \
   --run-id sample-20260805 \
