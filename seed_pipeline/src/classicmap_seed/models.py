@@ -23,6 +23,7 @@ class StrictModel(BaseModel):
 
 class SourceName(StrEnum):
     MUSICBRAINZ = "musicbrainz"
+    MUSICBRAINZ_DUMP = "musicbrainz-dump"
     MUSICBRAINZ_WORKS = "musicbrainz-works"
     OPEN_OPUS = "open-opus"
     WIKIDATA = "wikidata"
@@ -273,11 +274,13 @@ class SnapshotManifest(StrictModel):
     def require_snapshot_content_identity(self) -> SnapshotManifest:
         if self.snapshot_id != self.sha256:
             raise ValueError("snapshot_id는 JSONL SHA-256과 같아야 합니다.")
-        is_wikidata_dump = self.source_uri.startswith(
+        requires_input_provenance = self.source_uri.startswith(
             "https://dumps.wikimedia.org/wikidatawiki/entities/"
+        ) or self.source_uri.startswith(
+            "https://data.metabrainz.org/pub/musicbrainz/data/fullexport/"
         )
-        if is_wikidata_dump and self.input_provenance is None:
-            raise ValueError("Wikidata dump manifest에는 input_provenance가 필요합니다.")
+        if requires_input_provenance and self.input_provenance is None:
+            raise ValueError("공식 dump manifest에는 input_provenance가 필요합니다.")
         if (
             self.input_provenance is not None
             and self.input_provenance.source_url != self.source_uri

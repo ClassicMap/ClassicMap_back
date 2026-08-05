@@ -6,6 +6,7 @@ from urllib.parse import quote
 from uuid import NAMESPACE_URL, uuid5
 
 from classicmap_seed.models import (
+    EntityKind,
     ExternalIdentifier,
     IdentifierStrength,
     JsonObject,
@@ -55,6 +56,15 @@ def _extract_identifiers(record: SourceRecord) -> tuple[ExternalIdentifier, ...]
         SourceName.OPEN_OPUS: "openopus_composer",
         SourceName.WIKIDATA: "wikidata",
     }
+    if record.source is SourceName.MUSICBRAINZ_DUMP:
+        if record.entity_kind is EntityKind.WORK:
+            namespace = "musicbrainz_work"
+        elif record.entity_kind is EntityKind.RECORDING:
+            namespace = "musicbrainz_recording"
+        else:
+            raise ValueError("MusicBrainz dump는 work/recording record만 지원합니다.")
+    else:
+        namespace = namespace_by_source[record.source]
     strength = (
         IdentifierStrength.WEAK
         if record.source is SourceName.OPEN_OPUS
@@ -62,7 +72,7 @@ def _extract_identifiers(record: SourceRecord) -> tuple[ExternalIdentifier, ...]
     )
     identifiers = [
         ExternalIdentifier(
-            namespace=namespace_by_source[record.source],
+            namespace=namespace,
             value=record.source_record_id,
             strength=strength,
             source=record.source,
@@ -133,6 +143,21 @@ def _extract_identifiers(record: SourceRecord) -> tuple[ExternalIdentifier, ...]
                             source=record.source,
                         )
                     )
+    if record.source is SourceName.MUSICBRAINZ_DUMP:
+        identifier_field = "iswcs" if record.entity_kind is EntityKind.WORK else "isrcs"
+        identifier_namespace = "iswc" if record.entity_kind is EntityKind.WORK else "isrc"
+        values = record.payload.get(identifier_field)
+        if isinstance(values, list):
+            for value in values:
+                if isinstance(value, str) and value:
+                    identifiers.append(
+                        ExternalIdentifier(
+                            namespace=identifier_namespace,
+                            value=value,
+                            strength=IdentifierStrength.STRONG,
+                            source=record.source,
+                        )
+                    )
     return tuple(dict.fromkeys(identifiers))
 
 
@@ -174,6 +199,20 @@ def _extract_facts(record: SourceRecord) -> JsonObject:
             "browsed_artist_ids",
             "exact_hierarchy",
         ),
+        SourceName.MUSICBRAINZ_DUMP: (
+            "musicbrainz_internal_id",
+            "type",
+            "work_type_mbid",
+            "disambiguation",
+            "duration_ms",
+            "iswcs",
+            "isrcs",
+            "artist_credit",
+            "artist_relations",
+            "recording_work_relations",
+            "performance_work_mbids",
+            "composer_mbids",
+        ),
         SourceName.OPEN_OPUS: (
             "epoch",
             "birth",
@@ -214,7 +253,9 @@ def _extract_facts(record: SourceRecord) -> JsonObject:
                 for image_id in image_ids
                 if isinstance(image_id, str) and image_id
             ]
-    if record.source is SourceName.MUSICBRAINZ_WORKS:
+    if record.source in {SourceName.MUSICBRAINZ_WORKS, SourceName.MUSICBRAINZ_DUMP} and (
+        record.entity_kind is EntityKind.WORK
+    ):
         facts["work_type"] = record.payload.get("type")
         facts["work_attributes"] = record.payload.get("attributes") or []
         facts["work_relations"] = record.payload.get("relations") or []

@@ -20,6 +20,7 @@ from classicmap_seed.models import (
     ResolutionAction,
     ResolutionDecision,
     SnapshotManifest,
+    SourceName,
     SourceRecord,
 )
 from classicmap_seed.projection_overrides import (
@@ -96,20 +97,32 @@ def build_canonical_load_bundle(
                 )
             )
         elif representative.entity_kind is EntityKind.WORK:
-            records.extend(
-                _work_records(
-                    run_id,
-                    group,
-                    decision,
-                    source_key_by_candidate,
-                    available_work_mbids,
-                    work_parent_by_mbid,
+            if representative.source is SourceName.MUSICBRAINZ_DUMP:
+                records.append(
+                    _review_for_unsupported_entity(
+                        run_id,
+                        decision,
+                        "MUSICBRAINZ_DUMP_WORK_RAW_ONLY",
+                    )
                 )
-            )
+            else:
+                records.extend(
+                    _work_records(
+                        run_id,
+                        group,
+                        decision,
+                        source_key_by_candidate,
+                        available_work_mbids,
+                        work_parent_by_mbid,
+                    )
+                )
         elif representative.entity_kind is EntityKind.RECORDING:
-            records.append(
-                _review_for_unsupported_entity(run_id, decision, "RECORDING_LOAD_NOT_MAPPED")
+            reason_code = (
+                "MUSICBRAINZ_DUMP_RECORDING_RAW_ONLY"
+                if representative.source is SourceName.MUSICBRAINZ_DUMP
+                else "RECORDING_LOAD_NOT_MAPPED"
             )
+            records.append(_review_for_unsupported_entity(run_id, decision, reason_code))
         else:
             records.append(_review_for_unsupported_entity(run_id, decision, "UNKNOWN_ENTITY_KIND"))
 
