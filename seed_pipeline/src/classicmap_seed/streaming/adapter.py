@@ -65,7 +65,7 @@ def build_streaming_load_bundle(
                 "run_kind": "streaming_links",
                 "command": f"classicmap-seed ingest-streaming --run-id {run_id}",
                 "status": "PENDING",
-                "dry_run": True,
+                "dry_run": False,
                 "manifest": {"db_contract_version": "global-seed-v1", "run_slug": run_id},
                 "summary": {},
             },

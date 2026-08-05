@@ -1,5 +1,7 @@
 from datetime import UTC, datetime
+from pathlib import Path
 
+from classicmap_seed.artifacts import JsonlArtifactStore
 from classicmap_seed.export import build_canonical_load_bundle
 from classicmap_seed.load import can_apply_seed_value
 from classicmap_seed.models import (
@@ -12,6 +14,7 @@ from classicmap_seed.models import (
     ResolutionAction,
     ResolutionDecision,
     SnapshotManifest,
+    SourceMetadata,
     SourceName,
     SourceRecord,
     WritePolicy,
@@ -61,7 +64,6 @@ def test_canonical_bundle_is_deterministic_and_preserves_manual_fields() -> None
 
     first = build_canonical_load_bundle(
         run_id="run-1",
-        dry_run=False,
         source_manifest=_manifest(),
         raw_records=[_raw()],
         candidates=[candidate],
@@ -69,7 +71,6 @@ def test_canonical_bundle_is_deterministic_and_preserves_manual_fields() -> None
     )
     second = build_canonical_load_bundle(
         run_id="run-1",
-        dry_run=False,
         source_manifest=_manifest(),
         raw_records=[_raw()],
         candidates=[candidate],
@@ -95,7 +96,6 @@ def test_review_decision_does_not_create_canonical_entity() -> None:
 
     bundle = build_canonical_load_bundle(
         run_id="run-1",
-        dry_run=False,
         source_manifest=_manifest(),
         raw_records=[_raw()],
         candidates=[candidate],
@@ -104,6 +104,55 @@ def test_review_decision_does_not_create_canonical_entity() -> None:
 
     assert any(record.table is LoadTable.REVIEW_QUEUE for record in bundle)
     assert not any(record.table is LoadTable.AUTHORITY_ENTITIES for record in bundle)
+
+
+def test_second_export_dry_run_is_byte_identical_and_zero_mutation(tmp_path: Path) -> None:
+    candidate = _candidate()
+    decision = ResolutionDecision(
+        decision_id="decision-idempotent",
+        action=ResolutionAction.CREATE,
+        candidate_ids=(candidate.candidate_id,),
+        reason_code="NO_MATCHING_STABLE_IDENTIFIER",
+    )
+    bundle = build_canonical_load_bundle(
+        run_id="run-1",
+        source_manifest=_manifest(),
+        raw_records=[_raw()],
+        candidates=[candidate],
+        decisions=[decision],
+    )
+    store = JsonlArtifactStore(tmp_path, tool_version="test")
+    first = store.write(
+        run_id="run-1",
+        stage=ArtifactStage.CANONICAL,
+        metadata=SourceMetadata(
+            source=SourceName.WIKIDATA,
+            source_uri="https://query.wikidata.org/sparql",
+            license="CC0-1.0",
+            license_uri="https://www.wikidata.org/wiki/Wikidata:Licensing",
+        ),
+        records=bundle,
+        retrieved_at=datetime(2026, 8, 5, tzinfo=UTC),
+        dry_run=False,
+        resume=True,
+    )
+    second = store.write(
+        run_id="run-1",
+        stage=ArtifactStage.CANONICAL,
+        metadata=SourceMetadata(
+            source=SourceName.WIKIDATA,
+            source_uri="https://query.wikidata.org/sparql",
+            license="CC0-1.0",
+            license_uri="https://www.wikidata.org/wiki/Wikidata:Licensing",
+        ),
+        records=bundle,
+        retrieved_at=datetime(2026, 8, 6, tzinfo=UTC),
+        dry_run=True,
+        resume=True,
+    )
+
+    assert first.manifest.sha256 == second.manifest.sha256
+    assert second.mutation_count == 0
 
 
 def test_unmapped_work_and_recording_are_review_only() -> None:
@@ -117,7 +166,6 @@ def test_unmapped_work_and_recording_are_review_only() -> None:
         )
         bundle = build_canonical_load_bundle(
             run_id="run-1",
-            dry_run=False,
             source_manifest=_manifest(),
             raw_records=[_raw(kind)],
             candidates=[candidate],

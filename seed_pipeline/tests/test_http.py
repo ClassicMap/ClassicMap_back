@@ -1,6 +1,11 @@
 import httpx
 
-from classicmap_seed.http import JsonHttpClient, NoopRateLimiter, RetryPolicy
+from classicmap_seed.http import (
+    FixedIntervalRateLimiter,
+    JsonHttpClient,
+    NoopRateLimiter,
+    RetryPolicy,
+)
 
 
 def test_retries_429_using_retry_after() -> None:
@@ -30,3 +35,23 @@ def test_retries_429_using_retry_after() -> None:
     assert call_count == 2
     assert delays == [2.0]
     underlying.close()
+
+
+def test_fixed_interval_rate_limiter_paces_consecutive_pages() -> None:
+    now = 10.0
+    delays: list[float] = []
+
+    def monotonic() -> float:
+        return now
+
+    def sleep(delay: float) -> None:
+        nonlocal now
+        delays.append(delay)
+        now += delay
+
+    limiter = FixedIntervalRateLimiter(0.5, monotonic=monotonic, sleep=sleep)
+    limiter.wait()
+    limiter.wait()
+    limiter.wait()
+
+    assert delays == [2.0, 2.0]

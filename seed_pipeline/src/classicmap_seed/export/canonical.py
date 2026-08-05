@@ -34,7 +34,6 @@ _AUTHORITY_KINDS = {
 def build_canonical_load_bundle(
     *,
     run_id: str,
-    dry_run: bool,
     source_manifest: SnapshotManifest,
     raw_records: list[SourceRecord],
     candidates: list[NormalizedEntityCandidate],
@@ -44,7 +43,7 @@ def build_canonical_load_bundle(
     raw_by_identity = {(record.source, record.source_record_id): record for record in raw_records}
     candidate_by_id = {candidate.candidate_id: candidate for candidate in candidates}
     source_key_by_candidate: dict[str, str] = {}
-    records = _run_and_snapshot_records(run_id, dry_run, source_manifest, snapshot_key)
+    records = _run_and_snapshot_records(run_id, source_manifest, snapshot_key)
 
     for candidate in sorted(candidates, key=lambda item: item.candidate_id):
         raw_record = raw_by_identity.get((candidate.source, candidate.source_record_id))
@@ -106,7 +105,6 @@ def build_canonical_load_bundle(
 
 def _run_and_snapshot_records(
     run_id: str,
-    dry_run: bool,
     source_manifest: SnapshotManifest,
     snapshot_key: str,
 ) -> list[CanonicalLoadRecord]:
@@ -120,7 +118,7 @@ def _run_and_snapshot_records(
             "run_kind": "global_seed",
             "command": f"classicmap-seed export-canonical --run-id {run_id}",
             "status": "PENDING",
-            "dry_run": dry_run,
+            "dry_run": False,
             "source_code_version": source_manifest.tool_version,
             "manifest": {
                 "db_contract_version": "global-seed-v1",
