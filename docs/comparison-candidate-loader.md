@@ -4,7 +4,7 @@
 
 ## 안전 계약
 
-- 작품은 `piece_identifiers.musicbrainz_work`로 해소하고, 연결된 작곡가의 `external_identifiers.wikidata`까지 교차 확인합니다.
+- 작품은 `piece_identifiers.musicbrainz_work` 또는 `piece_parts.part_key=musicbrainz:{MBID}`로 정확히 해소하고, 연결된 작곡가의 `external_identifiers.wikidata`까지 교차 확인합니다. 악장·부분 작품이면 연주는 상위 `pieces`에, 비교 구간은 해당 `piece_part_id`에 연결합니다.
 - 연주자는 `external_identifiers.wikidata → authority_entities → artists` 경로로만 해소합니다. 이름은 근거로 사용하지 않습니다.
 - 기존 legacy 작품 또는 연주자를 해소하지 못하면 후보 적재 전체를 rollback합니다. 실패 실행과 `review_queue`만 남기므로 먼저 권위 식별자를 legacy 행에 연결해야 합니다.
 - 입력의 `PIANIST`는 API canonical role인 `soloist`로 저장하고 원문 role은 후보 evidence에 보존합니다.
