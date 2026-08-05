@@ -146,6 +146,18 @@ uv run classicmap-seed snapshot-wikidata-entities \
 
 비교 파일럿 입력은 `candidates.jsonl`의 작곡가와 연주자 Wikidata 식별자에서 결정적으로 추출한 17개 QID입니다. 같은 run-id로 `--resume`하면 완료 checkpoint와 content-addressed aggregate를 재사용하여 mutation 0이 되어야 합니다. 이 명령도 운영 DB나 홈서버에 연결하지 않습니다.
 
+공식 source의 복수·역사 국가 이력 때문에 단일 legacy `nationality` 표시값을 자동 결정할 수 없으면, 검수한 override JSONL을 canonical export에 명시합니다. override는 authority의 국가 사실을 바꾸지 않고 legacy composer/artist projection과 별도 `field_provenance`에만 적용됩니다.
+
+```bash
+uv run classicmap-seed export-canonical \
+  --run-id comparison-pilot-wikidata-20260805 \
+  --manifest artifacts/comparison-pilot-wikidata-20260805/resolved/wikidata/<sha256>.manifest.json \
+  --projection-overrides curation/pilot-2026-08-05/projection-overrides.jsonl \
+  --limit 1000
+```
+
+각 override는 target, 정확한 Wikidata QID, `nationality`, 검수자·시각·HTTPS 근거와 자기 내용을 포함한 SHA-256 fingerprint를 요구합니다. 공식값이 이미 하나로 검증된 대상, bundle에 없는 QID, 중복 target/QID/field, 변조된 fingerprint는 전체 export를 거부합니다. override 파일 SHA-256과 행별 근거는 canonical evidence와 `field_provenance`에 보존됩니다.
+
 후속 작품 수집에는 `curation/pilot-2026-08-05/wikidata-composers.jsonl`의 작곡가 4건만 별도 run으로 수집합니다. 이 결과의 canonical manifest에는 검증된 MusicBrainz artist ID만 남으므로 `snapshot-musicbrainz-works --artist-manifest` 입력으로 바로 연결할 수 있습니다. mixed 17건 canonical manifest를 작품 browse 입력으로 사용하지 않습니다.
 
 레거시 `composers`와 `artists` 행은 필요한 표시 필드가 공식 원본에서 모두 검증된 경우에만 생성합니다. 작곡가 시대 정보가 원본에 없을 때는 검증된 출생연도를 기준으로 `<1400 중세`, `<1600 르네상스`, `<1750 바로크`, `<1810 고전주의`, `<1860 낭만주의`, 그 외 `근현대` 규칙을 적용하고 bundle evidence에 `birth_year_boundaries_v1`을 남깁니다. 국가 표시명, 영어 이름, 연주 분야 등 필수값이 없거나 여러 값으로 충돌하면 임의 기본값을 만들지 않고 `review_queue`로 보냅니다. Commons 이미지는 파일별 저작자와 라이선스가 검증되기 전에는 `entity_images.REVIEW_REQUIRED`에만 두며 레거시 공개 이미지 필드로 투영하지 않습니다.

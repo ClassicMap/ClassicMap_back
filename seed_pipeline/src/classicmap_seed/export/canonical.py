@@ -22,6 +22,11 @@ from classicmap_seed.models import (
     SnapshotManifest,
     SourceRecord,
 )
+from classicmap_seed.projection_overrides import (
+    ProjectionOverrideRecord,
+    ProjectionOverrideSet,
+    ProjectionTarget,
+)
 
 _AUTHORITY_KINDS = {
     EntityKind.PERSON,
@@ -39,6 +44,7 @@ def build_canonical_load_bundle(
     raw_records: list[SourceRecord],
     candidates: list[NormalizedEntityCandidate],
     decisions: list[ResolutionDecision],
+    projection_overrides: ProjectionOverrideSet | None = None,
 ) -> list[CanonicalLoadRecord]:
     snapshot_key = f"{source_manifest.source}:{source_manifest.sha256}"
     raw_by_identity = {(record.source, record.source_record_id): record for record in raw_records}
@@ -46,6 +52,7 @@ def build_canonical_load_bundle(
     source_key_by_candidate: dict[str, str] = {}
     available_work_mbids, work_parent_by_mbid = _work_hierarchy_index(candidates)
     records = _run_and_snapshot_records(run_id, source_manifest, snapshot_key)
+    used_projection_overrides: set[tuple[ProjectionTarget, str, str]] = set()
 
     for candidate in sorted(candidates, key=lambda item: item.candidate_id):
         raw_record = raw_by_identity.get((candidate.source, candidate.source_record_id))
@@ -84,6 +91,8 @@ def build_canonical_load_bundle(
                     group,
                     decision,
                     source_key_by_candidate,
+                    projection_overrides,
+                    used_projection_overrides,
                 )
             )
         elif representative.entity_kind is EntityKind.WORK:
@@ -104,6 +113,19 @@ def build_canonical_load_bundle(
         else:
             records.append(_review_for_unsupported_entity(run_id, decision, "UNKNOWN_ENTITY_KIND"))
 
+    if projection_overrides is not None:
+        unused = {record.key for record in projection_overrides.records}.difference(
+            used_projection_overrides
+        )
+        if unused:
+            target, qid, field = sorted(
+                unused,
+                key=lambda key: (key[0].value, key[1], key[2]),
+            )[0]
+            raise ValueError(
+                "projection override가 현재 resolved bundle의 누락 필드와 일치하지 않습니다: "
+                f"{target.value}:{qid}:{field}"
+            )
     return sorted(records, key=lambda record: (record.table, record.natural_key))
 
 
@@ -196,6 +218,8 @@ def _authority_records(
     candidates: list[NormalizedEntityCandidate],
     decision: ResolutionDecision,
     source_key_by_candidate: dict[str, str],
+    projection_overrides: ProjectionOverrideSet | None,
+    used_projection_overrides: set[tuple[ProjectionTarget, str, str]],
 ) -> list[CanonicalLoadRecord]:
     representative = _choose_representative(candidates)
     entity_id = _canonical_entity_id(candidates)
@@ -246,6 +270,8 @@ def _authority_records(
             entity_id,
             candidates,
             source_key_by_candidate,
+            projection_overrides,
+            used_projection_overrides,
         )
     )
     return records
@@ -441,30 +467,71 @@ def _legacy_projection_records(
     entity_id: str,
     candidates: list[NormalizedEntityCandidate],
     source_key_by_candidate: dict[str, str],
+    projection_overrides: ProjectionOverrideSet | None,
+    used_projection_overrides: set[tuple[ProjectionTarget, str, str]],
 ) -> list[CanonicalLoadRecord]:
     scopes = set(_all_fact_strings(candidates, "scope"))
     role_codes = set(_all_fact_strings(candidates, "role_codes"))
     is_composer = "composers" in scopes or "Q36834" in role_codes
     is_artist = bool(scopes.intersection({"performers", "ensembles"}))
     records: list[CanonicalLoadRecord] = []
+    wikidata_qid = _unique_identifier(candidates, "wikidata")
     if is_composer:
-        records.append(
-            _composer_projection_or_review(
-                run_id,
-                entity_id,
-                candidates,
-                source_key_by_candidate,
-            )
+        override = _nationality_override(
+            projection_overrides,
+            ProjectionTarget.COMPOSER,
+            wikidata_qid,
+            candidates,
+            used_projection_overrides,
         )
+        projection = _composer_projection_or_review(
+            run_id,
+            entity_id,
+            candidates,
+            source_key_by_candidate,
+            override,
+            projection_overrides,
+        )
+        records.append(projection)
+        if override is not None and projection.table is LoadTable.COMPOSERS:
+            records.append(
+                _projection_override_provenance(
+                    run_id,
+                    projection,
+                    candidates,
+                    source_key_by_candidate,
+                    override,
+                    projection_overrides,
+                )
+            )
     if is_artist:
-        records.append(
-            _artist_projection_or_review(
-                run_id,
-                entity_id,
-                candidates,
-                source_key_by_candidate,
-            )
+        override = _nationality_override(
+            projection_overrides,
+            ProjectionTarget.ARTIST,
+            wikidata_qid,
+            candidates,
+            used_projection_overrides,
         )
+        projection = _artist_projection_or_review(
+            run_id,
+            entity_id,
+            candidates,
+            source_key_by_candidate,
+            override,
+            projection_overrides,
+        )
+        records.append(projection)
+        if override is not None and projection.table is LoadTable.ARTISTS:
+            records.append(
+                _projection_override_provenance(
+                    run_id,
+                    projection,
+                    candidates,
+                    source_key_by_candidate,
+                    override,
+                    projection_overrides,
+                )
+            )
     return records
 
 
@@ -473,6 +540,8 @@ def _composer_projection_or_review(
     entity_id: str,
     candidates: list[NormalizedEntityCandidate],
     source_key_by_candidate: dict[str, str],
+    nationality_override: ProjectionOverrideRecord | None,
+    projection_overrides: ProjectionOverrideSet | None,
 ) -> CanonicalLoadRecord:
     mbid = _unique_identifier(candidates, "musicbrainz_artist")
     name_en = _canonical_name(candidates, "en")
@@ -480,7 +549,9 @@ def _composer_projection_or_review(
     display_name = name_ko or name_en
     birth_year = _year_from_fact(candidates, "date_of_birth")
     death_year = _year_from_fact(candidates, "date_of_death")
-    nationality = _verified_country_name(candidates)
+    nationality = _verified_country_name(candidates) or (
+        nationality_override.value if nationality_override is not None else None
+    )
     period = _period_from_birth_year(birth_year) if birth_year is not None else None
     missing = [
         field
@@ -515,6 +586,19 @@ def _composer_projection_or_review(
     }
     if death_year is not None:
         values["death_year"] = death_year
+    evidence: JsonObject = {
+        "derived_fields": {
+            "period": {
+                "rule": "birth_year_boundaries_v1",
+                "birth_year": birth_year,
+            }
+        }
+    }
+    if nationality_override is not None and projection_overrides is not None:
+        evidence["manual_projection_override"] = _override_evidence(
+            nationality_override,
+            projection_overrides,
+        )
     return _record(
         run_id,
         LoadTable.COMPOSERS,
@@ -528,14 +612,7 @@ def _composer_projection_or_review(
                 source_key_by_candidate[representative.candidate_id],
             ),
         ),
-        evidence={
-            "derived_fields": {
-                "period": {
-                    "rule": "birth_year_boundaries_v1",
-                    "birth_year": birth_year,
-                }
-            }
-        },
+        evidence=evidence,
     )
 
 
@@ -544,12 +621,16 @@ def _artist_projection_or_review(
     entity_id: str,
     candidates: list[NormalizedEntityCandidate],
     source_key_by_candidate: dict[str, str],
+    nationality_override: ProjectionOverrideRecord | None,
+    projection_overrides: ProjectionOverrideSet | None,
 ) -> CanonicalLoadRecord:
     mbid = _unique_identifier(candidates, "musicbrainz_artist")
     name_en = _canonical_name(candidates, "en")
     name_ko = _canonical_name(candidates, "ko")
     display_name = name_ko or name_en
-    nationality = _verified_country_name(candidates)
+    nationality = _verified_country_name(candidates) or (
+        nationality_override.value if nationality_override is not None else None
+    )
     category = _verified_instrument_name(candidates)
     missing = [
         field
@@ -582,6 +663,12 @@ def _artist_projection_or_review(
     birth_year = _year_from_fact(candidates, "date_of_birth")
     if birth_year is not None:
         values["birth_year"] = str(birth_year)
+    evidence: JsonObject = {}
+    if nationality_override is not None and projection_overrides is not None:
+        evidence["manual_projection_override"] = _override_evidence(
+            nationality_override,
+            projection_overrides,
+        )
     return _record(
         run_id,
         LoadTable.ARTISTS,
@@ -595,7 +682,88 @@ def _artist_projection_or_review(
                 source_key_by_candidate[representative.candidate_id],
             ),
         ),
+        evidence=evidence,
     )
+
+
+def _nationality_override(
+    projection_overrides: ProjectionOverrideSet | None,
+    target: ProjectionTarget,
+    wikidata_qid: str | None,
+    candidates: list[NormalizedEntityCandidate],
+    used_projection_overrides: set[tuple[ProjectionTarget, str, str]],
+) -> ProjectionOverrideRecord | None:
+    if projection_overrides is None:
+        return None
+    override = projection_overrides.get(target, wikidata_qid, "nationality")
+    if override is None:
+        return None
+    if _verified_country_name(candidates) is not None:
+        raise ValueError(
+            "검증된 nationality가 이미 있으므로 수동 projection override를 적용하지 않습니다: "
+            f"{target.value}:{override.wikidata_qid}"
+        )
+    used_projection_overrides.add(override.key)
+    return override
+
+
+def _projection_override_provenance(
+    run_id: str,
+    projection: CanonicalLoadRecord,
+    candidates: list[NormalizedEntityCandidate],
+    source_key_by_candidate: dict[str, str],
+    override: ProjectionOverrideRecord,
+    projection_overrides: ProjectionOverrideSet | None,
+) -> CanonicalLoadRecord:
+    if projection_overrides is None:
+        raise ValueError("projection override provenance에 입력 bundle 정보가 없습니다.")
+    representative = _choose_representative(candidates)
+    evidence = _override_evidence(override, projection_overrides)
+    return _record(
+        run_id,
+        LoadTable.FIELD_PROVENANCE,
+        (
+            f"{projection.table.value}:{projection.natural_key}:nationality:"
+            f"manual-override:{override.record_fingerprint}"
+        ),
+        {
+            "seed_run_id": canonical_seed_run_id(run_id),
+            "target_table": projection.table.value,
+            "target_id": projection.natural_key,
+            "field_name": "nationality",
+            "origin": "seed",
+            "editorial_status": "EDITOR_REVIEWED",
+            "evidence": evidence,
+        },
+        foreign_keys=(
+            _fk("seed_run_id", LoadTable.SEED_RUNS, canonical_seed_run_id(run_id)),
+            _fk(
+                "source_record_id",
+                LoadTable.SOURCE_RECORDS,
+                source_key_by_candidate[representative.candidate_id],
+            ),
+        ),
+        evidence=evidence,
+    )
+
+
+def _override_evidence(
+    override: ProjectionOverrideRecord,
+    projection_overrides: ProjectionOverrideSet,
+) -> JsonObject:
+    return {
+        "contract_version": override.contract_version,
+        "target": override.target.value,
+        "wikidata_qid": override.wikidata_qid,
+        "field": override.field,
+        "value": override.value,
+        "reviewer": override.reviewer,
+        "reviewed_at": override.reviewed_at.isoformat().replace("+00:00", "Z"),
+        "evidence_url": override.evidence_url,
+        "evidence_note": override.evidence_note,
+        "record_fingerprint": override.record_fingerprint,
+        "input_sha256": projection_overrides.input_sha256,
+    }
 
 
 def _projection_review(
