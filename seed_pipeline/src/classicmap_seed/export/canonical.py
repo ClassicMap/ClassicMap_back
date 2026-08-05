@@ -735,16 +735,13 @@ def _projection_override_provenance(
     return _record(
         run_id,
         LoadTable.FIELD_PROVENANCE,
-        (
-            f"{projection.table.value}:{projection.natural_key}:nationality:"
-            f"manual-override:{override.record_fingerprint}"
-        ),
+        (f"{projection.table.value}:{projection.natural_key}:nationality:manual-override"),
         {
             "seed_run_id": canonical_seed_run_id(run_id),
             "target_table": projection.table.value,
             "target_id": projection.natural_key,
             "field_name": "nationality",
-            "origin": "seed",
+            "origin": "manual",
             "editorial_status": "EDITOR_REVIEWED",
             "evidence": evidence,
         },

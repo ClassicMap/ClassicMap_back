@@ -368,8 +368,10 @@ def test_reviewed_nationality_override_creates_projection_and_manual_provenance(
         and record.values.get("target_table") == "composers"
         and record.values.get("field_name") == "nationality"
     )
-    assert provenance.values["origin"] == "seed"
+    assert provenance.values["origin"] == "manual"
     assert provenance.values["editorial_status"] == "EDITOR_REVIEWED"
+    assert provenance.natural_key.endswith(":nationality:manual-override")
+    assert override.record_fingerprint not in provenance.natural_key
     assert not any(
         record.table is LoadTable.REVIEW_QUEUE
         and record.values["reason_code"] == "LEGACY_COMPOSER_REQUIRED_FIELDS_MISSING"

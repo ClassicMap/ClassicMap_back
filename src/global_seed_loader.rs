@@ -1121,7 +1121,15 @@ fn validate_record(record: &CanonicalLoadRecord, line: usize) -> Result<(), Glob
             ));
         }
     }
-    if matches!(record.values.get("origin"), Some(Value::String(value)) if value != "seed")
+    let manual_reviewed_provenance = record.table == LoadTable::FieldProvenance
+        && matches!(record.values.get("origin"), Some(Value::String(value)) if value == "manual")
+        && matches!(
+            record.values.get("editorial_status"),
+            Some(Value::String(value)) if value == "EDITOR_REVIEWED"
+        )
+        && manual_review_evidence_is_complete(record.values.get("evidence"));
+    if (matches!(record.values.get("origin"), Some(Value::String(value)) if value != "seed")
+        && !manual_reviewed_provenance)
         || matches!(record.values.get("editor_locked"), Some(Value::Bool(true)))
     {
         return Err(GlobalSeedLoadError::input(
@@ -1131,6 +1139,34 @@ fn validate_record(record: &CanonicalLoadRecord, line: usize) -> Result<(), Glob
         ));
     }
     Ok(())
+}
+
+fn manual_review_evidence_is_complete(evidence: Option<&Value>) -> bool {
+    let Some(Value::Object(evidence)) = evidence else {
+        return false;
+    };
+    let non_empty = |key: &str| {
+        evidence
+            .get(key)
+            .and_then(Value::as_str)
+            .is_some_and(|value| !value.trim().is_empty())
+    };
+    let fingerprint_valid = evidence
+        .get("record_fingerprint")
+        .and_then(Value::as_str)
+        .is_some_and(|value| {
+            value.len() == 64
+                && value
+                    .bytes()
+                    .all(|byte| byte.is_ascii_digit() || (b'a'..=b'f').contains(&byte))
+        });
+    non_empty("reviewer")
+        && non_empty("reviewed_at")
+        && evidence
+            .get("evidence_url")
+            .and_then(Value::as_str)
+            .is_some_and(|value| value.starts_with("https://"))
+        && fingerprint_valid
 }
 
 fn validate_value(
@@ -2744,7 +2780,7 @@ fn rollback_manifest(
 
 #[cfg(test)]
 mod tests {
-    use super::{parse_bundle, GlobalSeedLoadOptions};
+    use super::{parse_bundle, validate_record, CanonicalLoadRecord, GlobalSeedLoadOptions};
     use serde_json::{json, Value};
     use std::{fs, path::PathBuf, time::SystemTime};
 
@@ -2852,5 +2888,47 @@ mod tests {
             .expect_err("bundle FK 오류여야 함");
         assert_eq!(error.code(), "BUNDLE_FOREIGN_KEY_MISSING");
         fs::remove_file(fk_path).expect("fixture 삭제");
+    }
+
+    #[test]
+    fn editor_reviewed_field_provenance_can_preserve_manual_origin() {
+        let fingerprint = "a".repeat(64);
+        let record = serde_json::from_value::<CanonicalLoadRecord>(json!({
+            "db_contract_version": "global-seed-v1",
+            "seed_run_id": RUN_ID,
+            "table": "field_provenance",
+            "natural_key": "composers:musicbrainz_artist:test:nationality:manual-override",
+            "values": {
+                "target_table": "composers",
+                "target_id": "musicbrainz_artist:test",
+                "field_name": "nationality",
+                "origin": "manual",
+                "editorial_status": "EDITOR_REVIEWED",
+                "evidence": {
+                    "reviewer": "fixture-reviewer",
+                    "reviewed_at": "2026-08-05T00:00:00Z",
+                    "evidence_url": "https://www.wikidata.org/wiki/Q1339",
+                    "record_fingerprint": fingerprint
+                }
+            },
+            "foreign_keys": [],
+            "evidence": {},
+            "origin": "seed",
+            "editor_locked": false,
+            "write_policy": "preserve_manual_or_locked"
+        }))
+        .expect("field provenance fixture");
+
+        validate_record(&record, 1).expect("완전한 수동 검수 provenance는 허용되어야 함");
+
+        let mut incomplete = record;
+        incomplete
+            .values
+            .get_mut("evidence")
+            .and_then(Value::as_object_mut)
+            .expect("evidence object")
+            .remove("reviewer");
+        let error = validate_record(&incomplete, 1).expect_err("검수자 없는 manual 표기는 거부");
+        assert_eq!(error.code(), "INVALID_ROW_OWNERSHIP");
     }
 }
