@@ -12,6 +12,7 @@ const ARTIST_AUTHORITY_ID: &str = "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb";
 const COMPOSER_WIKIDATA_ID: &str = "Q900000001";
 const ARTIST_WIKIDATA_ID: &str = "Q900000002";
 const WORK_MBID: &str = "11111111-2222-4333-8444-555555555555";
+const PART_WORK_MBID: &str = "66666666-7777-4888-8999-aaaaaaaaaaaa";
 
 fn unique_path(name: &str) -> PathBuf {
     std::env::temp_dir().join(format!(
@@ -104,6 +105,15 @@ async fn prepare_authority_fixture(pool: &db::DbPool) -> (i32, i32, i32, i32) {
 }
 
 fn candidate(video_id: &str, artist_wikidata_id: &str) -> Value {
+    candidate_for_work(video_id, artist_wikidata_id, WORK_MBID, "whole-work")
+}
+
+fn candidate_for_work(
+    video_id: &str,
+    artist_wikidata_id: &str,
+    work_mbid: &str,
+    sector_key: &str,
+) -> Value {
     let base = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
         .join("seed_pipeline/curation/pilot-2026-08-05/candidates.jsonl");
     let mut row: Value = serde_json::from_str(
@@ -115,10 +125,10 @@ fn candidate(video_id: &str, artist_wikidata_id: &str) -> Value {
     )
     .expect("pilot JSON");
     row["candidateKey"] = json!(format!("yt:{video_id}:0:40"));
-    row["workCandidate"]["naturalKey"] = json!(format!("musicbrainz-work:{WORK_MBID}"));
-    row["workCandidate"]["externalIdentifiers"][0]["value"] = json!(WORK_MBID);
+    row["workCandidate"]["naturalKey"] = json!(format!("musicbrainz-work:{work_mbid}"));
+    row["workCandidate"]["externalIdentifiers"][0]["value"] = json!(work_mbid);
     row["workCandidate"]["externalIdentifiers"][0]["sourceUrl"] =
-        json!(format!("https://musicbrainz.org/work/{WORK_MBID}"));
+        json!(format!("https://musicbrainz.org/work/{work_mbid}"));
     row["workCandidate"]["composer"]["externalIdentifiers"][0]["value"] =
         json!(COMPOSER_WIKIDATA_ID);
     row["workCandidate"]["composer"]["externalIdentifiers"][0]["sourceUrl"] = json!(format!(
@@ -126,6 +136,7 @@ fn candidate(video_id: &str, artist_wikidata_id: &str) -> Value {
     ));
     row["source"]["videoId"] = json!(video_id);
     row["source"]["originalUrl"] = json!(format!("https://www.youtube.com/watch?v={video_id}"));
+    row["sectorCandidate"]["sectorKey"] = json!(sector_key);
     row["credits"][0]["entityCandidate"]["externalIdentifiers"][0]["value"] =
         json!(artist_wikidata_id);
     row["credits"][0]["entityCandidate"]["externalIdentifiers"][0]["sourceUrl"] = json!(format!(
@@ -161,6 +172,19 @@ fn options(bundle_path: PathBuf, run_id: &str, dry_run: bool) -> ComparisonSeedL
 async fn load_is_atomic_idempotent_and_rights_gated() {
     let pool = db::create_pool().await.expect("격리 테스트 DB 연결");
     let (_composer_id, piece_id, artist_id, sector_id) = prepare_authority_fixture(&pool).await;
+    let part_id = sqlx::query(
+        "INSERT INTO piece_parts (
+            piece_id, part_key, sequence_number, name_ko, name_en,
+            editorial_status, origin, editor_locked
+         ) VALUES (?, ?, 1, '통합 테스트 악장', 'Integration movement',
+                   'FACTS_VERIFIED', 'seed', FALSE)",
+    )
+    .bind(piece_id)
+    .bind(format!("musicbrainz:{PART_WORK_MBID}"))
+    .execute(&pool)
+    .await
+    .expect("MusicBrainz part fixture")
+    .last_insert_id();
     let manual_sector_before = sqlx::query_as::<_, (String, String, bool)>(
         "SELECT sector_name, origin, editor_locked FROM performance_sectors WHERE id = ?",
     )
@@ -273,6 +297,44 @@ async fn load_is_atomic_idempotent_and_rights_gated() {
             .await
             .expect("재실행 mutation 확인");
     assert_eq!(second_mutations, 0);
+
+    let part_video = "partvid0001";
+    let part_bundle = write_bundle(
+        "comparison-part.jsonl",
+        &[candidate_for_work(
+            part_video,
+            ARTIST_WIKIDATA_ID,
+            PART_WORK_MBID,
+            "first-movement",
+        )],
+    );
+    let part_result = ComparisonSeedLoader::load(
+        &pool,
+        &options(
+            part_bundle.clone(),
+            "20000000-0000-4000-8000-000000000004",
+            false,
+        ),
+    )
+    .await
+    .expect("악장 후보 적재");
+    assert_eq!(part_result.mutations.total, 6);
+    let part_scope = sqlx::query_as::<_, (i32, Option<u64>, i32)>(
+        "SELECT sector.piece_id, sector.piece_part_id, performance.piece_id
+         FROM performance_sectors sector
+         JOIN performance_candidates candidate ON candidate.sector_id = sector.id
+         JOIN performance_sources source ON source.id = candidate.performance_source_id
+         JOIN performances performance
+           ON performance.performance_source_id = source.id
+          AND performance.start_ms = candidate.proposed_start_ms
+          AND performance.end_ms = candidate.proposed_end_ms
+         WHERE source.provider_video_id = ?",
+    )
+    .bind(part_video)
+    .fetch_one(&pool)
+    .await
+    .expect("악장 범위 연결 확인");
+    assert_eq!(part_scope, (piece_id, Some(part_id), piece_id));
     let cli = Command::new(env!("CARGO_BIN_EXE_load_comparison_candidates"))
         .args([
             "--bundle",
@@ -346,5 +408,6 @@ async fn load_is_atomic_idempotent_and_rights_gated() {
 
     fs::remove_file(dry_bundle).expect("dry bundle 삭제");
     fs::remove_file(bundle).expect("valid bundle 삭제");
+    fs::remove_file(part_bundle).expect("part bundle 삭제");
     fs::remove_file(atomic_bundle).expect("atomic bundle 삭제");
 }

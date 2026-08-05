@@ -550,7 +550,7 @@ async fn apply_candidates(
     let mut counts = ComparisonSeedMutationCounts::default();
 
     for candidate in candidates {
-        let piece_id = resolve_piece(transaction, candidate).await?;
+        let work = resolve_work(transaction, candidate).await?;
         let artist_ids = resolve_artists(transaction, candidate).await?;
         let primary_artist_id = candidate
             .row
@@ -561,8 +561,15 @@ async fn apply_candidates(
             .expect("입력 검증에서 primary 크레딧을 보장함");
 
         let source_id = ensure_source(transaction, candidate, run_id, &mut counts).await?;
-        let sector_id =
-            ensure_sector(transaction, candidate, piece_id, run_id, &mut counts).await?;
+        let sector_id = ensure_sector(
+            transaction,
+            candidate,
+            work.piece_id,
+            work.piece_part_id,
+            run_id,
+            &mut counts,
+        )
+        .await?;
         ensure_candidate(
             transaction,
             candidate,
@@ -584,7 +591,7 @@ async fn apply_candidates(
         let performance_id = ensure_performance(
             transaction,
             candidate,
-            piece_id,
+            work.piece_id,
             sector_id,
             source_id,
             primary_artist_id,
@@ -598,12 +605,19 @@ async fn apply_candidates(
     Ok(counts)
 }
 
-async fn resolve_piece(
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+struct ResolvedWork {
+    piece_id: i32,
+    piece_part_id: Option<u64>,
+}
+
+async fn resolve_work(
     transaction: &mut Transaction<'_, MySql>,
     candidate: &ValidatedCandidate,
-) -> Result<i32, ComparisonSeedLoadError> {
-    let rows = sqlx::query_as::<_, (i32, String)>(
-        "SELECT piece.id, CAST(composer_identifier.external_id AS CHAR CHARACTER SET utf8mb4)
+) -> Result<ResolvedWork, ComparisonSeedLoadError> {
+    let root_rows = sqlx::query_as::<_, (i32, String)>(
+        "SELECT piece.id,
+                CAST(composer_identifier.external_id AS CHAR CHARACTER SET utf8mb4)
          FROM piece_identifiers piece_identifier
          JOIN pieces piece ON piece.id = piece_identifier.piece_id
          JOIN composers composer ON composer.id = piece.composer_id
@@ -617,7 +631,22 @@ async fn resolve_piece(
     .bind(&candidate.work_mbid)
     .fetch_all(&mut **transaction)
     .await?;
-    if rows.len() != 1 || rows[0].1 != candidate.composer_wikidata_id {
+    let part_rows = sqlx::query_as::<_, (i32, u64, String)>(
+        "SELECT part.piece_id, part.id,
+                CAST(composer_identifier.external_id AS CHAR CHARACTER SET utf8mb4)
+         FROM piece_parts part
+         JOIN pieces piece ON piece.id = part.piece_id
+         JOIN composers composer ON composer.id = piece.composer_id
+         JOIN external_identifiers composer_identifier
+           ON composer_identifier.authority_entity_id = composer.authority_entity_id
+          AND composer_identifier.namespace = 'wikidata'
+         WHERE part.part_key = CONCAT('musicbrainz:', ?)
+         FOR UPDATE",
+    )
+    .bind(&candidate.work_mbid)
+    .fetch_all(&mut **transaction)
+    .await?;
+    if root_rows.len() + part_rows.len() != 1 {
         return Err(ComparisonSeedLoadError::input(
             "UNRESOLVED_WORK_IDENTIFIER",
             format!(
@@ -627,7 +656,37 @@ async fn resolve_piece(
             Some(candidate.line),
         ));
     }
-    Ok(rows[0].0)
+    if let Some((piece_id, composer_wikidata_id)) = root_rows.first() {
+        if composer_wikidata_id != &candidate.composer_wikidata_id {
+            return Err(ComparisonSeedLoadError::input(
+                "UNRESOLVED_WORK_IDENTIFIER",
+                format!(
+                    "MusicBrainz 작품 {}와 Wikidata 작곡가 {}를 정확히 해소할 수 없음",
+                    candidate.work_mbid, candidate.composer_wikidata_id
+                ),
+                Some(candidate.line),
+            ));
+        }
+        return Ok(ResolvedWork {
+            piece_id: *piece_id,
+            piece_part_id: None,
+        });
+    }
+    let (piece_id, piece_part_id, composer_wikidata_id) = &part_rows[0];
+    if composer_wikidata_id != &candidate.composer_wikidata_id {
+        return Err(ComparisonSeedLoadError::input(
+            "UNRESOLVED_WORK_IDENTIFIER",
+            format!(
+                "MusicBrainz 작품 {}와 Wikidata 작곡가 {}를 정확히 해소할 수 없음",
+                candidate.work_mbid, candidate.composer_wikidata_id
+            ),
+            Some(candidate.line),
+        ));
+    }
+    Ok(ResolvedWork {
+        piece_id: *piece_id,
+        piece_part_id: Some(*piece_part_id),
+    })
 }
 
 async fn resolve_artists(
@@ -740,11 +799,12 @@ async fn ensure_sector(
     transaction: &mut Transaction<'_, MySql>,
     candidate: &ValidatedCandidate,
     piece_id: i32,
+    piece_part_id: Option<u64>,
     run_id: &str,
     counts: &mut ComparisonSeedMutationCounts,
 ) -> Result<i32, ComparisonSeedLoadError> {
-    let existing = sqlx::query_scalar::<_, i32>(
-        "SELECT id FROM performance_sectors
+    let existing = sqlx::query_as::<_, (i32, Option<u64>)>(
+        "SELECT id, piece_part_id FROM performance_sectors
          WHERE piece_id = ? AND sector_key = ?
          FOR UPDATE",
     )
@@ -752,21 +812,29 @@ async fn ensure_sector(
     .bind(&candidate.row.sector_candidate.sector_key)
     .fetch_optional(&mut **transaction)
     .await?;
-    if let Some(id) = existing {
+    if let Some((id, existing_piece_part_id)) = existing {
+        if existing_piece_part_id != piece_part_id {
+            return Err(ComparisonSeedLoadError::input(
+                "SECTOR_PART_CONFLICT",
+                "기존 비교 구간의 작품 부분 연결이 후보 bundle과 다르므로 자동 변경하지 않음",
+                Some(candidate.line),
+            ));
+        }
         return Ok(id);
     }
     let sector = &candidate.row.sector_candidate;
     let description = sector.editorial_note.as_deref();
     let inserted = sqlx::query(
         "INSERT INTO performance_sectors (
-            piece_id, sector_name, description, display_order, sector_key,
+            piece_id, piece_part_id, sector_name, description, display_order, sector_key,
             sector_type, name_ko, name_en, measure_start, measure_end,
             start_cue, end_cue, target_min_ms, target_max_ms,
             editorial_status, origin, editor_locked
-         ) VALUES (?, ?, ?, 0, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+         ) VALUES (?, ?, ?, ?, 0, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
                    'FACTS_VERIFIED', 'seed', FALSE)",
     )
     .bind(piece_id)
+    .bind(piece_part_id)
     .bind(&sector.name_ko)
     .bind(description)
     .bind(&sector.sector_key)
@@ -793,7 +861,11 @@ async fn ensure_sector(
         run_id,
         "performance_sectors",
         id.to_string(),
-        json!({"pieceId": piece_id, "sectorKey": sector.sector_key}),
+        json!({
+            "pieceId": piece_id,
+            "piecePartId": piece_part_id,
+            "sectorKey": sector.sector_key,
+        }),
     )
     .await?;
     counts.increment("performance_sectors");
