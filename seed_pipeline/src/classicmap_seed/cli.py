@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import UTC, datetime
+from math import ceil
 from pathlib import Path
 from typing import Annotated
 
@@ -23,11 +24,13 @@ from classicmap_seed.models import (
     SourceName,
     SourceRecord,
     ValidationReport,
+    WikidataScope,
 )
 from classicmap_seed.normalize import normalize_records
 from classicmap_seed.reporting import render_report, write_report
 from classicmap_seed.resolve import resolve_candidates
-from classicmap_seed.sources import build_connector
+from classicmap_seed.sources import WikidataConnector, build_connector
+from classicmap_seed.sources.collector import collect_paginated
 from classicmap_seed.streaming import (
     StreamingPlatform,
     build_streaming_load_bundle,
@@ -62,6 +65,10 @@ JsonReportOption = Annotated[
 ArtifactsDirOption = Annotated[
     Path,
     typer.Option("--artifacts-dir", help="immutable artifact 루트"),
+]
+MaxPagesOption = Annotated[
+    int | None,
+    typer.Option("--max-pages", min=1, help="이번 실행에서 요청할 최대 page 수"),
 ]
 
 
@@ -114,6 +121,96 @@ def snapshot(
             data_path=str(result.data_path),
             manifest_path=str(result.manifest_path),
             notes=("운영 DB에 연결하지 않았습니다.",),
+        ),
+        options,
+    )
+
+
+@app.command("snapshot-wikidata")
+def snapshot_wikidata(
+    run_id: RunIdOption,
+    scope: Annotated[WikidataScope, typer.Option("--scope", case_sensitive=False)],
+    contact: Annotated[
+        str,
+        typer.Option("--contact", help="Wikidata User-Agent 연락처. artifact에는 저장하지 않음"),
+    ],
+    dry_run: DryRunOption = False,
+    resume: ResumeOption = True,
+    limit: LimitOption = 20,
+    json_report: JsonReportOption = None,
+    artifacts_dir: ArtifactsDirOption = Path("artifacts"),
+    page_size: Annotated[
+        int,
+        typer.Option("--page-size", min=1, max=1_000, help="WDQS keyset page 크기"),
+    ] = 100,
+    max_pages: MaxPagesOption = None,
+) -> None:
+    """Wikidata 인물·단체 scope를 keyset pagination과 checkpoint로 수집합니다."""
+    options = _options(run_id, dry_run, resume, limit, json_report)
+    try:
+        connector, http_client = build_connector(SourceName.WIKIDATA, contact=contact)
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--contact") from error
+    if not isinstance(connector, WikidataConnector):
+        raise RuntimeError("Wikidata connector factory 결과가 올바르지 않습니다.")
+
+    retrieved_at = datetime.now(UTC)
+    store = _store(artifacts_dir)
+    checkpoint_path = (
+        artifacts_dir / options.run_id / "checkpoints" / f"wikidata-{scope.value}.json"
+    )
+    try:
+        collection = collect_paginated(
+            run_id=options.run_id,
+            scope=scope.value,
+            metadata=connector.metadata,
+            fetch_page=lambda size, cursor: connector.fetch_page(
+                scope=scope,
+                page_size=size,
+                cursor=cursor,
+            ),
+            artifact_store=store,
+            artifacts_root=artifacts_dir,
+            checkpoint_path=checkpoint_path,
+            retrieved_at=retrieved_at,
+            limit=options.limit,
+            page_size=page_size,
+            max_pages=max_pages,
+            dry_run=options.dry_run,
+            resume=options.resume,
+        )
+    except ValueError as error:
+        raise typer.BadParameter(str(error)) from error
+    finally:
+        http_client.close()
+
+    result = store.write(
+        run_id=options.run_id,
+        stage=ArtifactStage.RAW,
+        metadata=connector.metadata,
+        records=collection.records,
+        retrieved_at=retrieved_at,
+        dry_run=options.dry_run,
+        resume=options.resume,
+    )
+    estimated_requests = ceil(options.limit / page_size)
+    _emit(
+        CommandReport(
+            command="snapshot-wikidata",
+            run_id=options.run_id,
+            dry_run=options.dry_run,
+            input_count=len(collection.records),
+            output_count=len(collection.records),
+            mutation_count=result.mutation_count,
+            data_path=str(result.data_path),
+            manifest_path=str(result.manifest_path),
+            notes=(
+                f"scope={scope.value}, 이번 실행 요청 {collection.request_count}회",
+                f"limit 기준 최대 요청 추정 {estimated_requests}회",
+                f"checkpoint 재사용 행 {collection.resumed_record_count}개",
+                "WDQS 0.5 req/s 제한과 immutable page artifact를 적용했습니다.",
+                "운영 DB에 연결하지 않았습니다.",
+            ),
         ),
         options,
     )
@@ -328,7 +425,6 @@ def export_canonical(
     ]
     load_records = build_canonical_load_bundle(
         run_id=options.run_id,
-        dry_run=options.dry_run,
         source_manifest=raw_manifest,
         raw_records=raw_records,
         candidates=selected_candidates,
