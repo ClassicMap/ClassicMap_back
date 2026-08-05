@@ -40,8 +40,8 @@ from classicmap_seed.sources import (
     WikidataConnector,
     build_connector,
     build_musicbrainz_work_connector,
+    collect_exact_work_hierarchy,
     fetch_exact_request_page,
-    fetch_exact_work_request_page,
     read_musicbrainz_work_entity_requests,
     read_wikidata_entity_requests,
 )
@@ -359,6 +359,24 @@ def snapshot_musicbrainz_work_entities(
     limit: LimitOption = 20,
     json_report: JsonReportOption = None,
     artifacts_dir: ArtifactsDirOption = Path("artifacts"),
+    max_hierarchy_depth: Annotated[
+        int,
+        typer.Option(
+            "--max-hierarchy-depth",
+            min=0,
+            max=32,
+            help="parts parent 재귀 최대 깊이",
+        ),
+    ] = 8,
+    max_hierarchy_records: Annotated[
+        int,
+        typer.Option(
+            "--max-hierarchy-records",
+            min=1,
+            max=100_000,
+            help="root와 parent를 합친 최대 work 수",
+        ),
+    ] = 1_000,
 ) -> None:
     """명시된 MusicBrainz work MBID만 단건 endpoint와 checkpoint로 수집합니다."""
     options = _options(run_id, dry_run, resume, limit, json_report)
@@ -383,23 +401,19 @@ def snapshot_musicbrainz_work_entities(
         / f"musicbrainz-work-entities-{input_sha256}.json"
     )
     try:
-        collection = collect_paginated(
+        collection = collect_exact_work_hierarchy(
+            connector=connector,
+            requests=requests,
+            input_sha256=input_sha256,
             run_id=options.run_id,
-            scope=f"exact-works:{input_sha256}",
             metadata=connector.metadata,
-            fetch_page=lambda size, cursor: fetch_exact_work_request_page(
-                connector,
-                requests,
-                page_size=size,
-                cursor=cursor,
-            ),
             artifact_store=store,
             artifacts_root=artifacts_dir,
             checkpoint_path=checkpoint_path,
             retrieved_at=retrieved_at,
-            limit=min(options.limit, len(requests)),
-            page_size=1,
-            max_pages=None,
+            root_limit=min(options.limit, len(requests)),
+            max_depth=max_hierarchy_depth,
+            max_records=max_hierarchy_records,
             dry_run=options.dry_run,
             resume=options.resume,
         )
@@ -429,8 +443,10 @@ def snapshot_musicbrainz_work_entities(
             manifest_path=str(result.manifest_path),
             notes=(
                 f"입력 manifest SHA-256 {input_sha256}",
-                f"exact work 요청 {collection.request_count}회, HTTP 요청당 MBID 1건",
+                f"exact work와 parts parent 요청 {collection.request_count}회, "
+                "HTTP 요청당 MBID 1건",
                 f"checkpoint 재사용 행 {collection.resumed_record_count}개",
+                f"hierarchy 제한 depth={max_hierarchy_depth}, records={max_hierarchy_records}",
                 "공식 /ws/2/work/<mbid> endpoint와 1 req/s 제한을 적용했습니다.",
                 "이름 검색, 작곡가 전체 browse, 운영 DB 연결을 수행하지 않았습니다.",
             ),

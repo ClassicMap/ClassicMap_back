@@ -1,5 +1,8 @@
 from classicmap_seed.sources.factory import build_connector, build_musicbrainz_work_connector
-from classicmap_seed.sources.musicbrainz_work_exact import fetch_exact_work_request_page
+from classicmap_seed.sources.musicbrainz_work_exact import (
+    collect_exact_work_hierarchy,
+    fetch_exact_work_request_page,
+)
 from classicmap_seed.sources.musicbrainz_work_exact_input import (
     MusicBrainzWorkEntityRequest,
     extract_comparison_candidate_work_requests,
@@ -21,6 +24,7 @@ __all__ = [
     "WikidataEntityRequest",
     "build_connector",
     "build_musicbrainz_work_connector",
+    "collect_exact_work_hierarchy",
     "extract_comparison_candidate_requests",
     "extract_comparison_candidate_work_requests",
     "fetch_exact_request_page",
