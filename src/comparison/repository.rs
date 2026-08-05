@@ -3,7 +3,7 @@ use super::model::{
     ComparisonPerformanceRow,
 };
 use crate::db::DbPool;
-use sqlx::{MySql, QueryBuilder, Transaction};
+use sqlx::{FromRow, MySql, QueryBuilder, Transaction};
 use std::{collections::HashMap, error::Error, fmt};
 
 const DEFAULT_PAGE_SIZE: u32 = 20;
@@ -41,6 +41,7 @@ pub enum ComparisonContractError {
     Database(sqlx::Error),
     InvalidCursor,
     ClipNotReady,
+    PublicationGateNotSatisfied,
     InvalidPublishTransition,
 }
 
@@ -50,6 +51,9 @@ impl fmt::Display for ComparisonContractError {
             Self::Database(error) => write!(formatter, "데이터베이스 오류: {error}"),
             Self::InvalidCursor => formatter.write_str("유효하지 않은 페이지 커서"),
             Self::ClipNotReady => formatter.write_str("검증된 현재 클립 자산이 없음"),
+            Self::PublicationGateNotSatisfied => {
+                formatter.write_str("시드 performance의 권리 또는 편집 승인 조건이 충족되지 않음")
+            }
             Self::InvalidPublishTransition => {
                 formatter.write_str("performance를 발행할 수 없는 상태임")
             }
@@ -66,6 +70,28 @@ impl From<sqlx::Error> for ComparisonContractError {
 }
 
 pub struct ComparisonRepository;
+
+#[derive(Debug, FromRow)]
+struct PublicationState {
+    publish_status: String,
+    clip_id: u64,
+    sector_id: i32,
+    performance_source_id: u64,
+    start_ms: u32,
+    end_ms: u32,
+    availability_status: String,
+    rights_mode: String,
+    sector_editorial_status: String,
+    origin: String,
+    editor_locked: bool,
+}
+
+fn allows_self_hosted_publication(rights_mode: &str) -> bool {
+    matches!(
+        rights_mode,
+        "licensed_self_hosted" | "public_domain" | "permission_granted"
+    )
+}
 
 impl ComparisonRepository {
     pub async fn find_published_by_artist(
@@ -249,9 +275,23 @@ impl ComparisonRepository {
     ) -> Result<u64, ComparisonContractError> {
         let mut mutations = 0;
 
-        let state = sqlx::query_as::<_, (String, u64)>(
-            "SELECT performance.publish_status, clip.id
+        let state = sqlx::query_as::<_, PublicationState>(
+            "SELECT CAST(performance.publish_status AS CHAR CHARACTER SET utf8mb4) AS publish_status,
+                    clip.id AS clip_id,
+                    performance.sector_id,
+                    performance.performance_source_id,
+                    performance.start_ms,
+                    performance.end_ms,
+                    CAST(source.availability_status AS CHAR CHARACTER SET utf8mb4) AS availability_status,
+                    CAST(source.rights_mode AS CHAR CHARACTER SET utf8mb4) AS rights_mode,
+                    CAST(sector.editorial_status AS CHAR CHARACTER SET utf8mb4) AS sector_editorial_status,
+                    CAST(performance.origin AS CHAR CHARACTER SET utf8mb4) AS origin,
+                    performance.editor_locked
              FROM performances performance
+             JOIN performance_sources source
+               ON source.id = performance.performance_source_id
+             JOIN performance_sectors sector
+               ON sector.id = performance.sector_id
              JOIN clip_assets clip
                ON clip.performance_id = performance.id
               AND clip.is_current = TRUE
@@ -272,15 +312,49 @@ impl ComparisonRepository {
         .await?
         .ok_or(ComparisonContractError::ClipNotReady)?;
 
-        if state.0 == "RETIRED" {
+        if state.publish_status == "RETIRED" {
             return Err(ComparisonContractError::InvalidPublishTransition);
         }
 
-        if state.0 != "PUBLISHED" {
+        let self_hosted_rights = allows_self_hosted_publication(&state.rights_mode);
+        let sector_is_approved = matches!(
+            state.sector_editorial_status.as_str(),
+            "EDITOR_REVIEWED" | "PUBLISHED"
+        );
+        if state.origin != "seed"
+            || state.editor_locked
+            || state.availability_status != "AVAILABLE"
+            || !self_hosted_rights
+            || !sector_is_approved
+        {
+            return Err(ComparisonContractError::PublicationGateNotSatisfied);
+        }
+
+        let candidate_status = sqlx::query_scalar::<_, String>(
+            "SELECT CAST(candidate_status AS CHAR CHARACTER SET utf8mb4)
+             FROM performance_candidates
+             WHERE sector_id = ?
+               AND performance_source_id = ?
+               AND proposed_start_ms = ?
+               AND proposed_end_ms = ?
+             FOR UPDATE",
+        )
+        .bind(state.sector_id)
+        .bind(state.performance_source_id)
+        .bind(state.start_ms)
+        .bind(state.end_ms)
+        .fetch_optional(&mut **transaction)
+        .await?;
+        if candidate_status.as_deref() != Some("APPROVED") {
+            return Err(ComparisonContractError::PublicationGateNotSatisfied);
+        }
+
+        if state.publish_status != "PUBLISHED" {
             let updated = sqlx::query(
                 "UPDATE performances
                  SET publish_status = 'PUBLISHED'
-                 WHERE id = ? AND publish_status IN ('DRAFT', 'READY')",
+                 WHERE id = ? AND publish_status IN ('DRAFT', 'READY')
+                   AND origin = 'seed' AND editor_locked = FALSE",
             )
             .bind(performance_id)
             .execute(&mut **transaction)
@@ -297,7 +371,7 @@ impl ComparisonRepository {
              SET status = 'PUBLISHED', published_at = COALESCE(published_at, CURRENT_TIMESTAMP(6))
              WHERE id = ? AND status <> 'PUBLISHED'",
         )
-        .bind(state.1)
+        .bind(state.clip_id)
         .execute(&mut **transaction)
         .await?;
         mutations += published.rows_affected();
@@ -308,7 +382,21 @@ impl ComparisonRepository {
 
 #[cfg(test)]
 mod tests {
-    use super::ComparisonPageRequest;
+    use super::{allows_self_hosted_publication, ComparisonPageRequest};
+
+    #[test]
+    fn publication_rights_allow_only_self_hosted_modes() {
+        for rights_mode in [
+            "licensed_self_hosted",
+            "public_domain",
+            "permission_granted",
+        ] {
+            assert!(allows_self_hosted_publication(rights_mode));
+        }
+        for rights_mode in ["unknown", "youtube_embed_only"] {
+            assert!(!allows_self_hosted_publication(rights_mode));
+        }
+    }
 
     #[test]
     fn page_request_applies_safe_defaults_and_limits() {
