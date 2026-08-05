@@ -26,11 +26,13 @@ def build_connector(
             rate_limiter=FixedIntervalRateLimiter(0.5),
         )
         return WikidataConnector(client), client
-    client = JsonHttpClient(
-        user_agent=user_agent,
-        rate_limiter=FixedIntervalRateLimiter(1.0),
-    )
-    return OpenOpusConnector(client), client
+    if source is SourceName.OPEN_OPUS:
+        client = JsonHttpClient(
+            user_agent=user_agent,
+            rate_limiter=FixedIntervalRateLimiter(1.0),
+        )
+        return OpenOpusConnector(client), client
+    raise ValueError(f"snapshot connector가 없는 source입니다: {source.value}")
 
 
 def _build_user_agent(source: SourceName, contact: str | None) -> str:
