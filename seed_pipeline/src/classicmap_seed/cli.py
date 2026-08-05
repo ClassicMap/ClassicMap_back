@@ -20,11 +20,13 @@ from classicmap_seed.models import (
     SourceMetadata,
     SourceName,
     SourceRecord,
+    ValidationReport,
 )
 from classicmap_seed.normalize import normalize_records
 from classicmap_seed.reporting import render_report, write_report
 from classicmap_seed.resolve import resolve_candidates
 from classicmap_seed.sources import build_connector
+from classicmap_seed.validate import validate_canonical_bundle
 
 app = typer.Typer(
     name="classicmap-seed",
@@ -295,44 +297,51 @@ def validate(
     limit: LimitOption = 20,
     json_report: JsonReportOption = None,
 ) -> None:
-    """Manifest의 SHA-256과 row_count를 다시 검증합니다."""
+    """Canonical load bundle의 발행 차단 규칙을 구조화 report로 판정합니다."""
     options = _options(run_id, dry_run, resume, limit, json_report)
     snapshot_manifest = read_manifest(manifest)
-    if snapshot_manifest.stage is ArtifactStage.RAW:
-        _, raw_records = read_artifact(manifest, SourceRecord)
-        record_count = len(raw_records)
-    elif snapshot_manifest.stage is ArtifactStage.NORMALIZED:
-        _, normalized_records = read_artifact(manifest, NormalizedEntityCandidate)
-        record_count = len(normalized_records)
-    elif snapshot_manifest.stage is ArtifactStage.RESOLVED:
-        _, resolution_records = read_artifact(manifest, ResolutionDecision)
-        record_count = len(resolution_records)
-    elif snapshot_manifest.stage is ArtifactStage.CANONICAL:
-        _, load_records = read_artifact(manifest, CanonicalLoadRecord)
-        record_count = len(load_records)
-    else:
+    _require_stage(snapshot_manifest.stage, ArtifactStage.CANONICAL)
+    _require_run_id(snapshot_manifest.run_id, options.run_id)
+    _, load_records = read_artifact(manifest, CanonicalLoadRecord)
+    try:
+        artifact_root = manifest.parents[3]
+    except IndexError as error:
         raise typer.BadParameter(
-            f"아직 검증할 수 없는 artifact stage입니다: {snapshot_manifest.stage}",
+            "manifest 경로가 표준 artifact 구조가 아닙니다.",
             param_hint="--manifest",
-        )
-    inspected_count = min(record_count, options.limit)
-    _emit(
-        CommandReport(
-            command="validate",
-            run_id=options.run_id,
-            dry_run=options.dry_run,
-            input_count=inspected_count,
-            output_count=inspected_count,
-            mutation_count=0,
-            data_path=str(manifest.parent / snapshot_manifest.relative_data_path),
-            manifest_path=str(manifest),
-            notes=(
-                f"resume={options.resume}",
-                "SHA-256과 row_count가 manifest와 일치합니다.",
-            ),
-        ),
-        options,
+        ) from error
+    idempotency_result = JsonlArtifactStore(
+        artifact_root,
+        tool_version=snapshot_manifest.tool_version,
+    ).write(
+        run_id=options.run_id,
+        stage=ArtifactStage.CANONICAL,
+        metadata=_metadata_from_manifest(snapshot_manifest),
+        records=load_records,
+        retrieved_at=snapshot_manifest.retrieved_at,
+        dry_run=True,
+        resume=options.resume,
+        parent_sha256=snapshot_manifest.parent_sha256,
     )
+    rules = validate_canonical_bundle(
+        load_records,
+        idempotent_mutation_count=idempotency_result.mutation_count,
+        example_limit=options.limit,
+    )
+    report = ValidationReport(
+        run_id=options.run_id,
+        dry_run=options.dry_run,
+        artifact_path=str(manifest.parent / snapshot_manifest.relative_data_path),
+        artifact_sha256=snapshot_manifest.sha256,
+        checked_records=len(load_records),
+        mutation_count=idempotency_result.mutation_count,
+        passed=all(rule.passed for rule in rules),
+        rules=rules,
+    )
+    typer.echo(render_report(report))
+    write_report(report, options.json_report, dry_run=options.dry_run)
+    if not report.passed:
+        raise typer.Exit(code=1)
 
 
 def _options(

@@ -75,6 +75,21 @@ class LoadTable(StrEnum):
     EXTERNAL_IDENTIFIERS = "external_identifiers"
     FIELD_PROVENANCE = "field_provenance"
     REVIEW_QUEUE = "review_queue"
+    RECORDING_TRACKS = "recording_tracks"
+    PLATFORM_LINKS = "platform_links"
+    TRACK_PIECE_LINKS = "track_piece_links"
+
+
+class ValidationRuleCode(StrEnum):
+    ARTIFACT_INTEGRITY = "artifact_integrity"
+    EXTERNAL_ID_UNIQUE = "external_id_unique"
+    FOREIGN_KEYS_PRESENT = "foreign_keys_present"
+    NO_NAME_ONLY_AUTO_MATCH = "no_name_only_auto_match"
+    PUBLIC_FIELDS_HAVE_PROVENANCE = "public_fields_have_provenance"
+    STREAMING_ISRC_MATCH = "streaming_isrc_match"
+    NO_DIRECT_ALBUM_WORK_LINK = "no_direct_album_work_link"
+    MANUAL_FIELD_PROTECTION = "manual_field_protection"
+    SECOND_DRY_RUN_ZERO = "second_dry_run_zero"
 
 
 class RunOptions(StrictModel):
@@ -213,3 +228,23 @@ class CommandReport(StrictModel):
     data_path: str | None = None
     manifest_path: str | None = None
     notes: tuple[str, ...] = ()
+
+
+class ValidationRuleResult(StrictModel):
+    rule: ValidationRuleCode
+    passed: bool
+    checked_count: int = Field(ge=0)
+    violation_count: int = Field(ge=0)
+    examples: tuple[str, ...] = ()
+
+
+class ValidationReport(StrictModel):
+    command: Literal["validate"] = "validate"
+    run_id: str
+    dry_run: bool
+    artifact_path: str
+    artifact_sha256: str
+    checked_records: int = Field(ge=0)
+    mutation_count: int = Field(ge=0)
+    passed: bool
+    rules: tuple[ValidationRuleResult, ...]
