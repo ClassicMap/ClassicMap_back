@@ -24,6 +24,14 @@ class SourceName(StrEnum):
     MUSICBRAINZ = "musicbrainz"
     OPEN_OPUS = "open-opus"
     WIKIDATA = "wikidata"
+    SPOTIFY_EXPORT = "spotify-export"
+    APPLE_MUSIC_EXPORT = "apple-music-export"
+
+
+class DiscoverySourceName(StrEnum):
+    MUSICBRAINZ = "musicbrainz"
+    OPEN_OPUS = "open-opus"
+    WIKIDATA = "wikidata"
 
 
 class ArtifactStage(StrEnum):
@@ -90,6 +98,7 @@ class ValidationRuleCode(StrEnum):
     NO_DIRECT_ALBUM_WORK_LINK = "no_direct_album_work_link"
     MANUAL_FIELD_PROTECTION = "manual_field_protection"
     SECOND_DRY_RUN_ZERO = "second_dry_run_zero"
+    REVIEW_QUEUE_EMPTY = "review_queue_empty"
 
 
 class RunOptions(StrictModel):

@@ -34,6 +34,7 @@ def validate_canonical_bundle(
         _no_direct_album_work_links(records, example_limit),
         _manual_fields_are_protected(records, example_limit),
         _second_dry_run_is_zero(idempotent_mutation_count),
+        _review_queue_is_empty(records, example_limit),
     )
     return rules
 
@@ -46,7 +47,11 @@ def _external_identifiers_unique(
     records: list[CanonicalLoadRecord],
     example_limit: int,
 ) -> ValidationRuleResult:
-    identifiers = [record for record in records if record.table is LoadTable.EXTERNAL_IDENTIFIERS]
+    identifiers = [
+        record
+        for record in records
+        if record.table in {LoadTable.EXTERNAL_IDENTIFIERS, LoadTable.PLATFORM_LINKS}
+    ]
     entity_ids_by_key: dict[str, set[str]] = defaultdict(set)
     counts: Counter[str] = Counter()
     for record in identifiers:
@@ -223,6 +228,19 @@ def _manual_fields_are_protected(
 def _second_dry_run_is_zero(mutation_count: int) -> ValidationRuleResult:
     violations = [] if mutation_count == 0 else [f"mutation_count:{mutation_count}"]
     return _result(ValidationRuleCode.SECOND_DRY_RUN_ZERO, 1, violations)
+
+
+def _review_queue_is_empty(
+    records: list[CanonicalLoadRecord],
+    example_limit: int,
+) -> ValidationRuleResult:
+    review_records = [record for record in records if record.table is LoadTable.REVIEW_QUEUE]
+    return _result(
+        ValidationRuleCode.REVIEW_QUEUE_EMPTY,
+        len(review_records),
+        [record.natural_key for record in review_records],
+        example_limit,
+    )
 
 
 def _string(record: CanonicalLoadRecord, field: str) -> str | None:

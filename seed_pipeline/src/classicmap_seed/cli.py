@@ -13,6 +13,8 @@ from classicmap_seed.models import (
     ArtifactStage,
     CanonicalLoadRecord,
     CommandReport,
+    DiscoverySourceName,
+    LoadTable,
     NormalizedEntityCandidate,
     ResolutionDecision,
     RunOptions,
@@ -26,6 +28,12 @@ from classicmap_seed.normalize import normalize_records
 from classicmap_seed.reporting import render_report, write_report
 from classicmap_seed.resolve import resolve_candidates
 from classicmap_seed.sources import build_connector
+from classicmap_seed.streaming import (
+    StreamingPlatform,
+    build_streaming_load_bundle,
+    read_streaming_candidates,
+    streaming_source_metadata,
+)
 from classicmap_seed.validate import validate_canonical_bundle
 
 app = typer.Typer(
@@ -60,7 +68,7 @@ ArtifactsDirOption = Annotated[
 @app.command()
 def snapshot(
     run_id: RunIdOption,
-    source: Annotated[SourceName, typer.Option("--source", case_sensitive=False)],
+    source: Annotated[DiscoverySourceName, typer.Option("--source", case_sensitive=False)],
     dry_run: DryRunOption = False,
     resume: ResumeOption = True,
     limit: LimitOption = 20,
@@ -77,7 +85,7 @@ def snapshot(
     """공식 API의 작은 후보 묶음을 raw immutable snapshot으로 저장합니다."""
     options = _options(run_id, dry_run, resume, limit, json_report)
     try:
-        connector, http_client = build_connector(source, contact=contact)
+        connector, http_client = build_connector(SourceName(source.value), contact=contact)
     except ValueError as error:
         raise typer.BadParameter(str(error), param_hint="--contact") from error
 
@@ -209,6 +217,74 @@ def resolve(
     )
 
 
+@app.command("link-streaming")
+def link_streaming(
+    run_id: RunIdOption,
+    input_path: Annotated[
+        Path,
+        typer.Option("--input", exists=True, dir_okay=False, readable=True),
+    ],
+    platform: Annotated[StreamingPlatform, typer.Option("--platform", case_sensitive=False)],
+    dry_run: DryRunOption = False,
+    resume: ResumeOption = True,
+    limit: LimitOption = 20,
+    json_report: JsonReportOption = None,
+    artifacts_dir: ArtifactsDirOption = Path("artifacts"),
+) -> None:
+    """Spotify/Apple export JSONL을 검증해 트랙 링크 load bundle로 만듭니다."""
+    options = _options(run_id, dry_run, resume, limit, json_report)
+    candidates = read_streaming_candidates(input_path)[: options.limit]
+    mismatched_platforms = [
+        candidate.platform_track.platform
+        for candidate in candidates
+        if candidate.platform_track.platform is not platform
+    ]
+    if mismatched_platforms:
+        raise typer.BadParameter(
+            "입력 JSONL의 platform이 --platform과 일치하지 않습니다.",
+            param_hint="--platform",
+        )
+    metadata = streaming_source_metadata(platform)
+    raw_result = _store(artifacts_dir).write(
+        run_id=options.run_id,
+        stage=ArtifactStage.RAW,
+        metadata=metadata,
+        records=candidates,
+        retrieved_at=datetime.now(UTC),
+        dry_run=options.dry_run,
+        resume=options.resume,
+    )
+    load_records = build_streaming_load_bundle(candidates, run_id=options.run_id)
+    streaming_result = _store(artifacts_dir).write(
+        run_id=options.run_id,
+        stage=ArtifactStage.STREAMING,
+        metadata=metadata,
+        records=load_records,
+        retrieved_at=datetime.now(UTC),
+        dry_run=options.dry_run,
+        resume=options.resume,
+        parent_sha256=raw_result.manifest.sha256,
+    )
+    review_count = sum(record.table is LoadTable.REVIEW_QUEUE for record in load_records)
+    _emit(
+        CommandReport(
+            command="link-streaming",
+            run_id=options.run_id,
+            dry_run=options.dry_run,
+            input_count=len(candidates),
+            output_count=len(load_records),
+            mutation_count=raw_result.mutation_count + streaming_result.mutation_count,
+            data_path=str(streaming_result.data_path),
+            manifest_path=str(streaming_result.manifest_path),
+            notes=(
+                f"자동 확정되지 않은 검수 대상 {review_count}개",
+                "토큰/API 호출과 운영 DB 쓰기를 수행하지 않았습니다.",
+            ),
+        ),
+        options,
+    )
+
+
 @app.command("export-canonical")
 def export_canonical(
     run_id: RunIdOption,
@@ -300,7 +376,11 @@ def validate(
     """Canonical load bundle의 발행 차단 규칙을 구조화 report로 판정합니다."""
     options = _options(run_id, dry_run, resume, limit, json_report)
     snapshot_manifest = read_manifest(manifest)
-    _require_stage(snapshot_manifest.stage, ArtifactStage.CANONICAL)
+    if snapshot_manifest.stage not in {ArtifactStage.CANONICAL, ArtifactStage.STREAMING}:
+        raise typer.BadParameter(
+            "validate는 canonical 또는 streaming load bundle만 지원합니다.",
+            param_hint="--manifest",
+        )
     _require_run_id(snapshot_manifest.run_id, options.run_id)
     _, load_records = read_artifact(manifest, CanonicalLoadRecord)
     try:
@@ -315,7 +395,7 @@ def validate(
         tool_version=snapshot_manifest.tool_version,
     ).write(
         run_id=options.run_id,
-        stage=ArtifactStage.CANONICAL,
+        stage=snapshot_manifest.stage,
         metadata=_metadata_from_manifest(snapshot_manifest),
         records=load_records,
         retrieved_at=snapshot_manifest.retrieved_at,
