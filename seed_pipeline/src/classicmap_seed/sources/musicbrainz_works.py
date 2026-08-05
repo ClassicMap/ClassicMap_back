@@ -15,6 +15,9 @@ from classicmap_seed.sources.base import (
     require_object,
     require_string,
 )
+from classicmap_seed.sources.musicbrainz_work_exact_input import (
+    is_musicbrainz_work_mbid,
+)
 from classicmap_seed.sources.pagination import SourcePage
 
 
@@ -62,8 +65,27 @@ class MusicBrainzWorkConnector:
             complete=complete,
         )
 
+    def fetch_exact(self, *, work_mbid: str) -> SourceRecord:
+        if not is_musicbrainz_work_mbid(work_mbid):
+            raise ValueError("MusicBrainz work MBID는 소문자 canonical UUID여야 합니다.")
+        payload = self._http_client.get_json(
+            f"{self._URL}/{work_mbid}",
+            params={
+                "fmt": "json",
+                "inc": "aliases+artist-rels+work-rels",
+            },
+        )
+        work = require_object(payload, field="MusicBrainz exact work response")
+        returned_mbid = require_string(work.get("id"), field="work.id")
+        if returned_mbid != work_mbid:
+            raise ValueError(
+                "MusicBrainz exact work 응답 ID가 요청 MBID와 일치하지 않습니다. "
+                f"requested={work_mbid}, returned={returned_mbid}"
+            )
+        return self._to_record(work, None)
+
     @staticmethod
-    def _to_record(value: JsonValue, browsed_artist_mbid: str) -> SourceRecord:
+    def _to_record(value: JsonValue, browsed_artist_mbid: str | None) -> SourceRecord:
         work = require_object(value, field="work")
         work_id = require_string(work.get("id"), field="work.id")
         title = require_string(work.get("title"), field="work.title")
@@ -86,7 +108,9 @@ class MusicBrainzWorkConnector:
             "catalogue_attributes": MusicBrainzWorkConnector._catalogue_attributes(attributes),
             "relations": relations,
             "composer_mbids": MusicBrainzWorkConnector._json_strings(composer_mbids),
-            "browsed_artist_ids": [browsed_artist_mbid],
+            "browsed_artist_ids": (
+                [browsed_artist_mbid] if browsed_artist_mbid is not None else []
+            ),
         }
         return SourceRecord(
             source=SourceName.MUSICBRAINZ_WORKS,

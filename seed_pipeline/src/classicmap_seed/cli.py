@@ -36,10 +36,13 @@ from classicmap_seed.normalize import normalize_records
 from classicmap_seed.reporting import render_report, write_report
 from classicmap_seed.resolve import resolve_candidates
 from classicmap_seed.sources import (
+    MusicBrainzWorkConnector,
     WikidataConnector,
     build_connector,
     build_musicbrainz_work_connector,
     fetch_exact_request_page,
+    fetch_exact_work_request_page,
+    read_musicbrainz_work_entity_requests,
     read_wikidata_entity_requests,
 )
 from classicmap_seed.sources.collector import collect_paginated
@@ -334,6 +337,102 @@ def snapshot_wikidata_entities(
                 "불일치는 거부했습니다.",
                 "역할·악기·국가 linked entity도 50건 단위로 보강했습니다.",
                 "이름 검색, 전체 WDQS discovery, 운영 DB 연결을 수행하지 않았습니다.",
+            ),
+        ),
+        options,
+    )
+
+
+@app.command("snapshot-musicbrainz-work-entities")
+def snapshot_musicbrainz_work_entities(
+    run_id: RunIdOption,
+    input_path: Annotated[
+        Path,
+        typer.Option("--input", exists=True, dir_okay=False, readable=True),
+    ],
+    contact: Annotated[
+        str,
+        typer.Option("--contact", help="MusicBrainz User-Agent 연락처. artifact에는 저장하지 않음"),
+    ],
+    dry_run: DryRunOption = False,
+    resume: ResumeOption = True,
+    limit: LimitOption = 20,
+    json_report: JsonReportOption = None,
+    artifacts_dir: ArtifactsDirOption = Path("artifacts"),
+) -> None:
+    """명시된 MusicBrainz work MBID만 단건 endpoint와 checkpoint로 수집합니다."""
+    options = _options(run_id, dry_run, resume, limit, json_report)
+    try:
+        requests = read_musicbrainz_work_entity_requests(input_path)
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--input") from error
+    try:
+        connector, http_client = build_musicbrainz_work_connector(contact=contact)
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--contact") from error
+    if not isinstance(connector, MusicBrainzWorkConnector):
+        raise RuntimeError("MusicBrainz work connector factory 결과가 올바르지 않습니다.")
+
+    input_sha256 = sha256_bytes(serialize_jsonl(requests))
+    retrieved_at = datetime.now(UTC)
+    store = _store(artifacts_dir)
+    checkpoint_path = (
+        artifacts_dir
+        / options.run_id
+        / "checkpoints"
+        / f"musicbrainz-work-entities-{input_sha256}.json"
+    )
+    try:
+        collection = collect_paginated(
+            run_id=options.run_id,
+            scope=f"exact-works:{input_sha256}",
+            metadata=connector.metadata,
+            fetch_page=lambda size, cursor: fetch_exact_work_request_page(
+                connector,
+                requests,
+                page_size=size,
+                cursor=cursor,
+            ),
+            artifact_store=store,
+            artifacts_root=artifacts_dir,
+            checkpoint_path=checkpoint_path,
+            retrieved_at=retrieved_at,
+            limit=min(options.limit, len(requests)),
+            page_size=1,
+            max_pages=None,
+            dry_run=options.dry_run,
+            resume=options.resume,
+        )
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--input") from error
+    finally:
+        http_client.close()
+
+    result = store.write(
+        run_id=options.run_id,
+        stage=ArtifactStage.RAW,
+        metadata=connector.metadata,
+        records=collection.records,
+        retrieved_at=retrieved_at,
+        dry_run=options.dry_run,
+        resume=options.resume,
+    )
+    _emit(
+        CommandReport(
+            command="snapshot-musicbrainz-work-entities",
+            run_id=options.run_id,
+            dry_run=options.dry_run,
+            input_count=len(requests),
+            output_count=len(collection.records),
+            mutation_count=max(result.mutation_count, collection.artifact_mutation_count),
+            data_path=str(result.data_path),
+            manifest_path=str(result.manifest_path),
+            notes=(
+                f"입력 manifest SHA-256 {input_sha256}",
+                f"exact work 요청 {collection.request_count}회, HTTP 요청당 MBID 1건",
+                f"checkpoint 재사용 행 {collection.resumed_record_count}개",
+                "공식 /ws/2/work/<mbid> endpoint와 1 req/s 제한을 적용했습니다.",
+                "이름 검색, 작곡가 전체 browse, 운영 DB 연결을 수행하지 않았습니다.",
             ),
         ),
         options,
