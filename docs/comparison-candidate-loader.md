@@ -26,9 +26,9 @@ DATABASE_URL='mysql://...' cargo run --bin load_comparison_candidates -- \
   --json-report /tmp/comparison-candidates-dry-run.json
 ```
 
-dry-run은 후보 변경을 rollback하고 `seed_runs`에 검증 결과만 기록합니다. 실제 적재에는 새 `run-id`를 사용하고 `--dry-run`을 제거합니다. 같은 bundle을 다시 적재할 때도 새 `run-id`를 사용해야 하며 두 번째 실행의 `plannedMutations.total`과 `mutations.total`은 0이어야 합니다.
+dry-run은 후보 변경을 rollback하고 `seed_runs`에 검증 결과만 기록합니다. 실제 적재에는 dry-run과 다른 새 `run-id`를 사용하고 `--dry-run`을 제거합니다. 실제 적재 검증은 같은 bundle과 같은 실제 `run-id`에 `--resume`을 붙여 다시 실행하며, `plannedMutations.total`과 `mutations.total`이 모두 0이어야 합니다.
 
-`--resume`은 새 `run-id`로 실행하면서 이미 존재하는 외부 식별자와 후보 자연키를 건너뛰고 남은 행을 계속 검증합니다. 후보 처리는 원자적이므로 중간 checkpoint를 복원하는 기능은 아닙니다. `--limit N`은 전체 JSONL을 먼저 strict 검증한 다음 `candidateKey` 순으로 앞의 N건만 같은 transaction에 적재합니다.
+`--resume`은 성공한 동일 `run-id`의 멱등 재검증 전용입니다. 기존 run의 bundle SHA-256, 처리 행 수, run kind, command, status, dry-run 계약이 모두 같아야 합니다. 한 건이라도 새 mutation이 필요하면 전체 transaction을 rollback하고 실패하므로 누락 데이터를 자동 복구하지 않습니다. 후보 처리는 원자적이며 중간 checkpoint를 복원하는 기능은 아닙니다. `--limit N`은 전체 JSONL을 먼저 strict 검증한 다음 `candidateKey` 순으로 앞의 N건만 같은 transaction에 적재합니다.
 
 ## 다음 단계
 

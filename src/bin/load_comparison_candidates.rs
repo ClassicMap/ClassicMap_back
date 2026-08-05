@@ -101,7 +101,7 @@ fn parse_args(args: &[String]) -> Result<Option<CliOptions>, String> {
 
 fn print_help() {
     println!(
-        "사용법:\n  load_comparison_candidates --bundle <candidates.jsonl> --run-id <uuid> [옵션]\n\n옵션:\n  --dry-run                 전체 DB 검증 후 후보 변경 rollback\n  --resume                  기존 자연키 적재분을 건너뛰며 계속 검증\n  --limit <count>           candidateKey 정렬 후 앞의 N건만 적재\n  --source-code-version     실행 코드 버전\n  --json-report <path>      구조화 JSON 보고서 원자 기록\n  --help                    도움말\n\n환경변수:\n  DATABASE_URL\n  SOURCE_CODE_VERSION"
+        "사용법:\n  load_comparison_candidates --bundle <candidates.jsonl> --run-id <uuid> [옵션]\n\n옵션:\n  --dry-run                 전체 DB 검증 후 후보 변경 rollback\n  --resume                  성공한 동일 run-id와 동일 bundle을 mutation 0으로 재검증\n  --limit <count>           candidateKey 정렬 후 앞의 N건만 적재\n  --source-code-version     실행 코드 버전\n  --json-report <path>      구조화 JSON 보고서 원자 기록\n  --help                    도움말\n\n환경변수:\n  DATABASE_URL\n  SOURCE_CODE_VERSION"
     );
 }
 
