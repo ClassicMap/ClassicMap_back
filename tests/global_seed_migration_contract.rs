@@ -5,10 +5,12 @@ const COMPARISON_API_SCHEMA: &str =
     include_str!("../migrations/202608050002_comparison_api_contract.sql");
 const LEGACY_PERFORMANCE_BACKFILL: &str =
     include_str!("../migrations/202608050003_backfill_legacy_performances.sql");
+const CLIP_ASSET_LOADER_SCHEMA: &str =
+    include_str!("../migrations/202608050004_clip_asset_loader_contract.sql");
 
 #[test]
 fn migrator_embeds_all_global_seed_migrations() {
-    assert_eq!(MIGRATOR.iter().count(), 3);
+    assert_eq!(MIGRATOR.iter().count(), 4);
 }
 
 #[test]
@@ -63,4 +65,7 @@ fn global_seed_migration_contains_required_contracts() {
     assert!(COMPARISON_API_SCHEMA.contains("ADD COLUMN public_url"));
     assert!(LEGACY_PERFORMANCE_BACKFILL.contains("INSERT IGNORE INTO performance_sources"));
     assert!(LEGACY_PERFORMANCE_BACKFILL.contains("INSERT IGNORE INTO performance_credits"));
+    assert!(CLIP_ASSET_LOADER_SCHEMA.contains("ADD COLUMN asset_validated_at"));
+    assert!(CLIP_ASSET_LOADER_SCHEMA.contains("ADD COLUMN range_verified_at"));
+    assert!(CLIP_ASSET_LOADER_SCHEMA.contains("uq_clip_assets_performance_storage"));
 }

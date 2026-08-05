@@ -39,15 +39,16 @@ WORKDIR /app
 
 # Copy the binary (���� �̸� �״��!)
 COPY --from=builder /app/target/release/ClassicMap_back /app/ClassicMap_back
+COPY --from=builder /app/target/release/load_clip_assets /app/load_clip_assets
 
 # Copy configuration files
 COPY --from=builder /app/Rocket.toml ./Rocket.toml
 
 # Create cache directory
-RUN mkdir -p /app/cache/images
+RUN mkdir -p /app/cache/images /var/cache/classicmap-video-clips
 
 # Change ownership to app user
-RUN chown -R appuser:appuser /app
+RUN chown -R appuser:appuser /app /var/cache/classicmap-video-clips
 
 USER appuser
 
