@@ -42,3 +42,7 @@ scripts/test_global_seed_canonical_bundle.sh /absolute/path/to/canonical.jsonl
 ~~~
 
 두 스크립트 모두 임시 MySQL Docker만 사용하며 운영·홈서버 DB에는 쓰지 않습니다.
+
+기존 수동 composer/artist를 authority에 명시 연결하는 JSONL 계약과 안전한
+`authority bootstrap → explicit link → full canonical` 순서는
+`docs/legacy-authority-linkage.md`를 따릅니다. 이름 자동 매칭은 사용하지 않습니다.

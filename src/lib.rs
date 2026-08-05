@@ -12,6 +12,7 @@ pub mod comparison_seed_loader;
 pub mod concert;
 pub mod db;
 pub mod global_seed_loader;
+pub mod legacy_authority_linker;
 pub mod logger;
 pub mod performance;
 pub mod performance_sector;
