@@ -282,6 +282,74 @@ def test_exact_hierarchy_rejects_parent_beyond_depth_without_fetching_it(tmp_pat
     underlying.close()
 
 
+def test_nested_work_hierarchy_targets_root_piece_and_direct_parent_part(tmp_path: Path) -> None:
+    def handler(request: httpx.Request) -> httpx.Response:
+        work_mbid = request.url.path.rsplit("/", maxsplit=1)[-1]
+        if work_mbid == _WORK_A:
+            payload = _work_with_parent(work_mbid, _WORK_B)
+        elif work_mbid == _WORK_B:
+            payload = _work_with_parent(work_mbid, _OTHER_WORK)
+        else:
+            payload = _work(work_mbid)
+        return httpx.Response(200, json=payload, request=request)
+
+    connector, underlying = _connector(httpx.MockTransport(handler))
+    store = JsonlArtifactStore(tmp_path, tool_version="test")
+    retrieved_at = datetime(2026, 8, 5, tzinfo=UTC)
+    collection = collect_exact_work_hierarchy(
+        connector=connector,
+        requests=(MusicBrainzWorkEntityRequest(mbid=_WORK_A),),
+        input_sha256="c" * 64,
+        run_id="nested-work-hierarchy",
+        metadata=connector.metadata,
+        artifact_store=store,
+        artifacts_root=tmp_path,
+        checkpoint_path=tmp_path / "nested-work-hierarchy" / "checkpoints" / "hierarchy.json",
+        retrieved_at=retrieved_at,
+        root_limit=1,
+        max_depth=4,
+        max_records=10,
+        dry_run=False,
+        resume=True,
+    )
+    raw_result = store.write(
+        run_id="nested-work-hierarchy",
+        stage=ArtifactStage.RAW,
+        metadata=connector.metadata,
+        records=collection.records,
+        retrieved_at=retrieved_at,
+        dry_run=False,
+        resume=True,
+    )
+    normalized = normalize_records(list(collection.records))
+    canonical = build_canonical_load_bundle(
+        run_id="nested-work-hierarchy",
+        source_manifest=raw_result.manifest,
+        raw_records=list(collection.records),
+        candidates=normalized,
+        decisions=resolve_candidates(normalized),
+    )
+    part_by_key = {
+        record.natural_key: record for record in canonical if record.table is LoadTable.PIECE_PARTS
+    }
+    child = part_by_key[f"musicbrainz_work_part:{_WORK_A}"]
+    parent = part_by_key[f"musicbrainz_work_part:{_WORK_B}"]
+
+    assert any(
+        foreign_key.column == "piece_id"
+        and foreign_key.target_natural_key == f"musicbrainz_work:{_OTHER_WORK}"
+        for foreign_key in child.foreign_keys
+    )
+    assert any(
+        foreign_key.column == "parent_part_id"
+        and foreign_key.target_natural_key == f"musicbrainz_work_part:{_WORK_B}"
+        for foreign_key in child.foreign_keys
+    )
+    assert not any(foreign_key.column == "parent_part_id" for foreign_key in parent.foreign_keys)
+    assert not any(record.table is LoadTable.REVIEW_QUEUE for record in canonical)
+    underlying.close()
+
+
 def test_exact_raw_resume_and_standard_pipeline_are_idempotent(tmp_path: Path) -> None:
     requested_mbids: list[str] = []
 

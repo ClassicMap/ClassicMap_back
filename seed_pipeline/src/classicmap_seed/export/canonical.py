@@ -44,14 +44,7 @@ def build_canonical_load_bundle(
     raw_by_identity = {(record.source, record.source_record_id): record for record in raw_records}
     candidate_by_id = {candidate.candidate_id: candidate for candidate in candidates}
     source_key_by_candidate: dict[str, str] = {}
-    available_work_mbids = {
-        identifier.value
-        for candidate in candidates
-        if candidate.entity_kind is EntityKind.WORK
-        for identifier in candidate.external_identifiers
-        if identifier.namespace == "musicbrainz_work"
-        and not _work_relations(candidate, relation_type="parts", direction="backward")
-    }
+    available_work_mbids, work_parent_by_mbid = _work_hierarchy_index(candidates)
     records = _run_and_snapshot_records(run_id, source_manifest, snapshot_key)
 
     for candidate in sorted(candidates, key=lambda item: item.candidate_id):
@@ -101,6 +94,7 @@ def build_canonical_load_bundle(
                     decision,
                     source_key_by_candidate,
                     available_work_mbids,
+                    work_parent_by_mbid,
                 )
             )
         elif representative.entity_kind is EntityKind.RECORDING:
@@ -729,6 +723,7 @@ def _work_records(
     decision: ResolutionDecision,
     source_key_by_candidate: dict[str, str],
     available_work_mbids: set[str],
+    work_parent_by_mbid: dict[str, str],
 ) -> list[CanonicalLoadRecord]:
     representative = _choose_representative(candidates)
     source_key = source_key_by_candidate[representative.candidate_id]
@@ -745,7 +740,38 @@ def _work_records(
             return [_review_for_unsupported_entity(run_id, decision, "WORK_PARENT_ID_MISSING")]
         if parent_mbid not in available_work_mbids:
             return [_review_for_unsupported_entity(run_id, decision, "WORK_PARENT_NOT_IN_BUNDLE")]
+        root_mbid, hierarchy_error = _root_work_mbid(
+            work_mbid,
+            work_parent_by_mbid,
+            available_work_mbids,
+        )
+        if hierarchy_error is not None or root_mbid is None:
+            return [
+                _review_for_unsupported_entity(
+                    run_id,
+                    decision,
+                    hierarchy_error or "WORK_PARENT_HIERARCHY_INVALID",
+                )
+            ]
         ordering_key = _object_int(parent, "ordering_key") or 0
+        foreign_keys = [
+            _fk(
+                "piece_id",
+                LoadTable.PIECES,
+                f"musicbrainz_work:{root_mbid}",
+                ForeignKeyResolution.BUNDLE_OR_EXISTING,
+            ),
+            _fk("source_record_id", LoadTable.SOURCE_RECORDS, source_key),
+        ]
+        if parent_mbid != root_mbid:
+            foreign_keys.append(
+                _fk(
+                    "parent_part_id",
+                    LoadTable.PIECE_PARTS,
+                    f"musicbrainz_work_part:{parent_mbid}",
+                    ForeignKeyResolution.BUNDLE_OR_EXISTING,
+                )
+            )
         return [
             _record(
                 run_id,
@@ -759,15 +785,7 @@ def _work_records(
                     "origin": "seed",
                     "editor_locked": False,
                 },
-                foreign_keys=(
-                    _fk(
-                        "piece_id",
-                        LoadTable.PIECES,
-                        f"musicbrainz_work:{parent_mbid}",
-                        ForeignKeyResolution.BUNDLE_OR_EXISTING,
-                    ),
-                    _fk("source_record_id", LoadTable.SOURCE_RECORDS, source_key),
-                ),
+                foreign_keys=tuple(foreign_keys),
                 evidence={
                     "resolution_action": decision.action,
                     "resolution_reason_code": decision.reason_code,
@@ -833,6 +851,45 @@ def _work_records(
         )
     )
     return records
+
+
+def _work_hierarchy_index(
+    candidates: list[NormalizedEntityCandidate],
+) -> tuple[set[str], dict[str, str]]:
+    available: set[str] = set()
+    parent_by_mbid: dict[str, str] = {}
+    for candidate in candidates:
+        if candidate.entity_kind is not EntityKind.WORK:
+            continue
+        work_mbid = _identifier_value(candidate, "musicbrainz_work")
+        if work_mbid is None:
+            continue
+        available.add(work_mbid)
+        parents = _work_relations(candidate, relation_type="parts", direction="backward")
+        if len(parents) != 1:
+            continue
+        parent_mbid = _object_string(parents[0], "target_work_id")
+        if parent_mbid is not None:
+            parent_by_mbid[work_mbid] = parent_mbid
+    return available, parent_by_mbid
+
+
+def _root_work_mbid(
+    work_mbid: str,
+    parent_by_mbid: dict[str, str],
+    available_work_mbids: set[str],
+) -> tuple[str | None, str | None]:
+    current = work_mbid
+    seen: set[str] = set()
+    while current in parent_by_mbid:
+        if current in seen:
+            return None, "WORK_PARENT_CYCLE"
+        seen.add(current)
+        parent_mbid = parent_by_mbid[current]
+        if parent_mbid not in available_work_mbids:
+            return None, "WORK_PARENT_NOT_IN_BUNDLE"
+        current = parent_mbid
+    return current, None
 
 
 def _work_identifier_and_alias_records(
