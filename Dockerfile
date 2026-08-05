@@ -19,6 +19,7 @@ RUN cargo build --release && rm -rf src
 
 # Copy source code
 COPY src ./src
+COPY migrations ./migrations
 COPY Rocket.toml ./
 COPY static ./static
 
