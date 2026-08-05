@@ -19,6 +19,11 @@ FORBIDDEN_DATABASE_ID_KEYS = {
     "pieceId",
     "sectorId",
 }
+SELF_HOSTED_RIGHTS_MODES = {
+    "licensed_self_hosted",
+    "permission_granted",
+    "public_domain",
+}
 
 
 class ValidationError(ValueError):
@@ -182,13 +187,36 @@ def validate_prewarm_template(
         actual = {field: template.get(field) for field in expected}
         if actual != expected:
             raise ValidationError(f"{key}: prewarm 구간이 후보 데이터와 다릅니다.")
-        if template.get("rightsCheckStatus") != "REVIEW_REQUIRED":
-            raise ValidationError(f"{key}: 권리 검토 상태를 임의로 승인할 수 없습니다.")
+        rights_mode = source.get("rightsMode")
+        if rights_mode not in SELF_HOSTED_RIGHTS_MODES:
+            if template.get("rightsCheckStatus") != "REVIEW_REQUIRED":
+                raise ValidationError(f"{key}: 권리 검토 상태를 임의로 승인할 수 없습니다.")
+            continue
+        rights_reviewed_at = require_string(
+            source.get("rightsReviewedAt"), f"{key}.source.rightsReviewedAt"
+        )
+        rights_evidence = require_string(
+            source.get("rightsEvidence"), f"{key}.source.rightsEvidence"
+        )
+        if template.get("rightsCheckStatus") != "RIGHTS_VERIFIED":
+            raise ValidationError(f"{key}: 자체 호스팅 권리 검토 완료 상태가 필요합니다.")
+        if template.get("rightsMode") != rights_mode:
+            raise ValidationError(f"{key}: 후보와 템플릿의 rightsMode가 다릅니다.")
+        if template.get("rightsReviewedAt") != rights_reviewed_at:
+            raise ValidationError(f"{key}: 후보와 템플릿의 rightsReviewedAt이 다릅니다.")
+        if template.get("rightsEvidence") != rights_evidence:
+            raise ValidationError(f"{key}: 후보와 템플릿의 rightsEvidence가 다릅니다.")
 
 
 def render_prewarm(
-    templates: list[dict[str, Any]], id_rows: list[dict[str, Any]], output: TextIO
+    candidates: list[dict[str, Any]],
+    templates: list[dict[str, Any]],
+    id_rows: list[dict[str, Any]],
+    output: TextIO,
 ) -> None:
+    validate_candidates(candidates)
+    validate_prewarm_template(candidates, templates)
+    candidates_by_key = {row["candidateKey"]: row for row in candidates}
     id_map: dict[str, int] = {}
     for index, row in enumerate(id_rows, start=1):
         key = require_string(row.get("candidateKey"), f"id-map:{index}.candidateKey")
@@ -207,11 +235,18 @@ def render_prewarm(
 
     for template in templates:
         key = template["candidateKey"]
+        if template.get("rightsCheckStatus") != "RIGHTS_VERIFIED":
+            raise ValidationError(f"{key}: 권리 검토 전에는 prewarm manifest를 만들 수 없습니다.")
+        source = candidates_by_key[key]["source"]
         rendered = {
             "performanceId": id_map[key],
             "videoId": template["videoId"],
             "start": template["start"],
             "end": template["end"],
+            "candidateStatus": "APPROVED",
+            "rightsMode": source["rightsMode"],
+            "rightsReviewedAt": source["rightsReviewedAt"],
+            "rightsEvidence": source["rightsEvidence"],
         }
         output.write(json.dumps(rendered, ensure_ascii=False, separators=(",", ":")) + "\n")
 
@@ -225,6 +260,7 @@ def build_parser() -> argparse.ArgumentParser:
     validate_parser.add_argument("--prewarm-template", type=Path, required=True)
 
     render_parser = subparsers.add_parser("render-prewarm")
+    render_parser.add_argument("--candidates", type=Path, required=True)
     render_parser.add_argument("--prewarm-template", type=Path, required=True)
     render_parser.add_argument("--id-map", type=Path, required=True)
     return parser
@@ -240,9 +276,10 @@ def main() -> int:
             validate_prewarm_template(candidates, templates)
             print(f"검증 완료: 후보 {len(candidates)}개, prewarm 템플릿 {len(templates)}개")
         else:
+            candidates = read_jsonl(args.candidates)
             templates = read_jsonl(args.prewarm_template)
             id_rows = read_jsonl(args.id_map)
-            render_prewarm(templates, id_rows, sys.stdout)
+            render_prewarm(candidates, templates, id_rows, sys.stdout)
     except ValidationError as error:
         print(f"검증 실패: {error}", file=sys.stderr)
         return 1
