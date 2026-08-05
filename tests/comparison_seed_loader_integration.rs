@@ -167,6 +167,12 @@ fn options(bundle_path: PathBuf, run_id: &str, dry_run: bool) -> ComparisonSeedL
     }
 }
 
+fn resume_options(bundle_path: PathBuf, run_id: &str, dry_run: bool) -> ComparisonSeedLoadOptions {
+    let mut value = options(bundle_path, run_id, dry_run);
+    value.resume = true;
+    value
+}
+
 #[tokio::test]
 #[ignore = "scripts/test_comparison_candidate_loader.sh에서 격리 MySQL로 실행"]
 async fn load_is_atomic_idempotent_and_rights_gated() {
@@ -235,6 +241,13 @@ async fn load_is_atomic_idempotent_and_rights_gated() {
     .await
     .expect("첫 적재");
     assert_eq!(first.mutations.total, 5);
+    let first_mutations =
+        sqlx::query_scalar::<_, i64>("SELECT COUNT(*) FROM seed_mutations WHERE seed_run_id = ?")
+            .bind("20000000-0000-4000-8000-000000000001")
+            .fetch_one(&pool)
+            .await
+            .expect("첫 적재 mutation 확인");
+    assert_eq!(first_mutations, 5);
 
     let states = sqlx::query_as::<_, (String, String, String, String, String, i32, i32)>(
         "SELECT
@@ -281,9 +294,9 @@ async fn load_is_atomic_idempotent_and_rights_gated() {
 
     let second = ComparisonSeedLoader::load(
         &pool,
-        &options(
+        &resume_options(
             bundle.clone(),
-            "20000000-0000-4000-8000-000000000002",
+            "20000000-0000-4000-8000-000000000001",
             false,
         ),
     )
@@ -292,11 +305,11 @@ async fn load_is_atomic_idempotent_and_rights_gated() {
     assert_eq!(second.mutations.total, 0);
     let second_mutations =
         sqlx::query_scalar::<_, i64>("SELECT COUNT(*) FROM seed_mutations WHERE seed_run_id = ?")
-            .bind("20000000-0000-4000-8000-000000000002")
+            .bind("20000000-0000-4000-8000-000000000001")
             .fetch_one(&pool)
             .await
             .expect("재실행 mutation 확인");
-    assert_eq!(second_mutations, 0);
+    assert_eq!(second_mutations, first_mutations);
 
     let part_video = "partvid0001";
     let part_bundle = write_bundle(
@@ -340,7 +353,7 @@ async fn load_is_atomic_idempotent_and_rights_gated() {
             "--bundle",
             bundle.to_str().expect("bundle UTF-8 경로"),
             "--run-id",
-            "20000000-0000-4000-8000-000000000003",
+            "20000000-0000-4000-8000-000000000001",
             "--resume",
         ])
         .output()
@@ -352,6 +365,113 @@ async fn load_is_atomic_idempotent_and_rights_gated() {
     );
     let cli_report: Value = serde_json::from_slice(&cli.stdout).expect("CLI JSON report");
     assert_eq!(cli_report["mutations"]["total"], 0);
+
+    let duplicate = ComparisonSeedLoader::load(
+        &pool,
+        &options(
+            bundle.clone(),
+            "20000000-0000-4000-8000-000000000001",
+            false,
+        ),
+    )
+    .await
+    .expect_err("--resume 없는 기존 run-id 거절");
+    assert_eq!(duplicate.code(), "DUPLICATE_RUN_ID");
+
+    let changed_bundle = unique_path("comparison-changed-sha.jsonl");
+    let original_bundle = fs::read_to_string(&bundle).expect("원본 bundle 읽기");
+    fs::write(
+        &changed_bundle,
+        format!("{} \n", original_bundle.trim_end()),
+    )
+    .expect("SHA 변경 bundle 쓰기");
+    let sha_conflict = ComparisonSeedLoader::load(
+        &pool,
+        &resume_options(
+            changed_bundle.clone(),
+            "20000000-0000-4000-8000-000000000001",
+            false,
+        ),
+    )
+    .await
+    .expect_err("다른 bundle SHA resume 거절");
+    assert_eq!(sha_conflict.code(), "SEED_RUN_RESUME_CONFLICT");
+
+    sqlx::query(
+        "UPDATE seed_runs SET manifest = JSON_SET(manifest, '$.rowCount', 99) WHERE id = ?",
+    )
+    .bind("20000000-0000-4000-8000-000000000001")
+    .execute(&pool)
+    .await
+    .expect("row count 계약 변조");
+    let row_count_conflict = ComparisonSeedLoader::load(
+        &pool,
+        &resume_options(
+            bundle.clone(),
+            "20000000-0000-4000-8000-000000000001",
+            false,
+        ),
+    )
+    .await
+    .expect_err("다른 row count resume 거절");
+    assert_eq!(row_count_conflict.code(), "SEED_RUN_RESUME_CONFLICT");
+    sqlx::query("UPDATE seed_runs SET manifest = JSON_SET(manifest, '$.rowCount', 1) WHERE id = ?")
+        .bind("20000000-0000-4000-8000-000000000001")
+        .execute(&pool)
+        .await
+        .expect("row count 계약 복구");
+
+    sqlx::query("UPDATE seed_runs SET run_kind = 'other' WHERE id = ?")
+        .bind("20000000-0000-4000-8000-000000000001")
+        .execute(&pool)
+        .await
+        .expect("run kind 계약 변조");
+    let kind_conflict = ComparisonSeedLoader::load(
+        &pool,
+        &resume_options(
+            bundle.clone(),
+            "20000000-0000-4000-8000-000000000001",
+            false,
+        ),
+    )
+    .await
+    .expect_err("다른 run kind resume 거절");
+    assert_eq!(kind_conflict.code(), "SEED_RUN_RESUME_CONFLICT");
+    sqlx::query("UPDATE seed_runs SET run_kind = 'comparison_candidates' WHERE id = ?")
+        .bind("20000000-0000-4000-8000-000000000001")
+        .execute(&pool)
+        .await
+        .expect("run kind 계약 복구");
+
+    sqlx::query("UPDATE seed_runs SET status = 'FAILED' WHERE id = ?")
+        .bind("20000000-0000-4000-8000-000000000001")
+        .execute(&pool)
+        .await
+        .expect("status 계약 변조");
+    let status_conflict = ComparisonSeedLoader::load(
+        &pool,
+        &resume_options(
+            bundle.clone(),
+            "20000000-0000-4000-8000-000000000001",
+            false,
+        ),
+    )
+    .await
+    .expect_err("성공하지 않은 run resume 거절");
+    assert_eq!(status_conflict.code(), "SEED_RUN_RESUME_CONFLICT");
+    sqlx::query("UPDATE seed_runs SET status = 'SUCCEEDED' WHERE id = ?")
+        .bind("20000000-0000-4000-8000-000000000001")
+        .execute(&pool)
+        .await
+        .expect("status 계약 복구");
+
+    let dry_run_conflict = ComparisonSeedLoader::load(
+        &pool,
+        &resume_options(bundle.clone(), "20000000-0000-4000-8000-000000000001", true),
+    )
+    .await
+    .expect_err("다른 dry-run 계약 resume 거절");
+    assert_eq!(dry_run_conflict.code(), "SEED_RUN_RESUME_CONFLICT");
 
     let atomic_video = "atomicvid01";
     let missing_video = "missingvid1";
@@ -406,8 +526,42 @@ async fn load_is_atomic_idempotent_and_rights_gated() {
     .expect("manual sector 재확인");
     assert_eq!(manual_sector_after, manual_sector_before);
 
+    sqlx::query(
+        "DELETE job FROM clip_jobs job
+         JOIN performances performance ON performance.id = job.performance_id
+         JOIN performance_sources source ON source.id = performance.performance_source_id
+         WHERE source.provider_video_id = ?",
+    )
+    .bind(video_id)
+    .execute(&pool)
+    .await
+    .expect("resume drift fixture");
+    let drift = ComparisonSeedLoader::load(
+        &pool,
+        &resume_options(
+            bundle.clone(),
+            "20000000-0000-4000-8000-000000000001",
+            false,
+        ),
+    )
+    .await
+    .expect_err("성공 run의 mutation 필요 상태 거절");
+    assert_eq!(drift.code(), "RESUME_MUTATION_DETECTED");
+    let drift_was_not_applied = sqlx::query_scalar::<_, i64>(
+        "SELECT COUNT(*) FROM clip_jobs job
+         JOIN performances performance ON performance.id = job.performance_id
+         JOIN performance_sources source ON source.id = performance.performance_source_id
+         WHERE source.provider_video_id = ?",
+    )
+    .bind(video_id)
+    .fetch_one(&pool)
+    .await
+    .expect("resume drift rollback 확인");
+    assert_eq!(drift_was_not_applied, 0);
+
     fs::remove_file(dry_bundle).expect("dry bundle 삭제");
     fs::remove_file(bundle).expect("valid bundle 삭제");
+    fs::remove_file(changed_bundle).expect("SHA 변경 bundle 삭제");
     fs::remove_file(part_bundle).expect("part bundle 삭제");
     fs::remove_file(atomic_bundle).expect("atomic bundle 삭제");
 }

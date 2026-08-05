@@ -2,7 +2,8 @@ use crate::db::DbPool;
 use chrono::{DateTime, NaiveDateTime, Utc};
 use serde::{Deserialize, Serialize};
 use serde_json::{json, Value};
-use sqlx::{MySql, Transaction};
+use sha2::{Digest, Sha256};
+use sqlx::{MySql, Row, Transaction};
 use std::{collections::HashSet, fmt, fs, path::PathBuf};
 use url::Url;
 
@@ -249,7 +250,7 @@ impl ComparisonSeedLoader {
         options: &ComparisonSeedLoadOptions,
     ) -> Result<ComparisonSeedLoadReport, ComparisonSeedLoadError> {
         validate_uuid(&options.run_id, "runId", None)?;
-        let mut candidates = parse_bundle(&options.bundle_path)?;
+        let (mut candidates, bundle_sha256) = parse_bundle(&options.bundle_path)?;
         if options.limit == Some(0) {
             return Err(ComparisonSeedLoadError::input(
                 "INVALID_LIMIT",
@@ -260,10 +261,16 @@ impl ComparisonSeedLoader {
         if let Some(limit) = options.limit {
             candidates.truncate(limit);
         }
-        ensure_new_run_id(pool, &options.run_id).await?;
+        let manifest = run_manifest(options, &bundle_sha256, candidates.len());
 
         let mut transaction = pool.begin().await?;
-        insert_seed_run(&mut transaction, options).await?;
+        let existing_run = fetch_seed_run(&mut transaction, &options.run_id).await?;
+        validate_resume(existing_run.as_ref(), options, &manifest)?;
+        if existing_run.is_some() {
+            return verify_resumed_run(transaction, &candidates, options).await;
+        }
+
+        insert_seed_run(&mut transaction, options, &manifest).await?;
         let result = apply_candidates(&mut transaction, &candidates, &options.run_id).await;
 
         match result {
@@ -274,7 +281,7 @@ impl ComparisonSeedLoader {
                 });
                 if options.dry_run {
                     transaction.rollback().await?;
-                    insert_terminal_dry_run(pool, options, &summary).await?;
+                    insert_terminal_dry_run(pool, options, &manifest, &summary).await?;
                     Ok(ComparisonSeedLoadReport {
                         status: "dry-run",
                         run_id: options.run_id.clone(),
@@ -301,18 +308,28 @@ impl ComparisonSeedLoader {
             }
             Err(error) => {
                 transaction.rollback().await?;
-                insert_failed_run(pool, options, &candidates, &error).await?;
+                insert_failed_run(pool, options, &manifest, &candidates, &error).await?;
                 Err(error)
             }
         }
     }
 }
 
-fn parse_bundle(path: &PathBuf) -> Result<Vec<ValidatedCandidate>, ComparisonSeedLoadError> {
-    let contents = fs::read_to_string(path).map_err(|error| {
+fn parse_bundle(
+    path: &PathBuf,
+) -> Result<(Vec<ValidatedCandidate>, String), ComparisonSeedLoadError> {
+    let bytes = fs::read(path).map_err(|error| {
         ComparisonSeedLoadError::input(
             "BUNDLE_READ_ERROR",
             format!("후보 bundle을 읽을 수 없음: {error}"),
+            None,
+        )
+    })?;
+    let bundle_sha256 = format!("{:x}", Sha256::digest(&bytes));
+    let contents = String::from_utf8(bytes).map_err(|error| {
+        ComparisonSeedLoadError::input(
+            "BUNDLE_READ_ERROR",
+            format!("후보 bundle이 UTF-8이 아님: {error}"),
             None,
         )
     })?;
@@ -443,7 +460,7 @@ fn parse_bundle(path: &PathBuf) -> Result<Vec<ValidatedCandidate>, ComparisonSee
         ));
     }
     rows.sort_by(|left, right| left.row.candidate_key.cmp(&right.row.candidate_key));
-    Ok(rows)
+    Ok((rows, bundle_sha256))
 }
 
 fn validate_candidate(row: &CandidateRow, line: usize) -> Result<(), ComparisonSeedLoadError> {
@@ -1169,30 +1186,134 @@ async fn record_insert_mutation(
     Ok(())
 }
 
-async fn ensure_new_run_id(pool: &DbPool, run_id: &str) -> Result<(), ComparisonSeedLoadError> {
-    let exists = sqlx::query_scalar::<_, i64>("SELECT COUNT(*) FROM seed_runs WHERE id = ?")
-        .bind(run_id)
-        .fetch_one(pool)
-        .await?;
-    if exists != 0 {
+const RUN_KIND: &str = "comparison_candidates";
+const COMMAND: &str = "load_comparison_candidates";
+const RUN_CONTRACT_VERSION: &str = "comparison-candidate-run-v1";
+
+#[derive(Debug)]
+struct ExistingSeedRun {
+    run_kind: String,
+    command: String,
+    status: String,
+    dry_run: bool,
+    manifest: Value,
+}
+
+fn run_manifest(
+    options: &ComparisonSeedLoadOptions,
+    bundle_sha256: &str,
+    row_count: usize,
+) -> Value {
+    json!({
+        "contractVersion": RUN_CONTRACT_VERSION,
+        "bundleSha256": bundle_sha256,
+        "rowCount": row_count,
+        "limit": options.limit,
+    })
+}
+
+async fn fetch_seed_run(
+    transaction: &mut Transaction<'_, MySql>,
+    run_id: &str,
+) -> Result<Option<ExistingSeedRun>, ComparisonSeedLoadError> {
+    let row = sqlx::query(
+        "SELECT
+            CAST(run_kind AS CHAR CHARACTER SET utf8mb4) AS run_kind,
+            CAST(command AS CHAR CHARACTER SET utf8mb4) AS command,
+            CAST(status AS CHAR CHARACTER SET utf8mb4) AS status,
+            dry_run,
+            manifest
+         FROM seed_runs WHERE id = ? FOR UPDATE",
+    )
+    .bind(run_id)
+    .fetch_optional(&mut **transaction)
+    .await?;
+    row.map(|row| {
+        let manifest: Option<sqlx::types::Json<Value>> = row.try_get("manifest")?;
+        Ok::<ExistingSeedRun, sqlx::Error>(ExistingSeedRun {
+            run_kind: row.try_get("run_kind")?,
+            command: row.try_get("command")?,
+            status: row.try_get("status")?,
+            dry_run: row.try_get("dry_run")?,
+            manifest: manifest.map_or(Value::Null, |value| value.0),
+        })
+    })
+    .transpose()
+    .map_err(ComparisonSeedLoadError::from)
+}
+
+fn validate_resume(
+    existing: Option<&ExistingSeedRun>,
+    options: &ComparisonSeedLoadOptions,
+    manifest: &Value,
+) -> Result<(), ComparisonSeedLoadError> {
+    let Some(existing) = existing else {
+        return Ok(());
+    };
+    if !options.resume {
         return Err(ComparisonSeedLoadError::input(
             "DUPLICATE_RUN_ID",
-            format!("이미 존재하는 runId임: {run_id}"),
+            format!("이미 존재하는 runId임: {}", options.run_id),
+            None,
+        ));
+    }
+    if existing.run_kind != RUN_KIND
+        || existing.command != COMMAND
+        || existing.status != "SUCCEEDED"
+        || existing.dry_run != options.dry_run
+        || existing.manifest != *manifest
+    {
+        return Err(ComparisonSeedLoadError::input(
+            "SEED_RUN_RESUME_CONFLICT",
+            "기존 seed run의 bundle SHA, row count, run kind, command, status 또는 dry-run 계약이 다름",
             None,
         ));
     }
     Ok(())
 }
 
+async fn verify_resumed_run(
+    mut transaction: Transaction<'_, MySql>,
+    candidates: &[ValidatedCandidate],
+    options: &ComparisonSeedLoadOptions,
+) -> Result<ComparisonSeedLoadReport, ComparisonSeedLoadError> {
+    let result = apply_candidates(&mut transaction, candidates, &options.run_id).await;
+    match result {
+        Ok(planned) if planned.total == 0 => {
+            transaction.rollback().await?;
+            Ok(ComparisonSeedLoadReport {
+                status: "succeeded",
+                run_id: options.run_id.clone(),
+                bundle_path: options.bundle_path.display().to_string(),
+                row_count: candidates.len(),
+                dry_run: options.dry_run,
+                mutations: ComparisonSeedMutationCounts::default(),
+                planned_mutations: ComparisonSeedMutationCounts::default(),
+            })
+        }
+        Ok(planned) => {
+            transaction.rollback().await?;
+            Err(ComparisonSeedLoadError::input(
+                "RESUME_MUTATION_DETECTED",
+                format!(
+                    "성공한 동일 run 재검증에서 {}건의 mutation이 필요하므로 적용하지 않음",
+                    planned.total
+                ),
+                None,
+            ))
+        }
+        Err(error) => {
+            transaction.rollback().await?;
+            Err(error)
+        }
+    }
+}
+
 async fn insert_seed_run(
     transaction: &mut Transaction<'_, MySql>,
     options: &ComparisonSeedLoadOptions,
+    manifest: &Value,
 ) -> Result<(), ComparisonSeedLoadError> {
-    let manifest = json!({
-        "bundlePath": options.bundle_path.display().to_string(),
-        "resume": options.resume,
-        "limit": options.limit,
-    });
     sqlx::query(
         "INSERT INTO seed_runs (
             id, run_kind, command, status, dry_run, source_code_version, manifest
@@ -1230,13 +1351,9 @@ async fn finish_seed_run(
 async fn insert_terminal_dry_run(
     pool: &DbPool,
     options: &ComparisonSeedLoadOptions,
+    manifest: &Value,
     summary: &Value,
 ) -> Result<(), ComparisonSeedLoadError> {
-    let manifest = json!({
-        "bundlePath": options.bundle_path.display().to_string(),
-        "resume": options.resume,
-        "limit": options.limit,
-    });
     sqlx::query(
         "INSERT INTO seed_runs (
             id, run_kind, command, status, dry_run, source_code_version,
@@ -1256,14 +1373,10 @@ async fn insert_terminal_dry_run(
 async fn insert_failed_run(
     pool: &DbPool,
     options: &ComparisonSeedLoadOptions,
+    manifest: &Value,
     candidates: &[ValidatedCandidate],
     error: &ComparisonSeedLoadError,
 ) -> Result<(), ComparisonSeedLoadError> {
-    let manifest = json!({
-        "bundlePath": options.bundle_path.display().to_string(),
-        "resume": options.resume,
-        "limit": options.limit,
-    });
     let summary = json!({
         "error": {"code": error.code(), "message": error.to_string(), "line": error.line()},
     });
@@ -1501,7 +1614,11 @@ fn is_youtube_video_id(value: &str) -> bool {
 
 #[cfg(test)]
 mod tests {
-    use super::{parse_bundle, ComparisonSeedLoadError};
+    use super::{
+        parse_bundle, validate_resume, ComparisonSeedLoadError, ComparisonSeedLoadOptions,
+        ExistingSeedRun, COMMAND, RUN_KIND,
+    };
+    use serde_json::json;
     use std::{fs, path::PathBuf, time::SystemTime};
 
     fn pilot_path() -> PathBuf {
@@ -1522,11 +1639,46 @@ mod tests {
 
     #[test]
     fn repository_pilot_is_strictly_valid() {
-        let rows = parse_bundle(&pilot_path()).expect("파일럿 후보 검증");
+        let (rows, bundle_sha256) = parse_bundle(&pilot_path()).expect("파일럿 후보 검증");
         assert_eq!(rows.len(), 15);
+        assert_eq!(bundle_sha256.len(), 64);
         assert!(rows.windows(2).all(|pair| {
             pair[0].row.candidate_key.as_str() < pair[1].row.candidate_key.as_str()
         }));
+    }
+
+    #[test]
+    fn resume_requires_succeeded_identical_run_contract() {
+        let manifest = json!({
+            "contractVersion": "comparison-candidate-run-v1",
+            "bundleSha256": "a".repeat(64),
+            "rowCount": 15,
+            "limit": null,
+        });
+        let options = ComparisonSeedLoadOptions {
+            bundle_path: pilot_path(),
+            run_id: "20000000-0000-4000-8000-000000000001".to_string(),
+            dry_run: false,
+            resume: true,
+            limit: None,
+            source_code_version: Some("unit-test".to_string()),
+        };
+        let succeeded = ExistingSeedRun {
+            run_kind: RUN_KIND.to_string(),
+            command: COMMAND.to_string(),
+            status: "SUCCEEDED".to_string(),
+            dry_run: false,
+            manifest: manifest.clone(),
+        };
+        validate_resume(Some(&succeeded), &options, &manifest).expect("동일 성공 run 재검증");
+
+        let failed = ExistingSeedRun {
+            status: "FAILED".to_string(),
+            ..succeeded
+        };
+        let error = validate_resume(Some(&failed), &options, &manifest)
+            .expect_err("성공하지 않은 run 거절");
+        assert_eq!(error.code(), "SEED_RUN_RESUME_CONFLICT");
     }
 
     #[test]

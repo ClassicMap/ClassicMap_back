@@ -20,7 +20,6 @@ people_run_id=$(jq -r 'select(.table == "seed_runs") | .natural_key' "$people_bu
 link_run_id="44444444-4444-4444-8444-444444444444"
 candidate_dry_run_id="55555555-5555-4555-8555-555555555555"
 candidate_run_id="66666666-6666-4666-8666-666666666666"
-candidate_rerun_id="77777777-7777-4777-8777-777777777777"
 
 cleanup() {
   docker rm -f "$container_name" >/dev/null 2>&1 || true
@@ -79,7 +78,8 @@ cargo run --quiet --manifest-path "$repo_root/Cargo.toml" --bin load_comparison_
   --json-report "$work_dir/candidate.json" >/dev/null
 cargo run --quiet --manifest-path "$repo_root/Cargo.toml" --bin load_comparison_candidates -- \
   --bundle "$candidate_bundle" \
-  --run-id "$candidate_rerun_id" \
+  --run-id "$candidate_run_id" \
+  --resume \
   --json-report "$work_dir/candidate-rerun.json" >/dev/null
 if [[ $(jq -r '.plannedMutations.total' "$work_dir/candidate-rerun.json") != "0" ]]; then
   echo "비교 후보 재실행이 mutation 0이 아닙니다." >&2
@@ -97,7 +97,16 @@ state=$(docker exec --env MYSQL_PWD="$database_password" "$container_name" \
          AND performance.publish_status='DRAFT' AND job.status='PENDING'), ':',
       (SELECT COUNT(*) FROM classicmap.performance_sectors sector
        JOIN classicmap.performance_candidates candidate ON candidate.sector_id=sector.id
-       WHERE candidate.seed_run_id='$candidate_run_id' AND sector.piece_part_id IS NOT NULL), ':',
+       JOIN classicmap.piece_parts part ON part.id=sector.piece_part_id
+       JOIN JSON_TABLE(
+         candidate.evidence,
+         '$.workCandidate.externalIdentifiers[*]' COLUMNS(
+           namespace VARCHAR(64) PATH '$.namespace',
+           external_id VARCHAR(64) PATH '$.value'
+         )
+       ) work_identifier ON work_identifier.namespace='musicbrainz_work'
+       WHERE candidate.seed_run_id='$candidate_run_id'
+         AND part.part_key=CONCAT('musicbrainz:', work_identifier.external_id)), ':',
       (SELECT COUNT(*) FROM classicmap.clip_assets asset
        JOIN classicmap.performances performance ON performance.id=asset.performance_id
        WHERE performance.seed_run_id='$candidate_run_id'), ':',
