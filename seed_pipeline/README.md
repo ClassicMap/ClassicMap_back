@@ -168,7 +168,7 @@ uv run classicmap-seed export-canonical \
 
 `snapshot-musicbrainz-dump`는 로컬 `mbdump.tar.bz2`를 streaming으로 읽어 작품과 녹음의 raw snapshot을 만듭니다. 실행 중 네트워크, 운영 DB, 홈서버를 사용하지 않습니다. 압축 파일 전체를 메모리에 올리지 않고 PostgreSQL COPY 행을 순차 처리하며, exact FK join에는 `artifacts/_indexes/musicbrainz/<input-sha256>.sqlite` 로컬 파생 index를 사용합니다.
 
-입력 sidecar의 `source_url`은 `LATEST`가 아닌 `https://data.metabrainz.org/pub/musicbrainz/data/fullexport/YYYYMMDD-HHMMSS/mbdump.tar.bz2` 형식이어야 합니다. URL 날짜, `release_date`, 실제 파일의 SHA-256과 크기가 모두 일치해야 합니다. tar 내부 `mbdump/SCHEMA_SEQUENCE`는 현재 지원 계약인 31이어야 하며 필수 core member가 하나라도 없거나 중복되면 중단합니다.
+입력 sidecar의 `source_url`은 `LATEST`가 아닌 `https://data.metabrainz.org/pub/musicbrainz/data/fullexport/YYYYMMDD-HHMMSS/mbdump.tar.bz2` 형식이어야 합니다. URL 날짜, `release_date`, 실제 파일의 SHA-256과 크기가 모두 일치해야 합니다. tar 루트의 `SCHEMA_SEQUENCE`는 현재 지원 계약인 31이어야 하며 필수 core member가 하나라도 없거나 중복되면 중단합니다.
 
 ```json
 {
@@ -193,15 +193,16 @@ uv run classicmap-seed snapshot-musicbrainz-dump \
   --json-report reports/musicbrainz-20260801-part-000.json
 ```
 
-ordinal은 `work.internal_id` 오름차순 다음 `recording.internal_id` 오름차순으로 부여한 0-based 순서입니다. partition은 `[start-ordinal, end-ordinal)`이며 같은 input SHA에서는 결정적입니다. checkpoint에는 다음 ordinal과 immutable page manifest 경로만 기록합니다.
+ordinal은 `work.internal_id` 오름차순 다음 `recording.internal_id` 오름차순으로 부여한 0-based 순서입니다. partition은 `[start-ordinal, end-ordinal)`이며 같은 input SHA에서는 결정적입니다. checkpoint에는 다음 ordinal과 immutable page manifest 경로만 기록합니다. resume 시 page 본문 전체를 역직렬화하지 않고 manifest provenance, SHA-256과 행 수를 streaming 검증합니다. 최종 aggregate JSONL도 page 파일을 순차 결합하므로 메모리는 누적 출력량이 아니라 현재 COPY 행, 현재 entity 관계와 checkpoint page 크기에 제한됩니다.
 
 raw 계약은 다음 exact 연결을 보존합니다.
 
 - 작품: MusicBrainz work MBID, ISWC, work type MBID, artist-work 관계, 작곡가 artist MBID
 - 녹음: MusicBrainz recording MBID, ISRC, 재생시간, artist credit MBID, credit별 artist MBID, recording-work 관계
 - 관계 의미: numeric ID나 표시명이 아니라 공식 `link_type.gid`가 composer 또는 performance UUID와 정확히 같고 entity 방향도 일치할 때만 부여
+- 관계 qualifier: link 날짜와 종료 상태, `entity0_credit`/`entity1_credit`, `link_attribute_type.gid`와 표시명을 raw payload에 보존
 
-이름은 payload의 표시 근거일 뿐 병합이나 관계 확정에 사용하지 않습니다. 잘못된 MBID/ISRC/ISWC는 malformed review로, 끊어진 credit/link/artist/work FK는 unresolved review로 따로 출력합니다. raw manifest만 normalize 입력으로 사용하며 두 review manifest는 입력으로 사용하지 않습니다.
+이름은 payload의 표시 근거일 뿐 병합이나 관계 확정에 사용하지 않습니다. 잘못된 MBID/ISRC/ISWC는 malformed review로, 끊어진 credit/link/artist/work FK는 unresolved review로 따로 출력합니다. root work/recording이 없는 orphan ISRC/ISWC/관계도 첫 partition의 review에 한 번만 남깁니다. raw manifest만 normalize 입력으로 사용하며 두 review manifest는 입력으로 사용하지 않습니다.
 
 현재 MusicBrainz recording은 ClassicMap의 앨범 단위 `recordings`와 같은 엔티티가 아니고 `recording_contributors`도 Python/Rust canonical loader 계약에 아직 없습니다. 또한 이 collector는 work hierarchy 전체를 적재 계약으로 확정하지 않았습니다. 따라서 dump의 work와 recording은 normalize 단계에서 exact identifier 후보로 읽을 수 있지만 `export-canonical`에서는 각각 `MUSICBRAINZ_DUMP_WORK_RAW_ONLY`, `MUSICBRAINZ_DUMP_RECORDING_RAW_ONLY` review로 남습니다. `recordings`, `recording_tracks`, `recording_contributors`, `track_piece_links`를 자동 생성하지 않습니다. 해당 loader 계약이 별도 승인되기 전에는 이 raw-only 경계를 해제하지 않습니다.
 
