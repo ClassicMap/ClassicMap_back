@@ -43,6 +43,8 @@ cargo test --quiet --manifest-path "$repo_root/Cargo.toml" \
   --test clip_asset_loader_integration -- --ignored --test-threads=1
 cargo test --quiet --manifest-path "$repo_root/Cargo.toml" \
   --test global_seed_loader_integration -- --ignored --test-threads=1
+cargo test --quiet --manifest-path "$repo_root/Cargo.toml" \
+  --test legacy_authority_linker_integration -- --ignored --test-threads=1
 
 backfill_counts_before=$(docker exec --env MYSQL_PWD="$database_password" "$container_name" \
   mysql --batch --skip-column-names --user=root --execute="

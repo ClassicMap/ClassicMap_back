@@ -7,7 +7,7 @@ use sqlx::{MySql, QueryBuilder, Row, Transaction};
 use std::{
     collections::{BTreeMap, HashMap, HashSet},
     fmt,
-    fs::File,
+    fs::{self, File},
     io::{BufRead, BufReader},
     path::PathBuf,
 };
@@ -23,6 +23,45 @@ pub struct GlobalSeedLoadOptions {
     pub run_id: Option<Uuid>,
     pub resume: bool,
     pub limit: Option<usize>,
+}
+
+#[derive(Debug, Clone)]
+pub struct AuthorityBootstrapOptions {
+    pub source_bundle_path: PathBuf,
+    pub output_bundle_path: PathBuf,
+    pub dry_run: bool,
+    pub resume: bool,
+    pub run_id: Option<Uuid>,
+    pub limit: Option<usize>,
+}
+
+impl AuthorityBootstrapOptions {
+    pub fn new(source_bundle_path: PathBuf, output_bundle_path: PathBuf) -> Self {
+        Self {
+            source_bundle_path,
+            output_bundle_path,
+            dry_run: false,
+            resume: true,
+            run_id: None,
+            limit: None,
+        }
+    }
+}
+
+#[derive(Debug, Clone, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct AuthorityBootstrapReport {
+    pub status: &'static str,
+    pub contract_version: &'static str,
+    pub source_bundle_path: String,
+    pub output_bundle_path: String,
+    pub seed_run_id: String,
+    pub source_row_count: usize,
+    pub output_row_count: usize,
+    pub output_sha256: String,
+    pub dry_run: bool,
+    pub written: bool,
+    pub table_counts: BTreeMap<String, u64>,
 }
 
 impl GlobalSeedLoadOptions {
@@ -1242,6 +1281,174 @@ struct MutationEvent {
 pub struct GlobalSeedLoader;
 
 impl GlobalSeedLoader {
+    pub fn prepare_authority_bootstrap(
+        options: &AuthorityBootstrapOptions,
+    ) -> Result<AuthorityBootstrapReport, GlobalSeedLoadError> {
+        if options.source_bundle_path == options.output_bundle_path {
+            return Err(GlobalSeedLoadError::input(
+                "BOOTSTRAP_OUTPUT_EQUALS_SOURCE",
+                "authority bootstrap 출력 경로는 원본 canonical bundle과 달라야 함",
+                None,
+            ));
+        }
+        let mut load_options = GlobalSeedLoadOptions::new(options.source_bundle_path.clone());
+        load_options.run_id = options.run_id;
+        load_options.limit = options.limit;
+        let records = parse_bundle(&load_options)?;
+        let source_row_count = records.len();
+        let seed_run_id = records[0].record.seed_run_id.clone();
+        let identity_to_index = records
+            .iter()
+            .enumerate()
+            .map(|(index, item)| ((item.record.table, item.record.natural_key.clone()), index))
+            .collect::<HashMap<_, _>>();
+        let mut included = records
+            .iter()
+            .enumerate()
+            .filter_map(|(index, item)| {
+                matches!(
+                    item.record.table,
+                    LoadTable::SeedRuns
+                        | LoadTable::AuthorityEntities
+                        | LoadTable::ExternalIdentifiers
+                )
+                .then_some(index)
+            })
+            .collect::<HashSet<_>>();
+        let mut pending = included.iter().copied().collect::<Vec<_>>();
+        while let Some(index) = pending.pop() {
+            for foreign_key in &records[index].record.foreign_keys {
+                let identity = (
+                    foreign_key.target_table,
+                    foreign_key.target_natural_key.clone(),
+                );
+                let dependency_index =
+                    identity_to_index.get(&identity).copied().ok_or_else(|| {
+                        GlobalSeedLoadError::input(
+                            "AUTHORITY_BOOTSTRAP_NOT_SELF_CONTAINED",
+                            format!(
+                                "authority bootstrap dependency가 원본 bundle에 없음: {}:{}",
+                                foreign_key.target_table.as_str(),
+                                foreign_key.target_natural_key
+                            ),
+                            Some(records[index].line),
+                        )
+                    })?;
+                if included.insert(dependency_index) {
+                    pending.push(dependency_index);
+                }
+            }
+        }
+        let allowed_tables = [
+            LoadTable::SeedRuns,
+            LoadTable::SourceSnapshots,
+            LoadTable::SourceRecords,
+            LoadTable::AuthorityEntities,
+            LoadTable::ExternalIdentifiers,
+        ]
+        .into_iter()
+        .collect::<HashSet<_>>();
+        let selected = records
+            .iter()
+            .enumerate()
+            .filter(|(index, _)| included.contains(index))
+            .map(|(_, item)| item)
+            .collect::<Vec<_>>();
+        if selected
+            .iter()
+            .any(|item| !allowed_tables.contains(&item.record.table))
+        {
+            return Err(GlobalSeedLoadError::input(
+                "UNSAFE_AUTHORITY_BOOTSTRAP_DEPENDENCY",
+                "authority bootstrap dependency closure에 허용되지 않은 table이 포함됨",
+                None,
+            ));
+        }
+        if !selected
+            .iter()
+            .any(|item| item.record.table == LoadTable::AuthorityEntities)
+            || !selected
+                .iter()
+                .any(|item| item.record.table == LoadTable::ExternalIdentifiers)
+        {
+            return Err(GlobalSeedLoadError::input(
+                "AUTHORITY_BOOTSTRAP_CONTENT_MISSING",
+                "authority bootstrap에는 authority_entities와 external_identifiers가 모두 필요함",
+                None,
+            ));
+        }
+
+        let mut output = Vec::new();
+        let mut table_counts = BTreeMap::new();
+        for item in &selected {
+            serde_json::to_writer(&mut output, &item.record).map_err(|error| {
+                GlobalSeedLoadError::input(
+                    "BOOTSTRAP_SERIALIZATION_ERROR",
+                    format!("authority bootstrap record를 직렬화할 수 없음: {error}"),
+                    Some(item.line),
+                )
+            })?;
+            output.push(b'\n');
+            *table_counts
+                .entry(item.record.table.as_str().to_string())
+                .or_insert(0) += 1;
+        }
+        let output_sha256 = format!("{:x}", Sha256::digest(&output));
+        let written = if options.dry_run {
+            false
+        } else if options.output_bundle_path.exists() {
+            let existing = fs::read(&options.output_bundle_path)?;
+            if existing != output {
+                return Err(GlobalSeedLoadError::input(
+                    "BOOTSTRAP_OUTPUT_CONFLICT",
+                    "기존 authority bootstrap 파일의 내용이 결정적 출력과 다름",
+                    None,
+                ));
+            }
+            if !options.resume {
+                return Err(GlobalSeedLoadError::input(
+                    "BOOTSTRAP_OUTPUT_ALREADY_EXISTS",
+                    "authority bootstrap 출력 파일이 이미 존재함",
+                    None,
+                ));
+            }
+            false
+        } else {
+            if let Some(parent) = options
+                .output_bundle_path
+                .parent()
+                .filter(|parent| !parent.as_os_str().is_empty())
+            {
+                fs::create_dir_all(parent)?;
+            }
+            let temporary_path = options.output_bundle_path.with_extension(format!(
+                "{}.{}.tmp",
+                options
+                    .output_bundle_path
+                    .extension()
+                    .and_then(|extension| extension.to_str())
+                    .unwrap_or("jsonl"),
+                std::process::id()
+            ));
+            fs::write(&temporary_path, &output)?;
+            fs::rename(&temporary_path, &options.output_bundle_path)?;
+            true
+        };
+        Ok(AuthorityBootstrapReport {
+            status: "succeeded",
+            contract_version: CONTRACT_VERSION,
+            source_bundle_path: options.source_bundle_path.display().to_string(),
+            output_bundle_path: options.output_bundle_path.display().to_string(),
+            seed_run_id,
+            source_row_count,
+            output_row_count: selected.len(),
+            output_sha256,
+            dry_run: options.dry_run,
+            written,
+            table_counts,
+        })
+    }
+
     pub async fn load(
         pool: &DbPool,
         options: &GlobalSeedLoadOptions,
@@ -1295,10 +1502,25 @@ impl GlobalSeedLoader {
                 let fingerprint_exact = registry
                     .as_ref()
                     .is_some_and(|value| value.record_fingerprint == item.fingerprint);
+                let explicit_legacy_link = if !exact
+                    && matches!(item.record.table, LoadTable::Composers | LoadTable::Artists)
+                    && (state.origin.as_deref() == Some("manual") || state.editor_locked)
+                {
+                    has_explicit_legacy_authority_link(
+                        &mut transaction,
+                        item.record.table,
+                        &target_id,
+                        &resolved_values,
+                        &state.values,
+                    )
+                    .await?
+                } else {
+                    false
+                };
                 if item.record.table == LoadTable::SeedRuns {
                     (PlannedAction::Reuse, target_id, Some(state.values))
                 } else if state.origin.as_deref() == Some("manual") || state.editor_locked {
-                    if !exact {
+                    if !exact && !explicit_legacy_link {
                         return Err(GlobalSeedLoadError::input(
                             "MANUAL_ROW_CONFLICT",
                             format!(
@@ -1512,6 +1734,41 @@ impl GlobalSeedLoader {
             rollback_manifest,
         })
     }
+}
+
+async fn has_explicit_legacy_authority_link(
+    transaction: &mut Transaction<'_, MySql>,
+    table: LoadTable,
+    target_id: &str,
+    desired: &Map<String, Value>,
+    current: &Value,
+) -> Result<bool, GlobalSeedLoadError> {
+    let desired_authority = desired.get("authority_entity_id").and_then(Value::as_str);
+    let current_authority = current.get("authority_entity_id").and_then(Value::as_str);
+    let Some(authority_entity_id) =
+        desired_authority.filter(|value| Some(*value) == current_authority)
+    else {
+        return Ok(false);
+    };
+    let count = sqlx::query_scalar::<_, i64>(
+        "SELECT COUNT(*)
+         FROM seed_mutations mutation
+         JOIN seed_runs run ON run.id = mutation.seed_run_id
+         WHERE run.run_kind = 'legacy_authority_linkage'
+           AND run.command = 'link_legacy_authorities'
+           AND run.status = 'SUCCEEDED'
+           AND mutation.target_table = ?
+           AND mutation.target_id = ?
+           AND mutation.operation = 'UPDATE'
+           AND mutation.manual_guard_confirmed = TRUE
+           AND JSON_UNQUOTE(JSON_EXTRACT(mutation.after_json, '$.authority_entity_id')) = ?",
+    )
+    .bind(table.as_str())
+    .bind(target_id)
+    .bind(authority_entity_id)
+    .fetch_one(&mut **transaction)
+    .await?;
+    Ok(count > 0)
 }
 
 async fn preflight_existing_foreign_keys(
