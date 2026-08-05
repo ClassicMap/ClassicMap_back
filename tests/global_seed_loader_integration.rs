@@ -156,6 +156,38 @@ fn stable_identifier(seed_run_id: &str, entity_id: &str, source_id: &str, mbid: 
     )
 }
 
+fn namespace_identifier(
+    seed_run_id: &str,
+    entity_id: &str,
+    source_id: &str,
+    namespace: &str,
+    external_id: &str,
+) -> Value {
+    record(
+        seed_run_id,
+        "external_identifiers",
+        &format!("{namespace}:{external_id}"),
+        json!({
+            "namespace": namespace,
+            "external_id": external_id
+        }),
+        vec![
+            foreign_key(
+                "authority_entity_id",
+                "authority_entities",
+                entity_id,
+                "bundle",
+            ),
+            foreign_key(
+                "source_record_id",
+                "source_records",
+                &format!("{SNAPSHOT_KEY}:{source_id}"),
+                "bundle",
+            ),
+        ],
+    )
+}
+
 fn valid_bundle() -> Vec<Value> {
     let composer_source = format!("{SNAPSHOT_KEY}:Q-COMPOSER");
     let artist_source = format!("{SNAPSHOT_KEY}:Q-ARTIST");
@@ -186,6 +218,20 @@ fn valid_bundle() -> Vec<Value> {
         authority(COMPOSER_ENTITY_ID, "person", "Q-COMPOSER", RUN_ID),
         authority(ARTIST_ENTITY_ID, "person", "Q-ARTIST", RUN_ID),
         stable_identifier(RUN_ID, COMPOSER_ENTITY_ID, "Q-COMPOSER", "composer-mbid"),
+        namespace_identifier(
+            RUN_ID,
+            COMPOSER_ENTITY_ID,
+            "Q-COMPOSER",
+            "gnd",
+            "fixture-gnd-1",
+        ),
+        namespace_identifier(
+            RUN_ID,
+            COMPOSER_ENTITY_ID,
+            "Q-COMPOSER",
+            "gnd",
+            "fixture-gnd-2",
+        ),
         stable_identifier(RUN_ID, ARTIST_ENTITY_ID, "Q-ARTIST", "artist-mbid"),
         record(
             RUN_ID,
@@ -407,6 +453,15 @@ async fn canonical_bundle_is_atomic_manual_safe_and_idempotent() {
     .await
     .expect("stable key duplicate");
     assert_eq!(duplicate_counts, (1, 1, 1));
+    let multiple_namespace_ids = sqlx::query_scalar::<_, i64>(
+        "SELECT COUNT(*) FROM external_identifiers
+         WHERE authority_entity_id = ? AND namespace = 'gnd'",
+    )
+    .bind(COMPOSER_ENTITY_ID)
+    .fetch_one(&pool)
+    .await
+    .expect("동일 namespace 복수 ID");
+    assert_eq!(multiple_namespace_ids, 2);
 
     let mutation_count_before =
         sqlx::query_scalar::<_, i64>("SELECT COUNT(*) FROM seed_mutations WHERE seed_run_id = ?")

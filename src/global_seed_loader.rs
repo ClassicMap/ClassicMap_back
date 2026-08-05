@@ -1208,8 +1208,11 @@ fn topological_order(records: Vec<BundleRecord>) -> Result<Vec<BundleRecord>, Gl
 
 #[derive(Debug, Clone)]
 struct RegistryState {
+    natural_key: String,
     target_id: String,
     record_fingerprint: String,
+    first_seed_run_id: String,
+    last_seed_run_id: String,
 }
 
 #[derive(Debug, Clone)]
@@ -1229,7 +1232,7 @@ enum PlannedAction {
 
 #[derive(Debug, Clone)]
 struct MutationEvent {
-    table: LoadTable,
+    target_table: String,
     target_id: String,
     operation: &'static str,
     before: Option<Value>,
@@ -1246,6 +1249,7 @@ impl GlobalSeedLoader {
         let records = parse_bundle(options)?;
         let seed_run_id = records[0].record.seed_run_id.clone();
         let mut transaction = pool.begin().await?;
+        preflight_existing_foreign_keys(&mut transaction, &records).await?;
         let mut natural_targets: HashMap<(LoadTable, String), String> = HashMap::new();
         let mut planned = GlobalSeedMutationCounts::default();
         let mut table_mutations = BTreeMap::new();
@@ -1344,7 +1348,12 @@ impl GlobalSeedLoader {
                 PlannedAction::Reuse => planned.reused += 1,
                 PlannedAction::ProtectedReuse => planned.protected_reused += 1,
             }
-            if registry.is_none() {
+            let registry_needs_mutation = registry.as_ref().is_none_or(|state| {
+                state.target_id != target_id
+                    || state.record_fingerprint != item.fingerprint
+                    || state.last_seed_run_id != seed_run_id
+            });
+            if registry_needs_mutation {
                 planned.registry_mappings += 1;
             }
             if matches!(action, PlannedAction::Insert | PlannedAction::Update) {
@@ -1361,6 +1370,22 @@ impl GlobalSeedLoader {
                         "RESTORE".to_string()
                     },
                     restore_json: before.clone(),
+                });
+            }
+            if registry_needs_mutation {
+                *table_mutations
+                    .entry("seed_natural_keys".to_string())
+                    .or_insert(0) += 1;
+                planned_rollbacks.push(RollbackEntry {
+                    sequence: planned_rollbacks.len() + 1,
+                    target_table: "seed_natural_keys".to_string(),
+                    target_id: natural_key_sha256(&item.record.natural_key),
+                    reverse_operation: if registry.is_none() {
+                        "DELETE".to_string()
+                    } else {
+                        "RESTORE".to_string()
+                    },
+                    restore_json: registry.as_ref().map(registry_json),
                 });
             }
 
@@ -1392,7 +1417,7 @@ impl GlobalSeedLoader {
                             .values;
                     if before.as_ref() != Some(&after) {
                         events.push(MutationEvent {
-                            table: item.record.table,
+                            target_table: item.record.table.as_str().to_string(),
                             target_id: actual_target_id.clone(),
                             operation: if action == PlannedAction::Insert {
                                 "INSERT"
@@ -1404,6 +1429,29 @@ impl GlobalSeedLoader {
                         });
                     }
                 }
+                if registry_needs_mutation {
+                    let after_registry = RegistryState {
+                        natural_key: item.record.natural_key.clone(),
+                        target_id: actual_target_id.clone(),
+                        record_fingerprint: item.fingerprint.clone(),
+                        first_seed_run_id: registry.as_ref().map_or_else(
+                            || seed_run_id.clone(),
+                            |state| state.first_seed_run_id.clone(),
+                        ),
+                        last_seed_run_id: seed_run_id.clone(),
+                    };
+                    events.push(MutationEvent {
+                        target_table: "seed_natural_keys".to_string(),
+                        target_id: natural_key_sha256(&item.record.natural_key),
+                        operation: if registry.is_none() {
+                            "INSERT"
+                        } else {
+                            "UPDATE"
+                        },
+                        before: registry.as_ref().map(registry_json),
+                        after: Some(registry_json(&after_registry)),
+                    });
+                }
                 actual_target_id
             };
             natural_targets.insert(
@@ -1412,7 +1460,7 @@ impl GlobalSeedLoader {
             );
         }
 
-        planned.total = planned.inserted + planned.updated;
+        planned.total = planned.inserted + planned.updated + planned.registry_mappings;
         let rollback_manifest =
             rollback_manifest(&seed_run_id, options.dry_run, &events, &planned_rollbacks);
         let mutations = if options.dry_run {
@@ -1422,18 +1470,26 @@ impl GlobalSeedLoader {
             let mut actual = planned.clone();
             actual.inserted = events
                 .iter()
-                .filter(|event| event.operation == "INSERT")
+                .filter(|event| {
+                    event.operation == "INSERT" && event.target_table != "seed_natural_keys"
+                })
                 .count() as u64;
             actual.updated = events
                 .iter()
-                .filter(|event| event.operation == "UPDATE")
+                .filter(|event| {
+                    event.operation == "UPDATE" && event.target_table != "seed_natural_keys"
+                })
                 .count() as u64;
-            actual.total = actual.inserted + actual.updated;
+            actual.registry_mappings = events
+                .iter()
+                .filter(|event| event.target_table == "seed_natural_keys")
+                .count() as u64;
+            actual.total = actual.inserted + actual.updated + actual.registry_mappings;
             finish_seed_run(&mut transaction, &seed_run_id, records.len(), &actual).await?;
             for event in &mut events {
-                if event.table == LoadTable::SeedRuns {
+                if event.target_table == LoadTable::SeedRuns.as_str() {
                     event.after =
-                        fetch_target_state(&mut transaction, event.table, &event.target_id)
+                        fetch_target_state(&mut transaction, LoadTable::SeedRuns, &event.target_id)
                             .await?
                             .map(|state| state.values);
                 }
@@ -1456,6 +1512,52 @@ impl GlobalSeedLoader {
             rollback_manifest,
         })
     }
+}
+
+async fn preflight_existing_foreign_keys(
+    transaction: &mut Transaction<'_, MySql>,
+    records: &[BundleRecord],
+) -> Result<(), GlobalSeedLoadError> {
+    let bundle_targets = records
+        .iter()
+        .map(|item| (item.record.table, item.record.natural_key.as_str()))
+        .collect::<HashSet<_>>();
+    let mut checked = HashSet::new();
+    for item in records {
+        for foreign_key in &item.record.foreign_keys {
+            if foreign_key.resolution != ForeignKeyResolution::BundleOrExisting
+                || bundle_targets.contains(&(
+                    foreign_key.target_table,
+                    foreign_key.target_natural_key.as_str(),
+                ))
+                || !checked.insert((
+                    foreign_key.target_table,
+                    foreign_key.target_natural_key.as_str(),
+                ))
+            {
+                continue;
+            }
+            if resolve_existing_natural_target(
+                transaction,
+                foreign_key.target_table,
+                &foreign_key.target_natural_key,
+            )
+            .await?
+            .is_none()
+            {
+                return Err(GlobalSeedLoadError::input(
+                    "EXISTING_FOREIGN_KEY_MISSING",
+                    format!(
+                        "bundle_or_existing target이 없음: {}:{}",
+                        foreign_key.target_table.as_str(),
+                        foreign_key.target_natural_key
+                    ),
+                    Some(item.line),
+                ));
+            }
+        }
+    }
+    Ok(())
 }
 
 fn planned_target_id(item: &BundleRecord) -> String {
@@ -1583,7 +1685,9 @@ async fn fetch_registry(
     let row = sqlx::query(
         "SELECT CAST(natural_key AS CHAR CHARACTER SET utf8mb4) AS natural_key,
                 CAST(target_id AS CHAR CHARACTER SET utf8mb4) AS target_id,
-                CAST(record_fingerprint AS CHAR CHARACTER SET utf8mb4) AS record_fingerprint
+                CAST(record_fingerprint AS CHAR CHARACTER SET utf8mb4) AS record_fingerprint,
+                CAST(first_seed_run_id AS CHAR CHARACTER SET utf8mb4) AS first_seed_run_id,
+                CAST(last_seed_run_id AS CHAR CHARACTER SET utf8mb4) AS last_seed_run_id
          FROM seed_natural_keys
          WHERE target_table = ? AND natural_key_sha256 = ?
          FOR UPDATE",
@@ -1607,9 +1711,22 @@ async fn fetch_registry(
         ));
     }
     Ok(Some(RegistryState {
+        natural_key: stored_key,
         target_id: row.try_get("target_id")?,
         record_fingerprint: row.try_get("record_fingerprint")?,
+        first_seed_run_id: row.try_get("first_seed_run_id")?,
+        last_seed_run_id: row.try_get("last_seed_run_id")?,
     }))
+}
+
+fn registry_json(state: &RegistryState) -> Value {
+    serde_json::json!({
+        "natural_key": state.natural_key,
+        "target_id": state.target_id,
+        "record_fingerprint": state.record_fingerprint,
+        "first_seed_run_id": state.first_seed_run_id,
+        "last_seed_run_id": state.last_seed_run_id,
+    })
 }
 
 async fn resolve_existing_natural_target(
@@ -2313,7 +2430,7 @@ async fn insert_mutation(
          ) VALUES (?, ?, ?, ?, ?, ?, TRUE)",
     )
     .bind(seed_run_id)
-    .bind(event.table.as_str())
+    .bind(&event.target_table)
     .bind(&event.target_id)
     .bind(event.operation)
     .bind(event.before.clone().map(sqlx::types::Json))
@@ -2349,7 +2466,7 @@ fn rollback_manifest(
             .enumerate()
             .map(|(index, event)| RollbackEntry {
                 sequence: index + 1,
-                target_table: event.table.as_str().to_string(),
+                target_table: event.target_table.clone(),
                 target_id: event.target_id.clone(),
                 reverse_operation: if event.operation == "INSERT" {
                     "DELETE".to_string()
