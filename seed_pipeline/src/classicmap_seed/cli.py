@@ -15,7 +15,7 @@ from classicmap_seed.artifacts import (
     serialize_jsonl,
     sha256_bytes,
 )
-from classicmap_seed.export import build_canonical_load_bundle
+from classicmap_seed.export import build_canonical_load_bundle, build_publishable_work_bundle
 from classicmap_seed.models import (
     ArtifactStage,
     CanonicalLoadRecord,
@@ -1084,6 +1084,90 @@ def export_canonical(
             notes=(
                 "운영 DB 연결 없이 JSONL load bundle만 생성했습니다.",
                 "모든 write policy는 manual/editor_locked 보존입니다.",
+            ),
+        ),
+        options,
+    )
+
+
+@app.command("prepare-publishable-works")
+def prepare_publishable_works(
+    run_id: RunIdOption,
+    work_manifest_path: Annotated[
+        Path,
+        typer.Option(
+            "--work-manifest",
+            exists=True,
+            dir_okay=False,
+            readable=True,
+            help="작품 canonical manifest",
+        ),
+    ],
+    composer_manifest_paths: Annotated[
+        list[Path],
+        typer.Option(
+            "--composer-manifest",
+            exists=True,
+            dir_okay=False,
+            readable=True,
+            help="먼저 적재할 composer canonical manifest. 여러 번 지정 가능",
+        ),
+    ],
+    dry_run: DryRunOption = False,
+    resume: ResumeOption = True,
+    limit: LimitOption = 100_000,
+    json_report: JsonReportOption = None,
+    artifacts_dir: ArtifactsDirOption = Path("artifacts"),
+) -> None:
+    """composer exact dependency가 준비된 작품만 load 가능한 bundle로 만듭니다."""
+    options = _options(run_id, dry_run, resume, limit, json_report)
+    work_manifest, work_records = read_artifact(work_manifest_path, CanonicalLoadRecord)
+    _require_stage(work_manifest.stage, ArtifactStage.CANONICAL)
+    _require_run_id(work_manifest.run_id, options.run_id)
+    if len(work_records) > options.limit:
+        raise typer.BadParameter(
+            f"work bundle {len(work_records)}행이 --limit {options.limit}을 초과합니다.",
+            param_hint="--limit",
+        )
+    composer_bundles: list[tuple[SnapshotManifest, list[CanonicalLoadRecord]]] = []
+    for manifest_path in composer_manifest_paths:
+        manifest, records = read_artifact(manifest_path, CanonicalLoadRecord)
+        _require_stage(manifest.stage, ArtifactStage.CANONICAL)
+        composer_bundles.append((manifest, records))
+    try:
+        prepared = build_publishable_work_bundle(
+            work_manifest=work_manifest,
+            work_records=work_records,
+            composer_bundles=composer_bundles,
+        )
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--composer-manifest") from error
+    result = _store(artifacts_dir).write(
+        run_id=options.run_id,
+        stage=ArtifactStage.CANONICAL,
+        metadata=_metadata_from_manifest(work_manifest),
+        records=prepared.records,
+        retrieved_at=datetime.now(UTC),
+        dry_run=options.dry_run,
+        resume=options.resume,
+        parent_sha256=work_manifest.sha256,
+        input_provenance=work_manifest.input_provenance,
+    )
+    _emit(
+        CommandReport(
+            command="prepare-publishable-works",
+            run_id=options.run_id,
+            dry_run=options.dry_run,
+            input_count=len(work_records),
+            output_count=len(prepared.records),
+            mutation_count=result.mutation_count,
+            data_path=str(result.data_path),
+            manifest_path=str(result.manifest_path),
+            notes=(
+                f"발행 가능 작품 {prepared.retained_piece_count}개",
+                f"작곡가 dependency 미해소 작품 {prepared.withheld_piece_count}개",
+                f"함께 제외한 종속 행 {prepared.dropped_dependent_count}개",
+                "이름이나 제목은 dependency 해소에 사용하지 않았습니다.",
             ),
         ),
         options,
