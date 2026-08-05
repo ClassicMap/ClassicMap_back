@@ -668,9 +668,46 @@ def _period_from_birth_year(birth_year: int) -> str:
 def _verified_country_name(candidates: list[NormalizedEntityCandidate]) -> str | None:
     country_codes = set(_all_fact_strings(candidates, "country_codes"))
     country_ids = set(_all_fact_strings(candidates, "country_entity_ids"))
-    if len(country_codes) != 1 or len(country_ids) != 1:
+    if len(country_codes) != 1:
+        return None
+    country_code = next(iter(country_codes))
+    linked_country_ids = _country_ids_for_code(candidates, country_code)
+    if _has_country_code_links(candidates):
+        if len(linked_country_ids) != 1:
+            return None
+        return _preferred_linked_label(
+            candidates,
+            "country_labels",
+            next(iter(linked_country_ids)),
+        )
+    if len(country_ids) != 1:
         return None
     return _preferred_linked_label(candidates, "country_labels", next(iter(country_ids)))
+
+
+def _has_country_code_links(candidates: list[NormalizedEntityCandidate]) -> bool:
+    return any(
+        isinstance(candidate.facts.get("country_code_links"), list) for candidate in candidates
+    )
+
+
+def _country_ids_for_code(
+    candidates: list[NormalizedEntityCandidate], country_code: str
+) -> set[str]:
+    country_ids: set[str] = set()
+    for candidate in candidates:
+        values = candidate.facts.get("country_code_links")
+        if not isinstance(values, list):
+            continue
+        for value in values:
+            if not isinstance(value, dict):
+                continue
+            if _object_string(value, "country_code") != country_code:
+                continue
+            country_id = _object_string(value, "country_entity_id")
+            if country_id is not None:
+                country_ids.add(country_id)
+    return country_ids
 
 
 def _verified_instrument_name(candidates: list[NormalizedEntityCandidate]) -> str | None:

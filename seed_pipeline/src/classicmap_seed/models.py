@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import re
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 from enum import StrEnum
 from pathlib import Path
 from typing import Literal
@@ -156,6 +156,20 @@ class SourceRecord(StrictModel):
     payload: JsonObject
 
 
+class InputFileProvenance(StrictModel):
+    sha256: str
+    size_bytes: int = Field(ge=1)
+    dump_date: date
+    source_url: str
+
+    @field_validator("sha256")
+    @classmethod
+    def validate_sha256(cls, value: str) -> str:
+        if not _SHA256_PATTERN.fullmatch(value):
+            raise ValueError("입력 SHA-256은 소문자 64자리 16진수여야 합니다.")
+        return value
+
+
 class ExternalIdentifier(StrictModel):
     namespace: str
     value: str
@@ -229,6 +243,7 @@ class SnapshotManifest(StrictModel):
     relative_data_path: str
     parent_sha256: str | None = None
     tool_version: str
+    input_provenance: InputFileProvenance | None = None
 
     @field_validator("retrieved_at")
     @classmethod
@@ -258,6 +273,16 @@ class SnapshotManifest(StrictModel):
     def require_snapshot_content_identity(self) -> SnapshotManifest:
         if self.snapshot_id != self.sha256:
             raise ValueError("snapshot_id는 JSONL SHA-256과 같아야 합니다.")
+        is_wikidata_dump = self.source_uri.startswith(
+            "https://dumps.wikimedia.org/wikidatawiki/entities/"
+        )
+        if is_wikidata_dump and self.input_provenance is None:
+            raise ValueError("Wikidata dump manifest에는 input_provenance가 필요합니다.")
+        if (
+            self.input_provenance is not None
+            and self.input_provenance.source_url != self.source_uri
+        ):
+            raise ValueError("input_provenance source_url과 manifest source_uri가 일치해야 합니다.")
         return self
 
 

@@ -51,6 +51,14 @@ from classicmap_seed.sources.musicbrainz_work_input import (
     read_verified_musicbrainz_artist_ids,
 )
 from classicmap_seed.sources.pagination import SourcePage
+from classicmap_seed.sources.wikidata_dump import (
+    WikidataDumpCommandReport,
+    collect_wikidata_dump,
+    dump_retrieved_at,
+    read_wikidata_dump_release_metadata,
+    verify_wikidata_dump_input,
+    wikidata_dump_metadata,
+)
 from classicmap_seed.sources.work_composer_dependencies import (
     WorkComposerDependencyCommandReport,
     WorkComposerDependencyConnector,
@@ -96,6 +104,141 @@ MaxPagesOption = Annotated[
     int | None,
     typer.Option("--max-pages", min=1, help="이번 실행에서 요청할 최대 page 수"),
 ]
+
+
+@app.command("snapshot-wikidata-dump")
+def snapshot_wikidata_dump(
+    run_id: RunIdOption,
+    input_path: Annotated[
+        Path,
+        typer.Option("--input", exists=True, dir_okay=False, readable=True),
+    ],
+    release_metadata_path: Annotated[
+        Path,
+        typer.Option(
+            "--release-metadata",
+            exists=True,
+            dir_okay=False,
+            readable=True,
+            help="공식 날짜·URL·SHA-256·파일크기 sidecar JSON",
+        ),
+    ],
+    dry_run: DryRunOption = False,
+    resume: ResumeOption = True,
+    limit: LimitOption = 20,
+    json_report: JsonReportOption = None,
+    artifacts_dir: ArtifactsDirOption = Path("artifacts"),
+    start_ordinal: Annotated[
+        int,
+        typer.Option("--start-ordinal", min=0, help="0-based entity ordinal, inclusive"),
+    ] = 0,
+    end_ordinal: Annotated[
+        int | None,
+        typer.Option("--end-ordinal", min=1, help="0-based entity ordinal, exclusive"),
+    ] = None,
+    checkpoint_every: Annotated[
+        int,
+        typer.Option(
+            "--checkpoint-every",
+            min=1,
+            max=1_000_000,
+            help="검사 entity 수 기준 checkpoint 간격",
+        ),
+    ] = 10_000,
+) -> None:
+    """공식 Wikidata JSON dump를 네트워크 없이 streaming snapshot으로 변환합니다."""
+    options = _options(run_id, dry_run, resume, limit, json_report)
+    try:
+        release = read_wikidata_dump_release_metadata(release_metadata_path)
+        provenance = verify_wikidata_dump_input(input_path, release)
+        if end_ordinal is not None and end_ordinal <= start_ordinal:
+            raise ValueError("--end-ordinal은 --start-ordinal보다 커야 합니다.")
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--release-metadata") from error
+
+    partition_name = f"{start_ordinal}-{end_ordinal if end_ordinal is not None else 'end'}"
+    checkpoint_path = (
+        artifacts_dir / options.run_id / "checkpoints" / f"wikidata-dump-{partition_name}.json"
+    )
+    store = _store(artifacts_dir)
+    metadata = wikidata_dump_metadata(provenance)
+    retrieved_at = dump_retrieved_at(provenance)
+    try:
+        collection = collect_wikidata_dump(
+            input_path=input_path,
+            provenance=provenance,
+            run_id=options.run_id,
+            artifact_store=store,
+            artifacts_root=artifacts_dir,
+            checkpoint_path=checkpoint_path,
+            start_ordinal=start_ordinal,
+            end_ordinal=end_ordinal,
+            limit=options.limit,
+            checkpoint_every=checkpoint_every,
+            dry_run=options.dry_run,
+            resume=options.resume,
+        )
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--input") from error
+
+    snapshot_result = store.write(
+        run_id=options.run_id,
+        stage=ArtifactStage.RAW,
+        metadata=metadata,
+        records=collection.records,
+        retrieved_at=retrieved_at,
+        dry_run=options.dry_run,
+        resume=options.resume,
+        input_provenance=provenance,
+    )
+    review_result = None
+    if collection.reviews:
+        review_result = store.write(
+            run_id=options.run_id,
+            stage=ArtifactStage.RAW,
+            metadata=metadata,
+            records=collection.reviews,
+            retrieved_at=retrieved_at,
+            dry_run=options.dry_run,
+            resume=options.resume,
+            input_provenance=provenance,
+        )
+    aggregate_mutation_count = snapshot_result.mutation_count + (
+        review_result.mutation_count if review_result is not None else 0
+    )
+    report = WikidataDumpCommandReport(
+        run_id=options.run_id,
+        dry_run=options.dry_run,
+        input_sha256=provenance.sha256,
+        input_size_bytes=provenance.size_bytes,
+        dump_date=provenance.dump_date,
+        source_url=provenance.source_url,
+        partition_start_ordinal=start_ordinal,
+        partition_end_ordinal=end_ordinal,
+        next_ordinal=collection.next_ordinal,
+        complete=collection.complete,
+        scanned_entity_count=collection.scanned_entity_count,
+        input_count=collection.scanned_entity_count,
+        output_count=len(collection.records),
+        review_count=len(collection.reviews),
+        resumed_output_count=collection.resumed_record_count,
+        resumed_review_count=collection.resumed_review_count,
+        mutation_count=max(collection.artifact_mutation_count, aggregate_mutation_count),
+        data_path=str(snapshot_result.data_path),
+        manifest_path=str(snapshot_result.manifest_path),
+        review_data_path=str(review_result.data_path) if review_result is not None else None,
+        review_manifest_path=(
+            str(review_result.manifest_path) if review_result is not None else None
+        ),
+        notes=(
+            "입력 전체를 메모리에 올리지 않고 entity 1행과 limit 결과만 유지했습니다.",
+            "P106/P31 및 dump 내부 P279 index만으로 scope를 판정했습니다.",
+            "이름 기반 scope 판정과 네트워크/API 호출을 수행하지 않았습니다.",
+            "unknown/ambiguous scope는 별도 review artifact로 분리했습니다.",
+            "운영 DB와 홈서버에 연결하지 않았습니다.",
+        ),
+    )
+    _emit(report, options)
 
 
 @app.command()
@@ -730,6 +873,7 @@ def normalize(
         dry_run=options.dry_run,
         resume=options.resume,
         parent_sha256=parent.sha256,
+        input_provenance=parent.input_provenance,
     )
     _emit(
         CommandReport(
@@ -776,6 +920,7 @@ def resolve(
         dry_run=options.dry_run,
         resume=options.resume,
         parent_sha256=parent.sha256,
+        input_provenance=parent.input_provenance,
     )
     review_count = sum(
         decision.reason_code == "NAME_ONLY_MATCH_FORBIDDEN" for decision in decisions
@@ -924,6 +1069,7 @@ def export_canonical(
         dry_run=options.dry_run,
         resume=options.resume,
         parent_sha256=resolved_manifest.sha256,
+        input_provenance=raw_manifest.input_provenance,
     )
     _emit(
         CommandReport(
@@ -985,6 +1131,7 @@ def validate(
         dry_run=True,
         resume=options.resume,
         parent_sha256=snapshot_manifest.parent_sha256,
+        input_provenance=snapshot_manifest.input_provenance,
     )
     rules = validate_canonical_bundle(
         load_records,

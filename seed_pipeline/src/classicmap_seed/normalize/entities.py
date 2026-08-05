@@ -189,6 +189,7 @@ def _extract_facts(record: SourceRecord) -> JsonObject:
             "instrument_codes",
             "instrument_labels",
             "country_codes",
+            "country_code_links",
             "country_entity_ids",
             "country_labels",
             "commons_image_ids",

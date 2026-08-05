@@ -109,3 +109,26 @@ def test_modified_data_fails_integrity_validation(tmp_path: Path) -> None:
 def test_run_id_rejects_path_traversal() -> None:
     with pytest.raises(ValueError, match="안전한 경로 이름"):
         RunOptions(run_id="../outside")
+
+
+def test_wikidata_dump_manifest_requires_input_provenance(tmp_path: Path) -> None:
+    metadata = SourceMetadata(
+        source=SourceName.WIKIDATA,
+        source_uri=(
+            "https://dumps.wikimedia.org/wikidatawiki/entities/"
+            "20260801/wikidata-20260801-all.json.bz2"
+        ),
+        license="CC0-1.0",
+        license_uri="https://www.wikidata.org/wiki/Wikidata:Licensing",
+    )
+
+    with pytest.raises(ValueError, match="input_provenance"):
+        JsonlArtifactStore(tmp_path, tool_version="test").write(
+            run_id="dump-run",
+            stage=ArtifactStage.RAW,
+            metadata=metadata,
+            records=_records(),
+            retrieved_at=datetime(2026, 8, 5, tzinfo=UTC),
+            dry_run=True,
+            resume=True,
+        )
