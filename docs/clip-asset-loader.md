@@ -2,6 +2,14 @@
 
 `load_clip_assets`는 프런트의 `ops/video-clips/prewarm.mjs`가 만든 9필드 JSONL 번들을 검증하고 `clip_jobs`, `clip_assets`, `performances`를 한 트랜잭션으로 갱신합니다. 명령 자체는 마이그레이션을 실행하지 않으므로 먼저 서버 시작 또는 `cargo run --bin migrate`로 최신 마이그레이션을 적용해야 합니다.
 
+클리퍼와 백엔드는 같은 홈서버 host cache 디렉터리를 공유해야 합니다. 클리퍼는 이 경로를 읽기/쓰기로 사용하고, 백엔드는 `CLASSICMAP_CLIP_CACHE_HOST_DIR`을 통해 같은 경로를 읽기 전용으로 bind mount합니다. 운영 경로를 저장소나 이미지 내부에 복사하지 않습니다.
+
+```dotenv
+CLASSICMAP_CLIP_CACHE_HOST_DIR=/home/user/Classicmap/video-clips/cache
+```
+
+컨테이너 내부 경로는 두 서비스 모두 `/var/cache/classicmap-video-clips`입니다. 백엔드 compose의 bind mount는 `read_only: true`이므로 loader는 MP4와 sidecar를 검증할 수 있지만 변경하거나 삭제할 수 없습니다.
+
 ## 실행 순서
 
 먼저 쓰기 없는 검증을 실행합니다.
