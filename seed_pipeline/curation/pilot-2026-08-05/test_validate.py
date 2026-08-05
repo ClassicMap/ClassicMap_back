@@ -39,17 +39,46 @@ class ComparisonPilotValidationTest(unittest.TestCase):
         with self.assertRaisesRegex(validator.ValidationError, "데이터베이스 ID"):
             validator.validate_candidates(changed)
 
-    def test_rendered_manifest_uses_post_load_ids(self) -> None:
+    def test_review_required_template_cannot_render(self) -> None:
         id_rows = [
             {"candidateKey": row["candidateKey"], "performanceId": index}
             for index, row in enumerate(self.templates, start=1)
         ]
         output = io.StringIO()
-        validator.render_prewarm(self.templates, id_rows, output)
+        with self.assertRaisesRegex(validator.ValidationError, "권리 검토 전"):
+            validator.render_prewarm(self.candidates, self.templates, id_rows, output)
+
+    def test_rendered_manifest_keeps_verified_rights_evidence(self) -> None:
+        candidates = json.loads(json.dumps(self.candidates))
+        templates = json.loads(json.dumps(self.templates))
+        for candidate, template in zip(candidates, templates, strict=True):
+            candidate["source"].update(
+                {
+                    "rightsMode": "permission_granted",
+                    "rightsReviewedAt": "2026-08-05T00:00:00Z",
+                    "rightsEvidence": f"rights-review:{candidate['candidateKey']}",
+                }
+            )
+            template.update(
+                {
+                    "rightsCheckStatus": "RIGHTS_VERIFIED",
+                    "rightsMode": candidate["source"]["rightsMode"],
+                    "rightsReviewedAt": candidate["source"]["rightsReviewedAt"],
+                    "rightsEvidence": candidate["source"]["rightsEvidence"],
+                }
+            )
+        id_rows = [
+            {"candidateKey": row["candidateKey"], "performanceId": index}
+            for index, row in enumerate(templates, start=1)
+        ]
+        output = io.StringIO()
+        validator.render_prewarm(candidates, templates, id_rows, output)
         rendered = [json.loads(line) for line in output.getvalue().splitlines()]
-        self.assertEqual(len(rendered), len(self.templates))
+        self.assertEqual(len(rendered), len(templates))
         self.assertEqual(rendered[0]["performanceId"], 1)
-        self.assertEqual(set(rendered[0]), {"performanceId", "videoId", "start", "end"})
+        self.assertEqual(rendered[0]["candidateStatus"], "APPROVED")
+        self.assertEqual(rendered[0]["rightsMode"], "permission_granted")
+        self.assertTrue(rendered[0]["rightsEvidence"].startswith("rights-review:"))
 
     def test_read_jsonl_rejects_non_object(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

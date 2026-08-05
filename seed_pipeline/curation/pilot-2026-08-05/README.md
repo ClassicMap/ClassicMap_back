@@ -17,8 +17,7 @@ python3 seed_pipeline/curation/pilot-2026-08-05/validate.py validate \
   --candidates seed_pipeline/curation/pilot-2026-08-05/candidates.jsonl \
   --prewarm-template seed_pipeline/curation/pilot-2026-08-05/prewarm-template.jsonl
 
-python3 -m unittest \
-  seed_pipeline/curation/pilot-2026-08-05/test_validate.py
+python3 seed_pipeline/curation/pilot-2026-08-05/test_validate.py
 ```
 
 검증은 다음 조건을 강제합니다.
@@ -40,10 +39,12 @@ python3 -m unittest \
 {"candidateKey":"yt:X37lU27kyPs:0:40","performanceId":123}
 ```
 
-3. 아래 명령은 프론트엔드 `ops/video-clips/prewarm.mjs`가 받는 `{performanceId, videoId, start, end}` JSONL을 표준 출력으로 생성합니다.
+3. 권리 담당자가 후보 원본의 `rightsMode`, `rightsReviewedAt`, `rightsEvidence`와 템플릿의 `rightsCheckStatus=RIGHTS_VERIFIED`를 함께 승인합니다. 허용되는 자체 호스팅 모드는 `licensed_self_hosted`, `permission_granted`, `public_domain`뿐입니다.
+4. 아래 명령은 프론트엔드 `ops/video-clips/prewarm.mjs`가 받는 승인 정보 포함 JSONL을 표준 출력으로 생성합니다. 한 건이라도 권리 검토 전이면 전체 출력을 거부합니다.
 
 ```bash
 python3 seed_pipeline/curation/pilot-2026-08-05/validate.py render-prewarm \
+  --candidates seed_pipeline/curation/pilot-2026-08-05/candidates.jsonl \
   --prewarm-template seed_pipeline/curation/pilot-2026-08-05/prewarm-template.jsonl \
   --id-map /path/to/staging-performance-id-map.jsonl \
   > /path/to/prewarm-manifest.jsonl
