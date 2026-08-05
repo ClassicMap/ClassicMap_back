@@ -50,6 +50,38 @@ backfill_counts_before=$(docker exec --env MYSQL_PWD="$database_password" "$cont
       (SELECT COUNT(*) FROM classicmap.performances WHERE performance_source_id IS NOT NULL)
     );
   ")
+partial_performance_id=$(docker exec --env MYSQL_PWD="$database_password" "$container_name" \
+  mysql --batch --skip-column-names --user=root --execute="
+    SELECT performance.id
+    FROM classicmap.performances performance
+    WHERE NOT EXISTS (
+      SELECT 1 FROM classicmap.clip_assets asset
+      WHERE asset.performance_id = performance.id
+    )
+      AND NOT EXISTS (
+        SELECT 1 FROM classicmap.performance_candidates candidate
+        WHERE candidate.sector_id = performance.sector_id
+          AND candidate.performance_source_id = performance.performance_source_id
+          AND candidate.proposed_start_ms = performance.start_ms
+          AND candidate.proposed_end_ms = performance.end_ms
+      )
+    ORDER BY performance.id
+    LIMIT 1;
+  ")
+docker exec --env MYSQL_PWD="$database_password" "$container_name" \
+  mysql --user=root --execute="
+    UPDATE classicmap.performances
+    SET performance_source_id = NULL,
+        start_ms = start_ms + 1000,
+        end_ms = end_ms + 1000
+    WHERE id = ${partial_performance_id};
+  "
+partial_range_before=$(docker exec --env MYSQL_PWD="$database_password" "$container_name" \
+  mysql --batch --skip-column-names --user=root --execute="
+    SELECT CONCAT(start_ms, ':', end_ms)
+    FROM classicmap.performances
+    WHERE id = ${partial_performance_id};
+  ")
 docker exec --interactive --env MYSQL_PWD="$database_password" "$container_name" \
   mysql --user=root "$database_name" \
   < "$repo_root/migrations/202608050003_backfill_legacy_performances.sql"
@@ -63,6 +95,16 @@ backfill_counts_after=$(docker exec --env MYSQL_PWD="$database_password" "$conta
   ")
 if [[ "$backfill_counts_before" != "$backfill_counts_after" ]]; then
   echo "legacy performance backfill이 멱등하지 않음" >&2
+  exit 1
+fi
+partial_range_after=$(docker exec --env MYSQL_PWD="$database_password" "$container_name" \
+  mysql --batch --skip-column-names --user=root --execute="
+    SELECT CONCAT(start_ms, ':', end_ms)
+    FROM classicmap.performances
+    WHERE id = ${partial_performance_id};
+  ")
+if [[ "$partial_range_before" != "$partial_range_after" ]]; then
+  echo "legacy performance backfill이 기존 정규 구간을 덮어씀" >&2
   exit 1
 fi
 

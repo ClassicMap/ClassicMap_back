@@ -5,6 +5,100 @@ use ClassicMap_back::{
     db,
 };
 
+async fn prepare_seed_publication_gate(pool: &db::DbPool, performance_id: i32, rights_mode: &str) {
+    sqlx::query(
+        "UPDATE performances
+         SET origin = 'seed', editor_locked = FALSE, publish_status = 'DRAFT'
+         WHERE id = ?",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("seed performance 상태 준비");
+    sqlx::query(
+        "UPDATE performance_sources source
+         JOIN performances performance ON performance.performance_source_id = source.id
+         SET source.availability_status = 'AVAILABLE', source.rights_mode = ?
+         WHERE performance.id = ?",
+    )
+    .bind(rights_mode)
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("performance source 권리 상태 준비");
+    sqlx::query(
+        "UPDATE performance_sectors sector
+         JOIN performances performance ON performance.sector_id = sector.id
+         SET sector.editorial_status = 'EDITOR_REVIEWED'
+         WHERE performance.id = ?",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("sector 편집 승인 준비");
+    sqlx::query(
+        "INSERT INTO performance_candidates (
+            sector_id, performance_source_id, proposed_start_ms, proposed_end_ms,
+            candidate_status, evidence
+         )
+         SELECT sector_id, performance_source_id, start_ms, end_ms,
+                'APPROVED', JSON_OBJECT('fixture', 'comparison_repository_integration')
+         FROM performances
+         WHERE id = ?
+         ON DUPLICATE KEY UPDATE candidate_status = 'APPROVED'",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("승인 performance candidate 준비");
+}
+
+async fn restore_legacy_publication_fixture(pool: &db::DbPool, performance_id: i32) {
+    sqlx::query(
+        "DELETE candidate
+         FROM performance_candidates candidate
+         JOIN performances performance
+           ON performance.sector_id = candidate.sector_id
+          AND performance.performance_source_id = candidate.performance_source_id
+          AND performance.start_ms = candidate.proposed_start_ms
+          AND performance.end_ms = candidate.proposed_end_ms
+         WHERE performance.id = ?",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("승인 candidate fixture 정리");
+    sqlx::query(
+        "UPDATE performance_sources source
+         JOIN performances performance ON performance.performance_source_id = source.id
+         SET source.rights_mode = 'unknown'
+         WHERE performance.id = ?",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("legacy source 권리 상태 복구");
+    sqlx::query(
+        "UPDATE performance_sectors sector
+         JOIN performances performance ON performance.sector_id = sector.id
+         SET sector.editorial_status = 'PUBLISHED'
+         WHERE performance.id = ?",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("legacy sector 상태 복구");
+    sqlx::query(
+        "UPDATE performances
+         SET origin = 'manual', editor_locked = TRUE
+         WHERE id = ?",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("legacy performance 잠금 복구");
+}
+
 #[tokio::test]
 #[ignore = "scripts/test_global_seed_migration.sh에서 격리 MySQL로 실행"]
 async fn ready_clip_is_exposed_with_video_and_credit_contract() {
@@ -19,6 +113,7 @@ async fn ready_clip_is_exposed_with_video_and_credit_contract() {
     .fetch_one(&pool)
     .await
     .expect("legacy performance backfill");
+    prepare_seed_publication_gate(&pool, performance_id, "unknown").await;
 
     let output_key = format!("integration-{performance_id}-v1.mp4");
     let job_id = sqlx::query(
@@ -54,6 +149,39 @@ async fn ready_clip_is_exposed_with_video_and_credit_contract() {
     .await
     .expect("검증된 clip asset 생성");
 
+    let unknown_rights =
+        ComparisonRepository::publish_ready_performance(&pool, performance_id).await;
+    assert!(matches!(
+        unknown_rights,
+        Err(ComparisonContractError::PublicationGateNotSatisfied)
+    ));
+
+    sqlx::query(
+        "UPDATE performance_sources source
+         JOIN performances performance ON performance.performance_source_id = source.id
+         SET source.rights_mode = 'youtube_embed_only'
+         WHERE performance.id = ?",
+    )
+    .bind(performance_id)
+    .execute(&pool)
+    .await
+    .expect("embed-only 권리 상태 준비");
+    let embed_only = ComparisonRepository::publish_ready_performance(&pool, performance_id).await;
+    assert!(matches!(
+        embed_only,
+        Err(ComparisonContractError::PublicationGateNotSatisfied)
+    ));
+
+    sqlx::query(
+        "UPDATE performance_sources source
+         JOIN performances performance ON performance.performance_source_id = source.id
+         SET source.rights_mode = 'licensed_self_hosted'
+         WHERE performance.id = ?",
+    )
+    .bind(performance_id)
+    .execute(&pool)
+    .await
+    .expect("self-hosted 권리 상태 승인");
     ComparisonRepository::publish_ready_performance(&pool, performance_id)
         .await
         .expect("public URL이 있는 READY clip 발행");
@@ -85,6 +213,7 @@ async fn ready_clip_is_exposed_with_video_and_credit_contract() {
         .credits
         .iter()
         .any(|credit| credit.artist_id == artist_id && credit.is_primary));
+    restore_legacy_publication_fixture(&pool, performance_id).await;
 }
 
 #[tokio::test]
