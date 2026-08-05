@@ -30,6 +30,8 @@ class ArtifactStage(StrEnum):
     RAW = "raw"
     NORMALIZED = "normalized"
     RESOLVED = "resolved"
+    CANONICAL = "canonical"
+    STREAMING = "streaming"
 
 
 class EntityKind(StrEnum):
@@ -52,6 +54,27 @@ class ResolutionAction(StrEnum):
     AUTO_MATCH = "auto_match"
     CREATE = "create"
     REVIEW_REQUIRED = "review_required"
+
+
+class DataOrigin(StrEnum):
+    SEED = "seed"
+    MANUAL = "manual"
+
+
+class WritePolicy(StrEnum):
+    PRESERVE_MANUAL_OR_LOCKED = "preserve_manual_or_locked"
+
+
+class LoadTable(StrEnum):
+    SEED_RUNS = "seed_runs"
+    SOURCE_SNAPSHOTS = "source_snapshots"
+    SOURCE_RECORDS = "source_records"
+    AUTHORITY_ENTITIES = "authority_entities"
+    WORKS = "works"
+    RECORDINGS = "recordings"
+    EXTERNAL_IDENTIFIERS = "external_identifiers"
+    FIELD_PROVENANCE = "field_provenance"
+    REVIEW_QUEUE = "review_queue"
 
 
 class RunOptions(StrictModel):
@@ -109,6 +132,20 @@ class ResolutionDecision(StrictModel):
     candidate_ids: tuple[str, ...]
     reason_code: str
     evidence: tuple[str, ...] = ()
+
+
+class CanonicalLoadRecord(StrictModel):
+    table: LoadTable
+    natural_key: str
+    values: JsonObject
+    origin: DataOrigin = DataOrigin.SEED
+    editor_locked: bool = False
+    write_policy: WritePolicy = WritePolicy.PRESERVE_MANUAL_OR_LOCKED
+
+
+class ExistingFieldState(StrictModel):
+    origin: DataOrigin
+    editor_locked: bool
 
 
 class SnapshotManifest(StrictModel):

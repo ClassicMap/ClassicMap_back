@@ -62,6 +62,10 @@ uv run classicmap-seed normalize \
 uv run classicmap-seed resolve \
   --run-id sample-20260805 \
   --manifest artifacts/sample-20260805/normalized/musicbrainz/<sha256>.manifest.json
+
+uv run classicmap-seed export-canonical \
+  --run-id sample-20260805 \
+  --manifest artifacts/sample-20260805/resolved/musicbrainz/<sha256>.manifest.json
 ```
 
 `resolve`는 안정적 외부 식별자를 공유한 후보만 자동 병합합니다. 이름만 같은 후보는 항상 `REVIEW_REQUIRED`로 분류합니다.
@@ -75,7 +79,9 @@ artifacts/<run-id>/
 ├─ normalized/<source>/<sha256>.jsonl
 ├─ normalized/<source>/<sha256>.manifest.json
 ├─ resolved/<source>/<sha256>.jsonl
-└─ resolved/<source>/<sha256>.manifest.json
+├─ resolved/<source>/<sha256>.manifest.json
+├─ canonical/<source>/<sha256>.jsonl
+└─ canonical/<source>/<sha256>.manifest.json
 ```
 
 파일명은 JSONL 본문의 SHA-256으로 결정됩니다. 이미 생성된 artifact는 덮어쓰지 않습니다. 같은 입력을 다시 실행하면 기존 artifact를 재사용하며 mutation 수는 0입니다.
