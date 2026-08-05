@@ -48,6 +48,12 @@ from classicmap_seed.sources.musicbrainz_work_input import (
     read_verified_musicbrainz_artist_ids,
 )
 from classicmap_seed.sources.pagination import SourcePage
+from classicmap_seed.sources.work_composer_dependencies import (
+    WorkComposerDependencyCommandReport,
+    WorkComposerDependencyConnector,
+    collect_work_composer_dependencies,
+    read_work_composer_dependency_plan,
+)
 from classicmap_seed.streaming import (
     StreamingPlatform,
     build_streaming_load_bundle,
@@ -456,6 +462,128 @@ def snapshot_musicbrainz_works(
         ),
         options,
     )
+
+
+@app.command("snapshot-work-composer-dependencies")
+def snapshot_work_composer_dependencies(
+    run_id: RunIdOption,
+    work_manifest: Annotated[
+        Path,
+        typer.Option("--work-manifest", exists=True, dir_okay=False, readable=True),
+    ],
+    composer_manifests: Annotated[
+        list[Path],
+        typer.Option(
+            "--composer-manifest",
+            exists=True,
+            dir_okay=False,
+            readable=True,
+            help="기존 composer canonical manifest. 여러 번 입력할 수 있음",
+        ),
+    ],
+    contact: Annotated[
+        str,
+        typer.Option("--contact", help="Wikidata User-Agent 연락처. artifact에는 저장하지 않음"),
+    ],
+    dry_run: DryRunOption = False,
+    resume: ResumeOption = True,
+    limit: LimitOption = 20,
+    json_report: JsonReportOption = None,
+    artifacts_dir: ArtifactsDirOption = Path("artifacts"),
+    batch_size: Annotated[
+        int,
+        typer.Option("--batch-size", min=1, max=100, help="WDQS VALUES 요청당 MBID 수"),
+    ] = 50,
+) -> None:
+    """작품 bundle이 참조하지만 composer bundle에 없는 MBID를 정확 QID로 수집합니다."""
+    options = _options(run_id, dry_run, resume, limit, json_report)
+    try:
+        plan = read_work_composer_dependency_plan(work_manifest, composer_manifests)
+        connector_value, http_client = build_connector(SourceName.WIKIDATA, contact=contact)
+    except ValueError as error:
+        raise typer.BadParameter(str(error)) from error
+    if not isinstance(connector_value, WikidataConnector):
+        raise RuntimeError("Wikidata connector factory 결과가 올바르지 않습니다.")
+
+    connector = WorkComposerDependencyConnector(http_client, connector_value)
+    retrieved_at = datetime.now(UTC)
+    store = _store(artifacts_dir)
+    checkpoint_path = (
+        artifacts_dir / options.run_id / "checkpoints" / "work-composer-dependencies.json"
+    )
+    try:
+        collection = collect_work_composer_dependencies(
+            run_id=options.run_id,
+            plan=plan,
+            connector=connector,
+            artifact_store=store,
+            artifacts_root=artifacts_dir,
+            checkpoint_path=checkpoint_path,
+            retrieved_at=retrieved_at,
+            limit=options.limit,
+            batch_size=batch_size,
+            dry_run=options.dry_run,
+            resume=options.resume,
+        )
+    except ValueError as error:
+        raise typer.BadParameter(str(error)) from error
+    finally:
+        http_client.close()
+
+    snapshot_result = store.write(
+        run_id=options.run_id,
+        stage=ArtifactStage.RAW,
+        metadata=connector.metadata,
+        records=collection.records,
+        retrieved_at=retrieved_at,
+        dry_run=options.dry_run,
+        resume=options.resume,
+    )
+    review_result = None
+    if collection.reviews:
+        review_result = store.write(
+            run_id=options.run_id,
+            stage=ArtifactStage.RAW,
+            metadata=connector.metadata,
+            records=collection.reviews,
+            retrieved_at=retrieved_at,
+            dry_run=options.dry_run,
+            resume=options.resume,
+        )
+    aggregate_mutations = snapshot_result.mutation_count + (
+        review_result.mutation_count if review_result is not None else 0
+    )
+    selected_count = min(options.limit, len(plan.missing_composer_mbids))
+    report = WorkComposerDependencyCommandReport(
+        command="snapshot-work-composer-dependencies",
+        run_id=options.run_id,
+        dry_run=options.dry_run,
+        input_count=selected_count,
+        output_count=len(collection.records),
+        mutation_count=max(collection.artifact_mutation_count, aggregate_mutations),
+        data_path=str(snapshot_result.data_path),
+        manifest_path=str(snapshot_result.manifest_path),
+        required_composer_count=len(plan.required_composer_keys),
+        existing_composer_count=len(plan.existing_composer_keys),
+        missing_composer_count=len(plan.missing_composer_mbids),
+        selected_composer_count=selected_count,
+        resolved_composer_count=len(collection.records),
+        review_count=len(collection.reviews),
+        resumed_composer_count=collection.resumed_composer_count,
+        request_count=collection.request_count,
+        review_data_path=(str(review_result.data_path) if review_result is not None else None),
+        review_manifest_path=(
+            str(review_result.manifest_path) if review_result is not None else None
+        ),
+        notes=(
+            "작품 composer FK와 기존 composer natural key의 차집합만 처리했습니다.",
+            "이름 매칭 없이 MusicBrainz artist ID와 Wikidata P434만 사용했습니다.",
+            "운영 DB에 연결하지 않았습니다.",
+        ),
+    )
+    _emit(report, options)
+    if collection.reviews:
+        raise typer.Exit(code=1)
 
 
 @app.command()
