@@ -6,6 +6,7 @@ import httpx
 from classicmap_seed.artifacts import JsonlArtifactStore
 from classicmap_seed.http import JsonHttpClient, NoopRateLimiter, RetryPolicy
 from classicmap_seed.models import (
+    ArtifactStage,
     EntityKind,
     SourceMetadata,
     SourceName,
@@ -56,6 +57,7 @@ def _entity(entity_id: str) -> dict[str, object]:
             "P227": [_statement(f"gnd-{entity_id}")],
             "P214": [_statement(f"viaf-{entity_id}")],
             "P213": [_statement(f"isni-{entity_id}")],
+            "P5504": [_statement(f"people/{entity_id.removeprefix('Q')}")],
         },
     }
 
@@ -114,6 +116,7 @@ def test_wikidata_scope_page_uses_stable_cursor_and_collects_authority_facts() -
         "gnd": ["gnd-Q10"],
         "viaf": ["viaf-Q10"],
         "isni": ["isni-Q10"],
+        "rism": ["people/10"],
     }
     underlying.close()
 
@@ -187,7 +190,19 @@ def test_paginated_collection_resumes_from_immutable_page_checkpoint(tmp_path: P
         resume=True,
     )
     assert [record.source_record_id for record in first.records] == ["Q1", "Q2"]
+    assert first.artifact_mutation_count == 2
     assert read_checkpoint(checkpoint_path).total_records == 2
+    one_page_aggregate = store.write(
+        run_id="run-1",
+        stage=ArtifactStage.RAW,
+        metadata=metadata,
+        records=first.records,
+        retrieved_at=datetime(2026, 8, 5, tzinfo=UTC),
+        dry_run=False,
+        resume=True,
+    )
+    assert one_page_aggregate.mutation_count == 0
+    assert max(one_page_aggregate.mutation_count, first.artifact_mutation_count) == 2
 
     def resumed_fetch(page_size: int, cursor: str | None) -> SourcePage:
         assert page_size == 1
@@ -211,8 +226,49 @@ def test_paginated_collection_resumes_from_immutable_page_checkpoint(tmp_path: P
     )
     assert resumed.resumed_record_count == 2
     assert resumed.request_count == 1
+    assert resumed.artifact_mutation_count == 1
     assert [record.source_record_id for record in resumed.records] == ["Q1", "Q2", "Q3"]
     assert read_checkpoint(checkpoint_path).complete is True
+    completed_aggregate = store.write(
+        run_id="run-1",
+        stage=ArtifactStage.RAW,
+        metadata=metadata,
+        records=resumed.records,
+        retrieved_at=datetime(2026, 8, 5, tzinfo=UTC),
+        dry_run=False,
+        resume=True,
+    )
+    assert completed_aggregate.mutation_count == 3
+
+    complete_resume = collect_paginated(
+        run_id="run-1",
+        scope="composers",
+        metadata=metadata,
+        fetch_page=lambda _size, _cursor: (_ for _ in ()).throw(
+            AssertionError("complete checkpoint는 API를 다시 호출하면 안 됩니다.")
+        ),
+        artifact_store=store,
+        artifacts_root=tmp_path,
+        checkpoint_path=checkpoint_path,
+        retrieved_at=datetime(2026, 8, 5, tzinfo=UTC),
+        limit=3,
+        page_size=2,
+        max_pages=None,
+        dry_run=False,
+        resume=True,
+    )
+    assert complete_resume.request_count == 0
+    assert complete_resume.artifact_mutation_count == 0
+    second_aggregate = store.write(
+        run_id="run-1",
+        stage=ArtifactStage.RAW,
+        metadata=metadata,
+        records=complete_resume.records,
+        retrieved_at=datetime(2026, 8, 6, tzinfo=UTC),
+        dry_run=False,
+        resume=True,
+    )
+    assert max(second_aggregate.mutation_count, complete_resume.artifact_mutation_count) == 0
 
 
 def _source_record(entity_id: str) -> SourceRecord:

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from collections.abc import Iterable
 from uuid import NAMESPACE_URL, uuid5
 
@@ -43,6 +44,14 @@ def build_canonical_load_bundle(
     raw_by_identity = {(record.source, record.source_record_id): record for record in raw_records}
     candidate_by_id = {candidate.candidate_id: candidate for candidate in candidates}
     source_key_by_candidate: dict[str, str] = {}
+    available_work_mbids = {
+        identifier.value
+        for candidate in candidates
+        if candidate.entity_kind is EntityKind.WORK
+        for identifier in candidate.external_identifiers
+        if identifier.namespace == "musicbrainz_work"
+        and not _work_relations(candidate, relation_type="parts", direction="backward")
+    }
     records = _run_and_snapshot_records(run_id, source_manifest, snapshot_key)
 
     for candidate in sorted(candidates, key=lambda item: item.candidate_id):
@@ -91,6 +100,7 @@ def build_canonical_load_bundle(
                     group,
                     decision,
                     source_key_by_candidate,
+                    available_work_mbids,
                 )
             )
         elif representative.entity_kind is EntityKind.RECORDING:
@@ -236,6 +246,14 @@ def _authority_records(
             source_key_by_candidate=source_key_by_candidate,
         )
     )
+    records.extend(
+        _legacy_projection_records(
+            run_id,
+            entity_id,
+            candidates,
+            source_key_by_candidate,
+        )
+    )
     return records
 
 
@@ -247,33 +265,26 @@ def _authority_name_records(
 ) -> list[CanonicalLoadRecord]:
     records: list[CanonicalLoadRecord] = []
     seen: set[tuple[str, str]] = set()
-    representative = _choose_representative(candidates)
     for candidate in candidates:
-        names = (
-            (candidate.preferred_name, "canonical"),
-            *((alias, "alias") for alias in candidate.aliases),
-        )
-        for name, name_kind in names:
+        names = _localized_names(candidate)
+        for locale, name_kind, name in names:
             normalized = name.casefold().strip()
-            identity = (name_kind, normalized)
+            identity = (f"{locale}:{name_kind}", normalized)
             if identity in seen:
                 continue
             seen.add(identity)
-            natural_key = f"{entity_id}:und:{name_kind}:{normalized}"
+            natural_key = f"{entity_id}:{locale}:{name_kind}:{normalized}"
             records.append(
                 _record(
                     run_id,
                     LoadTable.ENTITY_NAMES,
                     natural_key,
                     {
-                        "locale": "und",
+                        "locale": locale,
                         "name_kind": name_kind,
                         "name_value": name,
                         "normalized_value": normalized,
-                        "is_preferred": (
-                            candidate.candidate_id == representative.candidate_id
-                            and name_kind == "canonical"
-                        ),
+                        "is_preferred": name_kind == "canonical",
                         "origin": "seed",
                         "editor_locked": False,
                     },
@@ -405,11 +416,325 @@ def _authority_identifier_records(
     return records
 
 
+def _localized_names(
+    candidate: NormalizedEntityCandidate,
+) -> tuple[tuple[str, str, str], ...]:
+    localized = candidate.facts.get("localized_names")
+    names: list[tuple[str, str, str]] = []
+    if isinstance(localized, list):
+        for value in localized:
+            if not isinstance(value, dict):
+                continue
+            locale = _object_string(value, "locale")
+            name_kind = _object_string(value, "name_kind")
+            name = _object_string(value, "name")
+            if (
+                locale is not None
+                and name_kind in {"canonical", "alias", "transliteration", "former"}
+                and name is not None
+            ):
+                names.append((locale, name_kind, name))
+    if names:
+        return tuple(names)
+    return (
+        ("und", "canonical", candidate.preferred_name),
+        *(("und", "alias", alias) for alias in candidate.aliases),
+    )
+
+
+def _legacy_projection_records(
+    run_id: str,
+    entity_id: str,
+    candidates: list[NormalizedEntityCandidate],
+    source_key_by_candidate: dict[str, str],
+) -> list[CanonicalLoadRecord]:
+    scopes = set(_all_fact_strings(candidates, "scope"))
+    role_codes = set(_all_fact_strings(candidates, "role_codes"))
+    is_composer = "composers" in scopes or "Q36834" in role_codes
+    is_artist = bool(scopes.intersection({"performers", "ensembles"}))
+    records: list[CanonicalLoadRecord] = []
+    if is_composer:
+        records.append(
+            _composer_projection_or_review(
+                run_id,
+                entity_id,
+                candidates,
+                source_key_by_candidate,
+            )
+        )
+    if is_artist:
+        records.append(
+            _artist_projection_or_review(
+                run_id,
+                entity_id,
+                candidates,
+                source_key_by_candidate,
+            )
+        )
+    return records
+
+
+def _composer_projection_or_review(
+    run_id: str,
+    entity_id: str,
+    candidates: list[NormalizedEntityCandidate],
+    source_key_by_candidate: dict[str, str],
+) -> CanonicalLoadRecord:
+    mbid = _unique_identifier(candidates, "musicbrainz_artist")
+    name_en = _canonical_name(candidates, "en")
+    name_ko = _canonical_name(candidates, "ko")
+    display_name = name_ko or name_en
+    birth_year = _year_from_fact(candidates, "date_of_birth")
+    death_year = _year_from_fact(candidates, "date_of_death")
+    nationality = _verified_country_name(candidates)
+    period = _period_from_birth_year(birth_year) if birth_year is not None else None
+    missing = [
+        field
+        for field, value in (
+            ("musicbrainz_artist", mbid),
+            ("name", display_name),
+            ("english_name", name_en),
+            ("birth_year", birth_year),
+            ("nationality", nationality),
+            ("period", period),
+        )
+        if value is None
+    ]
+    if missing:
+        return _projection_review(
+            run_id,
+            entity_id,
+            "legacy_composer",
+            "LEGACY_COMPOSER_REQUIRED_FIELDS_MISSING",
+            missing,
+        )
+    representative = _choose_representative(candidates)
+    values: JsonObject = {
+        "name": display_name,
+        "full_name": display_name,
+        "english_name": name_en,
+        "period": period,
+        "birth_year": birth_year,
+        "nationality": nationality,
+        "origin": "seed",
+        "editor_locked": False,
+    }
+    if death_year is not None:
+        values["death_year"] = death_year
+    image_urls = _all_fact_strings(candidates, "commons_image_urls")
+    if image_urls:
+        values["avatar_url"] = image_urls[0]
+    return _record(
+        run_id,
+        LoadTable.COMPOSERS,
+        f"musicbrainz_artist:{mbid}",
+        values,
+        foreign_keys=(
+            _fk("authority_entity_id", LoadTable.AUTHORITY_ENTITIES, entity_id),
+            _fk(
+                "source_record_id",
+                LoadTable.SOURCE_RECORDS,
+                source_key_by_candidate[representative.candidate_id],
+            ),
+        ),
+        evidence={
+            "derived_fields": {
+                "period": {
+                    "rule": "birth_year_boundaries_v1",
+                    "birth_year": birth_year,
+                }
+            }
+        },
+    )
+
+
+def _artist_projection_or_review(
+    run_id: str,
+    entity_id: str,
+    candidates: list[NormalizedEntityCandidate],
+    source_key_by_candidate: dict[str, str],
+) -> CanonicalLoadRecord:
+    mbid = _unique_identifier(candidates, "musicbrainz_artist")
+    name_en = _canonical_name(candidates, "en")
+    name_ko = _canonical_name(candidates, "ko")
+    display_name = name_ko or name_en
+    nationality = _verified_country_name(candidates)
+    category = _verified_instrument_name(candidates)
+    missing = [
+        field
+        for field, value in (
+            ("musicbrainz_artist", mbid),
+            ("name", display_name),
+            ("english_name", name_en),
+            ("category", category),
+            ("nationality", nationality),
+        )
+        if value is None
+    ]
+    if missing:
+        return _projection_review(
+            run_id,
+            entity_id,
+            "legacy_artist",
+            "LEGACY_ARTIST_REQUIRED_FIELDS_MISSING",
+            missing,
+        )
+    representative = _choose_representative(candidates)
+    values: JsonObject = {
+        "name": display_name,
+        "english_name": name_en,
+        "category": category,
+        "nationality": nationality,
+        "origin": "seed",
+        "editor_locked": False,
+    }
+    birth_year = _year_from_fact(candidates, "date_of_birth")
+    if birth_year is not None:
+        values["birth_year"] = str(birth_year)
+    image_urls = _all_fact_strings(candidates, "commons_image_urls")
+    if image_urls:
+        values["image_url"] = image_urls[0]
+    return _record(
+        run_id,
+        LoadTable.ARTISTS,
+        f"musicbrainz_artist:{mbid}",
+        values,
+        foreign_keys=(
+            _fk("authority_entity_id", LoadTable.AUTHORITY_ENTITIES, entity_id),
+            _fk(
+                "source_record_id",
+                LoadTable.SOURCE_RECORDS,
+                source_key_by_candidate[representative.candidate_id],
+            ),
+        ),
+    )
+
+
+def _projection_review(
+    run_id: str,
+    entity_id: str,
+    target_type: str,
+    reason_code: str,
+    missing_fields: list[str],
+) -> CanonicalLoadRecord:
+    natural_key = f"projection:{target_type}:{entity_id}"
+    return _record(
+        run_id,
+        LoadTable.REVIEW_QUEUE,
+        natural_key,
+        {
+            "seed_run_id": canonical_seed_run_id(run_id),
+            "target_type": target_type,
+            "target_id": entity_id,
+            "reason_code": reason_code,
+            "status": "OPEN",
+            "evidence": {"missing_fields": _json_strings(missing_fields)},
+        },
+        foreign_keys=(_fk("seed_run_id", LoadTable.SEED_RUNS, canonical_seed_run_id(run_id)),),
+    )
+
+
+def _canonical_name(candidates: list[NormalizedEntityCandidate], locale: str) -> str | None:
+    names = sorted(
+        name
+        for candidate in candidates
+        for localized_locale, name_kind, name in _localized_names(candidate)
+        if localized_locale == locale and name_kind == "canonical"
+    )
+    return names[0] if names else None
+
+
+def _unique_identifier(candidates: list[NormalizedEntityCandidate], namespace: str) -> str | None:
+    values = {
+        identifier.value
+        for candidate in candidates
+        for identifier in candidate.external_identifiers
+        if identifier.namespace == namespace
+    }
+    return next(iter(values)) if len(values) == 1 else None
+
+
+def _year_from_fact(candidates: list[NormalizedEntityCandidate], field: str) -> int | None:
+    years = {
+        int(match.group(1))
+        for value in _all_fact_strings(candidates, field)
+        if (match := re.match(r"^\+?(\d{4})", value)) is not None
+    }
+    return next(iter(years)) if len(years) == 1 else None
+
+
+def _period_from_birth_year(birth_year: int) -> str:
+    if birth_year < 1400:
+        return "중세"
+    if birth_year < 1600:
+        return "르네상스"
+    if birth_year < 1750:
+        return "바로크"
+    if birth_year < 1820:
+        return "고전주의"
+    if birth_year < 1900:
+        return "낭만주의"
+    return "근현대"
+
+
+def _verified_country_name(candidates: list[NormalizedEntityCandidate]) -> str | None:
+    country_codes = set(_all_fact_strings(candidates, "country_codes"))
+    country_ids = set(_all_fact_strings(candidates, "country_entity_ids"))
+    if len(country_codes) != 1 or len(country_ids) != 1:
+        return None
+    return _preferred_linked_label(candidates, "country_labels", next(iter(country_ids)))
+
+
+def _verified_instrument_name(candidates: list[NormalizedEntityCandidate]) -> str | None:
+    instrument_codes = set(_all_fact_strings(candidates, "instrument_codes"))
+    if len(instrument_codes) != 1:
+        return None
+    return _preferred_linked_label(
+        candidates,
+        "instrument_labels",
+        next(iter(instrument_codes)),
+    )
+
+
+def _preferred_linked_label(
+    candidates: list[NormalizedEntityCandidate], field: str, code: str
+) -> str | None:
+    names_by_locale: dict[str, set[str]] = {"ko": set(), "en": set()}
+    for candidate in candidates:
+        values = candidate.facts.get(field)
+        if not isinstance(values, list):
+            continue
+        for value in values:
+            if not isinstance(value, dict) or _object_string(value, "code") != code:
+                continue
+            locale = _object_string(value, "locale")
+            name = _object_string(value, "name")
+            if locale in names_by_locale and name is not None:
+                names_by_locale[locale].add(name)
+    for locale in ("ko", "en"):
+        names = names_by_locale[locale]
+        if len(names) == 1:
+            return next(iter(names))
+    return None
+
+
+def _all_fact_strings(candidates: list[NormalizedEntityCandidate], field: str) -> tuple[str, ...]:
+    values: set[str] = set()
+    for candidate in candidates:
+        value = candidate.facts.get(field)
+        if isinstance(value, str) and value:
+            values.add(value)
+        elif isinstance(value, list):
+            values.update(item for item in value if isinstance(item, str) and item)
+    return tuple(sorted(values))
+
+
 def _work_records(
     run_id: str,
     candidates: list[NormalizedEntityCandidate],
     decision: ResolutionDecision,
     source_key_by_candidate: dict[str, str],
+    available_work_mbids: set[str],
 ) -> list[CanonicalLoadRecord]:
     representative = _choose_representative(candidates)
     source_key = source_key_by_candidate[representative.candidate_id]
@@ -424,6 +749,8 @@ def _work_records(
         parent_mbid = _object_string(parent, "target_work_id")
         if parent_mbid is None:
             return [_review_for_unsupported_entity(run_id, decision, "WORK_PARENT_ID_MISSING")]
+        if parent_mbid not in available_work_mbids:
+            return [_review_for_unsupported_entity(run_id, decision, "WORK_PARENT_NOT_IN_BUNDLE")]
         ordering_key = _object_int(parent, "ordering_key") or 0
         return [
             _record(

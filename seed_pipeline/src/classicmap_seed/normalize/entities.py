@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 import unicodedata
+from urllib.parse import quote
 from uuid import NAMESPACE_URL, uuid5
 
 from classicmap_seed.models import (
@@ -67,34 +68,60 @@ def _extract_identifiers(record: SourceRecord) -> tuple[ExternalIdentifier, ...]
         )
     ]
     if record.source is SourceName.WIKIDATA:
-        cross_identifier_fields = {
-            "musicbrainz_artist_id": "musicbrainz_artist",
-            "gnd_id": "gnd",
-            "viaf_id": "viaf",
-        }
-        for field, namespace in cross_identifier_fields.items():
-            value = optional_string(record.payload.get(field))
-            if value is None:
-                continue
-            identifiers.append(
-                ExternalIdentifier(
-                    namespace=namespace,
-                    value=value,
-                    strength=IdentifierStrength.STRONG,
-                    source=record.source,
+        external = record.payload.get("external_identifiers")
+        if isinstance(external, dict):
+            for namespace in ("musicbrainz_artist", "gnd", "viaf", "isni", "rism"):
+                values = external.get(namespace)
+                if not isinstance(values, list):
+                    continue
+                for value in values:
+                    if not isinstance(value, str) or not value.strip():
+                        continue
+                    identifiers.append(
+                        ExternalIdentifier(
+                            namespace=namespace,
+                            value=value.strip(),
+                            strength=IdentifierStrength.STRONG,
+                            source=record.source,
+                        )
+                    )
+        else:
+            cross_identifier_fields = {
+                "musicbrainz_artist_id": "musicbrainz_artist",
+                "gnd_id": "gnd",
+                "viaf_id": "viaf",
+            }
+            for field, namespace in cross_identifier_fields.items():
+                value = optional_string(record.payload.get(field))
+                if value is None:
+                    continue
+                identifiers.append(
+                    ExternalIdentifier(
+                        namespace=namespace,
+                        value=value,
+                        strength=IdentifierStrength.STRONG,
+                        source=record.source,
+                    )
                 )
-            )
-    return tuple(identifiers)
+    return tuple(dict.fromkeys(identifiers))
 
 
 def _extract_aliases(record: SourceRecord) -> tuple[str, ...]:
-    if record.source is not SourceName.OPEN_OPUS:
-        return ()
-    complete_name = optional_string(record.payload.get("complete_name"))
     preferred_name = require_string(record.payload.get("name"), field="payload.name")
-    if complete_name is None or normalize_name(complete_name) == normalize_name(preferred_name):
-        return ()
-    return (complete_name,)
+    aliases: list[str] = []
+    payload_aliases = record.payload.get("aliases")
+    if isinstance(payload_aliases, list):
+        aliases.extend(
+            value.strip() for value in payload_aliases if isinstance(value, str) and value.strip()
+        )
+    if record.source is SourceName.OPEN_OPUS:
+        complete_name = optional_string(record.payload.get("complete_name"))
+        if complete_name is not None:
+            aliases.append(complete_name)
+    preferred_normalized = normalize_name(preferred_name)
+    return tuple(
+        dict.fromkeys(alias for alias in aliases if normalize_name(alias) != preferred_normalized)
+    )
 
 
 def _extract_facts(record: SourceRecord) -> JsonObject:
@@ -114,8 +141,19 @@ def _extract_facts(record: SourceRecord) -> JsonObject:
             "recommended",
         ),
         SourceName.WIKIDATA: (
+            "scope",
+            "localized_names",
+            "role_codes",
+            "role_labels",
+            "instrument_codes",
+            "instrument_labels",
+            "country_codes",
+            "country_entity_ids",
+            "country_labels",
+            "commons_image_ids",
             "date_of_birth",
             "date_of_death",
+            "entity_data_source",
             "musicbrainz_artist_id",
             "gnd_id",
             "viaf_id",
@@ -126,4 +164,12 @@ def _extract_facts(record: SourceRecord) -> JsonObject:
         value: JsonValue = record.payload.get(field)
         if value is not None and value != "":
             facts[field] = value
+    if record.source is SourceName.WIKIDATA:
+        image_ids = facts.get("commons_image_ids")
+        if isinstance(image_ids, list):
+            facts["commons_image_urls"] = [
+                f"https://commons.wikimedia.org/wiki/Special:FilePath/{quote(image_id)}"
+                for image_id in image_ids
+                if isinstance(image_id, str) and image_id
+            ]
     return facts

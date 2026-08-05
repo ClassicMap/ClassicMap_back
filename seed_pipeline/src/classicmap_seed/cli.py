@@ -193,7 +193,9 @@ def snapshot_wikidata(
         dry_run=options.dry_run,
         resume=options.resume,
     )
-    estimated_requests = ceil(options.limit / page_size)
+    estimated_pages = ceil(options.limit / page_size)
+    minimum_http_requests = estimated_pages * (1 + ceil(page_size / 50))
+    full_25k_minimum_requests = ceil(25_000 / page_size) * (1 + ceil(page_size / 50))
     _emit(
         CommandReport(
             command="snapshot-wikidata",
@@ -201,12 +203,14 @@ def snapshot_wikidata(
             dry_run=options.dry_run,
             input_count=len(collection.records),
             output_count=len(collection.records),
-            mutation_count=result.mutation_count,
+            mutation_count=max(result.mutation_count, collection.artifact_mutation_count),
             data_path=str(result.data_path),
             manifest_path=str(result.manifest_path),
             notes=(
-                f"scope={scope.value}, 이번 실행 요청 {collection.request_count}회",
-                f"limit 기준 최대 요청 추정 {estimated_requests}회",
+                f"scope={scope.value}, 이번 실행 WDQS page {collection.request_count}개",
+                f"limit 기준 HTTP 최소 요청 추정 {minimum_http_requests}회",
+                f"25,000건 HTTP 최소 요청 추정 {full_25k_minimum_requests}회",
+                "역할·악기·국가 linked entity batch 요청은 최소 추정에 포함되지 않습니다.",
                 f"checkpoint 재사용 행 {collection.resumed_record_count}개",
                 "WDQS 0.5 req/s 제한과 immutable page artifact를 적용했습니다.",
                 "운영 DB에 연결하지 않았습니다.",
