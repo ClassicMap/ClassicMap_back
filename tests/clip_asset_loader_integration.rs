@@ -119,6 +119,100 @@ async fn available_performances(pool: &db::DbPool, limit: u32) -> Vec<Performanc
     .expect("사용 가능한 performance fixture")
 }
 
+async fn prepare_seed_performance(pool: &db::DbPool, performance_id: i32) {
+    sqlx::query(
+        "UPDATE performances
+         SET origin = 'seed', editor_locked = FALSE, publish_status = 'DRAFT'
+         WHERE id = ?",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("seed performance 상태 준비");
+    sqlx::query(
+        "UPDATE performance_sources source
+         JOIN performances performance ON performance.performance_source_id = source.id
+         SET source.availability_status = 'AVAILABLE',
+             source.rights_mode = 'licensed_self_hosted'
+         WHERE performance.id = ?",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("self-hosted source 권리 준비");
+    sqlx::query(
+        "UPDATE performance_sectors sector
+         JOIN performances performance ON performance.sector_id = sector.id
+         SET sector.editorial_status = 'EDITOR_REVIEWED'
+         WHERE performance.id = ?",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("sector 편집 승인 준비");
+    sqlx::query(
+        "INSERT INTO performance_candidates (
+            sector_id, performance_source_id, proposed_start_ms, proposed_end_ms,
+            candidate_status, evidence
+         )
+         SELECT sector_id, performance_source_id, start_ms, end_ms,
+                'APPROVED', JSON_OBJECT('fixture', 'clip_asset_loader_integration')
+         FROM performances
+         WHERE id = ?
+         ON DUPLICATE KEY UPDATE candidate_status = 'APPROVED'",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("승인 performance candidate 준비");
+}
+
+async fn restore_legacy_performance(pool: &db::DbPool, performance_id: i32) {
+    sqlx::query(
+        "DELETE candidate
+         FROM performance_candidates candidate
+         JOIN performances performance
+           ON performance.sector_id = candidate.sector_id
+          AND performance.performance_source_id = candidate.performance_source_id
+          AND performance.start_ms = candidate.proposed_start_ms
+          AND performance.end_ms = candidate.proposed_end_ms
+         WHERE performance.id = ?",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("승인 candidate fixture 정리");
+    sqlx::query(
+        "UPDATE performance_sources source
+         JOIN performances performance ON performance.performance_source_id = source.id
+         SET source.rights_mode = 'unknown'
+         WHERE performance.id = ?",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("legacy source 권리 상태 복구");
+    sqlx::query(
+        "UPDATE performance_sectors sector
+         JOIN performances performance ON performance.sector_id = sector.id
+         SET sector.editorial_status = 'PUBLISHED'
+         WHERE performance.id = ?",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("legacy sector 상태 복구");
+    sqlx::query(
+        "UPDATE performances
+         SET origin = 'manual', editor_locked = TRUE
+         WHERE id = ?",
+    )
+    .bind(performance_id)
+    .execute(pool)
+    .await
+    .expect("legacy performance 잠금 복구");
+}
+
 fn options(
     path: PathBuf,
     cache_dir: PathBuf,
@@ -148,8 +242,11 @@ async fn bundle_load_is_atomic_idempotent_and_publishable() {
     .execute(&pool)
     .await
     .expect("seed run fixture 생성");
-    let fixtures = available_performances(&pool, 3).await;
-    assert_eq!(fixtures.len(), 3, "integration fixture가 부족함");
+    let fixtures = available_performances(&pool, 4).await;
+    assert_eq!(fixtures.len(), 4, "integration fixture가 부족함");
+    for fixture in &fixtures[..3] {
+        prepare_seed_performance(&pool, fixture.performance_id).await;
+    }
     let cache = create_cache();
 
     let fixture = &fixtures[0];
@@ -296,7 +393,52 @@ async fn bundle_load_is_atomic_idempotent_and_publishable() {
     .expect("원자 rollback 확인");
     assert_eq!(atomic_writes, 0);
 
+    let manual_fixture = &fixtures[3];
+    let manual_storage_key = format!(
+        "loader-{}-manual-locked-v1.mp4",
+        manual_fixture.performance_id
+    );
+    let manual_duration = manual_fixture.end_ms - manual_fixture.start_ms;
+    let manual_asset =
+        write_verified_asset(&cache, manual_fixture, &manual_storage_key, manual_duration);
+    let manual_path = bundle_path("clip-loader-manual-locked");
+    fs::write(
+        &manual_path,
+        format!(
+            "{}\n",
+            bundle_row(
+                manual_fixture,
+                &manual_storage_key,
+                manual_duration,
+                &manual_asset,
+            )
+        ),
+    )
+    .expect("manual performance bundle 작성");
+    let manual_error = ClipAssetLoader::load(
+        &pool,
+        &options(manual_path.clone(), cache.clone(), false, false),
+    )
+    .await
+    .expect_err("manual/editor_locked performance 적재 거부");
+    assert_eq!(manual_error.code(), "MANUAL_OR_LOCKED_PERFORMANCE");
+    let manual_writes = sqlx::query_scalar::<_, i64>(
+        "SELECT COUNT(*)
+         FROM clip_assets
+         WHERE performance_id = ?",
+    )
+    .bind(manual_fixture.performance_id)
+    .fetch_one(&pool)
+    .await
+    .expect("manual performance write 차단 확인");
+    assert_eq!(manual_writes, 0);
+
+    for fixture in &fixtures[..3] {
+        restore_legacy_performance(&pool, fixture.performance_id).await;
+    }
+
     fs::remove_file(path).expect("bundle 삭제");
     fs::remove_file(atomic_path).expect("atomic bundle 삭제");
+    fs::remove_file(manual_path).expect("manual bundle 삭제");
     fs::remove_dir_all(cache).expect("cache fixture 삭제");
 }

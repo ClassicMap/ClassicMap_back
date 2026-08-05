@@ -34,6 +34,10 @@ services:
       - "127.0.0.1:1037:1037"
     volumes:
       - image_cache:/app/cache/images
+      - type: bind
+        source: ${CLASSICMAP_CLIP_CACHE_HOST_DIR:?CLASSICMAP_CLIP_CACHE_HOST_DIR must be set}
+        target: /var/cache/classicmap-video-clips
+        read_only: true
     depends_on:
       classicmap_mysql:
         condition: service_healthy

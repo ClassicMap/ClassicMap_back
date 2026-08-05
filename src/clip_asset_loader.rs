@@ -109,6 +109,8 @@ struct PerformanceState {
     end_ms: u32,
     publish_status: String,
     provider_video_id: String,
+    origin: String,
+    editor_locked: bool,
 }
 
 #[derive(Debug, Clone, FromRow)]
@@ -610,7 +612,9 @@ async fn lock_performances(
                 performance.start_ms,
                 performance.end_ms,
                 CAST(performance.publish_status AS CHAR CHARACTER SET utf8mb4) AS publish_status,
-                CAST(source.provider_video_id AS CHAR CHARACTER SET utf8mb4) AS provider_video_id
+                CAST(source.provider_video_id AS CHAR CHARACTER SET utf8mb4) AS provider_video_id,
+                CAST(performance.origin AS CHAR CHARACTER SET utf8mb4) AS origin,
+                performance.editor_locked
          FROM performances performance
          JOIN performance_sources source ON source.id = performance.performance_source_id
          WHERE performance.id IN (",
@@ -901,6 +905,7 @@ async fn apply_rows(
                 "UPDATE performances
                  SET publish_status = 'READY', seed_run_id = COALESCE(?, seed_run_id)
                  WHERE id = ? AND publish_status IN ('DRAFT', 'READY', 'PUBLISHED')
+                   AND origin = 'seed' AND editor_locked = FALSE
                    AND publish_status <> 'READY'",
             )
             .bind(seed_run_id)
@@ -929,6 +934,13 @@ fn validate_performance_contract(
     row: &ValidatedBundleRow,
     performance: &PerformanceState,
 ) -> Result<(), ClipAssetLoadError> {
+    if performance.origin != "seed" || performance.editor_locked {
+        return Err(ClipAssetLoadError::input(
+            "MANUAL_OR_LOCKED_PERFORMANCE",
+            "seed clip loader는 origin=seed이고 editor_locked=FALSE인 performance만 변경할 수 있음",
+            Some(row.line),
+        ));
+    }
     if performance.publish_status == "RETIRED" {
         return Err(ClipAssetLoadError::input(
             "RETIRED_PERFORMANCE",

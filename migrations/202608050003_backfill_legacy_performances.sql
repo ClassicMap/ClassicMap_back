@@ -23,9 +23,9 @@ UPDATE performances performance
 JOIN performance_sources source
   ON source.provider = performance.video_platform
  AND source.provider_video_id = performance.video_id
-SET performance.performance_source_id = source.id,
-    performance.start_ms = performance.start_time * 1000,
-    performance.end_ms = performance.end_time * 1000
+SET performance.performance_source_id = COALESCE(performance.performance_source_id, source.id),
+    performance.start_ms = COALESCE(performance.start_ms, performance.start_time * 1000),
+    performance.end_ms = COALESCE(performance.end_ms, performance.end_time * 1000)
 WHERE performance.performance_source_id IS NULL
    OR performance.start_ms IS NULL
    OR performance.end_ms IS NULL;
