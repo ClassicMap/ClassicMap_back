@@ -47,6 +47,14 @@ from classicmap_seed.sources import (
     read_wikidata_entity_requests,
 )
 from classicmap_seed.sources.collector import collect_paginated
+from classicmap_seed.sources.musicbrainz_dump import (
+    MusicBrainzDumpCommandReport,
+    collect_musicbrainz_dump,
+    musicbrainz_dump_metadata,
+    musicbrainz_dump_retrieved_at,
+    read_musicbrainz_dump_release_metadata,
+    verify_musicbrainz_dump_input,
+)
 from classicmap_seed.sources.musicbrainz_work_input import (
     merge_duplicate_work_records,
     read_verified_musicbrainz_artist_ids,
@@ -105,6 +113,166 @@ MaxPagesOption = Annotated[
     int | None,
     typer.Option("--max-pages", min=1, help="이번 실행에서 요청할 최대 page 수"),
 ]
+
+
+@app.command("snapshot-musicbrainz-dump")
+def snapshot_musicbrainz_dump(
+    run_id: RunIdOption,
+    input_path: Annotated[
+        Path,
+        typer.Option("--input", exists=True, dir_okay=False, readable=True),
+    ],
+    release_metadata_path: Annotated[
+        Path,
+        typer.Option(
+            "--release-metadata",
+            exists=True,
+            dir_okay=False,
+            readable=True,
+            help="공식 release date·URL·SHA-256·파일크기 sidecar JSON",
+        ),
+    ],
+    dry_run: DryRunOption = False,
+    resume: ResumeOption = True,
+    limit: LimitOption = 20,
+    json_report: JsonReportOption = None,
+    artifacts_dir: ArtifactsDirOption = Path("artifacts"),
+    start_ordinal: Annotated[
+        int,
+        typer.Option("--start-ordinal", min=0, help="work 다음 recording 순서의 0-based ordinal"),
+    ] = 0,
+    end_ordinal: Annotated[
+        int | None,
+        typer.Option("--end-ordinal", min=1, help="0-based entity ordinal, exclusive"),
+    ] = None,
+    checkpoint_every: Annotated[
+        int,
+        typer.Option(
+            "--checkpoint-every",
+            min=1,
+            max=1_000_000,
+            help="검사 entity 수 기준 checkpoint 간격",
+        ),
+    ] = 10_000,
+) -> None:
+    """공식 MusicBrainz core dump를 네트워크 없이 raw snapshot으로 변환합니다."""
+    options = _options(run_id, dry_run, resume, limit, json_report)
+    try:
+        release = read_musicbrainz_dump_release_metadata(release_metadata_path)
+        provenance = verify_musicbrainz_dump_input(input_path, release)
+        if end_ordinal is not None and end_ordinal <= start_ordinal:
+            raise ValueError("--end-ordinal은 --start-ordinal보다 커야 합니다.")
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--release-metadata") from error
+
+    partition_name = f"{start_ordinal}-{end_ordinal if end_ordinal is not None else 'end'}"
+    checkpoint_path = (
+        artifacts_dir / options.run_id / "checkpoints" / f"musicbrainz-dump-{partition_name}.json"
+    )
+    store = _store(artifacts_dir)
+    metadata = musicbrainz_dump_metadata(provenance)
+    retrieved_at = musicbrainz_dump_retrieved_at(provenance)
+    try:
+        collection = collect_musicbrainz_dump(
+            input_path=input_path,
+            provenance=provenance,
+            run_id=options.run_id,
+            artifact_store=store,
+            artifacts_root=artifacts_dir,
+            checkpoint_path=checkpoint_path,
+            start_ordinal=start_ordinal,
+            end_ordinal=end_ordinal,
+            limit=options.limit,
+            checkpoint_every=checkpoint_every,
+            dry_run=options.dry_run,
+            resume=options.resume,
+        )
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--input") from error
+
+    snapshot_result = store.write(
+        run_id=options.run_id,
+        stage=ArtifactStage.RAW,
+        metadata=metadata,
+        records=collection.records,
+        retrieved_at=retrieved_at,
+        dry_run=options.dry_run,
+        resume=options.resume,
+        input_provenance=provenance,
+    )
+    malformed_result = None
+    if collection.malformed_reviews:
+        malformed_result = store.write(
+            run_id=options.run_id,
+            stage=ArtifactStage.RAW,
+            metadata=metadata,
+            records=collection.malformed_reviews,
+            retrieved_at=retrieved_at,
+            dry_run=options.dry_run,
+            resume=options.resume,
+            input_provenance=provenance,
+        )
+    unresolved_result = None
+    if collection.unresolved_reviews:
+        unresolved_result = store.write(
+            run_id=options.run_id,
+            stage=ArtifactStage.RAW,
+            metadata=metadata,
+            records=collection.unresolved_reviews,
+            retrieved_at=retrieved_at,
+            dry_run=options.dry_run,
+            resume=options.resume,
+            input_provenance=provenance,
+        )
+    aggregate_mutation_count = snapshot_result.mutation_count
+    if malformed_result is not None:
+        aggregate_mutation_count += malformed_result.mutation_count
+    if unresolved_result is not None:
+        aggregate_mutation_count += unresolved_result.mutation_count
+    report = MusicBrainzDumpCommandReport(
+        run_id=options.run_id,
+        dry_run=options.dry_run,
+        input_sha256=provenance.sha256,
+        input_size_bytes=provenance.size_bytes,
+        release_date=provenance.dump_date,
+        source_url=provenance.source_url,
+        partition_start_ordinal=start_ordinal,
+        partition_end_ordinal=end_ordinal,
+        next_ordinal=collection.next_ordinal,
+        complete=collection.complete,
+        scanned_entity_count=collection.scanned_entity_count,
+        input_count=collection.scanned_entity_count,
+        output_count=len(collection.records),
+        malformed_count=len(collection.malformed_reviews),
+        unresolved_count=len(collection.unresolved_reviews),
+        resumed_output_count=collection.resumed_record_count,
+        resumed_malformed_count=collection.resumed_malformed_count,
+        resumed_unresolved_count=collection.resumed_unresolved_count,
+        mutation_count=max(collection.artifact_mutation_count, aggregate_mutation_count),
+        data_path=str(snapshot_result.data_path),
+        manifest_path=str(snapshot_result.manifest_path),
+        malformed_data_path=(
+            str(malformed_result.data_path) if malformed_result is not None else None
+        ),
+        malformed_manifest_path=(
+            str(malformed_result.manifest_path) if malformed_result is not None else None
+        ),
+        unresolved_data_path=(
+            str(unresolved_result.data_path) if unresolved_result is not None else None
+        ),
+        unresolved_manifest_path=(
+            str(unresolved_result.manifest_path) if unresolved_result is not None else None
+        ),
+        notes=(
+            "MusicBrainz schema sequence 31과 필수 core member를 검증했습니다.",
+            "tar.bz2와 PostgreSQL COPY를 streaming 처리하고 SQLite disk index만 사용했습니다.",
+            "artist/work/recording 연결은 MBID, recording 식별은 MBID/ISRC exact만 사용했습니다.",
+            "composer/performance는 공식 link_type GID exact match일 때만 의미를 부여했습니다.",
+            "malformed와 unresolved는 서로 다른 review artifact로 분리했습니다.",
+            "네트워크, 운영 DB, 홈서버에 연결하지 않았습니다.",
+        ),
+    )
+    _emit(report, options)
 
 
 @app.command("snapshot-wikidata-dump")
