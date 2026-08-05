@@ -12,6 +12,7 @@ from pydantic import BaseModel
 from classicmap_seed.models import (
     ArtifactStage,
     ArtifactWriteResult,
+    InputFileProvenance,
     SnapshotManifest,
     SourceMetadata,
 )
@@ -76,6 +77,7 @@ class JsonlArtifactStore:
         dry_run: bool,
         resume: bool,
         parent_sha256: str | None = None,
+        input_provenance: InputFileProvenance | None = None,
     ) -> ArtifactWriteResult:
         content = serialize_jsonl(records)
         digest = sha256_bytes(content)
@@ -96,6 +98,7 @@ class JsonlArtifactStore:
             relative_data_path=data_path.name,
             parent_sha256=parent_sha256,
             tool_version=self._tool_version,
+            input_provenance=input_provenance,
         )
 
         data_exists = data_path.exists()
@@ -187,6 +190,7 @@ class JsonlArtifactStore:
             "relative_data_path",
             "parent_sha256",
             "tool_version",
+            "input_provenance",
         )
         for field in comparable_fields:
             if getattr(existing, field) != getattr(expected, field):

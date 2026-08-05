@@ -236,6 +236,75 @@ def test_verified_performer_projection_requires_instrument_and_country_labels() 
     assert "image_url" not in artist.values
 
 
+def test_single_iso_country_link_selects_matching_label_among_historical_qids() -> None:
+    raw = _wikidata_projection_raw(scope="composers")
+    payload = dict(raw.payload)
+    payload["country_entity_ids"] = ["Q183", "Q123456"]
+    payload["country_labels"] = [
+        {"code": "Q183", "locale": "en", "name": "Germany"},
+        {"code": "Q183", "locale": "ko", "name": "독일"},
+        {"code": "Q123456", "locale": "en", "name": "Historical state"},
+        {"code": "Q123456", "locale": "ko", "name": "역사적 국가"},
+    ]
+    linked_raw = raw.model_copy(update={"payload": payload})
+    candidate = normalize_records([linked_raw])[0]
+    decision = ResolutionDecision(
+        decision_id="decision-country-link",
+        action=ResolutionAction.CREATE,
+        candidate_ids=(candidate.candidate_id,),
+        reason_code="NO_MATCHING_STABLE_IDENTIFIER",
+    )
+
+    bundle = build_canonical_load_bundle(
+        run_id="run-country-link",
+        source_manifest=_manifest(),
+        raw_records=[linked_raw],
+        candidates=[candidate],
+        decisions=[decision],
+    )
+
+    composer = next(record for record in bundle if record.table is LoadTable.COMPOSERS)
+    assert composer.values["nationality"] == "독일"
+
+
+def test_multiple_iso_country_codes_keep_legacy_projection_in_review() -> None:
+    raw = _wikidata_projection_raw(scope="composers")
+    payload = dict(raw.payload)
+    payload["country_codes"] = ["DE", "PL"]
+    payload["country_code_links"] = [
+        {"country_code": "DE", "country_entity_id": "Q183"},
+        {"country_code": "PL", "country_entity_id": "Q36"},
+    ]
+    payload["country_entity_ids"] = ["Q183", "Q36"]
+    payload["country_labels"] = [
+        {"code": "Q183", "locale": "ko", "name": "독일"},
+        {"code": "Q36", "locale": "ko", "name": "폴란드"},
+    ]
+    ambiguous_raw = raw.model_copy(update={"payload": payload})
+    candidate = normalize_records([ambiguous_raw])[0]
+    decision = ResolutionDecision(
+        decision_id="decision-country-ambiguous",
+        action=ResolutionAction.CREATE,
+        candidate_ids=(candidate.candidate_id,),
+        reason_code="NO_MATCHING_STABLE_IDENTIFIER",
+    )
+
+    bundle = build_canonical_load_bundle(
+        run_id="run-country-ambiguous",
+        source_manifest=_manifest(),
+        raw_records=[ambiguous_raw],
+        candidates=[candidate],
+        decisions=[decision],
+    )
+
+    assert not any(record.table is LoadTable.COMPOSERS for record in bundle)
+    assert any(
+        record.table is LoadTable.REVIEW_QUEUE
+        and record.values["reason_code"] == "LEGACY_COMPOSER_REQUIRED_FIELDS_MISSING"
+        for record in bundle
+    )
+
+
 def test_birth_year_period_fallback_keeps_chopin_and_debussy_out_of_classical() -> None:
     for birth_year, expected_period in ((1810, "낭만주의"), (1862, "근현대")):
         raw = _wikidata_projection_raw(scope="composers")
@@ -414,6 +483,7 @@ def _wikidata_projection_raw(*, scope: str) -> SourceRecord:
                 {"code": "Q5994", "locale": "ko", "name": "피아노"},
             ],
             "country_codes": ["DE"],
+            "country_code_links": [{"country_code": "DE", "country_entity_id": "Q183"}],
             "country_entity_ids": ["Q183"],
             "country_labels": [
                 {"code": "Q183", "locale": "en", "name": "Germany"},

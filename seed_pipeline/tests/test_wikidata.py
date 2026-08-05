@@ -111,6 +111,9 @@ def test_wikidata_scope_page_uses_stable_cursor_and_collects_authority_facts() -
     assert record.payload["role_codes"] == ["Q36834"]
     assert record.payload["instrument_codes"] == ["Q5994"]
     assert record.payload["country_codes"] == ["DE"]
+    assert record.payload["country_code_links"] == [
+        {"country_code": "DE", "country_entity_id": "Q183"}
+    ]
     assert record.payload["external_identifiers"] == {
         "musicbrainz_artist": ["mbid-Q10"],
         "gnd": ["gnd-Q10"],

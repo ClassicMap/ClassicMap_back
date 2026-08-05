@@ -67,7 +67,72 @@ uv run classicmap-seed snapshot-wikidata \
   --limit 1000
 ```
 
-이 API collector는 작은 live 검증, 파일럿, 증분 보강용입니다. 수만 명 이상의 전세계 공개 seed를 반복 생성하는 주 경로로 WDQS/API를 사용하지 않습니다. 전체 공개 목표는 공식 Wikidata dump를 고정 버전으로 내려받아 동일한 raw `SourceRecord` 계약으로 변환하는 별도 ingestion job이 필요합니다. dump checksum, 배포일, 재시작 가능한 partition cursor를 manifest에 남긴 뒤 이 파이프라인의 normalize 이후 단계를 재사용해야 합니다.
+이 API collector는 작은 live 검증, 파일럿, 증분 보강용입니다. 수만 명 이상의 전세계 공개 seed를 반복 생성하는 주 경로로 WDQS/API를 사용하지 않습니다. 전세계 대량 seed의 주 경로는 아래의 날짜 고정 공식 dump ingestion입니다.
+
+### Wikidata 공식 dump 대량 수집
+
+`snapshot-wikidata-dump`는 공식 entities JSON dump의 로컬 `.json.bz2` 파일을 streaming으로 읽습니다. 테스트용 uncompressed `.json`도 같은 줄 단위 JSON array 계약으로 읽습니다. 네트워크를 호출하지 않으며 파일 전체를 메모리에 올리지 않습니다. 결과 수는 `--limit`으로 제한되고, 입력 entity는 한 행씩만 메모리에 유지합니다.
+
+입력에는 다음 strict release metadata sidecar가 필수입니다. `source_url`은 `latest`가 아닌 날짜 고정 `dumps.wikimedia.org` entities URL이어야 하며 URL 날짜와 `dump_date`가 같아야 합니다. `sha256`과 `size_bytes`는 실제 로컬 입력 파일과 정확히 일치해야 합니다. 이 네 값은 모든 dump 기반 manifest의 `input_provenance`에 보존됩니다.
+
+```json
+{
+  "schema_version": "1",
+  "dump_date": "2026-08-01",
+  "source_url": "https://dumps.wikimedia.org/wikidatawiki/entities/20260801/wikidata-20260801-all.json.bz2",
+  "sha256": "<실제 로컬 파일의 소문자 SHA-256 64자리>",
+  "size_bytes": 123456789
+}
+```
+
+```bash
+uv run classicmap-seed snapshot-wikidata-dump \
+  --run-id wikidata-20260801-part-000 \
+  --input /data/wikidata-20260801-all.json.bz2 \
+  --release-metadata /data/wikidata-20260801.release.json \
+  --start-ordinal 0 \
+  --end-ordinal 10000000 \
+  --checkpoint-every 10000 \
+  --limit 100000 \
+  --artifacts-dir artifacts \
+  --json-report reports/wikidata-20260801-part-000.json
+```
+
+partition은 dump JSON array에 나타나는 모든 top-level entity의 0-based ordinal입니다. `start`는 inclusive, `end`는 exclusive입니다. 같은 dump와 partition은 항상 같은 범위를 가리킵니다. checkpoint에는 다음 ordinal과 immutable page manifest만 저장합니다. 입력 파일이나 sidecar checksum이 바뀐 상태에서 같은 run/partition을 resume하면 거부합니다.
+
+첫 실행은 dump의 P279 edge와 영어·한국어 linked label/P297을 `artifacts/_indexes/wikidata/<input-sha>.scope.sqlite`에 streaming으로 구축합니다. 이 로컬 파생 index로 기존 `P106/P279* composer`, `P106/P279* musician`, `P31/P279* musical ensemble` predicate를 평가합니다. composer가 musician 계층에도 속하는 구조적 중첩에는 composer precedence를 적용합니다. 이름은 scope 판정에 사용하지 않습니다. scope 근거가 손상되었거나 person/ensemble이 동시에 일치하면 공개 raw에 섞지 않고 별도 review artifact로 보냅니다.
+
+Wikidata raw payload는 국가 ISO code와 국가 QID를 `country_code_links`로 함께 보존합니다. ISO code가 정확히 하나면 그 code에 연결된 QID의 한국어, 영어 순서로 국가명을 선택합니다. 역사 국가 QID가 함께 있어도 연결되지 않은 label을 nationality로 고르지 않습니다. ISO code 또는 같은 code의 연결 QID가 둘 이상이면 legacy projection은 계속 review입니다.
+
+dump snapshot 이후에는 report의 공개 raw `manifest_path`를 표준 단계에 그대로 전달합니다. `input_provenance`는 canonical까지 전파됩니다. review manifest를 normalize 입력으로 사용하면 안 됩니다.
+
+```bash
+uv run classicmap-seed normalize \
+  --run-id wikidata-20260801-part-000 \
+  --manifest artifacts/wikidata-20260801-part-000/raw/wikidata/<raw-sha>.manifest.json \
+  --limit 100000
+
+uv run classicmap-seed resolve \
+  --run-id wikidata-20260801-part-000 \
+  --manifest artifacts/wikidata-20260801-part-000/normalized/wikidata/<normalized-sha>.manifest.json \
+  --limit 100000
+
+uv run classicmap-seed export-canonical \
+  --run-id wikidata-20260801-part-000 \
+  --manifest artifacts/wikidata-20260801-part-000/resolved/wikidata/<resolved-sha>.manifest.json \
+  --limit 100000
+```
+
+낮은 사양 모델이나 운영 자동화는 다음 순서를 바꾸지 않습니다.
+
+1. 날짜 고정 공식 URL, dump 날짜, 로컬 SHA-256, 파일 크기를 sidecar에 기록합니다.
+2. 서로 겹치지 않는 `[start-ordinal, end-ordinal)` partition과 고유 run-id를 정합니다.
+3. 먼저 `--dry-run`으로 계약과 예상 결과를 확인합니다.
+4. write 실행 후 raw와 review manifest 경로를 각각 기록합니다.
+5. 같은 명령을 `--resume`으로 다시 실행해 `scanned_entity_count=0`, `mutation_count=0`을 확인합니다.
+6. review가 아닌 raw manifest만 normalize, resolve, export-canonical에 전달합니다.
+7. canonical의 두 번째 dry-run mutation 0과 review queue를 확인하기 전에는 staging loader에도 전달하지 않습니다.
+8. 이 명령에는 contact, 토큰, API key를 추가하지 않으며 운영 DB와 홈서버 경로를 사용하지 않습니다.
 
 이미 외부 검수가 끝난 QID dependency는 이름 검색 없이 entity API로 직접 수집합니다. 입력은 `{qid, scope}` 두 필드만 허용하며 QID 중복, 잘못된 scope, 이름 필드와 알 수 없는 필드를 거부합니다. main entity와 역할·악기·국가 linked entity를 `wbgetentities` 최대 50건 batch로 읽고 immutable page artifact와 입력 SHA-256별 checkpoint를 남깁니다. 입력 scope는 그대로 신뢰하지 않습니다. 같은 50건 page를 WDQS `VALUES`와 기존 작곡가·연주자·앙상블 predicate로 검증하며, 불일치는 수집 전에 거부하고 검증 근거를 각 raw record의 `scope_validation`에 남깁니다.
 
@@ -219,9 +284,11 @@ artifacts/<run-id>/
 ├─ canonical/<source>/<sha256>.manifest.json
 ├─ streaming/<source>/<sha256>.jsonl
 └─ streaming/<source>/<sha256>.manifest.json
+
+artifacts/_indexes/wikidata/<input-sha256>.scope.sqlite
 ```
 
-파일명은 JSONL 본문의 SHA-256으로 결정됩니다. 이미 생성된 artifact는 덮어쓰지 않습니다. 같은 입력을 다시 실행하면 기존 artifact를 재사용하며 mutation 수는 0입니다.
+파일명은 JSONL 본문의 SHA-256으로 결정됩니다. 이미 생성된 artifact는 덮어쓰지 않습니다. 같은 입력을 다시 실행하면 기존 artifact를 재사용하며 mutation 수는 0입니다. `_indexes`는 dump 자체를 복사한 artifact가 아니라 동일 input SHA partition들이 공유하는 bounded-memory 분류용 로컬 SQLite 파생 index입니다.
 
 ## 검증
 

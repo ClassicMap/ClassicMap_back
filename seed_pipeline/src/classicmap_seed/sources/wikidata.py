@@ -279,6 +279,7 @@ ORDER BY STR(?entity) STR(?scope)
         linked_entities: dict[str, JsonObject],
         *,
         scope_validation: JsonObject | None = None,
+        entity_data_source: str | None = None,
     ) -> SourceRecord:
         entity_id = WikidataConnector._entity_id(entity)
         labels = require_object(entity.get("labels"), field=f"{entity_id}.labels")
@@ -319,6 +320,24 @@ ORDER BY STR(?entity) STR(?scope)
                 if len(code) == 2
             }
         )
+        country_code_link_objects: list[JsonObject] = sorted(
+            (
+                {
+                    "country_code": code.upper(),
+                    "country_entity_id": country_id,
+                }
+                for country_id in country_entity_ids
+                for code in WikidataConnector._claim_strings(
+                    linked_entities.get(country_id, {}), "P297"
+                )
+                if len(code) == 2
+            ),
+            key=lambda link: (
+                str(link["country_code"]),
+                str(link["country_entity_id"]),
+            ),
+        )
+        country_code_links: list[JsonValue] = [link for link in country_code_link_objects]
         selected_payload: JsonObject = {
             "id": entity_id,
             "name": label_en or label_ko or entity_id,
@@ -332,6 +351,7 @@ ORDER BY STR(?entity) STR(?scope)
                 instrument_codes, linked_entities
             ),
             "country_codes": WikidataConnector._json_strings(country_codes),
+            "country_code_links": country_code_links,
             "country_entity_ids": WikidataConnector._json_strings(country_entity_ids),
             "country_labels": WikidataConnector._linked_labels(country_entity_ids, linked_entities),
             "commons_image_ids": WikidataConnector._json_strings(
@@ -356,7 +376,7 @@ ORDER BY STR(?entity) STR(?scope)
             },
             "date_of_birth": WikidataConnector._first_claim_time(entity, "P569"),
             "date_of_death": WikidataConnector._first_claim_time(entity, "P570"),
-            "entity_data_source": WikidataConnector._ENTITY_URL,
+            "entity_data_source": entity_data_source or WikidataConnector._ENTITY_URL,
         }
         if scope_validation is not None:
             selected_payload["scope_validation"] = scope_validation
