@@ -29,8 +29,17 @@ from classicmap_seed.models import (
 from classicmap_seed.normalize import normalize_records
 from classicmap_seed.reporting import render_report, write_report
 from classicmap_seed.resolve import resolve_candidates
-from classicmap_seed.sources import WikidataConnector, build_connector
+from classicmap_seed.sources import (
+    WikidataConnector,
+    build_connector,
+    build_musicbrainz_work_connector,
+)
 from classicmap_seed.sources.collector import collect_paginated
+from classicmap_seed.sources.musicbrainz_work_input import (
+    merge_duplicate_work_records,
+    read_verified_musicbrainz_artist_ids,
+)
+from classicmap_seed.sources.pagination import SourcePage
 from classicmap_seed.streaming import (
     StreamingPlatform,
     build_streaming_load_bundle,
@@ -213,6 +222,130 @@ def snapshot_wikidata(
                 "역할·악기·국가 linked entity batch 요청은 최소 추정에 포함되지 않습니다.",
                 f"checkpoint 재사용 행 {collection.resumed_record_count}개",
                 "WDQS 0.5 req/s 제한과 immutable page artifact를 적용했습니다.",
+                "운영 DB에 연결하지 않았습니다.",
+            ),
+        ),
+        options,
+    )
+
+
+@app.command("snapshot-musicbrainz-works")
+def snapshot_musicbrainz_works(
+    run_id: RunIdOption,
+    artist_manifest: Annotated[
+        Path,
+        typer.Option("--artist-manifest", exists=True, dir_okay=False, readable=True),
+    ],
+    contact: Annotated[
+        str,
+        typer.Option("--contact", help="MusicBrainz User-Agent 연락처. artifact에는 저장하지 않음"),
+    ],
+    dry_run: DryRunOption = False,
+    resume: ResumeOption = True,
+    limit: LimitOption = 20,
+    json_report: JsonReportOption = None,
+    artifacts_dir: ArtifactsDirOption = Path("artifacts"),
+    page_size: Annotated[
+        int,
+        typer.Option("--page-size", min=1, max=100, help="MusicBrainz work browse page 크기"),
+    ] = 100,
+    max_pages: MaxPagesOption = None,
+) -> None:
+    """검증된 artist MBID별 MusicBrainz work를 offset pagination으로 수집합니다."""
+    options = _options(run_id, dry_run, resume, limit, json_report)
+    try:
+        artist_ids = read_verified_musicbrainz_artist_ids(artist_manifest)
+        connector, http_client = build_musicbrainz_work_connector(contact=contact)
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--artist-manifest") from error
+
+    retrieved_at = datetime.now(UTC)
+    store = _store(artifacts_dir)
+    all_records: list[SourceRecord] = []
+    artifact_mutation_count = 0
+    requested_pages = 0
+    resumed_records = 0
+    try:
+        for artist_id in artist_ids:
+            remaining = options.limit - len(all_records)
+            if remaining <= 0:
+                break
+            remaining_pages = None if max_pages is None else max_pages - requested_pages
+            if remaining_pages is not None and remaining_pages <= 0:
+                break
+            checkpoint_path = (
+                artifacts_dir
+                / options.run_id
+                / "checkpoints"
+                / f"musicbrainz-works-{artist_id}.json"
+            )
+            current_artist_id = artist_id
+
+            def fetch_work_page(
+                size: int,
+                cursor: str | None,
+                artist_mbid: str = current_artist_id,
+            ) -> SourcePage:
+                return connector.fetch_page(
+                    artist_mbid=artist_mbid,
+                    offset=int(cursor) if cursor is not None else 0,
+                    page_size=size,
+                )
+
+            collection = collect_paginated(
+                run_id=options.run_id,
+                scope=f"artist:{artist_id}",
+                metadata=connector.metadata,
+                fetch_page=fetch_work_page,
+                artifact_store=store,
+                artifacts_root=artifacts_dir,
+                checkpoint_path=checkpoint_path,
+                retrieved_at=retrieved_at,
+                limit=remaining,
+                page_size=page_size,
+                max_pages=remaining_pages,
+                dry_run=options.dry_run,
+                resume=options.resume,
+            )
+            all_records.extend(collection.records)
+            artifact_mutation_count += collection.artifact_mutation_count
+            requested_pages += collection.request_count
+            resumed_records += collection.resumed_record_count
+    except ValueError as error:
+        raise typer.BadParameter(str(error)) from error
+    finally:
+        http_client.close()
+
+    merged_records = merge_duplicate_work_records(all_records)
+    result = store.write(
+        run_id=options.run_id,
+        stage=ArtifactStage.RAW,
+        metadata=connector.metadata,
+        records=merged_records,
+        retrieved_at=retrieved_at,
+        dry_run=options.dry_run,
+        resume=options.resume,
+    )
+    estimated_requests = max(len(artist_ids), ceil(options.limit / page_size))
+    full_25k_requests = max(len(artist_ids), ceil(25_000 / page_size))
+    _emit(
+        CommandReport(
+            command="snapshot-musicbrainz-works",
+            run_id=options.run_id,
+            dry_run=options.dry_run,
+            input_count=len(artist_ids),
+            output_count=len(merged_records),
+            mutation_count=max(result.mutation_count, artifact_mutation_count),
+            data_path=str(result.data_path),
+            manifest_path=str(result.manifest_path),
+            notes=(
+                f"이번 실행 MusicBrainz page 요청 {requested_pages}회",
+                f"limit 기준 최소 요청 추정 {estimated_requests}회",
+                f"25,000 work 최소 요청 추정 {full_25k_requests}회, 1 req/s 기준 같은 초 이상",
+                f"checkpoint 재사용 행 {resumed_records}개",
+                "공식 browse /work?artist= 계약의 WORK만 수집했습니다.",
+                "recording/ISRC는 composer work browse와 performance artist 의미가 달라 "
+                "수집하지 않았습니다.",
                 "운영 DB에 연결하지 않았습니다.",
             ),
         ),
