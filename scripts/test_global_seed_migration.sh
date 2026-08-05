@@ -41,6 +41,8 @@ cargo test --quiet --manifest-path "$repo_root/Cargo.toml" \
   --test comparison_repository_integration -- --ignored
 cargo test --quiet --manifest-path "$repo_root/Cargo.toml" \
   --test clip_asset_loader_integration -- --ignored --test-threads=1
+cargo test --quiet --manifest-path "$repo_root/Cargo.toml" \
+  --test global_seed_loader_integration -- --ignored --test-threads=1
 
 backfill_counts_before=$(docker exec --env MYSQL_PWD="$database_password" "$container_name" \
   mysql --batch --skip-column-names --user=root --execute="
@@ -82,16 +84,16 @@ assert_sql \
   "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='classicmap' AND table_name IN ('authority_entities','piece_parts','recording_tracks','seed_runs','performance_sources','clip_assets','seed_natural_keys');" \
   "7"
 assert_sql \
-  "SELECT IF(COUNT(*) = SUM(origin='manual' AND editor_locked=1), 1, 0) FROM classicmap.composers;" \
+  "SELECT IF(COUNT(*) = SUM(editor_locked=1), 1, 0) FROM classicmap.composers WHERE origin='manual';" \
   "1"
 assert_sql \
-  "SELECT IF(COUNT(*) = SUM(origin='manual' AND editor_locked=1), 1, 0) FROM classicmap.artists;" \
+  "SELECT IF(COUNT(*) = SUM(editor_locked=1), 1, 0) FROM classicmap.artists WHERE origin='manual';" \
   "1"
 assert_sql \
-  "SELECT IF(COUNT(*) = SUM(origin='manual' AND editor_locked=1), 1, 0) FROM classicmap.recordings;" \
+  "SELECT IF(COUNT(*) = SUM(editor_locked=1), 1, 0) FROM classicmap.recordings WHERE origin='manual';" \
   "1"
 assert_sql \
-  "SELECT IF(COUNT(*) = SUM(origin='manual' AND editor_locked=1), 1, 0) FROM classicmap.performances;" \
+  "SELECT IF(COUNT(*) = SUM(editor_locked=1), 1, 0) FROM classicmap.performances WHERE origin='manual';" \
   "1"
 assert_sql \
   "SELECT COUNT(*) FROM classicmap.performances WHERE performance_source_id IS NULL OR start_ms IS NULL OR end_ms IS NULL;" \
