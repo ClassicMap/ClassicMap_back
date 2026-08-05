@@ -7,14 +7,10 @@ WORKDIR /app
 # Copy Cargo files for dependency caching
 COPY Cargo.toml Cargo.lock ./
 
-# Copy .sqlx for offline mode (�ִٸ�)
-COPY .sqlx ./.sqlx
-
 # Create dummy main.rs for dependency cache
 RUN mkdir src && echo "fn main() {}" > src/main.rs
 
 # Build dependencies only
-ENV SQLX_OFFLINE=true
 RUN cargo build --release && rm -rf src
 
 # Copy source code
