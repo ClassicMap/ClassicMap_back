@@ -84,7 +84,7 @@ def build_canonical_load_bundle(
         entity_id = _canonical_entity_id(group)
         for candidate in group:
             entity_id_by_candidate[candidate.candidate_id] = entity_id
-        records.append(_entity_record(run_id, entity_id, group))
+        records.append(_entity_record(run_id, entity_id, group, decision))
 
     records.extend(_identifier_records(run_id, candidates, entity_id_by_candidate))
     records.extend(_provenance_records(run_id, candidates, entity_id_by_candidate))
@@ -95,6 +95,7 @@ def _entity_record(
     run_id: str,
     entity_id: str,
     candidates: list[NormalizedEntityCandidate],
+    decision: ResolutionDecision,
 ) -> CanonicalLoadRecord:
     representative = _choose_representative(candidates)
     table = _entity_table(representative.entity_kind)
@@ -108,6 +109,8 @@ def _entity_record(
             "preferred_name": representative.preferred_name,
             "normalized_name": representative.normalized_name,
             "candidate_ids": _json_strings(candidate.candidate_id for candidate in candidates),
+            "resolution_action": decision.action,
+            "resolution_reason_code": decision.reason_code,
             "publication_state": "IDENTIFIERS_MATCHED",
         },
     )
@@ -137,26 +140,33 @@ def _identifier_records(
     candidates: list[NormalizedEntityCandidate],
     entity_id_by_candidate: dict[str, str],
 ) -> list[CanonicalLoadRecord]:
-    by_natural_key: dict[str, CanonicalLoadRecord] = {}
+    records: list[CanonicalLoadRecord] = []
+    seen: set[tuple[str, str]] = set()
     for candidate in candidates:
         entity_id = entity_id_by_candidate.get(candidate.candidate_id)
         if entity_id is None:
             continue
         for identifier in candidate.external_identifiers:
             natural_key = f"{identifier.namespace}:{identifier.value}"
-            by_natural_key[natural_key] = _record(
-                LoadTable.EXTERNAL_IDENTIFIERS,
-                natural_key,
-                {
-                    "run_id": run_id,
-                    "entity_id": entity_id,
-                    "namespace": identifier.namespace,
-                    "value": identifier.value,
-                    "strength": identifier.strength,
-                    "source": identifier.source,
-                },
+            identity = (natural_key, entity_id)
+            if identity in seen:
+                continue
+            seen.add(identity)
+            records.append(
+                _record(
+                    LoadTable.EXTERNAL_IDENTIFIERS,
+                    natural_key,
+                    {
+                        "run_id": run_id,
+                        "entity_id": entity_id,
+                        "namespace": identifier.namespace,
+                        "value": identifier.value,
+                        "strength": identifier.strength,
+                        "source": identifier.source,
+                    },
+                )
             )
-    return list(by_natural_key.values())
+    return records
 
 
 def _provenance_records(

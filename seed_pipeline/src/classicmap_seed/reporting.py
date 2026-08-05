@@ -4,14 +4,14 @@ import os
 from pathlib import Path
 from tempfile import NamedTemporaryFile
 
-from classicmap_seed.models import CommandReport
+from pydantic import BaseModel
 
 
-def render_report(report: CommandReport) -> str:
+def render_report(report: BaseModel) -> str:
     return report.model_dump_json(indent=2)
 
 
-def write_report(report: CommandReport, destination: Path | None, *, dry_run: bool) -> None:
+def write_report(report: BaseModel, destination: Path | None, *, dry_run: bool) -> None:
     if destination is None or dry_run:
         return
 
