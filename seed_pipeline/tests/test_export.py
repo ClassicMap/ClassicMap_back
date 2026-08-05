@@ -349,6 +349,51 @@ def test_work_part_without_parent_piece_in_bundle_is_reviewed() -> None:
     )
 
 
+def test_work_aliases_with_same_locale_and_normalized_value_are_deduplicated() -> None:
+    raw = SourceRecord(
+        source=SourceName.MUSICBRAINZ_WORKS,
+        source_record_id="work-with-duplicate-alias",
+        entity_kind=EntityKind.WORK,
+        payload={
+            "name": "Adieu, mein kleiner Gardeoffizier",
+            "localized_names": [
+                {
+                    "locale": "und",
+                    "name_kind": "alias",
+                    "name": "Adieu, mein kleiner Gardeoffizier",
+                },
+                {
+                    "locale": "und",
+                    "name_kind": "alias",
+                    "name": "adieu, mein kleiner gardeoffizier",
+                },
+            ],
+            "composer_mbids": ["composer-mbid"],
+            "relations": [],
+        },
+    )
+    candidate = normalize_records([raw])[0]
+    decision = ResolutionDecision(
+        decision_id="decision-duplicate-work-alias",
+        action=ResolutionAction.CREATE,
+        candidate_ids=(candidate.candidate_id,),
+        reason_code="NO_MATCHING_STABLE_IDENTIFIER",
+    )
+    manifest = _manifest().model_copy(update={"source": SourceName.MUSICBRAINZ_WORKS})
+
+    bundle = build_canonical_load_bundle(
+        run_id="run-1",
+        source_manifest=manifest,
+        raw_records=[raw],
+        candidates=[candidate],
+        decisions=[decision],
+    )
+    aliases = [record for record in bundle if record.table is LoadTable.PIECE_ALIASES]
+
+    assert len(aliases) == 1
+    assert len({record.natural_key for record in aliases}) == 1
+
+
 def _wikidata_projection_raw(*, scope: str) -> SourceRecord:
     return SourceRecord(
         source=SourceName.WIKIDATA,

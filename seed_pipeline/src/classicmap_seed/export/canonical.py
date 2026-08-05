@@ -867,8 +867,13 @@ def _work_identifier_and_alias_records(
     ]
     if not localized_aliases:
         localized_aliases = [("und", alias) for alias in candidate.aliases]
-    for locale, alias in localized_aliases:
+    seen_aliases: set[tuple[str, str]] = set()
+    for locale, alias in sorted(localized_aliases):
         normalized = alias.casefold().strip()
+        identity = (locale, normalized)
+        if identity in seen_aliases:
+            continue
+        seen_aliases.add(identity)
         records.append(
             _record(
                 run_id,
