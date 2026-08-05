@@ -11,10 +11,16 @@ const COMPOSER_PERIOD_SCHEMA: &str =
     include_str!("../migrations/202608050005_expand_composer_periods.sql");
 const APPLE_MUSIC_BACKFILL: &str =
     include_str!("../migrations/202608050006_backfill_apple_music_album_links.sql");
+const GLOBAL_SEED_LOADER_REGISTRY: &str =
+    include_str!("../migrations/202608050007_global_seed_loader_registry.sql");
+const BINARY_NORMALIZED_NAME_IDENTITY: &str =
+    include_str!("../migrations/202608050008_binary_normalized_name_identity.sql");
+const MULTIPLE_AUTHORITY_IDS: &str =
+    include_str!("../migrations/202608050009_allow_multiple_authority_ids_per_namespace.sql");
 
 #[test]
 fn migrator_embeds_all_global_seed_migrations() {
-    assert_eq!(MIGRATOR.iter().count(), 6);
+    assert_eq!(MIGRATOR.iter().count(), 9);
 }
 
 #[test]
@@ -76,4 +82,16 @@ fn global_seed_migration_contains_required_contracts() {
     assert!(COMPOSER_PERIOD_SCHEMA.contains("'르네상스'"));
     assert!(APPLE_MUSIC_BACKFILL.contains("INSERT INTO platform_links"));
     assert!(!APPLE_MUSIC_BACKFILL.contains("INSERT IGNORE INTO"));
+    assert!(GLOBAL_SEED_LOADER_REGISTRY.contains("CREATE TABLE seed_natural_keys"));
+    assert!(GLOBAL_SEED_LOADER_REGISTRY.contains("natural_key_sha256 CHAR(64)"));
+    assert!(GLOBAL_SEED_LOADER_REGISTRY.contains("record_fingerprint CHAR(64)"));
+    assert!(!GLOBAL_SEED_LOADER_REGISTRY.contains("INSERT IGNORE"));
+    assert!(BINARY_NORMALIZED_NAME_IDENTITY.contains("tmp_entity_name_binary_identity"));
+    assert!(BINARY_NORMALIZED_NAME_IDENTITY.contains("tmp_piece_alias_binary_identity"));
+    assert!(BINARY_NORMALIZED_NAME_IDENTITY.contains("COLLATE utf8mb4_bin"));
+    assert!(BINARY_NORMALIZED_NAME_IDENTITY.contains("ADD UNIQUE KEY uq_entity_names_identity"));
+    assert!(BINARY_NORMALIZED_NAME_IDENTITY.contains("ADD UNIQUE KEY uq_piece_aliases_identity"));
+    assert!(MULTIPLE_AUTHORITY_IDS.contains("DROP INDEX uq_external_identifiers_entity_namespace"));
+    assert!(MULTIPLE_AUTHORITY_IDS.contains("ADD INDEX idx_external_identifiers_entity"));
+    assert!(!MULTIPLE_AUTHORITY_IDS.contains("DROP INDEX uq_external_identifiers_namespace_value"));
 }
