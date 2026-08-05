@@ -37,17 +37,17 @@ def _manifest() -> SnapshotManifest:
     )
 
 
+def _raw(kind: EntityKind = EntityKind.PERSON) -> SourceRecord:
+    return SourceRecord(
+        source=SourceName.WIKIDATA,
+        source_record_id="Q255",
+        entity_kind=kind,
+        payload={"name": "Ludwig van Beethoven", "date_of_birth": "1770-12-17"},
+    )
+
+
 def _candidate(kind: EntityKind = EntityKind.PERSON) -> NormalizedEntityCandidate:
-    return normalize_records(
-        [
-            SourceRecord(
-                source=SourceName.WIKIDATA,
-                source_record_id="Q255",
-                entity_kind=kind,
-                payload={"name": "Ludwig van Beethoven", "date_of_birth": "1770-12-17"},
-            )
-        ]
-    )[0]
+    return normalize_records([_raw(kind)])[0]
 
 
 def test_canonical_bundle_is_deterministic_and_preserves_manual_fields() -> None:
@@ -61,13 +61,17 @@ def test_canonical_bundle_is_deterministic_and_preserves_manual_fields() -> None
 
     first = build_canonical_load_bundle(
         run_id="run-1",
+        dry_run=False,
         source_manifest=_manifest(),
+        raw_records=[_raw()],
         candidates=[candidate],
         decisions=[decision],
     )
     second = build_canonical_load_bundle(
         run_id="run-1",
+        dry_run=False,
         source_manifest=_manifest(),
+        raw_records=[_raw()],
         candidates=[candidate],
         decisions=[decision],
     )
@@ -91,7 +95,9 @@ def test_review_decision_does_not_create_canonical_entity() -> None:
 
     bundle = build_canonical_load_bundle(
         run_id="run-1",
+        dry_run=False,
         source_manifest=_manifest(),
+        raw_records=[_raw()],
         candidates=[candidate],
         decisions=[decision],
     )
@@ -100,11 +106,8 @@ def test_review_decision_does_not_create_canonical_entity() -> None:
     assert not any(record.table is LoadTable.AUTHORITY_ENTITIES for record in bundle)
 
 
-def test_entity_kind_routes_to_work_and_recording_tables() -> None:
-    for kind, expected_table in (
-        (EntityKind.WORK, LoadTable.WORKS),
-        (EntityKind.RECORDING, LoadTable.RECORDINGS),
-    ):
+def test_unmapped_work_and_recording_are_review_only() -> None:
+    for kind in (EntityKind.WORK, EntityKind.RECORDING):
         candidate = _candidate(kind)
         decision = ResolutionDecision(
             decision_id=f"decision-{kind}",
@@ -114,11 +117,16 @@ def test_entity_kind_routes_to_work_and_recording_tables() -> None:
         )
         bundle = build_canonical_load_bundle(
             run_id="run-1",
+            dry_run=False,
             source_manifest=_manifest(),
+            raw_records=[_raw(kind)],
             candidates=[candidate],
             decisions=[decision],
         )
-        assert any(record.table is expected_table for record in bundle)
+        assert any(record.table is LoadTable.REVIEW_QUEUE for record in bundle)
+        assert not any(
+            record.table in {LoadTable.PIECES, LoadTable.RECORDINGS} for record in bundle
+        )
 
 
 def test_load_contract_blocks_manual_or_locked_fields() -> None:
