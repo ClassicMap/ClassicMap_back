@@ -8,6 +8,7 @@ pub mod boxoffice;
 pub mod clip_asset_loader;
 pub mod composer;
 pub mod comparison;
+pub mod comparison_seed_loader;
 pub mod concert;
 pub mod db;
 pub mod logger;
