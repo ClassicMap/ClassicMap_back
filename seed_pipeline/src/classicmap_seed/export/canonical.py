@@ -521,9 +521,6 @@ def _composer_projection_or_review(
     }
     if death_year is not None:
         values["death_year"] = death_year
-    image_urls = _all_fact_strings(candidates, "commons_image_urls")
-    if image_urls:
-        values["avatar_url"] = image_urls[0]
     return _record(
         run_id,
         LoadTable.COMPOSERS,
@@ -591,9 +588,6 @@ def _artist_projection_or_review(
     birth_year = _year_from_fact(candidates, "date_of_birth")
     if birth_year is not None:
         values["birth_year"] = str(birth_year)
-    image_urls = _all_fact_strings(candidates, "commons_image_urls")
-    if image_urls:
-        values["image_url"] = image_urls[0]
     return _record(
         run_id,
         LoadTable.ARTISTS,
@@ -670,9 +664,9 @@ def _period_from_birth_year(birth_year: int) -> str:
         return "르네상스"
     if birth_year < 1750:
         return "바로크"
-    if birth_year < 1820:
+    if birth_year < 1810:
         return "고전주의"
-    if birth_year < 1900:
+    if birth_year < 1860:
         return "낭만주의"
     return "근현대"
 
