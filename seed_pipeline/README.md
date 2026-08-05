@@ -87,6 +87,20 @@ uv run classicmap-seed snapshot-wikidata-entities \
 
 ### MusicBrainz 작품 수집
 
+이미 외부 검수가 끝난 작품은 `{mbid}` 한 필드만 있는 JSONL로 exact 수집합니다. 입력의 알 수 없는 필드, 비정규 UUID, 중복 MBID를 거부합니다. 각 행은 공식 `/ws/2/work/<mbid>?inc=aliases+artist-rels+work-rels&fmt=json`에서 한 번씩 조회하며 반환 ID가 요청 MBID와 정확히 같아야 합니다.
+
+```bash
+uv run classicmap-seed snapshot-musicbrainz-work-entities \
+  --run-id comparison-pilot-works-20260805 \
+  --input curation/pilot-2026-08-05/musicbrainz-works.jsonl \
+  --contact maintainer@example.com \
+  --limit 5
+```
+
+비교 파일럿 입력은 `candidates.jsonl`의 `workCandidate.naturalKey`와 같은 `musicbrainz_work` 외부 식별자를 함께 검증해 결정적으로 추출한 5개 MBID입니다. HTTP 요청당 작품 한 건, MusicBrainz 1 req/s 제한을 적용합니다. 입력 SHA-256별 checkpoint와 immutable page artifact를 남기므로 같은 run-id와 입력으로 `--resume`하면 요청과 mutation이 모두 0이어야 합니다. 이름 검색, 작곡가 전체 browse, 운영 DB나 홈서버 연결은 수행하지 않습니다.
+
+#### 작곡가별 전체 작품 탐색
+
 작품 수집은 이전 단계에서 만든 canonical artist manifest를 입력으로 받습니다. `authority_entities`를 참조하며 evidence가 strong인 `musicbrainz_artist` 식별자만 허용합니다.
 
 ```bash
