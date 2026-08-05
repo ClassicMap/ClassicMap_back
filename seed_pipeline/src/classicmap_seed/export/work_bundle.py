@@ -32,6 +32,11 @@ def build_publishable_work_bundle(
     if not composer_bundles:
         raise ValueError("composer canonical manifest를 하나 이상 제공해야 합니다.")
     known_composer_keys = _known_composer_keys(composer_bundles)
+    bundle_identities = {(record.table, record.natural_key) for record in work_records}
+    _require_bundle_foreign_keys(work_records, bundle_identities)
+    available_identities = bundle_identities.union(
+        (LoadTable.COMPOSERS, composer_key) for composer_key in known_composer_keys
+    )
     pieces = [record for record in work_records if record.table is LoadTable.PIECES]
     if not pieces:
         raise ValueError("work canonical bundle에 pieces 행이 없습니다.")
@@ -68,8 +73,10 @@ def build_publishable_work_bundle(
             identity = (record.table, record.natural_key)
             if identity in dropped_identities:
                 continue
-            if _targets_dropped_identity(record, dropped_identities) or _is_dropped_provenance(
-                record, withheld_piece_keys
+            if (
+                _targets_dropped_identity(record, dropped_identities)
+                or _targets_unavailable_existing_identity(record, available_identities)
+                or _is_dropped_provenance(record, withheld_piece_keys)
             ):
                 dropped_identities.add(identity)
                 dropped_dependent_count += 1
@@ -151,6 +158,35 @@ def _targets_dropped_identity(
         (foreign_key.target_table, foreign_key.target_natural_key) in dropped_identities
         for foreign_key in record.foreign_keys
     )
+
+
+def _targets_unavailable_existing_identity(
+    record: CanonicalLoadRecord,
+    available_identities: set[tuple[LoadTable, str]],
+) -> bool:
+    return any(
+        foreign_key.resolution is ForeignKeyResolution.BUNDLE_OR_EXISTING
+        and (foreign_key.target_table, foreign_key.target_natural_key) not in available_identities
+        for foreign_key in record.foreign_keys
+    )
+
+
+def _require_bundle_foreign_keys(
+    records: list[CanonicalLoadRecord],
+    bundle_identities: set[tuple[LoadTable, str]],
+) -> None:
+    for record in records:
+        for foreign_key in record.foreign_keys:
+            target = (foreign_key.target_table, foreign_key.target_natural_key)
+            if (
+                foreign_key.resolution is ForeignKeyResolution.BUNDLE
+                and target not in bundle_identities
+            ):
+                raise ValueError(
+                    "bundle 내부 외래키 대상이 없습니다: "
+                    f"{record.table}:{record.natural_key} -> "
+                    f"{foreign_key.target_table}:{foreign_key.target_natural_key}"
+                )
 
 
 def _is_dropped_provenance(

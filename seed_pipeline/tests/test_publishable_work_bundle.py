@@ -85,6 +85,14 @@ def test_withholds_unresolved_composer_piece_and_all_dependents() -> None:
             fk("to_piece_id", LoadTable.PIECES, withheld_piece.natural_key),
         ),
     )
+    external_relation = record(
+        LoadTable.PIECE_RELATIONS,
+        "relation:kept-external",
+        foreign_keys=(
+            fk("from_piece_id", LoadTable.PIECES, kept_piece.natural_key),
+            fk("to_piece_id", LoadTable.PIECES, "musicbrainz_work:not-in-bundle"),
+        ),
+    )
     withheld_provenance = record(
         LoadTable.FIELD_PROVENANCE,
         "provenance:withheld",
@@ -101,6 +109,7 @@ def test_withholds_unresolved_composer_piece_and_all_dependents() -> None:
             withheld_piece,
             withheld_alias,
             withheld_relation,
+            external_relation,
             withheld_provenance,
             source_record,
         ],
@@ -114,6 +123,7 @@ def test_withholds_unresolved_composer_piece_and_all_dependents() -> None:
     assert (LoadTable.PIECES, withheld_piece.natural_key) not in identities
     assert (LoadTable.PIECE_ALIASES, withheld_alias.natural_key) not in identities
     assert (LoadTable.PIECE_RELATIONS, withheld_relation.natural_key) not in identities
+    assert (LoadTable.PIECE_RELATIONS, external_relation.natural_key) not in identities
     assert (LoadTable.FIELD_PROVENANCE, withheld_provenance.natural_key) not in identities
     assert (LoadTable.SOURCE_RECORDS, source_record.natural_key) in identities
     reviews = [item for item in result.records if item.table is LoadTable.REVIEW_QUEUE]
@@ -126,7 +136,7 @@ def test_withholds_unresolved_composer_piece_and_all_dependents() -> None:
     }
     assert result.retained_piece_count == 1
     assert result.withheld_piece_count == 1
-    assert result.dropped_dependent_count == 3
+    assert result.dropped_dependent_count == 4
 
 
 def test_rejects_duplicate_composer_natural_keys_across_manifests() -> None:
