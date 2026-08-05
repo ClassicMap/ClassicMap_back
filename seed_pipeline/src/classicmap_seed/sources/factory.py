@@ -4,6 +4,7 @@ from classicmap_seed.http import FixedIntervalRateLimiter, JsonHttpClient
 from classicmap_seed.models import SourceName
 from classicmap_seed.sources.base import SourceConnector
 from classicmap_seed.sources.musicbrainz import MusicBrainzConnector
+from classicmap_seed.sources.musicbrainz_works import MusicBrainzWorkConnector
 from classicmap_seed.sources.open_opus import OpenOpusConnector
 from classicmap_seed.sources.wikidata import WikidataConnector
 
@@ -35,9 +36,27 @@ def build_connector(
     raise ValueError(f"snapshot connector가 없는 source입니다: {source.value}")
 
 
+def build_musicbrainz_work_connector(
+    *, contact: str | None
+) -> tuple[MusicBrainzWorkConnector, JsonHttpClient]:
+    client = JsonHttpClient(
+        user_agent=_build_user_agent(SourceName.MUSICBRAINZ_WORKS, contact),
+        rate_limiter=FixedIntervalRateLimiter(1.0),
+    )
+    return MusicBrainzWorkConnector(client), client
+
+
 def _build_user_agent(source: SourceName, contact: str | None) -> str:
     normalized_contact = contact.strip() if contact is not None else ""
-    if source in {SourceName.MUSICBRAINZ, SourceName.WIKIDATA} and not normalized_contact:
+    if (
+        source
+        in {
+            SourceName.MUSICBRAINZ,
+            SourceName.MUSICBRAINZ_WORKS,
+            SourceName.WIKIDATA,
+        }
+        and not normalized_contact
+    ):
         raise ValueError(f"{source.value} 요청에는 --contact가 필요합니다.")
     suffix = f" ({normalized_contact})" if normalized_contact else ""
     return f"ClassicMapSeed/0.1.0{suffix}"

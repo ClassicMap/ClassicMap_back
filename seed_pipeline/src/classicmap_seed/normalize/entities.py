@@ -51,6 +51,7 @@ def normalize_name(value: str) -> str:
 def _extract_identifiers(record: SourceRecord) -> tuple[ExternalIdentifier, ...]:
     namespace_by_source = {
         SourceName.MUSICBRAINZ: "musicbrainz_artist",
+        SourceName.MUSICBRAINZ_WORKS: "musicbrainz_work",
         SourceName.OPEN_OPUS: "openopus_composer",
         SourceName.WIKIDATA: "wikidata",
     }
@@ -103,6 +104,35 @@ def _extract_identifiers(record: SourceRecord) -> tuple[ExternalIdentifier, ...]
                         source=record.source,
                     )
                 )
+    if record.source is SourceName.MUSICBRAINZ_WORKS:
+        iswcs = record.payload.get("iswcs")
+        if isinstance(iswcs, list):
+            for iswc in iswcs:
+                if isinstance(iswc, str) and iswc:
+                    identifiers.append(
+                        ExternalIdentifier(
+                            namespace="iswc",
+                            value=iswc,
+                            strength=IdentifierStrength.STRONG,
+                            source=record.source,
+                        )
+                    )
+        catalogue_attributes = record.payload.get("catalogue_attributes")
+        if isinstance(catalogue_attributes, list):
+            for attribute in catalogue_attributes:
+                if not isinstance(attribute, dict):
+                    continue
+                attribute_type = optional_string(attribute.get("type"))
+                value = optional_string(attribute.get("value"))
+                if attribute_type is not None and value is not None:
+                    identifiers.append(
+                        ExternalIdentifier(
+                            namespace="work_catalogue",
+                            value=f"{attribute_type}:{value}",
+                            strength=IdentifierStrength.WEAK,
+                            source=record.source,
+                        )
+                    )
     return tuple(dict.fromkeys(identifiers))
 
 
@@ -132,6 +162,16 @@ def _extract_facts(record: SourceRecord) -> JsonObject:
             "country",
             "disambiguation",
             "life_span",
+        ),
+        SourceName.MUSICBRAINZ_WORKS: (
+            "localized_names",
+            "type",
+            "languages",
+            "attributes",
+            "catalogue_attributes",
+            "relations",
+            "composer_mbids",
+            "browsed_artist_ids",
         ),
         SourceName.OPEN_OPUS: (
             "epoch",
@@ -172,4 +212,8 @@ def _extract_facts(record: SourceRecord) -> JsonObject:
                 for image_id in image_ids
                 if isinstance(image_id, str) and image_id
             ]
+    if record.source is SourceName.MUSICBRAINZ_WORKS:
+        facts["work_type"] = record.payload.get("type")
+        facts["work_attributes"] = record.payload.get("attributes") or []
+        facts["work_relations"] = record.payload.get("relations") or []
     return facts

@@ -71,6 +71,21 @@ uv run classicmap-seed snapshot-wikidata \
 
 레거시 `composers`와 `artists` 행은 필요한 표시 필드가 공식 원본에서 모두 검증된 경우에만 생성합니다. 작곡가 시대 정보가 원본에 없을 때는 검증된 출생연도를 기준으로 `<1400 중세`, `<1600 르네상스`, `<1750 바로크`, `<1810 고전주의`, `<1860 낭만주의`, 그 외 `근현대` 규칙을 적용하고 bundle evidence에 `birth_year_boundaries_v1`을 남깁니다. 국가 표시명, 영어 이름, 연주 분야 등 필수값이 없거나 여러 값으로 충돌하면 임의 기본값을 만들지 않고 `review_queue`로 보냅니다. Commons 이미지는 파일별 저작자와 라이선스가 검증되기 전에는 `entity_images.REVIEW_REQUIRED`에만 두며 레거시 공개 이미지 필드로 투영하지 않습니다.
 
+### MusicBrainz 작품 수집
+
+작품 수집은 이전 단계에서 만든 canonical artist manifest를 입력으로 받습니다. `authority_entities`를 참조하며 evidence가 strong인 `musicbrainz_artist` 식별자만 허용합니다.
+
+```bash
+uv run classicmap-seed snapshot-musicbrainz-works \
+  --run-id sample-works-20260805 \
+  --artist-manifest artifacts/sample-artists/canonical/wikidata/<sha256>.manifest.json \
+  --contact maintainer@example.com \
+  --page-size 100 \
+  --limit 25000
+```
+
+공식 `/ws/2/work?artist=<MBID>` browse를 offset checkpoint로 순회합니다. work MBID, ISWC, type, language, alias, 명시적 work attribute, composer relation, work-to-work relation과 movement ordering을 보존합니다. 제목 문자열에서 작품번호나 악장을 추측하지 않습니다. page 100 기준 25,000 work의 절대 하한은 약 250 요청이며 MusicBrainz 1 req/s 제한 때문에 최소 약 250초가 필요합니다. 작곡가 work browse의 artist 의미는 녹음의 연주자와 다르므로 이 명령은 recording/ISRC를 수집하지 않습니다. recording은 release/recording 관계와 공식 식별 계약이 별도로 승인된 뒤 추가해야 합니다.
+
 ```bash
 uv run classicmap-seed normalize \
   --run-id sample-20260805 \
