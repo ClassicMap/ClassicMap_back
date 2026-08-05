@@ -860,15 +860,22 @@ def _work_identifier_and_alias_records(
                 ),
             )
         )
-    for alias in candidate.aliases:
+    localized_aliases = [
+        (locale, alias)
+        for locale, name_kind, alias in _localized_names(candidate)
+        if name_kind == "alias"
+    ]
+    if not localized_aliases:
+        localized_aliases = [("und", alias) for alias in candidate.aliases]
+    for locale, alias in localized_aliases:
         normalized = alias.casefold().strip()
         records.append(
             _record(
                 run_id,
                 LoadTable.PIECE_ALIASES,
-                f"{piece_key}:und:{normalized}",
+                f"{piece_key}:{locale}:{normalized}",
                 {
-                    "locale": "und",
+                    "locale": locale,
                     "alias_kind": "alias",
                     "alias_value": alias,
                     "normalized_value": normalized,
