@@ -100,6 +100,45 @@ uv run classicmap-seed snapshot-musicbrainz-works \
 
 공식 `/ws/2/work?artist=<MBID>` browse를 offset checkpoint로 순회합니다. work MBID, ISWC, type, language, alias, 명시적 work attribute, composer relation, work-to-work relation과 movement ordering을 보존합니다. 제목 문자열에서 작품번호나 악장을 추측하지 않습니다. page 100 기준 25,000 work의 절대 하한은 약 250 요청이며 MusicBrainz 1 req/s 제한 때문에 최소 약 250초가 필요합니다. 작곡가 work browse의 artist 의미는 녹음의 연주자와 다르므로 이 명령은 recording/ISRC를 수집하지 않습니다. recording은 release/recording 관계와 공식 식별 계약이 별도로 승인된 뒤 추가해야 합니다.
 
+### 작품 bundle의 작곡가 closure 보강
+
+`snapshot-work-composer-dependencies`는 작품 canonical bundle의 `pieces.composer_id` FK가 참조하지만 입력한 작곡가 canonical bundle들에 없는 `musicbrainz_artist:<mbid>`만 결정적으로 정렬해 수집합니다. 이름과 제목은 식별 근거로 사용하지 않습니다.
+
+```bash
+.venv/bin/classicmap-seed snapshot-work-composer-dependencies \
+  --run-id sample-work-composer-dependencies-20260805 \
+  --work-manifest artifacts/sample-works/canonical/musicbrainz-works/<sha256>.manifest.json \
+  --composer-manifest artifacts/sample-composers-a/canonical/wikidata/<sha256>.manifest.json \
+  --composer-manifest artifacts/sample-composers-b/canonical/wikidata/<sha256>.manifest.json \
+  --contact maintainer@example.com \
+  --batch-size 50 \
+  --limit 1000 \
+  --json-report reports/work-composer-dependencies.json
+```
+
+WDQS에는 canonical UUID만 `VALUES ?mbid { ... }`로 전달하고 `?entity wdt:P434 ?mbid`의 정확한 결과만 사용합니다. MBID가 Wikidata QID 0개 또는 2개 이상에 대응하거나, 한 QID가 여러 MusicBrainz artist ID를 주장하면 자동 병합하지 않습니다. 이 경우 구조화 immutable review artifact와 실패 report를 남기고 exit code 1을 반환합니다.
+
+성공 snapshot은 기존 Wikidata 인물 enrichment와 `SourceRecord` 계약을 그대로 사용합니다. 따라서 일반 파이프라인으로 legacy `composers` projection까지 이어집니다.
+
+```bash
+.venv/bin/classicmap-seed normalize \
+  --run-id sample-work-composer-dependencies-20260805 \
+  --manifest artifacts/sample-work-composer-dependencies-20260805/raw/wikidata/<sha256>.manifest.json \
+  --limit 1000
+
+.venv/bin/classicmap-seed resolve \
+  --run-id sample-work-composer-dependencies-20260805 \
+  --manifest artifacts/sample-work-composer-dependencies-20260805/normalized/wikidata/<sha256>.manifest.json \
+  --limit 1000
+
+.venv/bin/classicmap-seed export-canonical \
+  --run-id sample-work-composer-dependencies-20260805 \
+  --manifest artifacts/sample-work-composer-dependencies-20260805/resolved/wikidata/<sha256>.manifest.json \
+  --limit 1000
+```
+
+각 WDQS batch는 immutable artifact로 남고 checkpoint는 그 manifest 경로와 처리한 MBID prefix만 보관합니다. 같은 입력과 `--limit`으로 `--resume`하면 외부 요청과 mutation이 모두 0이어야 합니다. `--dry-run`은 조회와 예상 mutation 계산만 수행하며 artifact, checkpoint, JSON report를 쓰지 않습니다.
+
 ```bash
 uv run classicmap-seed normalize \
   --run-id sample-20260805 \
