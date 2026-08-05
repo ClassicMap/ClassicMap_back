@@ -83,7 +83,10 @@ class PlatformTrackExport(StrictModel):
 
 
 class StreamingLinkCandidate(StrictModel):
+    recording_natural_key: str = Field(min_length=1)
     track_id: str = Field(min_length=1)
+    disc_number: int = Field(default=1, ge=1)
+    track_number: int = Field(ge=1)
     source_title: str = Field(min_length=1)
     source_isrc: str
     source_artist_names: tuple[str, ...] = Field(min_length=1)

@@ -25,11 +25,11 @@ def test_spotify_export_auto_confirms_only_isrc_artist_and_duration_match() -> N
     assert decision.status is StreamingMatchStatus.AUTO_CONFIRMED
     assert decision.reason_codes == ()
     link = next(record for record in bundle if record.table is LoadTable.PLATFORM_LINKS)
-    assert link.values["target_type"] == "recording_track"
-    assert link.values["source_isrc"] == link.values["target_isrc"]
+    assert link.evidence["source_isrc"] == link.evidence["target_isrc"]
     assert link.values["storefront"] == "KR"
-    assert link.values["checked_at"] == "2026-08-05T00:00:00+00:00"
-    assert not any(record.table is LoadTable.WORKS for record in bundle)
+    assert link.values["verified_at"] == "2026-08-05T00:00:00+00:00"
+    assert link.foreign_keys[0].target_table is LoadTable.RECORDING_TRACKS
+    assert not any(record.table is LoadTable.PIECES for record in bundle)
 
     rules = validate_canonical_bundle(
         bundle,
@@ -75,7 +75,9 @@ def test_same_track_id_with_conflicting_source_facts_requires_review() -> None:
     bundle = build_streaming_load_bundle([candidate, conflicting], run_id="run-streaming")
     review = next(record for record in bundle if record.table is LoadTable.REVIEW_QUEUE)
 
-    assert review.values["reason_codes"] == ["SOURCE_TRACK_CONFLICT"]
+    evidence = review.values["evidence"]
+    assert isinstance(evidence, dict)
+    assert evidence["reason_codes"] == ["SOURCE_TRACK_CONFLICT"]
 
 
 def test_platform_export_rejects_nonofficial_track_host() -> None:
