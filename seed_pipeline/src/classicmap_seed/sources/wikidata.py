@@ -202,6 +202,7 @@ LIMIT {page_size}
             ),
             "country_codes": WikidataConnector._json_strings(country_codes),
             "country_entity_ids": WikidataConnector._json_strings(country_entity_ids),
+            "country_labels": WikidataConnector._linked_labels(country_entity_ids, linked_entities),
             "commons_image_ids": WikidataConnector._json_strings(
                 WikidataConnector._claim_strings(entity, "P18")
             ),
@@ -217,6 +218,9 @@ LIMIT {page_size}
                 ),
                 "isni": WikidataConnector._json_strings(
                     WikidataConnector._claim_strings(entity, "P213")
+                ),
+                "rism": WikidataConnector._json_strings(
+                    WikidataConnector._claim_strings(entity, "P5504")
                 ),
             },
             "date_of_birth": WikidataConnector._first_claim_time(entity, "P569"),

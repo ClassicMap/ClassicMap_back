@@ -20,6 +20,7 @@ class PaginatedCollectionResult:
     records: tuple[SourceRecord, ...]
     request_count: int
     resumed_record_count: int
+    artifact_mutation_count: int
     checkpoint: CollectionCheckpoint
 
 
@@ -59,6 +60,7 @@ def collect_paginated(
 
     resumed_record_count = len(records)
     request_count = 0
+    artifact_mutation_count = 0
     page_manifest_paths = list(checkpoint.page_manifest_paths)
     next_cursor = checkpoint.next_cursor
     complete = checkpoint.complete
@@ -87,6 +89,7 @@ def collect_paginated(
                 dry_run=False,
                 resume=resume,
             )
+            artifact_mutation_count += page_result.mutation_count
             relative_manifest = page_result.manifest_path.relative_to(artifacts_root).as_posix()
             if relative_manifest not in page_manifest_paths:
                 page_manifest_paths.append(relative_manifest)
@@ -116,6 +119,7 @@ def collect_paginated(
         records=tuple(records),
         request_count=request_count,
         resumed_record_count=resumed_record_count,
+        artifact_mutation_count=artifact_mutation_count,
         checkpoint=checkpoint,
     )
 

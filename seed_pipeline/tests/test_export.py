@@ -9,6 +9,8 @@ from classicmap_seed.models import (
     DataOrigin,
     EntityKind,
     ExistingFieldState,
+    ExternalIdentifier,
+    IdentifierStrength,
     LoadTable,
     NormalizedEntityCandidate,
     ResolutionAction,
@@ -175,6 +177,188 @@ def test_unmapped_work_and_recording_are_review_only() -> None:
         assert not any(
             record.table in {LoadTable.PIECES, LoadTable.RECORDINGS} for record in bundle
         )
+
+
+def test_localized_names_and_verified_composer_projection_use_real_db_fields() -> None:
+    raw = _wikidata_projection_raw(scope="composers")
+    candidate = normalize_records([raw])[0]
+    decision = ResolutionDecision(
+        decision_id="decision-composer-projection",
+        action=ResolutionAction.CREATE,
+        candidate_ids=(candidate.candidate_id,),
+        reason_code="NO_MATCHING_STABLE_IDENTIFIER",
+    )
+    bundle = build_canonical_load_bundle(
+        run_id="run-1",
+        source_manifest=_manifest(),
+        raw_records=[raw],
+        candidates=[candidate],
+        decisions=[decision],
+    )
+
+    names = [record for record in bundle if record.table is LoadTable.ENTITY_NAMES]
+    assert {(record.values["locale"], record.values["name_value"]) for record in names} >= {
+        ("en", "Ludwig van Beethoven"),
+        ("ko", "루트비히 판 베토벤"),
+    }
+    composer = next(record for record in bundle if record.table is LoadTable.COMPOSERS)
+    assert composer.natural_key == "musicbrainz_artist:mbid-beethoven"
+    assert composer.values["name"] == "루트비히 판 베토벤"
+    assert composer.values["nationality"] == "독일"
+    assert composer.values["period"] == "고전주의"
+    assert composer.evidence["derived_fields"] == {
+        "period": {"rule": "birth_year_boundaries_v1", "birth_year": 1770}
+    }
+
+
+def test_verified_performer_projection_requires_instrument_and_country_labels() -> None:
+    raw = _wikidata_projection_raw(scope="performers")
+    candidate = normalize_records([raw])[0]
+    decision = ResolutionDecision(
+        decision_id="decision-artist-projection",
+        action=ResolutionAction.CREATE,
+        candidate_ids=(candidate.candidate_id,),
+        reason_code="NO_MATCHING_STABLE_IDENTIFIER",
+    )
+    bundle = build_canonical_load_bundle(
+        run_id="run-1",
+        source_manifest=_manifest(),
+        raw_records=[raw],
+        candidates=[candidate],
+        decisions=[decision],
+    )
+
+    artist = next(record for record in bundle if record.table is LoadTable.ARTISTS)
+    assert artist.natural_key == "musicbrainz_artist:mbid-beethoven"
+    assert artist.values["category"] == "피아노"
+    assert artist.values["nationality"] == "독일"
+
+
+def test_missing_verified_legacy_fields_are_reviewed_without_fake_defaults() -> None:
+    raw = _wikidata_projection_raw(scope="composers")
+    payload = dict(raw.payload)
+    payload["country_labels"] = []
+    incomplete_raw = raw.model_copy(update={"payload": payload})
+    candidate = normalize_records([incomplete_raw])[0]
+    decision = ResolutionDecision(
+        decision_id="decision-incomplete-projection",
+        action=ResolutionAction.CREATE,
+        candidate_ids=(candidate.candidate_id,),
+        reason_code="NO_MATCHING_STABLE_IDENTIFIER",
+    )
+    bundle = build_canonical_load_bundle(
+        run_id="run-1",
+        source_manifest=_manifest(),
+        raw_records=[incomplete_raw],
+        candidates=[candidate],
+        decisions=[decision],
+    )
+
+    assert not any(record.table is LoadTable.COMPOSERS for record in bundle)
+    review = next(
+        record
+        for record in bundle
+        if record.table is LoadTable.REVIEW_QUEUE
+        and record.values["reason_code"] == "LEGACY_COMPOSER_REQUIRED_FIELDS_MISSING"
+    )
+    evidence = review.values["evidence"]
+    assert isinstance(evidence, dict)
+    missing_fields = evidence["missing_fields"]
+    assert isinstance(missing_fields, list)
+    assert "nationality" in missing_fields
+
+
+def test_work_part_without_parent_piece_in_bundle_is_reviewed() -> None:
+    raw = SourceRecord(
+        source=SourceName.MUSICBRAINZ_WORKS,
+        source_record_id="child-work",
+        entity_kind=EntityKind.WORK,
+        payload={"name": "I. Allegro"},
+    )
+    candidate = NormalizedEntityCandidate(
+        candidate_id="child-candidate",
+        source=SourceName.MUSICBRAINZ_WORKS,
+        source_record_id="child-work",
+        entity_kind=EntityKind.WORK,
+        preferred_name="I. Allegro",
+        normalized_name="i. allegro",
+        external_identifiers=(
+            ExternalIdentifier(
+                namespace="musicbrainz_work",
+                value="child-work",
+                strength=IdentifierStrength.STRONG,
+                source=SourceName.MUSICBRAINZ_WORKS,
+            ),
+        ),
+        facts={
+            "work_relations": [
+                {
+                    "relation_type": "parts",
+                    "direction": "backward",
+                    "target_work_id": "missing-parent",
+                    "ordering_key": 1,
+                }
+            ]
+        },
+    )
+    decision = ResolutionDecision(
+        decision_id="decision-child-work",
+        action=ResolutionAction.CREATE,
+        candidate_ids=(candidate.candidate_id,),
+        reason_code="NO_MATCHING_STABLE_IDENTIFIER",
+    )
+    bundle = build_canonical_load_bundle(
+        run_id="run-1",
+        source_manifest=_manifest(),
+        raw_records=[raw],
+        candidates=[candidate],
+        decisions=[decision],
+    )
+
+    assert not any(record.table is LoadTable.PIECE_PARTS for record in bundle)
+    assert any(
+        record.table is LoadTable.REVIEW_QUEUE
+        and record.values["reason_code"] == "WORK_PARENT_NOT_IN_BUNDLE"
+        for record in bundle
+    )
+
+
+def _wikidata_projection_raw(*, scope: str) -> SourceRecord:
+    return SourceRecord(
+        source=SourceName.WIKIDATA,
+        source_record_id="Q255",
+        entity_kind=EntityKind.PERSON,
+        payload={
+            "id": "Q255",
+            "name": "Ludwig van Beethoven",
+            "scope": scope,
+            "localized_names": [
+                {"locale": "en", "name_kind": "canonical", "name": "Ludwig van Beethoven"},
+                {"locale": "ko", "name_kind": "canonical", "name": "루트비히 판 베토벤"},
+            ],
+            "role_codes": ["Q36834"],
+            "instrument_codes": ["Q5994"],
+            "instrument_labels": [
+                {"code": "Q5994", "locale": "en", "name": "piano"},
+                {"code": "Q5994", "locale": "ko", "name": "피아노"},
+            ],
+            "country_codes": ["DE"],
+            "country_entity_ids": ["Q183"],
+            "country_labels": [
+                {"code": "Q183", "locale": "en", "name": "Germany"},
+                {"code": "Q183", "locale": "ko", "name": "독일"},
+            ],
+            "commons_image_ids": ["Beethoven.jpg"],
+            "external_identifiers": {
+                "musicbrainz_artist": ["mbid-beethoven"],
+                "gnd": ["118508288"],
+                "viaf": ["32182557"],
+                "isni": ["0000000121268987"],
+            },
+            "date_of_birth": "+1770-12-17T00:00:00Z",
+            "date_of_death": "+1827-03-26T00:00:00Z",
+        },
+    )
 
 
 def test_load_contract_blocks_manual_or_locked_fields() -> None:
