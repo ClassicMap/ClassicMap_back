@@ -1,3 +1,5 @@
+from uuid import NAMESPACE_URL, uuid5
+
 from classicmap_seed.models import DataOrigin, ExistingFieldState
 
 
@@ -6,3 +8,7 @@ def can_apply_seed_value(existing: ExistingFieldState | None) -> bool:
     if existing is None:
         return True
     return existing.origin is not DataOrigin.MANUAL and not existing.editor_locked
+
+
+def canonical_seed_run_id(run_slug: str) -> str:
+    return str(uuid5(NAMESPACE_URL, f"classicmap-seed-run:{run_slug}"))

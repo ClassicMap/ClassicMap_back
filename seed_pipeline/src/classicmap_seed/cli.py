@@ -317,7 +317,7 @@ def export_canonical(
         normalized_manifest,
         ArtifactStage.RAW,
     )
-    raw_manifest = read_manifest(raw_manifest_path)
+    raw_manifest, raw_records = read_artifact(raw_manifest_path, SourceRecord)
 
     selected_decisions = decisions[: options.limit]
     selected_candidate_ids = {
@@ -328,7 +328,9 @@ def export_canonical(
     ]
     load_records = build_canonical_load_bundle(
         run_id=options.run_id,
+        dry_run=options.dry_run,
         source_manifest=raw_manifest,
+        raw_records=raw_records,
         candidates=selected_candidates,
         decisions=selected_decisions,
     )

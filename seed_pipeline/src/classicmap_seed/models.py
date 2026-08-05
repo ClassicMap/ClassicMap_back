@@ -5,6 +5,7 @@ from datetime import UTC, datetime
 from enum import StrEnum
 from pathlib import Path
 from typing import Literal
+from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
@@ -78,7 +79,19 @@ class LoadTable(StrEnum):
     SOURCE_SNAPSHOTS = "source_snapshots"
     SOURCE_RECORDS = "source_records"
     AUTHORITY_ENTITIES = "authority_entities"
-    WORKS = "works"
+    ENTITY_NAMES = "entity_names"
+    ENTITY_ROLES = "entity_roles"
+    ENTITY_INSTRUMENTS = "entity_instruments"
+    ENTITY_COUNTRIES = "entity_countries"
+    ENTITY_IMAGES = "entity_images"
+    COMPOSERS = "composers"
+    ARTISTS = "artists"
+    PIECES = "pieces"
+    PIECE_ALIASES = "piece_aliases"
+    PIECE_IDENTIFIERS = "piece_identifiers"
+    PIECE_PARTS = "piece_parts"
+    PIECE_RELATIONS = "piece_relations"
+    PIECE_INSTRUMENTATION = "piece_instrumentation"
     RECORDINGS = "recordings"
     EXTERNAL_IDENTIFIERS = "external_identifiers"
     FIELD_PROVENANCE = "field_provenance"
@@ -86,6 +99,11 @@ class LoadTable(StrEnum):
     RECORDING_TRACKS = "recording_tracks"
     PLATFORM_LINKS = "platform_links"
     TRACK_PIECE_LINKS = "track_piece_links"
+
+
+class ForeignKeyResolution(StrEnum):
+    BUNDLE = "bundle"
+    BUNDLE_OR_EXISTING = "bundle_or_existing"
 
 
 class ValidationRuleCode(StrEnum):
@@ -158,13 +176,30 @@ class ResolutionDecision(StrictModel):
     evidence: tuple[str, ...] = ()
 
 
+class LoadForeignKey(StrictModel):
+    column: str
+    target_table: LoadTable
+    target_natural_key: str
+    resolution: ForeignKeyResolution = ForeignKeyResolution.BUNDLE
+
+
 class CanonicalLoadRecord(StrictModel):
+    db_contract_version: Literal["global-seed-v1"] = "global-seed-v1"
+    seed_run_id: str
     table: LoadTable
     natural_key: str
     values: JsonObject
+    foreign_keys: tuple[LoadForeignKey, ...] = ()
+    evidence: JsonObject = Field(default_factory=dict)
     origin: DataOrigin = DataOrigin.SEED
     editor_locked: bool = False
     write_policy: WritePolicy = WritePolicy.PRESERVE_MANUAL_OR_LOCKED
+
+    @field_validator("seed_run_id")
+    @classmethod
+    def require_seed_run_uuid(cls, value: str) -> str:
+        parsed = UUID(value)
+        return str(parsed)
 
 
 class ExistingFieldState(StrictModel):
