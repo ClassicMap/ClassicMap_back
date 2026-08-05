@@ -101,7 +101,11 @@ assert_sql \
   "0"
 assert_sql \
   "SELECT COUNT(*) FROM classicmap._sqlx_migrations WHERE success=1;" \
-  "4"
+  "6"
+
+docker exec --interactive --env MYSQL_PWD="$database_password" "$container_name" \
+  mysql --user=root "$database_name" \
+  < "$repo_root/scripts/verify_apple_music_album_backfill_historical.sql"
 
 if docker exec --env MYSQL_PWD="$database_password" "$container_name" \
   mysql --user=root --execute="
