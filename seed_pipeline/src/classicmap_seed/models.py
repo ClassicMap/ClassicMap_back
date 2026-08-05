@@ -23,6 +23,7 @@ class StrictModel(BaseModel):
 
 class SourceName(StrEnum):
     MUSICBRAINZ = "musicbrainz"
+    MUSICBRAINZ_WORKS = "musicbrainz-works"
     OPEN_OPUS = "open-opus"
     WIKIDATA = "wikidata"
     SPOTIFY_EXPORT = "spotify-export"
@@ -33,6 +34,12 @@ class DiscoverySourceName(StrEnum):
     MUSICBRAINZ = "musicbrainz"
     OPEN_OPUS = "open-opus"
     WIKIDATA = "wikidata"
+
+
+class WikidataScope(StrEnum):
+    COMPOSERS = "composers"
+    PERFORMERS = "performers"
+    ENSEMBLES = "ensembles"
 
 
 class ArtifactStage(StrEnum):
