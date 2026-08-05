@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import re
-from collections.abc import Iterable
+from collections.abc import Iterable, Sequence
 from typing import ClassVar
 
 from classicmap_seed.http import JsonHttpClient
@@ -16,6 +16,7 @@ from classicmap_seed.models import (
 )
 from classicmap_seed.sources.base import optional_string, require_list, require_object
 from classicmap_seed.sources.pagination import SourcePage
+from classicmap_seed.sources.wikidata_exact_input import WikidataEntityRequest
 
 _CURSOR_PATTERN = re.compile(r"^https?://www\.wikidata\.org/entity/Q[1-9][0-9]*$")
 _QID_PATTERN = re.compile(r"^Q[1-9][0-9]*$")
@@ -29,6 +30,11 @@ class WikidataConnector:
         WikidataScope.PERFORMERS: "?entity wdt:P106/wdt:P279* wd:Q639669 .",
         WikidataScope.ENSEMBLES: "?entity wdt:P31/wdt:P279* wd:Q2088357 .",
     }
+    _SCOPE_EVIDENCE: ClassVar[dict[WikidataScope, tuple[str, str]]] = {
+        WikidataScope.COMPOSERS: ("P106/P279*", "Q36834"),
+        WikidataScope.PERFORMERS: ("P106/P279*", "Q639669"),
+        WikidataScope.ENSEMBLES: ("P31/P279*", "Q2088357"),
+    }
 
     def __init__(self, http_client: JsonHttpClient) -> None:
         self._http_client = http_client
@@ -38,6 +44,15 @@ class WikidataConnector:
         return SourceMetadata(
             source=SourceName.WIKIDATA,
             source_uri=self._QUERY_URL,
+            license="CC0-1.0",
+            license_uri="https://www.wikidata.org/wiki/Wikidata:Licensing",
+        )
+
+    @property
+    def entity_metadata(self) -> SourceMetadata:
+        return SourceMetadata(
+            source=SourceName.WIKIDATA,
+            source_uri=self._ENTITY_URL,
             license="CC0-1.0",
             license_uri="https://www.wikidata.org/wiki/Wikidata:Licensing",
         )
@@ -81,6 +96,96 @@ class WikidataConnector:
 
         entity_ids = [entity_uri.rsplit("/", 1)[-1] for entity_uri in entity_uris]
         entities = self._fetch_entities(entity_ids)
+        linked_entities = self._fetch_linked_entities(entities)
+        records = tuple(self._to_record(entity, scope, linked_entities) for entity in entities)
+        return SourcePage(
+            records=records,
+            next_cursor=entity_uris[-1] if len(entity_uris) == page_size else None,
+            complete=len(entity_uris) < page_size,
+        )
+
+    def fetch_exact(
+        self,
+        requests: Sequence[WikidataEntityRequest],
+    ) -> tuple[SourceRecord, ...]:
+        if not requests or len(requests) > 50:
+            raise ValueError("Wikidata exact entity batch는 1~50건이어야 합니다.")
+        scope_by_qid: dict[str, WikidataScope] = {}
+        for request in requests:
+            if request.qid in scope_by_qid:
+                raise ValueError(f"Wikidata exact entity QID가 중복되었습니다: {request.qid}")
+            scope_by_qid[request.qid] = request.scope
+        scope_evidence = self._validate_exact_scopes(requests)
+        entities = self._fetch_entities([request.qid for request in requests])
+        linked_entities = self._fetch_linked_entities(entities)
+        return tuple(
+            self._to_record(
+                entity,
+                scope_by_qid[self._entity_id(entity)],
+                linked_entities,
+                scope_validation=scope_evidence[self._entity_id(entity)],
+            )
+            for entity in entities
+        )
+
+    def _validate_exact_scopes(
+        self,
+        requests: Sequence[WikidataEntityRequest],
+    ) -> dict[str, JsonObject]:
+        expected = {(request.qid, request.scope) for request in requests}
+        payload = self._http_client.get_json(
+            self._QUERY_URL,
+            params={
+                "query": self._build_exact_scope_validation_query(requests),
+                "format": "json",
+            },
+        )
+        root = require_object(payload, field="Wikidata exact scope response")
+        results = require_object(root.get("results"), field="results")
+        bindings = require_list(results.get("bindings"), field="results.bindings")
+        validated: set[tuple[str, WikidataScope]] = set()
+        for value in bindings:
+            entity_uri = self._binding_entity_uri(value)
+            entity_id = entity_uri.rsplit("/", 1)[-1]
+            binding = require_object(value, field="binding")
+            scope_binding = require_object(binding.get("scope"), field="binding.scope")
+            raw_scope = optional_string(scope_binding.get("value"))
+            if raw_scope is None:
+                raise ValueError("Wikidata exact scope 응답 값이 올바르지 않습니다.")
+            try:
+                scope = WikidataScope(raw_scope)
+            except (TypeError, ValueError) as error:
+                raise ValueError("Wikidata exact scope 응답 값이 올바르지 않습니다.") from error
+            pair = (entity_id, scope)
+            if pair not in expected:
+                raise ValueError(
+                    f"Wikidata exact scope 응답에 요청하지 않은 분류가 있습니다: "
+                    f"{entity_id}/{scope.value}"
+                )
+            validated.add(pair)
+
+        missing = sorted(
+            f"{qid}/{scope.value}" for qid, scope in expected if (qid, scope) not in validated
+        )
+        if missing:
+            raise ValueError(
+                "Wikidata QID가 요청 scope predicate를 만족하지 않습니다: " + ", ".join(missing)
+            )
+
+        evidence: dict[str, JsonObject] = {}
+        for request in requests:
+            predicate_path, target_qid = self._SCOPE_EVIDENCE[request.scope]
+            evidence[request.qid] = {
+                "validated": True,
+                "method": "wdqs-values",
+                "source_uri": self._QUERY_URL,
+                "scope": request.scope.value,
+                "predicate_path": predicate_path,
+                "target_qid": target_qid,
+            }
+        return evidence
+
+    def _fetch_linked_entities(self, entities: Sequence[JsonObject]) -> dict[str, JsonObject]:
         linked_ids = sorted(
             {
                 qid
@@ -89,15 +194,7 @@ class WikidataConnector:
                 for qid in self._claim_item_ids(entity, property_id)
             }
         )
-        linked_entities = {
-            self._entity_id(entity): entity for entity in self._fetch_entities(linked_ids)
-        }
-        records = tuple(self._to_record(entity, scope, linked_entities) for entity in entities)
-        return SourcePage(
-            records=records,
-            next_cursor=entity_uris[-1] if len(entity_uris) == page_size else None,
-            complete=len(entity_uris) < page_size,
-        )
+        return {self._entity_id(entity): entity for entity in self._fetch_entities(linked_ids)}
 
     @classmethod
     def _build_scope_query(
@@ -115,6 +212,38 @@ SELECT DISTINCT ?entity WHERE {{
 }}
 ORDER BY STR(?entity)
 LIMIT {page_size}
+""".strip()
+
+    @classmethod
+    def _build_exact_scope_validation_query(
+        cls,
+        requests: Sequence[WikidataEntityRequest],
+    ) -> str:
+        branches: list[str] = []
+        for scope in WikidataScope:
+            qids = sorted(request.qid for request in requests if request.scope is scope)
+            if not qids:
+                continue
+            values = " ".join(f"wd:{qid}" for qid in qids)
+            branches.append(
+                "\n".join(
+                    (
+                        "{",
+                        f"  VALUES ?entity {{ {values} }}",
+                        f"  {cls._SCOPE_PATTERN[scope]}",
+                        f'  BIND("{scope.value}" AS ?scope)',
+                        "}",
+                    )
+                )
+            )
+        union = "\nUNION\n".join(branches)
+        return f"""
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT DISTINCT ?entity ?scope WHERE {{
+{union}
+}}
+ORDER BY STR(?entity) STR(?scope)
 """.strip()
 
     def _fetch_entities(self, entity_ids: list[str]) -> list[JsonObject]:
@@ -148,6 +277,8 @@ LIMIT {page_size}
         entity: JsonObject,
         scope: WikidataScope,
         linked_entities: dict[str, JsonObject],
+        *,
+        scope_validation: JsonObject | None = None,
     ) -> SourceRecord:
         entity_id = WikidataConnector._entity_id(entity)
         labels = require_object(entity.get("labels"), field=f"{entity_id}.labels")
@@ -227,6 +358,8 @@ LIMIT {page_size}
             "date_of_death": WikidataConnector._first_claim_time(entity, "P570"),
             "entity_data_source": WikidataConnector._ENTITY_URL,
         }
+        if scope_validation is not None:
+            selected_payload["scope_validation"] = scope_validation
         entity_kind = EntityKind.ENSEMBLE if scope is WikidataScope.ENSEMBLES else EntityKind.PERSON
         return SourceRecord(
             source=SourceName.WIKIDATA,

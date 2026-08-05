@@ -6,6 +6,8 @@
 
 - `candidates.jsonl`: 작품, 작곡가, 연주자, 원본 영상, 구간, 크레딧과 검수 근거를 포함한 정규 후보입니다.
 - `prewarm-template.jsonl`: 데이터베이스 적재 전 단계의 클립 선생성 템플릿입니다. `candidateKey`를 사용하므로 그대로 실행할 수 없습니다.
+- `wikidata-entities.jsonl`: 후보 작곡가와 연주자의 중복 제거된 exact QID dependency 17건입니다. 이름 검색에 사용하지 않습니다.
+- `wikidata-composers.jsonl`: 위 dependency에서 분리한 작곡가 exact QID 4건입니다. 작곡가 canonical manifest를 만든 뒤 MusicBrainz 작품 수집 입력으로 사용합니다.
 - `review-report.md`: 선정 기준, 출처, 검수 결과와 남은 공개 조건을 정리한 사람이 읽는 보고서입니다.
 - `validate.py`: 두 JSONL의 구조와 상호 참조를 검증하고, 적재 후 실제 prewarm manifest를 생성합니다.
 - `test_validate.py`: 검증기와 변환기의 회귀 테스트입니다.

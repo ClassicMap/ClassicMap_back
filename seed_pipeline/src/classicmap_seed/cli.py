@@ -8,7 +8,13 @@ from typing import Annotated
 import typer
 
 from classicmap_seed import __version__
-from classicmap_seed.artifacts import JsonlArtifactStore, read_artifact, read_manifest
+from classicmap_seed.artifacts import (
+    JsonlArtifactStore,
+    read_artifact,
+    read_manifest,
+    serialize_jsonl,
+    sha256_bytes,
+)
 from classicmap_seed.export import build_canonical_load_bundle
 from classicmap_seed.models import (
     ArtifactStage,
@@ -33,6 +39,8 @@ from classicmap_seed.sources import (
     WikidataConnector,
     build_connector,
     build_musicbrainz_work_connector,
+    fetch_exact_request_page,
+    read_wikidata_entity_requests,
 )
 from classicmap_seed.sources.collector import collect_paginated
 from classicmap_seed.sources.musicbrainz_work_input import (
@@ -223,6 +231,103 @@ def snapshot_wikidata(
                 f"checkpoint 재사용 행 {collection.resumed_record_count}개",
                 "WDQS 0.5 req/s 제한과 immutable page artifact를 적용했습니다.",
                 "운영 DB에 연결하지 않았습니다.",
+            ),
+        ),
+        options,
+    )
+
+
+@app.command("snapshot-wikidata-entities")
+def snapshot_wikidata_entities(
+    run_id: RunIdOption,
+    input_path: Annotated[
+        Path,
+        typer.Option("--input", exists=True, dir_okay=False, readable=True),
+    ],
+    contact: Annotated[
+        str,
+        typer.Option("--contact", help="Wikidata User-Agent 연락처. artifact에는 저장하지 않음"),
+    ],
+    dry_run: DryRunOption = False,
+    resume: ResumeOption = True,
+    limit: LimitOption = 20,
+    json_report: JsonReportOption = None,
+    artifacts_dir: ArtifactsDirOption = Path("artifacts"),
+    max_pages: MaxPagesOption = None,
+) -> None:
+    """명시된 Wikidata QID만 entity API batch와 checkpoint로 수집합니다."""
+    options = _options(run_id, dry_run, resume, limit, json_report)
+    try:
+        requests = read_wikidata_entity_requests(input_path)
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--input") from error
+    try:
+        connector, http_client = build_connector(SourceName.WIKIDATA, contact=contact)
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--contact") from error
+    if not isinstance(connector, WikidataConnector):
+        raise RuntimeError("Wikidata connector factory 결과가 올바르지 않습니다.")
+
+    input_sha256 = sha256_bytes(serialize_jsonl(requests))
+    retrieved_at = datetime.now(UTC)
+    store = _store(artifacts_dir)
+    checkpoint_path = (
+        artifacts_dir / options.run_id / "checkpoints" / f"wikidata-entities-{input_sha256}.json"
+    )
+    try:
+        collection = collect_paginated(
+            run_id=options.run_id,
+            scope=f"exact:{input_sha256}",
+            metadata=connector.entity_metadata,
+            fetch_page=lambda size, cursor: fetch_exact_request_page(
+                connector,
+                requests,
+                page_size=size,
+                cursor=cursor,
+            ),
+            artifact_store=store,
+            artifacts_root=artifacts_dir,
+            checkpoint_path=checkpoint_path,
+            retrieved_at=retrieved_at,
+            limit=min(options.limit, len(requests)),
+            page_size=50,
+            max_pages=max_pages,
+            dry_run=options.dry_run,
+            resume=options.resume,
+        )
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--input") from error
+    finally:
+        http_client.close()
+
+    result = store.write(
+        run_id=options.run_id,
+        stage=ArtifactStage.RAW,
+        metadata=connector.entity_metadata,
+        records=collection.records,
+        retrieved_at=retrieved_at,
+        dry_run=options.dry_run,
+        resume=options.resume,
+    )
+    _emit(
+        CommandReport(
+            command="snapshot-wikidata-entities",
+            run_id=options.run_id,
+            dry_run=options.dry_run,
+            input_count=len(requests),
+            output_count=len(collection.records),
+            mutation_count=max(result.mutation_count, collection.artifact_mutation_count),
+            data_path=str(result.data_path),
+            manifest_path=str(result.manifest_path),
+            notes=(
+                f"입력 manifest SHA-256 {input_sha256}",
+                f"exact page 요청 {collection.request_count}회, "
+                "WDQS scope 검증과 wbgetentities batch 최대 50건",
+                f"checkpoint 재사용 행 {collection.resumed_record_count}개",
+                "QID별 scope를 WDQS VALUES와 기존 scope predicate로 검증하고 "
+                "불일치는 거부했습니다.",
+                "역할·악기·국가 linked entity도 50건 단위로 보강했습니다.",
+                "이름 검색, 전체 WDQS discovery, 운영 DB 연결을 수행하지 않았습니다.",
             ),
         ),
         options,
