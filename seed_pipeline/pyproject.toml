@@ -1,0 +1,51 @@
+[project]
+name = "classicmap-seed"
+version = "0.1.0"
+description = "ClassicMap 국제 초기 시드 수집·정규화·식별 파이프라인"
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+dependencies = [
+  "httpx>=0.28.1,<1",
+  "pydantic>=2.11.7,<3",
+  "typer>=0.16.0,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.17.0,<2",
+  "pytest>=8.4.1,<9",
+  "ruff>=0.12.7,<1",
+]
+
+[project.scripts]
+classicmap-seed = "classicmap_seed.cli:app"
+
+[dependency-groups]
+dev = [
+  "mypy>=1.17.0,<2",
+  "pytest>=8.4.1,<9",
+  "ruff>=0.12.7,<1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/classicmap_seed"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
