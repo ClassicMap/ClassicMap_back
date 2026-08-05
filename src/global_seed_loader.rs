@@ -1467,10 +1467,9 @@ fn planned_target_id(item: &BundleRecord) -> String {
             .expect("supplied id는 validation에서 확인됨")
             .to_string()
     } else {
-        format!(
-            "planned:{}",
-            &natural_key_sha256(&item.record.natural_key)[..16]
-        )
+        let hash = natural_key_sha256(&item.record.natural_key);
+        let suffix = u64::from_str_radix(&hash[..8], 16).expect("SHA-256 hex") % 100_000_000;
+        (1_500_000_000_u64 + suffix).to_string()
     }
 }
 
