@@ -20,7 +20,11 @@ from classicmap_seed.models import (
 from classicmap_seed.normalize import normalize_records
 from classicmap_seed.resolve import resolve_candidates
 from classicmap_seed.sources.collector import PaginatedCollectionResult, collect_paginated
-from classicmap_seed.sources.musicbrainz_work_exact import fetch_exact_work_request_page
+from classicmap_seed.sources.musicbrainz_work_exact import (
+    ExactWorkHierarchyCollectionResult,
+    collect_exact_work_hierarchy,
+    fetch_exact_work_request_page,
+)
 from classicmap_seed.sources.musicbrainz_work_exact_input import (
     MusicBrainzWorkEntityRequest,
     extract_comparison_candidate_work_requests,
@@ -67,6 +71,22 @@ def _work(work_mbid: str) -> dict[str, object]:
             }
         ],
     }
+
+
+def _work_with_parent(work_mbid: str, parent_mbid: str) -> dict[str, object]:
+    work = _work(work_mbid)
+    relations = work["relations"]
+    assert isinstance(relations, list)
+    relations.append(
+        {
+            "type": "parts",
+            "direction": "backward",
+            "target-type": "work",
+            "work": {"id": parent_mbid, "title": "Fixture Parent"},
+            "ordering-key": 1,
+        }
+    )
+    return work
 
 
 def test_committed_manifest_is_exact_deterministic_pilot_work_dependency() -> None:
@@ -147,6 +167,118 @@ def test_exact_connector_rejects_returned_id_mismatch() -> None:
 
     with pytest.raises(ValueError, match="응답 ID가 요청 MBID와 일치하지 않습니다"):
         connector.fetch_exact(work_mbid=_WORK_A)
+    underlying.close()
+
+
+def test_exact_hierarchy_collects_only_parts_parents_and_resumes(tmp_path: Path) -> None:
+    requested_mbids: list[str] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        work_mbid = request.url.path.rsplit("/", maxsplit=1)[-1]
+        requested_mbids.append(work_mbid)
+        payload = (
+            _work_with_parent(work_mbid, _WORK_B) if work_mbid == _WORK_A else _work(work_mbid)
+        )
+        return httpx.Response(200, json=payload, request=request)
+
+    connector, underlying = _connector(httpx.MockTransport(handler))
+    run_id = "exact-work-hierarchy-fixture"
+    retrieved_at = datetime(2026, 8, 5, tzinfo=UTC)
+    store = JsonlArtifactStore(tmp_path, tool_version="test")
+    checkpoint_path = tmp_path / run_id / "checkpoints" / "hierarchy.json"
+
+    def collect() -> ExactWorkHierarchyCollectionResult:
+        return collect_exact_work_hierarchy(
+            connector=connector,
+            requests=(MusicBrainzWorkEntityRequest(mbid=_WORK_A),),
+            input_sha256="a" * 64,
+            run_id=run_id,
+            metadata=connector.metadata,
+            artifact_store=store,
+            artifacts_root=tmp_path,
+            checkpoint_path=checkpoint_path,
+            retrieved_at=retrieved_at,
+            root_limit=1,
+            max_depth=4,
+            max_records=10,
+            dry_run=False,
+            resume=True,
+        )
+
+    first = collect()
+    resumed = collect()
+    raw_result = store.write(
+        run_id=run_id,
+        stage=ArtifactStage.RAW,
+        metadata=connector.metadata,
+        records=first.records,
+        retrieved_at=retrieved_at,
+        dry_run=False,
+        resume=True,
+    )
+    normalized = normalize_records(list(first.records))
+    decisions = resolve_candidates(normalized)
+    canonical = build_canonical_load_bundle(
+        run_id=run_id,
+        source_manifest=raw_result.manifest,
+        raw_records=list(first.records),
+        candidates=normalized,
+        decisions=decisions,
+    )
+
+    assert requested_mbids == [_WORK_A, _WORK_B]
+    assert first.request_count == 2
+    assert resumed.request_count == 0
+    assert resumed.resumed_record_count == 2
+    assert resumed.artifact_mutation_count == 0
+    assert {record.source_record_id for record in first.records} == {_WORK_A, _WORK_B}
+    assert first.records[0].payload["exact_hierarchy"] == {
+        "root_mbid": _WORK_A,
+        "depth": 0,
+        "relation_type": "root",
+    }
+    assert {record.natural_key for record in canonical if record.table is LoadTable.PIECES} == {
+        f"musicbrainz_work:{_WORK_B}",
+    }
+    assert {
+        record.natural_key for record in canonical if record.table is LoadTable.PIECE_PARTS
+    } == {f"musicbrainz_work_part:{_WORK_A}"}
+    assert not any(record.table is LoadTable.REVIEW_QUEUE for record in canonical)
+    underlying.close()
+
+
+def test_exact_hierarchy_rejects_parent_beyond_depth_without_fetching_it(tmp_path: Path) -> None:
+    requested_mbids: list[str] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        work_mbid = request.url.path.rsplit("/", maxsplit=1)[-1]
+        requested_mbids.append(work_mbid)
+        return httpx.Response(
+            200,
+            json=_work_with_parent(work_mbid, _WORK_B),
+            request=request,
+        )
+
+    connector, underlying = _connector(httpx.MockTransport(handler))
+    with pytest.raises(ValueError, match="max-hierarchy-depth"):
+        collect_exact_work_hierarchy(
+            connector=connector,
+            requests=(MusicBrainzWorkEntityRequest(mbid=_WORK_A),),
+            input_sha256="b" * 64,
+            run_id="depth-limit",
+            metadata=connector.metadata,
+            artifact_store=JsonlArtifactStore(tmp_path, tool_version="test"),
+            artifacts_root=tmp_path,
+            checkpoint_path=tmp_path / "depth-limit" / "checkpoints" / "hierarchy.json",
+            retrieved_at=datetime(2026, 8, 5, tzinfo=UTC),
+            root_limit=1,
+            max_depth=0,
+            max_records=10,
+            dry_run=True,
+            resume=True,
+        )
+
+    assert requested_mbids == [_WORK_A]
     underlying.close()
 
 
@@ -374,3 +506,4 @@ def test_exact_cli_exposes_required_common_options() -> None:
         "--json-report",
     ):
         assert option in result.output
+    assert "--max-hierarchy-" in result.output

@@ -94,10 +94,12 @@ uv run classicmap-seed snapshot-musicbrainz-work-entities \
   --run-id comparison-pilot-works-20260805 \
   --input curation/pilot-2026-08-05/musicbrainz-works.jsonl \
   --contact maintainer@example.com \
-  --limit 5
+  --limit 5 \
+  --max-hierarchy-depth 8 \
+  --max-hierarchy-records 1000
 ```
 
-비교 파일럿 입력은 `candidates.jsonl`의 `workCandidate.naturalKey`와 같은 `musicbrainz_work` 외부 식별자를 함께 검증해 결정적으로 추출한 5개 MBID입니다. HTTP 요청당 작품 한 건, MusicBrainz 1 req/s 제한을 적용합니다. 입력 SHA-256별 checkpoint와 immutable page artifact를 남기므로 같은 run-id와 입력으로 `--resume`하면 요청과 mutation이 모두 0이어야 합니다. 이름 검색, 작곡가 전체 browse, 운영 DB나 홈서버 연결은 수행하지 않습니다.
+비교 파일럿 입력은 `candidates.jsonl`의 `workCandidate.naturalKey`와 같은 `musicbrainz_work` 외부 식별자를 함께 검증해 결정적으로 추출한 5개 MBID입니다. 악장인 작품은 canonical 계층 FK에 필요한 `parts` backward 부모만 제한적으로 재귀 수집합니다. `based on`, 편곡 등 다른 관계를 따라가지는 않으며 깊이와 전체 레코드 상한을 넘으면 중단합니다. 각 raw record에는 최초 root MBID, 깊이와 dependency relation을 남깁니다. HTTP 요청당 작품 한 건, MusicBrainz 1 req/s 제한을 적용합니다. 입력 SHA-256과 계층 제한별 checkpoint와 immutable page artifact를 남기므로 같은 run-id와 입력으로 `--resume`하면 요청과 mutation이 모두 0이어야 합니다. 이름 검색, 작곡가 전체 browse, 운영 DB나 홈서버 연결은 수행하지 않습니다.
 
 #### 작곡가별 전체 작품 탐색
 

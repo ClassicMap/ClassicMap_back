@@ -172,6 +172,7 @@ def _extract_facts(record: SourceRecord) -> JsonObject:
             "relations",
             "composer_mbids",
             "browsed_artist_ids",
+            "exact_hierarchy",
         ),
         SourceName.OPEN_OPUS: (
             "epoch",
