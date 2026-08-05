@@ -20,6 +20,7 @@ mod user;
 mod venue;
 
 use dotenv::dotenv;
+use ClassicMap_back::comparison;
 use logger::Logger;
 use rocket::http::Method;
 use rocket_cors::{AllowedHeaders, AllowedOrigins, CorsOptions};
@@ -100,6 +101,7 @@ async fn rocket() -> _ {
                 artist::delete_artist,
                 artist::create_artist_award,
                 artist::delete_artist_award,
+                comparison::get_artist_comparison_performances,
                 // Concert routes
                 concert::get_concerts,
                 concert::get_concert,
