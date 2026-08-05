@@ -40,6 +40,7 @@ WORKDIR /app
 # Copy the binary (���� �̸� �״��!)
 COPY --from=builder /app/target/release/ClassicMap_back /app/ClassicMap_back
 COPY --from=builder /app/target/release/load_clip_assets /app/load_clip_assets
+COPY --from=builder /app/target/release/load_comparison_candidates /app/load_comparison_candidates
 
 # Copy configuration files
 COPY --from=builder /app/Rocket.toml ./Rocket.toml
