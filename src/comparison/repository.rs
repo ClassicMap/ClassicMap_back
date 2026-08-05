@@ -3,7 +3,7 @@ use super::model::{
     ComparisonPerformanceRow,
 };
 use crate::db::DbPool;
-use sqlx::{MySql, QueryBuilder};
+use sqlx::{MySql, QueryBuilder, Transaction};
 use std::{collections::HashMap, error::Error, fmt};
 
 const DEFAULT_PAGE_SIZE: u32 = 20;
@@ -237,6 +237,18 @@ impl ComparisonRepository {
     ) -> Result<(), ComparisonContractError> {
         let mut transaction = pool.begin().await?;
 
+        Self::publish_ready_performance_in_transaction(&mut transaction, performance_id).await?;
+
+        transaction.commit().await?;
+        Ok(())
+    }
+
+    pub(crate) async fn publish_ready_performance_in_transaction(
+        transaction: &mut Transaction<'_, MySql>,
+        performance_id: i32,
+    ) -> Result<u64, ComparisonContractError> {
+        let mut mutations = 0;
+
         let state = sqlx::query_as::<_, (String, u64)>(
             "SELECT performance.publish_status, clip.id
              FROM performances performance
@@ -256,7 +268,7 @@ impl ComparisonRepository {
              FOR UPDATE",
         )
         .bind(performance_id)
-        .fetch_optional(&mut *transaction)
+        .fetch_optional(&mut **transaction)
         .await?
         .ok_or(ComparisonContractError::ClipNotReady)?;
 
@@ -271,25 +283,26 @@ impl ComparisonRepository {
                  WHERE id = ? AND publish_status IN ('DRAFT', 'READY')",
             )
             .bind(performance_id)
-            .execute(&mut *transaction)
+            .execute(&mut **transaction)
             .await?;
 
             if updated.rows_affected() != 1 {
                 return Err(ComparisonContractError::InvalidPublishTransition);
             }
+            mutations += updated.rows_affected();
         }
 
-        sqlx::query(
+        let published = sqlx::query(
             "UPDATE clip_assets
              SET status = 'PUBLISHED', published_at = COALESCE(published_at, CURRENT_TIMESTAMP(6))
-             WHERE id = ?",
+             WHERE id = ? AND status <> 'PUBLISHED'",
         )
         .bind(state.1)
-        .execute(&mut *transaction)
+        .execute(&mut **transaction)
         .await?;
+        mutations += published.rows_affected();
 
-        transaction.commit().await?;
-        Ok(())
+        Ok(mutations)
     }
 }
 

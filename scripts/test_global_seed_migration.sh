@@ -39,6 +39,8 @@ cargo run --quiet --manifest-path "$repo_root/Cargo.toml" --bin migrate
 cargo run --quiet --manifest-path "$repo_root/Cargo.toml" --bin migrate
 cargo test --quiet --manifest-path "$repo_root/Cargo.toml" \
   --test comparison_repository_integration -- --ignored
+cargo test --quiet --manifest-path "$repo_root/Cargo.toml" \
+  --test clip_asset_loader_integration -- --ignored --test-threads=1
 
 backfill_counts_before=$(docker exec --env MYSQL_PWD="$database_password" "$container_name" \
   mysql --batch --skip-column-names --user=root --execute="
@@ -99,7 +101,7 @@ assert_sql \
   "0"
 assert_sql \
   "SELECT COUNT(*) FROM classicmap._sqlx_migrations WHERE success=1;" \
-  "3"
+  "4"
 
 if docker exec --env MYSQL_PWD="$database_password" "$container_name" \
   mysql --user=root --execute="
