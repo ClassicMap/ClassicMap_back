@@ -33,6 +33,7 @@ from classicmap_seed.models import (
     WikidataScope,
 )
 from classicmap_seed.normalize import normalize_records
+from classicmap_seed.projection_overrides import read_projection_overrides
 from classicmap_seed.reporting import render_report, write_report
 from classicmap_seed.resolve import resolve_candidates
 from classicmap_seed.sources import (
@@ -1019,6 +1020,16 @@ def export_canonical(
         Path,
         typer.Option("--manifest", exists=True, dir_okay=False, readable=True),
     ],
+    projection_overrides_path: Annotated[
+        Path | None,
+        typer.Option(
+            "--projection-overrides",
+            exists=True,
+            dir_okay=False,
+            readable=True,
+            help="명시적으로 검수한 legacy 표시 필드 override JSONL",
+        ),
+    ] = None,
     dry_run: DryRunOption = False,
     resume: ResumeOption = True,
     limit: LimitOption = 20,
@@ -1053,13 +1064,27 @@ def export_canonical(
     selected_candidates = [
         candidate for candidate in candidates if candidate.candidate_id in selected_candidate_ids
     ]
-    load_records = build_canonical_load_bundle(
-        run_id=options.run_id,
-        source_manifest=raw_manifest,
-        raw_records=raw_records,
-        candidates=selected_candidates,
-        decisions=selected_decisions,
-    )
+    try:
+        projection_overrides = (
+            read_projection_overrides(projection_overrides_path)
+            if projection_overrides_path is not None
+            else None
+        )
+    except ValueError as error:
+        raise typer.BadParameter(str(error), param_hint="--projection-overrides") from error
+    try:
+        load_records = build_canonical_load_bundle(
+            run_id=options.run_id,
+            source_manifest=raw_manifest,
+            raw_records=raw_records,
+            candidates=selected_candidates,
+            decisions=selected_decisions,
+            projection_overrides=projection_overrides,
+        )
+    except ValueError as error:
+        if projection_overrides is not None:
+            raise typer.BadParameter(str(error), param_hint="--projection-overrides") from error
+        raise
     result = _store(artifacts_dir).write(
         run_id=options.run_id,
         stage=ArtifactStage.CANONICAL,
@@ -1084,6 +1109,12 @@ def export_canonical(
             notes=(
                 "운영 DB 연결 없이 JSONL load bundle만 생성했습니다.",
                 "모든 write policy는 manual/editor_locked 보존입니다.",
+                (
+                    f"검수된 projection override {len(projection_overrides.records)}건, "
+                    f"입력 SHA-256 {projection_overrides.input_sha256}"
+                    if projection_overrides is not None
+                    else "수동 projection override를 사용하지 않았습니다."
+                ),
             ),
         ),
         options,

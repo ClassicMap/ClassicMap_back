@@ -22,6 +22,11 @@ from classicmap_seed.models import (
     WritePolicy,
 )
 from classicmap_seed.normalize import normalize_records
+from classicmap_seed.projection_overrides import (
+    ProjectionOverrideRecord,
+    ProjectionOverrideSet,
+    projection_override_fingerprint,
+)
 
 
 def _manifest() -> SnapshotManifest:
@@ -299,6 +304,73 @@ def test_multiple_iso_country_codes_keep_legacy_projection_in_review() -> None:
 
     assert not any(record.table is LoadTable.COMPOSERS for record in bundle)
     assert any(
+        record.table is LoadTable.REVIEW_QUEUE
+        and record.values["reason_code"] == "LEGACY_COMPOSER_REQUIRED_FIELDS_MISSING"
+        for record in bundle
+    )
+
+
+def test_reviewed_nationality_override_creates_projection_and_manual_provenance() -> None:
+    raw = _wikidata_projection_raw(scope="composers")
+    payload = dict(raw.payload)
+    payload["country_codes"] = ["DE", "PL"]
+    payload["country_code_links"] = [
+        {"country_code": "DE", "country_entity_id": "Q183"},
+        {"country_code": "PL", "country_entity_id": "Q36"},
+    ]
+    ambiguous_raw = raw.model_copy(update={"payload": payload})
+    candidate = normalize_records([ambiguous_raw])[0]
+    decision = ResolutionDecision(
+        decision_id="decision-country-manual-override",
+        action=ResolutionAction.CREATE,
+        candidate_ids=(candidate.candidate_id,),
+        reason_code="NO_MATCHING_STABLE_IDENTIFIER",
+    )
+    override_payload: dict[str, object] = {
+        "contract_version": "projection-override-v1",
+        "target": "composer",
+        "wikidata_qid": "Q255",
+        "field": "nationality",
+        "value": "독일",
+        "reviewer": "fixture-reviewer",
+        "reviewed_at": "2026-08-05T00:00:00Z",
+        "evidence_url": "https://www.wikidata.org/wiki/Q255",
+        "evidence_note": "복수 국적 중 legacy 대표 표시값을 명시적으로 검수했습니다.",
+    }
+    override = ProjectionOverrideRecord.model_validate(
+        {
+            **override_payload,
+            "record_fingerprint": projection_override_fingerprint(override_payload),
+        }
+    )
+    overrides = ProjectionOverrideSet(records=(override,), input_sha256="b" * 64)
+
+    bundle = build_canonical_load_bundle(
+        run_id="run-country-manual-override",
+        source_manifest=_manifest(),
+        raw_records=[ambiguous_raw],
+        candidates=[candidate],
+        decisions=[decision],
+        projection_overrides=overrides,
+    )
+
+    composer = next(record for record in bundle if record.table is LoadTable.COMPOSERS)
+    assert composer.values["nationality"] == "독일"
+    assert composer.evidence["manual_projection_override"] == {
+        **override_payload,
+        "record_fingerprint": override.record_fingerprint,
+        "input_sha256": "b" * 64,
+    }
+    provenance = next(
+        record
+        for record in bundle
+        if record.table is LoadTable.FIELD_PROVENANCE
+        and record.values.get("target_table") == "composers"
+        and record.values.get("field_name") == "nationality"
+    )
+    assert provenance.values["origin"] == "seed"
+    assert provenance.values["editorial_status"] == "EDITOR_REVIEWED"
+    assert not any(
         record.table is LoadTable.REVIEW_QUEUE
         and record.values["reason_code"] == "LEGACY_COMPOSER_REQUIRED_FIELDS_MISSING"
         for record in bundle
