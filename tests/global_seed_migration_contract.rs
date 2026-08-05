@@ -11,10 +11,12 @@ const COMPOSER_PERIOD_SCHEMA: &str =
     include_str!("../migrations/202608050005_expand_composer_periods.sql");
 const APPLE_MUSIC_BACKFILL: &str =
     include_str!("../migrations/202608050006_backfill_apple_music_album_links.sql");
+const GLOBAL_SEED_LOADER_REGISTRY: &str =
+    include_str!("../migrations/202608050007_global_seed_loader_registry.sql");
 
 #[test]
 fn migrator_embeds_all_global_seed_migrations() {
-    assert_eq!(MIGRATOR.iter().count(), 6);
+    assert_eq!(MIGRATOR.iter().count(), 7);
 }
 
 #[test]
@@ -76,4 +78,8 @@ fn global_seed_migration_contains_required_contracts() {
     assert!(COMPOSER_PERIOD_SCHEMA.contains("'르네상스'"));
     assert!(APPLE_MUSIC_BACKFILL.contains("INSERT INTO platform_links"));
     assert!(!APPLE_MUSIC_BACKFILL.contains("INSERT IGNORE INTO"));
+    assert!(GLOBAL_SEED_LOADER_REGISTRY.contains("CREATE TABLE seed_natural_keys"));
+    assert!(GLOBAL_SEED_LOADER_REGISTRY.contains("natural_key_sha256 CHAR(64)"));
+    assert!(GLOBAL_SEED_LOADER_REGISTRY.contains("record_fingerprint CHAR(64)"));
+    assert!(!GLOBAL_SEED_LOADER_REGISTRY.contains("INSERT IGNORE"));
 }

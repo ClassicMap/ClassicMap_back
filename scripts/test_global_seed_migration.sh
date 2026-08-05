@@ -79,8 +79,8 @@ assert_sql() {
 }
 
 assert_sql \
-  "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='classicmap' AND table_name IN ('authority_entities','piece_parts','recording_tracks','seed_runs','performance_sources','clip_assets');" \
-  "6"
+  "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='classicmap' AND table_name IN ('authority_entities','piece_parts','recording_tracks','seed_runs','performance_sources','clip_assets','seed_natural_keys');" \
+  "7"
 assert_sql \
   "SELECT IF(COUNT(*) = SUM(origin='manual' AND editor_locked=1), 1, 0) FROM classicmap.composers;" \
   "1"
@@ -101,7 +101,7 @@ assert_sql \
   "0"
 assert_sql \
   "SELECT COUNT(*) FROM classicmap._sqlx_migrations WHERE success=1;" \
-  "6"
+  "7"
 
 docker exec --interactive --env MYSQL_PWD="$database_password" "$container_name" \
   mysql --user=root "$database_name" \
