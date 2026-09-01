@@ -1,0 +1,74 @@
+{
+  "db_name": "MySQL",
+  "query": "\n            SELECT\n                ps.id,\n                ps.piece_id,\n                ps.sector_name,\n                ps.description,\n                ps.display_order,\n                COALESCE(COUNT(p.id), 0) as `performance_count!: i32`\n            FROM performance_sectors ps\n            LEFT JOIN performances p ON ps.id = p.sector_id\n            WHERE ps.piece_id = ?\n            GROUP BY ps.id, ps.piece_id, ps.sector_name, ps.description, ps.display_order\n            ORDER BY ps.display_order ASC, ps.id ASC\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": {
+          "type": "Long",
+          "flags": "NOT_NULL | PRIMARY_KEY | AUTO_INCREMENT",
+          "max_size": 11
+        }
+      },
+      {
+        "ordinal": 1,
+        "name": "piece_id",
+        "type_info": {
+          "type": "Long",
+          "flags": "NOT_NULL | MULTIPLE_KEY | NO_DEFAULT_VALUE",
+          "max_size": 11
+        }
+      },
+      {
+        "ordinal": 2,
+        "name": "sector_name",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | NO_DEFAULT_VALUE",
+          "max_size": 800
+        }
+      },
+      {
+        "ordinal": 3,
+        "name": "description",
+        "type_info": {
+          "type": "Blob",
+          "flags": "BLOB",
+          "max_size": 262140
+        }
+      },
+      {
+        "ordinal": 4,
+        "name": "display_order",
+        "type_info": {
+          "type": "Long",
+          "flags": "MULTIPLE_KEY",
+          "max_size": 11
+        }
+      },
+      {
+        "ordinal": 5,
+        "name": "performance_count!: i32",
+        "type_info": {
+          "type": "LongLong",
+          "flags": "NOT_NULL | BINARY",
+          "max_size": 21
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      false
+    ]
+  },
+  "hash": "fe406b2d33d7bb7aa890175651732a5cd7061ed75511dfce7b34239d5d79baa3"
+}
