@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "\n            UPDATE performance_sectors\n            SET sector_name = ?, description = ?, display_order = ?\n            WHERE id = ?\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "a4149ea1b853a97753f0aa31bc3a5f050aed65e5e7f04549ffaf4e24603ccf5d"
+}

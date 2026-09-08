@@ -16,6 +16,7 @@ target
 *.env
 
 
-.sqlx
 
 cache/
+
+# .sqlx는 CI에서 DB 없이 빌드하기 위해 커밋한다 (SQLX_OFFLINE)
