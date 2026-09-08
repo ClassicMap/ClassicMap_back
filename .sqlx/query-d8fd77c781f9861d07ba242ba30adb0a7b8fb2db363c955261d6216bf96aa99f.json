@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "\n            INSERT INTO performance_sectors (piece_id, sector_name, description, display_order)\n            VALUES (?, ?, ?, ?)\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "d8fd77c781f9861d07ba242ba30adb0a7b8fb2db363c955261d6216bf96aa99f"
+}
