@@ -4,12 +4,17 @@ use sqlx::Error;
 
 pub struct PerformanceRepository;
 
+// 공개 목록은 발행된 연주만 보여준다.
+// 국제 시드가 적재한 후보는 publish_status='DRAFT' 로 들어오며
+// 권리 검토와 클립 검증을 거쳐야 발행된다. 수동 생성 행의 기본값은 'PUBLISHED' 라
+// 관리자 경로는 영향을 받지 않는다.
+
 impl PerformanceRepository {
     pub async fn find_all(pool: &DbPool) -> Result<Vec<Performance>, Error> {
         sqlx::query_as::<_, Performance>(
             "SELECT id, sector_id, piece_id, artist_id, video_platform, video_id, start_time, end_time,
              characteristic, view_count, CAST(rating AS DOUBLE) as rating
-             FROM performances ORDER BY id DESC",
+             FROM performances WHERE publish_status = 'PUBLISHED' ORDER BY id DESC",
         )
         .fetch_all(pool)
         .await
@@ -30,7 +35,7 @@ impl PerformanceRepository {
         sqlx::query_as::<_, Performance>(
             "SELECT id, sector_id, piece_id, artist_id, video_platform, video_id, start_time, end_time,
              characteristic, view_count, CAST(rating AS DOUBLE) as rating
-             FROM performances WHERE sector_id = ? ORDER BY rating DESC",
+             FROM performances WHERE sector_id = ? AND publish_status = 'PUBLISHED' ORDER BY rating DESC",
         )
         .bind(sector_id)
         .fetch_all(pool)
@@ -41,7 +46,7 @@ impl PerformanceRepository {
         sqlx::query_as::<_, Performance>(
             "SELECT id, sector_id, piece_id, artist_id, video_platform, video_id, start_time, end_time,
              characteristic, view_count, CAST(rating AS DOUBLE) as rating
-             FROM performances WHERE piece_id = ? ORDER BY rating DESC",
+             FROM performances WHERE piece_id = ? AND publish_status = 'PUBLISHED' ORDER BY rating DESC",
         )
         .bind(piece_id)
         .fetch_all(pool)
@@ -52,7 +57,7 @@ impl PerformanceRepository {
         sqlx::query_as::<_, Performance>(
             "SELECT id, sector_id, piece_id, artist_id, video_platform, video_id, start_time, end_time,
              characteristic, view_count, CAST(rating AS DOUBLE) as rating
-             FROM performances WHERE artist_id = ? ORDER BY id DESC",
+             FROM performances WHERE artist_id = ? AND publish_status = 'PUBLISHED' ORDER BY id DESC",
         )
         .bind(artist_id)
         .fetch_all(pool)
