@@ -54,3 +54,19 @@ python3 seed_pipeline/curation/pilot-2026-08-05/validate.py render-prewarm \
 ```
 
 `candidateKey`는 `yt:{videoId}:{start}:{end}` 형식입니다. 적재 과정에서 영상 ID나 구간이 바뀌면 새 키를 만들고 기존 키를 재사용하지 않습니다. 이 템플릿은 권리 검토와 운영 승인을 대신하지 않으며, 현재 행의 `rightsCheckStatus`가 `REVIEW_REQUIRED`이므로 자동 실행 대상이 아닙니다.
+
+## 2026-09-09 override 갱신
+
+`projection-overrides.jsonl`은 2026-08-05 검수 시점의 기록이므로 그대로 둡니다.
+실제 적재에는 `projection-overrides.2026-09-09.jsonl`을 사용합니다.
+
+그 사이 Wikidata의 국가 이력이 정리되어 두 건은 공식값이 단일하게 확정됐고,
+파이프라인이 "검증된 nationality가 이미 있으므로 수동 override를 적용하지 않습니다"로
+export 전체를 거부합니다. 그래서 다음 두 행만 제외한 6건을 사용합니다.
+
+| target | QID | 값 | 제외 사유 |
+|---|---|---|---|
+| composer | Q1339 | 독일 | 공식 원본이 단일 국가로 확정 |
+| artist | Q319732 | 소련 | 공식 원본이 단일 국가로 확정 |
+
+제외한 두 건은 자동 투영 결과가 override 값과 같아 표시값이 달라지지 않습니다.
