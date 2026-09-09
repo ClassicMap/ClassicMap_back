@@ -28,12 +28,21 @@ impl RecordingRepository {
         .await
     }
 
+    /// 참여 관계는 recordings.artist_id 가 아니라 recording_contributors 가 갖는다.
+    /// 같은 앨범이 참여 아티스트마다 따로 등록돼 있던 중복(검수 큐 566건)을
+    /// 202608050011 이 이 테이블로 통합했다.
     pub async fn find_by_artist(pool: &DbPool, artist_id: i32) -> Result<Vec<Recording>, Error> {
         sqlx::query_as::<_, Recording>(
             "SELECT id, artist_id, title, year, release_date, label, cover_url, upc, apple_music_id,
              track_count, is_single, is_compilation, genre_names, copyright, editorial_notes,
              artwork_width, artwork_height, spotify_url, apple_music_url, youtube_music_url, external_url
-             FROM recordings WHERE artist_id = ? ORDER BY year DESC"
+             FROM recordings
+             WHERE id IN (
+                 SELECT contributor.recording_id
+                 FROM recording_contributors contributor
+                 WHERE contributor.artist_id = ?
+             )
+             ORDER BY year DESC"
         )
         .bind(artist_id)
         .fetch_all(pool)
@@ -53,6 +62,9 @@ impl RecordingRepository {
         let genre_names_json: Option<JsonValue> = recording.genre_names
             .as_ref()
             .and_then(|s| serde_json::from_str(s).ok());
+
+        let artist_id = recording.artist_id;
+        let mut transaction = pool.begin().await?;
 
         let result = sqlx::query(
             "INSERT INTO recordings (artist_id, title, year, release_date, label, cover_url, upc, apple_music_id,
@@ -80,10 +92,26 @@ impl RecordingRepository {
         .bind(recording.apple_music_url)
         .bind(recording.youtube_music_url)
         .bind(recording.external_url)
-        .execute(pool)
+        .execute(&mut *transaction)
         .await?;
 
-        Ok(result.last_insert_id())
+        let recording_id = result.last_insert_id();
+
+        // find_by_artist 가 contributors 를 보므로, 여기서 같이 넣지 않으면
+        // 새로 만든 음반이 아티스트 화면에 뜨지 않는다.
+        sqlx::query(
+            "INSERT IGNORE INTO recording_contributors
+             (recording_id, track_id, artist_id, role_code, is_primary, display_order)
+             VALUES (?, NULL, ?, 'primary_performer', TRUE, 0)"
+        )
+        .bind(recording_id)
+        .bind(artist_id)
+        .execute(&mut *transaction)
+        .await?;
+
+        transaction.commit().await?;
+
+        Ok(recording_id)
     }
 
     pub async fn update(pool: &DbPool, id: i32, recording: UpdateRecording) -> Result<u64, Error> {
