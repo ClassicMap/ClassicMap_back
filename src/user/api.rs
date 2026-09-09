@@ -341,7 +341,9 @@ pub async fn update_my_profile_visibility(
     }
 }
 
-#[get("/users/<id>/public-profile")]
+// /users/clerk/<id> · /users/email/<id> 와 경로 모양이 겹친다.
+// 리터럴 세그먼트를 가진 쪽을 먼저 시도하도록 순위를 뒤로 둔다.
+#[get("/users/<id>/public-profile", rank = 2)]
 pub async fn get_public_profile(
     pool: &State<DbPool>,
     id: i32,
