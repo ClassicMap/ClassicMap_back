@@ -4,16 +4,29 @@ use sqlx::Error;
 
 pub struct ComposerRepository;
 
+/// 연주자로 이미 등록돼 있고 곡이 한 곡도 없는 작곡가는 목록에서 뺀다.
+///
+/// 국제 시드는 Wikidata 의 P106 에 작곡가가 있으면 연주자도 작곡가로 투영한다.
+/// 지휘자·피아니스트가 실제로 작곡 이력이 있어 생기는 일인데, ClassicMap 에
+/// 그들의 곡이 없으면 작곡가 목록에 빈 항목으로만 남는다.
+/// 곡이 한 곡이라도 등록되면 조건이 풀려 자동으로 다시 보인다.
+const HIDE_EMPTY_PERFORMER_COMPOSER: &str =
+    "NOT (c.authority_entity_id IS NOT NULL
+          AND EXISTS (SELECT 1 FROM artists performer
+                      WHERE performer.authority_entity_id = c.authority_entity_id)
+          AND NOT EXISTS (SELECT 1 FROM pieces own WHERE own.composer_id = c.id))";
+
 impl ComposerRepository {
     pub async fn find_all(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<Composer>, Error> {
-        sqlx::query_as::<_, Composer>(
+        sqlx::query_as::<_, Composer>(&format!(
             "SELECT c.*, COUNT(p.id) as piece_count
              FROM composers c
              LEFT JOIN pieces p ON c.id = p.composer_id
+             WHERE {HIDE_EMPTY_PERFORMER_COMPOSER}
              GROUP BY c.id
              ORDER BY c.birth_year ASC
              LIMIT ? OFFSET ?"
-        )
+        ))
             .bind(limit)
             .bind(offset)
             .fetch_all(pool)
@@ -106,7 +119,7 @@ impl ComposerRepository {
              LEFT JOIN pieces p ON c.id = p.composer_id"
         );
 
-        let mut where_clauses = Vec::new();
+        let mut where_clauses = vec![HIDE_EMPTY_PERFORMER_COMPOSER.to_string()];
         let mut bind_values: Vec<String> = Vec::new();
 
         // Add search condition if query provided
