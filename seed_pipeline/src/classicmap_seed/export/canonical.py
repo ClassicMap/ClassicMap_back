@@ -1182,6 +1182,9 @@ def _work_relation_records(
         "based on": "based_on",
     }
     records: list[CanonicalLoadRecord] = []
+    # 같은 두 작품 사이에 같은 관계가 공식 원본에 두 번 등록돼 있을 수 있다.
+    # natural key 가 같은 행이 bundle 에 둘 이상 들어가면 loader 가 전체를 거부한다.
+    seen_keys: set[str] = set()
     for relation in _work_relations(candidate):
         relation_type = _object_string(relation, "relation_type")
         direction = _object_string(relation, "direction")
@@ -1190,11 +1193,15 @@ def _work_relation_records(
         if mapped_type is None or target_mbid is None or direction != "backward":
             continue
         target_key = f"musicbrainz_work:{target_mbid}"
+        natural_key = f"{piece_key}:{mapped_type}:{target_key}"
+        if natural_key in seen_keys:
+            continue
+        seen_keys.add(natural_key)
         records.append(
             _record(
                 run_id,
                 LoadTable.PIECE_RELATIONS,
-                f"{piece_key}:{mapped_type}:{target_key}",
+                natural_key,
                 {"relation_type": mapped_type},
                 foreign_keys=(
                     _fk("from_piece_id", LoadTable.PIECES, piece_key),
