@@ -304,6 +304,9 @@ ORDER BY STR(?entity) STR(?scope)
 
         role_codes = WikidataConnector._claim_item_ids(entity, "P106")
         instrument_codes = WikidataConnector._claim_item_ids(entity, "P1303")
+        # 공식 P106 의 composer 는 클래식 작곡가만이 아니라 작곡 이력이 있는 모든 인물이다.
+        # 장르(P136)를 함께 보존해 뒤 단계에서 분야를 판정할 수 있게 한다.
+        genre_codes = WikidataConnector._claim_item_ids(entity, "P136")
         country_entity_ids = sorted(
             {
                 *WikidataConnector._claim_item_ids(entity, "P27"),
@@ -350,6 +353,8 @@ ORDER BY STR(?entity) STR(?scope)
             "instrument_labels": WikidataConnector._linked_labels(
                 instrument_codes, linked_entities
             ),
+            "genre_codes": WikidataConnector._json_strings(genre_codes),
+            "genre_labels": WikidataConnector._linked_labels(genre_codes, linked_entities),
             "country_codes": WikidataConnector._json_strings(country_codes),
             "country_code_links": country_code_links,
             "country_entity_ids": WikidataConnector._json_strings(country_entity_ids),
