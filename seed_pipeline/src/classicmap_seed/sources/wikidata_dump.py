@@ -517,7 +517,7 @@ class _DumpScopeIndex(AbstractContextManager["_DumpScopeIndex"]):
         linked_ids = sorted(
             {
                 qid
-                for property_id in ("P27", "P495", "P106", "P1303")
+                for property_id in ("P27", "P495", "P106", "P1303", "P136")
                 for qid in WikidataConnector._claim_item_ids(entity, property_id)
             }
         )
