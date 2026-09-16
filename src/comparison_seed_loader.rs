@@ -4,7 +4,11 @@ use serde::{Deserialize, Serialize};
 use serde_json::{json, Value};
 use sha2::{Digest, Sha256};
 use sqlx::{MySql, Row, Transaction};
-use std::{collections::HashSet, fmt, fs, path::PathBuf};
+use std::{
+    collections::{HashMap, HashSet},
+    fmt, fs,
+    path::PathBuf,
+};
 use url::Url;
 
 const MAX_CLIP_DURATION_SECONDS: u32 = 600;
@@ -334,7 +338,9 @@ fn parse_bundle(
         )
     })?;
     let mut candidate_keys = HashSet::new();
-    let mut video_ids = HashSet::new();
+    // 한 영상에서 여러 구간을 뽑는 것은 정상이다(긴 곡의 악장별 발췌).
+    // 다만 같은 자리를 두 번 담지 않도록 구간이 겹치는지만 본다.
+    let mut video_spans: HashMap<String, Vec<(u32, u32)>> = HashMap::new();
     let mut rows = Vec::new();
 
     for (index, raw_line) in contents.lines().enumerate() {
@@ -361,13 +367,22 @@ fn parse_bundle(
                 Some(line),
             ));
         }
-        if !video_ids.insert(row.source.video_id.clone()) {
+        let span = (row.clip.start_seconds, row.clip.end_seconds);
+        let spans = video_spans.entry(row.source.video_id.clone()).or_default();
+        if let Some((prev_start, prev_end)) = spans
+            .iter()
+            .find(|(start, end)| span.0 < *end && *start < span.1)
+        {
             return Err(ComparisonSeedLoadError::input(
-                "DUPLICATE_VIDEO_ID",
-                format!("videoId가 중복됨: {}", row.source.video_id),
+                "OVERLAPPING_VIDEO_SPAN",
+                format!(
+                    "같은 영상의 구간이 겹침: {} ({}-{} 와 {}-{})",
+                    row.source.video_id, prev_start, prev_end, span.0, span.1
+                ),
                 Some(line),
             ));
         }
+        spans.push(span);
 
         let work_mbid = one_identifier(
             &row.work_candidate.external_identifiers,
@@ -1513,12 +1528,26 @@ fn one_identifier(
     Ok(matches[0].value.clone())
 }
 
+/// 입력의 구체적인 역할을 API가 노출하는 7개 canonical role로 줄인다.
+///
+/// 악기별 독주자는 화면에서 모두 '독주'로 묶이므로 soloist 하나로 모은다.
+/// 원문 role 은 후보 evidence 에 그대로 남으므로 구분이 필요하면 거기서 읽는다.
 fn canonical_credit_role(
     source_role: &str,
     line: usize,
 ) -> Result<&'static str, ComparisonSeedLoadError> {
     match source_role {
-        "PIANIST" => Ok("soloist"),
+        "PIANIST" | "VIOLINIST" | "VIOLIST" | "CELLIST" | "CONTRABASSIST" | "HARPIST"
+        | "GUITARIST" | "ORGANIST" | "HARPSICHORDIST" | "FLUTIST" | "OBOIST" | "CLARINETIST"
+        | "BASSOONIST" | "HORNIST" | "TRUMPETER" | "TROMBONIST" | "PERCUSSIONIST" | "SOLOIST" => {
+            Ok("soloist")
+        }
+        "CONDUCTOR" => Ok("conductor"),
+        "ORCHESTRA" => Ok("orchestra"),
+        "ENSEMBLE" | "CHOIR" | "QUARTET" | "QUINTET" | "TRIO" => Ok("ensemble"),
+        "ACCOMPANIST" => Ok("accompanist"),
+        "VOCALIST" | "SOPRANO" | "MEZZO_SOPRANO" | "ALTO" | "CONTRALTO" | "COUNTERTENOR"
+        | "TENOR" | "BARITONE" | "BASS" => Ok("vocalist"),
         _ => Err(ComparisonSeedLoadError::input(
             "UNSUPPORTED_CREDIT_ROLE",
             format!("API canonical role로 매핑되지 않은 roleCode임: {source_role}"),
