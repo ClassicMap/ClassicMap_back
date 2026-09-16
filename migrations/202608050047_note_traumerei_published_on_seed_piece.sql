@@ -1,0 +1,25 @@
+-- 슈만 트로이메라이 3건을 piece 464 에 발행한 사실을 기록한다.
+--
+-- 202608050045 에서 발행하지 않고 둔 3건이다. 그때 적은 대로 그 모음곡의
+-- MusicBrainz work 이 이미 piece 464 "Kinderszenen, op. 15" 에 붙어 있어서
+-- legacy 곡 135 "피아노 모음곡 <어린이의 정경>" 에는 붙일 수 없었다.
+--
+-- 두 곡을 비교한 결과 464 를 쓰기로 했다.
+--   piece 135  manual, editor_locked=1, 식별자 0, part 0, 연주 0
+--   piece 464  seed,   MusicBrainz work 연결, part 1
+-- 135 는 잠겨 있지만 내용이 없는 껍데기이고, 464 가 작품으로서 더 완전하다.
+--
+-- 병합하지 않은 이유는 seed_natural_keys 가 이 작품을 464 로 가리키고 있기
+-- 때문이다. target_id 를 135 로 옮기면 다음 시드 실행에서 global_seed_loader 가
+-- manual/editor_locked 행과 값이 달라 MANUAL_ROW_CONFLICT 로 멈춘다.
+-- 이 예외(explicit_legacy_link)는 composers/artists 에만 있고 pieces 에는 없다.
+-- 중복이 2건(461 골드베르크, 464 어린이의 정경)뿐이라 파이프라인을 고칠 일이
+-- 아니라고 보았다.
+--
+-- 남은 문제는 중복이 아니라 제목이다. 파일럿 시드로 들어온 39곡(461~499)은
+-- title 에 원어가 들어 있어 화면에 영어로 보인다. 이것은 별도로 다룬다.
+--
+-- 이 마이그레이션은 상태를 바꾸지 않는다. 발행은 load_clip_assets --publish 가
+-- 이미 했고, 여기서는 판단 근거만 남긴다.
+
+SELECT 1;
