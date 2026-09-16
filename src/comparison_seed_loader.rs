@@ -678,7 +678,17 @@ async fn resolve_work(
     .bind(&candidate.work_mbid)
     .fetch_all(&mut **transaction)
     .await?;
-    if root_rows.len() + part_rows.len() != 1 {
+    // piece_identifiers 는 "이 곡이 그 작품이다"라는 직접 진술이고
+    // piece_parts 는 "이 곡이 그 작품을 부분으로 담는다"는 포함 관계다.
+    // 둘이 같은 MBID 를 가리키면 직접 진술을 따른다. 국제 시드가 모음곡을
+    // 악장 part 로 넣어 두었고 legacy 곡이 그 낱곡을 독립된 곡으로 갖고 있을 때
+    // 늘 이렇게 겹친다. 연주를 붙일 대상은 낱곡 쪽이다.
+    let ambiguous = if root_rows.is_empty() {
+        part_rows.len() != 1
+    } else {
+        root_rows.len() != 1
+    };
+    if ambiguous {
         return Err(ComparisonSeedLoadError::input(
             "UNRESOLVED_WORK_IDENTIFIER",
             format!(
