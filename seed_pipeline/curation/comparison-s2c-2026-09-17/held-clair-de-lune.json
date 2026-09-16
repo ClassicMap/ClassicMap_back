@@ -1,0 +1,263 @@
+[
+  {
+    "schemaVersion": "1",
+    "candidateKey": "yt:-Bxpm0EmOMU:12:284",
+    "candidateStatus": "APPROVED",
+    "confidence": "MEDIUM_HIGH",
+    "reviewedAt": "2026-09-16T15:13:12Z",
+    "workCandidate": {
+      "naturalKey": "musicbrainz-work:8d331505-4d88-39ae-81c7-bec5da77af96",
+      "preferredTitleKo": "베르가마스크 모음곡 L. 75: 제3곡 “달빛”",
+      "preferredTitleEn": "Suite bergamasque, L. 75, CD 82: III. Clair de lune",
+      "externalIdentifiers": [
+        {
+          "namespace": "musicbrainz_work",
+          "value": "8d331505-4d88-39ae-81c7-bec5da77af96",
+          "sourceUrl": "https://musicbrainz.org/work/8d331505-4d88-39ae-81c7-bec5da77af96"
+        }
+      ],
+      "composer": {
+        "preferredName": "Claude Debussy",
+        "nameKo": "클로드 드뷔시",
+        "externalIdentifiers": [
+          {
+            "namespace": "wikidata",
+            "value": "Q4700",
+            "sourceUrl": "https://www.wikidata.org/wiki/Q4700"
+          }
+        ]
+      }
+    },
+    "sectorCandidate": {
+      "sectorKey": "whole-work",
+      "sectorType": "WHOLE_WORK",
+      "nameKo": "전곡",
+      "nameEn": "Complete work",
+      "measureStart": "1",
+      "measureEnd": "final",
+      "startCue": "여린 화음의 첫 타건(작품 시작)",
+      "endCue": "종결 화음과 잔향",
+      "targetMinMs": 267000,
+      "targetMaxMs": 320000
+    },
+    "source": {
+      "provider": "youtube",
+      "videoId": "-Bxpm0EmOMU",
+      "originalUrl": "https://www.youtube.com/watch?v=-Bxpm0EmOMU",
+      "title": "Debussy: Clair de lune | Menahem Pressler, piano",
+      "channel": "DW Classical Music",
+      "channelId": "@DWClassicalMusic",
+      "channelUrl": "https://www.youtube.com/@DWClassicalMusic",
+      "uploadDate": "2024-03-23",
+      "durationSeconds": 327,
+      "availabilityStatus": "AVAILABLE",
+      "availabilityCheckedAt": "2026-09-16T15:13:12Z",
+      "availabilityEvidence": {
+        "method": "yt-dlp metadata and YouTube oEmbed",
+        "extractorAvailability": "public",
+        "liveStatus": "not_live",
+        "oembedUrl": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D-Bxpm0EmOMU&format=json",
+        "oembedHttpStatus": 200
+      },
+      "rightsMode": "unknown"
+    },
+    "credits": [
+      {
+        "roleCode": "PIANIST",
+        "isPrimary": true,
+        "displayOrder": 0,
+        "entityCandidate": {
+          "preferredName": "Menahem Pressler",
+          "externalIdentifiers": [
+            {
+              "namespace": "wikidata",
+              "value": "Q70142",
+              "sourceUrl": "https://www.wikidata.org/wiki/Q70142"
+            }
+          ]
+        }
+      }
+    ],
+    "clip": {
+      "startSeconds": 12,
+      "endSeconds": 284,
+      "timelineMethod": "AUDIO_DETECTED_WHOLE_WORK",
+      "verificationNote": "박수와 무음을 걷어내고 조성 성분이 이어지는 구간을 작품으로 보아 경계를 잡았다. 같은 곡의 다른 연주와 교차 정렬해 같은 음악인지 확인했다."
+    },
+    "publicationGate": "RIGHTS_AND_CLIP_ASSET_REQUIRED"
+  },
+  {
+    "schemaVersion": "1",
+    "candidateKey": "yt:AhsLh1iQ_qo:4:319",
+    "candidateStatus": "APPROVED",
+    "confidence": "MEDIUM_HIGH",
+    "reviewedAt": "2026-09-16T15:13:12Z",
+    "workCandidate": {
+      "naturalKey": "musicbrainz-work:8d331505-4d88-39ae-81c7-bec5da77af96",
+      "preferredTitleKo": "베르가마스크 모음곡 L. 75: 제3곡 “달빛”",
+      "preferredTitleEn": "Suite bergamasque, L. 75, CD 82: III. Clair de lune",
+      "externalIdentifiers": [
+        {
+          "namespace": "musicbrainz_work",
+          "value": "8d331505-4d88-39ae-81c7-bec5da77af96",
+          "sourceUrl": "https://musicbrainz.org/work/8d331505-4d88-39ae-81c7-bec5da77af96"
+        }
+      ],
+      "composer": {
+        "preferredName": "Claude Debussy",
+        "nameKo": "클로드 드뷔시",
+        "externalIdentifiers": [
+          {
+            "namespace": "wikidata",
+            "value": "Q4700",
+            "sourceUrl": "https://www.wikidata.org/wiki/Q4700"
+          }
+        ]
+      }
+    },
+    "sectorCandidate": {
+      "sectorKey": "whole-work",
+      "sectorType": "WHOLE_WORK",
+      "nameKo": "전곡",
+      "nameEn": "Complete work",
+      "measureStart": "1",
+      "measureEnd": "final",
+      "startCue": "여린 화음의 첫 타건(작품 시작)",
+      "endCue": "종결 화음과 잔향",
+      "targetMinMs": 267000,
+      "targetMaxMs": 320000
+    },
+    "source": {
+      "provider": "youtube",
+      "videoId": "AhsLh1iQ_qo",
+      "originalUrl": "https://www.youtube.com/watch?v=AhsLh1iQ_qo",
+      "title": "Debussy: Suite bergamasque, CD 82: III. Clair de lune",
+      "channel": "Seong-Jin Cho",
+      "channelId": "UCs8JR1ngAf-t8wZkidmHEPA",
+      "channelUrl": "https://www.youtube.com/channel/UCs8JR1ngAf-t8wZkidmHEPA",
+      "uploadDate": "2018-11-24",
+      "durationSeconds": 331,
+      "availabilityStatus": "AVAILABLE",
+      "availabilityCheckedAt": "2026-09-16T15:13:12Z",
+      "availabilityEvidence": {
+        "method": "yt-dlp metadata and YouTube oEmbed",
+        "extractorAvailability": "public",
+        "liveStatus": "not_live",
+        "oembedUrl": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DAhsLh1iQ_qo&format=json",
+        "oembedHttpStatus": 200
+      },
+      "rightsMode": "unknown"
+    },
+    "credits": [
+      {
+        "roleCode": "PIANIST",
+        "isPrimary": true,
+        "displayOrder": 0,
+        "entityCandidate": {
+          "preferredName": "Seong-Jin Cho",
+          "externalIdentifiers": [
+            {
+              "namespace": "wikidata",
+              "value": "Q4516986",
+              "sourceUrl": "https://www.wikidata.org/wiki/Q4516986"
+            }
+          ]
+        }
+      }
+    ],
+    "clip": {
+      "startSeconds": 4,
+      "endSeconds": 319,
+      "timelineMethod": "AUDIO_DETECTED_WHOLE_WORK",
+      "verificationNote": "박수와 무음을 걷어내고 조성 성분이 이어지는 구간을 작품으로 보아 경계를 잡았다. 같은 곡의 다른 연주와 교차 정렬해 같은 음악인지 확인했다."
+    },
+    "publicationGate": "RIGHTS_AND_CLIP_ASSET_REQUIRED"
+  },
+  {
+    "schemaVersion": "1",
+    "candidateKey": "yt:Ch2mrPm1JnM:3:316",
+    "candidateStatus": "APPROVED",
+    "confidence": "MEDIUM_HIGH",
+    "reviewedAt": "2026-09-16T15:13:12Z",
+    "workCandidate": {
+      "naturalKey": "musicbrainz-work:8d331505-4d88-39ae-81c7-bec5da77af96",
+      "preferredTitleKo": "베르가마스크 모음곡 L. 75: 제3곡 “달빛”",
+      "preferredTitleEn": "Suite bergamasque, L. 75, CD 82: III. Clair de lune",
+      "externalIdentifiers": [
+        {
+          "namespace": "musicbrainz_work",
+          "value": "8d331505-4d88-39ae-81c7-bec5da77af96",
+          "sourceUrl": "https://musicbrainz.org/work/8d331505-4d88-39ae-81c7-bec5da77af96"
+        }
+      ],
+      "composer": {
+        "preferredName": "Claude Debussy",
+        "nameKo": "클로드 드뷔시",
+        "externalIdentifiers": [
+          {
+            "namespace": "wikidata",
+            "value": "Q4700",
+            "sourceUrl": "https://www.wikidata.org/wiki/Q4700"
+          }
+        ]
+      }
+    },
+    "sectorCandidate": {
+      "sectorKey": "whole-work",
+      "sectorType": "WHOLE_WORK",
+      "nameKo": "전곡",
+      "nameEn": "Complete work",
+      "measureStart": "1",
+      "measureEnd": "final",
+      "startCue": "여린 화음의 첫 타건(작품 시작)",
+      "endCue": "종결 화음과 잔향",
+      "targetMinMs": 267000,
+      "targetMaxMs": 320000
+    },
+    "source": {
+      "provider": "youtube",
+      "videoId": "Ch2mrPm1JnM",
+      "originalUrl": "https://www.youtube.com/watch?v=Ch2mrPm1JnM",
+      "title": "C.Debussy - Clair de Lune, Maria João Pires live at Jardin Musical",
+      "channel": "Jardin Musical",
+      "channelId": "@JardinMusicalBrussels",
+      "channelUrl": "https://www.youtube.com/@JardinMusicalBrussels",
+      "uploadDate": "2023-03-19",
+      "durationSeconds": 322,
+      "availabilityStatus": "AVAILABLE",
+      "availabilityCheckedAt": "2026-09-16T15:13:12Z",
+      "availabilityEvidence": {
+        "method": "yt-dlp metadata and YouTube oEmbed",
+        "extractorAvailability": "public",
+        "liveStatus": "not_live",
+        "oembedUrl": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DCh2mrPm1JnM&format=json",
+        "oembedHttpStatus": 200
+      },
+      "rightsMode": "unknown"
+    },
+    "credits": [
+      {
+        "roleCode": "PIANIST",
+        "isPrimary": true,
+        "displayOrder": 0,
+        "entityCandidate": {
+          "preferredName": "Maria João Pires",
+          "externalIdentifiers": [
+            {
+              "namespace": "wikidata",
+              "value": "Q235650",
+              "sourceUrl": "https://www.wikidata.org/wiki/Q235650"
+            }
+          ]
+        }
+      }
+    ],
+    "clip": {
+      "startSeconds": 3,
+      "endSeconds": 316,
+      "timelineMethod": "AUDIO_DETECTED_WHOLE_WORK",
+      "verificationNote": "박수와 무음을 걷어내고 조성 성분이 이어지는 구간을 작품으로 보아 경계를 잡았다. 같은 곡의 다른 연주와 교차 정렬해 같은 음악인지 확인했다."
+    },
+    "publicationGate": "RIGHTS_AND_CLIP_ASSET_REQUIRED"
+  }
+]
