@@ -23,6 +23,20 @@ BASE = os.environ.get("COMPARISON_WORK_DIR",
                       os.path.dirname(os.path.abspath(__file__)))
 
 
+def close_gaps(mask, seconds):
+    """seconds 보다 짧은 틈을 메운다. 배열 가장자리는 깎지 않는다.
+
+    scipy 의 binary_closing 은 배열 밖을 거짓으로 본다. 팽창은 경계 밖으로
+    번지지 못하는데 침식은 경계에서 반폭만큼 깎으므로, 파일 첫머리부터 음악이
+    나오면 시작이 반폭만큼 늦게 잡힌다. 12초 닫기에서는 6초였다. 아트트랙처럼
+    0초부터 음악이 나오는 영상에서 첫 마디가 잘렸다. 거짓으로 채운 여백을 두고
+    닫은 뒤 잘라내면 원래 경계가 그대로 남는다.
+    """
+    size = int(seconds * SR / HOP)
+    padded = np.pad(mask, size, constant_values=False)
+    closed = scipy.ndimage.binary_closing(padded, np.ones(size))
+    return closed[size:-size]
+
 
 def load(vid):
     cache = os.path.join(BASE, f"{vid}.y.npy")
@@ -58,7 +72,7 @@ def clap_mask(vid, y, frames):
         rms = librosa.feature.rms(y=y, hop_length=HOP)[0]
         db = librosa.amplitude_to_db(rms, ref=np.max)
         mask = (flat > np.percentile(flat, 93)) & (db > -38)
-        mask = scipy.ndimage.binary_closing(mask, np.ones(int(1.5 * SR / HOP)))
+        mask = close_gaps(mask, 1.5)
         mask = scipy.ndimage.binary_opening(mask, np.ones(int(1.0 * SR / HOP)))
         np.save(cache, mask)
     if len(mask) < frames:
@@ -108,7 +122,7 @@ def detect(vid, y=None):
     clap = clap_mask(vid, y, len(loud))
     loud &= ~clap
     # 악장 사이 휴지나 여린 대목으로 곡이 토막나지 않게 넉넉히 메운다.
-    loud = scipy.ndimage.binary_closing(loud, np.ones(int(12.0 * SR / HOP)))
+    loud = close_gaps(loud, 12.0)
     loud = scipy.ndimage.binary_opening(loud, np.ones(int(1.0 * SR / HOP)))
 
     # 해설·인트로가 붙은 영상은 앞쪽에도 조성 성분이 잡힌다.
