@@ -55,27 +55,32 @@ def oembed(video_ids):
 
 
 def credits_for(piece, video):
-    """독주자나 지휘자가 primary 이고, 관현악 곡이면 악단이 따라붙는다."""
-    entries = [{
-        "roleCode": piece["role"], "isPrimary": True, "displayOrder": 0,
-        "entityCandidate": {
-            "preferredName": video["artistName"],
-            "externalIdentifiers": [{
-                "namespace": "wikidata", "value": video["wikidata"],
-                "sourceUrl": f"https://www.wikidata.org/wiki/{video['wikidata']}"}],
-        },
-    }]
+    """독주자나 지휘자가 primary 다.
+
+    협주곡처럼 독주자가 primary 인 관현악 곡은 video 에 conductor 를 적어 지휘자를
+    붙이고, 관현악 곡이면 orchestra 로 악단을 붙인다. 둘 다 primary 가 아니다.
+    """
+    def entry(role_code, is_primary, order, person):
+        return {
+            "roleCode": role_code, "isPrimary": is_primary, "displayOrder": order,
+            "entityCandidate": {
+                "preferredName": person["name"],
+                "externalIdentifiers": [{
+                    "namespace": "wikidata", "value": person["wikidata"],
+                    "sourceUrl": f"https://www.wikidata.org/wiki/{person['wikidata']}"}],
+            },
+        }
+
+    entries = [entry(piece["role"], True, 0,
+                     {"name": video["artistName"], "wikidata": video["wikidata"]})]
+    conductor = video.get("conductor")
+    if conductor:
+        if piece["role"] == "CONDUCTOR":
+            raise SystemExit(f"{video['videoId']}: primary 가 지휘자인 곡에 conductor 를 또 적었다")
+        entries.append(entry("CONDUCTOR", False, len(entries), conductor))
     orchestra = video.get("orchestra")
     if orchestra:
-        entries.append({
-            "roleCode": "ORCHESTRA", "isPrimary": False, "displayOrder": 1,
-            "entityCandidate": {
-                "preferredName": orchestra["name"],
-                "externalIdentifiers": [{
-                    "namespace": "wikidata", "value": orchestra["wikidata"],
-                    "sourceUrl": f"https://www.wikidata.org/wiki/{orchestra['wikidata']}"}],
-            },
-        })
+        entries.append(entry("ORCHESTRA", False, len(entries), orchestra))
     return entries
 
 
