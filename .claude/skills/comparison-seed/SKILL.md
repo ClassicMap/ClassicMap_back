@@ -29,6 +29,10 @@ description: ClassicMap 비교 영상 시드를 한 배치씩 만든다. 곡과 
 배치 하나는 **곡 2~3개, 연주 6~9건**이 알맞다. 더 늘리면 한 건이 어긋났을 때
 되돌리는 비용이 커진다.
 
+여러 배치를 이어서 돌릴 때는 **배치마다 서브에이전트에 맡긴다.** 검출·정렬 출력이
+컨텍스트에 쌓이지 않아 훨씬 싸고, 둘셋을 동시에 돌릴 수 있다. 다만 **DB 에 쓰는
+일은 넘기지 않는다.** 나누는 선은 `references/06-subagent.md` 에 있다.
+
 ## 먼저 읽을 것
 
 | 단계 | 문서 |
@@ -38,6 +42,7 @@ description: ClassicMap 비교 영상 시드를 한 배치씩 만든다. 곡과 
 | 정렬이 어긋났을 때 | `references/03-verification.md` |
 | 적재·발행할 때 | `references/04-loading.md` |
 | 막혔을 때 | `references/05-pitfalls.md` |
+| 배치를 서브에이전트에 맡길 때 | `references/06-subagent.md` |
 
 ## 배치 정의
 
