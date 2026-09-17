@@ -80,6 +80,37 @@ CANCELLED 다. `RESOLVED` 는 없다.
 
 **`resolution` 컬럼** — JSON 이라 문자열을 거부한다. `JSON_OBJECT(...)` 로 쓴다.
 
+## 오디오 수집
+
+**`Sign in to confirm you're not a bot`** — 유튜브가 IP 를 막은 것이다. 영상을
+100건 넘게 받으면 걸리고, 여러 배치를 동시에 돌리면 더 빨리 온다. 재시도로는
+풀리지 않는다. **두드릴수록 길어진다.**
+
+**클리퍼 파드를 경유한다.** IP 가 다르고 쿠키가 이미 마운트돼 있다.
+
+```bash
+export COMPARISON_FETCH_POD=$(kubectl -n homeserver get pods -o name | grep clip | head -1 | cut -d/ -f2)
+./fetch_videos.sh batch.json
+```
+
+파드 안에서 받아 wav 로 바꾼 뒤 그것만 가져온다. 349초 영상이 받기 10초,
+전송 0.13초였다.
+
+**쿠키 값을 밖으로 꺼내지 않는다.** 파드 안에서 `/tmp` 로 복사해 그 자리에서
+쓰고 끝낸다. 읽기 전용 마운트를 그대로 가리키면 yt-dlp 가 쿠키를 갱신하려다
+`Read-only file system` 으로 죽는다.
+
+**브라우저 쿠키를 임의로 쓰지 않는다.** `--cookies-from-browser` 는 사용자
+계정 자격증명이다. 필요하면 사용자에게 받는다.
+
+**`COOKIE_ARGS[@]: unbound variable`** — macOS 의 bash 3.2 는 `set -u` 아래에서
+빈 배열 전개를 unbound 로 본다. `${배열[@]+"${배열[@]}"}` 로 쓴다. 고쳐 뒀다.
+
+## 디스크
+
+WAV 는 배치마다 지운다. 한 세션에서 133개가 남아 스크래치패드가 9.2GB 가 된
+적이 있다. 초당 44KB 씩 쌓인다.
+
 ## 비밀
 
 `kubectl exec <pod> -- env` 를 통째로 찍지 않는다. 클리퍼 빌드 토큰이 출력에
