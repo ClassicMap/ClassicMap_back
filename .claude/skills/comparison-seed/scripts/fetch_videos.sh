@@ -27,6 +27,8 @@ POD="${COMPARISON_FETCH_POD:-}"
 NS="${COMPARISON_FETCH_NS:-homeserver}"
 POD_COOKIES="${COMPARISON_POD_COOKIES:-/etc/clipper/youtube/cookies.txt}"
 POD_WORK=/tmp/comparison-fetch
+# 영상 사이에 쉰다. 파드는 운영 클리퍼라 몰아서 부르면 운영 IP 까지 봇 차단에 걸린다.
+DELAY="${COMPARISON_FETCH_DELAY:-20}"
 
 BATCH_ID=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['batchId'])" "$BATCH")
 META="$WORK/$BATCH_ID-videometa.txt"
@@ -114,6 +116,7 @@ for piece in batch['pieces']:
   fi
   fetch_meta "$vid" >> "$META"
   echo "$vid ok"
+  sleep "$DELAY"
 done
 
 echo "메타 → $META"

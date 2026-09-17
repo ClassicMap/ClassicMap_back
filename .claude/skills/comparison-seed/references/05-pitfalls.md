@@ -116,6 +116,26 @@ WAV 는 배치마다 지운다. 한 세션에서 133개가 남아 스크래치�
 `kubectl exec <pod> -- env` 를 통째로 찍지 않는다. 클리퍼 빌드 토큰이 출력에
 섞여 나온 적이 있다. 필요한 변수만 `grep` 한다.
 
+**시크릿의 `metadata` 를 찍지 않는다.** `kubectl apply` 로 만든 시크릿은
+`kubectl.kubernetes.io/last-applied-configuration` 어노테이션에 값 전체를 품고
+있다. `.metadata.annotations` 를 출력했다가 빌드 토큰이 새어 나온 적이 있다.
+시크릿에서 보는 것은 **키 이름**까지다.
+
+```bash
+kubectl -n homeserver get secret <이름> -o json \
+  | python3 -c 'import json,sys; print(sorted(json.load(sys.stdin)["data"]))'
+```
+
+시크릿을 만들거나 바꿀 때는 `apply` 대신 `replace` 를 쓴다. 어노테이션에 값이
+남지 않는다.
+
+토큰은 변수에만 담는다. 길이로 확보 여부를 확인하고 값은 찍지 않는다.
+
+```bash
+TOKEN=$(kubectl -n homeserver exec "$POD" -- cat /etc/clipper/youtube/build-token)
+echo "길이 ${#TOKEN}"
+```
+
 DB 비밀번호는 명령줄에 쓰지 않는다. 파드 안에서 `$MYSQL_ROOT_PASSWORD` 를
 참조하게 한다.
 
