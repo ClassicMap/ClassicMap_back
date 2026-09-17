@@ -24,7 +24,13 @@ def chroma(video_id, start, end):
         os.path.join(BASE, f"{video_id}.wav"), sr=SR, mono=True)[0]
     a, b = max(int(start * SR), 0), min(int(end * SR), len(y))
     c = librosa.feature.chroma_cens(y=y[a:b], sr=SR, hop_length=HOP)
-    return librosa.util.normalize(c, norm=2, axis=0)
+    c = librosa.util.normalize(c, norm=2, axis=0)
+    # 완전 무음 프레임은 0벡터라 코사인 거리가 정의되지 않고 DTW 가 NaN 으로 죽는다.
+    # 화성이 없다는 뜻으로 12음을 고르게 채운다. 음악과는 멀어지므로 경계를 훑을 때
+    # 무음을 끌어들이면 비용이 오르는 것이 그대로 드러난다.
+    silent = ~c.any(axis=0)
+    c[:, silent] = 1.0 / np.sqrt(c.shape[0])
+    return c
 
 
 def cost(left, right):
