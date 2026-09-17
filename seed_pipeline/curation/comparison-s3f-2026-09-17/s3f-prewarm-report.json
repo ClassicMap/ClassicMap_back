@@ -1,0 +1,81 @@
+{
+  "baseUrl": "http://127.0.0.1:13200",
+  "bundlePath": "/Users/kdh/project/ClassicMap/ClassicMap_back/seed_pipeline/curation/comparison-s3f-2026-09-17/s3f-clip-assets.jsonl",
+  "completedAt": "2026-09-17T08:26:41.819Z",
+  "concurrency": 1,
+  "counts": {
+    "failed": 3,
+    "invalid": 0,
+    "skipped": 0,
+    "succeeded": 0
+  },
+  "encodingProfileVersion": "v1-copy",
+  "manifestPath": "/Users/kdh/project/ClassicMap/ClassicMap_back/seed_pipeline/curation/comparison-s3f-2026-09-17/s3f-prewarm.jsonl",
+  "maxClipSeconds": 600,
+  "publicBaseUrl": "https://kang1027.com/classicmap/clips",
+  "reportVersion": 2,
+  "results": [
+    {
+      "cacheKey": "5O9XIvkC-rk:4:284:v1-copy",
+      "durationMs": 1494,
+      "error": {
+        "code": "REQUEST_FAILED",
+        "message": "HTTP Range 검증에 실패했습니다. (502) {\"error\":\"WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing\\nERROR: [youtube] 5O9XIvkC-rk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exp",
+        "httpStatus": 502
+      },
+      "finishedAt": "2026-09-17T08:26:38.636Z",
+      "lines": [
+        1
+      ],
+      "performanceIds": [
+        206
+      ],
+      "startedAt": "2026-09-17T08:26:37.142Z",
+      "status": "failed",
+      "url": "http://127.0.0.1:13200/5O9XIvkC-rk?end=284&profile=v1-copy&start=4",
+      "publicUrl": "https://kang1027.com/classicmap/clips/5O9XIvkC-rk?end=284&profile=v1-copy&start=4"
+    },
+    {
+      "cacheKey": "vrHKMOgfxnM:0:270:v1-copy",
+      "durationMs": 1769,
+      "error": {
+        "code": "REQUEST_FAILED",
+        "message": "HTTP Range 검증에 실패했습니다. (502) {\"error\":\"WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing\\nERROR: [youtube] vrHKMOgfxnM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exp",
+        "httpStatus": 502
+      },
+      "finishedAt": "2026-09-17T08:26:40.407Z",
+      "lines": [
+        2
+      ],
+      "performanceIds": [
+        207
+      ],
+      "startedAt": "2026-09-17T08:26:38.638Z",
+      "status": "failed",
+      "url": "http://127.0.0.1:13200/vrHKMOgfxnM?end=270&profile=v1-copy&start=0",
+      "publicUrl": "https://kang1027.com/classicmap/clips/vrHKMOgfxnM?end=270&profile=v1-copy&start=0"
+    },
+    {
+      "cacheKey": "yeWusSwiX4g:6:252:v1-copy",
+      "durationMs": 1409,
+      "error": {
+        "code": "REQUEST_FAILED",
+        "message": "HTTP Range 검증에 실패했습니다. (502) {\"error\":\"WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing\\nERROR: [youtube] yeWusSwiX4g: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exp",
+        "httpStatus": 502
+      },
+      "finishedAt": "2026-09-17T08:26:41.818Z",
+      "lines": [
+        3
+      ],
+      "performanceIds": [
+        208
+      ],
+      "startedAt": "2026-09-17T08:26:40.409Z",
+      "status": "failed",
+      "url": "http://127.0.0.1:13200/yeWusSwiX4g?end=252&profile=v1-copy&start=6",
+      "publicUrl": "https://kang1027.com/classicmap/clips/yeWusSwiX4g?end=252&profile=v1-copy&start=6"
+    }
+  ],
+  "resume": false,
+  "startedAt": "2026-09-17T08:26:37.138Z"
+}

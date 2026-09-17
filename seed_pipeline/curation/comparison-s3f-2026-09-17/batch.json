@@ -1,0 +1,46 @@
+{
+  "batchId": "s3f",
+  "note": "서브에이전트 시험 B. videos 는 서브에이전트가 채운다. 곡·MBID·QID 는 확정됐고 충돌 검사를 마쳤다.",
+  "pieces": [
+    {
+      "pieceId": 435,
+      "workMbid": "a2ad223d-d73b-3775-9580-fd25b4d986e1",
+      "composerQid": "Q254",
+      "titleKo": "피아노 소나타 16번 C장조 \"쉬운 소나타\"",
+      "titleEn": "Sonata for Piano no. 16 in C major, K. 545 \"Sonata facile\"",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv1-allegro",
+        "type": "MOVEMENT",
+        "nameKo": "1악장 Allegro",
+        "nameEn": "I. Allegro",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "오른손 C장조 주제의 첫 음(악장 시작)",
+        "endCue": "악장 종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "yeWusSwiX4g",
+          "artistId": 399,
+          "artistName": "Maria João Pires",
+          "wikidata": "Q235650"
+        },
+        {
+          "videoId": "vrHKMOgfxnM",
+          "artistId": 189,
+          "artistName": "Yeol Eum Son",
+          "wikidata": "Q435711"
+        },
+        {
+          "videoId": "5O9XIvkC-rk",
+          "artistId": 200,
+          "artistName": "Lang Lang",
+          "wikidata": "Q155713"
+        }
+      ]
+    }
+  ]
+}
