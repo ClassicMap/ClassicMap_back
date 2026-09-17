@@ -1,0 +1,62 @@
+{
+  "batchId": "example",
+  "note": "이 파일을 복사해 쓴다. videos 의 artistId 는 기록용이고 해소는 wikidata 로 한다.",
+  "pieces": [
+    {
+      "pieceId": 78,
+      "workMbid": "d754d820-2036-39f6-9fd5-636cda85b3b2",
+      "composerQid": "Q255",
+      "titleKo": "피아노 소나타 14번 C#단조 Op. 27-2 “월광”",
+      "titleEn": "Sonata for Piano no. 14 in C-sharp minor, op. 27 no. 2 “Moonlight”",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv1-adagio",
+        "type": "MOVEMENT",
+        "nameKo": "1악장 Adagio sostenuto",
+        "nameEn": "I. Adagio sostenuto",
+        "measureStart": "1",
+        "measureEnd": "69",
+        "startCue": "오른손 셋잇단음 반주의 첫 음(악장 시작)",
+        "endCue": "악장 종결 화음과 잔향"
+      },
+      "videos": [
+        {"videoId": "9EGdL_P2iXE", "artistId": 249,
+         "artistName": "Igor Levit", "wikidata": "Q100759"},
+        {"videoId": "AtcPhQB7rh0", "artistId": 207,
+         "artistName": "Maurizio Pollini", "wikidata": "Q160058"},
+        {"videoId": "-aJ9JdV5c5A", "artistId": 206,
+         "artistName": "Evgeny Kissin", "wikidata": "Q160154"}
+      ]
+    },
+    {
+      "pieceId": 187,
+      "workMbid": "85be26e9-6dec-3d34-96e5-87ba458133da",
+      "composerQid": "Q83309",
+      "titleKo": "폴카 슈넬 <천둥과 번개> Op. 324",
+      "titleEn": "Unter Donner und Blitz, op. 324",
+      "composerNameEn": "Johann Strauss II",
+      "composerNameKo": "요한 슈트라우스 2세",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "총주의 첫 타격(작품 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": [
+        {"videoId": "RqsEs7iY7xQ", "artistId": 422,
+         "artistName": "Herbert von Karajan", "wikidata": "Q154895",
+         "orchestra": {"name": "Wiener Philharmoniker", "wikidata": "Q154685"}},
+        {"videoId": "rXABrgiwthc", "artistId": 288,
+         "artistName": "Mariss Jansons", "wikidata": "Q158340",
+         "orchestra": {"name": "Berliner Philharmoniker", "wikidata": "Q152222"}}
+      ]
+    }
+  ]
+}
