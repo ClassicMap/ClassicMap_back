@@ -1,0 +1,56 @@
+{
+  "batchId": "s3e",
+  "note": "서브에이전트 시험 A. videos 는 서브에이전트가 채운다. 곡·MBID·QID 는 확정됐고 충돌 검사를 마쳤다.",
+  "pieces": [
+    {
+      "pieceId": 66,
+      "workMbid": "f334182c-42f7-4808-9576-6c73efe2c632",
+      "composerQid": "Q254",
+      "titleKo": "아이네 클라이네 나흐트무지크",
+      "titleEn": "Serenade no. 13 for Strings in G major, K. 525 \"Eine kleine Nachtmusik\"",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-allegro",
+        "type": "MOVEMENT",
+        "nameKo": "1악장 Allegro",
+        "nameEn": "I. Allegro",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "현 총주의 유니즌 상행 동기 첫 음(악장 시작)",
+        "endCue": "악장 종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "UhPBT0dA_oA",
+          "artistName": "Neville Marriner",
+          "wikidata": "Q318636",
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        },
+        {
+          "videoId": "dC_sCEYmvAM",
+          "artistId": 220,
+          "artistName": "Simon Rattle",
+          "wikidata": "Q157814",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "OaTbNbna3HY",
+          "artistName": "Wolfgang Sobotka",
+          "wikidata": "Q2591433",
+          "orchestra": {
+            "name": "Capella Istropolitana",
+            "wikidata": "Q2937553"
+          }
+        }
+      ]
+    }
+  ]
+}
