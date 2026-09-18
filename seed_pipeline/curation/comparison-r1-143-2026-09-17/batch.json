@@ -1,0 +1,46 @@
+{
+  "batchId": "r1-143",
+  "note": "1라운드 준비. videos 는 다음 단계에서 채운다. 곡·MBID·QID 는 DB·MusicBrainz 로 확인했고 충돌 검사를 마쳤다.",
+  "pieces": [
+    {
+      "pieceId": 143,
+      "workMbid": "3ea62b96-e31e-4797-8d7b-cdeadbc6f27f",
+      "composerQid": "Q41309",
+      "titleKo": "초절기교 연습곡 4번 D단조 \"마제파\"",
+      "titleEn": "Études d’exécution transcendante, S. 139, R. 2b: IV. “Mazeppa” in D minor. Allegro",
+      "composerNameEn": "Franz Liszt",
+      "composerNameKo": "프란츠 리스트",
+      "role": "PIANIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "도입부 첫 fortissimo 화음 타격(작품 시작)",
+        "endCue": "D장조 종결 화음 연타와 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "CXGeOHdiHrE",
+          "artistId": 202,
+          "artistName": "Daniil Trifonov",
+          "wikidata": "Q2635946"
+        },
+        {
+          "videoId": "aJaFaSyseqI",
+          "artistId": 187,
+          "artistName": "Yunchan Lim",
+          "wikidata": "Q112685630"
+        },
+        {
+          "videoId": "KhspEZLSlGs",
+          "artistId": 312,
+          "artistName": "Haochen Zhang",
+          "wikidata": "Q5651513"
+        }
+      ]
+    }
+  ]
+}
