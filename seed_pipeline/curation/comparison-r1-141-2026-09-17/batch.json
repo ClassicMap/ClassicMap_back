@@ -1,0 +1,45 @@
+{
+  "batchId": "r1-141",
+  "note": "1라운드 준비. videos 는 다음 단계에서 채운다. 곡·MBID·QID 는 DB·MusicBrainz 로 확인했고 충돌 검사를 마쳤다.",
+  "pieces": [
+    {
+      "pieceId": 141,
+      "workMbid": "90929826-5064-3212-89c1-689be90e1d4d",
+      "composerQid": "Q41309",
+      "titleKo": "헝가리 광시곡 2번",
+      "titleEn": "19 Hungarian Rhapsodies, S. 244 / R. 106: No. 2 in C‐sharp minor",
+      "composerNameEn": "Franz Liszt",
+      "composerNameKo": "프란츠 리스트",
+      "role": "PIANIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "Lassan 도입의 첫 저음 옥타브 타건(작품 시작)",
+        "endCue": "Friska 종결 화음 연타와 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "LdH1hSWGFGU",
+          "artistId": 567,
+          "artistName": "Valentina Lisitsa",
+          "wikidata": "Q253233"
+        },
+        {
+          "videoId": "MrohPhXXAjw",
+          "artistName": "Hayato Sumino",
+          "wikidata": "Q95340089"
+        },
+        {
+          "videoId": "kwal0TKUNiY",
+          "artistId": 562,
+          "artistName": "Dmitry Shishkin",
+          "wikidata": "Q24053154"
+        }
+      ]
+    }
+  ]
+}
