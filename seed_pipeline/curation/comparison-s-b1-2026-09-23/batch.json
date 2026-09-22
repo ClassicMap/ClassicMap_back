@@ -1,0 +1,81 @@
+{
+  "batchId": "s-b1",
+  "note": "S tier 대기열. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 334,
+      "workMbid": "7e7d799a-babe-3d9c-b271-9ad417ac650f",
+      "composerQid": "Q123829",
+      "titleKo": "교향시 <파리의 미국인>",
+      "titleEn": "An American in Paris",
+      "composerNameEn": "George Gershwin",
+      "composerNameKo": "조지 거슈윈",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "opening",
+        "type": "EXCERPT",
+        "nameKo": "도입 (산책 주제)",
+        "nameEn": "Opening walking theme",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현과 목관의 산책 주제 첫 음(작품 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 90
+      }
+    },
+    {
+      "pieceId": 142,
+      "workMbid": "5e852053-64ba-3013-a86b-daf146791dda",
+      "composerQid": "Q41309",
+      "titleKo": "교향시 <전주곡> S. 97",
+      "titleEn": "Les Préludes, S. 97",
+      "composerNameEn": "Franz Liszt",
+      "composerNameKo": "프란츠 리스트",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "opening",
+        "type": "EXCERPT",
+        "nameKo": "도입",
+        "nameEn": "Opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 피치카토와 첫 주제(작품 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      }
+    },
+    {
+      "pieceId": 163,
+      "workMbid": "36dfecf2-b58c-3997-a629-3b34979791ae",
+      "composerQid": "Q7315",
+      "titleKo": "1812년 서곡 Op. 49",
+      "titleEn": "The Year 1812, Festival Overture in E-flat major, op. 49",
+      "composerNameEn": "Pyotr Ilyich Tchaikovsky",
+      "composerNameKo": "표트르 일리치 차이콥스키",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "tail",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "coda",
+        "type": "EXCERPT",
+        "nameKo": "코다 (대포와 종)",
+        "nameEn": "Coda",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "발췌 구간의 시작",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "batchId": "s-a3",
+  "note": "S tier 대기열. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 121,
+      "workMbid": "9d1fcbf9-9bd2-427b-9abb-e550c24052f8",
+      "composerQid": "Q7312",
+      "titleKo": "4개의 즉흥곡 Op. 90, D. 899",
+      "titleEn": "4 Impromptus, op. 90, D. 899",
+      "composerNameEn": "Franz Schubert",
+      "composerNameKo": "프란츠 슈베르트",
+      "role": "PIANIST",
+      "sector": {
+        "key": "no3-g-flat",
+        "type": "EXCERPT",
+        "nameKo": "3번 G♭장조 Andante",
+        "nameEn": "No. 3 in G-flat major. Andante",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "왼손 아르페지오 위 오른손 선율의 첫 음(3번 시작)",
+        "endCue": "3번 종결 화음과 잔향"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 138,
+      "workMbid": "20cb8152-c2ad-3e20-a818-bc32624b1838",
+      "composerQid": "Q7351",
+      "titleKo": "카니발 Op. 9",
+      "titleEn": "Carnaval, op. 9",
+      "composerNameEn": "Robert Schumann",
+      "composerNameKo": "로베르트 슈만",
+      "role": "PIANIST",
+      "sector": {
+        "key": "final-marche",
+        "type": "EXCERPT",
+        "nameKo": "마지막 곡 다비드 동맹의 행진",
+        "nameEn": "Marche des Davidsbündler contre les Philistins",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "발췌 구간의 시작",
+        "endCue": "작품 종결 화음과 잔향"
+      },
+      "videos": [],
+      "excerpt": {
+        "anchor": "tail",
+        "seconds": 150
+      }
+    },
+    {
+      "pieceId": 332,
+      "workMbid": "bf7e3ad3-4d47-3425-aa5f-8cc8c91d53ed",
+      "composerQid": "Q123829",
+      "titleKo": "랩소디 인 블루",
+      "titleEn": "Rhapsody in Blue",
+      "composerNameEn": "George Gershwin",
+      "composerNameKo": "조지 거슈윈",
+      "role": "PIANIST",
+      "sector": {
+        "key": "opening",
+        "type": "EXCERPT",
+        "nameKo": "도입 (클라리넷 글리산도와 첫 주제)",
+        "nameEn": "Opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "클라리넷 트릴과 글리산도의 첫 음(작품 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 90
+      }
+    }
+  ]
+}
