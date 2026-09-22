@@ -1,0 +1,58 @@
+{
+  "batchId": "r1-323",
+  "note": "1라운드 준비. videos 는 다음 단계에서 채운다. 곡·MBID·QID 는 DB·MusicBrainz 로 확인했고 충돌 검사를 마쳤다.",
+  "pieces": [
+    {
+      "pieceId": 323,
+      "workMbid": "5983b48e-59ce-40d4-a4df-e3c1667655db",
+      "composerQid": "Q49481",
+      "titleKo": "교향곡 1번 D장조 \"고전 교향곡\"",
+      "titleEn": "Symphony no. 1 in D major, op. 25 “Classical”",
+      "composerNameEn": "Sergei Prokofiev",
+      "composerNameKo": "세르게이 세르게예비치 프로코피예프",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-allegro",
+        "type": "MOVEMENT",
+        "nameKo": "1악장 Allegro",
+        "nameEn": "I. Allegro",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "총주 D장조 상행 분산화음의 첫 타격(악장 시작)",
+        "endCue": "총주 종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "UcFtg8hTUZ8",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "hcKJCgvzY2o",
+          "artistId": 289,
+          "artistName": "Valery Gergiev",
+          "wikidata": "Q165693",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "neogX7Zn-kA",
+          "artistId": 577,
+          "artistName": "Neville Marriner",
+          "wikidata": "Q318636",
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        }
+      ]
+    }
+  ]
+}

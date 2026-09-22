@@ -1,0 +1,55 @@
+{
+  "batchId": "r1-126",
+  "note": "1라운드 준비. videos 는 다음 단계에서 채운다. 곡·MBID·QID 는 DB·MusicBrainz 로 확인했고 충돌 검사를 마쳤다.",
+  "pieces": [
+    {
+      "pieceId": 126,
+      "workMbid": "3329a6c8-4785-31ee-ab7e-8ded6804598e",
+      "composerQid": "Q46096",
+      "titleKo": "<핑갈의 동굴> 서곡",
+      "titleEn": "Die Hebriden, op. 26",
+      "composerNameEn": "Felix Mendelssohn",
+      "composerNameKo": "야코프 루트비히 펠릭스 멘델스존 바르톨디",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "비올라·첼로·바순의 B단조 첫 동기 첫 음(작품 시작)",
+        "endCue": "여린 종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "Tgnlo7rcmGw",
+          "artistName": "Kurt Masur",
+          "wikidata": "Q157921",
+          "orchestra": {
+            "name": "Gewandhausorchester Leipzig",
+            "wikidata": "Q156515"
+          }
+        },
+        {
+          "videoId": "vjVNMftlowo",
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "Israel Philharmonic Orchestra",
+            "wikidata": "Q1062617"
+          }
+        },
+        {
+          "videoId": "MdQyN7MYSN8",
+          "artistName": "John Eliot Gardiner",
+          "wikidata": "Q160325",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
+    }
+  ]
+}

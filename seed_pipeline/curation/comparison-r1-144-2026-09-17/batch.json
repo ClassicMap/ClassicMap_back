@@ -1,0 +1,58 @@
+{
+  "batchId": "r1-144",
+  "note": "1라운드 준비. videos 는 다음 단계에서 채운다. 곡·MBID·QID 는 DB·MusicBrainz 로 확인했고 충돌 검사를 마쳤다.",
+  "pieces": [
+    {
+      "pieceId": 144,
+      "workMbid": "6996fc77-b5dc-48ca-a7d5-3434f541f87a",
+      "composerQid": "Q1511",
+      "titleKo": "오페라 <발퀴레> 중 \"발퀴레의 기행\"",
+      "titleEn": "Excerpt from Die Walküre, WWV 86B: Akt III, Scene I, Walkürenritt",
+      "composerNameEn": "Richard Wagner",
+      "composerNameKo": "빌헬름 리하르트 바그너",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "목관 트릴과 현의 상행 음형 첫 음(작품 시작)",
+        "endCue": "관현악 종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "4sn1tEQEZ90",
+          "artistId": 574,
+          "artistName": "Zubin Mehta",
+          "wikidata": "Q157635",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "qlQf1vUoxPU",
+          "artistId": 293,
+          "artistName": "Andris Nelsons",
+          "wikidata": "Q511817",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "Bn--a0jK4qs",
+          "artistId": 583,
+          "artistName": "Paavo Järvi",
+          "wikidata": "Q700791",
+          "orchestra": {
+            "name": "NHK Symphony Orchestra",
+            "wikidata": "Q1329364"
+          }
+        }
+      ]
+    }
+  ]
+}
