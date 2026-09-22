@@ -149,16 +149,6 @@
           }
         },
         {
-          "videoId": "lz6JlFDLUkM",
-          "artistId": 575,
-          "artistName": "Seiji Ozawa",
-          "wikidata": "Q313649",
-          "orchestra": {
-            "name": "Boston Symphony Orchestra",
-            "wikidata": "Q864369"
-          }
-        },
-        {
           "videoId": "uG6in-SrtdA",
           "artistId": 574,
           "artistName": "Zubin Mehta",
@@ -166,6 +156,16 @@
           "orchestra": {
             "name": "Los Angeles Philharmonic",
             "wikidata": "Q315715"
+          }
+        },
+        {
+          "videoId": "EkkFz9OlDLg",
+          "artistId": 289,
+          "artistName": "Valery Gergiev",
+          "wikidata": "Q165693",
+          "orchestra": {
+            "name": "Mariinsky Orchestra",
+            "wikidata": "Q4419936"
           }
         }
       ]
