@@ -1,0 +1,46 @@
+{
+  "batchId": "r1-326",
+  "note": "1라운드 준비. videos 는 다음 단계에서 채운다. 곡·MBID·QID 는 DB·MusicBrainz 로 확인했고 충돌 검사를 마쳤다.",
+  "pieces": [
+    {
+      "pieceId": 326,
+      "workMbid": "45d6ee5d-b598-4196-9f96-b07aa68ed223",
+      "composerQid": "Q49481",
+      "titleKo": "피아노 소나타 7번 B♭장조 \"전쟁 소나타\"",
+      "titleEn": "Piano Sonata no. 7 in B-flat major, op. 83",
+      "composerNameEn": "Sergei Prokofiev",
+      "composerNameKo": "세르게이 세르게예비치 프로코피예프",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv3-precipitato",
+        "type": "MOVEMENT",
+        "nameKo": "3악장 Precipitato",
+        "nameEn": "III. Precipitato",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "7/8박 반복 저음 음형의 첫 타건(악장 시작)",
+        "endCue": "B♭ 옥타브 종결 타격과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "8xKnuGdAKzo",
+          "artistId": 207,
+          "artistName": "Maurizio Pollini",
+          "wikidata": "Q160058"
+        },
+        {
+          "videoId": "zSGQ5D56NiA",
+          "artistId": 567,
+          "artistName": "Valentina Lisitsa",
+          "wikidata": "Q253233"
+        },
+        {
+          "videoId": "omx6jg82bJc",
+          "artistId": 372,
+          "artistName": "Glenn Gould",
+          "wikidata": "Q216924"
+        }
+      ]
+    }
+  ]
+}
