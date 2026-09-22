@@ -1,0 +1,138 @@
+{
+  "batchId": "s-a2",
+  "note": "S tier 대기열 A 묶음. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 319,
+      "workMbid": "8fcac0d0-d728-32e1-b7a5-8e5560ed36ab",
+      "composerQid": "Q80135",
+      "titleKo": "재즈 모음곡 2번 중 왈츠 2번",
+      "titleEn": "Suite for Variety Orchestra: VII. Waltz II",
+      "composerNameEn": "Dmitri Shostakovich",
+      "composerNameKo": "드미트리 드미트리예비치 쇼스타코비치",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 왈츠 반주 첫 박(곡 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "AFie0R1XYSw",
+          "artistId": 290,
+          "artistName": "Riccardo Chailly",
+          "wikidata": "Q371795",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "qZQUeOrc0Iw",
+          "artistId": 293,
+          "artistName": "Andris Nelsons",
+          "wikidata": "Q511817",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "1o2gLSEX6K4",
+          "artistName": "Andrew Litton",
+          "wikidata": "Q2133568",
+          "orchestra": {
+            "name": "Singapore Symphony Orchestra",
+            "wikidata": "Q1144875"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 436,
+      "workMbid": "1ecee37a-d6b6-3489-a542-5517c38e59f4",
+      "composerQid": "Q254",
+      "titleKo": "“아! 어머니께 말씀드리죠” 주제에 의한 12개 변주곡 K. 265",
+      "titleEn": "12 Variations on \"Ah, vous dirai-je, Maman\" for Piano, K. 265",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "PIANIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "주제 첫 음(곡 시작)",
+        "endCue": "마지막 변주의 종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "yzcmU5jQB88",
+          "artistId": 235,
+          "artistName": "Myung-Whun Chung",
+          "wikidata": "Q153778"
+        },
+        {
+          "videoId": "8oS3XYeg9FA",
+          "artistId": 570,
+          "artistName": "Aldo Ciccolini",
+          "wikidata": "Q2185247"
+        },
+        {
+          "videoId": "d3O-gIqJ0Tc",
+          "artistName": "Clara Haskil",
+          "wikidata": "Q123463"
+        }
+      ]
+    },
+    {
+      "pieceId": 451,
+      "workMbid": "6bdc6d7a-52a4-4104-b7a3-2efec855fe1c",
+      "composerQid": "Q7294",
+      "titleKo": "자장가 Op. 49-4 (5개의 가곡 중)",
+      "titleEn": "5 Lieder, op. 49: No. 4 Wiegenlied",
+      "composerNameEn": "Johannes Brahms",
+      "composerNameKo": "요하네스 브람스",
+      "role": "VOCALIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "피아노 전주의 첫 음(곡 시작)",
+        "endCue": "피아노 후주의 종결 화음과 잔향"
+      },
+      "videos": [],
+      "blocked": "성악 원곡판 3종을 못 모았다. 담라우는 F장조(이조), 조수미는 원조(E♭)인데도 플레밍·아멜링 둘 다와 0.18~0.19 로 평평하다. 예비로 받은 리타 슈트라이히는 F#장조, 에디트 빈스는 D♭장조라 또 이조였다. 원조로 맞물린 것은 플레밍 ↔ 아멜링 0.0838 두 건뿐이다. 교차표와 조성 추정은 보고 참조. 후보 생성에서 제외했다.",
+      "attemptedVideos": [
+        {
+          "videoId": "jbRxFkhaprM",
+          "artistId": 294,
+          "artistName": "Diana Damrau",
+          "wikidata": "Q237965"
+        },
+        {
+          "videoId": "3nNvz8UFEHY",
+          "artistId": 295,
+          "artistName": "Renée Fleming",
+          "wikidata": "Q165637"
+        },
+        {
+          "videoId": "WFmyYw3Ki74",
+          "artistId": 199,
+          "artistName": "Sumi Jo",
+          "wikidata": "Q235200"
+        }
+      ]
+    }
+  ]
+}
