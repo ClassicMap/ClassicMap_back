@@ -1,0 +1,43 @@
+{
+  "batchId": "r1-320",
+  "note": "1라운드 준비. videos 는 다음 단계에서 채운다. 곡·MBID·QID 는 DB·MusicBrainz 로 확인했고 충돌 검사를 마쳤다.",
+  "pieces": [
+    {
+      "pieceId": 320,
+      "workMbid": "725265f4-4b9e-46d2-832b-50b0466f1b6f",
+      "composerQid": "Q80135",
+      "titleKo": "현악 4중주 8번 C단조",
+      "titleEn": "String Quartet no. 8 in C minor, op. 110",
+      "composerNameEn": "Dmitri Shostakovich",
+      "composerNameKo": "드미트리 드미트리예비치 쇼스타코비치",
+      "role": "QUARTET",
+      "sector": {
+        "key": "mv2-allegro-molto",
+        "type": "MOVEMENT",
+        "nameKo": "2악장 Allegro molto",
+        "nameEn": "II. Allegro molto",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "네 악기 fortissimo 첫 타격(악장 시작)",
+        "endCue": "악장 끝 fortissimo 종결 타격(3악장 왈츠 직전)"
+      },
+      "videos": [
+        {
+          "videoId": "SOBNpIyUYrE",
+          "artistName": "Borodin Quartet",
+          "wikidata": "Q894040"
+        },
+        {
+          "videoId": "AuQghuj3Kfs",
+          "artistName": "Emerson String Quartet",
+          "wikidata": "Q681006"
+        },
+        {
+          "videoId": "WVTeysPXdL0",
+          "artistName": "St. Lawrence String Quartet",
+          "wikidata": "Q7589494"
+        }
+      ]
+    }
+  ]
+}

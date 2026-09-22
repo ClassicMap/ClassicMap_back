@@ -1,0 +1,48 @@
+{
+  "batchId": "r1-443",
+  "note": "1라운드 준비. videos 는 다음 단계에서 채운다. 곡·MBID·QID 는 DB·MusicBrainz 로 확인했고 충돌 검사를 마쳤다.",
+  "pieces": [
+    {
+      "pieceId": 443,
+      "workMbid": "b2be878e-12f4-3ce1-85e0-6b84d07ea43c",
+      "composerQid": "Q7312",
+      "titleKo": "가곡 \"아베 마리아\" (엘렌의 노래 3번)",
+      "titleEn": "Ellens Gesang III, op. 52 no. 6, D. 839 “Ave Maria”",
+      "composerNameEn": "Franz Peter Schubert",
+      "composerNameKo": "프란츠 페터 슈베르트",
+      "role": "VOCALIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "피아노 분산화음 전주의 첫 음(곡 시작)",
+        "endCue": "피아노 후주 종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "O9S3gZwk5cA",
+          "artistId": 295,
+          "artistName": "Renée Fleming",
+          "wikidata": "Q165637"
+        },
+        {
+          "videoId": "tDQj7j-xogM",
+          "artistName": "Barbara Bonney",
+          "wikidata": "Q201079",
+          "pianist": {
+            "name": "Geoffrey Parsons",
+            "wikidata": "Q326911"
+          }
+        },
+        {
+          "videoId": "QfqvOhcstvI",
+          "artistName": "Ruth Ziesak",
+          "wikidata": "Q105705"
+        }
+      ]
+    }
+  ]
+}
