@@ -1,0 +1,44 @@
+{
+  "batchId": "r1-316",
+  "note": "1라운드 준비. videos 는 다음 단계에서 채운다. 곡·MBID·QID 는 DB·MusicBrainz 로 확인했고 충돌 검사를 마쳤다.",
+  "pieces": [
+    {
+      "pieceId": 316,
+      "workMbid": "cfd0d254-2062-42fc-b260-f56600fc7527",
+      "composerQid": "Q154770",
+      "titleKo": "5개의 피아노 소품",
+      "titleEn": "Fünf Klavierstücke, op. 23",
+      "composerNameEn": "Arnold Schoenberg",
+      "composerNameKo": "아르놀트 쇤베르크",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv1-sehr-langsam",
+        "type": "MOVEMENT",
+        "nameKo": "1곡 Sehr langsam",
+        "nameEn": "I. Sehr langsam",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "오른손 단선율의 첫 음(곡 시작)",
+        "endCue": "여린 종결 음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "Jup5INtrYWg",
+          "artistId": 207,
+          "artistName": "Maurizio Pollini",
+          "wikidata": "Q160058"
+        },
+        {
+          "videoId": "eck4L611pV8",
+          "artistName": "Gianluca Cascioli",
+          "wikidata": "Q5558139"
+        },
+        {
+          "videoId": "pRqafuIV4dM",
+          "artistName": "Peter Serkin",
+          "wikidata": "Q1361841"
+        }
+      ]
+    }
+  ]
+}

@@ -43,6 +43,11 @@ cargo run --quiet --bin load_comparison_candidates -- \
 **dry-run 은 run-id 를 소비한다.** dry-run 을 돌렸으면 실제 적재는 새 run-id 로
 한다. 같은 것을 쓰면 `DUPLICATE_RUN_ID` 가 난다.
 
+**크레딧 역할을 적재 전에 본다.** 적재기는 악기 역할(`PIANIST` 등)을 모두 독주자로 묶는다.
+가곡 반주자는 `ACCOMPANIST`, 4중주단은 `QUARTET`, 악단은 `ORCHESTRA` 여야 한다.
+`build_candidates.py` 는 두 번째 크레딧을 만들지 못해 서브에이전트가 손으로 덧붙이는데,
+그때 반주자를 `PIANIST` 로 넣은 적이 있다.
+
 적재에 실패하면 후보는 rollback 되고 `review_queue` 에만 남는다. 설계된 동작이다.
 원인을 고쳐 다시 적재한 뒤, 해소된 항목은 닫는다(`05-pitfalls.md` 참고).
 
@@ -86,8 +91,10 @@ VIDEO_CLIP_BUILD_TOKEN="$TOKEN" node ops/video-clips/prewarm.mjs \
   --bundle <batchId>-clip-assets.jsonl
 ```
 
-**`--concurrency 2` 를 준다.** 기본값 1 이면 하나씩 만든다. 파드는 운영 클리퍼라
-3 이상은 봇 차단 위험이 있다.
+**`--concurrency` 는 기본값 1 로 둔다.** 파드 메모리 한도가 640Mi 라 서로 다른 영상
+둘의 원본을 동시에 받으면 OOMKilled 로 죽는다(쇤베르크 배치에서 2 로 돌려 두 건이
+`fetch failed` 로 실패했다). 같은 영상의 구간끼리는 원본을 한 번만 받으므로 1 이어도 빠르다.
+파드가 재시작되면 yt-dlp 챌린지 캐시와 `/tmp` 가 비지만 수집·클립 모두 알아서 다시 받는다.
 
 클리퍼는 같은 영상의 원본을 **한 번만** 받아 `sources/` 에 두고(24시간) 로컬에서 자른다.
 구간마다 스트림을 받던 때는 실시간의 1.2~1.6배로만 내려와 45분 영상의 네 구간에 6분이
