@@ -38,6 +38,28 @@ def reference_span(piece, spans, excerpt):
     return video_id, row["start"], min(row["start"] + seconds, row["end"])
 
 
+def search_window(row, reference, anchor, length):
+    """옮길 자리를 찾을 창. 넓으면 반복된 같은 음악을 고른다.
+
+    도입·코다는 검출 구간의 그쪽 끝에서 발췌 길이의 SEARCH_SPAN 배만 본다.
+    구간을 직접 지정했을 때는 기준 연주에서의 상대 위치 둘레를 같은 폭으로 본다.
+    """
+    span = length * align.SEARCH_SPAN
+    if anchor == "head":
+        return row["videoId"], row["start"], min(row["start"] + span, row["end"])
+    if anchor == "tail":
+        return row["videoId"], max(row["end"] - span, row["start"]), row["end"]
+    ref_id, ref_start, ref_end = reference
+    ratio = (ref_start - REF_SPANS[ref_id][0]) / max(
+        REF_SPANS[ref_id][1] - REF_SPANS[ref_id][0], 1e-9)
+    middle = row["start"] + ratio * (row["end"] - row["start"])
+    return (row["videoId"], max(middle - span / 2, row["start"]),
+            min(middle + length + span / 2, row["end"]))
+
+
+REF_SPANS = {}
+
+
 def main():
     if len(sys.argv) != 2:
         raise SystemExit(__doc__)
@@ -58,16 +80,27 @@ def main():
             print(f"■ {piece['titleKo']}: 기준 영상의 검출값이 없음")
             continue
         ref_id, ref_start, ref_end = reference
+        ref_row = next(r for r in spans if r["videoId"] == ref_id)
+        REF_SPANS[ref_id] = (ref_row["start"], ref_row["end"])
         print(f"\n■ {piece['titleKo']}  기준 {ref_id} {ref_start:.2f}–{ref_end:.2f}"
               f"  ({ref_end - ref_start:.0f}s)")
 
+        anchor = excerpt.get("anchor", "head") if "start" not in excerpt else None
+        length = ref_end - ref_start
         for row in spans:
             if row["videoId"] == ref_id:
                 row["start"], row["end"] = round(ref_start, 2), round(ref_end, 2)
                 print(f"   {row['artistName']:<22} 기준")
                 continue
-            start, end, value = align.locate(
-                reference, (row["videoId"], row["start"], row["end"]))
+            window = search_window(row, reference, anchor, length)
+            start, end, value = align.locate(reference, window)
+            # 큐가 "악장 시작"·"악장 끝" 이면 그 자리를 검출값으로 고정한다. 부분열 DTW 는
+            # 여린 도입을 지나쳐 시작을 늦게 잡는 일이 잦다(실측 0.2~4.1초). 비용은 거의
+            # 움직이지 않으므로(±0.005) 큐를 지키는 쪽이 낫다.
+            if anchor == "head":
+                start = row["start"]
+            elif anchor == "tail":
+                end = row["end"]
             row["start"], row["end"] = round(start, 2), round(end, 2)
             print(f"   {row['artistName']:<22} {start:7.2f}–{end:7.2f}  "
                   f"길이 {end - start:6.1f}s  옮김 비용 {value:.4f}")

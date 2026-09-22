@@ -1,0 +1,174 @@
+{
+  "batchId": "r2-orch",
+  "note": "발췌 배치. excerpt 는 07-excerpt.md 를 따른다. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 76,
+      "workMbid": "c35b4956-d4f8-321a-865b-5b13d9ed192b",
+      "composerQid": "Q255",
+      "titleKo": "교향곡 9번 D단조 Op. 125 “합창”",
+      "titleEn": "Symphony no. 9 in D minor, op. 125 “Choral”",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv4-opening",
+        "type": "EXCERPT",
+        "nameKo": "4악장 도입 (공포의 팡파르와 첼로 레치타티보)",
+        "nameEn": "IV. Presto, opening (Schreckensfanfare and cello recitative)",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 총주의 불협화 팡파르(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "Nm4rvvX1krk",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "TBcb0B4Yit4",
+          "artistId": 290,
+          "artistName": "Riccardo Chailly",
+          "wikidata": "Q371795",
+          "orchestra": {
+            "name": "Gewandhausorchester Leipzig",
+            "wikidata": "Q156515"
+          }
+        },
+        {
+          "videoId": "VJO8hvE_tr0",
+          "artistId": 235,
+          "artistName": "Myung-Whun Chung",
+          "wikidata": "Q153778",
+          "orchestra": {
+            "name": "Seoul Philharmonic Orchestra",
+            "wikidata": "Q483782"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 67,
+      "workMbid": "724cdab2-00ea-4aa2-b2b4-9d246d3672e0",
+      "composerQid": "Q254",
+      "titleKo": "교향곡 40번 G단조 K. 550",
+      "titleEn": "Symphony no. 40 in G minor, K. 550",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 90
+      },
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 도입 (Molto allegro 제1주제)",
+        "nameEn": "I. Molto allegro, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "비올라 반주 위 바이올린 제1주제 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "RDAjLjvequ4",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "r2-asx8cY0s",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "CMBLu6xYlNQ",
+          "artistId": 577,
+          "artistName": "Neville Marriner",
+          "wikidata": "Q318636",
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 309,
+      "workMbid": "54dacada-b00c-34b6-bbbb-e89855c7219f",
+      "composerQid": "Q7314",
+      "titleKo": "발레 <봄의 제전>",
+      "titleEn": "Le sacre du printemps",
+      "composerNameEn": "Igor Stravinsky",
+      "composerNameKo": "이고르 스트라빈스키",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 90
+      },
+      "sector": {
+        "key": "part1-introduction",
+        "type": "EXCERPT",
+        "nameKo": "제1부 서주 (바순 독주)",
+        "nameEn": "Part I. Introduction",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "최고음역 바순 독주의 첫 음(작품 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "5ss-JBw08v4",
+          "artistId": 219,
+          "artistName": "Yannick Nezet-Seguin",
+          "wikidata": "Q951548",
+          "orchestra": {
+            "name": "The Philadelphia Orchestra",
+            "wikidata": "Q659181"
+          }
+        },
+        {
+          "videoId": "lz6JlFDLUkM",
+          "artistId": 575,
+          "artistName": "Seiji Ozawa",
+          "wikidata": "Q313649",
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "uG6in-SrtdA",
+          "artistId": 574,
+          "artistName": "Zubin Mehta",
+          "wikidata": "Q157635",
+          "orchestra": {
+            "name": "Los Angeles Philharmonic",
+            "wikidata": "Q315715"
+          }
+        }
+      ]
+    }
+  ]
+}

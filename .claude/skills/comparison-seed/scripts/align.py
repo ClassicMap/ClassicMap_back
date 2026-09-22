@@ -133,13 +133,20 @@ def chroma_at(video_id, start, end, hop=MAP_HOP):
     return c
 
 
+# 탐색 창은 발췌 길이의 이 배수까지만 본다. 모차르트 40번에서 무티의 도입 발췌가
+# 제시부 반복 쪽(124~217초)으로 옮겨진 적이 있다. 반복은 화성이 같아 비용이 오히려
+# 낮게 나오므로 비용으로는 걸러지지 않는다. 창을 좁히는 것이 유일한 방어다.
+SEARCH_SPAN = 1.7
+
+
 def locate(reference, target, hop=MAP_HOP):
     """기준 연주의 발췌가 다른 연주의 어디인지 찾는다.
 
     reference 는 (video_id, start, end), target 은 (video_id, start, end) 다.
-    target 의 구간은 발췌를 품는 넓은 구간(대개 악장 전체)이다. 부분열 DTW 는
-    긴 쪽에서 짧은 쪽과 가장 잘 맞물리는 토막을 찾으므로, 템포가 달라도 같은
-    대목을 집어낸다. 돌려주는 것은 (start, end, 비용) 이다.
+    target 의 구간은 발췌를 품는 창이다. 부분열 DTW 는 긴 쪽에서 짧은 쪽과 가장 잘
+    맞물리는 토막을 찾으므로 템포가 달라도 같은 대목을 집어내지만, 창이 넓으면
+    반복된 같은 음악을 고른다. 창은 부르는 쪽에서 좁혀 준다.
+    돌려주는 것은 (start, end, 비용) 이다.
     """
     ref_id, ref_start, ref_end = reference
     tgt_id, tgt_start, tgt_end = target
