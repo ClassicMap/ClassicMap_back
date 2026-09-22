@@ -1,0 +1,31 @@
+{
+  "status": "succeeded",
+  "bundlePath": "seed_pipeline/curation/comparison-legacy-2026-09-17/legacy-7r-clip-assets.jsonl",
+  "rowCount": 1,
+  "dryRun": false,
+  "publish": true,
+  "seedRunId": "c9135e6b-6148-4176-abac-6660614eb524",
+  "mutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 1,
+    "clipAssetsInserted": 1,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 2,
+    "total": 4
+  },
+  "plannedMutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 1,
+    "clipAssetsInserted": 1,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 2,
+    "total": 4
+  },
+  "performanceIds": [
+    258
+  ]
+}

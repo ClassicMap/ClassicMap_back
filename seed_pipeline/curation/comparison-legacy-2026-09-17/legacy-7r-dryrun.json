@@ -1,0 +1,25 @@
+{
+  "status": "dry-run",
+  "runId": "0a2fa275-0dca-4ba5-930c-fc211c0f7df3",
+  "bundlePath": "seed_pipeline/curation/comparison-legacy-2026-09-17/legacy-7r-candidates.jsonl",
+  "rowCount": 1,
+  "dryRun": true,
+  "mutations": {
+    "performanceSources": 0,
+    "performanceSectors": 0,
+    "performanceCandidates": 0,
+    "performanceCredits": 0,
+    "performances": 0,
+    "clipJobs": 0,
+    "total": 0
+  },
+  "plannedMutations": {
+    "performanceSources": 0,
+    "performanceSectors": 0,
+    "performanceCandidates": 1,
+    "performanceCredits": 0,
+    "performances": 1,
+    "clipJobs": 1,
+    "total": 3
+  }
+}

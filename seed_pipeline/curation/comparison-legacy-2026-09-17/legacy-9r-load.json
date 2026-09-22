@@ -1,0 +1,25 @@
+{
+  "status": "succeeded",
+  "runId": "4a06a635-8480-496b-9435-373f01b9ed9a",
+  "bundlePath": "/Users/kdh/project/ClassicMap/ClassicMap_back/seed_pipeline/curation/comparison-legacy-2026-09-17/legacy-9r-candidates.jsonl",
+  "rowCount": 1,
+  "dryRun": false,
+  "mutations": {
+    "performanceSources": 0,
+    "performanceSectors": 0,
+    "performanceCandidates": 1,
+    "performanceCredits": 0,
+    "performances": 1,
+    "clipJobs": 1,
+    "total": 3
+  },
+  "plannedMutations": {
+    "performanceSources": 0,
+    "performanceSectors": 0,
+    "performanceCandidates": 1,
+    "performanceCredits": 0,
+    "performances": 1,
+    "clipJobs": 1,
+    "total": 3
+  }
+}
