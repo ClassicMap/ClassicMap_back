@@ -106,6 +106,15 @@ export COMPARISON_FETCH_POD=$(kubectl -n homeserver get pods -o name | grep clip
 **`COOKIE_ARGS[@]: unbound variable`** — macOS 의 bash 3.2 는 `set -u` 아래에서
 빈 배열 전개를 unbound 로 본다. `${배열[@]+"${배열[@]}"}` 로 쓴다. 고쳐 뒀다.
 
+
+**`Requested format is not available`** — JS 챌린지 풀이 스크립트가 캐시에 없다. yt-dlp 에
+`--remote-components ejs:github` 를 준다. `fetch_videos.sh` 는 준다. 파드는 재시작하면 캐시가
+사라져서, 예전에는 클리퍼가 받아 둔 캐시를 우연히 같이 쓰다가 재배포 뒤 깨졌다.
+
+**wav 가 잘려 온다** — 파드에서 `kubectl exec cat` 으로 옮기다 전송이 끊기면 비어 있지 않은
+채로 잘린다(2160초 영상이 1956초). `fetch_videos.sh` 가 메타 길이와 ±2초로 맞춰 보고, 어긋나면
+한 번 다시 옮긴 뒤 그래도 틀리면 실패로 처리한다. 예전에 잘린 채 남은 wav 도 다시 받는다.
+
 ## 디스크
 
 WAV 는 배치마다 지운다. 한 세션에서 133개가 남아 스크래치패드가 9.2GB 가 된
