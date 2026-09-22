@@ -1,0 +1,206 @@
+{
+  "batchId": "r2-conc",
+  "note": "발췌 배치. excerpt 는 07-excerpt.md 를 따른다. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 80,
+      "workMbid": "e5cfd8b5-74c2-3330-9ca4-42ecd22dffef",
+      "composerQid": "Q255",
+      "titleKo": "피아노 협주곡 5번 E♭장조 Op. 73 “황제”",
+      "titleEn": "Concerto for Piano and Orchestra no. 5 in E-flat major, op. 73 “Emperor”",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "PIANIST",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 90
+      },
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 도입 (총주 화음과 피아노 서주)",
+        "nameEn": "I. Allegro, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 총주 화음의 첫 타격(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "WojbFvAV_Bg",
+          "artistId": 207,
+          "artistName": "Maurizio Pollini",
+          "wikidata": "Q160058",
+          "conductor": {
+            "name": "Claudio Abbado",
+            "wikidata": "Q151608"
+          },
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "iwKxy1cjpJw",
+          "artistId": 252,
+          "artistName": "Radu Lupu",
+          "wikidata": "Q472114",
+          "conductor": {
+            "name": "Zubin Mehta",
+            "wikidata": "Q157635"
+          },
+          "orchestra": {
+            "name": "Israel Philharmonic Orchestra",
+            "wikidata": "Q1062617"
+          }
+        },
+        {
+          "videoId": "z4gJL5VdSV0",
+          "artistId": 370,
+          "artistName": "Vladimir Ashkenazy",
+          "wikidata": "Q157785",
+          "conductor": {
+            "name": "Zubin Mehta",
+            "wikidata": "Q157635"
+          },
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 160,
+      "workMbid": "f7136e19-4a8a-42ae-be40-01e9d78b45d5",
+      "composerQid": "Q7315",
+      "titleKo": "바이올린 협주곡 D장조 Op. 35",
+      "titleEn": "Violin Concerto in D major, op. 35",
+      "composerNameEn": "Pyotr Ilyich Tchaikovsky",
+      "composerNameKo": "표트르 일리치 차이콥스키",
+      "role": "VIOLINIST",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 도입 (관현악 서주와 독주 첫 주제)",
+        "nameEn": "I. Allegro moderato, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 여린 서주 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "6EgQmiSbBq4",
+          "artistId": 211,
+          "artistName": "Anne-Sophie Mutter",
+          "wikidata": "Q3374",
+          "conductor": {
+            "name": "Herbert von Karajan",
+            "wikidata": "Q154895"
+          },
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "0UcFaU7qYfA",
+          "artistId": 210,
+          "artistName": "Joshua Bell",
+          "wikidata": "Q312792",
+          "conductor": {
+            "name": "Vladimir Ashkenazy",
+            "wikidata": "Q157785"
+          },
+          "orchestra": {
+            "name": "The Cleveland Orchestra",
+            "wikidata": "Q875248"
+          }
+        },
+        {
+          "videoId": "9XVaC4zadLI",
+          "artistId": 212,
+          "artistName": "Janine Jansen",
+          "wikidata": "Q235149",
+          "conductor": {
+            "name": "Daniel Harding",
+            "wikidata": "Q524328"
+          },
+          "orchestra": {
+            "name": "Mahler Chamber Orchestra",
+            "wikidata": "Q573902"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 72,
+      "workMbid": "63ec17bb-39b9-344c-a006-3c30863c25a7",
+      "composerQid": "Q254",
+      "titleKo": "피아노 협주곡 20번 D단조 K. 466",
+      "titleEn": "Concerto for Piano no. 20 in D minor, K. 466",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "PIANIST",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 240
+      },
+      "sector": {
+        "key": "mv2-romanze",
+        "type": "EXCERPT",
+        "nameKo": "2악장 로만체",
+        "nameEn": "II. Romanze",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "피아노 독주의 로만체 주제 첫 음(악장 시작)",
+        "endCue": "악장 종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "t9d3Q8l8rMM",
+          "artistId": 186,
+          "artistName": "Seong-Jin Cho",
+          "wikidata": "Q4516986",
+          "conductor": {
+            "name": "Yannick Nézet-Séguin",
+            "wikidata": "Q951548"
+          },
+          "orchestra": {
+            "name": "Chamber Orchestra of Europe",
+            "wikidata": "Q661670"
+          }
+        },
+        {
+          "videoId": "kR5W4A-4aPU",
+          "artistId": 257,
+          "artistName": "Jan Lisiecki",
+          "wikidata": "Q548800",
+          "conductor": {
+            "name": "Christian Zacharias",
+            "wikidata": "Q62739"
+          },
+          "orchestra": {
+            "name": "Symphonieorchester des Bayerischen Rundfunks",
+            "wikidata": "Q636159"
+          }
+        },
+        {
+          "videoId": "BFNOvCK_vTo",
+          "artistId": 564,
+          "artistName": "Khatia Buniatishvili",
+          "wikidata": "Q467436",
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        }
+      ]
+    }
+  ]
+}

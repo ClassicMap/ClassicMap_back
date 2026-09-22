@@ -1,0 +1,39 @@
+{
+  "status": "succeeded",
+  "bundlePath": "seed_pipeline/curation/comparison-r2-conc-2026-09-23/r2-conc-clip-assets.jsonl",
+  "rowCount": 9,
+  "dryRun": false,
+  "publish": true,
+  "seedRunId": "785f16e9-2aa0-45ad-9e06-16bc47452283",
+  "mutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 9,
+    "clipAssetsInserted": 9,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 18,
+    "total": 36
+  },
+  "plannedMutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 9,
+    "clipAssetsInserted": 9,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 18,
+    "total": 36
+  },
+  "performanceIds": [
+    290,
+    291,
+    292,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298
+  ]
+}
