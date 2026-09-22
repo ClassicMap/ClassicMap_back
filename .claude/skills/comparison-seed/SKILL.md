@@ -43,6 +43,7 @@ description: ClassicMap 비교 영상 시드를 한 배치씩 만든다. 곡과 
 | 적재·발행할 때 | `references/04-loading.md` |
 | 막혔을 때 | `references/05-pitfalls.md` |
 | 배치를 서브에이전트에 맡길 때 | `references/06-subagent.md` |
+| 20분 넘는 곡을 발췌할 때 | `references/07-excerpt.md` |
 
 ## 배치 정의
 
@@ -56,6 +57,7 @@ cd .claude/skills/comparison-seed/scripts
 ./fetch_videos.sh batch.json          # 오디오와 메타
 uv run --python 3.12 --with numpy --with scipy --with librosa \
   python run_detect.py batch.json     # 구간 검출
+uv run ... python run_excerpt.py batch.json  # 발췌만 쓸 때(07-excerpt.md)
 uv run ... python run_verify.py batch.json   # 교차 정렬 — 여기서 걸러진다
 python3 build_candidates.py batch.json       # 적재용 JSONL
 ```

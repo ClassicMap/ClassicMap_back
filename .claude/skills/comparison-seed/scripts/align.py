@@ -114,3 +114,40 @@ def sweep_pitch(video_id, start, end, reference):
     feature = chroma(video_id, start, end)
     return [(shift, cost(np.roll(feature, shift, axis=0), reference))
             for shift in range(12)]
+
+
+# 발췌를 옮길 때 쓰는 성긴 해상도. 512 로 10분을 맞추면 DTW 행렬이 6억 칸이라 죽는다.
+# 2048 은 93ms 라 경계를 찾기에 충분하고 10분 대 90초가 6백만 칸으로 떨어진다.
+MAP_HOP = 2048
+
+
+def chroma_at(video_id, start, end, hop=MAP_HOP):
+    """chroma 와 같지만 hop 을 고를 수 있다. 발췌를 옮길 때만 쓴다."""
+    y = audio(video_id)
+    a, b = max(int(start * SR), 0), min(int(end * SR), len(y))
+    c = librosa.feature.chroma_cens(y=y[a:b], sr=SR, hop_length=hop,
+                                    tuning=tuning(video_id, y))
+    c = librosa.util.normalize(c, norm=2, axis=0)
+    silent = ~c.any(axis=0)
+    c[:, silent] = 1.0 / np.sqrt(c.shape[0])
+    return c
+
+
+def locate(reference, target, hop=MAP_HOP):
+    """기준 연주의 발췌가 다른 연주의 어디인지 찾는다.
+
+    reference 는 (video_id, start, end), target 은 (video_id, start, end) 다.
+    target 의 구간은 발췌를 품는 넓은 구간(대개 악장 전체)이다. 부분열 DTW 는
+    긴 쪽에서 짧은 쪽과 가장 잘 맞물리는 토막을 찾으므로, 템포가 달라도 같은
+    대목을 집어낸다. 돌려주는 것은 (start, end, 비용) 이다.
+    """
+    ref_id, ref_start, ref_end = reference
+    tgt_id, tgt_start, tgt_end = target
+    x = chroma_at(ref_id, ref_start, ref_end, hop).astype(np.float32)
+    y = chroma_at(tgt_id, tgt_start, tgt_end, hop).astype(np.float32)
+    distance, path = librosa.sequence.dtw(X=x, Y=y, metric="cosine", subseq=True)
+    # path 는 끝에서 시작으로 내려온다. 두 번째 열이 target 의 프레임이다.
+    first, last = path[-1][1], path[0][1]
+    seconds = hop / SR
+    value = float(distance[-1, last]) / len(path)
+    return (tgt_start + first * seconds, tgt_start + last * seconds, value)
