@@ -1,0 +1,138 @@
+{
+  "batchId": "s-a1",
+  "note": "S tier 대기열 A 묶음. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 128,
+      "workMbid": "3fdac4f1-9077-3e58-a704-994e6ce3562a",
+      "composerQid": "Q1268",
+      "titleKo": "즉흥곡 4번 C#단조 Op. 66 “환상 즉흥곡”",
+      "titleEn": "Fantaisie-impromptu in C-sharp minor, op. 66",
+      "composerNameEn": "Frédéric Chopin",
+      "composerNameKo": "프레데리크 쇼팽",
+      "role": "PIANIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "오른손 십육분음 첫 음(곡 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "Gy5UHK4EeM8",
+          "artistId": 202,
+          "artistName": "Daniil Trifonov",
+          "wikidata": "Q2635946"
+        },
+        {
+          "videoId": "LV2c0BdM5xY",
+          "artistId": 200,
+          "artistName": "Lang Lang",
+          "wikidata": "Q155713"
+        },
+        {
+          "videoId": "E0C461Gor64",
+          "artistId": 568,
+          "artistName": "Yundi",
+          "wikidata": "Q557244"
+        }
+      ]
+    },
+    {
+      "pieceId": 139,
+      "workMbid": "0edc5a7d-48e1-393e-9a88-3ed0ce05aee0",
+      "composerQid": "Q41309",
+      "titleKo": "사랑의 꿈 3번 A♭장조 S. 541-3",
+      "titleEn": "Liebesträume, S. 541: No. 3 in A-flat major",
+      "composerNameEn": "Franz Liszt",
+      "composerNameKo": "프란츠 리스트",
+      "role": "PIANIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "아르페지오 반주 위 첫 선율음(곡 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "bhYfOh6dn3o",
+          "artistId": 187,
+          "artistName": "Yunchan Lim",
+          "wikidata": "Q112685630"
+        },
+        {
+          "videoId": "kr6yyFlwsSE",
+          "artistId": 206,
+          "artistName": "Evgeny Kissin",
+          "wikidata": "Q160154"
+        },
+        {
+          "videoId": "OCi7WWl-rI8",
+          "artistId": 200,
+          "artistName": "Lang Lang",
+          "wikidata": "Q155713"
+        }
+      ]
+    },
+    {
+      "pieceId": 155,
+      "workMbid": "e822f7b1-8cd7-4e34-9950-d13f9f911cda",
+      "composerQid": "Q7294",
+      "titleKo": "헝가리 무곡 5번 G단조 (관현악판)",
+      "titleEn": "Hungarian Dances for orchestra, WoO 1, Book 1, No. 5 in G minor",
+      "composerNameEn": "Johannes Brahms",
+      "composerNameKo": "요하네스 브람스",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "총주의 첫 타격(곡 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "QAMxkietiik",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "4ARjT4QatGY",
+          "artistId": 288,
+          "artistName": "Mariss Jansons",
+          "wikidata": "Q158340",
+          "orchestra": {
+            "name": "Symphonieorchester des Bayerischen Rundfunks",
+            "wikidata": "Q636159"
+          }
+        },
+        {
+          "videoId": "WbhlzOoc2s8",
+          "artistId": 577,
+          "artistName": "Sir Neville Marriner",
+          "wikidata": "Q318636",
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        }
+      ]
+    }
+  ]
+}
