@@ -40,6 +40,22 @@ META_FMT='%(id)s|%(duration)s|%(channel)s|%(upload_date)s|%(availability)s|%(liv
 mkdir -p "$WORK"
 : > "$META"
 
+# 파드에 잠금을 건다. 파드는 운영 클리퍼라 둘이 동시에 받으면 운영 IP 가 봇 차단에
+# 걸린다. 사람이 눈으로 확인하는 것으로는 못 막는다. `ls` 는 스크립트가 wav 를 옮긴
+# 직후 지우기 때문에 비어 보이고, `ps` 는 영상 사이 20초 쉬는 동안 아무것도 안 잡힌다.
+# 실제로 두 배치가 5분간 겹쳐 돌았고 양쪽 다 "비었다"고 판단했었다(2026-09-23).
+# mkdir 은 원자적이라 경쟁이 없다. 3분 넘게 갱신이 없으면 죽은 잠금으로 보고 뺏는다.
+lock_touch() {
+  [ -n "$POD" ] || return 0
+  kubectl -n "$NS" exec "$POD" -- touch "$POD_WORK/lock" >/dev/null 2>&1 || true
+}
+
+lock_release() {
+  [ -n "$POD" ] || return 0
+  [ -n "${LOCK_HELD:-}" ] || return 0
+  kubectl -n "$NS" exec "$POD" -- rm -rf "$POD_WORK/lock" >/dev/null 2>&1 || true
+}
+
 if [ -n "$POD" ]; then
   # 읽기 전용 마운트를 쓰기 가능한 곳으로 옮겨 둔다. 파드 안에서만 존재한다.
   kubectl -n "$NS" exec -i "$POD" -- sh -s "$POD_WORK" "$POD_COOKIES" >/dev/null 2>&1 <<'EOS' || { echo "파드 준비 실패: $POD"; exit 1; }
@@ -47,6 +63,18 @@ work=$1; mounted=$2
 mkdir -p "$work"
 [ -f "$work/cookies.txt" ] || { cp "$mounted" "$work/cookies.txt"; chmod 600 "$work/cookies.txt"; }
 EOS
+  kubectl -n "$NS" exec -i "$POD" -- sh -s "$POD_WORK" <<'EOS'
+work=$1; lock="$work/lock"
+mkdir "$lock" 2>/dev/null && exit 0
+now=$(date +%s); mtime=$(stat -c %Y "$lock" 2>/dev/null || echo 0)
+[ $((now - mtime)) -gt 180 ] || exit 3
+rm -rf "$lock" && mkdir "$lock"
+EOS
+  case $? in
+    0) LOCK_HELD=1; trap lock_release EXIT INT TERM ;;
+    3) echo "파드에서 다른 수집이 돌고 있음. 끝나기를 기다린다."; exit 2 ;;
+    *) echo "파드 잠금 실패: $POD"; exit 1 ;;
+  esac
 fi
 
 # 영상 ID 는 셸 문자열에 넣지 않는다. 배치 정의는 자동으로 채워지므로
@@ -147,6 +175,7 @@ for piece in batch['pieces']:
     fi
   fi
   [ -n "$meta_line" ] && printf '%s\n' "$meta_line" >> "$META"
+  lock_touch
   echo "$vid ok"
   sleep "$DELAY"
 done
