@@ -86,6 +86,15 @@ VIDEO_CLIP_BUILD_TOKEN="$TOKEN" node ops/video-clips/prewarm.mjs \
   --bundle <batchId>-clip-assets.jsonl
 ```
 
+**`--concurrency 2` 를 준다.** 기본값 1 이면 하나씩 만든다. 파드는 운영 클리퍼라
+3 이상은 봇 차단 위험이 있다.
+
+클리퍼는 같은 영상의 원본을 **한 번만** 받아 `sources/` 에 두고(24시간) 로컬에서 자른다.
+구간마다 스트림을 받던 때는 실시간의 1.2~1.6배로만 내려와 45분 영상의 네 구간에 6분이
+넘게 걸렸다. 지금은 원본 45분이 수십 초, 그 뒤 구간은 0.1~0.2초다. 그러니 **같은 영상의
+구간은 한 매니페스트에 모아** 보내는 게 좋다. 예전 방식으로 돌리려면 클리퍼에
+`CLIP_SOURCE_CACHE=off` 를 준다.
+
 ## 5. 클립을 로컬로 가져온다
 
 `load_clip_assets` 의 `--cache-dir` 은 **로컬 경로**다. 클리퍼 파드의 경로를
