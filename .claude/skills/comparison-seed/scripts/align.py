@@ -5,6 +5,7 @@
 
 판정 기준과 어긋남의 네 가지 모양은 references/03-verification.md 에 있다.
 """
+import json
 import os
 
 import numpy as np
@@ -17,13 +18,42 @@ BASE = os.environ.get("COMPARISON_WORK_DIR",
                       os.path.dirname(os.path.abspath(__file__)))
 
 
+def audio(video_id):
+    path = os.path.join(BASE, f"{video_id}.y.npy")
+    return np.load(path) if os.path.exists(path) else librosa.load(
+        os.path.join(BASE, f"{video_id}.wav"), sr=SR, mono=True)[0]
+
+
+def tuning(video_id, y=None):
+    """영상 하나의 조율 편차(1반음 단위). 영상마다 한 번만 재서 저장한다.
+
+    chroma_cens 에 맡기면 구간마다 튜닝을 새로 추정한다. 조율이 ±0.5 근처인 녹음은
+    경계가 0.1초만 달라도 추정이 반대쪽으로 뒤집혀(1/3반음) 비용이 두 배로 뛰었다
+    (0.053 과 0.108 사이를 오감). 곡선에 가짜 급락·급등이 섞여 경계 오류나 4번 패턴처럼
+    보였다. 영상 전체에서 고르게 뽑은 조각으로 한 번 재고 모든 구간에 같은 값을 쓴다.
+    """
+    path = os.path.join(BASE, f"{video_id}.tuning.json")
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as fh:
+            saved = json.load(fh)
+        if isinstance(saved, dict) and "tuning" in saved:
+            return float(saved["tuning"])
+    y = audio(video_id) if y is None else y
+    piece = 15 * SR
+    starts = np.linspace(0, max(len(y) - piece, 0), num=12).astype(int)
+    sample = np.concatenate([y[s:s + piece] for s in starts]) if len(y) > piece else y
+    value = float(librosa.estimate_tuning(y=sample, sr=SR))
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump({"tuning": value}, fh)
+    return value
+
+
 def chroma(video_id, start, end):
     """구간의 화성 윤곽. 음색과 가사는 여기서 대부분 사라진다."""
-    path = os.path.join(BASE, f"{video_id}.y.npy")
-    y = np.load(path) if os.path.exists(path) else librosa.load(
-        os.path.join(BASE, f"{video_id}.wav"), sr=SR, mono=True)[0]
+    y = audio(video_id)
     a, b = max(int(start * SR), 0), min(int(end * SR), len(y))
-    c = librosa.feature.chroma_cens(y=y[a:b], sr=SR, hop_length=HOP)
+    c = librosa.feature.chroma_cens(y=y[a:b], sr=SR, hop_length=HOP,
+                                    tuning=tuning(video_id, y))
     c = librosa.util.normalize(c, norm=2, axis=0)
     # 완전 무음 프레임은 0벡터라 코사인 거리가 정의되지 않고 DTW 가 NaN 으로 죽는다.
     # 화성이 없다는 뜻으로 12음을 고르게 채운다. 음악과는 멀어지므로 경계를 훑을 때
