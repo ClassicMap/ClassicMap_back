@@ -1,0 +1,52 @@
+{
+  "batchId": "legacy-9",
+  "note": "레거시 섹터 9 재수집. 경계는 사람이 잡은 초를 출발점으로 미세 조정만 한다. 루빈스타인(l7GtUKE-Ju0)은 섹터 7·8·9 전반에서 다른 연주와 0.11~0.17 로 멀어 뺐다.",
+  "pieces": [
+    {
+      "pieceId": 129,
+      "workMbid": "f94364c5-b4ca-3555-af9e-86dff67757af",
+      "composerQid": "Q1268",
+      "titleKo": "발라드 1번 G단조",
+      "titleEn": "Ballade no. 1 in G minor, op. 23",
+      "composerNameEn": "Frédéric Chopin",
+      "composerNameKo": "프레데리크 쇼팽",
+      "role": "PIANIST",
+      "sector": {
+        "key": "coda",
+        "type": "EXCERPT",
+        "nameKo": "코다",
+        "nameEn": "Coda (Presto con fuoco)",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "레거시 발췌 시작(사람이 잡은 경계를 첫 음에 맞춤)",
+        "endCue": "레거시 발췌 끝(악구 사이 숨에 맞춤)"
+      },
+      "videos": [
+        {
+          "videoId": "YYUu4Rl7EdE",
+          "artistId": 366,
+          "artistName": "Krystian Zimerman",
+          "wikidata": "Q353461"
+        },
+        {
+          "videoId": "taY5oHleS4I",
+          "artistId": 186,
+          "artistName": "Seong-Jin Cho",
+          "wikidata": "Q4516986"
+        },
+        {
+          "videoId": "eG1Olvh7vCU",
+          "artistId": 367,
+          "artistName": "Vladimir Horowitz",
+          "wikidata": "Q192506"
+        },
+        {
+          "videoId": "SlJEjza0-FQ",
+          "artistId": 206,
+          "artistName": "Evgeny Kissin",
+          "wikidata": "Q160154"
+        }
+      ]
+    }
+  ]
+}

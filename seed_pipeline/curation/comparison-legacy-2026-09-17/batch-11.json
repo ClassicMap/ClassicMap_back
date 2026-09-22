@@ -1,0 +1,62 @@
+{
+  "batchId": "legacy-11",
+  "note": "레거시 섹터 11 재수집. 경계는 사람이 잡은 초를 출발점으로 미세 조정만 한다.",
+  "pieces": [
+    {
+      "pieceId": 225,
+      "workMbid": "aca4167a-b927-41f5-a839-99cf9ad476cc",
+      "composerQid": "Q131861",
+      "titleKo": "피아노 협주곡 2번 C단조",
+      "titleEn": "Piano Concerto no. 2 in C minor, op. 18",
+      "composerNameEn": "Sergei Rachmaninoff",
+      "composerNameKo": "세르게이 라흐마니노프",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv1-excerpt",
+        "type": "EXCERPT",
+        "nameKo": "1악장",
+        "nameEn": "I. Moderato — excerpt",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "레거시 발췌 시작(사람이 잡은 경계를 첫 음에 맞춤)",
+        "endCue": "레거시 발췌 끝(악구 사이 숨에 맞춤)"
+      },
+      "videos": [
+        {
+          "videoId": "rEGOihjqO9w",
+          "artistId": 369,
+          "artistName": "Anna Fedorova",
+          "wikidata": "Q125885",
+          "conductor": {
+            "name": "Martin Panteleev",
+            "wikidata": "Q21474595"
+          },
+          "orchestra": {
+            "name": "Nordwestdeutsche Philharmonie",
+            "wikidata": "Q318022"
+          }
+        },
+        {
+          "videoId": "YviN1tuXbzc",
+          "artistId": 186,
+          "artistName": "Seong-Jin Cho",
+          "wikidata": "Q4516986"
+        },
+        {
+          "videoId": "NsqXCO0ADwM",
+          "artistId": 201,
+          "artistName": "Yuja Wang",
+          "wikidata": "Q465311",
+          "conductor": {
+            "name": "Valery Gergiev",
+            "wikidata": "Q165693"
+          },
+          "orchestra": {
+            "name": "Mariinsky Theatre Orchestra",
+            "wikidata": "Q4419936"
+          }
+        }
+      ]
+    }
+  ]
+}

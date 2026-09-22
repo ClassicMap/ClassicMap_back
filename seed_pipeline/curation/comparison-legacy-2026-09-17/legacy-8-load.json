@@ -1,0 +1,25 @@
+{
+  "status": "succeeded",
+  "runId": "b968eaca-dd4d-4fe6-a60f-d5814e5131c1",
+  "bundlePath": "seed_pipeline/curation/comparison-legacy-2026-09-17/legacy-8-candidates.jsonl",
+  "rowCount": 4,
+  "dryRun": false,
+  "mutations": {
+    "performanceSources": 0,
+    "performanceSectors": 1,
+    "performanceCandidates": 4,
+    "performanceCredits": 0,
+    "performances": 4,
+    "clipJobs": 4,
+    "total": 13
+  },
+  "plannedMutations": {
+    "performanceSources": 0,
+    "performanceSectors": 1,
+    "performanceCandidates": 4,
+    "performanceCredits": 0,
+    "performances": 4,
+    "clipJobs": 4,
+    "total": 13
+  }
+}
