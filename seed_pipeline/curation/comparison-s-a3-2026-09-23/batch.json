@@ -21,7 +21,26 @@
         "startCue": "왼손 아르페지오 위 오른손 선율의 첫 음(3번 시작)",
         "endCue": "3번 종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "LUp2u9wI1fY",
+          "artistId": 564,
+          "artistName": "Khatia Buniatishvili",
+          "wikidata": "Q467436"
+        },
+        {
+          "videoId": "u-BoPjodVRM",
+          "artistId": 316,
+          "artistName": "Eric Lu",
+          "wikidata": "Q21279310"
+        },
+        {
+          "videoId": "dMi9AHqKWWs",
+          "artistId": 366,
+          "artistName": "Krystian Zimerman",
+          "wikidata": "Q353461"
+        }
+      ]
     },
     {
       "pieceId": 138,
@@ -42,7 +61,26 @@
         "startCue": "발췌 구간의 시작",
         "endCue": "작품 종결 화음과 잔향"
       },
-      "videos": [],
+      "videos": [
+        {
+          "videoId": "N0tcrKs6Uq4",
+          "artistId": 206,
+          "artistName": "Evgeny Kissin",
+          "wikidata": "Q160154"
+        },
+        {
+          "videoId": "SsL3rroWuk0",
+          "artistId": 223,
+          "artistName": "Boris Giltburg",
+          "wikidata": "Q893661"
+        },
+        {
+          "videoId": "HfLYNgvuNYQ",
+          "artistId": 368,
+          "artistName": "Artur Rubinstein",
+          "wikidata": "Q183182"
+        }
+      ],
       "excerpt": {
         "anchor": "tail",
         "seconds": 150
@@ -67,7 +105,46 @@
         "startCue": "클라리넷 트릴과 글리산도의 첫 음(작품 시작)",
         "endCue": "발췌 구간의 끝"
       },
-      "videos": [],
+      "videos": [
+        {
+          "videoId": "6v-Jotfey68",
+          "artistId": 573,
+          "artistName": "Jean-Yves Thibaudet",
+          "wikidata": "Q1030549",
+          "conductor": {
+            "name": "Hugh Wolff",
+            "wikidata": "Q320019"
+          },
+          "orchestra": {
+            "name": "BBC Symphony Orchestra",
+            "wikidata": "Q795630"
+          }
+        },
+        {
+          "videoId": "1wL7M4T7y-U",
+          "artistId": 557,
+          "artistName": "Christopher O'Riley",
+          "wikidata": "Q5112988",
+          "conductor": {
+            "name": "Barry Wordsworth",
+            "wikidata": "Q809113"
+          },
+          "orchestra": {
+            "name": "Royal Philharmonic Orchestra",
+            "wikidata": "Q856125"
+          }
+        },
+        {
+          "videoId": "4jVh5cZ_ZvM",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "Columbia Symphony Orchestra",
+            "wikidata": "Q1112596"
+          }
+        }
+      ],
       "excerpt": {
         "anchor": "head",
         "seconds": 90

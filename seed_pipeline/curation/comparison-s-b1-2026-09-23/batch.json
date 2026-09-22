@@ -21,7 +21,38 @@
         "startCue": "현과 목관의 산책 주제 첫 음(작품 시작)",
         "endCue": "발췌 구간의 끝"
       },
-      "videos": [],
+      "videos": [
+        {
+          "videoId": "SxX0MxGCzKQ",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic Orchestra",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "xQ8wULjf3x0",
+          "artistId": 574,
+          "artistName": "Zubin Mehta",
+          "wikidata": "Q157635",
+          "orchestra": {
+            "name": "Los Angeles Philharmonic",
+            "wikidata": "Q315715"
+          }
+        },
+        {
+          "videoId": "YuS3Vwsl4fo",
+          "artistId": 290,
+          "artistName": "Riccardo Chailly",
+          "wikidata": "Q371795",
+          "orchestra": {
+            "name": "The Cleveland Orchestra",
+            "wikidata": "Q875248"
+          }
+        }
+      ],
       "excerpt": {
         "anchor": "head",
         "seconds": 90
@@ -46,7 +77,38 @@
         "startCue": "현의 피치카토와 첫 주제(작품 시작)",
         "endCue": "발췌 구간의 끝"
       },
-      "videos": [],
+      "videos": [
+        {
+          "videoId": "BEe-lgzUv1g",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "SLFi3k3KGIc",
+          "artistId": 602,
+          "artistName": "Kurt Masur",
+          "wikidata": "Q157921",
+          "orchestra": {
+            "name": "Gewandhausorchester Leipzig",
+            "wikidata": "Q156515"
+          }
+        },
+        {
+          "videoId": "AQOWJruw81A",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "orchestra": {
+            "name": "Philadelphia Orchestra",
+            "wikidata": "Q659181"
+          }
+        }
+      ],
       "excerpt": {
         "anchor": "head",
         "seconds": 120
@@ -75,7 +137,38 @@
         "startCue": "발췌 구간의 시작",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "y9MoHkB8SEc",
+          "artistId": 288,
+          "artistName": "Mariss Jansons",
+          "wikidata": "Q158340",
+          "orchestra": {
+            "name": "Oslo Philharmonic Orchestra",
+            "wikidata": "Q1063440"
+          }
+        },
+        {
+          "videoId": "w0Lj6Au6jtE",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "a5KDsNUSnoU",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Orchestre symphonique de Montréal",
+            "wikidata": "Q1196259"
+          }
+        }
+      ]
     }
   ]
 }
