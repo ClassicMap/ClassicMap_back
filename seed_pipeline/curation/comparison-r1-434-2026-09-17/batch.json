@@ -1,0 +1,63 @@
+{
+  "batchId": "r1-434",
+  "note": "1라운드 준비. videos 는 다음 단계에서 채운다. 곡·MBID·QID 는 DB·MusicBrainz 로 확인했고 충돌 검사를 마쳤다. 협주곡이라 독주자를 primary 로 두고 video 에 conductor·orchestra 를 적는다.",
+  "pieces": [
+    {
+      "pieceId": 434,
+      "workMbid": "57f35a3f-1f6d-3ed0-940b-b6e2885de715",
+      "composerQid": "Q254",
+      "titleKo": "호른 협주곡 4번 E♭장조",
+      "titleEn": "Concerto for Horn no. 4 in E-flat major, K. 495",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "HORNIST",
+      "sector": {
+        "key": "mv3-rondo",
+        "type": "MOVEMENT",
+        "nameKo": "3악장 Rondo. Allegro vivace",
+        "nameEn": "III. Rondo. Allegro vivace",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "독주 호른 6/8박 론도 주제의 첫 음(악장 시작)",
+        "endCue": "총주 종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "YJYFJvEdhtQ",
+          "artistName": "Barry Tuckwell",
+          "wikidata": "Q809108",
+          "conductor": {
+            "name": "Neville Marriner",
+            "wikidata": "Q318636"
+          },
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        },
+        {
+          "videoId": "7ZNrLilfRJE",
+          "artistName": "Günter Högner",
+          "wikidata": "Q28966416",
+          "conductor": {
+            "name": "Karl Böhm",
+            "wikidata": "Q84241"
+          },
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "MKN0SY1ehUc",
+          "artistName": "Ben Goldscheider",
+          "wikidata": "Q133161275",
+          "orchestra": {
+            "name": "Münchener Kammerorchester",
+            "wikidata": "Q315242"
+          }
+        }
+      ]
+    }
+  ]
+}

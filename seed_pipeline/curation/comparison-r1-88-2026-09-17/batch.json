@@ -1,0 +1,67 @@
+{
+  "batchId": "r1-88",
+  "note": "1라운드 준비. videos 는 다음 단계에서 채운다. 곡·MBID·QID 는 DB·MusicBrainz 로 확인했고 충돌 검사를 마쳤다. 협주곡이라 독주자를 primary 로 두고 video 에 conductor·orchestra 를 적는다.",
+  "pieces": [
+    {
+      "pieceId": 88,
+      "workMbid": "0c2f8487-6439-3b21-8284-8d578fcf8e1d",
+      "composerQid": "Q7349",
+      "titleKo": "트럼펫 협주곡 E♭장조",
+      "titleEn": "Konzert für Trompete und Orchester Es-Dur, Hob. VIIe:1",
+      "composerNameEn": "Franz Joseph Haydn",
+      "composerNameKo": "프란츠 요제프 하이든",
+      "role": "TRUMPETER",
+      "sector": {
+        "key": "mv3-finale",
+        "type": "MOVEMENT",
+        "nameKo": "3악장 Finale. Allegro",
+        "nameEn": "III. Finale. Allegro",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "현의 여린 론도 주제 첫 음(악장 시작)",
+        "endCue": "총주 종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "hjd6tz4IiWs",
+          "artistName": "Wynton Marsalis",
+          "wikidata": "Q273076",
+          "conductor": {
+            "name": "Raymond Leppard",
+            "wikidata": "Q720702"
+          },
+          "orchestra": {
+            "name": "National Philharmonic Orchestra",
+            "wikidata": "Q2394269"
+          }
+        },
+        {
+          "videoId": "WLvKpg4gAWc",
+          "artistName": "Adolph Herseth",
+          "wikidata": "Q365397",
+          "conductor": {
+            "name": "Claudio Abbado",
+            "wikidata": "Q151608"
+          },
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "eAZmXMQoGQM",
+          "artistName": "Maurice André",
+          "wikidata": "Q153432",
+          "conductor": {
+            "name": "Hans Stadlmair",
+            "wikidata": "Q1582611"
+          },
+          "orchestra": {
+            "name": "Münchener Kammerorchester",
+            "wikidata": "Q315242"
+          }
+        }
+      ]
+    }
+  ]
+}

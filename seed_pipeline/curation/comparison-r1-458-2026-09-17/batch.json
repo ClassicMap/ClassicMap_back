@@ -1,0 +1,69 @@
+{
+  "batchId": "r1-458",
+  "note": "1라운드 준비. videos 는 다음 단계에서 채운다. 곡·MBID·QID 는 DB·MusicBrainz 로 확인했고 충돌 검사를 마쳤다. 협주곡이라 독주자를 primary 로 두고 video 에 conductor·orchestra 를 적는다.",
+  "pieces": [
+    {
+      "pieceId": 458,
+      "workMbid": "3ed3ae19-6230-4337-b1f6-b5d2a718cc1a",
+      "composerQid": "Q80135",
+      "titleKo": "피아노 협주곡 2번 F장조",
+      "titleEn": "Piano Concerto no. 2 in F major, op. 102",
+      "composerNameEn": "Dmitri Shostakovich",
+      "composerNameKo": "드미트리 드미트리예비치 쇼스타코비치",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv2-andante",
+        "type": "MOVEMENT",
+        "nameKo": "2악장 Andante",
+        "nameEn": "II. Andante",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "현의 여린 C단조 도입 첫 음(악장 시작)",
+        "endCue": "피아노 여린 종결 화음과 잔향(3악장 시작 직전)"
+      },
+      "videos": [
+        {
+          "videoId": "byDlW4BUe20",
+          "artistId": 201,
+          "artistName": "Yuja Wang",
+          "wikidata": "Q465311",
+          "conductor": {
+            "name": "Andris Nelsons",
+            "wikidata": "Q511817"
+          },
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "GO7hN5R1td4",
+          "artistId": 255,
+          "artistName": "Alexander Melnikov",
+          "wikidata": "Q548431",
+          "conductor": {
+            "name": "Teodor Currentzis",
+            "wikidata": "Q536185"
+          },
+          "orchestra": {
+            "name": "Mahler Chamber Orchestra",
+            "wikidata": "Q573902"
+          }
+        },
+        {
+          "videoId": "bJaJVywUXs4",
+          "artistName": "Elisabeth Leonskaja",
+          "wikidata": "Q447946",
+          "conductor": {
+            "name": "Hugh Wolff",
+            "wikidata": "Q320019"
+          },
+          "orchestra": {
+            "name": "Saint Paul Chamber Orchestra",
+            "wikidata": "Q2905648"
+          }
+        }
+      ]
+    }
+  ]
+}
