@@ -1,0 +1,137 @@
+{
+  "batchId": "s-d1",
+  "note": "S tier 대기열. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 440,
+      "workMbid": "88a8eaa9-d07b-3b9b-b284-72289e2eeb43",
+      "composerQid": "Q255",
+      "titleKo": "피아노 소나타 23번 F단조 Op. 57 “열정”",
+      "titleEn": "Sonata for Piano no. 23 in F minor, op. 57 “Appassionata”",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "PIANIST",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv3-allegro-ma-non-troppo",
+        "type": "EXCERPT",
+        "nameKo": "3악장 Allegro ma non troppo 도입",
+        "nameEn": "III. Allegro ma non troppo, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "감7화음 연타와 16분음표 물결의 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "efA1S8hyBms",
+          "artistName": "Lang Lang",
+          "wikidata": "Q155713"
+        },
+        {
+          "videoId": "pRcOnzRErfE",
+          "artistName": "Maurizio Pollini",
+          "wikidata": "Q160058"
+        },
+        {
+          "videoId": "ZZsT7F0l_WY",
+          "artistName": "Vladimir Ashkenazy",
+          "wikidata": "Q157785"
+        }
+      ]
+    },
+    {
+      "pieceId": 73,
+      "workMbid": "a488a020-884d-3349-a7e7-18993ffed13e",
+      "composerQid": "Q254",
+      "titleKo": "피아노 소나타 11번 A장조 K. 331 “터키 행진곡”",
+      "titleEn": "Sonata for Piano no. 11 in A major, K. 300i/331 “Alla Turca”",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv3-alla-turca",
+        "type": "EXCERPT",
+        "nameKo": "3악장 Rondo alla turca",
+        "nameEn": "III. Rondo alla turca",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "오른손 A단조 회전음형의 첫 음(악장 시작)",
+        "endCue": "악장 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "n2Tru4Qa3pc",
+          "artistName": "Yundi Li",
+          "wikidata": "Q557244"
+        },
+        {
+          "videoId": "lfAw693rYRQ",
+          "artistName": "András Schiff",
+          "wikidata": "Q427319"
+        },
+        {
+          "videoId": "xXRtV9G5924",
+          "artistName": "Murray Perahia",
+          "wikidata": "Q326221"
+        }
+      ]
+    },
+    {
+      "pieceId": 439,
+      "workMbid": "26c8afae-81cd-4d4e-87c6-1b98cda047fc",
+      "composerQid": "Q255",
+      "titleKo": "바이올린 소나타 5번 F장조 Op. 24 “봄”",
+      "titleEn": "Sonata for Violin and Piano no. 5 in F major, op. 24 “Spring”",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "VIOLINIST",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv1-allegro",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro 도입 (봄의 주제)",
+        "nameEn": "I. Allegro, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "바이올린의 첫 주제 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "AcofgtlKdj4",
+          "artistName": "Itzhak Perlman",
+          "wikidata": "Q215905",
+          "pianist": {
+            "name": "Vladimir Ashkenazy",
+            "wikidata": "Q157785"
+          }
+        },
+        {
+          "videoId": "XPH2gEPCnmo",
+          "artistName": "Anne-Sophie Mutter",
+          "wikidata": "Q3374",
+          "pianist": {
+            "name": "Lambert Orkis",
+            "wikidata": "Q1250415"
+          }
+        },
+        {
+          "videoId": "3lrErQqdZNc",
+          "artistName": "Clara-Jumi Kang",
+          "wikidata": "Q18209541",
+          "pianist": {
+            "name": "Sunwook Kim",
+            "wikidata": "Q626696"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "batchId": "s-c4",
+  "note": "S tier 대기열. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 118,
+      "workMbid": "ed002d99-2ca2-4fb1-9e1b-2cb16b61fd14",
+      "composerQid": "Q7312",
+      "titleKo": "피아노 5중주 A장조 D. 667 “송어”",
+      "titleEn": "Quintet in A major, D. 667 “Trout”",
+      "composerNameEn": "Franz Schubert",
+      "composerNameKo": "프란츠 페터 슈베르트",
+      "role": "PIANIST",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv4-tema-con-variazioni",
+        "type": "EXCERPT",
+        "nameKo": "4악장 Thema con variazioni 주제",
+        "nameEn": "IV. Thema con variazioni, theme",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현이 제시하는 <송어> 주제의 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "pogdUk0keiw",
+          "artistId": 208,
+          "artistName": "András Schiff",
+          "wikidata": "Q427319"
+        },
+        {
+          "videoId": "gxbIiC2QF4g",
+          "artistId": 373,
+          "artistName": "Emil Gilels",
+          "wikidata": "Q319732",
+          "ensemble": {
+            "name": "Amadeus Quartet",
+            "wikidata": "Q451806"
+          }
+        },
+        {
+          "videoId": "pebjNmNfAlc",
+          "artistId": 203,
+          "artistName": "Yefim Bronfman",
+          "wikidata": "Q1344161"
+        }
+      ]
+    },
+    {
+      "pieceId": 120,
+      "workMbid": "db422156-b77e-45ad-a1b2-3f02f38885dd",
+      "composerQid": "Q7312",
+      "titleKo": "현악 4중주 14번 D단조 D. 810 “죽음과 소녀”",
+      "titleEn": "String Quartet no. 14 in D minor, D. 810 “Death and the Maiden”",
+      "composerNameEn": "Franz Schubert",
+      "composerNameKo": "프란츠 페터 슈베르트",
+      "role": "QUARTET",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv2-andante-con-moto",
+        "type": "EXCERPT",
+        "nameKo": "2악장 Andante con moto 주제",
+        "nameEn": "II. Andante con moto, theme",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "네 성부가 함께 내는 화음 주제의 첫 박(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "m8r4YVkqFl4",
+          "artistId": 607,
+          "artistName": "Emerson String Quartet",
+          "wikidata": "Q681006"
+        },
+        {
+          "videoId": "FCuJmyEu1EE",
+          "artistId": 606,
+          "artistName": "Borodin Quartet",
+          "wikidata": "Q894040"
+        },
+        {
+          "videoId": "JZ51CWhKW0U",
+          "artistName": "Takács Quartet",
+          "wikidata": "Q4218548"
+        }
+      ]
+    },
+    {
+      "pieceId": 86,
+      "workMbid": "a723b328-ae25-4f0e-ad92-d6423f31b4ab",
+      "composerQid": "Q7349",
+      "titleKo": "현악 4중주 C장조 Op. 76-3 Hob. III:77 “황제”",
+      "titleEn": "String Quartet in C major, op. 76 no. 3, Hob. III:77 “Kaiser”",
+      "composerNameEn": "Joseph Haydn",
+      "composerNameKo": "프란츠 요제프 하이든",
+      "role": "QUARTET",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv2-poco-adagio-cantabile",
+        "type": "EXCERPT",
+        "nameKo": "2악장 Poco adagio cantabile 주제 (황제 찬가)",
+        "nameEn": "II. Poco adagio cantabile, theme",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "제1바이올린이 내는 황제 찬가 선율의 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "msM3F2Q9334",
+          "artistName": "Amadeus Quartet",
+          "wikidata": "Q451806"
+        },
+        {
+          "videoId": "HpVah-JbvxM",
+          "artistName": "Alban Berg Quartett",
+          "wikidata": "Q389156"
+        },
+        {
+          "videoId": "v8ssyi0SvBk",
+          "artistId": 607,
+          "artistName": "Emerson String Quartet",
+          "wikidata": "Q681006"
+        }
+      ]
+    }
+  ]
+}
