@@ -1,0 +1,72 @@
+{
+  "batchId": "s-bc1",
+  "note": "S tier 대기열 B·C 잔여. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 156,
+      "workMbid": "40215afd-f532-3cc5-8e69-db60650c526b",
+      "composerQid": "Q7294",
+      "titleKo": "바이올린 협주곡 D장조 Op. 77",
+      "titleEn": "Violin Concerto in D major, op. 77",
+      "composerNameEn": "Johannes Brahms",
+      "composerNameKo": "요하네스 브람스",
+      "role": "VIOLINIST",
+      "excerpt": { "anchor": "head", "seconds": 120 },
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro non troppo 도입 (관현악 서주)",
+        "nameEn": "I. Allegro non troppo, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "저현과 목관의 D장조 첫 주제 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 313,
+      "workMbid": "47ac23fb-acab-42b6-8f81-10550f8b1f83",
+      "composerQid": "Q154770",
+      "titleKo": "정화된 밤 Op. 4",
+      "titleEn": "Verklärte Nacht, op. 4",
+      "composerNameEn": "Arnold Schoenberg",
+      "composerNameKo": "아르놀트 쇤베르크",
+      "role": "CONDUCTOR",
+      "excerpt": { "anchor": "head", "seconds": 120 },
+      "sector": {
+        "key": "opening",
+        "type": "EXCERPT",
+        "nameKo": "도입 (두 사람이 걷는 달밤)",
+        "nameEn": "Opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "저현의 하행 걸음 주제 첫 음",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 337,
+      "workMbid": "67cb661e-8c40-32f7-8687-11a06a450738",
+      "composerQid": "Q152505",
+      "titleKo": "<웨스트 사이드 스토리> 중 “심포닉 댄스”",
+      "titleEn": "Symphonic Dances from “West Side Story”",
+      "composerNameEn": "Leonard Bernstein",
+      "composerNameKo": "레너드 번스타인",
+      "role": "CONDUCTOR",
+      "excerpt": { "anchor": "head", "seconds": 120 },
+      "sector": {
+        "key": "prologue",
+        "type": "EXCERPT",
+        "nameKo": "Prologue 도입 (손가락 튕김과 3온음 동기)",
+        "nameEn": "Prologue, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "손가락 튕김 위로 오르는 3온음 동기의 첫 음",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": []
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "batchId": "s-d4",
+  "note": "S tier 대기열. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 453,
+      "workMbid": "9e906d77-a921-3d05-a101-0f757b1c93d2",
+      "composerQid": "Q7315",
+      "titleKo": "교향곡 5번 E단조 Op. 64",
+      "titleEn": "Symphony no. 5 in E minor, op. 64",
+      "composerNameEn": "Pyotr Ilyich Tchaikovsky",
+      "composerNameKo": "표트르 일리치 차이콥스키",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv2-andante-cantabile",
+        "type": "EXCERPT",
+        "nameKo": "2악장 Andante cantabile 도입 (호른 주제)",
+        "nameEn": "II. Andante cantabile, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "저현의 어두운 화음 첫 박(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "k4ifu1KYUKc",
+          "artistId": 291,
+          "artistName": "Kirill Petrenko",
+          "wikidata": "Q478275",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "Ba-98o8Azbg",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "Vrm1ZE-3RgE",
+          "artistId": 289,
+          "artistName": "Valery Gergiev",
+          "wikidata": "Q165693",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 327,
+      "workMbid": "2720522c-d8cb-4d94-b35a-e7773e8e5070",
+      "composerQid": "Q83326",
+      "titleKo": "관현악을 위한 협주곡 Sz. 116",
+      "titleEn": "Concerto for Orchestra, Sz. 116, BB 123",
+      "composerNameEn": "Béla Bartók",
+      "composerNameKo": "벨러 버르토크",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv2-giuoco-delle-coppie",
+        "type": "EXCERPT",
+        "nameKo": "2악장 Giuoco delle coppie 도입 (짝지은 관악기들의 놀이)",
+        "nameEn": "II. Giuoco delle coppie, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "작은북의 홑 리듬 첫 타(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "w8UNxJ8v5CU",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "MISq829UhYs",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "L45vWhtmp6c",
+          "artistId": 218,
+          "artistName": "Gustavo Dudamel",
+          "wikidata": "Q160390",
+          "orchestra": {
+            "name": "Los Angeles Philharmonic",
+            "wikidata": "Q315715"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 328,
+      "workMbid": "0c680f6b-c5cf-4045-a689-df318e794383",
+      "composerQid": "Q83326",
+      "titleKo": "현악기, 타악기, 첼레스타를 위한 음악 Sz. 106",
+      "titleEn": "Music for Strings, Percussion and Celesta, Sz. 106, BB 114",
+      "composerNameEn": "Béla Bartók",
+      "composerNameKo": "벨러 버르토크",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv3-adagio",
+        "type": "EXCERPT",
+        "nameKo": "3악장 Adagio 도입 (밤의 음악)",
+        "nameEn": "III. Adagio, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "실로폰의 홑음 반복 첫 타(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "ATEqWcjJIio",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "VSi4HBFSGV8",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Orchestre symphonique de Montréal",
+            "wikidata": "Q1196259"
+          }
+        },
+        {
+          "videoId": "aTb4-78pi0A",
+          "artistId": 575,
+          "artistName": "Seiji Ozawa",
+          "wikidata": "Q313649",
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        }
+      ]
+    }
+  ]
+}
