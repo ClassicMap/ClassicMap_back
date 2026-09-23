@@ -1,0 +1,174 @@
+{
+  "batchId": "s-d3",
+  "note": "S tier 대기열. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 452,
+      "workMbid": "abc15adc-3442-359e-a051-72a0f5a7f90a",
+      "composerQid": "Q7294",
+      "titleKo": "교향곡 4번 E단조 Op. 98",
+      "titleEn": "Symphony no. 4 in E minor, op. 98",
+      "composerNameEn": "Johannes Brahms",
+      "composerNameKo": "요하네스 브람스",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv1-allegro-non-troppo",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro non troppo 도입 (하행 3도 주제)",
+        "nameEn": "I. Allegro non troppo, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "제1바이올린의 하행 3도 주제 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "onwEcAR3DV0",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "BXEWPP7lPyo",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "e3MUzB3pGdk",
+          "artistId": 634,
+          "artistName": "André Previn",
+          "wikidata": "Q155712",
+          "orchestra": {
+            "name": "Royal Philharmonic Orchestra",
+            "wikidata": "Q856125"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 137,
+      "workMbid": "9676e339-c433-4d26-b28d-a454eec164eb",
+      "composerQid": "Q7351",
+      "titleKo": "교향곡 3번 E♭장조 Op. 97 “라인”",
+      "titleEn": "Symphony no. 3 in E-flat major, op. 97 “Rhenish”",
+      "composerNameEn": "Robert Schumann",
+      "composerNameKo": "로베르트 슈만",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv1-lebhaft",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Lebhaft 도입",
+        "nameEn": "I. Lebhaft, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "총주의 E♭장조 첫 주제 첫 박(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "yRnrDA1qRa4",
+          "artistId": 290,
+          "artistName": "Riccardo Chailly",
+          "wikidata": "Q371795",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "9SFvBXVus08",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "a6m7o1c8-YA",
+          "artistId": 632,
+          "artistName": "Daniel Barenboim",
+          "wikidata": "Q152768",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 158,
+      "workMbid": "15e0a721-5332-3452-8a56-e00af7b9e4ca",
+      "composerQid": "Q7315",
+      "titleKo": "교향곡 6번 B단조 Op. 74 “비창”",
+      "titleEn": "Symphony no. 6 in B minor, op. 74 “Pathétique”",
+      "composerNameEn": "Pyotr Ilyich Tchaikovsky",
+      "composerNameKo": "표트르 일리치 차이콥스키",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv4-adagio-lamentoso",
+        "type": "EXCERPT",
+        "nameKo": "4악장 Adagio lamentoso 도입",
+        "nameEn": "IV. Finale: Adagio lamentoso, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 하행 탄식 주제 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "BZHhkv5umMA",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "PPJq1ANa1KY",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "2TfzG0q9V8o",
+          "artistId": 289,
+          "artistName": "Valery Gergiev",
+          "wikidata": "Q165693",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
+    }
+  ]
+}
