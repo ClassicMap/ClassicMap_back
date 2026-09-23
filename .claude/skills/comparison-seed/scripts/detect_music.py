@@ -62,16 +62,23 @@ def tonal_envelope(vid, y):
     return env
 
 
+# 박수로 보려면 이 평탄도를 넘어야 한다. 백분위만 쓰면 박수가 없는 녹음에서도 늘 상위
+# 7% 가 박수로 잡힌다. 실측에서 스튜디오 녹음 아홉 개의 상위 7% 는 0.004~0.011 이었고
+# 0.05 를 넘는 큰 소리는 0초였다. 실황(뉴이어 콘서트)은 0.05 넘는 큰 소리가 22.6초였다.
+CLAP_FLATNESS = 0.05
+
+
 def clap_mask(vid, y, frames):
     """박수 구간. 넓은 대역에 고르게 퍼진 소리가 크게 들리는 곳이다."""
-    cache = os.path.join(BASE, f"{vid}.clap.npy")
+    # 규칙이 바뀌면 이름을 올린다. 예전 캐시를 그대로 읽으면 고친 것이 적용되지 않는다.
+    cache = os.path.join(BASE, f"{vid}.clap2.npy")
     if os.path.exists(cache):
         mask = np.load(cache)
     else:
         flat = librosa.feature.spectral_flatness(y=y, hop_length=HOP)[0]
         rms = librosa.feature.rms(y=y, hop_length=HOP)[0]
         db = librosa.amplitude_to_db(rms, ref=np.max)
-        mask = (flat > np.percentile(flat, 93)) & (db > -38)
+        mask = (flat > np.percentile(flat, 93)) & (flat > CLAP_FLATNESS) & (db > -38)
         mask = close_gaps(mask, 1.5)
         mask = scipy.ndimage.binary_opening(mask, np.ones(int(1.0 * SR / HOP)))
         np.save(cache, mask)

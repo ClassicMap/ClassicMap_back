@@ -1,0 +1,206 @@
+{
+  "batchId": "s-c2",
+  "note": "S tier 대기열. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 122,
+      "workMbid": "c230858f-8b2b-3e77-aa3e-777743980263",
+      "composerQid": "Q46096",
+      "titleKo": "바이올린 협주곡 E단조 Op. 64",
+      "titleEn": "Violin Concerto in E minor, op. 64",
+      "composerNameEn": "Felix Mendelssohn",
+      "composerNameKo": "펠릭스 멘델스존",
+      "role": "VIOLINIST",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 도입 (독주 첫 주제)",
+        "nameEn": "I. Allegro molto appassionato, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악의 여린 서주와 독주 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "7_7fLTLHV2Q",
+          "artistId": 209,
+          "artistName": "Hilary Hahn",
+          "wikidata": "Q235406",
+          "conductor": {
+            "name": "Hugh Wolff",
+            "wikidata": "Q320019"
+          },
+          "orchestra": {
+            "name": "Oslo Philharmonic Orchestra",
+            "wikidata": "Q1063440"
+          }
+        },
+        {
+          "videoId": "uIVrAuHQlqc",
+          "artistId": 211,
+          "artistName": "Anne-Sophie Mutter",
+          "wikidata": "Q3374",
+          "conductor": {
+            "name": "Herbert von Karajan",
+            "wikidata": "Q154895"
+          },
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "TUcbAsmgRk8",
+          "artistId": 210,
+          "artistName": "Joshua Bell",
+          "wikidata": "Q312792",
+          "conductor": {
+            "name": "Neville Marriner",
+            "wikidata": "Q318636"
+          },
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 74,
+      "workMbid": "d180cb96-0471-4626-bf85-d8083df7272e",
+      "composerQid": "Q254",
+      "titleKo": "클라리넷 협주곡 A장조 K. 622",
+      "titleEn": "Concerto for Clarinet in A major, K. 622",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "CLARINETIST",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv2-adagio",
+        "type": "EXCERPT",
+        "nameKo": "2악장 Adagio 도입",
+        "nameEn": "II. Adagio, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "클라리넷 주제의 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "J4ocVFqn7CY",
+          "artistId": 309,
+          "artistName": "Sabine Meyer",
+          "wikidata": "Q263349",
+          "conductor": {
+            "name": "Claudio Abbado",
+            "wikidata": "Q151608"
+          },
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "9Sz74TNeWsk",
+          "artistId": 550,
+          "artistName": "Ernst Ottensamer",
+          "wikidata": "Q89154",
+          "conductor": {
+            "name": "Colin Davis",
+            "wikidata": "Q366624"
+          },
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "VpDq4Wu2f0A",
+          "artistId": 308,
+          "artistName": "Martin Fröst",
+          "wikidata": "Q961572",
+          "orchestra": {
+            "name": "Swedish Chamber Orchestra",
+            "wikidata": "Q2036196"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 321,
+      "workMbid": "357a8194-bc80-478b-86cd-e3a90fe28c39",
+      "composerQid": "Q80135",
+      "titleKo": "첼로 협주곡 1번 E♭장조 Op. 107",
+      "titleEn": "Cello Concerto no. 1 in E-flat major, op. 107",
+      "composerNameEn": "Dmitri Shostakovich",
+      "composerNameKo": "드미트리 드미트리예비치 쇼스타코비치",
+      "role": "CELLIST",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 90
+      },
+      "sector": {
+        "key": "mv1-allegretto",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegretto 도입",
+        "nameEn": "I. Allegretto, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "첼로의 네 음 동기 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "uzd3nnYm0ww",
+          "artistId": 215,
+          "artistName": "Yo-Yo Ma",
+          "wikidata": "Q234891",
+          "conductor": {
+            "name": "Andris Nelsons",
+            "wikidata": "Q511817"
+          },
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "c8AT5v9lm8Y",
+          "artistId": 277,
+          "artistName": "Gautier Capuçon",
+          "wikidata": "Q689479",
+          "conductor": {
+            "name": "Valery Gergiev",
+            "wikidata": "Q165693"
+          },
+          "orchestra": {
+            "name": "Mariinsky Orchestra",
+            "wikidata": "Q4419936"
+          }
+        },
+        {
+          "videoId": "PLOGc6DXDyA",
+          "artistId": 216,
+          "artistName": "Mischa Maisky",
+          "wikidata": "Q381759",
+          "conductor": {
+            "name": "Michael Tilson Thomas",
+            "wikidata": "Q520493"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
+    }
+  ]
+}
