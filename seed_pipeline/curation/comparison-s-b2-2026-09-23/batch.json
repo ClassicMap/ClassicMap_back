@@ -1,0 +1,174 @@
+{
+  "batchId": "s-b2",
+  "note": "S tier 대기열. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 124,
+      "workMbid": "59f6e454-fc95-30d0-ab26-1ece5af0ea78",
+      "composerQid": "Q46096",
+      "titleKo": "교향곡 4번 A장조 Op. 90 “이탈리아”",
+      "titleEn": "Symphony no. 4 in A major, op. 90 “Italian”",
+      "composerNameEn": "Felix Mendelssohn",
+      "composerNameKo": "펠릭스 멘델스존",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-allegro-vivace",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro vivace 도입",
+        "nameEn": "I. Allegro vivace, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관악의 반복 화음 위 바이올린 제1주제 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "NAJoIDBm81M",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "v9Zl1lXhmWs",
+          "artistId": 577,
+          "artistName": "Neville Marriner",
+          "wikidata": "Q318636",
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        },
+        {
+          "videoId": "oUdINtPpiIw",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      }
+    },
+    {
+      "pieceId": 119,
+      "workMbid": "b1e3d631-47fb-49fe-8d60-6f0dc7cbe0d8",
+      "composerQid": "Q7312",
+      "titleKo": "교향곡 8번 B단조 D. 759 “미완성”",
+      "titleEn": "Symphony no. 8 in B minor, D. 759 “Unfinished”",
+      "composerNameEn": "Franz Schubert",
+      "composerNameKo": "프란츠 슈베르트",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-allegro-moderato",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro moderato 도입",
+        "nameEn": "I. Allegro moderato, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "저현의 여린 서주 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "5zNI5FgGzjA",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "Cmmgdn22irU",
+          "artistId": 601,
+          "artistName": "Karl Böhm",
+          "wikidata": "Q84241",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "3iBKH2aZUuw",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Chamber Orchestra of Europe",
+            "wikidata": "Q661670"
+          }
+        }
+      ],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      }
+    },
+    {
+      "pieceId": 83,
+      "workMbid": "3e1453b3-0bae-42d2-8768-fc891bde8faf",
+      "composerQid": "Q7349",
+      "titleKo": "교향곡 94번 G장조 Hob. I:94 “놀람”",
+      "titleEn": "Symphony no. 94 in G major, Hob. I:94 “Surprise”",
+      "composerNameEn": "Joseph Haydn",
+      "composerNameKo": "프란츠 요제프 하이든",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv2-andante",
+        "type": "EXCERPT",
+        "nameKo": "2악장 Andante 도입 (놀람 화음)",
+        "nameEn": "II. Andante, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 여린 주제 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "xiytuHvoPdg",
+          "artistId": 577,
+          "artistName": "Neville Marriner",
+          "wikidata": "Q318636",
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        },
+        {
+          "videoId": "14G_PDZWXVE",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "oTRi5mTZgcQ",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        }
+      ],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 90
+      }
+    }
+  ]
+}
