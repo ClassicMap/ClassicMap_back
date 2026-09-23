@@ -1,0 +1,174 @@
+{
+  "batchId": "s-d2",
+  "note": "S tier 대기열. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 77,
+      "workMbid": "80737426-8ef3-3a9c-a3a6-9507afb93e93",
+      "composerQid": "Q255",
+      "titleKo": "교향곡 3번 E♭장조 Op. 55 “영웅”",
+      "titleEn": "Symphony no. 3 in E-flat major, op. 55 “Eroica”",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv2-marcia-funebre",
+        "type": "EXCERPT",
+        "nameKo": "2악장 장송행진곡 도입",
+        "nameEn": "II. Marcia funebre: Adagio assai, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "제1바이올린의 C단조 행진 주제 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "MwmupVj_qxg",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "HzT8ZL0Gvz8",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "fnnmEEeq5fc",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 153,
+      "workMbid": "c1b0e8a2-2461-4d48-9a89-f4e6d624d342",
+      "composerQid": "Q7294",
+      "titleKo": "교향곡 1번 C단조 Op. 68",
+      "titleEn": "Symphony no. 1 in C minor, op. 68",
+      "composerNameEn": "Johannes Brahms",
+      "composerNameKo": "요하네스 브람스",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv1-un-poco-sostenuto",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Un poco sostenuto 서주 (팀파니 오스티나토)",
+        "nameEn": "I. Un poco sostenuto, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "팀파니 오스티나토와 현의 반음계 상행 첫 박(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "MIvEyGm7AKc",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "SHK95KzvtFE",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "seb6kB0CcBM",
+          "artistId": 290,
+          "artistName": "Riccardo Chailly",
+          "wikidata": "Q371795",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 154,
+      "workMbid": "e79fbd3e-02f2-4d16-b9fe-cf66e9facd27",
+      "composerQid": "Q7294",
+      "titleKo": "교향곡 3번 F장조 Op. 90",
+      "titleEn": "Symphony no. 3 in F major, op. 90",
+      "composerNameEn": "Johannes Brahms",
+      "composerNameKo": "요하네스 브람스",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv3-poco-allegretto",
+        "type": "EXCERPT",
+        "nameKo": "3악장 Poco allegretto 주제",
+        "nameEn": "III. Poco allegretto, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "첼로가 내는 C단조 주제의 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "t9ndxDhgZBM",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "9F4_D9g0V9E",
+          "artistId": 290,
+          "artistName": "Riccardo Chailly",
+          "wikidata": "Q371795",
+          "orchestra": {
+            "name": "Gewandhausorchester Leipzig",
+            "wikidata": "Q156515"
+          }
+        },
+        {
+          "videoId": "0fk0Ov7A1UI",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        }
+      ]
+    }
+  ]
+}
