@@ -1,0 +1,162 @@
+{
+  "batchId": "s-e2",
+  "note": "S tier 대기열 발레·부수음악 낱곡. 낱 트랙 영상을 쓰므로 excerpt 를 두지 않는다.",
+  "pieces": [
+    {
+      "pieceId": 310,
+      "workMbid": "2fbaaf2d-deff-46fb-ac15-ac76e9e56eca",
+      "composerQid": "Q7314",
+      "titleKo": "발레 <불새>",
+      "titleEn": "L’Oiseau de feu",
+      "composerNameEn": "Igor Stravinsky",
+      "composerNameKo": "이고르 스트라빈스키",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "danse-infernale",
+        "type": "EXCERPT",
+        "nameKo": "“마왕 카슈체이의 흉악한 춤”",
+        "nameEn": "Danse infernale du roi Kastcheï",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 총주의 첫 충격 화음",
+        "endCue": "춤의 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "o-uxOk7SW80",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Orchestre symphonique de Montréal",
+            "wikidata": "Q1196259"
+          }
+        },
+        {
+          "videoId": "puhDdq1jCnw",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "FbFRNjZvK2A",
+          "artistId": 218,
+          "artistName": "Gustavo Dudamel",
+          "wikidata": "Q160390",
+          "orchestra": {
+            "name": "Los Angeles Philharmonic",
+            "wikidata": "Q315715"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 311,
+      "workMbid": "57deae1f-4fb3-40c3-aa4f-3167ea0e806a",
+      "composerQid": "Q7314",
+      "titleKo": "발레 <페트루슈카>",
+      "titleEn": "Pétrouchka",
+      "composerNameEn": "Igor Stravinsky",
+      "composerNameKo": "이고르 스트라빈스키",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "danse-russe",
+        "type": "EXCERPT",
+        "nameKo": "1장 “러시아의 춤”",
+        "nameEn": "Tableau I: Danse russe",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "피아노와 관현악의 첫 박",
+        "endCue": "춤의 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "N4lne1URCe0",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "DfM3_Ii-cOA",
+          "artistId": 575,
+          "artistName": "Seiji Ozawa",
+          "wikidata": "Q313649",
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "s8pT6TwGUJs",
+          "artistId": 630,
+          "artistName": "Michael Tilson Thomas",
+          "wikidata": "Q520493",
+          "orchestra": {
+            "name": "Philharmonia Orchestra",
+            "wikidata": "Q1046309"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 123,
+      "workMbid": "e2a0b12c-c31c-4802-a57d-6bc2a9266e0f",
+      "composerQid": "Q46096",
+      "titleKo": "<한여름 밤의 꿈> 부수음악 Op. 61",
+      "titleEn": "Ein Sommernachtstraum, op. 61",
+      "composerNameEn": "Felix Mendelssohn",
+      "composerNameKo": "펠릭스 멘델스존",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "hochzeitsmarsch",
+        "type": "EXCERPT",
+        "nameKo": "“결혼 행진곡”",
+        "nameEn": "Hochzeitsmarsch (Wedding March)",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "트럼펫 팡파르의 첫 음",
+        "endCue": "행진곡 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "QeSEuY9tdPs",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Orchestre symphonique de Montréal",
+            "wikidata": "Q1196259"
+          }
+        },
+        {
+          "videoId": "rNucITfyRKc",
+          "artistId": 575,
+          "artistName": "Seiji Ozawa",
+          "wikidata": "Q313649",
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "GvZINNKR4E0",
+          "artistId": 634,
+          "artistName": "André Previn",
+          "wikidata": "Q155712",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
+    }
+  ]
+}
