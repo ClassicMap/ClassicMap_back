@@ -1,0 +1,174 @@
+{
+  "batchId": "s-b4",
+  "note": "S tier 대기열. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 438,
+      "workMbid": "c7caedf2-954f-394b-9601-5878b76577ac",
+      "composerQid": "Q255",
+      "titleKo": "교향곡 7번 A장조 Op. 92",
+      "titleEn": "Symphony no. 7 in A major, op. 92",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv2-allegretto",
+        "type": "EXCERPT",
+        "nameKo": "2악장 Allegretto 도입 (오스티나토 주제)",
+        "nameEn": "II. Allegretto, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "목관의 A단조 화음과 저현의 오스티나토 첫 박(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "_Hpkju-9Iv8",
+          "artistId": 287,
+          "artistName": "Iván Fischer",
+          "wikidata": "Q933913",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "VtsTSdPbP4U",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "Vi05EG6sTVQ",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 437,
+      "workMbid": "60e1dcf6-e728-35be-8948-ba74500b6c6e",
+      "composerQid": "Q255",
+      "titleKo": "교향곡 6번 F장조 Op. 68 “전원”",
+      "titleEn": "Symphony no. 6 in F major, op. 68 “Pastorale”",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro ma non troppo 도입 (시골에 도착한 기분)",
+        "nameEn": "I. Allegro ma non troppo, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 첫 주제 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "OqyRXm6rzZU",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "zbyO7qRoB7E",
+          "artistId": 601,
+          "artistName": "Karl Böhm",
+          "wikidata": "Q84241",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "qK206KusWDc",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 454,
+      "workMbid": "ec6691e5-79c3-471b-b82d-e94462e42e14",
+      "composerQid": "Q7315",
+      "titleKo": "현을 위한 세레나데 C장조 Op. 48",
+      "titleEn": "Serenade for Strings in C major, op. 48",
+      "composerNameEn": "Pyotr Ilyich Tchaikovsky",
+      "composerNameKo": "표트르 일리치 차이콥스키",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv1-pezzo-in-forma-di-sonatina",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Pezzo in forma di sonatina 도입 (찬가풍 서주)",
+        "nameEn": "I. Pezzo in forma di sonatina, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "전 현의 찬가풍 화음 첫 박(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "2lSwwXNmdkY",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "jMcB6Nep4WM",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "BgHRvJuIs1U",
+          "artistId": 577,
+          "artistName": "Sir Neville Marriner",
+          "wikidata": "Q318636",
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        }
+      ]
+    }
+  ]
+}
