@@ -1,0 +1,162 @@
+{
+  "batchId": "s-f1",
+  "note": "S tier 대기열 성악 표본. videos 는 서브에이전트가 채운다. 셋 다 전곡이라 발췌하지 않는다.",
+  "pieces": [
+    {
+      "pieceId": 117,
+      "workMbid": "d783dab0-9f74-3226-81a0-645de2b56d3e",
+      "composerQid": "Q7312",
+      "titleKo": "가곡 <마왕> D. 328",
+      "titleEn": "Erlkönig, D. 328",
+      "composerNameEn": "Franz Schubert",
+      "composerNameKo": "프란츠 페터 슈베르트",
+      "role": "VOCALIST",
+      "sector": {
+        "key": "whole",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "피아노의 셋잇단음 반주 첫 음",
+        "endCue": "\"in seinen Armen das Kind war tot\" 뒤 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "DbpCe9XzLjI",
+          "artistName": "Dietrich Fischer-Dieskau",
+          "wikidata": "Q77060",
+          "accompanist": {
+            "name": "Gerald Moore",
+            "wikidata": "Q712017"
+          }
+        },
+        {
+          "videoId": "9E12rdMTKfc",
+          "artistName": "Bryn Terfel",
+          "wikidata": "Q322211",
+          "accompanist": {
+            "name": "Malcolm Martineau",
+            "wikidata": "Q6742481"
+          }
+        },
+        {
+          "videoId": "hkS2SNtoaX8",
+          "artistName": "Matthias Goerne",
+          "wikidata": "Q70390",
+          "accompanist": {
+            "name": "Andreas Haefliger",
+            "wikidata": "Q388020"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 151,
+      "workMbid": "8c33f7c4-23cf-43d0-a638-f2c2901ed646",
+      "composerQid": "Q7317",
+      "titleKo": "오페라 <나부코> 중 “히브리 노예들의 합창”",
+      "titleEn": "Nabucco: Atto III. “Va, pensiero” (Coro)",
+      "composerNameEn": "Giuseppe Verdi",
+      "composerNameKo": "주세페 베르디",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole",
+        "type": "EXCERPT",
+        "nameKo": "합창 전체",
+        "nameEn": "Complete chorus",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 서주의 첫 음",
+        "endCue": "합창 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "zIkVAT-AKew",
+          "artistName": "Riccardo Muti",
+          "artistId": 427,
+          "wikidata": "Q276038",
+          "choir": {
+            "name": "Ambrosian Singers",
+            "wikidata": "Q2588958"
+          },
+          "orchestra": {
+            "name": "Philharmonia Orchestra",
+            "wikidata": "Q1046309"
+          }
+        },
+        {
+          "videoId": "XI5wvuB3jAQ",
+          "artistName": "Riccardo Chailly",
+          "artistId": 290,
+          "wikidata": "Q371795",
+          "choir": {
+            "name": "Coro del Teatro alla Scala di Milano",
+            "wikidata": "Q3923908"
+          },
+          "orchestra": {
+            "name": "Orchestra del Teatro alla Scala di Milano",
+            "wikidata": "Q913873"
+          }
+        },
+        {
+          "videoId": "aiSSz0snWzA",
+          "artistName": "James Conlon",
+          "artistId": 628,
+          "wikidata": "Q1348801",
+          "orchestra": {
+            "name": "Orchestra del Teatro La Fenice",
+            "wikidata": "Q102281356"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 146,
+      "workMbid": "5a75bea9-985d-4267-9a0a-2ace57e20716",
+      "composerQid": "Q1511",
+      "titleKo": "오페라 <로엔그린> 중 “혼례의 합창”",
+      "titleEn": "Lohengrin, WWV 75: Akt III, Szene I. „Treulich geführt ziehet dahin“",
+      "composerNameEn": "Richard Wagner",
+      "composerNameKo": "빌헬름 리하르트 바그너",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole",
+        "type": "EXCERPT",
+        "nameKo": "합창 전체",
+        "nameEn": "Complete chorus",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 서주의 첫 음",
+        "endCue": "합창 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "5LSl_gMLGjc",
+          "artistName": "Colin Davis",
+          "artistId": 629,
+          "wikidata": "Q366624",
+          "orchestra": {
+            "name": "Symphonieorchester des Bayerischen Rundfunks",
+            "wikidata": "Q636159"
+          }
+        },
+        {
+          "videoId": "iGB7YvXHVtU",
+          "artistName": "Wolfgang Sawallisch",
+          "artistId": 473,
+          "wikidata": "Q61205",
+          "orchestra": {
+            "name": "Bayreuther Festspielorchester",
+            "wikidata": "Q11327489"
+          }
+        },
+        {
+          "videoId": "D4rgx14OabI",
+          "artistName": "Rafael Frühbeck de Burgos",
+          "wikidata": "Q549617"
+        }
+      ]
+    }
+  ]
+}
