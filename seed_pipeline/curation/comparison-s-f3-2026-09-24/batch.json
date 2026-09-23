@@ -1,0 +1,176 @@
+{
+  "batchId": "s-f3",
+  "note": "S tier 대기열 서곡·아리아. 147 만 발췌하고 나머지는 낱 트랙 그대로 쓴다.",
+  "pieces": [
+    {
+      "pieceId": 338,
+      "workMbid": "f27a6729-0610-348e-83b3-d55c5d53ff86",
+      "composerQid": "Q152505",
+      "titleKo": "오페레타 <캔디드> 서곡",
+      "titleEn": "Candide: Overture",
+      "composerNameEn": "Leonard Bernstein",
+      "composerNameKo": "레너드 번스타인",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole",
+        "type": "EXCERPT",
+        "nameKo": "서곡 전곡",
+        "nameEn": "Overture, complete",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 총주의 첫 팡파르",
+        "endCue": "서곡 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "upZPGNYkBe4",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "tD9LYIvFans",
+          "artistId": 219,
+          "artistName": "Yannick Nézet-Séguin",
+          "wikidata": "Q951548",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "AC2gqgiisl4",
+          "artistId": 218,
+          "artistName": "Gustavo Dudamel",
+          "wikidata": "Q160390",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 147,
+      "workMbid": "1cba82ba-a6f3-3590-a0c1-b9e742fa742d",
+      "composerQid": "Q1511",
+      "titleKo": "오페라 <탄호이저> 서곡",
+      "titleEn": "Tannhäuser und der Sängerkrieg auf Wartburg, WWV 70: Ouvertüre",
+      "composerNameEn": "Richard Wagner",
+      "composerNameKo": "빌헬름 리하르트 바그너",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "opening",
+        "type": "EXCERPT",
+        "nameKo": "서곡 도입 (순례자의 합창 주제)",
+        "nameEn": "Overture, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "클라리넷·바순·호른의 순례자 합창 주제 첫 음",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "L1FJDkSG-oA",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "AXiXjpq-jzM",
+          "artistId": 288,
+          "artistName": "Mariss Jansons",
+          "wikidata": "Q158340",
+          "orchestra": {
+            "name": "Symphonieorchester des Bayerischen Rundfunks",
+            "wikidata": "Q636159"
+          }
+        },
+        {
+          "videoId": "NItNBq_Rw0A",
+          "artistId": 293,
+          "artistName": "Andris Nelsons",
+          "wikidata": "Q511817",
+          "orchestra": {
+            "name": "Gewandhausorchester Leipzig",
+            "wikidata": "Q156515"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 70,
+      "workMbid": "e208c5f5-5d37-3dfc-ac0b-999f207c9e46",
+      "composerQid": "Q254",
+      "titleKo": "오페라 <마술피리> K. 620",
+      "titleEn": "Die Zauberflöte, K. 620",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "SOPRANO",
+      "sector": {
+        "key": "der-holle-rache",
+        "type": "EXCERPT",
+        "nameKo": "2막 “밤의 여왕 아리아” (지옥의 복수가 내 마음에 끓어오르고)",
+        "nameEn": "Act II: “Der Hölle Rache kocht in meinem Herzen”",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 전주의 첫 박",
+        "endCue": "아리아 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "mjceJ1hywLs",
+          "artistId": 199,
+          "artistName": "Sumi Jo",
+          "wikidata": "Q235200",
+          "conductor": {
+            "name": "Georg Solti",
+            "wikidata": "Q128085"
+          },
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "WMMj6UXdVBE",
+          "artistName": "Erika Miklósa",
+          "wikidata": "Q448192",
+          "conductor": {
+            "name": "Claudio Abbado",
+            "wikidata": "Q151608"
+          },
+          "orchestra": {
+            "name": "Mahler Chamber Orchestra",
+            "wikidata": "Q573902"
+          }
+        },
+        {
+          "videoId": "h9AT24gcMRI",
+          "artistName": "Edita Gruberová",
+          "wikidata": "Q235549",
+          "conductor": {
+            "name": "Nikolaus Harnoncourt",
+            "wikidata": "Q78526"
+          },
+          "orchestra": {
+            "name": "Orchester der Oper Zürich",
+            "wikidata": "Q16854096"
+          }
+        }
+      ]
+    }
+  ]
+}

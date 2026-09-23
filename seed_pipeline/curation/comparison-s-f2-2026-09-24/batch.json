@@ -1,0 +1,206 @@
+{
+  "batchId": "s-f2",
+  "note": "S tier 대기열 베르디 오페라 낱곡. 낱 트랙 영상을 쓰므로 excerpt 를 두지 않는다.",
+  "pieces": [
+    {
+      "pieceId": 149,
+      "workMbid": "2dc7fb62-ae9b-4e0d-9296-42c9234923f5",
+      "composerQid": "Q7317",
+      "titleKo": "오페라 <리골레토>",
+      "titleEn": "Rigoletto",
+      "composerNameEn": "Giuseppe Verdi",
+      "composerNameKo": "주세페 베르디",
+      "role": "TENOR",
+      "sector": {
+        "key": "la-donna-e-mobile",
+        "type": "EXCERPT",
+        "nameKo": "3막 “여자의 마음”",
+        "nameEn": "Act III: “La donna è mobile”",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 전주의 첫 박",
+        "endCue": "아리아 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "13OYF5JuuSI",
+          "artistId": 300,
+          "artistName": "Jonas Kaufmann",
+          "wikidata": "Q62358",
+          "conductor": {
+            "name": "Pier Giorgio Morandi",
+            "wikidata": "Q106688028"
+          }
+        },
+        {
+          "videoId": "FLBKImFQJyo",
+          "artistId": 302,
+          "artistName": "Piotr Beczala",
+          "wikidata": "Q614016",
+          "conductor": {
+            "name": "Ion Marin",
+            "wikidata": "Q4281466"
+          },
+          "orchestra": {
+            "name": "Munich Radio Orchestra",
+            "wikidata": "Q457183"
+          }
+        },
+        {
+          "videoId": "EocxrP8LqBE",
+          "artistId": 301,
+          "artistName": "Juan Diego Florez",
+          "wikidata": "Q160427",
+          "conductor": {
+            "name": "Carlo Rizzi",
+            "wikidata": "Q5041594"
+          },
+          "orchestra": {
+            "name": "Orchestra Sinfonica di Milano",
+            "wikidata": "Q384339"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 148,
+      "workMbid": "24df0a9b-7977-4ff6-a4dc-7ad71db6972c",
+      "composerQid": "Q7317",
+      "titleKo": "오페라 <라 트라비아타>",
+      "titleEn": "La traviata",
+      "composerNameEn": "Giuseppe Verdi",
+      "composerNameKo": "주세페 베르디",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "brindisi",
+        "type": "EXCERPT",
+        "nameKo": "1막 “축배의 노래”",
+        "nameEn": "Act I: Brindisi “Libiamo ne’ lieti calici”",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 전주의 첫 박",
+        "endCue": "합창 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "nECNTyAdlL4",
+          "artistId": 561,
+          "artistName": "Carlos Kleiber",
+          "wikidata": "Q160706",
+          "orchestra": {
+            "name": "Bavarian State Orchestra",
+            "wikidata": "Q683117"
+          },
+          "singers": [
+            {
+              "role": "SOPRANO",
+              "name": "Ileana Cotrubas",
+              "wikidata": "Q240098"
+            },
+            {
+              "role": "TENOR",
+              "name": "Placido Domingo",
+              "wikidata": "Q130853"
+            }
+          ]
+        },
+        {
+          "videoId": "l2hrTGtB2ao",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "orchestra": {
+            "name": "Orchestra del Teatro alla Scala",
+            "wikidata": "Q913873"
+          },
+          "singers": [
+            {
+              "role": "SOPRANO",
+              "name": "Tiziana Fabbricini",
+              "wikidata": "Q3991977"
+            },
+            {
+              "role": "TENOR",
+              "name": "Roberto Alagna",
+              "wikidata": "Q267617"
+            }
+          ]
+        },
+        {
+          "videoId": "GVWxkoHGwfk",
+          "artistId": null,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Orchestra of the Royal Opera House",
+            "wikidata": "Q11350146"
+          },
+          "singers": [
+            {
+              "role": "SOPRANO",
+              "name": "Angela Gheorghiu",
+              "wikidata": "Q159092"
+            },
+            {
+              "role": "TENOR",
+              "name": "Frank Lopardo",
+              "wikidata": "Q5488007"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pieceId": 150,
+      "workMbid": "6675ed9c-9b8b-43f0-9cd7-3df843b6e8d8",
+      "composerQid": "Q7317",
+      "titleKo": "오페라 <아이다>",
+      "titleEn": "Aida",
+      "composerNameEn": "Giuseppe Verdi",
+      "composerNameKo": "주세페 베르디",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "marcia-trionfale",
+        "type": "EXCERPT",
+        "nameKo": "2막 “개선 행진곡”",
+        "nameEn": "Act II: Marcia trionfale (Grand March)",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "아이다 트럼펫의 팡파르 첫 음",
+        "endCue": "행진곡 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "djCRcOy95P8",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "FKBHKD9Ke7M",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "orchestra": {
+            "name": "Philharmonia Orchestra",
+            "wikidata": "Q1046309"
+          }
+        },
+        {
+          "videoId": "zEI6p5hLtcg",
+          "artistId": 286,
+          "artistName": "Antonio Pappano",
+          "wikidata": "Q1125383",
+          "orchestra": {
+            "name": "Orchestra dell'Accademia Nazionale di Santa Cecilia",
+            "wikidata": "Q1328398"
+          }
+        }
+      ]
+    }
+  ]
+}
