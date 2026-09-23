@@ -1,0 +1,162 @@
+{
+  "batchId": "s-f4",
+  "note": "S tier 대기열 레퀴엠 낱곡. 낱 트랙 영상을 쓰므로 excerpt 를 두지 않는다.",
+  "pieces": [
+    {
+      "pieceId": 71,
+      "workMbid": "e3442502-1d20-44ec-9c39-2655956840e2",
+      "composerQid": "Q254",
+      "titleKo": "레퀴엠 D단조 K. 626",
+      "titleEn": "Requiem, K. 626",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "lacrimosa",
+        "type": "EXCERPT",
+        "nameKo": "“라크리모사”",
+        "nameEn": "Sequentia: Lacrimosa",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 한숨 동형 첫 박",
+        "endCue": "“Amen” 뒤 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "sRq1iZi3inE",
+          "artistId": 629,
+          "artistName": "Colin Davis",
+          "wikidata": "Q366624",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "W_kSfXbmwS4",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "haXQnBzaiko",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 152,
+      "workMbid": "2d73a8a6-cead-4464-bd6f-5a55d8ad2752",
+      "composerQid": "Q7317",
+      "titleKo": "레퀴엠",
+      "titleEn": "Messa da requiem",
+      "composerNameEn": "Giuseppe Verdi",
+      "composerNameKo": "주세페 베르디",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "dies-irae",
+        "type": "EXCERPT",
+        "nameKo": "“진노의 날”",
+        "nameEn": "Dies irae",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "총주의 첫 충격 화음",
+        "endCue": "“진노의 날” 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "2WkML_wUvJc",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "osalGR5xSfc",
+          "artistId": 632,
+          "artistName": "Daniel Barenboim",
+          "wikidata": "Q152768",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "1LzBXe9--oM",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 157,
+      "workMbid": "362813da-c202-4c15-86af-5dcea05242de",
+      "composerQid": "Q7294",
+      "titleKo": "독일 레퀴엠 Op. 45",
+      "titleEn": "Ein deutsches Requiem, op. 45",
+      "composerNameEn": "Johannes Brahms",
+      "composerNameKo": "요하네스 브람스",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv4-wie-lieblich",
+        "type": "EXCERPT",
+        "nameKo": "4곡 “주의 장막이 어찌 그리 사랑스러운지”",
+        "nameEn": "IV. Wie lieblich sind deine Wohnungen",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 전주의 첫 박",
+        "endCue": "합창 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "DXAevclIZzg",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "kA8nFf-GlXs",
+          "artistId": 220,
+          "artistName": "Simon Rattle",
+          "wikidata": "Q157814",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "ProgBvky4UM",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        }
+      ]
+    }
+  ]
+}

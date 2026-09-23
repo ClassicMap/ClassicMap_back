@@ -1,0 +1,69 @@
+{
+  "batchId": "s-f2",
+  "note": "S tier 대기열 베르디 오페라 낱곡. 낱 트랙 영상을 쓰므로 excerpt 를 두지 않는다.",
+  "pieces": [
+    {
+      "pieceId": 149,
+      "workMbid": "2dc7fb62-ae9b-4e0d-9296-42c9234923f5",
+      "composerQid": "Q7317",
+      "titleKo": "오페라 <리골레토>",
+      "titleEn": "Rigoletto",
+      "composerNameEn": "Giuseppe Verdi",
+      "composerNameKo": "주세페 베르디",
+      "role": "TENOR",
+      "sector": {
+        "key": "la-donna-e-mobile",
+        "type": "EXCERPT",
+        "nameKo": "3막 “여자의 마음”",
+        "nameEn": "Act III: “La donna è mobile”",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 전주의 첫 박",
+        "endCue": "아리아 마지막 화음"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 148,
+      "workMbid": "24df0a9b-7977-4ff6-a4dc-7ad71db6972c",
+      "composerQid": "Q7317",
+      "titleKo": "오페라 <라 트라비아타>",
+      "titleEn": "La traviata",
+      "composerNameEn": "Giuseppe Verdi",
+      "composerNameKo": "주세페 베르디",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "brindisi",
+        "type": "EXCERPT",
+        "nameKo": "1막 “축배의 노래”",
+        "nameEn": "Act I: Brindisi “Libiamo ne’ lieti calici”",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 전주의 첫 박",
+        "endCue": "합창 마지막 화음"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 150,
+      "workMbid": "6675ed9c-9b8b-43f0-9cd7-3df843b6e8d8",
+      "composerQid": "Q7317",
+      "titleKo": "오페라 <아이다>",
+      "titleEn": "Aida",
+      "composerNameEn": "Giuseppe Verdi",
+      "composerNameKo": "주세페 베르디",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "marcia-trionfale",
+        "type": "EXCERPT",
+        "nameKo": "2막 “개선 행진곡”",
+        "nameEn": "Act II: Marcia trionfale (Grand March)",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "아이다 트럼펫의 팡파르 첫 음",
+        "endCue": "행진곡 마지막 화음"
+      },
+      "videos": []
+    }
+  ]
+}
