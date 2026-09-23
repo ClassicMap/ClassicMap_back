@@ -1,0 +1,189 @@
+{
+  "batchId": "s-c5",
+  "note": "S tier 대기열. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 441,
+      "workMbid": "53ac5ed4-77f8-41cf-8d3e-f9e5c6643220",
+      "composerQid": "Q255",
+      "titleKo": "피아노 3중주 7번 B♭장조 Op. 97 “대공”",
+      "titleEn": "Trio for Piano, Violin and Cello no. 7 in B-flat major, op. 97 “Archduke”",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "PIANIST",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv3-andante-cantabile",
+        "type": "EXCERPT",
+        "nameKo": "3악장 Andante cantabile 주제",
+        "nameEn": "III. Andante cantabile, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "피아노가 내는 D장조 찬가풍 주제의 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "AGM9mzfPnb4",
+          "artistId": 632,
+          "artistName": "Daniel Barenboim",
+          "wikidata": "Q152768",
+          "violinist": {
+            "name": "Michael Barenboim",
+            "wikidata": "Q15449943"
+          },
+          "cellist": {
+            "name": "Kian Soltani",
+            "wikidata": "Q55640253"
+          }
+        },
+        {
+          "videoId": "Q96U0kJZ7zE",
+          "artistId": 370,
+          "artistName": "Vladimir Ashkenazy",
+          "wikidata": "Q157785",
+          "violinist": {
+            "name": "Itzhak Perlman",
+            "wikidata": "Q215905"
+          },
+          "cellist": {
+            "name": "Lynn Harrell",
+            "wikidata": "Q60317"
+          }
+        },
+        {
+          "videoId": "ApbXavHDqL0",
+          "artistId": 634,
+          "artistName": "André Previn",
+          "wikidata": "Q155712",
+          "violinist": {
+            "name": "Viktoria Mullova",
+            "wikidata": "Q268575"
+          },
+          "cellist": {
+            "name": "Heinrich Schiff",
+            "wikidata": "Q662066"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 448,
+      "workMbid": "9e6cbe3d-ac22-4255-aece-07df8edc5d6f",
+      "composerQid": "Q7351",
+      "titleKo": "피아노 5중주 E♭장조 Op. 44",
+      "titleEn": "Piano Quintet in E-flat major, op. 44",
+      "composerNameEn": "Robert Schumann",
+      "composerNameKo": "로베르트 슈만",
+      "role": "PIANIST",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv1-allegro-brillante",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro brillante 도입",
+        "nameEn": "I. Allegro brillante, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "다섯 악기가 함께 내는 E♭장조 첫 화음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "SoJXrj34nkw",
+          "artistId": 571,
+          "artistName": "Menahem Pressler",
+          "wikidata": "Q70142",
+          "ensemble": {
+            "name": "Emerson String Quartet",
+            "wikidata": "Q681006"
+          }
+        },
+        {
+          "videoId": "XFJ2VOkh_DI",
+          "artistId": 204,
+          "artistName": "Martha Argerich",
+          "wikidata": "Q156810"
+        },
+        {
+          "videoId": "uzi_6CvXTr0",
+          "artistId": 399,
+          "artistName": "Maria João Pires",
+          "wikidata": "Q235650"
+        }
+      ]
+    },
+    {
+      "pieceId": 449,
+      "workMbid": "ea02583a-af2d-4d81-bc64-5d0b7778271a",
+      "composerQid": "Q46096",
+      "titleKo": "피아노 3중주 1번 D단조 Op. 49",
+      "titleEn": "Trio for Piano, Violin and Violoncello no. 1 in D minor, op. 49",
+      "composerNameEn": "Felix Mendelssohn",
+      "composerNameKo": "펠릭스 멘델스존",
+      "role": "PIANIST",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv1-molto-allegro-agitato",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Molto allegro ed agitato 도입 (첼로 첫 주제)",
+        "nameEn": "I. Molto allegro ed agitato, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "첼로가 내는 D단조 첫 주제의 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "SvLMHK3rB1s",
+          "artistName": "Jeremy Denk",
+          "wikidata": "Q6181301",
+          "violinist": {
+            "name": "Joshua Bell",
+            "wikidata": "Q312792"
+          },
+          "cellist": {
+            "name": "Steven Isserlis",
+            "wikidata": "Q2095862"
+          }
+        },
+        {
+          "videoId": "PGalG0uHaqk",
+          "artistId": 204,
+          "artistName": "Martha Argerich",
+          "wikidata": "Q156810",
+          "violinist": {
+            "name": "Renaud Capuçon",
+            "wikidata": "Q552845"
+          },
+          "cellist": {
+            "name": "Gautier Capuçon",
+            "wikidata": "Q689479"
+          }
+        },
+        {
+          "videoId": "iHHf_Jg7I6k",
+          "artistId": 634,
+          "artistName": "André Previn",
+          "wikidata": "Q155712",
+          "violinist": {
+            "name": "Anne-Sophie Mutter",
+            "wikidata": "Q3374"
+          },
+          "cellist": {
+            "name": "Lynn Harrell",
+            "wikidata": "Q60317"
+          }
+        }
+      ]
+    }
+  ]
+}
