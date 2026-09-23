@@ -1,0 +1,210 @@
+{
+  "batchId": "s-c1",
+  "note": "S tier 대기열. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 450,
+      "workMbid": "d7793d9f-4613-4a34-9f2e-c2dffb8d2412",
+      "composerQid": "Q41309",
+      "titleKo": "피아노 협주곡 1번 E♭장조 S. 124",
+      "titleEn": "Concerto for Piano and Orchestra no. 1 in E-flat major, S. 124",
+      "composerNameEn": "Franz Liszt",
+      "composerNameKo": "프란츠 리스트",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv1-allegro-maestoso",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro maestoso 도입",
+        "nameEn": "I. Allegro maestoso, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "총주의 첫 타격과 피아노의 응답(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "WLQNYsvW6OY",
+          "artistId": 204,
+          "artistName": "Martha Argerich",
+          "wikidata": "Q156810",
+          "conductor": {
+            "name": "Claudio Abbado",
+            "wikidata": "Q151608"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "ZvTcWXYad0s",
+          "artistId": 573,
+          "artistName": "Jean-Yves Thibaudet",
+          "wikidata": "Q1030549",
+          "conductor": {
+            "name": "Charles Dutoit",
+            "wikidata": "Q116995"
+          },
+          "orchestra": {
+            "name": "Orchestre symphonique de Montréal",
+            "wikidata": "Q1196259"
+          }
+        },
+        {
+          "videoId": "vjomI2HOq8Y",
+          "artistId": 569,
+          "artistName": "Alice Sara Ott",
+          "wikidata": "Q76387",
+          "conductor": {
+            "name": "Thomas Hengelbrock",
+            "wikidata": "Q87912"
+          },
+          "orchestra": {
+            "name": "Münchner Philharmoniker",
+            "wikidata": "Q693453"
+          }
+        }
+      ],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 90
+      }
+    },
+    {
+      "pieceId": 132,
+      "workMbid": "5f7ded0a-9869-38e5-a9fd-8612919f1a94",
+      "composerQid": "Q1268",
+      "titleKo": "피아노 협주곡 1번 E단조 Op. 11",
+      "titleEn": "Concerto for Piano and Orchestra no. 1 in E minor, op. 11",
+      "composerNameEn": "Frédéric Chopin",
+      "composerNameKo": "프레데리크 쇼팽",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv2-romance",
+        "type": "EXCERPT",
+        "nameKo": "2악장 로망스 도입",
+        "nameEn": "II. Romance. Larghetto, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 여린 반주 위 피아노 주제 첫 음(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "fI2ndj3drNE",
+          "artistId": 186,
+          "artistName": "Seong-Jin Cho",
+          "wikidata": "Q4516986",
+          "conductor": {
+            "name": "Gianandrea Noseda",
+            "wikidata": "Q2631069"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "z3AFO__LODs",
+          "artistId": 200,
+          "artistName": "Lang Lang",
+          "wikidata": "Q155713",
+          "conductor": {
+            "name": "Zubin Mehta",
+            "wikidata": "Q157635"
+          },
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "W77ADpSwUZQ",
+          "artistId": 227,
+          "artistName": "Nobuyuki Tsujii",
+          "wikidata": "Q1197779",
+          "conductor": {
+            "name": "James Conlon",
+            "wikidata": "Q1348801"
+          },
+          "orchestra": {
+            "name": "Fort Worth Symphony Orchestra",
+            "wikidata": "Q5472407"
+          }
+        }
+      ],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      }
+    },
+    {
+      "pieceId": 136,
+      "workMbid": "5aa383a9-75d7-4b9e-a804-15d6bc5c793e",
+      "composerQid": "Q7351",
+      "titleKo": "피아노 협주곡 A단조 Op. 54",
+      "titleEn": "Concerto for Piano and Orchestra in A minor, op. 54",
+      "composerNameEn": "Robert Schumann",
+      "composerNameKo": "로베르트 슈만",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv1-allegro-affettuoso",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro affettuoso 도입",
+        "nameEn": "I. Allegro affettuoso, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관악의 화음과 피아노의 하강 화음 첫 타건(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "4l_BkNzGLsY",
+          "artistId": 207,
+          "artistName": "Maurizio Pollini",
+          "wikidata": "Q160058",
+          "conductor": {
+            "name": "Claudio Abbado",
+            "wikidata": "Q151608"
+          },
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "47m2naIWRWI",
+          "artistId": 250,
+          "artistName": "Murray Perahia",
+          "wikidata": "Q326221",
+          "conductor": {
+            "name": "Claudio Abbado",
+            "wikidata": "Q151608"
+          },
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "3KoHJQUneXU",
+          "artistId": 206,
+          "artistName": "Evgeny Kissin",
+          "wikidata": "Q160154",
+          "conductor": {
+            "name": "Colin Davis",
+            "wikidata": "Q366624"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      }
+    }
+  ]
+}
