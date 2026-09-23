@@ -118,11 +118,11 @@
       "sector": {
         "key": "dance-of-the-knights",
         "type": "EXCERPT",
-        "nameKo": "1막 “기사들의 춤” (몬테규가와 캐풀렛가)",
+        "nameKo": "1막 “기사들의 춤” (몬테규가와 캐풀렛가) — 도입 포함",
         "nameEn": "Act I: Dance of the Knights (Montagues and Capulets)",
         "measureStart": "",
         "measureEnd": "",
-        "startCue": "관현악 총주의 무거운 3박 주제 첫 박",
+        "startCue": "도입(공작의 명령)의 첫 음. 무거운 3박 행진 주제는 그 뒤에 나온다",
         "endCue": "춤의 마지막 화음"
       },
       "videos": [
