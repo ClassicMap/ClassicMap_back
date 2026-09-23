@@ -1,0 +1,174 @@
+{
+  "batchId": "s-db1",
+  "note": "S tier 대기열 D·B 잔여. videos 는 서브에이전트가 채운다.",
+  "pieces": [
+    {
+      "pieceId": 317,
+      "workMbid": "c3b8d09b-4dfd-3502-ac57-eef529e711ee",
+      "composerQid": "Q80135",
+      "titleKo": "교향곡 5번 D단조 Op. 47 “혁명”",
+      "titleEn": "Symphony no. 5 in D minor, op. 47",
+      "composerNameEn": "Dmitri Shostakovich",
+      "composerNameKo": "드미트리 드미트리예비치 쇼스타코비치",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv4-allegro-non-troppo",
+        "type": "EXCERPT",
+        "nameKo": "4악장 Allegro non troppo 도입 (행진 주제)",
+        "nameEn": "IV. Allegro non troppo, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "팀파니와 금관의 D단조 행진 주제 첫 박(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "oHTr1JAwVAk",
+          "artistId": 293,
+          "artistName": "Andris Nelsons",
+          "wikidata": "Q511817",
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "M6GQU_AK4XY",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "Vp1REXUQaGA",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 318,
+      "workMbid": "b49d094b-4de0-4dbb-a4a6-94e9af295dc7",
+      "composerQid": "Q80135",
+      "titleKo": "교향곡 7번 C장조 Op. 60 “레닌그라드”",
+      "titleEn": "Symphony no. 7 in C major, op. 60 “Leningrad”",
+      "composerNameEn": "Dmitri Shostakovich",
+      "composerNameKo": "드미트리 드미트리예비치 쇼스타코비치",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv1-allegretto",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegretto 도입 (C장조 첫 주제)",
+        "nameEn": "I. Allegretto, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현과 금관의 C장조 첫 주제 첫 박(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "_Oa7C-71PX4",
+          "artistId": 293,
+          "artistName": "Andris Nelsons",
+          "wikidata": "Q511817",
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "7eMaCPZx03s",
+          "artistId": 627,
+          "artistName": "Gianandrea Noseda",
+          "wikidata": "Q2631069",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "hR37aTd8mMM",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 312,
+      "workMbid": "84070a93-3b55-4c11-a15c-7f4efec7df7f",
+      "composerQid": "Q7314",
+      "titleKo": "시편 교향곡",
+      "titleEn": "Symphony of Psalms",
+      "composerNameEn": "Igor Stravinsky",
+      "composerNameKo": "이고르 스트라빈스키",
+      "role": "CONDUCTOR",
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "sector": {
+        "key": "mv1-exaudi",
+        "type": "EXCERPT",
+        "nameKo": "1악장 “Exaudi orationem meam” 도입",
+        "nameEn": "I. Exaudi orationem meam, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악의 E단조 화음 첫 타(악장 시작)",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": [
+        {
+          "videoId": "zU8JbCouzYw",
+          "artistId": 220,
+          "artistName": "Simon Rattle",
+          "wikidata": "Q157814",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "LZOOcf9vEs8",
+          "artistId": 630,
+          "artistName": "Michael Tilson Thomas",
+          "wikidata": "Q520493",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "9MitWFoMs34",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "batchId": "s-f5",
+  "note": "S tier 대기열 연가곡·오라토리오 낱곡. 낱 트랙 영상을 쓰므로 excerpt 를 두지 않는다.",
+  "pieces": [
+    {
+      "pieceId": 116,
+      "workMbid": "16a894eb-3164-4e69-b2e3-d0b1db71c2a8",
+      "composerQid": "Q7312",
+      "titleKo": "연가곡집 <겨울나그네> D. 911",
+      "titleEn": "Winterreise, op. 89, D. 911",
+      "composerNameEn": "Franz Schubert",
+      "composerNameKo": "프란츠 페터 슈베르트",
+      "role": "VOCALIST",
+      "sector": {
+        "key": "der-lindenbaum",
+        "type": "EXCERPT",
+        "nameKo": "5곡 “보리수”",
+        "nameEn": "V. Der Lindenbaum",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "피아노 전주의 첫 음",
+        "endCue": "노래 뒤 후주의 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "AoW9MHspVs8",
+          "artistId": 649,
+          "artistName": "Dietrich Fischer-Dieskau",
+          "wikidata": "Q77060",
+          "accompanist": {
+            "name": "Gerald Moore",
+            "wikidata": "Q712017"
+          }
+        },
+        {
+          "videoId": "Vl4UkfMyPkU",
+          "artistId": 653,
+          "artistName": "Matthias Goerne",
+          "wikidata": "Q70390",
+          "accompanist": {
+            "name": "Graham Johnson",
+            "wikidata": "Q1541946"
+          }
+        },
+        {
+          "videoId": "BwjGdaOKcWw",
+          "artistName": "Christian Gerhaher",
+          "wikidata": "Q96162",
+          "accompanist": {
+            "name": "Gerold Huber",
+            "wikidata": "Q99336"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 134,
+      "workMbid": "6c060724-fd7e-4b77-99e9-e7f10c58aebd",
+      "composerQid": "Q7351",
+      "titleKo": "연가곡집 <시인의 사랑> Op. 48",
+      "titleEn": "Dichterliebe, op. 48",
+      "composerNameEn": "Robert Schumann",
+      "composerNameKo": "로베르트 슈만",
+      "role": "VOCALIST",
+      "sector": {
+        "key": "im-wunderschoenen-monat-mai",
+        "type": "EXCERPT",
+        "nameKo": "1곡 “아름다운 5월에”",
+        "nameEn": "I. Im wunderschönen Monat Mai",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "피아노 전주의 첫 음",
+        "endCue": "해결되지 않는 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "xI1PRuuOVn0",
+          "artistId": 649,
+          "artistName": "Dietrich Fischer-Dieskau",
+          "wikidata": "Q77060",
+          "accompanist": {
+            "name": "Christoph Eschenbach",
+            "wikidata": "Q60814"
+          }
+        },
+        {
+          "videoId": "nKaABiTH9QY",
+          "artistId": 653,
+          "artistName": "Matthias Goerne",
+          "wikidata": "Q70390",
+          "accompanist": {
+            "name": "Vladimir Ashkenazy",
+            "wikidata": "Q157785"
+          }
+        },
+        {
+          "videoId": "KeSpE-iipcw",
+          "artistName": "Christian Gerhaher",
+          "wikidata": "Q96162",
+          "accompanist": {
+            "name": "Gerold Huber",
+            "wikidata": "Q99336"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 87,
+      "workMbid": "c77e1961-e301-4957-9660-f6607be5cbac",
+      "composerQid": "Q7349",
+      "titleKo": "오라토리오 <천지창조> Hob. XXI:2",
+      "titleEn": "Die Schöpfung, Hob. XXI:2",
+      "composerNameEn": "Joseph Haydn",
+      "composerNameKo": "프란츠 요제프 하이든",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "und-es-ward-licht",
+        "type": "EXCERPT",
+        "nameKo": "1부 “빛이 있으라” (혼돈의 묘사에 이은 합창)",
+        "nameEn": "Part I: “Und es ward Licht”",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "레치타티보 “Und Gott sprach” 의 첫 음",
+        "endCue": "합창 대목의 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "Dkxos2ol9lw",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "wZ1ZdgxroC0",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "Symphonieorchester des Bayerischen Rundfunks",
+            "wikidata": "Q636159"
+          }
+        },
+        {
+          "videoId": "3ru2oDBvlvE",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        }
+      ]
+    }
+  ]
+}
