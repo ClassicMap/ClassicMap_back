@@ -1,0 +1,71 @@
+{
+  "batchId": "s-last",
+  "note": "S tier 대기열 마지막 세 곡. 69 는 낱 트랙, 145·329 는 도입 발췌.",
+  "pieces": [
+    {
+      "pieceId": 69,
+      "workMbid": "8c6d8c96-bb80-4d9d-9fda-96852e10af60",
+      "composerQid": "Q254",
+      "titleKo": "오페라 <피가로의 결혼> K. 492",
+      "titleEn": "Le nozze di Figaro, K. 492",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "sull-aria",
+        "type": "EXCERPT",
+        "nameKo": "3막 “편지 이중창” (저녁 산들바람은 부드럽게)",
+        "nameEn": "Act III: Duettino “Sull’aria… che soave zeffiretto”",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 전주의 첫 박",
+        "endCue": "이중창 마지막 화음"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 145,
+      "workMbid": "ae217ba8-0b07-4b0b-aed6-c80535dcd94b",
+      "composerQid": "Q1511",
+      "titleKo": "오페라 <트리스탄과 이졸데> WWV 90",
+      "titleEn": "Tristan und Isolde, WWV 90",
+      "composerNameEn": "Richard Wagner",
+      "composerNameKo": "빌헬름 리하르트 바그너",
+      "role": "CONDUCTOR",
+      "excerpt": { "anchor": "head", "seconds": 120 },
+      "sector": {
+        "key": "prelude-opening",
+        "type": "EXCERPT",
+        "nameKo": "1막 전주곡 도입 (트리스탄 화음)",
+        "nameEn": "Act I: Prelude, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "첼로의 상행 동기 첫 음",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 329,
+      "workMbid": "7628784b-557a-4fd6-9cbc-f378178f5e12",
+      "composerQid": "Q83326",
+      "titleKo": "발레 <이상한 만다린> Sz. 73",
+      "titleEn": "The Miraculous Mandarin, BB 82, Sz. 73, op. 19",
+      "composerNameEn": "Béla Bartók",
+      "composerNameKo": "벨러 버르토크",
+      "role": "CONDUCTOR",
+      "excerpt": { "anchor": "head", "seconds": 120 },
+      "sector": {
+        "key": "introduction",
+        "type": "EXCERPT",
+        "nameKo": "도입 (대도시의 소음)",
+        "nameEn": "Introduction",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 반음계 질주 첫 음",
+        "endCue": "발췌 구간의 끝"
+      },
+      "videos": []
+    }
+  ]
+}
