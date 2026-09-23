@@ -1,0 +1,162 @@
+{
+  "batchId": "s-e1",
+  "note": "S tier 대기열 발레 낱곡. 낱 트랙 영상을 쓰므로 excerpt 를 두지 않는다.",
+  "pieces": [
+    {
+      "pieceId": 161,
+      "workMbid": "f3281e81-eea2-409f-88b8-9e1e1de5ca10",
+      "composerQid": "Q7315",
+      "titleKo": "발레 <호두까기 인형> Op. 71",
+      "titleEn": "The Nutcracker, op. 71",
+      "composerNameEn": "Pyotr Ilyich Tchaikovsky",
+      "composerNameKo": "표트르 일리치 차이콥스키",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "waltz-of-the-flowers",
+        "type": "EXCERPT",
+        "nameKo": "2막 “꽃의 왈츠”",
+        "nameEn": "Act II: Waltz of the Flowers",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "하프 카덴차 앞 목관의 도입 첫 음",
+        "endCue": "왈츠 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "QE7wA6SHHzI",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "3CDho7XOCGA",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Orchestre symphonique de Montréal",
+            "wikidata": "Q1196259"
+          }
+        },
+        {
+          "videoId": "feY5odnlYT8",
+          "artistId": 634,
+          "artistName": "André Previn",
+          "wikidata": "Q155712",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 162,
+      "workMbid": "11f48c5e-5ee9-4646-9826-fb7c2fccce7f",
+      "composerQid": "Q7315",
+      "titleKo": "발레 <백조의 호수> Op. 20",
+      "titleEn": "Swan Lake, op. 20",
+      "composerNameEn": "Pyotr Ilyich Tchaikovsky",
+      "composerNameKo": "표트르 일리치 차이콥스키",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "scene-act2",
+        "type": "EXCERPT",
+        "nameKo": "2막 “정경” (백조의 주제)",
+        "nameEn": "Act II, no. 10: Scène",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "하프 아르페지오 위 오보에의 백조 주제 첫 음",
+        "endCue": "정경 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "ItMDZDExhKw",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Orchestre symphonique de Montréal",
+            "wikidata": "Q1196259"
+          }
+        },
+        {
+          "videoId": "wfnJGXUNWbk",
+          "artistId": 630,
+          "artistName": "Michael Tilson Thomas",
+          "wikidata": "Q520493",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "cFH1MVVaNOg",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 322,
+      "workMbid": "91ceabb1-a48f-4ef2-ba9f-d30204e8e8fb",
+      "composerQid": "Q49481",
+      "titleKo": "발레 <로미오와 줄리엣> Op. 64",
+      "titleEn": "Romeo and Juliet, op. 64",
+      "composerNameEn": "Sergei Prokofiev",
+      "composerNameKo": "세르게이 세르게예비치 프로코피예프",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "dance-of-the-knights",
+        "type": "EXCERPT",
+        "nameKo": "1막 “기사들의 춤” (몬테규가와 캐풀렛가)",
+        "nameEn": "Act I: Dance of the Knights (Montagues and Capulets)",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 총주의 무거운 3박 주제 첫 박",
+        "endCue": "춤의 마지막 화음"
+      },
+      "videos": [
+        {
+          "videoId": "NanMRBTeBCc",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "97aYNBjpd40",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "f3zM76eAQ3M",
+          "artistId": 235,
+          "artistName": "Myung-Whun Chung",
+          "wikidata": "Q153778",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        }
+      ]
+    }
+  ]
+}

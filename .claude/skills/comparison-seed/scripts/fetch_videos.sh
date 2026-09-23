@@ -80,6 +80,11 @@ fi
 # 영상 ID 는 셸 문자열에 넣지 않는다. 배치 정의는 자동으로 채워지므로
 # 그 값을 그대로 보간하면 파드 안에서 임의 명령이 된다. 먼저 글자를 검사하고,
 # 파드에는 stdin 으로 스크립트를 주고 ID 는 인자로 넘긴다.
+#
+# 인자 앞에 `--` 를 붙인다. 유튜브 ID 는 하이픈으로 시작할 수 있는데(-HLDqBUxcD4)
+# `sh -s "$vid"` 로 넘기면 sh 가 옵션으로 읽어 "illegal option -H" 로 죽는다.
+# 로컬 경로는 yt-dlp 에 -o 로 출력 이름을 따로 주므로 걸리지 않고, 파드 경유에서만
+# 났다(2026-09-24, 심포닉 댄스 배치).
 valid_id() {
   case "$1" in
     ""|*[!A-Za-z0-9_-]*) return 1 ;;
@@ -105,7 +110,7 @@ fetch_one() {
   valid_id "$vid" || { echo "영상 ID 에 쓸 수 없는 글자: $vid"; return 1; }
   valid_id "$out" || { echo "출력 이름에 쓸 수 없는 글자: $out"; return 1; }
   if [ -n "$POD" ]; then
-    kubectl -n "$NS" exec -i "$POD" -- sh -s "$vid" "$out" "$POD_WORK" >/dev/null 2>&1 <<'EOS' || return 1
+    kubectl -n "$NS" exec -i "$POD" -- sh -s -- "$vid" "$out" "$POD_WORK" >/dev/null 2>&1 <<'EOS' || return 1
 set -e
 vid=$1; out=$2; work=$3
 yt-dlp --remote-components ejs:github --cookies "$work/cookies.txt" -f bestaudio --no-warnings   -o "$work/$out.%(ext)s" "https://www.youtube.com/watch?v=$vid" >/dev/null 2>&1
@@ -141,7 +146,7 @@ fetch_meta() {
   local vid="$1"
   valid_id "$vid" || return 1
   if [ -n "$POD" ]; then
-    kubectl -n "$NS" exec -i "$POD" -- sh -s "$vid" "$POD_WORK" "$META_FMT" <<'EOS'
+    kubectl -n "$NS" exec -i "$POD" -- sh -s -- "$vid" "$POD_WORK" "$META_FMT" <<'EOS'
 vid=$1; work=$2; fmt=$3
 yt-dlp --remote-components ejs:github --cookies "$work/cookies.txt" --no-warnings --skip-download \
   --print "$fmt" "https://www.youtube.com/watch?v=$vid" 2>/dev/null
