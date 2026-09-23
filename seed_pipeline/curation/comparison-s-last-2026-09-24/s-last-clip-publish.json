@@ -1,0 +1,39 @@
+{
+  "status": "succeeded",
+  "bundlePath": "/private/tmp/claude-501/-Users-kdh/a7b6f260-3a00-4d61-a287-f7a411cb5f3b/scratchpad/slast-clip-assets.jsonl",
+  "rowCount": 9,
+  "dryRun": false,
+  "publish": true,
+  "seedRunId": "2c048478-60c8-45c5-9f9f-e54e298b4628",
+  "mutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 9,
+    "clipAssetsInserted": 9,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 18,
+    "total": 36
+  },
+  "plannedMutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 9,
+    "clipAssetsInserted": 9,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 18,
+    "total": 36
+  },
+  "performanceIds": [
+    530,
+    531,
+    532,
+    533,
+    534,
+    535,
+    536,
+    537,
+    538
+  ]
+}

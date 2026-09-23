@@ -21,7 +21,62 @@
         "startCue": "관현악 전주의 첫 박",
         "endCue": "이중창 마지막 화음"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "klfGmj0_QC4",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "singers": [
+            {
+              "role": "SOPRANO",
+              "name": "Kathleen Battle",
+              "wikidata": "Q241263"
+            },
+            {
+              "role": "SOPRANO",
+              "name": "Margaret Price",
+              "wikidata": "Q254781"
+            }
+          ]
+        },
+        {
+          "videoId": "xRW3kKwVI9k",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "singers": [
+            {
+              "role": "SOPRANO",
+              "name": "Cheryl Studer",
+              "wikidata": "Q438857"
+            },
+            {
+              "role": "SOPRANO",
+              "name": "Sylvia McNair",
+              "wikidata": "Q469990"
+            }
+          ]
+        },
+        {
+          "videoId": "WJUwVv3IbTY",
+          "artistId": 665,
+          "artistName": "Nikolaus Harnoncourt",
+          "wikidata": "Q78526",
+          "singers": [
+            {
+              "role": "SOPRANO",
+              "name": "Barbara Bonney",
+              "wikidata": "Q201079"
+            },
+            {
+              "role": "SOPRANO",
+              "name": "Charlotte Margiono",
+              "wikidata": "Q2607941"
+            }
+          ]
+        }
+      ]
     },
     {
       "pieceId": 145,
@@ -32,7 +87,10 @@
       "composerNameEn": "Richard Wagner",
       "composerNameKo": "빌헬름 리하르트 바그너",
       "role": "CONDUCTOR",
-      "excerpt": { "anchor": "head", "seconds": 120 },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
       "sector": {
         "key": "prelude-opening",
         "type": "EXCERPT",
@@ -43,7 +101,38 @@
         "startCue": "첼로의 상행 동기 첫 음",
         "endCue": "발췌 구간의 끝"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "iTKTV0c7Cno",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "mf9upCNqyMQ",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "fnku4qbHJog",
+          "artistId": 288,
+          "artistName": "Mariss Jansons",
+          "wikidata": "Q158340",
+          "orchestra": {
+            "name": "Oslo Philharmonic Orchestra",
+            "wikidata": "Q1063440"
+          }
+        }
+      ]
     },
     {
       "pieceId": 329,
@@ -54,7 +143,10 @@
       "composerNameEn": "Béla Bartók",
       "composerNameKo": "벨러 버르토크",
       "role": "CONDUCTOR",
-      "excerpt": { "anchor": "head", "seconds": 120 },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
       "sector": {
         "key": "introduction",
         "type": "EXCERPT",
@@ -65,7 +157,38 @@
         "startCue": "현의 반음계 질주 첫 음",
         "endCue": "발췌 구간의 끝"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "yrWvTD_aDhg",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "MY0vhhR7wCg",
+          "artistId": 575,
+          "artistName": "Seiji Ozawa",
+          "wikidata": "Q313649",
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "j7RoUbDhIj4",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Orchestre symphonique de Montreal",
+            "wikidata": "Q1196259"
+          }
+        }
+      ]
     }
   ]
 }
