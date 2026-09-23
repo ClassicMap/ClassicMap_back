@@ -11,7 +11,10 @@
       "composerNameEn": "Johannes Brahms",
       "composerNameKo": "요하네스 브람스",
       "role": "VIOLINIST",
-      "excerpt": { "anchor": "head", "seconds": 120 },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
       "sector": {
         "key": "mv1-opening",
         "type": "EXCERPT",
@@ -22,7 +25,47 @@
         "startCue": "저현과 목관의 D장조 첫 주제 첫 음(악장 시작)",
         "endCue": "발췌 구간의 끝"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "4e4hoGd7TSk",
+          "artistName": "Hilary Hahn",
+          "wikidata": "Q235406",
+          "conductor": {
+            "name": "Neville Marriner",
+            "wikidata": "Q318636"
+          },
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        },
+        {
+          "videoId": "jOnxyxTO4dE",
+          "artistName": "Renaud Capuçon",
+          "wikidata": "Q552845",
+          "conductor": {
+            "name": "Daniel Harding",
+            "wikidata": "Q524328"
+          },
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "AVC_JXoK7Uo",
+          "artistName": "Anne-Sophie Mutter",
+          "wikidata": "Q3374",
+          "conductor": {
+            "name": "Herbert von Karajan",
+            "wikidata": "Q154895"
+          },
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        }
+      ]
     },
     {
       "pieceId": 313,
@@ -33,7 +76,10 @@
       "composerNameEn": "Arnold Schoenberg",
       "composerNameKo": "아르놀트 쇤베르크",
       "role": "CONDUCTOR",
-      "excerpt": { "anchor": "head", "seconds": 120 },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
       "sector": {
         "key": "opening",
         "type": "EXCERPT",
@@ -44,7 +90,35 @@
         "startCue": "저현의 하행 걸음 주제 첫 음",
         "endCue": "발췌 구간의 끝"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "5Bgv0Iye6-s",
+          "artistName": "Daniel Barenboim",
+          "wikidata": "Q152768",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "6qKOrTNx6ek",
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "8RsX5Wv6rVI",
+          "artistName": "Zubin Mehta",
+          "wikidata": "Q157635",
+          "orchestra": {
+            "name": "Los Angeles Philharmonic",
+            "wikidata": "Q315715"
+          }
+        }
+      ]
     },
     {
       "pieceId": 337,
@@ -55,7 +129,10 @@
       "composerNameEn": "Leonard Bernstein",
       "composerNameKo": "레너드 번스타인",
       "role": "CONDUCTOR",
-      "excerpt": { "anchor": "head", "seconds": 120 },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
       "sector": {
         "key": "prologue",
         "type": "EXCERPT",
@@ -66,7 +143,35 @@
         "startCue": "손가락 튕김 위로 오르는 3온음 동기의 첫 음",
         "endCue": "발췌 구간의 끝"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "cyBcpCrOuQg",
+          "artistName": "Michael Tilson Thomas",
+          "wikidata": "Q520493",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "PG09Sv94tZU",
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "IgXVHd-d45E",
+          "artistName": "Carl Davis",
+          "wikidata": "Q584221",
+          "orchestra": {
+            "name": "Royal Philharmonic Orchestra",
+            "wikidata": "Q856125"
+          }
+        }
+      ]
     }
   ]
 }
