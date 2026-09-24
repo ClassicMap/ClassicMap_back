@@ -21,8 +21,30 @@
         "startCue": "오른손 단선율 프롬나드 주제의 첫 음(작품 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 90},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 90
+      },
+      "videos": [
+        {
+          "videoId": "Uls0QQnzCjY",
+          "artistId": 564,
+          "artistName": "Khatia Buniatishvili",
+          "wikidata": "Q467436"
+        },
+        {
+          "videoId": "hlhtkcgk7yY",
+          "artistId": 227,
+          "artistName": "Nobuyuki Tsujii",
+          "wikidata": "Q1197779"
+        },
+        {
+          "videoId": "S-258DY6M7s",
+          "artistId": 206,
+          "artistName": "Evgeny Kissin",
+          "wikidata": "Q160154"
+        }
+      ]
     },
     {
       "pieceId": 190,
@@ -43,8 +65,42 @@
         "startCue": "트럼펫 독주 프롬나드 주제의 첫 음(작품 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 90},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 90
+      },
+      "videos": [
+        {
+          "videoId": "UJFPHKKyW7I",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "006qz-AWIdE",
+          "artistId": 629,
+          "artistName": "Colin Davis",
+          "wikidata": "Q366624",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "ldSNzphMpmI",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "orchestra": {
+            "name": "The Philadelphia Orchestra",
+            "wikidata": "Q659181"
+          }
+        }
+      ]
     },
     {
       "pieceId": 191,
@@ -65,7 +121,35 @@
         "startCue": "현의 떨리는 하행 음형 첫 음(작품 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "y_emfJINpyU",
+          "artistName": "Lorin Maazel",
+          "wikidata": "Q117710",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "epSsnwrixNM",
+          "artistName": "Georges Pretre",
+          "wikidata": "Q342381",
+          "orchestra": {
+            "name": "Royal Philharmonic Orchestra",
+            "wikidata": "Q856125"
+          }
+        },
+        {
+          "videoId": "3r3YTHzovag",
+          "artistName": "Fritz Reiner",
+          "wikidata": "Q364179",
+          "orchestra": {
+            "name": "Pittsburgh Symphony Orchestra",
+            "wikidata": "Q430642"
+          }
+        }
+      ]
     }
   ]
 }
