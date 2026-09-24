@@ -1,0 +1,72 @@
+{
+  "batchId": "a-a9",
+  "note": "A tier A9. 드보르자크 셋. 셋 다 긴 곡이라 발췌다. 197 은 널리 알려진 2악장 라르고 주제를 쓴다.",
+  "pieces": [
+    {
+      "pieceId": 197,
+      "workMbid": "90379c91-2dce-4ba4-9900-dd32763ee0b4",
+      "composerQid": "Q7298",
+      "titleKo": "교향곡 9번 E단조 Op. 95 “신세계로부터”",
+      "titleEn": "Symphony no. 9 in E minor, op. 95 “From the New World”",
+      "composerNameEn": "Antonín Dvořák",
+      "composerNameKo": "안토닌 드보르자크",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv2-largo",
+        "type": "EXCERPT",
+        "nameKo": "2악장 Largo 도입 (잉글리시 호른 주제)",
+        "nameEn": "II. Largo, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "금관의 여린 화음 연속 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 198,
+      "workMbid": "7c7657b6-86af-3a86-9c20-21e88c92544c",
+      "composerQid": "Q7298",
+      "titleKo": "첼로 협주곡 B단조 Op. 104",
+      "titleEn": "Cello Concerto in B minor, op. 104",
+      "composerNameEn": "Antonín Dvořák",
+      "composerNameKo": "안토닌 드보르자크",
+      "role": "CELLIST",
+      "sector": {
+        "key": "mv1-allegro",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro 도입 (관현악 서주)",
+        "nameEn": "I. Allegro, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "클라리넷의 여린 첫 주제 제시(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 200,
+      "workMbid": "22cb232b-1587-455a-a3b2-248ae605771c",
+      "composerQid": "Q7298",
+      "titleKo": "현악 4중주 12번 F장조 Op. 96 “아메리카”",
+      "titleEn": "String Quartet no. 12 in F major, op. 96 “American”",
+      "composerNameEn": "Antonín Dvořák",
+      "composerNameKo": "안토닌 드보르자크",
+      "role": "QUARTET",
+      "sector": {
+        "key": "mv1-allegro-ma-non-troppo",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro ma non troppo 도입",
+        "nameEn": "I. Allegro ma non troppo, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 트레몰로 위 비올라 주제 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    }
+  ]
+}
