@@ -1,0 +1,148 @@
+{
+  "batchId": "a-a4",
+  "note": "A tier A4. 클레멘티 소나타와 글루크 낱곡 둘. 62·63 은 전곡이다. excerpt 는 piece 레벨 키다.",
+  "pieces": [
+    {
+      "pieceId": 115,
+      "workMbid": "52373e56-faab-4c9e-a7e7-51358b0241f7",
+      "composerQid": "Q193673",
+      "titleKo": "피아노 소나타 G단조 Op. 50-3 “버림받은 디도”",
+      "titleEn": "Sonata in G minor, op. 50 no. 3 “Didone abbandonata”",
+      "composerNameEn": "Muzio Clementi",
+      "composerNameKo": "무치오 클레멘티",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv1-largo-allegro",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Largo patetico e sostenuto 도입",
+        "nameEn": "I. Largo patetico e sostenuto, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "느린 서주의 첫 화음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "H8RaGYZyiys",
+          "artistName": "Howard Shelley",
+          "wikidata": "Q11327040"
+        },
+        {
+          "videoId": "zkDukLfjJsg",
+          "artistName": "John McCabe",
+          "wikidata": "Q949396"
+        },
+        {
+          "videoId": "645PN3ig7Bs",
+          "artistName": "Sandro De Palma",
+          "wikidata": "Q3948214"
+        }
+      ]
+    },
+    {
+      "pieceId": 62,
+      "workMbid": "dc2c37a8-4ec1-348c-8f68-c4a5dbfc6a7f",
+      "composerQid": "Q130759",
+      "titleKo": "<오르페오와 에우리디체> 중 “정령들의 춤”",
+      "titleEn": "Orfeo ed Euridice, Wq. 30: Ballet in D minor “Dance of the Blessed Spirits”",
+      "composerNameEn": "Christoph Willibald Gluck",
+      "composerNameKo": "크리스토프 빌리발트 글루크",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "현악 반주 위 플루트 선율의 첫 음(작품 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "_b571ZHue0Q",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "nn9Ir6p18e8",
+          "artistId": 577,
+          "artistName": "Neville Marriner",
+          "wikidata": "Q318636",
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        },
+        {
+          "videoId": "kGslb2jArxA",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Orchestra of the Royal Opera House, Covent Garden",
+            "wikidata": "Q11350146"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 63,
+      "workMbid": "a7b15806-035a-39be-9bba-47b06b61e3cc",
+      "composerQid": "Q130759",
+      "titleKo": "<오르페오와 에우리디체> 중 “에우리디체 없이 어찌하리”",
+      "titleEn": "Orfeo ed Euridice, Wq. 30: Atto III. Aria “Che farò senza Euridice?”",
+      "composerNameEn": "Christoph Willibald Gluck",
+      "composerNameKo": "크리스토프 빌리발트 글루크",
+      "role": "MEZZO_SOPRANO",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "관현악 전주 첫 음(아리아 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "Dgyj3f-aCe8",
+          "artistName": "Teresa Berganza",
+          "wikidata": "Q233876",
+          "orchestra": {
+            "name": "Orchestra of the Royal Opera House, Covent Garden",
+            "wikidata": "Q11350146"
+          }
+        },
+        {
+          "videoId": "Vj2yrFBtDpk",
+          "artistName": "Vesselina Kasarova",
+          "wikidata": "Q441867",
+          "orchestra": {
+            "name": "Münchner Rundfunkorchester",
+            "wikidata": "Q457183"
+          }
+        },
+        {
+          "videoId": "Fv5q7nps9FU",
+          "artistName": "Frederica von Stade",
+          "wikidata": "Q265872",
+          "orchestra": {
+            "name": "Utah Symphony",
+            "wikidata": "Q2778079"
+          }
+        }
+      ]
+    }
+  ]
+}

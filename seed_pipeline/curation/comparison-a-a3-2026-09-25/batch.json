@@ -1,0 +1,72 @@
+{
+  "batchId": "a-a3",
+  "note": "A tier A3. 협주곡 셋. videos 는 서브에이전트가 채운다. excerpt 는 piece 레벨 키다(sector 안이 아니다).",
+  "pieces": [
+    {
+      "pieceId": 109,
+      "workMbid": "9c46cacc-9284-4816-9996-9969230809e7",
+      "composerQid": "Q106641",
+      "titleKo": "비올라 협주곡 C단조 (카자드쉬 위작)",
+      "titleEn": "Concerto for Viola in C minor",
+      "composerNameEn": "Johann Christian Bach",
+      "composerNameKo": "요한 크리스티안 바흐",
+      "role": "VIOLIST",
+      "sector": {
+        "key": "mv1-allegro",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro molto ma maestoso 도입",
+        "nameEn": "I. Allegro molto ma maestoso, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현악 총주의 첫 타격(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 110,
+      "workMbid": "73a26450-b76a-42d6-a8c4-eb94948a7f81",
+      "composerQid": "Q156033",
+      "titleKo": "클라리넷 협주곡 B♭장조",
+      "titleEn": "Clarinet Concerto in B-flat major",
+      "composerNameEn": "Johann Wenzel Anton Stamitz",
+      "composerNameKo": "요한 슈타미츠",
+      "role": "CLARINETIST",
+      "sector": {
+        "key": "mv1-allegro",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro 도입",
+        "nameEn": "I. Allegro, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "총주의 첫 타격(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 112,
+      "workMbid": "3c67b597-4521-415b-ac32-c816de36097a",
+      "composerQid": "Q156033",
+      "titleKo": "트럼펫 협주곡 D장조",
+      "titleEn": "Trumpet Concerto in D",
+      "composerNameEn": "Johann Wenzel Anton Stamitz",
+      "composerNameKo": "요한 슈타미츠",
+      "role": "TRUMPETER",
+      "sector": {
+        "key": "mv1-allegro",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro 도입",
+        "nameEn": "I. Allegro, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "총주의 첫 타격(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    }
+  ]
+}
