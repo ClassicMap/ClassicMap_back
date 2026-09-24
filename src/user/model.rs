@@ -131,6 +131,7 @@ pub struct FavoriteArtistItem {
     pub artist_id: i32,
     pub name: String,
     pub english_name: String,
+    #[serde(serialize_with = "crate::artist::category::serialize_category")]
     pub category: String,
     pub image_url: Option<String>,
     pub created_at: String,

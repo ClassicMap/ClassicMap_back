@@ -1,5 +1,6 @@
 use crate::db::DbPool;
 use super::model::{Artist, CreateArtist, UpdateArtist, ArtistWithAwards, CreateArtistAward};
+use super::category::CategoryFilter;
 use super::repository::ArtistRepository;
 
 pub struct ArtistService;
@@ -57,7 +58,7 @@ impl ArtistService {
         pool: &DbPool,
         search_query: Option<String>,
         tier: Option<String>,
-        category: Option<String>,
+        category: Option<CategoryFilter>,
         offset: Option<i64>,
         limit: Option<i64>,
     ) -> Result<Vec<Artist>, String> {
@@ -68,7 +69,7 @@ impl ArtistService {
             pool,
             search_query.as_deref(),
             tier.as_deref(),
-            category.as_deref(),
+            category.as_ref(),
             offset_val,
             limit_val,
         )

@@ -1,4 +1,5 @@
 use super::model::{Artist, CreateArtist, UpdateArtist, ArtistWithAwards, CreateArtistAward};
+use super::category::CategoryFilter;
 use super::service::ArtistService;
 use crate::auth::ModeratorUser;
 use crate::concert::model::Concert;
@@ -134,6 +135,13 @@ pub async fn search_artists(
     offset: Option<i64>,
     limit: Option<i64>,
 ) -> Result<Json<Vec<Artist>>, Status> {
+    // category는 분류 코드(pianist, other 등)로 받는다. 표에 없는 값은 400이다.
+    let category = category
+        .as_deref()
+        .map(CategoryFilter::parse)
+        .transpose()
+        .map_err(|_| Status::BadRequest)?;
+
     // If search query is provided, use text search
     if q.is_some() && q.as_ref().unwrap().trim().len() > 0 {
         match ArtistService::search_artists(pool, q, tier, category, offset, limit).await {

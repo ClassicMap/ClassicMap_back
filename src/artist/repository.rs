@@ -1,5 +1,6 @@
 use crate::db::DbPool;
 use super::model::{Artist, CreateArtist, UpdateArtist, ArtistWithAwards, ArtistAward, CreateArtistAward};
+use super::category::{stored_values_matching_label, CategoryFilter};
 use crate::search::SearchText;
 use sqlx::Error;
 
@@ -159,11 +160,15 @@ impl ArtistRepository {
         pool: &DbPool,
         search_query: Option<&str>,
         tier: Option<&str>,
-        category: Option<&str>,
+        category: Option<&CategoryFilter>,
         offset: i64,
         limit: i64,
     ) -> Result<Vec<Artist>, Error> {
         let search_text = SearchText::parse(search_query);
+        // "피아" 같은 검색어가 분류 라벨(피아니스트)에 걸리면 그 분류의 원본 값도 찾는다.
+        let label_values = search_query
+            .map(stored_values_matching_label)
+            .unwrap_or_default();
 
         let mut query = String::from(
             "SELECT * FROM v_artists_full WHERE 1=1"
@@ -172,8 +177,15 @@ impl ArtistRepository {
         // Text search across multiple fields
         if search_text.is_some() {
             query.push_str(
-                " AND (name LIKE ? OR english_name LIKE ? OR category LIKE ? OR nationality LIKE ? OR bio LIKE ? OR style LIKE ?)"
+                " AND (name LIKE ? OR english_name LIKE ? OR category LIKE ? OR nationality LIKE ? OR bio LIKE ? OR style LIKE ?"
             );
+            if !label_values.is_empty() {
+                query.push_str(&format!(
+                    " OR category IN ({})",
+                    vec!["?"; label_values.len()].join(", ")
+                ));
+            }
+            query.push(')');
         }
 
         // Tier filter
@@ -181,9 +193,10 @@ impl ArtistRepository {
             query.push_str(" AND tier = ?");
         }
 
-        // Category filter
-        if category.is_some() {
-            query.push_str(" AND category = ?");
+        // Category filter: 코드에 묶인 원본 값 전부를 SQL에서 거른다.
+        if let Some(filter) = category {
+            query.push_str(" AND ");
+            query.push_str(&filter.sql("category"));
         }
 
         let relevance = search_text
@@ -204,6 +217,9 @@ impl ArtistRepository {
                 // name, english_name, category, nationality, bio, style
                 sql_query = sql_query.bind(text.contains());
             }
+            for value in &label_values {
+                sql_query = sql_query.bind(*value);
+            }
         }
 
         // Bind tier filter
@@ -212,8 +228,10 @@ impl ArtistRepository {
         }
 
         // Bind category filter
-        if let Some(c) = category {
-            sql_query = sql_query.bind(c);
+        if let Some(filter) = category {
+            for value in filter.values() {
+                sql_query = sql_query.bind(*value);
+            }
         }
 
         if let Some((_, relevance_binds)) = relevance {
