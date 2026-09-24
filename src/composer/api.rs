@@ -3,7 +3,7 @@ use crate::auth::ModeratorUser;
 use crate::db::DbPool;
 use crate::logger::Logger;
 use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces, ComposerWithPerformance};
-use super::service::ComposerService;
+use super::service::{ComposerService, ComposerSort};
 
 #[get("/composers/with-performances?<limit>")]
 pub async fn get_composers_with_performances(
@@ -19,15 +19,17 @@ pub async fn get_composers_with_performances(
     }
 }
 
-#[get("/composers/search?<q>&<period>&<offset>&<limit>")]
+#[get("/composers/search?<q>&<period>&<offset>&<limit>&<sort>")]
 pub async fn search_composers(
     pool: &State<DbPool>,
     q: Option<String>,
     period: Option<String>,
     offset: Option<i64>,
     limit: Option<i64>,
+    sort: Option<&str>,
 ) -> Result<Json<Vec<Composer>>, Status> {
-    match ComposerService::search_composers(pool, q, period, offset, limit).await {
+    let sort = ComposerSort::parse(sort).map_err(|_| Status::BadRequest)?;
+    match ComposerService::search_composers(pool, q, period, offset, limit, sort).await {
         Ok(composers) => Ok(Json(composers)),
         Err(e) => {
             Logger::error("API", &format!("Failed to search composers: {}", e));
@@ -36,15 +38,18 @@ pub async fn search_composers(
     }
 }
 
-#[get("/composers?<period>&<offset>&<limit>")]
+/// sort=recommended 는 tier → 공개 비교 섹터 → 초상 → 소개 → 작품 수 → id 순이다.
+#[get("/composers?<period>&<offset>&<limit>&<sort>")]
 pub async fn get_composers(
     pool: &State<DbPool>,
     period: Option<String>,
     offset: Option<i64>,
     limit: Option<i64>,
+    sort: Option<&str>,
 ) -> Result<Json<Vec<Composer>>, Status> {
+    let sort = ComposerSort::parse(sort).map_err(|_| Status::BadRequest)?;
     // Use search_composers with no query (filter only)
-    match ComposerService::search_composers(pool, None, period, offset, limit).await {
+    match ComposerService::search_composers(pool, None, period, offset, limit, sort).await {
         Ok(composers) => Ok(Json(composers)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get composers: {}", e));

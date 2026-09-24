@@ -1,6 +1,8 @@
 #![allow(non_snake_case)]
 #[macro_use]
 extern crate rocket;
+// main.rs가 모듈을 따로 컴파일하므로 양쪽에서 같은 경로로 lib 항목을 부르게 한다.
+extern crate self as ClassicMap_back;
 
 pub mod artist;
 pub mod auth;

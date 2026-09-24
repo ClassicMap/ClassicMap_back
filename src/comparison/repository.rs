@@ -98,7 +98,7 @@ fn allows_self_hosted_publication(rights_mode: &str) -> bool {
 /// `ready_performance`는 발행됐고 현재 클립이 준비됐으며 편집 승인된 섹터에 속한 연주다.
 /// `public_sector`는 그 집합에서 서로 다른 primary artist가 3명 이상인 섹터다.
 /// 곡 비교 화면과 아티스트 상세가 같은 기준을 쓰도록 세 조회가 이 CTE를 공유한다.
-const PUBLIC_COMPARISON_CTE: &str = "WITH ready_performance AS (
+pub const PUBLIC_COMPARISON_CTE: &str = "WITH ready_performance AS (
         SELECT p.id,
                p.sector_id,
                p.piece_id,

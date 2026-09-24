@@ -1,6 +1,8 @@
 use crate::db::DbPool;
 use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces, ComposerWithPerformance};
+use super::service::ComposerSort;
 use crate::search::SearchText;
+use ClassicMap_back::comparison::repository::PUBLIC_COMPARISON_CTE;
 use sqlx::Error;
 
 pub struct ComposerRepository;
@@ -13,6 +15,29 @@ pub struct ComposerRepository;
 ///
 /// 손으로 채운 작곡가는 전원 곡을 가지고 있어 이 조건에 걸리지 않는다.
 /// 작품이 한 곡이라도 적재되면 조건이 풀려 자동으로 다시 보인다.
+/// tier(S > A > 없음 > B > C) → 공개 비교 섹터 보유 → 초상 → 소개 → 작품 수 → id.
+/// 초상과 소개를 따로 보는 건 목록 첫 화면에서 눈에 띄는 게 초상이기 때문이다.
+/// 마지막 id는 offset 페이지를 넘길 때 순서가 흔들리지 않게 한다.
+/// `PUBLIC_COMPARISON_CTE`가 앞에 붙은 쿼리에서만 쓴다.
+const RECOMMENDED_ORDER: &str = "CASE c.tier
+        WHEN 'S' THEN 0
+        WHEN 'A' THEN 1
+        WHEN 'B' THEN 3
+        WHEN 'C' THEN 4
+        ELSE 2
+    END ASC,
+    EXISTS (
+        SELECT 1
+        FROM public_sector
+        JOIN performance_sectors sector ON sector.id = public_sector.sector_id
+        JOIN pieces sector_piece ON sector_piece.id = sector.piece_id
+        WHERE sector_piece.composer_id = c.id
+    ) DESC,
+    (c.avatar_url IS NOT NULL AND c.avatar_url <> '') DESC,
+    (c.bio IS NOT NULL AND c.bio <> '') DESC,
+    COUNT(p.id) DESC,
+    c.id ASC";
+
 const HIDE_EMPTY_COMPOSER: &str =
     "EXISTS (SELECT 1 FROM pieces own WHERE own.composer_id = c.id)";
 
@@ -112,8 +137,14 @@ impl ComposerRepository {
         period: Option<String>,
         offset: i64,
         limit: i64,
+        sort: ComposerSort,
     ) -> Result<Vec<Composer>, Error> {
-        let mut sql = String::from(
+        // 추천순은 곡 비교 화면과 같은 공개 기준으로 비교 가능 여부를 본다.
+        let mut sql = match sort {
+            ComposerSort::BirthYear => String::new(),
+            ComposerSort::Recommended => format!("{PUBLIC_COMPARISON_CTE} "),
+        };
+        sql.push_str(
             "SELECT c.*, COUNT(p.id) as piece_count
              FROM composers c
              LEFT JOIN pieces p ON c.id = p.composer_id"
@@ -155,7 +186,10 @@ impl ComposerRepository {
             sql.push_str(", ");
             bind_values.extend(relevance_binds);
         }
-        sql.push_str("c.birth_year ASC, c.id ASC");
+        match sort {
+            ComposerSort::BirthYear => sql.push_str("c.birth_year ASC, c.id ASC"),
+            ComposerSort::Recommended => sql.push_str(RECOMMENDED_ORDER),
+        }
 
         // limit=0이면 전체 반환, 아니면 페이징
         if limit > 0 {
