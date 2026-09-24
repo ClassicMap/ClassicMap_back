@@ -27,24 +27,6 @@
       },
       "videos": [
         {
-          "videoId": "X0C3CDmehfY",
-          "artistName": "Hartmut Rohde",
-          "wikidata": "Q111141",
-          "conductor": {
-            "name": "Georg Mais",
-            "wikidata": "Q95344794"
-          },
-          "orchestra": {
-            "name": "Lithuanian Chamber Orchestra",
-            "wikidata": "Q3355282"
-          }
-        },
-        {
-          "videoId": "5_-pkR7im4U",
-          "artistName": "Nemanja Radulović",
-          "wikidata": "Q3337983"
-        },
-        {
           "videoId": "eJKQNLyTqLo",
           "artistName": "Wolfram Christ",
           "wikidata": "Q1696454",
@@ -55,6 +37,20 @@
           "orchestra": {
             "name": "Kölner Kammerorchester",
             "wikidata": "Q111795682"
+          }
+        },
+        {
+          "videoId": "5_-pkR7im4U",
+          "artistName": "Nemanja Radulović",
+          "wikidata": "Q3337983"
+        },
+        {
+          "videoId": "h5uJ4dMH4qE",
+          "artistName": "Lubomír Malý",
+          "wikidata": "Q12034092",
+          "orchestra": {
+            "name": "Prague Chamber Orchestra",
+            "wikidata": "Q11335518"
           }
         }
       ]

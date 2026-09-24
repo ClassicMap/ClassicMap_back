@@ -21,6 +21,7 @@
         "startCue": "첼로 독주의 첫 음(서곡 시작)",
         "endCue": "종결 화음과 잔향"
       },
+      "skipReason": "전곡 연주가 모두 600초를 넘는다. 검색에서 확인한 가장 짧은 전곡이 658초(아바도·유럽 체임버)이고 나머지는 664~890초다. 클립 상한 600초를 셋 다 넘겨 이 배치에서 뺀다.",
       "videos": []
     },
     {
@@ -42,7 +43,17 @@
         "startCue": "작은북 연타의 첫 타(서곡 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {"videoId": "7RJ_4shanxo", "artistId": 422,
+         "artistName": "Herbert von Karajan", "wikidata": "Q154895",
+         "orchestra": {"name": "Berliner Philharmoniker", "wikidata": "Q152222"}},
+        {"videoId": "Gg6fVEdOfQA", "artistId": 594,
+         "artistName": "Claudio Abbado", "wikidata": "Q151608",
+         "orchestra": {"name": "Chamber Orchestra of Europe", "wikidata": "Q661670"}},
+        {"videoId": "pWaw80lu35s", "artistId": 605,
+         "artistName": "Leonard Bernstein", "wikidata": "Q152505",
+         "orchestra": {"name": "New York Philharmonic Orchestra", "wikidata": "Q471154"}}
+      ]
     },
     {
       "pieceId": 170,
@@ -64,7 +75,17 @@
         "endCue": "발췌 끝"
       },
       "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "videos": [
+        {"videoId": "YjJvpSS4SMM", "artistId": 422,
+         "artistName": "Herbert von Karajan", "wikidata": "Q154895",
+         "orchestra": {"name": "Berliner Philharmoniker", "wikidata": "Q152222"}},
+        {"videoId": "iia2J-6CHmY", "artistId": 629,
+         "artistName": "Colin Davis", "wikidata": "Q366624",
+         "orchestra": {"name": "Vienna Philharmonic Orchestra", "wikidata": "Q154685"}},
+        {"videoId": "u_FJUPoJ9Gg", "artistId": 575,
+         "artistName": "Seiji Ozawa", "wikidata": "Q313649",
+         "orchestra": {"name": "Boston Symphony Orchestra", "wikidata": "Q864369"}}
+      ]
     }
   ]
 }
