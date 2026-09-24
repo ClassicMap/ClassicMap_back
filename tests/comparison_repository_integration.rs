@@ -99,21 +99,13 @@ async fn restore_legacy_publication_fixture(pool: &db::DbPool, performance_id: i
     .expect("legacy performance 잠금 복구");
 }
 
-#[tokio::test]
-#[ignore = "scripts/test_global_seed_migration.sh에서 격리 MySQL로 실행"]
-async fn ready_clip_is_exposed_with_video_and_credit_contract() {
-    let pool = db::create_pool().await.expect("격리 테스트 DB 연결");
-    let (performance_id, artist_id, duration_ms) = sqlx::query_as::<_, (i32, i32, u32)>(
-        "SELECT id, artist_id, end_ms - start_ms
-         FROM performances
-         WHERE performance_source_id IS NOT NULL
-         ORDER BY id
-         LIMIT 1",
-    )
-    .fetch_one(&pool)
-    .await
-    .expect("legacy performance backfill");
-    prepare_seed_publication_gate(&pool, performance_id, "unknown").await;
+async fn insert_verified_clip(pool: &db::DbPool, performance_id: i32) {
+    let duration_ms =
+        sqlx::query_scalar::<_, u32>("SELECT end_ms - start_ms FROM performances WHERE id = ?")
+            .bind(performance_id)
+            .fetch_one(pool)
+            .await
+            .expect("performance 구간 길이");
 
     let output_key = format!("integration-{performance_id}-v1.mp4");
     let job_id = sqlx::query(
@@ -123,7 +115,7 @@ async fn ready_clip_is_exposed_with_video_and_credit_contract() {
     )
     .bind(performance_id)
     .bind(&output_key)
-    .execute(&pool)
+    .execute(pool)
     .await
     .expect("clip job 생성")
     .last_insert_id();
@@ -134,20 +126,75 @@ async fn ready_clip_is_exposed_with_video_and_credit_contract() {
             encoding_profile_version, file_size, duration_ms, sha256,
             ffprobe_result, range_verified, is_current, generated_at
          ) VALUES (
-            ?, ?, 'READY', ?, 'https://media.example.test/comparison.mp4',
-            'integration-v1', 1024, ?, ?, JSON_OBJECT('durationMs', ?),
-            TRUE, TRUE, CURRENT_TIMESTAMP(6)
+            ?, ?, 'READY', ?, ?, 'integration-v1', 1024, ?, ?,
+            JSON_OBJECT('durationMs', ?), TRUE, TRUE, CURRENT_TIMESTAMP(6)
          )",
     )
     .bind(performance_id)
     .bind(job_id)
     .bind(format!("/integration/{output_key}"))
+    .bind(format!("https://media.example.test/{output_key}"))
     .bind(duration_ms)
     .bind("a".repeat(64))
     .bind(duration_ms)
-    .execute(&pool)
+    .execute(pool)
     .await
     .expect("검증된 clip asset 생성");
+}
+
+/// 같은 섹터에서 서로 다른 연주자의 역채움 performance 3건을 고른다.
+/// 가장 큰 id는 공개 URL 없는 클립 테스트가 쓰므로 뺀다.
+async fn find_three_artist_sector(pool: &db::DbPool) -> (i32, i32, Vec<(i32, i32)>) {
+    let (sector_id, piece_id) = sqlx::query_as::<_, (i32, i32)>(
+        "SELECT performance.sector_id, performance.piece_id
+         FROM performances performance
+         JOIN performance_sectors sector
+           ON sector.id = performance.sector_id
+          AND sector.piece_id = performance.piece_id
+         WHERE performance.performance_source_id IS NOT NULL
+           AND performance.id < (
+               SELECT MAX(id) FROM performances WHERE performance_source_id IS NOT NULL
+           )
+         GROUP BY performance.sector_id, performance.piece_id
+         HAVING COUNT(DISTINCT performance.artist_id) >= 3
+            AND COUNT(DISTINCT performance.performance_source_id) >= 3
+         ORDER BY performance.sector_id
+         LIMIT 1",
+    )
+    .fetch_one(pool)
+    .await
+    .expect("연주자 3명 이상인 역채움 섹터");
+
+    let performances = sqlx::query_as::<_, (i32, i32)>(
+        "SELECT MIN(id), artist_id
+         FROM performances
+         WHERE sector_id = ?
+           AND performance_source_id IS NOT NULL
+           AND id < (
+               SELECT MAX(id) FROM performances WHERE performance_source_id IS NOT NULL
+           )
+         GROUP BY artist_id
+         ORDER BY MIN(id)
+         LIMIT 3",
+    )
+    .bind(sector_id)
+    .fetch_all(pool)
+    .await
+    .expect("섹터 performance 3건");
+    assert_eq!(performances.len(), 3);
+
+    (sector_id, piece_id, performances)
+}
+
+#[tokio::test]
+#[ignore = "scripts/test_global_seed_migration.sh에서 격리 MySQL로 실행"]
+async fn ready_clip_is_exposed_with_video_and_credit_contract() {
+    let pool = db::create_pool().await.expect("격리 테스트 DB 연결");
+    let (sector_id, piece_id, performances) = find_three_artist_sector(&pool).await;
+    let (performance_id, artist_id) = performances[0];
+
+    prepare_seed_publication_gate(&pool, performance_id, "unknown").await;
+    insert_verified_clip(&pool, performance_id).await;
 
     let unknown_rights =
         ComparisonRepository::publish_ready_performance(&pool, performance_id).await;
@@ -186,6 +233,55 @@ async fn ready_clip_is_exposed_with_video_and_credit_contract() {
         .await
         .expect("public URL이 있는 READY clip 발행");
 
+    // 발행된 연주가 한 명뿐이면 섹터는 아직 비교 대상이 아니다.
+    let sectors = ComparisonRepository::find_public_sectors_by_piece(&pool, piece_id)
+        .await
+        .expect("공개 섹터 조회")
+        .expect("작품 존재");
+    assert!(sectors.iter().all(|sector| sector.id != sector_id));
+    let hidden = ComparisonRepository::find_public_performances_by_sector(&pool, sector_id)
+        .await
+        .expect("섹터 performance 조회")
+        .expect("섹터 존재");
+    assert!(hidden.is_empty());
+
+    for &(other_performance_id, _) in &performances[1..] {
+        prepare_seed_publication_gate(&pool, other_performance_id, "licensed_self_hosted").await;
+        insert_verified_clip(&pool, other_performance_id).await;
+        ComparisonRepository::publish_ready_performance(&pool, other_performance_id)
+            .await
+            .expect("나머지 연주 발행");
+    }
+
+    let sectors = ComparisonRepository::find_public_sectors_by_piece(&pool, piece_id)
+        .await
+        .expect("공개 섹터 조회")
+        .expect("작품 존재");
+    let sector = sectors
+        .iter()
+        .find(|sector| sector.id == sector_id)
+        .expect("연주자 3명이 모이면 섹터 공개");
+    assert_eq!(sector.piece_id, piece_id);
+    assert_eq!(sector.ready_performance_count, 3);
+    assert_eq!(sector.primary_artist_count, 3);
+
+    let sector_performances =
+        ComparisonRepository::find_public_performances_by_sector(&pool, sector_id)
+            .await
+            .expect("섹터 performance 조회")
+            .expect("섹터 존재");
+    let mut exposed_ids = sector_performances
+        .iter()
+        .map(|item| item.id)
+        .collect::<Vec<_>>();
+    exposed_ids.sort_unstable();
+    let mut expected_ids = performances.iter().map(|(id, _)| *id).collect::<Vec<_>>();
+    expected_ids.sort_unstable();
+    assert_eq!(exposed_ids, expected_ids);
+    assert!(sector_performances
+        .iter()
+        .all(|item| item.sector_id == sector_id && item.piece_id == piece_id));
+
     let page = ComparisonRepository::find_published_by_artist(
         &pool,
         artist_id,
@@ -206,14 +302,26 @@ async fn ready_clip_is_exposed_with_video_and_credit_contract() {
     )));
     assert_eq!(
         item.clip_url.as_deref(),
-        Some("https://media.example.test/comparison.mp4")
+        Some(format!("https://media.example.test/integration-{performance_id}-v1.mp4").as_str())
     );
     assert!(item.video_id.is_some());
     assert!(item
         .credits
         .iter()
         .any(|credit| credit.artist_id == artist_id && credit.is_primary));
-    restore_legacy_publication_fixture(&pool, performance_id).await;
+
+    let missing_piece = ComparisonRepository::find_public_sectors_by_piece(&pool, i32::MAX)
+        .await
+        .expect("없는 작품 조회");
+    assert!(missing_piece.is_none());
+    let missing_sector = ComparisonRepository::find_public_performances_by_sector(&pool, i32::MAX)
+        .await
+        .expect("없는 섹터 조회");
+    assert!(missing_sector.is_none());
+
+    for (published_id, _) in performances {
+        restore_legacy_publication_fixture(&pool, published_id).await;
+    }
 }
 
 #[tokio::test]

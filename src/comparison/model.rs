@@ -172,6 +172,22 @@ pub struct ComparisonPerformance {
     pub credits: Vec<ComparisonCredit>,
 }
 
+/// 곡 비교 화면에 공개되는 섹터. 두 카운트는 같은 공개 연주 집합에서 센다.
+#[derive(Debug, Clone, Serialize, FromRow)]
+#[serde(rename_all = "camelCase")]
+pub struct ComparisonSector {
+    pub id: i32,
+    pub piece_id: i32,
+    pub sector_name: String,
+    pub sector_name_en: Option<String>,
+    pub description: Option<String>,
+    pub display_order: Option<i32>,
+    pub measure_start: Option<String>,
+    pub measure_end: Option<String>,
+    pub ready_performance_count: i64,
+    pub primary_artist_count: i64,
+}
+
 #[derive(Debug, Clone, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct ComparisonPerformancePage {
@@ -220,7 +236,7 @@ impl From<ComparisonCreditRow> for ComparisonCredit {
 
 #[cfg(test)]
 mod tests {
-    use super::{ClipStatus, EditorialStatus, PerformancePublishStatus};
+    use super::{ClipStatus, ComparisonSector, EditorialStatus, PerformancePublishStatus};
     use std::str::FromStr;
 
     #[test]
@@ -231,6 +247,33 @@ mod tests {
         assert!(ClipStatus::Ready.can_be_published());
         assert!(ClipStatus::Published.can_be_published());
         assert!(!ClipStatus::Generating.can_be_published());
+    }
+
+    #[test]
+    fn sector_serializes_missing_values_as_null() {
+        let sector = ComparisonSector {
+            id: 14,
+            piece_id: 226,
+            sector_name: "1악장 카덴차".to_string(),
+            sector_name_en: None,
+            description: None,
+            display_order: Some(1),
+            measure_start: None,
+            measure_end: None,
+            ready_performance_count: 4,
+            primary_artist_count: 3,
+        };
+
+        let value = serde_json::to_value(sector).expect("섹터 직렬화");
+        assert_eq!(value["sectorName"], "1악장 카덴차");
+        assert_eq!(value["readyPerformanceCount"], 4);
+        assert_eq!(value["primaryArtistCount"], 3);
+        for key in ["sectorNameEn", "description", "measureStart", "measureEnd"] {
+            assert!(
+                value.get(key).is_some_and(serde_json::Value::is_null),
+                "{key}"
+            );
+        }
     }
 
     #[test]

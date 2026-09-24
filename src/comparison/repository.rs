@@ -1,6 +1,6 @@
 use super::model::{
     ComparisonCredit, ComparisonCreditRow, ComparisonPerformance, ComparisonPerformancePage,
-    ComparisonPerformanceRow,
+    ComparisonPerformanceRow, ComparisonSector,
 };
 use crate::db::DbPool;
 use sqlx::{FromRow, MySql, QueryBuilder, Transaction};
@@ -93,6 +93,67 @@ fn allows_self_hosted_publication(rights_mode: &str) -> bool {
     )
 }
 
+/// 사용자에게 공개할 수 있는 비교 연주와 섹터.
+///
+/// `ready_performance`는 발행됐고 현재 클립이 준비됐으며 편집 승인된 섹터에 속한 연주다.
+/// `public_sector`는 그 집합에서 서로 다른 primary artist가 3명 이상인 섹터다.
+/// 곡 비교 화면과 아티스트 상세가 같은 기준을 쓰도록 세 조회가 이 CTE를 공유한다.
+const PUBLIC_COMPARISON_CTE: &str = "WITH ready_performance AS (
+        SELECT p.id,
+               p.sector_id,
+               p.piece_id,
+               p.performance_source_id,
+               p.start_ms,
+               p.end_ms,
+               clip.public_url AS clip_url
+        FROM performances p
+        JOIN performance_sectors sector
+          ON sector.id = p.sector_id
+         AND sector.piece_id = p.piece_id
+        JOIN clip_assets clip
+          ON clip.performance_id = p.id
+         AND clip.is_current = TRUE
+         AND clip.status IN ('READY', 'PUBLISHED')
+         AND clip.public_url IS NOT NULL
+         AND clip.public_url <> ''
+        WHERE p.publish_status = 'PUBLISHED'
+          AND p.performance_source_id IS NOT NULL
+          AND p.start_ms IS NOT NULL
+          AND p.end_ms IS NOT NULL
+          AND sector.editorial_status IN ('EDITOR_REVIEWED', 'PUBLISHED')
+    ),
+    public_sector AS (
+        SELECT ready.sector_id,
+               COUNT(DISTINCT ready.id) AS ready_performance_count,
+               COUNT(DISTINCT credit.artist_id) AS primary_artist_count
+        FROM ready_performance ready
+        LEFT JOIN performance_credits credit
+          ON credit.performance_source_id = ready.performance_source_id
+         AND credit.is_primary = TRUE
+        GROUP BY ready.sector_id
+        HAVING COUNT(DISTINCT credit.artist_id) >= 3
+    )";
+
+const PUBLIC_PERFORMANCE_SELECT: &str = "SELECT ready.id,
+            source.id AS source_id,
+            ready.sector_id,
+            ready.piece_id,
+            piece.title AS piece_title,
+            composer.id AS composer_id,
+            composer.name AS composer_name,
+            COALESCE(sector.name_ko, sector.sector_name) AS sector_name,
+            ready.start_ms,
+            ready.end_ms,
+            'ready' AS clip_status,
+            ready.clip_url,
+            CAST(source.provider_video_id AS CHAR CHARACTER SET utf8mb4) AS video_id
+     FROM ready_performance ready
+     JOIN public_sector ON public_sector.sector_id = ready.sector_id
+     JOIN performance_sources source ON source.id = ready.performance_source_id
+     JOIN performance_sectors sector ON sector.id = ready.sector_id
+     JOIN pieces piece ON piece.id = ready.piece_id
+     JOIN composers composer ON composer.id = piece.composer_id";
+
 impl ComparisonRepository {
     pub async fn find_published_by_artist(
         pool: &DbPool,
@@ -100,58 +161,116 @@ impl ComparisonRepository {
         page: ComparisonPageRequest,
     ) -> Result<ComparisonPerformancePage, ComparisonContractError> {
         let fetch_limit = page.limit.saturating_add(1);
-        let mut rows = sqlx::query_as::<_, ComparisonPerformanceRow>(
-            "SELECT p.id,
-                    source.id AS source_id,
-                    p.sector_id,
-                    p.piece_id,
-                    piece.title AS piece_title,
-                    composer.id AS composer_id,
-                    composer.name AS composer_name,
-                    COALESCE(sector.name_ko, sector.sector_name) AS sector_name,
-                    p.start_ms,
-                    p.end_ms,
-                    'ready' AS clip_status,
-                    clip.public_url AS clip_url,
-                    CAST(source.provider_video_id AS CHAR CHARACTER SET utf8mb4) AS video_id
-             FROM performances p
-             JOIN performance_sources source ON source.id = p.performance_source_id
-             JOIN performance_sectors sector ON sector.id = p.sector_id
-             JOIN pieces piece ON piece.id = p.piece_id
-             JOIN composers composer ON composer.id = piece.composer_id
-             JOIN clip_assets clip
-               ON clip.performance_id = p.id
-              AND clip.is_current = TRUE
-              AND clip.status IN ('READY', 'PUBLISHED')
-              AND clip.public_url IS NOT NULL
-              AND clip.public_url <> ''
-             WHERE p.publish_status = 'PUBLISHED'
-               AND p.start_ms IS NOT NULL
-               AND p.end_ms IS NOT NULL
-               AND EXISTS (
+        let sql = format!(
+            "{PUBLIC_COMPARISON_CTE}
+             {PUBLIC_PERFORMANCE_SELECT}
+             WHERE EXISTS (
                    SELECT 1
                    FROM performance_credits requested_credit
                    WHERE requested_credit.performance_source_id = source.id
                      AND requested_credit.artist_id = ?
                )
-               AND (? IS NULL OR p.id < ?)
-             ORDER BY p.id DESC
-             LIMIT ?",
-        )
-        .bind(artist_id)
-        .bind(page.cursor)
-        .bind(page.cursor)
-        .bind(fetch_limit)
-        .fetch_all(pool)
-        .await?;
+               AND (? IS NULL OR ready.id < ?)
+             ORDER BY ready.id DESC
+             LIMIT ?"
+        );
+        let mut rows = sqlx::query_as::<_, ComparisonPerformanceRow>(&sql)
+            .bind(artist_id)
+            .bind(page.cursor)
+            .bind(page.cursor)
+            .bind(fetch_limit)
+            .fetch_all(pool)
+            .await?;
 
         let has_more = rows.len() > page.limit as usize;
         rows.truncate(page.limit as usize);
 
+        let items = Self::attach_credits(pool, rows).await?;
+        let next_cursor = has_more
+            .then(|| items.last().map(|item| item.id.to_string()))
+            .flatten();
+
+        Ok(ComparisonPerformancePage { items, next_cursor })
+    }
+
+    /// 작품이 없으면 `None`, 작품은 있는데 공개 섹터가 없으면 빈 목록을 준다.
+    pub async fn find_public_sectors_by_piece(
+        pool: &DbPool,
+        piece_id: i32,
+    ) -> Result<Option<Vec<ComparisonSector>>, ComparisonContractError> {
+        let piece_exists =
+            sqlx::query_scalar::<_, i64>("SELECT EXISTS(SELECT 1 FROM pieces WHERE id = ?)")
+                .bind(piece_id)
+                .fetch_one(pool)
+                .await?
+                == 1;
+        if !piece_exists {
+            return Ok(None);
+        }
+
+        let sql = format!(
+            "{PUBLIC_COMPARISON_CTE}
+             SELECT sector.id,
+                    sector.piece_id,
+                    COALESCE(sector.name_ko, sector.sector_name) AS sector_name,
+                    sector.name_en AS sector_name_en,
+                    sector.description,
+                    sector.display_order,
+                    sector.measure_start,
+                    sector.measure_end,
+                    public_sector.ready_performance_count,
+                    public_sector.primary_artist_count
+             FROM public_sector
+             JOIN performance_sectors sector ON sector.id = public_sector.sector_id
+             WHERE sector.piece_id = ?
+             ORDER BY sector.display_order ASC, sector.id ASC"
+        );
+        let sectors = sqlx::query_as::<_, ComparisonSector>(&sql)
+            .bind(piece_id)
+            .fetch_all(pool)
+            .await?;
+
+        Ok(Some(sectors))
+    }
+
+    /// 섹터가 없으면 `None`, 섹터는 있는데 공개 기준에 못 미치면 빈 목록을 준다.
+    pub async fn find_public_performances_by_sector(
+        pool: &DbPool,
+        sector_id: i32,
+    ) -> Result<Option<Vec<ComparisonPerformance>>, ComparisonContractError> {
+        let sector_exists = sqlx::query_scalar::<_, i64>(
+            "SELECT EXISTS(SELECT 1 FROM performance_sectors WHERE id = ?)",
+        )
+        .bind(sector_id)
+        .fetch_one(pool)
+        .await?
+            == 1;
+        if !sector_exists {
+            return Ok(None);
+        }
+
+        let sql = format!(
+            "{PUBLIC_COMPARISON_CTE}
+             {PUBLIC_PERFORMANCE_SELECT}
+             WHERE ready.sector_id = ?
+             ORDER BY ready.id ASC"
+        );
+        let rows = sqlx::query_as::<_, ComparisonPerformanceRow>(&sql)
+            .bind(sector_id)
+            .fetch_all(pool)
+            .await?;
+
+        Ok(Some(Self::attach_credits(pool, rows).await?))
+    }
+
+    async fn attach_credits(
+        pool: &DbPool,
+        rows: Vec<ComparisonPerformanceRow>,
+    ) -> Result<Vec<ComparisonPerformance>, sqlx::Error> {
         let source_ids = rows.iter().map(|row| row.source_id).collect::<Vec<_>>();
         let credits_by_source = Self::find_credits_by_source_ids(pool, &source_ids).await?;
 
-        let items = rows
+        Ok(rows
             .into_iter()
             .map(|row| {
                 let credits = credits_by_source
@@ -176,13 +295,7 @@ impl ComparisonRepository {
                     credits,
                 }
             })
-            .collect::<Vec<_>>();
-
-        let next_cursor = has_more
-            .then(|| items.last().map(|item| item.id.to_string()))
-            .flatten();
-
-        Ok(ComparisonPerformancePage { items, next_cursor })
+            .collect())
     }
 
     async fn find_credits_by_source_ids(

@@ -102,6 +102,8 @@ async fn rocket() -> _ {
                 artist::create_artist_award,
                 artist::delete_artist_award,
                 comparison::get_artist_comparison_performances,
+                comparison::get_piece_comparison_sectors,
+                comparison::get_sector_comparison_performances,
                 // Concert routes
                 concert::get_concerts,
                 concert::get_concert,
