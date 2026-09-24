@@ -837,6 +837,12 @@ async fn ensure_source(
     Ok(id)
 }
 
+/// 후보 bundle 은 마디를 모르면 `unknown` 을 적는다. DB 에는 값이 없다는 뜻의 NULL 로 넣는다.
+fn known_measure(value: &str) -> Option<&str> {
+    let value = value.trim();
+    (!value.is_empty() && !value.eq_ignore_ascii_case("unknown")).then_some(value)
+}
+
 async fn ensure_sector(
     transaction: &mut Transaction<'_, MySql>,
     candidate: &ValidatedCandidate,
@@ -883,8 +889,8 @@ async fn ensure_sector(
     .bind(&sector.sector_type)
     .bind(&sector.name_ko)
     .bind(&sector.name_en)
-    .bind(&sector.measure_start)
-    .bind(&sector.measure_end)
+    .bind(known_measure(&sector.measure_start))
+    .bind(known_measure(&sector.measure_end))
     .bind(&sector.start_cue)
     .bind(&sector.end_cue)
     .bind(sector.target_min_ms)
@@ -1654,9 +1660,18 @@ fn is_youtube_video_id(value: &str) -> bool {
 #[cfg(test)]
 mod tests {
     use super::{
-        parse_bundle, validate_resume, ComparisonSeedLoadError, ComparisonSeedLoadOptions,
-        ExistingSeedRun, COMMAND, RUN_KIND,
+        known_measure, parse_bundle, validate_resume, ComparisonSeedLoadError,
+        ComparisonSeedLoadOptions, ExistingSeedRun, COMMAND, RUN_KIND,
     };
+
+    #[test]
+    fn unknown_measure_is_stored_as_null() {
+        assert_eq!(known_measure("unknown"), None);
+        assert_eq!(known_measure(" Unknown "), None);
+        assert_eq!(known_measure(""), None);
+        assert_eq!(known_measure("1"), Some("1"));
+        assert_eq!(known_measure("final"), Some("final"));
+    }
     use serde_json::json;
     use std::{fs, path::PathBuf, time::SystemTime};
 
