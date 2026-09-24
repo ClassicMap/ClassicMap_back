@@ -1,0 +1,71 @@
+{
+  "batchId": "a-a7",
+  "note": "A tier A7. 무소르크스키 셋. 189 는 피아노 원곡, 190 은 라벨 편곡 관현악판이다. 서로 다른 work 이고 연주를 섞으면 안 된다. 191 은 림스키코르사코프 편곡판이다.",
+  "pieces": [
+    {
+      "pieceId": 189,
+      "workMbid": "fef21cee-269d-45cb-b41e-f90980979aca",
+      "composerQid": "Q132682",
+      "titleKo": "피아노 모음곡 <전람회의 그림> (피아노 원곡)",
+      "titleEn": "Pictures at an Exhibition (original piano version)",
+      "composerNameEn": "Modest Mussorgsky",
+      "composerNameKo": "모데스트 무소르크스키",
+      "role": "PIANIST",
+      "sector": {
+        "key": "promenade-1",
+        "type": "EXCERPT",
+        "nameKo": "첫 <프롬나드> 도입",
+        "nameEn": "Promenade I, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "오른손 단선율 프롬나드 주제의 첫 음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 90},
+      "videos": []
+    },
+    {
+      "pieceId": 190,
+      "workMbid": "e624d7dc-5abc-4439-87f7-65bc1095bf57",
+      "composerQid": "Q132682",
+      "titleKo": "<전람회의 그림> (라벨 편곡 관현악판)",
+      "titleEn": "Tableaux d'une exposition (orchestrated by Ravel)",
+      "composerNameEn": "Modest Mussorgsky",
+      "composerNameKo": "모데스트 무소르크스키",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "promenade-1",
+        "type": "EXCERPT",
+        "nameKo": "첫 <프롬나드> 도입",
+        "nameEn": "Promenade I, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "트럼펫 독주 프롬나드 주제의 첫 음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 90},
+      "videos": []
+    },
+    {
+      "pieceId": 191,
+      "workMbid": "7cd45975-951c-3f4a-9c07-5bdfb59abddc",
+      "composerQid": "Q132682",
+      "titleKo": "교향시 <민둥산의 하룻밤> (림스키코르사코프 편곡)",
+      "titleEn": "Une nuit sur le mont chauve (orchestrated by Rimsky-Korsakov)",
+      "composerNameEn": "Modest Mussorgsky",
+      "composerNameKo": "모데스트 무소르크스키",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "현의 떨리는 하행 음형 첫 음(작품 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    }
+  ]
+}

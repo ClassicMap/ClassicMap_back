@@ -21,7 +21,38 @@
         "startCue": "여린 관악 신호의 첫 음(악곡 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "0dIosxJ2iIo",
+          "artistId": 629,
+          "artistName": "Colin Davis",
+          "wikidata": "Q366624",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "u6dK5hnPHTE",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "7okulqWTP2Q",
+          "artistId": 220,
+          "artistName": "Simon Rattle",
+          "wikidata": "Q157814",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
     },
     {
       "pieceId": 172,
@@ -42,7 +73,38 @@
         "startCue": "총주의 첫 타격(서곡 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "pvU_FWJuFWY",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "o4YkiZFYw-w",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Orchestre symphonique de Montreal",
+            "wikidata": "Q1196259"
+          }
+        },
+        {
+          "videoId": "K_OoE8MINyg",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        }
+      ]
     },
     {
       "pieceId": 175,
@@ -63,7 +125,35 @@
         "startCue": "피아노 전주의 첫 음(가곡 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "5Afka9zN5YE",
+          "artistName": "Galina Vishnevskaya",
+          "wikidata": "Q230916",
+          "accompanist": {
+            "name": "Mstislav Rostropovich",
+            "wikidata": "Q152043"
+          }
+        },
+        {
+          "videoId": "73XTYqwjYwo",
+          "artistName": "Galina Gorchakova",
+          "wikidata": "Q1811349",
+          "accompanist": {
+            "name": "Larissa Gergieva",
+            "wikidata": "Q4137143"
+          }
+        },
+        {
+          "videoId": "phXHJwmx0ho",
+          "artistName": "Julia Sukmanova",
+          "wikidata": "Q28034881",
+          "accompanist": {
+            "name": "Elena Sukmanova",
+            "wikidata": "Q139199024"
+          }
+        }
+      ]
     }
   ]
 }
