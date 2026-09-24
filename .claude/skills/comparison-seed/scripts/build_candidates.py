@@ -55,10 +55,17 @@ def oembed(video_ids):
 
 
 def credits_for(piece, video):
-    """독주자나 지휘자가 primary 다.
+    """독주자·성악가·지휘자가 primary 다.
 
     협주곡처럼 독주자가 primary 인 관현악 곡은 video 에 conductor 를 적어 지휘자를
     붙이고, 관현악 곡이면 orchestra 로 악단을 붙인다. 둘 다 primary 가 아니다.
+
+    가곡은 accompanist 로 반주자를, 합창 딸린 곡은 choir 로 합창단을 붙인다.
+    **반주자를 `PIANIST` 로 넣으면 안 된다.** 적재기가 악기 역할을 모두 독주자로
+    묶어 반주자가 독주자로 뜬다(`04-loading.md`).
+
+    차례는 primary → CHOIR → ORCHESTRA → ACCOMPANIST 다. 합창단과 악단이 함께
+    드는 곡에서 합창을 앞에 두는 것은 S tier F1 의 히브리 노예들과 같다.
     """
     def entry(role_code, is_primary, order, person):
         return {
@@ -78,9 +85,17 @@ def credits_for(piece, video):
         if piece["role"] == "CONDUCTOR":
             raise SystemExit(f"{video['videoId']}: primary 가 지휘자인 곡에 conductor 를 또 적었다")
         entries.append(entry("CONDUCTOR", False, len(entries), conductor))
+    choir = video.get("choir")
+    if choir:
+        entries.append(entry("CHOIR", False, len(entries), choir))
     orchestra = video.get("orchestra")
     if orchestra:
         entries.append(entry("ORCHESTRA", False, len(entries), orchestra))
+    accompanist = video.get("accompanist")
+    if accompanist:
+        if piece["role"] == "ACCOMPANIST":
+            raise SystemExit(f"{video['videoId']}: primary 가 반주자인 곡에 accompanist 를 또 적었다")
+        entries.append(entry("ACCOMPANIST", False, len(entries), accompanist))
     return entries
 
 

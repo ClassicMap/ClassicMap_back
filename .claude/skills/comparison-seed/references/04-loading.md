@@ -45,8 +45,21 @@ cargo run --quiet --bin load_comparison_candidates -- \
 
 **크레딧 역할을 적재 전에 본다.** 적재기는 악기 역할(`PIANIST` 등)을 모두 독주자로 묶는다.
 가곡 반주자는 `ACCOMPANIST`, 4중주단은 `QUARTET`, 악단은 `ORCHESTRA` 여야 한다.
-`build_candidates.py` 는 두 번째 크레딧을 만들지 못해 서브에이전트가 손으로 덧붙이는데,
-그때 반주자를 `PIANIST` 로 넣은 적이 있다.
+반주자를 `PIANIST` 로 넣은 적이 있다.
+
+`build_candidates.py` 가 배치 정의의 `videos[]` 에서 읽는 딸림 크레딧은 넷이다.
+차례는 primary → `CHOIR` → `ORCHESTRA` → `ACCOMPANIST` 다.
+
+```json
+{"videoId": "…", "artistName": "…", "wikidata": "Q…",
+ "conductor":   {"name": "…", "wikidata": "Q…"},
+ "choir":       {"name": "…", "wikidata": "Q…"},
+ "orchestra":   {"name": "…", "wikidata": "Q…"},
+ "accompanist": {"name": "…", "wikidata": "Q…"}}
+```
+
+`choir` 와 `accompanist` 는 2026-09-25 에 넣었다. 그 전에는 서브에이전트가 생성된
+JSONL 에 손으로 덧붙였고, 그때 역할을 잘못 적는 일이 있었다.
 
 적재에 실패하면 후보는 rollback 되고 `review_queue` 에만 남는다. 설계된 동작이다.
 원인을 고쳐 다시 적재한 뒤, 해소된 항목은 닫는다(`05-pitfalls.md` 참고).
