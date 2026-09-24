@@ -1,0 +1,70 @@
+{
+  "batchId": "a-a5",
+  "note": "A tier A5. 로시니 서곡 둘과 베를리오즈 환상 교향곡. 170 만 발췌다.",
+  "pieces": [
+    {
+      "pieceId": 168,
+      "workMbid": "937398a2-d307-3ccd-a390-78d1b73c6457",
+      "composerQid": "Q9726",
+      "titleKo": "오페라 <윌리엄 텔> 서곡",
+      "titleEn": "Guillaume Tell: Ouverture",
+      "composerNameEn": "Gioachino Rossini",
+      "composerNameKo": "조아키노 로시니",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "첼로 독주의 첫 음(서곡 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 169,
+      "workMbid": "baa339e5-c2db-45da-a0ff-f9ea200f9178",
+      "composerQid": "Q9726",
+      "titleKo": "오페라 <도둑 까치> 서곡",
+      "titleEn": "La gazza ladra: Ouverture",
+      "composerNameEn": "Gioachino Rossini",
+      "composerNameKo": "조아키노 로시니",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "작은북 연타의 첫 타(서곡 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 170,
+      "workMbid": "312510a8-a429-39a0-9a33-8d5f914872dd",
+      "composerQid": "Q1151",
+      "titleKo": "환상 교향곡 Op. 14",
+      "titleEn": "Symphonie fantastique, op. 14",
+      "composerNameEn": "Hector Berlioz",
+      "composerNameKo": "엑토르 베를리오즈",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv4-marche-au-supplice",
+        "type": "EXCERPT",
+        "nameKo": "4악장 “단두대로의 행진” 도입",
+        "nameEn": "IV. Marche au supplice, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "팀파니의 여린 연타 첫 타(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    }
+  ]
+}
