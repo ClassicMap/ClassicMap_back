@@ -1,0 +1,25 @@
+{
+  "status": "succeeded",
+  "runId": "7284a169-da17-4983-926b-d950df0553dc",
+  "bundlePath": "seed_pipeline/curation/comparison-a-a9-2026-09-25/candidates.jsonl",
+  "rowCount": 9,
+  "dryRun": false,
+  "mutations": {
+    "performanceSources": 9,
+    "performanceSectors": 3,
+    "performanceCandidates": 9,
+    "performanceCredits": 18,
+    "performances": 9,
+    "clipJobs": 9,
+    "total": 57
+  },
+  "plannedMutations": {
+    "performanceSources": 9,
+    "performanceSectors": 3,
+    "performanceCandidates": 9,
+    "performanceCredits": 18,
+    "performances": 9,
+    "clipJobs": 9,
+    "total": 57
+  }
+}

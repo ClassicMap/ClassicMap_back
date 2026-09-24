@@ -1,0 +1,71 @@
+{
+  "batchId": "a-a11",
+  "note": "A tier A11. 브루크너 모테트와 말러 교향곡 둘. 215·216 은 긴 곡이라 발췌다.",
+  "pieces": [
+    {
+      "pieceId": 184,
+      "workMbid": "59bb5205-fbec-3a26-b106-544cb887e268",
+      "composerQid": "Q81752",
+      "titleKo": "모테트 <Locus iste> WAB 23",
+      "titleEn": "Locus iste, WAB 23",
+      "composerNameEn": "Anton Bruckner",
+      "composerNameKo": "안톤 브루크너",
+      "role": "CHOIR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "무반주 합창의 첫 화음(작품 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 215,
+      "workMbid": "ad8df966-dba7-43d0-8d0e-91e69df5b5ef",
+      "composerQid": "Q7304",
+      "titleKo": "교향곡 2번 C단조 “부활”",
+      "titleEn": "Symphony no. 2 “Resurrection”",
+      "composerNameEn": "Gustav Mahler",
+      "composerNameKo": "구스타프 말러",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro maestoso 도입 (저현의 트레몰로와 주제)",
+        "nameEn": "I. Allegro maestoso, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "저현의 트레몰로 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 216,
+      "workMbid": "adcdc472-8b19-4e6f-aa4e-be8c6aea5f8a",
+      "composerQid": "Q7304",
+      "titleKo": "교향곡 5번 C#단조",
+      "titleEn": "Symphony no. 5",
+      "composerNameEn": "Gustav Mahler",
+      "composerNameKo": "구스타프 말러",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-trauermarsch",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Trauermarsch 도입 (트럼펫 독주)",
+        "nameEn": "I. Trauermarsch, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "트럼펫 독주 신호의 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    }
+  ]
+}

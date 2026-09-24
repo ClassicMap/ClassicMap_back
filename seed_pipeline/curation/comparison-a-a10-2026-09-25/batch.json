@@ -1,0 +1,71 @@
+{
+  "batchId": "a-a10",
+  "note": "A tier A10. 드보르자크 유모레스크와 브루크너 교향곡 둘. 182·183 은 판본이 여럿이라 발췌를 1악장 도입으로 잡아 판본 차이를 피한다.",
+  "pieces": [
+    {
+      "pieceId": 201,
+      "workMbid": "134f4e53-e0d5-3ec7-aa86-5d3456379c4b",
+      "composerQid": "Q7298",
+      "titleKo": "유모레스크 7번 G♭장조 Op. 101-7 (피아노 원곡)",
+      "titleEn": "Humoresque in G-flat major, op. 101 no. 7 (for piano)",
+      "composerNameEn": "Antonín Dvořák",
+      "composerNameKo": "안토닌 드보르자크",
+      "role": "PIANIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "오른손 점리듬 선율의 첫 음(작품 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 182,
+      "workMbid": "9d9a08ad-40c7-4291-b7c1-3c5120dac2c8",
+      "composerQid": "Q81752",
+      "titleKo": "교향곡 4번 E♭장조 WAB 104 “낭만적”",
+      "titleEn": "Symphony no. 4 in E-flat major, WAB 104 “Romantic”",
+      "composerNameEn": "Anton Bruckner",
+      "composerNameKo": "안톤 브루크너",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Bewegt, nicht zu schnell 도입 (호른 주제)",
+        "nameEn": "I. Bewegt, nicht zu schnell, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 트레몰로 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 183,
+      "workMbid": "e080651c-3566-451b-a151-c8a2032ac0f7",
+      "composerQid": "Q81752",
+      "titleKo": "교향곡 7번 E장조 WAB 107",
+      "titleEn": "Symphony no. 7 in E major, WAB 107",
+      "composerNameEn": "Anton Bruckner",
+      "composerNameKo": "안톤 브루크너",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro moderato 도입 (첼로 주제)",
+        "nameEn": "I. Allegro moderato, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 트레몰로 위 첼로 주제 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    }
+  ]
+}
