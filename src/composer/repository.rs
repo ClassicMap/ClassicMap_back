@@ -1,5 +1,6 @@
 use crate::db::DbPool;
 use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces, ComposerWithPerformance};
+use crate::search::SearchText;
 use sqlx::Error;
 
 pub struct ComposerRepository;
@@ -120,18 +121,15 @@ impl ComposerRepository {
 
         let mut where_clauses = vec![HIDE_EMPTY_COMPOSER.to_string()];
         let mut bind_values: Vec<String> = Vec::new();
+        let search_text = SearchText::parse(query.as_deref());
 
         // Add search condition if query provided
-        if let Some(q) = query {
-            let trimmed = q.trim();
-            if !trimmed.is_empty() {
-                where_clauses.push(
-                    "(c.name LIKE ? OR c.full_name LIKE ? OR c.english_name LIKE ?)".to_string()
-                );
-                let search_pattern = format!("%{}%", trimmed);
-                bind_values.push(search_pattern.clone());
-                bind_values.push(search_pattern.clone());
-                bind_values.push(search_pattern);
+        if let Some(text) = &search_text {
+            where_clauses.push(
+                "(c.name LIKE ? OR c.full_name LIKE ? OR c.english_name LIKE ?)".to_string()
+            );
+            for _ in 0..3 {
+                bind_values.push(text.contains().to_string());
             }
         }
 
@@ -148,7 +146,16 @@ impl ComposerRepository {
             sql.push_str(&format!(" WHERE {}", where_clauses.join(" AND ")));
         }
 
-        sql.push_str(" GROUP BY c.id ORDER BY c.birth_year ASC");
+        // 검색어가 있으면 이름 관련도를 먼저 보고, 없으면 기존처럼 연대순이다.
+        sql.push_str(" GROUP BY c.id ORDER BY ");
+        if let Some(text) = &search_text {
+            let (relevance_sql, relevance_binds) =
+                text.name_relevance(&["c.name", "c.full_name", "c.english_name"]);
+            sql.push_str(&relevance_sql);
+            sql.push_str(", ");
+            bind_values.extend(relevance_binds);
+        }
+        sql.push_str("c.birth_year ASC, c.id ASC");
 
         // limit=0이면 전체 반환, 아니면 페이징
         if limit > 0 {

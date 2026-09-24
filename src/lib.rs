@@ -18,4 +18,5 @@ pub mod performance;
 pub mod performance_sector;
 pub mod piece;
 pub mod recording;
+pub mod search;
 pub mod user;

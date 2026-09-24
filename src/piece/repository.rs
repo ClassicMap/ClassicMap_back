@@ -1,5 +1,6 @@
 use crate::db::DbPool;
 use super::model::{Piece, CreatePiece, PieceSearchResult, UpdatePiece};
+use crate::search::SearchText;
 use sqlx::Error;
 
 pub struct PieceRepository;
@@ -61,8 +62,7 @@ impl PieceRepository {
         offset: i64,
         limit: i64,
     ) -> Result<Vec<PieceSearchResult>, Error> {
-        let query = query.map(str::trim).filter(|value| !value.is_empty());
-        let Some(query) = query else {
+        let Some(text) = SearchText::parse(query) else {
             return sqlx::query_as::<_, PieceSearchResult>(&format!(
                 "SELECT piece.*, composer.name AS composer_name
                  FROM pieces piece
@@ -77,9 +77,9 @@ impl PieceRepository {
             .await;
         };
 
-        let escaped = escape_like(query);
-        let prefix = format!("{escaped}%");
-        let contains = format!("%{escaped}%");
+        let exact = text.exact();
+        let prefix = text.prefix();
+        let contains = text.contains();
 
         sqlx::query_as::<_, PieceSearchResult>(&format!(
             "SELECT piece.*,
@@ -110,21 +110,21 @@ impl PieceRepository {
              LIMIT ? OFFSET ?",
             Self::SEARCH_TIEBREAK_COLUMNS
         ))
-        .bind(query)
-        .bind(query)
-        .bind(&prefix)
-        .bind(&prefix)
-        .bind(&contains)
-        .bind(&contains)
-        .bind(&contains)
-        .bind(&contains)
-        .bind(&contains)
-        .bind(&contains)
-        .bind(&contains)
-        .bind(&contains)
-        .bind(&contains)
-        .bind(&contains)
-        .bind(&contains)
+        .bind(exact)
+        .bind(exact)
+        .bind(prefix)
+        .bind(prefix)
+        .bind(contains)
+        .bind(contains)
+        .bind(contains)
+        .bind(contains)
+        .bind(contains)
+        .bind(contains)
+        .bind(contains)
+        .bind(contains)
+        .bind(contains)
+        .bind(contains)
+        .bind(contains)
         .bind(limit)
         .bind(offset)
         .fetch_all(pool)
@@ -201,27 +201,3 @@ impl PieceRepository {
     }
 }
 
-/// LIKE 패턴에서 사용자 입력의 `%`, `_`, `\`를 글자 그대로 찾게 한다.
-fn escape_like(value: &str) -> String {
-    let mut escaped = String::with_capacity(value.len());
-    for character in value.chars() {
-        if matches!(character, '\\' | '%' | '_') {
-            escaped.push('\\');
-        }
-        escaped.push(character);
-    }
-    escaped
-}
-
-#[cfg(test)]
-mod tests {
-    use super::escape_like;
-
-    #[test]
-    fn like_wildcards_are_escaped() {
-        assert_eq!(escape_like("100%"), "100\\%");
-        assert_eq!(escape_like("a_b"), "a\\_b");
-        assert_eq!(escape_like("c:\\x"), "c:\\\\x");
-        assert_eq!(escape_like("월광"), "월광");
-    }
-}

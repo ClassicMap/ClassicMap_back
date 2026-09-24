@@ -16,6 +16,7 @@ mod performance;
 mod performance_sector;
 mod piece;
 mod recording;
+mod search;
 mod user;
 mod venue;
 

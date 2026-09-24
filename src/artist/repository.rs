@@ -1,5 +1,6 @@
 use crate::db::DbPool;
 use super::model::{Artist, CreateArtist, UpdateArtist, ArtistWithAwards, ArtistAward, CreateArtistAward};
+use crate::search::SearchText;
 use sqlx::Error;
 
 pub struct ArtistRepository;
@@ -152,7 +153,8 @@ impl ArtistRepository {
         Ok(result.rows_affected())
     }
 
-    /// Full-text search across artists with pagination
+    /// Full-text search across artists with pagination.
+    /// 검색어가 있으면 이름 관련도(완전 일치 → 접두사 → 포함 → 다른 열)를 먼저 본다.
     pub async fn search_artists_by_text(
         pool: &DbPool,
         search_query: Option<&str>,
@@ -161,17 +163,14 @@ impl ArtistRepository {
         offset: i64,
         limit: i64,
     ) -> Result<Vec<Artist>, Error> {
-        // Prepare search pattern early to avoid lifetime issues
-        let search_pattern = search_query
-            .filter(|q| !q.trim().is_empty())
-            .map(|q| format!("%{}%", q));
+        let search_text = SearchText::parse(search_query);
 
         let mut query = String::from(
             "SELECT * FROM v_artists_full WHERE 1=1"
         );
 
         // Text search across multiple fields
-        if search_pattern.is_some() {
+        if search_text.is_some() {
             query.push_str(
                 " AND (name LIKE ? OR english_name LIKE ? OR category LIKE ? OR nationality LIKE ? OR bio LIKE ? OR style LIKE ?)"
             );
@@ -187,20 +186,24 @@ impl ArtistRepository {
             query.push_str(" AND category = ?");
         }
 
-        // Order by rating and tier
-        query.push_str(" ORDER BY rating DESC, tier ASC LIMIT ? OFFSET ?");
+        let relevance = search_text
+            .as_ref()
+            .map(|text| text.name_relevance(&["name", "english_name"]));
+        query.push_str(" ORDER BY ");
+        if let Some((relevance_sql, _)) = &relevance {
+            query.push_str(relevance_sql);
+            query.push_str(", ");
+        }
+        query.push_str("rating DESC, tier ASC, id ASC LIMIT ? OFFSET ?");
 
         let mut sql_query = sqlx::query_as::<_, Artist>(&query);
 
         // Bind search query with wildcards
-        if let Some(ref pattern) = search_pattern {
-            sql_query = sql_query
-                .bind(pattern) // name
-                .bind(pattern) // english_name
-                .bind(pattern) // category
-                .bind(pattern) // nationality
-                .bind(pattern) // bio
-                .bind(pattern); // style
+        if let Some(text) = &search_text {
+            for _ in 0..6 {
+                // name, english_name, category, nationality, bio, style
+                sql_query = sql_query.bind(text.contains());
+            }
         }
 
         // Bind tier filter
@@ -211,6 +214,12 @@ impl ArtistRepository {
         // Bind category filter
         if let Some(c) = category {
             sql_query = sql_query.bind(c);
+        }
+
+        if let Some((_, relevance_binds)) = relevance {
+            for value in relevance_binds {
+                sql_query = sql_query.bind(value);
+            }
         }
 
         // Bind pagination
