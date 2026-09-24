@@ -3,7 +3,7 @@ use crate::auth::ModeratorUser;
 use crate::db::DbPool;
 use crate::logger::Logger;
 use super::model::{Piece, CreatePiece, UpdatePiece};
-use super::service::PieceService;
+use super::service::{PieceListRange, PieceService};
 
 #[get("/pieces")]
 pub async fn get_pieces(pool: &State<DbPool>) -> Result<Json<Vec<Piece>>, Status> {
@@ -27,9 +27,17 @@ pub async fn get_piece(pool: &State<DbPool>, id: i32) -> Result<Json<Option<Piec
     }
 }
 
-#[get("/composers/<composer_id>/pieces")]
-pub async fn get_pieces_by_composer(pool: &State<DbPool>, composer_id: i32) -> Result<Json<Vec<Piece>>, Status> {
-    match PieceService::get_pieces_by_composer(pool, composer_id).await {
+/// offset·limit이 없으면 전체를 준다(기존 호출 호환). 하나라도 있으면 페이지로 준다.
+#[get("/composers/<composer_id>/pieces?<offset>&<limit>")]
+pub async fn get_pieces_by_composer(
+    pool: &State<DbPool>,
+    composer_id: i32,
+    offset: Option<i64>,
+    limit: Option<i64>,
+) -> Result<Json<Vec<Piece>>, Status> {
+    let range = PieceListRange::parse(offset, limit).map_err(|_| Status::BadRequest)?;
+
+    match PieceService::get_pieces_by_composer(pool, composer_id, range).await {
         Ok(pieces) => Ok(Json(pieces)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get pieces for composer {}: {}", composer_id, e));

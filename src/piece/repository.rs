@@ -20,16 +20,35 @@ impl PieceRepository {
 
     /// 국제 시드가 넣은 작품은 제목과 식별자만 있고 설명·스트리밍 링크가 없다.
     /// 정렬이 없으면 손으로 채운 작품이 시드 작품 수백 건에 묻히므로,
-    /// 들을 수 있고 설명이 있는 작품을 먼저 준다.
-    pub async fn find_by_composer_id(pool: &DbPool, composer_id: i32) -> Result<Vec<Piece>, Error> {
-        sqlx::query_as::<_, Piece>(
-            "SELECT * FROM pieces WHERE composer_id = ?
-             ORDER BY
+    /// 들을 수 있고 설명이 있는 작품을 먼저 준다. 마지막 id 정렬은 페이지 경계를 고정한다.
+    const COMPOSER_PIECES_ORDER: &'static str = "ORDER BY
                (spotify_url IS NOT NULL OR apple_music_url IS NOT NULL) DESC,
                (description IS NOT NULL AND description <> '') DESC,
-               id ASC"
-        )
+               id ASC";
+
+    pub async fn find_by_composer_id(pool: &DbPool, composer_id: i32) -> Result<Vec<Piece>, Error> {
+        sqlx::query_as::<_, Piece>(&format!(
+            "SELECT * FROM pieces WHERE composer_id = ? {}",
+            Self::COMPOSER_PIECES_ORDER
+        ))
             .bind(composer_id)
+            .fetch_all(pool)
+            .await
+    }
+
+    pub async fn find_page_by_composer_id(
+        pool: &DbPool,
+        composer_id: i32,
+        offset: i64,
+        limit: i64,
+    ) -> Result<Vec<Piece>, Error> {
+        sqlx::query_as::<_, Piece>(&format!(
+            "SELECT * FROM pieces WHERE composer_id = ? {} LIMIT ? OFFSET ?",
+            Self::COMPOSER_PIECES_ORDER
+        ))
+            .bind(composer_id)
+            .bind(limit)
+            .bind(offset)
             .fetch_all(pool)
             .await
     }
