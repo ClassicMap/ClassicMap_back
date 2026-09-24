@@ -21,7 +21,24 @@
         "startCue": "오른손 점리듬 선율의 첫 음(작품 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "i-Lj25WO7wI",
+          "artistId": 632,
+          "artistName": "Daniel Barenboim",
+          "wikidata": "Q152768"
+        },
+        {
+          "videoId": "IcZOqCN4szA",
+          "artistName": "Rudolf Firkušný",
+          "wikidata": "Q2142506"
+        },
+        {
+          "videoId": "108gFzneFy4",
+          "artistName": "Moura Lympany",
+          "wikidata": "Q435639"
+        }
+      ]
     },
     {
       "pieceId": 182,
@@ -42,8 +59,42 @@
         "startCue": "현의 트레몰로 첫 음(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "2bDHzugiOvA",
+          "artistId": 601,
+          "artistName": "Karl Böhm",
+          "wikidata": "Q84241",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "6np1QJm2KFs",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "Uck58ZbsDxo",
+          "artistId": 290,
+          "artistName": "Riccardo Chailly",
+          "wikidata": "Q371795",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        }
+      ]
     },
     {
       "pieceId": 183,
@@ -64,8 +115,42 @@
         "startCue": "현의 트레몰로 위 첼로 주제 첫 음(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "Re-Bzo0OT3w",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "bSYSXB93i-4",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "zEYE21Lgi8s",
+          "artistId": 293,
+          "artistName": "Andris Nelsons",
+          "wikidata": "Q511817",
+          "orchestra": {
+            "name": "Gewandhausorchester",
+            "wikidata": "Q156515"
+          }
+        }
+      ]
     }
   ]
 }

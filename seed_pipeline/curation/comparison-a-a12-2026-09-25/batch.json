@@ -1,0 +1,72 @@
+{
+  "batchId": "a-a12",
+  "note": "A tier A12. 말러 셋. 셋 다 긴 곡이라 발췌다. 219 대지의 노래는 1악장 테너 독창이다.",
+  "pieces": [
+    {
+      "pieceId": 217,
+      "workMbid": "5b8cb51a-6b4f-48b7-888d-c7f1e812dfba",
+      "composerQid": "Q7304",
+      "titleKo": "교향곡 1번 D장조 “거인”",
+      "titleEn": "Symphony no. 1 in D major “Titan”",
+      "composerNameEn": "Gustav Mahler",
+      "composerNameKo": "구스타프 말러",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Langsam, schleppend 도입 (현의 지속음)",
+        "nameEn": "I. Langsam, schleppend, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "전 현이 A음을 여리게 내는 첫 순간(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 218,
+      "workMbid": "e0cc93c7-3ebb-41f7-8586-5c0188cccca8",
+      "composerQid": "Q7304",
+      "titleKo": "교향곡 8번 E♭장조 “천인 교향곡”",
+      "titleEn": "Symphony no. 8 “Symphony of a Thousand”",
+      "composerNameEn": "Gustav Mahler",
+      "composerNameKo": "구스타프 말러",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "part1-veni-creator",
+        "type": "EXCERPT",
+        "nameKo": "1부 “Veni, creator spiritus” 도입",
+        "nameEn": "Part I “Veni, creator spiritus”, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "오르간과 합창 총주의 첫 화음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 219,
+      "workMbid": "14514e77-f06c-4d24-a4d5-9a5962acae64",
+      "composerQid": "Q7304",
+      "titleKo": "<대지의 노래>",
+      "titleEn": "Das Lied von der Erde",
+      "composerNameEn": "Gustav Mahler",
+      "composerNameKo": "구스타프 말러",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-trinklied",
+        "type": "EXCERPT",
+        "nameKo": "1악장 “Das Trinklied vom Jammer der Erde” 도입",
+        "nameEn": "I. Das Trinklied vom Jammer der Erde, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "호른의 상행 신호 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    }
+  ]
+}

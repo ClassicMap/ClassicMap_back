@@ -21,7 +21,35 @@
         "startCue": "무반주 합창의 첫 화음(작품 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "17RtsaZ6lws",
+          "artistName": "Monteverdi Choir",
+          "wikidata": "Q372854",
+          "conductor": {
+            "name": "John Eliot Gardiner",
+            "wikidata": "Q160325"
+          }
+        },
+        {
+          "videoId": "nqR67tbb-m4",
+          "artistName": "Polyphony",
+          "wikidata": "Q7226756",
+          "conductor": {
+            "name": "Stephen Layton",
+            "wikidata": "Q7609766"
+          }
+        },
+        {
+          "videoId": "IBgNK5SCNF4",
+          "artistName": "Latvian Radio Choir",
+          "wikidata": "Q16361547",
+          "conductor": {
+            "name": "Sigvards Kļava",
+            "wikidata": "Q16299912"
+          }
+        }
+      ]
     },
     {
       "pieceId": 215,
@@ -42,8 +70,42 @@
         "startCue": "저현의 트레몰로 첫 음(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "vAIJBHiZnhY",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "kPq4RADOg9E",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "Qy8G6zAeYrE",
+          "artistId": 574,
+          "artistName": "Zubin Mehta",
+          "wikidata": "Q157635",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
     },
     {
       "pieceId": 216,
@@ -64,8 +126,42 @@
         "startCue": "트럼펫 독주 신호의 첫 음(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "PlOglISMYiQ",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "bdCnSEsoM8o",
+          "artistId": 575,
+          "artistName": "Seiji Ozawa",
+          "wikidata": "Q313649",
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "GtXcLdHIOwY",
+          "artistId": 630,
+          "artistName": "Michael Tilson Thomas",
+          "wikidata": "Q520493",
+          "orchestra": {
+            "name": "San Francisco Symphony",
+            "wikidata": "Q933993"
+          }
+        }
+      ]
     }
   ]
 }

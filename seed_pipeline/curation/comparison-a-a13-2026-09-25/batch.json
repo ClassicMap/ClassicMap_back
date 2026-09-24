@@ -1,0 +1,72 @@
+{
+  "batchId": "a-a13",
+  "note": "A tier A13. 요한 슈트라우스 왈츠 둘과 프랑크 바이올린 소나타. 왈츠 둘은 전곡이 10~12분이라 600초 상한에 걸린다. 셋 다 발췌로 잡았다.",
+  "pieces": [
+    {
+      "pieceId": 185,
+      "workMbid": "6763c20d-f2df-3347-8a0e-7abad42a5a56",
+      "composerQid": "Q83309",
+      "titleKo": "왈츠 <아름답고 푸른 도나우> Op. 314",
+      "titleEn": "An der schönen blauen Donau, op. 314",
+      "composerNameEn": "Johann Strauss II",
+      "composerNameKo": "요한 슈트라우스 2세",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "intro-waltz1",
+        "type": "EXCERPT",
+        "nameKo": "서주와 첫 왈츠",
+        "nameEn": "Introduction and Waltz I",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 트레몰로 위 호른 주제 첫 음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 188,
+      "workMbid": "2a7a816c-3c28-3609-be5d-7663b3337fee",
+      "composerQid": "Q83309",
+      "titleKo": "왈츠 <빈 숲 속의 이야기> Op. 325",
+      "titleEn": "Geschichten aus dem Wienerwald, op. 325",
+      "composerNameEn": "Johann Strauss II",
+      "composerNameKo": "요한 슈트라우스 2세",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "intro-waltz1",
+        "type": "EXCERPT",
+        "nameKo": "서주와 첫 왈츠",
+        "nameEn": "Introduction and Waltz I",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "총주의 첫 타격(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 179,
+      "workMbid": "4dfff025-0499-420c-8b35-cfda9e234847",
+      "composerQid": "Q50187",
+      "titleKo": "바이올린 소나타 A장조",
+      "titleEn": "Sonata for Violin and Piano in A major",
+      "composerNameEn": "César Franck",
+      "composerNameKo": "세자르 프랑크",
+      "role": "VIOLINIST",
+      "sector": {
+        "key": "mv1-allegretto",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegretto ben moderato 도입",
+        "nameEn": "I. Allegretto ben moderato, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "피아노 서주 뒤 바이올린의 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    }
+  ]
+}
