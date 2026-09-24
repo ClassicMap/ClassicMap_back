@@ -20,6 +20,16 @@ pub struct Piece {
     pub youtube_music_url: Option<String>,
 }
 
+/// 작품 검색 결과. 목록에 작곡가를 함께 보여줄 수 있게 이름을 싣는다.
+#[derive(Debug, Serialize, FromRow)]
+#[serde(rename_all = "camelCase")]
+pub struct PieceSearchResult {
+    #[serde(flatten)]
+    #[sqlx(flatten)]
+    pub piece: Piece,
+    pub composer_name: String,
+}
+
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct CreatePiece {

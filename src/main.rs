@@ -85,6 +85,7 @@ async fn rocket() -> _ {
                 composer::update_composer,
                 composer::delete_composer,
                 // Piece routes
+                piece::search_pieces,
                 piece::get_pieces,
                 piece::get_piece,
                 piece::get_pieces_by_composer,

@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Piece, CreatePiece, UpdatePiece};
+use super::model::{Piece, CreatePiece, PieceSearchResult, UpdatePiece};
 use super::repository::PieceRepository;
 
 pub struct PieceService;
@@ -58,6 +58,17 @@ impl PieceService {
         };
 
         pieces.map_err(|e| e.to_string())
+    }
+
+    pub async fn search_pieces(
+        pool: &DbPool,
+        query: Option<&str>,
+        offset: i64,
+        limit: i64,
+    ) -> Result<Vec<PieceSearchResult>, String> {
+        PieceRepository::search(pool, query, offset, limit)
+            .await
+            .map_err(|e| e.to_string())
     }
 
     pub async fn create_piece(pool: &DbPool, piece: CreatePiece) -> Result<i32, String> {

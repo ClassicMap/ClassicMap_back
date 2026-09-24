@@ -2,7 +2,7 @@ use rocket::{State, serde::json::Json, http::Status};
 use crate::auth::ModeratorUser;
 use crate::db::DbPool;
 use crate::logger::Logger;
-use super::model::{Piece, CreatePiece, UpdatePiece};
+use super::model::{Piece, CreatePiece, PieceSearchResult, UpdatePiece};
 use super::service::{PieceListRange, PieceService};
 
 #[get("/pieces")]
@@ -11,6 +11,29 @@ pub async fn get_pieces(pool: &State<DbPool>) -> Result<Json<Vec<Piece>>, Status
         Ok(pieces) => Ok(Json(pieces)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get pieces: {}", e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+/// 다른 검색 엔드포인트와 같이 q가 비면 필터 없이 페이지로 준다.
+#[get("/pieces/search?<q>&<offset>&<limit>")]
+pub async fn search_pieces(
+    pool: &State<DbPool>,
+    q: Option<&str>,
+    offset: Option<i64>,
+    limit: Option<i64>,
+) -> Result<Json<Vec<PieceSearchResult>>, Status> {
+    let range = PieceListRange::parse(Some(offset.unwrap_or(0)), limit)
+        .map_err(|_| Status::BadRequest)?;
+    let PieceListRange::Page { offset, limit } = range else {
+        return Err(Status::BadRequest);
+    };
+
+    match PieceService::search_pieces(pool, q, offset, limit).await {
+        Ok(pieces) => Ok(Json(pieces)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to search pieces: {}", e));
             Err(Status::InternalServerError)
         }
     }

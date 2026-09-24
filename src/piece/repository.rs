@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Piece, CreatePiece, UpdatePiece};
+use super::model::{Piece, CreatePiece, PieceSearchResult, UpdatePiece};
 use sqlx::Error;
 
 pub struct PieceRepository;
@@ -52,6 +52,87 @@ impl PieceRepository {
             .fetch_all(pool)
             .await
     }
+
+    /// 제목·영문 제목·별칭·작품번호·작곡가 이름으로 찾는다.
+    /// 제목 완전 일치, 접두사, 포함(별칭 포함), 작품번호, 작곡가 이름 순으로 앞에 둔다.
+    pub async fn search(
+        pool: &DbPool,
+        query: Option<&str>,
+        offset: i64,
+        limit: i64,
+    ) -> Result<Vec<PieceSearchResult>, Error> {
+        let query = query.map(str::trim).filter(|value| !value.is_empty());
+        let Some(query) = query else {
+            return sqlx::query_as::<_, PieceSearchResult>(&format!(
+                "SELECT piece.*, composer.name AS composer_name
+                 FROM pieces piece
+                 JOIN composers composer ON composer.id = piece.composer_id
+                 ORDER BY {}
+                 LIMIT ? OFFSET ?",
+                Self::SEARCH_TIEBREAK_COLUMNS
+            ))
+            .bind(limit)
+            .bind(offset)
+            .fetch_all(pool)
+            .await;
+        };
+
+        let escaped = escape_like(query);
+        let prefix = format!("{escaped}%");
+        let contains = format!("%{escaped}%");
+
+        sqlx::query_as::<_, PieceSearchResult>(&format!(
+            "SELECT piece.*,
+                    composer.name AS composer_name,
+                    CASE
+                        WHEN piece.title = ? OR piece.title_en = ? THEN 0
+                        WHEN piece.title LIKE ? OR piece.title_en LIKE ? THEN 1
+                        WHEN piece.title LIKE ? OR piece.title_en LIKE ? OR EXISTS (
+                            SELECT 1 FROM piece_aliases alias
+                            WHERE alias.piece_id = piece.id AND alias.alias_value LIKE ?
+                        ) THEN 2
+                        WHEN piece.opus_number LIKE ? THEN 3
+                        ELSE 4
+                    END AS relevance
+             FROM pieces piece
+             JOIN composers composer ON composer.id = piece.composer_id
+             WHERE piece.title LIKE ?
+                OR piece.title_en LIKE ?
+                OR piece.opus_number LIKE ?
+                OR composer.name LIKE ?
+                OR composer.full_name LIKE ?
+                OR composer.english_name LIKE ?
+                OR EXISTS (
+                    SELECT 1 FROM piece_aliases alias
+                    WHERE alias.piece_id = piece.id AND alias.alias_value LIKE ?
+                )
+             ORDER BY relevance ASC, {}
+             LIMIT ? OFFSET ?",
+            Self::SEARCH_TIEBREAK_COLUMNS
+        ))
+        .bind(query)
+        .bind(query)
+        .bind(&prefix)
+        .bind(&prefix)
+        .bind(&contains)
+        .bind(&contains)
+        .bind(&contains)
+        .bind(&contains)
+        .bind(&contains)
+        .bind(&contains)
+        .bind(&contains)
+        .bind(&contains)
+        .bind(&contains)
+        .bind(&contains)
+        .bind(&contains)
+        .bind(limit)
+        .bind(offset)
+        .fetch_all(pool)
+        .await
+    }
+
+    const SEARCH_TIEBREAK_COLUMNS: &'static str =
+        "(piece.spotify_url IS NOT NULL OR piece.apple_music_url IS NOT NULL) DESC, piece.id ASC";
 
     pub async fn create(pool: &DbPool, piece: CreatePiece) -> Result<i32, Error> {
         let result = sqlx::query(
@@ -117,5 +198,30 @@ impl PieceRepository {
             .await?;
 
         Ok(result.rows_affected())
+    }
+}
+
+/// LIKE 패턴에서 사용자 입력의 `%`, `_`, `\`를 글자 그대로 찾게 한다.
+fn escape_like(value: &str) -> String {
+    let mut escaped = String::with_capacity(value.len());
+    for character in value.chars() {
+        if matches!(character, '\\' | '%' | '_') {
+            escaped.push('\\');
+        }
+        escaped.push(character);
+    }
+    escaped
+}
+
+#[cfg(test)]
+mod tests {
+    use super::escape_like;
+
+    #[test]
+    fn like_wildcards_are_escaped() {
+        assert_eq!(escape_like("100%"), "100\\%");
+        assert_eq!(escape_like("a_b"), "a\\_b");
+        assert_eq!(escape_like("c:\\x"), "c:\\\\x");
+        assert_eq!(escape_like("월광"), "월광");
     }
 }
