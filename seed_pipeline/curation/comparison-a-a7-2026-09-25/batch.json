@@ -14,16 +14,12 @@
       "sector": {
         "key": "promenade-1",
         "type": "EXCERPT",
-        "nameKo": "첫 <프롬나드> 도입",
-        "nameEn": "Promenade I, opening",
+        "nameKo": "첫 <프롬나드> 전곡",
+        "nameEn": "Promenade I, complete",
         "measureStart": "",
         "measureEnd": "",
         "startCue": "오른손 단선율 프롬나드 주제의 첫 음(작품 시작)",
-        "endCue": "발췌 끝"
-      },
-      "excerpt": {
-        "anchor": "head",
-        "seconds": 90
+        "endCue": "프롬나드 1 의 마지막 화음과 잔향"
       },
       "videos": [
         {
@@ -58,16 +54,12 @@
       "sector": {
         "key": "promenade-1",
         "type": "EXCERPT",
-        "nameKo": "첫 <프롬나드> 도입",
-        "nameEn": "Promenade I, opening",
+        "nameKo": "첫 <프롬나드> 전곡",
+        "nameEn": "Promenade I, complete",
         "measureStart": "",
         "measureEnd": "",
         "startCue": "트럼펫 독주 프롬나드 주제의 첫 음(작품 시작)",
-        "endCue": "발췌 끝"
-      },
-      "excerpt": {
-        "anchor": "head",
-        "seconds": 90
+        "endCue": "프롬나드 1 의 마지막 화음과 잔향"
       },
       "videos": [
         {
