@@ -132,6 +132,16 @@
       },
       "videos": [
         {
+          "videoId": "GtXcLdHIOwY",
+          "artistId": 630,
+          "artistName": "Michael Tilson Thomas",
+          "wikidata": "Q520493",
+          "orchestra": {
+            "name": "San Francisco Symphony",
+            "wikidata": "Q933993"
+          }
+        },
+        {
           "videoId": "PlOglISMYiQ",
           "artistId": 422,
           "artistName": "Herbert von Karajan",
@@ -149,16 +159,6 @@
           "orchestra": {
             "name": "Boston Symphony Orchestra",
             "wikidata": "Q864369"
-          }
-        },
-        {
-          "videoId": "GtXcLdHIOwY",
-          "artistId": 630,
-          "artistName": "Michael Tilson Thomas",
-          "wikidata": "Q520493",
-          "orchestra": {
-            "name": "San Francisco Symphony",
-            "wikidata": "Q933993"
           }
         }
       ]
