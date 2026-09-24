@@ -1,0 +1,174 @@
+{
+  "batchId": "a-a1",
+  "note": "A tier A1. C.P.E. 바흐 세 곡. videos 는 서브에이전트가 채운다. 곡·MBID·QID 는 확정된 것이라 바꾸지 않는다.",
+  "pieces": [
+    {
+      "pieceId": 103,
+      "workMbid": "e8996fa5-8493-4984-9690-b3bea2fc27c3",
+      "composerQid": "Q76428",
+      "titleKo": "솔페지에토 C단조 Wq. 117-2, H. 220",
+      "titleEn": "Solfeggio for keyboard in C minor, Wq 117 no. 2, H 220",
+      "composerNameEn": "Carl Philipp Emanuel Bach",
+      "composerNameKo": "카를 필리프 에마누엘 바흐",
+      "role": "PIANIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "왼손 단음 뒤 오른손 16분음표 하행이 시작되는 첫 음",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "z43_5wyqcc0",
+          "artistId": 253,
+          "artistName": "Marc-André Hamelin",
+          "wikidata": "Q45189"
+        },
+        {
+          "videoId": "z3qlW3whwrY",
+          "artistId": 632,
+          "artistName": "Daniel Barenboim",
+          "wikidata": "Q152768"
+        },
+        {
+          "videoId": "OoCXLtyd3wI",
+          "artistName": "Cyprien Katsaris",
+          "wikidata": "Q1148343"
+        }
+      ]
+    },
+    {
+      "pieceId": 104,
+      "workMbid": "ddebfc59-04e3-46a0-b4aa-80b17e4522dd",
+      "composerQid": "Q76428",
+      "titleKo": "첼로 협주곡 A단조 Wq. 170, H. 432",
+      "titleEn": "Cello Concerto in A minor, Wq. 170, H. 432",
+      "composerNameEn": "Carl Philipp Emanuel Bach",
+      "composerNameKo": "카를 필리프 에마누엘 바흐",
+      "role": "CELLIST",
+      "sector": {
+        "key": "mv1-allegro-assai",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro assai 도입 (관현악 서주)",
+        "nameEn": "I. Allegro assai, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현악 총주의 첫 타격(악장 시작)",
+        "endCue": "발췌 끝",
+        "anchor": "head",
+        "seconds": 68
+      },
+      "videos": [],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 68
+      },
+      "rejectedVideos": [
+        {
+          "videoId": "O0RLO_hYlmk",
+          "artistName": "Anner Bylsma",
+          "wikidata": "Q566461",
+          "conductor": {
+            "name": "Gustav Leonhardt",
+            "wikidata": "Q51584"
+          },
+          "orchestra": {
+            "name": "Orchestra of the Age of Enlightenment",
+            "wikidata": "Q2028664"
+          }
+        },
+        {
+          "videoId": "0AlwJbA1Nr4",
+          "artistName": "Christophe Coin",
+          "wikidata": "Q1086303",
+          "orchestra": {
+            "name": "Orquesta Barroca de Sevilla",
+            "wikidata": "Q6053328"
+          }
+        },
+        {
+          "videoId": "9t2J-C175Ys",
+          "artistName": "Hidemi Suzuki",
+          "wikidata": "Q780563",
+          "orchestra": {
+            "name": "Bach Collegium Japan",
+            "wikidata": "Q798071"
+          }
+        }
+      ],
+      "rejectionNote": "세 연주 모두 실격. Coin(0AlwJbA1Nr4)은 전악장 12방향 회전에서 최저가 없어(0.154~0.272) 같은 곡이 아니다. 평균 크로마도 G·F·B♭ 로 A단조가 아니다. Suzuki(9t2J-C175Ys)는 리토르넬로 발췌에서 회전 1반음 0.0743 / 0반음 0.192 로 같은 음악이지만 조율이 A=415 여서 Bylsma(A≈430, tuning -0.48)와 한 반음 어긋난다. Bylsma 한 건만 남아 재수집 없이는 살릴 수 없다."
+    },
+    {
+      "pieceId": 105,
+      "workMbid": "fcac157c-a205-43e6-ae87-5a4e1b419422",
+      "composerQid": "Q76428",
+      "titleKo": "플루트 협주곡 D단조 H. 484.1",
+      "titleEn": "Flute Concerto in D minor, H. 484.1",
+      "composerNameEn": "Carl Philipp Emanuel Bach",
+      "composerNameKo": "카를 필리프 에마누엘 바흐",
+      "role": "FLUTIST",
+      "sector": {
+        "key": "mv1-allegro",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro 도입 (관현악 서주)",
+        "nameEn": "I. Allegro, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현악 총주의 첫 타격(악장 시작)",
+        "endCue": "발췌 끝",
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "kP8TlXoZZrU",
+          "artistId": 305,
+          "artistName": "Emmanuel Pahud",
+          "wikidata": "Q115764",
+          "conductor": {
+            "name": "Trevor Pinnock",
+            "wikidata": "Q434774"
+          },
+          "orchestra": {
+            "name": "Kammerakademie Potsdam",
+            "wikidata": "Q1723133"
+          }
+        },
+        {
+          "videoId": "1vHRdmIP6k4",
+          "artistName": "James Galway",
+          "wikidata": "Q160371",
+          "conductor": {
+            "name": "Jörg Faerber",
+            "wikidata": "Q111014"
+          },
+          "orchestra": {
+            "name": "Württembergisches Kammerorchester Heilbronn",
+            "wikidata": "Q679341"
+          }
+        },
+        {
+          "videoId": "9NbgZKZylMU",
+          "artistName": "Patrick Gallois",
+          "wikidata": "Q1234459",
+          "conductor": {
+            "name": "Kevin Mallon",
+            "wikidata": "Q6396843"
+          },
+          "orchestra": {
+            "name": "Toronto Chamber Orchestra",
+            "wikidata": "Q7826306"
+          }
+        }
+      ],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      }
+    }
+  ]
+}

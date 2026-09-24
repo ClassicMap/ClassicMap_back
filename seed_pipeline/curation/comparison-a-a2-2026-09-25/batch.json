@@ -1,0 +1,172 @@
+{
+  "batchId": "a-a2",
+  "note": "A tier A2. C.P.E. 바흐 마니피카트와 J.C. 바흐 두 곡. videos 는 서브에이전트가 채운다. 곡·MBID·QID 는 확정된 것이라 바꾸지 않는다.",
+  "pieces": [
+    {
+      "pieceId": 106,
+      "workMbid": "00f1b8fc-b0f9-4f87-aaad-145c2806d6d9",
+      "composerQid": "Q76428",
+      "titleKo": "마니피카트 D장조 Wq. 215, H. 772",
+      "titleEn": "Magnificat, Wq. 215, H. 772",
+      "composerNameEn": "Carl Philipp Emanuel Bach",
+      "composerNameKo": "카를 필리프 에마누엘 바흐",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "no1-magnificat",
+        "type": "EXCERPT",
+        "nameKo": "1곡 “Magnificat anima mea” 도입",
+        "nameEn": "No. 1 “Magnificat anima mea”, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 총주의 첫 타격(작품 시작)",
+        "endCue": "발췌 끝",
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "T5DXyvE5Q1E",
+          "artistName": "Hans-Christoph Rademann",
+          "wikidata": "Q1576815",
+          "orchestra": {
+            "name": "Akademie für Alte Musik Berlin",
+            "wikidata": "Q414240"
+          }
+        },
+        {
+          "videoId": "UqTnFUUbO-Y",
+          "artistName": "Michael Alexander Willens",
+          "wikidata": "Q106435900",
+          "orchestra": {
+            "name": "Die Kölner Akademie",
+            "wikidata": "Q6453858"
+          }
+        },
+        {
+          "videoId": "9gkyyZJRLhQ",
+          "artistName": "Michael Schneider",
+          "wikidata": "Q74931",
+          "orchestra": {
+            "name": "La Stagione Frankfurt",
+            "wikidata": "Q48772265"
+          }
+        }
+      ],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      }
+    },
+    {
+      "pieceId": 107,
+      "workMbid": "3a700d83-b704-4d6b-9a31-5953178d9553",
+      "composerQid": "Q106641",
+      "titleKo": "신포니아 B♭장조 Op. 18-2 (<루치오 실라> 서곡)",
+      "titleEn": "Symphony in B-flat major (Lucio Silla Overture), op. 18 no. 2",
+      "composerNameEn": "Johann Christian Bach",
+      "composerNameKo": "요한 크리스티안 바흐",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-allegro",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro 도입",
+        "nameEn": "I. Allegro, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "총주의 첫 타격(악장 시작)",
+        "endCue": "발췌 끝",
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "bUqE6_qxXLQ",
+          "artistId": 636,
+          "artistName": "David Zinman",
+          "wikidata": "Q115696",
+          "orchestra": {
+            "name": "Netherlands Chamber Orchestra",
+            "wikidata": "Q2556468"
+          }
+        },
+        {
+          "videoId": "6bv7bjwZlAE",
+          "artistName": "Karl Münchinger",
+          "wikidata": "Q65295",
+          "orchestra": {
+            "name": "Stuttgarter Kammerorchester",
+            "wikidata": "Q724513"
+          }
+        },
+        {
+          "videoId": "ZhPgBEqmLTA",
+          "artistName": "Eduard van Beinum",
+          "wikidata": "Q508916",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        }
+      ],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      }
+    },
+    {
+      "pieceId": 108,
+      "workMbid": "99a42b4d-4edd-407b-a0f1-7d36e8c87ea1",
+      "composerQid": "Q106641",
+      "titleKo": "신포니아 콘체르탄테 C장조 T. 289/4 (플루트·오보에·바이올린·첼로)",
+      "titleEn": "Sinfonia Concertante in C major, T 289/4",
+      "composerNameEn": "Johann Christian Bach",
+      "composerNameKo": "요한 크리스티안 바흐",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-allegro",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro 도입 (관현악 서주)",
+        "nameEn": "I. Allegro, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "총주의 첫 타격(악장 시작)",
+        "endCue": "발췌 끝",
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "RnCG3GIP8Gw",
+          "artistName": "Franzjosef Maier",
+          "wikidata": "Q1450429",
+          "orchestra": {
+            "name": "Collegium Aureum",
+            "wikidata": "Q834039"
+          }
+        },
+        {
+          "videoId": "cLXuJitvqhI",
+          "artistName": "Anthony Halstead",
+          "wikidata": "Q4772653",
+          "orchestra": {
+            "name": "The Hanover Band",
+            "wikidata": "Q2901816"
+          }
+        },
+        {
+          "videoId": "vr2IdnKZYP8",
+          "artistName": "Simon Standage",
+          "wikidata": "Q323956",
+          "orchestra": {
+            "name": "Academy of Ancient Music",
+            "wikidata": "Q337310"
+          }
+        }
+      ],
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      }
+    }
+  ]
+}
