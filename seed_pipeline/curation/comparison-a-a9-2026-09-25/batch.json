@@ -21,8 +21,42 @@
         "startCue": "금관의 여린 화음 연속 첫 음(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "acurczH-Yt8",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "ny2gBgjrl58",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "uB18t0Y24Yo",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
     },
     {
       "pieceId": 198,
@@ -43,8 +77,54 @@
         "startCue": "클라리넷의 여린 첫 주제 제시(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "o1UkK5jFALY",
+          "artistId": 734,
+          "artistName": "Mstislav Rostropovich",
+          "wikidata": "Q152043",
+          "conductor": {
+            "name": "Herbert von Karajan",
+            "wikidata": "Q154895"
+          },
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "537ryTeIBH4",
+          "artistId": 217,
+          "artistName": "Steven Isserlis",
+          "wikidata": "Q2095862",
+          "conductor": {
+            "name": "Daniel Harding",
+            "wikidata": "Q524328"
+          },
+          "orchestra": {
+            "name": "Mahler Chamber Orchestra",
+            "wikidata": "Q573902"
+          }
+        },
+        {
+          "videoId": "75ZX41yf3J8",
+          "artistId": 282,
+          "artistName": "Truls Mørk",
+          "wikidata": "Q527351",
+          "conductor": {
+            "name": "Mariss Jansons",
+            "wikidata": "Q158340"
+          },
+          "orchestra": {
+            "name": "Oslo Philharmonic Orchestra",
+            "wikidata": "Q1063440"
+          }
+        }
+      ]
     },
     {
       "pieceId": 200,
@@ -65,8 +145,30 @@
         "startCue": "현의 트레몰로 위 비올라 주제 첫 음(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "BYdZvzxs5o0",
+          "artistId": 607,
+          "artistName": "Emerson String Quartet",
+          "wikidata": "Q681006"
+        },
+        {
+          "videoId": "UYCWH6Ev5s8",
+          "artistId": 641,
+          "artistName": "Takács Quartet",
+          "wikidata": "Q4218548"
+        },
+        {
+          "videoId": "wBqoQ-uQYuE",
+          "artistId": 642,
+          "artistName": "Alban Berg Quartett",
+          "wikidata": "Q389156"
+        }
+      ]
     }
   ]
 }
