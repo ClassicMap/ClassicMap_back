@@ -1,0 +1,104 @@
+{
+  "batchId": "a-a8",
+  "note": "A tier A8. 림스키코르사코프 셋. 202 만 발췌(1악장 도입)이고 204·205 는 15~16분이라 600초를 넘을 수 있어 확인이 필요하다.",
+  "pieces": [
+    {
+      "pieceId": 202,
+      "workMbid": "4bf36cb5-817b-4ef4-b0e4-63e00fa27dc5",
+      "composerQid": "Q93227",
+      "titleKo": "교향 모음곡 <셰헤라자데> Op. 35",
+      "titleEn": "Scheherazade, op. 35",
+      "composerNameEn": "Nikolai Rimsky-Korsakov",
+      "composerNameKo": "니콜라이 림스키코르사코프",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-la-mer",
+        "type": "EXCERPT",
+        "nameKo": "1악장 “바다와 신드바드의 배” 도입",
+        "nameEn": "I. The Sea and Sinbad's Ship, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "금관과 저현의 술탄 주제 첫 음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "PE6eKvsyx-8",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "UeUblo_aK7c",
+          "artistId": 289,
+          "artistName": "Valery Gergiev",
+          "wikidata": "Q165693",
+          "orchestra": {
+            "name": "Mariinsky Orchestra",
+            "wikidata": "Q4419936"
+          }
+        },
+        {
+          "videoId": "AnfdjM8KnTE",
+          "artistId": 632,
+          "artistName": "Daniel Barenboim",
+          "wikidata": "Q152768",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 204,
+      "workMbid": "18d5c524-e250-4b8d-b773-4f724fe636c2",
+      "composerQid": "Q93227",
+      "titleKo": "스페인 기상곡 Op. 34",
+      "titleEn": "Capriccio Espagnol, op. 34",
+      "composerNameEn": "Nikolai Rimsky-Korsakov",
+      "composerNameKo": "니콜라이 림스키코르사코프",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "총주의 첫 타격(1곡 Alborada 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 205,
+      "workMbid": "840155b0-c12d-365c-bd5f-029136aa816e",
+      "composerQid": "Q93227",
+      "titleKo": "<러시아 부활절 축제> 서곡 Op. 36",
+      "titleEn": "Russian Easter Festival Overture, op. 36",
+      "composerNameEn": "Nikolai Rimsky-Korsakov",
+      "composerNameKo": "니콜라이 림스키코르사코프",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "관악의 느린 성가 선율 첫 음(서곡 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    }
+  ]
+}
