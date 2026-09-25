@@ -1,0 +1,81 @@
+{
+  "batchId": "a-a17",
+  "note": "A tier A17. 클라라 슈만 로망스와 파가니니 협주곡 둘. 셋 다 발췌다. 165 는 3악장 \"라 캄파넬라\" 라 낱악장 트랙이 필요하다 — 전곡 영상뿐이면 excerpt 를 referenceVideoId·start·end 꼴로 바꿔야 한다. anchor:head 는 전곡의 머리, 곧 1악장을 잡는다.",
+  "pieces": [
+    {
+      "pieceId": 178,
+      "workMbid": "7643c480-ab02-4c9c-aac4-da711ba87be5",
+      "composerQid": "Q132232",
+      "titleKo": "3개의 로망스 Op. 22 (바이올린과 피아노를 위한)",
+      "titleEn": "Drei Romanzen für Pianoforte und Violine, op. 22",
+      "composerNameEn": "Clara Schumann",
+      "composerNameKo": "클라라 슈만",
+      "role": "VIOLINIST",
+      "sector": {
+        "key": "no1-andante-molto",
+        "type": "EXCERPT",
+        "nameKo": "1번 D♭장조 Andante molto 도입",
+        "nameEn": "No. 1 in D-flat major, Andante molto, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "피아노 전주 위 바이올린 첫 음(1번 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 165,
+      "workMbid": "f6f5be9e-9f7d-49e5-a579-edfb0d9b1229",
+      "composerQid": "Q66075",
+      "titleKo": "바이올린 협주곡 2번 B단조 Op. 7 “라 캄파넬라”",
+      "titleEn": "Violin Concerto no. 2 in B minor, op. 7, MS 48",
+      "composerNameEn": "Niccolò Paganini",
+      "composerNameKo": "니콜로 파가니니",
+      "role": "VIOLINIST",
+      "sector": {
+        "key": "mv3-la-campanella",
+        "type": "EXCERPT",
+        "nameKo": "3악장 Rondo “La campanella” 도입",
+        "nameEn": "III. Rondo “La campanella”, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "종소리와 관현악 서주 뒤 독주 바이올린의 론도 주제 첫 음",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 166,
+      "workMbid": "86f174b7-2b36-4807-aa07-a730c20e7bf8",
+      "composerQid": "Q66075",
+      "titleKo": "바이올린 협주곡 1번 D장조 Op. 6",
+      "titleEn": "Concerto for Violin and Orchestra in D major, op. 6",
+      "composerNameEn": "Niccolò Paganini",
+      "composerNameKo": "니콜로 파가니니",
+      "role": "VIOLINIST",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro maestoso 도입",
+        "nameEn": "I. Allegro maestoso, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 서주의 첫 화음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    }
+  ]
+}

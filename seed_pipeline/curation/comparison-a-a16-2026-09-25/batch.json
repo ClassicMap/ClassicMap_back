@@ -1,0 +1,72 @@
+{
+  "batchId": "a-a16",
+  "note": "A tier A16. 비제 교향곡과 클라라 슈만 둘. 셋 다 10분을 넘어 발췌다. 196 은 시드 쌍둥이 병합분이다.",
+  "pieces": [
+    {
+      "pieceId": 196,
+      "workMbid": "37b35e9f-3c6f-4204-9c2f-0745af4267a6",
+      "composerQid": "Q56158",
+      "titleKo": "교향곡 1번 C장조",
+      "titleEn": "Symphonie no. 1 en ut majeur",
+      "composerNameEn": "Georges Bizet",
+      "composerNameKo": "조르주 비제",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro vivo 도입",
+        "nameEn": "I. Allegro vivo, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "전 관현악 총주의 첫 화음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 176,
+      "workMbid": "d866c709-fc3a-4e7d-a3af-3f27145937cd",
+      "composerQid": "Q132232",
+      "titleKo": "피아노 3중주 G단조 Op. 17",
+      "titleEn": "Piano Trio in G minor, op. 17",
+      "composerNameEn": "Clara Schumann",
+      "composerNameKo": "클라라 슈만",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro moderato 도입",
+        "nameEn": "I. Allegro moderato, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "바이올린의 첫 주제 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 177,
+      "workMbid": "8f4e1205-4860-455a-8f68-d941a09aaca4",
+      "composerQid": "Q132232",
+      "titleKo": "피아노 협주곡 A단조 Op. 7",
+      "titleEn": "Concerto for Piano and Orchestra in A minor, op. 7",
+      "composerNameEn": "Clara Schumann",
+      "composerNameKo": "클라라 슈만",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegro maestoso 도입",
+        "nameEn": "I. Allegro maestoso, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 총주의 첫 화음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    }
+  ]
+}
