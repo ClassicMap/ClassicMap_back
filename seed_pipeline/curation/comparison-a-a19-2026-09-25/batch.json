@@ -1,0 +1,72 @@
+{
+  "batchId": "a-a19",
+  "note": "A tier A19. 드뷔시 셋. 221 은 10분 정각이라 상한에 붙어 발췌로 잡았다. 221·223 은 시드 쌍둥이 병합분이다. 223 은 피아노 원곡이고 관현악 편곡(카플레)이 따로 돈다.",
+  "pieces": [
+    {
+      "pieceId": 221,
+      "workMbid": "9e9d8173-2bca-347e-b19c-2057455e3fad",
+      "composerQid": "Q4700",
+      "titleKo": "<목신의 오후에의 전주곡>",
+      "titleEn": "Prélude à l’après-midi d’un faune, L. 86",
+      "composerNameEn": "Claude Debussy",
+      "composerNameKo": "클로드 드뷔시",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "opening",
+        "type": "EXCERPT",
+        "nameKo": "도입 (플루트 독주 주제)",
+        "nameEn": "Opening, solo flute theme",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "무반주 플루트의 하행 반음계 첫 음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 222,
+      "workMbid": "6b73c1be-7e55-48f2-bfdf-16f88e0a1d25",
+      "composerQid": "Q4700",
+      "titleKo": "<바다> — 3개의 교향적 스케치",
+      "titleEn": "La mer, trois esquisses symphoniques",
+      "composerNameEn": "Claude Debussy",
+      "composerNameKo": "클로드 드뷔시",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1곡 “바다 위의 새벽부터 정오까지” 도입",
+        "nameEn": "I. De l’aube à midi sur la mer, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "팀파니 트레몰로 위 저현의 첫 음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 223,
+      "workMbid": "bd18eb14-b1c5-4804-af2e-c9d3a31d57c1",
+      "composerQid": "Q4700",
+      "titleKo": "<어린이 차지> (피아노 원곡)",
+      "titleEn": "Children’s Corner, L. 113 (original, for piano)",
+      "composerNameEn": "Claude Debussy",
+      "composerNameKo": "클로드 드뷔시",
+      "role": "PIANIST",
+      "sector": {
+        "key": "no1-doctor-gradus",
+        "type": "EXCERPT",
+        "nameKo": "1곡 “그라두스 아드 파르나숨 박사”",
+        "nameEn": "I. Doctor Gradus ad Parnassum",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "오른손 16분음표 무궁동의 첫 음(1곡 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    }
+  ]
+}
