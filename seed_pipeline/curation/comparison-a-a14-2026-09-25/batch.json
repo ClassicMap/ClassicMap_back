@@ -1,0 +1,71 @@
+{
+  "batchId": "a-a14",
+  "note": "A tier A14. 프랑크 둘과 포레 레퀴엠. 206 은 판본이 넷이라 1900 concert 판으로 확정돼 있다. 181 은 Messe solennelle op.12 의 낱곡이다.",
+  "pieces": [
+    {
+      "pieceId": 180,
+      "workMbid": "1f83b1af-010a-4fa4-92ad-d81b02865194",
+      "composerQid": "Q50187",
+      "titleKo": "교향곡 D단조",
+      "titleEn": "Symphonie en ré mineur",
+      "composerNameEn": "César Franck",
+      "composerNameKo": "세자르 프랑크",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Lento — Allegro non troppo 도입",
+        "nameEn": "I. Lento — Allegro non troppo, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "저현의 느린 3음 동기 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 181,
+      "workMbid": "5b979859-257c-4562-a5a3-8aeba2204241",
+      "composerQid": "Q50187",
+      "titleKo": "<장엄 미사> Op. 12 중 “생명의 양식”",
+      "titleEn": "Messe solennelle, op. 12: Panis angelicus",
+      "composerNameEn": "César Franck",
+      "composerNameKo": "세자르 프랑크",
+      "role": "VOCALIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "반주의 첫 화음(악곡 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 206,
+      "workMbid": "ccb56514-45cd-470c-abb6-d314b5bb150a",
+      "composerQid": "Q104919",
+      "titleKo": "레퀴엠 Op. 48 (1900 관현악판)",
+      "titleEn": "Requiem, op. 48 (1900 “concert” version)",
+      "composerNameEn": "Gabriel Fauré",
+      "composerNameKo": "가브리엘 포레",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "no4-pie-jesu",
+        "type": "EXCERPT",
+        "nameKo": "4곡 “Pie Jesu”",
+        "nameEn": "IV. Pie Jesu",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "반주의 첫 화음(곡 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    }
+  ]
+}

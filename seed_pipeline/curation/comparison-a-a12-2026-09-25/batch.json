@@ -21,8 +21,42 @@
         "startCue": "전 현이 A음을 여리게 내는 첫 순간(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "yAbucni1hIY",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "Hp0uLRrxEjo",
+          "artistId": 630,
+          "artistName": "Michael Tilson Thomas",
+          "wikidata": "Q520493",
+          "orchestra": {
+            "name": "San Francisco Symphony",
+            "wikidata": "Q933993"
+          }
+        },
+        {
+          "videoId": "6y6a5S-RpIo",
+          "artistId": 575,
+          "artistName": "Seiji Ozawa",
+          "wikidata": "Q313649",
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        }
+      ]
     },
     {
       "pieceId": 218,
@@ -41,10 +75,40 @@
         "measureStart": "",
         "measureEnd": "",
         "startCue": "오르간과 합창 총주의 첫 화음(작품 시작)",
-        "endCue": "발췌 끝"
+        "endCue": "“Veni, creator spiritus” 절 끝(트랙 끝)"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "videos": [
+        {
+          "videoId": "q1oYkxXqqY4",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "Anm50YMycxI",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "bAaF9Qu_3Vk",
+          "artistId": 218,
+          "artistName": "Gustavo Dudamel",
+          "wikidata": "Q160390",
+          "orchestra": {
+            "name": "Los Angeles Philharmonic",
+            "wikidata": "Q315715"
+          }
+        }
+      ]
     },
     {
       "pieceId": 219,
@@ -65,8 +129,42 @@
         "startCue": "호른의 상행 신호 첫 음(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "HcXodVXXreE",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "q5APtY9c_lM",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "HoZ2uPNyUHw",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        }
+      ]
     }
   ]
 }

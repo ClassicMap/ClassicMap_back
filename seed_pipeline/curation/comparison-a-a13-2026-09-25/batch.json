@@ -21,8 +21,42 @@
         "startCue": "현의 트레몰로 위 호른 주제 첫 음(작품 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "uZM5scZkm_Y",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "iyG2iBRDSVI",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "GCpSbBZ_dyI",
+          "artistId": 736,
+          "artistName": "Lorin Maazel",
+          "wikidata": "Q117710",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
     },
     {
       "pieceId": 188,
@@ -43,8 +77,42 @@
         "startCue": "총주의 첫 타격(작품 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "Yg_5gR9YZT8",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "iZX7RyQ9GNY",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "BBy8gWDE2nQ",
+          "artistId": 736,
+          "artistName": "Lorin Maazel",
+          "wikidata": "Q117710",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
     },
     {
       "pieceId": 179,
@@ -65,8 +133,42 @@
         "startCue": "피아노 서주 뒤 바이올린의 첫 음(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "VXF_gnEwEvQ",
+          "artistId": 211,
+          "artistName": "Anne-Sophie Mutter",
+          "wikidata": "Q3374",
+          "accompanist": {
+            "name": "Lambert Orkis",
+            "wikidata": "Q1250415"
+          }
+        },
+        {
+          "videoId": "JTiW8MTRIPc",
+          "artistId": 648,
+          "artistName": "Renaud Capuçon",
+          "wikidata": "Q552845",
+          "accompanist": {
+            "name": "Martha Argerich",
+            "wikidata": "Q156810"
+          }
+        },
+        {
+          "videoId": "cc30J54o5E4",
+          "artistId": 210,
+          "artistName": "Joshua Bell",
+          "wikidata": "Q312792",
+          "accompanist": {
+            "name": "Jean-Yves Thibaudet",
+            "wikidata": "Q1030549"
+          }
+        }
+      ]
     }
   ]
 }
