@@ -1,0 +1,81 @@
+{
+  "batchId": "a-a26",
+  "note": "A tier A26. 베베른 셋. 10~12분이라 상한에 붙어 셋 다 발췌로 잡았다. 369 는 1928 개정판으로 확정돼 있다 — 1909 원판이 따로 돈다. 셋 다 시드 쌍둥이 병합분이다.",
+  "pieces": [
+    {
+      "pieceId": 367,
+      "workMbid": "2195c606-ddb5-44c6-8993-4c5ea1cbb1ef",
+      "composerQid": "Q190933",
+      "titleKo": "교향곡 Op. 21",
+      "titleEn": "Symphony, op. 21",
+      "composerNameEn": "Anton Webern",
+      "composerNameKo": "안톤 베베른",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-ruhig-schreitend",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Ruhig schreitend",
+        "nameEn": "I. Ruhig schreitend",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "호른과 클라리넷의 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 368,
+      "workMbid": "fafa518d-4f22-45b7-b784-d744f8072240",
+      "composerQid": "Q190933",
+      "titleKo": "현악 4중주를 위한 5개의 악장 Op. 5",
+      "titleEn": "Five Movements for String Quartet, op. 5",
+      "composerNameEn": "Anton Webern",
+      "composerNameKo": "안톤 베베른",
+      "role": "QUARTET",
+      "sector": {
+        "key": "mv1-heftig-bewegt",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Heftig bewegt",
+        "nameEn": "I. Heftig bewegt",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "4중주 총주의 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 369,
+      "workMbid": "c13f2347-8145-41a6-9f7a-b4ef2a4bddd0",
+      "composerQid": "Q190933",
+      "titleKo": "오케스트라를 위한 6개의 소품 Op. 6 (1928 개정판)",
+      "titleEn": "Sechs Stücke für Orchester, op. 6 (1928 revision)",
+      "composerNameEn": "Anton Webern",
+      "composerNameKo": "안톤 베베른",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-langsam",
+        "type": "EXCERPT",
+        "nameKo": "1곡 Langsam",
+        "nameEn": "I. Langsam",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악의 여린 첫 음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    }
+  ]
+}

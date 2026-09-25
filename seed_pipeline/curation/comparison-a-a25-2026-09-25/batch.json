@@ -1,0 +1,81 @@
+{
+  "batchId": "a-a25",
+  "note": "A tier A25. 아이브스 하나와 베르크 둘. 셋 다 발췌다. 366 서정 모음곡은 현악 4중주 원곡이고 베르크 자신의 현악합주 편곡(3악장분)이 따로 돈다. 373·365 는 시드 쌍둥이 병합분이다.",
+  "pieces": [
+    {
+      "pieceId": 373,
+      "workMbid": "7d77c078-c85f-4306-84fa-0054c91f402a",
+      "composerQid": "Q309648",
+      "titleKo": "<뉴잉글랜드의 세 장소> (관현악 모음곡 1번)",
+      "titleEn": "Orchestral Set no. 1, S. 7 “Three Places in New England”",
+      "composerNameEn": "Charles Ives",
+      "composerNameKo": "찰스 아이브스",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-st-gaudens",
+        "type": "EXCERPT",
+        "nameKo": "1곡 “보스턴 공원의 세인트고든스 기념상”",
+        "nameEn": "I. The “St. Gaudens” in Boston Common",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 여린 첫 화음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 365,
+      "workMbid": "baca1b94-4041-49c4-8b61-32a99d46524d",
+      "composerQid": "Q78475",
+      "titleKo": "바이올린 협주곡 “어느 천사를 추억하며”",
+      "titleEn": "Violinkonzert „Dem Andenken eines Engels“",
+      "composerNameEn": "Alban Berg",
+      "composerNameKo": "알반 베르크",
+      "role": "VIOLINIST",
+      "sector": {
+        "key": "mv1-andante",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Andante 도입",
+        "nameEn": "I. Andante, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "하프와 클라리넷 위 독주 바이올린의 개방현 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 366,
+      "workMbid": "1c4e8c99-711e-4e23-aca4-96cd7e998197",
+      "composerQid": "Q78475",
+      "titleKo": "<서정 모음곡> (현악 4중주 원곡)",
+      "titleEn": "Lyrische Suite (original, for string quartet)",
+      "composerNameEn": "Alban Berg",
+      "composerNameKo": "알반 베르크",
+      "role": "QUARTET",
+      "sector": {
+        "key": "mv1-allegretto-gioviale",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegretto gioviale",
+        "nameEn": "I. Allegretto gioviale",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "4중주 총주의 첫 화음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    }
+  ]
+}

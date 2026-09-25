@@ -1,0 +1,48 @@
+{
+  "batchId": "a-a29",
+  "note": "A tier A29. 피아졸라 하나와 하차투리안 하나. 두 곡짜리 배치다. 377 은 네 악장의 차례가 녹음마다 달라 anchor:head 가 어느 악장을 잡을지 알 수 없다 — excerpt 를 일부러 비워 뒀다. “Verano porteño” 낱악장 트랙을 찾거나 referenceVideoId·start·end 꼴로 적어라.",
+  "pieces": [
+    {
+      "pieceId": 377,
+      "workMbid": "a289bd55-5684-4cbd-8482-3ac980ad0da9",
+      "composerQid": "Q172505",
+      "titleKo": "<부에노스 아이레스의 사계>",
+      "titleEn": "Las cuatro estaciones porteñas",
+      "composerNameEn": "Astor Piazzolla",
+      "composerNameKo": "아스토르 피아졸라",
+      "role": "ENSEMBLE",
+      "sector": {
+        "key": "verano-porteno",
+        "type": "EXCERPT",
+        "nameKo": "“부에노스 아이레스의 여름”",
+        "nameEn": "Verano porteño",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "반주 오스티나토의 첫 박(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 381,
+      "workMbid": "4f10d0d0-d644-463e-8791-c65b65d6ff36",
+      "composerQid": "Q152293",
+      "titleKo": "<가야네> 중 “칼춤”",
+      "titleEn": "Sabre Dance, from the ballet Gayaneh",
+      "composerNameEn": "Aram Khachaturian",
+      "composerNameKo": "아람 하차투리안",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete movement",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "타악과 현의 총주 첫 타격(곡 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    }
+  ]
+}

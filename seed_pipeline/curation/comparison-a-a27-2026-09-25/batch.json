@@ -1,0 +1,77 @@
+{
+  "batchId": "a-a27",
+  "note": "A tier A27. 메시앙 둘과 글래스 하나. 354 만 전곡(7분)이다. 360 은 바이올린·클라리넷·첼로·피아노 4중주인데 role 이 ENSEMBLE 이라 이름 붙은 앙상블 녹음을 찾아야 한다. 360·362 는 시드 쌍둥이 병합분이다.",
+  "pieces": [
+    {
+      "pieceId": 360,
+      "workMbid": "92eab622-10fb-4613-8b95-e7ef4e76d99b",
+      "composerQid": "Q151593",
+      "titleKo": "<시간의 종말을 위한 4중주>",
+      "titleEn": "Quatuor pour la fin du Temps",
+      "composerNameEn": "Olivier Messiaen",
+      "composerNameKo": "올리비에 메시앙",
+      "role": "ENSEMBLE",
+      "sector": {
+        "key": "mv1-liturgie-de-cristal",
+        "type": "EXCERPT",
+        "nameKo": "1곡 “수정의 전례”",
+        "nameEn": "I. Liturgie de cristal",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "클라리넷의 새소리 음형 첫 음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 362,
+      "workMbid": "ec48e2cb-8e50-4648-89ba-ec86fb914304",
+      "composerQid": "Q151593",
+      "titleKo": "<투랑갈릴라 교향곡>",
+      "titleEn": "Turangalîla-Symphonie, I/29",
+      "composerNameEn": "Olivier Messiaen",
+      "composerNameKo": "올리비에 메시앙",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-introduction",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Introduction",
+        "nameEn": "I. Introduction",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "금관의 첫 총주 화음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 354,
+      "workMbid": "f4e481ae-e994-4ca5-aff0-d2d8c1d06ccf",
+      "composerQid": "Q189729",
+      "titleKo": "피아노 연습곡 6번",
+      "titleEn": "Etude no. 6",
+      "composerNameEn": "Philip Glass",
+      "composerNameKo": "필립 글래스",
+      "role": "PIANIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "왼손 반복 음형의 첫 음(작품 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    }
+  ]
+}
