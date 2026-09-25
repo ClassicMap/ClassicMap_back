@@ -115,6 +115,40 @@ export COMPARISON_FETCH_POD=$(kubectl -n homeserver get pods -o name | grep clip
 채로 잘린다(2160초 영상이 1956초). `fetch_videos.sh` 가 메타 길이와 ±2초로 맞춰 보고, 어긋나면
 한 번 다시 옮긴 뒤 그래도 틀리면 실패로 처리한다. 예전에 잘린 채 남은 wav 도 다시 받는다.
 
+### 잠금(rc=2)에 걸리면 기다리지 말고 다시 부른다 (2026-09-25)
+
+`fetch_videos.sh` 는 파드에 `mkdir` 잠금을 걸고, 다른 배치가 쓰고 있으면 **rc=2** 로
+빠진다. 이것은 실패가 아니라 "지금은 차례가 아니다" 라는 뜻이다.
+
+**알림은 오지 않는다.** 잠금이 풀렸는지는 스스로 다시 불러 봐야 안다. 그런데
+서브에이전트가 "수집 잠금이 풀리기를 기다리는 중입니다. 완료되면 알림을 받습니다"
+하고 턴을 끝내는 일이 하루에 두 번 있었다. **한 배치가 그렇게 4시간을 날렸다.**
+WAV 는 이미 다 받아져 있었는데 다음 단계로 넘어가지 않았다.
+
+재시도 루프를 background 로 돌린다. 끝나면 알림이 온다.
+
+```bash
+#!/bin/bash
+cd .../.claude/skills/comparison-seed/scripts
+export COMPARISON_WORK_DIR=...   # 배치 작업 디렉터리
+export COMPARISON_FETCH_POD=...  # 클리퍼 파드
+B=.../comparison-<batchId>-<날짜>/batch.json
+LOG=$COMPARISON_WORK_DIR/fetch.log
+for i in $(seq 1 90); do
+  echo "=== 시도 $i $(date +%H:%M:%S) ===" >> "$LOG"
+  ./fetch_videos.sh "$B" >> "$LOG" 2>&1
+  rc=$?
+  echo "rc=$rc" >> "$LOG"
+  [ $rc -ne 2 ] && exit $rc
+  sleep 60
+done
+exit 2
+```
+
+동시에 두 배치가 도는 것이 정상이므로 몇 번 걸리는 것도 정상이다. 잠금은 3분간
+갱신이 없으면 죽은 것으로 보고 다음 호출이 뺏는다. 90번(90분) 안에 못 들어가면
+그때는 보고한다.
+
 ## 디스크
 
 WAV 는 배치마다 지운다. 한 세션에서 133개가 남아 스크래치패드가 9.2GB 가 된
