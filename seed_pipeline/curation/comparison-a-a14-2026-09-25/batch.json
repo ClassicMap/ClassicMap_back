@@ -21,8 +21,39 @@
         "startCue": "저현의 느린 3음 동기 첫 음(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "J3lnwOzHIuA",
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "Orchestre National de France",
+            "wikidata": "Q686537"
+          }
+        },
+        {
+          "videoId": "EiIN3EMi1T4",
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Orchestre symphonique de Montréal",
+            "wikidata": "Q1196259"
+          }
+        },
+        {
+          "videoId": "8lab3fiAFhc",
+          "artistName": "Seiji Ozawa",
+          "wikidata": "Q313649",
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        }
+      ]
     },
     {
       "pieceId": 181,
@@ -43,7 +74,41 @@
         "startCue": "반주의 첫 화음(악곡 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [],
+      "rejectedVideos": [
+        {
+          "videoId": "hfSOsN9nIT8",
+          "artistName": "Vittorio Grigolo",
+          "wikidata": "Q715316",
+          "orchestra": {
+            "name": "Orchestra Roma Sinfonietta",
+            "wikidata": "Q2042975"
+          }
+        },
+        {
+          "videoId": "EiA8TSX6rxU",
+          "artistName": "Plácido Domingo",
+          "wikidata": "Q130853",
+          "choir": {
+            "name": "Wiener Sängerknaben",
+            "wikidata": "Q266508"
+          },
+          "orchestra": {
+            "name": "Wiener Symphoniker",
+            "wikidata": "Q686887"
+          }
+        },
+        {
+          "videoId": "7tE6lAmQV0A",
+          "artistName": "Roberto Alagna",
+          "wikidata": "Q267617",
+          "orchestra": {
+            "name": "Orchestre national du Capitole de Toulouse",
+            "wikidata": "Q2993030"
+          }
+        }
+      ],
+      "blockedNote": "A장조 원조 3종(그리골로·도밍고·카레라스)이 0.1126~0.1370 으로 세 쌍 모두 임계를 넘었다. 회전 최저는 0반음이고 경계를 옮겨도 평평하다. 삼등분에서 세 쌍 모두 중간이 가장 나쁘다(0.145~0.215) — 둘째 절 처리가 편곡마다 갈린다. 알라냐는 A♭장조, 플로레스는 B♭장조로 이조돼 있어 먼저 빠졌다. 03-verification 5번 패턴으로 보아 배치에서 뺀다."
     },
     {
       "pieceId": 206,
@@ -64,8 +129,39 @@
         "startCue": "반주의 첫 화음(곡 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "ygsksBdffJI",
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Orchestre symphonique de Montréal",
+            "wikidata": "Q1196259"
+          }
+        },
+        {
+          "videoId": "e-G2BeHNCDM",
+          "artistName": "Daniel Barenboim",
+          "wikidata": "Q152768",
+          "orchestra": {
+            "name": "Orchestre de Paris",
+            "wikidata": "Q1053524"
+          }
+        },
+        {
+          "videoId": "bju1nDX9_rc",
+          "artistName": "Colin Davis",
+          "wikidata": "Q366624",
+          "orchestra": {
+            "name": "Staatskapelle Dresden",
+            "wikidata": "Q584017"
+          }
+        }
+      ]
     }
   ]
 }

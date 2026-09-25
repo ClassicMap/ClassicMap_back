@@ -1,0 +1,36 @@
+{
+  "status": "succeeded",
+  "bundlePath": "/private/tmp/claude-501/-Users-kdh/a7b6f260-3a00-4d61-a287-f7a411cb5f3b/scratchpad/comparison/a-a14/a-a14-clip-assets.jsonl",
+  "rowCount": 6,
+  "dryRun": false,
+  "publish": true,
+  "seedRunId": "ed55f631-5979-4b37-8cad-2b5de447aa33",
+  "mutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 6,
+    "clipAssetsInserted": 6,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 12,
+    "total": 24
+  },
+  "plannedMutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 6,
+    "clipAssetsInserted": 6,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 12,
+    "total": 24
+  },
+  "performanceIds": [
+    641,
+    642,
+    643,
+    644,
+    645,
+    646
+  ]
+}
