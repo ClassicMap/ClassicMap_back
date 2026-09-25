@@ -1,0 +1,71 @@
+{
+  "batchId": "a-a20",
+  "note": "A tier A20. 드뷔시 <꿈> 과 라벨 둘. 456 은 짧아 전곡이다. 230 볼레로는 같은 선율이 18번 되풀이되는 곡이라 발췌 자리를 옮기면 한 바퀴 밀려도 비용이 낮게 나온다 — 반드시 머리로 잡는다. 셋 다 시드 쌍둥이 병합분이다.",
+  "pieces": [
+    {
+      "pieceId": 456,
+      "workMbid": "7158411f-d467-38ce-9d2d-338a5bf5a26e",
+      "composerQid": "Q4700",
+      "titleKo": "<꿈>",
+      "titleEn": "Rêverie, L. 68",
+      "composerNameEn": "Claude Debussy",
+      "composerNameKo": "클로드 드뷔시",
+      "role": "PIANIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "왼손 분산화음 위 오른손 선율 첫 음(작품 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 230,
+      "workMbid": "487527b9-a525-33f4-b948-ea41b9a2672f",
+      "composerQid": "Q1178",
+      "titleKo": "<볼레로>",
+      "titleEn": "Boléro",
+      "composerNameEn": "Maurice Ravel",
+      "composerNameKo": "모리스 라벨",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "opening",
+        "type": "EXCERPT",
+        "nameKo": "도입 (작은북 오스티나토와 플루트 첫 주제)",
+        "nameEn": "Opening, snare ostinato and first flute statement",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "작은북 오스티나토의 첫 타(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 233,
+      "workMbid": "191c0821-e4da-4333-afa5-e5ebe2497308",
+      "composerQid": "Q1178",
+      "titleKo": "피아노 협주곡 G장조 M. 83",
+      "titleEn": "Piano Concerto in G major, M. 83",
+      "composerNameEn": "Maurice Ravel",
+      "composerNameKo": "모리스 라벨",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Allegramente 도입",
+        "nameEn": "I. Allegramente, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "채찍 소리 한 번과 피콜로의 첫 주제(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    }
+  ]
+}

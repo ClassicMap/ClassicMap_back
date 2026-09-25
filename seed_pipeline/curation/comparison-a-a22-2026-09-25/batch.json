@@ -1,0 +1,69 @@
+{
+  "batchId": "a-a22",
+  "note": "A tier A22. 사티 하나와 오르프 둘. 349 와 350 이 같은 배치에 든다 — 350 이 <카르미나 부라나> 의 1곡 “오 포르투나” 이므로 349 의 발췌를 오 포르투나로 잡으면 두 곡이 같은 음악이 된다. 349 는 2곡 “Fortune plango vulnera” 로 잡았고 excerpt 를 일부러 비워 뒀다. 낱곡 트랙을 찾으면 excerpt 없이 두고 endCue 만 트랙에 맞춘다. 전곡 영상뿐이면 referenceVideoId·start·end 꼴로 적는다.",
+  "pieces": [
+    {
+      "pieceId": 380,
+      "workMbid": "9c6277dc-e1ae-31fa-aedb-db69491a0a45",
+      "composerQid": "Q187192",
+      "titleKo": "<난 그대를 원해요>",
+      "titleEn": "Je te veux",
+      "composerNameEn": "Erik Satie",
+      "composerNameKo": "에릭 사티",
+      "role": "PIANIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "왈츠 반주의 첫 박(작품 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 349,
+      "workMbid": "2088dbfb-b916-4d29-8883-cd5fd60c6c28",
+      "composerQid": "Q44086",
+      "titleKo": "<카르미나 부라나>",
+      "titleEn": "Carmina Burana",
+      "composerNameEn": "Carl Orff",
+      "composerNameKo": "카를 오르프",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "no2-fortune-plango",
+        "type": "EXCERPT",
+        "nameKo": "2곡 “Fortune plango vulnera”",
+        "nameEn": "No. 2, Fortune plango vulnera",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "“오 포르투나” 가 끝난 뒤 합창의 첫 음",
+        "endCue": "발췌 끝"
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 350,
+      "workMbid": "53833e21-6318-33b3-b3d8-7bf1fc0b7373",
+      "composerQid": "Q44086",
+      "titleKo": "<카르미나 부라나> 중 1곡 “오 포르투나”",
+      "titleEn": "Carmina Burana: I. O Fortuna",
+      "composerNameEn": "Carl Orff",
+      "composerNameKo": "카를 오르프",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-movement",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete movement",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "합창과 팀파니 총주의 첫 화음(곡 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    }
+  ]
+}

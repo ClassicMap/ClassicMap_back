@@ -1,0 +1,71 @@
+{
+  "batchId": "a-a21",
+  "note": "A tier A21. 라벨 둘과 사티 하나. 457 치건은 바이올린+관현악판으로 확정돼 있다(피아노 반주 원곡판이 따로 돈다). 379 는 짧아 전곡이고 관현악·기타 편곡이 널리 도니 피아노 원곡으로 맞춘다. 234 는 시드 쌍둥이 병합분이다.",
+  "pieces": [
+    {
+      "pieceId": 234,
+      "workMbid": "ac050479-394c-4abd-9757-6fd005656560",
+      "composerQid": "Q1178",
+      "titleKo": "<다프니스와 클로에> 모음곡 2번",
+      "titleEn": "Daphnis et Chloé, Suite no. 2",
+      "composerNameEn": "Maurice Ravel",
+      "composerNameKo": "모리스 라벨",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "lever-du-jour",
+        "type": "EXCERPT",
+        "nameKo": "1곡 “동트기(Lever du jour)” 도입",
+        "nameEn": "I. Lever du jour, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "저현과 하프의 물결 음형 첫 음(모음곡 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 457,
+      "workMbid": "7c706500-059c-31ba-af16-05e8f8dacec6",
+      "composerQid": "Q1178",
+      "titleKo": "<치건> (바이올린과 관현악판)",
+      "titleEn": "Tzigane (for violin and orchestra)",
+      "composerNameEn": "Maurice Ravel",
+      "composerNameKo": "모리스 라벨",
+      "role": "VIOLINIST",
+      "sector": {
+        "key": "opening-cadenza",
+        "type": "EXCERPT",
+        "nameKo": "도입 (무반주 바이올린 카덴차)",
+        "nameEn": "Opening, unaccompanied violin cadenza",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "G현 무반주 카덴차의 첫 음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {"anchor": "head", "seconds": 120},
+      "videos": []
+    },
+    {
+      "pieceId": 379,
+      "workMbid": "eb07cf62-985a-3f73-9595-2c45b95e1004",
+      "composerQid": "Q187192",
+      "titleKo": "그노시엔 1번 (피아노 원곡)",
+      "titleEn": "Gnossienne no. 1 — Lent (original, for piano)",
+      "composerNameEn": "Erik Satie",
+      "composerNameKo": "에릭 사티",
+      "role": "PIANIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "왼손 반주 음형의 첫 화음(작품 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": []
+    }
+  ]
+}
