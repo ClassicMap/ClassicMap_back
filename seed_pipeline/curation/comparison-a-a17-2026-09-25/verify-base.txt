@@ -1,0 +1,13 @@
+곡                       연주쌍                                    정렬비용  판정
+------------------------------------------------------------------------------
+3개의 로망스 Op. 22 (바이올린과   Clara-Jumi Kan ↔ Janine Jansen       0.0592  같은 곡
+3개의 로망스 Op. 22 (바이올린과   Clara-Jumi Kan ↔ Lisa Batiashvi      0.0585  같은 곡
+3개의 로망스 Op. 22 (바이올린과   Janine Jansen ↔ Lisa Batiashvi       0.0638  같은 곡
+바이올린 협주곡 2번 B단조 Op. 7   Salvatore Acca ↔ Shmuel Ashkena      0.0653  같은 곡
+바이올린 협주곡 2번 B단조 Op. 7   Salvatore Acca ↔ Kristóf Baráti      0.0709  같은 곡
+바이올린 협주곡 2번 B단조 Op. 7   Shmuel Ashkena ↔ Kristóf Baráti      0.0876  같은 곡
+바이올린 협주곡 1번 D장조 Op. 6   Itzhak Perlman ↔ Midori              0.0610  같은 곡
+바이올린 협주곡 1번 D장조 Op. 6   Itzhak Perlman ↔ Hilary Hahn         0.1125  확인 필요
+바이올린 협주곡 1번 D장조 Op. 6   Midori ↔ Hilary Hahn                 0.0821  같은 곡
+------------------------------------------------------------------------------
+  확인 필요: 바이올린 협주곡 1번 D장조 Op. 6 (최대 비용 0.1125)

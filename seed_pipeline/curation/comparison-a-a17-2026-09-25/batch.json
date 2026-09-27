@@ -167,16 +167,12 @@
           }
         },
         {
-          "videoId": "pJJWxBeHqM8",
-          "artistName": "Hilary Hahn",
-          "wikidata": "Q235406",
-          "conductor": {
-            "name": "Eiji Oue",
-            "wikidata": "Q650184"
-          },
+          "videoId": "IblRlEX8P6U",
+          "artistName": "Joshua Bell",
+          "wikidata": "Q312792",
           "orchestra": {
-            "name": "Swedish Radio Symphony Orchestra",
-            "wikidata": "Q2066271"
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
           }
         }
       ]
