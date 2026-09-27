@@ -1,0 +1,30 @@
+악장 전체 길이
+  Lucy Parham              409.6s
+  Isata Kanneh-Mason       358.4s
+  Howard Shelley           351.5s
+
+악장 전체 비 (기준 → 대상)
+  Lucy Parham     → Isata Kanneh-M   0.875
+  Lucy Parham     → Howard Shelley   0.858
+  Isata Kanneh-M  → Lucy Parham      1.143
+  Isata Kanneh-M  → Howard Shelley   0.981
+  Howard Shelley  → Lucy Parham      1.165
+  Howard Shelley  → Isata Kanneh-M   1.020
+
+1) 기준을 셋 다 바꿔 120초 발췌
+  기준 Lucy Parham  2.14–122.14 (120.0s)
+    Isata Kanneh-Mason       2.00– 107.05   105.0s  비율 0.875  옮김 0.0337
+    Howard Shelley           3.72–  98.83    95.1s  비율 0.793  옮김 0.0334
+  기준 Isata Kanneh-Mason  2.00–122.00 (120.0s)
+    Lucy Parham              2.14– 137.00   134.9s  비율 1.124  옮김 0.0344
+    Howard Shelley           3.72– 112.85   109.1s  비율 0.909  옮김 0.0321
+  기준 Howard Shelley  3.72–123.72 (120.0s)
+    Lucy Parham              2.14– 149.17   147.0s  비율 1.225  옮김 0.0363
+    Isata Kanneh-Mason       2.00– 132.03   130.0s  비율 1.084  옮김 0.0319
+
+2) 기준을 첫 연주로 두고 발췌를 늘린다
+  발췌        60s  Isata Kanneh-M 0.858 ( 51.5s, 옮김 0.0283)  |  Howard Shelley 0.771 ( 46.3s, 옮김 0.0317)
+  발췌       120s  Isata Kanneh-M 0.875 (105.0s, 옮김 0.0337)  |  Howard Shelley 0.793 ( 95.1s, 옮김 0.0334)
+  발췌       180s  Isata Kanneh-M 0.873 (157.2s, 옮김 0.0336)  |  Howard Shelley 0.809 (145.5s, 옮김 0.0362)
+  발췌       300s  Isata Kanneh-M 0.898 (269.4s, 옮김 0.0339)  |  Howard Shelley 0.865 (259.5s, 옮김 0.0349)
+  발췌   410s(전체)  Isata Kanneh-M 0.875 (358.3s, 옮김 0.0514)  |  Howard Shelley 0.858 (351.5s, 옮김 0.0537)
