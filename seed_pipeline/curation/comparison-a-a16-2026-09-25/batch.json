@@ -21,8 +21,42 @@
         "startCue": "전 관현악 총주의 첫 화음(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "PQXiW4fsJVU",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Orchestre symphonique de Montréal",
+            "wikidata": "Q1196259"
+          }
+        },
+        {
+          "videoId": "dfCTZERDecY",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "DQulAMj4lH0",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic Orchestra",
+            "wikidata": "Q471154"
+          }
+        }
+      ]
     },
     {
       "pieceId": 176,
@@ -43,8 +77,29 @@
         "startCue": "바이올린의 첫 주제 첫 음(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "5_iz_nFNbKE",
+          "artistName": "Ragna Schirmer",
+          "wikidata": "Q106486"
+        },
+        {
+          "videoId": "9W2ri4KMMso",
+          "artistId": 639,
+          "artistName": "Lambert Orkis",
+          "wikidata": "Q1250415"
+        },
+        {
+          "videoId": "y0BLD9Lxzzk",
+          "artistId": 571,
+          "artistName": "Menahem Pressler",
+          "wikidata": "Q70142"
+        }
+      ]
     },
     {
       "pieceId": 177,
@@ -65,8 +120,48 @@
         "startCue": "관현악 총주의 첫 화음(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "Td82HXpmhl8",
+          "artistName": "Lucy Parham",
+          "wikidata": "Q62619403",
+          "conductor": {
+            "name": "Barry Wordsworth",
+            "wikidata": "Q809113"
+          },
+          "orchestra": {
+            "name": "BBC Concert Orchestra",
+            "wikidata": "Q2217163"
+          }
+        },
+        {
+          "videoId": "OMMtrrWpKH8",
+          "artistName": "Isata Kanneh-Mason",
+          "wikidata": "Q100868946",
+          "conductor": {
+            "name": "Holly Mathieson",
+            "wikidata": "Q21998639"
+          },
+          "orchestra": {
+            "name": "Royal Liverpool Philharmonic Orchestra",
+            "wikidata": "Q1818979"
+          }
+        },
+        {
+          "videoId": "kqX-7BWpQAo",
+          "artistId": 716,
+          "artistName": "Howard Shelley",
+          "wikidata": "Q11327040",
+          "orchestra": {
+            "name": "Tasmanian Symphony Orchestra",
+            "wikidata": "Q2263987"
+          }
+        }
+      ]
     }
   ]
 }

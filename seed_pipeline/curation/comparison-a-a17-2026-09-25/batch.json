@@ -14,18 +14,42 @@
       "sector": {
         "key": "no1-andante-molto",
         "type": "EXCERPT",
-        "nameKo": "1번 D♭장조 Andante molto 도입",
-        "nameEn": "No. 1 in D-flat major, Andante molto, opening",
+        "nameKo": "1번 D♭장조 Andante molto",
+        "nameEn": "No. 1 in D-flat major, Andante molto",
         "measureStart": "",
         "measureEnd": "",
-        "startCue": "피아노 전주 위 바이올린 첫 음(1번 시작)",
-        "endCue": "발췌 끝"
+        "startCue": "피아노 전주의 첫 음(1번 시작)",
+        "endCue": "1번 종결 화음과 잔향"
       },
-      "excerpt": {
-        "anchor": "head",
-        "seconds": 120
-      },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "JH1miZzWZ2I",
+          "artistName": "Clara-Jumi Kang",
+          "wikidata": "Q18209541",
+          "accompanist": {
+            "name": "Yeol Eum Son",
+            "wikidata": "Q435711"
+          }
+        },
+        {
+          "videoId": "QlLurOVifPM",
+          "artistName": "Janine Jansen",
+          "wikidata": "Q235149",
+          "accompanist": {
+            "name": "Antonio Pappano",
+            "wikidata": "Q1125383"
+          }
+        },
+        {
+          "videoId": "5Q_BaQ_0eTc",
+          "artistName": "Lisa Batiashvili",
+          "wikidata": "Q271429",
+          "accompanist": {
+            "name": "Alice Sara Ott",
+            "wikidata": "Q76387"
+          }
+        }
+      ]
     },
     {
       "pieceId": 165,
@@ -43,14 +67,54 @@
         "nameEn": "III. Rondo “La campanella”, opening",
         "measureStart": "",
         "measureEnd": "",
-        "startCue": "종소리와 관현악 서주 뒤 독주 바이올린의 론도 주제 첫 음",
+        "startCue": "관현악 서주(종소리)의 첫 음(악장 시작)",
         "endCue": "발췌 끝"
       },
       "excerpt": {
         "anchor": "head",
         "seconds": 120
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "EpP4UsviQPA",
+          "artistName": "Salvatore Accardo",
+          "wikidata": "Q373703",
+          "conductor": {
+            "name": "Charles Dutoit",
+            "wikidata": "Q116995"
+          },
+          "orchestra": {
+            "name": "London Philharmonic Orchestra",
+            "wikidata": "Q863397"
+          }
+        },
+        {
+          "videoId": "USjK8_lMZp0",
+          "artistName": "Shmuel Ashkenasi",
+          "wikidata": "Q321539",
+          "conductor": {
+            "name": "Heribert Esser",
+            "wikidata": "Q16264579"
+          },
+          "orchestra": {
+            "name": "Wiener Symphoniker",
+            "wikidata": "Q686887"
+          }
+        },
+        {
+          "videoId": "pY6TiZP14Qc",
+          "artistName": "Kristóf Baráti",
+          "wikidata": "Q791092",
+          "conductor": {
+            "name": "Eiji Oue",
+            "wikidata": "Q650184"
+          },
+          "orchestra": {
+            "name": "NDR Radiophilharmonie",
+            "wikidata": "Q830510"
+          }
+        }
+      ]
     },
     {
       "pieceId": 166,
@@ -75,7 +139,47 @@
         "anchor": "head",
         "seconds": 120
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "cIQhpLSO4bA",
+          "artistName": "Itzhak Perlman",
+          "wikidata": "Q215905",
+          "conductor": {
+            "name": "Lawrence Foster",
+            "wikidata": "Q980815"
+          },
+          "orchestra": {
+            "name": "Royal Philharmonic Orchestra",
+            "wikidata": "Q856125"
+          }
+        },
+        {
+          "videoId": "5XgO62Hys54",
+          "artistName": "Midori",
+          "wikidata": "Q268644",
+          "conductor": {
+            "name": "Leonard Slatkin",
+            "wikidata": "Q509870"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "pJJWxBeHqM8",
+          "artistName": "Hilary Hahn",
+          "wikidata": "Q235406",
+          "conductor": {
+            "name": "Eiji Oue",
+            "wikidata": "Q650184"
+          },
+          "orchestra": {
+            "name": "Swedish Radio Symphony Orchestra",
+            "wikidata": "Q2066271"
+          }
+        }
+      ]
     }
   ]
 }
