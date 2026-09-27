@@ -1,0 +1,25 @@
+
+■ 207 검출값
+   Marriner   ↔ MTT        0.0697
+   Marriner   ↔ Ormandy    0.0678
+   MTT        ↔ Ormandy    0.0574
+
+■ 207 시작만 보정
+   Marriner   ↔ MTT        0.0691
+   Marriner   ↔ Ormandy    0.0688
+   MTT        ↔ Ormandy    0.0572
+
+■ 207 시작+끝 보정
+   Marriner   ↔ MTT        0.0678
+   Marriner   ↔ Ormandy    0.0694
+   MTT        ↔ Ormandy    0.0559
+
+■ 208 검출값
+   Isserlis   ↔ Ma         0.0606
+   Isserlis   ↔ Capucon    0.0677
+   Ma         ↔ Capucon    0.0733
+
+■ 208 끝 보정
+   Isserlis   ↔ Ma         0.0636
+   Isserlis   ↔ Capucon    0.0676
+   Ma         ↔ Capucon    0.0740

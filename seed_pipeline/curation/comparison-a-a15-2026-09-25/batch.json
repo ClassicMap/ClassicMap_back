@@ -21,7 +21,37 @@
         "startCue": "현의 피치카토 위 플루트 선율 첫 음(작품 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "moT3BcFocLY",
+          "artistId": 577,
+          "artistName": "Neville Marriner",
+          "wikidata": "Q318636",
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        },
+        {
+          "videoId": "sXq75AFhanQ",
+          "artistId": 630,
+          "artistName": "Michael Tilson Thomas",
+          "wikidata": "Q520493",
+          "orchestra": {
+            "name": "San Francisco Symphony",
+            "wikidata": "Q933993"
+          }
+        },
+        {
+          "videoId": "SWa-9eLmpIQ",
+          "artistName": "Eugene Ormandy",
+          "wikidata": "Q344023",
+          "orchestra": {
+            "name": "The Philadelphia Orchestra",
+            "wikidata": "Q659181"
+          }
+        }
+      ]
     },
     {
       "pieceId": 208,
@@ -42,7 +72,38 @@
         "startCue": "피아노 전주의 첫 음(작품 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "byDBJ8yDxO8",
+          "artistId": 217,
+          "artistName": "Steven Isserlis",
+          "wikidata": "Q2095862",
+          "accompanist": {
+            "name": "Pascal Devoyon",
+            "wikidata": "Q1671133"
+          }
+        },
+        {
+          "videoId": "ccGKNopFzUA",
+          "artistId": 215,
+          "artistName": "Yo-Yo Ma",
+          "wikidata": "Q234891",
+          "accompanist": {
+            "name": "Kathryn Stott",
+            "wikidata": "Q6377130"
+          }
+        },
+        {
+          "videoId": "YuCYg9_Dg_w",
+          "artistId": 277,
+          "artistName": "Gautier Capuçon",
+          "wikidata": "Q689479",
+          "accompanist": {
+            "name": "Michel Dalberto",
+            "wikidata": "Q704544"
+          }
+        }
+      ]
     },
     {
       "pieceId": 209,
@@ -63,7 +124,37 @@
         "startCue": "피아노 전주의 첫 음(가곡 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "bYr16LK-Gpg",
+          "artistId": 295,
+          "artistName": "Renée Fleming",
+          "wikidata": "Q165637",
+          "accompanist": {
+            "name": "Jean-Yves Thibaudet",
+            "wikidata": "Q1030549"
+          }
+        },
+        {
+          "videoId": "If8AlQ4FgUA",
+          "artistId": 297,
+          "artistName": "Sabine Devieilhe",
+          "wikidata": "Q6497759",
+          "accompanist": {
+            "name": "Alexandre Tharaud",
+            "wikidata": "Q954028"
+          }
+        },
+        {
+          "videoId": "tLBmMFodJ0w",
+          "artistName": "Barbara Hendricks",
+          "wikidata": "Q807482",
+          "accompanist": {
+            "name": "Michel Dalberto",
+            "wikidata": "Q704544"
+          }
+        }
+      ]
     }
   ]
 }

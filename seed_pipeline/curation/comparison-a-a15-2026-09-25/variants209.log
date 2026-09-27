@@ -1,0 +1,10 @@
+
+■ 209 시작만 보정 (검출 끝)
+   Fleming    ↔ Devieilhe  0.0880
+   Fleming    ↔ Hendricks  0.0790
+   Devieilhe  ↔ Hendricks  0.0810
+
+■ 209 시작+끝 보정
+   Fleming    ↔ Devieilhe  0.0810
+   Fleming    ↔ Hendricks  0.0762
+   Devieilhe  ↔ Hendricks  0.0815
