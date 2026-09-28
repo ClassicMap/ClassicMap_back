@@ -21,7 +21,26 @@
         "startCue": "왼손 분산화음 위 오른손 선율 첫 음(작품 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "Mz91oSREyJg",
+          "artistId": 569,
+          "artistName": "Alice Sara Ott",
+          "wikidata": "Q76387"
+        },
+        {
+          "videoId": "D5Ypbt_USRg",
+          "artistId": 573,
+          "artistName": "Jean-Yves Thibaudet",
+          "wikidata": "Q1030549"
+        },
+        {
+          "videoId": "GHKz33G4p1A",
+          "artistId": 228,
+          "artistName": "Bruce Liu",
+          "wikidata": "Q108877746"
+        }
+      ]
     },
     {
       "pieceId": 230,
@@ -42,8 +61,42 @@
         "startCue": "작은북 오스티나토의 첫 타(작품 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "zfwcuz0W3d4",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "pFFigPdKPg4",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "BV-nm2OIEzM",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        }
+      ]
     },
     {
       "pieceId": 233,
@@ -64,8 +117,54 @@
         "startCue": "채찍 소리 한 번과 피콜로의 첫 주제(악장 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "qBKnNdWqNJM",
+          "artistId": 186,
+          "artistName": "Seong-Jin Cho",
+          "wikidata": "Q4516986",
+          "conductor": {
+            "name": "Andris Nelsons",
+            "wikidata": "Q511817"
+          },
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "CjULZmPXTzE",
+          "artistId": 204,
+          "artistName": "Martha Argerich",
+          "wikidata": "Q156810",
+          "conductor": {
+            "name": "Claudio Abbado",
+            "wikidata": "Q151608"
+          },
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "5KLpp-Ku678",
+          "artistId": 563,
+          "artistName": "Pascal Rogé",
+          "wikidata": "Q2525670",
+          "conductor": {
+            "name": "Charles Dutoit",
+            "wikidata": "Q116995"
+          },
+          "orchestra": {
+            "name": "Orchestre symphonique de Montréal",
+            "wikidata": "Q1196259"
+          }
+        }
+      ]
     }
   ]
 }

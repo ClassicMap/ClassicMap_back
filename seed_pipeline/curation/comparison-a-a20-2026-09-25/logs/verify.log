@@ -1,0 +1,13 @@
+곡                       연주쌍                                    정렬비용  판정
+------------------------------------------------------------------------------
+<꿈>                     Alice Sara Ott ↔ Jean-Yves Thib      0.0625  같은 곡
+<꿈>                     Alice Sara Ott ↔ Bruce Liu           0.0604  같은 곡
+<꿈>                     Jean-Yves Thib ↔ Bruce Liu           0.0478  같은 곡
+<볼레로>                   Herbert von Ka ↔ Claudio Abbado      0.0870  같은 곡
+<볼레로>                   Herbert von Ka ↔ Georg Solti         0.0969  같은 곡
+<볼레로>                   Claudio Abbado ↔ Georg Solti         0.0871  같은 곡
+피아노 협주곡 G장조 M. 83       Seong-Jin Cho ↔ Martha Argeric       0.0682  같은 곡
+피아노 협주곡 G장조 M. 83       Seong-Jin Cho ↔ Pascal Rogé          0.0631  같은 곡
+피아노 협주곡 G장조 M. 83       Martha Argeric ↔ Pascal Rogé         0.0646  같은 곡
+------------------------------------------------------------------------------
+  전부 통과
