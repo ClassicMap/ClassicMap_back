@@ -19,9 +19,52 @@
         "measureStart": "",
         "measureEnd": "",
         "startCue": "독주 피아노가 반전된 주제를 처음 내는 음",
-        "endCue": "발췌 끝"
+        "endCue": "18번 변주 종결 화음과 잔향(낱 변주 트랙의 끝)"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "Ni70oNgaOI0",
+          "artistId": 202,
+          "artistName": "Daniil Trifonov",
+          "wikidata": "Q2635946",
+          "conductor": {
+            "name": "Yannick Nézet-Séguin",
+            "wikidata": "Q951548"
+          },
+          "orchestra": {
+            "name": "The Philadelphia Orchestra",
+            "wikidata": "Q659181"
+          }
+        },
+        {
+          "videoId": "qTok7XNV3Y4",
+          "artistId": 201,
+          "artistName": "Yuja Wang",
+          "wikidata": "Q465311",
+          "conductor": {
+            "name": "Gustavo Dudamel",
+            "wikidata": "Q160390"
+          },
+          "orchestra": {
+            "name": "Los Angeles Philharmonic",
+            "wikidata": "Q315715"
+          }
+        },
+        {
+          "videoId": "xcLhxTLfLqc",
+          "artistId": 200,
+          "artistName": "Lang Lang",
+          "wikidata": "Q155713",
+          "conductor": {
+            "name": "Valery Gergiev",
+            "wikidata": "Q165693"
+          },
+          "orchestra": {
+            "name": "Mariinsky Orchestra",
+            "wikidata": "Q4419936"
+          }
+        }
+      ]
     },
     {
       "pieceId": 228,
@@ -42,7 +85,42 @@
         "startCue": "반주의 첫 화음(악곡 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "NacE6oV_LHg",
+          "artistId": 402,
+          "artistName": "Kathleen Battle",
+          "wikidata": "Q241263",
+          "accompanist": {
+            "name": "Margo Garrett",
+            "wikidata": "Q133704350"
+          }
+        },
+        {
+          "videoId": "er-bwkLjj5Q",
+          "artistId": 749,
+          "artistName": "Kiri Te Kanawa",
+          "wikidata": "Q380133",
+          "accompanist": {
+            "name": "Roger Vignoles",
+            "wikidata": "Q3439553"
+          }
+        },
+        {
+          "videoId": "22It9TlhcS0",
+          "artistId": 295,
+          "artistName": "Renée Fleming",
+          "wikidata": "Q165637",
+          "conductor": {
+            "name": "Jeffrey Tate",
+            "wikidata": "Q948893"
+          },
+          "orchestra": {
+            "name": "English Chamber Orchestra",
+            "wikidata": "Q1146465"
+          }
+        }
+      ]
     },
     {
       "pieceId": 455,
@@ -63,7 +141,26 @@
         "startCue": "행진곡풍 첫 화음(악곡 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "dcDlo9zhMSU",
+          "artistId": 257,
+          "artistName": "Jan Lisiecki",
+          "wikidata": "Q548800"
+        },
+        {
+          "videoId": "PmS-yqEKMYE",
+          "artistId": 565,
+          "artistName": "Nikolai Lugansky",
+          "wikidata": "Q706497"
+        },
+        {
+          "videoId": "H3k-03y-VXQ",
+          "artistId": 716,
+          "artistName": "Howard Shelley",
+          "wikidata": "Q11327040"
+        }
+      ]
     }
   ]
 }

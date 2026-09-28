@@ -21,8 +21,42 @@
         "startCue": "무반주 플루트의 하행 반음계 첫 음(작품 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "Xa_9hF3L6fQ",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "aCphwVnD_hM",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "yHy64Bg_hGs",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Orchestre symphonique de Montreal",
+            "wikidata": "Q1196259"
+          }
+        }
+      ]
     },
     {
       "pieceId": 222,
@@ -43,8 +77,42 @@
         "startCue": "팀파니 트레몰로 위 저현의 첫 음(작품 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "b51FcFpwwgw",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "RD8MLADN0mw",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "loicyIkwqj8",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Orchestre symphonique de Montreal",
+            "wikidata": "Q1196259"
+          }
+        }
+      ]
     },
     {
       "pieceId": 223,
@@ -63,10 +131,28 @@
         "measureStart": "",
         "measureEnd": "",
         "startCue": "오른손 16분음표 무궁동의 첫 음(1곡 시작)",
-        "endCue": "발췌 끝"
+        "endCue": "1곡 종결 화음과 잔향(낱 트랙 전체)"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "videos": [
+        {
+          "videoId": "FGM1hkr6RkI",
+          "artistId": 262,
+          "artistName": "Jean-Efflam Bavouzet",
+          "wikidata": "Q6169197"
+        },
+        {
+          "videoId": "IA-UEzd608g",
+          "artistId": 573,
+          "artistName": "Jean-Yves Thibaudet",
+          "wikidata": "Q1030549"
+        },
+        {
+          "videoId": "J2ECNLziz64",
+          "artistId": 186,
+          "artistName": "Seong-Jin Cho",
+          "wikidata": "Q4516986"
+        }
+      ]
     }
   ]
 }

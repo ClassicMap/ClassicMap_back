@@ -1,0 +1,43 @@
+=== 1) 검출 원값 그대로 ===
+곡                       연주쌍                                    정렬비용  판정
+------------------------------------------------------------------------------
+파가니니 주제에 의한 광시곡 Op. 43  Daniil Trifono ↔ Yuja Wang           0.0480  같은 곡
+파가니니 주제에 의한 광시곡 Op. 43  Daniil Trifono ↔ Lang Lang           0.0542  같은 곡
+파가니니 주제에 의한 광시곡 Op. 43  Yuja Wang ↔ Lang Lang                0.0570  같은 곡
+<14개의 로망스> Op. 34 중 14  Kathleen Battl ↔ Kiri Te Kanawa      0.1452  확인 필요
+<14개의 로망스> Op. 34 중 14  Kathleen Battl ↔ Renée Fleming       0.1725  확인 필요
+<14개의 로망스> Op. 34 중 14  Kiri Te Kanawa ↔ Renée Fleming       0.1166  확인 필요
+<10개의 전주곡> Op. 23 중 5번  Jan Lisiecki ↔ Nikolai Lugans        0.0393  같은 곡
+<10개의 전주곡> Op. 23 중 5번  Jan Lisiecki ↔ Howard Shelley        0.0409  같은 곡
+<10개의 전주곡> Op. 23 중 5번  Nikolai Lugans ↔ Howard Shelley      0.0410  같은 곡
+------------------------------------------------------------------------------
+  확인 필요: <14개의 로망스> Op. 34 중 14번 “보칼리제” (최대 비용 0.1725)
+
+=== 2) 경계 보정 뒤 (유자 시작 3.39->0.05, 루간스키 2.28->0.80, 배틀 2.23->1.50, 플레밍 1.74->2.70, 끝 9건 전부 종결화음+잔향까지) ===
+곡                       연주쌍                                    정렬비용  판정
+------------------------------------------------------------------------------
+파가니니 주제에 의한 광시곡 Op. 43  Daniil Trifono ↔ Yuja Wang           0.0434  같은 곡
+파가니니 주제에 의한 광시곡 Op. 43  Daniil Trifono ↔ Lang Lang           0.0480  같은 곡
+파가니니 주제에 의한 광시곡 Op. 43  Yuja Wang ↔ Lang Lang                0.0563  같은 곡
+<14개의 로망스> Op. 34 중 14  Kathleen Battl ↔ Kiri Te Kanawa      0.1446  확인 필요
+<14개의 로망스> Op. 34 중 14  Kathleen Battl ↔ Renée Fleming       0.1703  확인 필요
+<14개의 로망스> Op. 34 중 14  Kiri Te Kanawa ↔ Renée Fleming       0.1168  확인 필요
+<10개의 전주곡> Op. 23 중 5번  Jan Lisiecki ↔ Nikolai Lugans        0.0359  같은 곡
+<10개의 전주곡> Op. 23 중 5번  Jan Lisiecki ↔ Howard Shelley        0.0387  같은 곡
+<10개의 전주곡> Op. 23 중 5번  Nikolai Lugans ↔ Howard Shelley      0.0413  같은 곡
+------------------------------------------------------------------------------
+  확인 필요: <14개의 로망스> Op. 34 중 14번 “보칼리제” (최대 비용 0.1703)
+=== 3) 228 을 뺀 최종 확인 ===
+곡                       연주쌍                                    정렬비용  판정
+------------------------------------------------------------------------------
+파가니니 주제에 의한 광시곡 Op. 43  Daniil Trifono ↔ Yuja Wang           0.0434  같은 곡
+파가니니 주제에 의한 광시곡 Op. 43  Daniil Trifono ↔ Lang Lang           0.0480  같은 곡
+파가니니 주제에 의한 광시곡 Op. 43  Yuja Wang ↔ Lang Lang                0.0563  같은 곡
+<14개의 로망스> Op. 34 중 14  Kathleen Battl ↔ Kiri Te Kanawa      0.1446  확인 필요
+<14개의 로망스> Op. 34 중 14  Kathleen Battl ↔ Renée Fleming       0.1703  확인 필요
+<14개의 로망스> Op. 34 중 14  Kiri Te Kanawa ↔ Renée Fleming       0.1168  확인 필요
+<10개의 전주곡> Op. 23 중 5번  Jan Lisiecki ↔ Nikolai Lugans        0.0359  같은 곡
+<10개의 전주곡> Op. 23 중 5번  Jan Lisiecki ↔ Howard Shelley        0.0387  같은 곡
+<10개의 전주곡> Op. 23 중 5번  Nikolai Lugans ↔ Howard Shelley      0.0413  같은 곡
+------------------------------------------------------------------------------
+  확인 필요: <14개의 로망스> Op. 34 중 14번 “보칼리제” (최대 비용 0.1703)

@@ -1,0 +1,13 @@
+곡                       연주쌍                                    정렬비용  판정
+------------------------------------------------------------------------------
+<목신의 오후에의 전주곡>          Claudio Abbado ↔ Bernard Haitin      0.0663  같은 곡
+<목신의 오후에의 전주곡>          Claudio Abbado ↔ Charles Dutoit      0.0868  같은 곡
+<목신의 오후에의 전주곡>          Bernard Haitin ↔ Charles Dutoit      0.0789  같은 곡
+<바다> — 3개의 교향적 스케치      Bernard Haitin ↔ Charles Dutoit      0.0667  같은 곡
+<바다> — 3개의 교향적 스케치      Bernard Haitin ↔ Herbert von Ka      0.0810  같은 곡
+<바다> — 3개의 교향적 스케치      Charles Dutoit ↔ Herbert von Ka      0.0585  같은 곡
+<어린이 차지> (피아노 원곡)       Jean-Efflam Ba ↔ Jean-Yves Thib      0.0554  같은 곡
+<어린이 차지> (피아노 원곡)       Jean-Efflam Ba ↔ Seong-Jin Cho       0.0430  같은 곡
+<어린이 차지> (피아노 원곡)       Jean-Yves Thib ↔ Seong-Jin Cho       0.0593  같은 곡
+------------------------------------------------------------------------------
+  전부 통과
