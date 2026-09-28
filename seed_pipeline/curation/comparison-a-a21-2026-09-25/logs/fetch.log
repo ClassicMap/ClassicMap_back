@@ -1,0 +1,32 @@
+=== 시도 1 22:42:28 ===
+command terminated with exit code 3
+파드에서 다른 수집이 돌고 있음. 끝나기를 기다린다.
+rc=2
+=== 시도 2 22:43:28 ===
+command terminated with exit code 3
+파드에서 다른 수집이 돌고 있음. 끝나기를 기다린다.
+rc=2
+=== 시도 3 22:44:28 ===
+command terminated with exit code 3
+파드에서 다른 수집이 돌고 있음. 끝나기를 기다린다.
+rc=2
+=== 시도 4 22:45:29 ===
+command terminated with exit code 3
+파드에서 다른 수집이 돌고 있음. 끝나기를 기다린다.
+rc=2
+=== 시도 5 22:46:29 ===
+command terminated with exit code 3
+파드에서 다른 수집이 돌고 있음. 끝나기를 기다린다.
+rc=2
+=== 시도 6 22:47:29 ===
+OiVOvVao2v4 ok
+92TSV_kL_p4 ok
+Gfujg6ECsz8 ok
+9Ho2xgkmaSc ok
+N0S7XTFPFAs ok
+fO7UkB6btLo ok
+Nr63uWgOh24 ok
+nImFFkrDv8U ok
+srfU6e9nY7A ok
+메타 → /private/tmp/claude-501/-Users-kdh/a7b6f260-3a00-4d61-a287-f7a411cb5f3b/scratchpad/comparison/a-a21/a-a21-videometa.txt
+rc=0

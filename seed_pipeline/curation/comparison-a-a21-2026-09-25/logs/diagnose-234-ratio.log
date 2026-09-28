@@ -1,0 +1,15 @@
+■ 1) 기준을 셋 다 바꿔 본다 (발췌 120초, 창 1.7배)
+기준         →Dutoit     →Muti   →Abbado
+Dutoit           —      1.28      0.93
+Muti          0.77         —      0.73
+Abbado        1.06      1.38         —
+
+■ 2) 발췌를 늘려 악장 전체 비로 수렴하는지 (기준 Dutoit)
+    발췌    Muti비   Abbado비
+    60    1.259     0.915
+   120    1.285     0.926
+   200    1.301     0.916
+   300    1.207     0.944
+
+  전곡 구간 길이  Dutoit 338.1  Muti 389.9  Abbado 283.3
+  Muti/Dutoit 1.153   Abbado/Dutoit 0.838

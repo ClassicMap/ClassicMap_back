@@ -21,8 +21,43 @@
         "startCue": "저현과 하프의 물결 음형 첫 음(모음곡 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120,
+        "referenceVideoId": "92TSV_kL_p4"
+      },
+      "videos": [
+        {
+          "videoId": "OiVOvVao2v4",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Montreal Symphony Orchestra",
+            "wikidata": "Q1196259"
+          }
+        },
+        {
+          "videoId": "92TSV_kL_p4",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "orchestra": {
+            "name": "Philadelphia Orchestra",
+            "wikidata": "Q659181"
+          }
+        },
+        {
+          "videoId": "Gfujg6ECsz8",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
     },
     {
       "pieceId": 457,
@@ -43,8 +78,54 @@
         "startCue": "G현 무반주 카덴차의 첫 음(작품 시작)",
         "endCue": "발췌 끝"
       },
-      "excerpt": {"anchor": "head", "seconds": 120},
-      "videos": []
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "9Ho2xgkmaSc",
+          "artistId": 234,
+          "artistName": "Kyung-wha Chung",
+          "wikidata": "Q391400",
+          "conductor": {
+            "name": "Charles Dutoit",
+            "wikidata": "Q116995"
+          },
+          "orchestra": {
+            "name": "Royal Philharmonic Orchestra",
+            "wikidata": "Q856125"
+          }
+        },
+        {
+          "videoId": "N0S7XTFPFAs",
+          "artistId": 267,
+          "artistName": "Itzhak Perlman",
+          "wikidata": "Q215905",
+          "conductor": {
+            "name": "Zubin Mehta",
+            "wikidata": "Q157635"
+          },
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "fO7UkB6btLo",
+          "artistId": 770,
+          "artistName": "Salvatore Accardo",
+          "wikidata": "Q373703",
+          "conductor": {
+            "name": "Claudio Abbado",
+            "wikidata": "Q151608"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
     },
     {
       "pieceId": 379,
@@ -65,7 +146,26 @@
         "startCue": "왼손 반주 음형의 첫 화음(작품 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "Nr63uWgOh24",
+          "artistId": 570,
+          "artistName": "Aldo Ciccolini",
+          "wikidata": "Q2185247"
+        },
+        {
+          "videoId": "nImFFkrDv8U",
+          "artistId": 563,
+          "artistName": "Pascal Rogé",
+          "wikidata": "Q2525670"
+        },
+        {
+          "videoId": "srfU6e9nY7A",
+          "artistId": 573,
+          "artistName": "Jean-Yves Thibaudet",
+          "wikidata": "Q1030549"
+        }
+      ]
     }
   ]
 }
