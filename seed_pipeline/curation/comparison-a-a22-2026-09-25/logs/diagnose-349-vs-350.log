@@ -1,0 +1,24 @@
+### 구간을 10등분한 평균 dB (O Fortuna 는 큰-작은-큰 아치)
+  350 Sir Simon Rattle    -20   -22   -38   -38   -40   -37   -26   -21   -20   -19
+  350 Riccardo Muti       -18   -19   -41   -40   -41   -39   -20   -17   -17   -17
+  350 James Levine        -17   -18   -38   -35   -38   -34   -19   -16   -15   -14
+  349 Sir Simon Rattle    -44   -36   -26   -28   -42   -29   -26   -42   -31   -25
+  349 Riccardo Muti       -37   -32   -21   -23   -39   -24   -19   -37   -25   -18
+  349 James Levine        -39   -29   -21   -26   -37   -23   -22   -37   -25   -20
+
+### 머리 30초끼리 교차 정렬 (다른 악장이면 높아야 한다)
+  349 Sir Simon Ratt  ↔ 349 Riccardo Muti   같은악장           0.0714
+  349 Sir Simon Ratt  ↔ 349 James Levine    같은악장           0.0475
+  349 Sir Simon Ratt  ↔ 350 Sir Simon Ratt  **다른악장**       0.0889
+  349 Sir Simon Ratt  ↔ 350 Riccardo Muti   **다른악장**       0.1087
+  349 Sir Simon Ratt  ↔ 350 James Levine    **다른악장**       0.0782
+  349 Riccardo Muti   ↔ 349 James Levine    같은악장           0.0980
+  349 Riccardo Muti   ↔ 350 Sir Simon Ratt  **다른악장**       0.1112
+  349 Riccardo Muti   ↔ 350 Riccardo Muti   **다른악장**       0.1189
+  349 Riccardo Muti   ↔ 350 James Levine    **다른악장**       0.1124
+  349 James Levine    ↔ 350 Sir Simon Ratt  **다른악장**       0.1194
+  349 James Levine    ↔ 350 Riccardo Muti   **다른악장**       0.1254
+  349 James Levine    ↔ 350 James Levine    **다른악장**       0.0934
+  350 Sir Simon Ratt  ↔ 350 Riccardo Muti   같은악장           0.0415
+  350 Sir Simon Ratt  ↔ 350 James Levine    같은악장           0.0447
+  350 Riccardo Muti   ↔ 350 James Levine    같은악장           0.0455

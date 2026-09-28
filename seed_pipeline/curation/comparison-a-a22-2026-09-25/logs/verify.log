@@ -1,0 +1,13 @@
+곡                       연주쌍                                    정렬비용  판정
+------------------------------------------------------------------------------
+<난 그대를 원해요>             Jean-Yves Thib ↔ Pascal Rogé         0.0704  같은 곡
+<난 그대를 원해요>             Jean-Yves Thib ↔ Aldo Ciccolini      0.0619  같은 곡
+<난 그대를 원해요>             Pascal Rogé ↔ Aldo Ciccolini         0.0755  같은 곡
+<카르미나 부라나>              Sir Simon Ratt ↔ Riccardo Muti       0.0540  같은 곡
+<카르미나 부라나>              Sir Simon Ratt ↔ James Levine        0.0451  같은 곡
+<카르미나 부라나>              Riccardo Muti ↔ James Levine         0.0760  같은 곡
+<카르미나 부라나> 중 1곡 “오 포르투  Sir Simon Ratt ↔ Riccardo Muti       0.0493  같은 곡
+<카르미나 부라나> 중 1곡 “오 포르투  Sir Simon Ratt ↔ James Levine        0.0534  같은 곡
+<카르미나 부라나> 중 1곡 “오 포르투  Riccardo Muti ↔ James Levine         0.0619  같은 곡
+------------------------------------------------------------------------------
+  전부 통과

@@ -21,7 +21,26 @@
         "startCue": "왈츠 반주의 첫 박(작품 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "z2kEpGPDdRA",
+          "artistId": 573,
+          "artistName": "Jean-Yves Thibaudet",
+          "wikidata": "Q1030549"
+        },
+        {
+          "videoId": "N2eOWEJ8rRg",
+          "artistId": 563,
+          "artistName": "Pascal Rogé",
+          "wikidata": "Q2525670"
+        },
+        {
+          "videoId": "cueBFtj8sTY",
+          "artistId": 570,
+          "artistName": "Aldo Ciccolini",
+          "wikidata": "Q2185247"
+        }
+      ]
     },
     {
       "pieceId": 349,
@@ -40,9 +59,51 @@
         "measureStart": "",
         "measureEnd": "",
         "startCue": "“오 포르투나” 가 끝난 뒤 합창의 첫 음",
-        "endCue": "발췌 끝"
+        "endCue": "2곡의 종결 화음과 잔향(낱곡 트랙의 끝)"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "B2KUP9XjpZI",
+          "artistId": 220,
+          "artistName": "Sir Simon Rattle",
+          "wikidata": "Q157814",
+          "choir": {
+            "name": "Rundfunkchor Berlin",
+            "wikidata": "Q880801"
+          },
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "Px4pyTlX-bI",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "choir": {
+            "name": "Philharmonia Chorus",
+            "wikidata": "Q7183042"
+          },
+          "orchestra": {
+            "name": "Philharmonia Orchestra",
+            "wikidata": "Q1046309"
+          }
+        },
+        {
+          "videoId": "YPJro7BCgrY",
+          "artistName": "James Levine",
+          "wikidata": "Q336388",
+          "choir": {
+            "name": "Chicago Symphony Chorus",
+            "wikidata": "Q5095798"
+          },
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        }
+      ]
     },
     {
       "pieceId": 350,
@@ -63,7 +124,49 @@
         "startCue": "합창과 팀파니 총주의 첫 화음(곡 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "cHWOYu9ntis",
+          "artistId": 220,
+          "artistName": "Sir Simon Rattle",
+          "wikidata": "Q157814",
+          "choir": {
+            "name": "Rundfunkchor Berlin",
+            "wikidata": "Q880801"
+          },
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "OqOB3jbVHI0",
+          "artistId": 427,
+          "artistName": "Riccardo Muti",
+          "wikidata": "Q276038",
+          "choir": {
+            "name": "Philharmonia Chorus",
+            "wikidata": "Q7183042"
+          },
+          "orchestra": {
+            "name": "Philharmonia Orchestra",
+            "wikidata": "Q1046309"
+          }
+        },
+        {
+          "videoId": "n_U5vG--7v4",
+          "artistName": "James Levine",
+          "wikidata": "Q336388",
+          "choir": {
+            "name": "Chicago Symphony Chorus",
+            "wikidata": "Q5095798"
+          },
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        }
+      ]
     }
   ]
 }
