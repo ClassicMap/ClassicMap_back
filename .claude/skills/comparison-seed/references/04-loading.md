@@ -64,6 +64,31 @@ JSONL 에 손으로 덧붙였고, 그때 역할을 잘못 적는 일이 있었�
 적재에 실패하면 후보는 rollback 되고 `review_queue` 에만 남는다. 설계된 동작이다.
 원인을 고쳐 다시 적재한 뒤, 해소된 항목은 닫는다(`05-pitfalls.md` 참고).
 
+### 이미 발행된 연주에 크레딧을 보탤 때 (2026-09-28)
+
+`videos[]` 의 키는 넷뿐이라(`conductor`·`choir`·`orchestra`·`accompanist`) 3중주
+주자나 낱 악기 독주자를 적을 자리가 없다. 적재 전이면 생성된 JSONL 에 손으로 넣고,
+**이미 발행했으면 `performance_credits` 에 직접 넣는다** — 적재기를 다시 돌리면 같은
+`candidate_key` 로 중복이 생긴다.
+
+그때 **적재기의 정규화를 손으로 맞춰야 한다.** 적재기는 역할을 여섯 갈래로 줄여 넣는다.
+
+| 배치 정의의 roleCode | DB 의 role_code |
+|---|---|
+| `CONDUCTOR` | `conductor` |
+| `ORCHESTRA` | `orchestra` |
+| `VIOLINIST` · `CELLIST` · `PIANIST` · `FLUTIST` … | **`soloist`** |
+| `SOPRANO` · `TENOR` · `VOCALIST` … | **`vocalist`** |
+| `TRIO` · `QUARTET` · `ENSEMBLE` · `CHOIR` | `ensemble` |
+| `ACCOMPANIST` | `accompanist` |
+
+`FLUTIST` 로 넣었다가 이 표에서 유일하게 튀는 값이 됐다. 넣은 뒤
+**`SELECT role_code, COUNT(*) FROM performance_credits GROUP BY role_code` 로
+이탈 값이 없는지 본다.**
+
+`display_order` 도 직접 밀어야 한다. 사이에 끼우면 뒤엣것을 먼저 옮긴다 —
+플루트를 1번에 넣으려면 이미 1번인 `orchestra` 를 2번으로 보낸다.
+
 ## 3. 발행 마이그레이션
 
 세 가지를 올린다. 기존 마이그레이션(`202608050030` 등)을 본떠 쓴다.
