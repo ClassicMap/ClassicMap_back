@@ -188,6 +188,35 @@ pub struct ComparisonSector {
     pub primary_artist_count: i64,
 }
 
+/// 비교 카탈로그의 작품 한 줄. 공개 섹터가 하나 이상 있는 작품만 나온다.
+#[derive(Debug, Clone, Serialize, FromRow)]
+#[serde(rename_all = "camelCase")]
+pub struct ComparisonPiece {
+    pub piece_id: i32,
+    pub piece_title: String,
+    pub opus_number: Option<String>,
+    pub composer_id: i32,
+    pub composer_name: String,
+    pub composer_avatar_url: Option<String>,
+    /// 공개 섹터 수
+    pub sector_count: i64,
+    /// 공개 섹터들에 등장하는 서로 다른 primary artist 수
+    pub performer_count: i64,
+    #[sqlx(skip)]
+    pub performers: Vec<ComparisonPiecePerformer>,
+}
+
+/// 카탈로그 카드에 얼굴로 보여 줄 연주자. 작품마다 최대 4명.
+#[derive(Debug, Clone, Serialize, FromRow)]
+#[serde(rename_all = "camelCase")]
+pub struct ComparisonPiecePerformer {
+    #[serde(skip)]
+    pub piece_id: i32,
+    pub artist_id: i32,
+    pub artist_name: String,
+    pub image_url: Option<String>,
+}
+
 #[derive(Debug, Clone, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct ComparisonPerformancePage {

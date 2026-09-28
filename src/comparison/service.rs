@@ -1,5 +1,5 @@
 use super::{
-    model::{ComparisonPerformance, ComparisonPerformancePage, ComparisonSector},
+    model::{ComparisonPerformance, ComparisonPerformancePage, ComparisonPiece, ComparisonSector},
     repository::{ComparisonContractError, ComparisonPageRequest, ComparisonRepository},
 };
 use crate::db::DbPool;
@@ -29,5 +29,14 @@ impl ComparisonService {
         sector_id: i32,
     ) -> Result<Option<Vec<ComparisonPerformance>>, ComparisonContractError> {
         ComparisonRepository::find_public_performances_by_sector(pool, sector_id).await
+    }
+
+    pub async fn get_public_pieces(
+        pool: &DbPool,
+        composer_id: Option<i32>,
+        offset: i64,
+        limit: i64,
+    ) -> Result<Vec<ComparisonPiece>, ComparisonContractError> {
+        ComparisonRepository::find_public_pieces(pool, composer_id, offset, limit).await
     }
 }

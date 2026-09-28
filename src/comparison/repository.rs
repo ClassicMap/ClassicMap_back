@@ -1,6 +1,6 @@
 use super::model::{
     ComparisonCredit, ComparisonCreditRow, ComparisonPerformance, ComparisonPerformancePage,
-    ComparisonPerformanceRow, ComparisonSector,
+    ComparisonPerformanceRow, ComparisonPiece, ComparisonPiecePerformer, ComparisonSector,
 };
 use crate::db::DbPool;
 use sqlx::{FromRow, MySql, QueryBuilder, Transaction};
@@ -8,6 +8,8 @@ use std::{collections::HashMap, error::Error, fmt};
 
 const DEFAULT_PAGE_SIZE: u32 = 20;
 const MAX_PAGE_SIZE: u32 = 50;
+/// 카탈로그 카드에 얼굴로 보여 줄 연주자 수
+const CATALOG_PERFORMER_FACES: usize = 4;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct ComparisonPageRequest {
@@ -155,6 +157,84 @@ const PUBLIC_PERFORMANCE_SELECT: &str = "SELECT ready.id,
      JOIN composers composer ON composer.id = piece.composer_id";
 
 impl ComparisonRepository {
+    /// 비교 카탈로그. 연주자 수가 많은 작품부터, 같으면 공개 섹터가 많은 작품부터.
+    /// `composer_id`가 있으면 그 작곡가의 작품만 준다.
+    pub async fn find_public_pieces(
+        pool: &DbPool,
+        composer_id: Option<i32>,
+        offset: i64,
+        limit: i64,
+    ) -> Result<Vec<ComparisonPiece>, ComparisonContractError> {
+        let sql = format!(
+            "{PUBLIC_COMPARISON_CTE}
+             SELECT piece.id AS piece_id,
+                    piece.title AS piece_title,
+                    piece.opus_number,
+                    composer.id AS composer_id,
+                    composer.name AS composer_name,
+                    composer.avatar_url AS composer_avatar_url,
+                    COUNT(DISTINCT public_sector.sector_id) AS sector_count,
+                    COUNT(DISTINCT credit.artist_id) AS performer_count
+             FROM public_sector
+             JOIN performance_sectors sector ON sector.id = public_sector.sector_id
+             JOIN pieces piece ON piece.id = sector.piece_id
+             JOIN composers composer ON composer.id = piece.composer_id
+             JOIN ready_performance ready ON ready.sector_id = public_sector.sector_id
+             LEFT JOIN performance_credits credit
+               ON credit.performance_source_id = ready.performance_source_id
+              AND credit.is_primary = TRUE
+             WHERE (? IS NULL OR composer.id = ?)
+             GROUP BY piece.id, piece.title, piece.opus_number,
+                      composer.id, composer.name, composer.avatar_url
+             ORDER BY performer_count DESC, sector_count DESC, piece.id ASC
+             LIMIT ? OFFSET ?"
+        );
+        let mut pieces = sqlx::query_as::<_, ComparisonPiece>(&sql)
+            .bind(composer_id)
+            .bind(composer_id)
+            .bind(limit)
+            .bind(offset)
+            .fetch_all(pool)
+            .await?;
+        if pieces.is_empty() {
+            return Ok(pieces);
+        }
+
+        let mut builder = QueryBuilder::<MySql>::new(format!(
+            "{PUBLIC_COMPARISON_CTE}
+             SELECT DISTINCT ready.piece_id, artist.id AS artist_id,
+                    artist.name AS artist_name, artist.image_url
+             FROM ready_performance ready
+             JOIN public_sector ON public_sector.sector_id = ready.sector_id
+             JOIN performance_credits credit
+               ON credit.performance_source_id = ready.performance_source_id
+              AND credit.is_primary = TRUE
+             JOIN artists artist ON artist.id = credit.artist_id
+             WHERE ready.piece_id IN ("
+        ));
+        let mut separated = builder.separated(", ");
+        for piece in &pieces {
+            separated.push_bind(piece.piece_id);
+        }
+        builder.push(") ORDER BY ready.piece_id, artist.id");
+        let performers = builder
+            .build_query_as::<ComparisonPiecePerformer>()
+            .fetch_all(pool)
+            .await?;
+
+        let mut by_piece: HashMap<i32, Vec<ComparisonPiecePerformer>> = HashMap::new();
+        for performer in performers {
+            let list = by_piece.entry(performer.piece_id).or_default();
+            if list.len() < CATALOG_PERFORMER_FACES {
+                list.push(performer);
+            }
+        }
+        for piece in &mut pieces {
+            piece.performers = by_piece.remove(&piece.piece_id).unwrap_or_default();
+        }
+        Ok(pieces)
+    }
+
     pub async fn find_published_by_artist(
         pool: &DbPool,
         artist_id: i32,

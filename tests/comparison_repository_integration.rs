@@ -310,6 +310,30 @@ async fn ready_clip_is_exposed_with_video_and_credit_contract() {
         .iter()
         .any(|credit| credit.artist_id == artist_id && credit.is_primary));
 
+    // 비교 카탈로그: 공개 섹터가 생긴 작품이 연주자 얼굴과 함께 나온다.
+    let catalog = ComparisonRepository::find_public_pieces(&pool, None, 0, 50)
+        .await
+        .expect("비교 카탈로그 조회");
+    let entry = catalog
+        .iter()
+        .find(|item| item.piece_id == piece_id)
+        .expect("공개 섹터가 있는 작품은 카탈로그에 나온다");
+    assert!(entry.sector_count >= 1);
+    assert!(entry.performer_count >= 3);
+    assert!(!entry.performers.is_empty() && entry.performers.len() <= 4);
+    assert!(entry
+        .performers
+        .iter()
+        .all(|performer| performer.piece_id == piece_id));
+    let by_composer =
+        ComparisonRepository::find_public_pieces(&pool, Some(entry.composer_id), 0, 50)
+            .await
+            .expect("작곡가별 카탈로그 조회");
+    assert!(by_composer
+        .iter()
+        .all(|item| item.composer_id == entry.composer_id));
+    assert!(by_composer.iter().any(|item| item.piece_id == piece_id));
+
     let missing_piece = ComparisonRepository::find_public_sectors_by_piece(&pool, i32::MAX)
         .await
         .expect("없는 작품 조회");
