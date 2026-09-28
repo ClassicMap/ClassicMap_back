@@ -1,0 +1,10 @@
+곡                       연주쌍                                    정렬비용  판정
+------------------------------------------------------------------------------
+<대답 없는 질문>              Leonard Bernst ↔ Michael Tilson      0.0905  같은 곡
+<대답 없는 질문>              Leonard Bernst ↔ Leonard Slatki      0.1465  확인 필요
+<대답 없는 질문>              Michael Tilson ↔ Leonard Slatki      0.1310  확인 필요
+교향곡 4번                  Seiji Ozawa ↔ Michael Tilson         0.0737  같은 곡
+교향곡 4번                  Seiji Ozawa ↔ Andrew Litton          0.0747  같은 곡
+교향곡 4번                  Michael Tilson ↔ Andrew Litton       0.0725  같은 곡
+------------------------------------------------------------------------------
+  확인 필요: <대답 없는 질문> (최대 비용 0.1465)

@@ -21,7 +21,38 @@
         "startCue": "현의 여린 지속 화음 첫 음(작품 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "8tNA_DbpJjU",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "aimFnsvv-3Q",
+          "artistId": 630,
+          "artistName": "Michael Tilson Thomas",
+          "wikidata": "Q520493",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "lXjhwCKJw6s",
+          "artistId": null,
+          "artistName": "Michael Gielen",
+          "wikidata": "Q213913",
+          "orchestra": {
+            "name": "SWR Sinfonieorchester Baden-Baden und Freiburg",
+            "wikidata": "Q700103"
+          }
+        }
+      ]
     },
     {
       "pieceId": 371,
@@ -40,13 +71,52 @@
         "measureStart": "",
         "measureEnd": "",
         "startCue": "저현 위 관현악의 첫 화음(악장 시작)",
-        "endCue": "발췌 끝"
+        "endCue": "악장의 종결 화음과 잔향"
       },
-      "excerpt": {
-        "anchor": "head",
-        "seconds": 120
-      },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "io7EsBCe3dE",
+          "artistId": 575,
+          "artistName": "Seiji Ozawa",
+          "wikidata": "Q313649",
+          "choir": {
+            "name": "Tanglewood Festival Chorus",
+            "wikidata": "Q7683038"
+          },
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "xQBd1kCeij8",
+          "artistId": 630,
+          "artistName": "Michael Tilson Thomas",
+          "wikidata": "Q520493",
+          "choir": {
+            "name": "San Francisco Symphony Chorus",
+            "wikidata": "Q7414119"
+          },
+          "orchestra": {
+            "name": "San Francisco Symphony",
+            "wikidata": "Q933993"
+          }
+        },
+        {
+          "videoId": "4VSj8HSU644",
+          "artistId": 622,
+          "artistName": "Andrew Litton",
+          "wikidata": "Q2133568",
+          "choir": {
+            "name": "Dallas Symphony Chorus",
+            "wikidata": "Q5211422"
+          },
+          "orchestra": {
+            "name": "Dallas Symphony Orchestra",
+            "wikidata": "Q597572"
+          }
+        }
+      ]
     },
     {
       "pieceId": 372,
@@ -71,7 +141,26 @@
         "anchor": "head",
         "seconds": 120
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "0Ea2K8ON3Kk",
+          "artistId": null,
+          "artistName": "Pierre-Laurent Aimard",
+          "wikidata": "Q561097"
+        },
+        {
+          "videoId": "WL6tKmmcSs0",
+          "artistId": 253,
+          "artistName": "Marc-André Hamelin",
+          "wikidata": "Q45189"
+        },
+        {
+          "videoId": "gmrs89tZrGk",
+          "artistId": 647,
+          "artistName": "Jeremy Denk",
+          "wikidata": "Q6181301"
+        }
+      ]
     }
   ]
 }
