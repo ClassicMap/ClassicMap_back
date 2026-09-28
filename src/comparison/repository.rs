@@ -127,7 +127,8 @@ pub const PUBLIC_COMPARISON_CTE: &str = "WITH ready_performance AS (
     public_sector AS (
         SELECT ready.sector_id,
                COUNT(DISTINCT ready.id) AS ready_performance_count,
-               COUNT(DISTINCT credit.artist_id) AS primary_artist_count
+               COUNT(DISTINCT credit.artist_id) AS primary_artist_count,
+               MIN(ready.start_ms) AS first_start_ms
         FROM ready_performance ready
         LEFT JOIN performance_credits credit
           ON credit.performance_source_id = ready.performance_source_id
@@ -303,7 +304,7 @@ impl ComparisonRepository {
              FROM public_sector
              JOIN performance_sectors sector ON sector.id = public_sector.sector_id
              WHERE sector.piece_id = ?
-             ORDER BY sector.display_order ASC, sector.id ASC"
+             ORDER BY sector.display_order ASC, public_sector.first_start_ms ASC, sector.id ASC"
         );
         let sectors = sqlx::query_as::<_, ComparisonSector>(&sql)
             .bind(piece_id)
