@@ -41,6 +41,47 @@ Job 이 하는 네 단계다.
 파일과 대조해 검증한다. `rangeVerifiedAt` 은 **실제로 Range 요청을 해 206 과
 Content-Range 를 받은 뒤에만** 적는다.
 
+### 클립 저장 키의 둘째 숫자는 길이다 (2026-09-30)
+
+```
+{videoId}-{startMs}-{durationMs}-{profile}.mp4      durationMs = endMs - startMs
+```
+
+**끝 시각이 아니다.** 사이드카의 `durationMs` 필드 이름이 그대로 맞다.
+
+끝 시각으로 잘못 알고 짓다가 운영에서 9건 중 2건만 찾았다. **그 둘이 `start=0`
+이었다** — 0 에서는 끝 시각과 길이가 같아 틀린 것이 드러나지 않는다. 이 자리를
+시험할 때는 **시작이 0 이 아닌 구간을 반드시 넣는다.**
+
+클리퍼 응답 헤더에도 같은 값이 온다. 이름을 못 믿을 때 이쪽으로 맞춰 볼 수 있다.
+
+```
+ETag: "<sha256>"
+X-ClassicMap-Clip-Asset-Validated-At: …
+X-ClassicMap-Clip-Duration-Ms: …
+X-ClassicMap-Clip-Encoding-Profile: v1-copy
+```
+
+### 운영에서 확인한 것 (2026-09-30)
+
+A17 배치(이미 발행된 것)로 네 단계를 다 돌려 봤다. 아무것도 쓰지 않았다.
+
+| 단계 | 결과 |
+|---|---|
+| `load_comparison_candidates` | `SOURCE_STATE_CONFLICT` 로 **올바르게 거부** — 이미 발행된 배치의 source 상태를 자동으로 바꾸지 않는다 |
+| `build_clip_bundle` | 9/9 (`reused: 9`, `failed: []`) |
+| `approve_seed_run --dry-run` | 세 값 모두 0 — 이미 올라가 있는 상태를 다시 건드리지 않는다 |
+| `load_clip_assets --dry-run` | 9건 수용, `performancesReady: 9`. sha256·파일 크기·길이·공개 주소 검증 통과 |
+
+처음 돌릴 때 네 가지가 걸렸고 모두 로컬 시험으로는 드러나지 않는 것이었다 —
+`utf8mb4_bin` 컬럼이 VARBINARY 로 오는 것, `INT UNSIGNED` 를 `i64` 로 받은 것,
+`secret/classicmap-back` 의 `DATABASE_URL` 호스트가 `classicmap_mysql`(밑줄)로 적혀
+있는 것, 그리고 위의 저장 키 형식이다.
+
+**`secret/classicmap-back` 의 `DATABASE_URL` 은 아직 그 상태다.** Deployment 가
+리터럴 env 로 덮어써서 지금 깨진 곳은 없지만, 그 secret 을 `envFrom` 으로 받는
+것을 새로 만들면 바로 걸린다. Job 은 그 값을 받지 않고 부품만 받는다.
+
 한 건이라도 실패하면 exit 5 로 빠져 뒤 단계를 돌리지 않는다. `backoffLimit: 0` 이라
 재시도도 하지 않는다 — **절반만 발행되는 것이 가장 나쁘다.**
 
