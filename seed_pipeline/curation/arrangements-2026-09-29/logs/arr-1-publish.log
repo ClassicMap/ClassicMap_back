@@ -1,0 +1,49 @@
+warning: unused import: `ConcertWithArtists`
+ --> src/concert/api.rs:2:43
+  |
+2 |     ConcertListItem, ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails, CreateConcert,
+  |                                           ^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `code`
+   --> src/concert/repository.rs:561:33
+    |
+561 |         let query = if let Some(code) = area_code {
+    |                                 ^^^^ help: if this is intentional, prefix it with an underscore: `_code`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+{
+  "status": "succeeded",
+  "bundlePath": "/Users/kdh/.cache/classicmap/comparison/arr-1/arr-1-clip-assets.jsonl",
+  "rowCount": 3,
+  "dryRun": false,
+  "publish": true,
+  "seedRunId": "f553c008-fc45-4fbf-a9f9-7ae5e1833dac",
+  "mutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 3,
+    "clipAssetsInserted": 3,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 6,
+    "total": 12
+  },
+  "plannedMutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 3,
+    "clipAssetsInserted": 3,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 6,
+    "total": 12
+  },
+  "performanceIds": [
+    767,
+    768,
+    769
+  ]
+}

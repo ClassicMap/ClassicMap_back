@@ -221,3 +221,46 @@ DB 에서 읽은 `start_ms`·`end_ms` 를 그대로 넘기면 안 된다. 1000 �
 ```bash
 grep '^AmIylG4QfG0|' $SPARE/a-a26-spare2-videometa.txt >> $W/a-a26-videometa.txt
 ```
+
+### 편곡 비교 배치에서 run_verify.py 는 비정상 종료한다 (2026-09-29)
+
+`run_verify.py` 는 임계를 넘는 쌍이 있으면 종료 코드를 0 이 아닌 값으로 낸다.
+편곡 비교 구간(`sector_type = ARRANGEMENTS`)에서는 임계를 넘는 것이 정상이므로
+**`set -e` 를 쓴 스크립트가 거기서 끊긴다.** 값은 기록용으로만 읽고 종료 코드를 무시한다.
+
+```bash
+$U run_verify.py "$B" > $W/verify.log 2>&1 || true
+```
+
+### 등록 여부는 세 단계로 확인한다 (2026-09-29)
+
+`genartists.py` 로 uuid5 를 계산하기 **전에** 확인해야 한다. 식별자 집합이 다르면
+uuid5 도 달라서, 이미 있는 인물을 새 엔티티로 넣으면 같은 viaf·gnd·isni 가 두
+엔티티에 붙어 `external_identifiers` 의 유니크 제약을 깬다.
+
+1. **wikidata QID 로 `artists` 를 찾는다** → 있으면 그대로 쓴다(등록하지 않는다)
+2. 없으면 **`external_identifiers` 를 찾는다** → 엔티티가 있으면 **`artists` 행만 넣는다**
+3. 둘 다 없으면 엔티티부터 만든다
+
+실측 — 요요 마는 1번(artists 215 가 있고 그 엔티티 UUID 가 새로 계산한 값과 달랐다),
+기돈 크레메르는 2번(엔티티 843c0da2… 에 식별자와 이름이 다 있는데 artists 행만 0개)
+이었다.
+
+```sql
+SELECT ei.external_id, a.id, a.name, ei.authority_entity_id
+FROM external_identifiers ei
+LEFT JOIN artists a ON a.authority_entity_id = ei.authority_entity_id
+WHERE ei.external_id IN (...);
+```
+
+`a.id` 가 NULL 로 나오면 2번 자리다.
+
+### 꼬리는 뒤에서부터 훑어 끝을 잡는다 (2026-09-29)
+
+검출기는 조성 곡선이 먼저 떨어져 여운을 일찍 끊는다. 편곡 비교에서는 사라지는 여운도
+편곡의 일부이므로 **원시 음량을 뒤에서부터 훑어 −55dB 를 넘는 마지막 자리**를 끝으로
+삼는다(`endpoint.py`). 실측에서 로이드 웨버의 <망각> 판이 15.3초 빠져 있었다 —
+205~220초가 −33~−50dB 에 평탄도 0.0000~0.0001 로 또렷한 조성음이었다.
+
+평활화한 값을 쓰면 안 된다. `np.convolve(..., mode='same')` 는 배열 밖을 0 으로 보고
+dB 에서 0 은 풀스케일이라 끝자리 값이 부풀어 파일 끝이 늘 음악으로 잡힌다.

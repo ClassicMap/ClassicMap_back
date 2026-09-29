@@ -1,0 +1,25 @@
+{
+  "status": "succeeded",
+  "runId": "f553c008-fc45-4fbf-a9f9-7ae5e1833dac",
+  "bundlePath": "/Users/kdh/.cache/classicmap/comparison/arr-1/arr-1-candidates.jsonl",
+  "rowCount": 3,
+  "dryRun": false,
+  "mutations": {
+    "performanceSources": 3,
+    "performanceSectors": 1,
+    "performanceCandidates": 3,
+    "performanceCredits": 3,
+    "performances": 3,
+    "clipJobs": 3,
+    "total": 16
+  },
+  "plannedMutations": {
+    "performanceSources": 3,
+    "performanceSectors": 1,
+    "performanceCandidates": 3,
+    "performanceCredits": 3,
+    "performances": 3,
+    "clipJobs": 3,
+    "total": 16
+  }
+}

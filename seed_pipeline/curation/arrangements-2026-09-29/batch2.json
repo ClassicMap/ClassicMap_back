@@ -1,0 +1,82 @@
+{
+  "batchId": "arr-2",
+  "note": "편곡 비교 배치 2. 375 <망각>과 377 <부에노스 아이레스의 사계>. **정렬 비용 임계를 적용하지 않는 구간이다**(sector type ARRANGEMENTS). A28·A29 에서 비용으로 막았던 곡이다. 375 는 판마다 조성이 갈리는 것이 들을 거리의 핵이고, 377 은 조성은 같은데 편성이 갈린다.",
+  "pieces": [
+    {
+      "pieceId": 375,
+      "workMbid": "f124195b-b3f2-3b47-af5c-f86e5cb7adff",
+      "composerQid": "Q172505",
+      "titleKo": "<망각>",
+      "titleEn": "Oblivion",
+      "composerNameEn": "Astor Piazzolla",
+      "composerNameKo": "아스토르 피아졸라",
+      "role": "SOLOIST",
+      "sector": {
+        "key": "arrangements",
+        "type": "ARRANGEMENTS",
+        "nameKo": "편곡 셋",
+        "nameEn": "Three arrangements",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "반주 위 선율 악기의 첫 음(작품 시작)",
+        "endCue": "종결 화음과 잔향",
+        "listeningNote": "같은 선율을 세 편성으로 듣습니다. 첼로와 관현악(카푸송), 첼로와 피아노(로이드 웨버), 바이올린과 현악합주(크레머)입니다. **조성이 갈리는 것이 이 곡의 핵입니다** — 카푸송과 크레머는 같은 조인데 로이드 웨버 판은 온음 낮습니다. 첼로가 낮은 조에서 더 굵게 울리도록 옮겨 적은 것이고, 같은 첼로라도 반주가 관현악인지 피아노인지에 따라 선율이 떠 있는 높이가 달라집니다. 조성을 맞춰 견주면 세 판이 0.17~0.28 로 붙는데, 맞추지 않고 들으면 그 차이가 그대로 인상의 차이가 됩니다."
+      },
+      "videos": [
+        {
+          "videoId": "PhepD-Q4a0Y",
+          "artistName": "Gautier Capuçon",
+          "wikidata": "Q689479"
+        },
+        {
+          "videoId": "h4C2Ieq7V1g",
+          "artistName": "Julian Lloyd Webber",
+          "wikidata": "Q319434"
+        },
+        {
+          "videoId": "meEgY9eApdw",
+          "artistName": "Gidon Kremer",
+          "wikidata": "Q159915"
+        }
+      ]
+    },
+    {
+      "pieceId": 377,
+      "workMbid": "a289bd55-5684-4cbd-8482-3ac980ad0da9",
+      "composerQid": "Q172505",
+      "titleKo": "<부에노스 아이레스의 사계>",
+      "titleEn": "Las cuatro estaciones porteñas",
+      "composerNameEn": "Astor Piazzolla",
+      "composerNameKo": "아스토르 피아졸라",
+      "role": "SOLOIST",
+      "sector": {
+        "key": "arrangements-verano",
+        "type": "ARRANGEMENTS",
+        "nameKo": "“여름” 편곡 셋",
+        "nameEn": "“Verano porteño”, three arrangements",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "반주 오스티나토의 첫 박(악장 시작)",
+        "endCue": "종결 화음과 잔향",
+        "listeningNote": "“부에노스 아이레스의 여름” 을 세 편성으로 듣습니다. 바이올린과 현악합주(크레머), 기타 홀로(존 윌리엄스, 베니테스 편곡), 관현악판(쿠아르테토 라티노아메리카노)입니다. **셋 다 같은 조입니다** — 375 <망각>과 달리 조성은 건드리지 않고 편성만 바꿉니다. 그래서 들리는 차이가 거의 전부 악기의 차이입니다. 기타 판은 화성과 선율을 한 손에 몰아 담아 가장 짧고(276초), 관현악판은 성부를 펼쳐 가장 깁니다(422초). 길이가 1.53배 갈리는 것도 편곡의 결과입니다."
+      },
+      "videos": [
+        {
+          "videoId": "WHRQhhuWSyw",
+          "artistName": "Gidon Kremer",
+          "wikidata": "Q159915"
+        },
+        {
+          "videoId": "c2uwOH1fx0k",
+          "artistName": "John Williams",
+          "wikidata": "Q370293"
+        },
+        {
+          "videoId": "b3nMJEsAml4",
+          "artistName": "Cuarteto Latinoamericano",
+          "wikidata": "Q4254956"
+        }
+      ]
+    }
+  ]
+}

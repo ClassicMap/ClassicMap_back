@@ -1,0 +1,90 @@
+{
+  "baseUrl": "http://127.0.0.1:13200",
+  "bundlePath": "/Users/kdh/.cache/classicmap/comparison/arr-1/arr-1-clip-assets.jsonl",
+  "completedAt": "2026-09-29T11:56:42.601Z",
+  "concurrency": 1,
+  "counts": {
+    "failed": 0,
+    "invalid": 0,
+    "skipped": 0,
+    "succeeded": 3
+  },
+  "encodingProfileVersion": "v1-copy",
+  "manifestPath": "/Users/kdh/.cache/classicmap/comparison/arr-1/arr-1-prewarm.jsonl",
+  "maxClipSeconds": 600,
+  "publicBaseUrl": "https://kang1027.com/classicmap/clips",
+  "reportVersion": 2,
+  "results": [
+    {
+      "assetValidatedAt": "2026-09-29T11:56:16.006Z",
+      "encodingProfileVersion": "v1-copy",
+      "fileSize": 3805173,
+      "probedDurationMs": 186040,
+      "sha256": "2a9363ade677e2777804e33de6b32682c4c2a1a1f490156663cd7ac2ee47cf83",
+      "storageKey": "31C1Des-XuY-0-186000-v1-copy.mp4",
+      "cacheKey": "31C1Des-XuY:0:186:v1-copy",
+      "contentRange": "bytes 0-0/3805173",
+      "durationMs": 6484,
+      "finishedAt": "2026-09-29T11:56:15.918Z",
+      "lines": [
+        1
+      ],
+      "performanceIds": [
+        767
+      ],
+      "rangeVerifiedAt": "2026-09-29T11:56:15.918Z",
+      "startedAt": "2026-09-29T11:56:09.434Z",
+      "status": "succeeded",
+      "url": "http://127.0.0.1:13200/31C1Des-XuY?end=186&profile=v1-copy&start=0",
+      "publicUrl": "https://kang1027.com/classicmap/clips/31C1Des-XuY?end=186&profile=v1-copy&start=0"
+    },
+    {
+      "assetValidatedAt": "2026-09-29T11:56:27.993Z",
+      "encodingProfileVersion": "v1-copy",
+      "fileSize": 7743895,
+      "probedDurationMs": 264040,
+      "sha256": "5b52daee8259481f20b8a3653b82a7a4627e727b358ecb076a8fccfe52bc2da2",
+      "storageKey": "Oa-1OKL_VxI-0-264000-v1-copy.mp4",
+      "cacheKey": "Oa-1OKL_VxI:0:264:v1-copy",
+      "contentRange": "bytes 0-0/7743895",
+      "durationMs": 12052,
+      "finishedAt": "2026-09-29T11:56:27.972Z",
+      "lines": [
+        2
+      ],
+      "performanceIds": [
+        768
+      ],
+      "rangeVerifiedAt": "2026-09-29T11:56:27.972Z",
+      "startedAt": "2026-09-29T11:56:15.920Z",
+      "status": "succeeded",
+      "url": "http://127.0.0.1:13200/Oa-1OKL_VxI?end=264&profile=v1-copy&start=0",
+      "publicUrl": "https://kang1027.com/classicmap/clips/Oa-1OKL_VxI?end=264&profile=v1-copy&start=0"
+    },
+    {
+      "assetValidatedAt": "2026-09-29T11:56:42.667Z",
+      "encodingProfileVersion": "v1-copy",
+      "fileSize": 10419535,
+      "probedDurationMs": 395040,
+      "sha256": "e254e16818edce2d544274e93288c3ae30299f6526a24b500549c84889138514",
+      "storageKey": "WbDp4bBKTyQ-1000-395000-v1-copy.mp4",
+      "cacheKey": "WbDp4bBKTyQ:1:396:v1-copy",
+      "contentRange": "bytes 0-0/10419535",
+      "durationMs": 14625,
+      "finishedAt": "2026-09-29T11:56:42.599Z",
+      "lines": [
+        3
+      ],
+      "performanceIds": [
+        769
+      ],
+      "rangeVerifiedAt": "2026-09-29T11:56:42.599Z",
+      "startedAt": "2026-09-29T11:56:27.974Z",
+      "status": "succeeded",
+      "url": "http://127.0.0.1:13200/WbDp4bBKTyQ?end=396&profile=v1-copy&start=1",
+      "publicUrl": "https://kang1027.com/classicmap/clips/WbDp4bBKTyQ?end=396&profile=v1-copy&start=1"
+    }
+  ],
+  "resume": false,
+  "startedAt": "2026-09-29T11:56:09.432Z"
+}
