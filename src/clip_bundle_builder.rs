@@ -117,10 +117,15 @@ pub struct ClipBundleOptions {
     pub request_timeout: Duration,
 }
 
-/// `{videoId}-{startMs}-{endMs}-{profile}.mp4`. 사이드카의 이름이 아니라 값으로
-/// 만든다 — 사이드카는 끝 시각을 `durationMs` 라고 잘못 적어 두었다.
+/// `{videoId}-{startMs}-{durationMs}-{profile}.mp4`.
+///
+/// **둘째 숫자는 끝 시각이 아니라 길이다.** 사이드카의 `durationMs` 가 그 값이고
+/// 이름 그대로다. 처음에 끝 시각으로 잘못 알고 짓다가 **시작이 0 인 구간만 맞고
+/// 나머지는 전부 어긋났다** — 0 에서는 끝 시각과 길이가 같아 틀린 것이 드러나지
+/// 않는다. 운영 캐시의 실제 이름으로 확인했다.
 pub fn storage_key(video_id: &str, start_ms: u32, end_ms: u32, profile: &str) -> String {
-    format!("{video_id}-{start_ms}-{end_ms}-{profile}.mp4")
+    let duration_ms = end_ms.saturating_sub(start_ms);
+    format!("{video_id}-{start_ms}-{duration_ms}-{profile}.mp4")
 }
 
 /// 질의 문자열은 알파벳 차례다. `load_clip_assets` 가 등록된 공개 주소와 대조한다.
@@ -168,11 +173,10 @@ fn read_sidecar(cache_dir: &Path, key: &str) -> Result<ClipSidecar, String> {
 
 /// 클립을 만들게 하고, 그다음 Range 요청이 되는지 확인한다.
 ///
-/// **요청을 둘로 나누는 까닭.** 처음에는 `Range: bytes=0-1` 하나로 만들기와 확인을
-/// 같이 하려 했는데, **Range 요청은 클립을 캐시에 만들지 않는다.** 클리퍼가 부분
-/// 응답만 흘려보내고 파일과 사이드카를 남기지 않아, 캐시에 이미 있던 것만 성공하고
-/// 없던 것은 사이드카를 못 찾아 전부 실패했다(9건 중 7건). 먼저 통째로 받아
-/// 만들게 하고, 그 뒤에 Range 를 확인한다.
+/// **요청을 둘로 나눈다.** 통째로 받는 요청은 캐시에 없는 클립을 만들게 하려는
+/// 것이고(`prewarm.mjs` 도 그렇게 했다), Range 요청은 `rangeVerifiedAt` 을 적을
+/// 근거를 만들려는 것이다. Range 요청만으로도 클리퍼가 만드는지는 확인하지 않았다 —
+/// 만들지 않을 수도 있으니 안전한 쪽을 쓴다.
 async fn build_and_verify(
     client: &reqwest::Client,
     url: &str,
@@ -315,11 +319,29 @@ pub async fn build_clip_bundle(
 mod tests {
     use super::*;
 
+    /// 운영 캐시의 실제 이름으로 맞춘 것이다. 시작이 0 이 아닌 것을 꼭 넣는다 —
+    /// 0 에서는 끝 시각과 길이가 같아 틀린 것이 드러나지 않는다.
     #[test]
-    fn storage_key_uses_end_not_duration() {
+    fn storage_key_second_number_is_duration() {
         assert_eq!(
-            storage_key("-Bxpm0EmOMU", 12000, 272000, "v1-copy"),
-            "-Bxpm0EmOMU-12000-272000-v1-copy.mp4"
+            storage_key("cIQhpLSO4bA", 4000, 125000, "v1-copy"),
+            "cIQhpLSO4bA-4000-121000-v1-copy.mp4"
+        );
+        assert_eq!(
+            storage_key("JH1miZzWZ2I", 1000, 176000, "v1-copy"),
+            "JH1miZzWZ2I-1000-175000-v1-copy.mp4"
+        );
+        assert_eq!(
+            storage_key("pY6TiZP14Qc", 1000, 115000, "v1-copy"),
+            "pY6TiZP14Qc-1000-114000-v1-copy.mp4"
+        );
+    }
+
+    #[test]
+    fn storage_key_is_same_shape_when_start_is_zero() {
+        assert_eq!(
+            storage_key("EpP4UsviQPA", 0, 121000, "v1-copy"),
+            "EpP4UsviQPA-0-121000-v1-copy.mp4"
         );
     }
 
