@@ -340,7 +340,7 @@ impl ConcertRepository {
             // 업데이트
             sqlx::query(
                 "UPDATE concerts SET
-                 title = ?, composer_info = ?, venue_id = ?,
+                 title = ?, composer_info = COALESCE(?, composer_info), venue_id = ?,
                  start_date = ?, end_date = ?, concert_time = ?,
                  poster_url = ?, program = ?, price_info = ?, status = ?,
                  venue_kopis_id = ?, kopis_updated_at = ?,
@@ -797,6 +797,71 @@ impl ConcertRepository {
         Ok(())
     }
 
+    /// 빠진 공연-아티스트 연결만 더한다. 관리자가 넣은 연결(역할 포함)은 건드리지 않는다.
+    pub async fn add_missing_concert_artists(
+        pool: &DbPool,
+        concert_id: i32,
+        artist_ids: &[i32],
+    ) -> Result<u64, Error> {
+        let mut added = 0;
+        for artist_id in artist_ids {
+            added += sqlx::query(
+                "INSERT INTO concert_artists (concert_id, artist_id, role)
+                 SELECT ?, ?, NULL FROM DUAL
+                 WHERE NOT EXISTS (
+                   SELECT 1 FROM concert_artists WHERE concert_id = ? AND artist_id = ?
+                 )",
+            )
+            .bind(concert_id)
+            .bind(artist_id)
+            .bind(concert_id)
+            .bind(artist_id)
+            .execute(pool)
+            .await?
+            .rows_affected();
+        }
+        Ok(added)
+    }
+
+    /// 공연에 연결된 아티스트의 DB 원본 분류.
+    pub async fn linked_artist_categories(pool: &DbPool, concert_id: i32) -> Result<Vec<String>, Error> {
+        sqlx::query_scalar::<_, String>(
+            "SELECT a.category FROM concert_artists ca
+             JOIN artists a ON a.id = ca.artist_id
+             WHERE ca.concert_id = ?",
+        )
+        .bind(concert_id)
+        .fetch_all(pool)
+        .await
+    }
+
+    /// 편성을 저장한다. 빈 문자열은 "분류했지만 해당 없음"이라 백필이 다시 보지 않는다.
+    pub async fn set_instrumentation(pool: &DbPool, concert_id: i32, value: &str) -> Result<(), Error> {
+        sqlx::query("UPDATE concerts SET instrumentation = ? WHERE id = ?")
+            .bind(value)
+            .bind(concert_id)
+            .execute(pool)
+            .await?;
+        Ok(())
+    }
+
+    /// 아직 편성을 매기지 않은 공연 (id, 제목, 출연진, KOPIS 여부).
+    pub async fn find_unenriched(
+        pool: &DbPool,
+        limit: i64,
+    ) -> Result<Vec<(i32, String, Option<String>, bool)>, Error> {
+        sqlx::query_as::<_, (i32, String, Option<String>, bool)>(
+            "SELECT id, title, cast, COALESCE(data_source = 'KOPIS', FALSE) AS is_kopis
+             FROM concerts
+             WHERE instrumentation IS NULL
+             ORDER BY id
+             LIMIT ?",
+        )
+        .bind(limit)
+        .fetch_all(pool)
+        .await
+    }
+
     // ============================================
     // Concert Images 저장 로직
     // ============================================
@@ -971,5 +1036,108 @@ mod search_filter_tests {
         let (sql, binds) = ConcertSearchFilter { query: Some("   "), ..Default::default() }.to_sql();
         assert!(!sql.contains("LIKE"));
         assert!(binds.is_empty());
+    }
+}
+
+/// 출연진 이름 → 아티스트. 이름(또는 영문명)이 정확히 같고 DB에 그 이름이 하나뿐일 때만 잇는다.
+/// 동명이인이 둘 이상이면 어느 쪽인지 알 수 없어 잇지 않는다.
+#[derive(Debug, Default)]
+pub struct ArtistNameIndex {
+    by_name: std::collections::HashMap<String, Option<(i32, String)>>,
+}
+
+impl ArtistNameIndex {
+    pub async fn load(pool: &DbPool) -> Result<Self, Error> {
+        let rows = sqlx::query_as::<_, (i32, String, Option<String>, String)>(
+            "SELECT id, name, english_name, category FROM artists",
+        )
+        .fetch_all(pool)
+        .await?;
+        Ok(Self::from_rows(rows))
+    }
+
+    pub fn from_rows(rows: Vec<(i32, String, Option<String>, String)>) -> Self {
+        let mut index = Self::default();
+        for (id, name, english_name, category) in rows {
+            let mut keys = vec![Self::key(&name)];
+            if let Some(english) = english_name.as_deref().map(Self::key).filter(|key| !key.is_empty()) {
+                if !keys.contains(&english) {
+                    keys.push(english);
+                }
+            }
+            for key in keys {
+                if key.is_empty() {
+                    continue;
+                }
+                index
+                    .by_name
+                    .entry(key)
+                    .and_modify(|entry| {
+                        if entry.as_ref().map(|(existing, _)| *existing) != Some(id) {
+                            *entry = None;
+                        }
+                    })
+                    .or_insert_with(|| Some((id, category.clone())));
+            }
+        }
+        index
+    }
+
+    fn key(name: &str) -> String {
+        name.split_whitespace().collect::<Vec<_>>().join(" ").to_lowercase()
+    }
+
+    /// (아티스트 id, DB 원본 분류)
+    pub fn lookup(&self, name: &str) -> Option<(i32, &str)> {
+        self.by_name
+            .get(&Self::key(name))
+            .and_then(|entry| entry.as_ref())
+            .map(|(id, category)| (*id, category.as_str()))
+    }
+
+    /// 출연진 문자열에서 찾은 아티스트 (중복 없이, 나온 순서).
+    pub fn match_cast(&self, cast: &str) -> Vec<(i32, &str)> {
+        let mut matched: Vec<(i32, &str)> = Vec::new();
+        for name in super::enrichment::split_cast_names(cast) {
+            if let Some(hit) = self.lookup(&name) {
+                if !matched.iter().any(|(id, _)| *id == hit.0) {
+                    matched.push(hit);
+                }
+            }
+        }
+        matched
+    }
+}
+
+#[cfg(test)]
+mod artist_name_index_tests {
+    use super::ArtistNameIndex;
+
+    fn index() -> ArtistNameIndex {
+        ArtistNameIndex::from_rows(vec![
+            (187, "임윤찬".into(), Some("Yunchan Lim".into()), "pianist".into()),
+            (10, "김민수".into(), Some("Minsoo Kim".into()), "violinist".into()),
+            (11, "김민수".into(), Some("Min-Su Kim".into()), "cellist".into()),
+            (50, "서울시립교향악단".into(), Some("Seoul Philharmonic Orchestra".into()), "orchestra".into()),
+        ])
+    }
+
+    #[test]
+    fn matches_exact_unique_names_in_cast_order() {
+        let index = index();
+        assert_eq!(
+            index.match_cast("서울시립교향악단, 임윤찬(피아노) 등"),
+            vec![(50, "orchestra"), (187, "pianist")]
+        );
+        assert_eq!(index.match_cast("yunchan  lim"), vec![(187, "pianist")]);
+    }
+
+    #[test]
+    fn skips_ambiguous_and_partial_names() {
+        let index = index();
+        assert!(index.match_cast("김민수").is_empty());
+        assert!(index.match_cast("임윤").is_empty());
+        assert!(index.match_cast("임윤찬 피아노 리사이틀").is_empty());
+        assert_eq!(index.match_cast("임윤찬, 임윤찬"), vec![(187, "pianist")]);
     }
 }

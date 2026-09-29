@@ -39,6 +39,9 @@ async fn rocket() -> _ {
 
     Logger::success("DATABASE", "Connection pool created");
 
+    // 편성을 아직 매기지 않은 공연을 백그라운드에서 채운다 (출연 아티스트 연결 포함)
+    concert::service::ConcertService::spawn_enrichment_backfill(pool.clone());
+
     // KOPIS 공연장 동기화 스케줄러 시작
     Logger::info("SCHEDULER", "Initializing KOPIS venue sync scheduler...");
     kopis::VenueSyncScheduler::start(pool.clone()).await;

@@ -1,7 +1,7 @@
 use super::client::KopisClient;
-use crate::artist::repository::ArtistRepository;
 use crate::boxoffice::BoxofficeRepository;
-use crate::concert::repository::ConcertRepository;
+use crate::concert::repository::{ArtistNameIndex, ConcertRepository};
+use crate::concert::service::ConcertService;
 use crate::hall::{CreateHall, HallRepository};
 use crate::logger::Logger;
 use crate::venue::{CreateVenue, VenueRepository};
@@ -264,52 +264,6 @@ impl KopisService {
     }
 
     // ============================================
-    // 아티스트 매칭 헬퍼 함수
-    // ============================================
-
-    /// cast 문자열을 파싱하여 아티스트 ID 목록 반환
-    /// 예: "손열음, 홍혜란, 김효나" -> [189, 234, ...]
-    async fn parse_and_match_artists(pool: &MySqlPool, cast: Option<&str>) -> Vec<i32> {
-        let mut artist_ids = Vec::new();
-
-        if let Some(cast_str) = cast {
-            // 쉼표나 띄어쓰기 등으로 분리
-            let names: Vec<&str> = cast_str
-                .split(&[',', '·', '/', '\n'][..])
-                .map(|s| s.trim())
-                .filter(|s| !s.is_empty() && s.len() > 1) // 너무 짧은 이름 제외
-                .collect();
-
-            for name in names {
-                // " 등" 제거
-                let clean_name = name.trim_end_matches(" 등").trim_end_matches("등").trim();
-
-                // DB에서 아티스트 검색
-                match ArtistRepository::find_by_name(pool, clean_name).await {
-                    Ok(Some(artist)) => {
-                        artist_ids.push(artist.id);
-                        Logger::debug(
-                            "KOPIS",
-                            &format!("Matched artist: {} (ID: {})", clean_name, artist.id),
-                        );
-                    }
-                    Ok(None) => {
-                        Logger::debug("KOPIS", &format!("Artist not found in DB: {}", clean_name));
-                    }
-                    Err(e) => {
-                        Logger::warn(
-                            "KOPIS",
-                            &format!("Failed to search artist '{}': {}", clean_name, e),
-                        );
-                    }
-                }
-            }
-        }
-
-        artist_ids
-    }
-
-    // ============================================
     // 공연 동기화
     // ============================================
 
@@ -334,6 +288,11 @@ impl KopisService {
 
         // KOPIS 클라이언트 생성
         let client = KopisClient::from_env()?;
+
+        // 출연진 이름 → 아티스트. 동기화 한 번 동안 같은 색인을 쓴다
+        let artist_index = ArtistNameIndex::load(pool)
+            .await
+            .map_err(|e| format!("Failed to load artist names: {}", e))?;
 
         // 클래식 관련 장르 코드
         let genre_codes = vec![
@@ -416,7 +375,8 @@ impl KopisService {
                                                 pool,
                                                 &detail.performance_id,
                                                 &detail.performance_name,
-                                                detail.cast.as_deref(),
+                                                // KOPIS 상세에는 작곡가·곡목 필드가 없다. 예전엔 출연진을 여기 넣어 복사본이 쌓였다
+                                                None,
                                                 venue_id,
                                                 &start_date_str,
                                                 end_date_str.as_deref(),
@@ -509,37 +469,32 @@ impl KopisService {
                                                         }
                                                     }
 
-                                                    // 아티스트 매칭 및 저장
-                                                    let artist_ids = Self::parse_and_match_artists(
+                                                    // 출연진 → 아티스트 연결, 편성 분류
+                                                    match ConcertService::enrich_concert(
                                                         pool,
+                                                        &artist_index,
+                                                        concert_id,
+                                                        &detail.performance_name,
                                                         detail.cast.as_deref(),
+                                                        true,
                                                     )
-                                                    .await;
-                                                    if !artist_ids.is_empty() {
-                                                        if let Err(e) = ConcertRepository::upsert_concert_artists(
-                                                            pool,
-                                                            concert_id,
-                                                            artist_ids.clone(),
-                                                        )
-                                                        .await
-                                                        {
-                                                            Logger::warn(
-                                                                "KOPIS",
-                                                                &format!(
-                                                                    "Failed to save concert artists for {}: {}",
-                                                                    detail.performance_name, e
-                                                                ),
-                                                            );
-                                                        } else {
-                                                            Logger::success(
-                                                                "KOPIS",
-                                                                &format!(
-                                                                    "Matched {} artists for concert: {}",
-                                                                    artist_ids.len(),
-                                                                    detail.performance_name
-                                                                ),
-                                                            );
-                                                        }
+                                                    .await
+                                                    {
+                                                        Ok(0) => {}
+                                                        Ok(added) => Logger::success(
+                                                            "KOPIS",
+                                                            &format!(
+                                                                "Matched {} artists for concert: {}",
+                                                                added, detail.performance_name
+                                                            ),
+                                                        ),
+                                                        Err(e) => Logger::warn(
+                                                            "KOPIS",
+                                                            &format!(
+                                                                "Failed to enrich concert {}: {}",
+                                                                detail.performance_name, e
+                                                            ),
+                                                        ),
                                                     }
 
                                                     // 기존 공연 여부 확인

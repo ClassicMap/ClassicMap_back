@@ -1,6 +1,8 @@
 use crate::db::DbPool;
 use super::model::{Concert, CreateConcert, UpdateConcert, ConcertWithArtists, ConcertWithDetails, ConcertListItem, ConcertTicketVendor};
-use super::repository::{ConcertRepository, ConcertSearchFilter};
+use super::enrichment::{classify_instrumentation, instrumentation_value};
+use super::repository::{ArtistNameIndex, ConcertRepository, ConcertSearchFilter};
+use crate::logger::Logger;
 use rust_decimal::Decimal;
 
 pub struct ConcertService;
@@ -141,5 +143,63 @@ impl ConcertService {
         ConcertRepository::get_distinct_areas(pool)
             .await
             .map_err(|e| e.to_string())
+    }
+
+    /// 공연 하나를 보강한다. KOPIS 공연이면 출연진에서 아티스트를 찾아 빠진 연결을 더하고,
+    /// 제목과 연결된 아티스트 분류로 편성을 다시 매긴다. 더한 연결 수를 돌려준다.
+    pub async fn enrich_concert(
+        pool: &DbPool,
+        index: &ArtistNameIndex,
+        concert_id: i32,
+        title: &str,
+        cast: Option<&str>,
+        match_cast: bool,
+    ) -> Result<u64, sqlx::Error> {
+        let mut added = 0;
+        if match_cast {
+            if let Some(cast) = cast {
+                let artist_ids: Vec<i32> = index.match_cast(cast).into_iter().map(|(id, _)| id).collect();
+                if !artist_ids.is_empty() {
+                    added = ConcertRepository::add_missing_concert_artists(pool, concert_id, &artist_ids).await?;
+                }
+            }
+        }
+        let categories = ConcertRepository::linked_artist_categories(pool, concert_id).await?;
+        let category_refs: Vec<&str> = categories.iter().map(String::as_str).collect();
+        let codes = classify_instrumentation(title, &category_refs);
+        ConcertRepository::set_instrumentation(pool, concert_id, &instrumentation_value(&codes)).await?;
+        Ok(added)
+    }
+
+    /// 편성이 비어 있는(NULL) 공연을 모두 보강한다. 한 번 매긴 공연은 다시 보지 않아 여러 번 돌려도 같다.
+    pub async fn backfill_enrichment(pool: &DbPool) -> Result<(u64, u64), sqlx::Error> {
+        const BATCH: i64 = 200;
+        let index = ArtistNameIndex::load(pool).await?;
+        let (mut enriched, mut linked) = (0u64, 0u64);
+        loop {
+            let rows = ConcertRepository::find_unenriched(pool, BATCH).await?;
+            if rows.is_empty() {
+                break;
+            }
+            for (id, title, cast, is_kopis) in rows {
+                linked += Self::enrich_concert(pool, &index, id, &title, cast.as_deref(), is_kopis).await?;
+                enriched += 1;
+            }
+        }
+        Ok((enriched, linked))
+    }
+
+    /// 서버 시작 뒤 백그라운드에서 한 번 돈다. 실패해도 서버는 계속 뜬다.
+    pub fn spawn_enrichment_backfill(pool: DbPool) {
+        tokio::spawn(async move {
+            match Self::backfill_enrichment(&pool).await {
+                Ok((0, _)) => {}
+                Ok((enriched, linked)) => Logger::success(
+                    "CONCERT",
+                    &format!("공연 편성 {}건을 매기고 출연 아티스트 연결 {}건을 더함", enriched, linked),
+                ),
+                Err(e) => Logger::error("CONCERT", &format!("공연 보강 백필 실패: {}", e)),
+            }
+        });
     }
 }
