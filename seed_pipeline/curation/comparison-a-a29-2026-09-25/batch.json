@@ -1,28 +1,7 @@
 {
   "batchId": "a-a29",
-  "note": "A tier A29. 피아졸라 하나와 하차투리안 하나. 두 곡짜리 배치다. 377 은 네 악장의 차례가 녹음마다 달라 anchor:head 가 어느 악장을 잡을지 알 수 없다 — excerpt 를 일부러 비워 뒀다. “Verano porteño” 낱악장 트랙을 찾거나 referenceVideoId·start·end 꼴로 적어라.",
+  "note": "A tier A29. **377 <부에노스 아이레스의 사계>는 막았다**(A-TIER-QUEUE.md 의 '다시 볼 곡' 참고) — 크레머·윌리엄스·쿠아르테토 라티노아메리카노 세 쌍이 0.1475~0.2325 였다. A28 피아졸라 셋과 같은 갈래다. **381 <칼춤> 한 곡만 발행한다.** 칼춤은 관현악 원곡이 표준 악보로 돌아 열 쌍이 0.0435~0.0692 로 깨끗하다. 낱 곡 트랙이 138~158초라 발췌를 뺐다. **오르만디 판은 검출이 곡 중간의 여린 대목에서 끊겨 끝을 111.71 로 잡았다** — 실제 음악은 156초까지 이어진다(44초 되살림).",
   "pieces": [
-    {
-      "pieceId": 377,
-      "workMbid": "a289bd55-5684-4cbd-8482-3ac980ad0da9",
-      "composerQid": "Q172505",
-      "titleKo": "<부에노스 아이레스의 사계>",
-      "titleEn": "Las cuatro estaciones porteñas",
-      "composerNameEn": "Astor Piazzolla",
-      "composerNameKo": "아스토르 피아졸라",
-      "role": "ENSEMBLE",
-      "sector": {
-        "key": "verano-porteno",
-        "type": "EXCERPT",
-        "nameKo": "“부에노스 아이레스의 여름”",
-        "nameEn": "Verano porteño",
-        "measureStart": "",
-        "measureEnd": "",
-        "startCue": "반주 오스티나토의 첫 박(악장 시작)",
-        "endCue": "발췌 끝"
-      },
-      "videos": []
-    },
     {
       "pieceId": 381,
       "workMbid": "4f10d0d0-d644-463e-8791-c65b65d6ff36",
@@ -42,7 +21,35 @@
         "startCue": "타악과 현의 총주 첫 타격(곡 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "NLP66CWzv34",
+          "artistName": "Eugene Ormandy",
+          "wikidata": "Q344023",
+          "orchestra": {
+            "name": "The Philadelphia Orchestra",
+            "wikidata": "Q659181"
+          }
+        },
+        {
+          "videoId": "gNCs7CGva4Q",
+          "artistName": "Gennady Rozhdestvensky",
+          "wikidata": "Q437262",
+          "orchestra": {
+            "name": "Leningrad Philharmonic Orchestra",
+            "wikidata": "Q1373970"
+          }
+        },
+        {
+          "videoId": "rrLK1pog3U8",
+          "artistName": "Loris Tjeknavorian",
+          "wikidata": "Q2984588",
+          "orchestra": {
+            "name": "Armenian Philharmonic Orchestra",
+            "wikidata": "Q3267972"
+          }
+        }
+      ]
     }
   ]
 }
