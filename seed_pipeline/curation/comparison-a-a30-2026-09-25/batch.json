@@ -1,6 +1,6 @@
 {
   "batchId": "a-a30",
-  "note": "A tier A30. 하차투리안 둘. 두 곡짜리 배치다. 둘 다 발췌다. 383 은 플루트 편곡(랑팔)이 따로 도니 바이올린 원곡으로 맞춘다. 둘 다 시드 쌍둥이 병합분이다.",
+  "note": "A tier A30. 하차투리안 둘. **383 은 1악장이 805~962초로 600초를 넘어 anchor:head 120초 발췌를 유지했다. 384 는 낱 곡 트랙이 243~250초라 발췌를 뺐다.** 383 은 플루트 편곡(랑팔)이 따로 도니 바이올린 원곡으로 맞췄다. 둘 다 시드 쌍둥이 병합분이다.",
   "pieces": [
     {
       "pieceId": 383,
@@ -25,7 +25,47 @@
         "anchor": "head",
         "seconds": 120
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "acYI5iroUK0",
+          "artistName": "Nemanja Radulović",
+          "wikidata": "Q3337983",
+          "conductor": {
+            "name": "Sascha Goetzel",
+            "wikidata": "Q112551"
+          },
+          "orchestra": {
+            "name": "Borusan Istanbul Philharmonic Orchestra",
+            "wikidata": "Q894268"
+          }
+        },
+        {
+          "videoId": "VVztr4PsRYs",
+          "artistName": "Ruggiero Ricci",
+          "wikidata": "Q718368",
+          "conductor": {
+            "name": "Anatole Fistoulari",
+            "wikidata": "Q487710"
+          },
+          "orchestra": {
+            "name": "London Philharmonic Orchestra",
+            "wikidata": "Q863397"
+          }
+        },
+        {
+          "videoId": "B702GYWSAcc",
+          "artistName": "Lydia Mordkovitch",
+          "wikidata": "Q4302514",
+          "conductor": {
+            "name": "Neeme Järvi",
+            "wikidata": "Q356161"
+          },
+          "orchestra": {
+            "name": "Royal Scottish National Orchestra",
+            "wikidata": "Q2002502"
+          }
+        }
+      ]
     },
     {
       "pieceId": 384,
@@ -44,13 +84,37 @@
         "measureStart": "",
         "measureEnd": "",
         "startCue": "왈츠 반주의 첫 박(모음곡 시작)",
-        "endCue": "발췌 끝"
+        "endCue": "왈츠 종결 화음과 잔향"
       },
-      "excerpt": {
-        "anchor": "head",
-        "seconds": 120
-      },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "gEr-yDnm704",
+          "artistName": "Loris Tjeknavorian",
+          "wikidata": "Q2984588",
+          "orchestra": {
+            "name": "Armenian Philharmonic Orchestra",
+            "wikidata": "Q3267972"
+          }
+        },
+        {
+          "videoId": "Yri4yKy9g9Q",
+          "artistName": "Neeme Järvi",
+          "wikidata": "Q356161",
+          "orchestra": {
+            "name": "Royal Scottish National Orchestra",
+            "wikidata": "Q2002502"
+          }
+        },
+        {
+          "videoId": "nXIa86OJ04Q",
+          "artistName": "Stanley Black",
+          "wikidata": "Q3129963",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
     }
   ]
 }

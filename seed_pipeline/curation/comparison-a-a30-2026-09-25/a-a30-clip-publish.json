@@ -1,0 +1,36 @@
+{
+  "status": "succeeded",
+  "bundlePath": "/Users/kdh/.cache/classicmap/comparison/a-a30/a-a30-clip-assets.jsonl",
+  "rowCount": 6,
+  "dryRun": false,
+  "publish": true,
+  "seedRunId": "1f1f9b4a-6b2d-4a0b-95d5-65f7a9868079",
+  "mutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 6,
+    "clipAssetsInserted": 6,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 12,
+    "total": 24
+  },
+  "plannedMutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 6,
+    "clipAssetsInserted": 6,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 12,
+    "total": 24
+  },
+  "performanceIds": [
+    761,
+    762,
+    763,
+    764,
+    765,
+    766
+  ]
+}
