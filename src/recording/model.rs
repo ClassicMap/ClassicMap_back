@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
-use sqlx::FromRow;
 use sqlx::types::chrono::NaiveDate;
 use sqlx::types::JsonValue;
+use sqlx::FromRow;
 
 #[derive(Debug, Serialize, Deserialize, FromRow)]
 #[serde(rename_all = "camelCase")]

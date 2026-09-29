@@ -1,6 +1,8 @@
-use crate::db::DbPool;
-use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces, ComposerWithPerformance};
+use super::model::{
+    Composer, ComposerWithMajorPieces, ComposerWithPerformance, CreateComposer, UpdateComposer,
+};
 use super::repository::ComposerRepository;
+use crate::db::DbPool;
 
 pub struct ComposerService;
 
@@ -22,13 +24,20 @@ impl ComposerSort {
 }
 
 impl ComposerService {
-    pub async fn get_all_composers(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<Composer>, String> {
+    pub async fn get_all_composers(
+        pool: &DbPool,
+        offset: i64,
+        limit: i64,
+    ) -> Result<Vec<Composer>, String> {
         ComposerRepository::find_all(pool, offset, limit)
             .await
             .map_err(|e| e.to_string())
     }
 
-    pub async fn get_composer_by_id(pool: &DbPool, id: i32) -> Result<Option<ComposerWithMajorPieces>, String> {
+    pub async fn get_composer_by_id(
+        pool: &DbPool,
+        id: i32,
+    ) -> Result<Option<ComposerWithMajorPieces>, String> {
         ComposerRepository::find_by_id(pool, id)
             .await
             .map_err(|e| e.to_string())
@@ -40,7 +49,11 @@ impl ComposerService {
             .map_err(|e| e.to_string())
     }
 
-    pub async fn update_composer(pool: &DbPool, id: i32, composer: UpdateComposer) -> Result<u64, String> {
+    pub async fn update_composer(
+        pool: &DbPool,
+        id: i32,
+        composer: UpdateComposer,
+    ) -> Result<u64, String> {
         ComposerRepository::update(pool, id, composer)
             .await
             .map_err(|e| e.to_string())
@@ -86,8 +99,14 @@ mod tests {
     #[test]
     fn sort_defaults_to_birth_year() {
         assert_eq!(ComposerSort::parse(None), Ok(ComposerSort::BirthYear));
-        assert_eq!(ComposerSort::parse(Some("birthYear")), Ok(ComposerSort::BirthYear));
-        assert_eq!(ComposerSort::parse(Some("recommended")), Ok(ComposerSort::Recommended));
+        assert_eq!(
+            ComposerSort::parse(Some("birthYear")),
+            Ok(ComposerSort::BirthYear)
+        );
+        assert_eq!(
+            ComposerSort::parse(Some("recommended")),
+            Ok(ComposerSort::Recommended)
+        );
     }
 
     #[test]

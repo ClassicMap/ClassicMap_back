@@ -1,6 +1,6 @@
-use crate::db::DbPool;
-use super::model::{Performance, CreatePerformance, UpdatePerformance};
+use super::model::{CreatePerformance, Performance, UpdatePerformance};
 use super::repository::PerformanceRepository;
+use crate::db::DbPool;
 
 pub struct PerformanceService;
 
@@ -17,31 +17,47 @@ impl PerformanceService {
             .map_err(|e| e.to_string())
     }
 
-    pub async fn get_performances_by_sector(pool: &DbPool, sector_id: i32) -> Result<Vec<Performance>, String> {
+    pub async fn get_performances_by_sector(
+        pool: &DbPool,
+        sector_id: i32,
+    ) -> Result<Vec<Performance>, String> {
         PerformanceRepository::find_by_sector(pool, sector_id)
             .await
             .map_err(|e| e.to_string())
     }
 
-    pub async fn get_performances_by_piece(pool: &DbPool, piece_id: i32) -> Result<Vec<Performance>, String> {
+    pub async fn get_performances_by_piece(
+        pool: &DbPool,
+        piece_id: i32,
+    ) -> Result<Vec<Performance>, String> {
         PerformanceRepository::find_by_piece(pool, piece_id)
             .await
             .map_err(|e| e.to_string())
     }
 
-    pub async fn get_performances_by_artist(pool: &DbPool, artist_id: i32) -> Result<Vec<Performance>, String> {
+    pub async fn get_performances_by_artist(
+        pool: &DbPool,
+        artist_id: i32,
+    ) -> Result<Vec<Performance>, String> {
         PerformanceRepository::find_by_artist(pool, artist_id)
             .await
             .map_err(|e| e.to_string())
     }
 
-    pub async fn create_performance(pool: &DbPool, performance: CreatePerformance) -> Result<u64, String> {
+    pub async fn create_performance(
+        pool: &DbPool,
+        performance: CreatePerformance,
+    ) -> Result<u64, String> {
         PerformanceRepository::create(pool, performance)
             .await
             .map_err(|e| e.to_string())
     }
 
-    pub async fn update_performance(pool: &DbPool, id: i32, performance: UpdatePerformance) -> Result<u64, String> {
+    pub async fn update_performance(
+        pool: &DbPool,
+        id: i32,
+        performance: UpdatePerformance,
+    ) -> Result<u64, String> {
         PerformanceRepository::update(pool, id, performance)
             .await
             .map_err(|e| e.to_string())

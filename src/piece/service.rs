@@ -1,6 +1,6 @@
-use crate::db::DbPool;
-use super::model::{Piece, CreatePiece, PieceSearchResult, UpdatePiece};
+use super::model::{CreatePiece, Piece, PieceSearchResult, UpdatePiece};
 use super::repository::PieceRepository;
+use crate::db::DbPool;
 
 pub struct PieceService;
 
@@ -103,15 +103,24 @@ mod tests {
     fn page_params_apply_defaults_and_limits() {
         assert_eq!(
             PieceListRange::parse(Some(40), None),
-            Ok(PieceListRange::Page { offset: 40, limit: 20 })
+            Ok(PieceListRange::Page {
+                offset: 40,
+                limit: 20
+            })
         );
         assert_eq!(
             PieceListRange::parse(None, Some(500)),
-            Ok(PieceListRange::Page { offset: 0, limit: 100 })
+            Ok(PieceListRange::Page {
+                offset: 0,
+                limit: 100
+            })
         );
         assert_eq!(
             PieceListRange::parse(None, Some(0)),
-            Ok(PieceListRange::Page { offset: 0, limit: 1 })
+            Ok(PieceListRange::Page {
+                offset: 0,
+                limit: 1
+            })
         );
     }
 

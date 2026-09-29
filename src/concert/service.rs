@@ -1,6 +1,9 @@
-use crate::db::DbPool;
-use super::model::{Concert, CreateConcert, UpdateConcert, ConcertWithArtists, ConcertWithDetails, ConcertListItem, ConcertTicketVendor};
+use super::model::{
+    Concert, ConcertListItem, ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails,
+    CreateConcert, UpdateConcert,
+};
 use super::repository::ConcertRepository;
+use crate::db::DbPool;
 use rust_decimal::Decimal;
 
 pub struct ConcertService;
@@ -12,7 +15,9 @@ impl ConcertService {
             .map_err(|e| e.to_string())
     }
 
-    pub async fn get_all_concerts_with_artists(pool: &DbPool) -> Result<Vec<ConcertWithArtists>, String> {
+    pub async fn get_all_concerts_with_artists(
+        pool: &DbPool,
+    ) -> Result<Vec<ConcertWithArtists>, String> {
         ConcertRepository::find_all_with_artists(pool)
             .await
             .map_err(|e| e.to_string())
@@ -24,13 +29,19 @@ impl ConcertService {
             .map_err(|e| e.to_string())
     }
 
-    pub async fn get_concert_by_id_with_artists(pool: &DbPool, id: i32) -> Result<Option<ConcertWithArtists>, String> {
+    pub async fn get_concert_by_id_with_artists(
+        pool: &DbPool,
+        id: i32,
+    ) -> Result<Option<ConcertWithArtists>, String> {
         ConcertRepository::find_by_id_with_artists(pool, id)
             .await
             .map_err(|e| e.to_string())
     }
 
-    pub async fn get_concerts_by_artist(pool: &DbPool, artist_id: i32) -> Result<Vec<Concert>, String> {
+    pub async fn get_concerts_by_artist(
+        pool: &DbPool,
+        artist_id: i32,
+    ) -> Result<Vec<Concert>, String> {
         ConcertRepository::find_by_artist(pool, artist_id)
             .await
             .map_err(|e| e.to_string())
@@ -42,7 +53,11 @@ impl ConcertService {
             .map_err(|e| e.to_string())
     }
 
-    pub async fn update_concert(pool: &DbPool, id: i32, concert: UpdateConcert) -> Result<u64, String> {
+    pub async fn update_concert(
+        pool: &DbPool,
+        id: i32,
+        concert: UpdateConcert,
+    ) -> Result<u64, String> {
         ConcertRepository::update(pool, id, concert)
             .await
             .map_err(|e| e.to_string())
@@ -54,7 +69,12 @@ impl ConcertService {
             .map_err(|e| e.to_string())
     }
 
-    pub async fn submit_rating(pool: &DbPool, user_id: i32, concert_id: i32, rating: f32) -> Result<(), String> {
+    pub async fn submit_rating(
+        pool: &DbPool,
+        user_id: i32,
+        concert_id: i32,
+        rating: f32,
+    ) -> Result<(), String> {
         if rating < 0.0 || rating > 5.0 {
             return Err("Rating must be between 0.0 and 5.0".to_string());
         }
@@ -63,7 +83,11 @@ impl ConcertService {
             .map_err(|e| e.to_string())
     }
 
-    pub async fn get_user_rating(pool: &DbPool, user_id: i32, concert_id: i32) -> Result<Option<Decimal>, String> {
+    pub async fn get_user_rating(
+        pool: &DbPool,
+        user_id: i32,
+        concert_id: i32,
+    ) -> Result<Option<Decimal>, String> {
         ConcertRepository::get_user_rating(pool, user_id, concert_id)
             .await
             .map_err(|e| e.to_string())
@@ -73,7 +97,11 @@ impl ConcertService {
     // New methods for enhanced features
     // ============================================
 
-    pub async fn get_all_concerts_list_view(pool: &DbPool, offset: Option<i64>, limit: Option<i64>) -> Result<Vec<ConcertListItem>, String> {
+    pub async fn get_all_concerts_list_view(
+        pool: &DbPool,
+        offset: Option<i64>,
+        limit: Option<i64>,
+    ) -> Result<Vec<ConcertListItem>, String> {
         let offset_val = offset.unwrap_or(0);
         let limit_val = limit.unwrap_or(20);
         ConcertRepository::find_all_list_view(pool, offset_val, limit_val)
@@ -81,20 +109,31 @@ impl ConcertService {
             .map_err(|e| e.to_string())
     }
 
-    pub async fn get_concert_with_details(pool: &DbPool, id: i32) -> Result<Option<ConcertWithDetails>, String> {
+    pub async fn get_concert_with_details(
+        pool: &DbPool,
+        id: i32,
+    ) -> Result<Option<ConcertWithDetails>, String> {
         ConcertRepository::find_by_id_with_details(pool, id)
             .await
             .map_err(|e| e.to_string())
     }
 
-    pub async fn get_featured_concerts(pool: &DbPool, area_code: Option<String>, limit: Option<i32>) -> Result<Vec<ConcertWithDetails>, String> {
+    pub async fn get_featured_concerts(
+        pool: &DbPool,
+        area_code: Option<String>,
+        limit: Option<i32>,
+    ) -> Result<Vec<ConcertWithDetails>, String> {
         let limit_val = limit.unwrap_or(3);
         ConcertRepository::find_featured_concerts(pool, area_code.as_deref(), limit_val)
             .await
             .map_err(|e| e.to_string())
     }
 
-    pub async fn get_upcoming_concerts(pool: &DbPool, sort_by: Option<String>, limit: Option<i32>) -> Result<Vec<ConcertListItem>, String> {
+    pub async fn get_upcoming_concerts(
+        pool: &DbPool,
+        sort_by: Option<String>,
+        limit: Option<i32>,
+    ) -> Result<Vec<ConcertListItem>, String> {
         let sort = sort_by.as_deref().unwrap_or("date");
         let limit_val = limit.unwrap_or(20);
         ConcertRepository::find_upcoming_concerts(pool, sort, limit_val)
@@ -145,7 +184,10 @@ impl ConcertService {
         .map_err(|e| e.to_string())
     }
 
-    pub async fn get_ticket_vendors(pool: &DbPool, concert_id: i32) -> Result<Vec<ConcertTicketVendor>, String> {
+    pub async fn get_ticket_vendors(
+        pool: &DbPool,
+        concert_id: i32,
+    ) -> Result<Vec<ConcertTicketVendor>, String> {
         ConcertRepository::find_ticket_vendors_by_concert(pool, concert_id)
             .await
             .map_err(|e| e.to_string())

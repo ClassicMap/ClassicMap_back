@@ -1,7 +1,6 @@
 use super::models::{
-    VenueListResponse, VenueDetailResponse,
-    ConcertListResponse, ConcertDetailResponse,
-    BoxofficeResponse,
+    BoxofficeResponse, ConcertDetailResponse, ConcertListResponse, VenueDetailResponse,
+    VenueListResponse,
 };
 use reqwest;
 use serde_xml_rs::from_str;
@@ -44,14 +43,18 @@ impl KopisClient {
     ) -> Result<VenueListResponse, String> {
         let mut url = format!(
             "{}/prfplc?service={}&cpage={}&rows={}",
-            self.base_url, self.api_key, page, rows.min(100)
+            self.base_url,
+            self.api_key,
+            page,
+            rows.min(100)
         );
 
         if let Some(date) = after_date {
             url.push_str(&format!("&afterdate={}", date));
         }
 
-        let response = self.client
+        let response = self
+            .client
             .get(&url)
             .send()
             .await
@@ -72,7 +75,10 @@ impl KopisClient {
             Err(e) => {
                 // 파싱 실패 시 원본 XML도 함께 출력
                 eprintln!("XML parsing error: {}", e);
-                eprintln!("Raw XML (first 500 chars): {}", &xml_text.chars().take(500).collect::<String>());
+                eprintln!(
+                    "Raw XML (first 500 chars): {}",
+                    &xml_text.chars().take(500).collect::<String>()
+                );
                 Err(format!("Failed to parse XML response: {}", e))
             }
         }
@@ -82,13 +88,17 @@ impl KopisClient {
     ///
     /// # Arguments
     /// * `facility_id` - 공연시설ID (예: FC000517)
-    pub async fn fetch_venue_detail(&self, facility_id: &str) -> Result<VenueDetailResponse, String> {
+    pub async fn fetch_venue_detail(
+        &self,
+        facility_id: &str,
+    ) -> Result<VenueDetailResponse, String> {
         let url = format!(
             "{}/prfplc/{}?service={}",
             self.base_url, facility_id, self.api_key
         );
 
-        let response = self.client
+        let response = self
+            .client
             .get(&url)
             .send()
             .await
@@ -108,7 +118,10 @@ impl KopisClient {
             Ok(parsed) => Ok(parsed),
             Err(e) => {
                 eprintln!("XML parsing error: {}", e);
-                eprintln!("Raw XML (first 500 chars): {}", &xml_text.chars().take(500).collect::<String>());
+                eprintln!(
+                    "Raw XML (first 500 chars): {}",
+                    &xml_text.chars().take(500).collect::<String>()
+                );
                 Err(format!("Failed to parse XML response: {}", e))
             }
         }
@@ -118,13 +131,18 @@ impl KopisClient {
     ///
     /// # Arguments
     /// * `after_date` - 해당일자 이후 등록/수정된 항목만 출력 (YYYYMMDD, Optional)
-    pub async fn fetch_all_venues(&self, after_date: Option<&str>) -> Result<Vec<crate::kopis::models::VenueListItem>, String> {
+    pub async fn fetch_all_venues(
+        &self,
+        after_date: Option<&str>,
+    ) -> Result<Vec<crate::kopis::models::VenueListItem>, String> {
         let mut all_venues = Vec::new();
         let mut page = 1u32;
         let rows_per_page = 100u32;
 
         loop {
-            let response = self.fetch_venue_list(page, rows_per_page, after_date).await?;
+            let response = self
+                .fetch_venue_list(page, rows_per_page, after_date)
+                .await?;
 
             let venue_count = response.db.len();
             if venue_count == 0 {
@@ -173,7 +191,12 @@ impl KopisClient {
     ) -> Result<ConcertListResponse, String> {
         let mut url = format!(
             "{}/pblprfr?service={}&stdate={}&eddate={}&cpage={}&rows={}",
-            self.base_url, self.api_key, start_date, end_date, page, rows.min(100)
+            self.base_url,
+            self.api_key,
+            start_date,
+            end_date,
+            page,
+            rows.min(100)
         );
 
         if let Some(code) = genre_code {
@@ -184,7 +207,8 @@ impl KopisClient {
             url.push_str(&format!("&afterdate={}", date));
         }
 
-        let response = self.client
+        let response = self
+            .client
             .get(&url)
             .send()
             .await
@@ -203,7 +227,10 @@ impl KopisClient {
             Ok(parsed) => Ok(parsed),
             Err(e) => {
                 eprintln!("XML parsing error: {}", e);
-                eprintln!("Raw XML (first 500 chars): {}", &xml_text.chars().take(500).collect::<String>());
+                eprintln!(
+                    "Raw XML (first 500 chars): {}",
+                    &xml_text.chars().take(500).collect::<String>()
+                );
                 Err(format!("Failed to parse XML response: {}", e))
             }
         }
@@ -213,13 +240,17 @@ impl KopisClient {
     ///
     /// # Arguments
     /// * `performance_id` - 공연ID (예: PF132236)
-    pub async fn fetch_concert_detail(&self, performance_id: &str) -> Result<ConcertDetailResponse, String> {
+    pub async fn fetch_concert_detail(
+        &self,
+        performance_id: &str,
+    ) -> Result<ConcertDetailResponse, String> {
         let url = format!(
             "{}/pblprfr/{}?service={}",
             self.base_url, performance_id, self.api_key
         );
 
-        let response = self.client
+        let response = self
+            .client
             .get(&url)
             .send()
             .await
@@ -238,7 +269,10 @@ impl KopisClient {
             Ok(parsed) => Ok(parsed),
             Err(e) => {
                 eprintln!("XML parsing error: {}", e);
-                eprintln!("Raw XML (first 500 chars): {}", &xml_text.chars().take(500).collect::<String>());
+                eprintln!(
+                    "Raw XML (first 500 chars): {}",
+                    &xml_text.chars().take(500).collect::<String>()
+                );
                 Err(format!("Failed to parse XML response: {}", e))
             }
         }
@@ -263,14 +297,16 @@ impl KopisClient {
         let rows_per_page = 100u32;
 
         loop {
-            let response = self.fetch_concert_list(
-                start_date,
-                end_date,
-                page,
-                rows_per_page,
-                genre_code,
-                after_date,
-            ).await?;
+            let response = self
+                .fetch_concert_list(
+                    start_date,
+                    end_date,
+                    page,
+                    rows_per_page,
+                    genre_code,
+                    after_date,
+                )
+                .await?;
 
             let concert_count = response.db.len();
             if concert_count == 0 {
@@ -325,7 +361,8 @@ impl KopisClient {
             url.push_str(&format!("&area={}", area));
         }
 
-        let response = self.client
+        let response = self
+            .client
             .get(&url)
             .send()
             .await
@@ -344,7 +381,10 @@ impl KopisClient {
             Ok(parsed) => Ok(parsed),
             Err(e) => {
                 eprintln!("XML parsing error: {}", e);
-                eprintln!("Raw XML (first 500 chars): {}", &xml_text.chars().take(500).collect::<String>());
+                eprintln!(
+                    "Raw XML (first 500 chars): {}",
+                    &xml_text.chars().take(500).collect::<String>()
+                );
                 Err(format!("Failed to parse XML response: {}", e))
             }
         }

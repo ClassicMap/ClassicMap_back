@@ -1,9 +1,9 @@
-use rocket::{State, serde::json::Json, http::Status};
+use super::model::{CreateRecording, Recording, UpdateRecording};
+use super::service::RecordingService;
 use crate::auth::ModeratorUser;
 use crate::db::DbPool;
 use crate::logger::Logger;
-use super::model::{Recording, CreateRecording, UpdateRecording};
-use super::service::RecordingService;
+use rocket::{http::Status, serde::json::Json, State};
 
 #[get("/recordings")]
 pub async fn get_recordings(pool: &State<DbPool>) -> Result<Json<Vec<Recording>>, Status> {
@@ -17,18 +17,27 @@ pub async fn get_recordings(pool: &State<DbPool>) -> Result<Json<Vec<Recording>>
 }
 
 #[get("/artists/<artist_id>/recordings")]
-pub async fn get_recordings_by_artist(pool: &State<DbPool>, artist_id: i32) -> Result<Json<Vec<Recording>>, Status> {
+pub async fn get_recordings_by_artist(
+    pool: &State<DbPool>,
+    artist_id: i32,
+) -> Result<Json<Vec<Recording>>, Status> {
     match RecordingService::get_recordings_by_artist(pool, artist_id).await {
         Ok(recordings) => Ok(Json(recordings)),
         Err(e) => {
-            Logger::error("API", &format!("Failed to get recordings for artist {}: {}", artist_id, e));
+            Logger::error(
+                "API",
+                &format!("Failed to get recordings for artist {}: {}", artist_id, e),
+            );
             Err(Status::InternalServerError)
         }
     }
 }
 
 #[get("/recordings/<id>")]
-pub async fn get_recording(pool: &State<DbPool>, id: i32) -> Result<Json<Option<Recording>>, Status> {
+pub async fn get_recording(
+    pool: &State<DbPool>,
+    id: i32,
+) -> Result<Json<Option<Recording>>, Status> {
     match RecordingService::get_recording(pool, id).await {
         Ok(recording) => Ok(Json(recording)),
         Err(e) => {

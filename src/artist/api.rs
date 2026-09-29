@@ -1,5 +1,5 @@
-use super::model::{Artist, CreateArtist, UpdateArtist, ArtistWithAwards, CreateArtistAward};
 use super::category::CategoryFilter;
+use super::model::{Artist, ArtistWithAwards, CreateArtist, CreateArtistAward, UpdateArtist};
 use super::service::ArtistService;
 use crate::auth::ModeratorUser;
 use crate::concert::model::Concert;
@@ -27,7 +27,10 @@ pub async fn get_artists(
 }
 
 #[get("/artists/<id>")]
-pub async fn get_artist(pool: &State<DbPool>, id: i32) -> Result<Json<Option<ArtistWithAwards>>, Status> {
+pub async fn get_artist(
+    pool: &State<DbPool>,
+    id: i32,
+) -> Result<Json<Option<ArtistWithAwards>>, Status> {
     match ArtistService::get_artist_by_id_with_awards(pool, id).await {
         Ok(artist) => Ok(Json(artist)),
         Err(e) => {
@@ -84,11 +87,17 @@ pub async fn delete_artist(
 }
 
 #[get("/artists/<id>/concerts")]
-pub async fn get_artist_concerts(pool: &State<DbPool>, id: i32) -> Result<Json<Vec<Concert>>, Status> {
+pub async fn get_artist_concerts(
+    pool: &State<DbPool>,
+    id: i32,
+) -> Result<Json<Vec<Concert>>, Status> {
     match ConcertService::get_concerts_by_artist(pool, id).await {
         Ok(concerts) => Ok(Json(concerts)),
         Err(e) => {
-            Logger::error("API", &format!("Failed to get concerts for artist {}: {}", id, e));
+            Logger::error(
+                "API",
+                &format!("Failed to get concerts for artist {}: {}", id, e),
+            );
             Err(Status::InternalServerError)
         }
     }
@@ -104,7 +113,10 @@ pub async fn create_artist_award(
     match ArtistService::create_artist_award(pool, id, award.into_inner()).await {
         Ok(award_id) => Ok(Json(award_id)),
         Err(e) => {
-            Logger::error("API", &format!("Failed to create award for artist {}: {}", id, e));
+            Logger::error(
+                "API",
+                &format!("Failed to create award for artist {}: {}", id, e),
+            );
             Err(Status::InternalServerError)
         }
     }
@@ -120,7 +132,13 @@ pub async fn delete_artist_award(
     match ArtistService::delete_artist_award(pool, award_id).await {
         Ok(rows) => Ok(Json(rows)),
         Err(e) => {
-            Logger::error("API", &format!("Failed to delete award {} for artist {}: {}", award_id, artist_id, e));
+            Logger::error(
+                "API",
+                &format!(
+                    "Failed to delete award {} for artist {}: {}",
+                    award_id, artist_id, e
+                ),
+            );
             Err(Status::InternalServerError)
         }
     }

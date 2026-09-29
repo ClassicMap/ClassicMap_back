@@ -1,4 +1,4 @@
-use super::model::{Venue, CreateVenue, UpdateVenue};
+use super::model::{CreateVenue, UpdateVenue, Venue};
 use super::repository::VenueRepository;
 use crate::db::DbPool;
 use crate::logger::Logger;
@@ -55,13 +55,8 @@ impl VenueService {
         offset: i64,
         limit: i64,
     ) -> Result<Vec<Venue>, String> {
-        VenueRepository::search_venues(
-            pool,
-            search_query.as_deref(),
-            offset,
-            limit
-        )
-        .await
-        .map_err(|e| format!("Failed to search venues: {}", e))
+        VenueRepository::search_venues(pool, search_query.as_deref(), offset, limit)
+            .await
+            .map_err(|e| format!("Failed to search venues: {}", e))
     }
 }

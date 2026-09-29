@@ -1,8 +1,8 @@
+use super::service::KopisService;
+use crate::logger::Logger;
+use chrono::{Local, Timelike};
 use sqlx::MySqlPool;
 use tokio::time::{sleep, Duration};
-use chrono::{Local, Timelike};
-use crate::logger::Logger;
-use super::service::KopisService;
 
 pub struct VenueSyncScheduler;
 
@@ -19,7 +19,10 @@ impl VenueSyncScheduler {
                 let wait_duration = Self::calculate_wait_until_next_run();
                 Logger::info(
                     "SCHEDULER",
-                    &format!("Next venue sync scheduled in {} hours", wait_duration.as_secs() / 3600)
+                    &format!(
+                        "Next venue sync scheduled in {} hours",
+                        wait_duration.as_secs() / 3600
+                    ),
                 );
 
                 sleep(wait_duration).await;
@@ -57,12 +60,10 @@ impl VenueSyncScheduler {
     /// 다음 새벽 2시까지 남은 시간 계산
     fn calculate_wait_until_next_run() -> Duration {
         let now = Local::now();
-        let target_hour = 2u32;  // 새벽 2시
+        let target_hour = 2u32; // 새벽 2시
 
         // 오늘 새벽 2시
-        let mut next_run = now.date_naive()
-            .and_hms_opt(target_hour, 0, 0)
-            .unwrap();
+        let mut next_run = now.date_naive().and_hms_opt(target_hour, 0, 0).unwrap();
 
         // 현재 시각을 타임존 고려하여 NaiveDateTime으로 변환
         let now_naive = now.naive_local();

@@ -1,9 +1,11 @@
-use crate::db::DbPool;
-use super::model::{Composer, CreateComposer, UpdateComposer, ComposerWithMajorPieces, ComposerWithPerformance};
+use super::model::{
+    Composer, ComposerWithMajorPieces, ComposerWithPerformance, CreateComposer, UpdateComposer,
+};
 use super::service::ComposerSort;
+use crate::db::DbPool;
 use crate::search::SearchText;
-use ClassicMap_back::comparison::repository::PUBLIC_COMPARISON_CTE;
 use sqlx::Error;
+use ClassicMap_back::comparison::repository::PUBLIC_COMPARISON_CTE;
 
 pub struct ComposerRepository;
 
@@ -38,8 +40,7 @@ const RECOMMENDED_ORDER: &str = "CASE c.tier
     COUNT(p.id) DESC,
     c.id ASC";
 
-const HIDE_EMPTY_COMPOSER: &str =
-    "EXISTS (SELECT 1 FROM pieces own WHERE own.composer_id = c.id)";
+const HIDE_EMPTY_COMPOSER: &str = "EXISTS (SELECT 1 FROM pieces own WHERE own.composer_id = c.id)";
 
 impl ComposerRepository {
     pub async fn find_all(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<Composer>, Error> {
@@ -52,13 +53,16 @@ impl ComposerRepository {
              ORDER BY c.birth_year ASC
              LIMIT ? OFFSET ?"
         ))
-            .bind(limit)
-            .bind(offset)
-            .fetch_all(pool)
-            .await
+        .bind(limit)
+        .bind(offset)
+        .fetch_all(pool)
+        .await
     }
 
-    pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<ComposerWithMajorPieces>, Error> {
+    pub async fn find_by_id(
+        pool: &DbPool,
+        id: i32,
+    ) -> Result<Option<ComposerWithMajorPieces>, Error> {
         sqlx::query_as::<_, ComposerWithMajorPieces>("SELECT * FROM v_composers_full WHERE id = ?")
             .bind(id)
             .fetch_optional(pool)
@@ -100,7 +104,7 @@ impl ComposerRepository {
             "UPDATE composers SET name = ?, full_name = ?, english_name = ?, period = ?, tier = ?,
              birth_year = ?, death_year = ?, nationality = ?, avatar_url = ?,
              cover_image_url = ?, bio = ?, style = ?, influence = ?
-             WHERE id = ?"
+             WHERE id = ?",
         )
         .bind(composer.name.unwrap_or(current.name))
         .bind(composer.full_name.unwrap_or(current.full_name))
@@ -147,7 +151,7 @@ impl ComposerRepository {
         sql.push_str(
             "SELECT c.*, COUNT(p.id) as piece_count
              FROM composers c
-             LEFT JOIN pieces p ON c.id = p.composer_id"
+             LEFT JOIN pieces p ON c.id = p.composer_id",
         );
 
         let mut where_clauses = vec![HIDE_EMPTY_COMPOSER.to_string()];
@@ -156,9 +160,8 @@ impl ComposerRepository {
 
         // Add search condition if query provided
         if let Some(text) = &search_text {
-            where_clauses.push(
-                "(c.name LIKE ? OR c.full_name LIKE ? OR c.english_name LIKE ?)".to_string()
-            );
+            where_clauses
+                .push("(c.name LIKE ? OR c.full_name LIKE ? OR c.english_name LIKE ?)".to_string());
             for _ in 0..3 {
                 bind_values.push(text.contains().to_string());
             }
@@ -212,7 +215,10 @@ impl ComposerRepository {
         query.fetch_all(pool).await
     }
 
-    pub async fn find_with_performances(pool: &DbPool, limit: i64) -> Result<Vec<ComposerWithPerformance>, Error> {
+    pub async fn find_with_performances(
+        pool: &DbPool,
+        limit: i64,
+    ) -> Result<Vec<ComposerWithPerformance>, Error> {
         sqlx::query_as::<_, ComposerWithPerformance>(
             "SELECT c.id AS composer_id, c.name AS composer_name,
                     c.avatar_url AS composer_avatar_url,
@@ -225,7 +231,7 @@ impl ComposerRepository {
              JOIN artists a ON a.id = pf.artist_id
              GROUP BY c.id, c.name, c.avatar_url, p.id, p.title
              ORDER BY RAND()
-             LIMIT ?"
+             LIMIT ?",
         )
         .bind(limit)
         .fetch_all(pool)

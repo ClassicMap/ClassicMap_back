@@ -1,5 +1,5 @@
+use super::model::{CreateVenue, UpdateVenue, Venue};
 use sqlx::MySqlPool;
-use super::model::{Venue, CreateVenue, UpdateVenue};
 
 pub struct VenueRepository;
 
@@ -17,7 +17,10 @@ impl VenueRepository {
             .await
     }
 
-    pub async fn get_by_kopis_id(pool: &MySqlPool, kopis_id: &str) -> Result<Option<Venue>, sqlx::Error> {
+    pub async fn get_by_kopis_id(
+        pool: &MySqlPool,
+        kopis_id: &str,
+    ) -> Result<Option<Venue>, sqlx::Error> {
         sqlx::query_as::<_, Venue>("SELECT * FROM venues WHERE kopis_id = ?")
             .bind(kopis_id)
             .fetch_optional(pool)
@@ -56,7 +59,7 @@ impl VenueRepository {
                 sqlx::query(
                     "UPDATE venues SET name = ?, address = ?, city = ?, province = ?, country = ?,
                      seats = ?, hall_count = ?, opening_year = ?, is_active = ?, data_source = ?
-                     WHERE kopis_id = ?"
+                     WHERE kopis_id = ?",
                 )
                 .bind(&venue.name)
                 .bind(&venue.address)
@@ -121,7 +124,11 @@ impl VenueRepository {
             return Ok(0);
         }
 
-        let set_clause = updates.iter().map(|field| format!("{} = ?", field)).collect::<Vec<_>>().join(", ");
+        let set_clause = updates
+            .iter()
+            .map(|field| format!("{} = ?", field))
+            .collect::<Vec<_>>()
+            .join(", ");
         let query = format!("UPDATE venues SET {} WHERE id = ?", set_clause);
 
         let mut q = sqlx::query(&query);
@@ -186,15 +193,11 @@ impl VenueRepository {
             .filter(|q| !q.trim().is_empty())
             .map(|q| format!("%{}%", q));
 
-        let mut query = String::from(
-            "SELECT * FROM venues WHERE 1=1"
-        );
+        let mut query = String::from("SELECT * FROM venues WHERE 1=1");
 
         // Text search across multiple fields
         if search_pattern.is_some() {
-            query.push_str(
-                " AND (name LIKE ? OR address LIKE ? OR city LIKE ?)"
-            );
+            query.push_str(" AND (name LIKE ? OR address LIKE ? OR city LIKE ?)");
         }
 
         // Order by name

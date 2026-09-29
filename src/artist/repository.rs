@@ -1,30 +1,28 @@
-use crate::db::DbPool;
-use super::model::{Artist, CreateArtist, UpdateArtist, ArtistWithAwards, ArtistAward, CreateArtistAward};
 use super::category::{stored_values_matching_label, CategoryFilter};
+use super::model::{
+    Artist, ArtistAward, ArtistWithAwards, CreateArtist, CreateArtistAward, UpdateArtist,
+};
+use crate::db::DbPool;
 use crate::search::SearchText;
 use sqlx::Error;
 
 pub struct ArtistRepository;
 
 impl ArtistRepository {
-        pub async fn find_all(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<Artist>, Error> {
-            sqlx::query_as::<_, Artist>(
-                "SELECT * FROM v_artists_full LIMIT ? OFFSET ?"
-            )
-                .bind(limit)
-                .bind(offset)
-                .fetch_all(pool)
-                .await
-        }
-    
-        pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<Artist>, Error> {
-            sqlx::query_as::<_, Artist>(
-                "SELECT * FROM v_artists_full WHERE id = ?"
-            )
+    pub async fn find_all(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<Artist>, Error> {
+        sqlx::query_as::<_, Artist>("SELECT * FROM v_artists_full LIMIT ? OFFSET ?")
+            .bind(limit)
+            .bind(offset)
+            .fetch_all(pool)
+            .await
+    }
+
+    pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<Artist>, Error> {
+        sqlx::query_as::<_, Artist>("SELECT * FROM v_artists_full WHERE id = ?")
             .bind(id)
             .fetch_optional(pool)
             .await
-        }
+    }
     pub async fn create(pool: &DbPool, artist: CreateArtist) -> Result<i32, Error> {
         let result = sqlx::query(
             "INSERT INTO artists (name, english_name, category, tier, nationality, rating, image_url, cover_image_url, birth_year, bio, style, concert_count, album_count, top_award_id)
@@ -94,7 +92,10 @@ impl ArtistRepository {
     }
 
     // Artist with awards
-    pub async fn find_by_id_with_awards(pool: &DbPool, id: i32) -> Result<Option<ArtistWithAwards>, Error> {
+    pub async fn find_by_id_with_awards(
+        pool: &DbPool,
+        id: i32,
+    ) -> Result<Option<ArtistWithAwards>, Error> {
         let artist_opt = Self::find_by_id(pool, id).await?;
 
         if let Some(artist) = artist_opt {
@@ -106,16 +107,23 @@ impl ArtistRepository {
     }
 
     // Award CRUD
-    pub async fn find_awards_by_artist(pool: &DbPool, artist_id: i32) -> Result<Vec<ArtistAward>, Error> {
+    pub async fn find_awards_by_artist(
+        pool: &DbPool,
+        artist_id: i32,
+    ) -> Result<Vec<ArtistAward>, Error> {
         sqlx::query_as::<_, ArtistAward>(
-            "SELECT * FROM artist_awards WHERE artist_id = ? ORDER BY display_order, year DESC"
+            "SELECT * FROM artist_awards WHERE artist_id = ? ORDER BY display_order, year DESC",
         )
         .bind(artist_id)
         .fetch_all(pool)
         .await
     }
 
-    pub async fn create_award(pool: &DbPool, artist_id: i32, award: CreateArtistAward) -> Result<i32, Error> {
+    pub async fn create_award(
+        pool: &DbPool,
+        artist_id: i32,
+        award: CreateArtistAward,
+    ) -> Result<i32, Error> {
         let result = sqlx::query(
             "INSERT INTO artist_awards (artist_id, year, award_name, award_type, organization, category, ranking, source, notes, display_order)
              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
@@ -170,9 +178,7 @@ impl ArtistRepository {
             .map(stored_values_matching_label)
             .unwrap_or_default();
 
-        let mut query = String::from(
-            "SELECT * FROM v_artists_full WHERE 1=1"
-        );
+        let mut query = String::from("SELECT * FROM v_artists_full WHERE 1=1");
 
         // Text search across multiple fields
         if search_text.is_some() {
@@ -252,7 +258,7 @@ impl ArtistRepository {
         sqlx::query_as::<_, Artist>(
             "SELECT * FROM v_artists_full
              WHERE name = ? OR english_name = ?
-             LIMIT 1"
+             LIMIT 1",
         )
         .bind(name)
         .bind(name)
