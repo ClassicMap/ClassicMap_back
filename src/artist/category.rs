@@ -85,6 +85,11 @@ pub const ARTIST_CATEGORIES: &[ArtistCategory] = &[
         source_values: &["호른"],
     },
     ArtistCategory {
+        code: "trumpeter",
+        label_ko: "트럼페터",
+        source_values: &["트럼펫"],
+    },
+    ArtistCategory {
         code: "percussionist",
         label_ko: "타악기 연주자",
         source_values: &["타악기", "마림바"],
@@ -112,6 +117,16 @@ pub const ARTIST_CATEGORIES: &[ArtistCategory] = &[
     ArtistCategory {
         code: "orchestra",
         label_ko: "오케스트라",
+        source_values: &[],
+    },
+    ArtistCategory {
+        code: "choir",
+        label_ko: "합창단",
+        source_values: &[],
+    },
+    ArtistCategory {
+        code: "ensemble",
+        label_ko: "실내악단",
         source_values: &[],
     },
 ];
@@ -243,6 +258,9 @@ mod tests {
         assert_eq!(known_code("mezzo_soprano"), Some("vocalist"));
         assert_eq!(known_code("baritone"), Some("vocalist"));
         assert_eq!(known_code("bass-baritone"), Some("vocalist"));
+        assert_eq!(known_code("choir"), Some("choir"));
+        assert_eq!(known_code("ensemble"), Some("ensemble"));
+        assert_eq!(known_code("trumpeter"), Some("trumpeter"));
         assert_eq!(known_code("기타"), Some("guitarist"));
         assert_eq!(known_code("conductor"), Some("conductor"));
     }
