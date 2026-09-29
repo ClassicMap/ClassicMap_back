@@ -25,7 +25,38 @@
         "anchor": "head",
         "seconds": 120
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "CBdltQz5eQM",
+          "artistId": 634,
+          "artistName": "André Previn",
+          "wikidata": "Q155712",
+          "orchestra": {
+            "name": "Royal Philharmonic Orchestra",
+            "wikidata": "Q856125"
+          }
+        },
+        {
+          "videoId": "eLvdpwvI0sU",
+          "artistId": 752,
+          "artistName": "Eugene Ormandy",
+          "wikidata": "Q344023",
+          "orchestra": {
+            "name": "The Philadelphia Orchestra",
+            "wikidata": "Q659181"
+          }
+        },
+        {
+          "videoId": "QcfXhTN3mg4",
+          "artistId": 775,
+          "artistName": "Leonard Slatkin",
+          "wikidata": "Q509870",
+          "orchestra": {
+            "name": "London Philharmonic Orchestra",
+            "wikidata": "Q863397"
+          }
+        }
+      ]
     },
     {
       "pieceId": 358,
@@ -50,7 +81,50 @@
         "anchor": "head",
         "seconds": 120
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "4eS8SQzuO0s",
+          "artistId": 288,
+          "artistName": "Mariss Jansons",
+          "wikidata": "Q158340",
+          "choir": {
+            "name": "Bavarian Radio Chorus",
+            "wikidata": "Q881144"
+          },
+          "orchestra": {
+            "name": "Bavarian Radio Symphony Orchestra",
+            "wikidata": "Q636159"
+          }
+        },
+        {
+          "videoId": "jpOnq_Egjp8",
+          "artistId": 220,
+          "artistName": "Simon Rattle",
+          "wikidata": "Q157814",
+          "choir": {
+            "name": "City of Birmingham Symphony Chorus",
+            "wikidata": "Q5009213"
+          },
+          "orchestra": {
+            "name": "City of Birmingham Symphony Orchestra",
+            "wikidata": "Q706774"
+          }
+        },
+        {
+          "videoId": "oW9RnGEfs7w",
+          "artistId": 627,
+          "artistName": "Gianandrea Noseda",
+          "wikidata": "Q2631069",
+          "choir": {
+            "name": "London Symphony Chorus",
+            "wikidata": "Q6670826"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
     },
     {
       "pieceId": 359,
@@ -69,13 +143,28 @@
         "measureStart": "",
         "measureEnd": "",
         "startCue": "무반주 첼로의 첫 음(작품 시작)",
-        "endCue": "발췌 끝"
+        "endCue": "악장 종결 음과 잔향"
       },
-      "excerpt": {
-        "anchor": "head",
-        "seconds": 120
-      },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "JylyM4LhFsQ",
+          "artistId": 734,
+          "artistName": "Mstislav Rostropovich",
+          "wikidata": "Q152043"
+        },
+        {
+          "videoId": "Pu51moF6dYo",
+          "artistId": 282,
+          "artistName": "Truls Mørk",
+          "wikidata": "Q527351"
+        },
+        {
+          "videoId": "ZX35HT7n30w",
+          "artistId": 278,
+          "artistName": "Alban Gerhardt",
+          "wikidata": "Q106657"
+        }
+      ]
     }
   ]
 }

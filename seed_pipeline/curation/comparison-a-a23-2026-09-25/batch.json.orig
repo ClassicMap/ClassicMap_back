@@ -1,0 +1,81 @@
+{
+  "batchId": "a-a23",
+  "note": "A tier A23. 브리튼 셋. 셋 다 10분을 넘어 발췌다. 358 전쟁 레퀴엠은 85분이라 1곡 Requiem aeternam 도입만 본다. 셋 다 시드 쌍둥이 병합분이다.",
+  "pieces": [
+    {
+      "pieceId": 356,
+      "workMbid": "ace72a0f-a21f-4ebd-a994-3957aaf14d9f",
+      "composerQid": "Q150767",
+      "titleKo": "청소년을 위한 관현악 입문 Op. 34",
+      "titleEn": "The Young Person’s Guide to the Orchestra, op. 34",
+      "composerNameEn": "Benjamin Britten",
+      "composerNameKo": "벤저민 브리튼",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "theme-tutti",
+        "type": "EXCERPT",
+        "nameKo": "퍼셀 주제 전 관현악 총주 제시",
+        "nameEn": "Theme, full orchestra statement",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "전 관현악 총주의 첫 화음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 358,
+      "workMbid": "145fc3a0-b3a1-4bcc-ac4e-adb7a3eed972",
+      "composerQid": "Q150767",
+      "titleKo": "전쟁 레퀴엠 Op. 66",
+      "titleEn": "War Requiem, op. 66",
+      "composerNameEn": "Benjamin Britten",
+      "composerNameKo": "벤저민 브리튼",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-requiem-aeternam",
+        "type": "EXCERPT",
+        "nameKo": "1곡 “Requiem aeternam” 도입",
+        "nameEn": "I. Requiem aeternam, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "종과 저현 위 합창의 첫 음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    },
+    {
+      "pieceId": 359,
+      "workMbid": "44506c7a-871f-4c7c-918f-00990699b8b6",
+      "composerQid": "Q150767",
+      "titleKo": "첼로 모음곡 1번 Op. 72",
+      "titleEn": "Cello Suite no. 1, op. 72",
+      "composerNameEn": "Benjamin Britten",
+      "composerNameKo": "벤저민 브리튼",
+      "role": "CELLIST",
+      "sector": {
+        "key": "canto-primo",
+        "type": "EXCERPT",
+        "nameKo": "1곡 “Canto primo”",
+        "nameEn": "Canto primo",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "무반주 첼로의 첫 음(작품 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": []
+    }
+  ]
+}
