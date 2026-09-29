@@ -39,10 +39,8 @@ pub async fn get_user_by_clerk_id(
     clerk_id: &str,
 ) -> Result<Json<Option<User>>, Status> {
     match UserService::get_user_by_clerk_id(pool, clerk_id).await {
-        Ok(user) => {
-            Logger::info("API", &format!("user: {}", user.clone().unwrap().email));
-            Ok(Json(user))
-        }
+        // 아직 웹훅으로 만들어지지 않은 사용자는 null 로 돌려준다(unwrap 패닉으로 500 이 났다)
+        Ok(user) => Ok(Json(user)),
         Err(e) => {
             Logger::error(
                 "API",
