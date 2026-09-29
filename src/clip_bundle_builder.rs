@@ -166,28 +166,50 @@ fn read_sidecar(cache_dir: &Path, key: &str) -> Result<ClipSidecar, String> {
     serde_json::from_str(&text).map_err(|error| format!("{} ({error})", path.display()))
 }
 
-/// 클립을 만들게 하고 Range 요청이 되는지 확인한다.
+/// 클립을 만들게 하고, 그다음 Range 요청이 되는지 확인한다.
+///
+/// **요청을 둘로 나누는 까닭.** 처음에는 `Range: bytes=0-1` 하나로 만들기와 확인을
+/// 같이 하려 했는데, **Range 요청은 클립을 캐시에 만들지 않는다.** 클리퍼가 부분
+/// 응답만 흘려보내고 파일과 사이드카를 남기지 않아, 캐시에 이미 있던 것만 성공하고
+/// 없던 것은 사이드카를 못 찾아 전부 실패했다(9건 중 7건). 먼저 통째로 받아
+/// 만들게 하고, 그 뒤에 Range 를 확인한다.
 async fn build_and_verify(
     client: &reqwest::Client,
     url: &str,
     token: &str,
 ) -> Result<bool, String> {
-    let built = client
+    let mut built = client
         .get(url)
         .bearer_auth(token)
-        .header(reqwest::header::RANGE, "bytes=0-1")
         .send()
         .await
         .map_err(|error| error.to_string())?;
 
     let status = built.status();
     if !status.is_success() {
-        return Err(format!("{status} — {url}"));
+        return Err(format!("만들기 {status} — {url}"));
     }
+    // 본문을 끝까지 비워야 클리퍼가 파일 쓰기를 마친다. 메모리에 쌓지 않고 흘려버린다
+    // — 45분 영상의 구간도 수십 MB 라 파드 한도(256Mi)에 담아 둘 이유가 없다.
+    while let Some(_chunk) = built
+        .chunk()
+        .await
+        .map_err(|error| format!("본문을 받는 중 끊김: {error}"))?
+    {}
+
+    let verified = client
+        .get(url)
+        .bearer_auth(token)
+        .header(reqwest::header::RANGE, "bytes=0-1")
+        .send()
+        .await
+        .map_err(|error| format!("Range 확인 실패: {error}"))?;
+
     // 206 과 Content-Range 가 함께 와야 Range 를 지원하는 것이다.
-    let range_ok = status == reqwest::StatusCode::PARTIAL_CONTENT
-        && built.headers().contains_key(reqwest::header::CONTENT_RANGE);
-    Ok(range_ok)
+    Ok(verified.status() == reqwest::StatusCode::PARTIAL_CONTENT
+        && verified
+            .headers()
+            .contains_key(reqwest::header::CONTENT_RANGE))
 }
 
 pub async fn build_clip_bundle(
