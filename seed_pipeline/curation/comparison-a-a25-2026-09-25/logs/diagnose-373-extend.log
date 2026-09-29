@@ -1,0 +1,24 @@
+### 검출값 그대로
+   AhbutHpw↔ri8weqSl  0.0796
+   AhbutHpw↔MeeJoeN3  0.0808
+   ri8weqSl↔MeeJoeN3  0.0735
+   최대 0.0808   길이 AhbutHpw:512.2s ri8weqSl:480.0s MeeJoeN3:516.2s
+
+### 종결부까지 늘림 (마주어 486.5 · 슬래트킨 522.5)
+   AhbutHpw↔ri8weqSl  0.0791
+   AhbutHpw↔MeeJoeN3  0.0785
+   ri8weqSl↔MeeJoeN3  0.0733
+   최대 0.0791   길이 AhbutHpw:512.2s ri8weqSl:481.7s MeeJoeN3:520.2s
+
+### 슬래트킨만 늘림
+   AhbutHpw↔ri8weqSl  0.0796
+   AhbutHpw↔MeeJoeN3  0.0785
+   ri8weqSl↔MeeJoeN3  0.0734
+   최대 0.0796   길이 AhbutHpw:512.2s ri8weqSl:480.0s MeeJoeN3:520.2s
+
+### 잔향 덜 (마주어 486.0 · 슬래트킨 521.5)
+   AhbutHpw↔ri8weqSl  0.0789
+   AhbutHpw↔MeeJoeN3  0.0792
+   ri8weqSl↔MeeJoeN3  0.0734
+   최대 0.0792   길이 AhbutHpw:512.2s ri8weqSl:481.2s MeeJoeN3:519.2s
+

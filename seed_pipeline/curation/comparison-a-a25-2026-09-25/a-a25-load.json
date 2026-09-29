@@ -1,0 +1,25 @@
+{
+  "status": "succeeded",
+  "runId": "e03ed478-c560-4d74-9659-937d2195d5b4",
+  "bundlePath": "/Users/kdh/.cache/classicmap/comparison/a-a25/a-a25-candidates.jsonl",
+  "rowCount": 9,
+  "dryRun": false,
+  "mutations": {
+    "performanceSources": 9,
+    "performanceSectors": 3,
+    "performanceCandidates": 9,
+    "performanceCredits": 18,
+    "performances": 9,
+    "clipJobs": 9,
+    "total": 57
+  },
+  "plannedMutations": {
+    "performanceSources": 9,
+    "performanceSectors": 3,
+    "performanceCandidates": 9,
+    "performanceCredits": 18,
+    "performances": 9,
+    "clipJobs": 9,
+    "total": 57
+  }
+}

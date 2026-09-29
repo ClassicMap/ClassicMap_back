@@ -1,0 +1,28 @@
+### 검출값 그대로
+   AhbutHpw↔ri8weqSl  0.0796
+   AhbutHpw↔MeeJoeN3  0.0808
+   ri8weqSl↔MeeJoeN3  0.0735
+   최대 0.0808
+   길이 {'AhbutHpwEh8': '512.2s', 'ri8weqSllms': '480.0s', 'MeeJoeN3y9c': '516.2s'}
+
+### 2악장 머리를 떼고 잔향까지
+   AhbutHpw↔ri8weqSl  0.0786
+   AhbutHpw↔MeeJoeN3  0.0829
+   ri8weqSl↔MeeJoeN3  0.0767
+   최대 0.0829
+   길이 {'AhbutHpwEh8': '509.2s', 'ri8weqSllms': '481.7s', 'MeeJoeN3y9c': '511.1s'}
+
+### 2악장 머리만 떼고 마주어는 그대로
+   AhbutHpw↔ri8weqSl  0.0787
+   AhbutHpw↔MeeJoeN3  0.0829
+   ri8weqSl↔MeeJoeN3  0.0761
+   최대 0.0829
+   길이 {'AhbutHpwEh8': '509.2s', 'ri8weqSllms': '480.0s', 'MeeJoeN3y9c': '511.1s'}
+
+### 더 바짝 떼기
+   AhbutHpw↔ri8weqSl  0.0786
+   AhbutHpw↔MeeJoeN3  0.0861
+   ri8weqSl↔MeeJoeN3  0.0787
+   최대 0.0861
+   길이 {'AhbutHpwEh8': '508.5s', 'ri8weqSllms': '481.7s', 'MeeJoeN3y9c': '510.5s'}
+

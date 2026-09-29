@@ -22,7 +22,7 @@
 -- 202608050203 과 같은 방식이다.
 
 INSERT INTO authority_entities (id, entity_kind, editorial_status, origin, editor_locked)
-SELECT '2c5d78b9-79ae-589e-bd94-1ccc7119c02a', 'group', 'IDENTIFIERS_MATCHED', 'manual', 1
+SELECT '2c5d78b9-79ae-589e-bd94-1ccc7119c02a', 'ensemble', 'IDENTIFIERS_MATCHED', 'manual', 1
 WHERE NOT EXISTS (SELECT 1 FROM (SELECT id FROM authority_entities) existing WHERE existing.id = '2c5d78b9-79ae-589e-bd94-1ccc7119c02a');
 
 INSERT INTO entity_names
@@ -57,7 +57,7 @@ WHERE NOT EXISTS (SELECT 1 FROM (SELECT authority_entity_id FROM artists) existi
 
 
 INSERT INTO authority_entities (id, entity_kind, editorial_status, origin, editor_locked)
-SELECT '1d5f1a14-31f6-54db-80e6-9514f9049ff9', 'group', 'IDENTIFIERS_MATCHED', 'manual', 1
+SELECT '1d5f1a14-31f6-54db-80e6-9514f9049ff9', 'ensemble', 'IDENTIFIERS_MATCHED', 'manual', 1
 WHERE NOT EXISTS (SELECT 1 FROM (SELECT id FROM authority_entities) existing WHERE existing.id = '1d5f1a14-31f6-54db-80e6-9514f9049ff9');
 
 INSERT INTO entity_names

@@ -1,0 +1,41 @@
+warning: unused import: `ConcertWithArtists`
+ --> src/concert/api.rs:2:43
+  |
+2 |     ConcertListItem, ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails, CreateConcert,
+  |                                           ^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `code`
+   --> src/concert/repository.rs:561:33
+    |
+561 |         let query = if let Some(code) = area_code {
+    |                                 ^^^^ help: if this is intentional, prefix it with an underscore: `_code`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+{
+  "status": "succeeded",
+  "runId": "e03ed478-c560-4d74-9659-937d2195d5b4",
+  "bundlePath": "/Users/kdh/.cache/classicmap/comparison/a-a25/a-a25-candidates.jsonl",
+  "rowCount": 9,
+  "dryRun": false,
+  "mutations": {
+    "performanceSources": 9,
+    "performanceSectors": 3,
+    "performanceCandidates": 9,
+    "performanceCredits": 18,
+    "performances": 9,
+    "clipJobs": 9,
+    "total": 57
+  },
+  "plannedMutations": {
+    "performanceSources": 9,
+    "performanceSectors": 3,
+    "performanceCandidates": 9,
+    "performanceCredits": 18,
+    "performances": 9,
+    "clipJobs": 9,
+    "total": 57
+  }
+}

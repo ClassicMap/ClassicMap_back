@@ -187,3 +187,27 @@ SQL 파일은 실행 전에 위험 구문을 확인한다.
 ```bash
 grep -inE 'USE |DROP |TRUNCATE |DELETE |ALTER ' <파일>
 ```
+
+### 스크래치패드는 세션이 재시작되면 지워진다 (2026-09-29)
+
+`06-subagent.md` 의 "중간 결과를 파일로 남긴다" 는 지시가 **그 파일이 스크래치패드에
+있으면 아무 값을 못 한다.** A25 에서 세션 재시작으로 스크래치패드가 통째로 지워져
+WAV 9개와 검출 결과를 잃고 오디오를 다시 받았다.
+
+- `COMPARISON_WORK_DIR` 는 `~/.cache/classicmap/comparison/<batchId>` 를 쓴다
+- 로그는 만드는 즉시 배치 폴더의 `logs/` 로 복사한다. 거기는 저장소라 남는다
+- 측정값(표)은 로그 파일과 보고서에 **숫자로** 적는다. WAV 가 없어도 다시 재지 않게 된다
+
+### authority_entities.entity_kind 는 person 과 ensemble 둘뿐이다 (2026-09-29)
+
+`group` 으로 적어 `chk_authority_entities_kind` 를 깼다. **악단도 합창단도 4중주단도
+`ensemble` 이다.** 확인은 이렇게 한다.
+
+```sql
+SELECT DISTINCT entity_kind FROM authority_entities;
+```
+
+### build_prewarm.py 의 start·end 는 초다 (2026-09-29)
+
+DB 에서 읽은 `start_ms`·`end_ms` 를 그대로 넘기면 안 된다. 1000 으로 나눠 넘긴다.
+넘기지 않으면 600초 검사에 걸려 죽는다(그래서 사고로는 이어지지 않는다).

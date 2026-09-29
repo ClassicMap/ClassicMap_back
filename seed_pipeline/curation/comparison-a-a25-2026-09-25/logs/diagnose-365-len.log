@@ -1,0 +1,18 @@
+### 365 발췌 길이별 (셋 다 자기 시작에서 같은 길이)
+  길이   jDcMAL↔XmV5Sl  jDcMAL↔5WJoNx  XmV5Sl↔5WJoNx     최대
+    45s         0.1303         0.1158         0.1042    0.1303
+    60s         0.1153         0.1062         0.1073    0.1153
+    75s         0.1118         0.1076         0.1037    0.1118
+    90s         0.1150         0.1175         0.1245    0.1245
+   120s         0.1177         0.1148         0.1262    0.1262
+   150s         0.1052         0.1081         0.1215    0.1215
+   180s         0.1007         0.1032         0.1184    0.1184
+   240s         0.1222         0.0964         0.1283    0.1283
+   300s         0.1043         0.0916         0.1128    0.1128
+
+### 365 부분열 DTW 로 옮긴 창 (run_excerpt 방식) 의 길이별
+  60s locate 실패 unsupported operand type(s) for *: 'NoneType' and 'int'
+  90s locate 실패 unsupported operand type(s) for *: 'NoneType' and 'int'
+  120s locate 실패 unsupported operand type(s) for *: 'NoneType' and 'int'
+  150s locate 실패 unsupported operand type(s) for *: 'NoneType' and 'int'
+  180s locate 실패 unsupported operand type(s) for *: 'NoneType' and 'int'

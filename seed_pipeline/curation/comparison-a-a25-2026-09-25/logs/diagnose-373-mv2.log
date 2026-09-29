@@ -1,0 +1,16 @@
+/Users/kdh/.cache/uv/archive-v0/rEqL30bqM-CqsLkt/lib/python3.12/site-packages/librosa/core/constantq.py:1202: UserWarning: n_fft=1024 is too large for input signal of length=690
+  D = stft(
+### 꼬리 큰 대목끼리
+  MTT[513.95-515.95] ↔ 슬래트킨[513.95-515.95]  0.4964
+
+### 같은 2초를 마주어 트랙 안 여러 곳과 맞춰 본다 (마주어는 1악장만 든 트랙)
+  마주어 440-442s  0.1911
+  마주어 450-452s  0.2582
+  마주어 460-462s  0.3346
+  마주어 470-472s  0.3759
+  마주어 480-482s  0.2999
+  마주어 490-492s  0.1555
+  마주어 안 최저 492-494s  0.1220
+
+### 대조 — 1악장 안의 아무 2초는 마주어 안에서 얼마나 붙는가
+  MTT[300-302] 의 마주어 안 최저 298-300s  0.0526
