@@ -102,7 +102,7 @@ pub const ARTIST_CATEGORIES: &[ArtistCategory] = &[
     ArtistCategory {
         code: "vocalist",
         label_ko: "성악가",
-        source_values: &["목소리", "soprano", "tenor"],
+        source_values: &["목소리", "soprano", "mezzo_soprano", "tenor", "baritone", "bass-baritone"],
     },
     ArtistCategory {
         code: "conductor",
@@ -239,6 +239,10 @@ mod tests {
         assert_eq!(known_code("피아노"), Some("pianist"));
         assert_eq!(known_code("피아니스트"), Some("pianist"));
         assert_eq!(known_code("목소리"), Some("vocalist"));
+        // 비교 시드 수동 등록분은 음역을 그대로 적었다
+        assert_eq!(known_code("mezzo_soprano"), Some("vocalist"));
+        assert_eq!(known_code("baritone"), Some("vocalist"));
+        assert_eq!(known_code("bass-baritone"), Some("vocalist"));
         assert_eq!(known_code("기타"), Some("guitarist"));
         assert_eq!(known_code("conductor"), Some("conductor"));
     }
