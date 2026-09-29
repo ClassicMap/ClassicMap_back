@@ -9,7 +9,9 @@ pub fn favicon() -> (ContentType, &'static [u8]) {
 
 #[get("/delete-account")]
 pub fn delete_account() -> (ContentType, &'static str) {
-    (ContentType::HTML, r#"<!DOCTYPE html>
+    (
+        ContentType::HTML,
+        r#"<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="utf-8">
@@ -56,5 +58,6 @@ pub fn delete_account() -> (ContentType, &'static str) {
         </div>
     </div>
 </body>
-</html>"#)
+</html>"#,
+    )
 }

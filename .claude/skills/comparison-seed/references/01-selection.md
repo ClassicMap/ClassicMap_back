@@ -327,3 +327,27 @@ A28 에서 피아졸라 셋을 막고 나서 방향을 바꿨다. **편성이 �
 오스티나토·즉흥이 많다)에 걸린 곡이다. **비용이 높은 다른 갈래는 해당하지 않는다** —
 A26 369(회전이 평평해 chroma 가 뜻을 잃음)처럼 재는 자가 무너진 곡은 편곡을 나란히
 놓아도 근거가 서지 않는다.
+
+## 판마다 role 을 달리 쓸 수 있다 (2026-09-29)
+
+편곡 비교 구간에서는 판마다 앞선 악기가 다르다. **배치 정의의 `videos[].role` 이
+곡의 `role` 을 덮는다.**
+
+```json
+{"pieceId": 228, "role": "VOCALIST",
+ "videos": [
+   {"videoId": "…", "artistName": "Kiri Te Kanawa",  "role": "VOCALIST",  "accompanist": {…}},
+   {"videoId": "…", "artistName": "Rostropovich",    "role": "CELLIST",   "accompanist": {…}},
+   {"videoId": "…", "artistName": "Cologne New Phil", "role": "ORCHESTRA"}]}
+```
+
+적재기는 이미 크레딧마다 `role_code` 를 읽고(`canonical_credit_role`)
+`performance_credits.role_code` 도 크레딧마다 따로 있다. 막고 있던 것은
+`build_candidates.py` 가 `piece["role"]` 을 세 영상에 똑같이 붙이던 한 줄이었다.
+
+**가사 없는 곡에서 특히 값을 한다** — 228 보칼리제는 모음 하나로만 부르는 가곡이라
+목소리·첼로·관현악이 같은 선율을 나눠 갖는다. role 이 곡마다 하나였을 때는 이 셋을
+한 구간에 둘 수 없었다.
+
+곡의 `role` 은 그대로 둔다. 원곡의 편성을 가리키는 값이고, 판별 `role` 이 없는 영상은
+그것을 물려받는다.

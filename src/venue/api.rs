@@ -1,8 +1,8 @@
-use rocket::{State, serde::json::Json};
+use super::model::{CreateVenue, UpdateVenue, Venue};
+use super::service::VenueService;
 use crate::auth::ModeratorUser;
 use crate::db::DbPool;
-use super::model::{Venue, CreateVenue, UpdateVenue};
-use super::service::VenueService;
+use rocket::{serde::json::Json, State};
 
 #[get("/venues")]
 pub async fn get_venues(pool: &State<DbPool>) -> Result<Json<Vec<Venue>>, String> {

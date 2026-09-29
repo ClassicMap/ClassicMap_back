@@ -1,5 +1,5 @@
+use super::model::{CreateHall, Hall};
 use sqlx::MySqlPool;
-use super::model::{Hall, CreateHall};
 
 pub struct HallRepository;
 
@@ -17,14 +17,20 @@ impl HallRepository {
             .await
     }
 
-    pub async fn get_by_venue_id(pool: &MySqlPool, venue_id: i32) -> Result<Vec<Hall>, sqlx::Error> {
+    pub async fn get_by_venue_id(
+        pool: &MySqlPool,
+        venue_id: i32,
+    ) -> Result<Vec<Hall>, sqlx::Error> {
         sqlx::query_as::<_, Hall>("SELECT * FROM halls WHERE venue_id = ? ORDER BY name")
             .bind(venue_id)
             .fetch_all(pool)
             .await
     }
 
-    pub async fn get_by_kopis_id(pool: &MySqlPool, kopis_id: &str) -> Result<Option<Hall>, sqlx::Error> {
+    pub async fn get_by_kopis_id(
+        pool: &MySqlPool,
+        kopis_id: &str,
+    ) -> Result<Option<Hall>, sqlx::Error> {
         sqlx::query_as::<_, Hall>("SELECT * FROM halls WHERE kopis_id = ?")
             .bind(kopis_id)
             .fetch_optional(pool)
@@ -33,7 +39,7 @@ impl HallRepository {
 
     pub async fn create(pool: &MySqlPool, hall: CreateHall) -> Result<i32, sqlx::Error> {
         let result = sqlx::query(
-            "INSERT INTO halls (venue_id, kopis_id, name, seats, is_active) VALUES (?, ?, ?, ?, ?)"
+            "INSERT INTO halls (venue_id, kopis_id, name, seats, is_active) VALUES (?, ?, ?, ?, ?)",
         )
         .bind(hall.venue_id)
         .bind(&hall.kopis_id)

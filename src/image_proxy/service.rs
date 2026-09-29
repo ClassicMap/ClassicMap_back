@@ -1,9 +1,9 @@
+use crate::db::DbPool;
+use crate::logger::Logger;
 use std::collections::hash_map::DefaultHasher;
 use std::hash::{Hash, Hasher};
 use std::path::{Path, PathBuf};
 use tokio::fs;
-use crate::db::DbPool;
-use crate::logger::Logger;
 
 const CACHE_DIR: &str = "cache/images";
 const ALLOWED_DOMAINS: &[&str] = &[
@@ -76,12 +76,16 @@ impl ImageProxyService {
         let (bytes, content_type) = 'retry: {
             for attempt in 0..max_retries {
                 if attempt > 0 {
-                    tokio::time::sleep(std::time::Duration::from_millis(500 * (1 << attempt))).await;
+                    tokio::time::sleep(std::time::Duration::from_millis(500 * (1 << attempt)))
+                        .await;
                 }
 
                 let response = match client
                     .get(url)
-                    .header("User-Agent", "ClassicMapBot/1.0 (https://classicmap.app; contact@classicmap.app)")
+                    .header(
+                        "User-Agent",
+                        "ClassicMapBot/1.0 (https://classicmap.app; contact@classicmap.app)",
+                    )
                     .send()
                     .await
                 {
@@ -140,7 +144,7 @@ impl ImageProxyService {
              UNION
              SELECT image_url AS url FROM artists WHERE image_url IS NOT NULL
              UNION
-             SELECT cover_image_url AS url FROM artists WHERE cover_image_url IS NOT NULL"
+             SELECT cover_image_url AS url FROM artists WHERE cover_image_url IS NOT NULL",
         )
         .fetch_all(pool)
         .await
@@ -172,11 +176,17 @@ impl ImageProxyService {
             match Self::get_or_fetch(url).await {
                 Ok(_) => {
                     cached += 1;
-                    Logger::info("CACHE", &format!("[{}/{}] 캐싱 완료: {}", i + 1, total, url));
+                    Logger::info(
+                        "CACHE",
+                        &format!("[{}/{}] 캐싱 완료: {}", i + 1, total, url),
+                    );
                 }
                 Err(e) => {
                     failed += 1;
-                    Logger::error("CACHE", &format!("[{}/{}] 캐싱 실패: {} - {}", i + 1, total, url, e));
+                    Logger::error(
+                        "CACHE",
+                        &format!("[{}/{}] 캐싱 실패: {} - {}", i + 1, total, url, e),
+                    );
                 }
             }
 
@@ -184,12 +194,20 @@ impl ImageProxyService {
             tokio::time::sleep(std::time::Duration::from_millis(200)).await;
         }
 
-        Logger::success("CACHE", &format!(
-            "캐시 워밍업 완료: 총 {} / 신규 {} / 기존 {} / 실패 {}",
-            total, cached, skipped, failed
-        ));
+        Logger::success(
+            "CACHE",
+            &format!(
+                "캐시 워밍업 완료: 총 {} / 신규 {} / 기존 {} / 실패 {}",
+                total, cached, skipped, failed
+            ),
+        );
 
-        Ok(WarmupResult { total: total as u32, cached, skipped, failed })
+        Ok(WarmupResult {
+            total: total as u32,
+            cached,
+            skipped,
+            failed,
+        })
     }
 
     fn guess_content_type(path: &Path) -> String {

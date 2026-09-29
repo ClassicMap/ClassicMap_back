@@ -1,5 +1,5 @@
+use super::model::{CreatePiece, Piece, PieceSearchResult, UpdatePiece};
 use crate::db::DbPool;
-use super::model::{Piece, CreatePiece, PieceSearchResult, UpdatePiece};
 use crate::search::SearchText;
 use sqlx::Error;
 
@@ -32,9 +32,9 @@ impl PieceRepository {
             "SELECT * FROM pieces WHERE composer_id = ? {}",
             Self::COMPOSER_PIECES_ORDER
         ))
-            .bind(composer_id)
-            .fetch_all(pool)
-            .await
+        .bind(composer_id)
+        .fetch_all(pool)
+        .await
     }
 
     pub async fn find_page_by_composer_id(
@@ -47,11 +47,11 @@ impl PieceRepository {
             "SELECT * FROM pieces WHERE composer_id = ? {} LIMIT ? OFFSET ?",
             Self::COMPOSER_PIECES_ORDER
         ))
-            .bind(composer_id)
-            .bind(limit)
-            .bind(offset)
-            .fetch_all(pool)
-            .await
+        .bind(composer_id)
+        .bind(limit)
+        .bind(offset)
+        .fetch_all(pool)
+        .await
     }
 
     /// 제목·영문 제목·별칭·작품번호·작곡가 이름으로 찾는다.
@@ -172,7 +172,7 @@ impl PieceRepository {
                 spotify_url = COALESCE(?, spotify_url),
                 apple_music_url = COALESCE(?, apple_music_url),
                 youtube_music_url = COALESCE(?, youtube_music_url)
-             WHERE id = ?"
+             WHERE id = ?",
         )
         .bind(&piece.title)
         .bind(&piece.title_en)
@@ -201,4 +201,3 @@ impl PieceRepository {
         Ok(result.rows_affected())
     }
 }
-

@@ -1,0 +1,87 @@
+# 비교 영상 배치 하나를 클러스터 안에서 적재·발행한다.
+#
+#   BATCH=comparison-a-a18-2026-09-25
+#   sed "s|__BATCH__|$BATCH|g" deploy/seed-publish-job.yaml | kubectl apply -f -
+#   kubectl -n homeserver logs -f job/seed-publish-$BATCH
+#
+# 끝나면 지운다.
+#   kubectl -n homeserver delete job seed-publish-$BATCH
+#
+# 노트북에서 하던 다섯 단계를 대신한다 — 포트포워딩, cargo 로컬 실행,
+# prewarm.mjs, kubectl cp, 배치마다 쓰던 approve 마이그레이션.
+#
+# 자격증명은 이 파일에 없다. DB 비밀번호는 secret/db-credentials 에서,
+# 빌드 토큰은 secret/clipper-youtube 에서 그대로 받는다.
+#
+# 클립 캐시 PVC 는 ReadWriteOnce 다. 지금 클러스터는 노드가 lima-homeserver
+# 하나뿐이라 문제가 없지만, 노드가 늘면 클리퍼와 같은 노드에 붙도록
+# podAffinity 를 넣어야 한다.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: seed-publish-__BATCH__
+  namespace: homeserver
+  labels:
+    app: classicmap-seed
+spec:
+  # 절반만 발행되는 것이 가장 나쁘다. 재시도하지 않고 사람이 보고 판단한다.
+  backoffLimit: 0
+  # 끝난 Job 은 하루 뒤 스스로 지워진다.
+  ttlSecondsAfterFinished: 86400
+  template:
+    metadata:
+      labels:
+        app: classicmap-seed
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: seed-publish
+          image: ghcr.io/classicmap/classicmap-back:latest
+          # :latest 라서 매번 새로 받아야 방금 푸시한 후보가 들어온다.
+          imagePullPolicy: Always
+          command: ["/bin/sh", "/app/seed_publish.sh", "/app/seed/__BATCH__"]
+          # secret/classicmap-back 을 envFrom 으로 붙이지 않는다. 그 안의
+          # DATABASE_URL 은 호스트가 classicmap_mysql(밑줄)로 적혀 있어 해소되지
+          # 않는다 — 서비스 이름은 classicmap-mysql(하이픈)이다. Deployment 는
+          # 리터럴 env 로 덮어써서 가려져 있을 뿐이다. 여기서는 부품만 주고
+          # src/db/mod.rs 가 퍼센트 인코딩해 주소를 짓게 한다.
+          env:
+            - name: MYSQL_HOST
+              value: classicmap-mysql
+            - name: MYSQL_PORT
+              value: "3306"
+            - name: MYSQL_DATABASE
+              value: classicmap
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-credentials
+                  key: CLASSICMAP_MYSQL_ROOT_PASSWORD
+            - name: VIDEO_CLIP_BUILD_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: clipper-youtube
+                  key: build-token
+            - name: CLIP_BASE_URL
+              value: http://clipper:3200
+            - name: CLIP_PUBLIC_BASE_URL
+              value: https://kang1027.com/classicmap/clips
+            - name: CLIP_CACHE_DIR
+              value: /var/cache/classicmap-video-clips
+          volumeMounts:
+            - name: clip-cache
+              mountPath: /var/cache/classicmap-video-clips
+              # 클립을 만드는 것은 클리퍼다. 이 Job 은 읽기만 한다.
+              readOnly: true
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              memory: 256Mi
+      volumes:
+        - name: clip-cache
+          persistentVolumeClaim:
+            claimName: clipper-cache

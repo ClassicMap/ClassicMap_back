@@ -1,5 +1,5 @@
+use super::model::{CreateRecording, Recording, UpdateRecording};
 use crate::db::DbPool;
-use super::model::{Recording, CreateRecording, UpdateRecording};
 use sqlx::Error;
 
 pub struct RecordingRepository;
@@ -54,12 +54,14 @@ impl RecordingRepository {
         use sqlx::types::JsonValue;
 
         // release_date 문자열을 NaiveDate로 파싱
-        let release_date_parsed = recording.release_date
+        let release_date_parsed = recording
+            .release_date
             .as_ref()
             .and_then(|s| NaiveDate::parse_from_str(s, "%Y-%m-%d").ok());
 
         // genre_names 문자열을 JSON으로 파싱
-        let genre_names_json: Option<JsonValue> = recording.genre_names
+        let genre_names_json: Option<JsonValue> = recording
+            .genre_names
             .as_ref()
             .and_then(|s| serde_json::from_str(s).ok());
 
@@ -102,7 +104,7 @@ impl RecordingRepository {
         sqlx::query(
             "INSERT IGNORE INTO recording_contributors
              (recording_id, track_id, artist_id, role_code, is_primary, display_order)
-             VALUES (?, NULL, ?, 'primary_performer', TRUE, 0)"
+             VALUES (?, NULL, ?, 'primary_performer', TRUE, 0)",
         )
         .bind(recording_id)
         .bind(artist_id)
@@ -125,12 +127,14 @@ impl RecordingRepository {
         let current = current.unwrap();
 
         // release_date 문자열을 NaiveDate로 파싱
-        let release_date_parsed = recording.release_date
+        let release_date_parsed = recording
+            .release_date
             .as_ref()
             .and_then(|s| NaiveDate::parse_from_str(s, "%Y-%m-%d").ok());
 
         // genre_names 문자열을 JSON으로 파싱
-        let genre_names_json: Option<JsonValue> = recording.genre_names
+        let genre_names_json: Option<JsonValue> = recording
+            .genre_names
             .as_ref()
             .and_then(|s| serde_json::from_str(s).ok());
 

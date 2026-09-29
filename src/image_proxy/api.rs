@@ -1,9 +1,9 @@
+use super::service::{ImageProxyService, WarmupResult};
+use crate::db::DbPool;
+use crate::logger::Logger;
 use rocket::http::{ContentType, Status};
 use rocket::serde::json::Json;
 use rocket::State;
-use crate::db::DbPool;
-use crate::logger::Logger;
-use super::service::{ImageProxyService, WarmupResult};
 
 #[get("/image-proxy?<url>")]
 pub async fn image_proxy(url: String) -> Result<(ContentType, Vec<u8>), Status> {

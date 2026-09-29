@@ -4,7 +4,9 @@ use rocket::State;
 
 use crate::auth::ModeratorUser;
 
-use super::model::{CreatePerformanceSector, PerformanceSector, PerformanceSectorWithCount, UpdatePerformanceSector};
+use super::model::{
+    CreatePerformanceSector, PerformanceSector, PerformanceSectorWithCount, UpdatePerformanceSector,
+};
 use super::repository::DbPool;
 use super::service::PerformanceSectorService;
 

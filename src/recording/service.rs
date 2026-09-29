@@ -1,6 +1,6 @@
-use crate::db::DbPool;
-use super::model::{Recording, CreateRecording, UpdateRecording};
+use super::model::{CreateRecording, Recording, UpdateRecording};
 use super::repository::RecordingRepository;
+use crate::db::DbPool;
 
 pub struct RecordingService;
 
@@ -17,19 +17,29 @@ impl RecordingService {
             .map_err(|e| e.to_string())
     }
 
-    pub async fn get_recordings_by_artist(pool: &DbPool, artist_id: i32) -> Result<Vec<Recording>, String> {
+    pub async fn get_recordings_by_artist(
+        pool: &DbPool,
+        artist_id: i32,
+    ) -> Result<Vec<Recording>, String> {
         RecordingRepository::find_by_artist(pool, artist_id)
             .await
             .map_err(|e| e.to_string())
     }
 
-    pub async fn create_recording(pool: &DbPool, recording: CreateRecording) -> Result<u64, String> {
+    pub async fn create_recording(
+        pool: &DbPool,
+        recording: CreateRecording,
+    ) -> Result<u64, String> {
         RecordingRepository::create(pool, recording)
             .await
             .map_err(|e| e.to_string())
     }
 
-    pub async fn update_recording(pool: &DbPool, id: i32, recording: UpdateRecording) -> Result<u64, String> {
+    pub async fn update_recording(
+        pool: &DbPool,
+        id: i32,
+        recording: UpdateRecording,
+    ) -> Result<u64, String> {
         RecordingRepository::update(pool, id, recording)
             .await
             .map_err(|e| e.to_string())

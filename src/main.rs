@@ -21,10 +21,10 @@ mod user;
 mod venue;
 
 use dotenv::dotenv;
-use ClassicMap_back::comparison;
 use logger::Logger;
 use rocket::http::Method;
 use rocket_cors::{AllowedHeaders, AllowedOrigins, CorsOptions};
+use ClassicMap_back::comparison;
 
 #[launch]
 async fn rocket() -> _ {

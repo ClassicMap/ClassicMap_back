@@ -724,7 +724,7 @@ impl ConcertRepository {
         let areas = sqlx::query_scalar::<_, String>(
             "SELECT DISTINCT area FROM concerts
              WHERE area IS NOT NULL AND area != ''
-             ORDER BY area"
+             ORDER BY area",
         )
         .fetch_all(pool)
         .await?;
@@ -787,7 +787,7 @@ impl ConcertRepository {
         for artist_id in artist_ids {
             sqlx::query(
                 "INSERT INTO concert_artists (concert_id, artist_id, role)
-                 VALUES (?, ?, NULL)"
+                 VALUES (?, ?, NULL)",
             )
             .bind(concert_id)
             .bind(artist_id)

@@ -1,6 +1,8 @@
 use sqlx::Error;
 
-use super::model::{CreatePerformanceSector, PerformanceSector, PerformanceSectorWithCount, UpdatePerformanceSector};
+use super::model::{
+    CreatePerformanceSector, PerformanceSector, PerformanceSectorWithCount, UpdatePerformanceSector,
+};
 use super::repository::{DbPool, PerformanceSectorRepository};
 
 pub struct PerformanceSectorService;
@@ -11,7 +13,8 @@ impl PerformanceSectorService {
         pool: &DbPool,
         piece_id: i32,
     ) -> Result<Vec<PerformanceSectorWithCount>, Error> {
-        let sectors_with_counts = PerformanceSectorRepository::find_by_piece_with_counts(pool, piece_id).await?;
+        let sectors_with_counts =
+            PerformanceSectorRepository::find_by_piece_with_counts(pool, piece_id).await?;
 
         Ok(sectors_with_counts
             .into_iter()
