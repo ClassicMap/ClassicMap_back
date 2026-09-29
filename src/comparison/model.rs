@@ -146,6 +146,8 @@ impl FromStr for PerformancePublishStatus {
 pub struct ComparisonCredit {
     pub artist_id: i32,
     pub artist_name: String,
+    /// 연주자 사진. 카탈로그 미리보기(작품당 4명)에 없는 연주자도 얼굴을 보여 주려고 싣는다
+    pub image_url: Option<String>,
     pub role: String,
     pub is_primary: bool,
     pub display_order: i32,
@@ -250,6 +252,7 @@ pub(crate) struct ComparisonCreditRow {
     pub source_id: u64,
     pub artist_id: i32,
     pub artist_name: String,
+    pub image_url: Option<String>,
     pub role: String,
     pub is_primary: bool,
     pub display_order: i32,
@@ -260,6 +263,7 @@ impl From<ComparisonCreditRow> for ComparisonCredit {
         Self {
             artist_id: row.artist_id,
             artist_name: row.artist_name,
+            image_url: row.image_url,
             role: row.role,
             is_primary: row.is_primary,
             display_order: row.display_order,

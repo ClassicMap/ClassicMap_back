@@ -392,6 +392,7 @@ impl ComparisonRepository {
             "SELECT credit.performance_source_id AS source_id,
                     credit.artist_id,
                     artist.name AS artist_name,
+                    artist.image_url,
                     CASE
                         WHEN credit.role_code IN (
                             'soloist', 'conductor', 'orchestra', 'ensemble',
