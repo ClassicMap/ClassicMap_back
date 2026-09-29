@@ -1,5 +1,5 @@
 use super::model::{
-    Concert, ConcertArtist, ConcertBoxofficeRanking, ConcertImage, ConcertListItem,
+    Concert, ConcertArtist, ConcertArtistSummary, ConcertBoxofficeRanking, ConcertImage, ConcertListItem,
     ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails, CreateConcert, UpdateConcert,
 };
 use crate::db::DbPool;
@@ -796,6 +796,37 @@ impl ConcertRepository {
         }
 
         Ok(())
+    }
+
+    /// 오늘 이후(끝나는 날 기준) 공연에 연결된 아티스트와 그 공연 수. 공연이 많은 순.
+    pub async fn find_upcoming_concert_artists(
+        pool: &DbPool,
+        query: Option<&str>,
+        limit: i64,
+    ) -> Result<Vec<ConcertArtistSummary>, Error> {
+        let pattern = query.map(str::trim).filter(|q| !q.is_empty()).map(|q| format!("%{}%", q));
+        let mut sql = String::from(
+            "SELECT a.id AS artist_id, a.name, a.english_name, a.image_url, a.category,
+                    COUNT(DISTINCT c.id) AS concert_count
+             FROM concert_artists ca
+             JOIN concerts c ON c.id = ca.concert_id
+             JOIN artists a ON a.id = ca.artist_id
+             WHERE COALESCE(c.end_date, c.start_date) >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00'))
+               AND c.status <> 'cancelled'",
+        );
+        if pattern.is_some() {
+            sql.push_str(" AND (a.name LIKE ? OR a.english_name LIKE ?)");
+        }
+        sql.push_str(
+            " GROUP BY a.id, a.name, a.english_name, a.image_url, a.category
+              ORDER BY concert_count DESC, a.name ASC
+              LIMIT ?",
+        );
+        let mut sql_query = sqlx::query_as::<_, ConcertArtistSummary>(&sql);
+        if let Some(pattern) = pattern {
+            sql_query = sql_query.bind(pattern.clone()).bind(pattern);
+        }
+        sql_query.bind(limit).fetch_all(pool).await
     }
 
     /// 빠진 공연-아티스트 연결만 더한다. 관리자가 넣은 연결(역할 포함)은 건드리지 않는다.

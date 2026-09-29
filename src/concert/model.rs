@@ -206,3 +206,16 @@ pub struct ConcertWithDetails {
     pub images: Vec<ConcertImage>,
     pub boxoffice_ranking: Option<ConcertBoxofficeRanking>,
 }
+
+/// 앞으로 열릴 공연에 출연진으로 연결된 아티스트 (`/concerts/artists`). 공연 탭 연주자 필터가 쓴다.
+#[derive(Debug, Serialize, FromRow)]
+#[serde(rename_all = "camelCase")]
+pub struct ConcertArtistSummary {
+    pub artist_id: i32,
+    pub name: String,
+    pub english_name: String,
+    pub image_url: Option<String>,
+    #[serde(serialize_with = "crate::artist::category::serialize_category")]
+    pub category: String,
+    pub concert_count: i64,
+}

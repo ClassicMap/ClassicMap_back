@@ -1,5 +1,5 @@
 use super::model::{
-    ConcertListItem, ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails, CreateConcert,
+    ConcertArtistSummary, ConcertListItem, ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails, CreateConcert,
     SubmitRating, UpdateConcert,
 };
 use super::enrichment::is_instrument_code;
@@ -211,6 +211,22 @@ fn parse_day(value: Option<&str>) -> Result<Option<NaiveDate>, Status> {
         Some(v) => NaiveDate::parse_from_str(v, "%Y-%m-%d")
             .map(Some)
             .map_err(|_| Status::BadRequest),
+    }
+}
+
+/// 앞으로 열릴 공연에 출연하는 아티스트 (공연 수 많은 순). 공연 탭 연주자 필터 자동완성용.
+#[get("/concerts/artists?<q>&<limit>")]
+pub async fn get_concert_artists(
+    pool: &State<DbPool>,
+    q: Option<String>,
+    limit: Option<i64>,
+) -> Result<Json<Vec<ConcertArtistSummary>>, Status> {
+    match ConcertService::get_upcoming_concert_artists(pool, q.as_deref(), limit).await {
+        Ok(artists) => Ok(Json(artists)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to get concert artists: {}", e));
+            Err(Status::InternalServerError)
+        }
     }
 }
 

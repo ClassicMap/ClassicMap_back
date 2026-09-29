@@ -1,5 +1,5 @@
 use crate::db::DbPool;
-use super::model::{Concert, CreateConcert, UpdateConcert, ConcertWithArtists, ConcertWithDetails, ConcertListItem, ConcertTicketVendor};
+use super::model::{Concert, CreateConcert, UpdateConcert, ConcertWithArtists, ConcertWithDetails, ConcertListItem, ConcertTicketVendor, ConcertArtistSummary};
 use super::enrichment::{classify_instrumentation, instrumentation_value};
 use super::repository::{ArtistNameIndex, ConcertRepository, ConcertSearchFilter};
 use crate::logger::Logger;
@@ -141,6 +141,18 @@ impl ConcertService {
 
     pub async fn get_available_areas(pool: &DbPool) -> Result<Vec<String>, String> {
         ConcertRepository::get_distinct_areas(pool)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    /// 앞으로 열릴 공연의 출연 아티스트. limit 은 기본 20, 최대 50.
+    pub async fn get_upcoming_concert_artists(
+        pool: &DbPool,
+        query: Option<&str>,
+        limit: Option<i64>,
+    ) -> Result<Vec<ConcertArtistSummary>, String> {
+        let limit = limit.unwrap_or(20).clamp(1, 50);
+        ConcertRepository::find_upcoming_concert_artists(pool, query, limit)
             .await
             .map_err(|e| e.to_string())
     }

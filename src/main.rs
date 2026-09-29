@@ -118,6 +118,7 @@ async fn rocket() -> _ {
                 concert::search_concerts,
                 concert::get_ticket_vendors,
                 concert::get_areas,
+                concert::get_concert_artists,
                 concert::create_concert,
                 concert::update_concert,
                 concert::delete_concert,
