@@ -9,7 +9,7 @@
 -- 남겨 30일 동안 다시 묻지 않는다.
 
 ALTER TABLE artists
-    ADD COLUMN apple_music_artist_id VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin NULL
+    ADD COLUMN apple_music_artist_id VARCHAR(32) CHARACTER SET ascii COLLATE ascii_general_ci NULL
         COMMENT 'Apple Music 아티스트 ID',
     ADD COLUMN apple_music_checked_at TIMESTAMP NULL
         COMMENT '마지막으로 Apple Music 아티스트를 찾아본 시각',
