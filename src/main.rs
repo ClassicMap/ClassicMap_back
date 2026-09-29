@@ -146,6 +146,9 @@ async fn rocket() -> _ {
                 performance::delete_performance,
                 // Recording routes
                 recording::get_recordings,
+                recording::browse::browse_recordings,
+                recording::browse::get_recording_labels,
+                recording::browse::get_my_new_recordings,
                 recording::get_recordings_by_artist,
                 recording::get_recording,
                 recording::create_recording,
