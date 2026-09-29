@@ -1,0 +1,44 @@
+{
+  "batchId": "arr-3",
+  "note": "편곡 비교 배치 3. 181 <생명의 양식>. **정렬 비용 임계를 적용하지 않는다**(sector type ARRANGEMENTS). A14 에서 조를 맞춘 A장조 세 종조차 0.1126~0.1370 으로 세 쌍 모두 임계를 넘어 막았던 곡이다. 원인이 '둘째 절 편성이 판마다 다름' 이었고 그것이 이 구간의 들을 거리다.",
+  "pieces": [
+    {
+      "pieceId": 181,
+      "workMbid": "5b979859-257c-4562-a5a3-8aeba2204241",
+      "composerQid": "Q50187",
+      "titleKo": "<장엄 미사> Op. 12 중 “생명의 양식”",
+      "titleEn": "Panis angelicus, from Messe solennelle op. 12",
+      "composerNameEn": "César Franck",
+      "composerNameKo": "세자르 프랑크",
+      "role": "VOCALIST",
+      "sector": {
+        "key": "arrangements",
+        "type": "ARRANGEMENTS",
+        "nameKo": "둘째 절 편성 셋",
+        "nameEn": "Three settings of the second verse",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "반주의 첫 화음(악곡 시작)",
+        "endCue": "종결 화음과 잔향",
+        "listeningNote": "셋 다 테너 독창이고 셋 다 원조인 A장조입니다. **갈리는 것은 둘째 절입니다** — 그리골로 판은 관현악이 받고, 도밍고 판은 빈 소년합창단이 들어오고, 카레라스 판은 보이 소프라노(마이클 고믈리)와 이중창을 이룹니다. 첫 절을 나란히 들으면 세 판이 0.109~0.147 로 붙는데 둘째 절에서 0.145~0.215 로 벌어집니다. 그 벌어짐이 곧 편곡의 차이입니다. 원곡은 <장엄 미사> 안의 낱곡이고 테너와 오르간·하프·첼로·저현이 원래 편성이라, 셋 다 그보다 두꺼운 편성으로 옮긴 판입니다."
+      },
+      "videos": [
+        {
+          "videoId": "hfSOsN9nIT8",
+          "artistName": "Vittorio Grigolo",
+          "wikidata": "Q715316"
+        },
+        {
+          "videoId": "EiA8TSX6rxU",
+          "artistName": "Plácido Domingo",
+          "wikidata": "Q130853"
+        },
+        {
+          "videoId": "V4LgTRsWRbI",
+          "artistName": "José Carreras",
+          "wikidata": "Q485165"
+        }
+      ]
+    }
+  ]
+}

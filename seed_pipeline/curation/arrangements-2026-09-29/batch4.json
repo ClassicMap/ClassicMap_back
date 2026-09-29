@@ -1,0 +1,52 @@
+{
+  "batchId": "arr-4",
+  "note": "편곡 비교 배치 4. 376 <아디오스 노니노>. **정렬 비용 임계를 적용하지 않는다**(sector type ARRANGEMENTS). A28 에서 '편곡이 판마다 다르고 길이가 125~616초로 갈린다' 는 까닭으로 재지도 않고 막았던 곡이다. 그 갈림이 이 구간의 들을 거리다.",
+  "pieces": [
+    {
+      "pieceId": 376,
+      "workMbid": "532643e5-b743-30b0-a623-1906b75d6524",
+      "composerQid": "Q172505",
+      "titleKo": "<아디오스 노니노>",
+      "titleEn": "Adiós Nonino",
+      "composerNameEn": "Astor Piazzolla",
+      "composerNameKo": "아스토르 피아졸라",
+      "role": "SOLOIST",
+      "sector": {
+        "key": "arrangements",
+        "type": "ARRANGEMENTS",
+        "nameKo": "편곡 셋",
+        "nameEn": "Three arrangements",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "도입(피아노 카덴차 또는 반주)의 첫 음(작품 시작)",
+        "endCue": "종결 화음과 잔향",
+        "listeningNote": "피아졸라가 아버지를 잃고 쓴 곡입니다. 세 편성으로 듣습니다 — 반도네온과 실내관현악·합창(크라이엔호프), 피아노 둘(티엠포와 카린 레히너), 바이올린과 피아노(슈타인바허, 칼로 편곡)입니다. **길이가 285초에서 519초까지 1.8배 갈리는데 그것이 도입 카덴차 때문입니다** — 이 곡은 도입을 연주자가 풀어 놓는 자리로 두고, 판마다 그 길이와 성격이 다릅니다. 크라이엔호프 판은 합창이 들어와 장송곡에 가깝고, 피아노 둘 판은 카덴차를 가장 길게 늘려 즉흥에 가깝고, 바이올린 판은 선율을 가장 곧게 노래합니다."
+      },
+      "videos": [
+        {
+          "videoId": "TOZZiIvi5JM",
+          "artistName": "Carel Kraayenhof",
+          "wikidata": "Q2463006",
+          "choir": {
+            "name": "Netherlands Chamber Choir",
+            "wikidata": "Q2701020"
+          },
+          "orchestra": {
+            "name": "Concertgebouw Chamber Orchestra",
+            "wikidata": "Q2519414"
+          }
+        },
+        {
+          "videoId": "y50VZbBS3QQ",
+          "artistName": "Sergio Tiempo",
+          "wikidata": "Q943169"
+        },
+        {
+          "videoId": "LtzUyP2lokk",
+          "artistName": "Arabella Steinbacher",
+          "wikidata": "Q84934"
+        }
+      ]
+    }
+  ]
+}
