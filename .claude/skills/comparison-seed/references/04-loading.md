@@ -2,6 +2,53 @@
 
 후보 JSONL 을 만든 뒤부터 배포까지다. 순서를 지키지 않으면 중간에 막힌다.
 
+## 클러스터 안에서 한 번에 하는 길 (2026-09-30)
+
+아래 1~7 단계를 노트북에서 손으로 하는 대신 **Job 하나로 돌릴 수 있다.**
+포트포워딩·`cargo run`·`prewarm.mjs`·`kubectl cp`·approve 마이그레이션이 없어진다.
+
+```bash
+BATCH=comparison-a-a18-2026-09-25
+git add seed_pipeline/curation/$BATCH/candidates.jsonl && git commit && git push
+# CI 가 이미지를 굽는다. 후보 JSONL 이 이미지 안 /app/seed/ 로 들어간다
+gh run watch <id> --exit-status
+
+sed "s|__BATCH__|$BATCH|g" deploy/seed-publish-job.yaml | kubectl apply -f -
+kubectl -n homeserver logs -f job/seed-publish-$BATCH
+kubectl -n homeserver delete job seed-publish-$BATCH
+```
+
+쓰기 전에 `SEED_DRY_RUN=1` 로 한 번 돌려 볼 수 있다. 적재기에 `--dry-run` 을 주고
+멈춘다. **다만 run-id 는 소비되므로** 실제 적재는 새 run-id 로 간다.
+
+Job 이 하는 네 단계다.
+
+| | 하는 일 | 대신하는 것 |
+|---|---|---|
+| 1 | `load_comparison_candidates` | 포트포워딩 + 로컬 `cargo run` |
+| 2 | `build_clip_bundle` | `prewarm.mjs` + `kubectl cp` |
+| 3 | `approve_seed_run` | 배치마다 쓰던 approve 마이그레이션 |
+| 4 | `load_clip_assets --publish` | 포트포워딩 + 로컬 `cargo run` |
+
+**approve 가 마이그레이션에서 빠진 까닭.** 푸시 기반이면 순서가 롤아웃 → 적재라서,
+마이그레이션이 아직 없는 행을 UPDATE 해 아무 일도 하지 않고 끝난다. sqlx 는 한 번만
+실행하므로 그 뒤로 영영 적용되지 않는다. 세 UPDATE 는 스키마 변경이 아니라 상태
+전이라 애초에 마이그레이션에 있을 물건이 아니었다. **판단 근거는 이제 마이그레이션
+주석이 아니라 배치 폴더의 `review-report.md` 에 남긴다.**
+
+`build_clip_bundle` 은 sha256 을 다시 재지 않는다. 클리퍼가 클립을 만들면서
+`<storageKey>.metadata.json` 에 이미 적어 두고, `load_clip_assets` 가 캐시의 실제
+파일과 대조해 검증한다. `rangeVerifiedAt` 은 **실제로 Range 요청을 해 206 과
+Content-Range 를 받은 뒤에만** 적는다.
+
+한 건이라도 실패하면 exit 5 로 빠져 뒤 단계를 돌리지 않는다. `backoffLimit: 0` 이라
+재시도도 하지 않는다 — **절반만 발행되는 것이 가장 나쁘다.**
+
+작품 식별자 마이그레이션(아래 1단계)과 인물 등록 마이그레이션은 **그대로 남는다.**
+둘 다 적재보다 먼저 있어야 하므로 롤아웃 순서가 맞다.
+
+아래는 손으로 할 때의 차례다. Job 이 막히면 여기로 돌아온다.
+
 ## 준비
 
 DB 는 포트포워딩으로 붙는다. `.env` 의 `DATABASE_URL` 은 외부 주소라 막혀 있다.
