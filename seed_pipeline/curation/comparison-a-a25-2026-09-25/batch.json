@@ -1,6 +1,6 @@
 {
   "batchId": "a-a25",
-  "note": "A tier A25. 아이브스 하나와 베르크 둘. 셋 다 발췌다. 366 서정 모음곡은 현악 4중주 원곡이고 베르크 자신의 현악합주 편곡(3악장분)이 따로 돈다. 373·365 는 시드 쌍둥이 병합분이다.",
+  "note": "A tier A25. 아이브스 하나와 베르크 둘. 373·366 은 낱 악장 트랙을 셋 다 찾아 발췌를 빼고 악장 전체를 구간으로 썼다(600초 안). 365 는 1악장이 660~695초라 600초를 넘어 anchor: head 120초 발췌를 유지했다. 366 서정 모음곡은 현악 4중주 원곡이고 베르크 자신의 현악합주 편곡분은 배제했다. 373·365 는 시드 쌍둥이 병합분이다.",
   "pieces": [
     {
       "pieceId": 373,
@@ -19,13 +19,40 @@
         "measureStart": "",
         "measureEnd": "",
         "startCue": "현의 여린 첫 화음(작품 시작)",
-        "endCue": "발췌 끝"
+        "endCue": "1곡 종결의 여린 마지막 화음과 잔향"
       },
-      "excerpt": {
-        "anchor": "head",
-        "seconds": 120
-      },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "AhbutHpwEh8",
+          "artistId": 630,
+          "artistName": "Michael Tilson Thomas",
+          "wikidata": "Q520493",
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "ri8weqSllms",
+          "artistId": 602,
+          "artistName": "Kurt Masur",
+          "wikidata": "Q157921",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "MeeJoeN3y9c",
+          "artistId": 775,
+          "artistName": "Leonard Slatkin",
+          "wikidata": "Q509870",
+          "orchestra": {
+            "name": "Saint Louis Symphony Orchestra",
+            "wikidata": "Q2212932"
+          }
+        }
+      ]
     },
     {
       "pieceId": 365,
@@ -50,7 +77,50 @@
         "anchor": "head",
         "seconds": 120
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "jDcMALgzcl8",
+          "artistId": 211,
+          "artistName": "Anne-Sophie Mutter",
+          "wikidata": "Q3374",
+          "conductor": {
+            "name": "James Levine",
+            "wikidata": "Q336388"
+          },
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "XmV5Slb9bIQ",
+          "artistId": 267,
+          "artistName": "Itzhak Perlman",
+          "wikidata": "Q215905",
+          "conductor": {
+            "name": "Seiji Ozawa",
+            "wikidata": "Q313649"
+          },
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "5WJoNxQfkBQ",
+          "artistId": 648,
+          "artistName": "Renaud Capuçon",
+          "wikidata": "Q552845",
+          "conductor": {
+            "name": "Daniel Harding",
+            "wikidata": "Q524328"
+          },
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
     },
     {
       "pieceId": 366,
@@ -69,13 +139,27 @@
         "measureStart": "",
         "measureEnd": "",
         "startCue": "4중주 총주의 첫 화음(악장 시작)",
-        "endCue": "발췌 끝"
+        "endCue": "1악장 종결 화음과 잔향"
       },
-      "excerpt": {
-        "anchor": "head",
-        "seconds": 120
-      },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "FQleHLTHYPk",
+          "artistId": 607,
+          "artistName": "Emerson String Quartet",
+          "wikidata": "Q681006"
+        },
+        {
+          "videoId": "2AQRpQ5jhMc",
+          "artistId": 642,
+          "artistName": "Alban Berg Quartett",
+          "wikidata": "Q389156"
+        },
+        {
+          "videoId": "Cv1N3hUE0EM",
+          "artistName": "LaSalle Quartet",
+          "wikidata": "Q979718"
+        }
+      ]
     }
   ]
 }
