@@ -50,6 +50,9 @@ async fn rocket() -> _ {
     Logger::info("SCHEDULER", "Initializing KOPIS concert sync scheduler...");
     kopis::ConcertSyncScheduler::start(pool.clone()).await;
 
+    // Apple Music 새 앨범 동기화 (키가 없으면 꺼진다)
+    recording::album_sync::AlbumSyncScheduler::start(pool.clone());
+
     Logger::info("SERVER", "Mounting routes...");
 
     // CORS 설정
