@@ -1,8 +1,9 @@
 use super::model::{
     ClerkDeleteWebhookEvent, ClerkWebhookEvent, FavoriteArtistItem, FavoriteArtistRequest,
     FavoriteComposerItem, FavoriteComposerRequest, FavoriteConcertItem, FavoriteConcertRequest,
-    FavoritePieceItem, FavoritePieceRequest, FavoriteRecordingItem, FavoriteRecordingRequest, PublicProfileResponse, RatedConcertListItem,
-    UpdateProfileVisibility, UpdateUser, User, UserPublicProfile,
+    FavoritePieceItem, FavoritePieceRequest, FavoriteRecordingItem, FavoriteRecordingRequest,
+    PublicProfileResponse, RatedConcertListItem, UpdateProfileVisibility, UpdateUser, User,
+    UserPublicProfile,
 };
 use super::service::UserService;
 use crate::auth::{AdminUser, AuthenticatedUser};
@@ -342,7 +343,10 @@ pub async fn delete_my_favorite_recording(
     match UserService::delete_favorite_recording(pool, user.user.id, recording_id).await {
         Ok(_) => Ok(Status::NoContent),
         Err(e) => {
-            Logger::error("API", &format!("Failed to delete favorite recording: {}", e));
+            Logger::error(
+                "API",
+                &format!("Failed to delete favorite recording: {}", e),
+            );
             if e.contains("must be positive") {
                 Err(Status::BadRequest)
             } else {

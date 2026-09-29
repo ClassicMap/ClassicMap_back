@@ -36,12 +36,18 @@ impl AppleMusicConfig {
     /// APPLE_MUSIC_PRIVATE_KEY · APPLE_MUSIC_KEY_ID · APPLE_MUSIC_TEAM_KEY 가 모두 있어야 한다.
     /// 하나라도 비면 None (동기화를 끈다).
     pub fn from_env() -> Option<Self> {
-        let read = |name: &str| env::var(name).ok().map(|value| value.trim().to_string()).filter(|v| !v.is_empty());
+        let read = |name: &str| {
+            env::var(name)
+                .ok()
+                .map(|value| value.trim().to_string())
+                .filter(|v| !v.is_empty())
+        };
         Some(Self {
             private_key_pem: normalize_pem(&read("APPLE_MUSIC_PRIVATE_KEY")?),
             key_id: read("APPLE_MUSIC_KEY_ID")?,
             team_id: read("APPLE_MUSIC_TEAM_KEY")?,
-            storefront: read("APPLE_MUSIC_STOREFRONT").unwrap_or_else(|| DEFAULT_STOREFRONT.to_string()),
+            storefront: read("APPLE_MUSIC_STOREFRONT")
+                .unwrap_or_else(|| DEFAULT_STOREFRONT.to_string()),
         })
     }
 
@@ -152,13 +158,18 @@ pub struct SearchResults {
 
 /// 표지 템플릿 `{w}x{h}` 을 시드와 같은 1000x1000bb 로 채운다.
 pub fn artwork_url(template: &str) -> String {
-    template.replace("{w}x{h}bb", "1000x1000bb").replace("{w}", "1000").replace("{h}", "1000")
+    template
+        .replace("{w}x{h}bb", "1000x1000bb")
+        .replace("{w}", "1000")
+        .replace("{h}", "1000")
 }
 
 /// 발매일은 'YYYY-MM-DD' 또는 'YYYY' 로 온다.
 pub fn release_year(release_date: &str) -> Option<String> {
     let year = release_date.get(0..4)?;
-    year.chars().all(|c| c.is_ascii_digit()).then(|| year.to_string())
+    year.chars()
+        .all(|c| c.is_ascii_digit())
+        .then(|| year.to_string())
 }
 
 /// 이름 비교용: 소문자, 글자와 숫자만. 악센트는 흔한 라틴 글자만 벗긴다.
@@ -191,7 +202,11 @@ pub fn same_name(a: &str, b: &str) -> bool {
 
 /// 우리 앨범에 참여한 Apple 아티스트 중 이 연주자를 고른다.
 /// 이름이 정확히 같으면 그 사람, 아니면 앨범 아티스트가 한 명뿐이고 성(마지막 단어)이 같을 때만.
-pub fn pick_album_artist<'a>(english_name: &str, korean_name: &str, artists: &'a [ResourceRef]) -> Option<&'a ResourceRef> {
+pub fn pick_album_artist<'a>(
+    english_name: &str,
+    korean_name: &str,
+    artists: &'a [ResourceRef],
+) -> Option<&'a ResourceRef> {
     let is_ours = |name: &str| same_name(name, english_name) || same_name(name, korean_name);
     if let Some(exact) = artists.iter().find(|artist| is_ours(artist_name(artist))) {
         return Some(exact);
@@ -200,21 +215,36 @@ pub fn pick_album_artist<'a>(english_name: &str, korean_name: &str, artists: &'a
         return None;
     }
     let only = &artists[0];
-    let last = |name: &str| name.split_whitespace().last().map(normalize_name).unwrap_or_default();
+    let last = |name: &str| {
+        name.split_whitespace()
+            .last()
+            .map(normalize_name)
+            .unwrap_or_default()
+    };
     let ours = last(english_name);
     (!ours.is_empty() && ours == last(artist_name(only))).then_some(only)
 }
 
 fn artist_name(artist: &ResourceRef) -> &str {
-    artist.attributes.as_ref().map(|a| a.name.as_str()).unwrap_or("")
+    artist
+        .attributes
+        .as_ref()
+        .map(|a| a.name.as_str())
+        .unwrap_or("")
 }
 
 /// 이름 검색 결과는 동명이인 위험이 커서 이름이 정확히 같고 장르에 Classical 이 있을 때만 쓴다.
-pub fn pick_search_artist<'a>(english_name: &str, artists: &'a [ResourceRef]) -> Option<&'a ResourceRef> {
+pub fn pick_search_artist<'a>(
+    english_name: &str,
+    artists: &'a [ResourceRef],
+) -> Option<&'a ResourceRef> {
     let mut matches = artists.iter().filter(|artist| {
         artist.attributes.as_ref().is_some_and(|attributes| {
             same_name(&attributes.name, english_name)
-                && attributes.genre_names.iter().any(|genre| genre.eq_ignore_ascii_case("classical"))
+                && attributes
+                    .genre_names
+                    .iter()
+                    .any(|genre| genre.eq_ignore_ascii_case("classical"))
         })
     });
     let first = matches.next()?;
@@ -234,20 +264,31 @@ pub struct AppleMusicClient {
 
 impl AppleMusicClient {
     pub fn new(config: AppleMusicConfig) -> Result<Self, String> {
-        let now = SystemTime::now().duration_since(UNIX_EPOCH).map_err(|e| e.to_string())?.as_secs();
+        let now = SystemTime::now()
+            .duration_since(UNIX_EPOCH)
+            .map_err(|e| e.to_string())?
+            .as_secs();
         let token = config.developer_token(now)?;
         let http = reqwest::Client::builder()
             .timeout(Duration::from_secs(20))
             .build()
             .map_err(|e| e.to_string())?;
-        Ok(Self { http, config, token, pace: Duration::from_millis(250) })
+        Ok(Self {
+            http,
+            config,
+            token,
+            pace: Duration::from_millis(250),
+        })
     }
 
     pub fn storefront(&self) -> &str {
         &self.config.storefront
     }
 
-    async fn get<T: for<'de> Deserialize<'de>>(&self, path_and_query: &str) -> Result<Option<T>, String> {
+    async fn get<T: for<'de> Deserialize<'de>>(
+        &self,
+        path_and_query: &str,
+    ) -> Result<Option<T>, String> {
         let url = format!("{}{}", API_BASE, path_and_query);
         let mut attempt = 0;
         loop {
@@ -266,13 +307,20 @@ impl AppleMusicClient {
             if status.as_u16() == 429 || status.is_server_error() {
                 attempt += 1;
                 if attempt > MAX_RETRIES {
-                    return Err(format!("Apple Music {} after {} retries", status, MAX_RETRIES));
+                    return Err(format!(
+                        "Apple Music {} after {} retries",
+                        status, MAX_RETRIES
+                    ));
                 }
                 tokio::time::sleep(Duration::from_secs(5 * 2u64.pow(attempt - 1))).await;
                 continue;
             }
             if !status.is_success() {
-                return Err(format!("Apple Music {} for {}", status, path_and_query.split('?').next().unwrap_or("")));
+                return Err(format!(
+                    "Apple Music {} for {}",
+                    status,
+                    path_and_query.split('?').next().unwrap_or("")
+                ));
             }
             return response
                 .json::<T>()
@@ -285,7 +333,11 @@ impl AppleMusicClient {
     /// 앨범과 그 앨범의 아티스트들
     pub async fn album_with_artists(&self, album_id: &str) -> Result<Option<Album>, String> {
         let page: Option<Page<Album>> = self
-            .get(&format!("/catalog/{}/albums/{}?include=artists", self.storefront(), url_escape(album_id)))
+            .get(&format!(
+                "/catalog/{}/albums/{}?include=artists",
+                self.storefront(),
+                url_escape(album_id)
+            ))
             .await?;
         Ok(page.and_then(|page| page.data.into_iter().next()))
     }
@@ -298,11 +350,18 @@ impl AppleMusicClient {
                 url_escape(term)
             ))
             .await?;
-        Ok(response.and_then(|r| r.results.artists).map(|p| p.data).unwrap_or_default())
+        Ok(response
+            .and_then(|r| r.results.artists)
+            .map(|p| p.data)
+            .unwrap_or_default())
     }
 
     /// 아티스트의 정규 앨범. Apple Music 앱과 같은 순서(최근 발매 먼저)로 온다.
-    pub async fn artist_full_albums(&self, artist_id: &str, limit: u32) -> Result<Vec<Album>, String> {
+    pub async fn artist_full_albums(
+        &self,
+        artist_id: &str,
+        limit: u32,
+    ) -> Result<Vec<Album>, String> {
         let page: Option<Page<Album>> = self
             .get(&format!(
                 "/catalog/{}/artists/{}/view/full-albums?limit={}",
@@ -336,13 +395,24 @@ mod tests {
     #[test]
     fn claims_use_team_id_and_expire_after_ttl() {
         let claims = token_claims("TEAM", 1_000);
-        assert_eq!(claims, TokenClaims { iss: "TEAM".into(), iat: 1_000, exp: 1_000 + TOKEN_TTL_SECS });
+        assert_eq!(
+            claims,
+            TokenClaims {
+                iss: "TEAM".into(),
+                iat: 1_000,
+                exp: 1_000 + TOKEN_TTL_SECS
+            }
+        );
     }
 
     #[test]
     fn pem_with_escaped_newlines_is_restored() {
-        let pem = normalize_pem("\"-----BEGIN PRIVATE KEY-----\\nabc\\n-----END PRIVATE KEY-----\"");
-        assert_eq!(pem, "-----BEGIN PRIVATE KEY-----\nabc\n-----END PRIVATE KEY-----");
+        let pem =
+            normalize_pem("\"-----BEGIN PRIVATE KEY-----\\nabc\\n-----END PRIVATE KEY-----\"");
+        assert_eq!(
+            pem,
+            "-----BEGIN PRIVATE KEY-----\nabc\n-----END PRIVATE KEY-----"
+        );
     }
 
     #[test]
@@ -383,12 +453,21 @@ mod tests {
 
     #[test]
     fn album_artist_prefers_exact_name_then_single_artist_surname() {
-        let pair = [artist("Andrés Orozco-Estrada", &[]), artist("Yuja Wang", &[])];
-        assert_eq!(pick_album_artist("Yuja Wang", "유자 왕", &pair).map(|a| a.id.as_str()), Some("Yuja Wang"));
+        let pair = [
+            artist("Andrés Orozco-Estrada", &[]),
+            artist("Yuja Wang", &[]),
+        ];
+        assert_eq!(
+            pick_album_artist("Yuja Wang", "유자 왕", &pair).map(|a| a.id.as_str()),
+            Some("Yuja Wang")
+        );
         assert!(pick_album_artist("Seong-Jin Cho", "조성진", &pair).is_none());
 
         let korean = [artist("손열음", &[]), artist("레지덴티 오케스트라", &[])];
-        assert_eq!(pick_album_artist("Yeol Eum Son", "손열음", &korean).map(|a| a.id.as_str()), Some("손열음"));
+        assert_eq!(
+            pick_album_artist("Yeol Eum Son", "손열음", &korean).map(|a| a.id.as_str()),
+            Some("손열음")
+        );
 
         let solo = [artist("Seong-Jin Cho", &[])];
         assert!(pick_album_artist("Seongjin Cho", "조성진", &solo).is_some());
@@ -398,13 +477,19 @@ mod tests {
 
     #[test]
     fn search_artist_needs_exact_name_classical_and_no_twin() {
-        let results = [artist("Lang Lang", &["Classical"]), artist("Lang Lang Band", &["Pop"])];
+        let results = [
+            artist("Lang Lang", &["Classical"]),
+            artist("Lang Lang Band", &["Pop"]),
+        ];
         assert!(pick_search_artist("Lang Lang", &results).is_some());
 
         let pop = [artist("John Williams", &["Soundtrack"])];
         assert!(pick_search_artist("John Williams", &pop).is_none());
 
-        let twins = [artist("John Williams", &["Classical"]), artist("John Williams", &["Classical", "Guitar"])];
+        let twins = [
+            artist("John Williams", &["Classical"]),
+            artist("John Williams", &["Classical", "Guitar"]),
+        ];
         assert!(pick_search_artist("John Williams", &twins).is_none());
     }
 
@@ -419,8 +504,21 @@ mod tests {
         let album = &page.data[0];
         let attributes = album.attributes.as_ref().unwrap();
         assert_eq!(attributes.upc.as_deref(), Some("3617390936252"));
-        assert_eq!(attributes.editorial_notes.as_ref().and_then(|n| n.short.as_deref()), Some("s"));
-        let artists = &album.relationships.as_ref().unwrap().artists.as_ref().unwrap().data;
+        assert_eq!(
+            attributes
+                .editorial_notes
+                .as_ref()
+                .and_then(|n| n.short.as_deref()),
+            Some("s")
+        );
+        let artists = &album
+            .relationships
+            .as_ref()
+            .unwrap()
+            .artists
+            .as_ref()
+            .unwrap()
+            .data;
         assert_eq!(artists[0].id, "1");
     }
 
@@ -434,16 +532,34 @@ mod tests {
             return;
         };
         let client = AppleMusicClient::new(config).expect("token");
-        let album = client.album_with_artists("1797822937").await.expect("album").expect("album exists");
-        let artists = album.relationships.and_then(|r| r.artists).map(|p| p.data).unwrap_or_default();
-        println!("album artists: {:?}", artists.iter().map(|a| artist_name(a)).collect::<Vec<_>>());
+        let album = client
+            .album_with_artists("1797822937")
+            .await
+            .expect("album")
+            .expect("album exists");
+        let artists = album
+            .relationships
+            .and_then(|r| r.artists)
+            .map(|p| p.data)
+            .unwrap_or_default();
+        println!(
+            "album artists: {:?}",
+            artists.iter().map(|a| artist_name(a)).collect::<Vec<_>>()
+        );
         let picked = pick_album_artist("Yeol Eum Son", "손열음", &artists).expect("picked artist");
         println!("resolved artist id: {}", picked.id);
-        let albums = client.artist_full_albums(&picked.id, 25).await.expect("albums");
+        let albums = client
+            .artist_full_albums(&picked.id, 25)
+            .await
+            .expect("albums");
         println!("full albums: {}", albums.len());
         for album in albums.iter().take(5) {
             let attributes = album.attributes.as_ref().unwrap();
-            println!("  {} | {}", attributes.release_date.as_deref().unwrap_or("-"), attributes.name);
+            println!(
+                "  {} | {}",
+                attributes.release_date.as_deref().unwrap_or("-"),
+                attributes.name
+            );
         }
         let search = client.search_artists("Yeol Eum Son").await.expect("search");
         println!("search matches: {}", search.len());

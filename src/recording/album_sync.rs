@@ -5,7 +5,8 @@
 //!    앨범은 건드리지 않고(참여 연결만 더함) 없는 앨범만 넣는다.
 
 use super::apple_music::{
-    artwork_url, pick_album_artist, pick_search_artist, release_year, Album, AppleMusicClient, AppleMusicConfig,
+    artwork_url, pick_album_artist, pick_search_artist, release_year, Album, AppleMusicClient,
+    AppleMusicConfig,
 };
 use crate::db::DbPool;
 use crate::logger::Logger;
@@ -57,7 +58,10 @@ pub struct NewAlbumRow {
 }
 
 fn non_empty(value: Option<&str>) -> Option<String> {
-    value.map(str::trim).filter(|v| !v.is_empty()).map(str::to_string)
+    value
+        .map(str::trim)
+        .filter(|v| !v.is_empty())
+        .map(str::to_string)
 }
 
 /// 제목·발매 연도가 없는 앨범은 넣지 않는다. 열 길이를 넘는 값은 자른다.
@@ -73,17 +77,18 @@ pub fn album_row(album: &Album) -> Option<NewAlbumRow> {
         year,
         release_date: NaiveDate::parse_from_str(&release, "%Y-%m-%d").ok(),
         label: non_empty(attributes.record_label.as_deref()).map(|label| truncate(&label, 100)),
-        cover_url: artwork.map(|a| artwork_url(&a.url)).filter(|url| url.len() <= 500),
+        cover_url: artwork
+            .map(|a| artwork_url(&a.url))
+            .filter(|url| url.len() <= 500),
         upc: non_empty(attributes.upc.as_deref()).filter(|upc| upc.len() <= 20),
         track_count: attributes.track_count,
         is_single: attributes.is_single.unwrap_or(false),
         is_compilation: attributes.is_compilation.unwrap_or(false),
         genre_names: JsonValue::from(attributes.genre_names.clone()),
         copyright: non_empty(attributes.copyright.as_deref()),
-        editorial_notes: attributes
-            .editorial_notes
-            .as_ref()
-            .and_then(|notes| non_empty(notes.standard.as_deref()).or_else(|| non_empty(notes.short.as_deref()))),
+        editorial_notes: attributes.editorial_notes.as_ref().and_then(|notes| {
+            non_empty(notes.standard.as_deref()).or_else(|| non_empty(notes.short.as_deref()))
+        }),
         artwork_width: artwork.and_then(|a| a.width),
         artwork_height: artwork.and_then(|a| a.height),
         apple_music_url: non_empty(attributes.url.as_deref()).filter(|url| url.len() <= 500),
@@ -119,7 +124,10 @@ impl AlbumSyncScheduler {
             );
             return;
         };
-        Logger::info("SCHEDULER", &format!("Apple Music album sync: daily at {}:00", DAILY_HOUR));
+        Logger::info(
+            "SCHEDULER",
+            &format!("Apple Music album sync: daily at {}:00", DAILY_HOUR),
+        );
         tokio::spawn(async move {
             sleep(STARTUP_DELAY).await;
             // 배포할 때마다 돌지 않게, 마지막 성공이 오늘이 아닐 때만 시작하자마자 한 번 돈다
@@ -196,11 +204,17 @@ async fn mark_status(pool: &DbPool, status: &str, result: &AlbumSyncResult, erro
     .execute(pool)
     .await;
     if let Err(e) = outcome {
-        Logger::warn("APPLE_MUSIC", &format!("Failed to record sync status: {}", e));
+        Logger::warn(
+            "APPLE_MUSIC",
+            &format!("Failed to record sync status: {}", e),
+        );
     }
 }
 
-pub async fn sync_albums(pool: &DbPool, config: &AppleMusicConfig) -> Result<AlbumSyncResult, String> {
+pub async fn sync_albums(
+    pool: &DbPool,
+    config: &AppleMusicConfig,
+) -> Result<AlbumSyncResult, String> {
     let client = AppleMusicClient::new(config.clone())?;
     let mut result = AlbumSyncResult::default();
     resolve_artist_ids(pool, &client, &mut result).await?;
@@ -213,7 +227,10 @@ pub async fn sync_albums(pool: &DbPool, config: &AppleMusicConfig) -> Result<Alb
     .map_err(|e| e.to_string())?;
 
     for artist in artists {
-        match client.artist_full_albums(&artist.apple_music_artist_id, ALBUMS_PER_ARTIST).await {
+        match client
+            .artist_full_albums(&artist.apple_music_artist_id, ALBUMS_PER_ARTIST)
+            .await
+        {
             Ok(albums) => {
                 for album in albums.iter().filter_map(album_row) {
                     match store_album(pool, artist.id, &album, client.storefront()).await {
@@ -222,21 +239,31 @@ pub async fn sync_albums(pool: &DbPool, config: &AppleMusicConfig) -> Result<Alb
                         Ok(StoreOutcome::AlreadyLinked) => {}
                         Err(e) => {
                             result.errors += 1;
-                            Logger::warn("APPLE_MUSIC", &format!("Failed to store album for artist {}: {}", artist.id, e));
+                            Logger::warn(
+                                "APPLE_MUSIC",
+                                &format!("Failed to store album for artist {}: {}", artist.id, e),
+                            );
                         }
                     }
                 }
             }
             Err(e) => {
                 result.errors += 1;
-                Logger::warn("APPLE_MUSIC", &format!("Failed to fetch albums for artist {}: {}", artist.id, e));
+                Logger::warn(
+                    "APPLE_MUSIC",
+                    &format!("Failed to fetch albums for artist {}: {}", artist.id, e),
+                );
             }
         }
     }
     Ok(result)
 }
 
-async fn resolve_artist_ids(pool: &DbPool, client: &AppleMusicClient, result: &mut AlbumSyncResult) -> Result<(), String> {
+async fn resolve_artist_ids(
+    pool: &DbPool,
+    client: &AppleMusicClient,
+    result: &mut AlbumSyncResult,
+) -> Result<(), String> {
     let pending = sqlx::query_as::<_, UnresolvedArtist>(
         "SELECT id, name, english_name FROM artists
          WHERE apple_music_artist_id IS NULL
@@ -254,7 +281,10 @@ async fn resolve_artist_ids(pool: &DbPool, client: &AppleMusicClient, result: &m
             Ok(found) => found,
             Err(e) => {
                 result.errors += 1;
-                Logger::warn("APPLE_MUSIC", &format!("Failed to resolve artist {}: {}", artist.id, e));
+                Logger::warn(
+                    "APPLE_MUSIC",
+                    &format!("Failed to resolve artist {}: {}", artist.id, e),
+                );
                 // 일시 오류면 다음 동기화에서 다시 묻도록 확인 시각을 남기지 않는다
                 continue;
             }
@@ -272,7 +302,11 @@ async fn resolve_artist_ids(pool: &DbPool, client: &AppleMusicClient, result: &m
     Ok(())
 }
 
-async fn resolve_one(pool: &DbPool, client: &AppleMusicClient, artist: &UnresolvedArtist) -> Result<Option<String>, String> {
+async fn resolve_one(
+    pool: &DbPool,
+    client: &AppleMusicClient,
+    artist: &UnresolvedArtist,
+) -> Result<Option<String>, String> {
     let samples = sqlx::query_scalar::<_, String>(
         "SELECT r.apple_music_id FROM recording_contributors rc
          JOIN recordings r ON r.id = rc.recording_id
@@ -287,8 +321,14 @@ async fn resolve_one(pool: &DbPool, client: &AppleMusicClient, artist: &Unresolv
     .map_err(|e| e.to_string())?;
 
     for album_id in &samples {
-        let Some(album) = client.album_with_artists(album_id).await? else { continue };
-        let artists = album.relationships.and_then(|r| r.artists).map(|p| p.data).unwrap_or_default();
+        let Some(album) = client.album_with_artists(album_id).await? else {
+            continue;
+        };
+        let artists = album
+            .relationships
+            .and_then(|r| r.artists)
+            .map(|p| p.data)
+            .unwrap_or_default();
         if let Some(found) = pick_album_artist(&artist.english_name, &artist.name, &artists) {
             return Ok(Some(found.id.clone()));
         }
@@ -308,7 +348,12 @@ enum StoreOutcome {
     AlreadyLinked,
 }
 
-async fn store_album(pool: &DbPool, artist_id: i32, album: &NewAlbumRow, storefront: &str) -> Result<StoreOutcome, sqlx::Error> {
+async fn store_album(
+    pool: &DbPool,
+    artist_id: i32,
+    album: &NewAlbumRow,
+    storefront: &str,
+) -> Result<StoreOutcome, sqlx::Error> {
     let existing = sqlx::query_scalar::<_, i32>(
         "SELECT id FROM recordings
          WHERE apple_music_id = ? OR (? IS NOT NULL AND upc = ?)
@@ -332,7 +377,11 @@ async fn store_album(pool: &DbPool, artist_id: i32, album: &NewAlbumRow, storefr
         .bind(artist_id)
         .execute(&mut *tx)
         .await?;
-        if linked.rows_affected() > 0 { StoreOutcome::Linked } else { StoreOutcome::AlreadyLinked }
+        if linked.rows_affected() > 0 {
+            StoreOutcome::Linked
+        } else {
+            StoreOutcome::AlreadyLinked
+        }
     } else {
         let inserted = sqlx::query(
             "INSERT INTO recordings (artist_id, title, year, release_date, label, cover_url, upc, apple_music_id,
@@ -418,7 +467,10 @@ mod tests {
 
     #[test]
     fn album_row_accepts_year_only_release() {
-        let row = album_row(&album(r#"{"id":"1","attributes":{"name":"Old","releaseDate":"1998"}}"#)).unwrap();
+        let row = album_row(&album(
+            r#"{"id":"1","attributes":{"name":"Old","releaseDate":"1998"}}"#,
+        ))
+        .unwrap();
         assert_eq!(row.year, "1998");
         assert_eq!(row.release_date, None);
     }
@@ -426,7 +478,10 @@ mod tests {
     #[test]
     fn album_row_skips_missing_title_or_date() {
         assert!(album_row(&album(r#"{"id":"1","attributes":{"name":"No date"}}"#)).is_none());
-        assert!(album_row(&album(r#"{"id":"1","attributes":{"name":"  ","releaseDate":"2025-01-01"}}"#)).is_none());
+        assert!(album_row(&album(
+            r#"{"id":"1","attributes":{"name":"  ","releaseDate":"2025-01-01"}}"#
+        ))
+        .is_none());
         assert!(album_row(&album(r#"{"id":"1"}"#)).is_none());
     }
 

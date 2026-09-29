@@ -40,7 +40,9 @@ fn strip_trailing_etc(value: &str) -> &str {
         let tail = name[pos + " 외".len()..].trim();
         let count_only = tail
             .strip_suffix('명')
-            .map(|digits| !digits.trim().is_empty() && digits.trim().chars().all(|c| c.is_ascii_digit()))
+            .map(|digits| {
+                !digits.trim().is_empty() && digits.trim().chars().all(|c| c.is_ascii_digit())
+            })
             .unwrap_or(false);
         if tail.is_empty() || tail == "다수" || count_only {
             name = name[..pos].trim_end();
@@ -79,7 +81,15 @@ pub fn is_instrument_code(value: &str) -> bool {
 const TITLE_KEYWORDS: &[(&str, &[&str])] = &[
     (
         "piano",
-        &["피아노", "피아니스트", "하프시코드", "쳄발로", "piano", "pianist", "harpsichord"],
+        &[
+            "피아노",
+            "피아니스트",
+            "하프시코드",
+            "쳄발로",
+            "piano",
+            "pianist",
+            "harpsichord",
+        ],
     ),
     (
         "strings",
@@ -154,7 +164,10 @@ const TITLE_KEYWORDS: &[(&str, &[&str])] = &[
             "baritone",
         ],
     ),
-    ("choir", &["합창", "콰이어", "성가대", "chorus", "choir", "chorale"]),
+    (
+        "choir",
+        &["합창", "콰이어", "성가대", "chorus", "choir", "chorale"],
+    ),
     (
         "orchestra",
         &[
@@ -198,7 +211,17 @@ const TITLE_KEYWORDS: &[(&str, &[&str])] = &[
     ("opera", &["오페라", "opera"]),
     (
         "crossover",
-        &["크로스오버", "재즈", "영화음악", "시네마", "지브리", "게임", "애니메이션", "jazz", "crossover"],
+        &[
+            "크로스오버",
+            "재즈",
+            "영화음악",
+            "시네마",
+            "지브리",
+            "게임",
+            "애니메이션",
+            "jazz",
+            "crossover",
+        ],
     ),
 ];
 
@@ -206,11 +229,10 @@ const TITLE_KEYWORDS: &[(&str, &[&str])] = &[
 fn category_instrument(code: &str) -> Option<&'static str> {
     match code {
         "pianist" => Some("piano"),
-        "violinist" | "violist" | "cellist" | "double_bassist" | "guitarist" | "harpist" | "gambist" => {
-            Some("strings")
-        }
-        "flutist" | "oboist" | "clarinetist" | "bassoonist" | "hornist" | "trumpeter" | "saxophonist"
-        | "recorder_player" => Some("winds"),
+        "violinist" | "violist" | "cellist" | "double_bassist" | "guitarist" | "harpist"
+        | "gambist" => Some("strings"),
+        "flutist" | "oboist" | "clarinetist" | "bassoonist" | "hornist" | "trumpeter"
+        | "saxophonist" | "recorder_player" => Some("winds"),
         "vocalist" => Some("vocal"),
         "choir" => Some("choir"),
         "orchestra" | "conductor" => Some("orchestra"),
@@ -251,9 +273,15 @@ mod tests {
 
     #[test]
     fn splits_cast_and_drops_trailing_etc() {
-        assert_eq!(split_cast_names("홍길동, 김철수 등"), vec!["홍길동", "김철수"]);
+        assert_eq!(
+            split_cast_names("홍길동, 김철수 등"),
+            vec!["홍길동", "김철수"]
+        );
         assert_eq!(split_cast_names("임윤찬"), vec!["임윤찬"]);
-        assert_eq!(split_cast_names("홍길동, 김철수등"), vec!["홍길동", "김철수"]);
+        assert_eq!(
+            split_cast_names("홍길동, 김철수등"),
+            vec!["홍길동", "김철수"]
+        );
         assert_eq!(split_cast_names("홍길동 외 3명"), vec!["홍길동"]);
         assert_eq!(split_cast_names("홍길동 외 다수"), vec!["홍길동"]);
     }
@@ -264,12 +292,18 @@ mod tests {
             split_cast_names("손열음(피아노) · 클라라 주미 강 (바이올린)/ 서울시립교향악단"),
             vec!["손열음", "클라라 주미 강", "서울시립교향악단"]
         );
-        assert_eq!(split_cast_names("조성진 & 임윤찬\n선우예권"), vec!["조성진", "임윤찬", "선우예권"]);
+        assert_eq!(
+            split_cast_names("조성진 & 임윤찬\n선우예권"),
+            vec!["조성진", "임윤찬", "선우예권"]
+        );
     }
 
     #[test]
     fn skips_short_and_duplicate_names() {
-        assert_eq!(split_cast_names("김, 이, 홍길동, 홍길동 등"), vec!["홍길동"]);
+        assert_eq!(
+            split_cast_names("김, 이, 홍길동, 홍길동 등"),
+            vec!["홍길동"]
+        );
         assert!(split_cast_names("  ,  등").is_empty());
     }
 
@@ -282,24 +316,46 @@ mod tests {
 
     #[test]
     fn classifies_by_title_keywords() {
-        assert_eq!(classify_instrumentation("임윤찬 피아노 리사이틀 [울산]", &[]), vec!["piano"]);
-        assert_eq!(classify_instrumentation("블래져 목관앙상블 정기연주회", &[]), vec!["winds", "chamber"]);
+        assert_eq!(
+            classify_instrumentation("임윤찬 피아노 리사이틀 [울산]", &[]),
+            vec!["piano"]
+        );
+        assert_eq!(
+            classify_instrumentation("블래져 목관앙상블 정기연주회", &[]),
+            vec!["winds", "chamber"]
+        );
         assert_eq!(
             classify_instrumentation("제447회 인천시립교향악단 정기연주회", &[]),
             vec!["orchestra"]
         );
-        assert_eq!(classify_instrumentation("소프라노 박지영 & 피아니스트 양기훈 듀오 리사이틀", &[]), vec![
-            "piano", "vocal", "chamber"
-        ]);
-        assert_eq!(classify_instrumentation("제14회 한국남성합창단 합동 연주회", &[]), vec!["choir"]);
-        assert_eq!(classify_instrumentation("라움마티네콘서트, 오페라 갈라", &[]), vec!["opera"]);
-        assert_eq!(classify_instrumentation("트릭컬 리바이브 오케스트라 콘서트: 게임 음악", &[]), vec![
-            "orchestra",
-            "crossover"
-        ]);
-        assert_eq!(classify_instrumentation("Esmé Quartet Recital", &[]), vec!["chamber"]);
-        assert_eq!(classify_instrumentation("경기필 마스터피스 시리즈 Ⅴ. 말러 교향곡 1번", &[]), vec!["orchestra"]);
-        assert_eq!(classify_instrumentation("우리가 사랑한 시네마 뮤직 콘서트", &[]), vec!["crossover"]);
+        assert_eq!(
+            classify_instrumentation("소프라노 박지영 & 피아니스트 양기훈 듀오 리사이틀", &[]),
+            vec!["piano", "vocal", "chamber"]
+        );
+        assert_eq!(
+            classify_instrumentation("제14회 한국남성합창단 합동 연주회", &[]),
+            vec!["choir"]
+        );
+        assert_eq!(
+            classify_instrumentation("라움마티네콘서트, 오페라 갈라", &[]),
+            vec!["opera"]
+        );
+        assert_eq!(
+            classify_instrumentation("트릭컬 리바이브 오케스트라 콘서트: 게임 음악", &[]),
+            vec!["orchestra", "crossover"]
+        );
+        assert_eq!(
+            classify_instrumentation("Esmé Quartet Recital", &[]),
+            vec!["chamber"]
+        );
+        assert_eq!(
+            classify_instrumentation("경기필 마스터피스 시리즈 Ⅴ. 말러 교향곡 1번", &[]),
+            vec!["orchestra"]
+        );
+        assert_eq!(
+            classify_instrumentation("우리가 사랑한 시네마 뮤직 콘서트", &[]),
+            vec!["crossover"]
+        );
     }
 
     #[test]
@@ -308,13 +364,19 @@ mod tests {
         assert!(classify_instrumentation("베이스캠프 콘서트", &[]).is_empty());
         assert!(classify_instrumentation("관악구민 음악회", &[]).is_empty());
         assert!(classify_instrumentation("Boston Recital", &[]).is_empty());
-        assert_eq!(classify_instrumentation("하프시코드 독주회", &[]), vec!["piano"]);
+        assert_eq!(
+            classify_instrumentation("하프시코드 독주회", &[]),
+            vec!["piano"]
+        );
     }
 
     #[test]
     fn adds_linked_artist_categories() {
         assert_eq!(
-            classify_instrumentation("SAC 월드스타시리즈, 알렉산더 가지예프 리사이틀", &["pianist"]),
+            classify_instrumentation(
+                "SAC 월드스타시리즈, 알렉산더 가지예프 리사이틀",
+                &["pianist"]
+            ),
             vec!["piano"]
         );
         assert_eq!(
@@ -322,12 +384,18 @@ mod tests {
             vec!["piano", "orchestra"]
         );
         // DB에 남은 원본 한국어 분류도 코드로 바꿔 쓴다
-        assert_eq!(classify_instrumentation("리사이틀", &["피아노"]), vec!["piano"]);
+        assert_eq!(
+            classify_instrumentation("리사이틀", &["피아노"]),
+            vec!["piano"]
+        );
     }
 
     #[test]
     fn stores_codes_as_comma_string() {
-        assert_eq!(instrumentation_value(&["piano", "chamber"]), "piano,chamber");
+        assert_eq!(
+            instrumentation_value(&["piano", "chamber"]),
+            "piano,chamber"
+        );
         assert_eq!(instrumentation_value(&[]), "");
         assert!(INSTRUMENT_CODES.iter().all(|code| is_instrument_code(code)));
         assert!(!is_instrument_code("guitar"));

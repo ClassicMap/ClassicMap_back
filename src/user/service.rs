@@ -1,8 +1,8 @@
 use super::model::{
     AutoCollection, ClerkDeleteWebhookEvent, ClerkWebhookEvent, CreateUser, FavoriteArtistItem,
-    FavoriteComposerItem, FavoriteConcertItem, FavoriteGroups, FavoritePieceItem, FavoriteRecordingItem, ProfileHeader,
-    ProfileSummary, ProfileVisibility, PublicProfileResponse, RatedConcertListItem,
-    UpdateProfileVisibility, UpdateUser, User, UserPublicProfile,
+    FavoriteComposerItem, FavoriteConcertItem, FavoriteGroups, FavoritePieceItem,
+    FavoriteRecordingItem, ProfileHeader, ProfileSummary, ProfileVisibility, PublicProfileResponse,
+    RatedConcertListItem, UpdateProfileVisibility, UpdateUser, User, UserPublicProfile,
 };
 use super::repository::UserRepository;
 use crate::db::DbPool;

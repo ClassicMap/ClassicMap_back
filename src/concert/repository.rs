@@ -1,6 +1,7 @@
 use super::model::{
-    Concert, ConcertArtist, ConcertArtistSummary, ConcertBoxofficeRanking, ConcertImage, ConcertListItem,
-    ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails, CreateConcert, UpdateConcert,
+    Concert, ConcertArtist, ConcertArtistSummary, ConcertBoxofficeRanking, ConcertImage,
+    ConcertListItem, ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails, CreateConcert,
+    UpdateConcert,
 };
 use crate::db::DbPool;
 use chrono::NaiveDate;
@@ -804,7 +805,10 @@ impl ConcertRepository {
         query: Option<&str>,
         limit: i64,
     ) -> Result<Vec<ConcertArtistSummary>, Error> {
-        let pattern = query.map(str::trim).filter(|q| !q.is_empty()).map(|q| format!("%{}%", q));
+        let pattern = query
+            .map(str::trim)
+            .filter(|q| !q.is_empty())
+            .map(|q| format!("%{}%", q));
         let mut sql = String::from(
             "SELECT a.id AS artist_id, a.name, a.english_name, a.image_url, a.category,
                     COUNT(DISTINCT c.id) AS concert_count
@@ -856,7 +860,10 @@ impl ConcertRepository {
     }
 
     /// 공연에 연결된 아티스트의 DB 원본 분류.
-    pub async fn linked_artist_categories(pool: &DbPool, concert_id: i32) -> Result<Vec<String>, Error> {
+    pub async fn linked_artist_categories(
+        pool: &DbPool,
+        concert_id: i32,
+    ) -> Result<Vec<String>, Error> {
         sqlx::query_scalar::<_, String>(
             "SELECT a.category FROM concert_artists ca
              JOIN artists a ON a.id = ca.artist_id
@@ -868,7 +875,11 @@ impl ConcertRepository {
     }
 
     /// 편성을 저장한다. 빈 문자열은 "분류했지만 해당 없음"이라 백필이 다시 보지 않는다.
-    pub async fn set_instrumentation(pool: &DbPool, concert_id: i32, value: &str) -> Result<(), Error> {
+    pub async fn set_instrumentation(
+        pool: &DbPool,
+        concert_id: i32,
+        value: &str,
+    ) -> Result<(), Error> {
         sqlx::query("UPDATE concerts SET instrumentation = ? WHERE id = ?")
             .bind(value)
             .bind(concert_id)
@@ -985,7 +996,11 @@ impl ConcertSearchFilter<'_> {
                 binds.push(SearchBind::Text(pattern.clone()));
             }
         }
-        for (column, value) in [("c.genre", self.genre), ("c.area", self.area), ("c.status", self.status)] {
+        for (column, value) in [
+            ("c.genre", self.genre),
+            ("c.area", self.area),
+            ("c.status", self.status),
+        ] {
             if let Some(value) = value {
                 sql.push_str(&format!(" AND {} = ?", column));
                 binds.push(SearchBind::Text(value.to_string()));
@@ -1085,7 +1100,11 @@ mod search_filter_tests {
 
     #[test]
     fn blank_query_is_ignored() {
-        let (sql, binds) = ConcertSearchFilter { query: Some("   "), ..Default::default() }.to_sql();
+        let (sql, binds) = ConcertSearchFilter {
+            query: Some("   "),
+            ..Default::default()
+        }
+        .to_sql();
         assert!(!sql.contains("LIKE"));
         assert!(binds.is_empty());
     }
@@ -1112,7 +1131,11 @@ impl ArtistNameIndex {
         let mut index = Self::default();
         for (id, name, english_name, category) in rows {
             let mut keys = vec![Self::key(&name)];
-            if let Some(english) = english_name.as_deref().map(Self::key).filter(|key| !key.is_empty()) {
+            if let Some(english) = english_name
+                .as_deref()
+                .map(Self::key)
+                .filter(|key| !key.is_empty())
+            {
                 if !keys.contains(&english) {
                     keys.push(english);
                 }
@@ -1136,7 +1159,10 @@ impl ArtistNameIndex {
     }
 
     fn key(name: &str) -> String {
-        name.split_whitespace().collect::<Vec<_>>().join(" ").to_lowercase()
+        name.split_whitespace()
+            .collect::<Vec<_>>()
+            .join(" ")
+            .to_lowercase()
     }
 
     /// (아티스트 id, DB 원본 분류)
@@ -1167,10 +1193,30 @@ mod artist_name_index_tests {
 
     fn index() -> ArtistNameIndex {
         ArtistNameIndex::from_rows(vec![
-            (187, "임윤찬".into(), Some("Yunchan Lim".into()), "pianist".into()),
-            (10, "김민수".into(), Some("Minsoo Kim".into()), "violinist".into()),
-            (11, "김민수".into(), Some("Min-Su Kim".into()), "cellist".into()),
-            (50, "서울시립교향악단".into(), Some("Seoul Philharmonic Orchestra".into()), "orchestra".into()),
+            (
+                187,
+                "임윤찬".into(),
+                Some("Yunchan Lim".into()),
+                "pianist".into(),
+            ),
+            (
+                10,
+                "김민수".into(),
+                Some("Minsoo Kim".into()),
+                "violinist".into(),
+            ),
+            (
+                11,
+                "김민수".into(),
+                Some("Min-Su Kim".into()),
+                "cellist".into(),
+            ),
+            (
+                50,
+                "서울시립교향악단".into(),
+                Some("Seoul Philharmonic Orchestra".into()),
+                "orchestra".into(),
+            ),
         ])
     }
 

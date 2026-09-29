@@ -1,8 +1,8 @@
-use super::model::{
-    ConcertArtistSummary, ConcertListItem, ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails, CreateConcert,
-    SubmitRating, UpdateConcert,
-};
 use super::enrichment::is_instrument_code;
+use super::model::{
+    ConcertArtistSummary, ConcertListItem, ConcertTicketVendor, ConcertWithArtists,
+    ConcertWithDetails, CreateConcert, SubmitRating, UpdateConcert,
+};
 use super::repository::ConcertSearchFilter;
 use super::service::ConcertService;
 use crate::auth::{AuthenticatedUser, ModeratorUser};
@@ -177,7 +177,10 @@ pub async fn search_concerts(
     limit: Option<i64>,
 ) -> Result<Json<Vec<ConcertListItem>>, Status> {
     // 편성은 정해진 코드만 받는다. 모르는 값은 결과가 늘 비므로 400 으로 알린다.
-    let instrument = instrument.as_deref().map(str::trim).filter(|v| !v.is_empty());
+    let instrument = instrument
+        .as_deref()
+        .map(str::trim)
+        .filter(|v| !v.is_empty());
     if instrument.is_some_and(|code| !is_instrument_code(code)) {
         return Err(Status::BadRequest);
     }

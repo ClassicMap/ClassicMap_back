@@ -106,7 +106,9 @@ pub fn browse_sql(filter: &BrowseFilter<'_>) -> (String, Vec<BrowseBind>) {
         binds.push(BrowseBind::Text(year.to_string()));
     }
     if let Some(query) = filter.query.map(str::trim).filter(|v| !v.is_empty()) {
-        sql.push_str(" AND (r.title LIKE ? OR r.label LIKE ? OR a.name LIKE ? OR a.english_name LIKE ?)");
+        sql.push_str(
+            " AND (r.title LIKE ? OR r.label LIKE ? OR a.name LIKE ? OR a.english_name LIKE ?)",
+        );
         let pattern = format!("%{}%", escape_like(query));
         for _ in 0..4 {
             binds.push(BrowseBind::Text(pattern.clone()));
@@ -122,11 +124,17 @@ pub fn browse_sql(filter: &BrowseFilter<'_>) -> (String, Vec<BrowseBind>) {
 }
 
 fn escape_like(value: &str) -> String {
-    value.replace('\\', "\\\\").replace('%', "\\%").replace('_', "\\_")
+    value
+        .replace('\\', "\\\\")
+        .replace('%', "\\%")
+        .replace('_', "\\_")
 }
 
 pub fn page(offset: Option<i64>, limit: Option<i64>) -> (i64, i64) {
-    (offset.unwrap_or(0).max(0), limit.unwrap_or(DEFAULT_LIMIT).clamp(1, MAX_LIMIT))
+    (
+        offset.unwrap_or(0).max(0),
+        limit.unwrap_or(DEFAULT_LIMIT).clamp(1, MAX_LIMIT),
+    )
 }
 
 fn is_valid_year(year: &str) -> bool {
@@ -136,7 +144,10 @@ fn is_valid_year(year: &str) -> bool {
 fn mark_pre_release(mut items: Vec<RecordingListItem>) -> Vec<RecordingListItem> {
     let today = Local::now().date_naive().format("%Y-%m-%d").to_string();
     for item in &mut items {
-        item.is_pre_release = item.release_date.as_deref().is_some_and(|date| date > today.as_str());
+        item.is_pre_release = item
+            .release_date
+            .as_deref()
+            .is_some_and(|date| date > today.as_str());
     }
     items
 }
@@ -155,7 +166,12 @@ pub async fn find_browse(
             BrowseBind::Text(value) => query.bind(value),
         };
     }
-    query.bind(limit).bind(offset).fetch_all(pool).await.map(mark_pre_release)
+    query
+        .bind(limit)
+        .bind(offset)
+        .fetch_all(pool)
+        .await
+        .map(mark_pre_release)
 }
 
 pub async fn find_labels(pool: &DbPool, limit: i64) -> Result<Vec<RecordingLabel>, sqlx::Error> {
@@ -225,18 +241,27 @@ pub async fn browse_recordings(
         sort: Some(sort),
     };
     let (offset, limit) = page(offset, limit);
-    find_browse(pool, &filter, offset, limit).await.map(Json).map_err(|e| {
-        Logger::error("API", &format!("Failed to browse recordings: {}", e));
-        Status::InternalServerError
-    })
+    find_browse(pool, &filter, offset, limit)
+        .await
+        .map(Json)
+        .map_err(|e| {
+            Logger::error("API", &format!("Failed to browse recordings: {}", e));
+            Status::InternalServerError
+        })
 }
 
 #[get("/recordings/labels?<limit>")]
-pub async fn get_recording_labels(pool: &State<DbPool>, limit: Option<i64>) -> Result<Json<Vec<RecordingLabel>>, Status> {
-    find_labels(pool, limit.unwrap_or(30).clamp(1, 100)).await.map(Json).map_err(|e| {
-        Logger::error("API", &format!("Failed to get recording labels: {}", e));
-        Status::InternalServerError
-    })
+pub async fn get_recording_labels(
+    pool: &State<DbPool>,
+    limit: Option<i64>,
+) -> Result<Json<Vec<RecordingLabel>>, Status> {
+    find_labels(pool, limit.unwrap_or(30).clamp(1, 100))
+        .await
+        .map(Json)
+        .map_err(|e| {
+            Logger::error("API", &format!("Failed to get recording labels: {}", e));
+            Status::InternalServerError
+        })
 }
 
 #[get("/me/recordings/new?<days>&<offset>&<limit>")]
@@ -249,10 +274,13 @@ pub async fn get_my_new_recordings(
 ) -> Result<Json<Vec<RecordingListItem>>, Status> {
     let days = days.unwrap_or(DEFAULT_NEW_DAYS).clamp(1, MAX_NEW_DAYS);
     let (offset, limit) = page(offset, limit);
-    find_new_for_user(pool, user.user.id, days, offset, limit).await.map(Json).map_err(|e| {
-        Logger::error("API", &format!("Failed to get new recordings: {}", e));
-        Status::InternalServerError
-    })
+    find_new_for_user(pool, user.user.id, days, offset, limit)
+        .await
+        .map(Json)
+        .map_err(|e| {
+            Logger::error("API", &format!("Failed to get new recordings: {}", e));
+            Status::InternalServerError
+        })
 }
 
 #[cfg(test)]
@@ -299,7 +327,9 @@ mod tests {
 
     #[rocket::async_test]
     async fn new_routes_do_not_collide_with_recording_by_id() {
-        let pool = sqlx::mysql::MySqlPoolOptions::new().connect_lazy("mysql://user:pass@localhost/db").unwrap();
+        let pool = sqlx::mysql::MySqlPoolOptions::new()
+            .connect_lazy("mysql://user:pass@localhost/db")
+            .unwrap();
         rocket::build()
             .manage(pool)
             .mount(
@@ -339,7 +369,14 @@ mod tests {
             artist_image_url: None,
             artist_category: "pianist".into(),
         };
-        let marked = mark_pre_release(vec![item(Some("2999-01-01")), item(Some("2000-01-01")), item(None)]);
-        assert_eq!(marked.iter().map(|i| i.is_pre_release).collect::<Vec<_>>(), vec![true, false, false]);
+        let marked = mark_pre_release(vec![
+            item(Some("2999-01-01")),
+            item(Some("2000-01-01")),
+            item(None),
+        ]);
+        assert_eq!(
+            marked.iter().map(|i| i.is_pre_release).collect::<Vec<_>>(),
+            vec![true, false, false]
+        );
     }
 }

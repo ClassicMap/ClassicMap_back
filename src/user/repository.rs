@@ -1,7 +1,7 @@
 use super::model::{
     CreateUser, FavoriteArtistItem, FavoriteComposerItem, FavoriteConcertItem, FavoriteGroups,
-    FavoritePieceItem, FavoriteRecordingItem, RatedConcertListItem, UpdateProfileVisibility, UpdateUser, User,
-    UserPublicProfile,
+    FavoritePieceItem, FavoriteRecordingItem, RatedConcertListItem, UpdateProfileVisibility,
+    UpdateUser, User, UserPublicProfile,
 };
 use crate::db::DbPool;
 use sqlx::Error;
@@ -371,12 +371,13 @@ impl UserRepository {
         user_id: i32,
         recording_id: i32,
     ) -> Result<u64, Error> {
-        let result =
-            sqlx::query("DELETE FROM user_favorite_recordings WHERE user_id = ? AND recording_id = ?")
-                .bind(user_id)
-                .bind(recording_id)
-                .execute(pool)
-                .await?;
+        let result = sqlx::query(
+            "DELETE FROM user_favorite_recordings WHERE user_id = ? AND recording_id = ?",
+        )
+        .bind(user_id)
+        .bind(recording_id)
+        .execute(pool)
+        .await?;
 
         Ok(result.rows_affected())
     }

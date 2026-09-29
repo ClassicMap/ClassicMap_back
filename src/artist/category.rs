@@ -107,7 +107,14 @@ pub const ARTIST_CATEGORIES: &[ArtistCategory] = &[
     ArtistCategory {
         code: "vocalist",
         label_ko: "성악가",
-        source_values: &["목소리", "soprano", "mezzo_soprano", "tenor", "baritone", "bass-baritone"],
+        source_values: &[
+            "목소리",
+            "soprano",
+            "mezzo_soprano",
+            "tenor",
+            "baritone",
+            "bass-baritone",
+        ],
     },
     ArtistCategory {
         code: "conductor",
