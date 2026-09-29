@@ -1,6 +1,6 @@
 use super::model::{
     AutoCollection, ClerkDeleteWebhookEvent, ClerkWebhookEvent, CreateUser, FavoriteArtistItem,
-    FavoriteComposerItem, FavoriteConcertItem, FavoriteGroups, FavoritePieceItem, ProfileHeader,
+    FavoriteComposerItem, FavoriteConcertItem, FavoriteGroups, FavoritePieceItem, FavoriteRecordingItem, ProfileHeader,
     ProfileSummary, ProfileVisibility, PublicProfileResponse, RatedConcertListItem,
     UpdateProfileVisibility, UpdateUser, User, UserPublicProfile,
 };
@@ -216,6 +216,37 @@ impl UserService {
     ) -> Result<u64, String> {
         Self::validate_positive_id(piece_id, "piece_id")?;
         UserRepository::delete_favorite_piece(pool, user_id, piece_id)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn get_favorite_recordings(
+        pool: &DbPool,
+        user_id: i32,
+    ) -> Result<Vec<FavoriteRecordingItem>, String> {
+        UserRepository::find_favorite_recordings(pool, user_id)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn add_favorite_recording(
+        pool: &DbPool,
+        user_id: i32,
+        recording_id: i32,
+    ) -> Result<u64, String> {
+        Self::validate_positive_id(recording_id, "recording_id")?;
+        UserRepository::add_favorite_recording(pool, user_id, recording_id)
+            .await
+            .map_err(|e| e.to_string())
+    }
+
+    pub async fn delete_favorite_recording(
+        pool: &DbPool,
+        user_id: i32,
+        recording_id: i32,
+    ) -> Result<u64, String> {
+        Self::validate_positive_id(recording_id, "recording_id")?;
+        UserRepository::delete_favorite_recording(pool, user_id, recording_id)
             .await
             .map_err(|e| e.to_string())
     }

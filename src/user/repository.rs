@@ -1,6 +1,6 @@
 use super::model::{
     CreateUser, FavoriteArtistItem, FavoriteComposerItem, FavoriteConcertItem, FavoriteGroups,
-    FavoritePieceItem, RatedConcertListItem, UpdateProfileVisibility, UpdateUser, User,
+    FavoritePieceItem, FavoriteRecordingItem, RatedConcertListItem, UpdateProfileVisibility, UpdateUser, User,
     UserPublicProfile,
 };
 use crate::db::DbPool;
@@ -316,6 +316,65 @@ impl UserRepository {
             sqlx::query("DELETE FROM user_favorite_pieces WHERE user_id = ? AND piece_id = ?")
                 .bind(user_id)
                 .bind(piece_id)
+                .execute(pool)
+                .await?;
+
+        Ok(result.rows_affected())
+    }
+
+    /// 앨범 레퍼토리. 레퍼토리 묶음(find_favorites)과 공개 프로필 개수에는 넣지 않는다.
+    pub async fn find_favorite_recordings(
+        pool: &DbPool,
+        user_id: i32,
+    ) -> Result<Vec<FavoriteRecordingItem>, Error> {
+        sqlx::query_as::<_, FavoriteRecordingItem>(
+            "SELECT
+                r.id AS recording_id,
+                r.title,
+                r.cover_url,
+                DATE_FORMAT(r.release_date, '%Y-%m-%d') AS release_date,
+                r.label,
+                a.id AS artist_id,
+                a.name AS artist_name,
+                DATE_FORMAT(f.created_at, '%Y-%m-%d %H:%i:%s') AS created_at
+             FROM user_favorite_recordings f
+             JOIN recordings r ON r.id = f.recording_id
+             JOIN artists a ON a.id = r.artist_id
+             WHERE f.user_id = ?
+             ORDER BY f.created_at DESC, f.id DESC",
+        )
+        .bind(user_id)
+        .fetch_all(pool)
+        .await
+    }
+
+    pub async fn add_favorite_recording(
+        pool: &DbPool,
+        user_id: i32,
+        recording_id: i32,
+    ) -> Result<u64, Error> {
+        let result = sqlx::query(
+            "INSERT INTO user_favorite_recordings (user_id, recording_id)
+             VALUES (?, ?)
+             ON DUPLICATE KEY UPDATE user_id = user_id",
+        )
+        .bind(user_id)
+        .bind(recording_id)
+        .execute(pool)
+        .await?;
+
+        Ok(result.rows_affected())
+    }
+
+    pub async fn delete_favorite_recording(
+        pool: &DbPool,
+        user_id: i32,
+        recording_id: i32,
+    ) -> Result<u64, Error> {
+        let result =
+            sqlx::query("DELETE FROM user_favorite_recordings WHERE user_id = ? AND recording_id = ?")
+                .bind(user_id)
+                .bind(recording_id)
                 .execute(pool)
                 .await?;
 

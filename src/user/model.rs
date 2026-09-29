@@ -162,6 +162,19 @@ pub struct FavoritePieceItem {
     pub created_at: String,
 }
 
+#[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+#[serde(rename_all = "camelCase")]
+pub struct FavoriteRecordingItem {
+    pub recording_id: i32,
+    pub title: String,
+    pub cover_url: Option<String>,
+    pub release_date: Option<String>,
+    pub label: Option<String>,
+    pub artist_id: i32,
+    pub artist_name: String,
+    pub created_at: String,
+}
+
 #[derive(Debug, Clone, Default, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct FavoriteGroups {
@@ -230,6 +243,12 @@ pub struct FavoriteComposerRequest {
 #[serde(rename_all = "camelCase")]
 pub struct FavoritePieceRequest {
     pub piece_id: i32,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct FavoriteRecordingRequest {
+    pub recording_id: i32,
 }
 
 #[derive(Debug, Serialize, Deserialize)]

@@ -1,7 +1,7 @@
 use super::model::{
     ClerkDeleteWebhookEvent, ClerkWebhookEvent, FavoriteArtistItem, FavoriteArtistRequest,
     FavoriteComposerItem, FavoriteComposerRequest, FavoriteConcertItem, FavoriteConcertRequest,
-    FavoritePieceItem, FavoritePieceRequest, PublicProfileResponse, RatedConcertListItem,
+    FavoritePieceItem, FavoritePieceRequest, FavoriteRecordingItem, FavoriteRecordingRequest, PublicProfileResponse, RatedConcertListItem,
     UpdateProfileVisibility, UpdateUser, User, UserPublicProfile,
 };
 use super::service::UserService;
@@ -298,6 +298,51 @@ pub async fn delete_my_favorite_piece(
         Ok(_) => Ok(Status::NoContent),
         Err(e) => {
             Logger::error("API", &format!("Failed to delete favorite piece: {}", e));
+            if e.contains("must be positive") {
+                Err(Status::BadRequest)
+            } else {
+                Err(Status::InternalServerError)
+            }
+        }
+    }
+}
+
+#[get("/me/favorites/recordings")]
+pub async fn get_my_favorite_recordings(
+    pool: &State<DbPool>,
+    user: AuthenticatedUser,
+) -> Result<Json<Vec<FavoriteRecordingItem>>, Status> {
+    match UserService::get_favorite_recordings(pool, user.user.id).await {
+        Ok(favorites) => Ok(Json(favorites)),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to get favorite recordings: {}", e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+#[post("/me/favorites/recordings", data = "<favorite>")]
+pub async fn add_my_favorite_recording(
+    pool: &State<DbPool>,
+    user: AuthenticatedUser,
+    favorite: Json<FavoriteRecordingRequest>,
+) -> Result<Status, Status> {
+    mutation_status(
+        UserService::add_favorite_recording(pool, user.user.id, favorite.recording_id).await,
+        "add favorite recording",
+    )
+}
+
+#[delete("/me/favorites/recordings/<recording_id>")]
+pub async fn delete_my_favorite_recording(
+    pool: &State<DbPool>,
+    user: AuthenticatedUser,
+    recording_id: i32,
+) -> Result<Status, Status> {
+    match UserService::delete_favorite_recording(pool, user.user.id, recording_id).await {
+        Ok(_) => Ok(Status::NoContent),
+        Err(e) => {
+            Logger::error("API", &format!("Failed to delete favorite recording: {}", e));
             if e.contains("must be positive") {
                 Err(Status::BadRequest)
             } else {
