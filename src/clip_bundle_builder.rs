@@ -31,7 +31,7 @@ struct ClipSidecar {
 #[derive(Debug, Serialize, PartialEq, Eq)]
 #[serde(rename_all = "camelCase")]
 pub struct ClipBundleRow {
-    pub performance_id: i64,
+    pub performance_id: i32,
     pub storage_key: String,
     pub encoding_profile_version: String,
     pub file_size: u64,
@@ -44,10 +44,10 @@ pub struct ClipBundleRow {
 
 #[derive(Debug, sqlx::FromRow)]
 struct ClipJobRow {
-    performance_id: i64,
+    performance_id: i32,
     provider_video_id: String,
-    start_ms: i64,
-    end_ms: i64,
+    start_ms: u32,
+    end_ms: u32,
 }
 
 #[derive(Debug, Serialize)]
@@ -62,7 +62,7 @@ pub struct ClipBundleReport {
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct ClipFailure {
-    pub performance_id: i64,
+    pub performance_id: i32,
     pub storage_key: String,
     pub reason: String,
 }
@@ -119,26 +119,28 @@ pub struct ClipBundleOptions {
 
 /// `{videoId}-{startMs}-{endMs}-{profile}.mp4`. 사이드카의 이름이 아니라 값으로
 /// 만든다 — 사이드카는 끝 시각을 `durationMs` 라고 잘못 적어 두었다.
-pub fn storage_key(video_id: &str, start_ms: i64, end_ms: i64, profile: &str) -> String {
+pub fn storage_key(video_id: &str, start_ms: u32, end_ms: u32, profile: &str) -> String {
     format!("{video_id}-{start_ms}-{end_ms}-{profile}.mp4")
 }
 
 /// 질의 문자열은 알파벳 차례다. `load_clip_assets` 가 등록된 공개 주소와 대조한다.
-pub fn public_url(base: &str, video_id: &str, start_ms: i64, end_ms: i64, profile: &str) -> String {
+pub fn public_url(base: &str, video_id: &str, start_ms: u32, end_ms: u32, profile: &str) -> String {
     let base = base.trim_end_matches('/');
     let start = start_ms / 1000;
     let end = end_ms / 1000;
     format!("{base}/{video_id}?end={end}&profile={profile}&start={start}")
 }
 
-fn clip_url(base: &str, video_id: &str, start_ms: i64, end_ms: i64, profile: &str) -> String {
+fn clip_url(base: &str, video_id: &str, start_ms: u32, end_ms: u32, profile: &str) -> String {
     public_url(base, video_id, start_ms, end_ms, profile)
 }
 
 async fn fetch_jobs(pool: &Pool<MySql>, run_id: &str) -> Result<Vec<ClipJobRow>, ClipBundleError> {
     let rows = sqlx::query_as::<_, ClipJobRow>(
+        // provider_video_id 는 utf8mb4_bin 이라 그대로 읽으면 VARBINARY 로 와서
+        // String 으로 디코딩되지 않는다. clip_asset_loader 와 같은 방식으로 캐스팅한다.
         "SELECT performance.id AS performance_id,
-                source.provider_video_id AS provider_video_id,
+                CAST(source.provider_video_id AS CHAR CHARACTER SET utf8mb4) AS provider_video_id,
                 performance.start_ms AS start_ms,
                 performance.end_ms AS end_ms
          FROM clip_jobs job
