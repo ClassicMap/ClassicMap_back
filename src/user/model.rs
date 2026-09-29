@@ -157,6 +157,8 @@ pub struct FavoritePieceItem {
     pub title_en: Option<String>,
     pub composer_id: i32,
     pub composer_name: String,
+    /// 레퍼토리 목록에서 작품 대신 작곡가 초상을 얼굴로 쓴다
+    pub composer_avatar_url: Option<String>,
     pub created_at: String,
 }
 

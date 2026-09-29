@@ -276,6 +276,7 @@ impl UserRepository {
                 p.title_en,
                 p.composer_id,
                 c.name AS composer_name,
+                c.avatar_url AS composer_avatar_url,
                 DATE_FORMAT(f.created_at, '%Y-%m-%d %H:%i:%s') AS created_at
              FROM user_favorite_pieces f
              JOIN pieces p ON p.id = f.piece_id
