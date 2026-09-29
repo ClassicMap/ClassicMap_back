@@ -3,6 +3,7 @@ use super::model::{
     ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails, CreateConcert, UpdateConcert,
 };
 use crate::db::DbPool;
+use chrono::NaiveDate;
 use rust_decimal::Decimal;
 use sqlx::Error;
 
@@ -695,86 +696,23 @@ impl ConcertRepository {
         sql_query.fetch_all(pool).await
     }
 
-    /// Full-text search across concerts with pagination
+    /// 공연 목록 검색. 텍스트·장르·지역·상태에 날짜 범위와 내한·페스티벌 여부를 더해 거른다.
     pub async fn search_concerts_by_text(
         pool: &DbPool,
-        search_query: Option<&str>,
-        genre: Option<&str>,
-        area: Option<&str>,
-        status: Option<&str>,
+        filter: &ConcertSearchFilter<'_>,
         offset: i64,
         limit: i64,
     ) -> Result<Vec<ConcertListItem>, Error> {
-        // Prepare search pattern early to avoid lifetime issues
-        let search_pattern = search_query
-            .filter(|q| !q.trim().is_empty())
-            .map(|q| format!("%{}%", q));
-
-        let mut query = String::from(
-            "SELECT c.id, c.title, c.venue_id,
-             DATE_FORMAT(c.start_date, '%Y-%m-%d') as start_date,
-             DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
-             c.concert_time,
-             c.poster_url, c.status, c.rating, c.rating_count,
-             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival,
-             cbr.ranking as boxoffice_ranking
-             FROM concerts c
-             LEFT JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
-             WHERE 1=1",
-        );
-
-        // Text search across multiple fields
-        if search_pattern.is_some() {
-            query.push_str(
-                " AND (c.title LIKE ? OR c.composer_info LIKE ? OR c.cast LIKE ? OR c.facility_name LIKE ?)"
-            );
+        let (sql, binds) = filter.to_sql();
+        let mut sql_query = sqlx::query_as::<_, ConcertListItem>(&sql);
+        for bind in binds {
+            sql_query = match bind {
+                SearchBind::Text(value) => sql_query.bind(value),
+                SearchBind::Date(value) => sql_query.bind(value),
+                SearchBind::Flag(value) => sql_query.bind(value),
+            };
         }
-
-        // Additional filters
-        if genre.is_some() {
-            query.push_str(" AND c.genre = ?");
-        }
-        if area.is_some() {
-            query.push_str(" AND c.area = ?");
-        }
-        if status.is_some() {
-            query.push_str(" AND c.status = ?");
-        }
-
-        // Sort by proximity to today (upcoming first, then past)
-        query.push_str(
-            " ORDER BY
-               CASE WHEN c.start_date >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00')) THEN 0 ELSE 1 END,
-               ABS(DATEDIFF(c.start_date, DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00')))) ASC
-             LIMIT ? OFFSET ?",
-        );
-
-        let mut sql_query = sqlx::query_as::<_, ConcertListItem>(&query);
-
-        // Bind search query with wildcards
-        if let Some(ref pattern) = search_pattern {
-            sql_query = sql_query
-                .bind(pattern) // title
-                .bind(pattern) // composer_info
-                .bind(pattern) // cast
-                .bind(pattern); // facility_name
-        }
-
-        // Bind filter parameters
-        if let Some(g) = genre {
-            sql_query = sql_query.bind(g);
-        }
-        if let Some(a) = area {
-            sql_query = sql_query.bind(a);
-        }
-        if let Some(s) = status {
-            sql_query = sql_query.bind(s);
-        }
-
-        // Bind pagination
-        sql_query = sql_query.bind(limit).bind(offset);
-
-        sql_query.fetch_all(pool).await
+        sql_query.bind(limit).bind(offset).fetch_all(pool).await
     }
 
     // ============================================
@@ -893,5 +831,145 @@ impl ConcertRepository {
         }
 
         Ok(())
+    }
+}
+
+/// `/concerts/search` 조건. 비어 있는 값은 조건에서 빠진다.
+#[derive(Debug, Default)]
+pub struct ConcertSearchFilter<'a> {
+    pub query: Option<&'a str>,
+    pub genre: Option<&'a str>,
+    pub area: Option<&'a str>,
+    pub status: Option<&'a str>,
+    /// 이 날 이후에도 열리는 공연 (끝나는 날, 없으면 시작일 기준)
+    pub from: Option<NaiveDate>,
+    /// 이 날까지 시작하는 공연
+    pub to: Option<NaiveDate>,
+    pub visit: Option<bool>,
+    pub festival: Option<bool>,
+}
+
+#[derive(Debug, PartialEq)]
+pub enum SearchBind {
+    Text(String),
+    Date(NaiveDate),
+    Flag(bool),
+}
+
+impl ConcertSearchFilter<'_> {
+    /// LIMIT/OFFSET 자리표시자로 끝나는 SQL과 그 앞까지의 바인딩 값.
+    pub fn to_sql(&self) -> (String, Vec<SearchBind>) {
+        // 예매 순위는 기간별로 여러 행이라 조인하면 공연이 겹친다. 가장 높은 순위 하나만 붙인다.
+        let mut sql = String::from(
+            "SELECT c.id, c.title, c.venue_id,
+             DATE_FORMAT(c.start_date, '%Y-%m-%d') as start_date,
+             DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
+             c.concert_time,
+             c.poster_url, c.status, c.rating, c.rating_count,
+             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival,
+             (SELECT MIN(cbr.ranking) FROM concert_boxoffice_rankings cbr WHERE cbr.concert_id = c.id) as boxoffice_ranking
+             FROM concerts c
+             WHERE 1=1",
+        );
+        let mut binds = Vec::new();
+
+        if let Some(query) = self.query.map(str::trim).filter(|q| !q.is_empty()) {
+            sql.push_str(
+                " AND (c.title LIKE ? OR c.composer_info LIKE ? OR c.cast LIKE ? OR c.facility_name LIKE ?)",
+            );
+            let pattern = format!("%{}%", query);
+            for _ in 0..4 {
+                binds.push(SearchBind::Text(pattern.clone()));
+            }
+        }
+        for (column, value) in [("c.genre", self.genre), ("c.area", self.area), ("c.status", self.status)] {
+            if let Some(value) = value {
+                sql.push_str(&format!(" AND {} = ?", column));
+                binds.push(SearchBind::Text(value.to_string()));
+            }
+        }
+        if let Some(from) = self.from {
+            sql.push_str(" AND COALESCE(c.end_date, c.start_date) >= ?");
+            binds.push(SearchBind::Date(from));
+        }
+        if let Some(to) = self.to {
+            sql.push_str(" AND c.start_date <= ?");
+            binds.push(SearchBind::Date(to));
+        }
+        if let Some(visit) = self.visit {
+            sql.push_str(" AND COALESCE(c.is_visit, FALSE) = ?");
+            binds.push(SearchBind::Flag(visit));
+        }
+        if let Some(festival) = self.festival {
+            sql.push_str(" AND COALESCE(c.is_festival, FALSE) = ?");
+            binds.push(SearchBind::Flag(festival));
+        }
+
+        if self.from.is_some() {
+            // 기간을 정하면 지난 공연이 없으니 날짜순이 곧 가까운 순이다
+            sql.push_str(" ORDER BY c.start_date ASC, c.id ASC LIMIT ? OFFSET ?");
+        } else {
+            // 오늘 이후 공연 먼저, 그다음 오늘과 가까운 순
+            sql.push_str(
+                " ORDER BY
+               CASE WHEN c.start_date >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00')) THEN 0 ELSE 1 END,
+               ABS(DATEDIFF(c.start_date, DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00')))) ASC,
+               c.id ASC
+             LIMIT ? OFFSET ?",
+            );
+        }
+        (sql, binds)
+    }
+}
+
+#[cfg(test)]
+mod search_filter_tests {
+    use super::*;
+
+    fn date(value: &str) -> NaiveDate {
+        NaiveDate::parse_from_str(value, "%Y-%m-%d").unwrap()
+    }
+
+    #[test]
+    fn empty_filter_keeps_legacy_order_without_conditions() {
+        let (sql, binds) = ConcertSearchFilter::default().to_sql();
+        assert!(!sql.contains(" AND "));
+        assert!(sql.contains("CASE WHEN c.start_date >="));
+        assert!(!sql.contains("LEFT JOIN"));
+        assert!(sql.ends_with("LIMIT ? OFFSET ?"));
+        assert!(binds.is_empty());
+    }
+
+    #[test]
+    fn binds_follow_placeholder_order() {
+        let filter = ConcertSearchFilter {
+            query: Some(" 조성진 "),
+            genre: Some("서양음악(클래식)"),
+            area: Some("서울특별시"),
+            status: None,
+            from: Some(date("2026-10-01")),
+            to: Some(date("2026-10-31")),
+            visit: Some(true),
+            festival: Some(false),
+        };
+        let (sql, binds) = filter.to_sql();
+        let placeholders = sql.matches('?').count();
+        // LIMIT, OFFSET 두 자리는 호출부가 채운다
+        assert_eq!(placeholders, binds.len() + 2);
+        assert_eq!(binds[0], SearchBind::Text("%조성진%".into()));
+        assert_eq!(binds[4], SearchBind::Text("서양음악(클래식)".into()));
+        assert_eq!(binds[5], SearchBind::Text("서울특별시".into()));
+        assert_eq!(binds[6], SearchBind::Date(date("2026-10-01")));
+        assert_eq!(binds[7], SearchBind::Date(date("2026-10-31")));
+        assert_eq!(binds[8], SearchBind::Flag(true));
+        assert_eq!(binds[9], SearchBind::Flag(false));
+        assert!(sql.contains("ORDER BY c.start_date ASC, c.id ASC"));
+    }
+
+    #[test]
+    fn blank_query_is_ignored() {
+        let (sql, binds) = ConcertSearchFilter { query: Some("   "), ..Default::default() }.to_sql();
+        assert!(!sql.contains("LIKE"));
+        assert!(binds.is_empty());
     }
 }

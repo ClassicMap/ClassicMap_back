@@ -2,10 +2,12 @@ use super::model::{
     ConcertListItem, ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails, CreateConcert,
     SubmitRating, UpdateConcert,
 };
+use super::repository::ConcertSearchFilter;
 use super::service::ConcertService;
 use crate::auth::{AuthenticatedUser, ModeratorUser};
 use crate::db::DbPool;
 use crate::logger::Logger;
+use chrono::NaiveDate;
 use rocket::{http::Status, serde::json::Json, State};
 use rust_decimal::Decimal;
 
@@ -156,25 +158,49 @@ pub async fn get_upcoming_concerts(
     }
 }
 
-#[get("/concerts/search?<q>&<genre>&<area>&<status>&<offset>&<limit>")]
+#[get("/concerts/search?<q>&<genre>&<area>&<status>&<from>&<to>&<visit>&<festival>&<offset>&<limit>")]
+#[allow(clippy::too_many_arguments)]
 pub async fn search_concerts(
     pool: &State<DbPool>,
     q: Option<String>,
     genre: Option<String>,
     area: Option<String>,
     status: Option<String>,
+    from: Option<String>,
+    to: Option<String>,
+    visit: Option<bool>,
+    festival: Option<bool>,
     offset: Option<i64>,
     limit: Option<i64>,
 ) -> Result<Json<Vec<ConcertListItem>>, Status> {
-    // Always use search_concerts_by_text for pagination support
-    // It handles both text search and filter-only search
-    match ConcertService::search_concerts_by_text(pool, q, genre, area, status, offset, limit).await
-    {
+    // 날짜는 YYYY-MM-DD 만 받는다. 형식이 틀리면 조용히 무시하지 않고 400 으로 알린다.
+    let from = parse_day(from.as_deref())?;
+    let to = parse_day(to.as_deref())?;
+    let filter = ConcertSearchFilter {
+        query: q.as_deref(),
+        genre: genre.as_deref(),
+        area: area.as_deref(),
+        status: status.as_deref(),
+        from,
+        to,
+        visit,
+        festival,
+    };
+    match ConcertService::search_concerts_by_text(pool, &filter, offset, limit).await {
         Ok(concerts) => Ok(Json(concerts)),
         Err(e) => {
             Logger::error("API", &format!("Failed to search concerts: {}", e));
             Err(Status::InternalServerError)
         }
+    }
+}
+
+fn parse_day(value: Option<&str>) -> Result<Option<NaiveDate>, Status> {
+    match value.map(str::trim).filter(|v| !v.is_empty()) {
+        None => Ok(None),
+        Some(v) => NaiveDate::parse_from_str(v, "%Y-%m-%d")
+            .map(Some)
+            .map_err(|_| Status::BadRequest),
     }
 }
 

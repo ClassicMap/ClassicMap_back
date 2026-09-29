@@ -1,6 +1,6 @@
 use crate::db::DbPool;
 use super::model::{Concert, CreateConcert, UpdateConcert, ConcertWithArtists, ConcertWithDetails, ConcertListItem, ConcertTicketVendor};
-use super::repository::ConcertRepository;
+use super::repository::{ConcertRepository, ConcertSearchFilter};
 use rust_decimal::Decimal;
 
 pub struct ConcertService;
@@ -122,27 +122,13 @@ impl ConcertService {
 
     pub async fn search_concerts_by_text(
         pool: &DbPool,
-        search_query: Option<String>,
-        genre: Option<String>,
-        area: Option<String>,
-        status: Option<String>,
+        filter: &ConcertSearchFilter<'_>,
         offset: Option<i64>,
         limit: Option<i64>,
     ) -> Result<Vec<ConcertListItem>, String> {
-        let offset_val = offset.unwrap_or(0);
-        let limit_val = limit.unwrap_or(20);
-
-        ConcertRepository::search_concerts_by_text(
-            pool,
-            search_query.as_deref(),
-            genre.as_deref(),
-            area.as_deref(),
-            status.as_deref(),
-            offset_val,
-            limit_val,
-        )
-        .await
-        .map_err(|e| e.to_string())
+        ConcertRepository::search_concerts_by_text(pool, filter, offset.unwrap_or(0), limit.unwrap_or(20))
+            .await
+            .map_err(|e| e.to_string())
     }
 
     pub async fn get_ticket_vendors(pool: &DbPool, concert_id: i32) -> Result<Vec<ConcertTicketVendor>, String> {
