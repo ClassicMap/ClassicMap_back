@@ -295,6 +295,7 @@ impl ComparisonRepository {
                     sector.piece_id,
                     COALESCE(sector.name_ko, sector.sector_name) AS sector_name,
                     sector.name_en AS sector_name_en,
+                    sector.sector_type,
                     sector.description,
                     sector.display_order,
                     sector.measure_start,

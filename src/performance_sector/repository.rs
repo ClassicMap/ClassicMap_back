@@ -14,7 +14,7 @@ impl PerformanceSectorRepository {
     ) -> Result<Vec<PerformanceSector>, Error> {
         sqlx::query_as::<_, PerformanceSector>(
             r#"
-            SELECT id, piece_id, sector_name, description, display_order
+            SELECT id, piece_id, sector_name, sector_type, description, display_order
             FROM performance_sectors
             WHERE piece_id = ?
             ORDER BY display_order ASC, id ASC
@@ -35,6 +35,7 @@ impl PerformanceSectorRepository {
             id: i32,
             piece_id: i32,
             sector_name: String,
+            sector_type: Option<String>,
             description: Option<String>,
             display_order: Option<i32>,
             performance_count: i64,
@@ -45,13 +46,14 @@ impl PerformanceSectorRepository {
                 ps.id,
                 ps.piece_id,
                 ps.sector_name,
+                ps.sector_type,
                 ps.description,
                 ps.display_order,
                 COALESCE(COUNT(p.id), 0) as performance_count
             FROM performance_sectors ps
             LEFT JOIN performances p ON ps.id = p.sector_id
             WHERE ps.piece_id = ?
-            GROUP BY ps.id, ps.piece_id, ps.sector_name, ps.description, ps.display_order
+            GROUP BY ps.id, ps.piece_id, ps.sector_name, ps.sector_type, ps.description, ps.display_order
             ORDER BY ps.display_order ASC, ps.id ASC
             "#,
         )
@@ -67,6 +69,7 @@ impl PerformanceSectorRepository {
                         id: r.id,
                         piece_id: r.piece_id,
                         sector_name: r.sector_name,
+                        sector_type: r.sector_type,
                         description: r.description,
                         display_order: r.display_order,
                     },
@@ -80,7 +83,7 @@ impl PerformanceSectorRepository {
     pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<PerformanceSector>, Error> {
         sqlx::query_as::<_, PerformanceSector>(
             r#"
-            SELECT id, piece_id, sector_name, description, display_order
+            SELECT id, piece_id, sector_name, sector_type, description, display_order
             FROM performance_sectors
             WHERE id = ?
             "#,

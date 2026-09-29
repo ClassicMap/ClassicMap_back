@@ -158,6 +158,11 @@ def main():
                 "endCue": sector["endCue"],
                 "targetMinMs": (min(lengths) - 5) * 1000,
                 "targetMaxMs": (max(lengths) + 5) * 1000,
+                # 배치 정의의 sector.listeningNote 가 섹터 description 으로 들어간다.
+                # 화면이 고른 구간 아래에 그대로 그린다. 편곡 비교 구간
+                # (sectorType == ARRANGEMENTS)에서는 무엇을 들어야 하는지를 여기 적는다.
+                **({"editorialNote": sector["listeningNote"]}
+                   if sector.get("listeningNote") else {}),
             },
             "source": {
                 "provider": "youtube", "videoId": video_id,

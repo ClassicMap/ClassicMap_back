@@ -180,6 +180,10 @@ pub struct ComparisonSector {
     pub piece_id: i32,
     pub sector_name: String,
     pub sector_name_en: Option<String>,
+    /// 구간의 갈래. `WHOLE_WORK` · `MOVEMENT` · `EXCERPT` 는 같은 대목의 다른 해석을
+    /// 견주는 구간이고, `ARRANGEMENTS` 는 편성이 서로 다른 편곡을 나란히 듣는 구간이다.
+    /// 뒤엣것은 정렬 비용 임계를 적용하지 않으므로 화면이 갈래를 표시해야 한다.
+    pub sector_type: Option<String>,
     pub description: Option<String>,
     pub display_order: Option<i32>,
     pub measure_start: Option<String>,
@@ -285,6 +289,7 @@ mod tests {
             piece_id: 226,
             sector_name: "1악장 카덴차".to_string(),
             sector_name_en: None,
+            sector_type: Some("EXCERPT".to_string()),
             description: None,
             display_order: Some(1),
             measure_start: None,
@@ -297,6 +302,7 @@ mod tests {
         assert_eq!(value["sectorName"], "1악장 카덴차");
         assert_eq!(value["readyPerformanceCount"], 4);
         assert_eq!(value["primaryArtistCount"], 3);
+        assert_eq!(value["sectorType"], "EXCERPT");
         for key in ["sectorNameEn", "description", "measureStart", "measureEnd"] {
             assert!(
                 value.get(key).is_some_and(serde_json::Value::is_null),
