@@ -558,37 +558,37 @@ impl ConcertRepository {
         area_code: Option<&str>,
         limit: i32,
     ) -> Result<Vec<ConcertWithDetails>, Error> {
-        let query = if let Some(code) = area_code {
-            format!(
-                "SELECT DISTINCT c.id
-                 FROM concerts c
-                 INNER JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
-                 WHERE cbr.is_featured = true
-                 AND cbr.kopis_area_code = ?
-                 AND c.start_date >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00'))
-                 ORDER BY cbr.ranking ASC
-                 LIMIT ?"
-            )
+        // MySQL 8은 SELECT DISTINCT에 없는 컬럼으로 ORDER BY 하면 3065 오류를 낸다.
+        // 한 공연이 여러 순위 행(장르·지역)에 걸릴 수 있어 공연별로 묶고 가장 높은 순위로 정렬한다.
+        let query = if area_code.is_some() {
+            "SELECT c.id
+             FROM concerts c
+             INNER JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
+             WHERE cbr.is_featured = true
+             AND cbr.kopis_area_code = ?
+             AND c.start_date >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00'))
+             GROUP BY c.id
+             ORDER BY MIN(cbr.ranking) ASC, c.id ASC
+             LIMIT ?"
         } else {
-            format!(
-                "SELECT DISTINCT c.id
-                 FROM concerts c
-                 INNER JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
-                 WHERE cbr.is_featured = true
-                 AND c.start_date >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00'))
-                 ORDER BY cbr.ranking ASC
-                 LIMIT ?"
-            )
+            "SELECT c.id
+             FROM concerts c
+             INNER JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
+             WHERE cbr.is_featured = true
+             AND c.start_date >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00'))
+             GROUP BY c.id
+             ORDER BY MIN(cbr.ranking) ASC, c.id ASC
+             LIMIT ?"
         };
 
         let concert_ids: Vec<(i32,)> = if let Some(code) = area_code {
-            sqlx::query_as(&query)
+            sqlx::query_as(query)
                 .bind(code)
                 .bind(limit)
                 .fetch_all(pool)
                 .await?
         } else {
-            sqlx::query_as(&query).bind(limit).fetch_all(pool).await?
+            sqlx::query_as(query).bind(limit).fetch_all(pool).await?
         };
 
         let mut result = Vec::new();
