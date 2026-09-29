@@ -1,6 +1,6 @@
 {
   "batchId": "a-a27",
-  "note": "A tier A27. 메시앙 둘과 글래스 하나. 354 만 전곡(7분)이다. 360 은 바이올린·클라리넷·첼로·피아노 4중주인데 role 이 ENSEMBLE 이라 이름 붙은 앙상블 녹음을 찾아야 한다. 360·362 는 시드 쌍둥이 병합분이다.",
+  "note": "A tier A27. 메시앙 둘과 글래스 하나. **셋 다 낱 악장·전곡 트랙이 600초 안에 들어 발췌를 뺐다.** 360 의 role 을 ENSEMBLE 에서 **SOLOIST** 로 바꿨다 — 이름 붙은 앙상블 (Tashi · Ensemble Walter Boeykens · Amici · Zurich · Left Coast · Eurythmia) 가운데 위키데이터 항목이 있는 곳이 하나도 없고, 낱 연주자를 앞세운 판은 앞선 악기가 갈린다(샤함·포펜 바이올린, 프뢰스트 클라리넷). 적재기가 SOLOIST 를 받아 soloist 로 줄이므로(`comparison_seed_loader.rs`) 실내악의 첫 크레딧을 그대로 적을 수 있다. 362 의 role 을 CONDUCTOR 에서 **PIANIST** 로 바꿨다 — 배급 표기가 모두 피아니스트를 앞세우고(투랑갈릴라는 사실상 피아노 협주곡) 지휘자·악단을 딸림 크레딧으로 붙이는 것이 스키마에 맞는다(A21 457 치건과 같은 꼴). **362 는 옹드 마르트노 연주자를 적을 자리가 없다** — 배치 스키마의 딸림 키가 넷뿐이다. 360·362 는 시드 쌍둥이 병합분이다. **360 에서 포펜을 크라카워로 바꿨다** — 다섯 연주 열 쌍에서 샤함↔포펜만 0.1176 이었고 포펜을 빼면 0.1005~0.1028 이 된다. **354 에서 레빙스턴을 휘트웰로 바꿨다** — 레빙스턴의 위키데이터 항목이 클레임 12개에 viaf 하나뿐이라 얇다.",
   "pieces": [
     {
       "pieceId": 360,
@@ -10,7 +10,7 @@
       "titleEn": "Quatuor pour la fin du Temps",
       "composerNameEn": "Olivier Messiaen",
       "composerNameKo": "올리비에 메시앙",
-      "role": "ENSEMBLE",
+      "role": "SOLOIST",
       "sector": {
         "key": "mv1-liturgie-de-cristal",
         "type": "EXCERPT",
@@ -19,13 +19,25 @@
         "measureStart": "",
         "measureEnd": "",
         "startCue": "클라리넷의 새소리 음형 첫 음(작품 시작)",
-        "endCue": "발췌 끝"
+        "endCue": "1곡 종결음과 잔향"
       },
-      "excerpt": {
-        "anchor": "head",
-        "seconds": 120
-      },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "il5Vb4q1Ntg",
+          "artistName": "Gil Shaham",
+          "wikidata": "Q1339670"
+        },
+        {
+          "videoId": "UpdmlyGYYnM",
+          "artistName": "Martin Fröst",
+          "wikidata": "Q961572"
+        },
+        {
+          "videoId": "TuGH_gI1Ddw",
+          "artistName": "David Krakauer",
+          "wikidata": "Q972261"
+        }
+      ]
     },
     {
       "pieceId": 362,
@@ -35,7 +47,7 @@
       "titleEn": "Turangalîla-Symphonie, I/29",
       "composerNameEn": "Olivier Messiaen",
       "composerNameKo": "올리비에 메시앙",
-      "role": "CONDUCTOR",
+      "role": "PIANIST",
       "sector": {
         "key": "mv1-introduction",
         "type": "EXCERPT",
@@ -44,13 +56,49 @@
         "measureStart": "",
         "measureEnd": "",
         "startCue": "금관의 첫 총주 화음(작품 시작)",
-        "endCue": "발췌 끝"
+        "endCue": "1악장 종결 화음과 잔향"
       },
-      "excerpt": {
-        "anchor": "head",
-        "seconds": 120
-      },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "ABHU3OaDAhI",
+          "artistName": "Jean-Yves Thibaudet",
+          "wikidata": "Q1030549",
+          "conductor": {
+            "name": "Riccardo Chailly",
+            "wikidata": "Q371795"
+          },
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "2-easfsrUzk",
+          "artistName": "Yuja Wang",
+          "wikidata": "Q465311",
+          "conductor": {
+            "name": "Andris Nelsons",
+            "wikidata": "Q511817"
+          },
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "Ia9qADMR7zQ",
+          "artistName": "Yvonne Loriod",
+          "wikidata": "Q235500",
+          "conductor": {
+            "name": "Myung-Whun Chung",
+            "wikidata": "Q153778"
+          },
+          "orchestra": {
+            "name": "Orchestre de l'Opéra national de Paris",
+            "wikidata": "Q3355288"
+          }
+        }
+      ]
     },
     {
       "pieceId": 354,
@@ -71,7 +119,23 @@
         "startCue": "왼손 반복 음형의 첫 음(작품 시작)",
         "endCue": "종결 화음과 잔향"
       },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "JzYI-_hLguE",
+          "artistName": "Yuja Wang",
+          "wikidata": "Q465311"
+        },
+        {
+          "videoId": "sZffgf4GoMQ",
+          "artistName": "Víkingur Ólafsson",
+          "wikidata": "Q27916341"
+        },
+        {
+          "videoId": "fKDwMlBVZ_k",
+          "artistName": "Sally Whitwell",
+          "wikidata": "Q16205888"
+        }
+      ]
     }
   ]
 }

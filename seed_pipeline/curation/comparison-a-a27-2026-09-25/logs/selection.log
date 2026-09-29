@@ -1,0 +1,36 @@
+======== A27 선정 기록 (2026-09-29)
+
+### 360 <시간의 종말을 위한 4중주> 1곡
+**이름 붙은 앙상블 녹음이 여럿인데 위키데이터 항목이 하나도 없다** —
+Tashi(`f1JQN65kONY`, RCA) · Ensemble Walter Boeykens(`MNgcSLvNFHs`, PIAS) ·
+Amici Ensemble(`TZA1-R6BwFo`, Naxos) · Zurich Ensemble(`rNgn1Y5B79I`, Naxos) ·
+Left Coast Chamber Ensemble(`MSXcWxGWzLU`, Orchard) · Eurythmia Quartet(`_SJAkuTtWTc`, Naxos).
+그래서 role 을 SOLOIST 로 바꾸고 낱 연주자를 앞세운 판을 썼다.
+
+뺀 것 —
+- `Sn8KcMfkiC8` — 배급 표기가 "Olivier Messiaen · Jean Pasquier · André Vacellier ·
+  Etienne Pasquier" 다. **작곡가 본인이 친 1956년 판**이다
+- `G5R_gcJ8Ub8`(Wibert Aerts 외) — 위키데이터에 동명 항목이 둘이고(Q112462505 클레임 10,
+  Q52818377 클레임 8, 뒤엣것은 식별자 없음) 어느 쪽인지 가릴 근거가 없다
+- `OsurVLyVl6E`(Takumi Kubota) · `XWpyv73AntM`(Frédéric Dupuis) ·
+  `04ZYK0CCF50` 계열 — 위키데이터 항목 없음
+- `I11lOujETgQ`(에셴바흐) — 받아서 쟀으나 어느 조합에서도 최대가 0.1140 이상이었다
+- `GhQoNUd0-nQ`(포펜) — 샤함과의 쌍만 0.1176. 포펜·프뢰스트·크라카워(0.1005)도
+  쓸 수 있었으나 샤함·프뢰스트·크라카워(0.1028)와 차이가 잡음이라 샤함을 남겼다
+
+### 362 <투랑갈릴라 교향곡> 1악장
+배급 표기가 셋 다 **피아니스트를 앞세운다.** role 을 PIANIST 로 바꿨다.
+- `prO9kzXitK8`(나가노) — 배급 표기에 **악단 이름이 없다**
+- `nGWVpV6QTSU`(토르틀리에·BBC 필하모닉) · `n7YYATDa-Ak`(베로프·프레빈·런던심포니) —
+  쓸 수 있으나 셋을 이미 채웠다
+- **옹드 마르트노 주자를 적을 자리가 없다**(하라다 다카시 · 세실 라르티고 · 잔 로리오)
+
+### 354 글래스 피아노 연습곡 6번
+- `dhCluN4ZAKo`(나메카와) — 공식 채널이지만 **배급 표기가 없다**
+- `P6ScuTjkLg0` "Etudes for Solo Piano, **Book II**: No. 6" — **Book II 의 6번은
+  16번이다.** 6번이 아니다
+- `GGmuX4Mcod8`(제니 린) · `kmWb2jIpWIA`(호르바트) · `dKssJsW2oPM`(후이 우) —
+  위키데이터 항목 없음
+- `04ZYK0CCF50`(브루스 레빙스턴) — 항목은 있으나 **클레임 12개에 viaf 하나뿐이라 얇다.**
+  레빙스턴·올라프손·휘트웰이 최대 0.0720 으로 가장 낮았지만 휘트웰(클레임 29, 식별자
+  다섯)을 넣고 유자 왕을 남기는 쪽을 골랐다(최대 0.1021)

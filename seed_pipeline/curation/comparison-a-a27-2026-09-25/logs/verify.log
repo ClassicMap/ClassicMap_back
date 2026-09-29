@@ -1,0 +1,13 @@
+곡                       연주쌍                                    정렬비용  판정
+------------------------------------------------------------------------------
+<시간의 종말을 위한 4중주>        Gil Shaham ↔ Christoph Popp          0.1176  확인 필요
+<시간의 종말을 위한 4중주>        Gil Shaham ↔ Martin Fröst            0.0995  같은 곡
+<시간의 종말을 위한 4중주>        Christoph Popp ↔ Martin Fröst        0.1005  같은 곡
+<투랑갈릴라 교향곡>             Jean-Yves Thib ↔ Yuja Wang           0.0651  같은 곡
+<투랑갈릴라 교향곡>             Jean-Yves Thib ↔ Yvonne Loriod       0.0601  같은 곡
+<투랑갈릴라 교향곡>             Yuja Wang ↔ Yvonne Loriod            0.0692  같은 곡
+피아노 연습곡 6번              Yuja Wang ↔ Víkingur Ólafs           0.0884  같은 곡
+피아노 연습곡 6번              Yuja Wang ↔ Bruce Levingst           0.1084  같은 곡
+피아노 연습곡 6번              Víkingur Ólafs ↔ Bruce Levingst      0.0506  같은 곡
+------------------------------------------------------------------------------
+  확인 필요: <시간의 종말을 위한 4중주> (최대 비용 0.1176)

@@ -1,0 +1,13 @@
+곡                       연주쌍                                    정렬비용  판정
+------------------------------------------------------------------------------
+<시간의 종말을 위한 4중주>        Gil Shaham ↔ Martin Fröst            0.0995  같은 곡
+<시간의 종말을 위한 4중주>        Gil Shaham ↔ David Krakauer          0.1007  같은 곡
+<시간의 종말을 위한 4중주>        Martin Fröst ↔ David Krakauer        0.0696  같은 곡
+<투랑갈릴라 교향곡>             Jean-Yves Thib ↔ Yuja Wang           0.0651  같은 곡
+<투랑갈릴라 교향곡>             Jean-Yves Thib ↔ Yvonne Loriod       0.0601  같은 곡
+<투랑갈릴라 교향곡>             Yuja Wang ↔ Yvonne Loriod            0.0692  같은 곡
+피아노 연습곡 6번              Yuja Wang ↔ Víkingur Ólafs           0.0884  같은 곡
+피아노 연습곡 6번              Yuja Wang ↔ Sally Whitwell           0.1021  같은 곡
+피아노 연습곡 6번              Víkingur Ólafs ↔ Sally Whitwell      0.0466  같은 곡
+------------------------------------------------------------------------------
+  전부 통과
