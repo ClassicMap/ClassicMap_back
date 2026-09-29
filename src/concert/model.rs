@@ -191,6 +191,8 @@ pub struct ConcertListItem {
     pub is_open_run: Option<bool>,
     pub is_visit: Option<bool>,
     pub is_festival: Option<bool>,
+    /// 편성 코드를 쉼표로 이은 값 (예: "piano,chamber"). 아직 매기지 않았으면 null
+    pub instrumentation: Option<String>,
 }
 
 // Full detail response with all related data

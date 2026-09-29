@@ -2,6 +2,7 @@ use super::model::{
     ConcertListItem, ConcertTicketVendor, ConcertWithArtists, ConcertWithDetails, CreateConcert,
     SubmitRating, UpdateConcert,
 };
+use super::enrichment::is_instrument_code;
 use super::repository::ConcertSearchFilter;
 use super::service::ConcertService;
 use crate::auth::{AuthenticatedUser, ModeratorUser};
@@ -158,7 +159,7 @@ pub async fn get_upcoming_concerts(
     }
 }
 
-#[get("/concerts/search?<q>&<genre>&<area>&<status>&<from>&<to>&<visit>&<festival>&<offset>&<limit>")]
+#[get("/concerts/search?<q>&<genre>&<area>&<status>&<from>&<to>&<visit>&<festival>&<artist>&<instrument>&<offset>&<limit>")]
 #[allow(clippy::too_many_arguments)]
 pub async fn search_concerts(
     pool: &State<DbPool>,
@@ -170,9 +171,16 @@ pub async fn search_concerts(
     to: Option<String>,
     visit: Option<bool>,
     festival: Option<bool>,
+    artist: Option<i32>,
+    instrument: Option<String>,
     offset: Option<i64>,
     limit: Option<i64>,
 ) -> Result<Json<Vec<ConcertListItem>>, Status> {
+    // 편성은 정해진 코드만 받는다. 모르는 값은 결과가 늘 비므로 400 으로 알린다.
+    let instrument = instrument.as_deref().map(str::trim).filter(|v| !v.is_empty());
+    if instrument.is_some_and(|code| !is_instrument_code(code)) {
+        return Err(Status::BadRequest);
+    }
     // 날짜는 YYYY-MM-DD 만 받는다. 형식이 틀리면 조용히 무시하지 않고 400 으로 알린다.
     let from = parse_day(from.as_deref())?;
     let to = parse_day(to.as_deref())?;
@@ -185,6 +193,8 @@ pub async fn search_concerts(
         to,
         visit,
         festival,
+        artist,
+        instrument,
     };
     match ConcertService::search_concerts_by_text(pool, &filter, offset, limit).await {
         Ok(concerts) => Ok(Json(concerts)),

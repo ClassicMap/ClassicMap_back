@@ -41,7 +41,7 @@ impl ConcertRepository {
              DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
              c.concert_time,
              c.poster_url, c.status, c.rating, c.rating_count,
-             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival,
+             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival, c.instrumentation,
              cbr.ranking as boxoffice_ranking
              FROM concerts c
              LEFT JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
@@ -622,7 +622,7 @@ impl ConcertRepository {
              DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
              c.concert_time,
              c.poster_url, c.status, c.rating, c.rating_count,
-             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival,
+             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival, c.instrumentation,
              cbr.ranking as boxoffice_ranking
              FROM concerts c
              LEFT JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
@@ -656,7 +656,7 @@ impl ConcertRepository {
              DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
              c.concert_time,
              c.poster_url, c.status, c.rating, c.rating_count,
-             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival,
+             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival, c.instrumentation,
              cbr.ranking as boxoffice_ranking
              FROM concerts c
              LEFT JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
@@ -710,6 +710,7 @@ impl ConcertRepository {
                 SearchBind::Text(value) => sql_query.bind(value),
                 SearchBind::Date(value) => sql_query.bind(value),
                 SearchBind::Flag(value) => sql_query.bind(value),
+                SearchBind::Int(value) => sql_query.bind(value),
             };
         }
         sql_query.bind(limit).bind(offset).fetch_all(pool).await
@@ -912,6 +913,10 @@ pub struct ConcertSearchFilter<'a> {
     pub to: Option<NaiveDate>,
     pub visit: Option<bool>,
     pub festival: Option<bool>,
+    /// 이 아티스트가 출연진으로 연결된 공연
+    pub artist: Option<i32>,
+    /// 편성 코드 하나 (`enrichment::INSTRUMENT_CODES`)
+    pub instrument: Option<&'a str>,
 }
 
 #[derive(Debug, PartialEq)]
@@ -919,6 +924,7 @@ pub enum SearchBind {
     Text(String),
     Date(NaiveDate),
     Flag(bool),
+    Int(i32),
 }
 
 impl ConcertSearchFilter<'_> {
@@ -931,19 +937,20 @@ impl ConcertSearchFilter<'_> {
              DATE_FORMAT(c.end_date, '%Y-%m-%d') as end_date,
              c.concert_time,
              c.poster_url, c.status, c.rating, c.rating_count,
-             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival,
+             c.genre, c.area, c.facility_name, c.is_open_run, c.is_visit, c.is_festival, c.instrumentation,
              (SELECT MIN(cbr.ranking) FROM concert_boxoffice_rankings cbr WHERE cbr.concert_id = c.id) as boxoffice_ranking
              FROM concerts c
              WHERE 1=1",
         );
         let mut binds = Vec::new();
 
+        // composer_info 는 예전 동기화가 출연진을 복사해 둔 값이라 보지 않는다. 곡목은 program·synopsis 에 있다
         if let Some(query) = self.query.map(str::trim).filter(|q| !q.is_empty()) {
             sql.push_str(
-                " AND (c.title LIKE ? OR c.composer_info LIKE ? OR c.cast LIKE ? OR c.facility_name LIKE ?)",
+                " AND (c.title LIKE ? OR c.cast LIKE ? OR c.facility_name LIKE ? OR c.program LIKE ? OR c.synopsis LIKE ?)",
             );
             let pattern = format!("%{}%", query);
-            for _ in 0..4 {
+            for _ in 0..5 {
                 binds.push(SearchBind::Text(pattern.clone()));
             }
         }
@@ -968,6 +975,14 @@ impl ConcertSearchFilter<'_> {
         if let Some(festival) = self.festival {
             sql.push_str(" AND COALESCE(c.is_festival, FALSE) = ?");
             binds.push(SearchBind::Flag(festival));
+        }
+        if let Some(artist) = self.artist {
+            sql.push_str(" AND EXISTS (SELECT 1 FROM concert_artists ca WHERE ca.concert_id = c.id AND ca.artist_id = ?)");
+            binds.push(SearchBind::Int(artist));
+        }
+        if let Some(instrument) = self.instrument {
+            sql.push_str(" AND FIND_IN_SET(?, c.instrumentation) > 0");
+            binds.push(SearchBind::Text(instrument.to_string()));
         }
 
         if self.from.is_some() {
@@ -1016,18 +1031,24 @@ mod search_filter_tests {
             to: Some(date("2026-10-31")),
             visit: Some(true),
             festival: Some(false),
+            artist: Some(187),
+            instrument: Some("piano"),
         };
         let (sql, binds) = filter.to_sql();
         let placeholders = sql.matches('?').count();
         // LIMIT, OFFSET 두 자리는 호출부가 채운다
         assert_eq!(placeholders, binds.len() + 2);
         assert_eq!(binds[0], SearchBind::Text("%조성진%".into()));
-        assert_eq!(binds[4], SearchBind::Text("서양음악(클래식)".into()));
-        assert_eq!(binds[5], SearchBind::Text("서울특별시".into()));
-        assert_eq!(binds[6], SearchBind::Date(date("2026-10-01")));
-        assert_eq!(binds[7], SearchBind::Date(date("2026-10-31")));
-        assert_eq!(binds[8], SearchBind::Flag(true));
-        assert_eq!(binds[9], SearchBind::Flag(false));
+        assert_eq!(binds[5], SearchBind::Text("서양음악(클래식)".into()));
+        assert_eq!(binds[6], SearchBind::Text("서울특별시".into()));
+        assert_eq!(binds[7], SearchBind::Date(date("2026-10-01")));
+        assert_eq!(binds[8], SearchBind::Date(date("2026-10-31")));
+        assert_eq!(binds[9], SearchBind::Flag(true));
+        assert_eq!(binds[10], SearchBind::Flag(false));
+        assert_eq!(binds[11], SearchBind::Int(187));
+        assert_eq!(binds[12], SearchBind::Text("piano".into()));
+        assert!(sql.contains("c.program LIKE ?"));
+        assert!(!sql.contains("composer_info LIKE"));
         assert!(sql.contains("ORDER BY c.start_date ASC, c.id ASC"));
     }
 
