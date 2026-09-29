@@ -40,6 +40,8 @@ pub struct ComposerWithMajorPieces {
     pub style: Option<String>,
     pub influence: Option<String>,
     pub major_pieces: Option<String>,
+    /// 목록(`Composer.piece_count`)과 같은 기준: 이 작곡가의 전체 작품 수.
+    pub piece_count: Option<i64>,
 }
 
 #[derive(Debug, Serialize, Deserialize, FromRow)]

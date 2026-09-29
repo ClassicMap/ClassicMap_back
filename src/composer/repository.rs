@@ -59,7 +59,12 @@ impl ComposerRepository {
     }
 
     pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<ComposerWithMajorPieces>, Error> {
-        sqlx::query_as::<_, ComposerWithMajorPieces>("SELECT * FROM v_composers_full WHERE id = ?")
+        sqlx::query_as::<_, ComposerWithMajorPieces>(
+            "SELECT v.*,
+                    (SELECT COUNT(*) FROM pieces p WHERE p.composer_id = v.id) AS piece_count
+             FROM v_composers_full v
+             WHERE v.id = ?",
+        )
             .bind(id)
             .fetch_optional(pool)
             .await
