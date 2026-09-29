@@ -211,3 +211,13 @@ SELECT DISTINCT entity_kind FROM authority_entities;
 
 DB 에서 읽은 `start_ms`·`end_ms` 를 그대로 넘기면 안 된다. 1000 으로 나눠 넘긴다.
 넘기지 않으면 600초 검사에 걸려 죽는다(그래서 사고로는 이어지지 않는다).
+
+### 예비로 받은 영상은 videometa 를 합쳐야 한다 (2026-09-29)
+
+예비 연주를 딴 작업 폴더(`a-a26-spare2` 등)로 받아 견준 뒤 배치에 넣으면
+`build_candidates.py` 가 `KeyError: '<videoId>'` 로 죽는다. 길이를 `<batchId>-videometa.txt`
+에서 읽기 때문이다. WAV 만 옮기지 말고 그 줄도 옮긴다.
+
+```bash
+grep '^AmIylG4QfG0|' $SPARE/a-a26-spare2-videometa.txt >> $W/a-a26-videometa.txt
+```

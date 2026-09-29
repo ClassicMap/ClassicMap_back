@@ -1,6 +1,6 @@
 {
   "batchId": "a-a26",
-  "note": "A tier A26. 베베른 셋. 10~12분이라 상한에 붙어 셋 다 발췌로 잡았다. 369 는 1928 개정판으로 확정돼 있다 — 1909 원판이 따로 돈다. 셋 다 시드 쌍둥이 병합분이다.",
+  "note": "A tier A26. 베베른 셋. **셋 다 낱 악장·낱 곡 트랙을 찾아 발췌를 빼고 전체를 구간으로 썼다** (367 은 386~409초, 368 은 142~165초, 369 는 258~324초로 셋 다 600초 안이다). **369 는 이 배치에서 뺐다**(A-TIER-QUEUE.md 의 '다시 볼 곡' 참고). 구간을 1곡에서 4곡 <장송행진곡>으로 바꿔 보았으나 네 연주 여섯 쌍의 최저가 0.1335 였고 회전 열두 방향이 평평해 chroma 에 쓸 만한 음높이 정보가 없었다. 원래 적은 까닭은 — 1곡은 트랙이 67~73초뿐이라 베베른의 가장 얇은 짜임을 그 길이로 견주는 것이 무리였고, 4곡이 이 묶음에서 가장 실하고 가장 유명하다. 369 는 1928 개정판이다. 1909 원판 트랙이 따로 도는데 4곡의 빠르기말이 갈린다 — 개정판은 'Sehr mäßig', 원판은 'Langsam (marcia funebre)' 다. 368 은 현악 4중주 원곡이고 베르크 자신의 현악합주 편곡분(1929)은 배제했다. 셋 다 시드 쌍둥이 병합분이다. **368 에서 줄리아드 현악 4중주단을 에머슨 4중주단으로 바꿨다** — 다섯 연주 열 쌍에서 줄리아드가 낀 쌍만 0.1126~0.1324 였고 나머지 넷끼리는 0.0823~0.1013 이었다.",
   "pieces": [
     {
       "pieceId": 367,
@@ -19,13 +19,37 @@
         "measureStart": "",
         "measureEnd": "",
         "startCue": "호른과 클라리넷의 첫 음(악장 시작)",
-        "endCue": "발췌 끝"
+        "endCue": "1악장 종결음과 잔향"
       },
-      "excerpt": {
-        "anchor": "head",
-        "seconds": 120
-      },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "_Gi6ASzZmQw",
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "OtthtWqHxnU",
+          "artistName": "Christoph von Dohnányi",
+          "wikidata": "Q58039",
+          "orchestra": {
+            "name": "The Cleveland Orchestra",
+            "wikidata": "Q875248"
+          }
+        },
+        {
+          "videoId": "HSvEAFv1VGo",
+          "artistName": "Pierre Boulez",
+          "wikidata": "Q156193",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
     },
     {
       "pieceId": 368,
@@ -44,38 +68,25 @@
         "measureStart": "",
         "measureEnd": "",
         "startCue": "4중주 총주의 첫 음(악장 시작)",
-        "endCue": "발췌 끝"
+        "endCue": "1악장 종결음과 잔향"
       },
-      "excerpt": {
-        "anchor": "head",
-        "seconds": 120
-      },
-      "videos": []
-    },
-    {
-      "pieceId": 369,
-      "workMbid": "c13f2347-8145-41a6-9f7a-b4ef2a4bddd0",
-      "composerQid": "Q190933",
-      "titleKo": "오케스트라를 위한 6개의 소품 Op. 6 (1928 개정판)",
-      "titleEn": "Sechs Stücke für Orchester, op. 6 (1928 revision)",
-      "composerNameEn": "Anton Webern",
-      "composerNameKo": "안톤 베베른",
-      "role": "CONDUCTOR",
-      "sector": {
-        "key": "mv1-langsam",
-        "type": "EXCERPT",
-        "nameKo": "1곡 Langsam",
-        "nameEn": "I. Langsam",
-        "measureStart": "",
-        "measureEnd": "",
-        "startCue": "관현악의 여린 첫 음(작품 시작)",
-        "endCue": "발췌 끝"
-      },
-      "excerpt": {
-        "anchor": "head",
-        "seconds": 120
-      },
-      "videos": []
+      "videos": [
+        {
+          "videoId": "-mnhMcMralk",
+          "artistName": "Arditti Quartet",
+          "wikidata": "Q639552"
+        },
+        {
+          "videoId": "aX6qzLiXPPc",
+          "artistName": "Quartetto Italiano",
+          "wikidata": "Q930494"
+        },
+        {
+          "videoId": "AmIylG4QfG0",
+          "artistName": "Emerson String Quartet",
+          "wikidata": "Q681006"
+        }
+      ]
     }
   ]
 }
