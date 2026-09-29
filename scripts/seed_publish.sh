@@ -10,7 +10,7 @@
 # prewarm.mjs, kubectl cp, approve 마이그레이션.
 #
 # 환경변수
-#   DATABASE_URL              (필수) 클러스터 안 주소
+#   DATABASE_URL              DB 주소. 없으면 MYSQL_HOST·MYSQL_PASSWORD 부품으로 짓는다
 #   VIDEO_CLIP_BUILD_TOKEN    (필수) 클리퍼 빌드 토큰. 값은 찍지 않는다
 #   CLIP_PUBLIC_BASE_URL      (필수) 공개 클립 주소
 #   CLIP_BASE_URL             기본 http://clipper:3200
@@ -31,7 +31,13 @@ if [ ! -f "$bundle" ]; then
     exit 2
 fi
 
-: "${DATABASE_URL:?DATABASE_URL 이 필요함}"
+# DB 주소는 DATABASE_URL 로 직접 받거나, MYSQL_HOST·MYSQL_PASSWORD 부품으로 받는다.
+# 부품일 때는 src/db/mod.rs 가 퍼센트 인코딩해 주소를 짓는다 — 셸에서 조립하면
+# 비밀번호의 URL 예약 문자에 취약하다.
+if [ -z "${DATABASE_URL:-}" ] && { [ -z "${MYSQL_HOST:-}" ] || [ -z "${MYSQL_PASSWORD:-}" ]; }; then
+    echo "DATABASE_URL 또는 MYSQL_HOST·MYSQL_PASSWORD 가 필요함" >&2
+    exit 2
+fi
 : "${VIDEO_CLIP_BUILD_TOKEN:?VIDEO_CLIP_BUILD_TOKEN 이 필요함}"
 : "${CLIP_PUBLIC_BASE_URL:?CLIP_PUBLIC_BASE_URL 이 필요함}"
 CLIP_BASE_URL=${CLIP_BASE_URL:-http://clipper:3200}
