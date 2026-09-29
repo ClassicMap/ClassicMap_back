@@ -160,6 +160,8 @@ const TITLE_KEYWORDS: &[(&str, &[&str])] = &[
         &[
             "교향악단",
             "교향악",
+            "교향곡",
+            "협주곡",
             "필하모닉",
             "필하모니",
             "심포니",
@@ -196,7 +198,7 @@ const TITLE_KEYWORDS: &[(&str, &[&str])] = &[
     ("opera", &["오페라", "opera"]),
     (
         "crossover",
-        &["크로스오버", "재즈", "영화음악", "게임", "애니메이션", "jazz", "crossover"],
+        &["크로스오버", "재즈", "영화음악", "시네마", "지브리", "게임", "애니메이션", "jazz", "crossover"],
     ),
 ];
 
@@ -296,6 +298,8 @@ mod tests {
             "crossover"
         ]);
         assert_eq!(classify_instrumentation("Esmé Quartet Recital", &[]), vec!["chamber"]);
+        assert_eq!(classify_instrumentation("경기필 마스터피스 시리즈 Ⅴ. 말러 교향곡 1번", &[]), vec!["orchestra"]);
+        assert_eq!(classify_instrumentation("우리가 사랑한 시네마 뮤직 콘서트", &[]), vec!["crossover"]);
     }
 
     #[test]
