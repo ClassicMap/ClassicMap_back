@@ -64,7 +64,7 @@ impl PieceRepository {
     ) -> Result<Vec<PieceSearchResult>, Error> {
         let Some(text) = SearchText::parse(query) else {
             return sqlx::query_as::<_, PieceSearchResult>(&format!(
-                "SELECT piece.*, composer.name AS composer_name
+                "SELECT piece.*, composer.name AS composer_name, composer.avatar_url AS composer_avatar_url
                  FROM pieces piece
                  JOIN composers composer ON composer.id = piece.composer_id
                  ORDER BY {}
@@ -84,6 +84,7 @@ impl PieceRepository {
         sqlx::query_as::<_, PieceSearchResult>(&format!(
             "SELECT piece.*,
                     composer.name AS composer_name,
+                    composer.avatar_url AS composer_avatar_url,
                     CASE
                         WHEN piece.title = ? OR piece.title_en = ? THEN 0
                         WHEN piece.title LIKE ? OR piece.title_en LIKE ? THEN 1
