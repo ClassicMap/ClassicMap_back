@@ -10,7 +10,7 @@
 # 노트북에서 하던 다섯 단계를 대신한다 — 포트포워딩, cargo 로컬 실행,
 # prewarm.mjs, kubectl cp, 배치마다 쓰던 approve 마이그레이션.
 #
-# 자격증명은 이 파일에 없다. DATABASE_URL 은 secret/classicmap-back 에서,
+# 자격증명은 이 파일에 없다. DB 비밀번호는 secret/db-credentials 에서,
 # 빌드 토큰은 secret/clipper-youtube 에서 그대로 받는다.
 #
 # 클립 캐시 PVC 는 ReadWriteOnce 다. 지금 클러스터는 노드가 lima-homeserver
@@ -40,11 +40,25 @@ spec:
           # :latest 라서 매번 새로 받아야 방금 푸시한 후보가 들어온다.
           imagePullPolicy: Always
           command: ["/bin/sh", "/app/seed_publish.sh", "/app/seed/__BATCH__"]
-          envFrom:
-            # DATABASE_URL 이 여기 있다.
-            - secretRef:
-                name: classicmap-back
+          # secret/classicmap-back 을 envFrom 으로 붙이지 않는다. 그 안의
+          # DATABASE_URL 은 호스트가 classicmap_mysql(밑줄)로 적혀 있어 해소되지
+          # 않는다 — 서비스 이름은 classicmap-mysql(하이픈)이다. Deployment 는
+          # 리터럴 env 로 덮어써서 가려져 있을 뿐이다. 여기서는 부품만 주고
+          # src/db/mod.rs 가 퍼센트 인코딩해 주소를 짓게 한다.
           env:
+            - name: MYSQL_HOST
+              value: classicmap-mysql
+            - name: MYSQL_PORT
+              value: "3306"
+            - name: MYSQL_DATABASE
+              value: classicmap
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-credentials
+                  key: CLASSICMAP_MYSQL_ROOT_PASSWORD
             - name: VIDEO_CLIP_BUILD_TOKEN
               valueFrom:
                 secretKeyRef:
