@@ -1,0 +1,55 @@
+{
+  "batchId": "arr-5",
+  "note": "편곡 비교 배치 5. 228 <보칼리제>. **정렬 비용 임계를 적용하지 않는다**(sector type ARRANGEMENTS). A18 에서 배틀 판의 음원 결함(앞 79초만 같은 음악)으로 막히고, 남은 둘(테카나와 피아노 반주 · 플레밍 관현악 반주)이 0.1168 로 안 붙어 보류돼 있었다. **이 배치는 판마다 role 을 달리 쓴다** — 목소리·첼로·악단이 각각 primary 다. `build_candidates.py` 가 video.role 을 먼저 읽게 고쳐 가능해졌다.",
+  "pieces": [
+    {
+      "pieceId": 228,
+      "workMbid": "24b1c94b-2779-3964-bc2e-3c5d4137f3f9",
+      "composerQid": "Q131861",
+      "titleKo": "<14개의 로망스> Op. 34 중 14번 “보칼리제”",
+      "titleEn": "Vocalise, from 14 Romances op. 34",
+      "composerNameEn": "Sergei Rachmaninoff",
+      "composerNameKo": "라흐마니노프",
+      "role": "VOCALIST",
+      "sector": {
+        "key": "arrangements",
+        "type": "ARRANGEMENTS",
+        "nameKo": "편성 셋",
+        "nameEn": "Three settings",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "반주의 첫 화음(악곡 시작)",
+        "endCue": "종결 화음과 잔향",
+        "listeningNote": "가사가 없고 모음 하나로만 부르는 곡입니다. 그래서 선율을 무엇이 노래해도 되고, 실제로 편곡이 원곡보다 널리 돕니다 — 라흐마니노프 본인도 관현악판을 남겼습니다. 여기서는 셋을 나란히 둡니다. **목소리**(테 카나와, 피아노 반주)는 숨과 모음의 빛깔이 그대로 드러나고, **첼로**(로스트로포비치, 피아노 반주)는 활을 이어 붙여 사람 목소리보다 길게 선을 끌고, **관현악판**(쾰른 신 필하모닉)은 선율을 성부에 나눠 주어 누가 노래하는지가 흐려집니다. 원곡이 가곡이라는 것을 목소리 판에서 먼저 듣고 나머지 둘로 넘어가는 순서를 권합니다."
+      },
+      "videos": [
+        {
+          "videoId": "er-bwkLjj5Q",
+          "artistName": "Kiri Te Kanawa",
+          "wikidata": "Q380133",
+          "role": "VOCALIST",
+          "accompanist": {
+            "name": "Roger Vignoles",
+            "wikidata": "Q3439553"
+          }
+        },
+        {
+          "videoId": "HknPi3rMguE",
+          "artistName": "Mstislav Rostropovich",
+          "wikidata": "Q152043",
+          "role": "CELLIST",
+          "accompanist": {
+            "name": "Alexander Dedyukhin",
+            "wikidata": "Q112479872"
+          }
+        },
+        {
+          "videoId": "-JqpjP3TalA",
+          "artistName": "Cologne New Philharmonic Orchestra",
+          "wikidata": "Q22959500",
+          "role": "ORCHESTRA"
+        }
+      ]
+    }
+  ]
+}

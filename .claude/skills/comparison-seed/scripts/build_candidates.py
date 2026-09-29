@@ -78,11 +78,15 @@ def credits_for(piece, video):
             },
         }
 
-    entries = [entry(piece["role"], True, 0,
+    # 편곡 비교 구간에서는 판마다 앞선 악기가 다를 수 있다(목소리 · 첼로 · 피아노).
+    # video.role 이 있으면 그것을 쓰고 없으면 곡의 role 을 쓴다. 적재기가 크레딧마다
+    # role_code 를 읽으므로(`canonical_credit_role`) 섞여도 각자 제 값으로 들어간다.
+    primary_role = video.get("role", piece["role"])
+    entries = [entry(primary_role, True, 0,
                      {"name": video["artistName"], "wikidata": video["wikidata"]})]
     conductor = video.get("conductor")
     if conductor:
-        if piece["role"] == "CONDUCTOR":
+        if primary_role == "CONDUCTOR":
             raise SystemExit(f"{video['videoId']}: primary 가 지휘자인 곡에 conductor 를 또 적었다")
         entries.append(entry("CONDUCTOR", False, len(entries), conductor))
     choir = video.get("choir")
@@ -93,7 +97,7 @@ def credits_for(piece, video):
         entries.append(entry("ORCHESTRA", False, len(entries), orchestra))
     accompanist = video.get("accompanist")
     if accompanist:
-        if piece["role"] == "ACCOMPANIST":
+        if primary_role == "ACCOMPANIST":
             raise SystemExit(f"{video['videoId']}: primary 가 반주자인 곡에 accompanist 를 또 적었다")
         entries.append(entry("ACCOMPANIST", False, len(entries), accompanist))
     return entries
