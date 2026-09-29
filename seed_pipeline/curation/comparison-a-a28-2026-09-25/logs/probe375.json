@@ -1,0 +1,48 @@
+{
+  "batchId": "a-a28-probe375",
+  "note": "A tier A28. 피아졸라 소품 셋. 셋 다 짧아 전곡이다. 셋 다 편곡이 원곡보다 널리 도는 곡이라 편성 맞추기가 이 배치의 거의 전부다. role 이 ENSEMBLE 이니 이름 붙은 앙상블 녹음으로 셋을 맞춘다.",
+  "pieces": [
+    {
+      "pieceId": 375,
+      "workMbid": "f124195b-b3f2-3b47-af5c-f86e5cb7adff",
+      "composerQid": "Q172505",
+      "titleKo": "<망각>",
+      "titleEn": "Oblivion",
+      "composerNameEn": "Astor Piazzolla",
+      "composerNameKo": "아스토르 피아졸라",
+      "role": "SOLOIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "반주 위 선율 악기의 첫 음(작품 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "PhepD-Q4a0Y",
+          "artistName": "Gautier Capuçon",
+          "wikidata": "Q689479"
+        },
+        {
+          "videoId": "h4C2Ieq7V1g",
+          "artistName": "Julian Lloyd Webber",
+          "wikidata": "Q319434"
+        },
+        {
+          "videoId": "Ndo7ktLmy_Y",
+          "artistName": "Chee-Yun Kim",
+          "wikidata": "Q4515549"
+        },
+        {
+          "videoId": "meEgY9eApdw",
+          "artistName": "Gidon Kremer",
+          "wikidata": "Q159915"
+        }
+      ]
+    }
+  ]
+}

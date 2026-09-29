@@ -1,0 +1,48 @@
+{
+  "batchId": "a-a28-probe374",
+  "note": "A tier A28. 피아졸라 소품 셋. 셋 다 짧아 전곡이다. 셋 다 편곡이 원곡보다 널리 도는 곡이라 편성 맞추기가 이 배치의 거의 전부다. role 이 ENSEMBLE 이니 이름 붙은 앙상블 녹음으로 셋을 맞춘다.",
+  "pieces": [
+    {
+      "pieceId": 374,
+      "workMbid": "e039120f-9a72-3d38-b885-5f9a6779e2c9",
+      "composerQid": "Q172505",
+      "titleKo": "<리베르탱고>",
+      "titleEn": "Libertango",
+      "composerNameEn": "Astor Piazzolla",
+      "composerNameKo": "아스토르 피아졸라",
+      "role": "SOLOIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "반주 오스티나토의 첫 박(작품 시작)",
+        "endCue": "종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "31C1Des-XuY",
+          "artistName": "Yo-Yo Ma",
+          "wikidata": "Q234891"
+        },
+        {
+          "videoId": "Oa-1OKL_VxI",
+          "artistName": "Alison Balsom",
+          "wikidata": "Q451849"
+        },
+        {
+          "videoId": "WbDp4bBKTyQ",
+          "artistName": "Quatuor Ébène",
+          "wikidata": "Q3413743"
+        },
+        {
+          "videoId": "aOghu2jlVQA",
+          "artistName": "Miloš Karadaglić",
+          "wikidata": "Q1935705"
+        }
+      ]
+    }
+  ]
+}
