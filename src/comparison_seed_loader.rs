@@ -133,6 +133,7 @@ struct ClipCandidate {
     start_seconds: u32,
     end_seconds: u32,
     timeline_method: String,
+    // 검증 메모는 후보 JSONL 에만 남긴다. performances.characteristic 은 연주 해석 자리라 넣지 않는다.
     verification_note: String,
 }
 
@@ -1094,9 +1095,9 @@ async fn ensure_performance(
     let inserted = sqlx::query(
         "INSERT INTO performances (
             sector_id, piece_id, artist_id, video_platform, video_id,
-            start_time, end_time, characteristic, performance_source_id,
+            start_time, end_time, performance_source_id,
             start_ms, end_ms, publish_status, seed_run_id, origin, editor_locked
-         ) VALUES (?, ?, ?, 'youtube', ?, ?, ?, ?, ?, ?, ?, 'DRAFT', ?, 'seed', FALSE)",
+         ) VALUES (?, ?, ?, 'youtube', ?, ?, ?, ?, ?, ?, 'DRAFT', ?, 'seed', FALSE)",
     )
     .bind(sector_id)
     .bind(piece_id)
@@ -1104,7 +1105,6 @@ async fn ensure_performance(
     .bind(&candidate.row.source.video_id)
     .bind(candidate.row.clip.start_seconds)
     .bind(candidate.row.clip.end_seconds)
-    .bind(&candidate.row.clip.verification_note)
     .bind(source_id)
     .bind(candidate.start_ms)
     .bind(candidate.end_ms)
