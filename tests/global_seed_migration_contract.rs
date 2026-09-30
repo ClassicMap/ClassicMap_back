@@ -22,7 +22,32 @@ const MULTIPLE_PIECE_IDS: &str =
 
 #[test]
 fn migrator_embeds_all_global_seed_migrations() {
-    assert_eq!(MIGRATOR.iter().count(), 10);
+    let migration_dir = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("migrations");
+    let sql_files = std::fs::read_dir(&migration_dir)
+        .expect("migrations 디렉터리")
+        .filter_map(Result::ok)
+        .filter(|entry| entry.path().extension().is_some_and(|ext| ext == "sql"))
+        .count();
+    assert_eq!(MIGRATOR.iter().count(), sql_files);
+    for version in [
+        202608050001_i64,
+        202608050002,
+        202608050003,
+        202608050004,
+        202608050005,
+        202608050006,
+        202608050007,
+        202608050008,
+        202608050009,
+        202608050010,
+    ] {
+        assert!(
+            MIGRATOR
+                .iter()
+                .any(|migration| migration.version == version),
+            "전역 시드 migration {version} 이 빠짐"
+        );
+    }
 }
 
 #[test]
