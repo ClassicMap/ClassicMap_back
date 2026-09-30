@@ -36,6 +36,10 @@
 
 이 작품은 전곡 자체가 약 30초이므로 한 후보가 권장 최소 길이 30초보다 짧습니다. 부분을 인위적으로 늘리는 대신 완결된 전곡을 유지했습니다.
 
+> 작품 전체가 30초 안팎이라 권장 최소 길이보다 짧아도 전곡 비교를 우선합니다.
+
+위 문장은 처음에 `candidates.jsonl` 세 행의 `sectorCandidate.editorialNote` 에 있었습니다. 적재기가 이 값을 구간 설명(`performance_sectors.description`)으로 넣어 비교 화면에 그대로 보였기 때문에, 2026-10-01 에 후보에서 지우고 검수 기록으로 이 보고서에만 남깁니다. 운영 구간의 설명은 `migrations/202610010001_clear_schumann_sector_work_note.sql` 이 비웁니다.
+
 | 연주자 | 영상과 업로더 | 구간 | 가용성 |
 |---|---|---:|---|
 | Martha Argerich | [Schumann: Kinderszenen, Op. 15: III. Hasche-Mann (Live)](https://www.youtube.com/watch?v=satKCMMp1E4) · Martha Argerich - Topic | 0–26초 | public, oEmbed 200 |
