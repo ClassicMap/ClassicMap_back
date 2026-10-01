@@ -65,6 +65,9 @@ pub enum NoteRecord {
         note: String,
         #[serde(default)]
         moments: Vec<PairMoment>,
+        /// 근거. 연주 노트와 같은 모양이고 API 는 내보내지 않는다
+        #[serde(default)]
+        evidence: Vec<Value>,
         status: String,
     },
     #[serde(rename_all = "camelCase")]
@@ -397,6 +400,7 @@ struct StoredPair {
     title: String,
     note: String,
     moments: Option<String>,
+    evidence: Option<String>,
     editorial_status: String,
 }
 
@@ -417,6 +421,14 @@ fn optional_array(values: Vec<Value>) -> Value {
         Value::Null
     } else {
         Value::Array(values)
+    }
+}
+
+/// 빈 배열과 NULL 을 같게 본다
+fn empty_as_null(value: Value) -> Value {
+    match value {
+        Value::Array(items) if items.is_empty() => Value::Null,
+        other => other,
     }
 }
 
@@ -594,6 +606,7 @@ impl ListeningNoteLoader {
             title,
             note,
             moments,
+            evidence,
             status,
         } = record
         else {
@@ -629,10 +642,12 @@ impl ListeningNoteLoader {
             }));
         }
         let moments_value = optional_array(stored_moments);
+        let evidence_value = optional_array(evidence.clone());
 
         let existing = sqlx::query_as::<_, StoredPair>(
             "SELECT performance_a_id, performance_b_id, title, note,
                     CAST(moments AS CHAR CHARACTER SET utf8mb4) AS moments,
+                    CAST(evidence AS CHAR CHARACTER SET utf8mb4) AS evidence,
                     CAST(editorial_status AS CHAR CHARACTER SET utf8mb4) AS editorial_status
              FROM sector_featured_pairs WHERE sector_id = ? FOR UPDATE",
         )
@@ -646,6 +661,7 @@ impl ListeningNoteLoader {
                 && existing.title == *title
                 && existing.note == *note
                 && parse_json(existing.moments.as_deref()) == moments_value
+                && empty_as_null(parse_json(existing.evidence.as_deref())) == evidence_value
                 && existing.editorial_status == *status
             {
                 return Ok(Outcome::Unchanged);
@@ -655,8 +671,8 @@ impl ListeningNoteLoader {
         sqlx::query(
             "INSERT INTO sector_featured_pairs
                  (sector_id, performance_a_id, performance_b_id, title, note, moments,
-                  editorial_status, reviewed_at)
-             VALUES (?, ?, ?, ?, ?, CAST(? AS JSON), ?,
+                  evidence, editorial_status, reviewed_at)
+             VALUES (?, ?, ?, ?, ?, CAST(? AS JSON), CAST(? AS JSON), ?,
                      IF(? = 'PUBLISHED', CURRENT_TIMESTAMP(6), NULL))
              ON DUPLICATE KEY UPDATE
                  reviewed_at = IF(VALUES(editorial_status) = 'PUBLISHED'
@@ -667,6 +683,7 @@ impl ListeningNoteLoader {
                  title = VALUES(title),
                  note = VALUES(note),
                  moments = VALUES(moments),
+                 evidence = VALUES(evidence),
                  editorial_status = VALUES(editorial_status)",
         )
         .bind(sector.id)
@@ -675,6 +692,7 @@ impl ListeningNoteLoader {
         .bind(title)
         .bind(note)
         .bind(json_text(&moments_value))
+        .bind(json_text(&evidence_value))
         .bind(status)
         .bind(status)
         .execute(&mut **transaction)
