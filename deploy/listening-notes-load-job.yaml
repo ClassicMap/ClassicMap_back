@@ -1,0 +1,59 @@
+# 듣기 노트(notes.jsonl: 구간 안내·추천 비교·연주 노트)를 자연 키로 찾아 넣는다.
+# 입력은 seed_pipeline/curation/<RUN>/notes.jsonl 로 커밋돼 이미지의 /app/seed/<RUN>/ 에
+# 들어 있다. 사람이 들어 보고 확정한 줄만 status 를 PUBLISHED 로 둔다.
+#
+#   RUN=listening-notes-2026-10-01
+#   # 먼저 dry-run: 계획 변경 수와 건너뛴 줄을 본다
+#   sed "s|__RUN__|$RUN|g; s|__MODE__|dry|g; s|__FLAGS__|--dry-run|g" deploy/listening-notes-load-job.yaml | kubectl apply -f -
+#   kubectl -n homeserver logs -f job/listening-notes-load-$RUN-dry
+#   # 그다음 적재, 끝나면 dry-run 을 한 번 더 돌려 계획 변경 수가 0 인지 본다
+#   sed "s|__RUN__|$RUN|g; s|__MODE__|apply|g; s|__FLAGS__||g" deploy/listening-notes-load-job.yaml | kubectl apply -f -
+#
+# 끝나면 지운다(하루 뒤 스스로 지워지기도 한다).
+#   kubectl -n homeserver delete job listening-notes-load-$RUN-dry listening-notes-load-$RUN-apply
+#
+# DB 자격증명은 seed-publish-job.yaml 과 같은 방식으로 부품만 받는다.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: listening-notes-load-__RUN__-__MODE__
+  namespace: homeserver
+  labels:
+    app: classicmap-listening-notes
+spec:
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 86400
+  template:
+    metadata:
+      labels:
+        app: classicmap-listening-notes
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: load
+          image: ghcr.io/classicmap/classicmap-back:latest
+          imagePullPolicy: Always
+          command:
+            - /bin/sh
+            - -c
+            - /app/load_listening_notes --input /app/seed/__RUN__/notes.jsonl --run-id __RUN__ __FLAGS__
+          env:
+            - name: MYSQL_HOST
+              value: classicmap-mysql
+            - name: MYSQL_PORT
+              value: "3306"
+            - name: MYSQL_DATABASE
+              value: classicmap
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-credentials
+                  key: CLASSICMAP_MYSQL_ROOT_PASSWORD
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              memory: 256Mi
