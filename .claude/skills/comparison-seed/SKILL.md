@@ -21,10 +21,16 @@ description: ClassicMap 비교 영상 시드를 한 배치씩 만든다. 곡과 
 
 ```
 곡 고르기 → 충돌 검사 → 영상 찾기 → 오디오 받기 → 구간 검출
-   → 교차 정렬 → (어긋나면 진단·교체) → 후보 JSONL
+   → 교차 정렬 → (어긋나면 진단·교체)
+   → 듣기 안내 초안 → 사람이 읽고 확정 → 후보 JSONL
    → 식별자 마이그레이션 → 커밋 → CI → 배포
    → 시드 Job (적재 → 클립 생성 → 승인 → 자산 등록·발행)
 ```
+
+듣기 안내는 구간마다 붙인다. 초안은 악보와 구간 정보로 쓰고, 사람이 확정한 것만
+배치 정의의 `sector.listeningNote` 에 넣는다. 확정 전이면 비워 두고 나중에
+마이그레이션으로 붙인다. 쓰는 법은 `references/08-listening-notes.md` 에 있다.
+연주 노트·추천 비교는 저장 자리가 생기기 전까지 초안만 남긴다.
 
 발행 마이그레이션은 더 쓰지 않는다. approve 세 UPDATE 는 `approve_seed_run` 이
 하고, 클립 복사는 Job 이 PVC 를 붙여 없어졌다. 까닭은 `04-loading.md` 머리에 있다.
@@ -48,6 +54,7 @@ description: ClassicMap 비교 영상 시드를 한 배치씩 만든다. 곡과 
 | 막혔을 때 | `references/05-pitfalls.md` |
 | 배치를 서브에이전트에 맡길 때 | `references/06-subagent.md` |
 | 20분 넘는 곡을 발췌할 때 | `references/07-excerpt.md` |
+| 구간 안내·연주 노트를 쓸 때 | `references/08-listening-notes.md` |
 
 ## 배치 정의
 

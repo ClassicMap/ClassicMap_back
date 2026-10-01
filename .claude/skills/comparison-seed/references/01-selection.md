@@ -55,6 +55,26 @@ WHERE a.category = 'pianist';
 한 작품에 sector 를 여럿 만들 수 있다. 월광 소나타는 1악장과 3악장이 각각
 붙어 있고, 영상 검색·MBID·충돌 검사를 한 번만 하면 되므로 **곡당 비용이 줄어든다.**
 
+### 구간마다 듣기 안내를 붙인다
+
+배치 정의의 `sector.listeningNote` 는 **모든 구간에 쓴다.** 해석 비교 구간이든
+편곡 비교 구간이든 같다. `build_candidates.py` 가 `editorialNote` 로 넘기고
+적재기가 `performance_sectors.description` 에 넣으면 화면이 구간 칩 아래 "이 구간
+듣기" 로 그린다.
+
+```json
+"sector": {"key": "coda", "type": "EXCERPT", "nameKo": "종결 클라이맥스", …,
+           "listeningNote": "마지막 스무 초 남짓, 옥타브와 화음이 몰아치는 대목이에요. …"}
+```
+
+- 이 대목에서 무엇을 들을지 해요체 두세 문장으로 쓴다. 문체와 근거 표기는
+  `08-listening-notes.md` 를 따른다
+- **작업 메모를 넣지 않는다.** 이 값은 그대로 공개된다. 경계·검출·권장 길이 이야기는
+  review-report 에 쓴다
+- 해석 비교 구간의 안내에는 연주자 이름을 넣지 않는다
+- 초안을 사람이 확정하기 전이면 비워 둔다. 적재기는 이미 있는 구간의 설명을
+  고치지 않으므로, 나중에 붙일 때는 마이그레이션과 curation 파일을 함께 고친다
+
 ## 작품 MBID 고르기
 
 같은 제목의 work 이 여럿이면 **연결된 녹음 수**로 가린다. 압도적인 것이 원곡이고
@@ -299,9 +319,9 @@ A28 에서 피아졸라 셋을 막고 나서 방향을 바꿨다. **편성이 �
 다른 해석" 이 아니라 "같은 작품의 다른 편성" 이고, 그것은 그 자체로 들을 거리다.**
 
 `performance_sectors.sector_type` 에 **`ARRANGEMENTS`** 를 쓴다. 화면이 구간 칩에
-"편곡" 표를 내고 고른 구간 아래에 감상 안내를 그린다(`sector-chip.tsx` ·
-`compare.tsx`). 안내문은 배치 정의의 `sector.listeningNote` 에 적으면
-`build_candidates.py` 가 `editorialNote` 로 넘기고 적재기가 `description` 에 넣는다.
+"편곡" 표를 내고, 고른 구간 아래 안내 머리에 "같은 작품을 다른 편성으로 들어요" 를
+붙인다(`components/compare/sector-guide.tsx`). 편곡 구간의 안내는 판마다 편성을
+괄호로 밝힌다. 쓰는 법은 `08-listening-notes.md` 에 있다.
 
 ### 무엇이 임계를 대신하는가
 
