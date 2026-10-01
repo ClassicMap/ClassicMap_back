@@ -731,3 +731,33 @@
 | 예브게니 키신 | [1:16](https://kang1027.com/classicmap/clips/S-258DY6M7s?end=76&profile=v1-copy&start=0#t=76) | 클립 끝이 프롬나드 1 마지막 화음과 잔향인지, 76초에 전체가 담겼는지 |  |
 | 카티아 부니아티슈빌리 | [1:45](https://kang1027.com/classicmap/clips/Uls0QQnzCjY?end=112&profile=v1-copy&start=3#t=105) | 가장 센 1:45 가 마지막 화음인지, 클립 끝에 다음 곡이 섞이지 않았는지 |  |
 | 츠지이 노부유키 | [1:14](https://kang1027.com/classicmap/clips/hlhtkcgk7yY?end=95&profile=v1-copy&start=2#t=74) | 1:14 가 마지막 화음 몇 마디 앞 총화음인지, 클립 끝이 마지막 화음인지 |  |
+
+## 52 드뷔시 아라베스크 1번 · 전곡
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD: 클립 길이 238·255·321초(1.35배). 프레슬러 클립이 곡 하나만 담았는지부터 불확실
+- 앱: https://kang1027.com/classicmap/compare?pieceId=224&sectorId=52
+
+구간 안내 질문
+- [ ] 세 클립 모두 오른손 아르페지오 첫 음에서 시작해 종결 화음에서 끝나는가
+- [ ] 프레슬러 클립의 길이 차이가 빠르기 때문인지 클립 범위 때문인지
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 메나헴 프레슬러 | [5:21](https://kang1027.com/classicmap/clips/lykFWJirapo?end=323&profile=v1-copy&start=2#t=321) | 5분 21초 클립이 아라베스크 1번 하나만 담았는지, 끝에 2번이나 박수가 섞였는지 |  |
+| 마리아 조앙 피레스 | [1:20](https://kang1027.com/classicmap/clips/JCTQTp1PdnA?end=240&profile=v1-copy&start=2#t=80) | 1:20 무렵 깊은 잦아듦이 가운데 대목으로 넘어가는 자리인지 |  |
+| 알도 치콜리니 | [2:45](https://kang1027.com/classicmap/clips/Yh36PaE-Pf0?end=259&profile=v1-copy&start=4#t=165) | 2:45~2:56 깊은 잦아듦이 쉼인지 처음 물결이 돌아오기 전 여린 대목인지 |  |
+
+## 239 라벨 발레 <다프니스와 클로에> 모음곡 2번 · 1곡 “동트기(Lever du jour)” 도입
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD: 클립 길이가 120·88·93초로 1.36배 벌어져 무티 클립이 더 긴 대목을 담았는지 불확실함. 세 연주 모두 62~64% 지점에 가장 센 곳이 있어 빠르기 차이일 수도 있으나 듣기 전에는 대목이 같다고 확정할 수 없음
+- 앱: https://kang1027.com/classicmap/compare?pieceId=234&sectorId=239
+
+구간 안내 질문
+- [ ] 세 클립이 모두 같은 마디(첫 해돋이 부풂 뒤 어디)에서 끝나는지
+- [ ] 클립 안에 목동의 피리 선율까지 들어가는지, 첫 부풂까지만인지
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 리카르도 무티 | [1:40](https://kang1027.com/classicmap/clips/92TSV_kL_p4?end=123&profile=v1-copy&start=3#t=100) | 1:40 이후 끝 20초가 다른 두 연주 클립의 끝과 같은 마디인지 |  |
+| 클라우디오 아바도 | [1:28](https://kang1027.com/classicmap/clips/Gfujg6ECsz8?end=88&profile=v1-copy&start=0#t=88) | 클립 끝 1:28 이 무티 클립 끝과 같은 자리인지 |  |
+| 샤를 뒤투아 | [1:00](https://kang1027.com/classicmap/clips/OiVOvVao2v4?end=117&profile=v1-copy&start=24#t=60) | 1:00 의 가장 큰 부풂이 무티 1:14 와 같은 해돋이 대목인지 |  |
