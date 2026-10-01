@@ -761,3 +761,18 @@
 | 리카르도 무티 | [1:40](https://kang1027.com/classicmap/clips/92TSV_kL_p4?end=123&profile=v1-copy&start=3#t=100) | 1:40 이후 끝 20초가 다른 두 연주 클립의 끝과 같은 마디인지 |  |
 | 클라우디오 아바도 | [1:28](https://kang1027.com/classicmap/clips/Gfujg6ECsz8?end=88&profile=v1-copy&start=0#t=88) | 클립 끝 1:28 이 무티 클립 끝과 같은 자리인지 |  |
 | 샤를 뒤투아 | [1:00](https://kang1027.com/classicmap/clips/OiVOvVao2v4?end=117&profile=v1-copy&start=24#t=60) | 1:00 의 가장 큰 부풂이 무티 1:14 와 같은 해돋이 대목인지 |  |
+
+## 254 필립 글래스 피아노 연습곡 6번 · 전곡
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD: 길이가 160·378·256초로 2.36배 벌어져, 세 판이 같은 판본(반복 포함)의 전곡인지, 유자 왕 판이 일부만 담겼는지 불확실
+- 앱: https://kang1027.com/classicmap/compare?pieceId=354&sectorId=254
+
+구간 안내 질문
+- [ ] 세 판 모두 연습곡 6번 전곡(같은 반복 처리)인가
+- [ ] 왼손의 반복 음형 위로 화성이 바뀌어 간다는 안내가 6번에 맞는가
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 유자 왕 | [2:40](https://kang1027.com/classicmap/clips/JzYI-_hLguE?end=160&profile=v1-copy&start=0#t=160) | 2분 40초로 끝나는데 전곡인가, 반복을 줄였거나 일부만 담긴 것인가 |  |
+| 샐리 휘트웰 | [6:18](https://kang1027.com/classicmap/clips/fKDwMlBVZ_k?end=378&profile=v1-copy&start=0#t=378) | 6분 18초 클립 끝까지 연습곡 6번만 담겼는가(다음 곡이나 다른 연습곡이 섞이지 않았는가) |  |
+| 비킹구르 올라프손 | [2:23](https://kang1027.com/classicmap/clips/sZffgf4GoMQ?end=256&profile=v1-copy&start=0#t=143) | 한가운데서 가장 크게 올라서는 곳이 곡의 어느 대목인가 |  |
