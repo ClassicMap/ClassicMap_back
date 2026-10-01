@@ -837,3 +837,34 @@
 | 랑랑 | [0:00](https://kang1027.com/classicmap/clips/R2d2spnXyLA?end=389&profile=v1-copy&start=2#t=0) | 6분 27초 클립이 전곡을 한 번만 담았는지, 앞뒤에 무음·박수·다른 곡이 섞였는지 |  |
 | 블라디미르 호로비츠 | [2:15](https://kang1027.com/classicmap/clips/Sh03YXzvDF4?end=290&profile=v1-copy&start=1#t=135) | 가장 센 곳이 가운데 C#단조 대목의 정점인지 |  |
 | 조성진 | [4:30](https://kang1027.com/classicmap/clips/pCx5g4FnAXU?end=301&profile=v1-copy&start=2#t=270) | 마지막 30초가 여린 마무리인지, 박수나 다른 소리가 섞였는지 |  |
+
+## 129 차이콥스키 현을 위한 세레나데 C장조 · 1악장 Pezzo in forma di sonatina 도입 (찬가풍 서주)
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD: 클립 길이가 98·121·146초로 1.49배 벌어지고 끝 큐가 '발췌 구간의 끝'뿐이라, 세 클립이 같은 대목(서주 전체)을 담았는지 불확실함
+- 앱: https://kang1027.com/classicmap/compare?pieceId=454&sectorId=129
+
+구간 안내 질문
+- [ ] 이 구간 끝이 서주 끝(Allegro moderato 직전)인지, 그 뒤 빠른 대목 일부까지인지
+- [ ] 세 연주 모두 서주 끝에서 잦아드는지(악보 셈여림 확인)
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 네빌 마리너 | [1:38](https://kang1027.com/classicmap/clips/BgHRvJuIs1U?end=98&profile=v1-copy&start=0#t=98) | 클립 끝이 서주 끝(Allegro moderato 직전)과 맞는지, 서주가 잘리지 않았는지 |  |
+| 레너드 번스타인 | [2:07](https://kang1027.com/classicmap/clips/jMcB6Nep4WM?end=146&profile=v1-copy&start=0#t=127) | 2:07~2:26 고요한 자리가 서주 마지막 화음인지, Allegro moderato 첫머리까지 넘어갔는지 |  |
+| 헤르베르트 폰 카라얀 | [1:44](https://kang1027.com/classicmap/clips/2lSwwXNmdkY?end=124&profile=v1-copy&start=3#t=104) | 1:44~2:01 잦아든 자리가 서주 끝인지 |  |
+
+## 26 바흐 골드베르크 변주곡 BWV 988 · 제1변주 전곡
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD: 클립 길이 70·105·115초(1.64배). 반복 처리 차이인지, 올라프손 클립 1:26 이후 무음(약 18초) 탓인지, 세 클립이 같은 대목(제1변주 처음부터 마지막 반복구 종지까지)을 담았는지부터 불확실
+- 앱: https://kang1027.com/classicmap/compare?pieceId=461&sectorId=26
+
+구간 안내 질문
+- [ ] 세 클립 모두 제1변주 첫 음에서 시작해 마지막 반복구 종지에서 끝나는지
+- [ ] 각 연주가 앞뒤 두 부분 반복을 지켰는지(길이 차이가 반복 때문인지)
+- [ ] 올라프손 클립 끝 무음을 잘라 내면 길이가 얼마인지
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 글렌 굴드 | [0:00](https://kang1027.com/classicmap/clips/4_IC4_MFdGM?end=70&profile=v1-copy&start=0#t=0) | 70초 안에 두 부분 반복을 모두 뺐는지, 하나만 지켰는지 |  |
+| 비킹구르 올라프손 | [1:26](https://kang1027.com/classicmap/clips/vn-g510Zxng?end=105&profile=v1-copy&start=0#t=86) | 1:26 에 음악이 끝나고 나머지는 무음인지, 다음 변주 앞 쉼인지 |  |
+| 이고르 레비트 | [1:47](https://kang1027.com/classicmap/clips/wFMiD7MvLpQ?end=115&profile=v1-copy&start=0#t=107) | 1:47 의 가장 센 곳이 제1변주 마지막 종지인지 |  |
