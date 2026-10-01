@@ -72,7 +72,7 @@
 - **제목**은 이 연주를 부르는 이름처럼 짓는다. 12자 안팎이다. "처음부터 천둥처럼"
 - **노트**는 두세 문장이다. 무엇이 다른지 → 어디서 들리는지 → 어떻게 들어 보면
   좋은지 순서로 쓴다
-- **들을 곳**은 시점과 짧은 말 한두 개다. "0:20 여기서 터져요". 시점은 클립 기준이다
+- **들을 곳**은 시점과 짧은 말 한두 개다. "0:19 여기서 터져요". 시점은 클립 기준이다
 - 확정된 노트가 없는 연주는 이름과 곡선만 보인다. "특징 없음" 같은 대체 문구를
   만들지 않는다
 
@@ -238,20 +238,33 @@
    JSONL 의 `sectorCandidate.editorialNote` 를 같은 문구로 고친다. 빈 DB 에 다시
    적재해도 같은 안내가 들어가게 하려고 한다
 
-### 연주 노트와 추천 비교
+### 연주 노트와 추천 비교 — `notes.jsonl`
 
-아직 적재기가 없어 **마이그레이션으로 넣는다.** 들어 보고 확정한 것만
-`editorial_status = 'PUBLISHED'` 로 넣는다. 첫 예는
-`migrations/202610010007_add_la_campanella_coda_notes.sql` 이다.
+배치(또는 듣기 노트 묶음) 폴더의 `notes.jsonl` 에 적고 `load_listening_notes` 로
+넣는다(`deploy/listening-notes-load-job.yaml`). 첫 예는
+`seed_pipeline/curation/listening-notes-2026-10-01/notes.jsonl` 이다.
 
-- 연주는 id 가 아니라 **영상 id 와 구간 경계**(`provider_video_id`, `start_ms`,
-  `end_ms`)로 찾는다. 시드 id 는 DB 마다 다르다
-- 들을 곳의 `atMs` 는 **원본 영상 시각**이다. `start_ms + 클립 안 오프셋` 으로 적으면
-  API 가 클립 기준 `offsetMs` 로 바꾼다. 클립 밖으로 벗어난 들을 곳은 버린다
-- 추천 비교의 들을 곳은 `performanceId` 를 함께 적는다. 두 연주가 아닌 것은 버린다
+```json
+{"kind":"sector","pieceId":140,"sectorKey":"coda","description":"…","status":"PUBLISHED"}
+{"kind":"pair","pieceId":140,"sectorKey":"coda","a":"0FbQZCsYXVg","b":"cIxGUAnj46U",
+ "title":"쏟아내기 vs 쌓아 올리기","note":"…",
+ "moments":[{"videoId":"cIxGUAnj46U","offsetMs":19000,"label":"랑랑의 정점"}],"status":"PUBLISHED"}
+{"kind":"performance","pieceId":140,"sectorKey":"coda","videoId":"0FbQZCsYXVg",
+ "headline":"처음부터 천둥처럼","note":"…","moments":[{"offsetMs":2600,"label":"벌써 거의 최대"}],
+ "facts":[],"evidence":[{"kind":"listening","status":"done"}],"status":"PUBLISHED"}
+```
+
+- 구간은 `pieceId + sectorKey`, 연주는 그 구간 안의 **`videoId`** 로 찾는다. DB id 를
+  쓰지 않으므로 빈 DB 에 시드를 다시 넣은 뒤 돌려도 같은 내용이 만들어진다
+- 들을 곳은 **클립 기준 `offsetMs`** 로 적는다. 적재기가 원본 영상 시각(`atMs`)으로
+  바꿔 넣고, API 가 다시 클립 기준으로 돌려준다. 클립 밖이면 그 줄을 건너뛴다
+- `status` 는 그대로 옮긴다. 들어 보고 확정한 줄만 `PUBLISHED` 로 둔다. 구간 안내는
+  상태 열이 없어 `PUBLISHED` 만 넣고, 시드 행이면서 잠기지 않은 구간만 바꾼다
 - `evidence` 에 근거를 남긴다. `{"kind":"measured","key":"peakRatio","value":0.11}`,
   `{"kind":"listening","status":"done"}` 꼴이다. API 는 내보내지 않는다
-- `NOT EXISTS` 로 이미 있는 행은 건드리지 않는다
+- 다시 돌려도 같다. dry-run → 적재 → dry-run(계획 변경 0) 순으로 돌린다
+- 이미 넣은 문구를 고칠 때는 `notes.jsonl` 을 고쳐 다시 적재한다. 007·009 마이그레이션은
+  적재기가 생기기 전에 넣은 것이다
 
 ### 초안 파일
 

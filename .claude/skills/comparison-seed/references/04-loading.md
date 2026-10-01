@@ -41,6 +41,29 @@ Job 이 하는 네 단계다.
 파일과 대조해 검증한다. `rangeVerifiedAt` 은 **실제로 Range 요청을 해 206 과
 Content-Range 를 받은 뒤에만** 적는다.
 
+### 발행 뒤: 음량 곡선과 듣기 노트 (2026-10-01)
+
+시드 Job 이 끝나 새 클립이 공개되면 곡선을 잰다. **아직 손으로 하는 단계다.**
+자동화는 나중에 시드 Job 뒤에 붙인다.
+
+1. **잴 클립 목록** — `seed_pipeline/curation/loudness-2026-10-01/README.md` 의 SELECT
+   를 돌려 `manifest.jsonl` 을 만든다(읽기만 한다). 새 배치만 잴 때는 그 배치의
+   `clip_assets.seed_run_id` 로 거른다
+2. **재기** — `deploy/loudness-measure-job.yaml`. 클리퍼 이미지(ffmpeg)에 클립 캐시를
+   읽기 전용으로 붙여 잰다. 결과 JSONL 은 Job 로그의 `{` 로 시작하는 줄이다.
+   680개에 7분쯤 걸린다
+3. **커밋** — 결과를 `seed_pipeline/curation/<run>/loudness-profiles.jsonl` 로 커밋하고
+   CI 가 이미지를 굽게 한다(이미지의 `/app/seed/<run>/` 로 들어간다)
+4. **곡선 적재** — `deploy/loudness-load-job.yaml` 로 dry-run → 적재 → dry-run(계획 0).
+   잰 파일의 해시가 지금 클립과 다르면 건너뛰고 보고서에 남긴다
+5. **노트 초안** — 곡선 잰 값·구간 안내·악보로 연주 노트·추천 비교 초안을 쓴다
+   (`08-listening-notes.md`). 초안은 DB 에 넣지 않는다
+6. **노트 적재** — 사람이 들어 보고 확정한 줄만 `notes.jsonl` 에 PUBLISHED 로 두고
+   `deploy/listening-notes-load-job.yaml` 로 dry-run → 적재 → dry-run
+
+ffmpeg 8 의 `ebur128` 은 100ms 프레임 기록을 `-loglevel verbose` 에서만 찍는다. 단기
+음량은 처음 3초가 −120.7 이다(창이 차지 않았다). 측정 스크립트가 둘 다 처리한다.
+
 ### 클립 저장 키의 둘째 숫자는 길이다 (2026-09-30)
 
 ```
