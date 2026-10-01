@@ -1,5 +1,20 @@
 # 들어 볼 목록 — 연주 노트·추천 비교 초안 30구간
 
+> **2026-10-01 결정: 듣기 확인 없이 초안대로 공개했어요.** 지금 목적은 시드 채우기예요.
+>
+> - 공개: 구간 안내를 확정한 21구간의 연주 노트·추천 비교 전부(`notes.jsonl`, PUBLISHED). 아래 "먼저 정할 것" 표의 짝도 고른 그대로 공개했어요
+> - DRAFT 로 남김: 보류 9구간(81, 84, 85, 181, 83, 86, 82, 38, 190)의 노트·추천 비교, 37 시시킨 노트(잰 값 근거 없음). `notes-draft.jsonl` 에만 있어요
+> - 공개한 노트·추천 비교의 `evidence` 에 `{"kind":"listening","status":"skipped","at":"2026-10-01"}` 를 남겼어요. 나중에 들어 보고 고칠 대상은 이 표시로 찾아요
+>
+>   ```sql
+>   SELECT performance_id FROM performance_listening_notes
+>   WHERE JSON_CONTAINS(evidence, '{"kind":"listening","status":"skipped"}');
+>   SELECT sector_id FROM sector_featured_pairs
+>   WHERE JSON_CONTAINS(evidence, '{"kind":"listening","status":"skipped"}');
+>   ```
+>
+> 이 목록은 그대로 둬요. 들어 보고 고칠 때 이 질문으로 시작해요. 고친 줄은 `notes.jsonl` 에서 바로 고치고, 들었으면 `skipped` 를 `done` 으로 바꿔 다시 적재해요.
+
 초안(`performance-notes-drafts.md`, `notes-draft.jsonl`)에서 `들어 봐야 함` 으로 남은 것과, 구간 안내를 보류한 9구간의 질문이에요.
 구간마다 앱 링크로 열고, 시점 링크는 그 클립을 그 초부터 틀어요. 답을 적어 주면 초안을 고쳐 PUBLISHED 로 적재해요.
 

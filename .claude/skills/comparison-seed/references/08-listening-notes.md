@@ -89,6 +89,13 @@
 `들어 봐야 함` 이 남은 글은 공개하지 않는다. 구간 안내 초안은 대개 `악보` 로만
 이루어지고, 연주 노트 초안은 대개 `잰 값` 과 `들어 봐야 함` 으로 이루어진다.
 
+**예외 (2026-10-01).** 시드를 채우려고 확정 구간 안내 21구간의 연주 노트·추천 비교
+초안을 듣기 없이 공개했다. 그 줄들의 `evidence` 에
+`{"kind":"listening","status":"skipped","at":"2026-10-01"}` 가 있다. 들어 보고 고칠 때는
+`JSON_CONTAINS(evidence, '{"kind":"listening","status":"skipped"}')` 로 찾고, 들은 뒤에는
+`skipped` 를 `done` 으로 바꿔 다시 적재한다. 질문은
+`seed_pipeline/curation/listening-notes-2026-10-01/listening-checklist.md` 에 있다.
+
 ### 잰 값을 쓸 때
 
 - **곡선은 한 녹음 안의 모양만 말한다.** 녹음마다 전체 레벨이 15dB 넘게 갈린다.
