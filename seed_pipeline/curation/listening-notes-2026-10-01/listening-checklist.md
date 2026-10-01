@@ -668,3 +668,66 @@
 | 마리스 얀손스 | [3:05](https://kang1027.com/classicmap/clips/4ARjT4QatGY?end=199&profile=v1-copy&start=9#t=185) | 3분 10초 안에 같은 곡이 한 번만 들어 있는지(반복·앙코르 멘트·다른 곡 섞임), 아니면 느려지는 자리를 크게 늘린 것인지 |  |
 | 클라우디오 아바도 | [0:45](https://kang1027.com/classicmap/clips/QAMxkietiik?end=142&profile=v1-copy&start=1#t=45) | 가장 센 0:45 가 첫 선율 대목 안인지 |  |
 | 네빌 마리너 | [1:55](https://kang1027.com/classicmap/clips/WbhlzOoc2s8?end=163&profile=v1-copy&start=2#t=115) | 가장 센 1:55 가 돌아온 첫 선율인지 |  |
+
+## 217 프랑크 교향곡 D단조 · 1악장 Lento — Allegro non troppo 도입
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD: 클립 길이 79·88·121초(1.53배). 가장 센 곳 0:59·1:10·1:40 비율(1.69)이 길이 비율과 비슷해 느린 도입 빠르기 차이일 수 있지만, 세 클립이 같은 마디에서 끝나는지와 가장 센 곳이 빠른 부분의 첫머리인지 확인 전에는 대목이 불확실함. 오자와는 0:59 터짐 뒤 1:04~1:16 다시 잦아들어 빠른 부분 뒤 느린 도입의 되돌아옴까지 담겼을 수도 있음
+- 앱: https://kang1027.com/classicmap/compare?pieceId=180&sectorId=217
+
+구간 안내 질문
+- [ ] 세 클립이 모두 악장 첫 음에서 시작해 같은 마디에서 끝나는지
+- [ ] 구간에 Allegro non troppo 의 첫머리(동기가 빠르게 터지는 곳)가 들어 있는지, 그 뒤 느린 도입이 다시 돌아오는 대목까지 담겼는지
+- [ ] 길이 차이(79·88·121초)가 느린 도입 빠르기 차이인지, 담긴 범위 차이인지
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 오자와 세이지 | [0:59](https://kang1027.com/classicmap/clips/8lab3fiAFhc?end=81&profile=v1-copy&start=2#t=59) | 가장 센 0:59 가 Allegro non troppo 첫머리인지, 1:04~1:16 의 잦아듦이 무엇인지 |  |
+| 샤를 뒤투아 | [0:20](https://kang1027.com/classicmap/clips/EiIN3EMi1T4?end=89&profile=v1-copy&start=1#t=20) | 0:20 무렵 크게 부푸는 대목이 느린 도입 안의 어느 자리인지 |  |
+| 레너드 번스타인 | [0:00](https://kang1027.com/classicmap/clips/J3lnwOzHIuA?end=124&profile=v1-copy&start=3#t=0) | 첫 24초가 연주인지 앞 무음이 섞였는지, 1:40 이 Allegro non troppo 첫머리인지 |  |
+
+## 207 브루크너 교향곡 7번 E장조 · 1악장 Allegro moderato 도입 (첼로 주제)
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD: 클립 길이 121·90·119초(1.34배). 세 클립의 10등분 모양은 비례로 거의 겹치지만(두 번 부풀고 끝에서 최고) 카라얀 90초가 같은 마디까지 담았는지, 1.34배 빠르기 차이는 이 악장에서 보기 어려워 담긴 범위가 다를 수 있음. 발췌 끝 마디가 정해지지 않아 대목 자체가 불확실
+- 앱: https://kang1027.com/classicmap/compare?pieceId=183&sectorId=207
+
+구간 안내 질문
+- [ ] 세 클립이 모두 악장 첫 트레몰로에서 시작해 같은 마디에서 끝나는지
+- [ ] 클립 끝의 가장 센 곳이 첫 주제의 총주 되풀이인지, 그 뒤 대목인지
+- [ ] 구간 안에 둘째 주제(오보에·클라리넷)가 들어 있는지
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 헤르베르트 폰 카라얀 | [1:28](https://kang1027.com/classicmap/clips/bSYSXB93i-4?end=92&profile=v1-copy&start=2#t=88) | 90초 클립의 끝(1:28 가장 센 곳)이 다른 두 연주의 끝(1:59·1:57)과 같은 마디인지 |  |
+| 베르나르트 하이팅크 | [0:50](https://kang1027.com/classicmap/clips/Re-Bzo0OT3w?end=122&profile=v1-copy&start=1#t=50) | 0:50 무렵 첫 부풂이 첼로 주제의 꼭대기인지, 주제가 다른 악기로 넘어가는 자리인지 |  |
+| 안드리스 넬손스 | [1:10](https://kang1027.com/classicmap/clips/zEYE21Lgi8s?end=119&profile=v1-copy&start=0#t=70) | 1:00~1:47 여린 대목이 둘째 주제군 앞의 경과부인지, 다른 두 연주의 1:02~1:23·0:46~1:02 와 같은 자리인지 |  |
+
+## 214 요한 슈트라우스 2세 왈츠 <빈 숲 속의 이야기> · 서주와 첫 왈츠 머리
+
+- 보류(DRAFT): 구간 이름은 '서주와 첫 왈츠 머리'인데 12~13분 곡의 앞 106~121초를 시간으로 자른 발췌다. 서주가 치터 독주까지 3분 넘게 이어지는 곡이라 첫 왈츠가 클립 안에 없을 가능성이 크고, 세 클립 모두 뒤 30~40% 가 아주 여려(-27~-38dB) 치터 대목으로 보인다. 시작 큐 '총주의 첫 타격'과 달리 셋 다 여리게 시작한다(-17·-30·-21dB). 어느 대목인지부터 확인이 필요하다
+- 앱: https://kang1027.com/classicmap/compare?pieceId=188&sectorId=214
+
+구간 안내 질문
+- [ ] 작품이 총주 타격으로 시작하는지, 여린 관악(호른) 부름으로 시작하는지
+- [ ] 120초 안에 첫 왈츠가 들어오는지, 아니면 서주(치터 독주 포함)만 담겼는지 — 아니라면 구간 이름을 '서주'로 바꿔야 하는지
+- [ ] 클립 끝의 긴 고요가 치터 독주인지, 그 연주들이 치터를 쓰는지
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 로린 마젤 | [1:13](https://kang1027.com/classicmap/clips/BBy8gWDE2nQ?end=121&profile=v1-copy&start=0#t=73) | 가장 센 곳이 서주의 어느 총주인지, 1:20 이후 고요가 치터 독주인지 |  |
+| 헤르베르트 폰 카라얀 | [0:00](https://kang1027.com/classicmap/clips/Yg_5gR9YZT8?end=111&profile=v1-copy&start=5#t=0) | 클립이 작품 첫 음에서 시작하는지, 첫 20초가 이렇게 여린 대목인지 |  |
+| 리카르도 무티 | [1:13](https://kang1027.com/classicmap/clips/iZX7RyQ9GNY?end=121&profile=v1-copy&start=0#t=73) | 1:13~2:01 고요가 치터(또는 대체 독주) 대목인지, 첫 왈츠가 클립 안에 들어오는지 |  |
+
+## 201 무소르크스키 피아노 모음곡 <전람회의 그림> · 첫 <프롬나드> 전곡
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD: 클립 길이 76·109·93초(1.43배). 프롬나드 1 은 되풀이가 없어 이 차이가 빠르기만으로 나는지, 한 클립이 다음 곡(그노무스) 첫머리나 앞 여백을 담았는지 확인 전에는 대목이 불확실함. 가장 센 곳도 0:37(48%)·1:45(97%)·1:14(79%)로 갈림
+- 앱: https://kang1027.com/classicmap/compare?pieceId=189&sectorId=201
+
+구간 안내 질문
+- [ ] 세 클립이 모두 오른손 단선율 첫 음에서 시작해 프롬나드 1 마지막 화음에서 끝나는지
+- [ ] 길이 76·109·93초 차이가 빠르기 차이인지, 담긴 범위 차이인지
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 예브게니 키신 | [1:16](https://kang1027.com/classicmap/clips/S-258DY6M7s?end=76&profile=v1-copy&start=0#t=76) | 클립 끝이 프롬나드 1 마지막 화음과 잔향인지, 76초에 전체가 담겼는지 |  |
+| 카티아 부니아티슈빌리 | [1:45](https://kang1027.com/classicmap/clips/Uls0QQnzCjY?end=112&profile=v1-copy&start=3#t=105) | 가장 센 1:45 가 마지막 화음인지, 클립 끝에 다음 곡이 섞이지 않았는지 |  |
+| 츠지이 노부유키 | [1:14](https://kang1027.com/classicmap/clips/hlhtkcgk7yY?end=95&profile=v1-copy&start=2#t=74) | 1:14 가 마지막 화음 몇 마디 앞 총화음인지, 클립 끝이 마지막 화음인지 |  |
