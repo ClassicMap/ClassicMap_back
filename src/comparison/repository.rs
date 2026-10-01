@@ -2,7 +2,7 @@ use super::model::{
     note_moments, pair_moments, parse_json_list, ComparisonCredit, ComparisonCreditRow,
     ComparisonPerformance, ComparisonPerformancePage, ComparisonPerformanceRow, ComparisonPiece,
     ComparisonPiecePerformer, ComparisonSector, FeaturedPair, FeaturedPairRow, ListeningNoteRow,
-    PerformanceListeningNote, StoredMoment,
+    LoudnessProfile, LoudnessProfileRow, PerformanceListeningNote, StoredMoment,
 };
 use crate::{db::DbPool, logger::Logger};
 use sqlx::{FromRow, MySql, QueryBuilder, Transaction};
@@ -431,6 +431,7 @@ impl ComparisonRepository {
         let credits_by_source = Self::find_credits_by_source_ids(pool, &source_ids).await?;
         let performance_ids = rows.iter().map(|row| row.id).collect::<Vec<_>>();
         let mut notes = Self::find_published_notes(pool, &performance_ids).await?;
+        let mut profiles = Self::find_current_loudness(pool, &performance_ids).await?;
 
         Ok(rows
             .into_iter()
@@ -459,6 +460,7 @@ impl ComparisonRepository {
                     video_id: row.video_id,
                     credits,
                     note,
+                    loudness: profiles.remove(&row.id),
                 }
             })
             .collect())
@@ -496,6 +498,68 @@ impl ComparisonRepository {
         Ok(rows
             .into_iter()
             .map(|row| (row.performance_id, row))
+            .collect())
+    }
+
+    /// 지금 클립을 잰 음량 곡선. 잰 파일의 해시가 지금 클립과 같을 때만 준다
+    async fn find_current_loudness(
+        pool: &DbPool,
+        performance_ids: &[i32],
+    ) -> Result<HashMap<i32, LoudnessProfile>, sqlx::Error> {
+        if performance_ids.is_empty() {
+            return Ok(HashMap::new());
+        }
+
+        let mut query = QueryBuilder::<MySql>::new(
+            "SELECT clip.performance_id,
+                    profile.step_ms,
+                    CAST(profile.curve_rel_db AS CHAR CHARACTER SET utf8mb4) AS curve_rel_db,
+                    CAST(profile.start_rel_db AS DOUBLE) AS start_rel_db,
+                    profile.peak_ms,
+                    CAST(profile.peak_ratio AS DOUBLE) AS peak_ratio,
+                    CAST(profile.range_db AS DOUBLE) AS range_db
+             FROM clip_loudness_profiles profile
+             JOIN clip_assets clip
+               ON clip.id = profile.clip_asset_id
+              AND clip.is_current = TRUE
+              AND clip.sha256 = profile.clip_sha256
+             WHERE clip.performance_id IN (",
+        );
+        let mut separated = query.separated(", ");
+        for performance_id in performance_ids {
+            separated.push_bind(performance_id);
+        }
+        separated.push_unseparated(")");
+
+        let rows = query
+            .build_query_as::<LoudnessProfileRow>()
+            .fetch_all(pool)
+            .await?;
+        Ok(rows
+            .into_iter()
+            .filter_map(|row| {
+                let curve = match serde_json::from_str::<Vec<f64>>(&row.curve_rel_db) {
+                    Ok(curve) => curve,
+                    Err(error) => {
+                        Logger::warn(
+                            "COMPARISON",
+                            &format!("연주 {} 음량 곡선을 읽지 못함: {error}", row.performance_id),
+                        );
+                        return None;
+                    }
+                };
+                Some((
+                    row.performance_id,
+                    LoudnessProfile {
+                        step_ms: row.step_ms,
+                        curve_rel_db: curve,
+                        start_rel_db: row.start_rel_db,
+                        peak_ms: row.peak_ms,
+                        peak_ratio: row.peak_ratio,
+                        range_db: row.range_db,
+                    },
+                ))
+            })
             .collect())
     }
 

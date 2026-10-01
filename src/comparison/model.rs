@@ -174,6 +174,23 @@ pub struct ComparisonPerformance {
     pub credits: Vec<ComparisonCredit>,
     /// 확정된 연주 노트. 없으면 null
     pub note: Option<PerformanceListeningNote>,
+    /// 지금 클립의 음량 곡선. 없거나 다른 파일을 잰 것이면 null
+    pub loudness: Option<LoudnessProfile>,
+}
+
+/// 음량 곡선. 가장 센 곳을 0dB 로 둔 상대값이라 녹음끼리 세기를 견줄 수 없다
+#[derive(Debug, Clone, PartialEq, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct LoudnessProfile {
+    pub step_ms: u16,
+    pub curve_rel_db: Vec<f64>,
+    /// 처음 5초 평균
+    pub start_rel_db: f64,
+    /// 가장 센 곳의 클립 안 시점과 진행률
+    pub peak_ms: u32,
+    pub peak_ratio: f64,
+    /// 곡선 폭(90분위 - 10분위). 2 미만이면 평평해 근거로 쓰지 않는다
+    pub range_db: f64,
 }
 
 /// 들을 곳. `offset_ms` 는 클립 처음부터 잰 시점이다
@@ -359,6 +376,17 @@ pub(crate) struct ListeningNoteRow {
     pub note: String,
     pub moments: Option<String>,
     pub facts: Option<String>,
+}
+
+#[derive(Debug, FromRow)]
+pub(crate) struct LoudnessProfileRow {
+    pub performance_id: i32,
+    pub step_ms: u16,
+    pub curve_rel_db: String,
+    pub start_rel_db: f64,
+    pub peak_ms: u32,
+    pub peak_ratio: f64,
+    pub range_db: f64,
 }
 
 #[derive(Debug, FromRow)]
