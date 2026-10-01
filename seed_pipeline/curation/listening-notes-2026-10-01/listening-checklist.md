@@ -776,3 +776,64 @@
 | 유자 왕 | [2:40](https://kang1027.com/classicmap/clips/JzYI-_hLguE?end=160&profile=v1-copy&start=0#t=160) | 2분 40초로 끝나는데 전곡인가, 반복을 줄였거나 일부만 담긴 것인가 |  |
 | 샐리 휘트웰 | [6:18](https://kang1027.com/classicmap/clips/fKDwMlBVZ_k?end=378&profile=v1-copy&start=0#t=378) | 6분 18초 클립 끝까지 연습곡 6번만 담겼는가(다음 곡이나 다른 연습곡이 섞이지 않았는가) |  |
 | 비킹구르 올라프손 | [2:23](https://kang1027.com/classicmap/clips/sZffgf4GoMQ?end=256&profile=v1-copy&start=0#t=143) | 한가운데서 가장 크게 올라서는 곳이 곡의 어느 대목인가 |  |
+
+## 244 아이브스 대답 없는 질문 · 전곡
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD(367·432·315초, 1.37배). 전곡 구간이라 길이 차이가 빠르기인지, 클립 앞뒤 무음이나 다른 내용이 섞였는지 가려야 함. 틸슨 토머스 6:21~7:12, 길렌 4:32~5:15 의 긴 고요가 음악인지 불확실
+- 앱: https://kang1027.com/classicmap/compare?pieceId=370&sectorId=244
+
+구간 안내 질문
+- [ ] 세 클립 모두 현의 첫 화음에서 시작해 종결 화음 잔향에서 끝나는가
+- [ ] 트럼펫 물음 일곱 번, 목관 대답 여섯 번이 세 클립에 모두 들어 있는가
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 마이클 틸슨 토머스 | [6:21](https://kang1027.com/classicmap/clips/aimFnsvv-3Q?end=432&profile=v1-copy&start=0#t=381) | 6:21~7:12 51초가 마지막 물음과 현의 종결 화음인가, 클립 끝 무음인가 |  |
+| 미하엘 길렌 | [4:32](https://kang1027.com/classicmap/clips/lXjhwCKJw6s?end=315&profile=v1-copy&start=0#t=272) | 4:32~5:15 고요 속에 트럼펫 마지막 물음이 들어 있는가, 클립이 종결 화음 잔향까지 담았는가 |  |
+| 레너드 번스타인 | [5:01](https://kang1027.com/classicmap/clips/8tNA_DbpJjU?end=367&profile=v1-copy&start=0#t=301) | 가장 큰 순간이 목관의 마지막(여섯 번째) 대답인가 |  |
+
+## 241 사티 그노시엔 1번 · 전곡
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD: 클립 길이가 178·217·270초로 1.52배까지 벌어져, 세 클립이 모두 작품 처음부터 끝까지 한 번씩 담았는지부터 불확실함
+- 앱: https://kang1027.com/classicmap/compare?pieceId=379&sectorId=241
+
+구간 안내 질문
+- [ ] 세 클립 모두 왼손 반주 첫 화음에서 시작해 종결 화음으로 끝나는가
+- [ ] 길이 차이가 빠르기 때문인가, 반복을 넣거나 뺀 것 때문인가
+- [ ] 안내에 든 'Du bout de la pensée' 지시가 이 곡(1번) 악보에 있는지 판본으로 확인
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 알도 치콜리니 | [2:58](https://kang1027.com/classicmap/clips/Nr63uWgOh24?end=179&profile=v1-copy&start=1#t=178) | 2분 58초 클립이 종결 화음까지 담았는지, 끝 무렵 다시 세지는 곳이 연주인지 |  |
+| 파스칼 로제 | [3:37](https://kang1027.com/classicmap/clips/nImFFkrDv8U?end=221&profile=v1-copy&start=4#t=217) | 3분 37초 클립의 끝이 종결 화음과 잔향인지 |  |
+| 장이브 티보데 | [4:30](https://kang1027.com/classicmap/clips/srfU6e9nY7A?end=270&profile=v1-copy&start=0#t=270) | 4분 30초 클립이 작품 한 번만 담았는지, 반복이나 다른 곡이 섞였는지 |  |
+
+## 96 슈베르트 가곡 "아베 마리아" (엘렌의 노래 3번) · 전곡
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD: 클립 길이가 445·322·362초로 1.38배 벌어져, 세 연주가 같은 절 수·같은 대목을 담았는지부터 불확실함
+- 앱: https://kang1027.com/classicmap/compare?pieceId=443&sectorId=96
+
+구간 안내 질문
+- [ ] 세 연주 모두 세 절을 다 부르고 후주 종결 화음까지 담았는지?
+- [ ] 세 연주 모두 피아노 반주인지(편곡판이 섞였는지)?
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 르네 플레밍 | [0:00](https://kang1027.com/classicmap/clips/O9S3gZwk5cA?end=450&profile=v1-copy&start=5#t=0) | 7분 25초 안에 세 절 말고 다른 대목(긴 전주, 다른 곡, 박수)이 들어 있는지? 반주가 피아노인지 관현악인지? |  |
+| 루트 치자크 | [5:22](https://kang1027.com/classicmap/clips/QfqvOhcstvI?end=322&profile=v1-copy&start=0#t=322) | 세 절을 모두 부르는지, 몇 절에서 끝나는지? |  |
+| 바버라 보니 | [5:30](https://kang1027.com/classicmap/clips/tDQj7j-xogM?end=362&profile=v1-copy&start=0#t=330) | 마지막 30여 초가 후주인지, 클립 끝의 무음이나 박수인지? |  |
+
+## 50 쇼팽 전주곡 15번 D♭장조 "빗방울" · 전곡
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD: 클립 길이 387·289·299초로 1.34배 벌어짐. 조성진 클립은 마지막 1분 평균이 -4.4·-4.0dB로 여린 마무리 곡치고 높아 끝에 박수 등이 섞였을 수 있음
+- 앱: https://kang1027.com/classicmap/compare?pieceId=446&sectorId=50
+
+구간 안내 질문
+- [ ] 세 클립 모두 왼손 반복음의 첫 타건에서 시작해 종결 화음에서 끝나는지
+- [ ] 랑랑 클립 길이(6분 27초)가 다른 둘(4분 49초, 4분 59초)과 크게 다른 까닭이 느린 빠르기인지, 클립 범위 탓인지
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 랑랑 | [0:00](https://kang1027.com/classicmap/clips/R2d2spnXyLA?end=389&profile=v1-copy&start=2#t=0) | 6분 27초 클립이 전곡을 한 번만 담았는지, 앞뒤에 무음·박수·다른 곡이 섞였는지 |  |
+| 블라디미르 호로비츠 | [2:15](https://kang1027.com/classicmap/clips/Sh03YXzvDF4?end=290&profile=v1-copy&start=1#t=135) | 가장 센 곳이 가운데 C#단조 대목의 정점인지 |  |
+| 조성진 | [4:30](https://kang1027.com/classicmap/clips/pCx5g4FnAXU?end=301&profile=v1-copy&start=2#t=270) | 마지막 30초가 여린 마무리인지, 박수나 다른 소리가 섞였는지 |  |
