@@ -1,8 +1,10 @@
 use super::model::{
-    ComparisonCredit, ComparisonCreditRow, ComparisonPerformance, ComparisonPerformancePage,
-    ComparisonPerformanceRow, ComparisonPiece, ComparisonPiecePerformer, ComparisonSector,
+    note_moments, pair_moments, parse_json_list, ComparisonCredit, ComparisonCreditRow,
+    ComparisonPerformance, ComparisonPerformancePage, ComparisonPerformanceRow, ComparisonPiece,
+    ComparisonPiecePerformer, ComparisonSector, FeaturedPair, FeaturedPairRow, ListeningNoteRow,
+    PerformanceListeningNote, StoredMoment,
 };
-use crate::db::DbPool;
+use crate::{db::DbPool, logger::Logger};
 use sqlx::{FromRow, MySql, QueryBuilder, Transaction};
 use std::{collections::HashMap, error::Error, fmt};
 
@@ -307,12 +309,88 @@ impl ComparisonRepository {
              WHERE sector.piece_id = ?
              ORDER BY sector.display_order ASC, public_sector.first_start_ms ASC, sector.id ASC"
         );
-        let sectors = sqlx::query_as::<_, ComparisonSector>(&sql)
+        let mut sectors = sqlx::query_as::<_, ComparisonSector>(&sql)
+            .bind(piece_id)
+            .fetch_all(pool)
+            .await?;
+        if sectors.is_empty() {
+            return Ok(Some(sectors));
+        }
+
+        let mut pairs = Self::find_published_pairs_by_piece(pool, piece_id).await?;
+        for sector in &mut sectors {
+            sector.featured_pair = pairs.remove(&sector.id);
+        }
+
+        Ok(Some(sectors))
+    }
+
+    /// 확정된 추천 비교. 두 연주가 서로 다르고 둘 다 그 구간의 공개 연주일 때만 준다
+    async fn find_published_pairs_by_piece(
+        pool: &DbPool,
+        piece_id: i32,
+    ) -> Result<HashMap<i32, FeaturedPair>, sqlx::Error> {
+        let sql = format!(
+            "{PUBLIC_COMPARISON_CTE}
+             SELECT pair.sector_id,
+                    pair.performance_a_id,
+                    pair.performance_b_id,
+                    pair.title,
+                    pair.note,
+                    CAST(pair.moments AS CHAR CHARACTER SET utf8mb4) AS moments,
+                    ready_a.start_ms AS a_start_ms,
+                    ready_a.end_ms AS a_end_ms,
+                    ready_b.start_ms AS b_start_ms,
+                    ready_b.end_ms AS b_end_ms
+             FROM sector_featured_pairs pair
+             JOIN public_sector ON public_sector.sector_id = pair.sector_id
+             JOIN ready_performance ready_a
+               ON ready_a.id = pair.performance_a_id
+              AND ready_a.sector_id = pair.sector_id
+             JOIN ready_performance ready_b
+               ON ready_b.id = pair.performance_b_id
+              AND ready_b.sector_id = pair.sector_id
+             WHERE pair.editorial_status = 'PUBLISHED'
+               AND pair.performance_a_id <> pair.performance_b_id
+               AND ready_a.piece_id = ?"
+        );
+        let rows = sqlx::query_as::<_, FeaturedPairRow>(&sql)
             .bind(piece_id)
             .fetch_all(pool)
             .await?;
 
-        Ok(Some(sectors))
+        Ok(rows
+            .into_iter()
+            .map(|row| {
+                let stored = parse_json_list::<StoredMoment>(row.moments.as_deref())
+                    .unwrap_or_else(|error| {
+                        Logger::warn(
+                            "COMPARISON",
+                            &format!(
+                                "구간 {} 추천 비교의 들을 곳을 읽지 못함: {error}",
+                                row.sector_id
+                            ),
+                        );
+                        Vec::new()
+                    });
+                let moments = pair_moments(
+                    stored,
+                    [
+                        (row.performance_a_id, row.a_start_ms, row.a_end_ms),
+                        (row.performance_b_id, row.b_start_ms, row.b_end_ms),
+                    ],
+                );
+                (
+                    row.sector_id,
+                    FeaturedPair {
+                        performance_ids: [row.performance_a_id, row.performance_b_id],
+                        title: row.title,
+                        note: row.note,
+                        moments,
+                    },
+                )
+            })
+            .collect())
     }
 
     /// 섹터가 없으면 `None`, 섹터는 있는데 공개 기준에 못 미치면 빈 목록을 준다.
@@ -351,6 +429,8 @@ impl ComparisonRepository {
     ) -> Result<Vec<ComparisonPerformance>, sqlx::Error> {
         let source_ids = rows.iter().map(|row| row.source_id).collect::<Vec<_>>();
         let credits_by_source = Self::find_credits_by_source_ids(pool, &source_ids).await?;
+        let performance_ids = rows.iter().map(|row| row.id).collect::<Vec<_>>();
+        let mut notes = Self::find_published_notes(pool, &performance_ids).await?;
 
         Ok(rows
             .into_iter()
@@ -359,6 +439,9 @@ impl ComparisonRepository {
                     .get(&row.source_id)
                     .cloned()
                     .unwrap_or_default();
+                let note = notes
+                    .remove(&row.id)
+                    .map(|note| Self::note_for_clip(note, row.start_ms, row.end_ms));
 
                 ComparisonPerformance {
                     id: row.id,
@@ -375,9 +458,77 @@ impl ComparisonRepository {
                     clip_url: row.clip_url,
                     video_id: row.video_id,
                     credits,
+                    note,
                 }
             })
             .collect())
+    }
+
+    /// 확정된 연주 노트
+    async fn find_published_notes(
+        pool: &DbPool,
+        performance_ids: &[i32],
+    ) -> Result<HashMap<i32, ListeningNoteRow>, sqlx::Error> {
+        if performance_ids.is_empty() {
+            return Ok(HashMap::new());
+        }
+
+        let mut query = QueryBuilder::<MySql>::new(
+            "SELECT note.performance_id,
+                    note.headline,
+                    note.note,
+                    CAST(note.moments AS CHAR CHARACTER SET utf8mb4) AS moments,
+                    CAST(note.facts AS CHAR CHARACTER SET utf8mb4) AS facts
+             FROM performance_listening_notes note
+             WHERE note.editorial_status = 'PUBLISHED'
+               AND note.performance_id IN (",
+        );
+        let mut separated = query.separated(", ");
+        for performance_id in performance_ids {
+            separated.push_bind(performance_id);
+        }
+        separated.push_unseparated(")");
+
+        let rows = query
+            .build_query_as::<ListeningNoteRow>()
+            .fetch_all(pool)
+            .await?;
+        Ok(rows
+            .into_iter()
+            .map(|row| (row.performance_id, row))
+            .collect())
+    }
+
+    /// 들을 곳을 클립 기준으로 바꾼다. 모양이 틀린 JSON 은 그 칸만 비우고 남긴다
+    fn note_for_clip(
+        row: ListeningNoteRow,
+        start_ms: u32,
+        end_ms: u32,
+    ) -> PerformanceListeningNote {
+        let warn = |field: &str, error: serde_json::Error| {
+            Logger::warn(
+                "COMPARISON",
+                &format!(
+                    "연주 {} 노트의 {field} 를 읽지 못함: {error}",
+                    row.performance_id
+                ),
+            );
+        };
+        let moments =
+            parse_json_list::<StoredMoment>(row.moments.as_deref()).unwrap_or_else(|error| {
+                warn("moments", error);
+                Vec::new()
+            });
+        let facts = parse_json_list::<String>(row.facts.as_deref()).unwrap_or_else(|error| {
+            warn("facts", error);
+            Vec::new()
+        });
+        PerformanceListeningNote {
+            headline: row.headline,
+            body: row.note,
+            moments: note_moments(moments, start_ms, end_ms),
+            facts,
+        }
     }
 
     async fn find_credits_by_source_ids(
