@@ -510,3 +510,82 @@
 | 에디타 그루베로바 | [1:29](https://kang1027.com/classicmap/clips/h9AT24gcMRI?end=178&profile=v1-copy&start=0#t=89) | 0:18~0:36 과 1:29~2:07 이 콜로라투라가 몰아치는 대목인가요? |  |
 | 조수미 | [0:00](https://kang1027.com/classicmap/clips/mjceJ1hywLs?end=169&profile=v1-copy&start=0#t=0) | 다른 두 연주와 견줘 여린 곳과 센 곳의 차이가 눈에 띄게 작게 들리나요, 아니면 비슷한가요? |  |
 | 에리카 미클로샤 / 에디타 그루베로바 | 1:43 / 1:47 | 추천 비교: 같은 대목에서 미클로샤 쪽이 확실히 더 가라앉게 들리나요? 아니면 미클로샤 ↔ 조수미 짝이 더 선명한가요? |  |
+
+## 120 하이든 교향곡 94번 G장조 "놀람" · 2악장 Andante 도입 (놀람 화음)
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD: 클립 길이 75·103·91초(1.37배). 가장 센 곳(놀람 화음으로 보이는 0:29·0:42·0:36)의 비율 1.43 이 길이 비율과 비슷해 빠르기 차이일 가능성이 크지만, 세 클립이 같은 마디에서 끝나는지(주제 뒷부분 되풀이·첫 변주 포함 여부) 확인 전에는 대목이 불확실함
+- 앱: https://kang1027.com/classicmap/compare?pieceId=83&sectorId=120
+
+구간 안내 질문
+- [ ] 세 클립이 모두 악장 첫머리에서 시작해 같은 마디(주제 뒷부분 끝, 첫 변주 앞)에서 끝나는지
+- [ ] 길이 차이(75·103·91초)가 빠르기 차이인지, 담긴 범위(되풀이 수행 여부) 차이인지
+- [ ] 구간에 놀람 화음 뒤 주제 뒷부분까지 들어 있는지
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 헤르베르트 폰 카라얀 | [0:29](https://kang1027.com/classicmap/clips/14G_PDZWXVE?end=76&profile=v1-copy&start=1#t=29) | 가장 센 곳이 16마디 끝의 놀람 화음인지, 클립 끝이 어느 마디인지 |  |
+| 레너드 번스타인 | [0:42](https://kang1027.com/classicmap/clips/oTRi5mTZgcQ?end=103&profile=v1-copy&start=0#t=42) | 가장 센 곳이 놀람 화음인지, 103초 클립이 주제 뒷부분 되풀이나 첫 변주까지 담았는지 |  |
+| 네빌 마리너 | [0:36](https://kang1027.com/classicmap/clips/xiytuHvoPdg?end=91&profile=v1-copy&start=0#t=36) | 가장 센 곳이 놀람 화음인지, 클립 끝이 다른 두 연주와 같은 마디인지 |  |
+
+## 139 하이든 현악 4중주 C장조 "황제" · 2악장 Poco adagio cantabile 주제 (황제 찬가)
+
+- 보류(DRAFT): 구간 이름은 '주제'인데 세 클립(1분 55초~2분 16초) 모두 64~68% 지점(1:14·1:17·1:32)에 2초 안팎의 깊은 쉼이 있고 그 뒤로 40초 가까이 큰 세기가 이어짐. 주제(20마디 안팎)는 1분 10~30초 남짓이라, 쉼 뒤는 첫 변주(제2바이올린 선율)일 가능성이 큼. 발췌가 주제에서 끝나는지부터 불확실
+- 앱: https://kang1027.com/classicmap/compare?pieceId=86&sectorId=139
+
+구간 안내 질문
+- [ ] 발췌 끝이 주제(황제 찬가 한 번)에서 끝나는가, 첫 변주 앞부분까지 들어가는가
+- [ ] 첫 변주까지 들어간다면 구간을 주제로 잘라 다시 만들지, 안내를 '주제와 첫 변주 앞부분'으로 고칠지
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 알반 베르크 4중주단 | [1:32](https://kang1027.com/classicmap/clips/HpVah-JbvxM?end=141&profile=v1-copy&start=5#t=92) | 깊은 쉼 뒤에 제2바이올린이 선율을 잡는 첫 변주가 시작되는지 |  |
+| 에머슨 현악 4중주단 | [1:14](https://kang1027.com/classicmap/clips/v8ssyi0SvBk?end=115&profile=v1-copy&start=0#t=74) | 깊은 쉼이 주제의 마지막 화음 뒤인지, 클립 끝까지 몇 마디가 더 들어 있는지 |  |
+| 아마데우스 4중주단 | [1:17](https://kang1027.com/classicmap/clips/msM3F2Q9334?end=125&profile=v1-copy&start=4#t=77) | 쉼 뒤로 큰 세기가 이어지는 대목이 무엇인지 |  |
+
+## 183 C.P.E. 바흐 플루트 협주곡 D단조 · 1악장 Allegro 도입 (관현악 서주)
+
+- 보류(DRAFT): 구간 이름이 '1악장 Allegro 도입 (관현악 서주)'인데 클립이 1분 57초~2분 19초라 독주 플루트가 안에 들어오는지 알 수 없다. 세 연주 모두 0:40~0:55 무렵(골웨이 둘째·넷째 10분의 1, 갈루아 0:47 −15.3dB, 파위 넷째 10분의 1 −8.4dB) 한 단계 여려지는 자리가 있어 플루트 진입일 가능성이 크다. 그러면 구간 이름의 '관현악 서주'가 틀리고, 안내도 그 자리를 짚어야 해서 대목부터 확인이 필요하다.
+- 앱: https://kang1027.com/classicmap/compare?pieceId=105&sectorId=183
+
+구간 안내 질문
+- [ ] 클립 안에서 독주 플루트가 들어오는가? 들어오면 연주마다 몇 초인가
+- [ ] 들어온다면 구간 이름 '(관현악 서주)'를 '도입'으로 고쳐야 하는가
+- [ ] 첫머리가 현악 합주(통주저음 포함)만으로 시작하는가
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 파트리크 갈루아 | [0:47](https://kang1027.com/classicmap/clips/9NbgZKZylMU?end=139&profile=v1-copy&start=0#t=47) | 잦아드는 자리가 서주가 끝나고 플루트가 들어오는 곳인지 |  |
+| 엠마누엘 파위 | [0:42](https://kang1027.com/classicmap/clips/kP8TlXoZZrU?end=122&profile=v1-copy&start=1#t=42) | 물러서는 자리에서 독주 플루트가 들어오는지 |  |
+| 제임스 골웨이 | [0:47](https://kang1027.com/classicmap/clips/1vHRdmIP6k4?end=117&profile=v1-copy&start=0#t=47) | 플루트가 들어오는 시점과, 뒤 절반이 고르게 높게 이어지는 것이 총주 때문인지 |  |
+
+## 187 J.C. 바흐 신포니아 콘체르탄테 C장조 · 1악장 Allegro 도입 (관현악 서주)
+
+- 보류(DRAFT): 구간 이름이 '1악장 Allegro 도입 (관현악 서주)'인데 클립이 1분 54초~2분 1초라 독주 넷(플루트·오보에·바이올린·첼로)이 안에서 들어오는지 알 수 없다. 세 연주 모두 1:24~1:27 에 가장 크게 올라서고 그 앞(일곱째 10분의 1)이 여려, 서주 끝 총주일 수도 독주 대목 뒤 총주일 수도 있다. 안내가 짚을 자리부터 정해야 한다. 덧붙여 입력의 작품 번호 'W.C 34'와 세 영상 표기 'W.C43'가 다르다.
+- 앱: https://kang1027.com/classicmap/compare?pieceId=108&sectorId=187
+
+구간 안내 질문
+- [ ] 클립 안에서 독주 넷이 들어오는가? 들어오면 연주마다 몇 초인가
+- [ ] 들어온다면 구간 이름 '(관현악 서주)'를 '도입'으로 고쳐야 하는가
+- [ ] 서주가 총주로 밝게 시작하는가, 여리게 시작하는가
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 앤서니 홀스테드 | [1:13](https://kang1027.com/classicmap/clips/cLXuJitvqhI?end=114&profile=v1-copy&start=0#t=73) | 깊이 잦아드는 자리가 독주 악기만 남는 대목인지 |  |
+| 프란츠요제프 마이어 | [1:27](https://kang1027.com/classicmap/clips/RnCG3GIP8Gw?end=122&profile=v1-copy&start=1#t=87) | 가장 센 자리가 총주가 다시 들어오는 곳인지. 이 판만 현대 음높이(조율 +0.05, 나머지 둘 −0.4 안팎)라 반음 절반쯤 높게 들리는지 |  |
+| 사이먼 스탠디지 | [0:57](https://kang1027.com/classicmap/clips/vr2IdnKZYP8?end=114&profile=v1-copy&start=0#t=57) | 중반에 한 번 올라서는 자리에서 독주 악기가 처음 나서는지 |  |
+
+## 188 무치오 클레멘티 피아노 소나타 G단조 "버림받은 디도" · 1악장 Largo patetico e sostenuto 도입
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD(120·121·89초, 1.36배). review-report 는 매케이브의 실제 템포 차이로 봤지만, 발췌 끝이 '발췌 끝'(시간 기준)이라 셋 다 서주 안에서 끝나는지, 알레그로 첫머리가 섞였는지 확인되지 않음
+- 앱: https://kang1027.com/classicmap/compare?pieceId=115&sectorId=188
+
+구간 안내 질문
+- [ ] 세 발췌가 모두 느린 서주(Largo patetico e sostenuto) 안에서 끝나는가, 아니면 알레그로 첫머리가 들어 있는가
+- [ ] 서주가 센 화음과 여린 악구를 번갈아 내놓는다는 설명이 악보와 맞는가(곡선 세 개가 같은 오르내림을 보인 데서 짐작한 것)
+- [ ] '버림받은 디도' 제목과 줄거리를 안내에 쓰는 것이 맞는가(Scena tragica 부제 확인)
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 존 매케이브 | [1:08](https://kang1027.com/classicmap/clips/zkDukLfjJsg?end=90&profile=v1-copy&start=1#t=68) | 1:08~1:16 거의 소리가 없는 곳이 악보의 쉼(늘임표)인지, 그 뒤 1:16~1:29 가 서주의 끝인지 알레그로의 시작인지 |  |
+| 하워드 셸리 | [1:41](https://kang1027.com/classicmap/clips/H8RaGYZyiys?end=121&profile=v1-copy&start=0#t=101) | 1:41~1:48 깊은 고요 뒤 2:01 까지 무엇이 나오는지(서주의 마지막 화음인지, 알레그로 첫머리인지) |  |
+| 산드로 데 팔마 | [0:31](https://kang1027.com/classicmap/clips/645PN3ig7Bs?end=123&profile=v1-copy&start=3#t=31) | 0:31 에 처음 크게 터지는 화음이 셸리 0:52·매케이브 0:37 과 같은 자리인지 |  |
