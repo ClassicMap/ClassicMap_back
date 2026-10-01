@@ -589,3 +589,82 @@
 | 존 매케이브 | [1:08](https://kang1027.com/classicmap/clips/zkDukLfjJsg?end=90&profile=v1-copy&start=1#t=68) | 1:08~1:16 거의 소리가 없는 곳이 악보의 쉼(늘임표)인지, 그 뒤 1:16~1:29 가 서주의 끝인지 알레그로의 시작인지 |  |
 | 하워드 셸리 | [1:41](https://kang1027.com/classicmap/clips/H8RaGYZyiys?end=121&profile=v1-copy&start=0#t=101) | 1:41~1:48 깊은 고요 뒤 2:01 까지 무엇이 나오는지(서주의 마지막 화음인지, 알레그로 첫머리인지) |  |
 | 산드로 데 팔마 | [0:31](https://kang1027.com/classicmap/clips/645PN3ig7Bs?end=123&profile=v1-copy&start=3#t=31) | 0:31 에 처음 크게 터지는 화음이 셸리 0:52·매케이브 0:37 과 같은 자리인지 |  |
+
+## 45 쇼팽 연습곡 Op. 10, No. 12 "혁명" · 전곡
+
+- 보류(DRAFT): 조성진 클립이 0~129초(영상 156초)로 키신·폴리니(155초)보다 17% 짧다. 다른 둘은 끝 여린 대목 뒤 종결 화음에서 다시 올라서는데 조성진은 마지막 13초가 여린 채 끝나 종결 화음이 잘렸을 수 있다. 메트로놈(4분음표=160) 기준 2분 6초라 온전한 빠른 연주일 수도 있어 들어서 가려야 한다
+- 앱: https://kang1027.com/classicmap/compare?pieceId=127&sectorId=45
+
+구간 안내 질문
+- [ ] 조성진 클립 129초가 작품 전체(종결 화음과 잔향까지)를 담는지
+- [ ] 원본 영상 129~156초에 음악이 남아 있는지, 박수·무음뿐인지
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 조성진 | [2:00](https://kang1027.com/classicmap/clips/qhYn9sirsJs?end=129&profile=v1-copy&start=0#t=120) | 클립 끝(2:09)까지 마지막 하행 패시지와 종결 화음이 들어 있는지, 아니면 그 앞에서 끊기는지 |  |
+| 조성진 | [0:21](https://kang1027.com/classicmap/clips/qhYn9sirsJs?end=129&profile=v1-copy&start=0#t=21) | 가장 센 0:21 이 첫 대목 어느 자리인지 |  |
+| 마우리치오 폴리니 | [2:12](https://kang1027.com/classicmap/clips/w2vLEQno9Ks?end=156&profile=v1-copy&start=1#t=132) | 2:12~2:26 여린 대목이 종결 앞 여린 대목인지 |  |
+
+## 48 쇼팽 폴로네즈 6번 A♭장조 "영웅" · 전곡
+
+- 보류(DRAFT): 키신 클립이 323초로 원본(387초)보다 1분 가까이 짧고 마지막 5분의 1이 여리게 잡혀, 곡이 크게 맺는 주제 귀환·종결부가 빠졌을 가능성이 큼. 클립 길이 범위(318~413초)에 맞춰 끝이 잘렸는지 확인 필요. 조성진도 마지막 1분 20초가 한 단계 낮음
+- 앱: https://kang1027.com/classicmap/compare?pieceId=130&sectorId=48
+
+구간 안내 질문
+- [ ] 세 클립 모두 도입 상행 음형에서 시작해 마지막 종결 화음까지 담는가(특히 키신 0:00~5:23)
+- [ ] 가운데 E장조 왼손 옥타브 대목이 세 클립 각각 어디쯤인가
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 예브게니 키신 | [5:23](https://kang1027.com/classicmap/clips/8QT7ITv9Ecs?end=328&profile=v1-copy&start=5#t=323) | 클립 끝이 종결 화음인지, 아니면 주제가 돌아오기 전 여린 대목에서 끊겼는지 |  |
+| 예브게니 키신 | [2:54](https://kang1027.com/classicmap/clips/8QT7ITv9Ecs?end=328&profile=v1-copy&start=5#t=174) | 2:54 의 잦아듦이 가운데 E장조 옥타브 대목의 시작인지 |  |
+| 조성진 | [6:48](https://kang1027.com/classicmap/clips/d3IKMiv8AHw?end=413&profile=v1-copy&start=5#t=408) | 클립 끝이 종결 화음과 잔향까지 담는지, 4:46 이후 낮아지는 것이 연주 모양인지 |  |
+| 블라디미르 호로비츠 | [0:04](https://kang1027.com/classicmap/clips/p1-uOCXQ_0I?end=412&profile=v1-copy&start=12#t=4) | 처음의 여린 자리가 도입 음형인지 무음인지 |  |
+
+## 46 쇼팽 녹턴 E♭장조 · 전곡
+
+- 보류(DRAFT): 세 클립(234·234·238초)이 원본(283·267·264초)보다 26~49초 짧고 길이 범위(229~243초)에 몰려 있음. 곡은 여리게 맺는데 루빈스타인·랑랑은 클립 마지막 10분의 1이 크게 잡히고 가장 센 곳이 둘 다 3:32 로 같아, 카덴차·마지막 화음 전에 끊겼을 가능성이 큼
+- 앱: https://kang1027.com/classicmap/compare?pieceId=131&sectorId=46
+
+구간 안내 질문
+- [ ] 세 클립 모두 마지막 화음과 잔향까지 담는가
+- [ ] 3:32(랑랑·루빈스타인), 3:16(조성진)의 가장 센 곳이 카덴차 직전의 큰 대목(con forza)인가
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 아르투르 루빈스타인 | [3:54](https://kang1027.com/classicmap/clips/Nu48Z45ibxQ?end=236&profile=v1-copy&start=2#t=234) | 클립 끝이 마지막 화음과 잔향인지, 카덴차 앞뒤에서 끊겼는지 |  |
+| 랑랑 | [3:54](https://kang1027.com/classicmap/clips/EvNsPyp5O2I?end=234&profile=v1-copy&start=0#t=234) | 클립 끝이 마지막 화음인지 |  |
+| 조성진 | [3:34](https://kang1027.com/classicmap/clips/QR10Od1cLaM?end=242&profile=v1-copy&start=4#t=214) | 마지막 20여 초의 여린 소리가 카덴차 뒤 맺음인지 |  |
+
+## 152 베르디 오페라 <나부코> 중 "히브리 노예들의 합창" · 합창 전체
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD: 길이가 3분 39초·4분 54초·5분 3초로 1.38배까지 벌어져, 샤이 판이 서주나 끝을 빠뜨렸는지 같은 범위인지부터 불확실함
+- 앱: https://kang1027.com/classicmap/compare?pieceId=151&sectorId=152
+
+구간 안내 질문
+- [ ] 세 판 모두 관현악 서주의 첫 음부터 합창 마지막 화음까지 같은 범위를 담았는지
+- [ ] 샤이 판이 짧은 까닭이 빠르기인지, 서주·반복이 빠진 것인지
+- [ ] 합창이 끝에서 여리게 맺는다는 안내가 세 판 모두에 맞는지
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 리카르도 샤이 | [0:00](https://kang1027.com/classicmap/clips/XI5wvuB3jAQ?end=219&profile=v1-copy&start=0#t=0) | 관현악 서주의 첫 음에서 시작하는지, 합창 마지막 화음까지 담겼는지 |  |
+| 리카르도 샤이 | [1:58](https://kang1027.com/classicmap/clips/XI5wvuB3jAQ?end=219&profile=v1-copy&start=0#t=118) | 가장 센 1:58 과 3분 무렵 다시 부푸는 곳 가운데 어느 쪽이 '황금 하프여' 인지 |  |
+| 제임스 콘론 | [0:40](https://kang1027.com/classicmap/clips/aiSSz0snWzA?end=299&profile=v1-copy&start=5#t=40) | 0:40 무렵 크게 부푸는 곳이 서주의 센 대목인지 |  |
+| 리카르도 무티 | [2:50](https://kang1027.com/classicmap/clips/zIkVAT-AKew?end=303&profile=v1-copy&start=0#t=170) | 가장 센 2:50 이 '황금 하프여' 인지, 끝 4:20 무렵 다시 부푸는 곳은 무엇인지 |  |
+
+## 106 브람스 헝가리 무곡 5번 G단조 · 전곡
+
+- 보류(DRAFT): holdFlags LENGTH_SPREAD(클립 길이 190·141·161초, 1.35배). 얀손스 클립은 0:00~0:08 이 아주 여려 곡이 총주 첫 타격으로 시작한다는 큐와 맞지 않아, 앞에 무음·박수나 다른 소리가 섞였을 수 있어요
+- 앱: https://kang1027.com/classicmap/compare?pieceId=155&sectorId=106
+
+구간 안내 질문
+- [ ] 세 클립 모두 총주 첫 타격에서 시작해 종결 화음에서 끝나는지
+- [ ] 세 판이 같은 관현악 편곡(팔로 판)인지, 가운데 장조 대목의 느림·빠름 교대가 셋 모두에 있는지
+
+| 연주 | 시점 | 질문 | 답 |
+|---|---|---|---|
+| 마리스 얀손스 | [0:00](https://kang1027.com/classicmap/clips/4ARjT4QatGY?end=199&profile=v1-copy&start=9#t=0) | 0:00~0:08 이 곡 시작 전 무음·박수인지, 첫 타격이 몇 초에 오는지 |  |
+| 마리스 얀손스 | [3:05](https://kang1027.com/classicmap/clips/4ARjT4QatGY?end=199&profile=v1-copy&start=9#t=185) | 3분 10초 안에 같은 곡이 한 번만 들어 있는지(반복·앙코르 멘트·다른 곡 섞임), 아니면 느려지는 자리를 크게 늘린 것인지 |  |
+| 클라우디오 아바도 | [0:45](https://kang1027.com/classicmap/clips/QAMxkietiik?end=142&profile=v1-copy&start=1#t=45) | 가장 센 0:45 가 첫 선율 대목 안인지 |  |
+| 네빌 마리너 | [1:55](https://kang1027.com/classicmap/clips/WbhlzOoc2s8?end=163&profile=v1-copy&start=2#t=115) | 가장 센 1:55 가 돌아온 첫 선율인지 |  |
