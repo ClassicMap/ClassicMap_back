@@ -47,18 +47,21 @@ COPY --from=builder /app/target/release/link_legacy_authorities /app/link_legacy
 COPY --from=builder /app/target/release/prepare_legacy_authority_bootstrap /app/prepare_legacy_authority_bootstrap
 COPY --from=builder /app/target/release/approve_seed_run /app/approve_seed_run
 COPY --from=builder /app/target/release/build_clip_bundle /app/build_clip_bundle
+COPY --from=builder /app/target/release/load_loudness_profiles /app/load_loudness_profiles
 
-# 시드 배치를 클러스터 안에서 발행하는 데 필요한 것. 후보 JSONL 만 넣는다 —
+# 시드 배치를 클러스터 안에서 발행하는 데 필요한 것. 후보 JSONL 과 음량 곡선 JSONL 만 넣는다 —
 # 검수 보고서와 클립 번들은 기록이지 실행에 쓰지 않는다.
 COPY scripts/seed_publish.sh /app/seed_publish.sh
 COPY seed_pipeline/curation /tmp/curation
 RUN mkdir -p /app/seed \
     && cd /tmp/curation \
     && for dir in */; do \
-         if [ -f "$dir/candidates.jsonl" ]; then \
-           mkdir -p "/app/seed/${dir%/}"; \
-           cp "$dir/candidates.jsonl" "/app/seed/${dir%/}/candidates.jsonl"; \
-         fi; \
+         for file in candidates.jsonl loudness-profiles.jsonl; do \
+           if [ -f "$dir/$file" ]; then \
+             mkdir -p "/app/seed/${dir%/}"; \
+             cp "$dir/$file" "/app/seed/${dir%/}/$file"; \
+           fi; \
+         done; \
        done \
     && rm -rf /tmp/curation \
     && chmod +x /app/seed_publish.sh

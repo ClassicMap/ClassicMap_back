@@ -17,6 +17,7 @@ pub mod db;
 pub mod global_seed_loader;
 pub mod legacy_authority_linker;
 pub mod logger;
+pub mod loudness_profile_loader;
 pub mod performance;
 pub mod performance_sector;
 pub mod piece;
