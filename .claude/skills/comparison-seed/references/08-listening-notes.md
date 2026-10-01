@@ -11,12 +11,14 @@
 | 겹 | 단위 | 쓰는 사람 | 저장 |
 |---|---|---|---|
 | 구간 안내 | 구간마다 하나 | 에이전트 초안 → 사람이 읽고 확정 | `performance_sectors.description` |
-| 추천 비교 | 구간마다 한 쌍 | 에이전트가 후보 → 사람이 들어 보고 확정 | 아직 없음 |
-| 연주 노트 | 연주마다 하나 | 에이전트 초안 → 사람이 들어 보고 확정 | 아직 없음 |
+| 추천 비교 | 구간마다 한 쌍 | 에이전트가 후보 → 사람이 들어 보고 확정 | `sector_featured_pairs` |
+| 연주 노트 | 연주마다 하나 | 에이전트 초안 → 사람이 들어 보고 확정 | `performance_listening_notes` |
 | 음량 곡선 | 클립마다 하나 | 자동 | 아직 없음 |
 
-2026-10-01 기준 화면에 나오는 것은 **구간 안내뿐이다**(`components/compare/sector-guide.tsx`).
-나머지 셋은 저장 자리가 생기기 전까지 초안을 후보 파일 옆에 남겨 둔다.
+비교 API 는 `editorial_status = 'PUBLISHED'` 인 노트와 추천 비교만 내보낸다
+(`note`, `featuredPair`, 없으면 null). 추천 비교는 두 연주가 모두 그 구간의 공개
+연주일 때만 나간다. 화면은 값이 없으면 그 자리를 그리지 않는다. 곡선은 저장 자리가
+생기기 전까지 잰 값을 초안 파일에 남겨 둔다.
 
 **에이전트는 소리를 듣지 못한다.** 그래서 구간 안내는 악보와 구간 정보로 쓸 수
 있지만, 연주 노트와 추천 비교는 사람이 들어 보기 전에는 초안일 뿐이다.
@@ -226,6 +228,21 @@
 2. **curation 파일** — 그 구간을 만든 배치 정의의 `sector.listeningNote` 와 후보
    JSONL 의 `sectorCandidate.editorialNote` 를 같은 문구로 고친다. 빈 DB 에 다시
    적재해도 같은 안내가 들어가게 하려고 한다
+
+### 연주 노트와 추천 비교
+
+아직 적재기가 없어 **마이그레이션으로 넣는다.** 들어 보고 확정한 것만
+`editorial_status = 'PUBLISHED'` 로 넣는다. 첫 예는
+`migrations/202610010007_add_la_campanella_coda_notes.sql` 이다.
+
+- 연주는 id 가 아니라 **영상 id 와 구간 경계**(`provider_video_id`, `start_ms`,
+  `end_ms`)로 찾는다. 시드 id 는 DB 마다 다르다
+- 들을 곳의 `atMs` 는 **원본 영상 시각**이다. `start_ms + 클립 안 오프셋` 으로 적으면
+  API 가 클립 기준 `offsetMs` 로 바꾼다. 클립 밖으로 벗어난 들을 곳은 버린다
+- 추천 비교의 들을 곳은 `performanceId` 를 함께 적는다. 두 연주가 아닌 것은 버린다
+- `evidence` 에 근거를 남긴다. `{"kind":"measured","key":"peakRatio","value":0.11}`,
+  `{"kind":"listening","status":"done"}` 꼴이다. API 는 내보내지 않는다
+- `NOT EXISTS` 로 이미 있는 행은 건드리지 않는다
 
 ### 초안 파일
 

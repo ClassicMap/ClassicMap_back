@@ -30,7 +30,7 @@ description: ClassicMap 비교 영상 시드를 한 배치씩 만든다. 곡과 
 듣기 안내는 구간마다 붙인다. 초안은 악보와 구간 정보로 쓰고, 사람이 확정한 것만
 배치 정의의 `sector.listeningNote` 에 넣는다. 확정 전이면 비워 두고 나중에
 마이그레이션으로 붙인다. 쓰는 법은 `references/08-listening-notes.md` 에 있다.
-연주 노트·추천 비교는 저장 자리가 생기기 전까지 초안만 남긴다.
+연주 노트·추천 비교는 사람이 들어 보고 확정한 것만 마이그레이션으로 넣는다.
 
 발행 마이그레이션은 더 쓰지 않는다. approve 세 UPDATE 는 `approve_seed_run` 이
 하고, 클립 복사는 Job 이 PVC 를 붙여 없어졌다. 까닭은 `04-loading.md` 머리에 있다.
