@@ -48,6 +48,19 @@ pub struct ArtistWithAwards {
     #[serde(flatten)]
     pub artist: Artist,
     pub awards: Vec<ArtistAward>,
+    /// 지금 사진(`image_url`)의 출처. 공개된 출처 기록이 있을 때만 낸다
+    pub image_credit: Option<ImageCredit>,
+}
+
+/// 사진 출처. 위키미디어 사진은 작가와 라이선스를, 보도용 사진은 출처 이름을 밝힌다
+#[derive(Debug, Serialize, Deserialize, FromRow)]
+#[serde(rename_all = "camelCase")]
+pub struct ImageCredit {
+    pub credit_line: Option<String>,
+    pub author: Option<String>,
+    pub license: Option<String>,
+    pub license_url: Option<String>,
+    pub source_url: String,
 }
 
 #[derive(Debug, Serialize, Deserialize)]

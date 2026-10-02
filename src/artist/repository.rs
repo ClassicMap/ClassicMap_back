@@ -1,6 +1,7 @@
 use super::category::{stored_values_matching_label, CategoryFilter};
 use super::model::{
-    Artist, ArtistAward, ArtistWithAwards, CreateArtist, CreateArtistAward, UpdateArtist,
+    Artist, ArtistAward, ArtistWithAwards, CreateArtist, CreateArtistAward, ImageCredit,
+    UpdateArtist,
 };
 use crate::db::DbPool;
 use crate::search::SearchText;
@@ -100,10 +101,40 @@ impl ArtistRepository {
 
         if let Some(artist) = artist_opt {
             let awards = Self::find_awards_by_artist(pool, id).await?;
-            Ok(Some(ArtistWithAwards { artist, awards }))
+            let image_credit = Self::find_image_credit(pool, id).await?;
+            Ok(Some(ArtistWithAwards {
+                artist,
+                awards,
+                image_credit,
+            }))
         } else {
             Ok(None)
         }
+    }
+
+    /// 지금 사진과 같은 파일의 공개된 출처 기록. 사진을 바꾸면 옛 기록은 맞지 않으므로 파일 주소로 맞춘다
+    pub async fn find_image_credit(
+        pool: &DbPool,
+        artist_id: i32,
+    ) -> Result<Option<ImageCredit>, Error> {
+        sqlx::query_as::<_, ImageCredit>(
+            "SELECT NULLIF(image.credit_line, '') AS credit_line,
+                    NULLIF(image.author, '') AS author,
+                    NULLIF(image.license, '') AS license,
+                    NULLIF(image.license_url, '') AS license_url,
+                    image.source_url
+             FROM artists artist
+             JOIN entity_images image
+               ON image.authority_entity_id = artist.authority_entity_id
+              AND image.file_url = artist.image_url
+             WHERE artist.id = ?
+               AND image.editorial_status = 'PUBLISHED'
+             ORDER BY image.is_primary DESC, image.id DESC
+             LIMIT 1",
+        )
+        .bind(artist_id)
+        .fetch_optional(pool)
+        .await
     }
 
     // Award CRUD
