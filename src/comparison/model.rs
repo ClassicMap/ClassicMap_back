@@ -176,6 +176,18 @@ pub struct ComparisonPerformance {
     pub note: Option<PerformanceListeningNote>,
     /// 지금 클립의 음량 곡선. 없거나 다른 파일을 잰 것이면 null
     pub loudness: Option<LoudnessProfile>,
+    /// 같은 구간 기준 연주에 맞춘 정렬 지도. 없거나 덜 맞으면 null(화면은 비율로 맞춘다)
+    pub alignment: Option<ClipAlignment>,
+}
+
+/// 정렬 지도. 기준 연주의 `step_ms` 마다 이 연주의 같은 지점(클립 안 ms)이다.
+/// 두 연주가 같은 기준을 가리키면 기준을 거쳐 서로의 같은 지점을 찾는다
+#[derive(Debug, Clone, PartialEq, Eq, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ClipAlignment {
+    pub reference_performance_id: i32,
+    pub step_ms: u16,
+    pub positions_ms: Vec<u32>,
 }
 
 /// 음량 곡선. 가장 센 곳을 0dB 로 둔 상대값이라 녹음끼리 세기를 견줄 수 없다
@@ -387,6 +399,14 @@ pub(crate) struct LoudnessProfileRow {
     pub peak_ms: u32,
     pub peak_ratio: f64,
     pub range_db: f64,
+}
+
+#[derive(Debug, FromRow)]
+pub(crate) struct ClipAlignmentRow {
+    pub performance_id: i32,
+    pub reference_performance_id: i32,
+    pub step_ms: u16,
+    pub positions_ms: String,
 }
 
 #[derive(Debug, FromRow)]

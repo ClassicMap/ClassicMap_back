@@ -1,12 +1,17 @@
 use super::model::{
-    note_moments, pair_moments, parse_json_list, ComparisonCredit, ComparisonCreditRow,
-    ComparisonPerformance, ComparisonPerformancePage, ComparisonPerformanceRow, ComparisonPiece,
-    ComparisonPiecePerformer, ComparisonSector, FeaturedPair, FeaturedPairRow, ListeningNoteRow,
-    LoudnessProfile, LoudnessProfileRow, PerformanceListeningNote, StoredMoment,
+    note_moments, pair_moments, parse_json_list, ClipAlignment, ClipAlignmentRow, ComparisonCredit,
+    ComparisonCreditRow, ComparisonPerformance, ComparisonPerformancePage,
+    ComparisonPerformanceRow, ComparisonPiece, ComparisonPiecePerformer, ComparisonSector,
+    FeaturedPair, FeaturedPairRow, ListeningNoteRow, LoudnessProfile, LoudnessProfileRow,
+    PerformanceListeningNote, StoredMoment,
 };
 use crate::{db::DbPool, logger::Logger};
 use sqlx::{FromRow, MySql, QueryBuilder, Transaction};
 use std::{collections::HashMap, error::Error, fmt};
+
+/// 이보다 덜 맞는 정렬 지도는 내보내지 않는다. 판이 다른 편곡(조옮김·편성)이 여기서 걸린다.
+/// 시드 검증의 교차 정렬 임계(align.py COST_THRESHOLD)와 같다
+const MAX_ALIGNMENT_COST: f64 = 0.11;
 
 const DEFAULT_PAGE_SIZE: u32 = 20;
 const MAX_PAGE_SIZE: u32 = 50;
@@ -432,6 +437,7 @@ impl ComparisonRepository {
         let performance_ids = rows.iter().map(|row| row.id).collect::<Vec<_>>();
         let mut notes = Self::find_published_notes(pool, &performance_ids).await?;
         let mut profiles = Self::find_current_loudness(pool, &performance_ids).await?;
+        let mut alignments = Self::find_current_alignments(pool, &performance_ids).await?;
 
         Ok(rows
             .into_iter()
@@ -461,6 +467,7 @@ impl ComparisonRepository {
                     credits,
                     note,
                     loudness: profiles.remove(&row.id),
+                    alignment: alignments.remove(&row.id),
                 }
             })
             .collect())
@@ -557,6 +564,73 @@ impl ComparisonRepository {
                         peak_ms: row.peak_ms,
                         peak_ratio: row.peak_ratio,
                         range_db: row.range_db,
+                    },
+                ))
+            })
+            .collect())
+    }
+
+    /// 지금 클립의 정렬 지도. 이 클립과 기준 클립이 모두 지금 클립이고 해시가 같으며,
+    /// 기준 연주가 같은 구간에 있고 비용이 임계 안일 때만 준다
+    async fn find_current_alignments(
+        pool: &DbPool,
+        performance_ids: &[i32],
+    ) -> Result<HashMap<i32, ClipAlignment>, sqlx::Error> {
+        if performance_ids.is_empty() {
+            return Ok(HashMap::new());
+        }
+
+        let mut query = QueryBuilder::<MySql>::new(
+            "SELECT clip.performance_id,
+                    reference.performance_id AS reference_performance_id,
+                    alignment.step_ms,
+                    CAST(alignment.positions_ms AS CHAR CHARACTER SET utf8mb4) AS positions_ms
+             FROM clip_alignments alignment
+             JOIN clip_assets clip
+               ON clip.id = alignment.clip_asset_id
+              AND clip.is_current = TRUE
+              AND clip.sha256 = alignment.clip_sha256
+             JOIN clip_assets reference
+               ON reference.id = alignment.reference_clip_asset_id
+              AND reference.is_current = TRUE
+              AND reference.sha256 = alignment.reference_clip_sha256
+             JOIN performances performance ON performance.id = clip.performance_id
+             JOIN performances reference_performance
+               ON reference_performance.id = reference.performance_id
+              AND reference_performance.sector_id = performance.sector_id
+             WHERE alignment.cost <= ",
+        );
+        query.push_bind(MAX_ALIGNMENT_COST);
+        query.push(" AND clip.performance_id IN (");
+        let mut separated = query.separated(", ");
+        for performance_id in performance_ids {
+            separated.push_bind(performance_id);
+        }
+        separated.push_unseparated(")");
+
+        let rows = query
+            .build_query_as::<ClipAlignmentRow>()
+            .fetch_all(pool)
+            .await?;
+        Ok(rows
+            .into_iter()
+            .filter_map(|row| {
+                let positions = match serde_json::from_str::<Vec<u32>>(&row.positions_ms) {
+                    Ok(positions) => positions,
+                    Err(error) => {
+                        Logger::warn(
+                            "COMPARISON",
+                            &format!("연주 {} 정렬 지도를 읽지 못함: {error}", row.performance_id),
+                        );
+                        return None;
+                    }
+                };
+                Some((
+                    row.performance_id,
+                    ClipAlignment {
+                        reference_performance_id: row.reference_performance_id,
+                        step_ms: row.step_ms,
+                        positions_ms: positions,
                     },
                 ))
             })
