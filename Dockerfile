@@ -48,6 +48,7 @@ COPY --from=builder /app/target/release/prepare_legacy_authority_bootstrap /app/
 COPY --from=builder /app/target/release/approve_seed_run /app/approve_seed_run
 COPY --from=builder /app/target/release/build_clip_bundle /app/build_clip_bundle
 COPY --from=builder /app/target/release/load_loudness_profiles /app/load_loudness_profiles
+COPY --from=builder /app/target/release/load_clip_alignments /app/load_clip_alignments
 COPY --from=builder /app/target/release/load_listening_notes /app/load_listening_notes
 
 # 시드 배치를 클러스터 안에서 발행하는 데 필요한 것. 후보·음량 곡선·듣기 노트 JSONL 만 넣는다 —
@@ -57,7 +58,7 @@ COPY seed_pipeline/curation /tmp/curation
 RUN mkdir -p /app/seed \
     && cd /tmp/curation \
     && for dir in */; do \
-         for file in candidates.jsonl loudness-profiles.jsonl notes.jsonl; do \
+         for file in candidates.jsonl loudness-profiles.jsonl alignment-maps.jsonl notes.jsonl; do \
            if [ -f "$dir/$file" ]; then \
              mkdir -p "/app/seed/${dir%/}"; \
              cp "$dir/$file" "/app/seed/${dir%/}/$file"; \

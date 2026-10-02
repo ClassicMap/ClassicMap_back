@@ -7,6 +7,7 @@ extern crate self as ClassicMap_back;
 pub mod artist;
 pub mod auth;
 pub mod boxoffice;
+pub mod clip_alignment_loader;
 pub mod clip_asset_loader;
 pub mod clip_bundle_builder;
 pub mod comparison;
