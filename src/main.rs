@@ -24,7 +24,7 @@ use dotenv::dotenv;
 use logger::Logger;
 use rocket::http::Method;
 use rocket_cors::{AllowedHeaders, AllowedOrigins, CorsOptions};
-use ClassicMap_back::comparison;
+use ClassicMap_back::{comparison, taste};
 
 #[launch]
 async fn rocket() -> _ {
@@ -113,6 +113,14 @@ async fn rocket() -> _ {
                 comparison::get_comparison_pieces,
                 comparison::get_piece_comparison_sectors,
                 comparison::get_sector_comparison_performances,
+                // Taste & recommendation routes
+                taste::get_my_taste,
+                taste::put_my_taste,
+                taste::get_onboarding_pieces,
+                taste::post_my_listening_events,
+                taste::delete_my_listening_events,
+                taste::get_my_home_recommendations,
+                taste::post_guest_home_recommendations,
                 // Concert routes
                 concert::get_concerts,
                 concert::get_concert,
