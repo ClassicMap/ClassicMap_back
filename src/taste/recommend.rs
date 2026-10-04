@@ -19,7 +19,7 @@ const SKIP_PENALTY: f64 = 0.05;
 const TODAY_POOL: usize = 5;
 const SHELF_SIZE: usize = 6;
 const MAX_REASONS: usize = 2;
-const EXPLORE_REASON: &str = "가끔은 다른 소리도";
+const EXPLORE_REASON: &str = "평소와 다른 소리";
 const STARTER_REASON: &str = "처음 듣기 좋은 곡";
 
 /// 점수를 매길 작품 한 곡
@@ -90,24 +90,19 @@ impl Signals {
     }
 }
 
+/// 고른 소리가 맞는 곡의 이유. 다른 이유("월광과 같은 베토벤", "처음 듣기 좋은 곡")처럼 명사로 끝낸다
 fn sound_reason(sound: &str, played: bool) -> Option<String> {
-    let text = if played {
-        match sound {
-            "piano" => "피아노를 연주해서",
-            "strings" => "현악기를 연주해서",
-            "winds" => "관악기를 연주해서",
-            "voice" => "노래를 해서",
-            _ => return None,
-        }
-    } else {
-        match sound {
-            "piano" => "피아노를 골라서",
-            "orchestra" => "오케스트라를 골라서",
-            "strings" => "바이올린·첼로를 골라서",
-            "voice" => "목소리를 골라서",
-            "ensemble" => "작은 앙상블을 골라서",
-            _ => return None,
-        }
+    if played {
+        return matches!(sound, "piano" | "strings" | "winds" | "voice")
+            .then(|| "연주하는 악기의 곡".to_string());
+    }
+    let text = match sound {
+        "piano" => "피아노 곡",
+        "orchestra" => "관현악곡",
+        "strings" => "바이올린·첼로 곡",
+        "voice" => "성악곡",
+        "ensemble" => "실내악곡",
+        _ => return None,
     };
     Some(text.to_string())
 }
