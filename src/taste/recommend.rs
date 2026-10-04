@@ -121,7 +121,7 @@ fn has_final_consonant(word: &str) -> bool {
     }
 }
 
-/// 이유 문구에 쓰는 짧은 곡 이름. 따옴표 별명 → 꺾쇠 제목 → 괄호 앞 제목 순
+/// 이유 문구에 쓰는 짧은 곡 이름. 따옴표 별명 → 꺾쇠 제목 → 괄호 앞 제목(끝의 조성은 뺀다) 순
 pub fn short_title(title: &str) -> String {
     let between = |open: char, close: char| -> Option<String> {
         let end = title.rfind(close)?;
@@ -131,7 +131,15 @@ pub fn short_title(title: &str) -> String {
     };
     between('"', '"')
         .or_else(|| between('<', '>'))
-        .unwrap_or_else(|| title.split(" (").next().unwrap_or(title).trim().to_string())
+        .unwrap_or_else(|| {
+            let head = title.split(" (").next().unwrap_or(title).trim();
+            match head.rsplit_once(' ') {
+                Some((rest, key)) if key.ends_with("장조") || key.ends_with("단조") => {
+                    rest.trim().to_string()
+                }
+                _ => head.to_string(),
+            }
+        })
 }
 
 fn same_as(reference: &str, composer: &str) -> String {
@@ -326,6 +334,7 @@ fn taste_shelf<'a>(
     used: &HashSet<i32>,
     sounds: &HashSet<&str>,
     level: Option<&str>,
+    taken_composers: &HashSet<i32>,
 ) -> Vec<Scored<'a>> {
     let main_size = if sounds.is_empty() {
         SHELF_SIZE
@@ -337,7 +346,7 @@ fn taste_shelf<'a>(
         .filter(|scored| !used.contains(&scored.candidate.piece.piece_id))
         .collect();
     let mut picked: Vec<Scored<'a>> = Vec::new();
-    let mut composers: HashSet<i32> = HashSet::new();
+    let mut composers: HashSet<i32> = taken_composers.clone();
     let fits = |scored: &Scored<'a>, picked: &[Scored<'a>], composers: &HashSet<i32>| {
         !composers.contains(&scored.candidate.piece.composer_id)
             && !picked
@@ -467,8 +476,18 @@ pub fn recommend_home(
     }
     let sounds = signals.sounds();
     let level = signals.taste.listening_level.as_deref();
-    let taste_items = taste_shelf(&ranked, &used, &sounds, level);
+    // 홈 전체에서 같은 작곡가가 겹치지 않게 오늘의 비교부터 차례로 넘긴다
+    let mut taken_composers: HashSet<i32> = today
+        .map(|today| today.candidate.piece.composer_id)
+        .into_iter()
+        .collect();
+    let taste_items = taste_shelf(&ranked, &used, &sounds, level, &taken_composers);
     used.extend(taste_items.iter().map(|item| item.candidate.piece.piece_id));
+    taken_composers.extend(
+        taste_items
+            .iter()
+            .map(|item| item.candidate.piece.composer_id),
+    );
 
     let mut shelves = Vec::new();
     if !taste_items.is_empty() {
@@ -502,7 +521,7 @@ pub fn recommend_home(
     }
 
     if level == Some("new") {
-        let mut composers = HashSet::new();
+        let mut composers = taken_composers;
         let starter: Vec<RecommendedPiece> = ranked
             .iter()
             .filter(|scored| {
@@ -685,6 +704,51 @@ mod tests {
                 "chamber",
                 "known",
             ),
+            candidate(
+                220,
+                (70, "드뷔시"),
+                "달빛 (베르가마스크 모음곡 중)",
+                "근현대",
+                "piano",
+                "solo",
+                "everyone",
+            ),
+            candidate(
+                378,
+                (71, "사티"),
+                "짐노페디 1번",
+                "근현대",
+                "piano",
+                "solo",
+                "everyone",
+            ),
+            candidate(
+                139,
+                (30, "리스트"),
+                "사랑의 꿈 3번 A♭장조",
+                "낭만주의",
+                "piano",
+                "solo",
+                "everyone",
+            ),
+            candidate(
+                185,
+                (72, "요한 슈트라우스 2세"),
+                "왈츠 <아름답고 푸른 도나우>",
+                "낭만주의",
+                "orchestra",
+                "large",
+                "everyone",
+            ),
+            candidate(
+                162,
+                (34, "차이콥스키"),
+                "발레 <백조의 호수>",
+                "낭만주의",
+                "orchestra",
+                "large",
+                "everyone",
+            ),
         ]
     }
 
@@ -709,6 +773,8 @@ mod tests {
         );
         assert_eq!(short_title("가곡 <마왕>"), "마왕");
         assert_eq!(short_title("달빛 (베르가마스크 모음곡 중)"), "달빛");
+        assert_eq!(short_title("교향곡 5번 C#단조"), "교향곡 5번");
+        assert_eq!(short_title("피아노 협주곡 1번 E♭장조"), "피아노 협주곡 1번");
         assert_eq!(
             same_as("피아노 소나타 14번 C#단조 \"월광\"", "베토벤"),
             "월광과 같은 베토벤"
@@ -718,6 +784,10 @@ mod tests {
             "놀람과 같은 하이든"
         );
         assert_eq!(same_as("교향곡 2번", "말러"), "교향곡 2번과 같은 말러");
+        assert_eq!(
+            same_as("교향곡 5번 C#단조", "말러"),
+            "교향곡 5번과 같은 말러"
+        );
         assert_eq!(
             same_as("아이네 클라이네 나흐트무지크", "모차르트"),
             "아이네 클라이네 나흐트무지크와 같은 모차르트"
@@ -790,6 +860,25 @@ mod tests {
             .expect("아는 곡");
         assert_eq!(known.items[0].piece.piece_id, 78);
         assert!(result.shelves.iter().any(|shelf| shelf.key == "starter"));
+    }
+
+    #[test]
+    fn composers_do_not_repeat_across_today_and_shelves() {
+        let result = recommend_home(&catalog(), &beginner_who_likes_moonlight(), 20_000);
+        let composers: Vec<i32> = result
+            .today
+            .iter()
+            .chain(
+                result
+                    .shelves
+                    .iter()
+                    .filter(|shelf| shelf.key != "known")
+                    .flat_map(|shelf| shelf.items.iter()),
+            )
+            .map(|item| item.piece.composer_id)
+            .collect();
+        let unique: HashSet<i32> = composers.iter().copied().collect();
+        assert_eq!(unique.len(), composers.len());
     }
 
     #[test]
