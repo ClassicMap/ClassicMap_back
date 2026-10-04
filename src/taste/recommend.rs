@@ -121,25 +121,38 @@ fn has_final_consonant(word: &str) -> bool {
     }
 }
 
-/// 이유 문구에 쓰는 짧은 곡 이름. 따옴표 별명 → 꺾쇠 제목 → 괄호 앞 제목(끝의 조성은 뺀다) 순
+/// 이유 문구에 쓰는 짧은 곡 이름. 프론트 `shortPieceTitle` 과 같은 규칙이다.
+/// 따옴표 별명 → 꺾쇠 제목(뒤에 붙은 말은 살린다: <타이스>의 명상곡 → 타이스의 명상곡)
+/// → 괄호 앞 제목(끝의 조성은 뺀다) 순
 pub fn short_title(title: &str) -> String {
-    let between = |open: char, close: char| -> Option<String> {
-        let end = title.rfind(close)?;
-        let start = title[..end].rfind(open)?;
-        let inner = title[start + open.len_utf8()..end].trim();
-        (!inner.is_empty()).then(|| inner.to_string())
-    };
-    between('"', '"')
-        .or_else(|| between('<', '>'))
-        .unwrap_or_else(|| {
-            let head = title.split(" (").next().unwrap_or(title).trim();
-            match head.rsplit_once(' ') {
-                Some((rest, key)) if key.ends_with("장조") || key.ends_with("단조") => {
-                    rest.trim().to_string()
-                }
-                _ => head.to_string(),
+    if let Some(end) = title.rfind('"') {
+        if let Some(start) = title[..end].rfind('"') {
+            let inner = title[start + 1..end].trim();
+            if !inner.is_empty() {
+                return inner.to_string();
             }
-        })
+        }
+    }
+    let head = title.split(" (").next().unwrap_or(title).trim();
+    if let Some(open) = head.find('<') {
+        if let Some(close) = head[open + 1..].find('>').map(|offset| open + 1 + offset) {
+            let inner = head[open + 1..close].trim();
+            let after = &head[close + 1..];
+            if !inner.is_empty() {
+                return if after.trim().is_empty() || after.trim().starts_with('중') {
+                    inner.to_string()
+                } else {
+                    format!("{inner}{after}").trim().to_string()
+                };
+            }
+        }
+    }
+    match head.rsplit_once(' ') {
+        Some((rest, key)) if key.ends_with("장조") || key.ends_with("단조") => {
+            rest.trim().to_string()
+        }
+        _ => head.to_string(),
+    }
 }
 
 fn same_as(reference: &str, composer: &str) -> String {
@@ -772,6 +785,12 @@ mod tests {
             "공주는 잠 못 이루고"
         );
         assert_eq!(short_title("가곡 <마왕>"), "마왕");
+        assert_eq!(short_title("<타이스>의 명상곡"), "타이스의 명상곡");
+        assert_eq!(short_title("<핑갈의 동굴> 서곡"), "핑갈의 동굴 서곡");
+        assert_eq!(
+            short_title("<전람회의 그림> (라벨 편곡 관현악 버전)"),
+            "전람회의 그림"
+        );
         assert_eq!(short_title("달빛 (베르가마스크 모음곡 중)"), "달빛");
         assert_eq!(short_title("교향곡 5번 C#단조"), "교향곡 5번");
         assert_eq!(short_title("피아노 협주곡 1번 E♭장조"), "피아노 협주곡 1번");
