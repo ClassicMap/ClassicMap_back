@@ -1,0 +1,59 @@
+# 추천 작품 속성(features.jsonl)을 piece_reco_features 에 넣는다.
+# 입력은 seed_pipeline/curation/<RUN>/features.jsonl 로 커밋돼 이미지의
+# /app/seed/<RUN>/ 에 들어 있다. 값을 정한 기준은 그 디렉터리의 README.md 에 있다.
+#
+#   RUN=reco-features-2026-10-04
+#   # 먼저 dry-run: 계획 변경 수와 건너뛴 작품을 본다
+#   sed "s|__RUN__|$RUN|g; s|__MODE__|dry|g; s|__FLAGS__|--dry-run|g" deploy/reco-features-load-job.yaml | kubectl apply -f -
+#   kubectl -n homeserver logs -f job/reco-features-load-$RUN-dry
+#   # 그다음 적재, 끝나면 dry-run 을 한 번 더 돌려 계획 변경 수가 0 인지 본다
+#   sed "s|__RUN__|$RUN|g; s|__MODE__|apply|g; s|__FLAGS__||g" deploy/reco-features-load-job.yaml | kubectl apply -f -
+#
+# 끝나면 지운다(하루 뒤 스스로 지워지기도 한다).
+#   kubectl -n homeserver delete job reco-features-load-$RUN-dry reco-features-load-$RUN-apply
+#
+# DB 자격증명은 seed-publish-job.yaml 과 같은 방식으로 부품만 받는다.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: reco-features-load-__RUN__-__MODE__
+  namespace: homeserver
+  labels:
+    app: classicmap-reco-features
+spec:
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 86400
+  template:
+    metadata:
+      labels:
+        app: classicmap-reco-features
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: load
+          image: ghcr.io/classicmap/classicmap-back:latest
+          imagePullPolicy: Always
+          command:
+            - /bin/sh
+            - -c
+            - /app/load_piece_reco_features --input /app/seed/__RUN__/features.jsonl --run-id __RUN__ __FLAGS__
+          env:
+            - name: MYSQL_HOST
+              value: classicmap-mysql
+            - name: MYSQL_PORT
+              value: "3306"
+            - name: MYSQL_DATABASE
+              value: classicmap
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-credentials
+                  key: CLASSICMAP_MYSQL_ROOT_PASSWORD
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              memory: 256Mi
