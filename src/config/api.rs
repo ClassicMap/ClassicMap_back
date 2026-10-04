@@ -47,6 +47,7 @@ pub fn delete_account() -> (ContentType, &'static str) {
             <li>계정 정보 (이메일, 프로필)</li>
             <li>평점 및 리뷰 데이터</li>
             <li>즐겨찾기 및 개인 설정</li>
+            <li>취향 답과 들은 기록 (추천에 쓰는 기록)</li>
         </ul>
 
         <h2>보관 기간</h2>
