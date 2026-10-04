@@ -27,3 +27,8 @@
 - 주인공 소리: orchestra 83 · piano 62 · voice 27 · strings 19 · ensemble 15 · winds 5
 - 편성 규모: large 133 · solo 63 · chamber 15
 - 친숙도: known 96 · deep 61 · everyone 54
+
+## 확정 (2026-10-04)
+
+- 사용자가 초안을 그대로 확정했다. 확인표(claude.ai 확인표 artifact)에서 직접 본 곡은 골드베르크 1곡이고 값은 초안과 같았다
+- 211줄 모두 `reviewStatus` CONFIRMED 로 다시 적재했다. 이상한 곡이 보이면 이 파일을 고쳐 다시 적재한다
