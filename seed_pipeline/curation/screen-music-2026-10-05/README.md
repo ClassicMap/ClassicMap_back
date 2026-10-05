@@ -13,6 +13,7 @@
 | `research-brief.md` | 조사 에이전트에게 준 지침 |
 | `build_titles.py` | 조사 원본 → `titles.jsonl`. 곡 매핑(`MAP`)은 사람이 확인한 값이다 |
 | `covers.json` | 작품 대표 그림으로 쓸 권리자 공식 YouTube 예고편·클립 28편(oEmbed 로 채널 확인). 큐 공식 클립이 없는 작품용 |
+| `probe_posters.py` · `posters.json` | 한국영상자료원 KMDb 오픈 API 로 찾은 작품 포스터. 사람이 확인한 `status: ok` 만 `build_titles.py` 가 `posterUrl`·`posterCredit` 으로 싣는다 |
 | `probe_thumbs.py` · `thumbs.json` | 공식 클립 영상마다 있는 가장 높은 jpg·webp 썸네일 화질. `build_titles.py` 가 `thumbJpg`·`thumbWebp` 로 싣는다 |
 
 ## 공개 기준
@@ -59,3 +60,13 @@ TMDB 무료 키는 '개인 용도만' 보증이 필요해 쓰지 않는다. 포�
 
 - 61개 영상 모두 jpg 가 있고, webp 는 48개에 있다. jpg 는 maxres 52, sd 3, hq 6
 - 있는 그림에도 가끔 404 가 와서 화질마다 세 번까지 잰다. 두 번 재서 결과가 같은 것을 확인했다
+
+## 포스터 (KMDb)
+
+예고편 장면을 세로 칸에 잘라 넣으면 글자·얼굴이 잘려서, 2026-10-05 사용자 결정으로 실제 극장 포스터를 KMDb 오픈 API 에서 받는다.
+KMDb 는 '국민 개인 및 단체, 기업 등이 제한 없이 활용할 수 있도록' 공공데이터를 연다고 안내한다. 포스터 그림은 화면에 'KMDb' 출처를 같이 적는다.
+
+- `KMDB_SERVICE_KEY=... python3 probe_posters.py`. 인증키는 환경변수로만 받고 어디에도 남기지 않는다
+- KMDb 등록 id(`identifiers.kmdb`)가 있으면 그 id 로, 없으면 한국어 제목 + 제작 연도(±1)로 찾고, 맞는 후보가 하나일 때만 고른다
+- 고른 포스터는 그림을 열어 작품이 맞는지 확인한 뒤 남긴다. 못 고른 작품은 `OVERRIDES` 에 확인한 id 를 적는다
+- KMDb 는 영화 DB 라서 드라마·애니 시리즈는 포스터가 없을 수 있다. 그 작품은 대표 클립 그림을 쓴다
