@@ -1,4 +1,4 @@
-use std::{fs, path::PathBuf};
+use std::{fs, path::Path};
 use ClassicMap_back::{
     db,
     screen::repository::ScreenRepository,
@@ -15,9 +15,9 @@ fn line(piece_id: i32, composer_id: i32, status: &str, note: &str) -> String {
     )
 }
 
-fn options(path: &PathBuf, dry_run: bool) -> ScreenMusicLoadOptions {
+fn options(path: &Path, dry_run: bool) -> ScreenMusicLoadOptions {
     ScreenMusicLoadOptions {
-        input_path: path.clone(),
+        input_path: path.to_path_buf(),
         dry_run,
         limit: Some(10),
         run_id: Some("screen-music-integration".to_string()),
