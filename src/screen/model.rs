@@ -23,6 +23,9 @@ pub struct ScreenTitleSummary {
     pub cover_video_id: Option<String>,
     /// 대표 그림 클립을 올린 채널. 화면에 출처로 적는다
     pub cover_channel: Option<String>,
+    /// 대표 그림 클립의 가장 높은 jpg·webp 썸네일 화질(`OfficialClip` 과 같음)
+    pub cover_thumb_jpg: Option<String>,
+    pub cover_thumb_webp: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -39,6 +42,12 @@ pub struct OfficialClip {
     pub start_sec: u32,
     pub channel: String,
     pub title: String,
+    /// 있는 가장 높은 jpg 썸네일 화질. 모르면 빠진다
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub thumb_jpg: Option<String>,
+    /// 있는 가장 높은 webp 썸네일 화질. webp 가 없거나 모르면 빠진다
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub thumb_webp: Option<String>,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -118,6 +127,8 @@ pub struct PieceScreenCue {
     pub usage: String,
     /// 작품의 대표 장면 클립 id
     pub cover_video_id: Option<String>,
+    pub cover_thumb_jpg: Option<String>,
+    pub cover_thumb_webp: Option<String>,
 }
 
 /// 모아 보는 화면 '그 대목 바로 듣기'. 비교 구간이 그대로 공개된 큐만
@@ -137,6 +148,8 @@ pub struct FeaturedScreenCue {
     pub sector_id: i32,
     /// 작품의 대표 장면 클립 id
     pub cover_video_id: Option<String>,
+    pub cover_thumb_jpg: Option<String>,
+    pub cover_thumb_webp: Option<String>,
 }
 
 /// 관리자 장면 스틸 고르기

@@ -12,31 +12,42 @@ use crate::{comparison::repository::PUBLIC_COMPARISON_CTE, db::DbPool, search::S
 pub const MAX_PAGE_SIZE: u32 = 50;
 const DEFAULT_PAGE_SIZE: u32 = 24;
 
-/// 작품 대표 그림 클립의 한 필드. 작품에 정한 예고편이 먼저, 없으면 스포일러가 아닌 큐의 공식 클립
+/// 작품 대표 그림 클립. 작품에 정한 예고편이 먼저, 없으면 스포일러가 아닌 큐의 공식 클립
+const COVER_CLIP_SQL: &str = "COALESCE(t.cover_clip,
+    (SELECT cover.official_clip
+     FROM screen_music_cues cover
+     WHERE cover.screen_title_id = t.id AND cover.editorial_status = 'PUBLISHED'
+       AND cover.official_clip IS NOT NULL
+     ORDER BY cover.spoiler ASC, cover.display_order ASC, cover.id ASC
+     LIMIT 1))";
+
+/// 대표 그림 클립의 한 필드. 필드마다 같은 클립에서 읽어 영상 id 와 썸네일 화질이 어긋나지 않는다
 fn cover_field_sql(field: &str) -> String {
     format!(
-        "COALESCE(
-            CAST(JSON_UNQUOTE(JSON_EXTRACT(t.cover_clip, '$.{field}')) AS CHAR CHARACTER SET utf8mb4),
-            (SELECT CAST(JSON_UNQUOTE(JSON_EXTRACT(cover.official_clip, '$.{field}'))
-                         AS CHAR CHARACTER SET utf8mb4)
-             FROM screen_music_cues cover
-             WHERE cover.screen_title_id = t.id AND cover.editorial_status = 'PUBLISHED'
-               AND cover.official_clip IS NOT NULL
-             ORDER BY cover.spoiler ASC, cover.display_order ASC, cover.id ASC
-             LIMIT 1))"
+        "CAST(JSON_UNQUOTE(JSON_EXTRACT({COVER_CLIP_SQL}, '$.{field}')) AS CHAR CHARACTER SET utf8mb4)"
+    )
+}
+
+/// 대표 그림 영상 id 와 썸네일 화질 열
+fn cover_columns_sql() -> String {
+    format!(
+        "{} AS cover_video_id, {} AS cover_thumb_jpg, {} AS cover_thumb_webp",
+        cover_field_sql("videoId"),
+        cover_field_sql("thumbJpg"),
+        cover_field_sql("thumbWebp")
     )
 }
 
 /// 공개된 작품이면서 공개된 큐가 하나 이상 있는 작품만 보인다
 fn summary_select() -> String {
-    let cover_video_id = cover_field_sql("videoId");
+    let cover_columns = cover_columns_sql();
     let cover_channel = cover_field_sql("channel");
     format!(
         "SELECT t.id, CAST(t.slug AS CHAR CHARACTER SET utf8mb4) AS slug, t.kind, t.title_ko, t.title_original,
             t.release_year, t.country_code, t.credit_line, t.poster_path, t.backdrop_path,
             (SELECT COUNT(*) FROM screen_music_cues cue
              WHERE cue.screen_title_id = t.id AND cue.editorial_status = 'PUBLISHED') AS cue_count,
-            {cover_video_id} AS cover_video_id,
+            {cover_columns},
             {cover_channel} AS cover_channel
      FROM screen_titles t
      WHERE t.editorial_status = 'PUBLISHED'
@@ -330,12 +341,12 @@ impl ScreenRepository {
         pool: &DbPool,
         piece_id: i32,
     ) -> Result<Vec<PieceScreenCue>, sqlx::Error> {
-        let cover_video_id = cover_field_sql("videoId");
+        let cover_columns = cover_columns_sql();
         let sql = format!(
             "SELECT c.id AS cue_id, t.id AS title_id, t.title_ko, t.kind, t.release_year,
                     t.poster_path, c.part_label, c.episode_label, c.sector_id,
                     c.usage_kind AS `usage`,
-                    {cover_video_id} AS cover_video_id
+                    {cover_columns}
              FROM screen_music_cues c
              JOIN screen_titles t ON t.id = c.screen_title_id AND t.editorial_status = 'PUBLISHED'
              WHERE c.piece_id = ? AND c.editorial_status = 'PUBLISHED'
@@ -353,14 +364,14 @@ impl ScreenRepository {
         limit: Option<u32>,
     ) -> Result<Vec<FeaturedScreenCue>, sqlx::Error> {
         let limit = limit.unwrap_or(12).clamp(1, MAX_PAGE_SIZE);
-        let cover_video_id = cover_field_sql("videoId");
+        let cover_columns = cover_columns_sql();
         let sql = format!(
             "{PUBLIC_COMPARISON_CTE}
              , ranked_cue AS (
                  SELECT c.id AS cue_id, t.id AS title_id, t.title_ko, t.kind, t.poster_path,
                         c.composer_id, c.composer_name, c.piece_id, c.work_title, c.part_label,
                         c.sector_id, t.display_order AS title_order, c.display_order AS cue_order,
-                        {cover_video_id} AS cover_video_id,
+                        {cover_columns},
                         ROW_NUMBER() OVER (
                             PARTITION BY t.id ORDER BY c.display_order ASC, c.id ASC
                         ) AS title_rank
@@ -373,7 +384,8 @@ impl ScreenRepository {
                  WHERE c.editorial_status = 'PUBLISHED' AND c.composer_id IS NOT NULL
              )
              SELECT cue_id, title_id, title_ko, kind, poster_path, composer_id, composer_name,
-                    piece_id, work_title, part_label, sector_id, cover_video_id
+                    piece_id, work_title, part_label, sector_id, cover_video_id,
+                    cover_thumb_jpg, cover_thumb_webp
              FROM ranked_cue
              WHERE title_rank = 1
              ORDER BY title_order ASC, cue_order ASC, cue_id ASC

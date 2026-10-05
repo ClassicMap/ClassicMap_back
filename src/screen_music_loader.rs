@@ -51,7 +51,17 @@ pub struct OfficialClip {
     pub start_sec: u32,
     pub channel: String,
     pub title: String,
+    /// 이 영상에 있는 가장 높은 jpg 썸네일 화질. 그 아래 화질은 다 있다.
+    /// 없는 화질을 앱이 요청하면 YouTube 가 404 를 1~2초 늦게 줘서, 미리 재어 둔다
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub thumb_jpg: Option<String>,
+    /// webp 썸네일이 있으면 가장 높은 화질. webp 가 없는 영상은 비운다
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub thumb_webp: Option<String>,
 }
+
+/// YouTube 썸네일 화질. 높은 것부터
+pub const THUMB_QUALITIES: [&str; 4] = ["maxresdefault", "sddefault", "hqdefault", "mqdefault"];
 
 #[derive(Debug, Clone, PartialEq, Eq, Deserialize, Serialize)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
@@ -188,7 +198,23 @@ impl OfficialClip {
             ));
         }
         not_blank("officialClip.channel", &self.channel, 100)?;
-        not_blank("officialClip.title", &self.title, 200)
+        not_blank("officialClip.title", &self.title, 200)?;
+        for (field, value) in [
+            ("thumbJpg", &self.thumb_jpg),
+            ("thumbWebp", &self.thumb_webp),
+        ] {
+            if let Some(value) = value {
+                if !THUMB_QUALITIES.contains(&value.as_str()) {
+                    return Err(format!(
+                        "officialClip.{field} 가 썸네일 화질이 아님: {value}"
+                    ));
+                }
+            }
+        }
+        if self.thumb_webp.is_some() && self.thumb_jpg.is_none() {
+            return Err("officialClip.thumbWebp 는 thumbJpg 와 같이 적어야 함".to_string());
+        }
+        Ok(())
     }
 }
 
@@ -1041,5 +1067,21 @@ mod tests {
         assert!(parse_records(&clip, None).is_err());
         let good = clip.replace("\"abc\"", "\"dQw4w9WgXcQ\"");
         assert!(parse_records(&good, None).is_ok());
+    }
+
+    #[test]
+    fn clip_thumb_quality_is_checked() {
+        let clip = LINE.replace(
+            "\"spoiler\":false,",
+            r#""spoiler":false,"officialClip":{"videoId":"dQw4w9WgXcQ","startSec":0,"channel":"Netflix Korea","title":"장면","thumbJpg":"sddefault","thumbWebp":"sddefault"},"#,
+        );
+        assert!(parse_records(&clip, None).is_ok());
+        assert!(parse_records(
+            &clip.replace("\"thumbWebp\":\"sddefault\"", "\"thumbWebp\":\"huge\""),
+            None
+        )
+        .is_err());
+        assert!(parse_records(&clip.replace("\"thumbJpg\":\"sddefault\",", ""), None).is_err());
+        assert!(parse_records(&clip.replace(",\"thumbWebp\":\"sddefault\"", ""), None).is_ok());
     }
 }
