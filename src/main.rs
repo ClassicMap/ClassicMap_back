@@ -169,6 +169,7 @@ async fn rocket() -> _ {
                 user::get_user_by_email,
                 user::update_user,
                 user::delete_user,
+                user::delete_me,
                 user::get_my_ratings,
                 user::get_my_favorite_concerts,
                 user::add_my_favorite_concert,

@@ -114,6 +114,22 @@ fn mutation_status(result: Result<u64, String>, action: &str) -> Result<Status, 
     }
 }
 
+/// 계정 삭제. 앱이 Clerk 계정을 지우기 전에 부른다.
+/// users 를 참조하는 표(평가·담기·공개 프로필·취향·들은 기록)는 모두 CASCADE 로 함께 지워진다
+#[delete("/me")]
+pub async fn delete_me(pool: &State<DbPool>, user: AuthenticatedUser) -> Result<Status, Status> {
+    match UserService::delete_user(pool, user.user.id).await {
+        Ok(_) => Ok(Status::NoContent),
+        Err(e) => {
+            Logger::error(
+                "API",
+                &format!("Failed to delete account {}: {}", user.user.id, e),
+            );
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
 #[get("/me/ratings")]
 pub async fn get_my_ratings(
     pool: &State<DbPool>,
