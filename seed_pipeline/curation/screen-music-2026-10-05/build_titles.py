@@ -231,6 +231,8 @@ STATUS = "PUBLISHED"
 COVERS = json.load(open(HERE / "covers.json")) if (HERE / "covers.json").exists() else {}
 # 영상마다 있는 가장 높은 썸네일 화질(probe_thumbs.py 가 잰다)
 THUMBS = json.load(open(HERE / "thumbs.json")) if (HERE / "thumbs.json").exists() else {}
+# KMDb 포스터(probe_posters.py 가 찾고 사람이 확인한다). status 가 ok 인 것만 싣는다
+POSTERS = json.load(open(HERE / "posters.json")) if (HERE / "posters.json").exists() else {}
 
 
 def with_thumbs(clip: dict) -> dict:
@@ -362,6 +364,9 @@ def main() -> int:
         cover = COVERS.get(slug)
         if cover:
             cover = with_thumbs(cover)
+        poster = POSTERS.get(slug) or {}
+        if poster.get("status") != "ok":
+            poster = {}
         title = {
             "slug": slug,
             "kind": data["kind"],
@@ -371,6 +376,8 @@ def main() -> int:
             "countryCode": data.get("countryCode"),
             "creditLine": (data.get("creditLine") or "").strip() or None,
             "coverClip": cover,
+            "posterUrl": poster.get("posterUrl"),
+            "posterCredit": poster.get("posterCredit"),
             "displayOrder": (len(titles) + 1) * 10,
             "status": STATUS,
             "identifiers": identifiers,

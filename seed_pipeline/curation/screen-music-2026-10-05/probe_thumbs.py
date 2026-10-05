@@ -30,10 +30,10 @@ URLS = {
 
 def video_ids() -> list[str]:
     ids: set[str] = set()
-    for clip in json.load(open(HERE / "covers.json")).values():
+    for clip in json.loads((HERE / "covers.json").read_text()).values():
         ids.add(clip["videoId"])
     for path in sorted((HERE / "research").glob("*.json")):
-        for cue in json.load(open(path)).get("cues", []):
+        for cue in json.loads(path.read_text()).get("cues", []):
             clip = cue.get("officialClip")
             if clip and clip.get("videoId"):
                 ids.add(clip["videoId"])
@@ -43,7 +43,9 @@ def video_ids() -> list[str]:
 def exists(url: str, attempts: int = 3) -> bool:
     """있는 그림에도 가끔 404 가 와서, 세 번 중 한 번이라도 200 이면 있는 것으로 본다"""
     for _ in range(attempts):
-        request = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "ClassicMap seed"})
+        request = urllib.request.Request(
+            url, method="HEAD", headers={"User-Agent": "ClassicMap seed"}
+        )
         try:
             with urllib.request.urlopen(request, timeout=20) as response:
                 if response.status == 200:
@@ -64,12 +66,12 @@ def best(video: str, kind: str) -> str | None:
     return top
 
 
-def probe(video: str) -> tuple[str, dict]:
+def probe(video: str) -> tuple[str, dict[str, str | None]]:
     return video, {"jpg": best(video, "jpg"), "webp": best(video, "webp")}
 
 
 def main() -> int:
-    known = json.load(open(OUT)) if OUT.exists() and "--all" not in sys.argv else {}
+    known = json.loads(OUT.read_text()) if OUT.exists() and "--all" not in sys.argv else {}
     todo = [video for video in video_ids() if video not in known]
     with ThreadPoolExecutor(max_workers=8) as pool:
         for video, result in pool.map(probe, todo):
@@ -77,7 +79,9 @@ def main() -> int:
             print(video, result["jpg"], result["webp"])
     missing = [video for video, result in known.items() if result["jpg"] is None]
     OUT.write_text(json.dumps(dict(sorted(known.items())), ensure_ascii=False, indent=1) + "\n")
-    print(f"{len(known)}개 영상, 새로 잰 것 {len(todo)}개, jpg 썸네일이 없는 영상 {len(missing)}개", missing)
+    print(f"{len(known)}개 영상, 새로 잰 것 {len(todo)}개, jpg 썸네일이 없는 영상 {len(missing)}개")
+    if missing:
+        print("jpg 썸네일이 없음:", ", ".join(missing))
     return 1 if missing else 0
 
 
