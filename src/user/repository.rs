@@ -36,14 +36,15 @@ impl UserRepository {
             .await
     }
 
-    /// 처음 로그인한 사용자를 만든다. 같은 계정의 요청이 동시에 와도 한 행만 남는다
+    /// 처음 로그인한 사용자를 만든다. 같은 계정의 요청이 동시에 와도 한 행만 남는다.
+    /// 이 요청이 행을 만들었으면 true
     pub async fn create_if_absent(
         pool: &DbPool,
         clerk_id: &str,
         email: &str,
         role: &str,
-    ) -> Result<(), Error> {
-        sqlx::query(
+    ) -> Result<bool, Error> {
+        let result = sqlx::query(
             "INSERT INTO users (clerk_id, email, role) VALUES (?, ?, ?)
              ON DUPLICATE KEY UPDATE id = id",
         )
@@ -52,7 +53,7 @@ impl UserRepository {
         .bind(role)
         .execute(pool)
         .await?;
-        Ok(())
+        Ok(result.rows_affected() == 1)
     }
 
     pub async fn update_email_and_role(

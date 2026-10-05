@@ -73,11 +73,12 @@ impl UserService {
         let role = email
             .map(Self::get_user_role)
             .unwrap_or_else(|| "user".to_string());
-        UserRepository::create_if_absent(pool, clerk_id, email.unwrap_or(""), &role).await?;
-        Logger::info(
-            "USER",
-            &format!("User provisioned on first sign-in: {}", clerk_id),
-        );
+        if UserRepository::create_if_absent(pool, clerk_id, email.unwrap_or(""), &role).await? {
+            Logger::info(
+                "USER",
+                &format!("User provisioned on first sign-in: {}", clerk_id),
+            );
+        }
         UserRepository::find_by_clerk_id(pool, clerk_id).await
     }
 
