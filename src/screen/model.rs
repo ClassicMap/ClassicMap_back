@@ -18,6 +18,8 @@ pub struct ScreenTitleSummary {
     pub backdrop_path: Option<String>,
     /// 공개된 큐 수
     pub cue_count: i64,
+    /// 포스터·스틸이 없을 때 쓸 대표 장면. 권리자 공식 YouTube 클립 id(스포일러 아닌 큐 먼저)
+    pub cover_video_id: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -111,6 +113,8 @@ pub struct PieceScreenCue {
     /// 영화에 나온 대목과 같은 비교 구간. 다른 대목이면 null
     pub sector_id: Option<i32>,
     pub usage: String,
+    /// 작품의 대표 장면 클립 id
+    pub cover_video_id: Option<String>,
 }
 
 /// 모아 보는 화면 '그 대목 바로 듣기'. 비교 구간이 그대로 공개된 큐만
@@ -128,6 +132,8 @@ pub struct FeaturedScreenCue {
     pub work_title: String,
     pub part_label: Option<String>,
     pub sector_id: i32,
+    /// 작품의 대표 장면 클립 id
+    pub cover_video_id: Option<String>,
 }
 
 /// 관리자 장면 스틸 고르기
