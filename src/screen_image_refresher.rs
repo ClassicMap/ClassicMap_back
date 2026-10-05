@@ -15,12 +15,15 @@ const TMDB_API: &str = "https://api.themoviedb.org/3";
 const MAX_STILL_CANDIDATES: usize = 16;
 const MAX_EPISODE_STILLS: usize = 6;
 
-#[derive(Debug, Clone)]
-pub enum TmdbCredential {
-    /// v4 읽기 토큰. Authorization: Bearer
-    ReadToken(String),
-    /// v3 API 키. api_key 쿼리
-    ApiKey(String),
+/// TMDB v4 읽기 토큰. Authorization 헤더로만 보낸다.
+/// v3 API 키는 주소 쿼리에 붙어 오류 문구·보고서에 섞일 수 있어 받지 않는다
+#[derive(Clone)]
+pub struct TmdbReadToken(pub String);
+
+impl std::fmt::Debug for TmdbReadToken {
+    fn fmt(&self, formatter: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        formatter.write_str("TmdbReadToken(***)")
+    }
 }
 
 #[derive(Debug, Clone)]
@@ -217,30 +220,29 @@ struct TitleTarget {
 
 struct TmdbClient {
     http: reqwest::Client,
-    credential: TmdbCredential,
+    token: TmdbReadToken,
 }
 
 impl TmdbClient {
-    fn new(credential: TmdbCredential) -> Result<Self, ScreenImageRefreshError> {
+    fn new(token: TmdbReadToken) -> Result<Self, ScreenImageRefreshError> {
         let http = reqwest::Client::builder()
             .timeout(Duration::from_secs(20))
             .user_agent("ClassicMap/1.0 (screen image refresh)")
             .build()
             .map_err(|error| ScreenImageRefreshError::Http(error.to_string()))?;
-        Ok(Self { http, credential })
+        Ok(Self { http, token })
     }
 
     async fn images(&self, path: &str) -> Result<TmdbImages, String> {
         let url = format!("{TMDB_API}{path}");
-        let mut request = self
+        let response = self
             .http
             .get(&url)
-            .query(&[("include_image_language", "ko,en,null")]);
-        request = match &self.credential {
-            TmdbCredential::ReadToken(token) => request.bearer_auth(token),
-            TmdbCredential::ApiKey(key) => request.query(&[("api_key", key.as_str())]),
-        };
-        let response = request.send().await.map_err(|error| error.to_string())?;
+            .query(&[("include_image_language", "ko,en,null")])
+            .bearer_auth(&self.token.0)
+            .send()
+            .await
+            .map_err(|error| error.without_url().to_string())?;
         let status = response.status();
         if !status.is_success() {
             return Err(format!("TMDB {status} ({path})"));
@@ -248,7 +250,7 @@ impl TmdbClient {
         response
             .json::<TmdbImages>()
             .await
-            .map_err(|error| error.to_string())
+            .map_err(|error| error.without_url().to_string())
     }
 }
 
@@ -257,10 +259,10 @@ pub struct ScreenImageRefresher;
 impl ScreenImageRefresher {
     pub async fn refresh(
         pool: &DbPool,
-        credential: TmdbCredential,
+        token: TmdbReadToken,
         options: &ScreenImageRefreshOptions,
     ) -> Result<ScreenImageRefreshReport, ScreenImageRefreshError> {
-        let client = TmdbClient::new(credential)?;
+        let client = TmdbClient::new(token)?;
         let targets = sqlx::query_as::<_, TitleTarget>(
             "SELECT t.id, CAST(t.slug AS CHAR CHARACTER SET utf8mb4) AS slug,
                     CAST(identifier.namespace AS CHAR CHARACTER SET utf8mb4) AS namespace,

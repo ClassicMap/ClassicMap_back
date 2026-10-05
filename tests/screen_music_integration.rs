@@ -159,6 +159,7 @@ async fn screen_music_loads_idempotently_and_is_served() {
         &SearchText::parse(Some("오징어게임")).expect("검색어"),
         None,
         None,
+        None,
     )
     .await
     .expect("검색");
@@ -168,10 +169,21 @@ async fn screen_music_loads_idempotently_and_is_served() {
         &SearchText::parse(Some("카탈로그 밖")).expect("검색어"),
         None,
         None,
+        None,
     )
     .await
     .expect("곡 이름 검색");
     assert!(by_work.items.iter().any(|item| item.id == title_id));
+    let other_kind = ScreenRepository::search_titles(
+        &pool,
+        &SearchText::parse(Some("오징어게임")).expect("검색어"),
+        Some("MOVIE"),
+        None,
+        None,
+    )
+    .await
+    .expect("종류 검색");
+    assert!(other_kind.items.iter().all(|item| item.id != title_id));
 
     let piece_cues = ScreenRepository::find_piece_cues(&pool, piece_id)
         .await

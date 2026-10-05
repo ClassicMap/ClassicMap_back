@@ -40,20 +40,24 @@ pub async fn get_screen_titles(
         .map_err(|error| server_error("Failed to list screen titles", error))
 }
 
-#[get("/screen-titles/search?<q>&<offset>&<limit>")]
+#[get("/screen-titles/search?<q>&<kind>&<offset>&<limit>")]
 pub async fn search_screen_titles(
     pool: &State<DbPool>,
     q: Option<&str>,
+    kind: Option<&str>,
     offset: Option<u32>,
     limit: Option<u32>,
 ) -> Result<Json<ScreenTitlePage>, Status> {
+    if kind.is_some_and(|kind| !KINDS.contains(&kind)) {
+        return Err(Status::BadRequest);
+    }
     let Some(query) = SearchText::parse(q) else {
         return Ok(Json(ScreenTitlePage {
             items: Vec::new(),
             has_more: false,
         }));
     };
-    ScreenRepository::search_titles(pool, &query, offset, limit)
+    ScreenRepository::search_titles(pool, &query, kind, offset, limit)
         .await
         .map(Json)
         .map_err(|error| server_error("Failed to search screen titles", error))

@@ -2,7 +2,7 @@ use serde::Serialize;
 use std::{env, fs, path::PathBuf, process};
 use ClassicMap_back::{
     db,
-    screen_image_refresher::{ScreenImageRefreshOptions, ScreenImageRefresher, TmdbCredential},
+    screen_image_refresher::{ScreenImageRefreshOptions, ScreenImageRefresher, TmdbReadToken},
 };
 
 const DEFAULT_STALE_DAYS: u32 = 30;
@@ -90,16 +90,17 @@ fn parse_args(args: &[String]) -> Result<Option<CliOptions>, String> {
     }))
 }
 
-fn credential_from_env() -> Option<TmdbCredential> {
-    let read = |name: &str| env::var(name).ok().filter(|value| !value.trim().is_empty());
-    read("TMDB_API_READ_TOKEN")
-        .map(TmdbCredential::ReadToken)
-        .or_else(|| read("TMDB_API_KEY").map(TmdbCredential::ApiKey))
+fn token_from_env() -> Option<TmdbReadToken> {
+    env::var("TMDB_API_READ_TOKEN")
+        .ok()
+        .map(|value| value.trim().to_string())
+        .filter(|value| !value.is_empty())
+        .map(TmdbReadToken)
 }
 
 fn print_help() {
     println!(
-        "사용법:\n  refresh_screen_images [옵션]\n\n옵션:\n  --dry-run                TMDB 에서 받아 비교만 하고 쓰지 않음\n  --stale-days <n>         n일보다 오래 전에 받은 작품만(기본 {DEFAULT_STALE_DAYS}, 0 이면 전부)\n  --limit <n>              이번에 받을 작품 수 상한\n  --run-id <id>            보고서에 남길 실행 id\n  --resume                 받은 시각으로 남은 작품만 받으므로 따로 하는 일이 없음\n  --json-report <path>     구조화 JSON 보고서 파일\n  --help                   도움말\n\n환경변수:\n  TMDB_API_READ_TOKEN (또는 TMDB_API_KEY)\n  DATABASE_URL (또는 MYSQL_HOST·MYSQL_PASSWORD)"
+        "사용법:\n  refresh_screen_images [옵션]\n\n옵션:\n  --dry-run                TMDB 에서 받아 비교만 하고 쓰지 않음\n  --stale-days <n>         n일보다 오래 전에 받은 작품만(기본 {DEFAULT_STALE_DAYS}, 0 이면 전부)\n  --limit <n>              이번에 받을 작품 수 상한\n  --run-id <id>            보고서에 남길 실행 id\n  --resume                 받은 시각으로 남은 작품만 받으므로 따로 하는 일이 없음\n  --json-report <path>     구조화 JSON 보고서 파일\n  --help                   도움말\n\n환경변수:\n  TMDB_API_READ_TOKEN (v4 읽기 토큰)\n  DATABASE_URL (또는 MYSQL_HOST·MYSQL_PASSWORD)"
     );
 }
 
@@ -147,10 +148,10 @@ async fn main() {
         }
         Err(error) => emit_error("INVALID_ARGUMENT", error, 2, None),
     };
-    let Some(credential) = credential_from_env() else {
+    let Some(token) = token_from_env() else {
         emit_error(
             "TMDB_CREDENTIAL_MISSING",
-            "TMDB_API_READ_TOKEN 이나 TMDB_API_KEY 가 필요함".to_string(),
+            "TMDB_API_READ_TOKEN 이 필요함".to_string(),
             2,
             options.json_report.as_ref(),
         );
@@ -165,7 +166,7 @@ async fn main() {
             options.json_report.as_ref(),
         ),
     };
-    let report = match ScreenImageRefresher::refresh(&pool, credential, &options.refresh).await {
+    let report = match ScreenImageRefresher::refresh(&pool, token, &options.refresh).await {
         Ok(report) => report,
         Err(error) => emit_error(
             error.code(),
