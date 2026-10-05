@@ -225,6 +225,9 @@ DEAD_URLS = {
     "https://www.animationmagazine.net/top-stories/the-case-of-the-copycat-concerto/",
 }
 
+# 2026-10-05 사용자가 확인 표의 149개를 모두 승인했다
+STATUS = "PUBLISHED"
+
 ID_NAMES = {
     "wikidata": "wikidata", "imdb": "imdb", "tmdbMovie": "tmdb_movie", "tmdbTv": "tmdb_tv",
     "kmdb": "kmdb", "anilist": "anilist",
@@ -325,7 +328,7 @@ def main() -> int:
                 "spoiler": bool(cue.get("spoiler")),
                 "officialClip": clip,
                 "evidence": evidence,
-                "status": "DRAFT",
+                "status": STATUS,
             }
             cues.append({k: v for k, v in entry.items() if v is not None or k in ("pieceId",)})
             if cues[-1].get("pieceId") is None:
@@ -349,7 +352,7 @@ def main() -> int:
             "countryCode": data.get("countryCode"),
             "creditLine": (data.get("creditLine") or "").strip() or None,
             "displayOrder": (len(titles) + 1) * 10,
-            "status": "DRAFT",
+            "status": STATUS,
             "identifiers": identifiers,
             "cues": cues,
         }

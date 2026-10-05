@@ -1,6 +1,6 @@
 # 영화 속 클래식 2026-10-05
 
-영화·드라마·애니 49편과 그 안에서 쓰인 클래식 큐 149개다. 결과는 `titles.jsonl` 이고,
+영화·드라마·애니 49편과 그 안에서 쓰인 클래식 큐 149개다. 2026-10-05 사용자가 확인 표에서 모두 승인해 PUBLISHED 다. 결과는 `titles.jsonl` 이고,
 `load_screen_music` 이 `screen_titles`·`screen_title_identifiers`·`screen_music_cues` 에 넣는다.
 기획은 claude.ai artifact 「ClassicMap 영화 속 클래식」(정할 것 다섯 가지 모두 추천안)을 따른다.
 
@@ -32,7 +32,7 @@
 ## 차례
 
 1. `research/*.json` 을 고치거나 `build_titles.py` 의 `MAP` 을 고친 뒤 `python3 build_titles.py titles.jsonl`(운영 API 로 받은 `composers.json`·`pieces.json` 스냅숏이 옆에 있어야 한다)
-2. 확인 표에서 승인한 큐와 작품만 `status` 를 `PUBLISHED` 로 바꾼다. 지금은 모두 `DRAFT` 다
+2. 확인 표에서 승인한 큐와 작품만 `status` 를 `PUBLISHED` 로 둔다(`build_titles.py` 의 `STATUS`)
 3. 커밋·배포 뒤 `deploy/screen-music-load-job.yaml` 로 dry-run → 적재 → dry-run(계획 변경 0)
 4. 포스터·스틸은 `deploy/screen-images-refresh-cronjob.yaml` 로 받는다(TMDB 읽기 토큰 시크릿 필요)
 
