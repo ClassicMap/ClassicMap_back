@@ -35,6 +35,8 @@ TITLE_FIELDS = ("title", "titleEng", "titleOrg")
 OVERRIDES: dict[str, str] = {}
 # 포스터를 쓰지 않을 작품 (slug → 이유)
 SKIP: dict[str, str] = {}
+# 첫 포스터가 재개봉판처럼 원래 개봉 포스터가 아닐 때 고를 순번 (slug → posters 안 순번)
+POSTER_CHOICE: dict[str, int] = {}
 
 
 def normalize(text: str) -> str:
@@ -119,7 +121,15 @@ def probe(title: Json) -> Json:
     with_poster = [candidate for candidate in candidates if candidate["posters"]]
     if len(with_poster) == 1:
         chosen = with_poster[0]
-        return {"status": "ok", **chosen, "posterUrl": chosen["posters"][0], "posterCredit": CREDIT}
+        index = POSTER_CHOICE.get(slug, 0)
+        if not 0 <= index < len(chosen["posters"]):
+            raise RuntimeError(f"POSTER_CHOICE 순번 {index} 이 포스터 수 {len(chosen['posters'])} 밖")
+        return {
+            "status": "ok",
+            **chosen,
+            "posterUrl": chosen["posters"][index],
+            "posterCredit": CREDIT,
+        }
     if not with_poster:
         return {"status": "none", "candidates": candidates}
     return {"status": "ambiguous", "candidates": with_poster}
