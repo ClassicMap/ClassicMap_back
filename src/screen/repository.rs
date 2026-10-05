@@ -12,22 +12,38 @@ use crate::{comparison::repository::PUBLIC_COMPARISON_CTE, db::DbPool, search::S
 pub const MAX_PAGE_SIZE: u32 = 50;
 const DEFAULT_PAGE_SIZE: u32 = 24;
 
-/// 공개된 작품이면서 공개된 큐가 하나 이상 있는 작품만 보인다
-const SUMMARY_SELECT: &str = "SELECT t.id, CAST(t.slug AS CHAR CHARACTER SET utf8mb4) AS slug, t.kind, t.title_ko, t.title_original,
-            t.release_year, t.country_code, t.credit_line, t.poster_path, t.backdrop_path,
-            (SELECT COUNT(*) FROM screen_music_cues cue
-             WHERE cue.screen_title_id = t.id AND cue.editorial_status = 'PUBLISHED') AS cue_count,
-            (SELECT CAST(JSON_UNQUOTE(JSON_EXTRACT(cover.official_clip, '$.videoId'))
-                     AS CHAR CHARACTER SET utf8mb4)
+/// 작품 대표 그림 클립의 한 필드. 작품에 정한 예고편이 먼저, 없으면 스포일러가 아닌 큐의 공식 클립
+fn cover_field_sql(field: &str) -> String {
+    format!(
+        "COALESCE(
+            CAST(JSON_UNQUOTE(JSON_EXTRACT(t.cover_clip, '$.{field}')) AS CHAR CHARACTER SET utf8mb4),
+            (SELECT CAST(JSON_UNQUOTE(JSON_EXTRACT(cover.official_clip, '$.{field}'))
+                         AS CHAR CHARACTER SET utf8mb4)
              FROM screen_music_cues cover
              WHERE cover.screen_title_id = t.id AND cover.editorial_status = 'PUBLISHED'
                AND cover.official_clip IS NOT NULL
              ORDER BY cover.spoiler ASC, cover.display_order ASC, cover.id ASC
-             LIMIT 1) AS cover_video_id
+             LIMIT 1))"
+    )
+}
+
+/// 공개된 작품이면서 공개된 큐가 하나 이상 있는 작품만 보인다
+fn summary_select() -> String {
+    let cover_video_id = cover_field_sql("videoId");
+    let cover_channel = cover_field_sql("channel");
+    format!(
+        "SELECT t.id, CAST(t.slug AS CHAR CHARACTER SET utf8mb4) AS slug, t.kind, t.title_ko, t.title_original,
+            t.release_year, t.country_code, t.credit_line, t.poster_path, t.backdrop_path,
+            (SELECT COUNT(*) FROM screen_music_cues cue
+             WHERE cue.screen_title_id = t.id AND cue.editorial_status = 'PUBLISHED') AS cue_count,
+            {cover_video_id} AS cover_video_id,
+            {cover_channel} AS cover_channel
      FROM screen_titles t
      WHERE t.editorial_status = 'PUBLISHED'
        AND EXISTS (SELECT 1 FROM screen_music_cues cue
-                   WHERE cue.screen_title_id = t.id AND cue.editorial_status = 'PUBLISHED')";
+                   WHERE cue.screen_title_id = t.id AND cue.editorial_status = 'PUBLISHED')"
+    )
+}
 
 const CUE_SELECT: &str = "SELECT c.id, c.display_order, c.episode_label, c.composer_id,
             c.composer_name, c.piece_id, c.work_title, c.part_label, c.sector_id, c.usage_kind,
@@ -153,8 +169,9 @@ impl ScreenRepository {
         limit: Option<u32>,
     ) -> Result<ScreenTitlePage, sqlx::Error> {
         let (offset, limit) = page_bounds(offset, limit);
+        let summary = summary_select();
         let sql = format!(
-            "{SUMMARY_SELECT}
+            "{summary}
                AND (? IS NULL OR t.kind = ?)
              ORDER BY t.display_order ASC, t.id ASC
              LIMIT ? OFFSET ?"
@@ -178,6 +195,7 @@ impl ScreenRepository {
         limit: Option<u32>,
     ) -> Result<ScreenTitlePage, sqlx::Error> {
         let (offset, limit) = page_bounds(offset, limit);
+        let summary = summary_select();
         let (relevance, relevance_binds) =
             query.name_relevance(&["t.title_ko", "t.title_original"]);
         let compact = format!(
@@ -187,7 +205,7 @@ impl ScreenRepository {
         let sql = format!(
             "SELECT * FROM (
                  SELECT summary.*, {relevance} AS relevance
-                 FROM ({SUMMARY_SELECT}) AS summary
+                 FROM ({summary}) AS summary
                  JOIN screen_titles t ON t.id = summary.id
              ) ranked
              WHERE (ranked.relevance < 4
@@ -223,7 +241,8 @@ impl ScreenRepository {
         pool: &DbPool,
         title_id: i32,
     ) -> Result<Option<ScreenTitleDetail>, sqlx::Error> {
-        let sql = format!("{SUMMARY_SELECT} AND t.id = ?");
+        let summary = summary_select();
+        let sql = format!("{summary} AND t.id = ?");
         let Some(title) = sqlx::query_as::<_, ScreenTitleSummary>(&sql)
             .bind(title_id)
             .fetch_optional(pool)
@@ -311,25 +330,21 @@ impl ScreenRepository {
         pool: &DbPool,
         piece_id: i32,
     ) -> Result<Vec<PieceScreenCue>, sqlx::Error> {
-        sqlx::query_as::<_, PieceScreenCue>(
+        let cover_video_id = cover_field_sql("videoId");
+        let sql = format!(
             "SELECT c.id AS cue_id, t.id AS title_id, t.title_ko, t.kind, t.release_year,
                     t.poster_path, c.part_label, c.episode_label, c.sector_id,
                     c.usage_kind AS `usage`,
-                    (SELECT CAST(JSON_UNQUOTE(JSON_EXTRACT(cover.official_clip, '$.videoId'))
-                             AS CHAR CHARACTER SET utf8mb4)
-                     FROM screen_music_cues cover
-                     WHERE cover.screen_title_id = t.id AND cover.editorial_status = 'PUBLISHED'
-                       AND cover.official_clip IS NOT NULL
-                     ORDER BY cover.spoiler ASC, cover.display_order ASC, cover.id ASC
-                     LIMIT 1) AS cover_video_id
+                    {cover_video_id} AS cover_video_id
              FROM screen_music_cues c
              JOIN screen_titles t ON t.id = c.screen_title_id AND t.editorial_status = 'PUBLISHED'
              WHERE c.piece_id = ? AND c.editorial_status = 'PUBLISHED'
-             ORDER BY t.display_order ASC, c.display_order ASC, c.id ASC",
-        )
-        .bind(piece_id)
-        .fetch_all(pool)
-        .await
+             ORDER BY t.display_order ASC, c.display_order ASC, c.id ASC"
+        );
+        sqlx::query_as::<_, PieceScreenCue>(&sql)
+            .bind(piece_id)
+            .fetch_all(pool)
+            .await
     }
 
     /// 작품마다 하나씩, 화면 순서대로
@@ -338,19 +353,14 @@ impl ScreenRepository {
         limit: Option<u32>,
     ) -> Result<Vec<FeaturedScreenCue>, sqlx::Error> {
         let limit = limit.unwrap_or(12).clamp(1, MAX_PAGE_SIZE);
+        let cover_video_id = cover_field_sql("videoId");
         let sql = format!(
             "{PUBLIC_COMPARISON_CTE}
              , ranked_cue AS (
                  SELECT c.id AS cue_id, t.id AS title_id, t.title_ko, t.kind, t.poster_path,
                         c.composer_id, c.composer_name, c.piece_id, c.work_title, c.part_label,
                         c.sector_id, t.display_order AS title_order, c.display_order AS cue_order,
-                        (SELECT CAST(JSON_UNQUOTE(JSON_EXTRACT(cover.official_clip, '$.videoId'))
-                                         AS CHAR CHARACTER SET utf8mb4)
-                                 FROM screen_music_cues cover
-                                 WHERE cover.screen_title_id = t.id AND cover.editorial_status = 'PUBLISHED'
-                                   AND cover.official_clip IS NOT NULL
-                                 ORDER BY cover.spoiler ASC, cover.display_order ASC, cover.id ASC
-                                 LIMIT 1) AS cover_video_id,
+                        {cover_video_id} AS cover_video_id,
                         ROW_NUMBER() OVER (
                             PARTITION BY t.id ORDER BY c.display_order ASC, c.id ASC
                         ) AS title_rank
