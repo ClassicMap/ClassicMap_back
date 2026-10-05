@@ -12,7 +12,7 @@ use rocket::http::Status;
 use rocket::{serde::json::Json, State};
 
 #[get("/users")]
-pub async fn get_users(pool: &State<DbPool>) -> Result<Json<Vec<User>>, Status> {
+pub async fn get_users(pool: &State<DbPool>, _admin: AdminUser) -> Result<Json<Vec<User>>, Status> {
     match UserService::get_all_users(pool).await {
         Ok(users) => Ok(Json(users)),
         Err(e) => {
@@ -23,7 +23,11 @@ pub async fn get_users(pool: &State<DbPool>) -> Result<Json<Vec<User>>, Status> 
 }
 
 #[get("/users/<id>")]
-pub async fn get_user(pool: &State<DbPool>, id: i32) -> Result<Json<Option<User>>, Status> {
+pub async fn get_user(
+    pool: &State<DbPool>,
+    _admin: AdminUser,
+    id: i32,
+) -> Result<Json<Option<User>>, Status> {
     match UserService::get_user_by_id(pool, id).await {
         Ok(user) => Ok(Json(user)),
         Err(e) => {
@@ -33,13 +37,20 @@ pub async fn get_user(pool: &State<DbPool>, id: i32) -> Result<Json<Option<User>
     }
 }
 
+/// 본인 행만 돌려준다(관리자는 누구든). 이메일·역할이 들어 있어 공개하지 않는다
 #[get("/users/clerk/<clerk_id>")]
 pub async fn get_user_by_clerk_id(
     pool: &State<DbPool>,
+    user: AuthenticatedUser,
     clerk_id: &str,
 ) -> Result<Json<Option<User>>, Status> {
+    if user.clerk_id == clerk_id {
+        return Ok(Json(Some(user.user)));
+    }
+    if user.user.role != "admin" {
+        return Err(Status::Forbidden);
+    }
     match UserService::get_user_by_clerk_id(pool, clerk_id).await {
-        // 아직 웹훅으로 만들어지지 않은 사용자는 null 로 돌려준다(unwrap 패닉으로 500 이 났다)
         Ok(user) => Ok(Json(user)),
         Err(e) => {
             Logger::error(
@@ -54,6 +65,7 @@ pub async fn get_user_by_clerk_id(
 #[get("/users/email/<email>")]
 pub async fn get_user_by_email(
     pool: &State<DbPool>,
+    _admin: AdminUser,
     email: &str,
 ) -> Result<Json<Option<User>>, Status> {
     match UserService::get_user_by_email(pool, email).await {
