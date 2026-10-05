@@ -18,8 +18,11 @@ pub struct ScreenTitleSummary {
     pub backdrop_path: Option<String>,
     /// 공개된 큐 수
     pub cue_count: i64,
-    /// 포스터·스틸이 없을 때 쓸 대표 장면. 권리자 공식 YouTube 클립 id(스포일러 아닌 큐 먼저)
+    /// 포스터·스틸이 없을 때 쓸 대표 그림. 권리자 공식 YouTube 클립 id.
+    /// 작품에 정한 예고편이 먼저, 없으면 스포일러가 아닌 큐의 클립
     pub cover_video_id: Option<String>,
+    /// 대표 그림 클립을 올린 채널. 화면에 출처로 적는다
+    pub cover_channel: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize)]

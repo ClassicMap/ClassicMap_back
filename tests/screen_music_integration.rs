@@ -100,6 +100,7 @@ async fn screen_music_loads_idempotently_and_is_served() {
     assert_eq!(detail.cues.len(), 2);
     assert_eq!(detail.cues[0].episode_label.as_deref(), Some("S1E1"));
     assert_eq!(detail.title.cover_video_id.as_deref(), Some("dQw4w9WgXcQ"));
+    assert_eq!(detail.title.cover_channel.as_deref(), Some("공식"));
     assert_ne!(detail.cues[0].listen.kind, "sector");
 
     // 서로 다른 주 연주자 셋의 공개 연주가 붙으면 그 구간으로 바로 듣는다
@@ -231,6 +232,31 @@ async fn screen_music_loads_idempotently_and_is_served() {
             .await
             .expect("스틸 조회");
     assert_eq!(still.as_deref(), Some("/a.jpg"));
+
+    // 작품에 정한 예고편이 큐 클립보다 먼저다
+    fs::write(
+        &path,
+        line(piece_id, composer_id, "PUBLISHED", "숙소에 아침마다 틀어요.").replacen(
+            r#""displayOrder":1,"#,
+            r#""coverClip":{"videoId":"aaaaaaaaaaa","startSec":0,"channel":"예고편 채널","title":"예고편"},"displayOrder":1,"#,
+            1,
+        ),
+    )
+    .expect("입력");
+    let covered = ScreenMusicLoader::load(&pool, &options(&path, false))
+        .await
+        .expect("예고편 적재");
+    assert_eq!(covered.mutations.titles_updated, 1);
+    let again = ScreenMusicLoader::load(&pool, &options(&path, true))
+        .await
+        .expect("예고편 dry-run");
+    assert_eq!(again.planned_mutations.total, 0);
+    let detail = ScreenRepository::find_title(&pool, title_id)
+        .await
+        .expect("조회")
+        .expect("공개");
+    assert_eq!(detail.title.cover_video_id.as_deref(), Some("aaaaaaaaaaa"));
+    assert_eq!(detail.title.cover_channel.as_deref(), Some("예고편 채널"));
 
     // 초안으로 돌리면 화면에서 빠진다
     fs::write(

@@ -105,6 +105,9 @@ pub struct TitleRecord {
     pub country_code: Option<String>,
     #[serde(default)]
     pub credit_line: Option<String>,
+    /// 작품 대표 그림으로 쓸 권리자 공식 YouTube 예고편·클립
+    #[serde(default)]
+    pub cover_clip: Option<OfficialClip>,
     pub display_order: i32,
     pub status: String,
     #[serde(default)]
@@ -263,6 +266,9 @@ impl TitleRecord {
         not_blank("titleKo", &self.title_ko, 200).map_err(context)?;
         optional_text("titleOriginal", &self.title_original, 200).map_err(context)?;
         optional_text("creditLine", &self.credit_line, 200).map_err(context)?;
+        if let Some(clip) = &self.cover_clip {
+            clip.validate().map_err(context)?;
+        }
         if let Some(year) = self.release_year {
             if !(1888..=2100).contains(&year) {
                 return Err(context(format!("releaseYear 가 이상함: {year}")));
@@ -476,6 +482,7 @@ struct StoredTitle {
     release_year: Option<u16>,
     country_code: Option<String>,
     credit_line: Option<String>,
+    cover_clip: Option<String>,
     display_order: i32,
     editorial_status: String,
 }
@@ -488,6 +495,7 @@ impl StoredTitle {
             && self.release_year == record.release_year
             && self.country_code == record.country_code
             && self.credit_line == record.credit_line
+            && parse_json(self.cover_clip.as_deref()) == title_clip_json(record)
             && self.display_order == record.display_order
             && self.editorial_status == record.status
     }
@@ -667,7 +675,8 @@ impl ScreenMusicLoader {
     ) -> Result<(i32, Option<bool>), sqlx::Error> {
         let stored = sqlx::query_as::<_, StoredTitle>(
             "SELECT id, kind, title_ko, title_original, release_year, country_code,
-                    credit_line, display_order, editorial_status
+                    credit_line, CAST(cover_clip AS CHAR CHARACTER SET utf8mb4) AS cover_clip,
+                    display_order, editorial_status
              FROM screen_titles
              WHERE slug = ?
              FOR UPDATE",
@@ -682,7 +691,8 @@ impl ScreenMusicLoader {
                 sqlx::query(
                     "UPDATE screen_titles
                      SET kind = ?, title_ko = ?, title_original = ?, release_year = ?,
-                         country_code = ?, credit_line = ?, display_order = ?, editorial_status = ?
+                         country_code = ?, credit_line = ?, cover_clip = CAST(? AS JSON),
+                         display_order = ?, editorial_status = ?
                      WHERE id = ?",
                 )
                 .bind(&record.kind)
@@ -691,6 +701,7 @@ impl ScreenMusicLoader {
                 .bind(record.release_year)
                 .bind(&record.country_code)
                 .bind(&record.credit_line)
+                .bind(title_clip_json(record).as_ref().map(Value::to_string))
                 .bind(record.display_order)
                 .bind(&record.status)
                 .bind(stored.id)
@@ -702,8 +713,8 @@ impl ScreenMusicLoader {
                 let result = sqlx::query(
                     "INSERT INTO screen_titles
                          (slug, kind, title_ko, title_original, release_year, country_code,
-                          credit_line, display_order, editorial_status)
-                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                          credit_line, cover_clip, display_order, editorial_status)
+                     VALUES (?, ?, ?, ?, ?, ?, ?, CAST(? AS JSON), ?, ?)",
                 )
                 .bind(&record.slug)
                 .bind(&record.kind)
@@ -712,6 +723,7 @@ impl ScreenMusicLoader {
                 .bind(record.release_year)
                 .bind(&record.country_code)
                 .bind(&record.credit_line)
+                .bind(title_clip_json(record).as_ref().map(Value::to_string))
                 .bind(record.display_order)
                 .bind(&record.status)
                 .execute(&mut **transaction)
@@ -935,6 +947,13 @@ impl ScreenMusicLoader {
 
 fn parse_json(text: Option<&str>) -> Option<Value> {
     text.and_then(|text| serde_json::from_str(text).ok())
+}
+
+fn title_clip_json(record: &TitleRecord) -> Option<Value> {
+    record
+        .cover_clip
+        .as_ref()
+        .and_then(|clip| serde_json::to_value(clip).ok())
 }
 
 fn clip_json(cue: &CueRecord) -> Result<Option<Value>, ScreenMusicLoadError> {
