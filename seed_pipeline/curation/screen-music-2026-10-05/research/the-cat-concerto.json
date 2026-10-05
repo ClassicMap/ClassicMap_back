@@ -1,0 +1,70 @@
+{
+  "slug": "the-cat-concerto",
+  "kind": "ANIME",
+  "titleKo": "톰과 제리: 고양이 협주곡",
+  "titleOriginal": "The Cat Concerto",
+  "releaseYear": 1947,
+  "countryCode": "US",
+  "creditLine": "윌리엄 해나·조지프 바베라 감독 · MGM",
+  "ids": {
+    "wikidata": "Q887569",
+    "imdb": "tt0039251",
+    "tmdbMovie": 39853,
+    "tmdbTv": null,
+    "kmdb": null,
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Franz Liszt",
+      "work": "Hungarian Rhapsody No. 2 in C-sharp minor",
+      "catalog": "S. 244/2",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "연미복 차림의 톰이 연주회 무대에서 이 곡을 치고, 피아노 속에 사는 제리가 연주를 계속 방해해요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "QpEfHVFilRc",
+        "startSec": 0,
+        "channel": "WB Kids",
+        "title": "Tom & Jerry | Concert Madness | Classic Cartoon | WB Kids",
+        "why": "워너 브러더스 공식 WB Kids 채널의 고전 단편 클립. 설명이 '관객 앞 피아니스트와 피아노 속에 사는 생쥐'이고 썸네일이 연미복 톰의 그랜드피아노 연주 장면"
+      },
+      "evidence": [
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/The_Cat_Concerto",
+          "note": "톰이 연주회에서 리스트 헝가리 광시곡 2번을 치고 피아노 속 제리가 방해한다고 출처와 함께 적음"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.animationmagazine.net/top-stories/the-case-of-the-copycat-concerto/",
+          "note": "애니메이션 매거진(2011, 마이클 맬러리). 톰이 연미복 차림 피아니스트로 리스트 헝가리 광시곡 2번을 연주한다고 적음"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.classical-music.com/features/articles/five-uses-classical-music-cartoons",
+          "note": "BBC 뮤직 매거진(2019). 이 단편에서 리스트 헝가리 광시곡 2번이 그랜드피아노 위 고양이와 생쥐 싸움의 바탕이 된다고 적음"
+        },
+        {
+          "grade": "ref",
+          "kind": "clip",
+          "url": "https://www.youtube.com/watch?v=QpEfHVFilRc",
+          "note": "WB Kids 공식 클립. 장면은 확인되나 설명에 곡명은 없음"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": []
+}

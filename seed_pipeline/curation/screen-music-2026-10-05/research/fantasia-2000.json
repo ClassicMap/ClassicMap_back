@@ -1,0 +1,222 @@
+{
+  "slug": "fantasia-2000",
+  "kind": "ANIME",
+  "titleKo": "환타지아 2000",
+  "titleOriginal": "Fantasia 2000",
+  "releaseYear": 1999,
+  "countryCode": "US",
+  "creditLine": "핸들 부토이 외 감독 · 월트 디즈니 픽처스",
+  "ids": {
+    "wikidata": "Q30937",
+    "imdb": "tt0120910",
+    "tmdbMovie": 49948,
+    "tmdbTv": null,
+    "kmdb": null,
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Ludwig van Beethoven",
+      "work": "Symphony No. 5 in C minor",
+      "catalog": "Op. 67",
+      "part": "I. Allegro con brio",
+      "partKo": "1악장 Allegro con brio",
+      "passage": "약 3분으로 줄인 판",
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "나비 같은 삼각형 날개들이 검은 박쥐 모양 도형들에게 쫓기다가 다시 빛을 되찾아요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/26d09656-97b9-44f9-8a9b-dd5950546ee1",
+          "note": "월트 디즈니 레코드 공식 사운드트랙 1번 트랙 'Symphony no. 5' (2:55)"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fantasia_2000#Program",
+          "note": "첫 곡. 나비 같은 형체가 박쥐 같은 검은 도형에 맞서는 추상 애니메이션이라고 적음. 로이 디즈니가 '3분짜리 5번'을 제안했다는 서술 포함"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://clevelandclassical.com/the-cleveland-orchestra-disney-fantasia-live-in-concert-dec-11/",
+          "note": "클리블랜드 오케스트라 판타지아 상영 공연 리뷰에서 2000년판에 쓰인 곡을 5번 교향곡 Allegro con brio 로 적음"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Ottorino Respighi",
+      "work": "Pini di Roma",
+      "catalog": null,
+      "part": null,
+      "partKo": null,
+      "passage": "2악장 '카타콤 근처의 소나무'를 빼고 3·4악장 일부를 줄인 브루스 코플린 편집판",
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "하늘을 나는 혹등고래 가족의 새끼가 빙산에 갇혔다가 어미 도움으로 빠져나와 고래 떼와 구름 위로 날아올라요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/26d09656-97b9-44f9-8a9b-dd5950546ee1",
+          "note": "사운드트랙 2번 트랙 'Pines of Rome'"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fantasia_2000#Program",
+          "note": "날아다니는 혹등고래 가족 이야기라고 적고, Music 절에서 2악장을 빼고 3·4악장을 줄여 다시 엮었다고 적음"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "George Gershwin",
+      "work": "Rhapsody in Blue",
+      "catalog": null,
+      "part": null,
+      "partKo": null,
+      "passage": "그로페 관현악판에서 피아노 독주 125마디를 덜어 낸 판",
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "1930년대 뉴욕에서 실직자, 드러머를 꿈꾸는 건설 노동자, 외로운 소녀, 부자 남편이 저마다 바라던 하루를 맞아요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/26d09656-97b9-44f9-8a9b-dd5950546ee1",
+          "note": "사운드트랙 3번 트랙 'Rhapsody in Blue'"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fantasia_2000#Program",
+          "note": "1930년대 뉴욕, 알 허슈펠드 화풍으로 네 인물의 바람을 엮은 구간이라고 적음. 그로페 편곡판을 줄여 썼다는 서술 포함"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": null,
+      "composer": "Dmitri Shostakovich",
+      "work": "Piano Concerto No. 2 in F major",
+      "catalog": "Op. 102",
+      "part": "I. Allegro",
+      "partKo": "1악장 Allegro",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "다리 하나인 장난감 병정이 발레리나 인형에게 반해 심술궂은 깜짝 상자 인형에게서 그녀를 지켜요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/26d09656-97b9-44f9-8a9b-dd5950546ee1",
+          "note": "사운드트랙 4번 트랙 'Piano Concerto no. 2, op. 102: Allegro'"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fantasia_2000#Program",
+          "note": "안데르센 「꿋꿋한 주석 병정」을 바탕으로 한 구간이며 피아노는 예핌 브론프만이라고 적음"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 5,
+      "episode": null,
+      "composer": "Edward Elgar",
+      "work": "Pomp and Circumstance Marches",
+      "catalog": "Op. 39",
+      "part": null,
+      "partKo": null,
+      "passage": "1~4번 행진곡을 피터 시클리가 엮은 편곡, 소프라노 캐슬린 배틀과 시카고 심포니 합창단",
+      "usage": "SCORE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "노아의 조수 도널드 덕이 동물들을 방주에 태우다 데이지와 엇갈렸다가 다시 만나요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/26d09656-97b9-44f9-8a9b-dd5950546ee1",
+          "note": "사운드트랙 7번 트랙 'Pomp and Circumstance: Marches #1, 2, 3, & 4'"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fantasia_2000#Program",
+          "note": "노아의 방주 이야기에 도널드·데이지 덕이 나오는 구간이라고 적고, Music 절에서 피터 시클리 편곡과 캐슬린 배틀 독창을 적음"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 6,
+      "episode": null,
+      "composer": "Igor Stravinsky",
+      "work": "The Firebird Suite (1919 version)",
+      "catalog": null,
+      "part": null,
+      "partKo": null,
+      "passage": "1919년 모음곡에서 네 부분을 엮어 사용",
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "엘크가 깨운 봄의 요정이 숲에 생기를 불어넣다가 화산 속 불새를 깨워 숲이 불길에 휩싸여요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/26d09656-97b9-44f9-8a9b-dd5950546ee1",
+          "note": "사운드트랙 8번 트랙 'Firebird Suite (1919 version)'"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fantasia_2000#Program",
+          "note": "마지막 곡. 요정과 엘크, 화산의 불의 정령 이야기라고 적고, 1919년판 네 부분으로 편곡했다고 적음"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    {
+      "what": "생상스 「동물의 사육제」 피날레, 요요 갖고 노는 플라밍고 장면",
+      "reason": "근거는 충분하지만 작품당 6개 제한"
+    },
+    {
+      "what": "뒤카 「마법사의 제자」, 1940년판 미키 마우스 장면 재수록",
+      "reason": "1940년 「환타지아」 큐와 같은 장면이라 뺌"
+    }
+  ]
+}

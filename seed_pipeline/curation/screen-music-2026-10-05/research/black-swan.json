@@ -1,0 +1,90 @@
+{
+  "slug": "black-swan",
+  "kind": "MOVIE",
+  "titleKo": "블랙 스완",
+  "titleOriginal": "Black Swan",
+  "releaseYear": 2010,
+  "countryCode": "US",
+  "creditLine": "대런 애러노프스키 감독",
+  "ids": { "wikidata": "Q180214", "imdb": "tt0947798", "tmdbMovie": 44214, "tmdbTv": null, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Pyotr Ilyich Tchaikovsky",
+      "work": "Swan Lake",
+      "catalog": "Op. 20",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": true,
+      "approxAtSec": 0,
+      "sceneNote": "니나가 「백조의 호수」 프롤로그를 추는 꿈을 꾸는 첫 장면에 클린트 맨셀이 편곡한 음악으로 흘러요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "Kd-81VRVQXw",
+        "startSec": 0,
+        "channel": "Movieclips",
+        "title": "Black Swan (2010) - Nightmarish Dance Scene (1/5) | Movieclips",
+        "why": "스튜디오 라이선스 클립 채널의 1/5 순서 클립이고 설명이 니나의 꿈속 춤 장면이라 영화 첫 꿈 장면으로 봄"
+      },
+      "evidence": [
+        { "grade": "1", "kind": "interview", "url": "https://web.archive.org/web/20101208222243/http://www.cinemablend.com/new/Interview-Darren-Aronofsky-On-Music-Scares-And-Gender-In-Black-Swan-21985.html", "note": "애러노프스키 인터뷰(Cinema Blend, 2010): 맨셀 스코어에 차이콥스키가 많이 들어가 아카데미 자격이 문제될 정도라고 밝힘" },
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/6330b70d-d7bf-402c-a29b-edf84de5572a", "note": "공식 OST(Sony Classical 88697813562) 1번 트랙 'Nina's Dream'" },
+        { "grade": "2", "kind": "article", "url": "https://www.fwweekly.com/2011/03/28/blogging-black-swan-part-1/", "note": "Fort Worth Weekly: 영화가 「백조의 호수」 프롤로그 음악으로 시작하고 니나가 꿈에서 로트바르트에게 쫓기며 춘다고 씀" },
+        { "grade": "2", "kind": "article", "url": "https://moviemusicuk.us/2010/12/07/black-swan-clint-mansell/", "note": "Movie Music UK 리뷰: 'Nina's Dream'에서 가장 먼저 들리는 것이 백조 주제라고 씀" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Pyotr Ilyich Tchaikovsky",
+      "work": "Swan Lake",
+      "catalog": "Op. 20",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "바이올리니스트 팀 페인이 반주자로 화면에 나와 니나가 추는 발레 장면 몇 곳에서 직접 연주해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "interview", "url": "https://www.latimes.com/archives/blogs/culture-monster-blog/story/2011-01-18/violinist-tim-fain-talks-black-swan-and-philip-glass-collaboration", "note": "LA Times 팀 페인 인터뷰(2011.1.18): 화면에 독주자로 나와 여러 발레 장면에서 포트먼을 반주하며 「백조의 호수」 중 몇 곡을 연주했다고 씀" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Black_Swan_(film)", "note": "Music 절: 팀 페인이 화면과 사운드트랙에서 차이콥스키를 연주했다는 문장(LA Times 출처)" }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Pyotr Ilyich Tchaikovsky",
+      "work": "Swan Lake",
+      "catalog": "Op. 20",
+      "part": "Act IV: Finale",
+      "partKo": "4막 피날레",
+      "passage": "백조 주제(Swan theme)",
+      "usage": "SCORE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "초연 무대 마지막 막에서 니나가 백조 여왕으로 마지막 장면을 추는 동안 흘러요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/6330b70d-d7bf-402c-a29b-edf84de5572a", "note": "공식 OST 15번 트랙 'Perfection'" },
+        { "grade": "2", "kind": "article", "url": "https://moviemusicuk.us/2010/12/07/black-swan-clint-mansell/", "note": "Movie Music UK 리뷰: 영화 피날레를 이루는 'A Swan Is Born'·'Perfection'에 차이콥스키 원곡이 가장 길게 나오고 'Perfection'에 백조 주제가 길게 나온다고 씀" },
+        { "grade": "2", "kind": "article", "url": "https://www.mfiles.co.uk/reviews/clint-mansell-black-swan.htm", "note": "mfiles 리뷰: 'Perfection'이 차이콥스키 피날레를 고조시킨 편곡이라고 씀" }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    { "what": "3막 흑조 춤(오딜 코다) 공연 장면", "reason": "20th Century Studios UK 공식 클립(N4vLrQZpu7c)은 있지만 쓰인 곡을 밝힌 근거가 없고 리뷰 하나는 헝가리 춤이라고 해 엇갈림" },
+    { "what": "「작은 백조들의 춤」('Stumbled Beginnings…' 트랙)", "reason": "트랙에 들어 있다는 리뷰는 2곳이지만 어느 장면인지 밝힌 근거가 없음" },
+    { "what": "니나 방 오르골의 「백조의 호수」 선율", "reason": "근거를 찾지 못함" }
+  ]
+}

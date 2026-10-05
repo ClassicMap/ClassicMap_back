@@ -1,0 +1,124 @@
+{
+  "slug": "do-you-like-brahms",
+  "kind": "SERIES",
+  "titleKo": "브람스를 좋아하세요?",
+  "titleOriginal": "브람스를 좋아하세요?",
+  "releaseYear": 2020,
+  "countryCode": "KR",
+  "creditLine": "조영민 연출 · SBS",
+  "ids": {
+    "wikidata": "Q97233126",
+    "imdb": "tt12867750",
+    "tmdbMovie": null,
+    "tmdbTv": 101857,
+    "kmdb": null,
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": "여러 회",
+      "composer": "Robert Schumann",
+      "work": "Kinderszenen",
+      "catalog": "Op. 15",
+      "part": "No. 7 Träumerei",
+      "partKo": "7번 「트로이메라이」",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "3회에서 준영이 아무 곡이나 쳐 달라는 정경의 부탁에 「트로이메라이」를 쳐요. 둘의 어린 시절과 얽힌 곡으로 14회까지 다시 나와요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "-JyZ5PDsQBg",
+        "startSec": 0,
+        "channel": "SBS 스브스 Drama",
+        "title": "박지현×김민재, 어릴 적 ‘트로이메라이’에 얽힌 과거 이야기ㅣ브람스를 좋아하세요?(brahms)ㅣSBS DRAMA",
+        "why": "SBS 공식 클립(2020-09-07 3회 방송분) 설명에 '김민재(박준영)는 아무거나 연주해달라는 박지현(이정경)의 부탁에 슈만의 트로이메라이를 연주한다'고 적힘"
+      },
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "clip",
+          "url": "https://www.youtube.com/watch?v=-JyZ5PDsQBg",
+          "note": "SBS 클립 설명: 준영이 정경의 부탁에 슈만의 트로이메라이를 연주"
+        },
+        {
+          "grade": "1",
+          "kind": "clip",
+          "url": "https://www.youtube.com/watch?v=W0LiSuoMnhQ",
+          "note": "SBS 14회 클립: 정경이 준영에게 트로이메라이를 다시 연주한 이유를 묻고 준영은 송아 때문이라고 답함"
+        },
+        {
+          "grade": "1",
+          "kind": "clip",
+          "url": "https://www.youtube.com/watch?v=oirMl734jRg",
+          "note": "SBS 14회 클립: 준영이 송아를 생각해 트로이메라이 음원을 내려 달라고 부탁"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.harpersbazaar.co.kr/article/49250",
+          "note": "하퍼스 바자 코리아: 슈만 「어린이 정경」 7번 트로이메라이를 김민재가 대역 없이 연주했고, 준영이 정경에게 자주 들려준 곡이라고 씀"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": "E16",
+      "composer": "Robert Schumann",
+      "work": "Myrthen: Widmung (arr. Franz Liszt)",
+      "catalog": "Op. 25 No. 1 / S. 566",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "16회 졸업 연주회에서 준영이 리스트가 피아노로 편곡한 슈만의 「헌정」을 연주해요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "BGDE8cFokSc",
+        "startSec": 0,
+        "channel": "SBS Catch",
+        "title": "[스페셜] 손열음 피아니스트와 함께 하는 준영의 졸업연주회 비하인드 ♪  《브람스를 좋아하세요? / 스브스캐치》",
+        "why": "SBS Catch 공식 영상 설명에 '16화 속 준영의 졸업연주회에 연주되었던 슈만의 헌정'을 손열음의 연주로 담은 명장면이라고 적힘. 본방 장면 클립(r4N4eEysdUI)은 곡명이 없어 이 영상을 넣음"
+      },
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "clip",
+          "url": "https://www.youtube.com/watch?v=BGDE8cFokSc",
+          "note": "SBS Catch: 16화 준영의 졸업연주회에서 연주된 곡이 슈만의 '헌정'"
+        },
+        {
+          "grade": "1",
+          "kind": "clip",
+          "url": "https://www.youtube.com/watch?v=r4N4eEysdUI",
+          "note": "SBS 16회 클립: 준영이 송아가 오지 않은 것을 확인하고 졸업 연주를 이어감(곡명은 없음)"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    {
+      "what": "바흐 무반주 바이올린 파르티타 2번 BWV 1004 「샤콘」 (송아가 준영을 떠올리며 연주)",
+      "reason": "하퍼스 바자 기사 하나뿐이고 회차도 확인 못함"
+    },
+    {
+      "what": "2회 송아의 신청곡(준영이 정경에게 독백하며 연주, SBS 클립 z_ldDKP1VXM)",
+      "reason": "트로이메라이로 보이지만 공식 설명에 곡명이 없어 확인 못함"
+    },
+    {
+      "what": "15회 송아·준영 '브람스 합주'(SBS 클립 mk_lMjY8fL4), 16회 준영·정경·현호 트리오(LfMP5cGtlR8)",
+      "reason": "공식 클립은 '브람스'까지만 밝히고 곡명·악장 근거를 못 찾음"
+    },
+    {
+      "what": "라흐마니노프 피아노 협주곡 2번, 브람스 피아노 협주곡 1번, 라벨 「치간느」, 프랑크 바이올린 소나타 등",
+      "reason": "팬 업로드 목록(ref)뿐이고 '클래식 앨범' 공식 음반 페이지도 확인 못함"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "slug": "for-horowitz",
+  "kind": "MOVIE",
+  "titleKo": "호로비츠를 위하여",
+  "titleOriginal": "호로비츠를 위하여",
+  "releaseYear": 2006,
+  "countryCode": "KR",
+  "creditLine": "권형진 감독",
+  "ids": { "wikidata": "Q16178189", "imdb": "tt0821463", "tmdbMovie": 168208, "tmdbTv": null, "kmdb": "K/07276", "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Ludwig van Beethoven",
+      "work": "Piano Concerto No. 5 in E-flat major \"Emperor\"",
+      "catalog": "Op. 73",
+      "part": "II. Adagio un poco mosso",
+      "partKo": "2악장 Adagio un poco mosso",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "피자가게 사장 광호가 지수가 피아노 치는 모습을 처음 보는 장면에 이 악장이 흘러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/07276", "note": "삽입곡에 Beethoven Piano Concerto No.5 'Emperor' 2nd movement 기재" },
+        { "grade": "2", "kind": "article", "url": "https://www.starnewskorea.com/movie/2006/05/19/2006051915213883987", "note": "스타뉴스(2006-05-19): 광호가 처음으로 지수의 연주 모습을 봤을 때 나오는 곡이 '황제'라고 소개" },
+        { "grade": "2", "kind": "article", "url": "https://www.kyeonggi.com/article/200606090187814", "note": "경기일보(2006-06-09): 광호가 지수의 연주 모습을 보고 사랑에 빠질 때 '황제'가 흐른다고 소개" }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Frédéric Chopin",
+      "work": "Étude in C minor \"Revolutionary\"",
+      "catalog": "Op. 10 No. 12",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "지수가 잘나가는 동창들과 만나고 돌아온 밤, 집에서 이 곡을 밤새 쳐요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/07276", "note": "삽입곡에 Chopin Etude op.10 no.12 기재" },
+        { "grade": "2", "kind": "article", "url": "https://www.starnewskorea.com/movie/2006/05/19/2006051915213883987", "note": "스타뉴스: 지수가 동창들과의 대화 뒤 돌아와 밤새 치는 곡이 쇼팽 '혁명'이라고 소개" },
+        { "grade": "2", "kind": "article", "url": "https://www.idomin.com/news/articleView.html?idxno=187470", "note": "경남도민일보(2006-05-25): 집으로 돌아와 밤새 치는 곡이 쇼팽 '혁명'이라고 소개" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Robert Schumann",
+      "work": "Kinderszenen",
+      "catalog": "Op. 15",
+      "part": "No. 7 Träumerei",
+      "partKo": "7곡 '트로이메라이'",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "울적해하는 경민을 달래려고 지수가 피아노로 이 곡을 쳐 줘요. 영화 끝부분에도 다시 나와요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/07276", "note": "삽입곡에 Schumann 'Traumerei' 기재" },
+        { "grade": "2", "kind": "article", "url": "https://www.starnewskorea.com/movie/2006/05/19/2006051915213883987", "note": "스타뉴스: 울적한 경민을 달래려 지수가 쳐 준 곡이며, 훗날 피아니스트가 된 경민이 지수에게 감사하며 연주하는 곡이라고 소개" },
+        { "grade": "2", "kind": "article", "url": "https://www.idomin.com/news/articleView.html?idxno=187470", "note": "경남도민일보: 울적한 경민을 달래기 위해 지수가 쳐 주는 곡이 '트로이메라이'라고 소개" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": null,
+      "composer": "Claude Debussy",
+      "work": "Deux Arabesques",
+      "catalog": "L. 66",
+      "part": "No. 1 Andantino con moto",
+      "partKo": "1번 Andantino con moto",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "경민이 하우스 콘서트에서 여러 사람 앞에 앉아 이 곡을 연주하고 실력을 인정받아요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/07276", "note": "삽입곡에 Debussy 'Arabesque' 기재(번호 없음)" },
+        { "grade": "2", "kind": "article", "url": "https://www.kyeonggi.com/article/200606090187814", "note": "경기일보: 경민이 하우스 콘서트에서 연주하는 곡이 드뷔시 '아라베스크 1번'이라고 소개" },
+        { "grade": "2", "kind": "article", "url": "https://www.idomin.com/news/articleView.html?idxno=187470", "note": "경남도민일보: 경민이 많은 사람 앞에서 연주해 실력을 인정받는 곡이 '아라베스크'라고 소개" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 5,
+      "episode": null,
+      "composer": "Sergei Rachmaninoff",
+      "work": "Piano Concerto No. 2 in C minor",
+      "catalog": "Op. 18",
+      "part": "I. Moderato",
+      "partKo": "1악장 Moderato",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "어른이 된 경민이 연주회 무대에서 오케스트라와 이 협주곡을 연주해요. 어른 경민은 피아니스트 김정원이 연기하고 연주했어요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/07276", "note": "삽입곡에 Rachmaninoff Piano Concerto No.2 - Julius Jeongwon Kim(piano), NDR Radiophilharmonie, Vladimir Valek 기재" },
+        { "grade": "2", "kind": "article", "url": "https://www.idomin.com/news/articleView.html?idxno=187470", "note": "경남도민일보: 어른이 된 경민이 연주하는 첫 곡이 라흐마니노프 피아노협주곡 2번 1악장이며 김정원이 직접 연주한다고 소개" },
+        { "grade": "2", "kind": "article", "url": "https://www.kyeonggi.com/article/200606090187814", "note": "경기일보: 영화의 하이라이트 장면에서 라흐마니노프 피아노 협주곡 2번이 연주된다고 소개" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    { "what": "림스키코르사코프(라흐마니노프 편곡) 「왕벌의 비행」", "reason": "KMDb 삽입곡 기재는 있으나 장면 근거 없음" },
+    { "what": "베토벤 「엘리제를 위하여」·「비창」 1악장·「월광」 1악장, 모차르트 K.331 「터키 행진곡」·K.330·K.545·K.265", "reason": "KMDb 삽입곡 기재는 있으나 장면 근거 없음(학원 연습 장면 등으로 짐작만 됨)" },
+    { "what": "바흐-부조니 「샤콘」, 쇼팽 연습곡 Op.25 No.12, 슈베르트 즉흥곡 Op.90-4, 드보르자크 현악 4중주 8번 2악장, 리스트 「결혼 행진곡」 변주", "reason": "KMDb 삽입곡 기재는 있으나 장면 근거 없음" }
+  ]
+}

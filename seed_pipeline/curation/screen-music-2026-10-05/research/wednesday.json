@@ -1,0 +1,209 @@
+{
+  "slug": "wednesday",
+  "kind": "SERIES",
+  "titleKo": "웬즈데이",
+  "titleOriginal": "Wednesday",
+  "releaseYear": 2022,
+  "countryCode": "US",
+  "creditLine": "팀 버튼 연출 · 넷플릭스",
+  "ids": {
+    "wikidata": "Q105553568",
+    "imdb": "tt13443470",
+    "tmdbMovie": null,
+    "tmdbTv": 119051,
+    "kmdb": null,
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": "S1E3",
+      "composer": "Antonio Vivaldi",
+      "work": "Violin Concerto in F minor \"Winter\" (The Four Seasons)",
+      "catalog": "RV 297",
+      "part": "I. Allegro non molto",
+      "partKo": "1악장 Allegro non molto",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "웬즈데이가 비발디 「겨울」 1악장을 편곡한 곡을 첼로로 연주해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/6d7e755e-f825-41ed-adfe-4e9ae6509ab8",
+          "note": "공식 EP 'Wednesday (Original Series Soundtrack)'(Lakeshore Records) 3번 'Four Seasons – Winter: I. Allegro Non Molto (Vivaldi)', Nevermore Academy Orchestra"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.classicfm.com/discover-music/periods-genres/film-tv/classical-music-wednesday-netflix/",
+          "note": "Classic FM(2022.12.6): 3화 'Friend or Woe'에서 웬즈데이가 비발디 「겨울」 편곡을 연주한다고 씀"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": "S1E6",
+      "composer": "Edward Elgar",
+      "work": "Cello Concerto in E minor",
+      "catalog": "Op. 85",
+      "part": "I. Adagio – Moderato",
+      "partKo": "1악장 Adagio – Moderato",
+      "passage": "첫머리 극적인 도입에서 첫 주제로 넘어가는 부분",
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "첼로를 켜는 웬즈데이 그림이 마법으로 움직이기 시작하면서 이 곡이 흘러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/6d7e755e-f825-41ed-adfe-4e9ae6509ab8",
+          "note": "공식 EP 4번 'Concerto in E minor for Violoncello and Orchestra (Elgar)', Nevermore Academy Orchestra"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.classicfm.com/discover-music/periods-genres/film-tv/classical-music-wednesday-netflix/",
+          "note": "Classic FM: 6화 'Quid Pro Woe'에서 첼로 켜는 웬즈데이 그림이 움직이며 엘가 협주곡 도입부가 주제로 이어진다고 씀"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": "S2E1",
+      "composer": "Sergei Prokofiev",
+      "work": "Romeo and Juliet",
+      "catalog": "Op. 64",
+      "part": "Act I: Dance of the Knights",
+      "partKo": "1막 「기사들의 춤」",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "웬즈데이가 어두운 방에서 혼자 첼로로 이 곡을 연주하고, 다른 인물들의 모습이 사이사이 비쳐요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/f7d2ad25-f00e-4e16-8cb2-e1efedc17cf3",
+          "note": "공식 OST 'Wednesday: Season 2'(Milan) 1번 'Dance of the Knights', wednesday addams·Nevermore Academy Orchestra·Jacob Braun"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://deadline.com/feature/wednesday-season-2-soundtrack-songs-1236480510/",
+          "note": "Deadline(2025.8.6): 시즌2 1화 삽입곡에 프로코피예프 「로미오와 줄리엣」 1막 '기사들의 춤'"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://screenrant.com/wednesday-season-2-part-1-songs-soundtrack-guide/",
+          "note": "ScreenRant(2025.8.6): 시즌2 첫 화에서 웬즈데이가 어두운 방에서 혼자 이 곡을 첼로로 연주하고 다른 인물 몽타주가 이어진다고 씀"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": "S2E2",
+      "composer": "Giuseppe Verdi",
+      "work": "Messa da Requiem",
+      "catalog": null,
+      "part": "II. Dies irae",
+      "partKo": "2곡 「진노의 날」",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "웬즈데이가 에니드의 운전 연수를 가로채 강사를 태운 채 거칠게 차를 모는 장면에 흘러요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "Wz28aM6M6Pc",
+        "startSec": 0,
+        "channel": "Netflix Philippines",
+        "title": "Wednesday Takes a Driving Lesson | Wednesday | Netflix Philippines",
+        "why": "넷플릭스 공식 지역 채널 클립이고 설명이 웬즈데이가 운전 연수에서 강사 대신 차를 모는 같은 장면임"
+      },
+      "evidence": [
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://deadline.com/feature/wednesday-season-2-soundtrack-songs-1236480510/",
+          "note": "Deadline: 시즌2 2화 삽입곡에 베르디 'Dies Irae'(Pantheon Classics)"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://screenrant.com/wednesday-season-2-part-1-songs-soundtrack-guide/",
+          "note": "ScreenRant: 2화에서 웬즈데이가 에니드의 운전 연수를 가로채 강사를 태우고 달리는 장면에 베르디 「진노의 날」이 나온다고 씀"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 5,
+      "episode": "S2E3",
+      "composer": "Richard Wagner",
+      "work": "Die Walküre",
+      "catalog": "WWV 86B",
+      "part": "Act III: Walkürenritt",
+      "partKo": "3막 「발퀴레의 기행」",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "캠프 제리코의 캐뎃 대 아웃캐스트 대결에서 웬즈데이가 유진의 벌떼를 불러들일 때 흘러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://deadline.com/feature/wednesday-season-2-soundtrack-songs-1236480510/",
+          "note": "Deadline: 시즌2 3화 삽입곡에 바그너 'Ride of the Valkyries'"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://screenrant.com/wednesday-season-2-part-1-songs-soundtrack-guide/",
+          "note": "ScreenRant: 캐뎃 대 아웃캐스트 경기에서 웬즈데이가 지원을 부르자 유진의 벌들이 나설 때 이 곡이 나온다고 씀"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    {
+      "what": "생상스 「동물의 사육제」 '수족관' (S1E6 오르골)",
+      "reason": "Classic FM 한 곳뿐(2차 1개)"
+    },
+    {
+      "what": "사티 「그노시엔」 1번 기타 편곡 (S1E7 전축)",
+      "reason": "Classic FM 한 곳뿐(2차 1개)"
+    },
+    {
+      "what": "림스키코르사코프 「왕벌의 비행」 (S1E8 에니드 휴대폰 벨소리)",
+      "reason": "Classic FM 한 곳뿐(2차 1개)"
+    },
+    {
+      "what": "모차르트 「피가로의 결혼」 '사랑의 괴로움을 그대는 아는가' (S2E2 오두막)",
+      "reason": "Deadline·ScreenRant 2곳에 있지만 아주 작게 깔리고 화면 속 음악인지 배경음악인지 불분명"
+    },
+    {
+      "what": "바흐 「토카타와 푸가 d단조」 (S2E8), 퍼셀·모차르트·차이콥스키·비발디 메들리 (S2E7)",
+      "reason": "Deadline 곡 목록 하나뿐이고 장면 설명 근거 없음"
+    }
+  ]
+}

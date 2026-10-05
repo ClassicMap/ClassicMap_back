@@ -1,0 +1,38 @@
+{
+  "slug": "melancholia",
+  "kind": "MOVIE",
+  "titleKo": "멜랑콜리아",
+  "titleOriginal": "Melancholia",
+  "releaseYear": 2011,
+  "countryCode": "DK",
+  "creditLine": "라르스 폰 트리어 감독",
+  "ids": { "wikidata": "Q165699", "imdb": "tt1527186", "tmdbMovie": 62215, "tmdbTv": null, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Richard Wagner",
+      "work": "Tristan und Isolde",
+      "catalog": "WWV 90",
+      "part": "Vorspiel (Prelude to Act 1)",
+      "partKo": "1막 전주곡(Vorspiel)",
+      "passage": "프롤로그에서 전주곡 거의 전체",
+      "usage": "TITLES",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "1부가 시작하기 전 8분 남짓한 프롤로그의 느린 화면들에 전주곡이 깔려요. 본편에서도 여러 번 다시 나와요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/92311ecb-6f0a-4310-89da-44e76b65eee6", "note": "Zentropa Music 공식 사운드트랙(2011, 프라하 시티 필하모닉): 7트랙 모두 「트리스탄과 이졸데」 전주곡이며 첫 트랙 'Prologue' 8:08, 이어 Intermezzo·Golf Course·Horses·End of the World·Credits" },
+        { "grade": "1", "kind": "interview", "url": "https://www.dfi.dk/en/english/only-redeeming-factor-world-ending", "note": "덴마크영화협회 인터뷰(2011): 폰 트리어가 프루스트를 따라 「트리스탄과 이졸데」 서곡을 영화 전체에 쏟아부었고 호른이 들고 날 때 박자에 맞춰 컷을 냈다고 말함" },
+        { "grade": "2", "kind": "article", "url": "https://www.uni-potsdam.de/fileadmin/projects/musik/MuWi-Material/Rudolph__2019__Leseprobe.pdf", "note": "Pascal Rudolph, Lied und populäre Kultur 64(2019): 도입 시퀀스에 전주곡이 거의 통째로 나오고, 130분 중 29분 동안 들리는 유일한 배경음악이라고 분석" },
+        { "grade": "2", "kind": "article", "url": "https://www.artofthetitle.com/title/melancholia/", "note": "Art of the Title(2019): 오프닝 시퀀스가 「트리스탄과 이졸데」 전주곡 위에 슬로모션 이미지를 엮었다고 씀" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Melancholia_(2011_film)", "note": "전주곡이 영화의 주요 음악 주제이고 1막 앞에 서곡 같은 오프닝을 두었다고 출처 달아 씀" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": []
+}

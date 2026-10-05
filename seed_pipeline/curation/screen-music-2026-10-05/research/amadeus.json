@@ -1,0 +1,290 @@
+{
+  "slug": "amadeus",
+  "kind": "MOVIE",
+  "titleKo": "아마데우스",
+  "titleOriginal": "Amadeus",
+  "releaseYear": 1984,
+  "countryCode": "US",
+  "creditLine": "밀로시 포르만 감독",
+  "ids": {
+    "wikidata": "Q190956",
+    "imdb": "tt0086879",
+    "tmdbMovie": 279,
+    "tmdbTv": null,
+    "kmdb": "F/01865",
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Wolfgang Amadeus Mozart",
+      "work": "Symphony No. 25 in G minor",
+      "catalog": "K. 183 (173dB)",
+      "part": "I. Allegro con brio",
+      "partKo": "1악장 Allegro con brio",
+      "passage": null,
+      "usage": "TITLES",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "자살을 시도한 늙은 살리에리가 눈 내리는 밤 병원으로 실려 가는 오프닝 타이틀에 흘러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/fe9d6f1c-457a-34de-a70f-1b7e889bc82e",
+          "note": "Fantasy 공식 OST(마리너·ASMF) 1번 트랙 교향곡 25번 1악장"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.hollywoodbowl.com/musicdb/pieces/7852/program-note-amadeus-in-concert",
+          "note": "LA 필하모닉 할리우드 볼 해설(존 벌링게임): 오프닝 타이틀 아래 교향곡 25번이 흐른다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.asmf.org/whats-on/too-many-notes-a-celebration-of-amadeus/",
+          "note": "Academy of St Martin in the Fields 공연 안내: 교향곡 25번을 영화의 상징적인 오프닝이라고 씀"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Wolfgang Amadeus Mozart",
+      "work": "Serenade No. 10 in B-flat major \"Gran Partita\"",
+      "catalog": "K. 361 (370a)",
+      "part": "III. Adagio",
+      "partKo": "3악장 Adagio",
+      "passage": "Opening: bassoon and basset-horn pulse, then the oboe's long held note taken over by the clarinet (described in Salieri's narration)",
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "대주교 저택 연주회에서 자기 곡이 먼저 시작되자 모차르트가 뛰어들어 지휘해요. 살리에리는 오보에와 클라리넷 대목을 짚으며 독백해요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "O4cKwBarnW8",
+        "startSec": 0,
+        "channel": "Warner Bros. Entertainment",
+        "title": "Amadeus 4K Movie Clip | They Started Without Me | Warner Bros. Entertainment",
+        "why": "영상 설명이 모차르트가 '내 음악을 나 없이 시작했다'며 뛰어들어 오케스트라를 지휘하는 장면이라고 밝힘. 할리우드 볼 해설의 그랑 파르티타 지휘 장면과 같음"
+      },
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/fe9d6f1c-457a-34de-a70f-1b7e889bc82e",
+          "note": "공식 OST 4번 트랙 세레나데 K.361 'Gran partita' 3악장 Adagio"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.hollywoodbowl.com/musicdb/pieces/7852/program-note-amadeus-in-concert",
+          "note": "할리우드 볼 해설: 모차르트가 콘스탄체와 장난치다 멈추고 관악 세레나데 '그랑 파르티타'를 지휘한다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.asmf.org/whats-on/too-many-notes-a-celebration-of-amadeus/",
+          "note": "ASMF 공연 안내: 그랑 파르티타 아다지오를 오보에 한 음을 말하는 살리에리 대사와 함께 소개"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://clevelandclassical.com/cleveland-orchestra-provides-the-live-soundtrack-to-amadeus-reveling-in-the-splendor-and-genius-of-mozart-sept-21/",
+          "note": "ClevelandClassical(2023): 살리에리가 오보에와 클라리넷의 주고받기를 풀어 설명하는 장면을 꼽음"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Wolfgang Amadeus Mozart",
+      "work": "Don Giovanni",
+      "catalog": "K. 527",
+      "part": "Act II Finale: \"Don Giovanni, a cenar teco m'invitasti\" (Commendatore scene)",
+      "partKo": "2막 피날레 기사장 장면 '돈 조반니, 나를 저녁에 초대했지'",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "모차르트가 빈에서 '돈 조반니'를 무대에 올리고 지휘해요. 살리에리는 객석에서 기사장 석상이 나타나는 장면을 지켜봐요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "8FKhLpg0M-E",
+        "startSec": 0,
+        "channel": "Movieclips",
+        "title": "Amadeus (1984) 4K - Don Giovanni (7/8) | Movieclips",
+        "why": "스튜디오 라이선스 클립 채널 Movieclips 영상 제목·설명이 'Mozart puts on Don Giovanni' 장면이라고 밝힘"
+      },
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/fe9d6f1c-457a-34de-a70f-1b7e889bc82e",
+          "note": "공식 OST 2부 4번 트랙 'Don Giovanni, a cenar teco' 기사장 장면"
+        },
+        {
+          "grade": "1",
+          "kind": "clip",
+          "url": "https://www.youtube.com/watch?v=8FKhLpg0M-E",
+          "note": "Movieclips 공식 클립 제목 'Don Giovanni (7/8)', 설명 'Mozart puts on Don Giovanni'"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.hollywoodbowl.com/musicdb/pieces/7852/program-note-amadeus-in-concert",
+          "note": "할리우드 볼 해설: 모차르트가 '돈 조반니'를 지휘한다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://operavision.eu/performance/don-giovanni-3",
+          "note": "OperaVision 해설: 영화 아마데우스에서 살리에리가 기사장에게서 '되살아난 레오폴트'를 본다고 씀"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": null,
+      "composer": "Wolfgang Amadeus Mozart",
+      "work": "Requiem in D minor",
+      "catalog": "K. 626",
+      "part": "Sequentia: Confutatis",
+      "partKo": "부속가 '저주받은 자들이 혼란에 빠질 때(Confutatis)'",
+      "passage": "Built up part by part as Mozart dictates it, then heard in full",
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "병상에 누운 모차르트가 레퀴엠의 이 대목을 성부마다 불러 주고 살리에리가 받아 적어요. 받아 적은 성부가 하나씩 쌓이며 곡이 완성돼요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/fe9d6f1c-457a-34de-a70f-1b7e889bc82e",
+          "note": "공식 OST 2부 9번 트랙 Requiem 'Confutatis'"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.hollywoodbowl.com/musicdb/pieces/7852/program-note-amadeus-in-concert",
+          "note": "할리우드 볼 해설: 병상의 모차르트가 살리에리에게 Confutatis를 받아 적게 한다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.classicfm.com/composers/mozart/amadeus-salieri-requiem-scrolling-score/",
+          "note": "Classic FM(2022): 살리에리가 성부별로 불러 주는 Confutatis를 받아 적는 장면을 다룸"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://clevelandclassical.com/cleveland-orchestra-provides-the-live-soundtrack-to-amadeus-reveling-in-the-splendor-and-genius-of-mozart-sept-21/",
+          "note": "ClevelandClassical(2023): Confutatis를 써 내려가는 장면을 음악을 화면에서 해부하는 장면으로 꼽음"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 5,
+      "episode": null,
+      "composer": "Wolfgang Amadeus Mozart",
+      "work": "Requiem in D minor",
+      "catalog": "K. 626",
+      "part": "Sequentia: Lacrimosa",
+      "partKo": "부속가 '눈물의 날(Lacrimosa)'",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "모차르트가 숨을 거둔 뒤 비 오는 날 장례 행렬과 공동묘지 매장 장면에 흘러요.",
+      "spoiler": true,
+      "officialClip": {
+        "videoId": "Nij3hX9Yq4A",
+        "startSec": 0,
+        "channel": "Movieclips",
+        "title": "Amadeus (1984) 4K - Mozart Dies (Requiem Lacrimosa) (8/8) | Movieclips",
+        "why": "스튜디오 라이선스 클립 채널 Movieclips 영상 제목에 'Mozart Dies (Requiem Lacrimosa)'가 적혀 있음"
+      },
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/fe9d6f1c-457a-34de-a70f-1b7e889bc82e",
+          "note": "공식 OST 2부 10번 트랙 Requiem 'Lacrimosa'"
+        },
+        {
+          "grade": "1",
+          "kind": "clip",
+          "url": "https://www.youtube.com/watch?v=Nij3hX9Yq4A",
+          "note": "Movieclips 공식 클립 제목 'Mozart Dies (Requiem Lacrimosa)'"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.hollywoodbowl.com/musicdb/pieces/7852/program-note-amadeus-in-concert",
+          "note": "할리우드 볼 해설: 모차르트의 죽음과 매장에 Lacrimosa가 흐른다고 씀"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 6,
+      "episode": null,
+      "composer": "Wolfgang Amadeus Mozart",
+      "work": "Piano Concerto No. 20 in D minor",
+      "catalog": "K. 466",
+      "part": "II. Romance",
+      "partKo": "2악장 Romance",
+      "passage": null,
+      "usage": "TITLES",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "검은 옷의 의뢰인이 모차르트를 찾아오는 장면에 처음 나와요. 마지막 정신병원 장면에서 다시 흘러 엔딩 크레디트로 이어져요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "eNWb2tzsHJc",
+        "startSec": 0,
+        "channel": "Warner Bros. Entertainment",
+        "title": "Amadeus 4K | A Mass For the Dead | Movie Clip | Warner Bros. Entertainment",
+        "why": "영상 설명이 술 취한 모차르트에게 검은 옷의 인물이 찾아와 레퀴엠을 의뢰하는 장면이라고 밝힘. 할리우드 볼 해설은 이 등장에 피아노 협주곡 20번이 흐른다고 씀"
+      },
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/fe9d6f1c-457a-34de-a70f-1b7e889bc82e",
+          "note": "공식 OST 2부 11번 트랙 피아노 협주곡 20번 2악장 Romanze"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.hollywoodbowl.com/musicdb/pieces/7852/program-note-amadeus-in-concert",
+          "note": "할리우드 볼 해설: 협주곡 20번이 검은 옷 인물의 등장을 알리고, 살리에리가 정신병원을 지나는 끝 장면에서 2악장이 다시 흘러 엔딩 타이틀까지 이어진다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.asmf.org/whats-on/too-many-notes-a-celebration-of-amadeus/",
+          "note": "ASMF 공연 안내: 협주곡 20번이 두 번 나오며 두 번째가 마지막 장면과 엔딩 크레디트라고 씀"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    {
+      "what": "피아노 협주곡 22번 3악장 (야외 연주회), 미사 c단조 Kyrie (결혼식), '후궁 탈출' 초연, '마술피리' 밤의 여왕 아리아",
+      "reason": "근거는 있으나 대표 장면 6개 제한으로 이번 1단계에서 뺌"
+    }
+  ]
+}

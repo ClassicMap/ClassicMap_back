@@ -1,0 +1,44 @@
+{
+  "slug": "apocalypse-now",
+  "kind": "MOVIE",
+  "titleKo": "지옥의 묵시록",
+  "titleOriginal": "Apocalypse Now",
+  "releaseYear": 1979,
+  "countryCode": "US",
+  "creditLine": "프랜시스 포드 코폴라 감독",
+  "ids": { "wikidata": "Q182692", "imdb": "tt0078788", "tmdbMovie": 28, "tmdbTv": null, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Richard Wagner",
+      "work": "Die Walküre",
+      "catalog": "WWV 86B",
+      "part": "Act III: Walkürenritt",
+      "partKo": "3막 서주 '발퀴레의 기행'",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "킬고어 중령의 헬기 부대가 해안 마을을 공습하면서 헬기에 단 스피커로 이 곡을 틀어요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "VE03Lqm3nbI",
+        "startSec": 0,
+        "channel": "The Dollar Theater",
+        "title": "'Ride of the Valkyries' | Apocalypse Now",
+        "why": "라이언스게이트 공식 채널 클립이고, 설명에 킬고어가 바그너 '발퀴레의 기행'을 틀며 마을을 공습한다고 적혀 있어요."
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/0b48cb1b-7cfd-4fd2-8b30-b76764290788", "note": "1979 Elektra OST 1면 10번 'The Ride of the Valkyries' (솔티/빈 필), 작품 Die Walküre WWV 86B 3막 Walkürenritt 연결" },
+        { "grade": "1", "kind": "clip", "url": "https://www.youtube.com/watch?v=VE03Lqm3nbI", "note": "라이언스게이트 공식 클립 설명에 헬기 공습 중 바그너 '발퀴레의 기행'을 튼다고 기재" },
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/32600da3-ab3e-4d00-aaec-88567014812e", "note": "2001 Redux OST(Nonesuch) 5번 'Ride of the Valkyries'" },
+        { "grade": "2", "kind": "article", "url": "https://faroutmagazine.co.uk/anatomy-of-a-scene-apocalypse-now/", "note": "킬고어가 헬기에 단 스피커로 바그너를 틀며 마을을 공습하는 장면을 분석" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Apocalypse_Now", "note": "줄거리와 사운드트랙 항목에 공습 때 스피커로 'Ride of the Valkyries'를 튼다고 기술" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": []
+}

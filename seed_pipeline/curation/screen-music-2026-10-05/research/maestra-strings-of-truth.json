@@ -1,0 +1,71 @@
+{
+  "slug": "maestra-strings-of-truth",
+  "kind": "SERIES",
+  "titleKo": "마에스트라",
+  "titleOriginal": "마에스트라",
+  "releaseYear": 2023,
+  "countryCode": "KR",
+  "creditLine": "김정권 연출 · tvN",
+  "ids": { "wikidata": "Q119164235", "imdb": "tt27817709", "tmdbMovie": null, "tmdbTv": 214806, "kmdb": null, "anilist": null },
+  "replacedFrom": "이상한 변호사 우영우 (2022, ENA) — 공식 OST·스코어 앨범에 클래식 곡이 없고 클래식 삽입곡 근거도 찾지 못함",
+  "cues": [
+    {
+      "order": 1,
+      "episode": "E7",
+      "composer": "Felix Mendelssohn",
+      "work": "Violin Concerto in E minor",
+      "catalog": "Op. 64",
+      "part": "II. Andante",
+      "partKo": "2악장 Andante",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "어머니가 세상을 떠나자 지휘자 차세음이 장례식에서 바이올린으로 이 악장을 연주해요.",
+      "spoiler": true,
+      "officialClip": {
+        "videoId": "QVIVDro9up0",
+        "startSec": 0,
+        "channel": "tvN DRAMA",
+        "title": "이영애, 예수정의 죽음을 추모하는 바이올린 연주 (ft. 엄마와의 기억) #마에스트라 EP.7 | tvN 231230 방송",
+        "why": "tvN 공식 7회 클립으로 차세음이 어머니를 추모하며 바이올린을 켜는 장면. 공식 OST 가 이 곡에 '(어머니의 장례식)'이라는 장면명을 붙임"
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://music.bugs.co.kr/album/20619142", "note": "공식 OST 'Original Sound Track for 마에스트라' 15번 '멘델스존 : 바이올린 협주곡 E단조 작품64 제2악장 (어머니의 장례식)' — 편곡 신민섭, Violin 김현서" },
+        { "grade": "ref", "kind": "clip", "url": "https://www.youtube.com/watch?v=QVIVDro9up0", "note": "tvN 공식 7회 클립 — 곡명 표기는 없어 회차 확인용" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": "E12",
+      "composer": "George Frideric Handel",
+      "work": "Passacaglia (arr. Johan Halvorsen)",
+      "catalog": "HWV 432",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "마지막 회 공연에서 차세음이 악장 이루나와 함께 바이올린 두 대로 오케스트라와 연주해요.",
+      "spoiler": true,
+      "officialClip": {
+        "videoId": "5ShBDh65Mfo",
+        "startSec": 0,
+        "channel": "tvN D ENT",
+        "title": "[#마에스트라] 와라, 이영애가 말아주는 레전드 카리스마 지휘여🔥 마지막 공연을 악장 이루나와의 〈파사칼리아〉 합주로 장식하는 이영애 | #갓구운클립",
+        "why": "CJ ENM 공식 채널이 12회 방송일(2024-01-14)에 올린 클립이고 제목에 '파사칼리아'와 장면이 있음"
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://music.bugs.co.kr/album/20619142", "note": "공식 OST 16번 '헨델 : 두 대의 바이올린과 오케스트라를 위한 파사칼리아' — 작곡 G.F.헨델·요한 할보르센, 편곡 정재민, Violin 박진희·김현서, Orchestra 아르티제" },
+        { "grade": "1", "kind": "clip", "url": "https://www.youtube.com/watch?v=5ShBDh65Mfo", "note": "tvN D ENT 공식 클립 제목: 마지막 공연을 악장 이루나와의 〈파사칼리아〉 합주로 장식" },
+        { "grade": "ref", "kind": "clip", "url": "https://www.youtube.com/watch?v=RaH_4YM3qq0", "note": "tvN DRAMA 공식 12회 클립 '바이올린 듀엣 연주하는 이영애 x 황보름별' — 곡명 없음" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    { "what": "1·2회 오케스트라 연주 장면 곡들", "reason": "공식 클립 제목·설명에 곡명이 없고, CJ ENM 의 '마에스트라 속 클래식 음악' 영상도 설명란에 곡 목록이 없어 확인 못 함" }
+  ]
+}

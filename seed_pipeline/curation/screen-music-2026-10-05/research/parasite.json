@@ -1,0 +1,59 @@
+{
+  "slug": "parasite",
+  "kind": "MOVIE",
+  "titleKo": "기생충",
+  "titleOriginal": "기생충",
+  "releaseYear": 2019,
+  "countryCode": "KR",
+  "creditLine": "봉준호 감독",
+  "ids": { "wikidata": "Q61448040", "imdb": "tt6751668", "tmdbMovie": 496243, "tmdbTv": null, "kmdb": "K/17748", "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "George Frideric Handel",
+      "work": "Rodelinda, regina de' Longobardi",
+      "catalog": "HWV 19",
+      "part": "Act II: \"Spietati, io vi giurai\"",
+      "partKo": "2막 로델린다의 아리아 '무자비한 자들이여, 맹세하노니'",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "기택이 박 사장 집 운전기사로 들어가고, 가족이 가정부를 내보낼 준비를 하는 몽타주에 깔려요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/17748", "note": "KMDb 삽입곡에 'Rodelinda / Act 2 - Spietati, io vi giurai' - Händel (Universal Music) 기재" },
+        { "grade": "2", "kind": "article", "url": "https://www.classicfm.com/discover-music/periods-genres/film-tv/parasite-music-soundtrack-italian-song-jung-jae-il/", "note": "Classic FM: 기택이 운전기사 일을 얻는 대목에 시모네 케르메스가 부른 2막 아리아가 나온다고 씀" },
+        { "grade": "2", "kind": "article", "url": "https://operawire.com/?p=40868", "note": "OperaWire: 가정부를 몰아낼 계획을 실행하는 긴 몽타주에 'Spietati io vi giurai'가 흐른다고 해설" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Parasite_(2019_film)", "note": "영어 위키백과(Classic FM·Billboard 출처): 음악에 헨델 「로델린다」 발췌가 쓰였다고 기재" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "George Frideric Handel",
+      "work": "Rodelinda, regina de' Longobardi",
+      "catalog": "HWV 19",
+      "part": "Act III: \"Mio caro bene\"",
+      "partKo": "3막 로델린다의 아리아 '나의 사랑하는 이여'",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "박 사장 집 정원에서 열린 다송이 생일 파티에서 초대받은 가수가 이 아리아를 불러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/17748", "note": "KMDb 노트 '영화속 사용컨텐츠'에 Händel 'Rodelinda - Mio Caro Bene' 기재" },
+        { "grade": "2", "kind": "article", "url": "https://operawire.com/?p=40868", "note": "OperaWire: 파티 장면에서 가수가 화면 속에서 직접 부르는 곡이라고 해설" },
+        { "grade": "2", "kind": "article", "url": "https://www.classicfm.com/discover-music/periods-genres/film-tv/parasite-music-soundtrack-italian-song-jung-jae-il/", "note": "Classic FM: 같은 오페라의 'Mio caro bene'도 영화에 나온다고 씀(장면은 안 밝힘)" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": []
+}

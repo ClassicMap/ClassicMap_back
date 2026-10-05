@@ -1,0 +1,202 @@
+{
+  "slug": "the-pianist",
+  "kind": "MOVIE",
+  "titleKo": "피아니스트",
+  "titleOriginal": "The Pianist",
+  "releaseYear": 2002,
+  "countryCode": "FR",
+  "creditLine": "로만 폴란스키 감독",
+  "ids": {
+    "wikidata": "Q150804",
+    "imdb": "tt0253474",
+    "tmdbMovie": 423,
+    "tmdbTv": null,
+    "kmdb": null,
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Frédéric Chopin",
+      "work": "Nocturne in C-sharp minor \"Lento con gran espressione\"",
+      "catalog": "Op. posth., B. 49",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "1939년 바르샤바 라디오 방송국에서 슈필만이 이 곡을 생방송으로 연주해요. 연주 도중 독일군 폭격이 방송국을 덮쳐요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/48fb637f-b846-4c19-9bb4-52c052f1725e",
+          "note": "Sony Classical 공식 OST 1번 트랙 'Nocturne in C-sharp minor (1830)'"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://archive.seattletimes.com/archive/20030103/pianist03/pianist-takes-journey-of-endurance-hope",
+          "note": "Seattle Times 리뷰: 1939년 폴란드 라디오에서 쇼팽 녹턴을 치던 중 방송국이 폭격당했다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.pianostreet.com/blog/?p=11531",
+          "note": "Piano Street Magazine: 첫 폭격 때 바르샤바 방송국에서 녹턴 c#단조를 생방송 중이었다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://en.cinemore.jp/jp/erudition/882/article_883_p3.html",
+          "note": "CINEMORE(2019): 녹턴 20번 c#단조가 첫 장면 방송국 폭격과 전후 방송 재개 장면에 쓰인다고 씀"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Frédéric Chopin",
+      "work": "Andante spianato et Grande polonaise brillante",
+      "catalog": "Op. 22",
+      "part": "Grande polonaise brillante",
+      "partKo": "후반부 '화려한 대폴로네즈'",
+      "passage": "Orchestral opening and first piano entry (silent-piano scene)",
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "숨은 아파트에서 소리를 낼 수 없는 슈필만이 건반 위로 손가락만 움직이며 이 곡을 떠올려요. 영화 끝에는 오케스트라와 무대에서 연주해요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/48fb637f-b846-4c19-9bb4-52c052f1725e",
+          "note": "공식 OST 8·9번 트랙 Andante spianato, Grande polonaise brillante Op.22"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://wosu.org/show/the-american-sound/2019-07-30/soundreels-music-inside-and-outside-the-wall-in-the-pianist",
+          "note": "WOSU Classical 101(2019): 은신 아파트 피아노 앞에서 Op.22 오케스트라 부분이 들리고 손가락이 건반에 닿지 않게 움직인다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.local802afm.org/allegro/articles/802-movie-review-the-pianist/",
+          "note": "Local 802 Allegro 리뷰(2003): 피아노 위로 손만 움직이며 'Grande Polonaise'를 치는 시늉을 하는 장면을 꼽음"
+        },
+        {
+          "grade": "ref",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/The_Pianist_(2002_film)",
+          "note": "줄거리·음악 절: 마지막에 오케스트라와 대폴로네즈 Op.22를 연주(출처 각주 없음)"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Ludwig van Beethoven",
+      "work": "Piano Sonata No. 14 in C-sharp minor \"Moonlight\"",
+      "catalog": "Op. 27 No. 2",
+      "part": "I. Adagio sostenuto",
+      "partKo": "1악장 Adagio sostenuto",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "빈집 다락에 숨은 슈필만에게 아래층 피아노 소리로 이 곡이 들려와요. 치는 사람은 독일군 장교 호젠펠트예요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://wosu.org/show/the-american-sound/2019-07-30/soundreels-music-inside-and-outside-the-wall-in-the-pianist",
+          "note": "WOSU Classical 101(2019): 슈필만이 다락에 올라간 뒤 '월광' 1악장이 들려온다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://en.cinemore.jp/jp/erudition/882/article_883_p3.html",
+          "note": "CINEMORE(2019): 폐허에서 들리는 '월광'을 따라가 보니 호젠펠트 대위가 치고 있었다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.pianostreet.com/blog/?p=11531",
+          "note": "Piano Street Magazine: 영화 음악 목록에 '월광' 1악장 Op.27-2를 적음"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": null,
+      "composer": "Frédéric Chopin",
+      "work": "Ballade No. 1 in G minor",
+      "catalog": "Op. 23",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": 7400,
+      "sceneNote": "폐허가 된 집에서 독일군 장교 호젠펠트가 피아니스트라는 슈필만에게 연주를 시켜요. 슈필만은 낡은 그랜드피아노로 이 곡을 쳐요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/48fb637f-b846-4c19-9bb4-52c052f1725e",
+          "note": "공식 OST 5번 트랙 'Ballade no. 1 in G minor, op. 23'"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://wosu.org/show/the-american-sound/2019-07-30/soundreels-music-inside-and-outside-the-wall-in-the-pianist",
+          "note": "WOSU Classical 101(2019): 호젠펠트가 연주를 시키자 발라드 g단조를 친다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.pianostreet.com/blog/?p=11531",
+          "note": "Piano Street Magazine: 독일 장교 앞에서 발라드 g단조를 치는 장면을 2:03:20으로 적음"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://slashfilm.com/852946/the-pianist-ending-explained-wladyslaw-szpilman-in-the-warsaw-ghetto",
+          "note": "/Film(2022): 호젠펠트를 만나 '발라드 g단조'를 연주하며 교감한다고 씀"
+        },
+        {
+          "grade": "ref",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/The_Pianist_(2002_film)",
+          "note": "영화에서는 약 10분 곡을 줄여 연주했다고 적음(출처 각주 없음)"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    {
+      "what": "바흐 무반주 첼로 모음곡 1번 전주곡 (도로타가 첼로 연주)",
+      "reason": "출처 없는 위키백과 문장뿐, 2차 근거 없음"
+    },
+    {
+      "what": "쇼팽 녹턴 e단조 Op.72-1, 녹턴 c단조 Op.48-1, 발라드 2번, 왈츠 Op.34-2, 전주곡 Op.28-4, 마주르카 Op.17-4",
+      "reason": "OST 음반에는 있으나 어느 장면에 쓰였는지 근거를 찾지 못함"
+    }
+  ]
+}

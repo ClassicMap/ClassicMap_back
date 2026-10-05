@@ -1,0 +1,159 @@
+{
+  "slug": "tar",
+  "kind": "MOVIE",
+  "titleKo": "타르",
+  "titleOriginal": "Tár",
+  "releaseYear": 2022,
+  "countryCode": "US",
+  "creditLine": "토드 필드 감독",
+  "ids": {
+    "wikidata": "Q108649516",
+    "imdb": "tt14444726",
+    "tmdbMovie": 817758,
+    "tmdbTv": null,
+    "kmdb": null,
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Johann Sebastian Bach",
+      "work": "Prelude and Fugue No. 1 in C major (The Well-Tempered Clavier, Book I)",
+      "catalog": "BWV 846",
+      "part": "Prelude",
+      "partKo": "전주곡",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "줄리아드 지휘 수업에서 바흐를 공부하지 않겠다는 학생 맥스에게 리디아가 피아노로 이 전주곡을 쳐 보이며 설명해요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "u2NKodxRO4A",
+        "startSec": 0,
+        "channel": "Focus Features",
+        "title": "Tár | Lydia Scolds Student for Not Studying Bach",
+        "why": "배급사 Focus Features 공식 채널 클립. 제목·설명이 줄리아드 수업에서 바흐 공부를 꺼리는 학생을 리디아가 몰아붙이는 장면이라고 밝힘"
+      },
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/59d0acf1-133e-49e2-9edf-e4c0b8d4499c",
+          "note": "Deutsche Grammophon 공식 음반 18번 트랙 'Prelude in C Major, BWV 846 - Lesson / Excerpt' (케이트 블란쳇·맥스 역 제프안 스미스-그나이스트)"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://wdav.org/news/will-long-layered-tar-satisfy-non-classical-fans/",
+          "note": "WDAV(2022): 바흐를 외면하는 줄리아드 학생을 설득하려 리디아가 바흐 전주곡을 친다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.wqxr.org/story/music-of-tar/",
+          "note": "WQXR(2023): 마스터클래스에서 학생에게 바흐를 권하고, 블란쳇이 피아노로 바흐를 치며 해석을 강의한다고 씀"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Gustav Mahler",
+      "work": "Symphony No. 5 in C-sharp minor",
+      "catalog": null,
+      "part": "IV. Adagietto. Sehr langsam",
+      "partKo": "4악장 Adagietto. Sehr langsam",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "리디아가 베를린 오케스트라와 실황 녹음을 앞두고 이 악장을 리허설해요. 현이 너무 끈적하게 흐르자 '비스콘티는 잊으라'고 말해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/59d0acf1-133e-49e2-9edf-e4c0b8d4499c",
+          "note": "DG 공식 음반 10번 트랙 'Symphony No. 5 / IV. Adagietto - Rehearsals' (케이트 블란쳇·드레스덴 필하모니)"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://wdav.org/news/will-long-layered-tar-satisfy-non-classical-fans/",
+          "note": "WDAV(2022): 리허설에서 아다지에토를 끈적하게 연주하자 '비스콘티는 잊으라'고 지시한다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.wqxr.org/story/music-of-tar/",
+          "note": "WQXR(2023): 리허설을 지휘하며 '비스콘티는 잊으라'고 말하는 장면과 아다지에토를 다룸"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.theguardian.com/music/2023/jan/20/classical-music-tar-cate-blanchett-todd-field",
+          "note": "Guardian(2023): 영화 속 실황 녹음 곡이 말러 5번이며 아다지에토 연주 길이를 두고 논의가 오간다고 씀"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Edward Elgar",
+      "work": "Cello Concerto in E minor",
+      "catalog": "Op. 85",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "리디아가 말러 5번과 함께 올릴 곡으로 이 협주곡을 정하고, 새로 입단한 첼리스트 올가가 독주를 맡아 연주해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/59d0acf1-133e-49e2-9edf-e4c0b8d4499c",
+          "note": "DG 공식 음반 12·14·16번 트랙 엘가 첼로 협주곡 1·4악장 녹음 세션(소피 카우어·LSO)"
+        },
+        {
+          "grade": "1",
+          "kind": "interview",
+          "url": "http://www.outtakemag.co.uk/interviews/2023/01/13/sophie-kauer-tar-interview-cate-blanchett/",
+          "note": "Outtake(2023) 소피 카우어 인터뷰: 오케스트라가 엘가 협주곡을 말러 5번과 짝짓기로 하는 장면이 있고, 올가로서 엘가를 촬영 현장에서 실연 녹음했다고 말함"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.theguardian.com/music/2023/jan/20/classical-music-tar-cate-blanchett-todd-field",
+          "note": "Guardian(2023): 리디아가 말러와 함께 올릴 곡으로 엘가 첼로 협주곡을 골라 올가를 독주자로 올린다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.wqxr.org/story/music-of-tar/",
+          "note": "WQXR(2023): 젊은 첼리스트 때문에 리디아가 녹음의 짝 곡으로 엘가 첼로 협주곡을 고른다고 씀"
+        }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    {
+      "what": "말러 교향곡 5번 실황 녹음 장면 (리디아가 무대에 난입, Movieclips 7uq5ESb9DvE·Focus Features dyFULvqiGLs 공식 클립 있음)",
+      "reason": "곡은 공식 클립 설명으로 확인되나 어느 악장인지 근거를 찾지 못함. 결말부 스포일러"
+    },
+    {
+      "what": "말러 교향곡 5번 1·2악장 리허설",
+      "reason": "DG 음반 9번 트랙 외에 장면을 짚은 근거 없음"
+    }
+  ]
+}

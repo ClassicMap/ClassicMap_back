@@ -1,0 +1,44 @@
+# 영화 속 클래식 2026-10-05
+
+영화·드라마·애니 49편과 그 안에서 쓰인 클래식 큐 149개다. 결과는 `titles.jsonl` 이고,
+`load_screen_music` 이 `screen_titles`·`screen_title_identifiers`·`screen_music_cues` 에 넣는다.
+기획은 claude.ai artifact 「ClassicMap 영화 속 클래식」(정할 것 다섯 가지 모두 추천안)을 따른다.
+
+## 파일
+
+| 파일 | 내용 |
+|---|---|
+| `titles.jsonl` | 적재 입력. 한 줄이 작품 하나와 그 큐들 |
+| `research/<slug>.json` | 조사 원본. 근거 등급 `ref`(참고)와 뺀 큐(`dropped`)까지 남겨 둔다 |
+| `research-brief.md` | 조사 에이전트에게 준 지침 |
+| `build_titles.py` | 조사 원본 → `titles.jsonl`. 곡 매핑(`MAP`)은 사람이 확인한 값이다 |
+
+## 공개 기준
+
+- 큐마다 1차 근거 하나, 또는 서로 다른 곳의 2차 근거 둘. 적재기가 줄마다 다시 확인한다
+- 1차: 공식 OST 트랙 목록(MusicBrainz 음반 포함), KMDb 삽입곡 기재, 제작진·배우 인터뷰, 권리자 공식 클립 설명, 공식 사이트 회차 줄거리, AFI 카탈로그
+- 2차: 클래식 전문지·일간지 기사, 출처 달린 위키백과 문장, AniList 스태프 기재
+- 나무위키·IMDb 사운드트랙·Tunefind·블로그는 실마리로만 읽었고 근거로 세지 않았다(`research/` 에 `ref` 로 남음)
+- TMDB 페이지·API 는 조사에 쓰지 않았다. TMDB ID 는 Wikidata 에서만 받았다
+- 2026-10-05 근거 링크 254개를 열어 봤고 253개가 열렸다. 열리지 않은 하나(Animation Magazine)는 빼도 기준을 넘어 뺐다
+
+## 곡 매핑
+
+- 작품은 한글 제목이 있는 큐레이션 작품에만 붙였다(`pieceId`). 없으면 `pieceId` 를 비우고 `workTitle` 로만 보인다
+- 비교 구간(`sectorKey`)은 영화에 나온 대목이 그 구간과 분명히 같을 때만 적었다(전곡 구간, 아리아 하나, 악장 하나처럼). 악장만 같고 대목을 모르면 비웠다
+- 결과: 큐 149개 중 비교 구간 그대로 37, 같은 곡의 다른 구간·카탈로그 작품 68, 카탈로그에 없는 곡 44
+- 카탈로그에 없어 다음에 더할 후보: 바버 「현을 위한 아다지오」, R. 슈트라우스 「차라투스트라」, 헨델 「로델린다」, 모차르트 피아노 협주곡 21번, 리게티, 말러 3·9번, 슈베르트 D.940 등
+
+## 차례
+
+1. `research/*.json` 을 고치거나 `build_titles.py` 의 `MAP` 을 고친 뒤 `python3 build_titles.py titles.jsonl`(운영 API 로 받은 `composers.json`·`pieces.json` 스냅숏이 옆에 있어야 한다)
+2. 확인 표에서 승인한 큐와 작품만 `status` 를 `PUBLISHED` 로 바꾼다. 지금은 모두 `DRAFT` 다
+3. 커밋·배포 뒤 `deploy/screen-music-load-job.yaml` 로 dry-run → 적재 → dry-run(계획 변경 0)
+4. 포스터·스틸은 `deploy/screen-images-refresh-cronjob.yaml` 로 받는다(TMDB 읽기 토큰 시크릿 필요)
+
+## 확인할 것
+
+- 「포핸즈」(tvN 2026)는 끝난 지 하루 된 작품이라 다른 출처가 더 생기면 다시 본다
+- 「더 글로리」 피에 예수는 회차·장면 근거가 없다
+- 「베니스에서의 죽음」 무소르크스키 자장가는 곡이 출처마다 다르다(OST 는 오스트롭스키 시 자장가, 독일어 위키는 「죽음의 노래와 춤」 1번)
+- 「내일도 칸타빌레」는 근거 있는 큐가 없어 뺐다

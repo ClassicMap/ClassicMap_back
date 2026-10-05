@@ -1,0 +1,68 @@
+{
+  "slug": "sky-castle",
+  "kind": "SERIES",
+  "titleKo": "SKY 캐슬",
+  "titleOriginal": "SKY 캐슬",
+  "releaseYear": 2018,
+  "countryCode": "KR",
+  "creditLine": "조현탁 연출 · JTBC",
+  "ids": { "wikidata": "Q58213269", "imdb": "tt9151274", "tmdbMovie": null, "tmdbTv": 84327, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": "여러 회",
+      "composer": "Franz Schubert",
+      "work": "Erlkönig",
+      "catalog": "D. 328",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "입시 코디네이터 김주영의 테마로 여러 회에 흘러요. 13회에는 김주영이 혼자 이 곡을 듣는 장면도 있어요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "CVz0O_26uOM",
+        "startSec": 0,
+        "channel": "JTBC Drama",
+        "title": "[마왕] 염정아(Yum Jung－ah)에게 선택하라는 김서형(Kim Seo－hyung).... 마지막 한 학기 SKY 캐슬(skycastle) 18회",
+        "why": "JTBC 공식 채널의 18회 장면 클립이고 제목 머리에 [마왕]을 달아 김주영 장면에 이 곡이 쓰였음을 밝힘"
+      },
+      "evidence": [
+        { "grade": "1", "kind": "clip", "url": "https://www.youtube.com/watch?v=Bw4-GR7eNSo", "note": "JTBC Drama 공식 비하인드 영상: 김주영의 주제곡으로 쓰인 슈베르트 '마왕', 음악감독이 테마로 잡았고 13회 대본에 '마왕'을 듣는 김주영이 있었다고 설명" },
+        { "grade": "1", "kind": "ost", "url": "https://music.bugs.co.kr/album/845452", "note": "공식 OST 13번 'Whisper of Evil (Feat. Erlkönig)' Composed by F.Schubert, 최정인, 임미현 — 극에 쓰인 편곡판. 장면에 원곡 가곡이 나오는지 편곡판인지는 확인 못 함" },
+        { "grade": "2", "kind": "article", "url": "https://www.khan.co.kr/article/201902271157001", "note": "경향신문 2019-02-27: 슈베르트 '마왕'이 김주영(김서형)의 테마곡으로 등장" },
+        { "grade": "2", "kind": "article", "url": "https://www.insight.co.kr/news/202531", "note": "인사이트 2019-01-05: 김주영이 혼자 집에 있을 때 '마왕'을 듣고, 한서진을 만날 때도 이 음악이 흐름" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": "여러 회",
+      "composer": "Maurice Ravel",
+      "work": "Ma mère l'Oye",
+      "catalog": "M. 60",
+      "part": "V. Le jardin féerique",
+      "partKo": "5곡 '요정의 정원'",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "인물들의 감정이 드러나는 장면에 피아노 편곡으로 깔리는 배경음악이에요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://music.bugs.co.kr/album/845452", "note": "공식 OST 10번 'Le jardin féerique from Ma mère l'Oye' Composed by M. Ravel, Arranged·Piano 박정은" },
+        { "grade": "2", "kind": "article", "url": "https://sports.khan.co.kr/article/201903160846003", "note": "스포츠경향 2019-03-16: 'SKY 캐슬'에서 캐릭터들의 섬세한 감정선을 받쳐준 곡으로 '어미 거위 모음곡' 중 '요정의 정원'을 소개" },
+        { "grade": "ref", "kind": "other", "url": "https://www.youtube.com/watch?v=0DwHl4DAySo", "note": "개인 피아노 채널이 '혜나 추락 BGM'으로 소개 — 장면 실마리일 뿐" }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    { "what": "라벨 '볼레로' (OST 12번, 어쿠스틱 기타 편곡)", "reason": "OST 크레딧(Composed by M. Ravel)으로 극 사용은 확인되나 쓰인 장면 근거가 없음. 대학 방송국 해설 영상(ref)이 차민혁 테마라고 소개 — 장면을 확인하면 살릴 수 있음" },
+    { "what": "바흐 곡", "reason": "SKY 캐슬에 바흐가 쓰였다는 근거를 찾지 못함" }
+  ]
+}

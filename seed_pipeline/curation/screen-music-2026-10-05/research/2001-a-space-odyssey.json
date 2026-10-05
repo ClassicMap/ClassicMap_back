@@ -1,0 +1,164 @@
+{
+  "slug": "2001-a-space-odyssey",
+  "kind": "MOVIE",
+  "titleKo": "2001: 스페이스 오디세이",
+  "titleOriginal": "2001: A Space Odyssey",
+  "releaseYear": 1968,
+  "countryCode": "US",
+  "creditLine": "스탠리 큐브릭 감독",
+  "ids": { "wikidata": "Q103474", "imdb": "tt0062622", "tmdbMovie": 62, "tmdbTv": null, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Richard Strauss",
+      "work": "Also sprach Zarathustra",
+      "catalog": "Op. 30",
+      "part": "Einleitung",
+      "partKo": "서주 Einleitung (일출)",
+      "passage": null,
+      "usage": "TITLES",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "오프닝 타이틀에서 달 뒤로 지구와 해가 떠오를 때 나와요. 유인원이 뼈를 처음 도구로 쓰는 장면에서 다시 들려요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "5NShEY1ScSY",
+        "startSec": 0,
+        "channel": "Warner Bros. Classics",
+        "title": "2001: A Space Odyssey | Dawn of Man: Opening Monolith Scene | Warner Classics",
+        "why": "워너 공식 채널의 영화 첫 부분 영상이고, 스토리보드 프레임상 0~80초가 해가 떠오르는 오프닝 타이틀이에요."
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/659213de-d86e-4e79-9188-6fa3a6f12561", "note": "1968 MGM OST LP 1번 'Also sprach Zarathustra (Main Title)', 8번 '(The Star Child)', 작품 Op. 30: I. Einleitung 연결" },
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/4b46b997-76cb-48ef-8f98-b3bbaf89605c", "note": "1996 Rhino OST 2번 'Main Title: Also sprach Zarathustra' (영화에 쓰인 카라얀/빈 필 녹음)" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(soundtrack)", "note": "오프닝 타이틀(해·지구·달), 유인원의 도구 발견, 스타차일드 변신 장면에 쓰였다고 기술" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "György Ligeti",
+      "work": "Requiem",
+      "catalog": null,
+      "part": "II. Kyrie",
+      "partKo": "2악장 Kyrie",
+      "passage": "Kyrie 첫머리부터 절정까지만 사용",
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "유인원 무리 앞에 검은 돌기둥 모노리스가 처음 나타날 때 나와요. 달에서 모노리스를 찾을 때와 목성 근처에서도 다시 들려요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "5NShEY1ScSY",
+        "startSec": 550,
+        "channel": "Warner Bros. Classics",
+        "title": "2001: A Space Odyssey | Dawn of Man: Opening Monolith Scene | Warner Classics",
+        "why": "영상 설명이 유인원이 모노리스를 발견하는 오프닝이라고 밝히고, 스토리보드상 약 550초부터 모노리스가 화면에 나와요."
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/659213de-d86e-4e79-9188-6fa3a6f12561", "note": "1968 MGM OST LP 2번 'Requiem ... (The Monolith)'" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(soundtrack)", "note": "Requiem의 Kyrie가 모노리스가 나오는 세 장면(유인원, 달, 목성)에 쓰였다고 기술" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Requiem_(Ligeti)", "note": "영화에는 Kyrie 처음부터 절정까지만 쓰였다고 기술" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Johann Strauss II",
+      "work": "An der schönen blauen Donau",
+      "catalog": "Op. 314",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "팬암 우주 왕복선이 회전하는 우주정거장에 도킹할 때 나와요. 달 착륙 장면과 엔딩 크레디트에도 다시 쓰여요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/659213de-d86e-4e79-9188-6fa3a6f12561", "note": "1968 MGM OST LP 4번 'The Blue Danube (The Space Station)', 7번 '(End Titles)'" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(soundtrack)", "note": "팬암 우주선의 우주정거장 도킹과 달 착륙 장면, 엔딩 크레디트에 쓰였다고 기술" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": null,
+      "composer": "György Ligeti",
+      "work": "Lux Aeterna",
+      "catalog": null,
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "플로이드 박사 일행이 탄 달 셔틀이 달 표면 위를 날아 발굴 현장으로 가는 장면에 나와요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "yOD9fyYmSYY",
+        "startSec": 0,
+        "channel": "Warner Bros. Classics",
+        "title": "2001: A Space Odyssey | The Moon Monolith | Warner Classics",
+        "why": "워너 공식 채널 영상이고, 스토리보드상 첫 1분가량이 달 셔틀이 달 표면 위를 나는 장면이에요."
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/659213de-d86e-4e79-9188-6fa3a6f12561", "note": "1968 MGM OST LP 3번 'Lux Aeterna (The Lunar Landscape)'" },
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/4b46b997-76cb-48ef-8f98-b3bbaf89605c", "note": "1996 Rhino OST 5번 'Lux Aeterna' (영화에 쓰인 짧은 판)" },
+        { "grade": "ref", "kind": "other", "url": "https://www.mfiles.co.uk/reviews/2001-a-space-odyssey.htm", "note": "플로이드 박사가 달 표면을 건너 모노리스로 가는 장면에 쓰였다고 설명" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 5,
+      "episode": null,
+      "composer": "Aram Khachaturian",
+      "work": "Gayane",
+      "catalog": null,
+      "part": "Adagio",
+      "partKo": "아다지오 (가야네의 아다지오)",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "목성으로 가는 디스커버리호에서 보먼과 풀이 처음 소개되는 장면에 나와요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/659213de-d86e-4e79-9188-6fa3a6f12561", "note": "1968 MGM OST LP 5번 'Gayane Ballet Suite - Adagio (The Discovery)'" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(soundtrack)", "note": "디스커버리호의 보먼과 풀을 소개하는 대목에 쓰였다고 기술" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 6,
+      "episode": null,
+      "composer": "György Ligeti",
+      "work": "Atmosphères",
+      "catalog": null,
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "보먼이 목성 근처에서 스타게이트로 들어가는 장면에 나와요. 시작 전 서곡과 중간 휴식에도 일부가 쓰여요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/659213de-d86e-4e79-9188-6fa3a6f12561", "note": "1968 MGM OST LP 6번 'Atmospheres (Beyond The Infinite)'" },
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/4b46b997-76cb-48ef-8f98-b3bbaf89605c", "note": "1996 Rhino OST 1번 'Overture: Atmospheres', 7번 'Jupiter and Beyond'" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(soundtrack)", "note": "보먼이 스타게이트에 들어갈 때, 그리고 서곡과 중간 휴식에 쓰였다고 기술" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    { "what": "리게티 「아방튀르」(전자 변조판, 결말의 호텔 방 장면)", "reason": "근거는 있음(1996 Rhino OST 7번 'Adventures (altered for film)'), 큐 상한 6개로 제외" }
+  ]
+}

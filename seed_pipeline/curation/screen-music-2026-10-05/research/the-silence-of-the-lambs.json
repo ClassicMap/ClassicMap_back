@@ -1,0 +1,38 @@
+{
+  "slug": "the-silence-of-the-lambs",
+  "kind": "MOVIE",
+  "titleKo": "양들의 침묵",
+  "titleOriginal": "The Silence of the Lambs",
+  "releaseYear": 1991,
+  "countryCode": "US",
+  "creditLine": "조너선 드미 감독",
+  "ids": { "wikidata": "Q133654", "imdb": "tt0102926", "tmdbMovie": 274, "tmdbTv": null, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Johann Sebastian Bach",
+      "work": "Goldberg Variations",
+      "catalog": "BWV 988",
+      "part": "Aria",
+      "partKo": "아리아",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "멤피스의 임시 감방에서 렉터가 카세트로 이 아리아를 틀어 놓고 들어요. 음악이 흐르는 동안 경비원 두 명을 습격하고 탈출해요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "2", "kind": "article", "url": "https://limelight-arts.com.au/features/classical-music-at-the-movies-10-great-moments-in-film", "note": "Limelight(2012): 렉터가 감방에서 골드베르크 변주곡을 틀게 하고 첫 아리아가 흐르는 동안 경비원들을 공격하며 탈출한다고 씀" },
+        { "grade": "2", "kind": "article", "url": "https://theamericanscholar.org/the-sound-of-evil/", "note": "The American Scholar(2019): 렉터가 골드베르크 변주곡에 맞춰 경비원 둘을 공격한다고 씀" },
+        { "grade": "2", "kind": "article", "url": "https://interlude.hk/classical-music-moments-in-movies-iii/", "note": "Interlude(2022): 골드베르크 변주곡 '아리아'가 렉터가 교도관을 공격하는 장면에 흐른다고 씀" },
+        { "grade": "2", "kind": "article", "url": "https://view.asiae.co.kr/en/article/2020062614525487943", "note": "아시아경제 '임훈구의 필뮤직'(2020): 렉터가 탈출하며 경찰을 해치는 장면에 골드베르크 변주곡 아리아가 흐른다고 씀" },
+        { "grade": "ref", "kind": "other", "url": "https://bach-cantatas.com/Movie/F0275.htm", "note": "Bach Cantatas Website(속편 '한니발' 항목): 테네시에서 경비원 둘을 죽일 때 아리아 테이프가 돌았다고 적음" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": []
+}

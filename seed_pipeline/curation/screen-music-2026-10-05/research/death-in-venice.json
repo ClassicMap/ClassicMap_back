@@ -1,0 +1,103 @@
+{
+  "slug": "death-in-venice",
+  "kind": "MOVIE",
+  "titleKo": "베니스에서의 죽음",
+  "titleOriginal": "Morte a Venezia",
+  "releaseYear": 1971,
+  "countryCode": "IT",
+  "creditLine": "루키노 비스콘티 감독",
+  "ids": { "wikidata": "Q742308", "imdb": "tt0067445", "tmdbMovie": 6619, "tmdbTv": null, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Gustav Mahler",
+      "work": "Symphony No. 5 in C-sharp minor",
+      "catalog": null,
+      "part": "IV. Adagietto. Sehr langsam",
+      "partKo": "4악장 Adagietto. Sehr langsam",
+      "passage": null,
+      "usage": "TITLES",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "아셴바흐가 탄 증기선이 새벽 석호를 지나 베네치아로 들어오는 첫 장면에 나와요. 마지막 해변 장면까지 여러 번 다시 들려요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/9038ac83-3cdc-4b40-853b-b31bfae106d6", "note": "1971 OST LP 1번 'Adagio from the 5th Symphony'(프랑코 마니노/산타 체칠리아 관현악단), 작품 5번 4악장 Adagietto 연결" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://de.wikipedia.org/wiki/Tod_in_Venedig_(Film)", "note": "독일어판(출처 달림): 증기선이 새벽 석호로 들어올 때 Adagietto가 들리고, 첫 장면부터 죽음 장면까지 네 번 길게 나온다고 기술" },
+        { "grade": "ref", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Death_in_Venice_(film)", "note": "영어판: Adagietto가 영화의 처음과 끝에 나온다고 기술(해당 문장 출처 없음)" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Gustav Mahler",
+      "work": "Symphony No. 3 in D minor",
+      "catalog": null,
+      "part": "IV. Sehr langsam. Misterioso ('O Mensch! Gib Acht!')",
+      "partKo": "4악장 Sehr langsam. Misterioso ('오 인간이여! 주의하라!')",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "해변 오두막 앞을 지나는 타지오를 본 아셴바흐가 곡을 쓰기 시작하는 장면에 나와요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/9038ac83-3cdc-4b40-853b-b31bfae106d6", "note": "1971 OST LP 4번 '4th Movement from the 3rd Symphony'(알토 루크레치아 웨스트)" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://de.wikipedia.org/wiki/Tod_in_Venedig_(Film)", "note": "독일어판(크레머·바게 논문 출처): 해변에서 타지오를 지켜보며 작곡에 영감을 얻는 장면에 3번 4악장 Misterioso가 나온다고 기술" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Ludwig van Beethoven",
+      "work": "Bagatelle in A minor \"Für Elise\"",
+      "catalog": "WoO 59",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "타지오가 피아노로 이 곡을 쳐 보는 장면이 나와요. 아셴바흐는 같은 곡을 치던 창부 에스메랄다를 떠올려요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/9038ac83-3cdc-4b40-853b-b31bfae106d6", "note": "1971 OST LP 2번 'Für Elise'(피아노 클라우디오 지치)" },
+        { "grade": "ref", "kind": "wikipedia", "url": "https://de.wikipedia.org/wiki/Tod_in_Venedig_(Film)", "note": "독일어판 줄거리: 타지오가 '엘리제를 위하여'를 쳐 보고, 아셴바흐가 같은 곡을 치던 창부 에스메랄다를 떠올린다고 기술" },
+        { "grade": "ref", "kind": "wikipedia", "url": "https://it.wikipedia.org/wiki/Morte_a_Venezia_(film)", "note": "이탈리아어판: 두 장면에서 피아노로 연주된다고 기술(출처 없음)" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": null,
+      "composer": "Modest Mussorgsky",
+      "work": "Cradle Song (Колыбельная песня)",
+      "catalog": null,
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "타지오 가족이 떠난다는 말을 들은 아셴바흐가 해변에 나갈 때, 러시아 부인이 반주 없이 이 노래를 불러요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/9038ac83-3cdc-4b40-853b-b31bfae106d6", "note": "1971 OST LP 3번 'Lullaby - (Ninna Nanna)'(노래 마샤 프레디트), MusicBrainz 작품명 'Колыбельная песня'" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://de.wikipedia.org/wiki/Tod_in_Venedig_(Film)", "note": "독일어판(찬더 책 출처): 마지막에 해변으로 갈 때 러시아 부인이 무반주로 자장가를 부른다고 기술. 다만 곡을 「죽음의 노래와 춤」 1번으로 보고 있어 OST·이탈리아어판(오스트롭스키 시)과 곡 식별이 엇갈림" },
+        { "grade": "ref", "kind": "wikipedia", "url": "https://it.wikipedia.org/wiki/Morte_a_Venezia_(film)", "note": "이탈리아어판: 오스트롭스키 시에 붙인 무소륵스키 자장가를 마샤 프레디트가 무반주로 부르고 주인공의 죽음 직전에 나온다고 기술(출처 없음)" }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    { "what": "레하르 「유쾌한 미망인」 왈츠·'입술은 침묵하고' (호텔 살롱에서 사중주단 연주)", "reason": "OST 미수록, 출처 달린 근거가 독일어 위키백과 하나뿐" }
+  ]
+}

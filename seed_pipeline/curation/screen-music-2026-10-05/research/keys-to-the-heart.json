@@ -1,0 +1,111 @@
+{
+  "slug": "keys-to-the-heart",
+  "kind": "MOVIE",
+  "titleKo": "그것만이 내 세상",
+  "titleOriginal": "그것만이 내 세상",
+  "releaseYear": 2018,
+  "countryCode": "KR",
+  "creditLine": "최성현 감독",
+  "ids": { "wikidata": "Q30644591", "imdb": "tt6985200", "tmdbMovie": 438623, "tmdbTv": null, "kmdb": "K/16816", "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Ludwig van Beethoven",
+      "work": "Piano Sonata No. 14 in C-sharp minor \"Moonlight\"",
+      "catalog": "Op. 27 No. 2",
+      "part": "III. Presto agitato",
+      "partKo": "3악장 Presto agitato",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "진태가 번화가 한가운데 놓인 피아노 앞에 앉아 처음으로 제대로 된 연주를 선보여요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "5pwBa5Y1R30",
+        "startSec": 0,
+        "channel": "디글 클래식 :Diggle Classic",
+        "title": "[#그것만이내세상] 백수 동생이 처음 번 돈이 길거리 버스킹? 악보도 볼 줄 모르지만 듣자마자 외워버리는 피아노 천재;;",
+        "why": "CJ ENM 디지털 채널(디글)의 장면 모음 영상으로, 제목의 '길거리 버스킹'이 텐아시아가 소개한 번화가 연주 장면과 맞아요. 18분짜리 모음이라 시작 시각은 확인하지 못했어요."
+      },
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/16816", "note": "삽입곡에 Beethoven Piano Sonata No.14 'Moonlight' III. Presto Agitato(연주 이아람) 기재" },
+        { "grade": "2", "kind": "article", "url": "https://www.tenasia.co.kr/article/2018020899034", "note": "번화가 한가운데서 진태가 처음 제대로 된 연주를 선보이는 장면의 곡이 월광 소나타라고 소개" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Frédéric Chopin",
+      "work": "Piano Concerto No. 1 in E minor",
+      "catalog": "Op. 11",
+      "part": "III. Rondo. Vivace",
+      "partKo": "3악장 Rondo. Vivace",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "진태가 가율의 집에서 천을 걷어낸 그랜드 피아노로 연주해요. 사고 뒤 피아노를 놓은 가율이 그 연주를 들어요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/16816", "note": "삽입곡에 Chopin Piano Concerto No.1 E minor Op.11-3 Rondo. Vivace(연주 송영민) 기재" },
+        { "grade": "2", "kind": "article", "url": "https://www.tenasia.co.kr/article/2018020899034", "note": "가율의 집에서 진태가 그랜드 피아노 천을 벗기고 연주하는 곡이 쇼팽 피아노 협주곡 1번 론도 비바체라고 소개" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Johannes Brahms",
+      "work": "Hungarian Dance No. 5 in F-sharp minor (piano four hands)",
+      "catalog": "WoO 1 No. 5",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "가율이 조심스레 건반을 누르자 진태가 이어받아 두 사람이 한 피아노로 연탄을 해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/16816", "note": "삽입곡에 Brahms Hungarian Dances WoO.1 (Version for Piano 4 Hands) No.5(연주 박은지) 기재" },
+        { "grade": "2", "kind": "article", "url": "https://www.tenasia.co.kr/article/2018020899034", "note": "가율이 건반을 누르자 진태가 화답하며 이어지는 연탄곡이 브람스 헝가리 무곡이라고 소개" },
+        { "grade": "2", "kind": "interview", "url": "https://mobile.newsis.com/view/NISX20180108_0000196704", "note": "박정민 인터뷰에서 한지민과 함께 연주한 첫 촬영 곡이 헝가리 무곡이라고 언급" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": null,
+      "composer": "Pyotr Ilyich Tchaikovsky",
+      "work": "Piano Concerto No. 1 in B-flat minor",
+      "catalog": "Op. 23",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "갈라 콘서트 무대에 선 진태가 오케스트라와 함께 이 협주곡을 연주해요. 영화 후반의 공연 장면이에요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/16816", "note": "삽입곡에 Tchaikovsky Piano Concerto No.1 in B Flat Minor Op.23(로열 필하모닉, 로넌 오호라) 기재. 악장은 적혀 있지 않음" },
+        { "grade": "2", "kind": "article", "url": "https://www.tenasia.co.kr/article/2018020899034", "note": "갈라 콘서트에서 진태가 오케스트라 반주에 맞춰 연주하는 곡이 차이콥스키 피아노 협주곡 1번이라고 소개" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    { "what": "쇼팽 즉흥환상곡 Op.66", "reason": "KMDb 삽입곡 기재(연주 송영민)는 있으나 어느 장면인지 확인할 근거를 못 찾음" },
+    { "what": "쇼팽 녹턴 Op.9 No.2", "reason": "KMDb 삽입곡 기재(연주 박은지)는 있으나 장면 근거 없음" },
+    { "what": "모차르트 피아노 소나타 11번 K.331 3악장 '터키 행진곡'", "reason": "KMDb 삽입곡 기재(연주 황성현)는 있으나 장면 근거 없음" },
+    { "what": "쇼팽 발라드 3번 Op.47", "reason": "KMDb 삽입곡 기재는 있으나 장면 근거 없음" },
+    { "what": "라흐마니노프 피아노 협주곡 2번 2악장", "reason": "KMDb 삽입곡 기재(로열 필하모닉 음원)는 있으나 장면 근거 없음" }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "slug": "my-paparotti",
+  "kind": "MOVIE",
+  "titleKo": "파파로티",
+  "titleOriginal": "파파로티",
+  "releaseYear": 2013,
+  "countryCode": "KR",
+  "creditLine": "윤종찬 감독",
+  "ids": {
+    "wikidata": "Q6946250",
+    "imdb": "tt2958712",
+    "tmdbMovie": 189081,
+    "tmdbTv": null,
+    "kmdb": "K/13404",
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Giuseppe Verdi",
+      "work": "Rigoletto",
+      "catalog": null,
+      "part": "La donna è mobile",
+      "partKo": "3막 만토바 공작의 칸초네 '여자의 마음'",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "영화 첫머리에 장호와 상진이 각자 차를 몰고 가는데, 차 라디오에서 이 아리아가 나와요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "kmdb",
+          "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/13404",
+          "note": "삽입곡에 La Donna E Mobile (Opera 'Rigoletto') - Giuseppe Verdi 기재"
+        },
+        {
+          "grade": "ref",
+          "kind": "other",
+          "url": "https://namu.wiki/w/%ED%8C%8C%ED%8C%8C%EB%A1%9C%ED%8B%B0",
+          "note": "나무위키: 두 인물이 운전하는 오프닝에서 차 라디오로 흐른다고 서술(장면 실마리)"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Giacomo Puccini",
+      "work": "Tosca",
+      "catalog": null,
+      "part": "E lucevan le stelle",
+      "partKo": "3막 카바라도시의 아리아 '별은 빛나건만'",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "장호가 상진의 피아노 반주에 맞춰 이 아리아를 불러 노래 재능을 드러내요. 노래는 테너 강요셉이 녹음했어요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://music.bugs.co.kr/album/360868",
+          "note": "공식 OST(케이엠컬쳐 기획, 2013-03-12) 2번 트랙 'E Lucevan Le Stelle (별은 빛나건만)' 강요셉"
+        },
+        {
+          "grade": "1",
+          "kind": "kmdb",
+          "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/13404",
+          "note": "삽입곡에 E Lucevan Le Stelle (Opera 'La Tosca'), 노래 강요셉 기재"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.asiae.co.kr/article/2013022716512895117&mobile=Y",
+          "note": "아시아경제(2013-02-27): 영화 속 곡으로 '별은 빛나건만'·'네순 도르마'를 들고, 이제훈의 노래 장면과 한석규의 피아노 장면을 위해 오래 연습했다고 전함"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.jbnews.com/news/articleView.html?idxno=505295",
+          "note": "실제 모델 김호중: 영화 속 '별은 빛나건만', '네순 도르마'는 립싱크이고 성악가 목소리라고 언급"
+        },
+        {
+          "grade": "ref",
+          "kind": "other",
+          "url": "https://namu.wiki/w/%ED%8C%8C%ED%8C%8C%EB%A1%9C%ED%8B%B0",
+          "note": "나무위키: 상진의 집에서 상진의 피아노 반주로 부른다고 서술(장면 실마리)"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Giacomo Puccini",
+      "work": "Turandot",
+      "catalog": null,
+      "part": "Nessun dorma",
+      "partKo": "3막 칼라프의 아리아 '아무도 잠들지 마라'",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "영화 후반부에 장호가 무대에 올라 이 아리아를 불러요. 노래는 테너 강요셉이 이제훈의 연기에 맞춰 다시 녹음했어요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://music.bugs.co.kr/album/360868",
+          "note": "공식 OST 3번 트랙 'Nessun Dorma (네순 도르마)' 강요셉"
+        },
+        {
+          "grade": "1",
+          "kind": "kmdb",
+          "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/13404",
+          "note": "삽입곡에 Nessun Dorma (Opera 'Turandot'), 노래 강요셉 기재"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://v.daum.net/v/M0O0a0nAgD",
+          "note": "티브이데일리(2013-03-20): 강요셉이 이제훈의 연기에 맞춰 다시 녹음해 후반부 '네순 도르마' 장면을 완성했다고 전함"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "http://www.osen.co.kr/article/G1109559935",
+          "note": "OSEN(2013-03-20): 강요셉이 마지막 무대 장면 촬영을 지켜본 소감을 전함"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    {
+      "what": "도니제티 「사랑의 묘약」 '남몰래 흐르는 눈물'",
+      "reason": "KMDb 삽입곡 기재는 있으나 장면 근거 없음"
+    },
+    {
+      "what": "슈베르트 「송어」 D.550",
+      "reason": "KMDb 삽입곡 기재는 있으나 장면은 나무위키(음악 시간에 학생이 부름)뿐"
+    },
+    {
+      "what": "베르디 「리골레토」 '이 여자도 저 여자도'(노래 주원준)",
+      "reason": "KMDb 삽입곡 기재는 있으나 장면 근거 없음"
+    },
+    {
+      "what": "브람스 「영원한 사랑」 Op.43-1(노래 류현진), 슈베르트 「쉼 없는 사랑」 D.138(노래 이지림), 가스탈돈 「금지된 음악」",
+      "reason": "KMDb 삽입곡 기재는 있으나 장면 근거 없음"
+    }
+  ]
+}

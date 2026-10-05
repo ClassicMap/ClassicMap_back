@@ -1,0 +1,211 @@
+{
+  "slug": "nodame-cantabile-anime",
+  "kind": "ANIME",
+  "titleKo": "노다메 칸타빌레",
+  "titleOriginal": "のだめカンタービレ",
+  "releaseYear": 2007,
+  "countryCode": "JP",
+  "creditLine": "가사이 겐이치 감독 · 후지TV 노이타미나",
+  "ids": {
+    "wikidata": "Q10883044",
+    "imdb": "tt0928099",
+    "tmdbMovie": null,
+    "tmdbTv": 45527,
+    "kmdb": null,
+    "anilist": 1698
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": "E1",
+      "composer": "Wolfgang Amadeus Mozart",
+      "work": "Sonata for Two Pianos in D major",
+      "catalog": "K. 448",
+      "part": "I. Allegro con spirito",
+      "partKo": "1악장 Allegro con spirito",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "다니오카 선생의 과제로 치아키와 노다메가 두 대의 피아노로 이 소나타를 함께 연주해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/44d2dcd0-3c3e-4562-a539-94de6167b152",
+          "note": "공식 음반 '「のだめオーケストラ」STORY!'(Epic Records Japan ESCL-2935/6, 노이타미나 애니·드라마 음원을 이야기 순서로 수록) 1번 디스크 6·7번 트랙 'K.448 1악장'"
+        },
+        {
+          "grade": "2",
+          "kind": "anilist",
+          "url": "https://anilist.co/anime/1698",
+          "note": "스태프 목록에 'Insert Song Composition (ep 1, 16, 18, 21) — Wolfgang Amadeus Mozart'"
+        },
+        {
+          "grade": "ref",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_Nodame_Cantabile_episodes",
+          "note": "1화 줄거리: 다니오카가 둘에게 모차르트 2대의 피아노를 위한 소나타를 과제로 냄(출처 각주 없음)"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": "여러 회",
+      "composer": "Ludwig van Beethoven",
+      "work": "Symphony No. 7 in A major",
+      "catalog": "Op. 92",
+      "part": "I. Poco sostenuto – Vivace",
+      "partKo": "1악장 Poco sostenuto – Vivace",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "5화에서 치아키가 슈트레제만 대신 S오케스트라 연습을 지휘하지만 합주가 흐트러져요. 23화 R☆S 공연에서도 연주해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/44d2dcd0-3c3e-4562-a539-94de6167b152",
+          "note": "공식 음반 '「のだめオーケストラ」STORY!' 1번 디스크 2·9번 트랙 '교향곡 7번 1악장에서'"
+        },
+        {
+          "grade": "2",
+          "kind": "anilist",
+          "url": "https://anilist.co/anime/1698",
+          "note": "스태프 목록에 'Insert Song Composition (ep 1, 2, 5, 6, 7, 9, 21, 23) — Ludwig van Beethoven'"
+        },
+        {
+          "grade": "ref",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_Nodame_Cantabile_episodes",
+          "note": "5화 줄거리: 치아키가 대리 지휘한 연습이 무너지고 슈트레제만이 이어받음, 곡은 교향곡 7번. 23화에도 7번(출처 각주 없음)"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": "E7",
+      "composer": "Ludwig van Beethoven",
+      "work": "Symphony No. 3 in E-flat major \"Eroica\"",
+      "catalog": "Op. 55",
+      "part": "I. Allegro con brio",
+      "partKo": "1악장 Allegro con brio",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "치아키가 지휘하는 S오케스트라가 학교 정기 공연 무대에서 이 교향곡을 연주해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/44d2dcd0-3c3e-4562-a539-94de6167b152",
+          "note": "공식 음반 '「のだめオーケストラ」STORY!' 1번 디스크 10~12번 트랙 '교향곡 3번 영웅 1·2악장'"
+        },
+        {
+          "grade": "2",
+          "kind": "anilist",
+          "url": "https://anilist.co/anime/1698",
+          "note": "스태프 목록에 베토벤이 7화 삽입곡 작곡가로 올라 있음"
+        },
+        {
+          "grade": "ref",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_Nodame_Cantabile_episodes",
+          "note": "7화 줄거리: S오케스트라가 공연에서 청중을 사로잡음, 곡은 교향곡 3번 '영웅'(출처 각주 없음)"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": "여러 회",
+      "composer": "Sergei Rachmaninoff",
+      "work": "Piano Concerto No. 2 in C minor",
+      "catalog": "Op. 18",
+      "part": "I. Moderato; III. Allegro scherzando",
+      "partKo": "1악장 Moderato · 3악장 Allegro scherzando 일부",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "11화 학교 축제에서 치아키가 독주를 맡고 슈트레제만이 A오케스트라를 지휘해요. 12화에선 노다메와 두 대의 피아노로 쳐요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/44d2dcd0-3c3e-4562-a539-94de6167b152",
+          "note": "공식 음반 '「のだめオーケストラ」STORY!' 1번 디스크 17~19번 트랙 '피아노 협주곡 2번 1악장·3악장에서'"
+        },
+        {
+          "grade": "2",
+          "kind": "anilist",
+          "url": "https://anilist.co/anime/1698",
+          "note": "스태프 목록에 'Insert Song Composition (ep 6, 8, 10, 11, 12) — Sergei Rachmaninoff'"
+        },
+        {
+          "grade": "ref",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_Nodame_Cantabile_episodes",
+          "note": "8·10·11화: 치아키가 슈트레제만의 A오케스트라와 협연, 12화: 두 대의 피아노판으로 연주(출처 각주 없음)"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 5,
+      "episode": "E19",
+      "composer": "Johannes Brahms",
+      "work": "Symphony No. 1 in C minor",
+      "catalog": "Op. 68",
+      "part": "I. Un poco sostenuto – Allegro; IV. Adagio – Allegro non troppo, ma con brio",
+      "partKo": "1악장 · 4악장 일부",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "치아키가 새로 꾸린 R☆S 오케스트라의 첫 공연에서 이 교향곡을 지휘해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/44d2dcd0-3c3e-4562-a539-94de6167b152",
+          "note": "공식 음반 '「のだめオーケストラ」STORY!' 2번 디스크 9번 트랙 '교향곡 1번 1악장→4악장에서'"
+        },
+        {
+          "grade": "2",
+          "kind": "anilist",
+          "url": "https://anilist.co/anime/1698",
+          "note": "스태프 목록에 'Insert Song Composition (ep 8, 19, 21) — Johannes Brahms'"
+        },
+        {
+          "grade": "ref",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_Nodame_Cantabile_episodes",
+          "note": "18화 R☆S 첫 공연, 19화 곡 목록에 브람스 교향곡 1번(출처 각주 없음)"
+        }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    {
+      "what": "오프닝 「Allegro Cantabile」, 엔딩 「こんなに近くで…」",
+      "reason": "가요 주제가라 제외"
+    }
+  ]
+}

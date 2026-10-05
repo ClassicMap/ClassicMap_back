@@ -1,0 +1,34 @@
+{
+  "slug": "harmony",
+  "kind": "MOVIE",
+  "titleKo": "하모니",
+  "titleOriginal": "하모니",
+  "releaseYear": 2010,
+  "countryCode": "KR",
+  "creditLine": "강대규 감독",
+  "ids": { "wikidata": "Q5659453", "imdb": "tt1588356", "tmdbMovie": 40167, "tmdbTv": null, "kmdb": "K/10897", "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Edvard Grieg",
+      "work": "Peer Gynt",
+      "catalog": "Op. 23",
+      "part": "No. 19 Solveigs sang",
+      "partKo": "19곡 '솔베이그의 노래'",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "여자교도소의 하모니 합창단이 큰 공연장 무대에서 공연의 절정 곡으로 이 노래를 합창으로 불러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://music.bugs.co.kr/album/217123", "note": "공식 OST(2010-02-08) 9번 '솔베이지의 노래'. 앨범 트랙 설명에 '하모니 합창단의 대공연장 클라이막스 곡(합창곡)'이라 적혀 있고, 신이경 음악감독이 합창곡으로 편곡했다고 소개" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": []
+}

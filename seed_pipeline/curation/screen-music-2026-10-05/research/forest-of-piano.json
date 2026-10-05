@@ -1,0 +1,142 @@
+{
+  "slug": "forest-of-piano",
+  "kind": "ANIME",
+  "titleKo": "피아노의 숲",
+  "titleOriginal": "ピアノの森",
+  "releaseYear": 2018,
+  "countryCode": "JP",
+  "creditLine": "나카타니 가쿠(1기)·야마가 히로유키(2기) 감독 · NHK",
+  "ids": { "wikidata": "Q57262487", "imdb": "tt8043492", "tmdbMovie": null, "tmdbTv": 78471, "kmdb": null, "anilist": 100401 },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": "S1E10",
+      "composer": "Frédéric Chopin",
+      "work": "Barcarolle in F-sharp major",
+      "catalog": "Op. 60",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "쇼팽 콩쿠르 1차 예선에서 판웨이가 이 곡을 연주해요. 객석의 카이가 판웨이의 연주를 처음 듣고 충격을 받아요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "other", "url": "https://piano-anime.jp/story_s1.html", "note": "공식 사이트 #10 '쇼팽 콩쿠르' 줄거리(카이가 판웨이 연주에 충격)와 피아노 곡 목록에 '舟歌 嬰ヘ長調 作品60'" },
+        { "grade": "1", "kind": "ost", "url": "https://columbia.jp/pianonomori/release.html", "note": "닛폰 콜럼비아 'FAVORITE COLLECTION AND MORE'(COCQ-85468-9) [제1차 예선] '舟歌 嬰ヘ長調 作品60／パン・ウェイ'" },
+        { "grade": "1", "kind": "ost", "url": "https://columbia.jp/pianonomori/pianoselection.html", "note": "방송 직후 배포하는 Piano Selection Vol.X(판웨이, 피아노 牛牛)가 2018/6/11, 10화 방송 다음 날 공개" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": "S1E11",
+      "composer": "Frédéric Chopin",
+      "work": "Étude in A minor \"Winter Wind\"",
+      "catalog": "Op. 25 No. 11",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "쇼팽 콩쿠르 1차 예선 무대에서 슈헤이가 긴장 속에 이 에튀드를 연주해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "other", "url": "https://piano-anime.jp/story_s1.html", "note": "공식 사이트 #11 줄거리(슈헤이가 무대에 오름)와 피아노 곡 목록에 'エチュード イ短調 作品25-11「木枯らし」'" },
+        { "grade": "1", "kind": "ost", "url": "https://columbia.jp/pianonomori/release.html", "note": "'FAVORITE COLLECTION AND MORE' [제1차 예선] '木枯らし／雨宮修平'" },
+        { "grade": "1", "kind": "ost", "url": "https://columbia.jp/pianonomori/pianoselection.html", "note": "Piano Selection Vol.XI '木枯らし' 雨宮修平(피아노 髙木竜馬)" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": "S1E12",
+      "composer": "Frédéric Chopin",
+      "work": "Étude in C major",
+      "catalog": "Op. 10 No. 1",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "쇼팽 콩쿠르 1차 예선에서 드디어 카이가 무대에 올라 이 에튀드로 연주를 시작해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "other", "url": "https://piano-anime.jp/story_s1.html", "note": "공식 사이트 #12 줄거리(카이의 순서가 와 무대에 오름)와 피아노 곡 목록 첫 곡 'エチュード ハ長調 作品10-1'" },
+        { "grade": "1", "kind": "ost", "url": "https://columbia.jp/pianonomori/release.html", "note": "'FAVORITE COLLECTION AND MORE' [제1차 예선] 'エチュード ハ長調 作品10-1／一ノ瀬 海'" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": "S2E2",
+      "composer": "Frédéric Chopin",
+      "work": "Piano Sonata No. 2 in B-flat minor \"Funeral March\"",
+      "catalog": "Op. 35",
+      "part": "I. Grave – Doppio movimento; III. Marche funèbre. Lento; IV. Finale. Presto",
+      "partKo": "1·3·4악장(3악장 장송행진곡)",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "쇼팽 콩쿠르 2차 예선 첫날, 우승 후보 판웨이가 이 소나타를 연주해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "other", "url": "https://piano-anime.jp/story.html", "note": "공식 사이트 #14(2기 2화) 줄거리(2차 예선 첫날 판웨이 출전)와 곡 목록 '葬送' 1·3·4악장" },
+        { "grade": "1", "kind": "ost", "url": "https://columbia.jp/pianonomori/release.html", "note": "'FAVORITE COLLECTION AND MORE' [제2차 예선] '葬送 第3楽章／パン・ウェイ', 'パン・ウェイ 不滅の魂'(COCQ-85455)에 3·4악장 수록" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 5,
+      "episode": "S2E5",
+      "composer": "Frédéric Chopin",
+      "work": "Piano Sonata No. 3 in B minor",
+      "catalog": "Op. 58",
+      "part": "I. Allegro maestoso; III. Largo; IV. Finale. Presto non tanto",
+      "partKo": "1·3·4악장",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "2차 예선에서 레프 다음 순서로 카이가 무대에 올라 이 소나타를 연주해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "other", "url": "https://piano-anime.jp/story.html", "note": "공식 사이트 #17(2기 5화) 줄거리(레프 뒤에 카이가 등장해 연주 시작)와 곡 목록 '소나타 3번 1·3·4악장'" },
+        { "grade": "1", "kind": "ost", "url": "https://columbia.jp/pianonomori/release.html", "note": "'FAVORITE COLLECTION AND MORE' [제2차 예선] '소나타 3번 3·4악장／一ノ瀬 海', '一ノ瀬 海 至高の世界'(COCQ-85453-4)에 전 악장" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 6,
+      "episode": "S2E10",
+      "composer": "Frédéric Chopin",
+      "work": "Piano Concerto No. 1 in E minor",
+      "catalog": "Op. 11",
+      "part": "I. Allegro maestoso; II. Romance. Larghetto; III. Rondo. Vivace",
+      "partKo": "1~3악장",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "결선 마지막 날 카이가 오케스트라와 이 협주곡을 협연해요. 판웨이와 레프도 결선에서 같은 곡을 연주해요(2기 7~11화).",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "other", "url": "https://piano-anime.jp/story.html", "note": "공식 사이트 #22(2기 10화) 줄거리(결선 마지막 날 카이가 무대로)와 곡 목록 '협주곡 1번 1·2악장', #19~#23에도 같은 곡" },
+        { "grade": "1", "kind": "ost", "url": "https://columbia.jp/pianonomori/release.html", "note": "'FAVORITE COLLECTION AND MORE' [파이널] '협주곡 1번 3악장／一ノ瀬 海'; 바르샤바 필하모니 홀에서 바르샤바 국립 필하모닉과 녹음했다고 적음" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": []
+}
