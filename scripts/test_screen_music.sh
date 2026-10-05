@@ -26,7 +26,7 @@ for _ in $(seq 1 90); do
   sleep 1
 done
 
-for file in scripts/fixtures/screen_music_minimal_schema.sql migrations/202610050002_add_screen_music.sql migrations/202610050003_add_screen_title_cover_clip.sql; do
+for file in scripts/fixtures/screen_music_minimal_schema.sql migrations/202610050002_add_screen_music.sql migrations/202610050003_add_screen_title_cover_clip.sql migrations/202610050004_add_screen_title_poster_url.sql; do
   docker exec --interactive --env MYSQL_PWD="$database_password" "$container_name" \
     mysql --user=root classicmap < "$repo_root/$file"
 done

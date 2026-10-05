@@ -45,6 +45,7 @@ fn summary_select() -> String {
     format!(
         "SELECT t.id, CAST(t.slug AS CHAR CHARACTER SET utf8mb4) AS slug, t.kind, t.title_ko, t.title_original,
             t.release_year, t.country_code, t.credit_line, t.poster_path, t.backdrop_path,
+            t.poster_url, t.poster_credit,
             (SELECT COUNT(*) FROM screen_music_cues cue
              WHERE cue.screen_title_id = t.id AND cue.editorial_status = 'PUBLISHED') AS cue_count,
             {cover_columns},
@@ -344,7 +345,8 @@ impl ScreenRepository {
         let cover_columns = cover_columns_sql();
         let sql = format!(
             "SELECT c.id AS cue_id, t.id AS title_id, t.title_ko, t.kind, t.release_year,
-                    t.poster_path, c.part_label, c.episode_label, c.sector_id,
+                    t.poster_path, t.poster_url, t.poster_credit, c.part_label, c.episode_label,
+                    c.sector_id,
                     c.usage_kind AS `usage`,
                     {cover_columns}
              FROM screen_music_cues c
@@ -369,6 +371,7 @@ impl ScreenRepository {
             "{PUBLIC_COMPARISON_CTE}
              , ranked_cue AS (
                  SELECT c.id AS cue_id, t.id AS title_id, t.title_ko, t.kind, t.poster_path,
+                        t.poster_url, t.poster_credit,
                         c.composer_id, c.composer_name, c.piece_id, c.work_title, c.part_label,
                         c.sector_id, t.display_order AS title_order, c.display_order AS cue_order,
                         {cover_columns},
@@ -383,7 +386,8 @@ impl ScreenRepository {
                    ON sector.id = c.sector_id AND sector.piece_id = c.piece_id
                  WHERE c.editorial_status = 'PUBLISHED' AND c.composer_id IS NOT NULL
              )
-             SELECT cue_id, title_id, title_ko, kind, poster_path, composer_id, composer_name,
+             SELECT cue_id, title_id, title_ko, kind, poster_path, poster_url, poster_credit,
+                    composer_id, composer_name,
                     piece_id, work_title, part_label, sector_id, cover_video_id,
                     cover_thumb_jpg, cover_thumb_webp
              FROM ranked_cue
