@@ -229,6 +229,19 @@ DEAD_URLS = {
 STATUS = "PUBLISHED"
 
 COVERS = json.load(open(HERE / "covers.json")) if (HERE / "covers.json").exists() else {}
+# 영상마다 있는 가장 높은 썸네일 화질(probe_thumbs.py 가 잰다)
+THUMBS = json.load(open(HERE / "thumbs.json")) if (HERE / "thumbs.json").exists() else {}
+
+
+def with_thumbs(clip: dict) -> dict:
+    """앱이 없는 화질을 요청하지 않게 thumbJpg·thumbWebp 를 싣는다. 안 잰 영상은 그대로 둔다"""
+    thumb = THUMBS.get(clip["videoId"]) or {}
+    if not thumb.get("jpg"):
+        return clip
+    clip = dict(clip, thumbJpg=thumb["jpg"])
+    if thumb.get("webp"):
+        clip["thumbWebp"] = thumb["webp"]
+    return clip
 
 ID_NAMES = {
     "wikidata": "wikidata", "imdb": "imdb", "tmdbMovie": "tmdb_movie", "tmdbTv": "tmdb_tv",
@@ -300,12 +313,12 @@ def main() -> int:
             ]
             clip = cue.get("officialClip")
             if clip:
-                clip = {
+                clip = with_thumbs({
                     "videoId": clip["videoId"],
                     "startSec": int(clip.get("startSec") or 0),
                     "channel": clip["channel"],
                     "title": clip["title"],
-                }
+                })
             base = slugify(composer.split()[-1], 1) + "-" + slugify(cue.get("work") or work_title, 4)
             if cue.get("part"):
                 base += "-" + slugify(cue["part"], 3)
@@ -347,6 +360,8 @@ def main() -> int:
             continue
         # 작품 대표 그림: 권리자 공식 예고편(covers.json, oEmbed 로 채널 확인)
         cover = COVERS.get(slug)
+        if cover:
+            cover = with_thumbs(cover)
         title = {
             "slug": slug,
             "kind": data["kind"],
