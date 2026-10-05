@@ -228,6 +228,8 @@ DEAD_URLS = {
 # 2026-10-05 사용자가 확인 표의 149개를 모두 승인했다
 STATUS = "PUBLISHED"
 
+COVERS = json.load(open(HERE / "covers.json")) if (HERE / "covers.json").exists() else {}
+
 ID_NAMES = {
     "wikidata": "wikidata", "imdb": "imdb", "tmdbMovie": "tmdb_movie", "tmdbTv": "tmdb_tv",
     "kmdb": "kmdb", "anilist": "anilist",
@@ -343,6 +345,8 @@ def main() -> int:
         if not cues:
             problems_skipped.append(slug)
             continue
+        # 작품 대표 그림: 권리자 공식 예고편(covers.json, oEmbed 로 채널 확인)
+        cover = COVERS.get(slug)
         title = {
             "slug": slug,
             "kind": data["kind"],
@@ -351,6 +355,7 @@ def main() -> int:
             "releaseYear": data.get("releaseYear"),
             "countryCode": data.get("countryCode"),
             "creditLine": (data.get("creditLine") or "").strip() or None,
+            "coverClip": cover,
             "displayOrder": (len(titles) + 1) * 10,
             "status": STATUS,
             "identifiers": identifiers,
