@@ -11,7 +11,7 @@ const SECTOR_KEY: &str = "screen-music-integration-sector";
 
 fn line(piece_id: i32, composer_id: i32, status: &str, note: &str) -> String {
     format!(
-        r#"{{"slug":"{SLUG}","kind":"SERIES","titleKo":"오징어 게임 통합","titleOriginal":"Squid Integration","releaseYear":2021,"countryCode":"KR","creditLine":"테스트","displayOrder":1,"status":"{status}","identifiers":{{"tmdb_tv":"999999001"}},"cues":[{{"key":"first","order":1,"episode":"S1E1","composerId":{composer_id},"composerName":"작곡가","pieceId":{piece_id},"workTitle":"테스트 곡","part":"3악장","sectorKey":"{SECTOR_KEY}","usage":"SOURCE","arranged":false,"sceneNote":"{note}","spoiler":false,"officialClip":{{"videoId":"dQw4w9WgXcQ","startSec":0,"channel":"공식","title":"장면"}},"evidence":[{{"grade":"1","kind":"ost","url":"https://example.com/ost","note":"OST"}}],"status":"{status}"}},{{"key":"second","order":2,"composerName":"없는 작곡가","workTitle":"카탈로그 밖 곡","usage":"SCORE","arranged":true,"sceneNote":"배경으로 흘러요.","spoiler":true,"evidence":[{{"grade":"2","kind":"article","url":"https://a.example.com/1","note":"기사"}},{{"grade":"2","kind":"article","url":"https://b.example.org/2","note":"기사"}}],"status":"{status}"}}]}}"#
+        r#"{{"slug":"{SLUG}","kind":"SERIES","titleKo":"오징어 게임 통합","titleOriginal":"Squid Integration","releaseYear":2021,"countryCode":"KR","creditLine":"테스트","displayOrder":1,"status":"{status}","identifiers":{{"tmdb_tv":"999999001"}},"cues":[{{"key":"first","order":1,"episode":"S1E1","composerId":{composer_id},"composerName":"작곡가","pieceId":{piece_id},"workTitle":"테스트 곡","part":"3악장","sectorKey":"{SECTOR_KEY}","usage":"SOURCE","arranged":false,"sceneNote":"{note}","spoiler":false,"officialClip":{{"videoId":"dQw4w9WgXcQ","startSec":0,"channel":"공식","title":"장면","thumbJpg":"hqdefault"}},"evidence":[{{"grade":"1","kind":"ost","url":"https://example.com/ost","note":"OST"}}],"status":"{status}"}},{{"key":"second","order":2,"composerName":"없는 작곡가","workTitle":"카탈로그 밖 곡","usage":"SCORE","arranged":true,"sceneNote":"배경으로 흘러요.","spoiler":true,"evidence":[{{"grade":"2","kind":"article","url":"https://a.example.com/1","note":"기사"}},{{"grade":"2","kind":"article","url":"https://b.example.org/2","note":"기사"}}],"status":"{status}"}}]}}"#
     )
 }
 
@@ -101,6 +101,15 @@ async fn screen_music_loads_idempotently_and_is_served() {
     assert_eq!(detail.cues[0].episode_label.as_deref(), Some("S1E1"));
     assert_eq!(detail.title.cover_video_id.as_deref(), Some("dQw4w9WgXcQ"));
     assert_eq!(detail.title.cover_channel.as_deref(), Some("공식"));
+    assert_eq!(detail.title.cover_thumb_jpg.as_deref(), Some("hqdefault"));
+    assert_eq!(detail.title.cover_thumb_webp, None);
+    assert_eq!(
+        detail.cues[0]
+            .official_clip
+            .as_ref()
+            .and_then(|clip| clip.thumb_jpg.as_deref()),
+        Some("hqdefault")
+    );
     assert_ne!(detail.cues[0].listen.kind, "sector");
 
     // 서로 다른 주 연주자 셋의 공개 연주가 붙으면 그 구간으로 바로 듣는다
@@ -257,6 +266,8 @@ async fn screen_music_loads_idempotently_and_is_served() {
         .expect("공개");
     assert_eq!(detail.title.cover_video_id.as_deref(), Some("aaaaaaaaaaa"));
     assert_eq!(detail.title.cover_channel.as_deref(), Some("예고편 채널"));
+    // 예고편에 화질을 안 적었으면 큐 클립의 화질을 섞어 쓰지 않는다
+    assert_eq!(detail.title.cover_thumb_jpg, None);
 
     // 초안으로 돌리면 화면에서 빠진다
     fs::write(
