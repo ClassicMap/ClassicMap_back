@@ -24,7 +24,7 @@ use dotenv::dotenv;
 use logger::Logger;
 use rocket::http::Method;
 use rocket_cors::{AllowedHeaders, AllowedOrigins, CorsOptions};
-use ClassicMap_back::{comparison, taste};
+use ClassicMap_back::{comparison, screen, taste};
 
 #[launch]
 async fn rocket() -> _ {
@@ -121,6 +121,14 @@ async fn rocket() -> _ {
                 taste::delete_my_listening_events,
                 taste::get_my_home_recommendations,
                 taste::post_guest_home_recommendations,
+                // Screen music (영화 속 클래식) routes
+                screen::get_screen_titles,
+                screen::search_screen_titles,
+                screen::get_screen_title,
+                screen::get_piece_screen_cues,
+                screen::get_featured_screen_cues,
+                screen::get_screen_still_candidates,
+                screen::put_screen_cue_still,
                 // Concert routes
                 concert::get_concerts,
                 concert::get_concert,
