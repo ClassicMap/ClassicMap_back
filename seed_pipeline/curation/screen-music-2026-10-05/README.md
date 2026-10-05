@@ -13,6 +13,7 @@
 | `research-brief.md` | 조사 에이전트에게 준 지침 |
 | `build_titles.py` | 조사 원본 → `titles.jsonl`. 곡 매핑(`MAP`)은 사람이 확인한 값이다 |
 | `covers.json` | 작품 대표 그림으로 쓸 권리자 공식 YouTube 예고편·클립 28편(oEmbed 로 채널 확인). 큐 공식 클립이 없는 작품용 |
+| `probe_thumbs.py` · `thumbs.json` | 공식 클립 영상마다 있는 가장 높은 jpg·webp 썸네일 화질. `build_titles.py` 가 `thumbJpg`·`thumbWebp` 로 싣는다 |
 
 ## 공개 기준
 
@@ -32,7 +33,7 @@
 
 ## 차례
 
-1. `research/*.json` 을 고치거나 `build_titles.py` 의 `MAP` 을 고친 뒤 `python3 build_titles.py titles.jsonl`(운영 API 로 받은 `composers.json`·`pieces.json` 스냅숏이 옆에 있어야 한다)
+1. `research/*.json` 을 고치거나 `build_titles.py` 의 `MAP` 을 고친 뒤 `python3 build_titles.py titles.jsonl`(운영 API 로 받은 `composers.json`·`pieces.json`·`composer-map.json` 스냅숏이 옆에 있어야 한다). 공식 클립을 더했으면 먼저 `python3 probe_thumbs.py`
 2. 확인 표에서 승인한 큐와 작품만 `status` 를 `PUBLISHED` 로 둔다(`build_titles.py` 의 `STATUS`)
 3. 커밋·배포 뒤 `deploy/screen-music-load-job.yaml` 로 dry-run → 적재 → dry-run(계획 변경 0)
 4. 포스터·스틸은 `deploy/screen-images-refresh-cronjob.yaml` 로 받는다(TMDB 읽기 토큰 시크릿 필요)
@@ -50,3 +51,11 @@ TMDB 무료 키는 '개인 용도만' 보증이 필요해 쓰지 않는다. 포�
 작품에 정한 예고편(`coverClip`)이 먼저, 없으면 스포일러가 아닌 큐의 공식 클립이다.
 공식 업로드를 못 찾은 「호로비츠를 위하여」「밀회(1945)」「엘비라 마디간」은 제목 카드로 남는다.
 「박쥐」 포커스 피처스 예고편은 퍼가기가 막혀(oEmbed 401) CJ ENM 해외 예고편으로 바꿨다.
+
+## 썸네일 화질 (2026-10-05)
+
+없는 화질을 앱이 요청하면 YouTube 가 404 를 1~2초 늦게 줘서 그림이 늦게 떴다. 그래서 영상마다 '그 화질부터 아래가 다 있는'
+가장 높은 jpg·webp 화질을 재어 클립에 싣는다(앱은 이 값이 있으면 재지 않고 바로 받는다).
+
+- 61개 영상 모두 jpg 가 있고, webp 는 48개에 있다. jpg 는 maxres 52, sd 3, hq 6
+- 있는 그림에도 가끔 404 가 와서 화질마다 세 번까지 잰다. 두 번 재서 결과가 같은 것을 확인했다
