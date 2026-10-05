@@ -25,6 +25,7 @@ pub mod performance_sector;
 pub mod piece;
 pub mod piece_reco_feature_loader;
 pub mod recording;
+pub mod screen_image_refresher;
 pub mod search;
 pub mod seed_approval;
 pub mod taste;

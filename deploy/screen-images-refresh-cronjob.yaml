@@ -1,0 +1,68 @@
+# 영화 속 클래식 포스터·스틸 경로를 TMDB 에서 다시 받는다.
+# TMDB 약관상 받은 정보를 6개월 넘게 두지 않는다. 매달 1일 새벽에 30일 넘은 작품만 다시 받는다.
+#
+# TMDB 읽기 토큰은 시크릿으로만 둔다(값을 파일·로그에 남기지 않는다).
+#   kubectl -n homeserver create secret generic classicmap-tmdb --from-literal=TMDB_API_READ_TOKEN=<토큰>
+#   kubectl apply -f deploy/screen-images-refresh-cronjob.yaml
+#
+# 새 작품을 적재한 직후에는 바로 한 번 돌린다.
+#   kubectl -n homeserver create job --from=cronjob/screen-images-refresh screen-images-refresh-now
+#   kubectl -n homeserver logs -f job/screen-images-refresh-now
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: screen-images-refresh
+  namespace: homeserver
+  labels:
+    app: classicmap-screen-images
+spec:
+  schedule: "30 4 1 * *"
+  timeZone: Asia/Seoul
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 2
+  failedJobsHistoryLimit: 2
+  jobTemplate:
+    spec:
+      backoffLimit: 0
+      ttlSecondsAfterFinished: 86400
+      template:
+        metadata:
+          labels:
+            app: classicmap-screen-images
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: refresh
+              image: ghcr.io/classicmap/classicmap-back:latest
+              imagePullPolicy: Always
+              command:
+                - /app/refresh_screen_images
+                - --stale-days
+                - "30"
+                - --run-id
+                - screen-images-monthly
+              env:
+                - name: TMDB_API_READ_TOKEN
+                  valueFrom:
+                    secretKeyRef:
+                      name: classicmap-tmdb
+                      key: TMDB_API_READ_TOKEN
+                - name: MYSQL_HOST
+                  value: classicmap-mysql
+                - name: MYSQL_PORT
+                  value: "3306"
+                - name: MYSQL_DATABASE
+                  value: classicmap
+                - name: MYSQL_USER
+                  value: root
+                - name: MYSQL_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: db-credentials
+                      key: CLASSICMAP_MYSQL_ROOT_PASSWORD
+              resources:
+                requests:
+                  cpu: 50m
+                  memory: 64Mi
+                limits:
+                  memory: 256Mi
