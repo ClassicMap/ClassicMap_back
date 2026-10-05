@@ -51,6 +51,7 @@ COPY --from=builder /app/target/release/load_loudness_profiles /app/load_loudnes
 COPY --from=builder /app/target/release/load_clip_alignments /app/load_clip_alignments
 COPY --from=builder /app/target/release/load_listening_notes /app/load_listening_notes
 COPY --from=builder /app/target/release/load_piece_reco_features /app/load_piece_reco_features
+COPY --from=builder /app/target/release/refresh_screen_images /app/refresh_screen_images
 
 # 시드 배치를 클러스터 안에서 발행하는 데 필요한 것. 후보·음량 곡선·정렬 지도·듣기 노트·추천 속성 JSONL 만 넣는다 —
 # 검수 보고서와 클립 번들은 기록이지 실행에 쓰지 않는다.
