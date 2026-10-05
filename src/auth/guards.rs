@@ -65,10 +65,14 @@ impl<'r> FromRequest<'r> for AuthenticatedUser {
             pool.inner(),
             &claims.sub,
             claims.email.as_deref(),
+            claims.iat as i64,
         )
         .await
         {
-            Ok(user) => user,
+            Ok(Some(user)) => user,
+            Ok(None) => {
+                return Outcome::Error((Status::Unauthorized, "Account deleted".to_string()))
+            }
             Err(e) => {
                 return Outcome::Error((
                     Status::InternalServerError,

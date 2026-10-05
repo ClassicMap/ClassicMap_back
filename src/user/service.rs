@@ -31,23 +31,44 @@ impl UserService {
         }
     }
 
+    /// 역할 높낮이. 이메일이 나중에 채워질 때 역할을 올리기만 하고 내리지는 않는다
+    fn role_rank(role: &str) -> u8 {
+        match role {
+            "admin" => 2,
+            "moderator" => 1,
+            _ => 0,
+        }
+    }
+
     /// 로그인한 사용자의 행을 찾는다. 처음 온 사용자면 만들고, 토큰의 이메일이 바뀌었으면 고친다.
-    /// 예전엔 Clerk 웹훅으로 만들었는데 웹훅이 오지 않아 새 가입자가 모든 /me 요청에서 401 을 받았다
+    /// 예전엔 Clerk 웹훅으로 만들었는데 웹훅이 오지 않아 새 가입자가 모든 /me 요청에서 401 을 받았다.
+    /// 계정을 지우기 전에 발급된 토큰이면 행을 다시 만들지 않고 None 을 돌려준다
     pub async fn find_or_provision(
         pool: &DbPool,
         clerk_id: &str,
         token_email: Option<&str>,
-    ) -> Result<User, sqlx::Error> {
+        token_issued_at: i64,
+    ) -> Result<Option<User>, sqlx::Error> {
         let email = token_email.map(str::trim).filter(|email| !email.is_empty());
         if let Some(user) = UserRepository::find_by_clerk_id(pool, clerk_id).await? {
             if let Some(email) = email.filter(|email| *email != user.email) {
-                UserRepository::update_email(pool, user.id, email).await?;
-                return Ok(User {
+                let listed = Self::get_user_role(email);
+                let role = if Self::role_rank(&listed) > Self::role_rank(&user.role) {
+                    listed
+                } else {
+                    user.role.clone()
+                };
+                UserRepository::update_email_and_role(pool, user.id, email, &role).await?;
+                return Ok(Some(User {
                     email: email.to_string(),
+                    role,
                     ..user
-                });
+                }));
             }
-            return Ok(user);
+            return Ok(Some(user));
+        }
+        if UserRepository::deleted_since(pool, clerk_id, token_issued_at).await? {
+            return Ok(None);
         }
         let role = email
             .map(Self::get_user_role)
@@ -57,9 +78,18 @@ impl UserService {
             "USER",
             &format!("User provisioned on first sign-in: {}", clerk_id),
         );
-        UserRepository::find_by_clerk_id(pool, clerk_id)
-            .await?
-            .ok_or(sqlx::Error::RowNotFound)
+        UserRepository::find_by_clerk_id(pool, clerk_id).await
+    }
+
+    /// 계정 삭제. 지운 기록을 먼저 남겨, 아직 살아 있는 토큰의 요청이 행을 다시 만들지 않게 한다
+    pub async fn delete_account(pool: &DbPool, user_id: i32, clerk_id: &str) -> Result<(), String> {
+        UserRepository::record_deletion(pool, clerk_id)
+            .await
+            .map_err(|e| e.to_string())?;
+        UserRepository::delete(pool, user_id)
+            .await
+            .map(|_| ())
+            .map_err(|e| e.to_string())
     }
 
     pub async fn get_all_users(pool: &DbPool) -> Result<Vec<User>, String> {

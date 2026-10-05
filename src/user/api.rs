@@ -129,8 +129,8 @@ fn mutation_status(result: Result<u64, String>, action: &str) -> Result<Status, 
 /// users 를 참조하는 표(평가·담기·공개 프로필·취향·들은 기록)는 모두 CASCADE 로 함께 지워진다
 #[delete("/me")]
 pub async fn delete_me(pool: &State<DbPool>, user: AuthenticatedUser) -> Result<Status, Status> {
-    match UserService::delete_user(pool, user.user.id).await {
-        Ok(_) => Ok(Status::NoContent),
+    match UserService::delete_account(pool, user.user.id, &user.clerk_id).await {
+        Ok(()) => Ok(Status::NoContent),
         Err(e) => {
             Logger::error(
                 "API",

@@ -55,13 +55,50 @@ impl UserRepository {
         Ok(())
     }
 
-    pub async fn update_email(pool: &DbPool, id: i32, email: &str) -> Result<u64, Error> {
-        let result = sqlx::query("UPDATE users SET email = ? WHERE id = ?")
+    pub async fn update_email_and_role(
+        pool: &DbPool,
+        id: i32,
+        email: &str,
+        role: &str,
+    ) -> Result<u64, Error> {
+        let result = sqlx::query("UPDATE users SET email = ?, role = ? WHERE id = ?")
             .bind(email)
+            .bind(role)
             .bind(id)
             .execute(pool)
             .await?;
         Ok(result.rows_affected())
+    }
+
+    /// 지운 계정을 남긴다. 하루 지난 기록은 함께 지운다
+    pub async fn record_deletion(pool: &DbPool, clerk_id: &str) -> Result<(), Error> {
+        sqlx::query("DELETE FROM deleted_accounts WHERE deleted_at < NOW() - INTERVAL 1 DAY")
+            .execute(pool)
+            .await?;
+        sqlx::query(
+            "INSERT INTO deleted_accounts (clerk_id) VALUES (?)
+             ON DUPLICATE KEY UPDATE deleted_at = CURRENT_TIMESTAMP",
+        )
+        .bind(clerk_id)
+        .execute(pool)
+        .await?;
+        Ok(())
+    }
+
+    /// 이 계정을 지운 시각이 토큰 발급 시각(초) 이후인지
+    pub async fn deleted_since(
+        pool: &DbPool,
+        clerk_id: &str,
+        issued_at: i64,
+    ) -> Result<bool, Error> {
+        let found: Option<i64> = sqlx::query_scalar(
+            "SELECT 1 FROM deleted_accounts WHERE clerk_id = ? AND deleted_at >= FROM_UNIXTIME(?)",
+        )
+        .bind(clerk_id)
+        .bind(issued_at)
+        .fetch_optional(pool)
+        .await?;
+        Ok(found.is_some())
     }
 
     pub async fn update(pool: &DbPool, id: i32, user: UpdateUser) -> Result<u64, Error> {
