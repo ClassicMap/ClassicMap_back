@@ -1,0 +1,18 @@
+{
+  "slug": "naeils-cantabile",
+  "kind": "SERIES",
+  "titleKo": "내일도 칸타빌레",
+  "titleOriginal": "내일도 칸타빌레",
+  "releaseYear": 2014,
+  "countryCode": "KR",
+  "creditLine": "한상우·이정미 연출 · KBS2",
+  "ids": { "wikidata": "Q17094856", "imdb": "tt4284134", "tmdbMovie": null, "tmdbTv": 61580, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [],
+  "dropped": [
+    { "what": "모차르트 2대의 피아노를 위한 소나타 D장조 K.448 1악장 (1회, 유진·내일 연주)", "reason": "한국어 위키백과 '드라마 삽입곡' 목록(출처 없음)뿐. 제작사 채널(YTKISS)·J Drama 클립 설명에 곡명이 없음" },
+    { "what": "드보르자크 교향곡 9번 「신세계로부터」 4악장 (1회 오케스트라 연주)", "reason": "한국어 위키백과 목록(출처 없음)뿐" },
+    { "what": "베토벤 바이올린 소나타 5번 「봄」, 브람스 헝가리 무곡 5번, 차이콥스키 현을 위한 세레나데 2악장, 쇼팽 발라드 4번, 리스트 「사랑의 꿈」 3번 등 1·2회 목록", "reason": "한국어 위키백과 목록(출처 없음)뿐이고 장면 근거를 못 찾음" },
+    { "what": "오프닝 곡", "reason": "공식 근거를 찾지 못함(위키백과 '여는 곡' 칸도 비어 있음)" }
+  ]
+}

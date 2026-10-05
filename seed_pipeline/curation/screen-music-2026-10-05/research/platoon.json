@@ -1,0 +1,44 @@
+{
+  "slug": "platoon",
+  "kind": "MOVIE",
+  "titleKo": "플래툰",
+  "titleOriginal": "Platoon",
+  "releaseYear": 1986,
+  "countryCode": "US",
+  "creditLine": "올리버 스톤 감독",
+  "ids": { "wikidata": "Q190643", "imdb": "tt0091763", "tmdbMovie": 792, "tmdbTv": null, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Samuel Barber",
+      "work": "Adagio for Strings",
+      "catalog": "Op. 11",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "헬기로 철수하던 크리스가 정글에 남은 엘리어스가 쫓기다 쓰러지는 모습을 보는 장면에 나와요. 첫 장면과 불타는 마을 장면에도 쓰여요.",
+      "spoiler": true,
+      "officialClip": {
+        "videoId": "QEv3zzKyiFQ",
+        "startSec": 0,
+        "channel": "Movieclips",
+        "title": "Platoon (1986) - The Death of Sgt. Elias Scene (7/10) | Movieclips",
+        "why": "MGM 라이선스 클립 채널 영상이고, 설명에 헬기 위 크리스가 엘리어스가 쓰러지는 모습을 지켜본다고 적혀 있어요."
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/21e436bf-3de2-3cf0-9d63-2228bb0ea851", "note": "1987 Atlantic OST 1번 'The Village: Adagio for Strings', 11번 'Adagio for Strings' (밴쿠버 심포니, 조르주 들르뤼 지휘)" },
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/884904c0-fa9f-4af4-9b4e-c3d9273c5695", "note": "2018 Quartet 확장판 OST 18번 'Adagio for Strings', 26번 '(dialogue: Charlie Sheen)'" },
+        { "grade": "2", "kind": "article", "url": "https://www.filmtracks.com/titles/platoon.html", "note": "Filmtracks 리뷰: 첫·마지막 장면, 불타는 마을, 엘리어스의 죽음 장면에 쓰였고 들르뤼가 직접 지휘했다고 설명" },
+        { "grade": "2", "kind": "article", "url": "https://aleteia.org/2022/01/28/did-you-know-the-sad-song-from-platoon-is-a-catholic-hymn/", "note": "철수 때 엘리어스가 홀로 남겨지는 장면에 이 곡이 흐른다고 설명" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Platoon_(film)", "note": "영화에 바버 '현을 위한 아다지오'가 쓰였다고 기술" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": []
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "the-glory",
+  "kind": "SERIES",
+  "titleKo": "더 글로리",
+  "titleOriginal": "더 글로리",
+  "releaseYear": 2022,
+  "countryCode": "KR",
+  "creditLine": "안길호 연출 · 넷플릭스",
+  "ids": { "wikidata": "Q113197148", "imdb": "tt21344706", "tmdbMovie": null, "tmdbTv": 136283, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Gabriel Fauré",
+      "work": "Requiem",
+      "catalog": "Op. 48",
+      "part": "IV. Pie Jesu",
+      "partKo": "4곡 Pie Jesu(자비로운 예수)",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "극 배경음악으로, 포레 레퀴엠의 '피에 예수'를 편곡해 노래를 얹은 곡이 쓰여요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://music.apple.com/us/album/the-glory-pt-2-original-soundtrack-from-the-netflix-series/1675238514", "note": "넷플릭스 공식 OST 'The Glory, Pt. 2' 13번 'It's Not a Fairy Tale, It's a Fable (Fauré: Requiem Op. 48: IV. Pie Jesu) [feat. Min Ki Jeong]' — 구본춘 편곡, ℗ 2023 Netflix" },
+        { "grade": "1", "kind": "ost", "url": "https://www.youtube.com/watch?v=xs89MCDC5Y0", "note": "지니뮤직 제공 자동 생성 트랙: Composer Gabriel Faure, BON CHOON KOO — 공식 OST 음원" }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    { "what": "포레 '피에 예수'가 쓰인 정확한 회차·장면", "reason": "트랙 제목이 극 중 대사 '이 이야긴 동화가 아니라, 우화거든'에서 왔지만, 그 대사·장면이 몇 회인지 근거를 찾지 못해 episode 를 비워 둠" }
+  ]
+}

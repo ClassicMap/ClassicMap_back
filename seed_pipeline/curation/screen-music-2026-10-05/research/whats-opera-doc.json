@@ -1,0 +1,227 @@
+{
+  "slug": "whats-opera-doc",
+  "kind": "ANIME",
+  "titleKo": "왓츠 오페라, 닥?",
+  "titleOriginal": "What's Opera, Doc?",
+  "releaseYear": 1957,
+  "countryCode": "US",
+  "creditLine": "척 존스 감독 · 워너 브러더스",
+  "ids": {
+    "wikidata": "Q2635222",
+    "imdb": "tt0051189",
+    "tmdbMovie": 53217,
+    "tmdbTv": null,
+    "kmdb": null,
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Richard Wagner",
+      "work": "Die Walküre",
+      "catalog": "WWV 86B",
+      "part": "Act III: Prelude \"Walkürenritt\"",
+      "partKo": "3막 전주곡 '발퀴레의 기행'",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "지크프리트 차림의 엘머 퍼드가 벅스의 굴을 창으로 찌르며 이 선율에 'Kill the wabbit'을 붙여 불러요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "KZTE9MDoaLs",
+        "startSec": 0,
+        "channel": "ElmerFuddVEVO",
+        "title": "Elmer Fudd - Kill the Wabbit (Official Video) ft. Bugs Bunny",
+        "why": "워너 계열 음반사 WaterTower Records 권리 표기(ⓒ1957)가 달린 공식 VEVO 영상. 제목이 'Kill the Wabbit'이고 썸네일이 투구 쓴 엘머와 벅스 장면"
+      },
+      "evidence": [
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/What%27s_Opera,_Doc%3F",
+          "note": "엘머가 '발퀴레의 기행' 선율에 맞춰 'Kill the wabbit!'을 부른다고 적음"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.classical-music.com/features/articles/five-uses-classical-music-cartoons",
+          "note": "BBC 뮤직 매거진(2019). 엘머 퍼드가 '발퀴레의 기행'에 'Kill the wabbit'을 붙여 부른다고 적음"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.classicfm.com/composers/wagner/guides/top-10-alternative-ring-cycles/",
+          "note": "클래식 FM. 이 단편에서 '발퀴레의 기행'에 맞춰 'Kill the Wabbit'을 부른다고 적음"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Der_Ring_der_Niegelungen#Unterschiede_zur_Vorlage",
+          "note": "엘머가 발퀴레의 기행 선율로 '토끼를 죽여라'를 외친다고 적음(DiGaetani 2006 인용)"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Richard Wagner",
+      "work": "Der fliegende Holländer",
+      "catalog": "WWV 63",
+      "part": "Overture",
+      "partKo": "서곡",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "엘머가 창과 마법 투구의 힘을 보여 주겠다며 번개를 내리쳐 벅스를 처음 위협해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Der_Ring_der_Niegelungen#Unterschiede_zur_Vorlage",
+          "note": "엘머가 처음 번개로 벅스를 위협할 때 「방황하는 네덜란드인」 서곡이 나온다고 적음(골드마크 『Tunes for 'Toons』 2005, 150쪽 인용)"
+        },
+        {
+          "grade": "2",
+          "kind": "other",
+          "url": "https://nac-cna.ca/en/event/notes/21094",
+          "note": "캐나다 국립예술센터 「Bugs Bunny at the Symphony」 프로그램 노트. 이 단편 음악이 「방황하는 네덜란드인」·「발퀴레」·「지크프리트」·「신들의 황혼」·「리엔치」·「탄호이저」에서 왔다고 적음"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Richard Wagner",
+      "work": "Rienzi, der Letzte der Tribunen",
+      "catalog": "WWV 49",
+      "part": "Overture",
+      "partKo": "서곡",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "겁먹고 달아나는 벅스를 엘머가 뒤쫓는 추격 장면에 흘러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Der_Ring_der_Niegelungen#Unterschiede_zur_Vorlage",
+          "note": "번개 장면에 이어지는 추격 장면에 「리엔치」 서곡이 나온다고 적음(골드마크 2005 인용)"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://operawire.com/opera-meets-film-a-little-bit-of-satire-wagner-in-whats-opera-doc/",
+          "note": "오페라와이어(2023). 이 단편에 바그너 초기작 「리엔치」 서곡이 쓰였다고 적음"
+        },
+        {
+          "grade": "2",
+          "kind": "other",
+          "url": "https://nac-cna.ca/en/event/notes/21094",
+          "note": "캐나다 국립예술센터 「Bugs Bunny at the Symphony」 프로그램 노트. 이 단편 음악이 「방황하는 네덜란드인」·「발퀴레」·「지크프리트」·「신들의 황혼」·「리엔치」·「탄호이저」에서 왔다고 적음"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "order": 4,
+      "episode": null,
+      "composer": "Richard Wagner",
+      "work": "Tannhäuser",
+      "catalog": "WWV 70",
+      "part": "Act I: Venusberg music (Bacchanale)",
+      "partKo": "1막 '베누스베르크 음악'(바카날레)",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "브륀힐데로 변장한 벅스와 지크프리트 차림의 엘머가 함께 발레를 춰요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/What%27s_Opera,_Doc%3F",
+          "note": "두 인물이 「탄호이저」의 베누스베르크 발레를 본뜬 발레를 춘다고 적음"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Der_Ring_der_Niegelungen#Unterschiede_zur_Vorlage",
+          "note": "벅스와 엘머가 「탄호이저」의 베누스베르크 발레를 춘다고 적음(골드마크 2005 인용)"
+        },
+        {
+          "grade": "2",
+          "kind": "other",
+          "url": "https://nac-cna.ca/en/event/notes/21094",
+          "note": "캐나다 국립예술센터 「Bugs Bunny at the Symphony」 프로그램 노트. 이 단편 음악이 「방황하는 네덜란드인」·「발퀴레」·「지크프리트」·「신들의 황혼」·「리엔치」·「탄호이저」에서 왔다고 적음"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "order": 5,
+      "episode": null,
+      "composer": "Richard Wagner",
+      "work": "Tannhäuser",
+      "catalog": "WWV 70",
+      "part": "Pilgerchor",
+      "partKo": "순례자의 합창",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "발레를 마친 벅스와 엘머가 이 선율에 새 가사를 붙인 사랑의 이중창 'Return My Love'를 불러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Der_Ring_der_Niegelungen#Unterschiede_zur_Vorlage",
+          "note": "두 인물이 함께 부르는 사랑 노래가 「탄호이저」 순례자의 합창 선율이라고 적음(골드마크 2005 인용)"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/What%27s_Opera,_Doc%3F",
+          "note": "마이클 몰티즈가 밀트 프랭클린의 바그너 편곡에 이중창 'Return My Love' 가사를 붙였다고 적음(Schneider 1988 인용)"
+        },
+        {
+          "grade": "2",
+          "kind": "other",
+          "url": "https://nac-cna.ca/en/event/notes/21094",
+          "note": "캐나다 국립예술센터 「Bugs Bunny at the Symphony」 프로그램 노트. 이 단편 음악이 「방황하는 네덜란드인」·「발퀴레」·「지크프리트」·「신들의 황혼」·「리엔치」·「탄호이저」에서 왔다고 적음"
+        },
+        {
+          "grade": "ref",
+          "kind": "other",
+          "url": "https://drgrobsanimationreview.com/2014/09/05/whats-opera-doc/",
+          "note": "블로그. 몰티즈가 「탄호이저」 순례자의 합창에 새 가사를 붙여 사랑의 이중창으로 만들었다고 적음"
+        }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    {
+      "what": "바그너 「탄호이저」 서곡, 엘머가 쓰러진 벅스를 안고 가는 마지막 장면",
+      "reason": "장면-곡 대응 근거가 독일어 위키백과(골드마크 책 인용) 하나뿐"
+    },
+    {
+      "what": "바그너 「지크프리트」 지크프리트 동기, 벅스가 엘머의 갑옷을 놀리는 대목",
+      "reason": "장면-곡 대응 근거가 독일어 위키백과 하나뿐이고 짧은 동기 인용"
+    }
+  ]
+}

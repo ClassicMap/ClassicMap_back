@@ -1,0 +1,116 @@
+{
+  "slug": "squid-game",
+  "kind": "SERIES",
+  "titleKo": "오징어 게임",
+  "titleOriginal": "오징어 게임",
+  "releaseYear": 2021,
+  "countryCode": "KR",
+  "creditLine": "황동혁 연출 · 넷플릭스",
+  "ids": {
+    "wikidata": "Q106582931",
+    "imdb": "tt10919420",
+    "tmdbMovie": null,
+    "tmdbTv": 93405,
+    "kmdb": null,
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": "여러 회",
+      "composer": "Joseph Haydn",
+      "work": "Trumpet Concerto in E-flat major",
+      "catalog": "Hob. VIIe:1",
+      "part": "III. Finale. Allegro",
+      "partKo": "3악장 Finale. Allegro",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "참가자들이 지내는 숙소에 매일 아침 기상 신호로 스피커에서 나와요. 1회 중반 첫 기상 장면부터 쓰여요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.classical-music.com/features/tv-and-film-music/squid-game-soundtrack",
+          "note": "BBC Music Magazine(2021-10-18): 참가자들이 매일 아침 하이든 트럼펫 협주곡 3악장에 깨어난다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.classicfm.com/discover-music/periods-genres/film-tv/squid-game-netflix-classical-music-soundtrack/",
+          "note": "Classic FM: 1회 시작 30분쯤 참가자들이 E♭장조 협주곡 3악장에 깨어나고 이후 반복된다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.heraldk.com/article/2025102816044333302",
+          "note": "헤럴드경제: 하이든 트럼펫 협주곡이 '오징어 게임'의 기상송으로 쓰였다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Squid_Game_(soundtrack)",
+          "note": "영문 위키백과(BBC Music Magazine 인용): 3악장이 참가자를 깨우는 데 쓰였다고 씀"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": "여러 회",
+      "composer": "Johann Strauss II",
+      "work": "An der schönen blauen Donau",
+      "catalog": "Op. 314",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "참가자들이 계단 통로를 지나 게임장으로 갈 때와 게임이 끝난 뒤 스피커에서 나와요. VIP 라운지 장면에도 쓰여요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.classical-music.com/features/tv-and-film-music/squid-game-soundtrack",
+          "note": "BBC Music Magazine: 새 게임 안내 때, VIP 라운지, 게임 뒤 계단에서 들리고 8회 식사 장면에도 길게 쓰인다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.classicfm.com/discover-music/periods-genres/film-tv/squid-game-netflix-classical-music-soundtrack/",
+          "note": "Classic FM: 게임 전후 장면의 밑음악으로 '아름답고 푸른 도나우'를 썼다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.tfmedia.co.kr/news/article.html?no=115043",
+          "note": "조세금융신문(2021-11-09): 게임하러 나갈 때와 마친 뒤 나온 음악이 이 곡이라고 씀"
+        },
+        {
+          "grade": "ref",
+          "kind": "other",
+          "url": "https://arcana.fm/2022/01/08/squid-game/",
+          "note": "Arcana(음악 웹진): 첫 게임 장면에서 처음 나온다고 씀"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    {
+      "what": "베토벤 교향곡 5번 (VIP 라운지)",
+      "reason": "BBC Music Magazine 기사 하나뿐. 영문 위키백과 문장도 같은 기사를 인용해 독립 근거가 아님"
+    },
+    {
+      "what": "차이콥스키 현을 위한 세레나데 C장조 Op.48 2악장 왈츠 (두 번째 게임 끝·세 번째 게임 팀 구성)",
+      "reason": "Classic FM 하나만 확실. 영문 위키백과 문장은 BBC 기사를 인용했지만 그 기사엔 차이콥스키가 없고, Arcana.fm 은 개인 웹진이라 참고 등급"
+    }
+  ]
+}

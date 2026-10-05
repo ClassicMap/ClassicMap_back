@@ -1,0 +1,82 @@
+{
+  "slug": "the-kings-speech",
+  "kind": "MOVIE",
+  "titleKo": "킹스 스피치",
+  "titleOriginal": "The King's Speech",
+  "releaseYear": 2010,
+  "countryCode": "GB",
+  "creditLine": "톰 후퍼 감독",
+  "ids": { "wikidata": "Q160060", "imdb": "tt1504320", "tmdbMovie": 45269, "tmdbTv": null, "kmdb": "K/27492", "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Wolfgang Amadeus Mozart",
+      "work": "Le nozze di Figaro",
+      "catalog": "K. 492",
+      "part": "Ouverture",
+      "partKo": "서곡",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "첫 치료 시간에 버티가 헤드폰으로 이 곡을 크게 들으며 「햄릿」 독백을 읽어요. 로그는 그 목소리를 녹음해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/b1bd13b1-8f6b-42fa-b3bc-f3ca443f501e", "note": "2011 Decca 영국판 OST 14번 'The Logue Method (Mozart: The Marriage of Figaro / Clarinet Concerto Mvt. 1)'" },
+        { "grade": "2", "kind": "other", "url": "https://globalshakespeares.mit.edu/extra/how-shakespeare-cures-a-stuttering-king", "note": "알렉사 주빈 논고: 헤드폰을 쓰고 「햄릿」을 읽는 장면에서 관객도 '피가로의 결혼' 서곡만 점점 크게 듣는다고 설명" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/The_King%27s_Speech", "note": "첫 치료 때 헤드폰으로 클래식 음악을 들으며 'To be, or not to be'를 읽고 로그가 녹음판을 준다고 기술(곡명은 없음)" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Ludwig van Beethoven",
+      "work": "Symphony No. 7 in A major",
+      "catalog": "Op. 92",
+      "part": "II. Allegretto",
+      "partKo": "2악장 Allegretto",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "조지 6세가 1939년 전쟁 선포 라디오 연설을 하는 장면에 나와요. 방송실에는 로그만 곁에 남아 연설을 도와요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/0e46f1d3-84b0-4544-a4ce-ef267124d287", "note": "2010 Decca OST 12번 'Speaking Unto Nations (Beethoven Symphony No. 7 - II)', LSO·테리 데이비스" },
+        { "grade": "1", "kind": "interview", "url": "https://thejoyofmovies.ca/2011/01/15/interview-alexandre-desplat-composer-for-the-kings-speech/", "note": "음악감독 데스플라: 끝부분 장면의 베토벤은 후퍼 감독의 선택이고 임시 트랙을 그대로 살렸다고 밝힘" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/The_King%27s_Speech_(soundtrack)", "note": "클라이맥스의 1939년 라디오 연설에 7번 2악장이 쓰였고 편집자 타리크 안와르가 넣었다고 기술(가디언 감독 Q&A 출처)" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Ludwig van Beethoven",
+      "work": "Piano Concerto No. 5 in E-flat major \"Emperor\"",
+      "catalog": "Op. 73",
+      "part": "II. Adagio un poco mosso",
+      "partKo": "2악장 Adagio un poco mosso",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "연설을 마친 뒤 왕실 가족이 궁 발코니에 나서는 마지막 장면과 후일담 자막에 나와요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/0e46f1d3-84b0-4544-a4ce-ef267124d287", "note": "2010 Decca OST 13번 'Epilogue (Beethoven Piano Concerto No. 5 \"Emperor\" - II)', 스티븐 오스본 피아노" },
+        { "grade": "1", "kind": "interview", "url": "https://thejoyofmovies.ca/2011/01/15/interview-alexandre-desplat-composer-for-the-kings-speech/", "note": "데스플라: 영화 끝부분 장면들에 베토벤 곡을 쓴 것은 후퍼 감독의 생각이라고 밝힘" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/The_King%27s_Speech", "note": "마지막 장면이 왕실 가족의 발코니 등장과 후일담 자막이라고 기술(곡명은 없음)" }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    { "what": "모차르트 클라리넷 협주곡 1악장", "reason": "OST 14번 트랙에 피가로 서곡과 함께 실렸으나 어느 장면인지 근거 없음" }
+  ]
+}

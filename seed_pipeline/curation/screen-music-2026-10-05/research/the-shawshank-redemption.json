@@ -1,0 +1,58 @@
+{
+  "slug": "the-shawshank-redemption",
+  "kind": "MOVIE",
+  "titleKo": "쇼생크 탈출",
+  "titleOriginal": "The Shawshank Redemption",
+  "releaseYear": 1994,
+  "countryCode": "US",
+  "creditLine": "프랭크 다라본트 감독",
+  "ids": {
+    "wikidata": "Q172241",
+    "imdb": "tt0111161",
+    "tmdbMovie": 278,
+    "tmdbTv": null,
+    "kmdb": null,
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Wolfgang Amadeus Mozart",
+      "work": "Le nozze di Figaro",
+      "catalog": "K. 492",
+      "part": "Act III: Duettino \"Sull'aria... Che soave zeffiretto\"",
+      "partKo": "3막 이중창 '저녁 산들바람은 부드럽게'",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "앤디가 소장실 문을 잠그고 이 이중창 음반을 교도소 확성기로 틀어요. 죄수들이 멈춰 서서 듣고, 앤디는 독방에 갇혀요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/6150946e-919a-4f24-b701-32e305bc4080",
+          "note": "1994 Epic Soundtrax 공식 OST 16번 트랙 'The Marriage of Figaro / Duettino – Sull'Aria'"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.classicfm.com/discover-music/periods-genres/opera/best-uses-opera-in-films/",
+          "note": "Classic FM: 앤디가 교도소 방송 설비를 장악해 피가로의 결혼 'Sull'aria'를 튼다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://operawire.com/?p=42471",
+          "note": "OperaWire 해설: 앤디가 소장실에서 이 이중창을 교도소 전체 확성기로 틀고 독방에 가는 장면을 다룸"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": []
+}

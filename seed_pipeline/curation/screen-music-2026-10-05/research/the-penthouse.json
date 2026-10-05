@@ -1,0 +1,96 @@
+{
+  "slug": "the-penthouse",
+  "kind": "SERIES",
+  "titleKo": "펜트하우스",
+  "titleOriginal": "펜트하우스",
+  "releaseYear": 2020,
+  "countryCode": "KR",
+  "creditLine": "주동민 연출 · SBS",
+  "ids": { "wikidata": "Q85987403", "imdb": "tt13067118", "tmdbMovie": null, "tmdbTv": 99489, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": "S1E1",
+      "composer": "Wolfgang Amadeus Mozart",
+      "work": "Die Zauberflöte",
+      "catalog": "K. 620",
+      "part": "Act II, No. 14 Aria: \"Der Hölle Rache kocht in meinem Herzen\"",
+      "partKo": "2막 아리아 '지옥의 복수심이 내 마음에 끓어오르고'(밤의 여왕 아리아)",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "성악은 하지 말라며 다 찢어 버린 엄마 오윤희 앞에서 배로나가 이 아리아를 불러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "interview", "url": "https://www.xportsnews.com/article/1472902", "note": "엑스포츠뉴스 2021-09-11 김현수(배로나) 인터뷰: 시즌1에서 엄마가 성악하지 말라고 다 찢어버린 뒤 엄마한테 '밤의 여왕의 아리아'를 부르는 장면이 기억에 남는다" },
+        { "grade": "1", "kind": "ost", "url": "https://www.yes24.com/product/goods/98479077", "note": "워너뮤직 'SBS 드라마 펜트하우스 클래식 앨범'(2021) 소개·수록곡: 극에 등장한 '밤의 여왕의 아리아' 수록, 수록곡은 모두 시즌1 등장곡" },
+        { "grade": "ref", "kind": "clip", "url": "https://www.youtube.com/watch?v=XNAKsFpTGZg", "note": "SBS 공식 1회 클립 '유진, 자신 닮아 성악하려는 딸 김현수에 반대' — 곡명 표기는 없어 회차 실마리로만 씀" },
+        { "grade": "ref", "kind": "other", "url": "https://gall.dcinside.com/board/view/?id=penthouse&no=12198", "note": "팬 갤러리 정리: 1화 배로나 '밤의 여왕 아리아'" }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "order": 2,
+      "episode": "S1E15",
+      "composer": "Franz Liszt",
+      "work": "Transcendental Études",
+      "catalog": "S. 139",
+      "part": "No. 4 \"Mazeppa\"",
+      "partKo": "4번 '마제파'",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "아버지를 계단 아래 내버려 두고 온 천서진이 레슨실에서 피 묻은 손으로 피아노를 쳐요.",
+      "spoiler": true,
+      "officialClip": {
+        "videoId": "CH8h__be07k",
+        "startSec": 0,
+        "channel": "SBS 스브스 Drama",
+        "title": "[광기엔딩] 김소연, 정성모 죽음 방치 후 섬뜩한 피아노 연주!ㅣ펜트하우스(Penthouse)ㅣSBS DRAMA",
+        "why": "SBS 공식 15회 엔딩 클립(2020-12-15). 음반사 소개가 천서진이 광기를 쏟으며 친 곡을 '마제파'로 밝힘 — 클립과 곡의 연결은 소개 문구에 기댄 추정"
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://www.yes24.com/product/goods/98479077", "note": "워너뮤직 클래식 앨범 소개: 주인공 천서진이 악녀의 광기를 쏟아내며 피아노로 연주해 화제가 된 리스트 '마제파'를 수록" },
+        { "grade": "2", "kind": "article", "url": "https://www.tenasia.co.kr/article/2020121638154", "note": "텐아시아 2020-12-16: 15회에서 천서진이 부친을 외면한 뒤 레슨실에서 피 묻은 손으로 미친 듯이 피아노를 연주(곡명은 없음)" },
+        { "grade": "ref", "kind": "other", "url": "https://gall.dcinside.com/board/view/?id=penthouse&no=12198", "note": "팬 갤러리 정리: 천서진 피아노곡 리스트 '마제파'" }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "order": 3,
+      "episode": "S2E2",
+      "composer": "Gioachino Rossini",
+      "work": "Il barbiere di Siviglia",
+      "catalog": null,
+      "part": "Act I, Cavatina: \"Una voce poco fa\"",
+      "partKo": "1막 카바티나 '방금 들린 그대 음성'",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "천서진의 독창회에서 무대 뒤에 숨은 오윤희가 대신 노래하고 천서진은 입만 맞춰요.",
+      "spoiler": true,
+      "officialClip": {
+        "videoId": "pqwnxEf-2KY",
+        "startSec": 0,
+        "channel": "SBS 스브스 Drama",
+        "title": "[소름 주의] 유진, 김소연 대신 소름 돋는 목소리 선사ㅣ펜트하우스2(Penthouse2)ㅣSBS DRAMA",
+        "why": "SBS 공식 시즌2 클립(2021-02-20 업로드)으로 오윤희가 천서진 뒤에서 대신 노래하는 공연 장면. 음반사 소개가 시즌2 천서진 콘서트 곡을 '방금 들린 그대 음성'으로 밝힘"
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://www.yes24.com/product/goods/98479077", "note": "워너뮤직 클래식 앨범 소개: 시즌2에서 천서진이 자신의 콘서트에서 부른 로시니 '방금 들린 그대 음성'을 특별히 추가 수록" },
+        { "grade": "ref", "kind": "other", "url": "https://www.youtube.com/watch?v=g4c-MMFwxOU", "note": "개인 채널: 'Una voce poco fa / 펜트하우스2 / 천서진 립싱크 / 오윤희 노래 / 천서진 콘서트'" }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    { "what": "헨델 '울게 하소서', 베르디 '언제나 자유라네', 들리브 '종의 노래', 토마 '나는 금발의 티타니아', 구노 '꿈속에 살고 싶어', 모차르트 레퀴엠 '라크리모사', 쇼팽 '겨울바람' 등 클래식 앨범 수록곡", "reason": "워너 클래식 앨범(1차)으로 극 사용은 확인되나, 누가 어느 회에 부르는지는 팬 정리(ref)뿐. 대표 곡만 남김" },
+    { "what": "헨델 '알치나' 중 'Tornami a vagheggiar' (시즌2 배로나)", "reason": "팬 업로드(ref)뿐" },
+    { "what": "시즌3 천서진 하이F 성공 장면의 아리아", "reason": "김소연 인터뷰(위키트리)는 장면만 말하고 곡명이 없음" }
+  ]
+}

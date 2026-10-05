@@ -1,0 +1,38 @@
+{
+  "slug": "oceans-eleven",
+  "kind": "MOVIE",
+  "titleKo": "오션스 일레븐",
+  "titleOriginal": "Ocean's Eleven",
+  "releaseYear": 2001,
+  "countryCode": "US",
+  "creditLine": "스티븐 소더버그 감독",
+  "ids": { "wikidata": "Q205447", "imdb": "tt0240772", "tmdbMovie": 161, "tmdbTv": null, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Claude Debussy",
+      "work": "Suite bergamasque",
+      "catalog": "L. 75",
+      "part": "III. Clair de lune",
+      "partKo": "3곡 「달빛」",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "일을 끝낸 대니 오션 일당이 벨라지오 분수 쇼를 함께 본 뒤 한 명씩 흩어지는 장면에 흘러요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/bdd6fd21-4e78-42df-8173-f4dc9d8f4255", "note": "공식 OST(Warner Bros./Warner Sunset 9 48112-2) 20번 트랙 'Clair de Lune (from Suite Bergamasque)', 필라델피아 오케스트라" },
+        { "grade": "2", "kind": "article", "url": "https://www.reviewjournal.com/entertainment/movies/how-oceans-eleven-became-part-of-bellagios-fabric/", "note": "Las Vegas Review-Journal(2018): 일당이 드뷔시 「달빛」에 맞춰 움직이는 벨라지오 분수를 본 뒤 각자 흩어지는 장면이 영화의 대표 장면이라고 씀" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Ocean%27s_Eleven", "note": "삽입곡 목록: 루시앵 카이에 관현악 편곡, 유진 오먼디 지휘 필라델피아 오케스트라 연주(Guardian 출처)" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    { "what": "드뷔시 「달빛」 (루벤 집에서 일당이 처음 모이는 장면)", "reason": "Reddit 글에서만 봄(ref), 공개 기준 근거 없음" }
+  ]
+}

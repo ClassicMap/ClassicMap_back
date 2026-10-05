@@ -1,0 +1,58 @@
+{
+  "slug": "mission-impossible-rogue-nation",
+  "kind": "MOVIE",
+  "titleKo": "미션 임파서블: 로그네이션",
+  "titleOriginal": "Mission: Impossible – Rogue Nation",
+  "releaseYear": 2015,
+  "countryCode": "US",
+  "creditLine": "크리스토퍼 매쿼리 감독",
+  "ids": { "wikidata": "Q17548046", "imdb": "tt2381249", "tmdbMovie": 177677, "tmdbTv": null, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Giacomo Puccini",
+      "work": "Turandot",
+      "catalog": null,
+      "part": "Act III: \"Nessun dorma\"",
+      "partKo": "3막 아리아 '아무도 잠들지 말라'(Nessun dorma)",
+      "passage": "아리아 끝 'Vincerò!'의 높은 B음까지 이어짐",
+      "usage": "SOURCE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "빈 국립오페라극장의 「투란도트」 공연 중, 이선이 무대 뒤에서 오스트리아 총리를 노리는 저격범들을 막으려 해요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "interview", "url": "http://web.archive.org/web/20151212102053/http://www.filmsonwax.co.uk:80/interview-joe-kraemer/", "note": "작곡가 조 크레이머 인터뷰(Films on Wax, 2015): 이선이 무대 뒤에서 일사를 보는 순간이 「네순 도르마」와 맞물리고, 편집에 맞춰 오페라를 새 가수·악기로 다시 녹음했다고 말함" },
+        { "grade": "2", "kind": "article", "url": "https://operawire.com/?p=16908", "note": "OperaWire(2018): 빈 오페라 시퀀스가 「투란도트」를 쓰며 「네순 도르마」의 높은 B음까지 쌓아 올린다고 해설" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Mission:_Impossible_–_Rogue_Nation", "note": "오페라하우스 장면에 「네순 도르마」가 나온다고 인터뷰·레이블 출처 달아 씀" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Giacomo Puccini",
+      "work": "Turandot",
+      "catalog": null,
+      "part": "Act III: \"Nessun dorma\"",
+      "partKo": "3막 아리아 '아무도 잠들지 말라'(Nessun dorma)",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "조 크레이머의 영화 음악이 「네순 도르마」 선율을 따와, 이선과 일사가 단둘이 마주하는 뒤 장면들에 다시 써요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "http://web.archive.org/web/20150731003118/http://lalalandrecords.com:80/Site/MIRN.html", "note": "La-La Land Records 공식 사운드트랙 페이지: 4번 Escape to Danger, 13번 A Matter of Going, 19번 Finale and Curtain Call 이 「투란도트」의 「네순 도르마」를 인용한다고 기재" },
+        { "grade": "1", "kind": "interview", "url": "http://web.archive.org/web/20151212102053/http://www.filmsonwax.co.uk:80/interview-joe-kraemer/", "note": "크레이머가 이선과 일사가 대화하고 작별하는 뒤 장면에 그 선율을 써서 두 사람을 잇고 싶었다고 말함" },
+        { "grade": "2", "kind": "article", "url": "https://operawire.com/?p=16908", "note": "OperaWire: 선율이 두 번 더 돌아오며 둘 다 헌트와 일사가 함께 있는 장면이라고 씀" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": []
+}

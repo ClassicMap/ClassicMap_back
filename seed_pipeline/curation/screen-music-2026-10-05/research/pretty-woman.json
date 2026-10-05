@@ -1,0 +1,61 @@
+{
+  "slug": "pretty-woman",
+  "kind": "MOVIE",
+  "titleKo": "귀여운 여인",
+  "titleOriginal": "Pretty Woman",
+  "releaseYear": 1990,
+  "countryCode": "US",
+  "creditLine": "게리 마셜 감독",
+  "ids": { "wikidata": "Q207954", "imdb": "tt0100405", "tmdbMovie": 114, "tmdbTv": null, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Giuseppe Verdi",
+      "work": "La traviata",
+      "catalog": null,
+      "part": "Act I: \"Sempre libera\"",
+      "partKo": "1막 아리아 '언제나 자유롭게'(Sempre libera)",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "에드워드가 비비안을 데려간 샌프란시스코 오페라 극장의 「라 트라비아타」 관람 장면에 1막 'Sempre libera'가 나와요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "2", "kind": "article", "url": "https://operawire.com/opera-meets-film-how-a-comparison-of-pretty-woman-la-traviata-emphasizes-social-progress-lack-thereof/", "note": "OperaWire(2017): 관람 장면이 전주곡, 'Sempre libera', 'Amami Alfredo', 마지막 장 순으로 이어진다고 해설" },
+        { "grade": "1", "kind": "other", "url": "https://catalog.afi.com/Catalog/moviedetails/55709", "note": "AFI 카탈로그(미국영화연구소 아카이브, 화면 크레디트 기재): 'Selections from La Traviata'(토머스 파사티에리 편곡·지휘), 오페라 장면 배역 카린 칼라브로(비올레타)·브루스 엑스터트(알프레도), 샌프란시스코 오페라하우스 내부는 디즈니 스튜디오 세트" }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Giuseppe Verdi",
+      "work": "La traviata",
+      "catalog": null,
+      "part": "Act II: \"Amami, Alfredo\"",
+      "partKo": "2막 '날 사랑해 줘요, 알프레도'(Amami, Alfredo)",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "같은 오페라 관람 장면에서 2막 'Amami, Alfredo'도 나와요. 공연이 끝나 갈 무렵 비비안이 눈물을 흘려요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "2", "kind": "article", "url": "https://operawire.com/opera-meets-film-how-a-comparison-of-pretty-woman-la-traviata-emphasizes-social-progress-lack-thereof/", "note": "OperaWire(2017): 'Sempre libera' 다음 절정인 'Amami Alfredo'로 건너뛰고, 공연이 끝나 갈 때 비비안이 운다고 씀" },
+        { "grade": "1", "kind": "other", "url": "https://catalog.afi.com/Catalog/moviedetails/55709", "note": "AFI 카탈로그: 「라 트라비아타」 발췌를 파사티에리가 편곡·지휘했고 비올레타·알프레도 역 가수가 출연한다고 크레디트 기재" },
+        { "grade": "ref", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Pretty_Woman", "note": "되풀이되는 아리아 대목이 'Dammi tu forza!'의 끝부분이라고 씀(출처 없음)" },
+        { "grade": "ref", "kind": "wikipedia", "url": "https://fr.wikipedia.org/wiki/Pretty_Woman", "note": "프랑스어 위키백과: 오페라 장면에서 'Amami, Alfredo' 대목이 들린다고 씀(출처 없음)" }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    { "what": "베르디 「라 트라비아타」 'Amami, Alfredo' (결말에서 에드워드가 비상계단을 오르는 장면)", "reason": "OperaWire 하나뿐이고 위키백과의 '되풀이된다' 문장은 출처 없음. 결말이라 스포일러이기도 함" },
+    { "what": "비발디 「사계」 가을·봄·겨울 (리 애슐리 편곡 라이브러리 음원)", "reason": "AFI 카탈로그 크레디트에는 있으나 어느 장면에 쓰였는지 근거 없음" }
+  ]
+}

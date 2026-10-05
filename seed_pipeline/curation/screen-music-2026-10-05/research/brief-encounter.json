@@ -1,0 +1,63 @@
+{
+  "slug": "brief-encounter",
+  "kind": "MOVIE",
+  "titleKo": "밀회",
+  "titleOriginal": "Brief Encounter",
+  "releaseYear": 1945,
+  "countryCode": "GB",
+  "creditLine": "데이비드 린 감독",
+  "ids": { "wikidata": "Q814296", "imdb": "tt0037558", "tmdbMovie": 851, "tmdbTv": null, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Sergei Rachmaninoff",
+      "work": "Piano Concerto No. 2 in C minor",
+      "catalog": "Op. 18",
+      "part": "I. Moderato",
+      "partKo": "1악장 Moderato",
+      "passage": "악장 첫머리(피아노 화음으로 여는 도입부)",
+      "usage": "TITLES",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "영화가 시작하고 오프닝 타이틀 카드가 나오는 동안 1악장 첫머리가 깔려요. 연주는 아일린 조이스예요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "2", "kind": "article", "url": "https://www.tpr.org/arts-culture/2012-03-29/rachmaninoff-and-doomed-romance", "note": "Texas Public Radio(2012): 1악장의 무거운 화음과 물결치는 선율이 오프닝 타이틀 카드에 깔린다고 씀" },
+        { "grade": "2", "kind": "article", "url": "https://www.tcm.com/articles/118585/trivia-brief-encounter", "note": "TCM 트리비아: 영화가 1악장 첫머리로 시작한다고 씀" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Brief_Encounter", "note": "협주곡 발췌가 영화 내내 되풀이되며 아일린 조이스·내셔널 심포니(뮤어 매시슨 지휘) 연주라고 출처 달아 씀(악장 언급 없음)" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Sergei Rachmaninoff",
+      "work": "Piano Concerto No. 2 in C minor",
+      "catalog": "Op. 18",
+      "part": "II. Adagio sostenuto",
+      "partKo": "2악장 Adagio sostenuto",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "로라가 집 거실 라디오로 이 협주곡을 들으며, 십자말풀이하는 남편 옆에서 알렉과의 일을 떠올려요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "2", "kind": "article", "url": "https://www.tpr.org/arts-culture/2012-03-29/rachmaninoff-and-doomed-romance", "note": "2악장이 십자말풀이하는 남편 곁에서 말없이 회상하는 로라의 긴 숏 위로 자주 흐른다고 씀(영화는 1·2악장을 쓴다고 함)" },
+        { "grade": "2", "kind": "article", "url": "https://www.gresham.ac.uk/node/12004", "note": "그레셤 칼리지 강연 'Film Music: A certain train station': 음악이 집 거실 라디오에서 여러 번 흘러나온다고 설명" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Eileen_Joyce", "note": "아일린 조이스가 「밀회」에서 이 협주곡 2악장을 연주했다고 씀(Jeremy Siepmann, The Piano 출처)" },
+        { "grade": "ref", "kind": "other", "url": "https://www.perisphere.org/2024/07/12/brief-encounter-music-as-memory/", "note": "영화 비평 웹진: 음악이 거실 라디오와 배경음악 사이를 오가며, 후반에 Adagio sostenuto 주제가 나온다고 씀" }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    { "what": "라흐마니노프 협주곡 2번 3악장 마지막 마디 (영화 끝)", "reason": "TCM 트리비아 하나뿐이고, TPR 는 1·2악장만 쓴다고 해서 서로 어긋남" },
+    { "what": "라흐마니노프 협주곡 2번 1악장 (로라가 친구 아파트에서 뛰쳐나오는 장면)", "reason": "2차 근거 하나(TPR)뿐. 같은 대목 뒤 전쟁기념비 장면을 2악장이라 한 글(perisphere)은 참고 등급" },
+    { "what": "모슈코프스키 「스페인 춤곡」 Op. 12 5번 Bolero (찻집 살롱 악단 연주)", "reason": "출처 없는 위키백과 문장 하나뿐" }
+  ]
+}

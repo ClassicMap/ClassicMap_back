@@ -1,0 +1,84 @@
+{
+  "slug": "neon-genesis-evangelion",
+  "kind": "ANIME",
+  "titleKo": "신세기 에반게리온",
+  "titleOriginal": "新世紀エヴァンゲリオン",
+  "releaseYear": 1995,
+  "countryCode": "JP",
+  "creditLine": "안노 히데아키 감독 · TV 도쿄",
+  "ids": { "wikidata": "Q662", "imdb": "tt0112159", "tmdbMovie": null, "tmdbTv": 890, "kmdb": null, "anilist": 30 },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": "E15",
+      "composer": "Johann Sebastian Bach",
+      "work": "Cello Suite No. 1 in G major",
+      "catalog": "BWV 1007",
+      "part": "I. Prélude",
+      "partKo": "1악장 Prélude(전주곡)",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "신지가 집에서 혼자 첼로로 전주곡을 연주해요. 마침 돌아온 아스카가 듣고 박수를 쳐요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Music_of_Neon_Genesis_Evangelion", "note": "15화에서 신지가 연주하는 바흐 첼로 모음곡은 각본가 사쓰카와 아키오가 골랐다고 적음(Evangelion Chronicle 18권 인용)" },
+        { "grade": "2", "kind": "article", "url": "https://web.archive.org/web/20240622120650/https://historifans.org/2022/08/04/neon-genesis-evangelion-ikari-shinji-and-j-s-bach-using-music-to-define-the-japanese-yutosei/", "note": "음악학자 Heike Hoffer 글: 15화에서 신지가 첼로 모음곡 1번 'Prelude' 일부를 연주하고 아스카가 듣고 박수친다고 적음" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": "E22",
+      "composer": "George Frideric Handel",
+      "work": "Messiah",
+      "catalog": "HWV 56",
+      "part": "Hallelujah",
+      "partKo": "2부 합창 '할렐루야'",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "아스카가 에바 2호기 안에서 사도의 정신 공격을 받는 장면에 「할렐루야」 합창이 배경으로 나와요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/bd9675f5-fc96-4f70-8348-df4aa3df5d3c", "note": "공식 음반 NEON GENESIS EVANGELION ADDITION(스타차일드 KICA-334) 5번 트랙 'CHORUS: Hallelujah (MESSIAH)'" },
+        { "grade": "2", "kind": "article", "url": "https://web.archive.org/web/20160518110042/http://style.fm/as/05_column/animesama55.shtml", "note": "WEB 아니메스타일 칼럼 '22화': 아스카가 정신 공격을 받는 장면에 쓰인 곡이 헨델 '메시아'이고 '할렐루야'가 반복된다고 적음" },
+        { "grade": "2", "kind": "anilist", "url": "https://anilist.co/anime/30", "note": "스태프 목록에 'Insert Song Composition (ep 22) — Georg Friedrich Handel'" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Music_of_Neon_Genesis_Evangelion", "note": "사운드트랙에 헨델 '메시아'가 쓰였다고 적고 위 22화 칼럼을 출처로 닮" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": "E24",
+      "composer": "Ludwig van Beethoven",
+      "work": "Symphony No. 9 in D minor \"Choral\"",
+      "catalog": "Op. 125",
+      "part": "IV. Presto – Allegro assai",
+      "partKo": "4악장 Presto – Allegro assai(환희의 송가)",
+      "passage": "합창 'und der Cherub steht vor Gott' 대목이 들림(Hoffer 2021)",
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "카오루가 네르프 본부 맨 아래로 내려가는 장면에 4악장 합창이 배경으로 나와요. 앞서 호숫가에서 카오루가 이 선율을 흥얼거려요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/bd9675f5-fc96-4f70-8348-df4aa3df5d3c", "note": "공식 음반 NEON GENESIS EVANGELION ADDITION(KICA-334) 7번 트랙 '4th Mov: Presto (SYMPHONY No.9 IN D MINOR Op.125 \"CHORAL\")'" },
+        { "grade": "2", "kind": "article", "url": "https://web.archive.org/web/20130901151057/http://www.style.fm/as/05_column/animesama57.shtml", "note": "WEB 아니메스타일 칼럼 '24화': 이 화의 배경음악은 모두 베토벤 9번이고 신지가 SDAT로 듣는 곡과 카오루의 흥얼거림도 9번이라고 적음" },
+        { "grade": "2", "kind": "anilist", "url": "https://anilist.co/anime/30", "note": "스태프 목록에 'Insert Song Composition (ep 24) — Ludwig van Beethoven'" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Music_of_Neon_Genesis_Evangelion", "note": "'환희의 송가'가 24화에 쓰였고 카오루가 본부 최심부로 침입하는 장면에 나온다고 적음(Napier·Redmond·Hoffer 인용)" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    { "what": "파헬벨 「캐논」, 바흐 「G선상의 아리아」", "reason": "TV 시리즈가 아니라 극장판(Death & Rebirth, The End of Evangelion)에 쓰인 곡" },
+    { "what": "보로딘 「폴로베츠인의 춤」", "reason": "안노가 오프닝 후보로 원했으나 쓰이지 않음" }
+  ]
+}

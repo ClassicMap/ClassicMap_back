@@ -1,0 +1,143 @@
+{
+  "slug": "sympathy-for-lady-vengeance",
+  "kind": "MOVIE",
+  "titleKo": "친절한 금자씨",
+  "titleOriginal": "친절한 금자씨",
+  "releaseYear": 2005,
+  "countryCode": "KR",
+  "creditLine": "박찬욱 감독",
+  "ids": { "wikidata": "Q495134", "imdb": "tt0451094", "tmdbMovie": 4550, "tmdbTv": null, "kmdb": "K/06626", "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Antonio Vivaldi",
+      "work": "Cantata \"Cessate, omai cessate\"",
+      "catalog": "RV 684",
+      "part": "Aria: \"Ah, ch'infelice sempre\"",
+      "partKo": "2곡 아리아 'Ah, ch'infelice sempre'",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "금자가 13년 만에 출소해 마중 나온 전도사에게 \"너나 잘하세요\"라고 말하는 장면에 흘러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/06626", "note": "KMDb 삽입곡에 Cantate \"Cessate, omai cessate\", RV 684 \"Ah ch'infelice sempre\" - Vivaldi 기재" },
+        { "grade": "2", "kind": "article", "url": "https://doi.org/10.5392/JKCA.2018.18.06.617", "note": "안준희·전윤한(한국콘텐츠학회논문지 2018): 테마곡으로 출소 장면, 원모 집에서 손가락을 자르는 장면, 권총 조립 장면 등 3장면에 쓰이고, 영화에선 바이올린이 노래 선율을 대신한다고 분석" },
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/cc021734-9c67-42b0-a4b8-21c3c15cd07b", "note": "공식 OST(Pastel Music, PMCD-7005) 1번 트랙 '친절한 금자씨'. 논문 표 1이 이 트랙을 RV 684로 밝힘(음반 표기엔 원곡명 없음)" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Niccolò Paganini",
+      "work": "24 Caprices for Solo Violin: No. 24 in A minor",
+      "catalog": "Op. 1 No. 24",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "오수희가 교도소에 처음 들어오는 장면을 비롯해 여러 장면에 깔려요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/06626", "note": "KMDb 삽입곡에 Caprice No.24 in A minor - Quasi presto - Paganini 기재" },
+        { "grade": "2", "kind": "article", "url": "https://doi.org/10.5392/JKCA.2018.18.06.617", "note": "논문 표 1: 음악 넘버 4 '마녀 이금자: Caprice No.24', 장면 '오수희 교도소 입소 외 5장면'" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Antonio Vivaldi",
+      "work": "Concerto for Strings in A major",
+      "catalog": "RV 159",
+      "part": "Allegro",
+      "partKo": "Allegro 악장",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "화창한 오후 교도소 운동 시간에 수감자들이 금자가 '마녀'로 불리게 된 사연을 이야기하는 장면에 흘러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/06626", "note": "KMDb 삽입곡에 Concerto for String in A major, RV 159 Allegro - Vivaldi 기재" },
+        { "grade": "2", "kind": "article", "url": "https://doi.org/10.5392/JKCA.2018.18.06.617", "note": "논문: 음악 넘버 7 '화창한 오후'로, 수감자들이 운동하며 금자가 마녀라는 별명을 얻은 이유를 이야기하는 장면에 약 1분 5초 나온다고 씀. RV 159엔 Allegro 악장이 둘(1·3악장)이라 어느 쪽인지는 근거에 없음" }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "order": 4,
+      "episode": null,
+      "composer": "Antonio Vivaldi",
+      "work": "L'estro armonico: Concerto No. 3 in G major",
+      "catalog": "Op. 3 No. 3, RV 310",
+      "part": "II. Largo",
+      "partKo": "2악장 Largo",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "금자가 출소한 오수희를 다시 만나 백 선생에게 복수할 일을 이야기하는 장면에 흘러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/06626", "note": "KMDb 삽입곡에 Concerto No. 3 in G major RV 310. Largo - Vivaldi 기재" },
+        { "grade": "2", "kind": "article", "url": "https://doi.org/10.5392/JKCA.2018.18.06.617", "note": "논문: 2악장이 금자가 목욕탕에서 비누를 들고 오수희를 보며 웃는 장면에서 시작해 출소한 오수희와 백선생 복수를 이야기하는 장면까지 약 1분 25초 나온다고 씀" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 5,
+      "episode": null,
+      "composer": "Antonio Vivaldi",
+      "work": "L'estro armonico: Concerto No. 2 in G minor",
+      "catalog": "Op. 3 No. 2, RV 578",
+      "part": "I. Adagio e spiccato",
+      "partKo": "1악장 Adagio e spiccato",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "교도소에서 '마녀'로 불리는 수감자가 저지른 범행을 설명하는 장면 등 세 장면에 깔려요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/06626", "note": "KMDb 삽입곡에 Concerto No. 2 in G major RV 578. Adagio e spiccato - Vivaldi 기재(RV 578은 G단조, KMDb 조성 표기 오류)" },
+        { "grade": "2", "kind": "article", "url": "https://doi.org/10.5392/JKCA.2018.18.06.617", "note": "논문: G단조 1악장 Adagio e spiccato가 마녀 고수희의 범행 설명, 폐교에서 유족들이 의논하는 장면 등 3장면에 2분 45초 나온다고 씀" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 6,
+      "episode": null,
+      "composer": "Antonio Vivaldi",
+      "work": "Bassoon Concerto in E minor",
+      "catalog": "RV 484",
+      "part": "III. Allegro",
+      "partKo": "3악장 Allegro",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "금자가 딸 제니와 함께 납치범들에게 쫓기다 총을 쏘는 장면에 깔려요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/06626", "note": "KMDb 삽입곡에 Concerto for Bassoon in E minor, RV 484 Allegro - Vivaldi 기재" },
+        { "grade": "2", "kind": "article", "url": "https://doi.org/10.5392/JKCA.2018.18.06.617", "note": "논문: 3악장이 금자가 자신과 딸을 납치하려는 자들에게 총을 쏘는 장면과 백선생에게 총을 겨누는 장면 등 2장면에 1분 20초 쓰인다고 씀" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    { "what": "Mareta, mareta no'm faces plorar (금자와 제니가 만나는 장면 등)", "reason": "카탈루냐 전통 자장가를 조르디 사발 일행이 연주한 곡이라 클래식 작품으로 보지 않음(KMDb·OST엔 있음)" }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "decision-to-leave",
+  "kind": "MOVIE",
+  "titleKo": "헤어질 결심",
+  "titleOriginal": "헤어질 결심",
+  "releaseYear": 2022,
+  "countryCode": "KR",
+  "creditLine": "박찬욱 감독",
+  "ids": { "wikidata": "Q100889636", "imdb": "tt12477480", "tmdbMovie": 705996, "tmdbTv": null, "kmdb": "K/28865", "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Gustav Mahler",
+      "work": "Symphony No. 5 in C-sharp minor",
+      "catalog": null,
+      "part": "IV. Adagietto. Sehr langsam",
+      "partKo": "4악장 Adagietto. 아주 느리게",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "해준이 서래의 남편이 숨진 날 오른 바위산에 직접 올라 사건을 되짚는 장면에 흘러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/28865", "note": "KMDb 삽입곡에 'Mahler: Symphony No.5 - IV. Adagietto. Sehr Langsam' - 정명훈, 서울시향(KMDb엔 'Sound Philharmonic'으로 오기), 유니버설 뮤직 기재" },
+        { "grade": "1", "kind": "interview", "url": "https://www.themalaysianinsight.com/s/383784", "note": "AFP 칸 기사(2022-05-29): 박찬욱 감독이 다른 클래식도 찾아봤지만 이 말러 곡이 이상적이었다고 직접 밝힘" },
+        { "grade": "1", "kind": "ost", "url": "https://www.youtube.com/watch?v=JzALG2cAhn8", "note": "유니버설 뮤직이 배포한 음원 제목 'Mahler: Symphony No. 5: IV. Adagietto. Sehr langsam (\"Decision to Leave\"/ Live at Seoul Arts Center, 2014)', 서울시향·정명훈" },
+        { "grade": "2", "kind": "article", "url": "https://v.daum.net/v/pktP9F2mZt", "note": "한국경제 김희경(2022-07-04, 다음 뉴스 전재): 해준이 피의자 남편이 사망 당일 간 바위산에 올라 진실을 찾으려 할 때 아다지에토가 흐른다고 씀" },
+        { "grade": "2", "kind": "article", "url": "https://www.lrb.co.uk/the-paper/v44/n21/michael-wood/at-the-movies", "note": "London Review of Books, Michael Wood: 해준이 서래가 남편을 밀었을 방법을 머릿속으로 재구성할 때 아다지에토가 사운드트랙에 스며든다고 씀" },
+        { "grade": "ref", "kind": "other", "url": "https://brunch.co.kr/@01f4cac6839d4fa/16", "note": "브런치 글: 남편의 유튜브 방송, 해준의 '붕괴' 고백, 호송차 회상 장면까지 세 번 나온다고 씀" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": []
+}

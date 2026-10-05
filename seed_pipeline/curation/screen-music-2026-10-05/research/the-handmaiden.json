@@ -1,0 +1,39 @@
+{
+  "slug": "the-handmaiden",
+  "kind": "MOVIE",
+  "titleKo": "아가씨",
+  "titleOriginal": "아가씨",
+  "releaseYear": 2016,
+  "countryCode": "KR",
+  "creditLine": "박찬욱 감독",
+  "ids": { "wikidata": "Q20444585", "imdb": "tt4016934", "tmdbMovie": 290098, "tmdbTv": null, "kmdb": "K/14382", "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Jean-Philippe Rameau",
+      "work": "Pièces de clavecin (1724): Suite in E minor",
+      "catalog": "RCT 2",
+      "part": "Tambourin",
+      "partKo": "탕부랭",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "코우즈키가 히데코에게 음란서 낭독을 시키는 모임에 백작이 처음 끼는 장면에 피아노 연주로 흘러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "kmdb", "url": "https://www.kmdb.or.kr/db/kor/detail/movie/K/14382", "note": "KMDb 삽입곡에 'PIECES FOR HARPSICHORD; SUITE IN E MINOR. TAMBOURIN - 작곡: JEAN-PHILIPPE RAMEAU' 기재" },
+        { "grade": "1", "kind": "other", "url": "http://www.magpictures.com/resources/presskits/handmaiden/THE%20HANDMAIDENfinalnotes.doc", "note": "미국 배급사 Magnolia Pictures 공식 보도자료 크레딧에 같은 곡 기재, 음악 녹음은 도이체 오퍼 베를린 단원 앙상블(피아노 포함)" },
+        { "grade": "2", "kind": "article", "url": "https://www.stardailynews.co.kr/news/articleView.html?idxno=286236", "note": "스타데일리뉴스 박수빈(2020-11-25): 2부에서 코우즈키의 낭독 모임에 백작이 가입하는 장면과 신사들이 매를 맞는 장면에 나오고, 클라브생 대신 피아노로 연주됐다고 씀" },
+        { "grade": "ref", "kind": "other", "url": "https://brunch.co.kr/@classicsalesman/44", "note": "브런치 글: 히데코가 나이 든 남성 귀족들 앞에서 낭독회를 하는 장면에 쓰였다고 씀" }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    { "what": "모차르트 클라리넷 오중주 A장조 K. 581 2악장 Larghetto", "reason": "영화에 쓰인 건 KMDb·배급사 보도자료 크레딧(1차)으로 확인되나, 장면 근거가 참고 등급뿐이고 서로 엇갈림(브런치: 숙희→히데코 시점 전환 순간 / 뉴스레터: 히데코와 백작의 레스토랑 장면, 나무위키상 3부). 장면·쓰임을 확정 못 해서 보류" }
+  ]
+}

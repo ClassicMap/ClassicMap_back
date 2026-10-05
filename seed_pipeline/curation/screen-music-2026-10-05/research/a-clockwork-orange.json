@@ -1,0 +1,155 @@
+{
+  "slug": "a-clockwork-orange",
+  "kind": "MOVIE",
+  "titleKo": "시계태엽 오렌지",
+  "titleOriginal": "A Clockwork Orange",
+  "releaseYear": 1971,
+  "countryCode": "GB",
+  "creditLine": "스탠리 큐브릭 감독",
+  "ids": { "wikidata": "Q181086", "imdb": "tt0066921", "tmdbMovie": 185, "tmdbTv": null, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Henry Purcell",
+      "work": "Music for the Funeral of Queen Mary",
+      "catalog": "Z. 860",
+      "part": "March",
+      "partKo": "행진곡 March",
+      "passage": null,
+      "usage": "TITLES",
+      "arranged": true,
+      "approxAtSec": 0,
+      "sceneNote": "오프닝 타이틀과 코로바 밀크바에 앉은 알렉스 일당을 비추는 첫 장면에 신시사이저 편곡으로 흘러요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "tR6nk8PUTFI",
+        "startSec": 0,
+        "channel": "Warner Bros. Classics",
+        "title": "A Clockwork Orange | Alex and his Droogs | Full Opening Sequence | Warner Classics",
+        "why": "워너 공식 채널의 영화 첫 시퀀스 전체 클립이라 타이틀 음악이 처음부터 들어 있음"
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/be8465ed-6650-4ea5-bce2-a3c3e0bb80cf", "note": "공식 OST(Warner Bros. BS 2573) 1번 트랙 'Title Music from A Clockwork Orange', 연주 Walter(Wendy) Carlos" },
+        { "grade": "1", "kind": "other", "url": "https://www.wendycarlos.com/+wcco.html", "note": "웬디 카를로스 공식 사이트 트랙 목록: 'Title Music from A Clockwork Orange (from Purcell's Music for the Funeral of Queen Mary)'" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Funeral_Sentences_and_Music_for_the_Funeral_of_Queen_Mary", "note": "행진곡을 웬디 카를로스가 이 영화 음악으로 편곡했다는 문장(Gengaro 2013 출처)" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Gioachino Rossini",
+      "work": "La gazza ladra",
+      "catalog": null,
+      "part": "Overture",
+      "partKo": "서곡",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "알렉스가 강변 산책로에서 대드는 조지와 딤을 공격하는 장면에 흘러요. 패거리의 다른 폭력 장면에도 쓰여요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/be8465ed-6650-4ea5-bce2-a3c3e0bb80cf", "note": "공식 OST 2번 트랙 'The Thieving Magpie (abridged)', 도이치 그라모폰 관현악 녹음" },
+        { "grade": "2", "kind": "article", "url": "https://www.csmonitor.com/Innovation/2012/0229/You-ve-heard-Gioachino-Rossini-s-music-even-if-you-ve-never-heard-of-him/The-Thieving-Magpie", "note": "Christian Science Monitor: 알렉스가 Flat Block Marina에서 자기 패거리를 공격할 때 이 서곡이 나온다고 씀" },
+        { "grade": "2", "kind": "article", "url": "https://operawire.com/opera-meets-film-watch-experience-the-dark-truth-behind-stanley-kubricks-use-of-rossini-in-a-clockwork-orange/", "note": "OperaWire: 「도둑까치」 서곡은 알렉스 일당이 폭력을 저지를 때 나온다고 씀" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)", "note": "Music 절: 패거리 간 싸움, 빌리 보이 패거리와의 싸움 등에 로시니 서곡이 쓰였다는 문장(McDougal 2003, CSM 출처)" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Gioachino Rossini",
+      "work": "Guillaume Tell",
+      "catalog": null,
+      "part": "Overture",
+      "partKo": "서곡",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "알렉스가 음반 가게에서 만난 두 여자와 자기 방에서 보내는 장면에 빨리 감은 화면과 함께 흘러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/be8465ed-6650-4ea5-bce2-a3c3e0bb80cf", "note": "공식 OST 6번 트랙 'William Tell: Overture (abridged)'(카를로스 신시사이저판), 12번은 관현악판" },
+        { "grade": "1", "kind": "other", "url": "https://www.wendycarlos.com/+wcco.html", "note": "웬디 카를로스 공식 사이트: 'William Tell Overture, Abridged – Rossini, Arr. Wendy Carlos'" },
+        { "grade": "2", "kind": "article", "url": "https://operawire.com/opera-meets-film-watch-experience-the-dark-truth-behind-stanley-kubricks-use-of-rossini-in-a-clockwork-orange/", "note": "OperaWire: 「윌리엄 텔」 서곡이 알렉스가 방에서 두 여자와 있는 장면에 처음 나온다고 씀" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)", "note": "Music 절: 두 여자와의 빨리 감은 장면에 로시니 서곡이 쓰였다는 문장(McDougal 2003 출처)" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": null,
+      "composer": "Ludwig van Beethoven",
+      "work": "Symphony No. 9 in D minor",
+      "catalog": "Op. 125",
+      "part": "II. Molto vivace",
+      "partKo": "2악장 Molto vivace",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "알렉스가 자기 방 침대에서 이 악장을 틀어 놓고 들으며 폭력적인 공상에 빠져요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/be8465ed-6650-4ea5-bce2-a3c3e0bb80cf", "note": "공식 OST 4번 트랙 'Symphony no. 9: II. Molto vivace (abridged)', 도이치 그라모폰 관현악 녹음" },
+        { "grade": "2", "kind": "article", "url": "https://www.srf.ch/kultur/musik/stanley-kubrick-und-beethoven-heilige-klaenge-und-foltermusik-beethoven-in-clockwork-orange", "note": "SRF(스위스 공영방송, 2019): 알렉스가 침대에 앉아 9번의 스케르초 악장을 들으며 폭력 장면을 떠올린다고 씀" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 5,
+      "episode": null,
+      "composer": "Ludwig van Beethoven",
+      "work": "Symphony No. 9 in D minor",
+      "catalog": "Op. 125",
+      "part": "IV. Presto – Allegro assai",
+      "partKo": "4악장 Presto – Allegro assai",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "루도비코 요법을 받는 알렉스가 눈을 감지 못한 채 나치 기록 영상을 볼 때 그 영상 음악으로 나와요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/be8465ed-6650-4ea5-bce2-a3c3e0bb80cf", "note": "공식 OST 5번 트랙 'March from A Clockwork Orange'(9번 4악장 카를로스 편곡)" },
+        { "grade": "2", "kind": "article", "url": "https://artsandculture.google.com/story/HwUBawwqu7ekgQ", "note": "VAN Magazine 올리비아 조베티 글(Google Arts & Culture): 나치 선전 영화 장면에 카를로스가 편곡한 9번 마지막 악장 전자음악판이 깔린다고 씀" },
+        { "grade": "2", "kind": "article", "url": "https://www.srf.ch/kultur/musik/stanley-kubrick-und-beethoven-heilige-klaenge-und-foltermusik-beethoven-in-clockwork-orange", "note": "SRF: 교도소 병원의 루도비코 요법에서 폭력 영상과 함께 베토벤이 틀어진다고 씀" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 6,
+      "episode": null,
+      "composer": "Ludwig van Beethoven",
+      "work": "Symphony No. 9 in D minor",
+      "catalog": "Op. 125",
+      "part": "II. Molto vivace",
+      "partKo": "2악장 Molto vivace",
+      "passage": null,
+      "usage": "SOURCE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "작가 알렉산더가 위층 방에 가둔 알렉스에게 아래층에서 이 곡을 크게 틀어 들려줘요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "other", "url": "https://www.wendycarlos.com/+wcco.html", "note": "웬디 카를로스 본인 글: 9번 스케르초를 영화의 자살 시도 장면에 맞게 줄이고 가공했다고 밝힘" },
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/be8465ed-6650-4ea5-bce2-a3c3e0bb80cf", "note": "공식 OST 13번 트랙 '\"Suicide Scherzo\" – Symphony no. 9: II. Molto vivace (abridged)'" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    { "what": "엘가 「위풍당당 행진곡」 1번·4번 (교도소 장관 방문 등)", "reason": "OST 수록은 확인됐지만 장면 근거가 출처 없는 위키백과 문장뿐이고 큐 6개 상한" },
+    { "what": "베토벤 교향곡 9번 4악장 관현악판 (마지막 장면)", "reason": "OST 14번 수록은 확인, 장면을 밝힌 2차 근거를 찾지 못함. 결말 장면이기도 함" }
+  ]
+}

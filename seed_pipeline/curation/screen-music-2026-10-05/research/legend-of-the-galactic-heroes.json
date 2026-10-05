@@ -1,0 +1,232 @@
+{
+  "slug": "legend-of-the-galactic-heroes",
+  "kind": "ANIME",
+  "titleKo": "은하영웅전설",
+  "titleOriginal": "銀河英雄伝説",
+  "releaseYear": 1988,
+  "countryCode": "JP",
+  "creditLine": "이시구로 노보루 감독 · 키티 필름",
+  "ids": {
+    "wikidata": "Q20038487",
+    "imdb": "tt0096633",
+    "tmdbMovie": null,
+    "tmdbTv": 27660,
+    "kmdb": null,
+    "anilist": 820
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": "여러 회",
+      "composer": "Gustav Mahler",
+      "work": "Symphony No. 3 in D minor",
+      "catalog": null,
+      "part": "I. Kräftig. Entschieden",
+      "partKo": "1악장 Kräftig. Entschieden",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "1화 첫 내레이션과 제국 제독들이 모여드는 장면에 흘러요. 뒤로도 여러 회 오프닝 내레이션에 쓰여요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://king-cr.jp/special/ginga/t_side.html",
+          "note": "킹 아뮤즈먼트 크리에이티브 공식 CD-BOX(제국 편) 1번 디스크 첫 트랙 '오프닝 내레이션'과 '집합하는 제국 제독들'이 말러 3번 1악장"
+        },
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://king-cr.jp/special/ginga/d_side.html",
+          "note": "같은 CD-BOX(동맹 편)에도 '오프닝 내레이션'·'모두 내레이션'이 말러 3번 1악장으로 여러 번 실림"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://ja.wikipedia.org/wiki/%E9%8A%80%E6%B2%B3%E8%8B%B1%E9%9B%84%E4%BC%9D%E8%AA%AC_(%E3%82%A2%E3%83%8B%E3%83%A1)#%E9%9F%B3%E6%A5%BD",
+          "note": "오프닝 내레이션에 말러 교향곡 3번 1악장을 썼다고 적음. 도이체 샬플라텐 음원을 썼다는 서술은 사운드트랙 해설지 인용"
+        },
+        {
+          "grade": "1",
+          "kind": "other",
+          "url": "https://www.ginei.jp/story1.php",
+          "note": "공식 사이트 1화 줄거리. 라인하르트 함대의 동맹령 침공과 제국군 내부 철수론"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": "E15",
+      "composer": "Antonín Dvořák",
+      "work": "Symphony No. 9 in E minor \"From the New World\"",
+      "catalog": "Op. 95, B. 178",
+      "part": "IV. Allegro con fuoco",
+      "partKo": "4악장 Allegro con fuoco",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "15화에서 보급이 끊겨 밀리던 동맹군 함대가 암릿처 성역에 모여 제국군과 마지막 회전을 벌여요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://king-cr.jp/special/ginga/d_side.html",
+          "note": "공식 CD-BOX(동맹 편) 1번 디스크 '암릿처 성역 회전' 트랙이 드보르자크 9번 4악장, 이어지는 '양 함대의 철수'는 3악장"
+        },
+        {
+          "grade": "1",
+          "kind": "other",
+          "url": "https://www.ginei.jp/story1.php",
+          "note": "공식 사이트 15화 「암릿처 성역 회전」 줄거리로 회차 확인"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": "E23",
+      "composer": "Gustav Mahler",
+      "work": "Symphony No. 9 in D major",
+      "catalog": null,
+      "part": "I. Andante comodo",
+      "partKo": "1악장 Andante comodo",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "23화에서 오베르슈타인이 베스터란트 핵 공격을 막지 말자고 진언하고, 행성이 불타는 장면으로 이어져요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://king-cr.jp/special/ginga/t_side.html",
+          "note": "공식 CD-BOX(제국 편) 2번 디스크 '오베르슈타인의 제언~베스터란트 열핵 공격'과 '베스터란트의 참상'이 말러 9번 1악장"
+        },
+        {
+          "grade": "1",
+          "kind": "other",
+          "url": "https://www.ginei.jp/story1.php",
+          "note": "공식 사이트 23화 「황금수는 쓰러졌다」 줄거리. 베스터란트 반란과 핵 공격, 오베르슈타인의 반대 의견으로 회차 확인"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": "E26",
+      "composer": "Anton Bruckner",
+      "work": "Symphony No. 7 in E major",
+      "catalog": "WAB 107",
+      "part": "I. Allegro moderato",
+      "partKo": "1악장 Allegro moderato",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "26화 전승 기념식에서 안스바흐의 습격을 대신 막은 키르히아이스의 마지막을 라인하르트가 지켜봐요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://king-cr.jp/special/ginga/t_side.html",
+          "note": "공식 CD-BOX(제국 편) 2번 디스크 '키르히아이스의 최후를 지켜보는 라인하르트'가 브루크너 7번 1악장"
+        },
+        {
+          "grade": "1",
+          "kind": "other",
+          "url": "https://www.ginei.jp/story1.php",
+          "note": "공식 사이트 26화 「잘 있거라, 머나먼 날」 줄거리. 안스바흐의 습격과 키르히아이스의 죽음으로 회차 확인"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 5,
+      "episode": "E51",
+      "composer": "Gustav Mahler",
+      "work": "Symphony No. 1 in D major",
+      "catalog": null,
+      "part": "IV. Stürmisch bewegt",
+      "partKo": "4악장 Stürmisch bewegt",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "51화에서 라인하르트를 노리고 적진 깊이 들어간 양 웬리 함대와 제국군의 버밀리온 성역 회전이 시작돼요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://king-cr.jp/special/ginga/d_side.html",
+          "note": "공식 CD-BOX(동맹 편) 3번 디스크 '버밀리온 회전 개시'가 말러 1번 4악장. 바로 앞 트랙이 '양의 프러포즈'"
+        },
+        {
+          "grade": "1",
+          "kind": "other",
+          "url": "https://www.ginei.jp/story2.php",
+          "note": "공식 사이트 51화 「버밀리온의 사투(전편)」 줄거리. 양의 청혼과 버밀리온 회전 개시로 회차 확인"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 6,
+      "episode": "E82",
+      "composer": "Anton Bruckner",
+      "work": "Symphony No. 9 in D minor",
+      "catalog": "WAB 109",
+      "part": "I. Feierlich, misterioso",
+      "partKo": "1악장 Feierlich, misterioso",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "82화에서 회담 길에 오른 양 웬리가 순양함 안에서 암살자들의 습격을 받고 쓰러지는 대목에 흘러요.",
+      "spoiler": true,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://king-cr.jp/special/ginga/d_side.html",
+          "note": "공식 CD-BOX(동맹 편) 5번 디스크 '마술사, 돌아오지 않다' 트랙이 브루크너 9번 1악장. 앞 트랙 '양 암살 부대의 전투', 뒤 트랙 '양의 죽음의 충격'"
+        },
+        {
+          "grade": "1",
+          "kind": "other",
+          "url": "https://www.ginei.jp/story3.php",
+          "note": "공식 사이트 82화 「마술사, 돌아오지 않다」 줄거리. 레다 2호 안의 암살과 양의 죽음으로 회차 확인"
+        }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    {
+      "what": "라벨 「볼레로」, 제4차 티아마트 회전",
+      "reason": "OVA 본편이 아니라 1988년 극장판 「나의 정복은 별의 바다」에 쓰인 곡"
+    },
+    {
+      "what": "닐센 교향곡 4번 「불멸」 4악장, 아스타테 회전 개막",
+      "reason": "공식 CD 근거는 있으나 작품당 6개 제한"
+    },
+    {
+      "what": "말러 교향곡 6번 1악장, 이제를론 요새 공략",
+      "reason": "공식 CD 근거는 있으나 작품당 6개 제한"
+    }
+  ]
+}

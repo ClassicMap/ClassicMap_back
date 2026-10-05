@@ -1,0 +1,64 @@
+{
+  "slug": "oldboy",
+  "kind": "MOVIE",
+  "titleKo": "올드보이",
+  "titleOriginal": "올드보이",
+  "releaseYear": 2003,
+  "countryCode": "KR",
+  "creditLine": "박찬욱 감독",
+  "ids": {
+    "wikidata": "Q475693",
+    "imdb": "tt0364569",
+    "tmdbMovie": 670,
+    "tmdbTv": null,
+    "kmdb": "K/06066",
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Antonio Vivaldi",
+      "work": "The Four Seasons: Violin Concerto in F minor \"L'inverno\" (Winter)",
+      "catalog": "Op. 8 No. 4, RV 297",
+      "part": "I. Allegro non molto",
+      "partKo": "1악장 Allegro non molto",
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "오대수가 자신을 가뒀던 사설 감옥을 찾아내 박 사장을 고문하며 캐묻는 장면에 깔려요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/9f6b8429-584b-4aed-be92-c4015bb88dc3",
+          "note": "공식 OST(EMI Music Korea, 2003) 9번 트랙 'Four Seasons Concerto in F minor, RV297 \"Winter\"'(3:07, 정경화·St. Luke's Chamber Ensemble), 녹음이 1악장 Allegro non molto 작품에 연결됨"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://gvpress.com/journals/IJACT/vol4_no1-2/8.pdf",
+          "note": "황진희, 「A Study of the Analysis of Film Music in Revenge Movies」(IJACT, 2020): 「사계」 겨울 1악장이 대수를 가둔 사람에게 복수하는 장면에 쓰였다고 씀"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Oldboy_(2003_film)",
+          "note": "영어 위키백과 사운드트랙 목록 9번에 비발디 「사계」 협주곡 4번 RV 297 '겨울' 기재"
+        },
+        {
+          "grade": "ref",
+          "kind": "other",
+          "url": "https://www.youtube.com/watch?v=2BP-oMrx-IY",
+          "note": "팬 업로드 영상 제목 'Oldboy 2003 Tooth torture scene, Antonio Vivaldi - Winter'(공식 아님, 실마리용)"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": []
+}

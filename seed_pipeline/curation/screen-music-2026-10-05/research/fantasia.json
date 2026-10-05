@@ -1,0 +1,228 @@
+{
+  "slug": "fantasia",
+  "kind": "ANIME",
+  "titleKo": "환타지아",
+  "titleOriginal": "Fantasia",
+  "releaseYear": 1940,
+  "countryCode": "US",
+  "creditLine": "벤 샤프스틴 외 감독 · 월트 디즈니 프로덕션",
+  "ids": {
+    "wikidata": "Q943192",
+    "imdb": "tt0032455",
+    "tmdbMovie": 756,
+    "tmdbTv": null,
+    "kmdb": null,
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Johann Sebastian Bach",
+      "work": "Toccata and Fugue in D minor",
+      "catalog": "BWV 565",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "필라델피아 오케스트라가 푸른 조명 아래 연주하는 실사 장면이 추상적인 선과 형체의 애니메이션으로 넘어가요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/46442526-6e59-3a01-97e1-fd51ade28e98",
+          "note": "1990 공식 사운드트랙 CD 1번 트랙 'Toccata and Fugue in D minor, BWV 565' (스토코프스키 지휘)"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fantasia_(1940_film)#Program",
+          "note": "첫 곡. 오케스트라 실사 장면이 추상 애니메이션으로 바뀐다고 적음. 스토코프스키 편곡 사용"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Pyotr Ilyich Tchaikovsky",
+      "work": "The Nutcracker Suite",
+      "catalog": "Op. 71a",
+      "part": null,
+      "partKo": null,
+      "passage": "Sugar Plum Fairy, Chinese Dance, Dance of the Reed Flutes, Arabian Dance, Russian Dance, Waltz of the Flowers (서곡·행진곡 빠짐)",
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "요정과 버섯, 물고기, 꽃잎이 여름에서 겨울로 바뀌는 계절 속에서 모음곡 여섯 곡에 맞춰 춤춰요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/46442526-6e59-3a01-97e1-fd51ade28e98",
+          "note": "사운드트랙 2~7번 트랙이 「호두까기 인형」 모음곡 Op. 71a 의 여섯 곡"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fantasia_(1940_film)#Program",
+          "note": "계절 변화를 요정·물고기·꽃·버섯·나뭇잎 춤으로 그린 구간이라고 적고 쓰인 곡 이름을 나열"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": null,
+      "composer": "Paul Dukas",
+      "work": "L'apprenti sorcier",
+      "catalog": null,
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "마법사 옌 시드의 견습생 미키 마우스가 스승 몰래 빗자루에 마법을 걸었다가 작업실이 물바다가 돼요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/46442526-6e59-3a01-97e1-fd51ade28e98",
+          "note": "사운드트랙 8번 트랙 'The Sorcerer’s Apprentice'"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fantasia_(1940_film)#Program",
+          "note": "미키 마우스가 옌 시드의 견습생으로 나오는 구간이며 이 곡 단편이 판타지아의 출발점이었다고 적음"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.classical-music.com/features/articles/five-uses-classical-music-cartoons",
+          "note": "BBC 뮤직 매거진(2019). 「환타지아」에서 지구 탄생 장면에 「봄의 제전」, 미키의 「마법사의 제자」가 쓰였다고 적음"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": null,
+      "composer": "Igor Stravinsky",
+      "work": "Le Sacre du printemps",
+      "catalog": null,
+      "part": null,
+      "partKo": null,
+      "passage": "스토코프스키가 일부 대목을 빼고 순서를 바꾼 축약판",
+      "usage": "SCORE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "지구가 생겨나 첫 생물이 나타나고 공룡이 번성했다가 사라지기까지를 보여 줘요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/46442526-6e59-3a01-97e1-fd51ade28e98",
+          "note": "사운드트랙 9번 트랙 'Rite of Spring'"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fantasia_(1940_film)#Program",
+          "note": "지구 탄생부터 공룡 멸종까지를 그린 구간. 스트라빈스키가 곡 순서가 뒤섞이고 어려운 대목이 빠졌다고 불만을 밝혔다고 적음"
+        },
+        {
+          "grade": "2",
+          "kind": "article",
+          "url": "https://www.classical-music.com/features/articles/five-uses-classical-music-cartoons",
+          "note": "BBC 뮤직 매거진(2019). 「환타지아」에서 지구 탄생 장면에 「봄의 제전」, 미키의 「마법사의 제자」가 쓰였다고 적음"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 5,
+      "episode": null,
+      "composer": "Ludwig van Beethoven",
+      "work": "Symphony No. 6 in F major \"Pastoral\"",
+      "catalog": "Op. 68",
+      "part": null,
+      "partKo": null,
+      "passage": "1~5악장을 줄여서 사용(사운드트랙은 1악장, 2악장, 3·4·5악장 세 트랙)",
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "켄타우로스와 아기 천사, 파우누스가 바쿠스 축제를 열다가 제우스가 일으킨 폭풍을 만나요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/46442526-6e59-3a01-97e1-fd51ade28e98",
+          "note": "사운드트랙 2번 디스크 1~3번 트랙이 「전원」 교향곡 1·2악장과 3~5악장"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fantasia_(1940_film)#Program",
+          "note": "그리스·로마 신화 세계에서 바쿠스 축제가 제우스의 폭풍으로 끊긴다고 적음"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 6,
+      "episode": null,
+      "composer": "Modest Mussorgsky",
+      "work": "Night on Bald Mountain",
+      "catalog": null,
+      "part": null,
+      "partKo": null,
+      "passage": "림스키코르사코프판을 바탕으로 한 스토코프스키 편곡",
+      "usage": "SCORE",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "발푸르기스의 밤에 마왕 체르나보그가 무덤의 영혼들을 민둥산으로 불러내요. 새벽 종소리에 물러나며 「아베 마리아」로 이어져요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "ost",
+          "url": "https://musicbrainz.org/release/46442526-6e59-3a01-97e1-fd51ade28e98",
+          "note": "사운드트랙 2번 디스크 5번 트랙 'A Night on Bald Mountain', 6번 트랙 'Ave Maria, Op. 52 No. 6'"
+        },
+        {
+          "grade": "2",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fantasia_(1940_film)#Program",
+          "note": "체르나보그가 영혼을 불러내고 종소리에 쫓겨난 뒤 「아베 마리아」 합창으로 끝난다고 적음. 스토코프스키 편곡이 림스키코르사코프판 기반이라는 서술 포함"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    {
+      "what": "슈베르트 「아베 마리아」 D. 839 (Op. 52 No. 6), 마지막 수도사 행렬 장면",
+      "reason": "근거는 충분하지만 작품당 6개 제한. 「민둥산의 하룻밤」 큐에 이어지는 곡으로 적음"
+    },
+    {
+      "what": "폰키엘리 「라 조콘다」 중 '시간의 춤', 타조·하마·코끼리·악어 발레 장면",
+      "reason": "근거는 충분하지만 작품당 6개 제한"
+    }
+  ]
+}

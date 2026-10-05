@@ -1,0 +1,60 @@
+{
+  "slug": "raging-bull",
+  "kind": "MOVIE",
+  "titleKo": "성난 황소",
+  "titleOriginal": "Raging Bull",
+  "releaseYear": 1980,
+  "countryCode": "US",
+  "creditLine": "마틴 스코세이지 감독",
+  "ids": { "wikidata": "Q220780", "imdb": "tt0081398", "tmdbMovie": 1578, "tmdbTv": null, "kmdb": null, "anilist": null },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": null,
+      "composer": "Pietro Mascagni",
+      "work": "Cavalleria rusticana",
+      "catalog": null,
+      "part": "Intermezzo",
+      "partKo": "간주곡",
+      "passage": null,
+      "usage": "TITLES",
+      "arranged": false,
+      "approxAtSec": 0,
+      "sceneNote": "제이크 라모타가 빈 링에서 혼자 몸을 푸는 오프닝 타이틀에 흘러요. 영화가 끝날 때 다시 나와요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/9c6e2b43-0903-4f18-bd14-06da9a4b3b33", "note": "공식 OST(Capitol 2005) 1번 'Cavalleria Rusticana: Intermezzo'(볼로냐 시립극장 관현악단), 2CD 18번 reprise" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Raging_Bull", "note": "Music 절: 스코세이지와 편집자 셀마 스쿤메이커가 오프닝 타이틀에 붙여 본 뒤 이 간주곡을 메인 테마로 썼다는 문장(Evans, The Making of Raging Bull 출처)" },
+        { "grade": "2", "kind": "other", "url": "https://web.archive.org/web/20100131043310/http://www.mascagni.org/faq", "note": "mascagni.org FAQ 9: 영화가 「카발레리아 루스티카나」 간주곡으로 시작하고 끝난다고 씀" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": null,
+      "composer": "Pietro Mascagni",
+      "work": "Silvano",
+      "catalog": null,
+      "part": "Barcarola",
+      "partKo": "뱃노래(바르카롤라)",
+      "passage": "테너 노래 'S'è spento il sol' 뒤의 관현악 부분",
+      "usage": "SCORE",
+      "arranged": false,
+      "approxAtSec": 2450,
+      "sceneNote": "라모타 부부와 가족의 일상을 담은 컬러 홈 무비 장면에 흘러요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://musicbrainz.org/release/9c6e2b43-0903-4f18-bd14-06da9a4b3b33", "note": "공식 OST 2CD 1번 'Silvano: Barcarolle'" },
+        { "grade": "2", "kind": "other", "url": "https://web.archive.org/web/20100131043310/http://www.mascagni.org/faq", "note": "mascagni.org FAQ 9: 약 40분 50초 무렵 라모타 가족의 바랜 컬러 장면에 「실바노」 뱃노래의 관현악 부분이 나온다고 씀" },
+        { "grade": "2", "kind": "wikipedia", "url": "https://en.wikipedia.org/wiki/Raging_Bull", "note": "Music 절: 「실바노」 뱃노래가 영화에 쓰였다는 문장(mascagni.org 출처)" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    { "what": "마스카니 「굴리엘모 라트클리프」 간주곡('라트클리프의 꿈')", "reason": "OST 수록과 mascagni.org 시각(약 58분, 1시간 18분~1시간 21분)은 있지만 어떤 장면인지 밝힌 근거를 찾지 못함" }
+  ]
+}

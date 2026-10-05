@@ -1,0 +1,148 @@
+{
+  "slug": "four-hands",
+  "kind": "SERIES",
+  "titleKo": "포핸즈",
+  "titleOriginal": "포핸즈",
+  "releaseYear": 2026,
+  "countryCode": "KR",
+  "creditLine": "박현석 연출 · tvN",
+  "ids": { "wikidata": "Q137271520", "imdb": "tt39368345", "tmdbMovie": null, "tmdbTv": 305644, "kmdb": null, "anilist": null },
+  "replacedFrom": "사랑의 불시착 (2019, tvN) — 리정혁이 치는 '형을 위한 노래'는 드라마 창작곡이고, 공식 OST 28곡에도 클래식이 없음",
+  "cues": [
+    {
+      "order": 1,
+      "episode": "여러 회",
+      "composer": "Sergei Rachmaninoff",
+      "work": "Piano Concerto No. 2 in C minor",
+      "catalog": "Op. 18",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "강비오의 대표곡이에요. 1회 첫 콩쿠르 무대와 5회 대결 무대에서 강비오가 연주해요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "hyc3fWm8Jmk",
+        "startSec": 0,
+        "channel": "tvN DRAMA",
+        "title": "강비오 | 라흐마니노프, 피아노 협주곡 제2번 (S. Rachmaninoff, Piano Concerto No. 2) Pf. Pio Kang",
+        "why": "tvN 공식 채널이 1회 방송 직후(2026-08-30 KST) 올린 강비오 연주 클립이고 제목에 곡명이 있음"
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://music.bugs.co.kr/album/4156050", "note": "공식 '포핸즈 OST Classic Collection'(STONE MUSIC·스튜디오드래곤) 소개: 강비오의 대표곡으로 1화 오프닝 콩쿠르와 5화 대결곡에 쓰인 라흐마니노프 협주곡 2번 1~3악장 수록. 장면별 악장은 밝히지 않아 part 를 비움" },
+        { "grade": "1", "kind": "clip", "url": "https://www.youtube.com/watch?v=_RtvzK7D8h4", "note": "tvN DRAMA 공식 영상 '[강비오 테마곡] … 라흐마니노프 피아노 협주곡 2번'" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": "여러 회",
+      "composer": "Camille Saint-Saëns",
+      "work": "Danse macabre",
+      "catalog": "Op. 40",
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "최정요와 강비오가 처음 네 손으로 맞춰 치며 가까워진 곡이에요. 이후 여러 회에 다시 나와요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "eUsjCJCxPro",
+        "startSec": 0,
+        "channel": "tvN DRAMA",
+        "title": "강비오 & 최정요│생상스, 죽음의 무도 (C. Saint-Saëns, Op. 40)  | 4hands piano",
+        "why": "tvN 공식 채널의 두 사람 포핸즈 연주 클립(2회 방송 다음 날 업로드)이고 제목에 곡명이 있음"
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://music.bugs.co.kr/album/4156050", "note": "공식 클래식 OST 소개: 정요와 비오가 합을 맞추며 처음 마음을 나눈 '생상스 죽음의 무도'를 포핸즈 피아노판과 오케스트라판으로 수록" },
+        { "grade": "1", "kind": "clip", "url": "https://www.youtube.com/watch?v=5glzSqJ9Qhw", "note": "tvN DRAMA 공식 영상 '[최정요 테마곡] 정요의 불안한 시간을 이겨내게 해준 곡 | 생상스의 죽음의 무도'" },
+        { "grade": "1", "kind": "clip", "url": "https://www.youtube.com/watch?v=7qxuqFPT4z0", "note": "CJ ENM 디글 공식 모음 '비오정요 10년 서사 전부 담겨있는 죽음의 무도' — 여러 회에 반복됨" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 3,
+      "episode": "E3",
+      "composer": "Johann Sebastian Bach",
+      "work": "Herz und Mund und Tat und Leben",
+      "catalog": "BWV 147",
+      "part": "No. 10 Chorale \"Jesus bleibet meine Freude\"",
+      "partKo": "10곡 코랄 '예수, 인간 소망의 기쁨'",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "강비오와 최정요가 피아노 한 대에 나란히 앉아 네 손으로 함께 쳐요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "MZVwf6t0MqU",
+        "startSec": 0,
+        "channel": "tvN DRAMA",
+        "title": "강비오 & 최정요 | 바흐, 칸타타 BWV 147 중 10번 '예수, 인간 소망의 기쁨' (J. S. Bach, BWV 147, No. 10) | 4hands piano #포핸즈",
+        "why": "tvN 공식 연주 클립(3회 방송 다음 날 업로드)이고 제목에 곡명이 있음"
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://music.bugs.co.kr/album/4156050", "note": "공식 클래식 OST 7번 'Bach: Cantata BWV 147 – X. Chorale (Arranged for Piano 4-Hands)', 극 중 연주곡으로 소개" },
+        { "grade": "1", "kind": "clip", "url": "https://www.youtube.com/watch?v=MZVwf6t0MqU", "note": "tvN DRAMA 공식 클립 제목이 강비오·최정요의 BWV 147 포핸즈 연주라고 밝힘" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 4,
+      "episode": "E4",
+      "composer": "Ludwig van Beethoven",
+      "work": "Piano Sonata No. 8 in C minor \"Pathétique\"",
+      "catalog": "Op. 13",
+      "part": "I. Grave – Allegro di molto e con brio",
+      "partKo": "1악장 Grave – Allegro di molto e con brio",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "4회 끝 장면에서 최정요가 이 곡을 치고, 강비오가 멀리서 지켜봐요.",
+      "spoiler": false,
+      "officialClip": null,
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://music.bugs.co.kr/album/4156050", "note": "공식 클래식 OST 소개: 정요의 숨겨진 상처를 대변하는 '베토벤 피아노 소나타 8번 비창 1악장' 수록" },
+        { "grade": "ref", "kind": "other", "url": "https://www.youtube.com/watch?v=Ne53J-N3avk", "note": "피아니스트 박종훈 채널: 4화 엔딩에서 정요가 연주하고 비오가 멀리서 바라본 곡이라고 소개" }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "order": 5,
+      "episode": "여러 회",
+      "composer": "Johann Sebastian Bach",
+      "work": "Gottes Zeit ist die allerbeste Zeit (Actus tragicus)",
+      "catalog": "BWV 106",
+      "part": "I. Sonatina",
+      "partKo": "1곡 소나티나",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": true,
+      "approxAtSec": null,
+      "sceneNote": "강비오와 최정요가 네 손으로 치는 곡이에요. 마지막 회에서 두 사람이 다시 함께 연주해요.",
+      "spoiler": true,
+      "officialClip": {
+        "videoId": "u5Tz0RXihWE",
+        "startSec": 0,
+        "channel": "tvN DRAMA",
+        "title": "강비오&최정요 포핸즈ㅣ바흐, 칸타타 BWV 106 '신의 시간은 가장 좋은 시간' 중 소나티나 #포핸즈",
+        "why": "tvN 공식 클립으로 최종회 방송 중(2026-10-04 KST) 올라왔고 제목에 곡명이 있음"
+      },
+      "evidence": [
+        { "grade": "1", "kind": "ost", "url": "https://music.bugs.co.kr/album/4156050", "note": "공식 클래식 OST 9번 'Bach: Cantata BWV 106 – I. Sonatina (Arranged for Piano 4-Hands)', 극 중 연주곡으로 소개" },
+        { "grade": "1", "kind": "clip", "url": "https://www.youtube.com/watch?v=DKWxVfp5_Bs", "note": "tvN DRAMA 공식 BWV 106 포핸즈 연주 클립, 3회 방송 다음 날 업로드" },
+        { "grade": "ref", "kind": "clip", "url": "https://www.youtube.com/watch?v=9hppVi3FXcg", "note": "디글 공식 최종화 클립 '그날처럼, 자유롭게 우리의 마지막 포핸즈' — 곡명은 없어 실마리로만 씀" }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "dropped": [
+    { "what": "모차르트 피아노 협주곡 20번 (8회 무렵 연주 클립)", "reason": "공식 OST·클립으로 극 사용은 확인되나 누가 어떤 장면에서 치는지 근거를 못 찾음" },
+    { "what": "리스트 '위안' 3번, 리스트 초절기교 연습곡 1번, 라흐마니노프 소나타 2번, 베토벤 '열정', 슈베르트 '아르페지오네'", "reason": "공식 OST·클립 제목으로 등장은 확인되나 장면 맥락 근거가 없음. 대표 곡만 남김" }
+  ]
+}

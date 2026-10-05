@@ -1,0 +1,120 @@
+{
+  "slug": "beethoven-virus",
+  "kind": "SERIES",
+  "titleKo": "베토벤 바이러스",
+  "titleOriginal": "베토벤 바이러스",
+  "releaseYear": 2008,
+  "countryCode": "KR",
+  "creditLine": "이재규 연출 · MBC",
+  "ids": {
+    "wikidata": "Q486093",
+    "imdb": "tt1690398",
+    "tmdbMovie": null,
+    "tmdbTv": 8012,
+    "kmdb": null,
+    "anilist": null
+  },
+  "replacedFrom": null,
+  "cues": [
+    {
+      "order": 1,
+      "episode": "E10",
+      "composer": "Ludwig van Beethoven",
+      "work": "Symphony No. 9 in D minor \"Choral\"",
+      "catalog": "Op. 125",
+      "part": "IV. Finale",
+      "partKo": "4악장 Finale (「환희의 송가」)",
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "10회 공연 날, 강마에가 수재민이 모인 공연장에서 단원들과 합창단을 이끌고 「합창」을 지휘해요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "IdfX269YshA",
+        "startSec": 0,
+        "channel": "옛드",
+        "title": "Beethoven virus, 10회, EP10, #07",
+        "why": "MBC 옛드 채널의 10회(2008/10/09) 클립으로 설명에 '공연보러 온 수재민들, 참석한 합창단원들, 열정적으로 연주 마친 단원들과 마에'라고 적힘. 같은 회 하이라이트(axpOnUDmiZM)가 이 공연 곡을 베토벤 <합창>으로 밝힘"
+      },
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "clip",
+          "url": "https://www.youtube.com/watch?v=axpOnUDmiZM",
+          "note": "옛드(MBC) '레전드 공연! 베토벤 <합창>' MBC081009방송: 악재 속에서 강마에가 관객에게 베토벤 <합창>을 선보인다고 설명"
+        },
+        {
+          "grade": "1",
+          "kind": "clip",
+          "url": "https://www.youtube.com/watch?v=IdfX269YshA",
+          "note": "옛드 10회 #07 클립: 수재민 관객, 합창단원 참석, 연주를 마친 단원과 마에"
+        },
+        {
+          "grade": "1",
+          "kind": "clip",
+          "url": "https://www.youtube.com/watch?v=9Pe5fM3d4OU",
+          "note": "옛드 봉춘쿠키 챕터 '구원이자 위로가 된 <합창>', '앵콜 피날레 <합창>'"
+        },
+        {
+          "grade": "ref",
+          "kind": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Beethoven_Virus",
+          "note": "영문 위키백과 줄거리(출처 없음): 단원들이 베토벤 9번을 몰래 연습해 공연 기회를 얻음"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "order": 2,
+      "episode": "E5",
+      "composer": "Gioachino Rossini",
+      "work": "Guillaume Tell: Overture",
+      "catalog": null,
+      "part": null,
+      "partKo": null,
+      "passage": null,
+      "usage": "PERFORMED",
+      "arranged": false,
+      "approxAtSec": null,
+      "sceneNote": "5회 석란시 오케스트라의 첫 공연에서 강마에의 지휘로 단원들이 마지막 곡으로 연주해요.",
+      "spoiler": false,
+      "officialClip": {
+        "videoId": "JTdyMvxERwk",
+        "startSec": 0,
+        "channel": "옛드",
+        "title": "Beethoven virus, 5회, EP05, #08",
+        "why": "MBC 옛드 채널의 5회(2008/09/24) 클립으로 설명에 '마지막곡 윌리엄텔 서곡을 완벽하게 연주한 단원들, 환호하는 관객'이라고 적힘"
+      },
+      "evidence": [
+        {
+          "grade": "1",
+          "kind": "clip",
+          "url": "https://www.youtube.com/watch?v=JTdyMvxERwk",
+          "note": "옛드 5회 #08 클립: 마지막 곡 '윌리엄텔 서곡'을 연주한 단원들과 관객 환호"
+        },
+        {
+          "grade": "1",
+          "kind": "clip",
+          "url": "https://www.youtube.com/watch?v=XqixZ-dSwwc",
+          "note": "옛드 MBC080924방송 하이라이트: 석란시향 첫 공연, 단원들이 매번 같은 부분을 틀리던 윌리엄텔 서곡"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dropped": [
+    {
+      "what": "피아졸라 「리베르탱고」 (5회 첫 공연, 희연 첼로 솔로)",
+      "reason": "MBC 공식 클립 근거는 있지만 누에보 탱고라 클래식 범위 판단이 필요해 뺌"
+    },
+    {
+      "what": "엔니오 모리코네 「넬라 판타지아」 (3회 강마에 지휘)",
+      "reason": "영화 「미션」 창작곡(가브리엘의 오보에)이라 클래식이 아님"
+    },
+    {
+      "what": "한국어 위키백과 '컴필레이션 앨범' 수록곡(치고이너바이젠, 라데츠키 행진곡, 베토벤 5번 1악장, 브람스 헝가리 무곡 5번·교향곡 3번 3악장, 드보르자크 「신세계」 2악장 등)",
+      "reason": "출처 없는 목록이고 어느 회·장면인지 근거를 찾지 못함"
+    }
+  ]
+}
