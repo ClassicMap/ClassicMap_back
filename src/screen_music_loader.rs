@@ -118,6 +118,12 @@ pub struct TitleRecord {
     /// 작품 대표 그림으로 쓸 권리자 공식 YouTube 예고편·클립
     #[serde(default)]
     pub cover_clip: Option<OfficialClip>,
+    /// 포스터 주소. 지금은 한국영상자료원 KMDb 오픈 API 가 주는 file.koreafilm.or.kr 주소만 받는다
+    #[serde(default)]
+    pub poster_url: Option<String>,
+    /// 포스터 출처. 화면에 그대로 적는다
+    #[serde(default)]
+    pub poster_credit: Option<String>,
     pub display_order: i32,
     pub status: String,
     #[serde(default)]
@@ -157,6 +163,20 @@ fn optional_text(field: &str, value: &Option<String>, max_chars: usize) -> Resul
         Some(value) => not_blank(field, value, max_chars),
         None => Ok(()),
     }
+}
+
+/// 포스터를 받아도 되는 곳. KMDb 오픈 API 가 주는 포스터 파일 서버
+const POSTER_HOSTS: [&str; 1] = ["file.koreafilm.or.kr"];
+
+fn is_poster_url(url: &str) -> bool {
+    url.chars().count() <= 500
+        && !url.contains(char::is_whitespace)
+        && url::Url::parse(url).is_ok_and(|parsed| {
+            parsed.scheme() == "https"
+                && parsed
+                    .host_str()
+                    .is_some_and(|host| POSTER_HOSTS.contains(&host))
+        })
 }
 
 /// 근거 링크는 웹 주소만 받는다. 오래된 보도자료처럼 http 로만 열리는 곳도 있다
@@ -294,6 +314,22 @@ impl TitleRecord {
         optional_text("creditLine", &self.credit_line, 200).map_err(context)?;
         if let Some(clip) = &self.cover_clip {
             clip.validate().map_err(context)?;
+        }
+        match (&self.poster_url, &self.poster_credit) {
+            (None, None) => {}
+            (Some(url), Some(credit)) => {
+                if !is_poster_url(url) {
+                    return Err(context(format!(
+                        "posterUrl 은 https://file.koreafilm.or.kr 주소여야 함: {url}"
+                    )));
+                }
+                not_blank("posterCredit", credit, 100).map_err(context)?;
+            }
+            _ => {
+                return Err(context(
+                    "posterUrl 과 posterCredit 은 같이 적어야 함".to_string(),
+                ))
+            }
         }
         if let Some(year) = self.release_year {
             if !(1888..=2100).contains(&year) {
@@ -509,6 +545,8 @@ struct StoredTitle {
     country_code: Option<String>,
     credit_line: Option<String>,
     cover_clip: Option<String>,
+    poster_url: Option<String>,
+    poster_credit: Option<String>,
     display_order: i32,
     editorial_status: String,
 }
@@ -522,6 +560,8 @@ impl StoredTitle {
             && self.country_code == record.country_code
             && self.credit_line == record.credit_line
             && parse_json(self.cover_clip.as_deref()) == title_clip_json(record)
+            && self.poster_url == record.poster_url
+            && self.poster_credit == record.poster_credit
             && self.display_order == record.display_order
             && self.editorial_status == record.status
     }
@@ -702,7 +742,7 @@ impl ScreenMusicLoader {
         let stored = sqlx::query_as::<_, StoredTitle>(
             "SELECT id, kind, title_ko, title_original, release_year, country_code,
                     credit_line, CAST(cover_clip AS CHAR CHARACTER SET utf8mb4) AS cover_clip,
-                    display_order, editorial_status
+                    poster_url, poster_credit, display_order, editorial_status
              FROM screen_titles
              WHERE slug = ?
              FOR UPDATE",
@@ -718,7 +758,7 @@ impl ScreenMusicLoader {
                     "UPDATE screen_titles
                      SET kind = ?, title_ko = ?, title_original = ?, release_year = ?,
                          country_code = ?, credit_line = ?, cover_clip = CAST(? AS JSON),
-                         display_order = ?, editorial_status = ?
+                         poster_url = ?, poster_credit = ?, display_order = ?, editorial_status = ?
                      WHERE id = ?",
                 )
                 .bind(&record.kind)
@@ -728,6 +768,8 @@ impl ScreenMusicLoader {
                 .bind(&record.country_code)
                 .bind(&record.credit_line)
                 .bind(title_clip_json(record).as_ref().map(Value::to_string))
+                .bind(&record.poster_url)
+                .bind(&record.poster_credit)
                 .bind(record.display_order)
                 .bind(&record.status)
                 .bind(stored.id)
@@ -739,8 +781,9 @@ impl ScreenMusicLoader {
                 let result = sqlx::query(
                     "INSERT INTO screen_titles
                          (slug, kind, title_ko, title_original, release_year, country_code,
-                          credit_line, cover_clip, display_order, editorial_status)
-                     VALUES (?, ?, ?, ?, ?, ?, ?, CAST(? AS JSON), ?, ?)",
+                          credit_line, cover_clip, poster_url, poster_credit, display_order,
+                          editorial_status)
+                     VALUES (?, ?, ?, ?, ?, ?, ?, CAST(? AS JSON), ?, ?, ?, ?)",
                 )
                 .bind(&record.slug)
                 .bind(&record.kind)
@@ -750,6 +793,8 @@ impl ScreenMusicLoader {
                 .bind(&record.country_code)
                 .bind(&record.credit_line)
                 .bind(title_clip_json(record).as_ref().map(Value::to_string))
+                .bind(&record.poster_url)
+                .bind(&record.poster_credit)
                 .bind(record.display_order)
                 .bind(&record.status)
                 .execute(&mut **transaction)
@@ -1067,6 +1112,22 @@ mod tests {
         assert!(parse_records(&clip, None).is_err());
         let good = clip.replace("\"abc\"", "\"dQw4w9WgXcQ\"");
         assert!(parse_records(&good, None).is_ok());
+    }
+
+    #[test]
+    fn poster_needs_kmdb_url_and_credit() {
+        let poster = LINE.replacen(
+            "\"displayOrder\"",
+            r#""posterUrl":"https://file.koreafilm.or.kr/thm/02/00/02/08/tn_DPK006270.JPG","posterCredit":"KMDb","displayOrder""#,
+            1,
+        );
+        assert!(parse_records(&poster, None).is_ok());
+        let other_host = poster.replace("file.koreafilm.or.kr", "image.tmdb.org");
+        assert!(parse_records(&other_host, None).is_err());
+        let plain_http = poster.replace("https://file", "http://file");
+        assert!(parse_records(&plain_http, None).is_err());
+        let no_credit = poster.replace(r#","posterCredit":"KMDb""#, "");
+        assert!(parse_records(&no_credit, None).is_err());
     }
 
     #[test]

@@ -247,7 +247,7 @@ async fn screen_music_loads_idempotently_and_is_served() {
         &path,
         line(piece_id, composer_id, "PUBLISHED", "숙소에 아침마다 틀어요.").replacen(
             r#""displayOrder":1,"#,
-            r#""coverClip":{"videoId":"aaaaaaaaaaa","startSec":0,"channel":"예고편 채널","title":"예고편"},"displayOrder":1,"#,
+            r#""coverClip":{"videoId":"aaaaaaaaaaa","startSec":0,"channel":"예고편 채널","title":"예고편"},"posterUrl":"https://file.koreafilm.or.kr/thm/02/00/02/08/tn_DPK006270.JPG","posterCredit":"KMDb","displayOrder":1,"#,
             1,
         ),
     )
@@ -268,6 +268,11 @@ async fn screen_music_loads_idempotently_and_is_served() {
     assert_eq!(detail.title.cover_channel.as_deref(), Some("예고편 채널"));
     // 예고편에 화질을 안 적었으면 큐 클립의 화질을 섞어 쓰지 않는다
     assert_eq!(detail.title.cover_thumb_jpg, None);
+    assert_eq!(
+        detail.title.poster_url.as_deref(),
+        Some("https://file.koreafilm.or.kr/thm/02/00/02/08/tn_DPK006270.JPG")
+    );
+    assert_eq!(detail.title.poster_credit.as_deref(), Some("KMDb"));
 
     // 초안으로 돌리면 화면에서 빠진다
     fs::write(

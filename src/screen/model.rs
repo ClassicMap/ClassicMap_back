@@ -16,6 +16,9 @@ pub struct ScreenTitleSummary {
     /// TMDB 이미지 파일 경로. 주소는 앱이 크기를 골라 붙인다
     pub poster_path: Option<String>,
     pub backdrop_path: Option<String>,
+    /// 포스터 주소(KMDb). 화면에 출처(poster_credit)를 같이 적는다
+    pub poster_url: Option<String>,
+    pub poster_credit: Option<String>,
     /// 공개된 큐 수
     pub cue_count: i64,
     /// 포스터·스틸이 없을 때 쓸 대표 그림. 권리자 공식 YouTube 클립 id.
@@ -120,6 +123,8 @@ pub struct PieceScreenCue {
     pub kind: String,
     pub release_year: Option<u16>,
     pub poster_path: Option<String>,
+    pub poster_url: Option<String>,
+    pub poster_credit: Option<String>,
     pub part_label: Option<String>,
     pub episode_label: Option<String>,
     /// 영화에 나온 대목과 같은 비교 구간. 다른 대목이면 null
@@ -140,6 +145,8 @@ pub struct FeaturedScreenCue {
     pub title_ko: String,
     pub kind: String,
     pub poster_path: Option<String>,
+    pub poster_url: Option<String>,
+    pub poster_credit: Option<String>,
     pub composer_id: i32,
     pub composer_name: String,
     pub piece_id: i32,
