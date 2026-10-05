@@ -146,10 +146,12 @@ fn optional_text(field: &str, value: &Option<String>, max_chars: usize) -> Resul
     }
 }
 
-fn is_https(url: &str) -> bool {
-    url.starts_with("https://")
-        && url.len() > "https://".len()
-        && !url.contains(char::is_whitespace)
+/// 근거 링크는 웹 주소만 받는다. 오래된 보도자료처럼 http 로만 열리는 곳도 있다
+fn is_web_url(url: &str) -> bool {
+    !url.contains(char::is_whitespace)
+        && url::Url::parse(url).is_ok_and(|parsed| {
+            matches!(parsed.scheme(), "https" | "http") && parsed.host_str().is_some()
+        })
 }
 
 /// 공개 기준: 1차 근거 하나, 또는 서로 다른 곳의 2차 근거 둘
@@ -231,9 +233,9 @@ impl CueRecord {
             one_of("evidence.grade", &item.grade, &EVIDENCE_GRADES).map_err(context)?;
             not_blank("evidence.kind", &item.kind, 32).map_err(context)?;
             not_blank("evidence.note", &item.note, 300).map_err(context)?;
-            if !is_https(&item.url) {
+            if !is_web_url(&item.url) {
                 return Err(context(format!(
-                    "evidence.url 은 https 주소여야 함: {}",
+                    "evidence.url 은 웹 주소여야 함: {}",
                     item.url
                 )));
             }
