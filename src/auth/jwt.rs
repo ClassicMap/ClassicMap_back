@@ -10,6 +10,9 @@ pub struct Claims {
     pub iss: String,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub azp: Option<String>,
+    /// Clerk 세션 토큰에 `{"email": "{{user.primary_email_address}}"}` 클레임을 넣으면 온다
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub email: Option<String>,
 }
 
 /// Clerk JWT 토큰 검증

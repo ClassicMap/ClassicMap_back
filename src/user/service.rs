@@ -31,6 +31,37 @@ impl UserService {
         }
     }
 
+    /// 로그인한 사용자의 행을 찾는다. 처음 온 사용자면 만들고, 토큰의 이메일이 바뀌었으면 고친다.
+    /// 예전엔 Clerk 웹훅으로 만들었는데 웹훅이 오지 않아 새 가입자가 모든 /me 요청에서 401 을 받았다
+    pub async fn find_or_provision(
+        pool: &DbPool,
+        clerk_id: &str,
+        token_email: Option<&str>,
+    ) -> Result<User, sqlx::Error> {
+        let email = token_email.map(str::trim).filter(|email| !email.is_empty());
+        if let Some(user) = UserRepository::find_by_clerk_id(pool, clerk_id).await? {
+            if let Some(email) = email.filter(|email| *email != user.email) {
+                UserRepository::update_email(pool, user.id, email).await?;
+                return Ok(User {
+                    email: email.to_string(),
+                    ..user
+                });
+            }
+            return Ok(user);
+        }
+        let role = email
+            .map(Self::get_user_role)
+            .unwrap_or_else(|| "user".to_string());
+        UserRepository::create_if_absent(pool, clerk_id, email.unwrap_or(""), &role).await?;
+        Logger::info(
+            "USER",
+            &format!("User provisioned on first sign-in: {}", clerk_id),
+        );
+        UserRepository::find_by_clerk_id(pool, clerk_id)
+            .await?
+            .ok_or(sqlx::Error::RowNotFound)
+    }
+
     pub async fn get_all_users(pool: &DbPool) -> Result<Vec<User>, String> {
         UserRepository::find_all(pool)
             .await

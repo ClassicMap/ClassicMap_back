@@ -1,5 +1,6 @@
 use crate::auth::jwt::verify_clerk_token;
 use crate::user::model::User;
+use crate::user::service::UserService;
 use rocket::{
     http::Status,
     request::{FromRequest, Outcome, Request},
@@ -60,18 +61,18 @@ impl<'r> FromRequest<'r> for AuthenticatedUser {
             }
         };
 
-        let user = match sqlx::query_as::<_, User>(
-            "SELECT id, clerk_id, email, role, is_first_visit, favorite_era FROM users WHERE clerk_id = ?"
+        let user = match UserService::find_or_provision(
+            pool.inner(),
+            &claims.sub,
+            claims.email.as_deref(),
         )
-        .bind(&claims.sub)
-        .fetch_one(pool.inner())
         .await
         {
             Ok(user) => user,
-            Err(_) => {
+            Err(e) => {
                 return Outcome::Error((
-                    Status::Unauthorized,
-                    "User not found in database".to_string(),
+                    Status::InternalServerError,
+                    format!("Failed to load user: {}", e),
                 ))
             }
         };

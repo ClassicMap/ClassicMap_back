@@ -53,6 +53,34 @@ impl UserRepository {
         Ok(result.last_insert_id() as i32)
     }
 
+    /// 처음 로그인한 사용자를 만든다. 같은 계정의 요청이 동시에 와도 한 행만 남는다
+    pub async fn create_if_absent(
+        pool: &DbPool,
+        clerk_id: &str,
+        email: &str,
+        role: &str,
+    ) -> Result<(), Error> {
+        sqlx::query(
+            "INSERT INTO users (clerk_id, email, role) VALUES (?, ?, ?)
+             ON DUPLICATE KEY UPDATE id = id",
+        )
+        .bind(clerk_id)
+        .bind(email)
+        .bind(role)
+        .execute(pool)
+        .await?;
+        Ok(())
+    }
+
+    pub async fn update_email(pool: &DbPool, id: i32, email: &str) -> Result<u64, Error> {
+        let result = sqlx::query("UPDATE users SET email = ? WHERE id = ?")
+            .bind(email)
+            .bind(id)
+            .execute(pool)
+            .await?;
+        Ok(result.rows_affected())
+    }
+
     pub async fn update(pool: &DbPool, id: i32, user: UpdateUser) -> Result<u64, Error> {
         let result = sqlx::query(
             "UPDATE users SET is_first_visit = COALESCE(?, is_first_visit), favorite_era = COALESCE(?, favorite_era) WHERE id = ?",
