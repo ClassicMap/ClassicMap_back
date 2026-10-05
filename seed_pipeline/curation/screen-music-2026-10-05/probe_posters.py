@@ -123,7 +123,8 @@ def probe(title: Json) -> Json:
         chosen = with_poster[0]
         index = POSTER_CHOICE.get(slug, 0)
         if not 0 <= index < len(chosen["posters"]):
-            raise RuntimeError(f"POSTER_CHOICE 순번 {index} 이 포스터 수 {len(chosen['posters'])} 밖")
+            count = len(chosen["posters"])
+            raise RuntimeError(f"POSTER_CHOICE 순번 {index} 이 포스터 수 {count} 밖")
         return {
             "status": "ok",
             **chosen,
