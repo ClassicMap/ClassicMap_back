@@ -26,6 +26,7 @@ pub mod piece;
 pub mod piece_reco_feature_loader;
 pub mod recording;
 pub mod screen_image_refresher;
+pub mod screen_music_loader;
 pub mod search;
 pub mod seed_approval;
 pub mod taste;
