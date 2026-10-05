@@ -189,7 +189,6 @@ async fn rocket() -> _ {
                 user::get_my_profile_visibility,
                 user::update_my_profile_visibility,
                 user::get_public_profile,
-                user::clerk_webhook,
                 // Venue routes
                 venue::get_venues,
                 venue::get_venue,

@@ -14,15 +14,6 @@ pub struct User {
 
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
-pub struct CreateUser {
-    pub clerk_id: String,
-    pub email: String,
-    pub role: Option<String>,
-    pub favorite_era: Option<String>,
-}
-
-#[derive(Debug, Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
 pub struct UpdateUser {
     pub is_first_visit: Option<bool>,
     pub favorite_era: Option<String>,
@@ -249,37 +240,4 @@ pub struct FavoritePieceRequest {
 #[serde(rename_all = "camelCase")]
 pub struct FavoriteRecordingRequest {
     pub recording_id: i32,
-}
-
-#[derive(Debug, Serialize, Deserialize)]
-pub struct ClerkWebhookEvent {
-    pub data: ClerkUserData,
-    pub r#type: String,
-}
-
-#[derive(Debug, Serialize, Deserialize)]
-pub struct ClerkDeleteWebhookEvent {
-    pub data: ClerkDeleteData,
-    pub r#type: String,
-}
-
-#[derive(Debug, Serialize, Deserialize)]
-pub struct ClerkUserData {
-    pub id: String,
-    pub email_addresses: Vec<ClerkEmailAddress>,
-    pub primary_email_address_id: Option<String>,
-    pub deleted: Option<bool>,
-}
-
-#[derive(Debug, Serialize, Deserialize)]
-pub struct ClerkDeleteData {
-    pub id: String,
-    pub deleted: bool,
-    pub object: String,
-}
-
-#[derive(Debug, Serialize, Deserialize)]
-pub struct ClerkEmailAddress {
-    pub id: String,
-    pub email_address: String,
 }

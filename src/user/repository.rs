@@ -1,5 +1,5 @@
 use super::model::{
-    CreateUser, FavoriteArtistItem, FavoriteComposerItem, FavoriteConcertItem, FavoriteGroups,
+    FavoriteArtistItem, FavoriteComposerItem, FavoriteConcertItem, FavoriteGroups,
     FavoritePieceItem, FavoriteRecordingItem, RatedConcertListItem, UpdateProfileVisibility,
     UpdateUser, User, UserPublicProfile,
 };
@@ -34,23 +34,6 @@ impl UserRepository {
             .bind(email)
             .fetch_optional(pool)
             .await
-    }
-
-    pub async fn create(pool: &DbPool, user: CreateUser) -> Result<i32, Error> {
-        let role = user.role.as_deref().unwrap_or("user");
-
-        let result = sqlx::query(
-            "INSERT INTO users (clerk_id, email, role, favorite_era) 
-             VALUES (?, ?, ?, ?)",
-        )
-        .bind(&user.clerk_id)
-        .bind(&user.email)
-        .bind(role)
-        .bind(&user.favorite_era)
-        .execute(pool)
-        .await?;
-
-        Ok(result.last_insert_id() as i32)
     }
 
     /// 처음 로그인한 사용자를 만든다. 같은 계정의 요청이 동시에 와도 한 행만 남는다
