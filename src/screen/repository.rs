@@ -166,6 +166,7 @@ impl ScreenRepository {
     pub async fn search_titles(
         pool: &DbPool,
         query: &SearchText,
+        kind: Option<&str>,
         offset: Option<u32>,
         limit: Option<u32>,
     ) -> Result<ScreenTitlePage, sqlx::Error> {
@@ -182,13 +183,14 @@ impl ScreenRepository {
                  FROM ({SUMMARY_SELECT}) AS summary
                  JOIN screen_titles t ON t.id = summary.id
              ) ranked
-             WHERE ranked.relevance < 4
+             WHERE (ranked.relevance < 4
                 OR REPLACE(ranked.title_ko, ' ', '') LIKE ?
                 OR EXISTS (
                     SELECT 1 FROM screen_music_cues c
                     WHERE c.screen_title_id = ranked.id
                       AND c.editorial_status = 'PUBLISHED'
-                      AND (c.work_title LIKE ? OR c.composer_name LIKE ? OR c.part_label LIKE ?))
+                      AND (c.work_title LIKE ? OR c.composer_name LIKE ? OR c.part_label LIKE ?)))
+               AND (? IS NULL OR ranked.kind = ?)
              ORDER BY ranked.relevance ASC, ranked.id ASC
              LIMIT ? OFFSET ?"
         );
@@ -201,6 +203,8 @@ impl ScreenRepository {
             .bind(query.contains())
             .bind(query.contains())
             .bind(query.contains())
+            .bind(kind)
+            .bind(kind)
             .bind(limit + 1)
             .bind(offset)
             .fetch_all(pool)
@@ -314,6 +318,7 @@ impl ScreenRepository {
         .await
     }
 
+    /// 작품마다 하나씩, 화면 순서대로
     pub async fn find_featured_cues(
         pool: &DbPool,
         limit: Option<u32>,
@@ -321,16 +326,26 @@ impl ScreenRepository {
         let limit = limit.unwrap_or(12).clamp(1, MAX_PAGE_SIZE);
         let sql = format!(
             "{PUBLIC_COMPARISON_CTE}
-             SELECT c.id AS cue_id, t.id AS title_id, t.title_ko, t.kind, t.poster_path,
-                    c.composer_id, c.composer_name, c.piece_id, c.work_title, c.part_label,
-                    c.sector_id
-             FROM screen_music_cues c
-             JOIN screen_titles t ON t.id = c.screen_title_id AND t.editorial_status = 'PUBLISHED'
-             JOIN public_sector ON public_sector.sector_id = c.sector_id
-             JOIN performance_sectors sector
-               ON sector.id = c.sector_id AND sector.piece_id = c.piece_id
-             WHERE c.editorial_status = 'PUBLISHED' AND c.composer_id IS NOT NULL
-             ORDER BY t.display_order ASC, c.display_order ASC, c.id ASC
+             , ranked_cue AS (
+                 SELECT c.id AS cue_id, t.id AS title_id, t.title_ko, t.kind, t.poster_path,
+                        c.composer_id, c.composer_name, c.piece_id, c.work_title, c.part_label,
+                        c.sector_id, t.display_order AS title_order, c.display_order AS cue_order,
+                        ROW_NUMBER() OVER (
+                            PARTITION BY t.id ORDER BY c.display_order ASC, c.id ASC
+                        ) AS title_rank
+                 FROM screen_music_cues c
+                 JOIN screen_titles t
+                   ON t.id = c.screen_title_id AND t.editorial_status = 'PUBLISHED'
+                 JOIN public_sector ON public_sector.sector_id = c.sector_id
+                 JOIN performance_sectors sector
+                   ON sector.id = c.sector_id AND sector.piece_id = c.piece_id
+                 WHERE c.editorial_status = 'PUBLISHED' AND c.composer_id IS NOT NULL
+             )
+             SELECT cue_id, title_id, title_ko, kind, poster_path, composer_id, composer_name,
+                    piece_id, work_title, part_label, sector_id
+             FROM ranked_cue
+             WHERE title_rank = 1
+             ORDER BY title_order ASC, cue_order ASC, cue_id ASC
              LIMIT ?"
         );
         sqlx::query_as::<_, FeaturedScreenCue>(&sql)
