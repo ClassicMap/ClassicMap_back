@@ -112,6 +112,24 @@ async fn screen_music_loads_idempotently_and_is_served() {
     );
     assert_ne!(detail.cues[0].listen.kind, "sector");
 
+    // 곡으로 찾기: 카탈로그 작품과 카탈로그 밖 곡이 각각 한 줄씩, 이 작품이 붙어 나온다
+    let works = ScreenRepository::list_works(&pool, None, Some(50))
+        .await
+        .expect("곡 목록");
+    let piece_work = works
+        .items
+        .iter()
+        .find(|work| work.piece_id == Some(piece_id))
+        .expect("카탈로그 곡");
+    assert!(piece_work
+        .titles
+        .iter()
+        .any(|title| title.title_id == title_id));
+    assert!(works
+        .items
+        .iter()
+        .any(|work| work.piece_id.is_none() && work.work_title == "카탈로그 밖 곡"));
+
     // 서로 다른 주 연주자 셋의 공개 연주가 붙으면 그 구간으로 바로 듣는다
     let sector_id: i32 =
         sqlx::query_scalar("SELECT id FROM performance_sectors WHERE sector_key = ?")

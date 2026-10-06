@@ -127,6 +127,7 @@ async fn rocket() -> _ {
                 screen::get_screen_title,
                 screen::get_piece_screen_cues,
                 screen::get_featured_screen_cues,
+                screen::get_screen_works,
                 screen::get_screen_still_candidates,
                 screen::put_screen_cue_still,
                 // Concert routes

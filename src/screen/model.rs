@@ -159,6 +159,35 @@ pub struct FeaturedScreenCue {
     pub cover_thumb_webp: Option<String>,
 }
 
+/// '곡으로 찾기' 한 줄. 영화에 나온 곡 하나와 그 곡이 나온 작품들
+#[derive(Debug, Clone, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ScreenWork {
+    pub composer_id: Option<i32>,
+    pub composer_name: String,
+    /// 카탈로그 작품이면 비교로 바로 갈 수 있다. 카탈로그 밖 곡이면 null
+    pub piece_id: Option<i32>,
+    pub work_title: String,
+    /// 이 곡이 나온 작품. 모아 보는 화면 순서대로, 작품마다 한 번
+    pub titles: Vec<ScreenWorkTitle>,
+}
+
+#[derive(Debug, Clone, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ScreenWorkTitle {
+    pub title_id: i32,
+    pub title_ko: String,
+    pub kind: String,
+    pub release_year: Option<u16>,
+}
+
+#[derive(Debug, Clone, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ScreenWorkPage {
+    pub items: Vec<ScreenWork>,
+    pub has_more: bool,
+}
+
 /// 관리자 장면 스틸 고르기
 #[derive(Debug, Clone, Serialize)]
 #[serde(rename_all = "camelCase")]

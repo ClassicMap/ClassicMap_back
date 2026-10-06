@@ -5,7 +5,7 @@ use std::collections::HashMap;
 use super::model::{
     CueEvidence, CueListen, FeaturedScreenCue, OfficialClip, PieceScreenCue, ScreenCue,
     ScreenCueStill, ScreenStillCandidates, ScreenTitleDetail, ScreenTitlePage, ScreenTitleSummary,
-    StreamingLinks,
+    ScreenWork, ScreenWorkPage, ScreenWorkTitle, StreamingLinks,
 };
 use crate::{comparison::repository::PUBLIC_COMPARISON_CTE, db::DbPool, search::SearchText};
 
@@ -67,6 +67,77 @@ const CUE_SELECT: &str = "SELECT c.id, c.display_order, c.episode_label, c.compo
      LEFT JOIN pieces piece ON piece.id = c.piece_id";
 
 pub const KINDS: [&str; 3] = ["MOVIE", "SERIES", "ANIME"];
+
+#[derive(Debug, FromRow)]
+struct WorkCueRow {
+    composer_id: Option<i32>,
+    composer_name: String,
+    piece_id: Option<i32>,
+    work_title: String,
+    title_id: i32,
+    title_ko: String,
+    kind: String,
+    release_year: Option<u16>,
+}
+
+/// 공개된 큐를 곡마다 모으고, 작품이 많이 나온 작곡가 → 작품이 많이 나온 곡 순으로 늘어놓는다.
+/// 카탈로그 작품은 piece_id 로, 카탈로그 밖 곡은 작곡가 이름과 곡 이름으로 묶는다
+fn group_works(rows: Vec<WorkCueRow>) -> Vec<ScreenWork> {
+    let mut works: Vec<ScreenWork> = Vec::new();
+    let mut index: HashMap<(Option<i32>, String, String), usize> = HashMap::new();
+    for row in rows {
+        let key = match row.piece_id {
+            Some(piece_id) => (Some(piece_id), String::new(), String::new()),
+            None => (None, row.composer_name.clone(), row.work_title.clone()),
+        };
+        let position = *index.entry(key).or_insert_with(|| {
+            works.push(ScreenWork {
+                composer_id: row.composer_id,
+                composer_name: row.composer_name.clone(),
+                piece_id: row.piece_id,
+                work_title: row.work_title.clone(),
+                titles: Vec::new(),
+            });
+            works.len() - 1
+        });
+        let work = &mut works[position];
+        if !work
+            .titles
+            .iter()
+            .any(|title| title.title_id == row.title_id)
+        {
+            work.titles.push(ScreenWorkTitle {
+                title_id: row.title_id,
+                title_ko: row.title_ko,
+                kind: row.kind,
+                release_year: row.release_year,
+            });
+        }
+    }
+
+    let composer_key = |work: &ScreenWork| match work.composer_id {
+        Some(id) => format!("#{id}"),
+        None => work.composer_name.clone(),
+    };
+    let mut composer_titles: HashMap<String, std::collections::HashSet<i32>> = HashMap::new();
+    for work in &works {
+        composer_titles
+            .entry(composer_key(work))
+            .or_default()
+            .extend(work.titles.iter().map(|title| title.title_id));
+    }
+    works.sort_by(|a, b| {
+        let a_count = composer_titles[&composer_key(a)].len();
+        let b_count = composer_titles[&composer_key(b)].len();
+        b_count
+            .cmp(&a_count)
+            .then_with(|| a.composer_name.cmp(&b.composer_name))
+            .then_with(|| composer_key(a).cmp(&composer_key(b)))
+            .then_with(|| b.titles.len().cmp(&a.titles.len()))
+            .then_with(|| a.work_title.cmp(&b.work_title))
+    });
+    works
+}
 
 #[derive(Debug, FromRow)]
 struct CueRow {
@@ -174,6 +245,32 @@ fn page_from(mut items: Vec<ScreenTitleSummary>, limit: u32) -> ScreenTitlePage 
 pub struct ScreenRepository;
 
 impl ScreenRepository {
+    /// '곡으로 찾기'. 곡이 몇 백 개라 한 번에 모아 정렬한 뒤 잘라 준다
+    pub async fn list_works(
+        pool: &DbPool,
+        offset: Option<u32>,
+        limit: Option<u32>,
+    ) -> Result<ScreenWorkPage, sqlx::Error> {
+        let (offset, limit) = page_bounds(offset, limit);
+        let rows = sqlx::query_as::<_, WorkCueRow>(
+            "SELECT c.composer_id, c.composer_name, c.piece_id, c.work_title,
+                    t.id AS title_id, t.title_ko, t.kind, t.release_year
+             FROM screen_music_cues c
+             JOIN screen_titles t ON t.id = c.screen_title_id AND t.editorial_status = 'PUBLISHED'
+             WHERE c.editorial_status = 'PUBLISHED'
+             ORDER BY t.display_order ASC, t.id ASC, c.display_order ASC, c.id ASC",
+        )
+        .fetch_all(pool)
+        .await?;
+        let works = group_works(rows);
+        let start = (offset as usize).min(works.len());
+        let end = (start + limit as usize).min(works.len());
+        Ok(ScreenWorkPage {
+            has_more: end < works.len(),
+            items: works[start..end].to_vec(),
+        })
+    }
+
     pub async fn list_titles(
         pool: &DbPool,
         kind: Option<&str>,
@@ -478,7 +575,7 @@ fn parse_paths(text: Option<&str>) -> Vec<String> {
 
 #[cfg(test)]
 mod tests {
-    use super::{listen_for, page_bounds, parse_evidence, CueRow};
+    use super::{group_works, listen_for, page_bounds, parse_evidence, CueRow, WorkCueRow};
     use std::collections::HashMap;
 
     fn row(piece_id: Option<i32>, sector_id: Option<i32>, apple: Option<&str>) -> CueRow {
@@ -546,5 +643,54 @@ mod tests {
         assert_eq!(page_bounds(None, None), (0, 24));
         assert_eq!(page_bounds(Some(10), Some(500)), (10, 50));
         assert_eq!(page_bounds(None, Some(0)), (0, 1));
+    }
+
+    fn work_row(
+        composer: (Option<i32>, &str),
+        piece: Option<i32>,
+        work: &str,
+        title: i32,
+    ) -> WorkCueRow {
+        WorkCueRow {
+            composer_id: composer.0,
+            composer_name: composer.1.to_string(),
+            piece_id: piece,
+            work_title: work.to_string(),
+            title_id: title,
+            title_ko: format!("작품{title}"),
+            kind: "MOVIE".to_string(),
+            release_year: Some(2000),
+        }
+    }
+
+    #[test]
+    fn works_group_by_piece_and_rank_by_titles() {
+        let mozart = (Some(1), "모차르트");
+        let barber = (None, "바버");
+        let bach = (Some(2), "바흐");
+        let works = group_works(vec![
+            work_row(bach, Some(20), "골드베르크 변주곡", 1),
+            work_row(mozart, Some(10), "피가로의 결혼", 1),
+            work_row(mozart, Some(10), "피가로의 결혼", 1),
+            work_row(mozart, Some(11), "레퀴엠", 2),
+            work_row(mozart, Some(10), "피가로의 결혼", 3),
+            work_row(barber, None, "현을 위한 아다지오", 2),
+            work_row(barber, None, "현을 위한 아다지오", 4),
+        ]);
+        let order: Vec<(&str, usize)> = works
+            .iter()
+            .map(|work| (work.work_title.as_str(), work.titles.len()))
+            .collect();
+        // 모차르트(작품 3편) → 바버(2편) → 바흐(1편), 모차르트 안에서는 많이 나온 곡부터
+        assert_eq!(
+            order,
+            vec![
+                ("피가로의 결혼", 2),
+                ("레퀴엠", 1),
+                ("현을 위한 아다지오", 2),
+                ("골드베르크 변주곡", 1),
+            ]
+        );
+        assert_eq!(works[2].piece_id, None);
     }
 }
