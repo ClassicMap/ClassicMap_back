@@ -58,7 +58,14 @@ pub struct OfficialClip {
     /// webp 썸네일이 있으면 가장 높은 화질. webp 가 없는 영상은 비운다
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub thumb_webp: Option<String>,
+    /// 그 곡이 나오는 장면을 보여 주는 썸네일. default 는 대표 썸네일, 1·2·3 은 YouTube 가
+    /// 영상 25·50·75% 지점에서 뜬 그림이다. 사람이 확인한 클립에만 적고, 없으면 장면 그림을 두지 않는다
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub scene_frame: Option<String>,
 }
+
+/// 장면 그림으로 쓸 수 있는 썸네일
+pub const SCENE_FRAMES: [&str; 4] = ["default", "1", "2", "3"];
 
 /// YouTube 썸네일 화질. 높은 것부터
 pub const THUMB_QUALITIES: [&str; 4] = ["maxresdefault", "sddefault", "hqdefault", "mqdefault"];
@@ -229,6 +236,13 @@ impl OfficialClip {
                         "officialClip.{field} 가 썸네일 화질이 아님: {value}"
                     ));
                 }
+            }
+        }
+        if let Some(frame) = &self.scene_frame {
+            if !SCENE_FRAMES.contains(&frame.as_str()) {
+                return Err(format!(
+                    "officialClip.sceneFrame 이 썸네일 이름이 아님: {frame}"
+                ));
             }
         }
         if self.thumb_webp.is_some() && self.thumb_jpg.is_none() {
@@ -1144,5 +1158,15 @@ mod tests {
         .is_err());
         assert!(parse_records(&clip.replace("\"thumbJpg\":\"sddefault\",", ""), None).is_err());
         assert!(parse_records(&clip.replace(",\"thumbWebp\":\"sddefault\"", ""), None).is_ok());
+        let framed = clip.replace(
+            "\"thumbWebp\":\"sddefault\"",
+            "\"thumbWebp\":\"sddefault\",\"sceneFrame\":\"3\"",
+        );
+        assert!(parse_records(&framed, None).is_ok());
+        assert!(parse_records(
+            &framed.replace("\"sceneFrame\":\"3\"", "\"sceneFrame\":\"4\""),
+            None
+        )
+        .is_err());
     }
 }

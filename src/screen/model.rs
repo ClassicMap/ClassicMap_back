@@ -51,6 +51,9 @@ pub struct OfficialClip {
     /// 있는 가장 높은 webp 썸네일 화질. webp 가 없거나 모르면 빠진다
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub thumb_webp: Option<String>,
+    /// 그 곡이 나오는 장면을 보여 주는 썸네일(default·1·2·3). 확인한 클립에만 있다
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub scene_frame: Option<String>,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]

@@ -231,6 +231,8 @@ STATUS = "PUBLISHED"
 COVERS = json.load(open(HERE / "covers.json")) if (HERE / "covers.json").exists() else {}
 # 영상마다 있는 가장 높은 썸네일 화질(probe_thumbs.py 가 잰다)
 THUMBS = json.load(open(HERE / "thumbs.json")) if (HERE / "thumbs.json").exists() else {}
+# 그 곡이 나오는 장면 그림. 확인 표에서 사람이 고른 것만("<slug>/<cue key>" → default·1·2·3)
+SCENE_FRAMES = json.load(open(HERE / "scene-frames.json")) if (HERE / "scene-frames.json").exists() else {}
 # KMDb 포스터(probe_posters.py 가 찾고 사람이 확인한다). status 가 ok 인 것만 싣는다
 POSTERS = json.load(open(HERE / "posters.json")) if (HERE / "posters.json").exists() else {}
 
@@ -328,6 +330,9 @@ def main() -> int:
             if key in used_keys:
                 key = f"{key}-{cue['order']}"
             used_keys.add(key)
+            frame = SCENE_FRAMES.get(f"{slug}/{key}")
+            if clip and frame:
+                clip = dict(clip, sceneFrame=frame)
             entry = {
                 "key": key,
                 "order": cue["order"],
