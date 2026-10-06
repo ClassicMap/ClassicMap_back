@@ -231,10 +231,11 @@ STATUS = "PUBLISHED"
 COVERS = json.load(open(HERE / "covers.json")) if (HERE / "covers.json").exists() else {}
 # 영상마다 있는 가장 높은 썸네일 화질(probe_thumbs.py 가 잰다)
 THUMBS = json.load(open(HERE / "thumbs.json")) if (HERE / "thumbs.json").exists() else {}
-# 그 곡이 나오는 장면 그림과 곡이 들리기 시작하는 시점. 확인 표에서 사람이 고르고 들어 본 것만
+# 그 곡이 나오는 장면 그림과 곡이 들리기 시작하는 시점. 사람이 확인 표에서 고른 것과 추천
 # ("<slug>/<cue key>" → {"frame": default·1·2·3 또는 null, "startSec": 초 또는 null,
 #  "clip": 조사 때 없던 공식 장면 클립을 새로 찾았으면 그 클립, "source": 확인 표·추천})
-SCENE_FRAMES = json.load(open(HERE / "scene-frames.json")) if (HERE / "scene-frames.json").exists() else {}
+SCENES_PATH = HERE / "scene-frames.json"
+SCENE_FRAMES = json.loads(SCENES_PATH.read_text()) if SCENES_PATH.exists() else {}
 # KMDb 포스터(probe_posters.py 가 찾고 사람이 확인한다). status 가 ok 인 것만 싣는다
 POSTERS = json.load(open(HERE / "posters.json")) if (HERE / "posters.json").exists() else {}
 
