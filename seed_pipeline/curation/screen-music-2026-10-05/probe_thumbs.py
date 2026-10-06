@@ -32,6 +32,11 @@ def video_ids() -> list[str]:
     ids: set[str] = set()
     for clip in json.loads((HERE / "covers.json").read_text()).values():
         ids.add(clip["videoId"])
+    scenes = HERE / "scene-frames.json"
+    if scenes.exists():
+        for scene in json.loads(scenes.read_text()).values():
+            if scene.get("clip"):
+                ids.add(scene["clip"]["videoId"])
     for path in sorted((HERE / "research").glob("*.json")):
         for cue in json.loads(path.read_text()).get("cues", []):
             clip = cue.get("officialClip")
