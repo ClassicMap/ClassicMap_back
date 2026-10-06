@@ -5,5 +5,5 @@ pub mod repository;
 
 pub use api::{
     get_featured_screen_cues, get_piece_screen_cues, get_screen_still_candidates, get_screen_title,
-    get_screen_titles, put_screen_cue_still, search_screen_titles,
+    get_screen_titles, get_screen_works, put_screen_cue_still, search_screen_titles,
 };

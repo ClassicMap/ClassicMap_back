@@ -2,7 +2,7 @@ use rocket::{http::Status, serde::json::Json, State};
 
 use super::model::{
     FeaturedScreenCue, PieceScreenCue, ScreenCueStillInput, ScreenStillCandidates,
-    ScreenTitleDetail, ScreenTitlePage,
+    ScreenTitleDetail, ScreenTitlePage, ScreenWorkPage,
 };
 use super::repository::{ScreenRepository, KINDS};
 use crate::{auth::AdminUser, db::DbPool, logger::Logger, search::SearchText};
@@ -92,6 +92,18 @@ pub async fn get_piece_screen_cues(
                 error,
             )
         })
+}
+
+#[get("/screen-works?<offset>&<limit>")]
+pub async fn get_screen_works(
+    pool: &State<DbPool>,
+    offset: Option<u32>,
+    limit: Option<u32>,
+) -> Result<Json<ScreenWorkPage>, Status> {
+    ScreenRepository::list_works(pool, offset, limit)
+        .await
+        .map(Json)
+        .map_err(|error| server_error("Failed to list screen works", error))
 }
 
 #[get("/screen-cues/featured?<limit>")]
