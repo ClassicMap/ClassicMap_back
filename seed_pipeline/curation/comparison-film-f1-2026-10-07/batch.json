@@ -1,0 +1,194 @@
+{
+  "batchId": "film-f1",
+  "note": "영화 속 클래식 1차. 영화에 나온 대목인데 비교 구간이 없던 셋(말러 5번 Adagietto, 라흐마니노프 2번 1악장 도입, 라 트라비아타 Sempre libera)을 기존 곡에 새 구간으로 붙인다. 기존 source 는 모두 발행돼 재사용하면 SOURCE_STATE_CONFLICT 이므로 새 영상으로 고른다.",
+  "pieces": [
+    {
+      "pieceId": 216,
+      "workMbid": "adcdc472-8b19-4e6f-aa4e-be8c6aea5f8a",
+      "composerQid": "Q7304",
+      "titleKo": "교향곡 5번 C#단조",
+      "titleEn": "Symphony no. 5",
+      "composerNameEn": "Gustav Mahler",
+      "composerNameKo": "구스타프 말러",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv4-adagietto",
+        "type": "EXCERPT",
+        "nameKo": "4악장 Adagietto 도입 (현과 하프)",
+        "nameEn": "IV. Adagietto, opening",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "현의 첫 음과 하프 아르페지오(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "JzALG2cAhn8",
+          "artistId": 235,
+          "artistName": "Myung-Whun Chung",
+          "wikidata": "Q153778",
+          "orchestra": {
+            "name": "Seoul Philharmonic Orchestra",
+            "wikidata": "Q483782"
+          }
+        },
+        {
+          "videoId": "mJ5pO8fIJQQ",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "JwtfwIopLi8",
+          "artistId": 290,
+          "artistName": "Riccardo Chailly",
+          "wikidata": "Q371795",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 225,
+      "workMbid": "aca4167a-b927-41f5-a839-99cf9ad476cc",
+      "composerQid": "Q131861",
+      "titleKo": "피아노 협주곡 2번 C단조",
+      "titleEn": "Piano Concerto no. 2 in C minor, op. 18",
+      "composerNameEn": "Sergei Rachmaninoff",
+      "composerNameKo": "세르게이 라흐마니노프",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 도입 (종소리 화음과 첫 주제)",
+        "nameEn": "I. Moderato, opening",
+        "measureStart": "1",
+        "measureEnd": "",
+        "startCue": "피아노 독주의 첫 화음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "caR7C2SHdFI",
+          "artistId": 366,
+          "artistName": "Krystian Zimerman",
+          "wikidata": "Q353461",
+          "conductor": {
+            "name": "Seiji Ozawa",
+            "wikidata": "Q313649"
+          },
+          "orchestra": {
+            "name": "Boston Symphony Orchestra",
+            "wikidata": "Q864369"
+          }
+        },
+        {
+          "videoId": "q0GaOpJl6dM",
+          "artistId": 202,
+          "artistName": "Daniil Trifonov",
+          "wikidata": "Q2635946",
+          "conductor": {
+            "name": "Yannick Nézet-Séguin",
+            "wikidata": "Q951548"
+          },
+          "orchestra": {
+            "name": "The Philadelphia Orchestra",
+            "wikidata": "Q659181"
+          }
+        },
+        {
+          "videoId": "bp2hHNDtCqw",
+          "artistId": 370,
+          "artistName": "Vladimir Ashkenazy",
+          "wikidata": "Q157785",
+          "conductor": {
+            "name": "André Previn",
+            "wikidata": "Q155712"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 148,
+      "workMbid": "24df0a9b-7977-4ff6-a4dc-7ad71db6972c",
+      "composerQid": "Q7317",
+      "titleKo": "오페라 <라 트라비아타>",
+      "titleEn": "La traviata",
+      "composerNameEn": "Giuseppe Verdi",
+      "composerNameKo": "주세페 베르디",
+      "role": "SOPRANO",
+      "sector": {
+        "key": "act1-sempre-libera",
+        "type": "EXCERPT",
+        "nameKo": "1막 「언제나 자유롭게」(Sempre libera)",
+        "nameEn": "Act I: Sempre libera",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "비올레타의 「Follie! follie!」 레치타티보 첫 음",
+        "endCue": "1막 끝 관현악 종결 화음과 잔향"
+      },
+      "videos": [
+        {
+          "videoId": "HU3tFRgi_eQ",
+          "artistId": 673,
+          "artistName": "Ileana Cotrubas",
+          "wikidata": "Q240098",
+          "conductor": {
+            "name": "Carlos Kleiber",
+            "wikidata": "Q160706"
+          },
+          "orchestra": {
+            "name": "Bayerisches Staatsorchester",
+            "wikidata": "Q683117"
+          }
+        },
+        {
+          "videoId": "VhLs0UxqIsg",
+          "artistId": 678,
+          "artistName": "Angela Gheorghiu",
+          "wikidata": "Q159092",
+          "conductor": {
+            "name": "Georg Solti",
+            "wikidata": "Q128085"
+          },
+          "orchestra": {
+            "name": "Orchestra of the Royal Opera House, Covent Garden",
+            "wikidata": "Q11350146"
+          }
+        },
+        {
+          "videoId": "XQrzDb4zwws",
+          "artistId": 663,
+          "artistName": "Edita Gruberová",
+          "wikidata": "Q235549",
+          "conductor": {
+            "name": "Carlo Rizzi",
+            "wikidata": "Q5041594"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
+    }
+  ]
+}
