@@ -29,7 +29,7 @@ MISSING_COMPOSERS = {
 
 MAP = {
     # 베토벤
-    "a-clockwork-orange#4": (76, None, None),
+    "a-clockwork-orange#4": (76, "mv2-opening", None),
     "a-clockwork-orange#5": (76, None, None),
     "a-clockwork-orange#6": (76, None, None),
     "beethoven-virus#1": (76, None, None),
@@ -45,7 +45,7 @@ MAP = {
     "nodame-cantabile-anime#3": (77, None, None),
     "secret-affair#2": (440, "mv3-allegro-ma-non-troppo", None),
     "the-kings-speech#2": (438, "mv2-allegretto", None),
-    "the-kings-speech#3": (80, None, None),
+    "the-kings-speech#3": (80, "mv2-opening", None),
     "the-pianist#3": (78, "mv1-adagio", None),
     "your-lie-in-april#1": (None, None, '바이올린 소나타 9번 A장조 "크로이처"'),
     # 쇼팽
