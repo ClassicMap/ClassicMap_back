@@ -83,7 +83,7 @@ MAP = {
     "whats-opera-doc#2": (None, None, "오페라 <방황하는 네덜란드인> 서곡"),
     "whats-opera-doc#3": (None, None, "오페라 <리엔치> 서곡"),
     "whats-opera-doc#4": (None, None, '오페라 <탄호이저> 중 "베누스베르크 음악"'),
-    "whats-opera-doc#5": (147, None, None),
+    "whats-opera-doc#5": (147, "opening", None),
     # 바흐
     "fantasia#1": (16, None, None),
     "four-hands#3": (432, None, None),
@@ -113,7 +113,7 @@ MAP = {
     "black-swan#1": (162, None, None),
     "black-swan#2": (162, None, None),
     "black-swan#3": (162, None, None),
-    "fantasia#2": (161, None, None),
+    "fantasia#2": (161, "waltz-of-the-flowers", None),
     "keys-to-the-heart#4": (159, None, None),
     "secret-affair#4": (None, None, '피아노 모음곡 <사계> 중 "4월"'),
     # 라흐마니노프
@@ -122,7 +122,7 @@ MAP = {
     "for-horowitz#5": (225, None, None),
     "four-hands#1": (225, None, None),
     "nodame-cantabile-anime#4": (225, None, None),
-    "secret-affair#6": (227, None, None),
+    "secret-affair#6": (227, "var18", None),
     # 로시니
     "a-clockwork-orange#2": (169, "whole-work", None),
     "a-clockwork-orange#3": (168, None, None),
@@ -160,7 +160,7 @@ MAP = {
     "squid-game#2": (185, "intro-waltz1", None),
     # 무소르크스키
     "death-in-venice#4": (None, None, "자장가"),
-    "fantasia#6": (191, None, None),
+    "fantasia#6": (191, "whole-work", None),
     # 스트라빈스키
     "fantasia-2000#6": (310, None, None),
     "fantasia#4": (309, None, None),
@@ -202,7 +202,7 @@ MAP = {
     "sympathy-for-lady-vengeance#2": (164, None, None),
     "the-glory#1": (206, "no4-pie-jesu", None),
     "the-handmaiden#1": (47, None, None),
-    "wednesday#3": (322, None, None),
+    "wednesday#3": (322, "dance-of-the-knights", None),
     "your-lie-in-april#4": (None, None, "사랑의 슬픔 (라흐마니노프 피아노 편곡)"),
 }
 
