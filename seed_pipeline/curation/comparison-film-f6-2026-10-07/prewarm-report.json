@@ -1,0 +1,20 @@
+{
+  "firstAttempt": {
+    "runId": "90c11db3-b194-4704-b26a-971f6e23b57e",
+    "built": 11,
+    "reused": 0,
+    "failed": [
+      {
+        "performanceId": 881,
+        "storageKey": "noW9fM9vgJs-1000-145000-v1-copy.mp4",
+        "reason": "만들기 502 Bad Gateway — http://clipper:3200/noW9fM9vgJs?end=146&profile=v1-copy&start=1"
+      }
+    ]
+  },
+  "resume": {
+    "runId": "90c11db3-b194-4704-b26a-971f6e23b57e",
+    "built": 1,
+    "reused": 11,
+    "failed": []
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "status": "succeeded",
+  "runId": "90c11db3-b194-4704-b26a-971f6e23b57e",
+  "bundlePath": "/app/seed/comparison-film-f6-2026-10-07/candidates.jsonl",
+  "rowCount": 12,
+  "dryRun": false,
+  "mutations": {
+    "performanceSources": 12,
+    "performanceSectors": 4,
+    "performanceCandidates": 12,
+    "performanceCredits": 12,
+    "performances": 12,
+    "clipJobs": 12,
+    "total": 64
+  },
+  "plannedMutations": {
+    "performanceSources": 12,
+    "performanceSectors": 4,
+    "performanceCandidates": 12,
+    "performanceCredits": 12,
+    "performances": 12,
+    "clipJobs": 12,
+    "total": 64
+  }
+}
