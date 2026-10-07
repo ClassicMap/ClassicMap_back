@@ -36,7 +36,7 @@ MAP = {
     "death-in-venice#3": (82, "whole-work", None),
     "detective-conan#1": (78, "mv1-adagio", None),
     "fantasia-2000#1": (75, "mv1-fate", None),
-    "fantasia#5": (437, None, None),
+    "fantasia#5": (437, "mv1-opening", None),
     "for-horowitz#1": (80, None, None),
     "four-hands#4": (79, None, None),
     "keys-to-the-heart#1": (78, "mv3-presto", None),
@@ -114,7 +114,7 @@ MAP = {
     "black-swan#2": (162, None, None),
     "black-swan#3": (162, None, None),
     "fantasia#2": (161, "waltz-of-the-flowers", None),
-    "keys-to-the-heart#4": (159, None, None),
+    "keys-to-the-heart#4": (159, "mv1-opening", None),
     "secret-affair#4": (None, None, '피아노 모음곡 <사계> 중 "4월"'),
     # 라흐마니노프
     "brief-encounter#1": (225, "mv1-opening", None),
@@ -162,8 +162,8 @@ MAP = {
     "death-in-venice#4": (None, None, "자장가"),
     "fantasia#6": (191, "whole-work", None),
     # 스트라빈스키
-    "fantasia-2000#6": (310, None, None),
-    "fantasia#4": (309, None, None),
+    "fantasia-2000#6": (310, "danse-infernale", None),
+    "fantasia#4": (309, "part1-introduction", None),
     # 드뷔시
     "for-horowitz#4": (224, "whole-work", None),
     "oceans-eleven#1": (220, "whole-work", None),
