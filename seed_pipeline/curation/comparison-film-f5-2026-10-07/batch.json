@@ -1,0 +1,75 @@
+{
+  "batchId": "film-f5",
+  "note": "영화 속 클래식 5차. 베토벤 바이러스 10회 「합창」 공연 MBC 공식 클립(IdfX269YshA) 374~438.5초가 4악장 m.543~594 총합창임을 오디오 정렬로 확인했다(아바도·샤이 두 기준, 교차 0.027/0.039). 그 대목을 기존 곡 76 에 새 구간으로 붙인다. 기존 source 는 모두 발행돼 새 영상으로 고른다.",
+  "pieces": [
+    {
+      "pieceId": 76,
+      "workMbid": "c35b4956-d4f8-321a-865b-5b13d9ed192b",
+      "composerQid": "Q255",
+      "titleKo": "교향곡 9번 D단조 Op. 125 “합창”",
+      "titleEn": "Symphony no. 9 in D minor, op. 125 “Choral”",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv4-freude-chorus",
+        "type": "EXCERPT",
+        "nameKo": "4악장 「환희의 송가」 총합창 (Freude, schöner Götterfunken)",
+        "nameEn": "IV. Ode to Joy, full chorus",
+        "measureStart": "543",
+        "measureEnd": "594",
+        "startCue": "합창과 관현악 총주가 「Freude, schöner Götterfunken」을 함께 부르는 첫 음(m.543)",
+        "endCue": "m.594 끝, Andante maestoso(Seid umschlungen) 직전"
+      },
+      "excerpt": {
+        "referenceVideoId": "KppnREiC3Dc",
+        "start": 823.1,
+        "end": 871.6
+      },
+      "videos": [
+        {
+          "videoId": "KppnREiC3Dc",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "choir": {
+            "name": "Chicago Symphony Chorus",
+            "wikidata": "Q5095798"
+          },
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "ozxr-jYPhIg",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "choir": {
+            "name": "London Symphony Chorus",
+            "wikidata": "Q6670826"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "Ha0s8mYXQHs",
+          "artistId": 220,
+          "artistName": "Simon Rattle",
+          "wikidata": "Q157814",
+          "choir": {
+            "name": "City of Birmingham Symphony Chorus",
+            "wikidata": "Q5009213"
+          },
+          "orchestra": {
+            "name": "Vienna Philharmonic Orchestra",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
+    }
+  ]
+}
