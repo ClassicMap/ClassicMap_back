@@ -1,0 +1,37 @@
+{
+  "batchId": "film-f3",
+  "note": "영화 속 클래식 3차. 라 트라비아타 2막 「Amami, Alfredo」는 대목만으로는 27~39초라 발췌 최소 30초에 걸려(film-f2), 알프레도가 들어오는 「Che fai?」부터 장면 끝까지를 구간으로 잡는다. 기존 source 는 모두 발행돼 새 영상으로 고른다.",
+  "pieces": [
+    {
+      "pieceId": 148,
+      "workMbid": "24df0a9b-7977-4ff6-a4dc-7ad71db6972c",
+      "composerQid": "Q7317",
+      "titleKo": "오페라 <라 트라비아타>",
+      "titleEn": "La traviata",
+      "composerNameEn": "Giuseppe Verdi",
+      "composerNameKo": "주세페 베르디",
+      "role": "SOPRANO",
+      "sector": {
+        "key": "act2-che-fai-amami",
+        "type": "EXCERPT",
+        "nameKo": "2막 「Che fai?」~「날 사랑해 줘요, 알프레도」(Amami, Alfredo)",
+        "nameEn": "Act II: Che fai? … Amami, Alfredo",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "알프레도가 들어와 「Che fai?」 하고 묻는 장면의 첫 음",
+        "endCue": "비올레타가 「Addio!」 하고 퇴장한 뒤 관현악 맺음"
+      },
+      "videos": [
+        {"videoId": "ThUQ39cyXQE", "artistId": 673, "artistName": "Ileana Cotrubas", "wikidata": "Q240098",
+         "conductor": {"name": "Carlos Kleiber", "wikidata": "Q160706"},
+         "orchestra": {"name": "Bayerisches Staatsorchester", "wikidata": "Q683117"}},
+        {"videoId": "zFIC_ccMaBI", "artistId": 678, "artistName": "Angela Gheorghiu", "wikidata": "Q159092",
+         "conductor": {"name": "Georg Solti", "wikidata": "Q128085"},
+         "orchestra": {"name": "Orchestra of the Royal Opera House, Covent Garden", "wikidata": "Q11350146"}},
+        {"videoId": "Hkjl8QumZ44", "artistId": 675, "artistName": "Tiziana Fabbricini", "wikidata": "Q3991977",
+         "conductor": {"name": "Riccardo Muti", "wikidata": "Q276038"},
+         "orchestra": {"name": "Orchestra del Teatro alla Scala", "wikidata": "Q913873"}}
+      ]
+    }
+  ]
+}
