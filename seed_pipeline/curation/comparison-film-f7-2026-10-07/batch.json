@@ -1,0 +1,314 @@
+{
+ "batchId": "film-f7",
+ "note": "영화 속 클래식 7차. 성악·합창·협주곡 다섯. 아리아·합창·악장 하나 또는 악장 도입을 새 구간으로 붙인다.",
+ "pieces": [
+  {
+   "pieceId": 21,
+   "workMbid": "426b7e1c-68e7-42cf-9cae-4ba34feddf67",
+   "composerQid": "Q7302",
+   "titleKo": "오라토리오 <메시아>",
+   "titleEn": "Messiah, HWV 56",
+   "composerNameEn": "George Frideric Handel",
+   "composerNameKo": "게오르크 프리드리히 헨델",
+   "role": "CONDUCTOR",
+   "sector": {
+    "key": "hallelujah-chorus",
+    "type": "EXCERPT",
+    "nameKo": "2부 끝 합창 「할렐루야」",
+    "nameEn": "Part II, no. 44 Chorus “Hallelujah”",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "관현악 첫 화음(합창 시작 전 짧은 전주)",
+    "endCue": "마지막 「Hallelujah」 화음과 잔향"
+   },
+   "filmNote": "에반게리온 22화. 합창단·악단 크레딧(choir, orchestra)",
+   "videos": [
+    {
+     "videoId": "gFRI-Ar5hTs",
+     "artistId": 664,
+     "artistName": "Georg Solti",
+     "wikidata": "Q128085",
+     "choir": {
+      "name": "Chicago Symphony Chorus",
+      "wikidata": "Q5095798"
+     },
+     "orchestra": {
+      "name": "Chicago Symphony Orchestra",
+      "wikidata": "Q1050470"
+     }
+    },
+    {
+     "videoId": "PZRgIna3Xa4",
+     "artistId": 629,
+     "artistName": "Colin Davis",
+     "wikidata": "Q366624",
+     "choir": {
+      "name": "Bavarian Radio Chorus",
+      "wikidata": "Q881144"
+     },
+     "orchestra": {
+      "name": "Bavarian Radio Symphony Orchestra",
+      "wikidata": "Q636159"
+     }
+    },
+    {
+     "videoId": "c0cLeRk93Gc",
+     "artistId": 220,
+     "artistName": "Simon Rattle",
+     "wikidata": "Q157814",
+     "choir": {
+      "name": "Rundfunkchor Berlin",
+      "wikidata": "Q880801"
+     },
+     "orchestra": {
+      "name": "Berlin Philharmonic Orchestra",
+      "wikidata": "Q152222"
+     }
+    }
+   ]
+  },
+  {
+   "pieceId": 212,
+   "workMbid": "b3e15438-61c0-4357-aba9-f05e29bb639d",
+   "composerQid": "Q7311",
+   "titleKo": "오페라 <토스카>",
+   "titleEn": "Tosca",
+   "composerNameEn": "Giacomo Puccini",
+   "composerNameKo": "자코모 푸치니",
+   "role": "TENOR",
+   "sector": {
+    "key": "e-lucevan-le-stelle",
+    "type": "EXCERPT",
+    "nameKo": "3막 「별은 빛나건만」(E lucevan le stelle)",
+    "nameEn": "Act III: E lucevan le stelle",
+    "measureStart": "",
+    "measureEnd": "",
+    "startCue": "클라리넷 독주 첫 음(아리아 전주)",
+    "endCue": "「Tanto la vita!」 뒤 관현악 마무리"
+   },
+   "filmNote": "파파로티. 테너 + 지휘자·악단 크레딧",
+   "videos": [
+    {
+     "videoId": "wkJE5pe01jk",
+     "artistId": 825,
+     "artistName": "José Carreras",
+     "wikidata": "Q485165",
+     "conductor": {
+      "name": "Colin Davis",
+      "wikidata": "Q366624"
+     },
+     "orchestra": {
+      "name": "Orchestra of the Royal Opera House",
+      "wikidata": "Q11350146"
+     }
+    },
+    {
+     "videoId": "-Bc-d5CHFaU",
+     "artistId": 674,
+     "artistName": "Plácido Domingo",
+     "wikidata": "Q130853",
+     "conductor": {
+      "name": "Zubin Mehta",
+      "wikidata": "Q157635"
+     },
+     "orchestra": {
+      "name": "Philharmonia Orchestra",
+      "wikidata": "Q1046309"
+     }
+    },
+    {
+     "videoId": "q8I_i_Bn52A",
+     "artistId": 676,
+     "artistName": "Roberto Alagna",
+     "wikidata": "Q267617",
+     "conductor": {
+      "name": "Antonio Pappano",
+      "wikidata": "Q1125383"
+     }
+    }
+   ]
+  },
+  {
+   "pieceId": 432,
+   "workMbid": "bb71e7f6-8cd0-37fa-8eef-dac459e03a09",
+   "composerQid": "Q1339",
+   "titleKo": "칸타타 BWV 147 \"예수, 인류의 소망의 기쁨\"",
+   "titleEn": "Herz und Mund und Tat und Leben, BWV 147: X. Choral “Jesus bleibet meine Freude”",
+   "composerNameEn": "Johann Sebastian Bach",
+   "composerNameKo": "요한 제바스티안 바흐",
+   "role": "CONDUCTOR",
+   "sector": {
+    "key": "whole-work",
+    "type": "WHOLE_WORK",
+    "nameKo": "전곡",
+    "nameEn": "Complete work",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "현·오보에 셋잇단 리토르넬로 첫 음",
+    "endCue": "마지막 코랄 행 뒤 리토르넬로 끝"
+   },
+   "filmNote": "포핸즈. 원곡(합창·관현악)으로 고른다. 합창단·악단 크레딧",
+   "videos": [
+    {
+     "videoId": "XUod6bQzG-U",
+     "artistId": 603,
+     "artistName": "John Eliot Gardiner",
+     "wikidata": "Q160325",
+     "choir": {
+      "name": "Monteverdi Choir",
+      "wikidata": "Q372854"
+     },
+     "orchestra": {
+      "name": "English Baroque Soloists",
+      "wikidata": "Q1342808"
+     }
+    },
+    {
+     "videoId": "PElgiVsHdGI",
+     "artistId": 665,
+     "artistName": "Nikolaus Harnoncourt",
+     "wikidata": "Q78526",
+     "choir": {
+      "name": "Tölzer Knabenchor",
+      "wikidata": "Q565939"
+     }
+    },
+    {
+     "videoId": "-vVDg4Bwm-E",
+     "artistName": "Philippe Herreweghe",
+     "wikidata": "Q168039",
+     "choir": {
+      "name": "Collegium Vocale Gent",
+      "wikidata": "Q1109305"
+     }
+    }
+   ]
+  },
+  {
+   "pieceId": 266,
+   "workMbid": "8abd4aec-5d22-3d22-84d2-7f70a54989a4",
+   "composerQid": "Q179631",
+   "titleKo": "첼로 협주곡 E단조",
+   "titleEn": "Cello Concerto in E minor, op. 85",
+   "composerNameEn": "Edward Elgar",
+   "composerNameKo": "에드워드 엘가",
+   "role": "CELLIST",
+   "sector": {
+    "key": "mv1-opening",
+    "type": "EXCERPT",
+    "nameKo": "1악장 도입 (첼로 레치타티보와 첫 주제)",
+    "nameEn": "I. Adagio – Moderato, opening",
+    "measureStart": "1",
+    "measureEnd": "",
+    "startCue": "독주 첼로의 첫 화음(Adagio 레치타티보)",
+    "endCue": "발췌 끝(Moderato 9/8 주제를 첼로가 처음 다 부른 뒤)"
+   },
+   "excerpt": {
+    "anchor": "head",
+    "seconds": 100
+   },
+   "filmNote": "웬즈데이. 첼로 + 지휘자·악단 크레딧",
+   "videos": [
+    {
+     "videoId": "gjpTnbOdHxw",
+     "artistId": 279,
+     "artistName": "Sheku Kanneh-Mason",
+     "wikidata": "Q27916482",
+     "conductor": {
+      "name": "Simon Rattle",
+      "wikidata": "Q157814"
+     },
+     "orchestra": {
+      "name": "London Symphony Orchestra",
+      "wikidata": "Q155805"
+     }
+    },
+    {
+     "videoId": "SoPJ3V4EFk0",
+     "artistId": 215,
+     "artistName": "Yo-Yo Ma",
+     "wikidata": "Q234891",
+     "conductor": {
+      "name": "André Previn",
+      "wikidata": "Q155712"
+     },
+     "orchestra": {
+      "name": "London Symphony Orchestra",
+      "wikidata": "Q155805"
+     }
+    },
+    {
+     "videoId": "wQUY-9glJKE",
+     "artistId": 646,
+     "artistName": "Heinrich Schiff",
+     "wikidata": "Q662066",
+     "conductor": {
+      "name": "Neville Marriner",
+      "wikidata": "Q318636"
+     },
+     "orchestra": {
+      "name": "Dresden Staatskapelle",
+      "wikidata": "Q584017"
+     }
+    }
+   ]
+  },
+  {
+   "pieceId": 28,
+   "workMbid": "87886dcf-9776-49cb-b6f5-10104da6e42c",
+   "composerQid": "Q1340",
+   "titleKo": "사계",
+   "titleEn": "Le quattro stagioni",
+   "composerNameEn": "Antonio Vivaldi",
+   "composerNameKo": "안토니오 비발디",
+   "role": "VIOLINIST",
+   "sector": {
+    "key": "winter-mv1",
+    "type": "MOVEMENT",
+    "nameKo": "「겨울」 RV 297 1악장 Allegro non molto",
+    "nameEn": "L'inverno, RV 297: I. Allegro non molto",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "현의 여린 반복음 첫 음",
+    "endCue": "1악장 마지막 화음과 잔향"
+   },
+   "filmNote": "올드보이(정경화 녹음 1악장 전체), 웬즈데이. 독주 바이올린 + 합주단 크레딧",
+   "videos": [
+    {
+     "videoId": "tfAQ5xzshDI",
+     "artistId": 824,
+     "artistName": "Gidon Kremer",
+     "wikidata": "Q159915",
+     "conductor": {
+      "name": "Claudio Abbado",
+      "wikidata": "Q151608"
+     },
+     "orchestra": {
+      "name": "London Symphony Orchestra",
+      "wikidata": "Q155805"
+     }
+    },
+    {
+     "videoId": "qI-5ESz6OwA",
+     "artistId": 267,
+     "artistName": "Itzhak Perlman",
+     "wikidata": "Q215905",
+     "conductor": {
+      "name": "Zubin Mehta",
+      "wikidata": "Q157635"
+     },
+     "orchestra": {
+      "name": "Israel Philharmonic Orchestra",
+      "wikidata": "Q1062617"
+     }
+    },
+    {
+     "videoId": "A1bFIH7I8Do",
+     "artistId": 234,
+     "artistName": "Kyung Wha Chung",
+     "wikidata": "Q391400"
+    }
+   ]
+  }
+ ]
+}
