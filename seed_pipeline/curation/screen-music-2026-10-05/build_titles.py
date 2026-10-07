@@ -53,7 +53,7 @@ MAP = {
     "the-pianist#1": (445, "whole-work", None),
     "the-pianist#2": (26036, None, None),
     "the-pianist#4": (129, "whole-work", None),
-    "your-lie-in-april#3": (463, None, None),
+    "your-lie-in-april#3": (463, "no5-whole", None),
     "your-lie-in-april#5": (129, "whole-work", None),
     # 모차르트
     "amadeus#1": (26041, None, None),
@@ -79,11 +79,11 @@ MAP = {
     "whats-opera-doc#5": (147, "opening", None),
     # 바흐
     "fantasia#1": (16, None, None),
-    "four-hands#3": (432, None, None),
+    "four-hands#3": (432, "whole-work", None),
     "four-hands#5": (14951, None, None),
-    "neon-genesis-evangelion#1": (12, None, None),
-    "secret-affair#3": (10, None, None),
-    "tar#1": (10, None, None),
+    "neon-genesis-evangelion#1": (12, "suite1-prelude", None),
+    "secret-affair#3": (10, "wtc1-no1-prelude", None),
+    "tar#1": (10, "wtc1-no1-prelude", None),
     "the-silence-of-the-lambs#1": (461, "aria", None),
     "thirst#1": (15339, None, None),
     # 말러
@@ -95,13 +95,13 @@ MAP = {
     "legend-of-the-galactic-heroes#5": (217, None, None),
     "tar#2": (216, "mv4-adagietto", None),
     # 비발디
-    "oldboy#1": (28, None, None),
+    "oldboy#1": (28, "winter-mv1", None),
     "sympathy-for-lady-vengeance#1": (26038, None, None),
     "sympathy-for-lady-vengeance#3": (26039, None, None),
     "sympathy-for-lady-vengeance#4": (29, None, None),
     "sympathy-for-lady-vengeance#5": (29, None, None),
     "sympathy-for-lady-vengeance#6": (26040, None, None),
-    "wednesday#1": (28, None, None),
+    "wednesday#1": (28, "winter-mv1", None),
     # 차이콥스키
     "black-swan#1": (162, None, None),
     "black-swan#2": (162, None, None),
@@ -112,8 +112,8 @@ MAP = {
     # 라흐마니노프
     "brief-encounter#1": (225, "mv1-opening", None),
     "brief-encounter#2": (225, None, None),
-    "for-horowitz#5": (225, None, None),
-    "four-hands#1": (225, None, None),
+    "for-horowitz#5": (225, "mv1-opening", None),
+    "four-hands#1": (225, "mv1-opening", None),
     "nodame-cantabile-anime#4": (225, "mv1-opening", None),
     "secret-affair#6": (227, "var18", None),
     # 로시니
@@ -123,13 +123,13 @@ MAP = {
     "the-penthouse#3": (167, None, None),
     # 헨델
     "maestra-strings-of-truth#2": (26057, None, None),
-    "neon-genesis-evangelion#2": (21, None, None),
+    "neon-genesis-evangelion#2": (21, "hallelujah-chorus", None),
     "parasite#1": (26024, None, None),
     "parasite#2": (26024, None, None),
     # 푸치니
     "mission-impossible-rogue-nation#1": (211, "aria", None),
     "mission-impossible-rogue-nation#2": (211, None, None),
-    "my-paparotti#2": (212, None, None),
+    "my-paparotti#2": (212, "e-lucevan-le-stelle", None),
     "my-paparotti#3": (211, "aria", None),
     # 베르디
     "my-paparotti#1": (149, "la-donna-e-mobile", None),
@@ -147,7 +147,7 @@ MAP = {
     # 엘가
     "fantasia-2000#5": (265, None, None),
     "tar#3": (266, None, None),
-    "wednesday#2": (266, None, None),
+    "wednesday#2": (266, "mv1-opening", None),
     # 요한 슈트라우스 2세
     "2001-a-space-odyssey#3": (185, "intro-waltz1", None),
     "squid-game#2": (185, "intro-waltz1", None),
@@ -194,7 +194,7 @@ MAP = {
     "squid-game#1": (88, "mv3-finale", None),
     "sympathy-for-lady-vengeance#2": (164, None, None),
     "the-glory#1": (206, "no4-pie-jesu", None),
-    "the-handmaiden#1": (47, None, None),
+    "the-handmaiden#1": (47, "whole-work", None),
     "wednesday#3": (322, "dance-of-the-knights", None),
     "your-lie-in-april#4": (26031, None, None),
 }
