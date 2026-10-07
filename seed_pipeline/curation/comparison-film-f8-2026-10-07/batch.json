@@ -1,0 +1,285 @@
+{
+ "batchId": "film-f8",
+ "note": "영화 속 클래식 8차. 쇼팽 Op. 25 11번(6차와 같은 곡이라 배치를 나눴다)과 관현악 넷(피날레·악장 도입·악장 끝 대목·악장 전체). 발췌 대목은 기준 연주에서 시점을 잡는다.",
+ "pieces": [
+  {
+   "pieceId": 463,
+   "workMbid": "4e2cd2d3-52bc-4031-bce7-caccaa9b52fa",
+   "composerQid": "Q1268",
+   "titleKo": "연습곡 Op. 25",
+   "titleEn": "Études, op. 25",
+   "composerNameEn": "Frédéric Chopin",
+   "composerNameKo": "프레데리크 쇼팽",
+   "role": "PIANIST",
+   "sector": {
+    "key": "no11-whole",
+    "type": "MOVEMENT",
+    "nameKo": "11번 A단조 「겨울바람」",
+    "nameEn": "No. 11 in A minor “Winter Wind”",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "Lento 4마디 주제 첫 음",
+    "endCue": "마지막 화음과 잔향"
+   },
+   "filmNote": "피아노의 숲 1차 예선",
+   "videos": [
+    {
+     "videoId": "hnPQ1FaeiLI",
+     "artistId": 187,
+     "artistName": "Yunchan Lim",
+     "wikidata": "Q112685630"
+    },
+    {
+     "videoId": "eSFBU9kn1ds",
+     "artistId": 207,
+     "artistName": "Maurizio Pollini",
+     "wikidata": "Q160058"
+    },
+    {
+     "videoId": "Ff4M7jCYloc",
+     "artistId": 311,
+     "artistName": "Beatrice Rana",
+     "wikidata": "Q17490313"
+    }
+   ]
+  },
+  {
+   "pieceId": 168,
+   "workMbid": "937398a2-d307-3ccd-a390-78d1b73c6457",
+   "composerQid": "Q9726",
+   "titleKo": "서곡 <윌리엄 텔>",
+   "titleEn": "Guillaume Tell: Ouverture",
+   "composerNameEn": "Gioachino Rossini",
+   "composerNameKo": "조아키노 로시니",
+   "role": "CONDUCTOR",
+   "sector": {
+    "key": "finale",
+    "type": "EXCERPT",
+    "nameKo": "피날레 (Allegro vivace, 스위스 군대의 행진)",
+    "nameEn": "Finale: Allegro vivace (March of the Swiss Soldiers)",
+    "measureStart": "226",
+    "measureEnd": "final",
+    "startCue": "트럼펫 팡파르 첫 음(목가 끝 뒤)",
+    "endCue": "서곡 마지막 화음과 잔향"
+   },
+   "excerpt": {
+    "referenceVideoId": "sHQ1Date2v0",
+    "start": 527.1,
+    "end": 718.0
+   },
+   "filmNote": "베토벤 바이러스 5회 석란시향 공연",
+   "videos": [
+    {
+     "videoId": "sHQ1Date2v0",
+     "artistId": 422,
+     "artistName": "Herbert von Karajan",
+     "wikidata": "Q154895",
+     "orchestra": {
+      "name": "Berliner Philharmoniker",
+      "wikidata": "Q152222"
+     }
+    },
+    {
+     "videoId": "LY1MilPZN1E",
+     "artistId": 427,
+     "artistName": "Riccardo Muti",
+     "wikidata": "Q276038",
+     "orchestra": {
+      "name": "Philharmonia Orchestra",
+      "wikidata": "Q1046309"
+     }
+    },
+    {
+     "videoId": "YuMjsob8Qm4",
+     "artistId": 581,
+     "artistName": "Charles Dutoit",
+     "wikidata": "Q116995",
+     "orchestra": {
+      "name": "Orchestre symphonique de Montréal",
+      "wikidata": "Q1196259"
+     }
+    }
+   ]
+  },
+  {
+   "pieceId": 197,
+   "workMbid": "90379c91-2dce-4ba4-9900-dd32763ee0b4",
+   "composerQid": "Q7298",
+   "titleKo": "교향곡 9번 E단조 \"신세계로부터\"",
+   "titleEn": "Symphony no. 9 in E minor, op. 95 “From the New World”",
+   "composerNameEn": "Antonín Dvořák",
+   "composerNameKo": "안토닌 드보르자크",
+   "role": "CONDUCTOR",
+   "sector": {
+    "key": "mv4-opening",
+    "type": "EXCERPT",
+    "nameKo": "4악장 Allegro con fuoco 도입 (금관의 주제)",
+    "nameEn": "IV. Allegro con fuoco, opening",
+    "measureStart": "1",
+    "measureEnd": "",
+    "startCue": "현의 반음 상행 도입 첫 음",
+    "endCue": "발췌 끝"
+   },
+   "excerpt": {
+    "anchor": "head",
+    "seconds": 90
+   },
+   "filmNote": "은하영웅전설 15화",
+   "videos": [
+    {
+     "videoId": "yghxNLey1v8",
+     "artistId": 664,
+     "artistName": "Georg Solti",
+     "wikidata": "Q128085",
+     "orchestra": {
+      "name": "Chicago Symphony Orchestra",
+      "wikidata": "Q1050470"
+     }
+    },
+    {
+     "videoId": "EqxDwm7clCM",
+     "artistId": 594,
+     "artistName": "Claudio Abbado",
+     "wikidata": "Q151608",
+     "orchestra": {
+      "name": "Berliner Philharmoniker",
+      "wikidata": "Q152222"
+     }
+    },
+    {
+     "videoId": "UmFOsUIpWPI",
+     "artistId": 218,
+     "artistName": "Gustavo Dudamel",
+     "wikidata": "Q160390",
+     "orchestra": {
+      "name": "Los Angeles Philharmonic",
+      "wikidata": "Q315715"
+     }
+    }
+   ]
+  },
+  {
+   "pieceId": 216,
+   "workMbid": "adcdc472-8b19-4e6f-aa4e-be8c6aea5f8a",
+   "composerQid": "Q7304",
+   "titleKo": "교향곡 5번 C#단조",
+   "titleEn": "Symphony no. 5 in C-sharp minor",
+   "composerNameEn": "Gustav Mahler",
+   "composerNameKo": "구스타프 말러",
+   "role": "CONDUCTOR",
+   "sector": {
+    "key": "mv4-adagietto-climax",
+    "type": "EXCERPT",
+    "nameKo": "4악장 Adagietto 마지막 고조와 끝 (m.90~103)",
+    "nameEn": "IV. Adagietto, final climax to the end (bb. 90–103)",
+    "measureStart": "90",
+    "measureEnd": "103",
+    "startCue": "m.90 첫 박",
+    "endCue": "악장 마지막 화음과 잔향(5악장 호른 전)"
+   },
+   "excerpt": {
+    "referenceVideoId": "wSdXXmrtt9w",
+    "start": 597.8,
+    "end": 711.4
+   },
+   "filmNote": "헤어질 결심 1:08:10~1:09:22 = m.90~100(최윤정 2025, 『예술과 문화』 8호 표 3). 같은 곡 구간 269 의 정명훈 JzALG2cAhn8 은 이미 발행돼 다시 쓸 수 없다(기준 위치 찾기에는 써도 된다)",
+   "videos": [
+    {
+     "videoId": "wSdXXmrtt9w",
+     "artistId": 422,
+     "artistName": "Herbert von Karajan",
+     "wikidata": "Q154895",
+     "orchestra": {
+      "name": "Berliner Philharmoniker",
+      "wikidata": "Q152222"
+     }
+    },
+    {
+     "videoId": "Hh5lFFvGrg0",
+     "artistId": 664,
+     "artistName": "Georg Solti",
+     "wikidata": "Q128085",
+     "orchestra": {
+      "name": "Chicago Symphony Orchestra",
+      "wikidata": "Q1050470"
+     }
+    },
+    {
+     "videoId": "TlbdAXZMlRE",
+     "artistId": 799,
+     "artistName": "Pierre Boulez",
+     "wikidata": "Q156193",
+     "orchestra": {
+      "name": "Wiener Philharmoniker",
+      "wikidata": "Q154685"
+     }
+    }
+   ]
+  },
+  {
+   "pieceId": 458,
+   "workMbid": "3ed3ae19-6230-4337-b1f6-b5d2a718cc1a",
+   "composerQid": "Q80135",
+   "titleKo": "피아노 협주곡 2번 F장조",
+   "titleEn": "Piano Concerto no. 2 in F major, op. 102",
+   "composerNameEn": "Dmitri Shostakovich",
+   "composerNameKo": "드미트리 쇼스타코비치",
+   "role": "PIANIST",
+   "sector": {
+    "key": "mv1-allegro",
+    "type": "MOVEMENT",
+    "nameKo": "1악장 Allegro",
+    "nameEn": "I. Allegro",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "작은북·목관 도입 첫 음",
+    "endCue": "1악장 마지막 화음"
+   },
+   "filmNote": "환타지아 2000 「꿋꿋한 주석 병정」. 피아노 + 지휘자·악단 크레딧",
+   "videos": [
+    {
+     "videoId": "LevT99Rdpvs",
+     "artistId": 201,
+     "artistName": "Yuja Wang",
+     "wikidata": "Q465311",
+     "conductor": {
+      "name": "Andris Nelsons",
+      "wikidata": "Q511817"
+     },
+     "orchestra": {
+      "name": "Boston Symphony Orchestra",
+      "wikidata": "Q864369"
+     }
+    },
+    {
+     "videoId": "YB7aEt793ow",
+     "artistId": 255,
+     "artistName": "Alexander Melnikov",
+     "wikidata": "Q548431",
+     "conductor": {
+      "name": "Teodor Currentzis",
+      "wikidata": "Q536185"
+     },
+     "orchestra": {
+      "name": "Mahler Chamber Orchestra",
+      "wikidata": "Q573902"
+     }
+    },
+    {
+     "videoId": "Pl_dj4LsSCo",
+     "artistId": 614,
+     "artistName": "Elisabeth Leonskaja",
+     "wikidata": "Q447946",
+     "conductor": {
+      "name": "Hugh Wolff",
+      "wikidata": "Q320019"
+     },
+     "orchestra": {
+      "name": "Saint Paul Chamber Orchestra",
+      "wikidata": "Q2905648"
+     }
+    }
+   ]
+  }
+ ]
+}
