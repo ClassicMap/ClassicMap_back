@@ -94,13 +94,13 @@ MAP = {
     "the-silence-of-the-lambs#1": (461, None, None),
     "thirst#1": (None, None, "칸타타 <나는 만족하나이다> BWV 82"),
     # 말러
-    "death-in-venice#1": (216, None, None),
+    "death-in-venice#1": (216, "mv4-adagietto", None),
     "death-in-venice#2": (None, None, "교향곡 3번 D단조"),
     "decision-to-leave#1": (216, None, None),
     "legend-of-the-galactic-heroes#1": (None, None, "교향곡 3번 D단조"),
     "legend-of-the-galactic-heroes#3": (None, None, "교향곡 9번 D장조"),
     "legend-of-the-galactic-heroes#5": (217, None, None),
-    "tar#2": (216, None, None),
+    "tar#2": (216, "mv4-adagietto", None),
     # 비발디
     "oldboy#1": (28, None, None),
     "sympathy-for-lady-vengeance#1": (None, None, "칸타타 <그만, 이제 그만> RV 684"),
@@ -117,7 +117,7 @@ MAP = {
     "keys-to-the-heart#4": (159, None, None),
     "secret-affair#4": (None, None, '피아노 모음곡 <사계> 중 "4월"'),
     # 라흐마니노프
-    "brief-encounter#1": (225, None, None),
+    "brief-encounter#1": (225, "mv1-opening", None),
     "brief-encounter#2": (225, None, None),
     "for-horowitz#5": (225, None, None),
     "four-hands#1": (225, None, None),
@@ -140,7 +140,7 @@ MAP = {
     "my-paparotti#3": (211, "aria", None),
     # 베르디
     "my-paparotti#1": (149, "la-donna-e-mobile", None),
-    "pretty-woman#1": (148, None, None),
+    "pretty-woman#1": (148, "act1-sempre-libera", None),
     "pretty-woman#2": (148, None, None),
     "wednesday#4": (152, "dies-irae", None),
     # 리게티
