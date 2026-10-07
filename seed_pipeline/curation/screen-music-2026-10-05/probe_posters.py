@@ -32,11 +32,28 @@ CREDIT = "KMDb"
 # 한국어 제목·원제와 맞춰 볼 KMDb 제목 필드
 TITLE_FIELDS = ("title", "titleEng", "titleOrg")
 # 사람이 확인한 KMDb 등록 id. 제목 검색으로 못 고른 작품만 적는다 (slug → "K/06066")
-OVERRIDES: dict[str, str] = {}
+OVERRIDES: dict[str, str] = {
+    # 같은 제목 하네케 「피아니스트」(2001, F/08129)와 갈린다
+    "the-pianist": "F/08176",
+}
 # 포스터를 쓰지 않을 작품 (slug → 이유)
-SKIP: dict[str, str] = {}
+SKIP: dict[str, str] = {
+    # KMDb 에는 같은 제목의 미국 다큐(2023, B/11268)만 있다
+    "maestra-strings-of-truth": "tvN 드라마는 KMDb 에 없다",
+}
 # 첫 포스터가 재개봉판처럼 원래 개봉 포스터가 아닐 때 고를 순번 (slug → posters 안 순번)
-POSTER_CHOICE: dict[str, int] = {}
+# 2026-10-07 포스터를 하나씩 열어 보고 골랐다
+POSTER_CHOICE: dict[str, int] = {
+    "amadeus": 1,  # 0 은 2025 재개봉, 1 은 1985 국내 개봉
+    "fantasia": 1,  # 0 은 50주년(1990) 재개봉
+    "melancholia": 4,  # 0 은 그림 주소가 404, 4 는 국내 개봉
+    "my-paparotti": 1,  # 0 은 가로 배너
+    "oldboy": 1,  # 0 은 20주년 재개봉
+    "raging-bull": 1,  # 1 이 1980 개봉 포스터
+    "tar": 1,  # 0 은 그림 주소가 404, 1 은 국내 개봉
+    "the-shawshank-redemption": 2,  # 0 은 2026, 1 은 2016 재개봉, 2 는 1995 국내 개봉
+    "the-silence-of-the-lambs": 1,  # 0 은 2025 재개봉, 1 은 1991 국내 개봉
+}
 
 
 def normalize(text: str) -> str:
