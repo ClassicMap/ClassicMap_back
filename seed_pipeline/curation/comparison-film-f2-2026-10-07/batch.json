@@ -1,0 +1,130 @@
+{
+  "batchId": "film-f2",
+  "note": "영화 속 클래식 2차. 영화에 나온 대목인데 비교 구간이 없던 둘(황제 2악장 도입, 합창 교향곡 2악장 도입)을 기존 곡에 새 구간으로 붙인다. 기존 source 는 모두 발행돼 재사용하면 SOURCE_STATE_CONFLICT 이므로 새 영상으로 고른다. 라 트라비아타 Amami Alfredo 는 스투더가 임계를 넘고 대목 자체가 30초 미만이라 이 배치에서 뺐다(review-report.md).",
+  "pieces": [
+    {
+      "pieceId": 80,
+      "workMbid": "e5cfd8b5-74c2-3330-9ca4-42ecd22dffef",
+      "composerQid": "Q255",
+      "titleKo": "피아노 협주곡 5번 E♭장조 Op. 73 “황제”",
+      "titleEn": "Concerto for Piano and Orchestra no. 5 in E-flat major, op. 73 “Emperor”",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv2-opening",
+        "type": "EXCERPT",
+        "nameKo": "2악장 Adagio un poco mosso 도입 (현의 찬가와 피아노 입장)",
+        "nameEn": "II. Adagio un poco mosso, opening",
+        "measureStart": "1",
+        "measureEnd": "",
+        "startCue": "약음기 낀 현의 첫 음(악장 시작)",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "videos": [
+        {
+          "videoId": "vNFXbCrsMYw",
+          "artistId": 206,
+          "artistName": "Evgeny Kissin",
+          "wikidata": "Q160154",
+          "conductor": {
+            "name": "James Levine",
+            "wikidata": "Q336388"
+          },
+          "orchestra": {
+            "name": "Philharmonia Orchestra",
+            "wikidata": "Q1046309"
+          }
+        },
+        {
+          "videoId": "175PLju79fM",
+          "artistId": 250,
+          "artistName": "Murray Perahia",
+          "wikidata": "Q326221",
+          "conductor": {
+            "name": "Bernard Haitink",
+            "wikidata": "Q158370"
+          },
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "QsrnBnnoQ00",
+          "artistId": 366,
+          "artistName": "Krystian Zimerman",
+          "wikidata": "Q353461",
+          "conductor": {
+            "name": "Simon Rattle",
+            "wikidata": "Q157814"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 76,
+      "workMbid": "c35b4956-d4f8-321a-865b-5b13d9ed192b",
+      "composerQid": "Q255",
+      "titleKo": "교향곡 9번 D단조 Op. 125 “합창”",
+      "titleEn": "Symphony no. 9 in D minor, op. 125 “Choral”",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv2-opening",
+        "type": "EXCERPT",
+        "nameKo": "2악장 Molto vivace 도입 (팀파니 옥타브와 푸가토)",
+        "nameEn": "II. Molto vivace, opening",
+        "measureStart": "1",
+        "measureEnd": "",
+        "startCue": "현의 옥타브 동기 첫 음(악장 시작)",
+        "endCue": "발췌 끝(제시부 반복 전)"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 60
+      },
+      "videos": [
+        {
+          "videoId": "_eLuTRcZ4vQ",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "lWoMy9F2j_U",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berlin Philharmonic Orchestra",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "MQdo8SdySWs",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "Vienna Philharmonic Orchestra",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
+    }
+  ]
+}
