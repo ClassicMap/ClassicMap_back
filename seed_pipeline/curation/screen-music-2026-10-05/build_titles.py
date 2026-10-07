@@ -17,15 +17,8 @@ COMPOSERS = {c["id"]: c for c in json.load(open(HERE / "composers.json"))}
 PIECES = {p["id"]: p for p in json.load(open(HERE / "pieces.json"))}
 COMPOSER_IDS = json.load(open(HERE / "composer-map.json"))
 COMPOSER_IDS["Sergei Prokofiev"] = 84
-# 카탈로그에 없는 작곡가의 한국어 이름
-MISSING_COMPOSERS = {
-    "György Ligeti": "리게티",
-    "Richard Strauss": "리하르트 슈트라우스",
-    "Ottorino Respighi": "레스피기",
-    "Paul Dukas": "뒤카",
-    "Samuel Barber": "바버",
-    "Fritz Kreisler": "크라이슬러",
-}
+# 카탈로그에 없는 작곡가의 한국어 이름(2026-10-07 에 여섯 다 migration 202610070004 로 들어와 비었다)
+MISSING_COMPOSERS: dict[str, str] = {}
 
 MAP = {
     # 베토벤
@@ -47,31 +40,31 @@ MAP = {
     "the-kings-speech#2": (438, "mv2-allegretto", None),
     "the-kings-speech#3": (80, "mv2-opening", None),
     "the-pianist#3": (78, "mv1-adagio", None),
-    "your-lie-in-april#1": (None, None, '바이올린 소나타 9번 A장조 "크로이처"'),
+    "your-lie-in-april#1": (26029, None, None),
     # 쇼팽
     "for-horowitz#2": (127, "whole-work", None),
-    "forest-of-piano#1": (None, None, "뱃노래 F#장조 Op. 60"),
+    "forest-of-piano#1": (26047, None, None),
     "forest-of-piano#2": (463, None, None),
-    "forest-of-piano#3": (None, None, "연습곡 C장조 Op. 10, No. 1"),
-    "forest-of-piano#4": (None, None, '피아노 소나타 2번 B♭단조 "장송"'),
-    "forest-of-piano#5": (None, None, "피아노 소나타 3번 B단조"),
+    "forest-of-piano#3": (26048, None, None),
+    "forest-of-piano#4": (26049, None, None),
+    "forest-of-piano#5": (26050, None, None),
     "forest-of-piano#6": (132, None, None),
     "keys-to-the-heart#2": (132, None, None),
     "the-pianist#1": (445, "whole-work", None),
-    "the-pianist#2": (None, None, "안단테 스피아나토와 화려한 대폴로네즈 Op. 22"),
+    "the-pianist#2": (26036, None, None),
     "the-pianist#4": (129, "whole-work", None),
     "your-lie-in-april#3": (463, None, None),
     "your-lie-in-april#5": (129, "whole-work", None),
     # 모차르트
-    "amadeus#1": (None, None, "교향곡 25번 G단조 K. 183"),
-    "amadeus#2": (None, None, '세레나데 10번 B♭장조 "그랑 파르티타" K. 361'),
-    "amadeus#3": (None, None, "오페라 <돈 조반니> K. 527"),
+    "amadeus#1": (26041, None, None),
+    "amadeus#2": (26042, None, None),
+    "amadeus#3": (26043, None, None),
     "amadeus#4": (71, "confutatis", None),
     "amadeus#5": (71, "lacrimosa", None),
     "amadeus#6": (72, "mv2-romanze", None),
-    "elvira-madigan#1": (None, None, "피아노 협주곡 21번 C장조 K. 467"),
-    "nodame-cantabile-anime#1": (None, None, "두 대의 피아노를 위한 소나타 D장조 K. 448"),
-    "secret-affair#5": (None, None, "네 손을 위한 피아노 소나타 C장조 K. 521"),
+    "elvira-madigan#1": (26058, None, None),
+    "nodame-cantabile-anime#1": (26046, None, None),
+    "secret-affair#5": (26035, None, None),
     "the-kings-speech#1": (69, "overture", None),
     "the-penthouse#1": (70, "der-holle-rache", None),
     "the-shawshank-redemption#1": (69, "sull-aria", None),
@@ -80,34 +73,34 @@ MAP = {
     "melancholia#1": (145, "prelude-opening", None),
     "wednesday#5": (144, "whole-work", None),
     "whats-opera-doc#1": (144, "whole-work", None),
-    "whats-opera-doc#2": (None, None, "오페라 <방황하는 네덜란드인> 서곡"),
-    "whats-opera-doc#3": (None, None, "오페라 <리엔치> 서곡"),
-    "whats-opera-doc#4": (None, None, '오페라 <탄호이저> 중 "베누스베르크 음악"'),
+    "whats-opera-doc#2": (26053, None, None),
+    "whats-opera-doc#3": (26054, None, None),
+    "whats-opera-doc#4": (26055, None, None),
     "whats-opera-doc#5": (147, "opening", None),
     # 바흐
     "fantasia#1": (16, None, None),
     "four-hands#3": (432, None, None),
-    "four-hands#5": (None, None, "칸타타 <하나님의 시간이 가장 좋은 때> BWV 106"),
+    "four-hands#5": (14951, None, None),
     "neon-genesis-evangelion#1": (12, None, None),
     "secret-affair#3": (10, None, None),
     "tar#1": (10, None, None),
     "the-silence-of-the-lambs#1": (461, "aria", None),
-    "thirst#1": (None, None, "칸타타 <나는 만족하나이다> BWV 82"),
+    "thirst#1": (15339, None, None),
     # 말러
     "death-in-venice#1": (216, "mv4-adagietto", None),
-    "death-in-venice#2": (None, None, "교향곡 3번 D단조"),
+    "death-in-venice#2": (11933, None, None),
     "decision-to-leave#1": (216, None, None),
-    "legend-of-the-galactic-heroes#1": (None, None, "교향곡 3번 D단조"),
-    "legend-of-the-galactic-heroes#3": (None, None, "교향곡 9번 D장조"),
+    "legend-of-the-galactic-heroes#1": (11933, None, None),
+    "legend-of-the-galactic-heroes#3": (11293, None, None),
     "legend-of-the-galactic-heroes#5": (217, None, None),
     "tar#2": (216, "mv4-adagietto", None),
     # 비발디
     "oldboy#1": (28, None, None),
-    "sympathy-for-lady-vengeance#1": (None, None, "칸타타 <그만, 이제 그만> RV 684"),
-    "sympathy-for-lady-vengeance#3": (None, None, "현을 위한 협주곡 A장조 RV 159"),
+    "sympathy-for-lady-vengeance#1": (26038, None, None),
+    "sympathy-for-lady-vengeance#3": (26039, None, None),
     "sympathy-for-lady-vengeance#4": (29, None, None),
     "sympathy-for-lady-vengeance#5": (29, None, None),
-    "sympathy-for-lady-vengeance#6": (None, None, "바순 협주곡 E단조 RV 484"),
+    "sympathy-for-lady-vengeance#6": (26040, None, None),
     "wednesday#1": (28, None, None),
     # 차이콥스키
     "black-swan#1": (162, None, None),
@@ -115,7 +108,7 @@ MAP = {
     "black-swan#3": (162, None, None),
     "fantasia#2": (161, "waltz-of-the-flowers", None),
     "keys-to-the-heart#4": (159, "mv1-opening", None),
-    "secret-affair#4": (None, None, '피아노 모음곡 <사계> 중 "4월"'),
+    "secret-affair#4": (26034, None, None),
     # 라흐마니노프
     "brief-encounter#1": (225, "mv1-opening", None),
     "brief-encounter#2": (225, None, None),
@@ -129,10 +122,10 @@ MAP = {
     "beethoven-virus#2": (168, None, None),
     "the-penthouse#3": (167, None, None),
     # 헨델
-    "maestra-strings-of-truth#2": (None, None, "파사칼리아 (할보르센 편곡)"),
+    "maestra-strings-of-truth#2": (26057, None, None),
     "neon-genesis-evangelion#2": (21, None, None),
-    "parasite#1": (None, None, "오페라 <로델린다>"),
-    "parasite#2": (None, None, "오페라 <로델린다>"),
+    "parasite#1": (26024, None, None),
+    "parasite#2": (26024, None, None),
     # 푸치니
     "mission-impossible-rogue-nation#1": (211, "aria", None),
     "mission-impossible-rogue-nation#2": (211, None, None),
@@ -144,12 +137,12 @@ MAP = {
     "pretty-woman#2": (148, "act2-che-fai-amami", None),
     "wednesday#4": (152, "dies-irae", None),
     # 리게티
-    "2001-a-space-odyssey#2": (None, None, "레퀴엠"),
-    "2001-a-space-odyssey#4": (None, None, "룩스 에테르나"),
-    "2001-a-space-odyssey#6": (None, None, "아트모스페르"),
+    "2001-a-space-odyssey#2": (26026, None, None),
+    "2001-a-space-odyssey#4": (26027, None, None),
+    "2001-a-space-odyssey#6": (26028, None, None),
     # 슈만
     "do-you-like-brahms#1": (464, "no7-traumerei", None),
-    "do-you-like-brahms#2": (None, None, "헌정 (리스트 피아노 편곡)"),
+    "do-you-like-brahms#2": (26032, None, None),
     "for-horowitz#3": (464, "no7-traumerei", None),
     # 엘가
     "fantasia-2000#5": (265, None, None),
@@ -159,7 +152,7 @@ MAP = {
     "2001-a-space-odyssey#3": (185, "intro-waltz1", None),
     "squid-game#2": (185, "intro-waltz1", None),
     # 무소르크스키
-    "death-in-venice#4": (None, None, "자장가"),
+    "death-in-venice#4": (26045, None, None),
     "fantasia#6": (191, "whole-work", None),
     # 스트라빈스키
     "fantasia-2000#6": (310, "danse-infernale", None),
@@ -169,41 +162,41 @@ MAP = {
     "oceans-eleven#1": (220, "whole-work", None),
     # 생상스
     "four-hands#2": (253, None, None),
-    "your-lie-in-april#2": (None, None, "서주와 론도 카프리치오소 Op. 28"),
+    "your-lie-in-april#2": (26030, None, None),
     # 브람스
     "keys-to-the-heart#3": (155, "whole-work", None),
     "nodame-cantabile-anime#5": (153, None, None),
     # 브루크너
     "legend-of-the-galactic-heroes#4": (183, None, None),
-    "legend-of-the-galactic-heroes#6": (None, None, "교향곡 9번 D단조"),
+    "legend-of-the-galactic-heroes#6": (26056, None, None),
     # 마스카니
     "raging-bull#1": (276, None, None),
-    "raging-bull#2": (None, None, '오페라 <실바노> 중 "뱃노래"'),
+    "raging-bull#2": (26059, None, None),
     # 슈베르트
-    "secret-affair#1": (None, None, "네 손을 위한 환상곡 F단조 D. 940"),
+    "secret-affair#1": (26033, None, None),
     "sky-castle#1": (117, "whole", None),
     # 리스트
     "the-cat-concerto#1": (141, "whole-work", None),
     "the-penthouse#2": (143, "whole-work", None),
     # 그 밖
-    "2001-a-space-odyssey#1": (None, None, "교향시 <차라투스트라는 이렇게 말했다>"),
-    "2001-a-space-odyssey#5": (None, None, '발레 <가야네> 중 "아다지오"'),
+    "2001-a-space-odyssey#1": (26025, None, None),
+    "2001-a-space-odyssey#5": (2799, None, None),
     "a-clockwork-orange#1": (37, None, None),
-    "fantasia-2000#2": (None, None, "교향시 <로마의 소나무>"),
+    "fantasia-2000#2": (26052, None, None),
     "fantasia-2000#3": (332, "opening", None),
     "fantasia-2000#4": (458, None, None),
-    "fantasia#3": (None, None, "교향시 <마법사의 제자>"),
-    "harmony#1": (None, None, '<페르 귄트> 중 "솔베이그의 노래"'),
+    "fantasia#3": (26051, None, None),
+    "harmony#1": (14198, None, None),
     "legend-of-the-galactic-heroes#2": (197, None, None),
     "maestra-strings-of-truth#1": (122, None, None),
-    "platoon#1": (None, None, "현을 위한 아다지오"),
-    "sky-castle#2": (None, None, '<어미 거위> 중 "요정의 정원"'),
+    "platoon#1": (26044, None, None),
+    "sky-castle#2": (26037, None, None),
     "squid-game#1": (88, "mv3-finale", None),
     "sympathy-for-lady-vengeance#2": (164, None, None),
     "the-glory#1": (206, "no4-pie-jesu", None),
     "the-handmaiden#1": (47, None, None),
     "wednesday#3": (322, "dance-of-the-knights", None),
-    "your-lie-in-april#4": (None, None, "사랑의 슬픔 (라흐마니노프 피아노 편곡)"),
+    "your-lie-in-april#4": (26031, None, None),
 }
 
 # 모아 보는 화면 순서. 한국 관객이 많이 본 작품부터
