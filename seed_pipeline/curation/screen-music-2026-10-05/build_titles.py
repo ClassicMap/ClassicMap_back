@@ -40,7 +40,7 @@ MAP = {
     "for-horowitz#1": (80, None, None),
     "four-hands#4": (79, None, None),
     "keys-to-the-heart#1": (78, "mv3-presto", None),
-    "neon-genesis-evangelion#3": (76, None, None),
+    "neon-genesis-evangelion#3": (76, "mv4-freude-chorus", None),
     "nodame-cantabile-anime#2": (438, None, None),
     "nodame-cantabile-anime#3": (77, None, None),
     "secret-affair#2": (440, "mv3-allegro-ma-non-troppo", None),
@@ -121,7 +121,7 @@ MAP = {
     "brief-encounter#2": (225, None, None),
     "for-horowitz#5": (225, None, None),
     "four-hands#1": (225, None, None),
-    "nodame-cantabile-anime#4": (225, None, None),
+    "nodame-cantabile-anime#4": (225, "mv1-opening", None),
     "secret-affair#6": (227, "var18", None),
     # 로시니
     "a-clockwork-orange#2": (169, "whole-work", None),
