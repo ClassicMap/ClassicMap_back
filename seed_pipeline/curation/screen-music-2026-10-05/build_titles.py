@@ -32,7 +32,7 @@ MAP = {
     "a-clockwork-orange#4": (76, "mv2-opening", None),
     "a-clockwork-orange#5": (76, None, None),
     "a-clockwork-orange#6": (76, None, None),
-    "beethoven-virus#1": (76, None, None),
+    "beethoven-virus#1": (76, "mv4-freude-chorus", None),
     "death-in-venice#3": (82, "whole-work", None),
     "detective-conan#1": (78, "mv1-adagio", None),
     "fantasia-2000#1": (75, "mv1-fate", None),
