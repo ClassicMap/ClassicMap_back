@@ -1,0 +1,170 @@
+{
+ "batchId": "film-f6",
+ "note": "영화 속 클래식 6차. 영화·드라마·애니에 한 곡(낱곡) 전체가 나오는 넷을 새 구간으로 붙인다. 낱곡만 담긴 영상을 쓴다.",
+ "pieces": [
+  {
+   "pieceId": 463,
+   "workMbid": "4e2cd2d3-52bc-4031-bce7-caccaa9b52fa",
+   "composerQid": "Q1268",
+   "titleKo": "연습곡 Op. 25",
+   "titleEn": "Études, op. 25",
+   "composerNameEn": "Frédéric Chopin",
+   "composerNameKo": "프레데리크 쇼팽",
+   "role": "PIANIST",
+   "sector": {
+    "key": "no5-whole",
+    "type": "MOVEMENT",
+    "nameKo": "5번 E단조",
+    "nameEn": "No. 5 in E minor",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "첫 음",
+    "endCue": "마지막 화음과 잔향"
+   },
+   "filmNote": "4월은 너의 거짓말 9~10화 콩쿠르",
+   "videos": [
+    {
+     "videoId": "sM_JwLchWaE",
+     "artistId": 187,
+     "artistName": "Yunchan Lim",
+     "wikidata": "Q112685630"
+    },
+    {
+     "videoId": "lkiv79QJms0",
+     "artistId": 207,
+     "artistName": "Maurizio Pollini",
+     "wikidata": "Q160058"
+    },
+    {
+     "videoId": "dA3zn3FisJE",
+     "artistId": 250,
+     "artistName": "Murray Perahia",
+     "wikidata": "Q326221"
+    }
+   ]
+  },
+  {
+   "pieceId": 10,
+   "workMbid": "bd511c33-29d3-332d-b2b7-7753d3cf42af",
+   "composerQid": "Q1339",
+   "titleKo": "평균율 클라비어곡집 (1권&2권)",
+   "titleEn": "Das wohltemperierte Klavier",
+   "composerNameEn": "Johann Sebastian Bach",
+   "composerNameKo": "요한 제바스티안 바흐",
+   "role": "PIANIST",
+   "sector": {
+    "key": "wtc1-no1-prelude",
+    "type": "MOVEMENT",
+    "nameKo": "1권 1번 C장조 전주곡 BWV 846",
+    "nameEn": "Book I: Prelude in C major, BWV 846",
+    "measureStart": "1",
+    "measureEnd": "35",
+    "startCue": "첫 음",
+    "endCue": "전주곡 마지막 화음과 잔향(푸가 전)"
+   },
+   "filmNote": "밀회 2회, 타르 수업 장면. 피아노 연주",
+   "videos": [
+    {
+     "videoId": "PIpTAgpabmo",
+     "artistId": 372,
+     "artistName": "Glenn Gould",
+     "wikidata": "Q216924"
+    },
+    {
+     "videoId": "dWwHtBDcPH4",
+     "artistId": 208,
+     "artistName": "András Schiff",
+     "wikidata": "Q427319"
+    },
+    {
+     "videoId": "qgD53idHgmE",
+     "artistId": 541,
+     "artistName": "Angela Hewitt",
+     "wikidata": "Q437307"
+    }
+   ]
+  },
+  {
+   "pieceId": 12,
+   "workMbid": "4e4b97df-403a-4a27-b9fa-5bd8a8333604",
+   "composerQid": "Q1339",
+   "titleKo": "무반주 첼로 모음곡",
+   "titleEn": "Six Suites for Unaccompanied Cello, BWV 1007–1012",
+   "composerNameEn": "Johann Sebastian Bach",
+   "composerNameKo": "요한 제바스티안 바흐",
+   "role": "CELLIST",
+   "sector": {
+    "key": "suite1-prelude",
+    "type": "MOVEMENT",
+    "nameKo": "1번 G장조 BWV 1007 전주곡",
+    "nameEn": "Suite no. 1 in G major, BWV 1007: Prélude",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "첫 음",
+    "endCue": "전주곡 마지막 화음과 잔향"
+   },
+   "filmNote": "에반게리온 15화 신지의 첼로",
+   "videos": [
+    {
+     "videoId": "noW9fM9vgJs",
+     "artistId": 215,
+     "artistName": "Yo-Yo Ma",
+     "wikidata": "Q234891"
+    },
+    {
+     "videoId": "_puFOiwgT0I",
+     "artistId": 216,
+     "artistName": "Mischa Maisky",
+     "wikidata": "Q381759"
+    },
+    {
+     "videoId": "IC1mWcl3B4Q",
+     "artistId": 217,
+     "artistName": "Steven Isserlis",
+     "wikidata": "Q2095862"
+    }
+   ]
+  },
+  {
+   "pieceId": 47,
+   "workMbid": "fc35bfba-5e0d-3de4-bbeb-93af627aa8b6",
+   "composerQid": "Q1145",
+   "titleKo": "클라브생 모음곡 중 \"탕부랭\"",
+   "titleEn": "Pièces de clavecin, Suite in E minor: Tambourin",
+   "composerNameEn": "Jean-Philippe Rameau",
+   "composerNameKo": "장필리프 라모",
+   "role": "PIANIST",
+   "sector": {
+    "key": "whole-work",
+    "type": "WHOLE_WORK",
+    "nameKo": "전곡",
+    "nameEn": "Complete work",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "첫 음",
+    "endCue": "마지막 음과 잔향"
+   },
+   "filmNote": "아가씨. 영화는 피아노 독주라 피아노 연주로 고른다",
+   "videos": [
+    {
+     "videoId": "DBKAzcR0FdU",
+     "artistId": 205,
+     "artistName": "Grigory Sokolov",
+     "wikidata": "Q468626"
+    },
+    {
+     "videoId": "WLRVUxhNUiQ",
+     "artistId": 541,
+     "artistName": "Angela Hewitt",
+     "wikidata": "Q437307"
+    },
+    {
+     "videoId": "DLcysHhZpTE",
+     "artistId": 754,
+     "artistName": "Alexandre Tharaud",
+     "wikidata": "Q954028"
+    }
+   ]
+  }
+ ]
+}
