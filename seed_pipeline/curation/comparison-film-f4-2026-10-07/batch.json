@@ -1,0 +1,162 @@
+{
+  "batchId": "film-f4",
+  "note": "영화 속 클래식 4차. 영화에 나온 대목이 곡의 한 부분 전체라 경계가 분명한 셋(피가로의 결혼 서곡, 레퀴엠 Confutatis, 골드베르크 변주곡 아리아)을 기존 곡에 새 구간으로 붙인다. 기존 source 는 모두 발행돼 새 영상으로 고른다.",
+  "pieces": [
+    {
+      "pieceId": 69,
+      "workMbid": "8c6d8c96-bb80-4d9d-9fda-96852e10af60",
+      "composerQid": "Q254",
+      "titleKo": "오페라 <피가로의 결혼> K. 492",
+      "titleEn": "Le nozze di Figaro, K. 492",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "overture",
+        "type": "EXCERPT",
+        "nameKo": "서곡",
+        "nameEn": "Overture",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "현과 바순의 여린 첫 음형(서곡 시작)",
+        "endCue": "서곡 종결 화음"
+      },
+      "videos": [
+        {
+          "videoId": "KFSIuj5ZuuU",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "08Go0UIMb7s",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "London Philharmonic Orchestra",
+            "wikidata": "Q863397"
+          }
+        },
+        {
+          "videoId": "n3oz1zTM8wo",
+          "artistId": 629,
+          "artistName": "Colin Davis",
+          "wikidata": "Q366624",
+          "orchestra": {
+            "name": "BBC Symphony Orchestra",
+            "wikidata": "Q795630"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 71,
+      "workMbid": "e3442502-1d20-44ec-9c39-2655956840e2",
+      "composerQid": "Q254",
+      "titleKo": "레퀴엠 D단조 K. 626",
+      "titleEn": "Requiem, K. 626",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "confutatis",
+        "type": "EXCERPT",
+        "nameKo": "「저주받은 자들이 혼란에 빠질 때」(Confutatis)",
+        "nameEn": "Sequentia: Confutatis",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "남성 합창과 현의 포르테 첫 박(악곡 시작)",
+        "endCue": "마지막 화음(라크리모사로 넘어가기 전)"
+      },
+      "videos": [
+        {
+          "videoId": "4PWb69eHmkI",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "choir": {
+            "name": "Chor des Bayerischen Rundfunks",
+            "wikidata": "Q881144"
+          },
+          "orchestra": {
+            "name": "Symphonieorchester des Bayerischen Rundfunks",
+            "wikidata": "Q636159"
+          }
+        },
+        {
+          "videoId": "hB4rYmfwpvc",
+          "artistId": 629,
+          "artistName": "Colin Davis",
+          "wikidata": "Q366624",
+          "choir": {
+            "name": "London Symphony Chorus",
+            "wikidata": "Q6670826"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "S8m4fm_cF6o",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "choir": {
+            "name": "Wiener Singverein",
+            "wikidata": "Q313692"
+          },
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 461,
+      "workMbid": "1d51e560-2a59-4e97-8943-13052b6adc03",
+      "composerQid": "Q1339",
+      "titleKo": "골드베르크 변주곡 BWV 988",
+      "titleEn": "Goldberg Variations, BWV 988",
+      "composerNameEn": "Johann Sebastian Bach",
+      "composerNameKo": "요한 제바스티안 바흐",
+      "role": "PIANIST",
+      "sector": {
+        "key": "aria",
+        "type": "EXCERPT",
+        "nameKo": "아리아",
+        "nameEn": "Aria",
+        "measureStart": "1",
+        "measureEnd": "32",
+        "startCue": "아리아 첫 음",
+        "endCue": "아리아 마지막 음과 잔향(제1변주 전)"
+      },
+      "videos": [
+        {
+          "videoId": "nBFRBWEuP0w",
+          "artistId": 250,
+          "artistName": "Murray Perahia",
+          "wikidata": "Q326221"
+        },
+        {
+          "videoId": "12OCY49jzS4",
+          "artistId": 208,
+          "artistName": "András Schiff",
+          "wikidata": "Q427319"
+        },
+        {
+          "videoId": "kHzcbQfIE0k",
+          "artistId": 541,
+          "artistName": "Angela Hewitt",
+          "wikidata": "Q437307"
+        }
+      ]
+    }
+  ]
+}
