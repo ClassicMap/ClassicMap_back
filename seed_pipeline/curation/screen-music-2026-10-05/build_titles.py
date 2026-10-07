@@ -141,7 +141,7 @@ MAP = {
     # 베르디
     "my-paparotti#1": (149, "la-donna-e-mobile", None),
     "pretty-woman#1": (148, "act1-sempre-libera", None),
-    "pretty-woman#2": (148, None, None),
+    "pretty-woman#2": (148, "act2-che-fai-amami", None),
     "wednesday#4": (152, "dies-irae", None),
     # 리게티
     "2001-a-space-odyssey#2": (None, None, "레퀴엠"),
