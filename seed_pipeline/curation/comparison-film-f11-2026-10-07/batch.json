@@ -1,0 +1,282 @@
+{
+  "batchId": "film-f11",
+  "note": "영화 속 클래식 11차. 새로 넣은 작품·한국어화한 시드 작품 가운데 모음곡·칸타타 낱곡 다섯.",
+  "pieces": [
+    {
+      "pieceId": 26034,
+      "workMbid": "76cd571a-1a95-4cee-8ae0-40387733d0f0",
+      "composerQid": "Q7315",
+      "titleKo": "피아노 모음곡 <사계>",
+      "titleEn": "The Seasons, op. 37a",
+      "composerNameEn": "Pyotr Ilyich Tchaikovsky",
+      "composerNameKo": "표트르 일리치 차이콥스키",
+      "role": "PIANIST",
+      "sector": {
+        "key": "april",
+        "type": "MOVEMENT",
+        "nameKo": "4월 「스노드롭」",
+        "nameEn": "April: Snowdrop",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "첫 음",
+        "endCue": "마지막 화음과 잔향"
+      },
+      "filmNote": "밀회. 4월 한 곡만 담긴 영상",
+      "videos": [
+        {
+          "videoId": "p42I0pxHIfg",
+          "artistId": 187,
+          "artistName": "Yunchan Lim",
+          "wikidata": "Q112685630"
+        },
+        {
+          "videoId": "AXrozmttH4k",
+          "artistId": 370,
+          "artistName": "Vladimir Ashkenazy",
+          "wikidata": "Q157785"
+        },
+        {
+          "videoId": "S7xvwquz0dc",
+          "artistId": 228,
+          "artistName": "Bruce Liu",
+          "wikidata": "Q108877746"
+        }
+      ]
+    },
+    {
+      "pieceId": 15339,
+      "workMbid": "c6c039f1-5f7c-4506-b2bc-61a2c037291d",
+      "composerQid": "Q1339",
+      "titleKo": "칸타타 <나는 만족하나이다>",
+      "titleEn": "Ich habe genung, BWV 82",
+      "composerNameEn": "Johann Sebastian Bach",
+      "composerNameKo": "요한 제바스티안 바흐",
+      "role": "VOCALIST",
+      "sector": {
+        "key": "mv1-aria",
+        "type": "MOVEMENT",
+        "nameKo": "1곡 아리아 「Ich habe genug」",
+        "nameEn": "I. Aria: Ich habe genug",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "오보에·현의 첫 음(리토르넬로)",
+        "endCue": "아리아 마지막 리토르넬로 끝"
+      },
+      "filmNote": "박쥐. 베이스·바리톤 원곡(+지휘자·악단), 1곡만 담긴 트랙",
+      "videos": [
+        {
+          "videoId": "xMau4hJ43zg",
+          "artistId": 649,
+          "artistName": "Dietrich Fischer-Dieskau",
+          "wikidata": "Q77060",
+          "conductor": {
+            "name": "Karl Richter",
+            "wikidata": "Q76735"
+          },
+          "orchestra": {
+            "name": "Münchener Bach-Orchester",
+            "wikidata": "Q106764138"
+          }
+        },
+        {
+          "videoId": "5N7UsT5uzWY",
+          "artistId": 653,
+          "artistName": "Matthias Goerne",
+          "wikidata": "Q70390",
+          "conductor": {
+            "name": "Roger Norrington",
+            "wikidata": "Q537083"
+          },
+          "orchestra": {
+            "name": "Camerata Salzburg",
+            "wikidata": "Q392430"
+          }
+        },
+        {
+          "videoId": "uXnau7ZYHnU",
+          "artistId": 843,
+          "artistName": "Hanno Müller-Brachmann",
+          "wikidata": "Q119296",
+          "conductor": {
+            "name": "Helmut Müller-Brühl",
+            "wikidata": "Q77898"
+          },
+          "orchestra": {
+            "name": "Kölner Kammerorchester",
+            "wikidata": "Q111795682"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 14951,
+      "workMbid": "85da3806-fd52-4556-917f-e6c55eab1e3c",
+      "composerQid": "Q1339",
+      "titleKo": "칸타타 <하나님의 시간이 가장 좋은 때>",
+      "titleEn": "Gottes Zeit ist die allerbeste Zeit, BWV 106",
+      "composerNameEn": "Johann Sebastian Bach",
+      "composerNameKo": "요한 제바스티안 바흐",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-sonatina",
+        "type": "MOVEMENT",
+        "nameKo": "1곡 소나티나",
+        "nameEn": "I. Sonatina",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "리코더·비올라 다 감바 첫 음",
+        "endCue": "소나티나 끝 화음"
+      },
+      "filmNote": "포핸즈. 원곡(리코더 둘·감바 둘·통주저음)",
+      "videos": [
+        {
+          "videoId": "dzTl01hn6oI",
+          "artistId": 603,
+          "artistName": "John Eliot Gardiner",
+          "wikidata": "Q160325",
+          "orchestra": {
+            "name": "English Baroque Soloists",
+            "wikidata": "Q1342808"
+          }
+        },
+        {
+          "videoId": "6jLpB1VKdU8",
+          "artistId": 844,
+          "artistName": "Gustav Leonhardt",
+          "wikidata": "Q51584",
+          "orchestra": {
+            "name": "Leonhardt-Consort",
+            "wikidata": "Q340088"
+          }
+        },
+        {
+          "videoId": "12XYFWFHDsw",
+          "artistName": "Sébastien Daucé",
+          "wikidata": "Q16841392",
+          "orchestra": {
+            "name": "Ensemble Correspondances",
+            "wikidata": "Q17154333"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 14198,
+      "workMbid": "1418776f-764b-4e2e-b920-fbab3fa18e6e",
+      "composerQid": "Q80621",
+      "titleKo": "극음악 <페르 귄트>",
+      "titleEn": "Peer Gynt, op. 23",
+      "composerNameEn": "Edvard Grieg",
+      "composerNameKo": "에드바르 그리그",
+      "role": "SOPRANO",
+      "sector": {
+        "key": "solveig-song",
+        "type": "EXCERPT",
+        "nameKo": "19곡 「솔베이그의 노래」",
+        "nameEn": "No. 19 Solveig's Song",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 전주 첫 음",
+        "endCue": "노래 끝 관현악 맺음"
+      },
+      "filmNote": "하모니(합창 편곡). 극음악 Op. 23 의 독창판(소프라노+관현악). 모음곡 2번 관현악판(Op. 55)은 쓰지 않는다",
+      "videos": [
+        {
+          "videoId": "RX6m4mGmmH4",
+          "artistId": 609,
+          "artistName": "Barbara Bonney",
+          "wikidata": "Q201079",
+          "conductor": {
+            "name": "Neeme Järvi",
+            "wikidata": "Q356161"
+          },
+          "orchestra": {
+            "name": "Gothenburg Symphony Orchestra",
+            "wikidata": "Q1526031"
+          }
+        },
+        {
+          "videoId": "vHNEL8vAw_8",
+          "artistId": 753,
+          "artistName": "Barbara Hendricks",
+          "wikidata": "Q807482",
+          "conductor": {
+            "name": "Esa-Pekka Salonen",
+            "wikidata": "Q314587"
+          },
+          "orchestra": {
+            "name": "Oslo Philharmonic",
+            "wikidata": "Q1063440"
+          }
+        },
+        {
+          "videoId": "Ij014f4qvWY",
+          "artistId": 850,
+          "artistName": "Camilla Tilling",
+          "wikidata": "Q4457269",
+          "conductor": {
+            "name": "Paavo Järvi",
+            "wikidata": "Q700791"
+          },
+          "orchestra": {
+            "name": "Estonian National Symphony Orchestra",
+            "wikidata": "Q1295657"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 26037,
+      "workMbid": "e2bdea3b-9d95-46f7-9607-08852bb836e5",
+      "composerQid": "Q1178",
+      "titleKo": "<어미 거위> 모음곡",
+      "titleEn": "Ma mère l'Oye (suite)",
+      "composerNameEn": "Maurice Ravel",
+      "composerNameKo": "모리스 라벨",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv5-fairy-garden",
+        "type": "MOVEMENT",
+        "nameKo": "5곡 「요정의 정원」",
+        "nameEn": "V. Le jardin féerique",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "현의 첫 화음",
+        "endCue": "마지막 화음과 잔향"
+      },
+      "filmNote": "SKY 캐슬(피아노 편곡). 관현악 모음곡",
+      "videos": [
+        {
+          "videoId": "Sh2DjRkqumI",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "0-orKiIZqBk",
+          "artistId": 235,
+          "artistName": "Myung-Whun Chung",
+          "wikidata": "Q153778",
+          "orchestra": {
+            "name": "Seoul Philharmonic Orchestra",
+            "wikidata": "Q483782"
+          }
+        },
+        {
+          "videoId": "n-v7vpRwzR4",
+          "artistId": 219,
+          "artistName": "Yannick Nézet-Séguin",
+          "wikidata": "Q951548",
+          "orchestra": {
+            "name": "Rotterdam Philharmonic Orchestra",
+            "wikidata": "Q2270779"
+          }
+        }
+      ]
+    }
+  ]
+}
