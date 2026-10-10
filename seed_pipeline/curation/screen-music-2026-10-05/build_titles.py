@@ -43,10 +43,10 @@ MAP = {
     "your-lie-in-april#1": (26029, None, None),
     # 쇼팽
     "for-horowitz#2": (127, "whole-work", None),
-    "forest-of-piano#1": (26047, None, None),
+    "forest-of-piano#1": (26047, "whole-work", None),
     "forest-of-piano#2": (463, "no11-whole", None),
-    "forest-of-piano#3": (26048, None, None),
-    "forest-of-piano#4": (26049, None, None),
+    "forest-of-piano#3": (26048, "whole-work", None),
+    "forest-of-piano#4": (26049, "mv3-funeral-march", None),
     "forest-of-piano#5": (26050, None, None),
     "forest-of-piano#6": (132, None, None),
     "keys-to-the-heart#2": (132, None, None),
@@ -142,7 +142,7 @@ MAP = {
     "2001-a-space-odyssey#6": (26028, None, None),
     # 슈만
     "do-you-like-brahms#1": (464, "no7-traumerei", None),
-    "do-you-like-brahms#2": (26032, None, None),
+    "do-you-like-brahms#2": (26032, "whole-work", None),
     "for-horowitz#3": (464, "no7-traumerei", None),
     # 엘가
     "fantasia-2000#5": (265, None, None),
@@ -196,7 +196,7 @@ MAP = {
     "the-glory#1": (206, "no4-pie-jesu", None),
     "the-handmaiden#1": (47, "whole-work", None),
     "wednesday#3": (322, "dance-of-the-knights", None),
-    "your-lie-in-april#4": (26031, None, None),
+    "your-lie-in-april#4": (26031, "whole-work", None),
 }
 
 # 모아 보는 화면 순서. 한국 관객이 많이 본 작품부터
