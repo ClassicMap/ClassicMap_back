@@ -1,0 +1,45 @@
+{
+  "status": "succeeded",
+  "bundlePath": "/tmp/tmp.S7gioqQTD0/clip-assets.jsonl",
+  "rowCount": 15,
+  "dryRun": false,
+  "publish": true,
+  "seedRunId": "0ce999bc-17da-406f-953d-5362986dc7ab",
+  "mutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 15,
+    "clipAssetsInserted": 15,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 30,
+    "total": 60
+  },
+  "plannedMutations": {
+    "clipJobsInserted": 0,
+    "clipJobsUpdated": 15,
+    "clipAssetsInserted": 15,
+    "clipAssetsRetired": 0,
+    "clipAssetsUpdated": 0,
+    "performancesReady": 0,
+    "publishTransitions": 30,
+    "total": 60
+  },
+  "performanceIds": [
+    998,
+    999,
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012
+  ]
+}
