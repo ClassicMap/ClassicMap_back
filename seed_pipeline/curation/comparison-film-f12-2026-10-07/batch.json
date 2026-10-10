@@ -1,0 +1,295 @@
+{
+  "batchId": "film-f12",
+  "note": "영화 속 클래식 12차. 새로 넣은 오페라·교향곡·협주곡 넷의 대목.",
+  "pieces": [
+    {
+      "pieceId": 26043,
+      "workMbid": "b3b1e2b3-cbb8-4b46-a7d0-0031ec13492c",
+      "composerQid": "Q254",
+      "titleKo": "오페라 <돈 조반니>",
+      "titleEn": "Don Giovanni, K. 527",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "act2-commendatore",
+        "type": "EXCERPT",
+        "nameKo": "2막 피날레 기사장 장면 「Don Giovanni, a cenar teco」",
+        "nameEn": "Act II Finale: Don Giovanni, a cenar teco",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "기사장 등장 d단조 총주 화음",
+        "endCue": "돈 조반니가 지옥에 끌려가는 합창 끝(「Ah!」)"
+      },
+      "filmNote": "아마데우스. 그 장면만 담긴 트랙(보통 5~7분)",
+      "videos": [
+        {
+          "videoId": "PDp174cYV84",
+          "artistId": 577,
+          "artistName": "Neville Marriner",
+          "wikidata": "Q318636",
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          },
+          "singers": [
+            {
+              "role": "BARITONE",
+              "name": "Thomas Allen",
+              "wikidata": "Q953628"
+            },
+            {
+              "role": "BASS",
+              "name": "Robert Lloyd",
+              "wikidata": "Q326331"
+            }
+          ]
+        },
+        {
+          "videoId": "yZN3LMtSJAA",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          },
+          "singers": [
+            {
+              "role": "BASS",
+              "name": "Samuel Ramey",
+              "wikidata": "Q951556"
+            },
+            {
+              "role": "BASS",
+              "name": "Paata Burchuladze",
+              "wikidata": "Q747956"
+            }
+          ]
+        },
+        {
+          "videoId": "qlaRnQpgBOA",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Chamber Orchestra of Europe",
+            "wikidata": "Q661670"
+          },
+          "singers": [
+            {
+              "role": "BARITONE",
+              "name": "Simon Keenlyside",
+              "wikidata": "Q549726"
+            },
+            {
+              "role": "BASS",
+              "name": "Matti Salminen",
+              "wikidata": "Q712805"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pieceId": 26055,
+      "workMbid": "9b1bd955-8635-43e6-9711-f2b820ffe8b8",
+      "composerQid": "Q1511",
+      "titleKo": "오페라 <탄호이저>",
+      "titleEn": "Tannhäuser, WWV 70",
+      "composerNameEn": "Richard Wagner",
+      "composerNameKo": "리하르트 바그너",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "act1-venusberg",
+        "type": "EXCERPT",
+        "nameKo": "1막 「베누스베르크 음악」(바카날레)",
+        "nameEn": "Act I: Venusberg Music (Bacchanale)",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "바카날레 첫 음",
+        "endCue": "세이렌 합창 뒤 음악이 잦아드는 끝"
+      },
+      "filmNote": "오페라가 뭐예요, 박사님?. 판(드레스덴/파리)은 셋이 같아야 한다",
+      "videos": [
+        {
+          "videoId": "ipzOyODGQyo",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "choir": {
+            "name": "Chor des Bayerischen Rundfunks",
+            "wikidata": "Q881144"
+          },
+          "orchestra": {
+            "name": "Symphonieorchester des Bayerischen Rundfunks",
+            "wikidata": "Q636159"
+          }
+        },
+        {
+          "videoId": "6PZlRUPlHSU",
+          "artistId": 632,
+          "artistName": "Daniel Barenboim",
+          "wikidata": "Q152768",
+          "orchestra": {
+            "name": "Staatskapelle Berlin",
+            "wikidata": "Q708538"
+          }
+        },
+        {
+          "videoId": "LkvsiG5ByyI",
+          "artistId": 859,
+          "artistName": "Franz Konwitschny",
+          "wikidata": "Q63454",
+          "orchestra": {
+            "name": "Staatskapelle Berlin",
+            "wikidata": "Q708538"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 11933,
+      "workMbid": "ddcca484-fa72-4703-a44e-7c84ac67a5ea",
+      "composerQid": "Q7304",
+      "titleKo": "교향곡 3번 D단조",
+      "titleEn": "Symphony No. 3 in D minor",
+      "composerNameEn": "Gustav Mahler",
+      "composerNameKo": "구스타프 말러",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv4-o-mensch",
+        "type": "EXCERPT",
+        "nameKo": "4악장 도입 (알토 「O Mensch! Gib Acht!」)",
+        "nameEn": "IV. Sehr langsam. Misterioso, opening",
+        "measureStart": "1",
+        "measureEnd": "",
+        "startCue": "저음 현의 첫 음",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 180
+      },
+      "filmNote": "베니스에서의 죽음. 4악장만 담긴 영상, 알토 크레딧",
+      "videos": [
+        {
+          "videoId": "xZ3qhcRU6qU",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          },
+          "singers": [
+            {
+              "role": "ALTO",
+              "name": "Christa Ludwig",
+              "wikidata": "Q241005"
+            }
+          ]
+        },
+        {
+          "videoId": "D3iKr54PnZY",
+          "artistId": 408,
+          "artistName": "Bernard Haitink",
+          "wikidata": "Q158370",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          },
+          "singers": [
+            {
+              "role": "ALTO",
+              "name": "Maureen Forrester",
+              "wikidata": "Q263172"
+            }
+          ]
+        },
+        {
+          "videoId": "5KGcLlQs4z0",
+          "artistId": 799,
+          "artistName": "Pierre Boulez",
+          "wikidata": "Q156193",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          },
+          "singers": [
+            {
+              "role": "ALTO",
+              "name": "Anne Sofie von Otter",
+              "wikidata": "Q234973"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pieceId": 26030,
+      "workMbid": "075a814d-a8a2-48d6-970d-90eea4e5e9ea",
+      "composerQid": "Q150445",
+      "titleKo": "서주와 론도 카프리치오소 A단조",
+      "titleEn": "Introduction et Rondo capriccioso, op. 28",
+      "composerNameEn": "Camille Saint-Saëns",
+      "composerNameKo": "카미유 생상스",
+      "role": "VIOLINIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete work",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "현의 피치카토 첫 음",
+        "endCue": "마지막 화음"
+      },
+      "filmNote": "4월은 너의 거짓말. 바이올린+관현악 원곡 + 지휘자·악단. 600초 넘는 연주는 뺀다",
+      "videos": [
+        {
+          "videoId": "-uZLhIwNt-w",
+          "artistId": 267,
+          "artistName": "Itzhak Perlman",
+          "wikidata": "Q215905",
+          "conductor": {
+            "name": "Zubin Mehta",
+            "wikidata": "Q157635"
+          },
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "DUesTd0sqMs",
+          "artistId": 234,
+          "artistName": "Kyung Wha Chung",
+          "wikidata": "Q391400",
+          "conductor": {
+            "name": "Charles Dutoit",
+            "wikidata": "Q116995"
+          },
+          "orchestra": {
+            "name": "Royal Philharmonic Orchestra",
+            "wikidata": "Q856125"
+          }
+        },
+        {
+          "videoId": "uP0Ssti-O_Q",
+          "artistId": 212,
+          "artistName": "Janine Jansen",
+          "wikidata": "Q235149",
+          "conductor": {
+            "name": "Barry Wordsworth",
+            "wikidata": "Q809113"
+          },
+          "orchestra": {
+            "name": "Royal Philharmonic Orchestra",
+            "wikidata": "Q856125"
+          }
+        }
+      ]
+    }
+  ]
+}
