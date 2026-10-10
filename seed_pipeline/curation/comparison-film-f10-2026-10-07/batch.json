@@ -1,0 +1,215 @@
+{
+ "batchId": "film-f10",
+ "note": "영화 속 클래식 10차. 새로 넣은 작품 가운데 피아노 독주 다섯(드라마·애니 연주 장면).",
+ "pieces": [
+  {
+   "pieceId": 26047,
+   "workMbid": "0d5d12d1-19d8-34fa-9c5d-61e118e4ff4c",
+   "composerQid": "Q1268",
+   "titleKo": "뱃노래 F#장조",
+   "titleEn": "Barcarolle in F-sharp major, op. 60",
+   "composerNameEn": "Frédéric Chopin",
+   "composerNameKo": "프레데리크 쇼팽",
+   "role": "PIANIST",
+   "sector": {
+    "key": "whole-work",
+    "type": "WHOLE_WORK",
+    "nameKo": "전곡",
+    "nameEn": "Complete work",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "첫 옥타브 C#",
+    "endCue": "마지막 화음과 잔향"
+   },
+   "filmNote": "피아노의 숲. 600초 넘는 연주는 뺀다",
+   "videos": [
+    {
+     "videoId": "2cv7diE0ZMc",
+     "artistId": 366,
+     "artistName": "Krystian Zimerman",
+     "wikidata": "Q353461"
+    },
+    {
+     "videoId": "CztOXaox2nA",
+     "artistId": 207,
+     "artistName": "Maurizio Pollini",
+     "wikidata": "Q160058"
+    },
+    {
+     "videoId": "eVA-bgNe27M",
+     "artistId": 206,
+     "artistName": "Evgeny Kissin",
+     "wikidata": "Q160154"
+    }
+   ]
+  },
+  {
+   "pieceId": 26048,
+   "workMbid": "3c6f04d7-dca0-3f06-b603-0d9d8cecdb27",
+   "composerQid": "Q1268",
+   "titleKo": "연습곡 Op. 10, No. 1 C장조",
+   "titleEn": "Étude in C major, op. 10 no. 1",
+   "composerNameEn": "Frédéric Chopin",
+   "composerNameKo": "프레데리크 쇼팽",
+   "role": "PIANIST",
+   "sector": {
+    "key": "whole-work",
+    "type": "WHOLE_WORK",
+    "nameKo": "전곡",
+    "nameEn": "Complete work",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "첫 음",
+    "endCue": "마지막 화음과 잔향"
+   },
+   "filmNote": "피아노의 숲. Op. 10-1 한 곡만 담긴 영상",
+   "videos": [
+    {
+     "videoId": "weXwhsrJC8o",
+     "artistId": 207,
+     "artistName": "Maurizio Pollini",
+     "wikidata": "Q160058"
+    },
+    {
+     "videoId": "mPZb1KZ5sbY",
+     "artistId": 187,
+     "artistName": "Yunchan Lim",
+     "wikidata": "Q112685630"
+    },
+    {
+     "videoId": "oO13AGlyHiI",
+     "artistId": 370,
+     "artistName": "Vladimir Ashkenazy",
+     "wikidata": "Q157785"
+    }
+   ]
+  },
+  {
+   "pieceId": 26049,
+   "workMbid": "7f3f7fdf-6a54-3f28-ba5c-765dbe3d689f",
+   "composerQid": "Q1268",
+   "titleKo": "피아노 소나타 2번 B♭단조 \"장송\"",
+   "titleEn": "Piano Sonata No. 2 in B-flat minor, op. 35",
+   "composerNameEn": "Frédéric Chopin",
+   "composerNameKo": "프레데리크 쇼팽",
+   "role": "PIANIST",
+   "sector": {
+    "key": "mv3-funeral-march",
+    "type": "EXCERPT",
+    "nameKo": "3악장 장송행진곡 도입",
+    "nameEn": "III. Marche funèbre, opening",
+    "measureStart": "1",
+    "measureEnd": "",
+    "startCue": "장송행진곡 첫 화음",
+    "endCue": "발췌 끝(트리오 전)"
+   },
+   "excerpt": {
+    "anchor": "head",
+    "seconds": 90
+   },
+   "filmNote": "피아노의 숲. 3악장만 담긴 영상",
+   "videos": [
+    {
+     "videoId": "uZxMADUkmbU",
+     "artistId": 186,
+     "artistName": "Seong-Jin Cho",
+     "wikidata": "Q4516986"
+    },
+    {
+     "videoId": "XxXO41Xw7Fk",
+     "artistId": 204,
+     "artistName": "Martha Argerich",
+     "wikidata": "Q156810"
+    },
+    {
+     "videoId": "SihbeHyc03U",
+     "artistId": 201,
+     "artistName": "Yuja Wang",
+     "wikidata": "Q465311"
+    }
+   ]
+  },
+  {
+   "pieceId": 26031,
+   "workMbid": "f39946b4-81cb-4f80-afcc-fe4528e7e2b4",
+   "composerQid": "Q78517",
+   "titleKo": "사랑의 슬픔 (라흐마니노프 피아노 편곡)",
+   "titleEn": "Liebesleid (arr. Rachmaninoff)",
+   "composerNameEn": "Fritz Kreisler",
+   "composerNameKo": "프리츠 크라이슬러",
+   "role": "PIANIST",
+   "sector": {
+    "key": "whole-work",
+    "type": "WHOLE_WORK",
+    "nameKo": "전곡",
+    "nameEn": "Complete work",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "첫 음",
+    "endCue": "마지막 화음과 잔향"
+   },
+   "filmNote": "4월은 너의 거짓말. 라흐마니노프 편곡판만(바이올린 원곡 아님)",
+   "videos": [
+    {
+     "videoId": "lkD60hv0evQ",
+     "artistId": 223,
+     "artistName": "Boris Giltburg",
+     "wikidata": "Q893661"
+    },
+    {
+     "videoId": "stZzxp1_as4",
+     "artistId": 261,
+     "artistName": "Stephen Hough",
+     "wikidata": "Q1243635"
+    },
+    {
+     "videoId": "X5lQB_TCi98",
+     "artistId": 716,
+     "artistName": "Howard Shelley",
+     "wikidata": "Q11327040"
+    }
+   ]
+  },
+  {
+   "pieceId": 26032,
+   "workMbid": "14197202-1fd5-41d1-b274-140dd4418e2f",
+   "composerQid": "Q7351",
+   "titleKo": "헌정 (리스트 피아노 편곡)",
+   "titleEn": "Widmung (arr. Liszt), S. 566",
+   "composerNameEn": "Robert Schumann",
+   "composerNameKo": "로베르트 슈만",
+   "role": "PIANIST",
+   "sector": {
+    "key": "whole-work",
+    "type": "WHOLE_WORK",
+    "nameKo": "전곡",
+    "nameEn": "Complete work",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "첫 음",
+    "endCue": "마지막 화음과 잔향"
+   },
+   "filmNote": "브람스를 좋아하세요?. 리스트 편곡 피아노 독주판만(가곡 원곡 아님)",
+   "videos": [
+    {
+     "videoId": "uqF7H3jHIKQ",
+     "artistId": 206,
+     "artistName": "Evgeny Kissin",
+     "wikidata": "Q160154"
+    },
+    {
+     "videoId": "T3ILPWUgnaw",
+     "artistId": 568,
+     "artistName": "Yundi",
+     "wikidata": "Q557244"
+    },
+    {
+     "videoId": "5VkE9fEj7sM",
+     "artistId": 189,
+     "artistName": "Yeol Eum Son",
+     "wikidata": "Q435711"
+    }
+   ]
+  }
+ ]
+}
