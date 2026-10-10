@@ -19,4 +19,10 @@
   - 283 골드베르크 아리아: 영어 위키백과, West Cork Music 해설(16마디씩 둘), PTNA 곡 해설
   - 284 레퀴엠 Confutatis: 영어 위키백과 Requiem(Mozart)
 
+  - 308 드보르자크 9번 4악장 도입: IMSLP #922878, 영어 위키백과
+  - 309 쇼팽 Op. 25-11: IMSLP #843798, 영어 위키백과
+  - 310 말러 5번 Adagietto m.90~103: IMSLP #360483, 8차 review-report 의 m.95 이정표
+  - 311 윌리엄 텔 서곡 피날레: IMSLP #33461(m.226·m.243·m.316)
+  - 312 쇼스타코비치 피아노 협주곡 2번 1악장: 영어 위키백과(총보는 저작권 때문에 못 봐서 셈여림 표시는 쓰지 않았다)
+- 2026-10-10 에 8차 새 구간 다섯(308~312)의 안내 5·추천 비교 5·연주 노트 15를 덧붙였다(듣기 없이, listening skipped 2026-10-10)
 적재는 `deploy/listening-notes-load-job.yaml` 에 `RUN=listening-notes-2026-10-07` 로 dry-run → 적재 → dry-run(계획 변경 0).
