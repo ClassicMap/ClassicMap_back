@@ -58,7 +58,7 @@ MAP = {
     # 모차르트
     "amadeus#1": (26041, "mv1-opening", None),
     "amadeus#2": (26042, "mv3-adagio", None),
-    "amadeus#3": (26043, None, None),
+    "amadeus#3": (26043, "act2-commendatore", None),
     "amadeus#4": (71, "confutatis", None),
     "amadeus#5": (71, "lacrimosa", None),
     "amadeus#6": (72, "mv2-romanze", None),
@@ -75,7 +75,7 @@ MAP = {
     "whats-opera-doc#1": (144, "whole-work", None),
     "whats-opera-doc#2": (26053, None, None),
     "whats-opera-doc#3": (26054, None, None),
-    "whats-opera-doc#4": (26055, None, None),
+    "whats-opera-doc#4": (26055, "act1-venusberg", None),
     "whats-opera-doc#5": (147, "opening", None),
     # 바흐
     "fantasia#1": (16, None, None),
@@ -88,7 +88,7 @@ MAP = {
     "thirst#1": (15339, None, None),
     # 말러
     "death-in-venice#1": (216, "mv4-adagietto", None),
-    "death-in-venice#2": (11933, None, None),
+    "death-in-venice#2": (11933, "mv4-o-mensch", None),
     "decision-to-leave#1": (216, "mv4-adagietto-climax", None),
     "legend-of-the-galactic-heroes#1": (11933, None, None),
     "legend-of-the-galactic-heroes#3": (11293, None, None),
@@ -162,7 +162,7 @@ MAP = {
     "oceans-eleven#1": (220, "whole-work", None),
     # 생상스
     "four-hands#2": (253, "opening-midnight-waltz", None),
-    "your-lie-in-april#2": (26030, None, None),
+    "your-lie-in-april#2": (26030, "whole-work", None),
     # 브람스
     "keys-to-the-heart#3": (155, "whole-work", None),
     "nodame-cantabile-anime#5": (153, None, None),
