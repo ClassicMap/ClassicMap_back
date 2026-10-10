@@ -44,7 +44,7 @@ MAP = {
     # 쇼팽
     "for-horowitz#2": (127, "whole-work", None),
     "forest-of-piano#1": (26047, None, None),
-    "forest-of-piano#2": (463, None, None),
+    "forest-of-piano#2": (463, "no11-whole", None),
     "forest-of-piano#3": (26048, None, None),
     "forest-of-piano#4": (26049, None, None),
     "forest-of-piano#5": (26050, None, None),
@@ -89,7 +89,7 @@ MAP = {
     # 말러
     "death-in-venice#1": (216, "mv4-adagietto", None),
     "death-in-venice#2": (11933, None, None),
-    "decision-to-leave#1": (216, None, None),
+    "decision-to-leave#1": (216, "mv4-adagietto-climax", None),
     "legend-of-the-galactic-heroes#1": (11933, None, None),
     "legend-of-the-galactic-heroes#3": (11293, None, None),
     "legend-of-the-galactic-heroes#5": (217, None, None),
@@ -119,7 +119,7 @@ MAP = {
     # 로시니
     "a-clockwork-orange#2": (169, "whole-work", None),
     "a-clockwork-orange#3": (168, None, None),
-    "beethoven-virus#2": (168, None, None),
+    "beethoven-virus#2": (168, "finale", None),
     "the-penthouse#3": (167, None, None),
     # 헨델
     "maestra-strings-of-truth#2": (26057, None, None),
@@ -184,10 +184,10 @@ MAP = {
     "a-clockwork-orange#1": (37, None, None),
     "fantasia-2000#2": (26052, None, None),
     "fantasia-2000#3": (332, "opening", None),
-    "fantasia-2000#4": (458, None, None),
+    "fantasia-2000#4": (458, "mv1-allegro", None),
     "fantasia#3": (26051, None, None),
     "harmony#1": (14198, None, None),
-    "legend-of-the-galactic-heroes#2": (197, None, None),
+    "legend-of-the-galactic-heroes#2": (197, "mv4-opening", None),
     "maestra-strings-of-truth#1": (122, None, None),
     "platoon#1": (26044, None, None),
     "sky-castle#2": (26037, None, None),
