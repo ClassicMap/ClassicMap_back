@@ -1,0 +1,340 @@
+{
+  "batchId": "film-f13",
+  "note": "영화 속 클래식 13차. 오디오 정렬(film-locate2)로 영화·드라마에 나온 대목을 찾은 다섯을 새 구간으로 붙인다. 기준 녹음의 시작·끝 초는 filmNote 에 있다.",
+  "pieces": [
+    {
+      "pieceId": 132,
+      "workMbid": "5f7ded0a-9869-38e5-a9fd-8612919f1a94",
+      "composerQid": "Q1268",
+      "titleKo": "피아노 협주곡 1번 E단조",
+      "titleEn": "Piano Concerto No. 1 in E minor, op. 11",
+      "composerNameEn": "Frédéric Chopin",
+      "composerNameKo": "프레데리크 쇼팽",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv3-rondo-opening",
+        "type": "EXCERPT",
+        "nameKo": "3악장 론도 주제 첫 제시",
+        "nameEn": "III. Rondo: Vivace, opening",
+        "measureStart": "1",
+        "measureEnd": "",
+        "startCue": "3악장 첫 음(관현악 짧은 도입)",
+        "endCue": "피아노의 론도 주제 첫 제시 끝"
+      },
+      "excerpt": {
+        "referenceVideoId": "wCa9Zs7NPjo",
+        "start": 0.0,
+        "end": 43.0
+      },
+      "filmNote": "그것만이 내 세상 진태의 피아노. film-locate2 정렬: 아르헤리치 wCa9Zs7NPjo 0.0~43.0, 조성진 cpNnGa2hoqw 0.0~46.8(교차 0.042). 두 영상은 운영에 없어 세 연주에 넣어도 된다. 피아니스트 + 지휘자·악단",
+      "videos": [
+        {
+          "videoId": "wCa9Zs7NPjo",
+          "artistId": 204,
+          "artistName": "Martha Argerich",
+          "wikidata": "Q156810",
+          "conductor": {
+            "name": "Claudio Abbado",
+            "wikidata": "Q151608"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "cpNnGa2hoqw",
+          "artistId": 186,
+          "artistName": "Seong-Jin Cho",
+          "wikidata": "Q4516986",
+          "conductor": {
+            "name": "Gianandrea Noseda",
+            "wikidata": "Q2631069"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "RD6TDJjiFyg",
+          "artistId": 200,
+          "artistName": "Lang Lang",
+          "wikidata": "Q155713",
+          "conductor": {
+            "name": "Zubin Mehta",
+            "wikidata": "Q157635"
+          },
+          "orchestra": {
+            "name": "Vienna Philharmonic Orchestra",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 253,
+      "workMbid": "640d92c6-7a12-38ca-a331-ac4ccf420536",
+      "composerQid": "Q150445",
+      "titleKo": "죽음의 무도",
+      "titleEn": "Danse macabre, op. 40",
+      "composerNameEn": "Camille Saint-Saëns",
+      "composerNameKo": "카미유 생상스",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "opening-midnight-waltz",
+        "type": "EXCERPT",
+        "nameKo": "도입 — 자정의 종과 죽음의 왈츠",
+        "nameEn": "Opening: midnight and the dance",
+        "measureStart": "1",
+        "measureEnd": "",
+        "startCue": "하프의 자정 종 첫 음",
+        "endCue": "왈츠 주제가 관현악 전체로 한 번 크게 울린 뒤"
+      },
+      "excerpt": {
+        "referenceVideoId": "V6TPgwy-nRk",
+        "start": 0.0,
+        "end": 101.3
+      },
+      "filmNote": "포핸즈 2회 첫 포핸즈(편곡). film-locate2 정렬: 스토코프스키 V6TPgwy-nRk 0.0~101.3, 몬트리올 Z4UEilNB3xA 3.5~110.8(교차 0.055). 둘 다 운영에 없다. 관현악 원곡, 독주 바이올린 크레딧은 있으면 넣는다",
+      "videos": [
+        {
+          "videoId": "V6TPgwy-nRk",
+          "artistId": 862,
+          "artistName": "Leopold Stokowski",
+          "wikidata": "Q297562",
+          "orchestra": {
+            "name": "National Philharmonic Orchestra",
+            "wikidata": "Q2394269"
+          }
+        },
+        {
+          "videoId": "k1s28gmLicc",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Philharmonia Orchestra",
+            "wikidata": "Q1046309"
+          }
+        },
+        {
+          "videoId": "A5SaniaVk0s",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 167,
+      "workMbid": "adeb0cf7-4f03-4781-87e5-a9228fdb02a3",
+      "composerQid": "Q9726",
+      "titleKo": "오페라 <세비야의 이발사>",
+      "titleEn": "Il barbiere di Siviglia",
+      "composerNameEn": "Gioachino Rossini",
+      "composerNameKo": "조아키노 로시니",
+      "role": "MEZZO_SOPRANO",
+      "sector": {
+        "key": "una-voce-andante",
+        "type": "EXCERPT",
+        "nameKo": "1막 카바티나 「Una voce poco fa」 Andante",
+        "nameEn": "Act I: Una voce poco fa (Andante)",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "관현악 전주 첫 음",
+        "endCue": "Andante 끝(Moderato 「Io sono docile」 전)"
+      },
+      "excerpt": {
+        "referenceVideoId": "rgGQOk_Bm9c",
+        "start": 0.0,
+        "end": 155.0
+      },
+      "filmNote": "펜트하우스(극 중 녹음은 반음 높은 F장조). film-locate2 정렬: 바르톨리 rgGQOk_Bm9c 0.0~155.0, 서덜랜드 2nUOlsaSBX0 0.0~154.4(교차 0.1045 — 장식이 많아 임계에 가깝다, 다른 연주로 바꾸는 게 낫다). 원조(E장조) 메조 판으로 고른다. 가수 + 지휘자·악단",
+      "videos": [
+        {
+          "videoId": "rgGQOk_Bm9c",
+          "artistId": 863,
+          "artistName": "Cecilia Bartoli",
+          "wikidata": "Q18828",
+          "conductor": {
+            "name": "Giuseppe Patanè",
+            "wikidata": "Q284248"
+          }
+        },
+        {
+          "videoId": "r7VrTrJHLgs",
+          "artistId": 719,
+          "artistName": "Teresa Berganza",
+          "wikidata": "Q233876",
+          "conductor": {
+            "name": "Claudio Abbado",
+            "wikidata": "Q151608"
+          },
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        },
+        {
+          "videoId": "AwJ-IUMZMP4",
+          "artistId": 865,
+          "artistName": "Agnes Baltsa",
+          "wikidata": "Q235679",
+          "conductor": {
+            "name": "Neville Marriner",
+            "wikidata": "Q318636"
+          },
+          "orchestra": {
+            "name": "Academy of St Martin in the Fields",
+            "wikidata": "Q337362"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 122,
+      "workMbid": "c230858f-8b2b-3e77-aa3e-777743980263",
+      "composerQid": "Q46096",
+      "titleKo": "바이올린 협주곡 E단조",
+      "titleEn": "Violin Concerto in E minor, op. 64",
+      "composerNameEn": "Felix Mendelssohn",
+      "composerNameKo": "펠릭스 멘델스존",
+      "role": "VIOLINIST",
+      "sector": {
+        "key": "mv2-andante-theme",
+        "type": "EXCERPT",
+        "nameKo": "2악장 Andante 첫 주제 (바이올린 입장부터 가운데 대목 전까지)",
+        "nameEn": "II. Andante, first theme",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "독주 바이올린의 첫 주제 첫 음",
+        "endCue": "A단조 가운데 대목 직전"
+      },
+      "excerpt": {
+        "referenceVideoId": "2Rn-7biLMA0",
+        "start": 47.7,
+        "end": 215.6
+      },
+      "filmNote": "마에스트라(편곡 발췌, 원곡 순서 그대로). film-locate2 정렬: 한 2Rn-7biLMA0 47.7~215.6, 하이페츠 S_NrQ3qFs0E 42.3~196.8(교차 0.063). 둘 다 운영에 없다. 바이올리니스트 + 지휘자·악단",
+      "videos": [
+        {
+          "videoId": "2Rn-7biLMA0",
+          "artistId": 209,
+          "artistName": "Hilary Hahn",
+          "wikidata": "Q235406",
+          "conductor": {
+            "name": "Hugh Wolff",
+            "wikidata": "Q320019"
+          },
+          "orchestra": {
+            "name": "Oslo Philharmonic",
+            "wikidata": "Q1063440"
+          }
+        },
+        {
+          "videoId": "f09l1Q-H4Ug",
+          "artistId": 267,
+          "artistName": "Itzhak Perlman",
+          "wikidata": "Q215905",
+          "conductor": {
+            "name": "Bernard Haitink",
+            "wikidata": "Q158370"
+          },
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "_e3ygyDwKaM",
+          "artistId": 211,
+          "artistName": "Anne-Sophie Mutter",
+          "wikidata": "Q3374",
+          "conductor": {
+            "name": "Herbert von Karajan",
+            "wikidata": "Q154895"
+          },
+          "orchestra": {
+            "name": "Berlin Philharmonic Orchestra",
+            "wikidata": "Q152222"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 80,
+      "workMbid": "e5cfd8b5-74c2-3330-9ca4-42ecd22dffef",
+      "composerQid": "Q255",
+      "titleKo": "피아노 협주곡 5번 E♭장조 \"황제\"",
+      "titleEn": "Piano Concerto No. 5 in E-flat major, op. 73 “Emperor”",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv2-piano-entry",
+        "type": "EXCERPT",
+        "nameKo": "2악장 피아노 입장 (현의 찬가 뒤)",
+        "nameEn": "II. Adagio un poco mosso: piano entry",
+        "measureStart": "16",
+        "measureEnd": "",
+        "startCue": "피아노가 높은 음에서 여리게 내려오는 첫 음(m.16)",
+        "endCue": "영화 대목 끝에 맞춘 발췌 끝"
+      },
+      "excerpt": {
+        "referenceVideoId": "X7bJpzHnscE",
+        "start": 107.5,
+        "end": 158.2
+      },
+      "filmNote": "호로비츠를 위하여(영화 745.5~802.0초, 57초). film-locate2 정렬: 짐머만 QsrnBnnoQ00 105.1~152.0, 키신 vNFXbCrsMYw 103.7~155.3. 이 둘과 페라이아 175PLju79fM 은 구간 273 에 이미 발행돼 세 연주로는 못 쓰고 위치 찾기 기준으로만 받는다. 새 연주 셋 가운데 하나를 기준으로 피아노 입장~그 대목 끝을 잡아 excerpt 를 referenceVideoId·start·end 로 채운다. 피아니스트 + 지휘자·악단",
+      "videos": [
+        {
+          "videoId": "X7bJpzHnscE",
+          "artistId": 207,
+          "artistName": "Maurizio Pollini",
+          "wikidata": "Q160058",
+          "conductor": {
+            "name": "Karl Böhm",
+            "wikidata": "Q84241"
+          },
+          "orchestra": {
+            "name": "Vienna Philharmonic Orchestra",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "KXuYsz4RThw",
+          "artistId": 370,
+          "artistName": "Vladimir Ashkenazy",
+          "wikidata": "Q157785",
+          "conductor": {
+            "name": "Georg Solti",
+            "wikidata": "Q128085"
+          },
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "p-5QsRcMYVE",
+          "artistId": 252,
+          "artistName": "Radu Lupu",
+          "wikidata": "Q472114",
+          "conductor": {
+            "name": "Zubin Mehta",
+            "wikidata": "Q157635"
+          },
+          "orchestra": {
+            "name": "Israel Philharmonic Orchestra",
+            "wikidata": "Q1062617"
+          }
+        }
+      ]
+    }
+  ]
+}
