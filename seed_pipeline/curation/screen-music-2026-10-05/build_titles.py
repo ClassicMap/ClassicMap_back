@@ -108,7 +108,7 @@ MAP = {
     "black-swan#3": (162, None, None),
     "fantasia#2": (161, "waltz-of-the-flowers", None),
     "keys-to-the-heart#4": (159, "mv1-opening", None),
-    "secret-affair#4": (26034, None, None),
+    "secret-affair#4": (26034, "april", None),
     # 라흐마니노프
     "brief-encounter#1": (225, "mv1-opening", None),
     "brief-encounter#2": (225, None, None),
