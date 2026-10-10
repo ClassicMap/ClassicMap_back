@@ -1,0 +1,287 @@
+{
+ "batchId": "film-f9",
+ "note": "영화 속 클래식 9차. 2026-10-07 카탈로그에 새로 넣은 작품(migration 202610070005) 가운데 대목이 분명한 관현악 다섯.",
+ "pieces": [
+  {
+   "pieceId": 26058,
+   "workMbid": "f210c793-f668-413c-8821-3628b3c55483",
+   "composerQid": "Q254",
+   "titleKo": "피아노 협주곡 21번 C장조",
+   "titleEn": "Piano Concerto No. 21 in C major, K. 467",
+   "composerNameEn": "Wolfgang Amadeus Mozart",
+   "composerNameKo": "볼프강 아마데우스 모차르트",
+   "role": "PIANIST",
+   "sector": {
+    "key": "mv2-andante",
+    "type": "MOVEMENT",
+    "nameKo": "2악장 Andante",
+    "nameEn": "II. Andante",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "약음기 낀 현의 셋잇단 반주 첫 음",
+    "endCue": "2악장 마지막 화음"
+   },
+   "filmNote": "엘비라 마디간. 피아니스트 + 지휘자·악단",
+   "videos": [
+    {
+     "videoId": "wdjp2xspTPQ",
+     "artistId": 257,
+     "artistName": "Jan Lisiecki",
+     "wikidata": "Q548800",
+     "conductor": {
+      "name": "Christian Zacharias",
+      "wikidata": "Q62739"
+     },
+     "orchestra": {
+      "name": "Symphonieorchester des Bayerischen Rundfunks",
+      "wikidata": "Q636159"
+     }
+    },
+    {
+     "videoId": "3INlfXNBKDU",
+     "artistId": 399,
+     "artistName": "Maria João Pires",
+     "wikidata": "Q235650",
+     "conductor": {
+      "name": "Claudio Abbado",
+      "wikidata": "Q151608"
+     },
+     "orchestra": {
+      "name": "Chamber Orchestra of Europe",
+      "wikidata": "Q661670"
+     }
+    },
+    {
+     "videoId": "HWa-OKYXq14",
+     "artistId": 189,
+     "artistName": "Yeol Eum Son",
+     "wikidata": "Q435711",
+     "conductor": {
+      "name": "Neville Marriner",
+      "wikidata": "Q318636"
+     },
+     "orchestra": {
+      "name": "Academy of St Martin in the Fields",
+      "wikidata": "Q337362"
+     }
+    }
+   ]
+  },
+  {
+   "pieceId": 26044,
+   "workMbid": "1ebe1abf-daf2-3e5e-b3ad-b6c5a4ec5727",
+   "composerQid": "Q216870",
+   "titleKo": "현을 위한 아다지오",
+   "titleEn": "Adagio for Strings, op. 11",
+   "composerNameEn": "Samuel Barber",
+   "composerNameKo": "새뮤얼 바버",
+   "role": "CONDUCTOR",
+   "sector": {
+    "key": "whole-work",
+    "type": "WHOLE_WORK",
+    "nameKo": "전곡",
+    "nameEn": "Complete work",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "제1바이올린의 첫 음",
+    "endCue": "마지막 화음과 잔향"
+   },
+   "filmNote": "플래툰. 600초 넘는 연주(번스타인 등)는 뺀다",
+   "videos": [
+    {
+     "videoId": "4ZFRgTcVseM",
+     "artistId": 577,
+     "artistName": "Neville Marriner",
+     "wikidata": "Q318636",
+     "orchestra": {
+      "name": "Academy of St Martin in the Fields",
+      "wikidata": "Q337362"
+     }
+    },
+    {
+     "videoId": "XXLLFukDsvw",
+     "artistId": 636,
+     "artistName": "David Zinman",
+     "wikidata": "Q115696",
+     "orchestra": {
+      "name": "Baltimore Symphony Orchestra",
+      "wikidata": "Q131874"
+     }
+    },
+    {
+     "videoId": "DYLIf6FGVTI",
+     "artistId": 775,
+     "artistName": "Leonard Slatkin",
+     "wikidata": "Q509870",
+     "orchestra": {
+      "name": "Saint Louis Symphony Orchestra",
+      "wikidata": "Q2212932"
+     }
+    }
+   ]
+  },
+  {
+   "pieceId": 26025,
+   "workMbid": "fec1c6a5-ece2-393b-89ed-00cdf5cf2afa",
+   "composerQid": "Q13894",
+   "titleKo": "교향시 <차라투스트라는 이렇게 말했다>",
+   "titleEn": "Also sprach Zarathustra, op. 30",
+   "composerNameEn": "Richard Strauss",
+   "composerNameKo": "리하르트 슈트라우스",
+   "role": "CONDUCTOR",
+   "sector": {
+    "key": "sunrise",
+    "type": "EXCERPT",
+    "nameKo": "서주 「일출」(Einleitung)",
+    "nameEn": "Einleitung, oder Sonnenaufgang",
+    "measureStart": "1",
+    "measureEnd": "22",
+    "startCue": "저음 C 지속음(오르간 페달·콘트라바순·더블베이스) 첫 음",
+    "endCue": "서주 끝 오르간 화음과 잔향(「Von den Hinterweltlern」 전)"
+   },
+   "filmNote": "2001: 스페이스 오디세이. 서주만 담긴 트랙",
+   "videos": [
+    {
+     "videoId": "exveTEjJa5E",
+     "artistId": 422,
+     "artistName": "Herbert von Karajan",
+     "wikidata": "Q154895",
+     "orchestra": {
+      "name": "Berliner Philharmoniker",
+      "wikidata": "Q152222"
+     }
+    },
+    {
+     "videoId": "H1R9YCnIdz0",
+     "artistId": 664,
+     "artistName": "Georg Solti",
+     "wikidata": "Q128085",
+     "orchestra": {
+      "name": "Chicago Symphony Orchestra",
+      "wikidata": "Q1050470"
+     }
+    },
+    {
+     "videoId": "6T_uacOZosw",
+     "artistId": 574,
+     "artistName": "Zubin Mehta",
+     "wikidata": "Q157635",
+     "orchestra": {
+      "name": "New York Philharmonic",
+      "wikidata": "Q471154"
+     }
+    }
+   ]
+  },
+  {
+   "pieceId": 26042,
+   "workMbid": "fc8bc562-e604-49d6-bd3b-f0b7a68c2153",
+   "composerQid": "Q254",
+   "titleKo": "세레나데 10번 B♭장조 \"그랑 파르티타\"",
+   "titleEn": "Serenade No. 10 in B-flat major, K. 361 “Gran Partita”",
+   "composerNameEn": "Wolfgang Amadeus Mozart",
+   "composerNameKo": "볼프강 아마데우스 모차르트",
+   "role": "CONDUCTOR",
+   "sector": {
+    "key": "mv3-adagio",
+    "type": "MOVEMENT",
+    "nameKo": "3악장 Adagio",
+    "nameEn": "III. Adagio",
+    "measureStart": "1",
+    "measureEnd": "final",
+    "startCue": "바순·바셋 호른의 반복 반주 첫 음",
+    "endCue": "3악장 마지막 화음"
+   },
+   "filmNote": "아마데우스 살리에리 회상. 관악 합주 — 지휘자(없으면 앙상블) primary",
+   "videos": [
+    {
+     "videoId": "CiIahTWPYZ4",
+     "artistId": 577,
+     "artistName": "Neville Marriner",
+     "wikidata": "Q318636",
+     "orchestra": {
+      "name": "Academy of St Martin in the Fields",
+      "wikidata": "Q337362"
+     }
+    },
+    {
+     "videoId": "NrI7LXbBhBM",
+     "artistId": 601,
+     "artistName": "Karl Böhm",
+     "wikidata": "Q84241",
+     "orchestra": {
+      "name": "Berliner Philharmoniker",
+      "wikidata": "Q152222"
+     }
+    },
+    {
+     "videoId": "KcXtnOcn4tk",
+     "artistId": 665,
+     "artistName": "Nikolaus Harnoncourt",
+     "wikidata": "Q78526",
+     "orchestra": {
+      "name": "Philharmonia Zürich",
+      "wikidata": "Q16854096"
+     }
+    }
+   ]
+  },
+  {
+   "pieceId": 26041,
+   "workMbid": "e99e8e9e-fff1-3da2-a55d-2833516e9899",
+   "composerQid": "Q254",
+   "titleKo": "교향곡 25번 G단조",
+   "titleEn": "Symphony No. 25 in G minor, K. 183",
+   "composerNameEn": "Wolfgang Amadeus Mozart",
+   "composerNameKo": "볼프강 아마데우스 모차르트",
+   "role": "CONDUCTOR",
+   "sector": {
+    "key": "mv1-opening",
+    "type": "EXCERPT",
+    "nameKo": "1악장 도입 (당김음 주제)",
+    "nameEn": "I. Allegro con brio, opening",
+    "measureStart": "1",
+    "measureEnd": "",
+    "startCue": "현의 당김음 첫 화음",
+    "endCue": "발췌 끝"
+   },
+   "excerpt": {
+    "anchor": "head",
+    "seconds": 60
+   },
+   "filmNote": "아마데우스 첫 장면. 1악장만 담긴 영상",
+   "videos": [
+    {
+     "videoId": "HMtm_P7Z3iM",
+     "artistId": 577,
+     "artistName": "Neville Marriner",
+     "wikidata": "Q318636",
+     "orchestra": {
+      "name": "Academy of St Martin in the Fields",
+      "wikidata": "Q337362"
+     }
+    },
+    {
+     "videoId": "lYvoSv7YpF0",
+     "artistId": 601,
+     "artistName": "Karl Böhm",
+     "wikidata": "Q84241",
+     "orchestra": {
+      "name": "Berliner Philharmoniker",
+      "wikidata": "Q152222"
+     }
+    },
+    {
+     "videoId": "BAOD0DXtG8U",
+     "artistId": 605,
+     "artistName": "Leonard Bernstein",
+     "wikidata": "Q152505",
+     "orchestra": {
+      "name": "Wiener Philharmoniker",
+      "wikidata": "Q154685"
+     }
+    }
+   ]
+  }
+ ]
+}
