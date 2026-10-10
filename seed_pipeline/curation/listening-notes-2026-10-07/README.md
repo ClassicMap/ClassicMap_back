@@ -25,4 +25,12 @@
   - 311 윌리엄 텔 서곡 피날레: IMSLP #33461(m.226·m.243·m.316)
   - 312 쇼스타코비치 피아노 협주곡 2번 1악장: 영어 위키백과(총보는 저작권 때문에 못 봐서 셈여림 표시는 쓰지 않았다)
 - 2026-10-10 에 8차 새 구간 다섯(308~312)의 안내 5·추천 비교 5·연주 노트 15를 덧붙였다(듣기 없이, listening skipped 2026-10-10)
+  - 318 쇼팽 뱃노래: Breitkopf 전집 악보(Wikimedia Commons), 영어 위키백과
+  - 319 슈만·리스트 「헌정」: Flaxland 1869 리스트 편곡 악보(Wikimedia Commons), 영어 위키백과 Myrthen
+  - 320 쇼팽 소나타 2번 3악장: 악보(Wikimedia Commons), 영어 위키백과
+  - 321 크라이슬러·라흐마니노프 「사랑의 슬픔」: 라흐마니노프 트랜스크립션집(Muzyka 1990, archive.org), 영어 위키백과 Alt-Wiener Tanzweisen
+  - 322 쇼팽 Op. 10-1: 영어 위키백과('stays in f throughout and never once reaches ff')
+  - 327 모차르트 K. 467 2악장·329 K. 183 1악장·330 K. 361 3악장: IMSLP NMA, 영어 위키백과
+  - 328 바버 현을 위한 아다지오: 영어 위키백과(악보는 저작권 때문에 못 봤다)
+- 2026-10-10 에 9·10차 새 구간 아홉(318~322, 327~330)의 안내 9·추천 비교 9·연주 노트 27을 덧붙였다(듣기 없이, listening skipped 2026-10-10). 10차 피아노 독주는 facts 를 비운다
 적재는 `deploy/listening-notes-load-job.yaml` 에 `RUN=listening-notes-2026-10-07` 로 dry-run → 적재 → dry-run(계획 변경 0).
