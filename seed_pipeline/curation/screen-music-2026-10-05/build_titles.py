@@ -165,7 +165,7 @@ MAP = {
     "your-lie-in-april#2": (26030, "whole-work", None),
     # 브람스
     "keys-to-the-heart#3": (155, "whole-work", None),
-    "nodame-cantabile-anime#5": (153, None, None),
+    "nodame-cantabile-anime#5": (153, "mv1-un-poco-sostenuto", None),
     # 브루크너
     "legend-of-the-galactic-heroes#4": (183, None, None),
     "legend-of-the-galactic-heroes#6": (26056, None, None),
