@@ -1,0 +1,4982 @@
+[
+ {
+  "id": 4,
+  "name": "바흐",
+  "english_name": "Johann Sebastian Bach",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1685–1750) · 직업 composer, organist, harpsichordist, violinist, violist · WD 장르 Baroque music · 작품 manual 9·seed 1686, 구간 7",
+  "note": null
+ },
+ {
+  "id": 5,
+  "name": "몬테베르디",
+  "english_name": "Claudio Monteverdi",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer, string player, choirmaster, and priest (1567–1643) · 직업 music theorist, viol player, Catholic priest, classical composer, singer · WD 장르 opera, Baroque music · 작품 manual 4·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 6,
+  "name": "헨델",
+  "english_name": "Georg Friedrich Händel",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German-British Baroque composer (1685–1759) · 직업 composer, harpsichordist, organist, violinist, opera composer · WD 장르 opera, oratorio, concerto, anthem · 작품 manual 383·seed 0, 구간 4",
+  "note": null
+ },
+ {
+  "id": 7,
+  "name": "비발디",
+  "english_name": "Antonio Lucio Vivaldi",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer and violinist (1678–1741) · 직업 opera composer, Latin Catholic priest, composer, musician, violinist · WD 장르 opera, chamber music, church music, concerto · 작품 manual 597·seed 0, 구간 3",
+  "note": null
+ },
+ {
+  "id": 8,
+  "name": "헨리 퍼셀",
+  "english_name": "Henry Purcell",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: English composer (1659–1695) · 직업 composer, organist, musicologist, music theorist, author · WD 장르 opera, hymn, ode · 작품 manual 5·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 9,
+  "name": "도메니코 스카를라티",
+  "english_name": "Giuseppe Domenico Scarlatti",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer, son of Alessandro Scarlatti · 직업 composer, harpsichordist, organist · 작품 manual 7·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 10,
+  "name": "라모",
+  "english_name": "Jean-Philippe Rameau",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer and music theorist (1683–1764) · 직업 composer, choreographer, musicologist, music theorist, organist · 작품 manual 57·seed 0, 구간 1",
+  "note": null
+ },
+ {
+  "id": 11,
+  "name": "텔레만",
+  "english_name": "Georg Philipp Telemann",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer · 직업 classical composer, chapelmaster, organist, composer, independent publisher · 작품 manual 5·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 12,
+  "name": "코렐리",
+  "english_name": "Arcangelo Corelli",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian violinist and composer (1653–1713) · 직업 composer, violist, violinist · WD 장르 Baroque music · 작품 manual 11·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 14,
+  "name": "모차르트",
+  "english_name": "Wolfgang Amadeus Mozart",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer of the Classical period (1756-1791) · 직업 composer, music educator, pianist, musician, organist · WD 장르 Classical period, chamber music, opera, symphony · 작품 manual 531·seed 0, 구간 20",
+  "note": null
+ },
+ {
+  "id": 15,
+  "name": "베토벤",
+  "english_name": "Ludwig van Beethoven",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1770-1827) · 직업 composer, pianist, conductor, music educator, organist · WD 장르 art music, opera, symphony, sonata · 작품 manual 357·seed 0, 구간 23",
+  "note": null
+ },
+ {
+  "id": 16,
+  "name": "하이든",
+  "english_name": "Franz Joseph Haydn",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer (1732–1809) · 직업 composer, conductor, musicologist, pianist, independent publisher · 작품 manual 501·seed 0, 구간 6",
+  "note": null
+ },
+ {
+  "id": 17,
+  "name": "살리에리",
+  "english_name": "Antonio Salieri",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer and teacher (1750–1825) · 직업 composer, conductor, musicologist, music educator, chapelmaster · 작품 manual 4·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 18,
+  "name": "체르니",
+  "english_name": "Carl Czerny",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer and pianist (1791-1857) · 직업 pianist, composer, musicologist, music theorist, music educator · 작품 manual 4·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 19,
+  "name": "레오폴트 모차르트",
+  "english_name": "Johann Georg Leopold Mozart",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1719–1787) · 직업 composer, musicologist, violinist, pedagogue, music educator · WD 장르 symphony · 작품 manual 3·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 20,
+  "name": "보케리니",
+  "english_name": "Luigi Boccherini",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer and cellist (1743–1805) · 직업 cellist, classical pianist, composer, property master, conductor · 작품 manual 4·seed 257, 구간 0",
+  "note": null
+ },
+ {
+  "id": 21,
+  "name": "글루크",
+  "english_name": "Christoph Willibald Gluck",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: opera composer (1714–1787) · 직업 composer, conductor · WD 장르 opera, ballet · 작품 manual 49·seed 0, 구간 2",
+  "note": null
+ },
+ {
+  "id": 22,
+  "name": "C.P.E. 바흐",
+  "english_name": "Carl Philipp Emanuel Bach",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1714–1788) · 직업 composer, pianist, musicologist, music theorist, harpsichordist · WD 장르 Baroque, symphony · 작품 manual 4·seed 354, 구간 3",
+  "note": null
+ },
+ {
+  "id": 23,
+  "name": "J.C. 바흐",
+  "english_name": "Johann Christian Bach",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1735–1782) · 직업 composer, pianist, music arranger · WD 장르 opera, symphony · 작품 manual 186·seed 0, 구간 3",
+  "note": null
+ },
+ {
+  "id": 24,
+  "name": "요한 슈타미츠",
+  "english_name": "Johann Wenzel Anton Stamitz",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Czech composer and violinist · 직업 composer, conductor, musicologist, philosopher, violinist · 작품 manual 3·seed 0, 구간 1",
+  "note": null
+ },
+ {
+  "id": 25,
+  "name": "무치오 클레멘티",
+  "english_name": "Muzio Clementi",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian-born English composer, pianist, pedagogue, conductor, music publisher, editor, and piano manufacturer · 직업 pianist, conductor, composer, musicologist, music educator · 작품 manual 3·seed 0, 구간 1",
+  "note": null
+ },
+ {
+  "id": 26,
+  "name": "슈베르트",
+  "english_name": "Franz Peter Schubert",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer (1797–1828) · 직업 composer, pianist, teacher · 작품 manual 9·seed 1160, 구간 8",
+  "note": null
+ },
+ {
+  "id": 27,
+  "name": "멘델스존",
+  "english_name": "Felix Mendelssohn",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer, pianist, organist and conductor of Jewish descent (1809-1847) · 직업 composer, pianist, organist, conductor, musicologist · WD 장르 opera, symphonic music · 작품 manual 201·seed 0, 구간 6",
+  "note": null
+ },
+ {
+  "id": 28,
+  "name": "쇼팽",
+  "english_name": "Frédéric François Chopin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Polish composer and pianist (1810–1849) · 직업 composer, pianist, piano teacher, virtuoso, musician · 작품 manual 116·seed 2, 구간 25",
+  "note": null
+ },
+ {
+  "id": 29,
+  "name": "슈만",
+  "english_name": "Robert Schumann",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer, pianist and critic (1810–1856) · 직업 composer, pianist, music critic, conductor, musicologist · 작품 manual 173·seed 1, 구간 8",
+  "note": null
+ },
+ {
+  "id": 30,
+  "name": "리스트",
+  "english_name": "Franz Liszt",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Hungarian romantic composer and virtuoso pianist (1811-1886) · 직업 classical composer, pianist, conductor, music educator, virtuoso · WD 장르 symphony, Hungarian folk music, symphonic poem · 작품 manual 369·seed 0, 구간 7",
+  "note": null
+ },
+ {
+  "id": 31,
+  "name": "바그너",
+  "english_name": "Richard Wagner",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1813–1883) · 직업 composer, librettist, conductor, essayist, theatre director · WD 장르 opera, choral symphony · 작품 manual 64·seed 0, 구간 7",
+  "note": null
+ },
+ {
+  "id": 32,
+  "name": "베르디",
+  "english_name": "Giuseppe Verdi",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian opera composer (1813–1901) · 직업 composer, conductor, writer, politician · WD 장르 opera · 작품 manual 56·seed 0, 구간 7",
+  "note": null
+ },
+ {
+  "id": 33,
+  "name": "브람스",
+  "english_name": "Johannes Brahms",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1833–1897) · 직업 composer, conductor, pianist · 작품 manual 7·seed 266, 구간 6",
+  "note": null
+ },
+ {
+  "id": 34,
+  "name": "차이콥스키",
+  "english_name": "Pyotr Ilyich Tchaikovsky",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian composer (1840–1893) · 직업 composer, librettist, conductor, choreographer, music educator · WD 장르 symphony, opera, ballet, Romantic music · 작품 manual 138·seed 0, 구간 10",
+  "note": null
+ },
+ {
+  "id": 35,
+  "name": "파가니니",
+  "english_name": "Niccolò Paganini",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian violinist and composer (1782–1840) · 직업 classical composer, violinist, violin virtuoso, violist, guitarist · WD 장르 art music · 작품 manual 121·seed 0, 구간 2",
+  "note": null
+ },
+ {
+  "id": 36,
+  "name": "로시니",
+  "english_name": "Gioachino Antonio Rossini",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian opera composer (1792–1868) · 직업 composer · WD 장르 opera, cantata · 작품 manual 129·seed 0, 구간 3",
+  "note": null
+ },
+ {
+  "id": 37,
+  "name": "베를리오즈",
+  "english_name": "Hector Berlioz",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer and conductor (1803–1869) · 직업 conductor, writer, autobiographer, music critic, librettist · WD 장르 opera, symphony, Romantic music · 작품 manual 3·seed 143, 구간 3",
+  "note": null
+ },
+ {
+  "id": 38,
+  "name": "글린카",
+  "english_name": "Mikhail Ivanovich Glinka",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian composer (1804–1857) · 직업 composer · WD 장르 opera, romance, symphonic music, chamber music · 작품 manual 151·seed 0, 구간 1",
+  "note": null
+ },
+ {
+  "id": 39,
+  "name": "클라라 슈만",
+  "english_name": "Clara Schumann",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German musician and composer (1819–1896) · 직업 pianist, composer, music educator, editor, music arranger · WD 장르 Romantic music · 작품 manual 43·seed 0, 구간 3",
+  "note": null
+ },
+ {
+  "id": 40,
+  "name": "프랑크",
+  "english_name": "César Franck",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Belgian-French composer and organist (1822–1890) · 직업 composer, organist, music educator, pianist, teacher · WD 장르 opera, symphony · 작품 manual 108·seed 0, 구간 3",
+  "note": null
+ },
+ {
+  "id": 41,
+  "name": "브루크너",
+  "english_name": "Anton Bruckner",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer (1824-1896) · 직업 composer, musicologist, music theorist, music educator, organist · WD 장르 symphony · 작품 manual 126·seed 0, 구간 4",
+  "note": null
+ },
+ {
+  "id": 42,
+  "name": "요한 슈트라우스 2세",
+  "english_name": "Johann Strauss II",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer (1825-1899) · 직업 conductor, composer · WD 장르 instrumental music, operetta · 작품 manual 496·seed 0, 구간 4",
+  "note": null
+ },
+ {
+  "id": 43,
+  "name": "무소르크스키",
+  "english_name": "Modest Mussorgsky",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian composer (1839–1881) · 직업 composer, pianist, librettist, military personnel, musician · WD 장르 opera · 작품 manual 77·seed 0, 구간 3",
+  "note": null
+ },
+ {
+  "id": 44,
+  "name": "비제",
+  "english_name": "Georges Bizet",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1838–1875) · 직업 classical composer, conductor, pianist, composer · WD 장르 opera, symphony, French opera, Romantic music · 작품 manual 4·seed 162, 구간 1",
+  "note": null
+ },
+ {
+  "id": 45,
+  "name": "드보르자크",
+  "english_name": "Antonín Dvořák",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Czech composer (1841–1904) · 직업 classical composer, organist, professor, conductor, musicologist · WD 장르 opera · 작품 manual 175·seed 0, 구간 5",
+  "note": null
+ },
+ {
+  "id": 46,
+  "name": "림스키코르사코프",
+  "english_name": "Nikolai Rimsky-Korsakov",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian composer (1844–1908) · 직업 composer, conductor, musicologist, autobiographer, music educator · WD 장르 opera, symphony · 작품 manual 96·seed 0, 구간 1",
+  "note": null
+ },
+ {
+  "id": 47,
+  "name": "포레",
+  "english_name": "Gabriel Fauré",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer, organist, pianist and teacher (1845–1924) · 직업 university teacher, composer, organist, musicologist, music educator · WD 장르 opera, Romantic music · 작품 manual 4·seed 158, 구간 4",
+  "note": null
+ },
+ {
+  "id": 48,
+  "name": "푸치니",
+  "english_name": "Giacomo Puccini",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian opera composer (1858–1924) · 직업 opera composer, composer, politician, conductor, organist · WD 장르 opera, verismo, religious music · 작품 manual 46·seed 0, 구간 2",
+  "note": null
+ },
+ {
+  "id": 49,
+  "name": "말러",
+  "english_name": "Gustav Mahler",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian late-Romantic composer (1860–1911) · 직업 conductor, composer, classical composer, bandleader, theatre manager · WD 장르 symphony, chamber music · 작품 manual 5·seed 68, 구간 9",
+  "note": null
+ },
+ {
+  "id": 50,
+  "name": "드뷔시",
+  "english_name": "Claude Debussy",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French classical composer (1862–1918) · 직업 composer, pianist, music critic · WD 장르 opera, impressionist music · 작품 manual 6·seed 263, 구간 6",
+  "note": null
+ },
+ {
+  "id": 51,
+  "name": "라흐마니노프",
+  "english_name": "Sergei Rachmaninoff",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian composer, pianist and conductor (1873–1943) · 직업 composer, pianist, conductor, musicologist, virtuoso · WD 장르 opera, symphony · 작품 manual 6·seed 146, 구간 19",
+  "note": null
+ },
+ {
+  "id": 52,
+  "name": "라벨",
+  "english_name": "Maurice Ravel",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1875–1937) · 직업 conductor, pianist, composer · WD 장르 opera, impressionism in music · 작품 manual 7·seed 135, 구간 7",
+  "note": null
+ },
+ {
+  "id": 53,
+  "name": "베버",
+  "english_name": "Carl Maria von Weber",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German Romantic composer (1786–1826) · 직업 composer, conductor, pianist, guitarist, classical guitarist · WD 장르 opera · 작품 manual 3·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 54,
+  "name": "요한 슈트라우스 1세",
+  "english_name": "Johann Strauss I",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian Romantic composer · 직업 composer, conductor · 작품 manual 246·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 55,
+  "name": "아당",
+  "english_name": "Adolphe Adam",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1803–1856) · 직업 composer, music critic, music educator, pianist, critic · WD 장르 opera · 작품 manual 2·seed 28, 구간 0",
+  "note": null
+ },
+ {
+  "id": 56,
+  "name": "구노",
+  "english_name": "Charles Gounod",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1818–1893) · 직업 classical composer, musicologist, music educator, organist, composer · WD 장르 opera, symphony, oratorio · 작품 manual 3·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 57,
+  "name": "오펜바흐",
+  "english_name": "Jacques Offenbach",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German-born French composer (1819–1880) · 직업 composer, cellist, conductor, theatre entrepreneur, theatre manager · WD 장르 opera, opéra bouffe, operetta · 작품 manual 2·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 58,
+  "name": "스메타나",
+  "english_name": "Bedřich Smetana",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Czech composer · 직업 composer, conductor, teacher, pedagogue, pianist · WD 장르 opera, symphonic poem · 작품 manual 124·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 59,
+  "name": "보로딘",
+  "english_name": "Alexander Borodin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian composer, doctor and chemist (1833–1887) · 직업 classical composer, chemist, pianist, flautist, cellist · WD 장르 opera, symphony, romance, chamber music · 작품 manual 35·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 60,
+  "name": "생상스",
+  "english_name": "Camille Saint-Saëns",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer, organist, conductor and pianist (1835–1921) · 직업 composer, organist, conductor, pianist, music critic · WD 장르 opera, symphony, concerto · 작품 manual 6·seed 284, 구간 2",
+  "note": null
+ },
+ {
+  "id": 61,
+  "name": "브루흐",
+  "english_name": "Max Bruch",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German romantic composer and conductor (1838-1920) · 직업 composer, conductor, teacher · WD 장르 opera, symphony · 작품 manual 3·seed 67, 구간 0",
+  "note": null
+ },
+ {
+  "id": 62,
+  "name": "마스네",
+  "english_name": "Jules Massenet",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1842–1912) · 직업 composer, musicologist, music educator, university teacher, pianist · WD 장르 opera, oratorio, operetta, incidental music · 작품 manual 2·seed 151, 구간 1",
+  "note": null
+ },
+ {
+  "id": 63,
+  "name": "사라사테",
+  "english_name": "Pablo de Sarasate",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish violinist and composer (1844–1908) · 직업 composer, violinist · WD 장르 Romanticism · 작품 manual 3·seed 57, 구간 0",
+  "note": null
+ },
+ {
+  "id": 64,
+  "name": "엘가",
+  "english_name": "Sir Edward Elgar",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: English composer (1857-1934) · 직업 composer, conductor · WD 장르 symphony · 작품 manual 5·seed 181, 구간 1",
+  "note": null
+ },
+ {
+  "id": 65,
+  "name": "레온카발로",
+  "english_name": "Ruggero Leoncavallo",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer (1857–1919) · 직업 librettist, composer, pianist, screenwriter, conductor · WD 장르 opera · 작품 manual 3·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 66,
+  "name": "알베니스",
+  "english_name": "Isaac Albéniz",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish composer (1860-1909) · 직업 classical pianist, composer, conductor, virtuoso, pianist · WD 장르 opera, zarzuela, sardana · 작품 manual 3·seed 77, 구간 0",
+  "note": null
+ },
+ {
+  "id": 67,
+  "name": "마스카니",
+  "english_name": "Pietro Mascagni",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer known for operas (1863–1945) · 직업 conductor, composer · WD 장르 opera · 작품 manual 3·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 68,
+  "name": "시벨리우스",
+  "english_name": "Jean Sibelius",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Finnish composer (1865–1957) · 직업 composer, conductor, musicologist, university teacher, violinist · WD 장르 opera, symphony, incidental music, 20th-century classical music · 작품 manual 301·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 69,
+  "name": "본 윌리엄스",
+  "english_name": "Ralph Vaughan Williams",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: English composer (1872-1958) · 직업 conductor, classical composer, choreographer, organist, pedagogue · WD 장르 opera, symphony · 작품 manual 3·seed 233, 구간 0",
+  "note": null
+ },
+ {
+  "id": 70,
+  "name": "홀스트",
+  "english_name": "Gustav Holst",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: British composer (1874–1934) · 직업 composer, librettist, music teacher, conductor, music arranger · WD 장르 opera · 작품 manual 2·seed 168, 구간 0",
+  "note": null
+ },
+ {
+  "id": 72,
+  "name": "부르크뮐러",
+  "english_name": "Friedrich Burgmüller",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1806–1874) · 직업 composer, pianist · 작품 manual 2·seed 8, 구간 0",
+  "note": null
+ },
+ {
+  "id": 73,
+  "name": "안톤 루빈스타인",
+  "english_name": "Anton Rubinstein",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian pianist, composer and conductor (1829–1894) · 직업 classical composer, pianist, conductor, musicologist, music educator · WD 장르 opera, symphony, Romanticism · 작품 manual 2·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 74,
+  "name": "비에니아프스키",
+  "english_name": "Henryk Wieniawski",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "작품 manual 3·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 75,
+  "name": "타레가",
+  "english_name": "Francisco Tárrega",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish composer and classical guitarist (1852-1909) · 직업 guitarist, composer, classical guitarist, pianist, music arranger · WD 장르 Romantic music · 작품 manual 2·seed 76, 구간 0",
+  "note": null
+ },
+ {
+  "id": 76,
+  "name": "후고 볼프",
+  "english_name": "Hugo Wolf",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer (1860–1903) · 직업 composer, music critic, musicologist · WD 장르 opera · 작품 manual 2·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 77,
+  "name": "닐센",
+  "english_name": "Carl Nielsen",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Danish composer (1865–1931) · 직업 conductor, classical composer, choreographer, autobiographer, music educator · WD 장르 opera, symphony · 작품 manual 2·seed 108, 구간 0",
+  "note": null
+ },
+ {
+  "id": 78,
+  "name": "글라주노프",
+  "english_name": "Alexander Glazunov",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian composer, music teacher and conductor (1865-1936) · 직업 composer, conductor, pedagogue, musicologist, music educator · WD 장르 symphony · 작품 manual 2·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 79,
+  "name": "레거",
+  "english_name": "Max Reger",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer, pianist and conductor (1873-1916) · 직업 composer, conductor, pianist, musicologist, university teacher · 작품 manual 2·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 80,
+  "name": "파야",
+  "english_name": "Manuel de Falla",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish composer (1876–1946) · 직업 composer, poet, pianist, musician · WD 장르 orchestra · 작품 manual 3·seed 57, 구간 0",
+  "note": null
+ },
+ {
+  "id": 81,
+  "name": "스트라빈스키",
+  "english_name": "Igor Stravinsky",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian, French, and American composer (1882–1971) · 직업 composer, conductor, pianist, librettist · WD 장르 opera, symphony, chamber music, 20th-century classical music · 작품 manual 124·seed 0, 구간 4",
+  "note": null
+ },
+ {
+  "id": 82,
+  "name": "쇤베르크",
+  "english_name": "Arnold Schoenberg",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian-Jewish American composer (1874-1951) · 직업 classical composer, painter, musicologist, music theorist, writer · WD 장르 20th-century classical music, opera, atonality, serialism · 작품 manual 4·seed 0, 구간 2",
+  "note": null
+ },
+ {
+  "id": 83,
+  "name": "쇼스타코비치",
+  "english_name": "Dmitri Shostakovich",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Soviet composer and pianist (1906-1975) · 직업 classical composer, choreographer, pianist, politician, jazz musician · WD 장르 symphony, chamber music, opera · 작품 manual 6·seed 254, 구간 7",
+  "note": null
+ },
+ {
+  "id": 84,
+  "name": "프로코피예프",
+  "english_name": "Sergei Prokofiev",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian and Soviet pianist, composer and conductor (1891–1953) · 직업 composer, pianist, conductor, choreographer, musicologist · WD 장르 opera, symphony, ballet · 작품 manual 5·seed 225, 구간 4",
+  "note": null
+ },
+ {
+  "id": 85,
+  "name": "버르토크",
+  "english_name": "Béla Bartók",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Hungarian composer and pianist (1881–1945) · 직업 composer, classical pianist, choreographer, music educator, ethnomusicologist · WD 장르 opera · 작품 manual 99·seed 0, 구간 3",
+  "note": null
+ },
+ {
+  "id": 86,
+  "name": "거슈윈",
+  "english_name": "George Gershwin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer and pianist (1898–1937) · 직업 composer, jazz pianist, songwriter, film score composer, painter · WD 장르 opera, jazz · 작품 manual 4·seed 184, 구간 3",
+  "note": "크로스오버(재즈·브로드웨이) 경계 사례, 클래식으로 둠"
+ },
+ {
+  "id": 87,
+  "name": "번스타인",
+  "english_name": "Leonard Bernstein",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American conductor and composer (1918–1990) · 직업 conductor, pianist, composer, film score composer, music teacher · WD 장르 symphony, opera · 작품 manual 4·seed 134, 구간 2",
+  "note": "지휘자·뮤지컬 작곡가 경계 사례, 클래식으로 둠"
+ },
+ {
+  "id": 88,
+  "name": "안익태",
+  "english_name": "Ahn Eak-tai",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: South Korean composer (1906–1965) · 직업 composer, conductor, cellist · WD 장르 opera · 작품 manual 2·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 89,
+  "name": "홍난파",
+  "english_name": "Hong Nan-pa",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Korean composer, conductor, violinist (1897-1941) · 직업 conductor, composer · 작품 manual 3·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 90,
+  "name": "윤이상",
+  "english_name": "Isang Yun",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Korean-born German composer (1917–1995) · 직업 composer, conductor, musicologist, music educator · WD 장르 opera, symphony · 작품 manual 4·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 91,
+  "name": "오르프",
+  "english_name": "Carl Orff",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1895–1982) · 직업 composer, musicologist, music educator, university teacher, music theorist · WD 장르 opera · 작품 manual 2·seed 62, 구간 2",
+  "note": null
+ },
+ {
+  "id": 92,
+  "name": "케이지",
+  "english_name": "John Cage",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American avant-garde composer (1912-1992) · 직업 composer, writer, poet, university teacher, musicologist · WD 장르 aleatoric music, opera, electronic music, experimental music · 작품 manual 2·seed 215, 구간 0",
+  "note": null
+ },
+ {
+  "id": 93,
+  "name": "필립 글래스",
+  "english_name": "Philip Glass",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (born 1937) · 직업 composer, pianist, film score composer, librettist, supporting actor · WD 장르 opera, symphony, Dixieland jazz, minimalist music · 작품 manual 3·seed 386, 구간 1",
+  "note": null
+ },
+ {
+  "id": 94,
+  "name": "브리튼",
+  "english_name": "Benjamin Britten",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: English composer, conductor, and pianist (1913-1976) · 직업 conductor, composer, pianist, politician, choreographer · WD 장르 opera, symphony · 작품 manual 4·seed 234, 구간 3",
+  "note": null
+ },
+ {
+  "id": 95,
+  "name": "메시앙",
+  "english_name": "Olivier Messiaen",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer, organist and ornithologist (1908–1992) · 직업 composer, organist, ornithologist, music educator, musicologist · WD 장르 opera, symphony · 작품 manual 4·seed 73, 구간 2",
+  "note": null
+ },
+ {
+  "id": 96,
+  "name": "베르크",
+  "english_name": "Alban Berg",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer (1885–1935) · 직업 composer, pianist, musician, librettist · WD 장르 opera, twelve-tone technique · 작품 manual 3·seed 77, 구간 2",
+  "note": null
+ },
+ {
+  "id": 97,
+  "name": "베베른",
+  "english_name": "Anton Webern",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer and conductor · 직업 classical composer, conductor, musician, composer, music arranger · WD 장르 impressionism in music · 작품 manual 3·seed 75, 구간 2",
+  "note": null
+ },
+ {
+  "id": 98,
+  "name": "아이브스",
+  "english_name": "Charles Ives",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American modernist composer (1874–1954) · 직업 actuary, composer · WD 장르 symphony · 작품 manual 4·seed 288, 구간 4",
+  "note": null
+ },
+ {
+  "id": 99,
+  "name": "피아졸라",
+  "english_name": "Astor Piazzolla",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Argentine tango composer, bandoneon player and arranger · 직업 composer, bandoneonist, conductor, film score composer · WD 장르 opera, nuevo tango, tango · 작품 manual 4·seed 252, 구간 4",
+  "note": "탱고 누에보 경계 사례, 클래식으로 둠"
+ },
+ {
+  "id": 100,
+  "name": "사티",
+  "english_name": "Erik Satie",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer and pianist (1866-1925) · 직업 composer, pianist · WD 장르 Romantic music, Impressionism · 작품 manual 3·seed 185, 구간 3",
+  "note": null
+ },
+ {
+  "id": 101,
+  "name": "하차투리안",
+  "english_name": "Aram Khachaturian",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Soviet Armenian composer (1903–1978) · 직업 classical composer, conductor, music educator, choreographer, musicologist · WD 장르 art music, ballet, concerto, symphony · 작품 manual 4·seed 155, 구간 4",
+  "note": null
+ },
+ {
+  "id": 102,
+  "name": "백남준",
+  "english_name": "Nam June Paik",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American video art pioneer (1932–2006) · 직업 video artist, university teacher, composer, painter, photographer · WD 장르 installation art · 작품 manual 3·seed 0, 구간 0",
+  "note": "비디오 아티스트·플럭서스 작곡가, 클래식(현대음악)으로 둠"
+ },
+ {
+  "id": 103,
+  "name": "김동진",
+  "english_name": "Kim Dong-jin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: South Korean composer · 직업 composer, conductor, university teacher · 작품 manual 5·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 104,
+  "name": "야나체크",
+  "english_name": "Leoš Janáček",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Czech composer (1854–1928) · 직업 composer, musicologist, pedagogue, conductor, librettist · WD 장르 opera · 작품 manual 4·seed 108, 구간 0",
+  "note": null
+ },
+ {
+  "id": 105,
+  "name": "빌라로부스",
+  "english_name": "Heitor Villa-Lobos",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Brazilian composer (1887–1959) · 직업 composer, choreographer, conductor, musicologist, secondary school teacher · WD 장르 opera, symphony · 작품 manual 4·seed 238, 구간 0",
+  "note": null
+ },
+ {
+  "id": 106,
+  "name": "힌데미트",
+  "english_name": "Paul Hindemith",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1895–1963) · 직업 classical composer, conductor, professor of music composition, musicologist, music educator · WD 장르 opera, symphony · 작품 manual 3·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 107,
+  "name": "풀랑크",
+  "english_name": "Francis Poulenc",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer and pianist (1899–1963) · 직업 composer, pianist, music critic · WD 장르 opera, religious music, choral music · 작품 manual 4·seed 155, 구간 0",
+  "note": null
+ },
+ {
+  "id": 108,
+  "name": "슈토크하우젠",
+  "english_name": "Karlheinz Stockhausen",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1928–2007) · 직업 composer, musicologist, music educator, music theorist, university teacher · WD 장르 opera, electronic music, experimental music, serialism · 작품 manual 3·seed 62, 구간 0",
+  "note": null
+ },
+ {
+  "id": 109,
+  "name": "베리오",
+  "english_name": "Luciano Berio",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer (1925–2003) · 직업 classical composer, conductor, pedagogue, music educator, university teacher · WD 장르 opera · 작품 manual 3·seed 102, 구간 0",
+  "note": null
+ },
+ {
+  "id": 110,
+  "name": "루토스와프스키",
+  "english_name": "Witold Lutosławski",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Polish composer and conductor (1913-1994) · 직업 composer, conductor, musicologist, pianist, music teacher · 작품 manual 3·seed 55, 구간 0",
+  "note": null
+ },
+ {
+  "id": 111,
+  "name": "니노 로타",
+  "english_name": "Nino Rota",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer · 직업 composer, conductor, teacher, pianist, actor · WD 장르 opera, symphony, 20th-century classical music · 작품 manual 3·seed 402, 구간 0",
+  "note": null
+ },
+ {
+  "id": 112,
+  "name": "버나드 허먼",
+  "english_name": "Bernard Herrmann",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer and conductor (1911-1975) · 직업 composer, conductor, film score composer · 작품 manual 3·seed 315, 구간 0",
+  "note": null
+ },
+ {
+  "id": 113,
+  "name": "강석희",
+  "english_name": "Kang Suk-hi",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: South Korean composer · 직업 composer · 작품 manual 2·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 114,
+  "name": "나운영",
+  "english_name": "Na Un-young",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: South Korean composer · 직업 composer · 작품 manual 2·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 115,
+  "name": "이흥렬",
+  "english_name": "Lee Heung-ryeol",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: South Korean composer · 직업 composer · 작품 manual 3·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 116,
+  "name": "조두남",
+  "english_name": "Jo Doo-nam",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: South Korean composer · 직업 composer · 작품 manual 2·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 117,
+  "name": "에드바르 그리그",
+  "english_name": "Edvard Grieg",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Norwegian composer and pianist (1843–1907) · 직업 composer, pianist · WD 장르 sardana · MB: composer / 장르·태그 classical, romantic classical, concerto, opera · 작품 manual 0·seed 310, 구간 2",
+  "note": null
+ },
+ {
+  "id": 118,
+  "name": "글렌 굴드",
+  "english_name": "Glenn Gould",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Canadian composer and pianist (1932–1982) · 직업 pianist, composer, harpsichordist, opinion journalist, music publicist · MB: pianist / 장르·태그 classical, baroque, instrumental · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 119,
+  "name": "마우리치오 폴리니",
+  "english_name": "Maurizio Pollini",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Italian pianist and conductor (1942–2024) · 직업 pianist, conductor, composer, musician, concertmaster · MB: pianist / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 120,
+  "name": "조성진",
+  "english_name": "Seong-Jin Cho",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: South Korean classical pianist · 직업 pianist, composer, musician · MB: pianist / 장르·태그 western classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 121,
+  "name": "손열음",
+  "english_name": "Yeol Eum Son",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: South Korean pianist · 직업 musician, composer, pianist · MB: pianist / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 122,
+  "name": "쓰지이 노부유키",
+  "english_name": "Nobuyuki Tsujii",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Japanese pianist and composer · 직업 pianist, composer · MB: Japanese pianist and composer / 장르·태그 likedis auto, pianist · 작품 manual 0·seed 0, 구간 0",
+  "note": "작곡(영화음악)도 하지만 피아니스트가 주, 작품 0"
+ },
+ {
+  "id": 123,
+  "name": "마르크-앙드레 아믈랭",
+  "english_name": "Marc-André Hamelin",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Canadian pianist and composer · 직업 pianist, composer, recording artist · MB: Canadian pianist / 장르·태그 classical, western classical · 작품 manual 0·seed 0, 구간 0",
+  "note": "작곡(12 에튀드)도 하지만 피아니스트가 주, 작품 0"
+ },
+ {
+  "id": 124,
+  "name": "임동혁",
+  "english_name": "Dong-Hyek Lim",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: South Korean musician · 직업 pianist, composer, musician · MB: pianist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 125,
+  "name": "Kit Armstrong",
+  "english_name": "Kit Armstrong",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: American pianist and composer · 직업 pianist, composer, musician · MB: classical pianist, composer / 장르·태그 pianist · 작품 manual 0·seed 0, 구간 0",
+  "note": "작곡도 하지만 피아니스트가 주, 작품 0"
+ },
+ {
+  "id": 126,
+  "name": "구스타보 두다멜",
+  "english_name": "Gustávo Dudamel",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Venezuelan conductor and violinist · 직업 conductor, composer, concertmaster, violinist · MB: conductor and violinist / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 127,
+  "name": "레오니다스 카바코스",
+  "english_name": "Leonidas Kavakos",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Greek violinist and conductor · 직업 violinist, composer, conductor, musician · MB: violinist and conductor / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 128,
+  "name": "정명훈",
+  "english_name": "Myung-whun Chung",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: South Korean pianist and conductor · 직업 conductor, pianist, music director, composer, musician · MB: pianist and conductor / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 129,
+  "name": "크리스티안 치메르만",
+  "english_name": "Krystian Zimerman",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Polish classical pianist · 직업 pianist, conductor, composer, music educator · MB: Polish concert pianist, conductor and pedagogue / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 130,
+  "name": "Lucas Debargue",
+  "english_name": "Lucas Debargue",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: French pianist · 직업 pianist, composer · MB: French pianist · 작품 manual 0·seed 0, 구간 0",
+  "note": "작곡도 하지만 피아니스트가 주, 작품 0"
+ },
+ {
+  "id": 131,
+  "name": "피셰르 이반",
+  "english_name": "Iván Fischer",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Hungarian conductor and composer · 직업 conductor, composer, musician · MB: conductor / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": "지휘자, 작곡도 하지만 작품 0"
+ },
+ {
+  "id": 132,
+  "name": "다닐 트리프노프",
+  "english_name": "Daniil Trifonov",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Russian pianist · 직업 classical pianist, composer, recording artist, pianist · MB: pianist / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": "작곡(피아노 협주곡)도 하지만 피아니스트가 주, 작품 0"
+ },
+ {
+  "id": 133,
+  "name": "Ilse Fromm-Michaels",
+  "english_name": "Ilse Fromm-Michaels",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German pianist and composer (1888–1986) · 직업 composer, pianist, music educator, university teacher, piano teacher · 작품 manual 0·seed 8, 구간 0",
+  "note": null
+ },
+ {
+  "id": 134,
+  "name": "Eugeniusz Knapik",
+  "english_name": "Eugeniusz Knapik",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Polish composer · 직업 pianist, composer, university teacher, musician · WD 장르 opera · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 135,
+  "name": "Pamelia Kurstin",
+  "english_name": "Pamelia Kurstin",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: American musician · 직업 pianist, cellist, composer, musician · MB: formerly known as Pamelia Kurstin · 작품 manual 0·seed 0, 구간 0",
+  "note": "테레민 연주자(재즈·실험), 작품 0"
+ },
+ {
+  "id": 136,
+  "name": "Albert Huybrechts",
+  "english_name": "Albert Huybrechts",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Belgian composer (1899–1938) · 직업 composer, music educator · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 137,
+  "name": "다니엘 바이엔베르흐",
+  "english_name": "Daniel Wayenberg",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Dutch composer and pianist (1929–2019) · 직업 composer, pianist, music educator · WD 장르 21st-century classical music · MB: pianist, composer · 작품 manual 0·seed 0, 구간 0",
+  "note": "피아니스트, 작곡도 하지만 작품 0"
+ },
+ {
+  "id": 138,
+  "name": "Joji Yuasa",
+  "english_name": "Joji Yuasa",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer (1929–2024) · 직업 composer, musicologist, university teacher, draftsperson · WD 장르 contemporary classical music · MB: Japanese composer / 장르·태그 japanese · 작품 manual 0·seed 18, 구간 0",
+  "note": null
+ },
+ {
+  "id": 139,
+  "name": "Jonathan Dove",
+  "english_name": "Jonathan Dove",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: English composer (1959- ) · 직업 composer · WD 장르 opera · MB: British composer / 장르·태그 british composer, composer · 작품 manual 0·seed 55, 구간 0",
+  "note": null
+ },
+ {
+  "id": 140,
+  "name": "루이 에마뉘엘 자댕",
+  "english_name": "Louis Emmanuel Jadin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer · 직업 composer, conductor, musicologist, music educator, pianist · WD 장르 opera · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 141,
+  "name": "카타리누스 엘링",
+  "english_name": "Catharinus Elling",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Norwegian musician, composer, musicologist, and music educator (1858–1942) · 직업 composer, musicologist, music educator, music critic · WD 장르 opera, symphony · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 142,
+  "name": "Hubert Klyne Headley",
+  "english_name": "Hubert Klyne Headley",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American conductor (1906–1996) · 직업 conductor, pianist, composer · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": "enwiki 상 작곡가·교육자, 작품 0"
+ },
+ {
+  "id": 143,
+  "name": "Vsevolod Zaderatsky",
+  "english_name": "Vsevolod Zaderatsky",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: composer (1891-1953) · 직업 composer, music educator, pianist, music teacher · WD 장르 opera, symphony · MB: 장르·태그 composer · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 144,
+  "name": "Anjelika Akbar",
+  "english_name": "Anjelika Akbar",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Turkish pianist (born 1969) · 직업 pianist, composer · MB: 장르·태그 turkish · 작품 manual 0·seed 0, 구간 0",
+  "note": "작곡가·피아니스트, 작품 0"
+ },
+ {
+  "id": 145,
+  "name": "José de Nebra",
+  "english_name": "José de Nebra",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish composer · 직업 composer · WD 장르 opera · MB: 장르·태그 classical · 작품 manual 0·seed 15, 구간 0",
+  "note": null
+ },
+ {
+  "id": 146,
+  "name": "Clara Maïda",
+  "english_name": "Clara Maïda",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer · 직업 composer, professor of music composition, plastic artist · WD 장르 21st-century classical music · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 147,
+  "name": "Eugeniusz Morawski-Da̜browa",
+  "english_name": "Eugeniusz Morawski-Da̜browa",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Polish composer and music educator (1876-1948) · 직업 composer, music educator, university teacher, painter · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 148,
+  "name": "Louis Kentner",
+  "english_name": "Louis Kentner",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Hungarian musician (1905–1987) · 직업 composer, pianist, musician · MB: pianist / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 149,
+  "name": "알렉산드르 다르고미시스키",
+  "english_name": "Alexander Dargomyzhsky",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian composer · 직업 composer, pianist · WD 장르 opera · MB: 장르·태그 classical · 작품 manual 0·seed 22, 구간 0",
+  "note": null
+ },
+ {
+  "id": 150,
+  "name": "체사레 소데로",
+  "english_name": "Cesare Sodero",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian conductor (1886–1947) · 직업 conductor, composer, cellist, musician · WD 장르 opera · 작품 manual 0·seed 1, 구간 0",
+  "note": "지휘자 겸 작곡(오페라 Ombre russe), seed 1개"
+ },
+ {
+  "id": 151,
+  "name": "하이코",
+  "english_name": "Hayko",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: Armenian singer (1973–2021) · 직업 singer-songwriter, musician, singer, composer · WD 장르 pop music, romance · MB: Hayk “Hayko” Hakobyan / 장르·태그 pop · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 152,
+  "name": "Bedřich Nikodem",
+  "english_name": "Bedřich Nikodem",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: Czech composer, lyricist, and table tennis player (1909-1970) · 직업 composer, table tennis player, pianist, editing staff · WD 장르 pop music, swing, operetta · 작품 manual 0·seed 6, 구간 0",
+  "note": "체코 대중가요·스윙·오페레타 작곡가(WD 장르 pop music)"
+ },
+ {
+  "id": 153,
+  "name": "Teizo Matsumura",
+  "english_name": "Teizo Matsumura",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer and poet (1929–2007) · 직업 poet, composer, musicologist · WD 장르 opera, symphony · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 154,
+  "name": "Mina Kubota",
+  "english_name": "Mina Kubota",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer and pianist (1972-) · 직업 Esperantist, composer, pianist, music arranger, lyricist · WD 장르 contemporary classical music, anime song · MB: 장르·태그 composer · 작품 manual 0·seed 45, 구간 0",
+  "note": null
+ },
+ {
+  "id": 155,
+  "name": "Guillaume Connesson",
+  "english_name": "Guillaume Connesson",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer · 직업 composer · MB: French composer · 작품 manual 0·seed 13, 구간 0",
+  "note": null
+ },
+ {
+  "id": 156,
+  "name": "Konstantin Listov",
+  "english_name": "Konstantin Listov",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: Soviet composer (1900–1983) · 직업 conductor, composer, songwriter, pianist · WD 장르 song, operetta · 작품 manual 0·seed 11, 구간 0",
+  "note": "소련 대중가요 작곡가(Tachanka, V Zemlyanke), 오페레타도 씀, 경계 사례"
+ },
+ {
+  "id": 157,
+  "name": "니코스 자하리우",
+  "english_name": "Nikos Zaccaria",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Greek opera singer (1923–2007) · 직업 opera singer, composer, singer, musician · WD 장르 opera · MB: operatic bass / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 158,
+  "name": "Nancy Van de Vate",
+  "english_name": "Nancy Van de Vate",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (1930-2023) · 직업 composer · WD 장르 opera · MB: 장르·태그 contemporary classical · 작품 manual 0·seed 10, 구간 0",
+  "note": null
+ },
+ {
+  "id": 159,
+  "name": "Kazimierz Serocki",
+  "english_name": "Kazimierz Serocki",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Polish composer (1922–1981) · 직업 composer, pianist, musician · 작품 manual 0·seed 14, 구간 0",
+  "note": null
+ },
+ {
+  "id": 160,
+  "name": "André Souris",
+  "english_name": "André Souris",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Belgian composer (1899–1970) · 직업 conductor, composer, musicologist, music educator, musician · MB: Belgian 20th century surrealist composer · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 161,
+  "name": "Friedrich Christian Hermann Uber",
+  "english_name": "Friedrich Christian Hermann Uber",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1781-1822) · 직업 composer, choir director, violinist · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 162,
+  "name": "브렛 딘",
+  "english_name": "Brett Dean",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Australian composer, conductor · 직업 composer, conductor · WD 장르 opera · MB: Australian composer, violist and conductor / 장르·태그 classical, contemporary classical · 작품 manual 0·seed 41, 구간 0",
+  "note": null
+ },
+ {
+  "id": 163,
+  "name": "William Henry Fry",
+  "english_name": "William Henry Fry",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer, music critic, and journalist (1813–1864) · 직업 composer, journalist, music critic · WD 장르 opera · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 164,
+  "name": "나이절 케네디",
+  "english_name": "Nigel Kennedy",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: British-born violinist and violist (born 1956) · 직업 violinist, jazz musician, violist, composer, conductor · MB: violinist / 장르·태그 classical · 작품 manual 0·seed 21, 구간 0",
+  "note": "바이올리니스트, seed 작품 21개는 본인 재즈·크로스오버 곡, 경계 사례"
+ },
+ {
+  "id": 165,
+  "name": "에이빈 오르세트",
+  "english_name": "Eivind Aarset",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: Norwegian guitarist · 직업 jazz musician, guitarist, composer, jazz guitarist, musician · WD 장르 jazz, nu jazz, ambient music, electroacoustic music · MB: 장르·태그 jazz, electronica, nu jazz · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 166,
+  "name": "Pierre Wissmer",
+  "english_name": "Pierre Wissmer",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1915–1992) · 직업 composer, conductor, teacher, music teacher, pianist · WD 장르 opera, symphony · 작품 manual 0·seed 8, 구간 0",
+  "note": null
+ },
+ {
+  "id": 167,
+  "name": "Yannis Papaioannou",
+  "english_name": "Yannis Papaioannou",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Greek composer (1910-1989) · 직업 composer · MB: Greek composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 168,
+  "name": "에밀 뒤랑",
+  "english_name": "Émile Durand",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French musical theorist, teacher and composer (1830-1903) · 직업 composer, musicologist, music educator, university teacher · WD 장르 opera · MB: French composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 169,
+  "name": "Hans von Koessler",
+  "english_name": "Hans von Koessler",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1853–1926) · 직업 composer, musicologist, music educator, university teacher, choir director · WD 장르 opera · MB: 장르·태그 relative-cousin · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 170,
+  "name": "Charlemagne Palestine",
+  "english_name": "Charlemagne Palestine",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American visual artist and musician · 직업 pianist, composer, carillonist, singer, organist · WD 장르 minimalist music · MB: 장르·태그 drone, experimental, minimalism, post-minimalism · 작품 manual 0·seed 7, 구간 0",
+  "note": "미니멀리즘 작곡가, 클래식으로 둠"
+ },
+ {
+  "id": 171,
+  "name": "W. Franke Harling",
+  "english_name": "W. Franke Harling",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: British-American composer (1887-1958) · 직업 composer, songwriter, film score composer, musician · WD 장르 opera · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 172,
+  "name": "블라디미르 코베킨",
+  "english_name": "Vladimir Kobekin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: composer · 직업 composer · WD 장르 opera · MB: composer · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 173,
+  "name": "나이덴 토도로프",
+  "english_name": "Nayden Todorov",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Bulgarian conductor and culture manager · 직업 conductor, composer, pianist, politician, author · WD 장르 symphonic music, opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 174,
+  "name": "파블로 카살스",
+  "english_name": "Pau Casals",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish cellist, conductor and composer (1876–1973) · 직업 cellist, conductor, composer, autobiographer, music educator · WD 장르 sardana · MB: cellist, aka Pablo Casals / 장르·태그 cellist, cello, composer, spanish cellist · 작품 manual 0·seed 14, 구간 0",
+  "note": "첼리스트지만 작곡도 함(오라토리오 El pessebre 등)"
+ },
+ {
+  "id": 175,
+  "name": "Heinrich Kaspar Schmid",
+  "english_name": "Heinrich Kaspar Schmid",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1874–1953) · 직업 composer, university teacher, pianist, musicologist · WD 장르 opera · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 176,
+  "name": "Frank Van der Stucken",
+  "english_name": "Frank Van der Stucken",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Flemish-American violinist, conductor, composer and festival director (1858–1929) · 직업 conductor, composer, violinist, event producer, musician · MB: Belgian-American 19/20th century composer, conductor · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 177,
+  "name": "William Sweeney",
+  "english_name": "William Sweeney",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: British composer · 직업 composer, musicologist · WD 장르 opera · MB: composer · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 178,
+  "name": "Violet Archer",
+  "english_name": "Violet Archer",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Canadian classical music composer (1913-2000) · 직업 composer, music educator, university teacher, pianist · MB: composer, pianist, organist, percussionist · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 179,
+  "name": "도야마유조",
+  "english_name": "Yūzō Toyama",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer and conductor · 직업 composer, conductor, music educator, musician · MB: composer/conductor / 장르·태그 classical · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 180,
+  "name": "뱅상 스코토",
+  "english_name": "Vincent Scotto",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: French composer · 직업 composer, actor, songwriter, musician · WD 장르 chanson, opera · 작품 manual 0·seed 102, 구간 0",
+  "note": null
+ },
+ {
+  "id": 181,
+  "name": "Ilkka Kuusisto",
+  "english_name": "Ilkka Kuusisto",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Finnish composer (1933–2025) · 직업 composer · WD 장르 opera, symphony · MB: composer / 장르·태그 classical · 작품 manual 0·seed 27, 구간 0",
+  "note": null
+ },
+ {
+  "id": 182,
+  "name": "Gian Paolo Chiti",
+  "english_name": "Gian Paolo Chiti",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian musician · 직업 composer, pianist · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 183,
+  "name": "Michael Gotthard Fischer",
+  "english_name": "Michael Gotthard Fischer",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer and music educator (1773-1829) · 직업 composer, music educator, conductor, music arranger, organist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 184,
+  "name": "미켈란젤로 아바도",
+  "english_name": "Michelangelo Abbado",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Italian violinist (1900-1979) · 직업 violinist, composer, music educator · MB: violinist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 185,
+  "name": "Sidonie Goossens",
+  "english_name": "Sidonie Goossens",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: British musician (1899–2004) · 직업 music educator, harpist, composer · MB: harpist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 186,
+  "name": "브루노 마데르나",
+  "english_name": "Bruno Maderna",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian conductor and composer (1920-1973) · 직업 composer, conductor, musicologist, music educator, partisan · WD 장르 opera · MB: Italian composer and conductor / 장르·태그 classical, contemporary classical, experimental · 작품 manual 0·seed 45, 구간 0",
+  "note": null
+ },
+ {
+  "id": 187,
+  "name": "마르크앙드레 달바비",
+  "english_name": "Marc-André Dalbavie",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer · 직업 composer, university teacher, music educator, musician · WD 장르 opera, 21st-century classical music · MB: French composer · 작품 manual 0·seed 13, 구간 0",
+  "note": null
+ },
+ {
+  "id": 188,
+  "name": "James Wilson",
+  "english_name": "James Wilson",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Irish composer (1922-2005) · 직업 composer, university teacher · WD 장르 opera · MB: 20th century British‐Irish composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 189,
+  "name": "Eduard Khagagortyan",
+  "english_name": "Eduard Khagagortyan",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Soviet composer (1930-1983) · 직업 composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 190,
+  "name": "Jean Catoire",
+  "english_name": "Jean Catoire",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1923–2005) · 직업 composer · WD 장르 contemporary classical music · MB: French composer · 작품 manual 0·seed 36, 구간 0",
+  "note": null
+ },
+ {
+  "id": 191,
+  "name": "조지 헨리 크럼",
+  "english_name": "George Crumb",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (1929-2022) · 직업 composer, university teacher · WD 장르 contemporary classical music · MB: American composer / 장르·태그 avant-garde, classical, contemporary classical · 작품 manual 0·seed 54, 구간 0",
+  "note": null
+ },
+ {
+  "id": 192,
+  "name": "Paul Ladmirault",
+  "english_name": "Paul Ladmirault",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1877–1944) · 직업 composer, choreographer, conductor, musicologist, music critic · WD 장르 opera · 작품 manual 0·seed 8, 구간 0",
+  "note": null
+ },
+ {
+  "id": 193,
+  "name": "Gardner Read",
+  "english_name": "Gardner Read",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (1913-2005) · 직업 composer, conductor, musicologist, music educator · WD 장르 opera, symphony · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 194,
+  "name": "줄리아 홀터",
+  "english_name": "Julia Holter",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: American singer-songwriter · 직업 singer, musician, songwriter, record producer, pop musician · WD 장르 electroacoustic music, pop art, indie pop, Baroque music · MB: 장르·태그 art pop, ambient, ambient pop, electronic · 작품 manual 0·seed 15, 구간 0",
+  "note": null
+ },
+ {
+  "id": 195,
+  "name": "Joseph Quesnel",
+  "english_name": "Joseph Quesnel",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Canadian composer · 직업 composer, poet, playwright, writer, military personnel · WD 장르 opera · MB: Compositeur musicien dramaturge · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 196,
+  "name": "알랭 방카르",
+  "english_name": "Alain Bancquart",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1934–2022) · 직업 organist, composer · MB: composer / 장르·태그 classical · 작품 manual 0·seed 5, 구간 0",
+  "note": null
+ },
+ {
+  "id": 197,
+  "name": "Gerard Victory",
+  "english_name": "Gerard Victory",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Irish composer (1921–1995) · 직업 composer · WD 장르 opera · MB: composer / 장르·태그 to clean up · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 198,
+  "name": "Émile Pierre Ratez",
+  "english_name": "Émile Pierre Ratez",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French musician (1851-1934) · 직업 choreographer, composer, violinist, conductor · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 199,
+  "name": "프랑수아 프랑쾨르",
+  "english_name": "François Francoeur",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer and violinist · 직업 conductor, composer · WD 장르 opera · MB: 장르·태그 classical · 작품 manual 0·seed 18, 구간 0",
+  "note": null
+ },
+ {
+  "id": 200,
+  "name": "Éric Tanguy",
+  "english_name": "Éric Tanguy",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer · 직업 composer · WD 장르 opera · MB: French composer · 작품 manual 0·seed 22, 구간 0",
+  "note": null
+ },
+ {
+  "id": 201,
+  "name": "Édouard Batiste",
+  "english_name": "Édouard Batiste",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer and pedagogue (1820-1876) · 직업 organist, composer, music educator, university teacher, music arranger · MB: French organist and composer · 작품 manual 0·seed 8, 구간 0",
+  "note": null
+ },
+ {
+  "id": 202,
+  "name": "Thomas Pasatieri",
+  "english_name": "Thomas Pasatieri",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer · 직업 composer, music educator, university teacher · WD 장르 opera · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 203,
+  "name": "J. A. C. Redford",
+  "english_name": "J. A. C. Redford",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer, arranger, orchestrator, conductor and writer · 직업 composer, conductor, orchestrator, music arranger · WD 장르 orchestral pop · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 204,
+  "name": "Leo Brouwer",
+  "english_name": "Leo Brouwer",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Cuban composer, conductor, and guitarist · 직업 composer, conductor, guitarist · WD 장르 contemporary classical music · MB: 장르·태그 modern classical · 작품 manual 0·seed 102, 구간 0",
+  "note": null
+ },
+ {
+  "id": 205,
+  "name": "Lodewijk Mortelmans",
+  "english_name": "Lodewijk Mortelmans",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Belgian composer (1868-1952) · 직업 conductor, composer, musicologist, university teacher, musician · WD 장르 opera · MB: Belgian composer and conductor · 작품 manual 0·seed 15, 구간 0",
+  "note": null
+ },
+ {
+  "id": 206,
+  "name": "요한 요한손",
+  "english_name": "Jóhann Jóhannsson",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Icelandic musician and composer (1969–2018) · 직업 composer, record producer, film score composer, pianist, music arranger · WD 장르 art music, minimalist music, ambient music · MB: Icelandic musician and score composer / 장르·태그 modern classical · 작품 manual 0·seed 165, 구간 0",
+  "note": "영화음악 작곡가, 미니멀리즘·포스트클래식 앨범도 있음"
+ },
+ {
+  "id": 207,
+  "name": "요제프 수크",
+  "english_name": "Josef Suk",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Czech composer and violinist (1874-1935) · 직업 composer, music educator, violinist · WD 장르 opera, symphony · MB: Czech composer, 1874–1935 / 장르·태그 classical · 작품 manual 0·seed 43, 구간 0",
+  "note": null
+ },
+ {
+  "id": 208,
+  "name": "Marcial del Adalid y Gurréa",
+  "english_name": "Marcial del Adalid y Gurréa",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish composer (1826-1881) · 직업 composer · WD 장르 opera · MB: Spanish composer · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 209,
+  "name": "Byron Fidetzis",
+  "english_name": "Byron Fidetzis",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Greek cellist and conductor · 직업 conductor, cellist, composer, musicologist, musician · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 210,
+  "name": "Henry Février",
+  "english_name": "Henry Février",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1875-1957) · 직업 composer · WD 장르 opera · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 211,
+  "name": "Micha Hamel",
+  "english_name": "Micha Hamel",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Dutch composer, conductor and poet · 직업 poet, conductor, composer, writer, musician · WD 장르 opera · MB: Dutch composer and conductor / 장르·태그 classical · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 212,
+  "name": "Amélie-Julie Candeille",
+  "english_name": "Amélie-Julie Candeille",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French actor and musician (1767-1834) · 직업 actor, singer, composer, playwright, writer · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 213,
+  "name": "Johan Hye-Knudsen",
+  "english_name": "Johan Hye-Knudsen",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Danish conductor (1896–1975) · 직업 conductor, composer · WD 장르 opera · MB: 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": "지휘자, 작곡도 하지만 작품 0"
+ },
+ {
+  "id": 214,
+  "name": "Jerzy Fitelberg",
+  "english_name": "Jerzy Fitelberg",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (1903-1951) · 직업 composer · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 215,
+  "name": "아르투르 모레이라 리마",
+  "english_name": "Arthur Moreira Lima",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Brazilian musician (1940–2024) · 직업 composer, pianist · MB: pianist / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 216,
+  "name": "프랑코 페레라",
+  "english_name": "Franco Ferrara",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer (1911–1985) · 직업 conductor, composer, music educator, film score composer, musician · MB: 장르·태그 classical · 작품 manual 0·seed 3, 구간 0",
+  "note": "지휘자 겸 작곡, seed 3개"
+ },
+ {
+  "id": 217,
+  "name": "Heikki Suolahti",
+  "english_name": "Heikki Suolahti",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Finnish composer (1920–1936) · 직업 composer · WD 장르 opera · MB: 장르·태그 composer, finnish composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 218,
+  "name": "찰스 맥커라스",
+  "english_name": "Charles Mackerras",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Australian conductor and classical oboist (1925–2010) · 직업 conductor, oboist, composer, music director, classical oboist · MB: Australian conductor / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 219,
+  "name": "Silvio Barbato",
+  "english_name": "Silvio Barbato",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Italian-Brazilian opera conductor and composer · 직업 conductor, composer · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": "오페라 지휘자, 작곡도 하지만 작품 0"
+ },
+ {
+  "id": 220,
+  "name": "David Chesky",
+  "english_name": "David Chesky",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer · 직업 composer, musicologist, pianist, jazz musician, musician · WD 장르 jazz · MB: 장르·태그 jazz · 작품 manual 0·seed 145, 구간 0",
+  "note": "재즈·클래식 겸업(MB 장르 jazz), 경계 사례로 클래식에 둠"
+ },
+ {
+  "id": 221,
+  "name": "빅토르 코센코",
+  "english_name": "Viktor Kosenko",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Ukrainian composer, pianist, and educator (1896–1938) · 직업 composer, pianist, pedagogue, teacher · WD 장르 waltz, prelude, nocturne, mazurka · MB: composer, pianist, educator · 작품 manual 0·seed 9, 구간 0",
+  "note": null
+ },
+ {
+  "id": 222,
+  "name": "Henri Miro",
+  "english_name": "Henri Miro",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Canadian composer/arranger, conductor, pianist, and music critic · 직업 conductor, composer, music educator, pianist, music critic · WD 장르 opera · MB: Compositeur/arrangeur, chef d’orchestre · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 223,
+  "name": "Ernest Pingoud",
+  "english_name": "Ernest Pingoud",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Finnish composer · 직업 composer · WD 장르 symphony, symphonic poem, contemporary classical music · MB: Finnish composer / 장르·태그 composer, finnish composer · 작품 manual 0·seed 6, 구간 0",
+  "note": null
+ },
+ {
+  "id": 224,
+  "name": "Felipe Boero",
+  "english_name": "Felipe Boero",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Argentine musician (1884–1958) · 직업 composer, pianist, founder, musician · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 225,
+  "name": "Salvatore Sciarrino",
+  "english_name": "Salvatore Sciarrino",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer · 직업 composer, librettist, conductor · WD 장르 opera, art music, avant-garde music · MB: composer / 장르·태그 classical, contemporary classical · 작품 manual 0·seed 55, 구간 0",
+  "note": null
+ },
+ {
+  "id": 226,
+  "name": "Claudio Ambrosini",
+  "english_name": "Claudio Ambrosini",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian musician (born 1948) · 직업 composer, conductor · MB: Italian composer · 작품 manual 0·seed 36, 구간 0",
+  "note": null
+ },
+ {
+  "id": 227,
+  "name": "반브리",
+  "english_name": "Johannes Bernardus van Bree",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Dutch composer, violinist and conductor (1801–1857) · 직업 composer, conductor, violinist · WD 장르 opera, symphony · MB: 장르·태그 composer · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 228,
+  "name": "Ernest van der Eyken",
+  "english_name": "Ernest van der Eyken",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Belgian musician (1913-2010) · 직업 conductor, composer, musicologist, violist · WD 장르 opera · MB: Belgian composer, conductor & violist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 229,
+  "name": "헨리 카웰",
+  "english_name": "Henry Cowell",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer, music theorist, pianist, teacher, publisher, and impresario (1897-1965) · 직업 composer, musicologist, music theorist, pianist, musician · MB: American composer / 장르·태그 avant-garde, classical, experimental, modern classical · 작품 manual 0·seed 97, 구간 0",
+  "note": null
+ },
+ {
+  "id": 230,
+  "name": "Cemal Reşit Rey",
+  "english_name": "Cemal Reşit Rey",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Turkish composer and pianist (1904–1985) · 직업 composer, screenwriter, pianist, conductor · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 231,
+  "name": "Brice Pauset",
+  "english_name": "Brice Pauset",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French musician and composer · 직업 musician, composer, university teacher · 작품 manual 0·seed 7, 구간 0",
+  "note": null
+ },
+ {
+  "id": 232,
+  "name": "Ulvi Cemal Erkin",
+  "english_name": "Ulvi Cemal Erkin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Turkish composer (1906–1972) · 직업 composer, pianist, conductor · MB: Turkish composer / 장르·태그 composer · 작품 manual 0·seed 11, 구간 0",
+  "note": null
+ },
+ {
+  "id": 233,
+  "name": "Florêncio José Ferreira Coutinho",
+  "english_name": "Florêncio José Ferreira Coutinho",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Brazilian trumpeter (?-1819) · 직업 trumpeter, conductor, composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 234,
+  "name": "Ludwig Daser",
+  "english_name": "Ludwig Daser",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer · 직업 composer, court chapel master, chapelmaster · MB: German Renaissance composer & choirmaster · 작품 manual 0·seed 9, 구간 0",
+  "note": null
+ },
+ {
+  "id": 235,
+  "name": "Tania León",
+  "english_name": "Tania León",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Cuban composer and conductor · 직업 conductor, composer, music educator, university teacher, pianist · WD 장르 opera · MB: Cuban-American composer · 작품 manual 0·seed 27, 구간 0",
+  "note": null
+ },
+ {
+  "id": 236,
+  "name": "Charles-Hubert Gervais",
+  "english_name": "Charles-Hubert Gervais",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1671–1744) · 직업 composer · WD 장르 opera · 작품 manual 0·seed 5, 구간 0",
+  "note": null
+ },
+ {
+  "id": 237,
+  "name": "Leon Stein",
+  "english_name": "Leon Stein",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (1910–2002) · 직업 conductor, composer, musicologist, musicographer · WD 장르 opera · MB: American composer · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 238,
+  "name": "Gustave Charpentier",
+  "english_name": "Gustave Charpentier",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1860-1956) · 직업 composer, conductor, writer · WD 장르 opera · MB: French composer / 장르·태그 composer, to clean up · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 239,
+  "name": "페르난도 소르",
+  "english_name": "Fernando Sor",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish classical guitarist and composer (1778-1839) · 직업 guitarist, composer, classical guitarist, performing artist · MB: Spanish composer / 장르·태그 classical · 작품 manual 0·seed 105, 구간 0",
+  "note": null
+ },
+ {
+  "id": 240,
+  "name": "Klimenty Korchmaryov",
+  "english_name": "Klimenty Korchmaryov",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Soviet composer and pianist (1899-1958) · 직업 composer, pianist · WD 장르 opera · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 241,
+  "name": "Kevin Volans",
+  "english_name": "Kevin Volans",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: South African-Irish composer (born 1949) · 직업 composer, musicologist, pianist, musician · WD 장르 opera · MB: South African-Irish composer / 장르·태그 classical · 작품 manual 0·seed 27, 구간 0",
+  "note": null
+ },
+ {
+  "id": 242,
+  "name": "Richard Meale",
+  "english_name": "Richard Meale",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Australian composer (1932–2009) · 직업 composer · WD 장르 opera · MB: composer / 장르·태그 composer · 작품 manual 0·seed 12, 구간 0",
+  "note": null
+ },
+ {
+  "id": 243,
+  "name": "Manuel Rosenthal",
+  "english_name": "Manuel Rosenthal",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer and conductor (1904-2003) · 직업 conductor, composer, music arranger, violinist, university teacher · MB: French conductor & composer / 장르·태그 classical · 작품 manual 0·seed 8, 구간 0",
+  "note": null
+ },
+ {
+  "id": 244,
+  "name": "Vano Muradeli",
+  "english_name": "Vano Muradeli",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Soviet composer (1908-1970) · 직업 composer, film score composer · WD 장르 opera, operetta, ballet, symphony · MB: Soviet composer and conductor · 작품 manual 0·seed 18, 구간 0",
+  "note": null
+ },
+ {
+  "id": 245,
+  "name": "펠릭스 블루멘펠트",
+  "english_name": "Felix Mikhailovich Blumenfeld",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian composer, pianist, conductor (1863-1931) · 직업 pianist, conductor, classical composer, pedagogue, professor · MB: Russian composer, pianist, conductor · 작품 manual 0·seed 16, 구간 0",
+  "note": null
+ },
+ {
+  "id": 246,
+  "name": "Tyondai Braxton",
+  "english_name": "Tyondai Braxton",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American musician · 직업 guitarist, composer, singer, jazz guitarist, musician · WD 장르 contemporary classical music · MB: 장르·태그 composer · 작품 manual 0·seed 6, 구간 0",
+  "note": "실험 록 밴드(Battles) 출신, WD 장르 contemporary classical, 경계 사례로 클래식에 둠"
+ },
+ {
+  "id": 247,
+  "name": "Paule Maurice",
+  "english_name": "Paule Maurice",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1910–1967) · 직업 composer, music educator · MB: French composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 248,
+  "name": "Denis Gougeon",
+  "english_name": "Denis Gougeon",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Canadian composer · 직업 composer, musicologist, university teacher · WD 장르 opera · 작품 manual 0·seed 6, 구간 0",
+  "note": null
+ },
+ {
+  "id": 249,
+  "name": "Jan Blockx",
+  "english_name": "Jan Blockx",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Belgian composer, pianist and teacher (1851–1912) · 직업 composer, conductor, pianist, teacher, music arranger · WD 장르 opera · MB: Belgian composer and pianist / 장르·태그 composer · 작품 manual 0·seed 5, 구간 0",
+  "note": null
+ },
+ {
+  "id": 250,
+  "name": "Alois Piňos",
+  "english_name": "Alois Piňos",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Czech music educator, composer and university educator · 직업 composer, musicologist, music educator, teacher, writer · WD 장르 electroacoustic music, happening, audiovisual work · MB: Czech music educator, composer and university educator · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 251,
+  "name": "Albert Guinovart i Mingacho",
+  "english_name": "Albert Guinovart i Mingacho",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Catalan composer and pianist · 직업 composer, pianist · WD 장르 opera, sardana, musical play, soundtrack · MB: Catalan composer · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 252,
+  "name": "밀턴 배빗",
+  "english_name": "Milton Babbitt",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (1916–2011) · 직업 mathematician, composer, musicologist, music educator, music theorist · MB: American composer / 장르·태그 composer · 작품 manual 0·seed 42, 구간 0",
+  "note": null
+ },
+ {
+  "id": 253,
+  "name": "Marcel Delannoy",
+  "english_name": "Marcel Delannoy",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1898–1962) · 직업 composer, music critic · WD 장르 opera · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 254,
+  "name": "바이런 재니스",
+  "english_name": "Byron Janis",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: American musician (1928–2024) · 직업 pianist, composer, musician · MB: pianist / 장르·태그 american pianist, pianist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 255,
+  "name": "Martin O'Donnell",
+  "english_name": "Martin O'Donnell",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American video game composer · 직업 composer, sound designer · MB: 장르·태그 classical · 작품 manual 0·seed 12, 구간 0",
+  "note": null
+ },
+ {
+  "id": 256,
+  "name": "Ruth Watson Henderson",
+  "english_name": "Ruth Watson Henderson",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Canadian composer and pianist · 직업 composer, music educator, pianist · WD 장르 contemporary classical music · 작품 manual 0·seed 17, 구간 0",
+  "note": null
+ },
+ {
+  "id": 257,
+  "name": "John Alden Carpenter",
+  "english_name": "John Alden Carpenter",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (1876-1951) · 직업 composer · WD 장르 impressionist music · MB: American composer · 작품 manual 0·seed 11, 구간 0",
+  "note": null
+ },
+ {
+  "id": 258,
+  "name": "Marc Lewon",
+  "english_name": "Marc Lewon",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: German musician, musicologist and music historian · 직업 musician, musicologist, music historian, composer, instrumentalist · WD 장르 early music · MB: German musician, musicologist and music historian · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 259,
+  "name": "Juan Crisóstomo de Arriaga",
+  "english_name": "Juan Crisóstomo de Arriaga",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish composer · 직업 composer · MB: Spanish composer / 장르·태그 composer, to clean up · 작품 manual 0·seed 12, 구간 0",
+  "note": null
+ },
+ {
+  "id": 260,
+  "name": "잔 프란체스코 말리피에로",
+  "english_name": "Gian Francesco Malipiero",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer of the 20th century (1882-1973) · 직업 composer, musicologist, director · WD 장르 opera · MB: Italian composer / 장르·태그 classical · 작품 manual 0·seed 102, 구간 0",
+  "note": null
+ },
+ {
+  "id": 261,
+  "name": "핏 스베르츠",
+  "english_name": "Piet Swerts",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Belgian composer · 직업 composer, pianist, conductor, pedagogue · WD 장르 opera · MB: Belgian composer & pianist · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 262,
+  "name": "Edmond Missa",
+  "english_name": "Edmond Missa",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1861-1910) · 직업 composer · WD 장르 opera · MB: organist/composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 263,
+  "name": "찰스 마리 비도르",
+  "english_name": "Charles-Marie Widor",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French organist and composer (1844–1937) · 직업 classical composer, organist, music educator, music critic, university teacher · WD 장르 opera, symphony · MB: French organist, composer and teacher / 장르·태그 classical, romantic classical · 작품 manual 0·seed 62, 구간 0",
+  "note": null
+ },
+ {
+  "id": 264,
+  "name": "Juventino Rosas",
+  "english_name": "Juventino Rosas",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Mexican composer, violinist and band leader (1868–1894) · 직업 composer, conductor, violinist · WD 장르 salon music · MB: bandleader and composer / 장르·태그 to clean up · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 265,
+  "name": "Jean-Luc Guionnet",
+  "english_name": "Jean-Luc Guionnet",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: French organist · 직업 organist, saxophonist, composer, musician · WD 장르 electroacoustic music · MB: French improviser / 장르·태그 free improvisation, free jazz · 작품 manual 0·seed 0, 구간 0",
+  "note": "자유즉흥·프리재즈 색소폰·오르간 연주자, 작품 0"
+ },
+ {
+  "id": 266,
+  "name": "Issac Strauss",
+  "english_name": "Issac Strauss",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French art collector, conductor and composer (1806–1888) · 직업 art collector, conductor, composer, violinist · MB: French composer · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 267,
+  "name": "Roberto Sierra",
+  "english_name": "Roberto Sierra",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Puerto Rican composer · 직업 musician, composer, musicologist · WD 장르 opera · MB: Puerto Rican composer · 작품 manual 0·seed 25, 구간 0",
+  "note": null
+ },
+ {
+  "id": 268,
+  "name": "에르네스트 앙세르메",
+  "english_name": "Ernest Ansermet",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Swiss conductor (1883–1969) · 직업 conductor, musicologist, composer, musician, music arranger · MB: conductor / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 269,
+  "name": "Alice Shields",
+  "english_name": "Alice Shields",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer and librettist · 직업 composer, librettist · WD 장르 opera, electronic music, instrumental music, vocal music · MB: 장르·태그 to clean up · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 270,
+  "name": "Pia Sebastiani",
+  "english_name": "Pia Sebastiani",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Argentinian composer and pianist (1925-2015) · 직업 composer, pianist, university teacher · MB: pianist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 271,
+  "name": "Hiroyuki Itō",
+  "english_name": "Hiroyuki Itō",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer · 직업 composer · MB: composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 272,
+  "name": "Michel Hermon",
+  "english_name": "Michel Hermon",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: French actor · 직업 actor, singer, chansonnier, artist · WD 장르 art lyrique · MB: French actor and singer · 작품 manual 0·seed 0, 구간 0",
+  "note": "배우·샹송 가수, 작품 0"
+ },
+ {
+  "id": 273,
+  "name": "Helmut Koch",
+  "english_name": "Helmut Koch",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: German musician and conductor (1908-1975) · 직업 musician, conductor, choir director, editor, composer · MB: conductor / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 274,
+  "name": "Diana Arismendi",
+  "english_name": "Diana Arismendi",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Venezuelan composer · 직업 composer, university teacher · WD 장르 opera · MB: Venezuelan composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 275,
+  "name": "Antonio Bibalo",
+  "english_name": "Antonio Bibalo",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian-Norwegian musician · 직업 composer, pianist · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 276,
+  "name": "루이즈 베르탱",
+  "english_name": "Louise Bertin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1805-1877) · 직업 poet, composer, writer, painter · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 277,
+  "name": "자넷 베이커",
+  "english_name": "Janet Baker",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: British opera and concert singer · 직업 opera singer, autobiographer, composer, diarist, singer · MB: mezzo‐soprano and alto / 장르·태그 classical, opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 278,
+  "name": "이시이 마키",
+  "english_name": "Maki Ishii",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer (1936-2003) · 직업 composer, choreographer, conductor, musician · WD 장르 contemporary classical music · MB: Japanese composer / 장르·태그 classical, contemporary classical · 작품 manual 0·seed 22, 구간 0",
+  "note": null
+ },
+ {
+  "id": 279,
+  "name": "Ernesto Elorduy",
+  "english_name": "Ernesto Elorduy",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Mexican composer and pianist (1853-1913) · 직업 composer, pianist, diplomat · WD 장르 opera · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 280,
+  "name": "마이클 나이먼",
+  "english_name": "Michael Nyman",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: English composer of minimalist music, pianist, librettist and musicologist · 직업 composer, musicologist, pianist, film score composer, recording artist · WD 장르 opera · MB: composer / 장르·태그 classical · 작품 manual 0·seed 335, 구간 0",
+  "note": "미니멀리즘·영화음악 경계, 클래식으로 둠"
+ },
+ {
+  "id": 281,
+  "name": "Louise Lincoln Kerr",
+  "english_name": "Louise Lincoln Kerr",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American musician (1892–1977) · 직업 composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 282,
+  "name": "프란츠 슈미트",
+  "english_name": "Franz Schmidt",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer, cellist and pianist (1874-1939) · 직업 composer, music educator, cellist, university teacher, pianist · WD 장르 opera, symphony · MB: Austrian composer / 장르·태그 classical · 작품 manual 0·seed 34, 구간 0",
+  "note": null
+ },
+ {
+  "id": 283,
+  "name": "크리스티안 신딩",
+  "english_name": "Christian Sinding",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Norwegian composer (1856–1941) · 직업 classical composer, academic musician, musicologist, composer · WD 장르 opera, symphony · MB: Norwegian composer / 장르·태그 classical · 작품 manual 0·seed 141, 구간 0",
+  "note": null
+ },
+ {
+  "id": 284,
+  "name": "Heinrich Esser",
+  "english_name": "Heinrich Esser",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer and conductor (1818–1872) · 직업 composer, conductor · WD 장르 opera · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 285,
+  "name": "Eddy Hilberts",
+  "english_name": "Eddy Hilberts",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: Dutch music producer and songwriter · 직업 record producer, songwriter, singer, music arranger · WD 장르 pop music, schlager music · 작품 manual 0·seed 10, 구간 0",
+  "note": null
+ },
+ {
+  "id": 286,
+  "name": "Aram Van Ballaert",
+  "english_name": "Aram Van Ballaert",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Belgian musician · 직업 guitarist, composer · MB: Belgian classical guitarist, composer & rock drummer · 작품 manual 0·seed 0, 구간 0",
+  "note": "클래식 기타리스트 출신, 2012년부터 영화·TV 음악 작곡, 작품 0"
+ },
+ {
+  "id": 287,
+  "name": "니콜라 렌스",
+  "english_name": "Nicholas Lens",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Belgian composer of contemporary music · 직업 composer, writer, actor, film director, musician · WD 장르 opera · MB: Belgian composer / 장르·태그 opera · 작품 manual 0·seed 78, 구간 0",
+  "note": null
+ },
+ {
+  "id": 288,
+  "name": "Dan Welcher",
+  "english_name": "Dan Welcher",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer · 직업 conductor, composer, musicologist · WD 장르 opera · MB: American composer · 작품 manual 0·seed 7, 구간 0",
+  "note": null
+ },
+ {
+  "id": 289,
+  "name": "오나카 메구미",
+  "english_name": "Megumi Ōnaka",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer · 직업 composer · 작품 manual 0·seed 6, 구간 0",
+  "note": "동요 작곡가(サッちゃん 등), 클래식으로 둠"
+ },
+ {
+  "id": 290,
+  "name": "보이치에흐 킬라르",
+  "english_name": "Wojciech Kilar",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Polish composer and pianist (1932–2013) · 직업 composer, pianist, film score composer, university teacher, musician · WD 장르 contemporary classical music, liturgical music, religious music · MB: composer / 장르·태그 classical · 작품 manual 0·seed 139, 구간 0",
+  "note": "클래식·영화음악 겸업, 클래식으로 둠"
+ },
+ {
+  "id": 291,
+  "name": "William Grant Still",
+  "english_name": "William Grant Still",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (1895–1978) · 직업 conductor, composer, oboist, film score composer, music arranger · WD 장르 opera, symphony · MB: American composer / 장르·태그 classical · 작품 manual 0·seed 63, 구간 0",
+  "note": null
+ },
+ {
+  "id": 292,
+  "name": "핫토리 다다시",
+  "english_name": "Tadashi Hattori",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer (1908–2008) · 직업 composer · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 293,
+  "name": "니코 멀리",
+  "english_name": "Nico Muhly",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American contemporary classical composer · 직업 composer, classical pianist, pianist, musician · WD 장르 contemporary classical music, minimalist music, opera · MB: 장르·태그 avant-garde, classical, concerto, contemporary classical · 작품 manual 0·seed 234, 구간 0",
+  "note": null
+ },
+ {
+  "id": 294,
+  "name": "Michael Rische",
+  "english_name": "Michael Rische",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: German classical pianist and university teacher · 직업 composer, classical pianist, university teacher, pianist, musician · WD 장르 jazz · MB: pianist / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 295,
+  "name": "Henry Brant",
+  "english_name": "Henry Brant",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (1913–2008) · 직업 composer, music educator, university teacher, musician · MB: Canadian-American composer / 장르·태그 classical, contemporary classical, modern classical · 작품 manual 0·seed 19, 구간 0",
+  "note": null
+ },
+ {
+  "id": 296,
+  "name": "나지 하킴",
+  "english_name": "Naji Hakim",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Lebanese-French composer, organist and improviser · 직업 organist, composer, pianist, musician · WD 장르 modern classical music, organ music, musical improvisation · MB: Franco-Lebanese organist and composer / 장르·태그 classical, contemporary classical · 작품 manual 0·seed 69, 구간 0",
+  "note": null
+ },
+ {
+  "id": 297,
+  "name": "Jennifer Higdon",
+  "english_name": "Jennifer Higdon",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer · 직업 composer, music teacher, flautist · MB: American composer / 장르·태그 classical, contemporary classical · 작품 manual 0·seed 29, 구간 0",
+  "note": null
+ },
+ {
+  "id": 298,
+  "name": "Antonio de Cabezahueca",
+  "english_name": "Antonio de Cabezahueca",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish composer and organist (1510-1566) · 직업 organist, composer · WD 장르 Renaissance music · MB: Spanish composer & organist, 1510-1566 / 장르·태그 composer, spanish composer · 작품 manual 0·seed 55, 구간 0",
+  "note": null
+ },
+ {
+  "id": 299,
+  "name": "Franck Bedrossian",
+  "english_name": "Franck Bedrossian",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer · 직업 composer · MB: French composer / 장르·태그 composer · 작품 manual 0·seed 12, 구간 0",
+  "note": null
+ },
+ {
+  "id": 300,
+  "name": "Adrien Talexy",
+  "english_name": "Adrien Talexy",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French pianist and composer · 직업 pianist, composer, musicologist, music arranger · WD 장르 opera · MB: 장르·태그 french composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 301,
+  "name": "피터 맥스웰 데이비스",
+  "english_name": "Peter Maxwell Davies",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: English composer and conductor (1934-2016) · 직업 classical composer, conductor, music educator, film score composer, pianist · WD 장르 opera, symphony · MB: English composer and conductor / 장르·태그 classical, contemporary classical · 작품 manual 0·seed 149, 구간 0",
+  "note": null
+ },
+ {
+  "id": 302,
+  "name": "브뤼노 뒤콜",
+  "english_name": "Bruno Ducol",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer · 직업 composer · MB: 장르·태그 contemporary classical · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 303,
+  "name": "Albert Siklós",
+  "english_name": "Albert Siklós",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Hungarian composer (1878-1942) · 직업 composer, pedagogue, cellist, university teacher · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 304,
+  "name": "Vieri Tosatti",
+  "english_name": "Vieri Tosatti",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer · 직업 composer · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 305,
+  "name": "Luca Turilli",
+  "english_name": "Luca Turilli",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: Italian musician, composer and producer · 직업 composer, music arranger, record producer, keyboardist, pianist · WD 장르 power metal, neo-classical metal, symphonic metal, pop music · MB: 장르·태그 power metal, symphonic metal, neoclassical metal · 작품 manual 0·seed 48, 구간 0",
+  "note": null
+ },
+ {
+  "id": 306,
+  "name": "프랭크 자파",
+  "english_name": "Frank Zappa",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: American musician (1940–1993) · 직업 guitarist, singer, composer, voice actor, rock musician · WD 장르 rock music, experimental music, avant-garde music, jazz · MB: US musician, composer, activist & filmmaker / 장르·태그 progressive rock, art rock, rock, experimental rock · 작품 manual 0·seed 506, 구간 0",
+  "note": null
+ },
+ {
+  "id": 307,
+  "name": "에르네스토 레쿠오나",
+  "english_name": "Ernesto Lecuona",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Cuban composer (1896-1963) · 직업 pianist, composer, songwriter, film score composer, actor · WD 장르 opera · MB: 장르·태그 classical · 작품 manual 0·seed 116, 구간 0",
+  "note": "쿠바 피아니스트·작곡가, 클래식·대중가요 경계, 클래식으로 둠"
+ },
+ {
+  "id": 308,
+  "name": "Thomas Enhco",
+  "english_name": "Thomas Enhco",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: French pianist, violinist and composer · 직업 pianist, violinist, composer, film score composer, jazz musician · WD 장르 jazz · MB: pianist / 장르·태그 jazz, contemporary jazz, third stream · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 309,
+  "name": "Vincent Ségal",
+  "english_name": "Vincent Ségal",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: French cellist and bassist · 직업 cellist, composer, musician · WD 장르 vocal music · MB: cellist · 작품 manual 0·seed 8, 구간 0",
+  "note": "첼리스트, seed 작품은 월드뮤직·팝 곡(Bumcello·발라케 시소코 협업), 경계 사례"
+ },
+ {
+  "id": 310,
+  "name": "사에구사 시게아키",
+  "english_name": "Shigeaki Saegusa",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer · 직업 composer, musicologist · WD 장르 opera · MB: 장르·태그 contemporary classical · 작품 manual 0·seed 31, 구간 0",
+  "note": "오페라·레퀴엠과 애니메이션(건담) 음악 겸업, seed 작품은 애니 음악 위주, 경계 사례로 클래식에 둠"
+ },
+ {
+  "id": 311,
+  "name": "아델리나 파티",
+  "english_name": "Adelina Patti",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Spanish opera singer (1843–1919) · 직업 opera singer, composer · WD 장르 opera · MB: 장르·태그 soprano · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 312,
+  "name": "Zygmunt Konieczny",
+  "english_name": "Zygmunt Konieczny",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Polish musician · 직업 composer, musician · 작품 manual 0·seed 1, 구간 0",
+  "note": "연극·영화음악 작곡가, 카바레 노래도 씀"
+ },
+ {
+  "id": 313,
+  "name": "Meinrad Schütter",
+  "english_name": "Meinrad Schütter",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Swiss composer (1910-2006) · 직업 composer · WD 장르 opera · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 314,
+  "name": "Makoto Shinohara",
+  "english_name": "Makoto Shinohara",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer (1931-2024) · 직업 composer, musicologist, music educator, conductor · WD 장르 contemporary classical music · MB: composer / 장르·태그 contemporary classical · 작품 manual 0·seed 5, 구간 0",
+  "note": null
+ },
+ {
+  "id": 315,
+  "name": "Nikolai Golovanov",
+  "english_name": "Nikolai Golovanov",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian composer and conductor (1891–1953) · 직업 conductor, composer, music educator, pianist, choir director · WD 장르 opera · MB: conductor and composer / 장르·태그 classical · 작품 manual 0·seed 4, 구간 0",
+  "note": "지휘자 겸 작곡(교회 합창곡), seed 4개"
+ },
+ {
+  "id": 316,
+  "name": "Zdeněk Šesták",
+  "english_name": "Zdeněk Šesták",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Czech composer and musicologist (1925–2026) · 직업 composer, flautist, musicologist, university teacher · MB: 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 317,
+  "name": "Jaroslav Krombholc",
+  "english_name": "Jaroslav Krombholc",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Czech conductor, composer and pianist (1918–1983) · 직업 conductor, composer, pianist, musician · WD 장르 opera · MB: conductor · 작품 manual 0·seed 0, 구간 0",
+  "note": "지휘자, 작곡도 하지만 작품 0"
+ },
+ {
+  "id": 318,
+  "name": "Robert Turner",
+  "english_name": "Robert Turner",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: composer (1920-2012) · 직업 composer, music educator, university teacher, music teacher · WD 장르 opera · MB: Canadian composer · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 319,
+  "name": "Zdeněk Zahradník",
+  "english_name": "Zdeněk Zahradník",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Czech music educator and composer · 직업 composer, music educator · WD 장르 twelve-tone technique, opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 320,
+  "name": "Sylvie Brunet-Grupposo",
+  "english_name": "Sylvie Brunet-Grupposo",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: French opera singer · 직업 opera singer, performing artist, composer, singer · WD 장르 opera · MB: mezzo-soprano · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 321,
+  "name": "카츠오 후쿠시마",
+  "english_name": "Kazuo Fukushima",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer and musicologist (1930–2023) · 직업 composer, musicologist, university teacher · MB: 장르·태그 classical, contemporary classical · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 322,
+  "name": "에벤시오 카스테야노스",
+  "english_name": "Evencio Castellanos",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Venezuelan composer (1915–1984) · 직업 composer, university teacher, pianist · MB: Venezuelan composer · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 323,
+  "name": "아서 벤저민",
+  "english_name": "Arthur Benjamin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Australian composer, pianist, conductor and teacher · 직업 pianist, conductor, composer, music educator, film score composer · WD 장르 opera · MB: Australian composer / pianist / conductor / 장르·태그 classical · 작품 manual 0·seed 41, 구간 0",
+  "note": null
+ },
+ {
+  "id": 324,
+  "name": "Edgar Tinel",
+  "english_name": "Edgar Tinel",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Belgian composer and pianist (1854-1912) · 직업 composer, university teacher, pianist, head teacher · WD 장르 opera · MB: Belgian composer & pianist · 작품 manual 0·seed 9, 구간 0",
+  "note": null
+ },
+ {
+  "id": 325,
+  "name": "Carles Baguer",
+  "english_name": "Carles Baguer",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Catalan organist and composer (1768-1808) · 직업 organist, composer · WD 장르 symphony, opera · MB: Spanish composer / 장르·태그 classical · 작품 manual 0·seed 5, 구간 0",
+  "note": null
+ },
+ {
+  "id": 326,
+  "name": "Samuel Jerónimo",
+  "english_name": "Samuel Jerónimo",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Portuguese musician, composer · 직업 composer · WD 장르 musique concrète · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 327,
+  "name": "José García Román",
+  "english_name": "José García Román",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish composer (born 1945) · 직업 composer · MB: Spanish composer, born 1945 / 장르·태그 contemporary classical · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 328,
+  "name": "Julius Weismann",
+  "english_name": "Julius Weismann",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer and conductor (1879–1950) · 직업 composer, conductor, pianist, librettist, musician · WD 장르 opera · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 329,
+  "name": "Auguste Mermet",
+  "english_name": "Auguste Mermet",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer · 직업 composer, musician · WD 장르 opera · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 330,
+  "name": "Georges Mathias",
+  "english_name": "Georges Mathias",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer, pianist and teacher (1826-1910) · 직업 pianist, composer, music educator · MB: French pianist and composer / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 331,
+  "name": "레오폴드 고도프스키",
+  "english_name": "Leopold Godowsky",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American pianist, composer, and teacher (1870–1938) · 직업 pianist, composer, music educator, musician · MB: pianist and composer / 장르·태그 classical · 작품 manual 0·seed 52, 구간 0",
+  "note": "피아니스트지만 작곡도 함"
+ },
+ {
+  "id": 332,
+  "name": "Michel Corboz",
+  "english_name": "Michel Corboz",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Swiss conductor (1934-2021) · 직업 conductor, choir director, music educator, composer, musician · MB: conductor and composer / 장르·태그 classical · 작품 manual 0·seed 1, 구간 0",
+  "note": "지휘자, MB 설명상 작곡도 함, seed 1개"
+ },
+ {
+  "id": 333,
+  "name": "클라라 락모어",
+  "english_name": "Clara Rockmore",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Russian-American musician (1911-1998) · 직업 violinist, composer, musician · MB: 장르·태그 european, lithuanian, theremin · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 334,
+  "name": "발보리 아울린",
+  "english_name": "Valborg Aulin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Swedish pianist and composer (1860-1928) · 직업 composer, pianist, music educator · MB: 장르·태그 composer · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 335,
+  "name": "Gustave Dugazon",
+  "english_name": "Gustave Dugazon",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer and choreographer · 직업 composer, choreographer · WD 장르 opera · MB: French composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 336,
+  "name": "올라브 셸란",
+  "english_name": "Olav Kielland",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Norwegian musician (1901–1985) · 직업 conductor, composer · 작품 manual 0·seed 0, 구간 0",
+  "note": "enwiki 상 작곡가·지휘자, 작품 0"
+ },
+ {
+  "id": 337,
+  "name": "Vasco Mendonça",
+  "english_name": "Vasco Mendonça",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Portuguese composer · 직업 composer · WD 장르 opera · MB: Portuguese composer · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 338,
+  "name": "Hermann Zilcher",
+  "english_name": "Hermann Zilcher",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer, pianist, conductor, and music teacher (1881–1948) · 직업 pianist, composer, conductor, music educator, university teacher · WD 장르 opera · MB: German composer and conductor · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 339,
+  "name": "스즈키 세이이치",
+  "english_name": "Seiichi Suzuki",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer (1901-1980) · 직업 composer, actor · MB: composer · 작품 manual 0·seed 2, 구간 0",
+  "note": "만돌린 오케스트라 작곡가, 영화음악·가요도 씀"
+ },
+ {
+  "id": 340,
+  "name": "아이버 노벨로",
+  "english_name": "Ivor Novello",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: Welsh composer and actor (1893–1951) · 직업 actor, playwright, composer, writer, screenwriter · WD 장르 musical play, operetta, music hall · MB: 장르·태그 composer, to clean up · 작품 manual 0·seed 13, 구간 0",
+  "note": null
+ },
+ {
+  "id": 341,
+  "name": "호아킨 로드리고",
+  "english_name": "Joaquín Rodrigo",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish composer, best known for his Concierto de Aranjuez (1901–1999) · 직업 composer, choreographer, pianist, pedagogue, musicologist · WD 장르 opera, zarzuela · MB: Spanish composer and virtuoso pianist / 장르·태그 classical · 작품 manual 0·seed 95, 구간 0",
+  "note": null
+ },
+ {
+  "id": 342,
+  "name": "페피토 아리올라",
+  "english_name": "Pepito Arriola",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Spanish classical pianist (1896-1954) · 직업 pianist, composer, violinist, musician · MB: Spanish pianist and violinist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 343,
+  "name": "Michael Berkeley",
+  "english_name": "Michael Berkeley",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: British composer and broadcaster on music · 직업 composer, film score composer, radio personality, musician, broadcaster · WD 장르 opera · MB: British composer / 장르·태그 classical · 작품 manual 0·seed 28, 구간 0",
+  "note": null
+ },
+ {
+  "id": 344,
+  "name": "José Pablo Moncayo García",
+  "english_name": "José Pablo Moncayo García",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Mexican pianist, percussionist, music teacher, composer and conductor (1912-1958) · 직업 composer, choreographer, conductor, musicologist, pianist · WD 장르 opera · MB: Mexican composer / 장르·태그 composer · 작품 manual 0·seed 9, 구간 0",
+  "note": null
+ },
+ {
+  "id": 345,
+  "name": "Bruno Mantovani",
+  "english_name": "Bruno Mantovani",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer · 직업 composer, conductor, pedagogue · WD 장르 contemporary classical music · MB: French composer · 작품 manual 0·seed 22, 구간 0",
+  "note": null
+ },
+ {
+  "id": 346,
+  "name": "도널드 토비",
+  "english_name": "Donald Tovey",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: British composer, pianist and musicologist (1875–1940) · 직업 pianist, composer, musicologist, music theorist, music critic · WD 장르 opera, symphony · 작품 manual 0·seed 17, 구간 0",
+  "note": null
+ },
+ {
+  "id": 347,
+  "name": "리환즈",
+  "english_name": "Li Huanzhi",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Hong Kong musician (1919–2000) · 직업 conductor, composer, musicologist · MB: 장르·태그 contemporary classical · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 348,
+  "name": "프랑수아 조제프 페티스",
+  "english_name": "François-Joseph Fétis",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Belgian composer (1784-1871) · 직업 composer, librarian, musicologist, pedagogue, conductor · WD 장르 opera · MB: Belgian composer · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 349,
+  "name": "Thomas Dunhill",
+  "english_name": "Thomas Dunhill",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: British composer · 직업 composer, music journalist, music teacher, musicographer · WD 장르 opera · 작품 manual 0·seed 9, 구간 0",
+  "note": null
+ },
+ {
+  "id": 350,
+  "name": "Fikret Amirov",
+  "english_name": "Fikret Amirov",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Azerbaijani Soviet composer (1922–1984) · 직업 composer, film score composer, music educator · WD 장르 opera, symphony, symphonic mugham, ballet · MB: Azerbaijani composer / 장르·태그 classical · 작품 manual 0·seed 12, 구간 0",
+  "note": null
+ },
+ {
+  "id": 351,
+  "name": "Ton de Leeuw",
+  "english_name": "Ton de Leeuw",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Dutch composer (1926–1996) · 직업 composer, musicologist · WD 장르 opera · MB: Dutch composer · 작품 manual 0·seed 14, 구간 0",
+  "note": null
+ },
+ {
+  "id": 352,
+  "name": "Andreas Hakenberger",
+  "english_name": "Andreas Hakenberger",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer · 직업 composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 353,
+  "name": "Peter Wishart",
+  "english_name": "Peter Wishart",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: English composer (1921–1984) · 직업 composer, music educator · WD 장르 opera · MB: English composer · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 354,
+  "name": "Robert Wykes",
+  "english_name": "Robert Wykes",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (1926–2021) · 직업 composer · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 355,
+  "name": "Thomas Byström",
+  "english_name": "Thomas Byström",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Swedish musician (1772-1839) · 직업 composer, violinist · MB: 1772-1839 · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 356,
+  "name": "Jaroslav Doubrava",
+  "english_name": "Jaroslav Doubrava",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Czech composer (1909–1960) · 직업 composer, teacher, conductor · WD 장르 opera · MB: Czech composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 357,
+  "name": "Edith Picht-Axenfeld",
+  "english_name": "Edith Picht-Axenfeld",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: German pianist and harpsichordist (1914–2001) · 직업 pianist, composer, university teacher, harpsichordist, music arranger · MB: pianist / harpsichordist / 장르·태그 harpsichordist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 358,
+  "name": "Berthe di Vito-Delvaux",
+  "english_name": "Berthe di Vito-Delvaux",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Belgian composer · 직업 composer, music educator · WD 장르 opera · MB: Belgian 20th century composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 359,
+  "name": "Kalevi Aho",
+  "english_name": "Kalevi Aho",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Finnish composer · 직업 composer, university teacher · WD 장르 opera, symphony, contemporary classical music · MB: Finnish composer / 장르·태그 classical, contemporary classical · 작품 manual 0·seed 100, 구간 0",
+  "note": null
+ },
+ {
+  "id": 360,
+  "name": "Sergio Rendine",
+  "english_name": "Sergio Rendine",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer (1954–2023) · 직업 composer, choreographer, conductor, musician · WD 장르 opera, symphony · MB: 장르·태그 classical, contemporary classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 361,
+  "name": "구스타프 레온하르트",
+  "english_name": "Gustav Leonhardt",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Dutch keyboard player, conductor, musicologist, teacher and editor (1928–2012) · 직업 conductor, organist, harpsichordist, choir director, musicologist · MB: conductor, harpsichordist / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 362,
+  "name": "루 해리슨",
+  "english_name": "Lou Harrison",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (1917-2003) · 직업 composer, Esperantist, music critic, journalist, professor · WD 장르 contemporary classical music · MB: American composer / 장르·태그 classical, avant-garde, contemporary classical, experimental · 작품 manual 0·seed 83, 구간 0",
+  "note": null
+ },
+ {
+  "id": 363,
+  "name": "한스 크나퍼츠부슈",
+  "english_name": "Hans Knappertsbusch",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: German musician (1888-1965) · 직업 conductor, university teacher, composer · WD 장르 opera, symphony, symphonic music, concerto · MB: German conductor / 장르·태그 german conductor, conductor · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 364,
+  "name": "Adam Klocek",
+  "english_name": "Adam Klocek",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Polish conductor · 직업 conductor, cellist, composer, musician · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 365,
+  "name": "파울 린케",
+  "english_name": "Paul Lincke",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1866–1946) · 직업 composer, conductor, classical composer, music publisher, musician · WD 장르 operetta, revue · 작품 manual 0·seed 15, 구간 0",
+  "note": "오페레타·레뷰 작곡가(Berliner Luft), 경계 사례로 클래식에 둠"
+ },
+ {
+  "id": 366,
+  "name": "Marco Frisina",
+  "english_name": "Marco Frisina",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian priest and composer · 직업 composer, Catholic priest, conductor, film score composer, choir director · WD 장르 opera · MB: 장르·태그 apostolo delle, priest · 작품 manual 0·seed 19, 구간 0",
+  "note": null
+ },
+ {
+  "id": 367,
+  "name": "Emil Sjögren",
+  "english_name": "Emil Sjögren",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Swedish composer (1853–1918) · 직업 composer, pianist, organist · MB: 장르·태그 classical · 작품 manual 0·seed 14, 구간 0",
+  "note": null
+ },
+ {
+  "id": 368,
+  "name": "얼 와일드",
+  "english_name": "Earl Wild",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American musician (1915–2010) · 직업 classical pianist, composer, conductor, jazz pianist, university teacher · MB: pianist, composer and conductor / 장르·태그 classical · 작품 manual 0·seed 5, 구간 0",
+  "note": "피아니스트지만 작곡도 함(비르투오소 에튀드 등)"
+ },
+ {
+  "id": 369,
+  "name": "Dieter Lehnhoff",
+  "english_name": "Dieter Lehnhoff",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Guatemalan composer · 직업 composer, conductor, musicologist · WD 장르 opera, symphony · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 370,
+  "name": "Israel Horowitz",
+  "english_name": "Israel Horowitz",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Record producer and classical music columnist · 직업 record producer, composer, journalist · 작품 manual 0·seed 0, 구간 0",
+  "note": "음반 프로듀서·음악 칼럼니스트, 작곡가 아님"
+ },
+ {
+  "id": 371,
+  "name": "Hans Georg Nägeli",
+  "english_name": "Hans Georg Nägeli",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Swiss composer (1773-1836) · 직업 composer, musicologist, independent publisher, music publisher, publisher · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 372,
+  "name": "Arthur Coquard",
+  "english_name": "Arthur Coquard",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer and music critic · 직업 composer, music critic · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 373,
+  "name": "Gottfried Heinrich Stölzel",
+  "english_name": "Gottfried Heinrich Stölzel",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer · 직업 composer, conductor, writer, musicologist, music theorist · WD 장르 opera · MB: composer · 작품 manual 0·seed 43, 구간 0",
+  "note": null
+ },
+ {
+  "id": 374,
+  "name": "Olaus Andreas Grøndahl",
+  "english_name": "Olaus Andreas Grøndahl",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Norwegian conductor and composer · 직업 composer, conductor, voice teacher, musicologist, music educator · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 375,
+  "name": "한스 첸더",
+  "english_name": "Hans Zender",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German conductor and composer · 직업 conductor, composer · WD 장르 opera, symphonic music · MB: German conductor and composer · 작품 manual 0·seed 10, 구간 0",
+  "note": null
+ },
+ {
+  "id": 376,
+  "name": "Rafael Frühbeck de Burgos",
+  "english_name": "Rafael Frühbeck de Burgos",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Spanish conductor (1933–2014) · 직업 conductor, composer, music arranger, musician · MB: conductor / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 377,
+  "name": "Waldemar Maciszewski",
+  "english_name": "Waldemar Maciszewski",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Polish musician (1927–1956) · 직업 musician, composer, pianist · MB: Polish pianist and composer · 작품 manual 0·seed 0, 구간 0",
+  "note": "피아니스트, 작곡도 하지만 작품 0"
+ },
+ {
+  "id": 378,
+  "name": "Jorge Luis del Hierro",
+  "english_name": "Jorge Luis del Hierro",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: Ecuadorian singer, songwriter and actor · 직업 composer, actor, singer · WD 장르 ballade, pop music, pop rock · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 379,
+  "name": "Amos Boasson",
+  "english_name": "Amos Boasson",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Israeli composer · 직업 composer · MB: violist · 작품 manual 0·seed 0, 구간 0",
+  "note": "예루살렘 심포니 수석 비올리스트, 작곡도 하지만 작품 0"
+ },
+ {
+  "id": 380,
+  "name": "클레멘스 크라우스",
+  "english_name": "Clemens Krauss",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Austrian conductor and opera impresario (1893 - 1954) · 직업 conductor, composer, librettist, university teacher, writer · WD 장르 opera · MB: conductor / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 381,
+  "name": "Julius Eichberg",
+  "english_name": "Julius Eichberg",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German-born composer, music director and educator · 직업 composer, writer, violinist, conductor, music teacher · WD 장르 opera · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 382,
+  "name": "Daniel Gortler",
+  "english_name": "Daniel Gortler",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Israeli musician · 직업 composer, pianist, musician · MB: pianist / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 383,
+  "name": "허레이쇼 파커",
+  "english_name": "Horatio Parker",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer and teacher (1863–1919) · 직업 composer, music educator, choir director, conductor, music teacher · WD 장르 opera · MB: American composer / 장르·태그 classical · 작품 manual 0·seed 11, 구간 0",
+  "note": null
+ },
+ {
+  "id": 384,
+  "name": "Jean-Joseph Rodolphe",
+  "english_name": "Jean-Joseph Rodolphe",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Alsatian horn player, violinist and composer · 직업 composer, horn player, violinist, music educator, university teacher · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 385,
+  "name": "Mark O'Connor",
+  "english_name": "Mark O'Connor",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American fiddle player · 직업 composer, mandolinist, fiddler, jazz musician, guitarist · WD 장르 country music, traditional folk music · MB: US bluegrass, country and classical fiddler/composer / 장르·태그 bluegrass, country, folk · 작품 manual 0·seed 19, 구간 0",
+  "note": "블루그래스·컨트리 피들러지만 협주곡·교향곡도 씀, 경계 사례로 클래식에 둠"
+ },
+ {
+  "id": 386,
+  "name": "Bruno Bettinelli",
+  "english_name": "Bruno Bettinelli",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer (1913–2004) · 직업 composer, university teacher · WD 장르 opera, symphony · MB: Italian composer · 작품 manual 0·seed 6, 구간 0",
+  "note": null
+ },
+ {
+  "id": 387,
+  "name": "Geoffrey Bush",
+  "english_name": "Geoffrey Bush",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: British composer, organist and scholar · 직업 composer · WD 장르 opera, symphony · MB: 장르·태그 classical · 작품 manual 0·seed 14, 구간 0",
+  "note": null
+ },
+ {
+  "id": 388,
+  "name": "Charles Sanford Skilton",
+  "english_name": "Charles Sanford Skilton",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer, teacher and musicologist (1868-1941) · 직업 conductor, composer, musicologist, university teacher, music educator · WD 장르 opera · MB: American composer · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 389,
+  "name": "Pavel Chesnokov",
+  "english_name": "Pavel Chesnokov",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian composer (1877–1944) · 직업 composer, conductor, musicologist, university teacher · WD 장르 opera, Eastern Orthodox music · MB: Russian composer and choirmaster / 장르·태그 classical · 작품 manual 0·seed 26, 구간 0",
+  "note": null
+ },
+ {
+  "id": 390,
+  "name": "클리포드 커즌",
+  "english_name": "Clifford Curzon",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: British musician (1907-1982) · 직업 pianist, composer, musician · MB: classical pianist, knighted in 1977 / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 391,
+  "name": "Henri Mulet",
+  "english_name": "Henri Mulet",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French organist and composer (1878–1967) · 직업 composer, organist, music educator · MB: 장르·태그 modern classical · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 392,
+  "name": "Geoffrey Toye",
+  "english_name": "Geoffrey Toye",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: English conductor, composer and opera producer · 직업 conductor, composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 393,
+  "name": "Viktor Ullmann",
+  "english_name": "Viktor Ullmann",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer (1898–1944) · 직업 composer, conductor, pianist, choir director, music critic · WD 장르 opera, atonality · MB: Czech-Austrian composer / 장르·태그 classical, modern classical, opera · 작품 manual 0·seed 39, 구간 0",
+  "note": null
+ },
+ {
+  "id": 394,
+  "name": "빌리 본",
+  "english_name": "Billy Vaughn",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: American singer, multi-instrumentalist, orchestra leader, and A&R man for Dot Records (1919-1991) · 직업 musician, singer, bandleader, multi-instrumentalist, music executive · WD 장르 traditional pop, easy listening, orchestral pop · MB: 장르·태그 christmas music, easy listening, exotica · 작품 manual 0·seed 6, 구간 0",
+  "note": null
+ },
+ {
+  "id": 395,
+  "name": "Pierre Certon",
+  "english_name": "Pierre Certon",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer · 직업 composer · MB: French renaissance composer, c. 1515-1572 · 작품 manual 0·seed 13, 구간 0",
+  "note": null
+ },
+ {
+  "id": 396,
+  "name": "Klaus Wunderlich",
+  "english_name": "Klaus Wunderlich",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: German musician (1931–1997) · 직업 organist, composer, musician · WD 장르 pop music, easy listening · MB: 장르·태그 easy listening · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 397,
+  "name": "샤를 쾨클랭",
+  "english_name": "Charles Koechlin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer, teacher and writer on music · 직업 composer, musicologist, music educator, writer, music critic · WD 장르 symphony, liturgical music · MB: composer / 장르·태그 classical · 작품 manual 0·seed 115, 구간 0",
+  "note": null
+ },
+ {
+  "id": 398,
+  "name": "Gustave Doret",
+  "english_name": "Gustave Doret",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Swiss composer and conductor (1866-1943) · 직업 composer, conductor · WD 장르 opera · MB: Swiss composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 399,
+  "name": "해럴드 버드",
+  "english_name": "Harold Budd",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American musician (1936–2020) · 직업 composer, poet, pianist, record producer, musician · WD 장르 ambient music, jazz, minimalist music, avant-garde music · MB: 장르·태그 ambient, minimalism, avant-garde, jazz · 작품 manual 0·seed 77, 구간 0",
+  "note": "앰비언트·미니멀리즘 경계(MB 장르 ambient), 클래식으로 둠"
+ },
+ {
+  "id": 400,
+  "name": "프랑수아 바쟁",
+  "english_name": "François Bazin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French opera composer (1816–1878) · 직업 composer, music educator, conductor · WD 장르 opera · MB: French composer · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 401,
+  "name": "Hisato Ohzawa",
+  "english_name": "Hisato Ohzawa",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer (1907-1953) · 직업 composer, conductor · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 402,
+  "name": "Elena Gnesina",
+  "english_name": "Elena Gnesina",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Russian composer and music educator (1874-1967) · 직업 composer, music educator, pianist · 작품 manual 0·seed 0, 구간 0",
+  "note": "작곡가·음악교육자, 작품 0"
+ },
+ {
+  "id": 403,
+  "name": "외이빈 피엘스타",
+  "english_name": "Øivin Fjeldstad",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Norwegian conductor and violinist (1903-1983) · 직업 conductor, composer, concertmaster, violinist, musician · MB: 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 404,
+  "name": "아서 버거",
+  "english_name": "Arthur Berger",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer and music critic (1912-2003) · 직업 composer, music educator, university teacher, musicologist, music critic · MB: American composer / 장르·태그 classical · 작품 manual 0·seed 5, 구간 0",
+  "note": null
+ },
+ {
+  "id": 405,
+  "name": "Zoltán Jeney",
+  "english_name": "Zoltán Jeney",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Hungarian composer (1943–2019) · 직업 composer · MB: Hungarian composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 406,
+  "name": "Murray Boren",
+  "english_name": "Murray Boren",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer · 직업 composer · WD 장르 opera · MB: American composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 407,
+  "name": "게오르크 프리드리히 하스",
+  "english_name": "Georg Friedrich Haas",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer · 직업 composer, academic musician, university teacher, classical pianist · WD 장르 opera · MB: Austrian composer / 장르·태그 composer · 작품 manual 0·seed 27, 구간 0",
+  "note": null
+ },
+ {
+  "id": 408,
+  "name": "Waldemar Kazanecki",
+  "english_name": "Waldemar Kazanecki",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Polish musician (1929–1991) · 직업 composer, pianist · 작품 manual 0·seed 2, 구간 0",
+  "note": "영화음악 작곡가(Noce i dnie), 라디오 악단 피아니스트·지휘자"
+ },
+ {
+  "id": 409,
+  "name": "Geoffrey Shaw",
+  "english_name": "Geoffrey Shaw",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: British composer (1879–1943) · 직업 composer · WD 장르 opera · MB: British composer, 1879–1943 · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 410,
+  "name": "Stanisław Wisłocki",
+  "english_name": "Stanisław Wisłocki",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Polish conductor (1921–1998) · 직업 conductor, composer, music educator, pianist, editor · MB: conductor · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 411,
+  "name": "Alix Fournier",
+  "english_name": "Alix Fournier",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1864-1897) · 직업 composer · WD 장르 opera · MB: French composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 412,
+  "name": "바르바라 헤세부코프스카",
+  "english_name": "Barbara Hesse-Bukowska",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Pianist, music educator (1930-2013) · 직업 composer, music educator, pianist, musician · MB: pianist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 413,
+  "name": "Humphrey John Stewart",
+  "english_name": "Humphrey John Stewart",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (1856-1932) · 직업 composer · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 414,
+  "name": "Nicholas O'Neill",
+  "english_name": "Nicholas O'Neill",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: English musician · 직업 composer, organist · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 415,
+  "name": "Francisco Mignone",
+  "english_name": "Francisco Mignone",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Brazilian composer (1897–1986) · 직업 composer, choreographer, pianist, conductor · WD 장르 opera, symphony · MB: Brazilian composer / 장르·태그 classical, contemporary classical, modern classical · 작품 manual 0·seed 60, 구간 0",
+  "note": null
+ },
+ {
+  "id": 416,
+  "name": "Bernardo Adam Ferrero",
+  "english_name": "Bernardo Adam Ferrero",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish composer and conductor (1942–2022) · 직업 composer, conductor, musicologist, pianist · MB: Compositor y director de orquesta / 장르·태그 composer, conductor · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 417,
+  "name": "Roger Woodward",
+  "english_name": "Roger Woodward",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Australian classical pianist (born 1942) · 직업 pianist, composer · MB: pianist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 418,
+  "name": "Joonas Kokkonen",
+  "english_name": "Joonas Kokkonen",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Finnish composer (1921–1996) · 직업 composer, pedagogue, musicologist, university teacher, pianist · WD 장르 opera, symphony, chamber music, religious music · MB: Finnish composer / 장르·태그 classical · 작품 manual 0·seed 33, 구간 0",
+  "note": null
+ },
+ {
+  "id": 419,
+  "name": "Terry Plumeri",
+  "english_name": "Terry Plumeri",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American conductor (1945–2016) · 직업 composer, conductor, film score composer, record producer, pianist · WD 장르 jazz, film score · 작품 manual 0·seed 186, 구간 0",
+  "note": "재즈 베이시스트·영화음악 작곡가. seed 작품이 영화음악 큐라 영화·TV·게임 작곡가 기준으로 숨기지 않음(리드 결정)"
+ },
+ {
+  "id": 420,
+  "name": "쿠르트 슈베르치크",
+  "english_name": "Kurt Schwertsik",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer · 직업 composer, university teacher · WD 장르 opera · MB: 장르·태그 classical · 작품 manual 0·seed 7, 구간 0",
+  "note": null
+ },
+ {
+  "id": 421,
+  "name": "베어 매크리리",
+  "english_name": "Bear McCreary",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer · 직업 composer, musician, film score composer, bandleader · WD 장르 film score, contemporary classical music, electronic music, rock music · MB: American score composer / 장르·태그 orchestral, contemporary classical, electronic, rock · 작품 manual 0·seed 1183, 구간 0",
+  "note": null
+ },
+ {
+  "id": 422,
+  "name": "José Luis Turina",
+  "english_name": "José Luis Turina",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish composer · 직업 composer, editor · WD 장르 opera · MB: Spanish composer · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 423,
+  "name": "장프랑수아 르쉬외르",
+  "english_name": "Jean-François Le Sueur",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer · 직업 composer, musicologist, music educator, conductor · WD 장르 opera · MB: French composer / 장르·태그 french composer, to clean up · 작품 manual 0·seed 6, 구간 0",
+  "note": null
+ },
+ {
+  "id": 424,
+  "name": "Avraham Eilam-Amzallag",
+  "english_name": "Avraham Eilam-Amzallag",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: musician · 직업 musicologist, composer, musician · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 425,
+  "name": "Jaroslav Krček",
+  "english_name": "Jaroslav Krček",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Czech conductor, composer and musician · 직업 composer, conductor · WD 장르 opera, symphony, liturgical music, incidental music · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 426,
+  "name": "고바야시 겐이치로",
+  "english_name": "Ken-Ichiro Kobayashi",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Japanese composer and conductor · 직업 conductor, composer, musician, university teacher · MB: 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 427,
+  "name": "Hamed Nikpay",
+  "english_name": "Hamed Nikpay",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: Iranian Singer And Composer · 직업 composer · WD 장르 jazz rock · MB: Iranian Singer And Composer · 작품 manual 0·seed 0, 구간 0",
+  "note": "이란 가수·작곡가(페르시아 전통·퓨전), 작품 0"
+ },
+ {
+  "id": 428,
+  "name": "Mieko Shiomi",
+  "english_name": "Mieko Shiomi",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer (born 1938) · 직업 artist, composer, performance artist, mail artist, object artist · MB: Japanese Fluxus artist and composer · 작품 manual 0·seed 3, 구간 0",
+  "note": "플럭서스 작곡가, 클래식(현대음악)으로 둠"
+ },
+ {
+  "id": 429,
+  "name": "Michael Waller",
+  "english_name": "Michael Waller",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American musician, La Monte Young Devotee · 직업 composer · WD 장르 21st-century classical music · 작품 manual 0·seed 10, 구간 0",
+  "note": null
+ },
+ {
+  "id": 430,
+  "name": "Henri Tomasi",
+  "english_name": "Henri Tomasi",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer and conductor (1901–1971) · 직업 conductor, composer, choreographer, musician · WD 장르 opera · MB: French composer / 장르·태그 classical · 작품 manual 0·seed 34, 구간 0",
+  "note": null
+ },
+ {
+  "id": 431,
+  "name": "프랑수아 쿠프랭",
+  "english_name": "François Couperin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French Baroque composer, organist and harpsichordist (1668–1733) · 직업 composer, organist, viol player, harpsichordist, harpist · WD 장르 Baroque music · MB: French composer of the Baroque era / 장르·태그 classical, baroque · 작품 manual 0·seed 104, 구간 0",
+  "note": null
+ },
+ {
+  "id": 432,
+  "name": "Zoltán Bókai",
+  "english_name": "Zoltán Bókai",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: Hungarian musician, railroad engineer and conductor · 직업 musician, train driver, conductor, audio engineer, composer · WD 장르 rock music · MB: 장르·태그 rock · 작품 manual 0·seed 0, 구간 0",
+  "note": "헝가리 지휘자·송라이터·록 연주자(MB 장르 rock), 작품 0"
+ },
+ {
+  "id": 433,
+  "name": "Thea Musgrave",
+  "english_name": "Thea Musgrave",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Scottish composer · 직업 composer, professor · WD 장르 opera, art music · MB: Scottish composer / 장르·태그 classical, contemporary classical · 작품 manual 0·seed 40, 구간 0",
+  "note": null
+ },
+ {
+  "id": 434,
+  "name": "베른하르드 크루셀",
+  "english_name": "Bernhard Crusell",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Swedish-Finnish clarinetist, composer and translator (1775–1838) · 직업 composer, clarinetist, autobiographer, translator, music critic · WD 장르 opera · MB: clarinetist and composer / 장르·태그 classical · 작품 manual 0·seed 17, 구간 0",
+  "note": null
+ },
+ {
+  "id": 435,
+  "name": "Erling Brene",
+  "english_name": "Erling Brene",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Danish composer (1896-1980) · 직업 composer · WD 장르 opera · MB: Danish composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 436,
+  "name": "Thomas Schippers",
+  "english_name": "Thomas Schippers",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: American conductor (1930–1977) · 직업 conductor, composer, musician · MB: conductor and composer / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 437,
+  "name": "Sigiswald Kuijken",
+  "english_name": "Sigiswald Kuijken",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Belgian musician · 직업 conductor, music educator, university teacher, composer, violinist · WD 장르 Baroque music · MB: 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 438,
+  "name": "미셸 폴나레프",
+  "english_name": "Michel Polnareff",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: French singer-songwriter (born 1944) · 직업 singer-songwriter, pianist, film score composer, guitarist, composer · WD 장르 pop music, chanson, pop rock, folk rock · MB: 장르·태그 baroque pop, chanson française, pop, pop rock · 작품 manual 0·seed 194, 구간 0",
+  "note": null
+ },
+ {
+  "id": 439,
+  "name": "Pierre Gaviniès",
+  "english_name": "Pierre Gaviniès",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French violin maker, violinist and composer · 직업 composer · WD 장르 opera · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 440,
+  "name": "Joaquín Valverde Sanjuán",
+  "english_name": "Joaquín Valverde Sanjuán",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish composer (1875-1918) · 직업 composer · WD 장르 opera, zarzuela · MB: the son, composed \"Clavelitos\" · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 441,
+  "name": "존 애덤스",
+  "english_name": "John Adams",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (born 1947) · 직업 conductor, composer, autobiographer, librettist, music arranger · WD 장르 opera, minimalist music · MB: American minimalist composer / 장르·태그 classical, contemporary classical, classical crossover · 작품 manual 0·seed 51, 구간 0",
+  "note": null
+ },
+ {
+  "id": 442,
+  "name": "Friedrich Wilhelm Marpurg",
+  "english_name": "Friedrich Wilhelm Marpurg",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German music critic, music-theorist and composer · 직업 organist, composer, musicologist, music theorist, music critic · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 443,
+  "name": "Anatol Vieru",
+  "english_name": "Anatol Vieru",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Romanian composer (1926–1998) · 직업 composer, music theorist, university teacher · WD 장르 opera, instrumental music · MB: Romanian composer / 장르·태그 classical · 작품 manual 0·seed 22, 구간 0",
+  "note": null
+ },
+ {
+  "id": 444,
+  "name": "Joseph Touchemoulin",
+  "english_name": "Joseph Touchemoulin",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer · 직업 composer, violinist · WD 장르 opera, symphony · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 445,
+  "name": "Julia Wolfe",
+  "english_name": "Julia Wolfe",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (born 1958) · 직업 composer, music educator, university teacher, musician · WD 장르 contemporary classical music · MB: composer / 장르·태그 composer · 작품 manual 0·seed 27, 구간 0",
+  "note": null
+ },
+ {
+  "id": 446,
+  "name": "나리타 다메조",
+  "english_name": "Tamezō Narita",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer (1893–1945) · 직업 composer · MB: 장르·태그 composer · 작품 manual 0·seed 4, 구간 0",
+  "note": null
+ },
+ {
+  "id": 447,
+  "name": "Arthur Bruhns",
+  "english_name": "Arthur Bruhns",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer · 직업 composer, pianist, conductor, musician · WD 장르 opera · MB: 장르·태그 composer · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 448,
+  "name": "지크문트 폰 하우제거",
+  "english_name": "Siegmund von Hausegger",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer and conductor (1872-1948) · 직업 conductor, composer, university teacher, writer · WD 장르 opera, New German School, symphonic poem · MB: 장르·태그 classical · 작품 manual 0·seed 6, 구간 0",
+  "note": null
+ },
+ {
+  "id": 449,
+  "name": "Miguel Llobet",
+  "english_name": "Miguel Llobet",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Catalan composer and guitarist (1878–1938) · 직업 composer, classical guitarist, music arranger, musician, guitarist · MB: composer for guitar / 장르·태그 composer · 작품 manual 0·seed 13, 구간 0",
+  "note": null
+ },
+ {
+  "id": 450,
+  "name": "헤르베르트 레바인",
+  "english_name": "Herbert Rehbein",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: German songwriter, composer, music arranger (1922–1979) · 직업 composer, songwriter, film score composer, conductor, music arranger · WD 장르 light music · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 451,
+  "name": "자난드레아 가바체니",
+  "english_name": "Gianandrea Gavazzeni",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Italian conductor (1909–1996) · 직업 conductor, composer, musicologist, pianist, critic · WD 장르 opera · MB: conductor · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 452,
+  "name": "카지미에시 비우코미르스키",
+  "english_name": "Kazimierz Wiłkomirski",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Polish musician (1900-1995) · 직업 conductor, composer, music educator, university teacher, cellist · MB: Polish cellist, composer and conductor / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": "첼리스트·지휘자, 작곡도 하지만 작품 0"
+ },
+ {
+  "id": 453,
+  "name": "Luis Cobos",
+  "english_name": "Luis Cobos",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: Composer and music conductor · 직업 conductor, composer, music arranger, musician · 작품 manual 0·seed 1, 구간 0",
+  "note": "클래식 메들리 크로스오버 편곡·지휘"
+ },
+ {
+  "id": 454,
+  "name": "David del Puerto",
+  "english_name": "David del Puerto",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Spanish musician · 직업 composer · WD 장르 opera · MB: Spanish composer and guitarist · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 455,
+  "name": "Elena Nikolaidi",
+  "english_name": "Elena Nikolaidi",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Greek-American singer · 직업 opera singer, composer, singer, musician · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 456,
+  "name": "필리파 스카일러",
+  "english_name": "Philippa Schuyler",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American pianist and composer (1931–1967) · 직업 pianist, composer, journalist · MB: American concert pianist, composer, author, journalist · 작품 manual 0·seed 13, 구간 0",
+  "note": "피아니스트지만 작곡도 함"
+ },
+ {
+  "id": 457,
+  "name": "Matthew King",
+  "english_name": "Matthew King",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: (1967-) British operatic composer and pianist · 직업 composer, pianist · WD 장르 opera · MB: UK operatic composer & pianist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 458,
+  "name": "기예르모 우리베 올긴",
+  "english_name": "Guillermo Uribe Holguín",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Colombian musician (1880–1971) · 직업 composer, music educator, violinist, musician · WD 장르 opera · MB: Colombian composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 459,
+  "name": "Jaume Pahissa",
+  "english_name": "Jaume Pahissa",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Catalan composer, conductor and music writer (1880-1969) · 직업 composer, musicologist, conductor · WD 장르 opera, sardana · MB: Catalonian music director and composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 460,
+  "name": "J. Rosamond Johnson",
+  "english_name": "J. Rosamond Johnson",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American classical composer (1873–1954) · 직업 composer · WD 장르 opera · MB: African American songwriter · 작품 manual 0·seed 0, 구간 0",
+  "note": "브로드웨이·가곡 작곡가, Lift Every Voice and Sing, 경계 사례로 클래식에 둠"
+ },
+ {
+  "id": 461,
+  "name": "Erwin Dressel",
+  "english_name": "Erwin Dressel",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer and pianist · 직업 composer, pianist, conductor, music arranger · WD 장르 opera · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 462,
+  "name": "한스 퐁크",
+  "english_name": "Hans Vonk",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Dutch conductor (1942-2004) · 직업 conductor, composer · MB: conductor / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 463,
+  "name": "Kirke Mechem",
+  "english_name": "Kirke Mechem",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer · 직업 composer · WD 장르 opera · 작품 manual 0·seed 3, 구간 0",
+  "note": null
+ },
+ {
+  "id": 464,
+  "name": "Heinz Tiessen",
+  "english_name": "Heinz Tiessen",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1887-1971) · 직업 composer, conductor, music educator, music critic, music teacher · MB: composer / 장르·태그 classical · 작품 manual 0·seed 5, 구간 0",
+  "note": null
+ },
+ {
+  "id": 465,
+  "name": "Philipp Maintz",
+  "english_name": "Philipp Maintz",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer · 직업 composer · WD 장르 opera · MB: composer / 장르·태그 composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 466,
+  "name": "파울 바두라스코다",
+  "english_name": "Paul Badura-Skoda",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Austrian musician (1927-2019) · 직업 pianist, conductor, musicologist, music historian, composer · MB: Austrian classical pianist and pedagogue / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 467,
+  "name": "Nicolas Gombert",
+  "english_name": "Nicolas Gombert",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Franco-Flemish composer · 직업 composer, chapelmaster, musicologist · WD 장르 Renaissance music · MB: Franco-Flemish composer of the Renaissance · 작품 manual 0·seed 89, 구간 0",
+  "note": null
+ },
+ {
+  "id": 468,
+  "name": "고프레도 페트라시",
+  "english_name": "Goffredo Petrassi",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer (1904–2003) · 직업 composer, university teacher, conductor · WD 장르 opera · MB: Italian composer / 장르·태그 classical, modern classical · 작품 manual 0·seed 21, 구간 0",
+  "note": null
+ },
+ {
+  "id": 469,
+  "name": "Georg Schumann",
+  "english_name": "Georg Schumann",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German comnposer (1866–1952) · 직업 composer, conductor · MB: 장르·태그 to clean up · 작품 manual 0·seed 6, 구간 0",
+  "note": null
+ },
+ {
+  "id": 470,
+  "name": "Kentaro Sato",
+  "english_name": "Kentaro Sato",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer · 직업 composer, choir director · WD 장르 contemporary classical music · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 471,
+  "name": "Gilbert Duprez",
+  "english_name": "Gilbert Duprez",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French tenor, singing teacher and minor composer (1806-1896) · 직업 composer, opera singer, music educator, voice teacher · WD 장르 opera · MB: 장르·태그 classical · 작품 manual 0·seed 1, 구간 0",
+  "note": "테너 겸 작곡(오페라), seed 1개"
+ },
+ {
+  "id": 472,
+  "name": "블라디미르 유롭스키",
+  "english_name": "Vladimir Jurowski",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Russian conductor · 직업 conductor, music director, composer · MB: conductor / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 473,
+  "name": "Isaac Nathan",
+  "english_name": "Isaac Nathan",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Anglo-Australian composer, musicologist, journalist and self-publicist · 직업 composer, journalist, music educator, ethnomusicologist, musicologist · WD 장르 opera · MB: composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 474,
+  "name": "Eduard Holst",
+  "english_name": "Eduard Holst",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Danish playwright, composer, actor, dancer, and dance master · 직업 composer, actor, dancer, playwright, dance teacher · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 475,
+  "name": "Jan Málek",
+  "english_name": "Jan Málek",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Czech composer · 직업 composer, musician, director, dramaturge · WD 장르 electroacoustic music · MB: composer, music director of Czech Radio from 1976 to 2003 / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 476,
+  "name": "Mordechai Rechtman",
+  "english_name": "Mordechai Rechtman",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Israeli bassoonist, conductor, educator and arranger · 직업 conductor, bassoonist, music educator, composer · MB: bassoonist / 장르·태그 bassoonist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 477,
+  "name": "Laurie Z",
+  "english_name": "Laurie Z",
+  "category": "popular",
+  "hide": true,
+  "hidden_reason": "non_classical",
+  "evidence": "WD: pianist, composer, arranger, performer, producer · 직업 composer, pianist · MB: Laurie Zeluck Carter, American pianist and electronic musician · 작품 manual 0·seed 0, 구간 0",
+  "note": "뉴에이지·전자음악 피아니스트, 작품 0"
+ },
+ {
+  "id": 478,
+  "name": "Carin Bartosch Edström",
+  "english_name": "Carin Bartosch Edström",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: composer · 직업 translator, composer, singer, musician · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 479,
+  "name": "José María Valle Riestra",
+  "english_name": "José María Valle Riestra",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Peruviaan composera (1858-1925) · 직업 composer · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 480,
+  "name": "Jean Gilbert",
+  "english_name": "Jean Gilbert",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer and conductor (1879–1942) · 직업 composer, poet, film score composer, theatre manager, musician · WD 장르 operetta · MB: composer · 작품 manual 0·seed 6, 구간 0",
+  "note": "오페레타·유행가 작곡가(Puppchen), 경계 사례로 클래식에 둠"
+ },
+ {
+  "id": 481,
+  "name": "Mark Bucci",
+  "english_name": "Mark Bucci",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer, lyricist, and dramatist (1924-2002) · 직업 composer, lyricist, songwriter · WD 장르 opera · MB: American composer, lyricist, dramatist · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 482,
+  "name": "Robert Fuchs",
+  "english_name": "Robert Fuchs",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian composer and music teacher (1847–1927) · 직업 composer, music educator, conductor, music arranger, music teacher · WD 장르 opera, symphony · MB: Austrian composer / 장르·태그 classical · 작품 manual 0·seed 13, 구간 0",
+  "note": null
+ },
+ {
+  "id": 483,
+  "name": "Eric Gross",
+  "english_name": "Eric Gross",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Australian musician (1926-2011) · 직업 composer, pianist, school teacher, music educator, art collector · WD 장르 opera · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 484,
+  "name": "Paul Kochanski",
+  "english_name": "Paul Kochanski",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Polish violinist (1887–1934) · 직업 musician, violinist, music educator, concertmaster, composer · MB: violinist / 장르·태그 classical · 작품 manual 0·seed 0, 구간 0",
+  "note": "바이올리니스트, 편곡·소품 작곡도 하지만 작품 0"
+ },
+ {
+  "id": 485,
+  "name": "Roy Douglas",
+  "english_name": "Roy Douglas",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: English composer · 직업 composer, pianist, music arranger · MB: British composer, pianist / 장르·태그 british composer, composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 486,
+  "name": "Yoshiaki Onishi",
+  "english_name": "Yoshiaki Onishi",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese-American composer, conductor, and clarinetist · 직업 composer, conductor, clarinetist · WD 장르 contemporary classical music · MB: composer, conductor and clarinetist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 487,
+  "name": "José Ángel Montero",
+  "english_name": "José Ángel Montero",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Venezuelan composer · 직업 opera composer · WD 장르 opera · MB: Venezuelan opera composer · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 488,
+  "name": "후카이 시로",
+  "english_name": "Shirō Fukai",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Japanese composer · 직업 composer, music critic · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 489,
+  "name": "Fran Lhotka",
+  "english_name": "Fran Lhotka",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Czech composer (1883-1962) · 직업 conductor, composer, music educator, university teacher · WD 장르 opera, ballet · MB: 장르·태그 classical · 작품 manual 0·seed 2, 구간 0",
+  "note": null
+ },
+ {
+  "id": 490,
+  "name": "Kurt Schröder",
+  "english_name": "Kurt Schröder",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: composer (1888–1962) · 직업 composer, conductor, film score composer, general music director, musician · MB: conductor · 작품 manual 0·seed 0, 구간 0",
+  "note": "영화음악 작곡가·지휘자(The Private Life of Henry VIII)"
+ },
+ {
+  "id": 491,
+  "name": "Cornel Trăilescu",
+  "english_name": "Cornel Trăilescu",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Romanian composer (1926-2019) · 직업 composer · WD 장르 opera · MB: composer and conductor · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 492,
+  "name": "Rolf Riehm",
+  "english_name": "Rolf Riehm",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer and oboist · 직업 composer, oboist, musician, music educator, university teacher · MB: German composer / 장르·태그 classical · 작품 manual 0·seed 6, 구간 0",
+  "note": null
+ },
+ {
+  "id": 493,
+  "name": "헤르베르트 빈트",
+  "english_name": "Herbert Windt",
+  "category": "film_tv_game",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer (1894–1965) · 직업 composer, film score composer, opera composer · WD 장르 opera · MB: A german composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 494,
+  "name": "얀 마클라키에비치",
+  "english_name": "Jan Maklakiewicz",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Polish composer and conductor (1899–1954) · 직업 composer, conductor, musicologist, music critic · MB: 장르·태그 choral symphony, classical, modern classical · 작품 manual 0·seed 8, 구간 0",
+  "note": null
+ },
+ {
+  "id": 495,
+  "name": "Eugen Lindner",
+  "english_name": "Eugen Lindner",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer · 직업 composer, choir director, singer, music teacher · WD 장르 opera · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 496,
+  "name": "Ursula Bagdasarjanz",
+  "english_name": "Ursula Bagdasarjanz",
+  "category": "performer",
+  "hide": true,
+  "hidden_reason": "performer",
+  "evidence": "WD: Swiss violinist · 직업 violinist, composer, musician · MB: Swiss violinist · 작품 manual 0·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 497,
+  "name": "Bartosz Kowalski-Banasewicz",
+  "english_name": "Bartosz Kowalski-Banasewicz",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Polish composer · 직업 composer, music arranger, music teacher · MB: Polish composer · 작품 manual 0·seed 1, 구간 0",
+  "note": null
+ },
+ {
+  "id": 498,
+  "name": "리하르트 슈트라우스",
+  "english_name": "Richard Strauss",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: German composer and orchestra director (1864–1949) · 직업 composer, conductor, librettist, musician, general music director · WD 장르 opera, symphony, sardana · 작품 manual 1·seed 0, 구간 1",
+  "note": null
+ },
+ {
+  "id": 499,
+  "name": "리게티",
+  "english_name": "György Ligeti",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Hungarian composer (1923-2006) · 직업 composer, music educator, university teacher, pianist, musician · WD 장르 opera · 작품 manual 3·seed 0, 구간 2",
+  "note": null
+ },
+ {
+  "id": 500,
+  "name": "바버",
+  "english_name": "Samuel Barber",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: American composer (1910-1981) · 직업 composer, musicologist, pianist, conductor, musician · WD 장르 opera, symphony · 작품 manual 1·seed 0, 구간 1",
+  "note": null
+ },
+ {
+  "id": 501,
+  "name": "뒤카",
+  "english_name": "Paul Dukas",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: French composer (1865–1935) · 직업 composer, choreographer, pedagogue, music educator, university teacher · WD 장르 opera, symphony, impressionist music · 작품 manual 1·seed 0, 구간 1",
+  "note": null
+ },
+ {
+  "id": 502,
+  "name": "레스피기",
+  "english_name": "Ottorino Respighi",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Italian composer, musicologist and conductor · 직업 composer, conductor, musicologist, music educator, university teacher · WD 장르 symphonic poem, impressionism in music · 작품 manual 1·seed 0, 구간 0",
+  "note": null
+ },
+ {
+  "id": 503,
+  "name": "크라이슬러",
+  "english_name": "Fritz Kreisler",
+  "category": "classical",
+  "hide": false,
+  "hidden_reason": null,
+  "evidence": "WD: Austrian violinist and composer (1875-1962) · 직업 composer, violinist · WD 장르 opera · 작품 manual 1·seed 0, 구간 1",
+  "note": "바이올리니스트지만 작곡도 함"
+ }
+]
