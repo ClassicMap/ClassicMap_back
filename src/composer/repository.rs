@@ -3,6 +3,7 @@ use super::model::{
 };
 use super::service::ComposerSort;
 use crate::db::DbPool;
+use crate::piece::repository::top_level_piece_condition;
 use crate::search::SearchText;
 use sqlx::Error;
 use ClassicMap_back::comparison::repository::PUBLIC_COMPARISON_CTE;
@@ -42,16 +43,26 @@ const RECOMMENDED_ORDER: &str = "CASE c.tier
 
 const HIDE_EMPTY_COMPOSER: &str = "EXISTS (SELECT 1 FROM pieces own WHERE own.composer_id = c.id)";
 
+/// 작품 수(`piece_count`)를 세는 `pieces p` 조인. 작품 목록(`/composers/<id>/pieces`)과 같이
+/// 묶음의 part 로 이어진 작품은 빼고 최상위 작품만 센다.
+fn counted_pieces_join() -> String {
+    format!(
+        "LEFT JOIN pieces p ON c.id = p.composer_id AND {}",
+        top_level_piece_condition("p")
+    )
+}
+
 impl ComposerRepository {
     pub async fn find_all(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<Composer>, Error> {
         sqlx::query_as::<_, Composer>(&format!(
             "SELECT c.*, COUNT(p.id) as piece_count
              FROM composers c
-             LEFT JOIN pieces p ON c.id = p.composer_id
+             {}
              WHERE {HIDE_EMPTY_COMPOSER}
              GROUP BY c.id
              ORDER BY c.birth_year ASC
-             LIMIT ? OFFSET ?"
+             LIMIT ? OFFSET ?",
+            counted_pieces_join()
         ))
         .bind(limit)
         .bind(offset)
@@ -63,12 +74,13 @@ impl ComposerRepository {
         pool: &DbPool,
         id: i32,
     ) -> Result<Option<ComposerWithMajorPieces>, Error> {
-        sqlx::query_as::<_, ComposerWithMajorPieces>(
+        sqlx::query_as::<_, ComposerWithMajorPieces>(&format!(
             "SELECT v.*,
-                    (SELECT COUNT(*) FROM pieces p WHERE p.composer_id = v.id) AS piece_count
+                    (SELECT COUNT(*) FROM pieces p WHERE p.composer_id = v.id AND {}) AS piece_count
              FROM v_composers_full v
              WHERE v.id = ?",
-        )
+            top_level_piece_condition("p")
+        ))
         .bind(id)
         .fetch_optional(pool)
         .await
@@ -155,9 +167,9 @@ impl ComposerRepository {
         };
         sql.push_str(
             "SELECT c.*, COUNT(p.id) as piece_count
-             FROM composers c
-             LEFT JOIN pieces p ON c.id = p.composer_id",
+             FROM composers c ",
         );
+        sql.push_str(&counted_pieces_join());
 
         let mut where_clauses = vec![HIDE_EMPTY_COMPOSER.to_string()];
         let mut bind_values: Vec<String> = Vec::new();

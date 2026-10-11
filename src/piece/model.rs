@@ -18,6 +18,9 @@ pub struct Piece {
     pub spotify_url: Option<String>,
     pub apple_music_url: Option<String>,
     pub youtube_music_url: Option<String>,
+    /// 최상위 part(악장·번호곡) 수. 0이면 낱곡이고, 1 이상이면 `/pieces/<id>/parts` 로 펼친다.
+    #[serde(default)]
+    pub part_count: i64,
 }
 
 /// 작품 검색 결과. 목록에 작곡가를 함께 보여줄 수 있게 이름을 싣는다.

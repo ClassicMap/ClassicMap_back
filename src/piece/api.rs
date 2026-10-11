@@ -50,6 +50,7 @@ pub async fn get_piece(pool: &State<DbPool>, id: i32) -> Result<Json<Option<Piec
     }
 }
 
+/// 다른 작품의 part 로 이어진 작품은 묶음 안에서 보이므로 빼고 준다.
 /// offset·limit이 없으면 전체를 준다(기존 호출 호환). 하나라도 있으면 페이지로 준다.
 #[get("/composers/<composer_id>/pieces?<offset>&<limit>")]
 pub async fn get_pieces_by_composer(
