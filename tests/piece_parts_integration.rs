@@ -102,16 +102,28 @@ async fn insert_composer(pool: &db::DbPool, english_name: &str) -> i32 {
     .last_insert_id() as i32
 }
 
-/// `listenable` 이면 스트리밍 링크와 설명을 채워 정렬 첫 단계에서 앞에 서게 한다.
+/// 정렬 첫 단계(들을 거리)를 가르는 작품 속성
+#[derive(Clone, Copy)]
+enum Listening {
+    /// 스트리밍 링크와 설명이 다 있다
+    Full,
+    /// 설명만 있다
+    DescriptionOnly,
+    /// 둘 다 없다(시드 작품, 새로 만든 묶음)
+    Nothing,
+}
+
 async fn insert_piece(
     pool: &db::DbPool,
     composer_id: i32,
     title: &str,
     opus_number: Option<&str>,
     catalogue: Option<(&str, &str)>,
-    listenable: bool,
+    listening: Listening,
 ) -> i32 {
     let (system, number) = catalogue.unzip();
+    let description = matches!(listening, Listening::Full | Listening::DescriptionOnly);
+    let streaming = matches!(listening, Listening::Full);
     sqlx::query(
         "INSERT INTO pieces (
             composer_id, title, type, description, opus_number, spotify_url,
@@ -120,9 +132,9 @@ async fn insert_piece(
     )
     .bind(composer_id)
     .bind(format!("파츠 통합 {title}"))
-    .bind(listenable.then_some("설명"))
+    .bind(description.then_some("설명"))
     .bind(opus_number)
-    .bind(listenable.then_some("https://open.spotify.com/track/integration"))
+    .bind(streaming.then_some("https://open.spotify.com/track/integration"))
     .bind(system)
     .bind(number)
     .execute(pool)
@@ -141,13 +153,21 @@ struct NewPart<'a> {
     linked: Option<i32>,
 }
 
-async fn insert_part(pool: &db::DbPool, piece_id: i32, part: NewPart<'_>) -> u64 {
-    insert_part_as(pool, piece_id, part, "FACTS_VERIFIED").await
+fn part(key: &str, sequence: i32) -> NewPart<'_> {
+    NewPart {
+        key,
+        parent: None,
+        sequence,
+        movement: None,
+        name_ko: None,
+        name_en: None,
+        linked: None,
+    }
 }
 
-/// 국제 시드가 넣고 아직 확인하지 않은 part. 화면에는 나오지 않아야 한다
-async fn insert_seed_part(pool: &db::DbPool, piece_id: i32, part: NewPart<'_>) -> u64 {
-    insert_part_as(pool, piece_id, part, "IDENTIFIERS_MATCHED").await
+/// 편집자가 확인한 part. 화면에 나온다
+async fn insert_part(pool: &db::DbPool, piece_id: i32, part: NewPart<'_>) -> u64 {
+    insert_part_as(pool, piece_id, part, "EDITOR_REVIEWED").await
 }
 
 async fn insert_part_as(pool: &db::DbPool, piece_id: i32, part: NewPart<'_>, status: &str) -> u64 {
@@ -262,67 +282,72 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
 
     let composer = insert_composer(&pool, COMPOSER_EN).await;
     let other = insert_composer(&pool, OTHER_COMPOSER_EN).await;
+    let piece = |title: &'static str,
+                 opus: Option<&'static str>,
+                 catalogue: Option<(&'static str, &'static str)>,
+                 listening: Listening| {
+        insert_piece(&pool, composer, title, opus, catalogue, listening)
+    };
 
+    // 쇼팽 데이터 꼴: 묶음은 catalogue 칼럼(Op. + 10), 낱곡은 opus_number("Op. 1", "B. 6").
     // 넣는 순서를 일부러 섞어 id 순이 작품번호 순과 다르게 한다
-    let quiet = insert_piece(&pool, composer, "조용한 곡", Some("Op. 1"), None, false).await;
-    let unnumbered = insert_piece(&pool, composer, "번호 없는 곡", None, None, true).await;
-    let op100 = insert_piece(&pool, composer, "Op. 100", Some("Op. 100"), None, true).await;
-    let b49 = insert_piece(&pool, composer, "유작", Some("B. 49"), None, true).await;
-    let revolutionary = insert_piece(
-        &pool,
-        composer,
-        "연습곡 혁명",
-        Some("Op. 10, No. 12"),
-        None,
-        true,
-    )
-    .await;
-    let op66 = insert_piece(&pool, composer, "즉흥 환상곡", Some("Op. 66"), None, true).await;
-    let no3 = insert_piece(
-        &pool,
-        composer,
-        "이별의 곡",
-        Some("Op. 10 No. 3"),
-        None,
-        true,
-    )
-    .await;
+    let quiet = piece("조용한 곡", Some("Op. 3"), None, Listening::Nothing).await;
+    let unnumbered = piece("번호 없는 곡", None, None, Listening::Full).await;
+    let op100 = piece("Op. 100", Some("Op. 100"), None, Listening::Full).await;
+    let b49 = piece("유작 49", Some("B. 49"), None, Listening::Full).await;
+    let revolutionary = piece("연습곡 혁명", Some("Op. 10, No. 12"), None, Listening::Full).await;
+    let op66 = piece("즉흥 환상곡", Some("Op. 66"), None, Listening::Full).await;
+    let no3 = piece("이별의 곡", Some("Op. 10 No. 3"), None, Listening::Full).await;
     // catalogue_number 가 있으면 opus_number 보다 그것을 따른다
-    let catalogued = insert_piece(
-        &pool,
-        composer,
+    let catalogued = piece(
         "전주곡집",
         Some("Op. 99"),
         Some(("Op.", "28")),
-        true,
+        Listening::Full,
     )
     .await;
-    let cross_linked = insert_piece(&pool, composer, "스케르초", Some("Op. 50"), None, true).await;
-    let bundle = insert_piece(
-        &pool,
-        composer,
-        "연습곡집 Op. 10",
-        Some("Op. 10"),
+    let cross_linked = piece("스케르초", Some("Op. 50"), None, Listening::Full).await;
+    // 링크·설명이 없어도 들을 수 있는 낱곡을 품으면 들을 거리가 있는 묶음이다
+    let bundle = piece(
+        "연습곡 Op. 10",
         None,
-        true,
+        Some(("Op.", "10")),
+        Listening::Nothing,
     )
     .await;
-    let op9 = insert_piece(&pool, composer, "녹턴", Some("Op. 9, No. 2"), None, true).await;
-    let concerto = insert_piece(&pool, composer, "협주곡", Some("Op. 11"), None, true).await;
-    let seed_only = insert_piece(&pool, composer, "시드 묶음", Some("Op. 25"), None, true).await;
-    let other_bundle = insert_piece(&pool, other, "다른 묶음", Some("Op. 1"), None, true).await;
+    let b6 = piece("유작 6", Some("B. 6"), None, Listening::Full).await;
+    let op74 = piece("가곡집", Some("Op. 74"), None, Listening::Full).await;
+    let op9 = piece("녹턴", Some("Op. 9, No. 2"), None, Listening::Full).await;
+    let concerto = piece("협주곡", Some("Op. 11"), None, Listening::Full).await;
+    // 확인 전 part 만 있는 묶음은 들을 수 있는 작품을 가리켜도 들을 거리가 없다
+    let seed_bundle = piece("시드 묶음", None, Some(("Op.", "25")), Listening::Nothing).await;
+    // 설명만 있어도 링크 있는 작품과 같은 단계다
+    let described = piece(
+        "설명만 있는 곡",
+        Some("Op. 2"),
+        None,
+        Listening::DescriptionOnly,
+    )
+    .await;
+    let op1 = piece("론도", Some("Op. 1"), None, Listening::Full).await;
+    let other_bundle = insert_piece(
+        &pool,
+        other,
+        "다른 묶음",
+        Some("Op. 1"),
+        None,
+        Listening::Full,
+    )
+    .await;
 
     let revolutionary_part = insert_part(
         &pool,
         bundle,
         NewPart {
-            key: "op10-12",
-            parent: None,
-            sequence: 12,
-            movement: None,
-            name_ko: None,
-            name_en: Some("No. 12 in C minor \"Revolutionary\""),
+            name_ko: Some("C단조 \"혁명\""),
+            name_en: Some("Étude Op. 10 No. 12"),
             linked: Some(revolutionary),
+            ..part("op10-12", 12)
         },
     )
     .await;
@@ -330,13 +355,9 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
         &pool,
         bundle,
         NewPart {
-            key: "op10-2",
-            parent: None,
-            sequence: 2,
-            movement: Some("2"),
-            name_ko: Some("2번 A단조"),
-            name_en: Some("No. 2 in A minor"),
-            linked: None,
+            name_ko: Some("A단조"),
+            name_en: Some("Étude Op. 10 No. 2"),
+            ..part("op10-2", 2)
         },
     )
     .await;
@@ -344,13 +365,9 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
         &pool,
         bundle,
         NewPart {
-            key: "op10-2-b",
             parent: Some(second),
-            sequence: 2,
-            movement: None,
-            name_ko: None,
             name_en: Some("Coda"),
-            linked: None,
+            ..part("op10-2-b", 2)
         },
     )
     .await;
@@ -358,13 +375,9 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
         &pool,
         bundle,
         NewPart {
-            key: "op10-2-a",
             parent: Some(second),
-            sequence: 1,
-            movement: None,
             name_ko: Some("도입"),
-            name_en: None,
-            linked: None,
+            ..part("op10-2-a", 1)
         },
     )
     .await;
@@ -372,57 +385,66 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
         &pool,
         bundle,
         NewPart {
-            key: "op10-1",
-            parent: None,
-            sequence: 1,
-            movement: Some("1"),
-            name_ko: Some("1번 C장조"),
-            name_en: Some("No. 1 in C major"),
-            linked: None,
+            name_ko: Some("C장조"),
+            name_en: Some("Étude Op. 10 No. 1"),
+            ..part("op10-1", 1)
         },
     )
     .await;
-    // 확인 전 시드 part 와 그 아래 part 는 개수·목록·종류 어디에도 들어가지 않는다
-    let seed_part = insert_seed_part(
+    // 확인 전 part(FACTS_VERIFIED·IDENTIFIERS_MATCHED)는 셈·목록·종류·숨김·정렬 어디에도 안 든다.
+    // 숨은 part 아래 자식은 확인됐어도 빠진다
+    insert_part_as(
         &pool,
         bundle,
         NewPart {
-            key: "op10-seed",
-            parent: None,
-            sequence: 5,
-            movement: Some("5"),
-            name_ko: None,
-            name_en: Some("Seed only"),
-            linked: None,
+            name_en: Some("Étude Op. 10 No. 3"),
+            linked: Some(no3),
+            ..part("op10-3", 3)
         },
+        "FACTS_VERIFIED",
+    )
+    .await;
+    let seed_part = insert_part_as(
+        &pool,
+        bundle,
+        NewPart {
+            movement: Some("5"),
+            name_en: Some("Seed only"),
+            ..part("op10-seed", 5)
+        },
+        "IDENTIFIERS_MATCHED",
     )
     .await;
     insert_part(
         &pool,
         bundle,
         NewPart {
-            key: "op10-seed-child",
             parent: Some(seed_part),
-            sequence: 1,
-            movement: None,
             name_ko: Some("숨은 부모 아래"),
-            name_en: None,
-            linked: None,
+            ..part("op10-seed-child", 1)
         },
     )
     .await;
-    insert_seed_part(
+    insert_part_as(
         &pool,
-        seed_only,
+        seed_bundle,
         NewPart {
-            key: "op25-seed",
-            parent: None,
-            sequence: 9,
-            movement: None,
-            name_ko: None,
-            name_en: Some("Butterfly"),
-            linked: None,
+            name_en: Some("Seed link"),
+            linked: Some(op100),
+            ..part("op25-seed", 1)
         },
+        "IDENTIFIERS_MATCHED",
+    )
+    .await;
+    insert_part_as(
+        &pool,
+        seed_bundle,
+        NewPart {
+            name_en: Some("Unreviewed link"),
+            linked: Some(op74),
+            ..part("op25-facts", 2)
+        },
+        "FACTS_VERIFIED",
     )
     .await;
     for (key, sequence, movement) in [("op11-1", 1, "I"), ("op11-2", 2, "II")] {
@@ -430,43 +452,36 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
             &pool,
             concerto,
             NewPart {
-                key,
-                parent: None,
-                sequence,
                 movement: Some(movement),
-                name_ko: None,
                 name_en: Some(movement),
-                linked: None,
+                ..part(key, sequence)
             },
         )
         .await;
     }
-    insert_seed_part(
-        &pool,
-        concerto,
-        NewPart {
-            key: "op11-seed",
-            parent: None,
-            sequence: 3,
-            movement: None,
-            name_ko: None,
-            name_en: Some("Seed finale"),
-            linked: None,
-        },
-    )
-    .await;
+    for (key, sequence, status) in [
+        ("op11-facts", 3, "FACTS_VERIFIED"),
+        ("op11-seed", 4, "IDENTIFIERS_MATCHED"),
+    ] {
+        insert_part_as(
+            &pool,
+            concerto,
+            NewPart {
+                name_en: Some("Finale without movement number"),
+                ..part(key, sequence)
+            },
+            status,
+        )
+        .await;
+    }
     // 다른 작곡가의 묶음이 가리키는 작품, 자기 자신을 가리키는 part 는 목록에서 빼지 않는다
     insert_part(
         &pool,
         other_bundle,
         NewPart {
-            key: "other-1",
-            parent: None,
-            sequence: 1,
-            movement: None,
-            name_ko: None,
             name_en: Some("Borrowed"),
             linked: Some(cross_linked),
+            ..part("other-1", 1)
         },
     )
     .await;
@@ -474,31 +489,32 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
         &pool,
         op66,
         NewPart {
-            key: "op66-self",
-            parent: None,
-            sequence: 1,
-            movement: None,
-            name_ko: None,
             name_en: Some("Self"),
             linked: Some(op66),
+            ..part("op66-self", 1)
         },
     )
     .await;
 
-    // 목록: 이어진 혁명은 빠지고, 들을 수 있는 작품 안에서 Op. 번호 → 다른 목록 → 번호 없음 순
+    // 목록: 확인된 part 로 이어진 혁명만 빠진다. 들을 거리 있는 작품 안에서
+    // catalogue 꼴 묶음과 opus 꼴 낱곡이 한 줄로 Op. 번호 → B. 번호 → 번호 없음 순이다
     let expected = vec![
+        op1,
+        described,
         op9,
         bundle,
         no3,
         concerto,
-        seed_only,
         catalogued,
         cross_linked,
         op66,
+        op74,
         op100,
+        b6,
         b49,
         unnumbered,
         quiet,
+        seed_bundle,
     ];
     assert_eq!(composer_page(&pool, composer).await, expected);
     let page = PieceRepository::find_page_by_composer_id(&pool, composer, 2, 3)
@@ -520,17 +536,17 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
     assert_eq!(
         summary(bundle),
         Some((3, Some("work"))),
-        "확인된 최상위 part 만 센다. 악장 번호가 빠진 곡이 있으면 work"
+        "확인된 최상위 part 만 센다. 악장 번호가 없으면 work"
     );
     assert_eq!(
         summary(concerto),
         Some((2, Some("movement"))),
-        "숨은 시드 part 는 종류도 바꾸지 않는다"
+        "확인 전 part 는 종류도 바꾸지 않는다"
     );
     assert_eq!(
-        summary(seed_only),
+        summary(seed_bundle),
         Some((0, None)),
-        "시드 part 만 있으면 낱곡"
+        "확인 전 part 만 있으면 낱곡"
     );
     assert_eq!(summary(op66), Some((1, Some("work"))));
     assert_eq!(summary(no3), Some((0, None)));
@@ -560,7 +576,7 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
     assert_eq!(count_of(composer), Some(expected.len() as i64));
     assert_eq!(count_of(other), Some(1));
 
-    // 단건·검색은 이어진 작품도 그대로 주고 part 수를 싣는다
+    // 단건·검색은 이어진 작품도 그대로 주고 part 수와 종류를 싣는다
     let single = PieceRepository::find_by_id(&pool, bundle)
         .await
         .expect("작품")
@@ -581,7 +597,7 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
         .iter()
         .any(|piece| piece.id == bundle && piece.part_count == 3));
 
-    // part: 부모 순서 안에서 자식, 이름은 한국어 → 영어
+    // part: 확인된 것만, 부모 순서 안에서 자식, 이름은 한국어 → 영어
     let parts = PieceRepository::find_parts(&pool, bundle)
         .await
         .expect("part 목록");
@@ -589,7 +605,7 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
         parts.iter().map(|part| part.id).collect::<Vec<_>>(),
         vec![first, second, second_a, second_b, revolutionary_part]
     );
-    assert_eq!(parts[0].name, "1번 C장조");
+    assert_eq!(parts[0].name, "C장조");
     assert_eq!(parts[3].name, "Coda");
     assert_eq!(parts[2].parent_part_id, Some(second));
     let linked = parts[4].linked_piece.as_ref().expect("이어진 작품");
@@ -604,9 +620,9 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
         .await
         .expect("없는 작품")
         .is_empty());
-    assert!(PieceRepository::find_parts(&pool, seed_only)
+    assert!(PieceRepository::find_parts(&pool, seed_bundle)
         .await
-        .expect("시드 part 만 있는 작품")
+        .expect("확인 전 part 만 있는 작품")
         .is_empty());
     let concerto_parts = PieceRepository::find_parts(&pool, concerto)
         .await
@@ -670,7 +686,7 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
         .expect("삭제 뒤 part");
     assert_eq!(after.len(), 5);
     assert_eq!(after[4].linked_piece, None);
-    assert_eq!(after[4].name, "No. 12 in C minor \"Revolutionary\"");
+    assert_eq!(after[4].name, "C단조 \"혁명\"");
 
     cleanup(&pool).await;
 }
