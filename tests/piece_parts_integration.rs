@@ -113,6 +113,8 @@ enum Listening {
     Full,
     /// 설명만 있다
     DescriptionOnly,
+    /// 스트리밍 링크만 있다(카탈로그로 다시 짠 시드 작품)
+    LinkOnly,
     /// 둘 다 없다(시드 작품, 새로 만든 묶음)
     Nothing,
 }
@@ -127,7 +129,7 @@ async fn insert_piece(
 ) -> i32 {
     let (system, number) = catalogue.unzip();
     let description = matches!(listening, Listening::Full | Listening::DescriptionOnly);
-    let streaming = matches!(listening, Listening::Full);
+    let streaming = matches!(listening, Listening::Full | Listening::LinkOnly);
     sqlx::query(
         "INSERT INTO pieces (
             composer_id, title, type, description, opus_number, spotify_url,
@@ -958,4 +960,64 @@ async fn hidden_rows_leave_lists_and_counts_but_details_open() {
     );
 
     cleanup_hidden(&pool).await;
+}
+
+const CURATED_EN: &str = "Curated Order Integration";
+
+#[tokio::test]
+#[ignore = "격리 MySQL 에서 실행: scripts/test_piece_parts.sh"]
+async fn curated_pieces_come_before_link_only_pieces() {
+    let pool = db::connect_pool().await.expect("DB 연결");
+    cleanup_composers(&pool, &format!("{CURATED_EN}%")).await;
+
+    let composer = insert_composer(&pool, CURATED_EN).await;
+    let piece = |title: &'static str, number: &'static str, listening: Listening| {
+        insert_piece(
+            &pool,
+            composer,
+            title,
+            None,
+            Some(("BWV", number)),
+            listening,
+        )
+    };
+    // 바흐 꼴: 링크만 있는 칸타타가 번호로는 앞서지만, 편집자가 손본 작품 뒤로 간다
+    let cantata = piece("칸타타", "1", Listening::LinkOnly).await;
+    let plain = piece("번호만 있는 곡", "2", Listening::Nothing).await;
+    let concertos = piece("협주곡집", "1046", Listening::DescriptionOnly).await;
+    // 설명·링크가 없어도 비교 구간이 붙으면 손본 작품이다
+    let variations = piece("변주곡", "988", Listening::Nothing).await;
+    sqlx::query("INSERT INTO performance_sectors (piece_id, sector_name) VALUES (?, '주제')")
+        .bind(variations)
+        .execute(&pool)
+        .await
+        .expect("구간");
+    // 손본 낱곡을 품은 묶음도 손본 작품이다. 낱곡은 묶음 안으로 들어가 목록에서 빠진다
+    let bundle = piece("칸타타 묶음", "147", Listening::Nothing).await;
+    let chorale = insert_piece(
+        &pool,
+        composer,
+        "코랄",
+        Some("BWV 147/10"),
+        None,
+        Listening::DescriptionOnly,
+    )
+    .await;
+    insert_part(
+        &pool,
+        bundle,
+        NewPart {
+            name_ko: Some("코랄"),
+            linked: Some(chorale),
+            ..part("curated-147-10", 10)
+        },
+    )
+    .await;
+
+    assert_eq!(
+        composer_page(&pool, composer).await,
+        vec![bundle, variations, concertos, cantata, plain]
+    );
+
+    cleanup_composers(&pool, &format!("{CURATED_EN}%")).await;
 }
