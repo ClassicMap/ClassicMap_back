@@ -50,44 +50,48 @@ async fn cleanup_performances(pool: &db::DbPool) {
 
 async fn cleanup(pool: &db::DbPool) {
     cleanup_performances(pool).await;
+    cleanup_composers(pool, &format!("{COMPOSER_EN}%")).await;
+    sqlx::query("DELETE FROM artists WHERE english_name LIKE ?")
+        .bind(format!("{ARTIST_EN}%"))
+        .execute(pool)
+        .await
+        .expect("연주자 정리");
+}
+
+/// 영문 이름이 `english_name_pattern`(LIKE)에 맞는 작곡가와 그 작품·part·구간을 지운다
+async fn cleanup_composers(pool: &db::DbPool, english_name_pattern: &str) {
     for (sql, label) in [
         (
             "DELETE sector FROM performance_sectors sector
              JOIN pieces piece ON piece.id = sector.piece_id
              JOIN composers composer ON composer.id = piece.composer_id
-             WHERE composer.english_name IN (?, ?)",
+             WHERE composer.english_name LIKE ?",
             "구간 정리",
         ),
         (
             "DELETE part FROM piece_parts part
              JOIN pieces piece ON piece.id = part.piece_id
              JOIN composers composer ON composer.id = piece.composer_id
-             WHERE composer.english_name IN (?, ?)",
+             WHERE composer.english_name LIKE ?",
             "part 정리",
         ),
         (
             "DELETE piece FROM pieces piece
              JOIN composers composer ON composer.id = piece.composer_id
-             WHERE composer.english_name IN (?, ?)",
+             WHERE composer.english_name LIKE ?",
             "작품 정리",
         ),
         (
-            "DELETE FROM composers WHERE english_name IN (?, ?)",
+            "DELETE FROM composers WHERE english_name LIKE ?",
             "작곡가 정리",
         ),
     ] {
         sqlx::query(sql)
-            .bind(COMPOSER_EN)
-            .bind(OTHER_COMPOSER_EN)
+            .bind(english_name_pattern)
             .execute(pool)
             .await
             .expect(label);
     }
-    sqlx::query("DELETE FROM artists WHERE english_name LIKE ?")
-        .bind(format!("{ARTIST_EN}%"))
-        .execute(pool)
-        .await
-        .expect("연주자 정리");
 }
 
 async fn insert_composer(pool: &db::DbPool, english_name: &str) -> i32 {
@@ -689,4 +693,269 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
     assert_eq!(after[4].name, "C단조 \"혁명\"");
 
     cleanup(&pool).await;
+}
+
+const HIDDEN_EN: &str = "Catalog Hidden Integration";
+const HIDDEN_VIDEO_PREFIX: &str = "ch-integration-";
+
+async fn cleanup_hidden(pool: &db::DbPool) {
+    sqlx::query("DELETE FROM performances WHERE video_id LIKE ?")
+        .bind(format!("{HIDDEN_VIDEO_PREFIX}%"))
+        .execute(pool)
+        .await
+        .expect("숨김 연주 정리");
+    cleanup_composers(pool, &format!("{HIDDEN_EN}%")).await;
+    sqlx::query("DELETE FROM artists WHERE english_name LIKE ?")
+        .bind(format!("{HIDDEN_EN}%"))
+        .execute(pool)
+        .await
+        .expect("숨김 연주자 정리");
+}
+
+async fn set_hidden(pool: &db::DbPool, table: &str, id: i32, reason: Option<&str>) {
+    sqlx::query(&format!(
+        "UPDATE {table} SET hidden_reason = ? WHERE id = ?"
+    ))
+    .bind(reason)
+    .bind(id)
+    .execute(pool)
+    .await
+    .expect("숨김 까닭");
+}
+
+fn sorted(mut ids: Vec<i32>) -> Vec<i32> {
+    ids.sort_unstable();
+    ids
+}
+
+async fn listed_composers(pool: &db::DbPool, query: Option<&str>, sort: ComposerSort) -> Vec<i32> {
+    ComposerRepository::search_composers(pool, query.map(str::to_string), None, 0, 0, sort)
+        .await
+        .expect("작곡가 목록")
+        .into_iter()
+        .map(|composer| composer.id)
+        .collect()
+}
+
+async fn searched_pieces(pool: &db::DbPool, query: Option<&str>) -> Vec<i32> {
+    PieceRepository::search(pool, query, 0, 100)
+        .await
+        .expect("작품 검색")
+        .into_iter()
+        .map(|result| result.piece.id)
+        .collect()
+}
+
+#[tokio::test]
+#[ignore = "격리 MySQL 에서 실행: scripts/test_piece_parts.sh"]
+async fn hidden_rows_leave_lists_and_counts_but_details_open() {
+    let pool = db::connect_pool().await.expect("DB 연결");
+    cleanup_hidden(&pool).await;
+
+    let classical = insert_composer(&pool, &format!("{HIDDEN_EN} Classical")).await;
+    let pop = insert_composer(&pool, &format!("{HIDDEN_EN} Pop")).await;
+    let emptied = insert_composer(&pool, &format!("{HIDDEN_EN} Emptied")).await;
+    let piece = |composer: i32, title: &'static str, opus: Option<&'static str>| {
+        insert_piece(&pool, composer, title, opus, None, Listening::Full)
+    };
+
+    let kept = piece(classical, "숨김확인 남는 곡", Some("Op. 1")).await;
+    let noise = piece(classical, "숨김확인 잡음", Some("Op. 2")).await;
+    let bundle = insert_piece(
+        &pool,
+        classical,
+        "숨김확인 묶음",
+        None,
+        Some(("Op.", "3")),
+        Listening::Nothing,
+    )
+    .await;
+    let hidden_bundle = insert_piece(
+        &pool,
+        classical,
+        "숨김확인 숨긴 묶음",
+        None,
+        Some(("Op.", "4")),
+        Listening::Nothing,
+    )
+    .await;
+    let promoted = piece(classical, "숨김확인 풀린 곡", Some("Op. 4, No. 1")).await;
+    let pop_song = piece(pop, "숨김확인 팝", Some("Op. 5")).await;
+    let emptied_only = piece(emptied, "숨김확인 전부 숨김", None).await;
+
+    // 보이는 묶음이 숨긴 작품을 가리키고, 숨긴 묶음이 보이는 작품을 가리킨다
+    insert_part(
+        &pool,
+        bundle,
+        NewPart {
+            name_ko: Some("잡음을 가리키는 곡"),
+            linked: Some(noise),
+            ..part("hidden-bundle-noise", 1)
+        },
+    )
+    .await;
+    insert_part(
+        &pool,
+        hidden_bundle,
+        NewPart {
+            name_ko: Some("풀린 곡"),
+            linked: Some(promoted),
+            ..part("hidden-bundle-promoted", 1)
+        },
+    )
+    .await;
+
+    set_hidden(&pool, "pieces", noise, Some("catalog_unmatched")).await;
+    set_hidden(&pool, "pieces", hidden_bundle, Some("catalog_unmatched")).await;
+    set_hidden(&pool, "pieces", emptied_only, Some("catalog_unmatched")).await;
+    set_hidden(&pool, "composers", pop, Some("non_classical")).await;
+
+    // 작곡가 목록·검색: 숨긴 작곡가와 곡을 전부 숨긴 작곡가는 빠지고, 작품 수는 남는 최상위 작품만 센다.
+    // 숨긴 묶음이 가리키던 작품은 펼칠 길이 없으니 최상위로 올라온다
+    for sort in [ComposerSort::BirthYear, ComposerSort::Recommended] {
+        assert_eq!(
+            listed_composers(&pool, Some(HIDDEN_EN), sort).await,
+            vec![classical]
+        );
+        let all = listed_composers(&pool, None, sort).await;
+        assert!(all.contains(&classical));
+        assert!(!all.contains(&pop) && !all.contains(&emptied));
+    }
+    let searched = ComposerRepository::search_composers(
+        &pool,
+        Some(HIDDEN_EN.to_string()),
+        None,
+        0,
+        20,
+        ComposerSort::BirthYear,
+    )
+    .await
+    .expect("작곡가 검색");
+    assert_eq!(searched[0].piece_count, Some(3));
+    let paged = ComposerRepository::find_all(&pool, 0, 100)
+        .await
+        .expect("작곡가 페이지");
+    assert!(paged.iter().any(|composer| composer.id == classical));
+    assert!(!paged
+        .iter()
+        .any(|composer| composer.id == pop || composer.id == emptied));
+
+    // 작곡가 상세는 숨겨도 열리고 작품 수는 목록과 같은 기준이다
+    let piece_count = |id: i32| {
+        let pool = pool.clone();
+        async move {
+            ComposerRepository::find_by_id(&pool, id)
+                .await
+                .expect("작곡가 상세")
+                .expect("숨겨도 열린다")
+                .piece_count
+        }
+    };
+    assert_eq!(piece_count(classical).await, Some(3));
+    assert_eq!(piece_count(pop).await, Some(1));
+    assert_eq!(piece_count(emptied).await, Some(0));
+
+    // 작곡가 작품 목록: 숨긴 작품만 빠진다. 숨긴 작곡가의 상세에서 여는 목록은 그대로다
+    assert_eq!(
+        sorted(composer_page(&pool, classical).await),
+        sorted(vec![kept, bundle, promoted])
+    );
+    let page = PieceRepository::find_page_by_composer_id(&pool, classical, 0, 20)
+        .await
+        .expect("작품 페이지");
+    assert_eq!(
+        sorted(page.iter().map(|piece| piece.id).collect()),
+        sorted(vec![kept, bundle, promoted])
+    );
+    assert_eq!(composer_page(&pool, pop).await, vec![pop_song]);
+    assert!(composer_page(&pool, emptied).await.is_empty());
+
+    // 작품 검색·전체: 숨긴 작품과 숨긴 작곡가의 작품이 빠진다
+    assert_eq!(
+        sorted(searched_pieces(&pool, Some("숨김확인")).await),
+        sorted(vec![kept, bundle, promoted])
+    );
+    assert!(searched_pieces(&pool, Some(&format!("{HIDDEN_EN} Pop")))
+        .await
+        .is_empty());
+    let browsed = searched_pieces(&pool, None).await;
+    let everything: Vec<i32> = PieceRepository::find_all(&pool)
+        .await
+        .expect("전체 작품")
+        .into_iter()
+        .map(|piece| piece.id)
+        .collect();
+    for listed in [&browsed, &everything] {
+        assert!(listed.contains(&kept) && listed.contains(&promoted));
+        for hidden in [noise, hidden_bundle, pop_song, emptied_only] {
+            assert!(!listed.contains(&hidden), "숨긴 작품 {hidden}");
+        }
+    }
+
+    // 작품 상세와 part 는 숨겨도 열리고, 묶음 안의 이어진 작품도 그대로 보인다
+    for hidden in [noise, hidden_bundle, pop_song] {
+        assert!(PieceRepository::find_by_id(&pool, hidden)
+            .await
+            .expect("작품 상세")
+            .is_some());
+    }
+    let bundle_parts = PieceRepository::find_parts(&pool, bundle)
+        .await
+        .expect("묶음 part");
+    assert_eq!(
+        bundle_parts[0].linked_piece.as_ref().map(|piece| piece.id),
+        Some(noise)
+    );
+    let hidden_parts = PieceRepository::find_parts(&pool, hidden_bundle)
+        .await
+        .expect("숨긴 묶음 part");
+    assert_eq!(
+        hidden_parts[0].linked_piece.as_ref().map(|piece| piece.id),
+        Some(promoted)
+    );
+
+    // 연주 있는 작곡가 목록에서도 빠진다
+    let artist_id = sqlx::query(
+        "INSERT INTO artists (name, english_name, category, nationality)
+         VALUES ('숨김 통합 연주자', ?, '피아니스트', '한국')",
+    )
+    .bind(format!("{HIDDEN_EN} Artist"))
+    .execute(&pool)
+    .await
+    .expect("연주자")
+    .last_insert_id() as i32;
+    for piece_id in [kept, noise, pop_song] {
+        sqlx::query(
+            "INSERT INTO performances (piece_id, sector_id, artist_id, video_id)
+             VALUES (?, 0, ?, ?)",
+        )
+        .bind(piece_id)
+        .bind(artist_id)
+        .bind(format!("{HIDDEN_VIDEO_PREFIX}{piece_id}"))
+        .execute(&pool)
+        .await
+        .expect("연주");
+    }
+    let performed: Vec<i32> = ComposerRepository::find_with_performances(&pool, 1000)
+        .await
+        .expect("연주 있는 작곡가")
+        .into_iter()
+        .map(|row| row.piece_id)
+        .filter(|id| [kept, noise, pop_song].contains(id))
+        .collect();
+    assert_eq!(performed, vec![kept]);
+
+    // 지우지 않았으니 까닭을 비우면 다시 보인다
+    set_hidden(&pool, "composers", pop, None).await;
+    set_hidden(&pool, "pieces", noise, None).await;
+    assert_eq!(
+        sorted(listed_composers(&pool, Some(HIDDEN_EN), ComposerSort::BirthYear).await),
+        sorted(vec![classical, pop])
+    );
+    assert_eq!(
+        sorted(searched_pieces(&pool, Some("숨김확인")).await),
+        sorted(vec![kept, noise, bundle, promoted, pop_song])
+    );
+
+    cleanup_hidden(&pool).await;
 }
