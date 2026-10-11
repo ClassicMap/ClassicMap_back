@@ -16,6 +16,16 @@ pub struct PieceRepository;
 /// 써서 개수·목록·숨김이 어긋나지 않게 한다. piece_parts 행을 `part` 로 부르는 쿼리에서만 쓴다.
 const VISIBLE_PART: &str = "part.editorial_status IN ('EDITOR_REVIEWED', 'PUBLISHED')";
 
+/// 목록에 내놓는 작품·작곡가 행: 숨김 까닭(`hidden_reason`)이 없다.
+///
+/// 국제 시드가 넣은 대중음악 작곡가와 잡음 작품(악장 하나짜리, 팝 편곡 등)은 지우지 않고 까닭을 적어
+/// 숨긴다. 작곡가 목록·검색, 작품 목록·검색, 작곡가 작품 수가 모두 이 조건을 써서 목록과 개수가
+/// 어긋나지 않게 한다. 상세(`/composers/<id>`, `/pieces/<id>`)와 `/pieces/<id>/parts` 는 쓰지 않아
+/// 직접 링크·즐겨찾기로는 열린다. `pieces`·`composers` 행의 별칭을 받는다.
+pub fn listed_condition(alias: &str) -> String {
+    format!("{alias}.hidden_reason IS NULL")
+}
+
 /// 들을 거리가 있는 작품 행: 스트리밍 링크나 설명이 있다.
 fn has_listening(alias: &str) -> String {
     format!(
@@ -50,24 +60,30 @@ fn part_summary_columns() -> String {
 ///
 /// 그런 작품은 묶음을 펼치면 보이므로 작곡가 작품 목록 최상위와 작곡가 작품 수에서 뺀다.
 /// 숨은 part 가 가리키는 작품은 펼쳐도 안 보이니 남긴다.
+/// 목록에서 숨긴 묶음(`listed_condition`)도 펼칠 길이 없으니 그 묶음이 가리키는 작품은 남긴다.
 /// 다른 작곡가의 묶음이 가리키는 경우는 이 작곡가 목록에서 볼 길이 없으니 남긴다.
 /// 검색과 `/pieces/<id>` 는 이 조건을 쓰지 않는다.
 ///
 /// 작곡가 비교를 바깥 행(`{alias}.composer_id`)과 하면 MySQL 이 같은 작곡가의 작품을
 /// 작품마다 다시 훑는 antijoin 을 고른다(작품 2만 건에서 작곡가 목록 3초).
 /// 안쪽의 `linked` 와 비교하면 이어진 작품 집합을 한 번만 만들어 찾는다.
+/// 그래도 바깥 쿼리의 행 수를 작게 어림하면 `bundle` 을 작곡가 인덱스로 훑는 같은 antijoin 으로
+/// 돌아갈 수 있어(숨김 조건을 붙이다 본 작곡가 목록 40초) `bundle` 은 기본 키로만 찾게 못 박는다.
+/// 그러면 작품마다 `part.linked_piece_id` 인덱스로 이어진 part 를 찾고 그 묶음을 기본 키로 본다.
 pub fn top_level_piece_condition(alias: &str) -> String {
     format!(
         "NOT EXISTS (
             SELECT 1
             FROM piece_parts part
             JOIN pieces linked ON linked.id = part.linked_piece_id
-            JOIN pieces bundle ON bundle.id = part.piece_id
+            JOIN pieces bundle FORCE INDEX (PRIMARY) ON bundle.id = part.piece_id
             WHERE part.linked_piece_id = {alias}.id
               AND {VISIBLE_PART}
               AND bundle.id <> linked.id
               AND bundle.composer_id = linked.composer_id
-        )"
+              AND {listed_bundle}
+        )",
+        listed_bundle = listed_condition("bundle"),
     )
 }
 
@@ -119,8 +135,12 @@ fn composer_pieces_order() -> String {
 impl PieceRepository {
     pub async fn find_all(pool: &DbPool) -> Result<Vec<Piece>, Error> {
         sqlx::query_as::<_, Piece>(&format!(
-            "SELECT piece.*, {} FROM pieces piece",
-            part_summary_columns()
+            "SELECT piece.*, {part_summary}
+             FROM pieces piece
+             JOIN composers composer ON composer.id = piece.composer_id
+             WHERE {listed}",
+            part_summary = part_summary_columns(),
+            listed = Self::listed_across_composers(),
         ))
         .fetch_all(pool)
         .await
@@ -141,9 +161,11 @@ impl PieceRepository {
             "SELECT piece.*, {part_summary}
              FROM pieces piece
              WHERE piece.composer_id = ?
+               AND {listed}
                AND {top_level}
              {order}{page}",
             part_summary = part_summary_columns(),
+            listed = listed_condition("piece"),
             top_level = top_level_piece_condition("piece"),
             order = composer_pieces_order(),
             page = if paged { " LIMIT ? OFFSET ?" } else { "" },
@@ -221,9 +243,11 @@ impl PieceRepository {
                         composer.name AS composer_name, composer.avatar_url AS composer_avatar_url
                  FROM pieces piece
                  JOIN composers composer ON composer.id = piece.composer_id
+                 WHERE {listed}
                  ORDER BY {tiebreak}
                  LIMIT ? OFFSET ?",
                 part_summary = part_summary_columns(),
+                listed = Self::listed_across_composers(),
                 tiebreak = Self::SEARCH_TIEBREAK_COLUMNS
             ))
             .bind(limit)
@@ -253,19 +277,21 @@ impl PieceRepository {
                     END AS relevance
              FROM pieces piece
              JOIN composers composer ON composer.id = piece.composer_id
-             WHERE piece.title LIKE ?
-                OR piece.title_en LIKE ?
-                OR piece.opus_number LIKE ?
-                OR composer.name LIKE ?
-                OR composer.full_name LIKE ?
-                OR composer.english_name LIKE ?
-                OR EXISTS (
-                    SELECT 1 FROM piece_aliases alias
-                    WHERE alias.piece_id = piece.id AND alias.alias_value LIKE ?
-                )
+             WHERE {listed}
+               AND (piece.title LIKE ?
+                    OR piece.title_en LIKE ?
+                    OR piece.opus_number LIKE ?
+                    OR composer.name LIKE ?
+                    OR composer.full_name LIKE ?
+                    OR composer.english_name LIKE ?
+                    OR EXISTS (
+                        SELECT 1 FROM piece_aliases alias
+                        WHERE alias.piece_id = piece.id AND alias.alias_value LIKE ?
+                    ))
              ORDER BY relevance ASC, {tiebreak}
              LIMIT ? OFFSET ?",
             part_summary = part_summary_columns(),
+            listed = Self::listed_across_composers(),
             tiebreak = Self::SEARCH_TIEBREAK_COLUMNS
         ))
         .bind(exact)
@@ -287,6 +313,17 @@ impl PieceRepository {
         .bind(offset)
         .fetch_all(pool)
         .await
+    }
+
+    /// 작곡가를 가로지르는 작품 목록(`/pieces`, `/pieces/search`): 작품도 작곡가도 숨기지 않았다.
+    /// 작곡가 작품 목록은 숨긴 작곡가의 상세에서도 열리므로 작품 숨김만 본다.
+    /// 작품 행을 `piece`, 작곡가 행을 `composer` 로 부르는 쿼리에서만 쓴다.
+    fn listed_across_composers() -> String {
+        format!(
+            "{} AND {}",
+            listed_condition("piece"),
+            listed_condition("composer")
+        )
     }
 
     const SEARCH_TIEBREAK_COLUMNS: &'static str =

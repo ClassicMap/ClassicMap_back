@@ -3,21 +3,13 @@ use super::model::{
 };
 use super::service::ComposerSort;
 use crate::db::DbPool;
-use crate::piece::repository::top_level_piece_condition;
+use crate::piece::repository::{listed_condition, top_level_piece_condition};
 use crate::search::SearchText;
 use sqlx::Error;
 use ClassicMap_back::comparison::repository::PUBLIC_COMPARISON_CTE;
 
 pub struct ComposerRepository;
 
-/// 곡이 한 곡도 없는 작곡가는 목록에서 뺀다.
-///
-/// 국제 시드는 두 종류의 빈 작곡가를 만든다. Wikidata 의 P106 에 작곡가가 있으면
-/// 지휘자·피아니스트도 작곡가로 투영되고, 덤프에서 발굴한 작곡가는 아직 작품을
-/// 가져오지 않아 곡이 없다. 어느 쪽이든 목록에서는 눌러도 볼 것이 없다.
-///
-/// 손으로 채운 작곡가는 전원 곡을 가지고 있어 이 조건에 걸리지 않는다.
-/// 작품이 한 곡이라도 적재되면 조건이 풀려 자동으로 다시 보인다.
 /// tier(S > A > 없음 > B > C) → 공개 비교 섹터 보유 → 초상 → 소개 → 작품 수 → id.
 /// 초상과 소개를 따로 보는 건 목록 첫 화면에서 눈에 띄는 게 초상이기 때문이다.
 /// 마지막 id는 offset 페이지를 넘길 때 순서가 흔들리지 않게 한다.
@@ -41,13 +33,27 @@ const RECOMMENDED_ORDER: &str = "CASE c.tier
     COUNT(p.id) DESC,
     c.id ASC";
 
-const HIDE_EMPTY_COMPOSER: &str = "EXISTS (SELECT 1 FROM pieces own WHERE own.composer_id = c.id)";
+/// 곡이 한 곡도 없는 작곡가는 목록에서 뺀다. 작품 수(`counted_pieces_join`)가 0 인 작곡가다.
+///
+/// 국제 시드는 두 종류의 빈 작곡가를 만든다. Wikidata 의 P106 에 작곡가가 있으면
+/// 지휘자·피아니스트도 작곡가로 투영되고, 덤프에서 발굴한 작곡가는 아직 작품을
+/// 가져오지 않아 곡이 없다. 어느 쪽이든 목록에서는 눌러도 볼 것이 없다.
+/// 곡을 전부 숨긴 작곡가도 같다.
+///
+/// 손으로 채운 작곡가는 전원 곡을 가지고 있어 이 조건에 걸리지 않는다.
+/// 작품이 한 곡이라도 적재되면 조건이 풀려 자동으로 다시 보인다.
+///
+/// 곡이 있는지를 `EXISTS` 로 따로 보면 숨김 조건이 붙은 쿼리에서 MySQL 이 작곡가 수를 작게 어림해
+/// 작품 수 조인을 작품마다 도는 길로 바꾼다(작곡가 목록 3배). 센 작품 수로 거르면 작곡가 기본 키
+/// 순으로 한 번에 센다. `counted_pieces_join` 을 붙이고 `GROUP BY c.id` 한 쿼리에서만 쓴다.
+const HIDE_EMPTY_COMPOSER: &str = "HAVING COUNT(p.id) > 0";
 
 /// 작품 수(`piece_count`)를 세는 `pieces p` 조인. 작품 목록(`/composers/<id>/pieces`)과 같이
-/// 묶음의 part 로 이어진 작품은 빼고 최상위 작품만 센다.
+/// 숨긴 작품과 묶음의 part 로 이어진 작품은 빼고 최상위 작품만 센다.
 fn counted_pieces_join() -> String {
     format!(
-        "LEFT JOIN pieces p ON c.id = p.composer_id AND {}",
+        "LEFT JOIN pieces p ON c.id = p.composer_id AND {} AND {}",
+        listed_condition("p"),
         top_level_piece_condition("p")
     )
 }
@@ -58,11 +64,13 @@ impl ComposerRepository {
             "SELECT c.*, COUNT(p.id) as piece_count
              FROM composers c
              {}
-             WHERE {HIDE_EMPTY_COMPOSER}
+             WHERE {}
              GROUP BY c.id
+             {HIDE_EMPTY_COMPOSER}
              ORDER BY c.birth_year ASC
              LIMIT ? OFFSET ?",
-            counted_pieces_join()
+            counted_pieces_join(),
+            listed_condition("c")
         ))
         .bind(limit)
         .bind(offset)
@@ -76,9 +84,11 @@ impl ComposerRepository {
     ) -> Result<Option<ComposerWithMajorPieces>, Error> {
         sqlx::query_as::<_, ComposerWithMajorPieces>(&format!(
             "SELECT v.*,
-                    (SELECT COUNT(*) FROM pieces p WHERE p.composer_id = v.id AND {}) AS piece_count
+                    (SELECT COUNT(*) FROM pieces p
+                     WHERE p.composer_id = v.id AND {} AND {}) AS piece_count
              FROM v_composers_full v
              WHERE v.id = ?",
+            listed_condition("p"),
             top_level_piece_condition("p")
         ))
         .bind(id)
@@ -171,7 +181,7 @@ impl ComposerRepository {
         );
         sql.push_str(&counted_pieces_join());
 
-        let mut where_clauses = vec![HIDE_EMPTY_COMPOSER.to_string()];
+        let mut where_clauses = vec![listed_condition("c")];
         let mut bind_values: Vec<String> = Vec::new();
         let search_text = SearchText::parse(query.as_deref());
 
@@ -198,7 +208,7 @@ impl ComposerRepository {
         }
 
         // 검색어가 있으면 이름 관련도를 먼저 보고, 없으면 기존처럼 연대순이다.
-        sql.push_str(" GROUP BY c.id ORDER BY ");
+        sql.push_str(&format!(" GROUP BY c.id {HIDE_EMPTY_COMPOSER} ORDER BY "));
         if let Some(text) = &search_text {
             let (relevance_sql, relevance_binds) =
                 text.name_relevance(&["c.name", "c.full_name", "c.english_name"]);
@@ -236,7 +246,7 @@ impl ComposerRepository {
         pool: &DbPool,
         limit: i64,
     ) -> Result<Vec<ComposerWithPerformance>, Error> {
-        sqlx::query_as::<_, ComposerWithPerformance>(
+        sqlx::query_as::<_, ComposerWithPerformance>(&format!(
             "SELECT c.id AS composer_id, c.name AS composer_name,
                     c.avatar_url AS composer_avatar_url,
                     p.id AS piece_id, p.title AS piece_title,
@@ -246,10 +256,13 @@ impl ComposerRepository {
              JOIN pieces p ON p.composer_id = c.id
              JOIN performances pf ON pf.piece_id = p.id
              JOIN artists a ON a.id = pf.artist_id
+             WHERE {} AND {}
              GROUP BY c.id, c.name, c.avatar_url, p.id, p.title
              ORDER BY RAND()
              LIMIT ?",
-        )
+            listed_condition("c"),
+            listed_condition("p")
+        ))
         .bind(limit)
         .fetch_all(pool)
         .await
