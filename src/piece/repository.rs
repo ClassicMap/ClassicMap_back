@@ -26,6 +26,14 @@ pub fn listed_condition(alias: &str) -> String {
     format!("{alias}.hidden_reason IS NULL")
 }
 
+/// 편집자가 손본 작품 행: 설명이 있거나 비교 구간이 붙어 있다.
+fn has_curation(alias: &str) -> String {
+    format!(
+        "(({alias}.description IS NOT NULL AND {alias}.description <> '')
+          OR EXISTS (SELECT 1 FROM performance_sectors sector WHERE sector.piece_id = {alias}.id))"
+    )
+}
+
 /// 들을 거리가 있는 작품 행: 스트리밍 링크나 설명이 있다.
 fn has_listening(alias: &str) -> String {
     format!(
@@ -95,6 +103,10 @@ pub fn top_level_piece_condition(alias: &str) -> String {
 /// 「혁명」처럼 링크 있는 낱곡을 품은 묶음(「연습곡 Op. 10」, 링크·설명 없음)이 시드 작품 뒤로
 /// 가라앉지 않게 한다.
 ///
+/// 그보다 먼저 편집자가 손본 작품(설명이나 비교 구간이 있거나, 보이는 part 가 그런 작품을
+/// 가리킴)을 준다. 카탈로그로 다시 짠 시드 작품도 스트리밍 링크를 많이 가지고 있어서, 이 단계가
+/// 없으면 바흐 칸타타 BWV 1–200 이 골드베르크 변주곡·브란덴부르크 협주곡보다 앞선다.
+///
 /// 그 안에서는 작품번호 순이다. catalogue_number 가 있으면 `catalogue_system catalogue_number`,
 /// 없으면 opus_number 를 작품번호로 본다(예: "Op. 10, No. 12", "B. 49", "BWV 1046–1051").
 /// 1. 작품번호가 없는 작품은 뒤로.
@@ -111,14 +123,25 @@ fn composer_pieces_order() -> String {
         END)";
     format!(
         "ORDER BY
-            ({piece_listening} OR EXISTS (
-                SELECT 1
-                FROM piece_parts part
-                JOIN pieces linked ON linked.id = part.linked_piece_id
-                WHERE part.piece_id = piece.id
-                  AND {VISIBLE_PART}
-                  AND {linked_listening}
-            )) DESC,
+            CASE
+                WHEN {piece_curation} OR EXISTS (
+                    SELECT 1
+                    FROM piece_parts part
+                    JOIN pieces linked ON linked.id = part.linked_piece_id
+                    WHERE part.piece_id = piece.id
+                      AND {VISIBLE_PART}
+                      AND {linked_curation}
+                ) THEN 0
+                WHEN {piece_listening} OR EXISTS (
+                    SELECT 1
+                    FROM piece_parts part
+                    JOIN pieces linked ON linked.id = part.linked_piece_id
+                    WHERE part.piece_id = piece.id
+                      AND {VISIBLE_PART}
+                      AND {linked_listening}
+                ) THEN 1
+                ELSE 2
+            END ASC,
             {label} IS NULL ASC,
             REGEXP_LIKE({label}, '^op', 'i') DESC,
             REGEXP_REPLACE(LOWER(REGEXP_SUBSTR({label}, '^[^0-9]*')), '[^a-z]', '') ASC,
@@ -127,6 +150,8 @@ fn composer_pieces_order() -> String {
             CAST(REGEXP_SUBSTR({label}, '[0-9]+', 1, 2) AS UNSIGNED) ASC,
             {label} ASC,
             piece.id ASC",
+        piece_curation = has_curation("piece"),
+        linked_curation = has_curation("linked"),
         piece_listening = has_listening("piece"),
         linked_listening = has_listening("linked"),
     )
