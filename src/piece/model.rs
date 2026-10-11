@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
-use std::collections::{HashMap, HashSet};
+use std::collections::HashMap;
 
 #[derive(Debug, Serialize, Deserialize, FromRow)]
 #[serde(rename_all = "camelCase")]
@@ -19,9 +19,12 @@ pub struct Piece {
     pub spotify_url: Option<String>,
     pub apple_music_url: Option<String>,
     pub youtube_music_url: Option<String>,
-    /// 최상위 part(악장·번호곡) 수. 0이면 낱곡이고, 1 이상이면 `/pieces/<id>/parts` 로 펼친다.
+    /// 보이는 최상위 part(악장·번호곡) 수. 0이면 낱곡이고, 1 이상이면 `/pieces/<id>/parts` 로 펼친다.
     #[serde(default)]
     pub part_count: i64,
+    /// part 종류. "movement"(전부 악장 번호가 있음, 예: 4악장) | "work"(예: 12곡) | part 가 없으면 None
+    #[serde(default)]
+    pub part_kind: Option<String>,
 }
 
 /// 작품 검색 결과. 목록에 작곡가를 함께 보여줄 수 있게 이름을 싣는다.
@@ -113,21 +116,20 @@ impl From<PiecePartRow> for PiecePart {
 }
 
 /// part 를 화면 순서로 편다. 같은 부모 아래는 sequence_number(같으면 id) 순이고,
-/// 자식은 부모 바로 뒤에 온다. 부모가 목록에 없는 part 는 최상위로 본다.
+/// 자식은 부모 바로 뒤에 온다.
+///
+/// 최상위 part 에서 닿지 않는 part 는 뺀다. 부모가 숨긴 상태(확인 전 시드)라 목록에 없으면
+/// 그 아래도 숨긴다. 그래야 최상위 개수(`part_count`)와 펼친 목록의 최상위가 같다.
 pub fn order_part_tree(rows: Vec<PiecePartRow>) -> Vec<PiecePartRow> {
-    let ids: HashSet<u64> = rows.iter().map(|row| row.id).collect();
     let mut children: HashMap<Option<u64>, Vec<PiecePartRow>> = HashMap::new();
     for row in rows {
-        let parent = row
-            .parent_part_id
-            .filter(|parent| *parent != row.id && ids.contains(parent));
-        children.entry(parent).or_default().push(row);
+        children.entry(row.parent_part_id).or_default().push(row);
     }
     for siblings in children.values_mut() {
         siblings.sort_by_key(|row| (row.sequence_number, row.id));
     }
 
-    let mut ordered = Vec::with_capacity(ids.len());
+    let mut ordered = Vec::new();
     // 뒤에서 꺼내므로 형제를 거꾸로 쌓는다
     let mut stack: Vec<PiecePartRow> = children.remove(&None).unwrap_or_default();
     stack.reverse();
@@ -138,10 +140,6 @@ pub fn order_part_tree(rows: Vec<PiecePartRow>) -> Vec<PiecePartRow> {
         }
         ordered.push(row);
     }
-    // 부모끼리 서로를 가리키는 고리는 최상위에 닿지 않는다. 버리지 않고 뒤에 붙인다
-    let mut rest: Vec<PiecePartRow> = children.into_values().flatten().collect();
-    rest.sort_by_key(|row| (row.sequence_number, row.id));
-    ordered.extend(rest);
     ordered
 }
 
@@ -219,15 +217,25 @@ mod tests {
     }
 
     #[test]
-    fn same_sequence_falls_back_to_id_and_cycles_are_kept() {
+    fn same_sequence_falls_back_to_id() {
+        let rows = vec![row(5, None, 1), row(4, None, 1)];
+
+        assert_eq!(ids(&order_part_tree(rows)), vec![4, 5]);
+    }
+
+    #[test]
+    fn parts_under_a_hidden_parent_are_dropped() {
+        // 30 의 부모 99 는 숨긴 상태라 목록에 없다. 31 은 30 아래, 7·8 은 서로를 가리킨다
         let rows = vec![
-            row(5, None, 1),
-            row(4, None, 1),
+            row(1, None, 1),
+            row(30, Some(99), 1),
+            row(31, Some(30), 1),
             row(7, Some(8), 1),
             row(8, Some(7), 2),
+            row(2, Some(1), 1),
         ];
 
-        assert_eq!(ids(&order_part_tree(rows)), vec![4, 5, 7, 8]);
+        assert_eq!(ids(&order_part_tree(rows)), vec![1, 2]);
     }
 
     #[test]

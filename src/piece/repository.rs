@@ -8,11 +8,32 @@ use ClassicMap_back::comparison::repository::PUBLIC_COMPARISON_CTE;
 
 pub struct PieceRepository;
 
-/// `Piece.part_count`: 최상위 part 수. 작품 행을 `piece` 로 부르는 쿼리에서만 쓴다.
-const PART_COUNT_COLUMN: &str = "(SELECT COUNT(*)
-         FROM piece_parts top_part
-         WHERE top_part.piece_id = piece.id
-           AND top_part.parent_part_id IS NULL) AS part_count";
+/// 화면에 내놓는 part. 국제 시드가 넣고 아직 확인하지 않은 part(IDENTIFIERS_MATCHED 등)는 숨긴다.
+/// `part_count`·`part_kind` 와 `/pieces/<id>/parts` 가 함께 써서 개수와 목록이 어긋나지 않게 한다.
+/// piece_parts 행을 `part` 로 부르는 쿼리에서만 쓴다.
+const VISIBLE_PART: &str =
+    "part.editorial_status IN ('FACTS_VERIFIED', 'EDITOR_REVIEWED', 'PUBLISHED')";
+
+/// `Piece.part_count`·`part_kind`: 보이는 최상위 part 의 수와 종류.
+/// 종류는 전부 악장 번호가 있으면 movement(교향곡 4악장), 하나라도 없으면 work(연습곡집 12곡),
+/// 0개면 NULL 이다. 작품 행을 `piece` 로 부르는 쿼리에서만 쓴다.
+fn part_summary_columns() -> String {
+    let top_parts = format!(
+        "FROM piece_parts part
+         WHERE part.piece_id = piece.id
+           AND part.parent_part_id IS NULL
+           AND {VISIBLE_PART}"
+    );
+    format!(
+        "(SELECT COUNT(*) {top_parts}) AS part_count,
+         (SELECT CASE
+                     WHEN COUNT(*) = 0 THEN NULL
+                     WHEN COUNT(*) = COUNT(NULLIF(TRIM(part.movement_number), '')) THEN 'movement'
+                     ELSE 'work'
+                 END
+          {top_parts}) AS part_kind"
+    )
+}
 
 /// 같은 작곡가의 다른 작품(묶음) part 가 가리키는 작품이 아니다.
 ///
@@ -75,7 +96,8 @@ fn composer_pieces_order() -> String {
 impl PieceRepository {
     pub async fn find_all(pool: &DbPool) -> Result<Vec<Piece>, Error> {
         sqlx::query_as::<_, Piece>(&format!(
-            "SELECT piece.*, {PART_COUNT_COLUMN} FROM pieces piece"
+            "SELECT piece.*, {} FROM pieces piece",
+            part_summary_columns()
         ))
         .fetch_all(pool)
         .await
@@ -83,7 +105,8 @@ impl PieceRepository {
 
     pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<Piece>, Error> {
         sqlx::query_as::<_, Piece>(&format!(
-            "SELECT piece.*, {PART_COUNT_COLUMN} FROM pieces piece WHERE piece.id = ?"
+            "SELECT piece.*, {} FROM pieces piece WHERE piece.id = ?",
+            part_summary_columns()
         ))
         .bind(id)
         .fetch_optional(pool)
@@ -92,11 +115,12 @@ impl PieceRepository {
 
     fn composer_pieces_sql(paged: bool) -> String {
         format!(
-            "SELECT piece.*, {PART_COUNT_COLUMN}
+            "SELECT piece.*, {part_summary}
              FROM pieces piece
              WHERE piece.composer_id = ?
                AND {top_level}
              {order}{page}",
+            part_summary = part_summary_columns(),
             top_level = top_level_piece_condition("piece"),
             order = composer_pieces_order(),
             page = if paged { " LIMIT ? OFFSET ?" } else { "" },
@@ -124,7 +148,7 @@ impl PieceRepository {
             .await
     }
 
-    /// 작품의 part 를 화면 순서로 준다. 없는 작품이면 다른 `/pieces/<id>/…` 목록처럼 빈 목록이다.
+    /// 작품의 보이는 part 를 화면 순서로 준다. 없는 작품이면 다른 `/pieces/<id>/…` 목록처럼 빈 목록이다.
     /// 이어진 작품의 `comparable` 은 비교 화면과 같은 공개 기준(`PUBLIC_COMPARISON_CTE`)으로 본다.
     pub async fn find_parts(pool: &DbPool, piece_id: i32) -> Result<Vec<PiecePart>, Error> {
         let rows = sqlx::query_as::<_, PiecePartRow>(&format!(
@@ -147,7 +171,8 @@ impl PieceRepository {
                     linked.apple_music_url AS linked_apple_music_url
              FROM piece_parts part
              LEFT JOIN pieces linked ON linked.id = part.linked_piece_id
-             WHERE part.piece_id = ?"
+             WHERE part.piece_id = ?
+               AND {VISIBLE_PART}"
         ))
         .bind(piece_id)
         .fetch_all(pool)
@@ -169,13 +194,14 @@ impl PieceRepository {
     ) -> Result<Vec<PieceSearchResult>, Error> {
         let Some(text) = SearchText::parse(query) else {
             return sqlx::query_as::<_, PieceSearchResult>(&format!(
-                "SELECT piece.*, {PART_COUNT_COLUMN},
+                "SELECT piece.*, {part_summary},
                         composer.name AS composer_name, composer.avatar_url AS composer_avatar_url
                  FROM pieces piece
                  JOIN composers composer ON composer.id = piece.composer_id
-                 ORDER BY {}
+                 ORDER BY {tiebreak}
                  LIMIT ? OFFSET ?",
-                Self::SEARCH_TIEBREAK_COLUMNS
+                part_summary = part_summary_columns(),
+                tiebreak = Self::SEARCH_TIEBREAK_COLUMNS
             ))
             .bind(limit)
             .bind(offset)
@@ -189,7 +215,7 @@ impl PieceRepository {
 
         sqlx::query_as::<_, PieceSearchResult>(&format!(
             "SELECT piece.*,
-                    {PART_COUNT_COLUMN},
+                    {part_summary},
                     composer.name AS composer_name,
                     composer.avatar_url AS composer_avatar_url,
                     CASE
@@ -214,9 +240,10 @@ impl PieceRepository {
                     SELECT 1 FROM piece_aliases alias
                     WHERE alias.piece_id = piece.id AND alias.alias_value LIKE ?
                 )
-             ORDER BY relevance ASC, {}
+             ORDER BY relevance ASC, {tiebreak}
              LIMIT ? OFFSET ?",
-            Self::SEARCH_TIEBREAK_COLUMNS
+            part_summary = part_summary_columns(),
+            tiebreak = Self::SEARCH_TIEBREAK_COLUMNS
         ))
         .bind(exact)
         .bind(exact)
