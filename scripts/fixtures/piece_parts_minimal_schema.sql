@@ -1,6 +1,7 @@
 -- 묶음 작품 part API 통합 테스트용 최소 표. 조회가 읽는 열과 운영 표의 NOT NULL 열만 둔다.
 -- 옛 백업에 전체 migration 을 얹으면 202608050219 가 실데이터에 기대 실패해서 따로 둔다.
 -- piece_parts 는 202608050001 의 정의에서 source_records FK 만 빼고 그대로 두어 새 migration 을 그 위에 얹는다.
+-- composers·pieces 의 hidden_reason 은 표에 두지 않고 202610120035 migration 으로 얹어 migration 도 함께 검증한다.
 CREATE TABLE composers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100) NOT NULL, full_name VARCHAR(200) NOT NULL,
   english_name VARCHAR(200) NOT NULL, period VARCHAR(16) NOT NULL, tier VARCHAR(1) NULL DEFAULT 'B', birth_year INT NOT NULL,
   death_year INT NULL, nationality VARCHAR(50) NOT NULL, avatar_url VARCHAR(500) NULL, cover_image_url VARCHAR(500) NULL,

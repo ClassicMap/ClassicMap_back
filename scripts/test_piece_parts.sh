@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 묶음 작품 part 조회·작곡가 작품 목록 통합 테스트. 임시 MySQL 에 최소 표와 새 migration 만 올려 돌린다.
+# 묶음 작품 part 조회·작곡가 작품 목록·목록 숨김 통합 테스트. 임시 MySQL 에 최소 표와 새 migration 만 올려 돌린다.
 set -euo pipefail
 
 repo_root=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
@@ -27,7 +27,9 @@ for _ in $(seq 1 90); do
   sleep 1
 done
 
-for file in scripts/fixtures/piece_parts_minimal_schema.sql migrations/202610120001_add_piece_part_linked_piece.sql; do
+for file in scripts/fixtures/piece_parts_minimal_schema.sql \
+  migrations/202610120001_add_piece_part_linked_piece.sql \
+  migrations/202610120035_add_catalog_hidden_reason.sql; do
   docker exec --interactive --env MYSQL_PWD="$database_password" "$container_name" \
     mysql --user=root classicmap < "$repo_root/$file"
 done
