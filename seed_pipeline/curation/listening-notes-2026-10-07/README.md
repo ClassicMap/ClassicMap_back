@@ -48,4 +48,22 @@
   - 357 탄호이저 베누스베르크 음악: 영어 위키백과, 12차 review-report(드레스덴판)
   - 358 돈 조반니 기사장 장면: Gugler판 총보(archive.org), 영어 위키백과
 - 2026-10-10 에 11~13차 새 구간 열넷(336~340, 346~350, 355~358)의 안내 14·추천 비교 14·연주 노트 42를 덧붙였다(듣기 없이, listening skipped 2026-10-10). 11차 편곡 큐 넷은 영화 장면을 안내에 넣지 않았다
+  - 379 말러 9번 1악장: UE 1912 총보(Wikimedia Commons), 영어·독일어 위키백과, Zander 해설
+  - 380 네덜란드인 서곡·381 리엔치 서곡: Fürstner·Durand 피아노 악보(archive.org), 영어 위키백과, Canton Symphony 해설
+  - 382 브루크너 9번 1악장: 1903 초연 프로그램(Wikimedia Commons), 영어 위키백과
+  - 383 비발디 RV 484 3악장: IMSLP 파트 사본(archive.org)
+  - 384 크로이처 1악장: Peters 1901 악보(archive.org), 영어 위키백과
+  - 385 쇼팽 Op. 22: Schirmer 악보(Wikimedia Commons)
+  - 386 K. 448·387 K. 521: 영어 위키백과, Hollywood Bowl·Parlance 해설
+  - 388 가야네 아다지오: Indianapolis Symphony 해설, Boosey & Hawkes 작품 소개, 2001 사운드트랙(영어 위키백과)
+  - 389 리게티 Kyrie: Hollywood Bowl 해설, 영어 위키백과
+  - 390 비발디 RV 684: Hollywood Bowl 해설, Archiv 437 082-2 해설
+  - 391·396 로델린다 아리아 둘: 리브레토(flaminioonline), 영어 위키백과, Handel Hendrix 줄거리, PBS
+  - 392 영웅 1악장 m.1~44: Eulenburg 총보(archive.org), 영어 위키백과
+  - 393 룩스 에테르나: 영어 위키백과, Jarvlepp 분석
+  - 394 할보르센 파사칼리아: Colburn School 해설, IMSLP·Henle 작품 정보
+  - 395 뒤카 도입: BSO 해설, 영어 위키백과
+  - 397 비창 1악장 m.253~294: 뮤토피아 악보, PTNA 곡 해설
+  - 398 차라투스트라 「일출」: 영어 위키백과, BSO·Hollywood Bowl 해설
+- 2026-10-11 에 14~18차 새 구간 스물(379~398)의 안내 20·추천 비교 20·연주 노트 60을 덧붙였다(듣기 없이, listening skipped 2026-10-11). 이중주 facts 는 봄 소나타 선례(「피아노 ○○」)를 따르고, 피아노 두 대·네 손은 선례가 없어 비운다
 적재는 `deploy/listening-notes-load-job.yaml` 에 `RUN=listening-notes-2026-10-07` 로 dry-run → 적재 → dry-run(계획 변경 0).
