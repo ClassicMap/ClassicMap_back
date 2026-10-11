@@ -8,11 +8,22 @@ use ClassicMap_back::comparison::repository::PUBLIC_COMPARISON_CTE;
 
 pub struct PieceRepository;
 
-/// 화면에 내놓는 part. 국제 시드가 넣고 아직 확인하지 않은 part(IDENTIFIERS_MATCHED 등)는 숨긴다.
-/// `part_count`·`part_kind` 와 `/pieces/<id>/parts` 가 함께 써서 개수와 목록이 어긋나지 않게 한다.
-/// piece_parts 행을 `part` 로 부르는 쿼리에서만 쓴다.
-const VISIBLE_PART: &str =
-    "part.editorial_status IN ('FACTS_VERIFIED', 'EDITOR_REVIEWED', 'PUBLISHED')";
+/// 화면에 내놓는 part. 편집자가 확인한 part 만 쓴다.
+///
+/// 국제 시드 part(IDENTIFIERS_MATCHED)와 손으로 넣은 옛 악장(FACTS_VERIFIED, 대부분 이름이
+/// "Winterreise, op. 89, D. 911: I. Gute Nacht" 같은 MusicBrainz 원제)는 숨긴다.
+/// `part_count`·`part_kind`, `/pieces/<id>/parts`, 목록 숨김, 정렬의 들을 거리가 모두 이 조건을
+/// 써서 개수·목록·숨김이 어긋나지 않게 한다. piece_parts 행을 `part` 로 부르는 쿼리에서만 쓴다.
+const VISIBLE_PART: &str = "part.editorial_status IN ('EDITOR_REVIEWED', 'PUBLISHED')";
+
+/// 들을 거리가 있는 작품 행: 스트리밍 링크나 설명이 있다.
+fn has_listening(alias: &str) -> String {
+    format!(
+        "({alias}.spotify_url IS NOT NULL
+          OR {alias}.apple_music_url IS NOT NULL
+          OR ({alias}.description IS NOT NULL AND {alias}.description <> ''))"
+    )
+}
 
 /// `Piece.part_count`·`part_kind`: 보이는 최상위 part 의 수와 종류.
 /// 종류는 전부 악장 번호가 있으면 movement(교향곡 4악장), 하나라도 없으면 work(연습곡집 12곡),
@@ -35,9 +46,10 @@ fn part_summary_columns() -> String {
     )
 }
 
-/// 같은 작곡가의 다른 작품(묶음) part 가 가리키는 작품이 아니다.
+/// 같은 작곡가의 다른 작품(묶음)의 보이는 part 가 가리키는 작품이 아니다.
 ///
 /// 그런 작품은 묶음을 펼치면 보이므로 작곡가 작품 목록 최상위와 작곡가 작품 수에서 뺀다.
+/// 숨은 part 가 가리키는 작품은 펼쳐도 안 보이니 남긴다.
 /// 다른 작곡가의 묶음이 가리키는 경우는 이 작곡가 목록에서 볼 길이 없으니 남긴다.
 /// 검색과 `/pieces/<id>` 는 이 조건을 쓰지 않는다.
 ///
@@ -48,10 +60,11 @@ pub fn top_level_piece_condition(alias: &str) -> String {
     format!(
         "NOT EXISTS (
             SELECT 1
-            FROM piece_parts linked_part
-            JOIN pieces linked ON linked.id = linked_part.linked_piece_id
-            JOIN pieces bundle ON bundle.id = linked_part.piece_id
-            WHERE linked_part.linked_piece_id = {alias}.id
+            FROM piece_parts part
+            JOIN pieces linked ON linked.id = part.linked_piece_id
+            JOIN pieces bundle ON bundle.id = part.piece_id
+            WHERE part.linked_piece_id = {alias}.id
+              AND {VISIBLE_PART}
               AND bundle.id <> linked.id
               AND bundle.composer_id = linked.composer_id
         )"
@@ -61,8 +74,10 @@ pub fn top_level_piece_condition(alias: &str) -> String {
 /// 작곡가 작품 목록 정렬.
 ///
 /// 국제 시드가 넣은 작품은 제목과 식별자만 있고 설명·스트리밍 링크가 없다.
-/// 정렬이 없으면 손으로 채운 작품이 시드 작품 수백 건에 묻히므로,
-/// 들을 수 있고 설명이 있는 작품을 먼저 준다.
+/// 정렬이 없으면 손으로 채운 작품이 시드 작품 수백 건에 묻히므로, 들을 거리가 있는 작품을
+/// 먼저 준다. 스트리밍 링크나 설명이 있거나, 보이는 part 가 그런 작품을 가리키면 들을 거리가 있다.
+/// 「혁명」처럼 링크 있는 낱곡을 품은 묶음(「연습곡 Op. 10」, 링크·설명 없음)이 시드 작품 뒤로
+/// 가라앉지 않게 한다.
 ///
 /// 그 안에서는 작품번호 순이다. catalogue_number 가 있으면 `catalogue_system catalogue_number`,
 /// 없으면 opus_number 를 작품번호로 본다(예: "Op. 10, No. 12", "B. 49", "BWV 1046–1051").
@@ -80,8 +95,14 @@ fn composer_pieces_order() -> String {
         END)";
     format!(
         "ORDER BY
-            (piece.spotify_url IS NOT NULL OR piece.apple_music_url IS NOT NULL) DESC,
-            (piece.description IS NOT NULL AND piece.description <> '') DESC,
+            ({piece_listening} OR EXISTS (
+                SELECT 1
+                FROM piece_parts part
+                JOIN pieces linked ON linked.id = part.linked_piece_id
+                WHERE part.piece_id = piece.id
+                  AND {VISIBLE_PART}
+                  AND {linked_listening}
+            )) DESC,
             {label} IS NULL ASC,
             REGEXP_LIKE({label}, '^op', 'i') DESC,
             REGEXP_REPLACE(LOWER(REGEXP_SUBSTR({label}, '^[^0-9]*')), '[^a-z]', '') ASC,
@@ -89,7 +110,9 @@ fn composer_pieces_order() -> String {
             CAST(REGEXP_SUBSTR({label}, '[0-9]+') AS UNSIGNED) ASC,
             CAST(REGEXP_SUBSTR({label}, '[0-9]+', 1, 2) AS UNSIGNED) ASC,
             {label} ASC,
-            piece.id ASC"
+            piece.id ASC",
+        piece_listening = has_listening("piece"),
+        linked_listening = has_listening("linked"),
     )
 }
 
