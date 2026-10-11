@@ -1,0 +1,1688 @@
+[
+ {
+  "pieceId": 470,
+  "title": "바이올린과 첼로를 위한 소나타 M. 73",
+  "mbids": [
+   "06662c6c-02eb-44f5-ac14-cec683427436"
+  ],
+  "mapping": "work",
+  "key": "ravel-m073",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 479,
+  "title": "미뉴에트 C#단조 M. 42",
+  "mbids": [
+   "10ec97eb-cc54-3d84-a524-42b620d30b93"
+  ],
+  "mapping": "work",
+  "key": "ravel-m042",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 484,
+  "title": "오페라 <어린이와 마법>",
+  "mbids": [
+   "17479113-fb9e-4b43-a01e-2d1060cb5cb3"
+  ],
+  "mapping": "work",
+  "key": "ravel-m071",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 488,
+  "title": "왼손을 위한 피아노 협주곡 D장조",
+  "mbids": [
+   "1abda5c6-93ca-31a6-996e-0503522504ec"
+  ],
+  "mapping": "work",
+  "key": "ravel-m082",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 514,
+  "title": "Frontispice",
+  "mbids": [
+   "37cce10c-c123-4568-8f24-618170b46602"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: Frontispice 의 불레즈 관현악 편곡(M. 70 편곡)"
+ },
+ {
+  "pieceId": 534,
+  "title": "Frontispice, pour deux pianos, cinq mains",
+  "mbids": [
+   "50e609b6-f13c-49ba-8437-1d0f9367f70e"
+  ],
+  "mapping": "work",
+  "key": "ravel-m070",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 545,
+  "title": "Ma mère l'Oye: Pavane de la Belle au bois dormant",
+  "mbids": [
+   "5bc61e4f-5b35-4bf0-9b67-6d77620ac61e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <어미 거위> I. Pavane 의 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 611,
+  "title": "Trio avec piano en la mineur",
+  "mbids": [
+   "a8998dbb-38bd-44f4-a62f-76675a829471"
+  ],
+  "mapping": "work",
+  "key": "ravel-m067",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 620,
+  "title": "Sonate pour violon et piano no. 2, M. 77",
+  "mbids": [
+   "b49702b8-2b06-4523-bd6e-7912c2ae2247"
+  ],
+  "mapping": "work",
+  "key": "ravel-m077",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 642,
+  "title": "Introduction et allegro pour harpe, flûte, clarinette et quatuor",
+  "mbids": [
+   "d1f7dfed-b50b-4e9d-8a2f-c0220669a697"
+  ],
+  "mapping": "work",
+  "key": "ravel-m046",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 666,
+  "title": "Ma mère l'Oye: Petit poucet",
+  "mbids": [
+   "f7e81b33-9f95-44d4-a5f0-4c573295e71d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <어미 거위> II. Petit Poucet 의 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 679,
+  "title": "Daphnis et Chloé, Suite no. 1",
+  "mbids": [
+   "ffefde2c-5696-4f63-8f1c-e9400341eec6"
+  ],
+  "mapping": "work",
+  "key": "ravel-m057a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 724,
+  "title": "Trois poèmes de Stéphane Mallarmé, M. 64",
+  "mbids": [
+   "eeeda24f-6930-4ec3-8f47-42273e42a1c5"
+  ],
+  "mapping": "work",
+  "key": "ravel-m064",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 770,
+  "title": "Pavane for a Dead Princess",
+  "mbids": [
+   "9f6eb747-6902-4d33-9658-7c65fbc1127b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB: <죽은 왕녀를 위한 파반느> 데오다토 판(재즈·팝)"
+ },
+ {
+  "pieceId": 771,
+  "title": "ティッシュ配り",
+  "mbids": [
+   "2207de2f-2949-43cc-bbd0-7419897a9172"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB: <볼레로> 에 바탕한 일본 노래"
+ },
+ {
+  "pieceId": 774,
+  "title": "Lonlon",
+  "mbids": [
+   "cc77a1c6-7dac-4081-aa55-34f490373c3a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB: <볼레로> 에 바탕한 노래"
+ },
+ {
+  "pieceId": 854,
+  "title": "Trio avec piano: IV. Final. Animé",
+  "mbids": [
+   "01e953b9-0859-4324-96da-8863f4cb249f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 피아노 3중주 IV 의 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 861,
+  "title": "Le Tombeau de Couperin: Toccata",
+  "mbids": [
+   "02ce015b-d598-4f55-8bc9-80bd83fd1e8c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <쿠프랭의 무덤> Toccata 의 헤스케스 관현악 편곡"
+ },
+ {
+  "pieceId": 862,
+  "title": "Berceuse sur le nom de Gabriel Fauré",
+  "mbids": [
+   "02e8940d-9159-4a65-b12f-9e028df7153f"
+  ],
+  "mapping": "work",
+  "key": "ravel-m074",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 884,
+  "title": "Petite symphonie à cordes",
+  "mbids": [
+   "053e26a7-2673-4db3-80b4-d6a4b39bead5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 현악 4중주를 바르샤이가 현악 합주로 편곡한 Petite symphonie"
+ },
+ {
+  "pieceId": 898,
+  "title": "Introduction et Allegro",
+  "mbids": [
+   "06b2ee2a-6e72-401f-8aea-e2be9017d85e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <서주와 알레그로> 피아노 두 대 판(편곡자 미상, 위키 목록에 없음)"
+ },
+ {
+  "pieceId": 930,
+  "title": "Trio avec piano: I. Modéré",
+  "mbids": [
+   "09d8a584-fe31-441b-8deb-31de16e63eee"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 피아노 3중주 I 의 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 954,
+  "title": "Five o'clock foxtrot",
+  "mbids": [
+   "0d25a326-d2ef-4377-bd1b-ff2024072ec1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: Five O'Clock Foxtrot(<어린이와 마법>) 의 피아노 독주 편곡"
+ },
+ {
+  "pieceId": 955,
+  "title": "Alyssa",
+  "mbids": [
+   "0d4163f9-ef49-4c8c-8a1a-4728c6a69cda"
+  ],
+  "mapping": "work",
+  "key": "ravel-m038",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 991,
+  "title": "Cinq Mélodies populaires grecques",
+  "mbids": [
+   "10eecf9e-83ff-4a8b-ab67-d11f915badf7"
+  ],
+  "mapping": "work",
+  "key": "ravel-ma-greek",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1009,
+  "title": "Habanera",
+  "mbids": [
+   "12ea3236-b7c4-4103-bd36-128d98411c2d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 보칼리즈 연습곡(M. 51)의 바즐레르 첼로 편곡"
+ },
+ {
+  "pieceId": 1029,
+  "title": "L'Heure espagnole",
+  "mbids": [
+   "15330825-712a-40c3-90c0-947e8aadcc33"
+  ],
+  "mapping": "work",
+  "key": "ravel-m052",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1046,
+  "title": "Schéhérazade: Trois poèmes pour chant et orchestre",
+  "mbids": [
+   "175894b9-1fbf-4851-becf-7c18ab4e49a5"
+  ],
+  "mapping": "work",
+  "key": "ravel-m041",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1060,
+  "title": "Piano Concerto in G major, M. 83",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "manual 233(피아노 협주곡 G장조, M. 83)과 같은 작품. MBID 없음, seed part 3개가 233 의 part 와 같은 MBID"
+ },
+ {
+  "pieceId": 1062,
+  "title": "Ma mère l'Oye (Le Jardin féerique)",
+  "mbids": [
+   "193ab3a0-826e-4326-9acb-1d43394398a9"
+  ],
+  "mapping": "part",
+  "key": "ravel-m060a",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "제목으로 맞춤: MB 'Ma mère l'Oye (Le Jardin féerique)'(판 불명)를 관현악 모음곡 M. 60a V 로 봄"
+ },
+ {
+  "pieceId": 1072,
+  "title": "L'Heure Espagnole : Scène XVIII (Ramiro, Gonzalve)",
+  "mbids": [
+   "1a7f6c01-c3a6-4493-9181-b1c33241ce56"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 1081,
+  "title": "Myrrha",
+  "mbids": [
+   "1b0e5c05-bf8a-43da-9c36-ea72c115858b"
+  ],
+  "mapping": "work",
+  "key": "ravel-m029",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1109,
+  "title": "Ouverture de féérie \"Shéhérazade\"",
+  "mbids": [
+   "1e5b0a86-f039-4afb-b30c-50cc936bed30"
+  ],
+  "mapping": "work",
+  "key": "ravel-m017",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1141,
+  "title": "Miroirs: Une barque sur l’océan",
+  "mbids": [
+   "218bd634-273d-327e-9a17-c864963b802a"
+  ],
+  "mapping": "work",
+  "key": "ravel-m043a",
+  "path": null,
+  "reason": null,
+  "note": "MB: Miroirs III 의 라벨 자신 관현악 편곡(orchestrator Ravel) = M. 43a"
+ },
+ {
+  "pieceId": 1156,
+  "title": "Noctuelles",
+  "mbids": [
+   "232f3e5e-5d20-4bf8-9c7e-b1dea01a8801"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <거울> I. Noctuelles 의 스터키 관현악 편곡"
+ },
+ {
+  "pieceId": 1190,
+  "title": "Le tombeau de Couperin: Fugue. Allegro moderato",
+  "mbids": [
+   "27a49146-db5a-4a40-8473-231cf3c4ebe3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <쿠프랭의 무덤> Fugue 의 코치시 관현악 편곡"
+ },
+ {
+  "pieceId": 1214,
+  "title": "L'Heure Espagnole : Scène XIII (les mêmes, Ramiro)",
+  "mbids": [
+   "2b702d09-4cab-45a5-9ea7-d7f6f54214ed"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 1243,
+  "title": "Violin Sonata no. 2 in G",
+  "mbids": [
+   "2e8aeb65-cf0a-4678-b5a7-034fc6b9b5ad"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 바이올린 소나타 2번의 마레스 관현악 편곡"
+ },
+ {
+  "pieceId": 1248,
+  "title": "Un grand sommeil noir",
+  "mbids": [
+   "2ed316ed-cac5-4a13-ac52-744a323a12f7"
+  ],
+  "mapping": "work",
+  "key": "ravel-m006",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1251,
+  "title": "Matinée de Provence",
+  "mbids": [
+   "2f59be81-f852-40ef-b660-a3b044a32d4c"
+  ],
+  "mapping": "work",
+  "key": "ravel-m037",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1252,
+  "title": "Rhapsodie Espagnole : Feria",
+  "mbids": [
+   "2f990906-b5d8-447f-a4da-32e4a28fc18d"
+  ],
+  "mapping": "part",
+  "key": "ravel-m054",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "MB 병합: 2f990906 -> e1d22d8c(관현악 IV. Feria)"
+ },
+ {
+  "pieceId": 1254,
+  "title": "Gaspard de la nuit",
+  "mbids": [
+   "2fce1e89-1685-43f7-97b2-5d0dd8c6fb70"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <밤의 가스파르> 의 마리우스 콩스탕 관현악 편곡"
+ },
+ {
+  "pieceId": 1258,
+  "title": "La parade",
+  "mbids": [
+   "30908006-5a11-4e20-a193-8a4d2a4ec8f3"
+  ],
+  "mapping": "work",
+  "key": "ravel-m011",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1295,
+  "title": "L'Heure Espagnole : Scène VII (Inigo, Concepcion)",
+  "mbids": [
+   "3642fd1b-9091-470c-8a13-c091a761c6d1"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 1313,
+  "title": "L'Heure Espagnole : Scène XXI (tous)",
+  "mbids": [
+   "3888ffb2-bffb-48a4-8dc6-cd129e6ef7a2"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   23
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음). MB 가 이 장면을 둘로 나눠 앞쪽 part 에 이음"
+ },
+ {
+  "pieceId": 1341,
+  "title": "Sonatine en trio",
+  "mbids": [
+   "3b6af88a-ebfe-4180-80c4-762ec30cf777"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 소나티네(M. 40)를 3중주로 편곡한 Sonatine en trio"
+ },
+ {
+  "pieceId": 1348,
+  "title": "16.03.48",
+  "mbids": [
+   "3c1d471a-05fd-380d-a3ff-c53e62af09cd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB: 피아노 협주곡 G장조에 바탕한 노래"
+ },
+ {
+  "pieceId": 1351,
+  "title": "L'Heure Espagnole : Scène VI (Concepcion, Gonzalve)",
+  "mbids": [
+   "3c81a6fe-fb47-4726-b4e3-0ecd5d893e2e"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 1367,
+  "title": "L'Heure Espagnole : Scène II (les mêmes, Concepcion)",
+  "mbids": [
+   "3eb4bb27-5564-4af4-80b0-cbdc5f0ab4da"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 1374,
+  "title": "Alcyone",
+  "mbids": [
+   "3f83d3da-1763-4a58-942e-02c4d4310c41"
+  ],
+  "mapping": "work",
+  "key": "ravel-m034",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1402,
+  "title": "Ballade de la reine morte d'aimer",
+  "mbids": [
+   "427eb04a-9bf9-409f-aebe-5391084e63c6"
+  ],
+  "mapping": "work",
+  "key": "ravel-m004",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1437,
+  "title": "Chants populaires",
+  "mbids": [
+   "47d1344b-8c9f-4e12-a496-f9e63de693bf"
+  ],
+  "mapping": "work",
+  "key": "ravel-ma17",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1439,
+  "title": "Kaddish",
+  "mbids": [
+   "47f2ecd0-3ead-41ad-8e37-8f0f719b620c"
+  ],
+  "mapping": "part",
+  "key": "ravel-ma22",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "제목으로 맞춤: MB 'Kaddish'(관계 없음) = <두 개의 히브리 노래> 1번"
+ },
+ {
+  "pieceId": 1447,
+  "title": "Rhapsodie Espagnole : Malagueña",
+  "mbids": [
+   "491e9f5a-2e04-45a8-b901-3939c8e1a74b"
+  ],
+  "mapping": "part",
+  "key": "ravel-m054",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "MB 병합: 491e9f5a -> d38881fd(관현악 II. Malagueña)"
+ },
+ {
+  "pieceId": 1477,
+  "title": "Rêves",
+  "mbids": [
+   "4c8fea26-72ca-4bcc-b117-1c412e6971cc"
+  ],
+  "mapping": "work",
+  "key": "ravel-m079",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1478,
+  "title": "Chansons madécasses, M. 78",
+  "mbids": [
+   "4cb5656c-b5c6-464b-bf16-9428f3ed1fe1"
+  ],
+  "mapping": "work",
+  "key": "ravel-m078",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1503,
+  "title": "Histoires naturelles",
+  "mbids": [
+   "5008b20d-548e-4bcc-b300-0e3d39ccfefe"
+  ],
+  "mapping": "work",
+  "key": "ravel-m050",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1525,
+  "title": "Antar",
+  "mbids": [
+   "52784528-47d6-4fce-ba0e-59cee63e3a71"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 림스키코르사코프 <안타르> 를 라벨이 고쳐 쓴 부수음악(M. A15, 남의 작품 편곡)"
+ },
+ {
+  "pieceId": 1529,
+  "title": "Ma mère l'Oye: V. Le Jardin féerique",
+  "mbids": [
+   "5360dbd5-8697-4591-9b66-b6392e51c154"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <어미 거위> V. Le Jardin féerique 의 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 1538,
+  "title": "La Valse (extrait)",
+  "mbids": [
+   "54ad8042-df92-4456-a95e-50f9eaad0e94"
+  ],
+  "mapping": "work",
+  "key": "ravel-m072",
+  "path": null,
+  "reason": null,
+  "note": "제목으로 맞춤: MB 'La Valse (extrait)'(관계 없음)를 <라 발스> M. 72 로 봄"
+ },
+ {
+  "pieceId": 1556,
+  "title": "Si morne !",
+  "mbids": [
+   "56c4cf0e-7de5-4ad1-a90c-7cc9e4a83240"
+  ],
+  "mapping": "work",
+  "key": "ravel-m016",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1558,
+  "title": "Les bayadères",
+  "mbids": [
+   "57422137-ac4f-4d39-849b-a7f1d41de999"
+  ],
+  "mapping": "work",
+  "key": "ravel-m025",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1585,
+  "title": "Sonata in G major: II. Blues",
+  "mbids": [
+   "5b35903a-9862-42e2-af21-1fd62c7fab12"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 바이올린 소나타 2번 II. Blues 의 해버런 현악 4중주 편곡"
+ },
+ {
+  "pieceId": 1673,
+  "title": "Cocktail-Bolero",
+  "mbids": [
+   "671b61ce-64d5-45c4-961e-4060a72218a0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB: <볼레로> 에 바탕한 노래(Cocktail-Bolero)"
+ },
+ {
+  "pieceId": 1711,
+  "title": "L’aurore",
+  "mbids": [
+   "6c669ee4-3149-4fe5-8026-b786dd3edd63"
+  ],
+  "mapping": "work",
+  "key": "ravel-m045",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1714,
+  "title": "L'Heure Espagnole : Scène XX (les mêmes, Torquemada)",
+  "mbids": [
+   "6c9e8958-d44a-48cf-8b53-5d1301688f88"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   22
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 1717,
+  "title": "Sur l'herbe",
+  "mbids": [
+   "6d1f1621-0078-4b2b-940e-e19a72f6ad10"
+  ],
+  "mapping": "work",
+  "key": "ravel-m053",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1734,
+  "title": "Ravel's Pavane pour une infante défunte",
+  "mbids": [
+   "6f0a90b9-116a-4025-b24d-0805a3871234"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB: <죽은 왕녀를 위한 파반느> 윌리엄 오빗 판(전자음악)"
+ },
+ {
+  "pieceId": 1762,
+  "title": "L'Heure Espagnole : Scène XIX (Inigo, Gonzalve)",
+  "mbids": [
+   "71eee024-5fa2-40f1-a56c-dbabf254d908"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   20
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음). MB 가 이 장면을 둘로 나눠 앞쪽 part 에 이음"
+ },
+ {
+  "pieceId": 1766,
+  "title": "L'Heure Espagnole : Scène V (les mêmes, Ramiro)",
+  "mbids": [
+   "730aa21e-207e-4d00-9a69-5bd669b67116"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 1774,
+  "title": "Never Say Goodbye",
+  "mbids": [
+   "73c99b11-50b0-4742-a19b-6f00c3689785"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB: 작사 Pam Sheyne 의 팝 노래"
+ },
+ {
+  "pieceId": 1815,
+  "title": "Oiseaux tristes",
+  "mbids": [
+   "775b24bd-3308-4c4f-81dd-596f88b4371b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <거울> II. Oiseaux tristes 의 매슈스 관현악 편곡"
+ },
+ {
+  "pieceId": 1835,
+  "title": "Trio avec piano: III. Passacaille. Très large",
+  "mbids": [
+   "79a54041-b274-438d-bccc-ed1e50b69286"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 피아노 3중주 III 의 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 1843,
+  "title": "The Dead Princess",
+  "mbids": [
+   "7ac47c01-869e-3c18-82ee-c48b5cb4ccc6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB: <죽은 왕녀를 위한 파반느> 에 바탕한 노래"
+ },
+ {
+  "pieceId": 1897,
+  "title": "Toi, le coeur de la rose",
+  "mbids": [
+   "81352018-97f6-4fd9-93ec-3927a63e32ee"
+  ],
+  "mapping": "part",
+  "key": "ravel-m071",
+  "path": [
+   1,
+   12
+  ],
+  "reason": null,
+  "note": "제목으로 맞춤: MB 'Toi, le coeur de la rose'(관계 없음) = <어린이와 마법> 1부 12번"
+ },
+ {
+  "pieceId": 1900,
+  "title": "Miroirs",
+  "mbids": [
+   "8192e0b8-156a-4c03-966c-1262468c05c3"
+  ],
+  "mapping": "work",
+  "key": "ravel-m043",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1901,
+  "title": "L'Heure Espagnole : Scène XI (Concepcion, Ramiro)",
+  "mbids": [
+   "81d17772-5529-4bf3-8612-262c45feeb08"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 1914,
+  "title": "Rapsodie Espagnole, KSS 33",
+  "mbids": [
+   "82f512f7-92df-48c9-9b1c-aa0a4564f657"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 소랍지의 <스페인 광시곡> 피아노 독주 편곡(KSS 33)"
+ },
+ {
+  "pieceId": 1922,
+  "title": "Tripatos",
+  "mbids": [
+   "83ba55f9-7833-4e84-b589-e2390e1b466f"
+  ],
+  "mapping": "work",
+  "key": "ravel-ma13",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1980,
+  "title": "Manteau de fleurs",
+  "mbids": [
+   "8a4341b9-4fe2-41d8-8be2-98e7644732e5"
+  ],
+  "mapping": "work",
+  "key": "ravel-m039",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1993,
+  "title": "Rhapsodie Espagnole : Habanera",
+  "mbids": [
+   "8c5ec676-b3d8-4086-a0ff-f67c2c5f04e7"
+  ],
+  "mapping": "part",
+  "key": "ravel-m054",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "MB 병합: 8c5ec676 -> 29dcb25b(관현악 III. Habanera)"
+ },
+ {
+  "pieceId": 2041,
+  "title": "Tout est lumière",
+  "mbids": [
+   "90d863c9-5191-4dfe-a785-706b04b7141f"
+  ],
+  "mapping": "work",
+  "key": "ravel-m028",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2044,
+  "title": "L'Heure Espagnole : Scène X (Ramiro, Inigo)",
+  "mbids": [
+   "913c7732-80ef-43e9-af8f-ccad920a15be"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 2050,
+  "title": "Danse gracieuse de Daphnis, suite",
+  "mbids": [
+   "921ec4f4-f1b8-4647-9a4a-f588ad77ad88"
+  ],
+  "mapping": "work",
+  "key": "ravel-m057c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2078,
+  "title": "Concerto en sol (Adagio assai)",
+  "mbids": [
+   "94d3ceb2-b356-4bfa-9987-2f2603fa650e"
+  ],
+  "mapping": "part",
+  "key": "ravel-m083",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "제목으로 맞춤: MB 'Concerto en sol (Adagio assai)'(관계 없음). 기존 manual part 38494 와 같은 악장"
+ },
+ {
+  "pieceId": 2113,
+  "title": "L'Heure Espagnole : Introduction",
+  "mbids": [
+   "985c7f49-026d-4a33-b6c8-4f683787a077"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 2158,
+  "title": "Deux épigrammes de Clément Marot",
+  "mbids": [
+   "9efb2172-1b7f-4605-9813-f792d4d0c4ed"
+  ],
+  "mapping": "work",
+  "key": "ravel-m010-021",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2180,
+  "title": "Trio avec piano: II. Pantoum. Assez vif",
+  "mbids": [
+   "a260a259-1462-4b12-af16-11b4e4b6337d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 피아노 3중주 II 의 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 2213,
+  "title": "Les grands vents venus d'outre-mer",
+  "mbids": [
+   "a55b6c15-75e3-4afb-ad44-9dcdbaf4f6eb"
+  ],
+  "mapping": "work",
+  "key": "ravel-m048",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2222,
+  "title": "Soupir",
+  "mbids": [
+   "a5f7ea30-333d-4acd-b16f-f50c95e47f79"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 말라르메 시 3편 I. Soupir 의 고트발트 합창 편곡"
+ },
+ {
+  "pieceId": 2225,
+  "title": "La vida breve: Acto II. Danza española",
+  "mbids": [
+   "a6630dad-fec7-4585-b767-a79606684d10"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "other_composer",
+  "note": "MB: 파야 <허무한 인생> 2막 스페인 춤의 장드롱 첼로 편곡"
+ },
+ {
+  "pieceId": 2230,
+  "title": "L'Heure Espagnole : Scène IV (Concepcion, Gonzalve)",
+  "mbids": [
+   "a714f9f4-8f23-4047-92f3-0e4675d05046"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 2325,
+  "title": "Noël des jouets",
+  "mbids": [
+   "b2a0dcd8-b4bd-4b4d-938f-2fe084b5d2c7"
+  ],
+  "mapping": "work",
+  "key": "ravel-m047",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2347,
+  "title": "L'Heure Espagnole : Scène I (Ramiro, Torquemada)",
+  "mbids": [
+   "b4b0b78a-cdeb-4684-a0d7-6cc92076ae3c"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 2381,
+  "title": "Wenn ich dich seh (Pavane)",
+  "mbids": [
+   "b928f835-7bc0-4a6a-85d7-ee057c17a358"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB: <죽은 왕녀를 위한 파반느> 에 가사를 붙인 독일어 노래"
+ },
+ {
+  "pieceId": 2383,
+  "title": "3 excerpts from Daphnis et Chloé : II. Fragments symphoniques : Nocturne, Interlude & Danse guerrière",
+  "mbids": [
+   "b944c03e-5cd8-4aef-9b7a-5de21f21e3b8"
+  ],
+  "mapping": "part",
+  "key": "ravel-m057c",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "제목으로 맞춤: MB '3 excerpts from Daphnis et Chloé' II = M. 57c 2번"
+ },
+ {
+  "pieceId": 2400,
+  "title": "Prélude",
+  "mbids": [
+   "bb4060b4-4e06-4fbd-b684-6d70d4d0922a"
+  ],
+  "mapping": "work",
+  "key": "ravel-m065",
+  "path": null,
+  "reason": null,
+  "note": "제목으로 맞춤: MB 'Prélude'(관계 없음)를 라벨의 낱곡 전주곡 M. 65 로 봄"
+ },
+ {
+  "pieceId": 2404,
+  "title": "Waltz No.2",
+  "mbids": [
+   "bbbff2c4-fa5d-3cc0-b638-995eb579d3a4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "MB 에 관계·주석 없음. 라벨에 'Waltz No. 2' 라는 작품 없음(다른 작곡가 곡 오기 의심)"
+ },
+ {
+  "pieceId": 2417,
+  "title": "L'Heure Espagnole : Scène IX (Inigo)",
+  "mbids": [
+   "bc94451b-4c90-40ae-ad89-9e055fa5c72c"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 2429,
+  "title": "Ma mère l'Oye: III. Laideronnette, impératrice des pagodes",
+  "mbids": [
+   "bd4f6d2d-5b27-4b9a-9992-43780578356f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <어미 거위> III. Laideronnette 의 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 2430,
+  "title": "Sérénade grotesque",
+  "mbids": [
+   "bd554f7f-d819-3b76-9104-9c5d734499d9"
+  ],
+  "mapping": "work",
+  "key": "ravel-m005",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2463,
+  "title": "L'Heure Espagnole : Scène XII (Inigo, Concepcion)",
+  "mbids": [
+   "c158d6a0-5977-4aaf-9947-7c7f6773e55e"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 2494,
+  "title": "3 excerpts from Daphnis et Chloé : I. Danse gracieuse et légère de Daphnis",
+  "mbids": [
+   "c518b0d0-61bc-4787-a00f-8eafdd1d3fc5"
+  ],
+  "mapping": "part",
+  "key": "ravel-m057c",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "제목으로 맞춤: MB '3 excerpts from Daphnis et Chloé' I = M. 57c 1번"
+ },
+ {
+  "pieceId": 2497,
+  "title": "Quatuor à cordes (Vif et agité)",
+  "mbids": [
+   "c5a27212-a704-41b2-ae65-485ea7b9b3b0"
+  ],
+  "mapping": "part",
+  "key": "ravel-m035",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "제목으로 맞춤: MB 'Quatuor à cordes (Vif et agité)'(관계 없음)"
+ },
+ {
+  "pieceId": 2526,
+  "title": "L'Heure Espagnole : Scène XVI (Ramiro)",
+  "mbids": [
+   "c94133aa-4125-4f03-b242-d5ac11b0440d"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 2527,
+  "title": "Le Tombeau de Couperin: Fugue",
+  "mbids": [
+   "c94d6fad-f4fc-4605-bdea-738e354906fc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <쿠프랭의 무덤> Fugue 의 헤스케스 관현악 편곡"
+ },
+ {
+  "pieceId": 2553,
+  "title": "Valse in D major",
+  "mbids": [
+   "cc20ab35-d5bb-4a5d-a394-d62dd9fceb1b"
+  ],
+  "mapping": "work",
+  "key": "ravel-m014",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2556,
+  "title": "L'Heure Espagnole : Scène XV (Gonzalve)",
+  "mbids": [
+   "cc5a8d79-d21b-4f70-abfb-1d38ef3f40f6"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 2558,
+  "title": "Don Quichotte à Dulcinée",
+  "mbids": [
+   "cc71ea45-124d-481f-8d07-6881be6bc680"
+  ],
+  "mapping": "work",
+  "key": "ravel-m084",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2610,
+  "title": "Le tombeau de Couperin: Toccata. Vif",
+  "mbids": [
+   "d2979816-65f4-4d09-96cb-c1b93819368b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <쿠프랭의 무덤> Toccata 의 코치시 관현악 편곡"
+ },
+ {
+  "pieceId": 2631,
+  "title": "À la manière de…",
+  "mbids": [
+   "d43c0ee5-f6cd-40ee-bdae-bdf6a85b91ed"
+  ],
+  "mapping": "work",
+  "key": "ravel-m063",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2637,
+  "title": "Sonatine pour piano",
+  "mbids": [
+   "d53a0cf8-6edb-40e9-ae9a-3870d4aeec8e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 소나티네(M. 40)의 다비드 발테르 색소폰·피아노 편곡"
+ },
+ {
+  "pieceId": 2642,
+  "title": "L'Heure Espagnole : Scène XIV (Concepcion, Gonzalve)",
+  "mbids": [
+   "d5e05a85-f955-40f0-94bf-7fa95ca38a43"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 2649,
+  "title": "Le Parti d’en rire",
+  "mbids": [
+   "d6b2d394-fcc7-42dc-9a36-9f44591aaae8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB: <볼레로> 의 다른 판 샹송"
+ },
+ {
+  "pieceId": 2682,
+  "title": "Ronsard à son âme",
+  "mbids": [
+   "dba036d8-d893-4008-aee9-8c0b9fdfef94"
+  ],
+  "mapping": "work",
+  "key": "ravel-m075",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2692,
+  "title": "Miroirs: La vallée des cloches",
+  "mbids": [
+   "dcec9591-326c-4f72-93c6-8bbc1776052c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <거울> V. La vallée des cloches 의 그레인저 편곡"
+ },
+ {
+  "pieceId": 2802,
+  "title": "Daphnis and Chloe (The Second Suite)",
+  "mbids": [
+   "e7895bb1-2451-4fe4-acf7-0d613a09e36d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <다프니스와 클로에> 모음곡 2번의 스넬 브라스 밴드 편곡"
+ },
+ {
+  "pieceId": 2811,
+  "title": "Daphnis et Chloé (Suite for Piano)",
+  "mbids": [
+   "e89e0454-3f21-49da-9b00-df64ff0d78a1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <다프니스와 클로에> 의 페트라우스카이테 피아노 모음곡 편곡(9곡)"
+ },
+ {
+  "pieceId": 2832,
+  "title": "3 excerpts from Daphnis et Chloé : III. Scène de Daphnis et Chloé",
+  "mbids": [
+   "eaba2236-584b-41c3-b954-f90919f5400f"
+  ],
+  "mapping": "part",
+  "key": "ravel-m057c",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "제목으로 맞춤: MB '3 excerpts from Daphnis et Chloé' III = M. 57c 3번"
+ },
+ {
+  "pieceId": 2849,
+  "title": "Gaspard de la nuit (Trois poèmes pour piano d'après Aloysius Bertrand)",
+  "mbids": [
+   "ecccf74c-4bd0-402c-8b7d-e3a4dd47ae08"
+  ],
+  "mapping": "work",
+  "key": "ravel-m055",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2859,
+  "title": "Adagio assai from Piano Concerto in G major",
+  "mbids": [
+   "ede60d80-2c69-4d06-bcfc-c2545b59769b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: 피아노 협주곡 G장조 II 의 윌리엄스 성악·피아노 편곡"
+ },
+ {
+  "pieceId": 2860,
+  "title": "Daphnis et Chloé Suite no. 2",
+  "mbids": [
+   "edfda1d5-e78b-4762-90cc-330443f919ab"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB: <다프니스와 클로에> 모음곡 2번의 가르방 두 대 피아노 편곡"
+ },
+ {
+  "pieceId": 2865,
+  "title": "Berceuse sur le nom de Ravel",
+  "mbids": [
+   "ee4e83ee-7d0d-4f57-b716-cea0009af462"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "MB 에 관계·주석 없음. 라벨에 'Berceuse sur le nom de Ravel' 없음(M. 74 오기 의심)"
+ },
+ {
+  "pieceId": 2867,
+  "title": "L'Heure Espagnole : Scène VIII (les mêmes, Ramiro)",
+  "mbids": [
+   "ee63c895-3611-4eb7-835b-ee2e641a2f83"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 2872,
+  "title": "Image fantôme - Pavane pour une infante défunte",
+  "mbids": [
+   "eef90489-69b7-36a7-b2d8-a599d5798845"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB: <죽은 왕녀를 위한 파반느> 에 에르베 기베르 가사를 붙인 노래"
+ },
+ {
+  "pieceId": 2889,
+  "title": "Rhapsodie Espagnole : Prélude à la nuit",
+  "mbids": [
+   "f13c938d-14b5-43a1-9274-d47e6671b1b2"
+  ],
+  "mapping": "part",
+  "key": "ravel-m054",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "MB 병합: f13c938d -> 115ca3b9(관현악 I. Prélude à la nuit)"
+ },
+ {
+  "pieceId": 2913,
+  "title": "Boléro Fox-Trot",
+  "mbids": [
+   "f382eadf-7b14-34ea-a471-048c672c481d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB: <볼레로> 의 폭스트롯 댄스 밴드 편곡"
+ },
+ {
+  "pieceId": 2939,
+  "title": "Chanson du rouet",
+  "mbids": [
+   "f65943be-816f-4c84-bcea-40551da01d6b"
+  ],
+  "mapping": "work",
+  "key": "ravel-m015",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2972,
+  "title": "L'Heure Espagnole : Scène XVII (Concepcion, Gonzalve)",
+  "mbids": [
+   "fa40f2c5-54f2-4fe3-bb1f-e1339ad734cf"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 3012,
+  "title": "L'Heure Espagnole : Scène III (Concepcion, Ramiro)",
+  "mbids": [
+   "feaef1b4-c466-4e90-9b2c-64414bc92de1"
+  ],
+  "mapping": "part",
+  "key": "ravel-m052",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "제목(장면 번호·등장인물)으로 맞춤: MB 의 따로 떨어진 장면 work(관계 없음)"
+ },
+ {
+  "pieceId": 7491,
+  "title": "Boléro",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "manual 230(볼레로, M. 81)과 같은 작품. MBID 없음"
+ },
+ {
+  "pieceId": 7571,
+  "title": "Daphnis et Chloé, Suite no. 2",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "manual 234(다프니스와 클로에 모음곡 2번, M. 57b)와 같은 작품. MBID 없음"
+ },
+ {
+  "pieceId": 7717,
+  "title": "Pavane",
+  "mbids": [
+   "cb7e7bb7-92aa-4ae2-8942-02e1632b4c69"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB: <죽은 왕녀를 위한 파반느> 에 바탕한 노래(Pavane)"
+ },
+ {
+  "pieceId": 8174,
+  "title": "Five O’Clock Foxtrot",
+  "mbids": [
+   "1e9bf3d9-829c-4c48-a9a6-aded4900471e"
+  ],
+  "mapping": "part",
+  "key": "ravel-m071",
+  "path": [
+   1,
+   6
+  ],
+  "reason": null,
+  "note": "제목으로 맞춤: MB 'Five O'Clock Foxtrot' = <어린이와 마법> 1부 찻주전자·찻잔 폭스트롯(«How's your mug?»)"
+ },
+ {
+  "pieceId": 10820,
+  "title": "Sainte",
+  "mbids": [
+   "de15aaf3-0a36-46c1-9c3d-19b55708c144"
+  ],
+  "mapping": "work",
+  "key": "ravel-m009",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

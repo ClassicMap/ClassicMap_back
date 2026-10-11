@@ -1,0 +1,3052 @@
+[
+ {
+  "pieceId": 1643,
+  "title": "United Nations March",
+  "mbids": [
+   "62a29e70-c66e-4fa9-a478-e36c595ca2bc"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op033",
+  "path": null,
+  "reason": "arrangement",
+  "note": "\"카운터플랜의 노래\"를 바꾼 <국제 연합 행진곡>(스토콥스키 관현악)"
+ },
+ {
+  "pieceId": 2346,
+  "title": "Symphony no. 7 in C major, op. 60 \"Leningrad\"",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": "shostakovich-op060",
+  "path": null,
+  "reason": "duplicate",
+  "note": "운영 manual 318 과 같은 교향곡 7번(MBID 없음)"
+ },
+ {
+  "pieceId": 2435,
+  "title": "Symphony no. 14, op. 135",
+  "mbids": [
+   "bdcc3bcc-c3ce-4e08-a66f-de96ecf7a936"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op135",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2479,
+  "title": "Symphony no. 5 in D minor, op. 47",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": "shostakovich-op047",
+  "path": null,
+  "reason": "duplicate",
+  "note": "운영 manual 317 과 같은 교향곡 5번(MBID 없음)"
+ },
+ {
+  "pieceId": 12012,
+  "title": "Падение Берлина, op. 82",
+  "mbids": [
+   "04dda58e-6a8e-4218-b3d4-39c86c0f7831"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op082",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12013,
+  "title": "Игроки",
+  "mbids": [
+   "06ba6a33-1ddc-4ea3-915c-eba6370c85b0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "오페라 <도박꾼들> — 1막 중간까지 쓰고 그만둔 미완성"
+ },
+ {
+  "pieceId": 12017,
+  "title": "Выстрел, op. 24",
+  "mbids": [
+   "0933c0bc-7b64-4521-af00-1668914dbddc"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op024",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12030,
+  "title": "Der Zukunft entgegen",
+  "mbids": [
+   "37a5b332-a8be-4463-8b24-7c24907b98e2"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op033",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "\"카운터플랜의 노래\" 독일어 판(Der Zukunft entgegen, 코르닐로프 가사)"
+ },
+ {
+  "pieceId": 12034,
+  "title": "Москва, Черёмушки, op. 105",
+  "mbids": [
+   "41cc50ef-631e-42e5-ae4c-7bdf5e16cff4"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op105",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12036,
+  "title": "Встречный, op. 33",
+  "mbids": [
+   "49aa34b8-e7ef-4b16-81ef-7b23f0602583"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op033",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12042,
+  "title": "Spanish dance (The Gadfly, op. 97)",
+  "mbids": [
+   "62f28539-f926-30e1-87ed-920ab088ea8d"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op097",
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<등에> 영화음악 안의 \"스페인 춤\" — MB 영화음악 part 목록에 없음"
+ },
+ {
+  "pieceId": 12045,
+  "title": "Выборгская сторона, op. 50",
+  "mbids": [
+   "646dc30e-77e8-4e3a-8b60-19e49cea783c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "Op. 50 <비보르크 쪽> 영화음악 — 위키: 원고 소실"
+ },
+ {
+  "pieceId": 12048,
+  "title": "Великий гражданин, op. 55",
+  "mbids": [
+   "6d28f631-1eed-464d-92cd-89bb65f1ed6c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "Op. 55 <위대한 시민> 2부 영화음악 — 위키: 대부분 소실"
+ },
+ {
+  "pieceId": 12056,
+  "title": "Над Родиной нашей солнце сияет, соч. 90",
+  "mbids": [
+   "85d0a84b-00be-41bf-b77b-8f81c4392e78"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op090",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12059,
+  "title": "Приключения Корзинкиной, op. 59",
+  "mbids": [
+   "967413b7-0511-48d0-a65f-0ea8807e3cef"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op059",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12063,
+  "title": "Piano Sonata no. 1, op. 12",
+  "mbids": [
+   "a134007d-98df-4896-9411-dc68dc83d2d4"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op012",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12064,
+  "title": "4 романса на стихи А. С. Пушкина, op. 46",
+  "mbids": [
+   "a5219914-bd6c-4ff9-9cec-6f212ef16e78"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op046",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12075,
+  "title": "Золотой век, op. 22",
+  "mbids": [
+   "b98429b0-57a9-4a5e-a5c6-48dd5bc015ff"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op022",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12077,
+  "title": "Dances of the Dolls",
+  "mbids": [
+   "bc36e47e-c92f-47b3-a2ff-2da1352dda11"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-dances-dolls",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12083,
+  "title": "The Execution of Stepan Razin, op. 119",
+  "mbids": [
+   "cb2401e9-1a3c-4c8a-ac8b-8654479d17d8"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op119",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12086,
+  "title": "Светлый ручей, op. 39",
+  "mbids": [
+   "ce983c9a-8696-456c-b199-b99b2311aeea"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op039",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12087,
+  "title": "Zoya Suite, op. 64a",
+  "mbids": [
+   "cea79199-f520-4baa-b2c8-72f2c1beb750"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op064a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12092,
+  "title": "Леди Макбет Мценского уезда, op. 29",
+  "mbids": [
+   "dd8a25e5-602f-4be5-9038-2ee178f8e2a6"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op029",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12100,
+  "title": "Большая молния",
+  "mbids": [
+   "f950a5a2-ec19-4c80-884a-7770aa5fbeec"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "희가극 <큰 번개> — 미완성"
+ },
+ {
+  "pieceId": 12103,
+  "title": "Ballet Suite no. 4 for Orchestra, op. 91f",
+  "mbids": [
+   "fe13f68a-f70d-434c-91bd-53c4df40d070"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-ballet-suite-4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12113,
+  "title": "Chamber Symphony in A-flat major, op. 118a",
+  "mbids": [
+   "26005658-7116-48da-b99a-51ad7541da11"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op118",
+  "path": null,
+  "reason": "arrangement",
+  "note": "현악 4중주 10번의 현악 합주 편곡 Op. 118a(바르샤이)"
+ },
+ {
+  "pieceId": 12115,
+  "title": "Violin Concerto no. 1 in A minor, op. 77 / 99",
+  "mbids": [
+   "11106b60-cc2a-4c62-a69d-428895080fcf"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op077",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12124,
+  "title": "Prelude, op. 87 no. 4",
+  "mbids": [
+   "00e0bfb1-7a2f-4372-b3e1-50583c72fe30"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op087",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 87 4번 전주곡 관현악 편곡(Maute)"
+ },
+ {
+  "pieceId": 12135,
+  "title": "Russian River, op. 66",
+  "mbids": [
+   "02acf372-59f2-4075-8a99-3068e940a830"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op066",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12140,
+  "title": "Spanish Songs, op. 100",
+  "mbids": [
+   "03800854-22b1-4ada-85c3-36409fadb5c6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "Op. 100 <스페인 노래> 스페인 민요 편곡 — 민요 편곡은 넣지 않음"
+ },
+ {
+  "pieceId": 12142,
+  "title": "March of the Soviet Militia, op. 139",
+  "mbids": [
+   "039c1816-627a-4af2-a6c9-ba46375b9724"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op139",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12146,
+  "title": "Unfinished Sonata for Violin and Piano: Moderato con moto",
+  "mbids": [
+   "04d20ef3-2d2d-485a-886c-d16172d1cee9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "1945년 바이올린 소나타, 1악장 제시부까지만 쓰고 그만둠"
+ },
+ {
+  "pieceId": 12148,
+  "title": "Funeral March in Memory of the Fallen Heroes of the Revolution",
+  "mbids": [
+   "055ecb8d-ff88-434c-a54e-e7b3c12e9e5e"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-funeral-march-1918",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12151,
+  "title": "Concerto for Piano, Trumpet and String Orchestra no. 1 in C minor, op. 35",
+  "mbids": [
+   "063c624b-62e1-471d-a905-1ef6eddbb46b"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op035",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12165,
+  "title": "Hamlet, op. 32",
+  "mbids": [
+   "086773d3-8c14-478b-9d24-7c0e984bc9d8"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op032",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12167,
+  "title": "Concertino for Two Pianos in A minor, op. 94",
+  "mbids": [
+   "089de324-4b96-323f-830f-23597b45a31f"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op094",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12193,
+  "title": "Ballet suite no. 1: Hurdy-Gurdy",
+  "mbids": [
+   "0c61852c-c106-4316-b6bb-26787c3355e9"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-wo-ballet-suite-1",
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 모음곡 1번 \"손풍금\" 첼로·피아노 편곡(아톱먄)"
+ },
+ {
+  "pieceId": 12195,
+  "title": "Suite for Two Pianos in F-sharp minor, op. 6",
+  "mbids": [
+   "0ca477ef-ea31-40d4-9e32-e97e47d9e153"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op006",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12201,
+  "title": "Prelude, op. 87 no. 18",
+  "mbids": [
+   "0d954108-3e6d-4d13-8c68-ae91035a0c43"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op087",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 87 18번 전주곡 관현악 편곡(Maute)"
+ },
+ {
+  "pieceId": 12212,
+  "title": "The Nose, op. 15",
+  "mbids": [
+   "0ed94355-78cf-47da-bfcc-0f82d5491455"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op015",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12219,
+  "title": "Five Days - Five Nights, op. 111",
+  "mbids": [
+   "0f953b80-b6fe-4829-aeba-0b4d9113e560"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op111",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12223,
+  "title": "Three Fugues for Piano",
+  "mbids": [
+   "103ccca9-3fbe-4a9c-a168-b99e6112787f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "<피아노를 위한 3개의 푸가> — 1922–23 <7개의 푸가>나 1934 <4개의 푸가> 가운데 일부로 보이나 확인 못 함"
+ },
+ {
+  "pieceId": 12245,
+  "title": "Symphony no. 13 in B-flat minor, op. 113 \"Babi Yar\"",
+  "mbids": [
+   "13100b0f-91dc-4277-93f4-510c59d29d59"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op113",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12255,
+  "title": "String Quartet no. 9 in E-flat major, op. 117",
+  "mbids": [
+   "14382ae2-8fa9-409d-bb12-a556ec9532b5"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op117",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12257,
+  "title": "Five Miniatures",
+  "mbids": [
+   "14823d48-e545-4e92-9f24-47c82ddbc74e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "아톱먄이 엮은 <5개의 미니어처>. 위키 목록에 없음"
+ },
+ {
+  "pieceId": 12261,
+  "title": "Nocturne (The Limpid Stream, op. 39)",
+  "mbids": [
+   "1596c052-4e3b-3823-b846-aa107b130201"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op039",
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<맑은 시냇물> 발레 안의 녹턴 — MB 에 발레 part 순서가 없어 part 를 만들지 않음"
+ },
+ {
+  "pieceId": 12269,
+  "title": "Three Piano Pieces",
+  "mbids": [
+   "163fb416-fd72-443a-baec-4a3d69d439d0"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-three-pieces-piano",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12272,
+  "title": "Scherzo for Orchestra in E-flat major, op. 7",
+  "mbids": [
+   "16a9d75c-0e96-46ac-a765-6d95cfbe16cb"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op007",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12279,
+  "title": "Suite nach Texten von Michelangelo Buonarroti, op. 145a",
+  "mbids": [
+   "17e6c749-438e-42c9-a364-f15aacb202b3"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op145a",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "미켈란젤로 모음곡 관현악 판의 독일어 번역 판(Sanderling/Lewin). 13097 이 원판"
+ },
+ {
+  "pieceId": 12281,
+  "title": "Suite from The Bolt",
+  "mbids": [
+   "17f5d3dc-a138-4449-ba6c-6095edeeff89"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op027a",
+  "path": null,
+  "reason": "duplicate",
+  "note": "작곡가가 1934년에 2곡을 뺀 6곡 판 <볼트> 모음곡. 8곡 판(12587)과 겹침"
+ },
+ {
+  "pieceId": 12283,
+  "title": "The Bolt, op. 27",
+  "mbids": [
+   "18238908-6f59-47f0-909f-b9e489c63edf"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op027",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12288,
+  "title": "Suite from The Unforgettable Year 1919, op. 89a",
+  "mbids": [
+   "18813117-0417-43f8-a89a-4c73f1bff39e"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op089a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12297,
+  "title": "String Quartet no. 6 in G major, op. 101",
+  "mbids": [
+   "1ab7dbad-f302-44c3-bb28-6e2322c1616b"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op101",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12312,
+  "title": "Murzilka",
+  "mbids": [
+   "1c534eb4-ad80-462d-83ce-3e83b32b1875"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-murzilka",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12314,
+  "title": "Rule, Britannia!, op. 28",
+  "mbids": [
+   "1c63dd3a-0592-403d-bb9a-14079bc71f50"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op028",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12318,
+  "title": "Pirogov, op. 76",
+  "mbids": [
+   "1d4fe49b-8448-4131-a964-0ca05890d25e"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op076",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12325,
+  "title": "Symphony no. 6 in B minor, op. 54",
+  "mbids": [
+   "1fc181b5-921a-4eb8-88bf-b35214e97b89"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op054",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12341,
+  "title": "Concerto No. 1 in C Minor, Op. 35 for Piano, Trumpet and Strings: I. Allegro moderato",
+  "mbids": [
+   "2261822f-5cd2-47dd-8d01-71542ed65702"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op035",
+  "path": null,
+  "reason": "arrangement",
+  "note": "피아노 협주곡 1번 1악장 편곡(Dokshizer·Merkelo)"
+ },
+ {
+  "pieceId": 12355,
+  "title": "Waltz for Piano Four Hands, op. 95",
+  "mbids": [
+   "23a2cbba-0e11-40f5-9498-1e30e0ab7e27"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op095",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<위대한 강들의 노래>(Op. 95)의 왈츠를 피아노 연탄으로 옮긴 판. 위키 목록에 없음"
+ },
+ {
+  "pieceId": 12359,
+  "title": "Prelude, op. 87 no. 2",
+  "mbids": [
+   "24375eb9-d913-4ba6-8982-c90b0d14ca72"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op087",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 87 2번 전주곡 관현악 편곡(Maute)"
+ },
+ {
+  "pieceId": 12372,
+  "title": "The Song of the Forests, op. 81",
+  "mbids": [
+   "2630ad30-e67a-42d1-b058-1958d482a039"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op081",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12375,
+  "title": "The Man With a Gun, op. 53",
+  "mbids": [
+   "26978196-8317-477f-9798-e1bde9da2087"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "Op. 53 <총을 든 사람> 영화음악 — 위키: 원래 총보 소실"
+ },
+ {
+  "pieceId": 12378,
+  "title": "Chamber-Symphony for strings, op. 49a",
+  "mbids": [
+   "2713976a-093a-4d77-a56d-afd3c8601ee9"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op049",
+  "path": null,
+  "reason": "arrangement",
+  "note": "현악 4중주 1번의 현악 합주 편곡 Op. 49a(바르샤이)"
+ },
+ {
+  "pieceId": 12392,
+  "title": "Suite for Variety Orchestra: VII. Waltz no. 2",
+  "mbids": [
+   "29d4a339-50cb-4571-9eed-08645e31d145"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-wo-variety-suite-1",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<버라이어티 오케스트라 모음곡> 왈츠 2번의 피아노 5중주 편곡(Jacqueline Thomas). 원곡 part 는 manual 319"
+ },
+ {
+  "pieceId": 12396,
+  "title": "Suite from the Music to the Film \"Alone\", op. 26",
+  "mbids": [
+   "2ad906e5-8aba-4502-bb29-0240468be99c"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op026",
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<홀로> 3곡 모음곡 — 위키 모음곡 목록에 없음(로제스트벤스키가 엮은 3곡 모음곡으로 보임)"
+ },
+ {
+  "pieceId": 12399,
+  "title": "Three Violin Duets",
+  "mbids": [
+   "2b1ee091-960a-4087-ade3-74c7dd8441ee"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "2대의 바이올린 2중주로 엮은 편곡(전주곡·가보트·왈츠). 위키 목록에 없음"
+ },
+ {
+  "pieceId": 12403,
+  "title": "Finale from Symphony no. 5",
+  "mbids": [
+   "2b8d6784-9f05-495f-8219-33f7ed39a7f5"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op047",
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 5번 피날레의 취주악 편곡(Righter)"
+ },
+ {
+  "pieceId": 12406,
+  "title": "Bagatelle for Piano in C major",
+  "mbids": [
+   "2c2a76f3-4740-4631-b812-74c85a12b85f"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-bagatelle",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12411,
+  "title": "Six Romances on Verses by British Poets, op. 140",
+  "mbids": [
+   "2c79b4c1-1b73-44bc-9d3f-df492c0e8fb7"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op140",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12423,
+  "title": "The Bedbug, op. 19",
+  "mbids": [
+   "2e7453f7-2b10-4ad6-a6a2-ca633667be92"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op019",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12434,
+  "title": "Hypothetically Murdered, op. 31",
+  "mbids": [
+   "313689ec-8d11-4889-ae62-81203be8f105"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op031",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12437,
+  "title": "The Gadfly: Tarantella",
+  "mbids": [
+   "3184cfeb-82c5-4c65-aa68-27781266f493"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-wo-tarantella",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<등에> 타란텔라 첼로·피아노 편곡(Tschelkauskas)"
+ },
+ {
+  "pieceId": 12438,
+  "title": "Ballet Suite for Flute, Oboe, Strings and Percussion",
+  "mbids": [
+   "31bc09eb-2edb-4438-828c-9b13c1d6979f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 모음곡 곡들을 플루트·오보에·현악·타악기로 옮긴 편곡(Utkin)"
+ },
+ {
+  "pieceId": 12446,
+  "title": "Chamber-Symphony for strings, op. 83a",
+  "mbids": [
+   "33762b25-f6d7-4e64-964b-7949be2340c4"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op083",
+  "path": null,
+  "reason": "arrangement",
+  "note": "현악 4중주 4번의 현악 합주 편곡 Op. 83a(바르샤이)"
+ },
+ {
+  "pieceId": 12459,
+  "title": "String Quartet no. 7 in F-sharp minor, op. 108: III. Allegro - Allegretto",
+  "mbids": [
+   "35f8afbe-af74-4d9c-bec6-45f248294f05"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op108",
+  "path": null,
+  "reason": "arrangement",
+  "note": "현악 4중주 7번 3악장의 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 12466,
+  "title": "Symphony no. 15 in A major, op. 141",
+  "mbids": [
+   "373c82af-cac6-498d-8f3d-84e28433f372"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op141",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12467,
+  "title": "Symphonic Movement",
+  "mbids": [
+   "374b0dc3-b34a-4191-8159-a9864355e874"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "교향곡 9번 첫 판 초고(MB 주석 \"Abandoned draft for Symphony no. 9\")"
+ },
+ {
+  "pieceId": 12472,
+  "title": "String Quartet no. 7 in F-sharp minor, op. 108",
+  "mbids": [
+   "3885d794-e52c-4737-a523-1514aba0223a"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op108",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12489,
+  "title": "Six Romances for Bass, op. 62",
+  "mbids": [
+   "3acc228e-f70e-40f8-9a95-e1d485556afa"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op062",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12492,
+  "title": "Sofia Perovskaya, op. 132",
+  "mbids": [
+   "3b559560-5193-4df4-a268-7559dc1e7142"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op132",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12507,
+  "title": "Four Verses of Captain Lebyadkin, op. 146: I. The Love of Captain Lebyadkin",
+  "mbids": [
+   "3d236762-103a-39ae-88fb-64688e57e8aa"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op146",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<레뱌드킨 대위> 1번 관현악 편곡(티셴코, Op. 146a)"
+ },
+ {
+  "pieceId": 12512,
+  "title": "Jazz Suite no. 2",
+  "mbids": [
+   "3e30ddcf-8c9b-4155-9636-898c1d115a01"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-wo-variety-suite-1",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<버라이어티 오케스트라 모음곡>을 \"재즈 모음곡 2번\"이라는 이름으로 옮긴 취주악 편곡(de Meij)"
+ },
+ {
+  "pieceId": 12514,
+  "title": "Preface to the Complete Edition of My Works and a Brief Reflection Apropos this Preface, op. 123",
+  "mbids": [
+   "3e946ea9-1f65-3ecf-b938-a1ffc0d5ebe1"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op123",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 123 관현악 편곡(데샤트니코프, Op. 123a)"
+ },
+ {
+  "pieceId": 12515,
+  "title": "Piano Concerto no. 2 in F major, op. 102",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": "shostakovich-op102",
+  "path": null,
+  "reason": "duplicate",
+  "note": "운영 manual 458 과 같은 피아노 협주곡 2번(MBID 없음)"
+ },
+ {
+  "pieceId": 12521,
+  "title": "The New Babylon, op. 18",
+  "mbids": [
+   "3f540ea5-868a-468c-8bab-1abe04766540"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op018",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12522,
+  "title": "5 Fragments for Small Orchestra, op. 42",
+  "mbids": [
+   "3f6d585f-6db6-423b-9384-926cbd40aaf1"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op042",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12526,
+  "title": "Nine Piano Preludes From op. 34",
+  "mbids": [
+   "40109ba3-45e9-43bb-8dd4-22d4ae3419b5"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op034",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 34 전주곡 9곡 관현악 편곡(바르샤이)"
+ },
+ {
+  "pieceId": 12528,
+  "title": "String Quartet no. 10 in A-flat major, op. 118",
+  "mbids": [
+   "4060a1d0-1993-41f0-9843-5220cc8cd582"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op118",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12531,
+  "title": "Four Verses of Captain Lebyadkin, op. 146",
+  "mbids": [
+   "411cacc9-6fe5-4b21-807b-149b43bc03ae"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op146",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12534,
+  "title": "String Quartet no. 2 in A major, op. 68",
+  "mbids": [
+   "417d559e-0374-492c-80bd-bf751c7809b2"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op068",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12536,
+  "title": "8 English and American Folk Songs, op. 63f",
+  "mbids": [
+   "41deee0c-a1c7-4a4b-8a7e-9f2f021c0200"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<영국과 미국 민요 8곡> 민요 편곡(MB op. 63f) — 민요 편곡은 넣지 않음"
+ },
+ {
+  "pieceId": 12550,
+  "title": "Satires (Pictures of the Past), op. 109: I. To a Critic",
+  "mbids": [
+   "4431274a-d3fa-3af8-b7f1-5344442d46de"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op109",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<풍자> 1번 관현악 편곡(티셴코, Op. 109a)"
+ },
+ {
+  "pieceId": 12564,
+  "title": "Satires (Pictures of the Past), op. 109: V. Kreutzer Sonata",
+  "mbids": [
+   "46948c88-23cd-33e9-9141-ebb9edbb2f49"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op109",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<풍자> 5번 관현악 편곡(티셴코, Op. 109a)"
+ },
+ {
+  "pieceId": 12571,
+  "title": "Reilly",
+  "mbids": [
+   "48c39214-6ee0-4366-9dd0-861ee53ebe33"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "TV 드라마 <Reilly, Ace of Spies> 주제곡(<등에> 로망스를 씀)"
+ },
+ {
+  "pieceId": 12574,
+  "title": "Two Pieces from Ballet Suite no. 2",
+  "mbids": [
+   "493c064d-25a0-4ab6-944d-39fc3f90da64"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-wo-ballet-suite-2",
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 모음곡 2번 2곡 첼로·피아노 편곡(아톱먄)"
+ },
+ {
+  "pieceId": 12586,
+  "title": "Suite from \"The Age of Gold\", op. 22a",
+  "mbids": [
+   "4a62f66e-a64d-42f8-af38-5ec98b17bc79"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op022a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12587,
+  "title": "Ballet Suite no. 5, op. 27a \"The Bolt\"",
+  "mbids": [
+   "4aeb233b-9b52-4264-b1af-3129b86e4c6c"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op027a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12594,
+  "title": "Impromptu for Viola and Piano, op. 33",
+  "mbids": [
+   "4c361736-1134-443a-a645-7b3aa2d85596"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-impromptu-viola",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12597,
+  "title": "Two Romances on Verses of Lermontov, op. 84",
+  "mbids": [
+   "4c621fad-815e-4b4e-b9d5-9e863a97e094"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op084",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12601,
+  "title": "Roundabout of Dances",
+  "mbids": [
+   "4ce6c402-d8b4-4e70-9732-b1270a49d5ed"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "여러 곡을 엮은 아톱먄 편곡 <춤의 원무>. 위키 목록에 없음"
+ },
+ {
+  "pieceId": 12613,
+  "title": "Cello Concerto no. 2 in G minor, op. 126",
+  "mbids": [
+   "4f38cdbc-4821-4487-9bf4-62e42dc3914c"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op126",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12614,
+  "title": "Orango",
+  "mbids": [
+   "4f3c3cd8-fef2-4f80-8e07-3e0fac39db3c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "오페라 <오랑고> — 프롤로그 피아노 악보만 남은 미완성(맥버니 관현악)"
+ },
+ {
+  "pieceId": 12628,
+  "title": "Symphony no. 11 in G minor, op. 103 \"The Year 1905\"",
+  "mbids": [
+   "51542533-d820-407b-9539-96f4e02bb551"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op103",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12631,
+  "title": "Six Poems of Marina Tsvetayeva, op. 143",
+  "mbids": [
+   "51e53a2f-cf3f-4d36-a5d2-243a7176c393"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op143",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12650,
+  "title": "Symphony no. 8 in C minor, op. 65",
+  "mbids": [
+   "54352c43-61aa-4165-a1ef-dcbbce32446c"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op065",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12655,
+  "title": "Two Fables by Krylov, op. 4a",
+  "mbids": [
+   "5579dd6e-4c02-45b0-afcc-f5e2be6c2565"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op004",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<크릴로프의 2개의 우화> 첫 판(메조소프라노·피아노, Op. 4a). 마지막 판(관현악)만 넣음"
+ },
+ {
+  "pieceId": 12666,
+  "title": "Prelude and Fugue for Piano in C-sharp minor",
+  "mbids": [
+   "58a469b0-3e7e-4859-b008-e8b1c739ea9d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "전주곡과 푸가 C#단조(Op. 87 아님, MB: Krzysztof Meyer 개정) — 위키 목록에 없음"
+ },
+ {
+  "pieceId": 12674,
+  "title": "Prelude, op. 87 no. 7",
+  "mbids": [
+   "59bbeb28-fb47-4cae-a713-aa47356ff5e5"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op087",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 87 7번 전주곡 관현악 편곡(Maute)"
+ },
+ {
+  "pieceId": 12676,
+  "title": "Fugue, op. 87 no. 7",
+  "mbids": [
+   "5a1d9f79-b993-465e-85fa-9beb39fe6230"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op087",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 87 7번 푸가 관현악 편곡(Maute)"
+ },
+ {
+  "pieceId": 12678,
+  "title": "Aphorisms, op. 13",
+  "mbids": [
+   "5a4fce38-56f9-44f9-83ed-6bfa1f6b7721"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op013",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12679,
+  "title": "Hamlet, op. 116",
+  "mbids": [
+   "5ae02034-0b09-4942-bb20-dc7c73a6ee00"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op116",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12681,
+  "title": "Тоска по Родине",
+  "mbids": [
+   "5b4901ea-98a0-41a8-b0e1-272f1504fd9b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "돌마톱스키 가사 노래 <조국을 그리며>. 위키 목록에 없음(영화음악 <엘베강의 만남> Op. 80 노래로 보임)"
+ },
+ {
+  "pieceId": 12684,
+  "title": "King Lear, op. 137",
+  "mbids": [
+   "5bc7e744-1d0b-4111-afa1-7beb77c870fc"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op137",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12689,
+  "title": "Hamlet, op. 32a",
+  "mbids": [
+   "5c850820-c96a-4497-a7ca-2e28acfe652f"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op032a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12695,
+  "title": "Piece for Piano in C major",
+  "mbids": [
+   "5d64894f-d8c3-4aed-9339-dacc531f9350"
+  ],
+  "mapping": "part",
+  "key": "shostakovich-wo-pieces-1919",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12699,
+  "title": "Suite for Jazz Orchestra no. 1",
+  "mbids": [
+   "5e7fac9e-2c47-407b-95c1-947a1008d476"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-jazz-suite-1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12708,
+  "title": "Violin Concerto No. 1, Op. 99: Nocturne (Moderato) / Scherzo (Allegro) / Passacaglia (Andante) / Cadenza / Burlesque (Allegro Con Brio)",
+  "mbids": [
+   "60b41a87-4b3c-47d5-9b91-935fed43fca3"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op077",
+  "path": null,
+  "reason": "duplicate",
+  "note": "바이올린 협주곡 1번 전체를 악장 이름으로 적은 MB work(60b41a87). 12115 와 겹침"
+ },
+ {
+  "pieceId": 12719,
+  "title": "Yelabuga Nail",
+  "mbids": [
+   "627f11ba-a5b8-424b-a08a-36f3281c86a2"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-yelabuga",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12724,
+  "title": "Prelude-March",
+  "mbids": [
+   "6396a696-c7ff-464d-9a8e-dbc06b0f49f3"
+  ],
+  "mapping": "part",
+  "key": "shostakovich-wo-pieces-1919",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12730,
+  "title": "String Quartet no. 13 in B-flat minor, op. 138",
+  "mbids": [
+   "63f41612-adad-34a7-bd2e-11498276b0fc"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op138",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12735,
+  "title": "Fragment of the Unpublished Movement: Adagio - Allegro non troppo",
+  "mbids": [
+   "64a62674-b89f-48fa-b7e2-e4bcab8f0610"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "출판되지 않은 악장의 단편"
+ },
+ {
+  "pieceId": 12738,
+  "title": "Confession",
+  "mbids": [
+   "64fd1f2f-4a09-43a5-a316-cedd6fc9eeb0"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op097",
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<등에>에서 쓰지 않은 \"고백\"(MB: scrapped from The Gadfly)"
+ },
+ {
+  "pieceId": 12748,
+  "title": "The Silly Little Mouse, op. 56",
+  "mbids": [
+   "66eba02e-3857-4710-ba43-801d288b2d55"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op056",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12763,
+  "title": "Four Songs to Verses of Dolmatovsky, op. 86",
+  "mbids": [
+   "689627c8-1936-4c77-b3a9-8045180a4530"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op086",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12771,
+  "title": "Alone, op. 26",
+  "mbids": [
+   "699bf183-d0eb-4290-b3e7-a22b46559b50"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op026",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12777,
+  "title": "Hamlet, Incidental Music, op. 32: Gigue",
+  "mbids": [
+   "6a184c32-acd7-46d8-b48c-d675f5a5cf6e"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op032",
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<햄릿> 부수음악 안의 지그 — MB Op. 32 part 목록(10곡)에 없음"
+ },
+ {
+  "pieceId": 12782,
+  "title": "Merry March",
+  "mbids": [
+   "6a9872d2-d99f-4017-9ac6-9354681d6843"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-merry-march",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12800,
+  "title": "October, op. 131",
+  "mbids": [
+   "6d4223b1-26cc-41f0-b874-342107237d20"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op131",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12815,
+  "title": "Seven Preludes from 24 Preludes for Piano, op. 34",
+  "mbids": [
+   "6fb70023-2f3c-4889-8665-daf4a6f05366"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op034",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 34 전주곡 7곡을 다시 엮은 편곡(곡마다 프랑스어 제목)"
+ },
+ {
+  "pieceId": 12823,
+  "title": "From Jewish Folk-Poetry, op. 79a",
+  "mbids": [
+   "70771984-4b6e-4290-937c-b6b432ddf4df"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op079a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12832,
+  "title": "24 Preludes and Fugues, op. 87",
+  "mbids": [
+   "72a5eb48-89b8-4fc1-b754-e2ebb3dfc437"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op087",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12833,
+  "title": "Pieces for Viola and Piano from \"The Gadfly\"",
+  "mbids": [
+   "72be6fed-ecd7-47b8-9eb9-1ec31c94ba4d"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op097a",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<등에> 모음곡 5곡 비올라·피아노 편곡"
+ },
+ {
+  "pieceId": 12837,
+  "title": "Hamlet Suite, op. 116a",
+  "mbids": [
+   "733c08a3-e55d-4d04-b462-a4116497d96d"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op116a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12841,
+  "title": "Novorossiysk Chimes, op. 111b",
+  "mbids": [
+   "73d48c1c-3dc9-4ec3-ad6e-7998698ee73e"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-novorossiysk",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12845,
+  "title": "Four Waltzes",
+  "mbids": [
+   "7480d994-a603-48d8-b1a9-bda3abb11532"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "아톱먄이 플루트·클라리넷·피아노로 엮은 <4개의 왈츠>"
+ },
+ {
+  "pieceId": 12853,
+  "title": "Symphony no. 1 in F minor, op. 10",
+  "mbids": [
+   "75c7ebd2-9e0a-4302-b9bc-48bff2698a1a"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op010",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12862,
+  "title": "The Young Lady and the Hooligan",
+  "mbids": [
+   "77328961-b9b1-4ca3-b80a-f6f12309f76a"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-lady-hooligan",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12865,
+  "title": "Greek Songs",
+  "mbids": [
+   "784c0083-6157-499f-91d0-efc68880f26c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<그리스 노래> 그리스 노래 편곡 — 민요 편곡은 넣지 않음"
+ },
+ {
+  "pieceId": 12879,
+  "title": "Satires (Pictures of the Past), op. 109: II. The Awakening of Spring",
+  "mbids": [
+   "7c976a11-804c-3483-8a31-9de80843cd53"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op109",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<풍자> 2번 관현악 편곡(티셴코, Op. 109a)"
+ },
+ {
+  "pieceId": 12890,
+  "title": "String Quartet no. 4 in D major, op. 83",
+  "mbids": [
+   "7e6a335b-f730-4b7b-b035-14b2b83ea02b"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op083",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12891,
+  "title": "Хороший день",
+  "mbids": [
+   "7e7204ca-f1bf-4dd2-81dc-3c345cea9ead"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "돌마톱스키 가사 노래 <좋은 날>. 위키 목록에 없음(영화·합창곡 안의 노래로 보임)"
+ },
+ {
+  "pieceId": 12897,
+  "title": "The Young Guard Suite, op. 75a",
+  "mbids": [
+   "7f7c1b68-f1b1-492d-b26f-cc0f956b2333"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op075a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12904,
+  "title": "Suite from 24 Preludes, op. 34",
+  "mbids": [
+   "805ac635-2176-4d72-90eb-f644b96920b1"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op034",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 34 전주곡 모음곡 현악 합주 편곡(Poltoratsky)"
+ },
+ {
+  "pieceId": 12909,
+  "title": "Нос",
+  "mbids": [
+   "80b8cc54-f53c-4412-b604-ece5271c5be2"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op015",
+  "path": null,
+  "reason": "duplicate",
+  "note": "<코> 러시아어 제목 MB work(80b8cc54). 12212 와 겹침"
+ },
+ {
+  "pieceId": 12914,
+  "title": "The Unforgettable Year 1919, op. 89",
+  "mbids": [
+   "815ef3ae-7c73-449b-baf3-6ad83aa9087a"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op089",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12918,
+  "title": "קטנתי",
+  "mbids": [
+   "82185641-c3cb-4d1e-9406-5e8c9f839f55"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op033",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "\"카운터플랜의 노래\" 히브리어 판(MB 에서 Песня о встречном 의 다른 판)"
+ },
+ {
+  "pieceId": 12935,
+  "title": "Five Days - Five Nights Suite, op. 111a",
+  "mbids": [
+   "83b57d89-9b44-439b-94db-c43ff88e9f9c"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op111a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12947,
+  "title": "Fantaisie pour alto et orchestre sur des thèmes de l’opéra « Lady Macbeth du district de Mtsensk » de Chostakovitch, op. 12",
+  "mbids": [
+   "857b6528-b649-45b3-a177-afb1a734b907"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "other_composer",
+  "note": "<므첸스크의 맥베스 부인> 주제에 의한 남의 비올라 환상곡(그 작곡가의 op. 12)"
+ },
+ {
+  "pieceId": 12950,
+  "title": "Polka from the Ballet Suite no. 2",
+  "mbids": [
+   "861d65c5-60ba-42a2-adf7-e0903459a01f"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-wo-ballet-suite-2",
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 모음곡 2번 폴카 피아노 연탄 편곡"
+ },
+ {
+  "pieceId": 12975,
+  "title": "Six Romances on Texts by Japanese Poets, op. 21",
+  "mbids": [
+   "8907c8b3-f971-441f-b91a-e605e37d6ede"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op021",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12977,
+  "title": "Pirogov Suite, op. 76a",
+  "mbids": [
+   "8965de0c-9929-411c-88b1-dff9edc358a5"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op076a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12986,
+  "title": "Two Fables by Krylov, op. 4",
+  "mbids": [
+   "8b3277a5-fa93-4824-a3cf-56fdb1b9ec03"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op004",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12987,
+  "title": "Six Romances on Verses by W. Raleigh, R. Burns and W. Shakespeare, op. 62a",
+  "mbids": [
+   "8b99af27-e37b-4cce-9779-1d67f3ca1e5d"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op062",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 62 를 작곡가가 대관현악으로 옮긴 판(Op. 62a, 1943). 위키 목록에 따로 없음"
+ },
+ {
+  "pieceId": 12992,
+  "title": "Ballet Suite no. 2",
+  "mbids": [
+   "8c74d321-3b42-40b0-86eb-819d785c8a1d"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-ballet-suite-2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13014,
+  "title": "Satirical Dance from The Bolt",
+  "mbids": [
+   "8fff40d0-1657-424e-ad86-7fe8c550dc4a"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op027",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<볼트> \"풍자적인 춤\" 금관 5중주 편곡"
+ },
+ {
+  "pieceId": 13016,
+  "title": "Prelude in E-flat minor, op. 34 no. 14",
+  "mbids": [
+   "90689c9b-b370-4a8c-bad6-f54d36539747"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op034",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 34 14번 전주곡 관현악 편곡(Stokowski)"
+ },
+ {
+  "pieceId": 13017,
+  "title": "Folk Dances",
+  "mbids": [
+   "906be0cd-79a7-447c-8b80-e4d261a7e992"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op063",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<조국 레닌그라드> \"젊음의 춤\" 관악 편곡(Reynolds)"
+ },
+ {
+  "pieceId": 13019,
+  "title": "Concerto No. 1 in C Minor, Op. 35 for Piano, Trumpet and Strings: II. Lento",
+  "mbids": [
+   "909d0bc5-4211-4c53-bd5a-6946e600e05c"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op035",
+  "path": null,
+  "reason": "arrangement",
+  "note": "피아노 협주곡 1번 2악장 편곡(Dokshizer·Merkelo)"
+ },
+ {
+  "pieceId": 13020,
+  "title": "Ballet Suite no. 1",
+  "mbids": [
+   "90e2a383-78ae-4a97-91de-005827bc58a7"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-ballet-suite-1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13046,
+  "title": "Prelude, op. 34 no. 14",
+  "mbids": [
+   "94cbace2-efcd-4f3b-9756-46d82192b5e5"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op034",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 34 14번 전주곡 관악 편곡(Reynolds)"
+ },
+ {
+  "pieceId": 13049,
+  "title": "Dances of the Dolls: Lyric Waltz",
+  "mbids": [
+   "956dfd8f-ccb9-4e9c-bf87-a8f2a03f9bee"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-wo-dances-dolls",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<인형의 춤> \"서정적 왈츠\" 바이올린·관현악 편곡(Batiashvili)"
+ },
+ {
+  "pieceId": 13050,
+  "title": "Le Nez",
+  "mbids": [
+   "957a83ab-9ecc-41ba-a0e2-f4ad1c0fac41"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op015",
+  "path": null,
+  "reason": "duplicate",
+  "note": "<코> 프랑스어 제목 MB work(957a83ab). 12212 와 겹침"
+ },
+ {
+  "pieceId": 13054,
+  "title": "Romance from The Gadfly Suite",
+  "mbids": [
+   "9616a39e-f2d4-48dd-9a08-cea02f744d05"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op097a",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<등에> 로망스 바이올린·피아노 편곡"
+ },
+ {
+  "pieceId": 13089,
+  "title": "The Limpid Stream Suite, op. 39a",
+  "mbids": [
+   "9b476236-9ed5-468b-b3c5-6fb2d48cb35d"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op039a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13092,
+  "title": "Prelude in E-flat minor",
+  "mbids": [
+   "9bfff762-3ab9-48ea-a5d8-ada5f466c073"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op087",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 87 14번 전주곡 관현악 편곡(Stokowski)"
+ },
+ {
+  "pieceId": 13097,
+  "title": "Suite on the Verses of Michelangelo Buonarroti, op. 145a",
+  "mbids": [
+   "9c79a882-3e27-424d-a7d4-ba7221ddd9d6"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op145a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13103,
+  "title": "Theme and Variations for Orchestra in B-flat major, op. 3",
+  "mbids": [
+   "9d78c7f6-55af-4b8b-9df2-3f9a5dbcb609"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op003",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13104,
+  "title": "String Quartet no. 11 in F minor, op. 122",
+  "mbids": [
+   "9e106db0-50c9-4835-952b-724ba88b64a1"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op122",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13106,
+  "title": "Марш советской милиции",
+  "mbids": [
+   "9e4312ab-f774-4448-98d6-4400bdb2e0a9"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op139",
+  "path": null,
+  "reason": "duplicate",
+  "note": "<소비에트 민경 행진곡> 러시아어 제목 MB work. 12142 와 겹침"
+ },
+ {
+  "pieceId": 13120,
+  "title": "Satires (Pictures of the Past), op. 109: IV. Misunderstanding",
+  "mbids": [
+   "9fdba3c6-0771-38da-8a02-396d912744fb"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op109",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<풍자> 4번 관현악 편곡(티셴코, Op. 109a)"
+ },
+ {
+  "pieceId": 13121,
+  "title": "Podrugi, op. 41(ii)",
+  "mbids": [
+   "9fe1971e-5f9d-4f06-8e5e-90d48307d62d"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op041a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13124,
+  "title": "The Tale of the Priest and of His Workman Balda, op. 36",
+  "mbids": [
+   "a0b953b7-d1d8-4d03-9a8c-34dbf7743291"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op036",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13127,
+  "title": "In the Forest",
+  "mbids": [
+   "a0ebfc19-97ad-49be-a451-de083a4623f2"
+  ],
+  "mapping": "part",
+  "key": "shostakovich-wo-pieces-1919",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13130,
+  "title": "Tarantella for Two Pianos from The Gadfly",
+  "mbids": [
+   "a12bcaf3-1a4c-41d8-b14e-b955ce6c5a8b"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-tarantella",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13154,
+  "title": "The Human Comedy, op. 37",
+  "mbids": [
+   "a45e62e8-9fac-4479-a12a-56d7529d6454"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op037",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13171,
+  "title": "Suite from \"Katerina Ismailova\", op. 114a",
+  "mbids": [
+   "a6f9f006-b79f-482d-a9a8-581195cf1a0b"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op114a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13173,
+  "title": "Four Waltzes for Flute, Clarinet and Piano",
+  "mbids": [
+   "a717be3b-b045-43b7-8a7a-13795b447eef"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "아톱먄이 플루트·클라리넷·피아노로 엮은 <4개의 왈츠>(곡마다 Op. 78a·27a·45·97a 에서)"
+ },
+ {
+  "pieceId": 13174,
+  "title": "Piano Trio no. 1 in C minor, op. 8 “Poème”",
+  "mbids": [
+   "a767873e-020a-3b83-a05b-db84d08d2f4e"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op008",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13187,
+  "title": "Suite from Golden Mountains, op. 30a",
+  "mbids": [
+   "a9ffb18d-6022-41b8-9b13-5d01796aa90e"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op030a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13188,
+  "title": "Polka from The Golden Age, op. 22b",
+  "mbids": [
+   "aa23173f-0393-41fe-8c47-31b30b9bc593"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op022a",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<황금 시대> 모음곡 폴카 피아노 독주 편곡(MB op. 22b). 위키 목록에 없음"
+ },
+ {
+  "pieceId": 13206,
+  "title": "String Quartet no. 15 in E-flat minor, op. 144",
+  "mbids": [
+   "acb5f762-1cc7-4691-b1d5-88bd0ef2a917"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op144",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13214,
+  "title": "\"Preface to the Complete Edition of My Works and a Brief Reflection Apropos this Preface\" for bass and piano, op. 123",
+  "mbids": [
+   "ad5108cb-6e60-4058-a8c5-78b4d235ba92"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op123",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13218,
+  "title": "The Gadfly: Romance",
+  "mbids": [
+   "ad9f0b29-98f2-47ce-837f-cc8479580510"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op097a",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<등에> 로망스 첼로·피아노 편곡(Tschelkauskas)"
+ },
+ {
+  "pieceId": 13248,
+  "title": "Satires (Pictures of the Past), op. 109: III. Descendants",
+  "mbids": [
+   "b2881047-b550-3d20-85aa-0775401c6950"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op109",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<풍자> 3번 관현악 편곡(티셴코, Op. 109a)"
+ },
+ {
+  "pieceId": 13256,
+  "title": "Detskaya tetrad, op. 69",
+  "mbids": [
+   "b3e84f98-61cc-4bf3-bcde-e49c2d77dc14"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op069",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13260,
+  "title": "Sinfonia for Viola and Strings",
+  "mbids": [
+   "b4c057c5-29c7-4e7e-817d-b26cf1fa2418"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op138",
+  "path": null,
+  "reason": "arrangement",
+  "note": "현악 4중주 13번의 비올라·현악 편곡"
+ },
+ {
+  "pieceId": 13266,
+  "title": "The Adventures of Korzinkina Suite, op. 59a",
+  "mbids": [
+   "b56293b0-a093-403a-b17f-cbac426eca49"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op059",
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<코르진키나의 모험> 모음곡(MB op. 59a) — 위키 목록에 없음"
+ },
+ {
+  "pieceId": 13279,
+  "title": "Scherzo for Orchestra in F-sharp minor, op. 1",
+  "mbids": [
+   "b7844401-a349-4968-a98f-225da07eb981"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op001",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13296,
+  "title": "Short piece (The Gadfly, op. 97)",
+  "mbids": [
+   "bad299bb-ac4d-3d1f-95f3-a68150fc6899"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op097",
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<등에> 영화음악 안의 짧은 곡 — MB 영화음악 part 목록에 없음"
+ },
+ {
+  "pieceId": 13297,
+  "title": "Suite from the Film \"Michurin\", op. 78a",
+  "mbids": [
+   "bb25f42e-de6c-4d17-a1f3-005d735a6ee8"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op078a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13308,
+  "title": "Five Romances on Texts by Yevgeni Dolmatovsky, op. 98",
+  "mbids": [
+   "bc0551fb-6031-4fe8-a7d0-48cade5fb3cb"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op098",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13310,
+  "title": "Ballet Suite no. 3",
+  "mbids": [
+   "bc40cf69-9816-416f-8fab-4a8dd23f4460"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-ballet-suite-3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13311,
+  "title": "Symphony no. 12 in D minor, op. 112 \"The Year 1917\"",
+  "mbids": [
+   "bc42de63-2d89-4e44-8f49-f60781cab74d"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op112",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13313,
+  "title": "String Quartet no. 3 in F major, op. 73",
+  "mbids": [
+   "bc715187-093a-4142-9258-e37924457ff5"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op073",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13325,
+  "title": "Suite on Finnish Themes",
+  "mbids": [
+   "be047a92-a896-4dae-8ac3-ea2b21743d95"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<핀란드 주제에 의한 모음곡> = 핀란드 민요 7곡 편곡 — 민요 편곡은 넣지 않음"
+ },
+ {
+  "pieceId": 13327,
+  "title": "Two Russian Folk Song Arrangements, op. 104",
+  "mbids": [
+   "be552588-d363-497c-bd7f-37debeae3465"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "Op. 104 러시아 민요 2곡 합창 편곡 — 민요 편곡은 넣지 않음"
+ },
+ {
+  "pieceId": 13328,
+  "title": "Sonata for Viola and Chamber Orchestra, op. 147a",
+  "mbids": [
+   "be9043fc-e190-4dd1-b2f3-ff5ae475e3a2"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op147",
+  "path": null,
+  "reason": "arrangement",
+  "note": "비올라 소나타의 실내 관현악 편곡(V. Mendelssohn)"
+ },
+ {
+  "pieceId": 13330,
+  "title": "Six Poems of Marina Tsvetayeva, op. 143a",
+  "mbids": [
+   "bee7cecd-46e9-45a1-8320-ee1631e7b50d"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op143a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13343,
+  "title": "Roundabout of Dances: Farewell Waltz",
+  "mbids": [
+   "c06ff4ac-72d3-49c6-8aff-4201e82e1958"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<춤의 원무> 중 \"작별 왈츠\"(아톱먄 편곡)"
+ },
+ {
+  "pieceId": 13344,
+  "title": "Lady Macbeth of the Mtsensk, op. 29: Entr'acte. Passacaglia",
+  "mbids": [
+   "c08f50af-3740-4820-ac26-0d877652f775"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-passacaglia-organ",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13362,
+  "title": "Cello Sonata in D minor, op. 40",
+  "mbids": [
+   "c5270937-664d-4400-9a77-7a4f321dcbed"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op040",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13368,
+  "title": "Sem Stikhotvoreniy A. Bloka, op. 127",
+  "mbids": [
+   "c5a323e9-ca7d-4db9-9aaf-8a31442af0a3"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op127",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13373,
+  "title": "String Quartet no. 1 in C major, op. 49",
+  "mbids": [
+   "c64a899e-d033-477f-b569-2612758d0adc"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op049",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13378,
+  "title": "Waltz from \"The Bedbug\"",
+  "mbids": [
+   "c703a473-a0e2-4f38-bfe8-30a04fb2af8a"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op019",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<빈대> 왈츠 피아노 3중주 편곡(맥버니)"
+ },
+ {
+  "pieceId": 13391,
+  "title": "Sonata for Violin and Piano, op. 134",
+  "mbids": [
+   "c8f75f6c-9f57-4c8d-a0bd-6158804c0408"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op134",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13397,
+  "title": "Four Romances on Verses of Pushkin, op. 91",
+  "mbids": [
+   "c9d8379d-aa40-4d55-ba54-5cf9deff6a20"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op091",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13402,
+  "title": "Piano Sonata no. 2 in B minor, op. 61",
+  "mbids": [
+   "cae10746-fecf-45e0-ad7e-061e12495935"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op061",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13411,
+  "title": "Sinfonietta in C minor",
+  "mbids": [
+   "cc467820-d983-4765-8aca-0dcbfd1cf686"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op110",
+  "path": null,
+  "reason": "arrangement",
+  "note": "현악 4중주 8번의 현악·팀파니 편곡(스타세비치)"
+ },
+ {
+  "pieceId": 13417,
+  "title": "Prelude, op. 87 no. 11",
+  "mbids": [
+   "cd3d50c7-21c4-4c85-9f3e-18e2b4c5a283"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op087",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 87 11번 전주곡 관현악 편곡(Maute)"
+ },
+ {
+  "pieceId": 13419,
+  "title": "Preludes from Girl Friends, op. 41a",
+  "mbids": [
+   "cd53ae83-1fab-4df9-a4d8-d1d0c36dedca"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op041a",
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<여자 친구들> 영화음악에서 뽑은 전주곡 7곡 — 위키 목록에 없음"
+ },
+ {
+  "pieceId": 13420,
+  "title": "Suite from \"Lady Macbeth of the Mtsensk District\"",
+  "mbids": [
+   "cdb2cecb-5eef-45bb-9e62-d82a9a5bb3e2"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op029",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<므첸스크의 맥베스 부인>에서 남이 엮은 8곡 모음곡. 위키 목록에 없음"
+ },
+ {
+  "pieceId": 13427,
+  "title": "\"Spring, Spring\", op. 128",
+  "mbids": [
+   "ced2a870-0512-4056-9fb5-dab3a1a3c8d4"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op128",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13432,
+  "title": "Four Verses of Captain Lebyadkin, op. 146: IV. A Radiant Personality",
+  "mbids": [
+   "cf809c38-07af-3488-8eb0-39d6ae7ee0cc"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op146",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<레뱌드킨 대위> 4번 관현악 편곡(티셴코, Op. 146a)"
+ },
+ {
+  "pieceId": 13435,
+  "title": "Chamber-Symphony for strings, wood winds, harp and celesta, op. 73a",
+  "mbids": [
+   "cfc36d4a-5516-4e98-87b0-2a46e1e45cd9"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op073",
+  "path": null,
+  "reason": "arrangement",
+  "note": "현악 4중주 3번의 실내 교향곡 편곡 Op. 73a(바르샤이)"
+ },
+ {
+  "pieceId": 13445,
+  "title": "String Quartet no. 12 in D-flat major, op. 133",
+  "mbids": [
+   "d152c7e4-e292-4534-9c03-c8640918fe6b"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op133",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13450,
+  "title": "Chamber Symphony in C minor, op. 110a",
+  "mbids": [
+   "d2b4f15b-c7eb-4e0b-b8ce-3ee506b2ee8e"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op110",
+  "path": null,
+  "reason": "arrangement",
+  "note": "현악 4중주 8번의 실내 교향곡 편곡 Op. 110a(바르샤이)"
+ },
+ {
+  "pieceId": 13452,
+  "title": "Adagio from Lady Macbeth of the Mtsensk District",
+  "mbids": [
+   "d2f94763-1cdd-439c-96e4-803567225140"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op029",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<므첸스크의 맥베스 부인> Adagio 현악 합주 편곡(Sikorski 판)"
+ },
+ {
+  "pieceId": 13453,
+  "title": "Nostalgia",
+  "mbids": [
+   "d30a4b0d-df19-4be8-9e81-c130d5ce2ff5"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-nostalgia",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13454,
+  "title": "Suite for Variety Orchestra",
+  "mbids": [
+   "d3229859-69bc-4bb3-9c60-39ef47c761ef"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-variety-suite-1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13455,
+  "title": "Incidental Music to \"King Lear\", op. 58a",
+  "mbids": [
+   "d33cdc10-b627-4563-bc4b-d590331c70fe"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op058a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13458,
+  "title": "Song of the Great Rivers, op. 95",
+  "mbids": [
+   "d367f33d-2e6f-403f-a758-11aac3a7001e"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op095",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13459,
+  "title": "Galop (from 'Cherymushki')",
+  "mbids": [
+   "d370866d-96df-4f54-bfef-58b0b9e454d4"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op105",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<체료무시키> 갤럽 비올라 48대 편곡"
+ },
+ {
+  "pieceId": 13463,
+  "title": "Four Verses of Captain Lebyadkin, op. 146: II. The Cockroach",
+  "mbids": [
+   "d40dd4d2-1a1b-38b8-8a09-860e74a033ac"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op146",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<레뱌드킨 대위> 2번 관현악 편곡(티셴코, Op. 146a)"
+ },
+ {
+  "pieceId": 13464,
+  "title": "Quintet n°8, op. 110",
+  "mbids": [
+   "d4745f39-c519-4d34-9822-7aaa31ec874d"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op110",
+  "path": null,
+  "reason": "arrangement",
+  "note": "현악 4중주 8번의 목관 5중주 편곡(Walter)"
+ },
+ {
+  "pieceId": 13487,
+  "title": "Suite from the Opera \"Lady Macbeth of Mtsensk\", op. 29a",
+  "mbids": [
+   "d8aab148-251c-4845-b71e-10df966398d8"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op029",
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "Op. 29a <맥베스 부인> 모음곡 — 위키 모음곡 목록에 없고 곡 수 자료가 엇갈림"
+ },
+ {
+  "pieceId": 13498,
+  "title": "Violin Concerto no. 2 in C-sharp minor, op. 129",
+  "mbids": [
+   "dbf79787-968e-4e77-949b-d8de5428e5df"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op129",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13504,
+  "title": "Two Pieces for String Quartet",
+  "mbids": [
+   "dcb2f66a-1e70-477d-9a59-238cef18c572"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-two-pieces-quartet",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13508,
+  "title": "Five Preludes",
+  "mbids": [
+   "dd7a5cec-0a1f-4d04-8b95-46eec8c75e11"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-five-preludes",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13538,
+  "title": "Volochayev Days, op. 48",
+  "mbids": [
+   "e2eeba8a-3667-4d03-8dfa-2ef7c6664056"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op048",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13543,
+  "title": "8 Preludes, op. 2",
+  "mbids": [
+   "e3497b59-0ac6-4d97-ba18-9b2dca0554b0"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op002",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13553,
+  "title": "Песня о встречном",
+  "mbids": [
+   "e4ed59f4-1d77-4722-9cef-6d563ca129aa"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op033",
+  "path": null,
+  "reason": "excerpt_keep",
+  "note": "Op. 33 <카운터플랜>의 노래. 단독으로 널리 불림(MB part 38ad4a70 과 같은 곡)",
+  "titleKo": "영화음악 <카운터플랜> 중 \"카운터플랜의 노래\"",
+  "titleEn": "\"Song of the Counterplan\" from Counterplan"
+ },
+ {
+  "pieceId": 13561,
+  "title": "Four Romances on Verses by Pushkin, op. 46b",
+  "mbids": [
+   "e5dd24d6-4fde-4320-8c02-ea3aacb51b43"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op046",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 46 앞 3곡을 작곡가가 현악 반주로 옮긴 판(위키 Op. 46a, MB op. 46b)"
+ },
+ {
+  "pieceId": 13563,
+  "title": "Prelude, op. 87 no. 5",
+  "mbids": [
+   "e60ac065-221e-423c-8060-972584bc1711"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op087",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 87 5번 전주곡 관현악 편곡(Maute)"
+ },
+ {
+  "pieceId": 13586,
+  "title": "Two Pieces for the Opera \"Poor Columbus\" by Erwin Dressel, op. 23",
+  "mbids": [
+   "e9f1d220-090b-4e43-8cc7-535d9d4465f9"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op023",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13590,
+  "title": "String Quartet no. 5 in B-flat major, op. 92",
+  "mbids": [
+   "eb70b7ab-5873-4916-8854-344985128168"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op092",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13592,
+  "title": "Symphony no. 3 in E-flat major, op. 20 \"The First of May\"",
+  "mbids": [
+   "ebf7a6dc-d5e3-39d3-8006-3f778d1d7c76"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op020",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13603,
+  "title": "Folk Festival",
+  "mbids": [
+   "ed38c47d-415c-415f-9dd5-6086927e7492"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op097a",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<등에> 모음곡 \"민속 축제\" 취주악 편곡(Hunsberger)"
+ },
+ {
+  "pieceId": 13607,
+  "title": "Moderato for Cello and Piano, op. 40b",
+  "mbids": [
+   "ee339048-b8f2-3cf6-8224-509e0b194eac"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-wo-moderato-cello",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13609,
+  "title": "Concerto No. 1 in C Minor, Op. 35 for Piano, Trumpet and Strings: III. Moderato",
+  "mbids": [
+   "ef1ceae1-4e94-42e3-945c-82e81a33a069"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op035",
+  "path": null,
+  "reason": "arrangement",
+  "note": "피아노 협주곡 1번 3악장 편곡(Dokshizer·Merkelo)"
+ },
+ {
+  "pieceId": 13627,
+  "title": "Suite From The Maxim Film-Trilogy, op. 50a",
+  "mbids": [
+   "f244f2d0-a291-4652-8d15-85d2af179340"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op050a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13634,
+  "title": "From Jewish Folk Poetry, op. 79",
+  "mbids": [
+   "f34c1554-cb5b-449c-9cfc-1f92eb5132a0"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op079",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13636,
+  "title": "Satires (Pictures of the Past). 5 Romances for Soprano and Piano, op. 109",
+  "mbids": [
+   "f3fca397-665f-4b7f-b867-d7183c5a35b0"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op109",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13644,
+  "title": "Cello Sonata, op. 40",
+  "mbids": [
+   "f5710f11-81de-40bf-93b8-f0b5638114ff"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op040",
+  "path": null,
+  "reason": "arrangement",
+  "note": "첼로 소나타의 비올라 편곡(Bartholdy)"
+ },
+ {
+  "pieceId": 13651,
+  "title": "String Quartet no. 14 in F-sharp major, op. 142",
+  "mbids": [
+   "f632a3fc-9781-4e0b-8b0c-413feec0f4bd"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op142",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13652,
+  "title": "Hamlet, op. 32: Finale",
+  "mbids": [
+   "f6a1174a-ee9b-4716-bd21-92d3df41f2f0"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op032",
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<햄릿> 부수음악 안의 피날레 — MB Op. 32 part 목록(10곡)에 없음"
+ },
+ {
+  "pieceId": 13667,
+  "title": "Two Pieces for String Octet, op. 11",
+  "mbids": [
+   "f844bd44-0e2c-456e-989b-41d1225994e9"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op011",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13672,
+  "title": "Mournful-Triumphal Prelude in Memory of the Heroes of Stalingrad, op. 130",
+  "mbids": [
+   "f94793fe-d672-461a-a53e-4b34f04f495d"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op130",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13675,
+  "title": "Salute to Spain, op. 44",
+  "mbids": [
+   "f99d41ac-f382-452e-bebb-ed92e9b951ec"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op044",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13679,
+  "title": "Quintet for Piano and Strings in G minor, op. 57",
+  "mbids": [
+   "fa7146d0-7cfe-464f-826a-901e6981d493"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op057",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13682,
+  "title": "Scherzo for Piano, op. 1a",
+  "mbids": [
+   "faa6bdf8-d35d-4ea4-acfb-afd739c23fa2"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op001",
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 1 스케르초의 피아노 판(Op. 1a). 위키 목록에 따로 없음"
+ },
+ {
+  "pieceId": 13687,
+  "title": "Concerto No. 1 in C Minor, Op. 35 for Piano, Trumpet and Strings: IV. Allegro con brio",
+  "mbids": [
+   "fb226062-2b41-4c65-aec7-086730aa7760"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op035",
+  "path": null,
+  "reason": "arrangement",
+  "note": "피아노 협주곡 1번 4악장 편곡(Dokshizer·Merkelo)"
+ },
+ {
+  "pieceId": 13693,
+  "title": "Piano Trio no. 2 in E minor, op. 67",
+  "mbids": [
+   "fbc37f9a-d7c2-40c1-91de-a640d95093ef"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op067",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13701,
+  "title": "Four Verses of Captain Lebyadkin, op. 146: III. The Ball for the Benefit of Governesses",
+  "mbids": [
+   "fdb373d0-eab3-3b84-b020-9698aab193ff"
+  ],
+  "mapping": "unmatched",
+  "key": "shostakovich-op146",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<레뱌드킨 대위> 3번 관현악 편곡(티셴코, Op. 146a)"
+ },
+ {
+  "pieceId": 13708,
+  "title": "Michurin, op. 78",
+  "mbids": [
+   "febec90a-3252-4f87-941b-6ec96fd027aa"
+  ],
+  "mapping": "work",
+  "key": "shostakovich-op078",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

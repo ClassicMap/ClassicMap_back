@@ -1,0 +1,840 @@
+[
+ {
+  "pieceId": 543,
+  "title": "Symphony no. 1 in D major “Titan”",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "교향곡 1번 manual 217 과 같은 작품(MBID 없음, seed part 가 217 과 같은 악장 MBID)"
+ },
+ {
+  "pieceId": 614,
+  "title": "Symphony no. 2 “Resurrection”",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "교향곡 2번 manual 215 와 같은 작품(MBID 없음, seed part 가 215 와 같은 악장 MBID)"
+ },
+ {
+  "pieceId": 1056,
+  "title": "What the Wild Flowers Tell Me",
+  "mbids": [
+   "186a173d-230c-3cba-9a2a-e3f4463e47f5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 3번 2악장의 브리튼 편곡 「What the Wild Flowers Tell Me」"
+ },
+ {
+  "pieceId": 2163,
+  "title": "Symphony no. 7 in E minor “Lied der Nacht”",
+  "mbids": [
+   "9f866c9a-abeb-4547-a3b9-9710eaa4c58d"
+  ],
+  "mapping": "work",
+  "key": "mahler-symphony-7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2575,
+  "title": "Symphony no. 10 in F-sharp major",
+  "mbids": [
+   "ce9ab8fa-3d7b-409a-bd1b-22f49fd0688a"
+  ],
+  "mapping": "work",
+  "key": "mahler-symphony-10",
+  "path": null,
+  "reason": null,
+  "note": "MBID ce9ab8fa 는 10번 'catch-all for unknown versions'. 카탈로그 MBID 는 원본 미완성판 eff9bd21"
+ },
+ {
+  "pieceId": 7996,
+  "title": "Eight Early Songs",
+  "mbids": [
+   "11a90605-99e9-4533-8c0b-b59e88cf697f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "베리오 관현악 편곡 「Eight Early Songs」(젊은 날의 노래에서 8곡)"
+ },
+ {
+  "pieceId": 8549,
+  "title": "Des Knaben Wunderhorn: Ablösung im Sommer",
+  "mbids": [
+   "3a2869e4-b839-4d05-8d6c-fe7690d7270a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Ablösung im Sommer」 베리오 관현악 편곡"
+ },
+ {
+  "pieceId": 8672,
+  "title": "Hans und Grete",
+  "mbids": [
+   "43d6b346-c0e5-4d02-ade3-84be94956194"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Hans und Grete」 관현악 편곡 work(MB orchestration)"
+ },
+ {
+  "pieceId": 9114,
+  "title": "Nicht Wiedersehen!",
+  "mbids": [
+   "61d4a076-465d-42f4-a983-3e5d5b2f5990"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Nicht wiedersehen!」 베리오 관현악 편곡"
+ },
+ {
+  "pieceId": 9153,
+  "title": "Scheiden und Meiden",
+  "mbids": [
+   "64bc812b-d515-498c-91ba-cbf06f9b5a29"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Scheiden und Meiden」 관현악 편곡 work(MB orchestration)"
+ },
+ {
+  "pieceId": 9383,
+  "title": "Um schlimme Kinder artig zu machen",
+  "mbids": [
+   "750f81c5-566f-4732-9e6c-6e4955a2ccd9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Um schlimme Kinder artig zu machen」 관현악 편곡 work(MB orchestration)"
+ },
+ {
+  "pieceId": 9719,
+  "title": "Phantasie",
+  "mbids": [
+   "8ce2a362-c3e5-4b95-904a-12b2288bd193"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Phantasie aus Don Juan」 관현악 편곡 work(MB orchestration)"
+ },
+ {
+  "pieceId": 9866,
+  "title": "Ich ging mit Lust durch einen grünen Wald",
+  "mbids": [
+   "98991db3-a982-4a3d-bdbe-e775343e2624"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Ich ging mit Lust durch einen grünen Wald」 베리오 관현악 편곡"
+ },
+ {
+  "pieceId": 10678,
+  "title": "Frühlingsmorgen",
+  "mbids": [
+   "d378e749-4614-44a7-aa2e-da696c1b7bc4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Frühlingsmorgen」 관현악 편곡 work(MB orchestration)"
+ },
+ {
+  "pieceId": 11150,
+  "title": "Fünf frühe Lieder: Nr. 2. Zu Strassburg auf der Schanz'",
+  "mbids": [
+   "f7274226-b554-476e-a916-224538a65e4a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "베리오 관현악 편곡 「5개의 초기 가곡」 2번 「Zu Straßburg auf der Schanz'」"
+ },
+ {
+  "pieceId": 11217,
+  "title": "Erinnerung",
+  "mbids": [
+   "fb363814-75c5-4ed4-9321-6090e525664d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Erinnerung」 관현악 편곡 work(MB orchestration)"
+ },
+ {
+  "pieceId": 11293,
+  "title": "교향곡 9번 D장조",
+  "mbids": [
+   "0d459ba8-74cd-4f1c-82b6-4566a5e0778c"
+  ],
+  "mapping": "work",
+  "key": "mahler-symphony-9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11298,
+  "title": "Lieder und Gesänge",
+  "mbids": [
+   "21d137c9-7dcb-45fa-8e01-0506a99dbc26"
+  ],
+  "mapping": "work",
+  "key": "mahler-lieder-und-gesaenge",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11322,
+  "title": "Symphonic Movement “Blumine”: Andante allegretto",
+  "mbids": [
+   "583db119-e1a3-3075-984e-9c5eab9a8909"
+  ],
+  "mapping": "work",
+  "key": "mahler-blumine",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11339,
+  "title": "Rückert-Lieder",
+  "mbids": [
+   "9a70a244-a0b8-4332-b5ef-c9f31236575b"
+  ],
+  "mapping": "work",
+  "key": "mahler-rueckert-lieder",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11352,
+  "title": "10. Sinfonie",
+  "mbids": [
+   "d207f159-8432-4644-b632-ef58c43ccf08"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 10번 피아노 편곡(MB 'piano arrangement')"
+ },
+ {
+  "pieceId": 11358,
+  "title": "Symphony no. 8 “Symphony of a Thousand”",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "교향곡 8번 manual 218 과 같은 작품(MBID 없음, seed part 33개가 218 과 같음)"
+ },
+ {
+  "pieceId": 11368,
+  "title": "Symphonie Nr. 6 in a-Moll",
+  "mbids": [
+   "f693fd6d-8542-4bcc-9282-cf1d007515c1"
+  ],
+  "mapping": "work",
+  "key": "mahler-symphony-6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11369,
+  "title": "Totenfeier",
+  "mbids": [
+   "f6f5ae23-053d-347f-83ae-aa0fd7809092"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "교향시 「장례제전」(1888) — 교향곡 2번 1악장의 옛 판이라 뺌"
+ },
+ {
+  "pieceId": 11379,
+  "title": "The Timeless Moment",
+  "mbids": [
+   "5a475e9c-912a-4997-93f1-4907a0a3cb1d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "Roger Webb 편곡·Norman Newell 가사의 1971년 대중가요 「The Timeless Moment」"
+ },
+ {
+  "pieceId": 11383,
+  "title": "Adieu",
+  "mbids": [
+   "60762c4f-372f-43e7-b329-950f07da72fa"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "일본 대중가요(작사 宝野アリカ) 「Adieu」"
+ },
+ {
+  "pieceId": 11408,
+  "title": "Des Knaben Wunderhorn : IV. Wer hat dies Liedlein erdacht?",
+  "mbids": [
+   "097bf085-ee12-4abc-b993-f5afcb4e626f"
+  ],
+  "mapping": "part",
+  "key": "mahler-des-knaben-wunderhorn",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "MB 관계 없는 낱개 work. 제목(분더호른 IV)으로 이음"
+ },
+ {
+  "pieceId": 11419,
+  "title": "Des Knaben Wunderhorn : X. Lob des hohen Verstandes",
+  "mbids": [
+   "0e77284c-f20b-47c1-8490-fb2812d3f784"
+  ],
+  "mapping": "part",
+  "key": "mahler-des-knaben-wunderhorn",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "MB 관계 없는 낱개 work. 제목(분더호른 X)으로 이음"
+ },
+ {
+  "pieceId": 11438,
+  "title": "Symphonie Nr. 6",
+  "mbids": [
+   "149be723-b944-4ac6-b807-4cade48c4b66"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "교향곡 6번 MB 중복 work(149be723, part 없음) — mahler-symphony-6(seed 11368)과 겹침"
+ },
+ {
+  "pieceId": 11439,
+  "title": "Lieder aus “Des Knaben Wunderhorn”",
+  "mbids": [
+   "157b073f-a099-486b-b18e-d5c3ce75881a"
+  ],
+  "mapping": "work",
+  "key": "mahler-des-knaben-wunderhorn",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11450,
+  "title": "Polka mit einem Trauermarsch als Einleitung",
+  "mbids": [
+   "18a55b4f-04f3-42e3-bbd1-08d3e84f977a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "어린 시절 작품(소실, 악보 전하지 않음)"
+ },
+ {
+  "pieceId": 11530,
+  "title": "Des Knaben Wunderhorn: Um schlimme Kinder artig zu machen",
+  "mbids": [
+   "3a742787-137b-39ff-82a9-08522004f70e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Um schlimme Kinder artig zu machen」 Byrns 관현악 편곡"
+ },
+ {
+  "pieceId": 11532,
+  "title": "Symphonisches Praeludium",
+  "mbids": [
+   "3bdd9cf5-681a-4470-850a-84d7cd76e9bb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "spurious",
+  "note": "「교향적 전주곡」 — 말러 작품 여부 불확실(브루크너·크시자노프스키설), 귀르싱 복원"
+ },
+ {
+  "pieceId": 11534,
+  "title": "Neun Lieder und Gesänge aus “Der Knaben Wunderhorn”",
+  "mbids": [
+   "3d3104ea-57ff-4448-85b5-c639e84db823"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 가 분더호른 가곡의 편곡으로 묶은 work(젊은 날의 노래 2·3권 9곡). 카탈로그는 mahler-lieder-und-gesaenge"
+ },
+ {
+  "pieceId": 11548,
+  "title": "Symphony no. 6",
+  "mbids": [
+   "451b4232-65cc-4fe0-998b-dadfb1f0ea7f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 6번 피아노 연탄 편곡(MB 451b4232)"
+ },
+ {
+  "pieceId": 11549,
+  "title": "Adagietto From Symphony no. 5",
+  "mbids": [
+   "45ae4bc7-d480-4bb0-a5f1-2c658188c281"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 5번 아다지에토 J. Nurse 피아노 5중주 편곡"
+ },
+ {
+  "pieceId": 11550,
+  "title": "Des Antonius von Padua Fischpredigt",
+  "mbids": [
+   "460143e5-e815-47e7-a4ad-b4e8a04547ba"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "「Des Antonius von Padua Fischpredigt」 — 분더호른 6번(seed 11684)과 겹침"
+ },
+ {
+  "pieceId": 11558,
+  "title": "Lieder für Tenor",
+  "mbids": [
+   "4aa252dd-6a09-4ca3-8c77-0caeb24687d1"
+  ],
+  "mapping": "work",
+  "key": "mahler-drei-lieder",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11573,
+  "title": "Des Knaben Wunderhorn : V. Das irdische Leben",
+  "mbids": [
+   "52c6211f-114d-4106-b8e4-955ef56837a4"
+  ],
+  "mapping": "part",
+  "key": "mahler-des-knaben-wunderhorn",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "MB 관계 없는 낱개 work. 제목(분더호른 V)으로 이음"
+ },
+ {
+  "pieceId": 11589,
+  "title": "Des Knaben Wunderhorn : I. Der Schildwache Nachtlied",
+  "mbids": [
+   "5c37c763-95f8-4540-bd5a-19897407cbc6"
+  ],
+  "mapping": "part",
+  "key": "mahler-des-knaben-wunderhorn",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "MBID 5c37c763 는 말러 자신의 피아노 반주판(관현악판 dc081a44 의 orchestration 원본). 같은 곡으로 봄"
+ },
+ {
+  "pieceId": 11591,
+  "title": "Urlicht",
+  "mbids": [
+   "5cda7101-b18d-4a54-82fd-1e2963e273e7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「원광」 고트발트 무반주 합창 편곡"
+ },
+ {
+  "pieceId": 11601,
+  "title": "Mahler Neu (n)",
+  "mbids": [
+   "61886623-11a5-4db8-9dc9-4b1c992feeea"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "「Mahler Neu (n)」 — MB 정보가 작곡자뿐. 제목으로는 말러 곡의 재해석으로 보임"
+ },
+ {
+  "pieceId": 11684,
+  "title": "Des Knaben Wunderhorn : VI. Des Antonius von Padua Fischpredigt",
+  "mbids": [
+   "7fbb0461-7efb-46d9-ba78-a50a8f06a168"
+  ],
+  "mapping": "part",
+  "key": "mahler-des-knaben-wunderhorn",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "MB 관계 없는 낱개 work. 제목(분더호른 VI)으로 이음"
+ },
+ {
+  "pieceId": 11707,
+  "title": "Des Knaben Wunderhorn: Frühlingsmorgen",
+  "mbids": [
+   "893fffed-9d98-3946-8a79-e1306783eb2d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Frühlingsmorgen」 Byrns 관현악 편곡"
+ },
+ {
+  "pieceId": 11723,
+  "title": "Symphonie n° 4 (Das immlische Leben)",
+  "mbids": [
+   "90bad68c-d24c-4e59-be4a-4d54aa85b937"
+  ],
+  "mapping": "part",
+  "key": "mahler-symphony-4",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "MBID 90bad68c 는 관계 없는 낱개 work. 제목(「천상의 삶」)으로 4번 4악장에 이음"
+ },
+ {
+  "pieceId": 11730,
+  "title": "Symphony no. 2 in C minor",
+  "mbids": [
+   "92be8d33-ded0-48c9-ba82-35e561ede4ce"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 2번 브루노 발터 피아노 연탄 편곡"
+ },
+ {
+  "pieceId": 11741,
+  "title": "Adagietto aus der 5. Symphonie",
+  "mbids": [
+   "960b9b3f-e54f-4084-a3e7-82a36a0db9c4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 5번 아다지에토 바이올린·피아노 편곡(Wittinger)"
+ },
+ {
+  "pieceId": 11815,
+  "title": "Die zwei blauen Augen",
+  "mbids": [
+   "af9b53c4-505c-4864-857e-54911e58bd0b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Die zwei blauen Augen」 고트발트 합창 편곡"
+ },
+ {
+  "pieceId": 11837,
+  "title": "Wo die shönen Trompeten blasen",
+  "mbids": [
+   "b6bcf0f9-7df0-4517-8619-340c37946bd9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "「Wo die schönen Trompeten blasen」(제목 오타) — 분더호른 9번(seed 11854)과 겹침"
+ },
+ {
+  "pieceId": 11854,
+  "title": "Des Knaben Wunderhorn : IX. Wo die schönen Trompeten blasen",
+  "mbids": [
+   "bbd4effc-78ab-4f09-8020-fcabf4372896"
+  ],
+  "mapping": "part",
+  "key": "mahler-des-knaben-wunderhorn",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "MB 관계 없는 낱개 work. 제목(분더호른 IX)으로 이음"
+ },
+ {
+  "pieceId": 11867,
+  "title": "Symphony no. 8 in E-flat major, \"Symphony of a Thousand\": XVIII. Alles Vergängliche",
+  "mbids": [
+   "bf68e284-4b9a-3f3b-9370-c87f5dda8198"
+  ],
+  "mapping": "part",
+  "key": "mahler-symphony-8",
+  "path": [
+   2,
+   18
+  ],
+  "reason": null,
+  "note": "MB 관계 없는 낱개 work. 제목(8번 XVIII 「Alles Vergängliche」)으로 2부 p 대목에 이음"
+ },
+ {
+  "pieceId": 11888,
+  "title": "Rückert Lieder : V. Liebst du um Schönheit",
+  "mbids": [
+   "ca0db2b2-31fd-4386-986a-5dd6d086c30d"
+  ],
+  "mapping": "part",
+  "key": "mahler-rueckert-lieder",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "MB 관계 없는 낱개 work. 제목(뤼케르트 V)으로 이음"
+ },
+ {
+  "pieceId": 11896,
+  "title": "Rückert Lieder : II. Ich atmet' einen linden Duft",
+  "mbids": [
+   "cd70c1f6-6a90-42c3-a7d2-07f112647254"
+  ],
+  "mapping": "part",
+  "key": "mahler-rueckert-lieder",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "MB 관계 없는 낱개 work. 제목(뤼케르트 II)으로 이음"
+ },
+ {
+  "pieceId": 11908,
+  "title": "Symphony no. 1 in D major \"Titan\"",
+  "mbids": [
+   "d292d694-e39c-4504-b848-0dbf2f27facb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "교향곡 1번 1893–94 함부르크판(5악장, 블루미네 포함) — 옛 판이라 뺌. 최종판은 manual 217"
+ },
+ {
+  "pieceId": 11929,
+  "title": "Symphony no. 8 in E-flat major, \"Symphony of a Thousand\": XVI. Komm! Komm!",
+  "mbids": [
+   "db4c6062-6cd9-3356-8573-7705d6b84e96"
+  ],
+  "mapping": "part",
+  "key": "mahler-symphony-8",
+  "path": [
+   2,
+   16
+  ],
+  "reason": null,
+  "note": "MB 관계 없는 낱개 work. 제목(8번 XVI 「Komm!」)으로 2부 n 대목에 이음"
+ },
+ {
+  "pieceId": 11931,
+  "title": "Lieder und Gesänge Vol. III 11. Ablösung im Sommer",
+  "mbids": [
+   "dc6478e8-652b-4345-9ae6-1b4cb72e15e7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Ablösung im Sommer」 콜린·데이비드 매슈스 관현악 편곡"
+ },
+ {
+  "pieceId": 11933,
+  "title": "교향곡 3번 D단조",
+  "mbids": [
+   "ddcca484-fa72-4703-a44e-7c84ac67a5ea"
+  ],
+  "mapping": "work",
+  "key": "mahler-symphony-3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11934,
+  "title": "Symphony no. 5 (arr. for piano 4 hands)",
+  "mbids": [
+   "decd61f4-0999-4eb8-89f0-fc71d7c6f243"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 5번 피아노 연탄 편곡"
+ },
+ {
+  "pieceId": 11954,
+  "title": "Symphony no. 10 in F-sharp minor",
+  "mbids": [
+   "e6b2fb0c-ac13-4719-9b3e-9691b65dce76"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 10번 휠러 완성판(1966) — 다른 사람의 완성판"
+ },
+ {
+  "pieceId": 11963,
+  "title": "Des Knaben Wunderhorn: Selbstgefühl",
+  "mbids": [
+   "eabf4ff2-f74f-38e4-9731-01464f9ba3de"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Selbstgefühl」 Byrns 관현악 편곡"
+ },
+ {
+  "pieceId": 11968,
+  "title": "Des Knaben Wunderhorn: VII. Rheinlegendchen",
+  "mbids": [
+   "ec19760c-0dd2-4d71-b255-159b222c2474"
+  ],
+  "mapping": "part",
+  "key": "mahler-des-knaben-wunderhorn",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "MB 관계 없는 낱개 work. 제목(분더호른 VII)으로 이음"
+ },
+ {
+  "pieceId": 11976,
+  "title": "Super‐Adagietto. Intermezzo VIII",
+  "mbids": [
+   "ef872336-1050-4bdb-aacb-dd7657ec4ca4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 5번 아다지에토를 바탕으로 한 스기야마 요이치 편곡"
+ },
+ {
+  "pieceId": 11979,
+  "title": "Symphony no. 5, I. Abteilung: Wie ein Kondukt. Stürmisch bewegt. Mit größter Vehemenz",
+  "mbids": [
+   "f05f9bd0-b0b9-3d96-a7ec-f2e0b88f04f3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "MB 가 UNUSED 로 표시한 work. 제목이 5번 1부(1·2악장)를 한데 가리켜 한 악장에 잇지 않음"
+ },
+ {
+  "pieceId": 11981,
+  "title": "Symphony no. 10 in F‐sharp minor: I. Adagio",
+  "mbids": [
+   "f0c63a3b-c381-420a-98ad-4334c6b08e11"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 10번 아다지오 편곡 catch-all work"
+ },
+ {
+  "pieceId": 11989,
+  "title": "Im Abendrot",
+  "mbids": [
+   "f606599c-0cfc-4c42-b96c-5df17296cf9d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 5번 아다지에토의 고트발트 합창 편곡 「Im Abendrot」(R. 슈트라우스 곡 아님)"
+ },
+ {
+  "pieceId": 12006,
+  "title": "Rückert Lieder : III. Ich bin der Welt abhanden gekommen",
+  "mbids": [
+   "fe727a7d-845d-4210-a987-362e86170412"
+  ],
+  "mapping": "part",
+  "key": "mahler-rueckert-lieder",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "MB 관계 없는 낱개 work. 제목(뤼케르트 III)으로 이음"
+ },
+ {
+  "pieceId": 14073,
+  "title": "Das Lied von der Erde",
+  "mbids": [
+   "01641a76-d7d1-488e-84c7-08fb75a98498"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "대지의 노래 쇤베르크(·리엔) 실내 관현악 편곡. 원곡은 manual 219"
+ },
+ {
+  "pieceId": 15066,
+  "title": "Lieder eines fahrenden Gesellen",
+  "mbids": [
+   "991fc011-26a2-468b-82c6-fa1b50a9d024"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "방랑하는 젊은이의 노래 쇤베르크 실내 앙상블 편곡. 원곡은 mahler-lieder-eines-fahrenden-gesellen"
+ }
+]

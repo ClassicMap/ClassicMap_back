@@ -1,0 +1,3194 @@
+[
+ {
+  "pieceId": 492,
+  "title": "색소폰과 관현악을 위한 랩소디 L. 98",
+  "mbids": [
+   "257b45aa-92a0-3c96-83cb-633c9a302281"
+  ],
+  "mapping": "work",
+  "key": "debussy-l98",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 504,
+  "title": "Jeux, L. 126, CD 133",
+  "mbids": [
+   "2fa50190-6032-38a6-9f1a-65e2f3ff5d71"
+  ],
+  "mapping": "work",
+  "key": "debussy-l126",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 572,
+  "title": "Tarantelle styrienne, L. 69, CD 77b",
+  "mbids": [
+   "7c85d06c-c246-355e-8b29-dd31262ace2f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<스티리아풍 타란텔라> 관현악 편곡(라벨, L¹ 69 / CD 77b)"
+ },
+ {
+  "pieceId": 601,
+  "title": "Prélude à l’après‐midi d’un faune, L. 86, CD 87",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MBID 없음. 제목·L¹ 86/CD 87 이 운영 manual 221 <목신의 오후에의 전주곡>(debussy-l86)과 같음"
+ },
+ {
+  "pieceId": 1047,
+  "title": "Nocturnes, L. 91, CD 98: II. Fêtes",
+  "mbids": [
+   "176ed5af-931d-4b51-8777-d1157c7e2b29"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<녹턴> 2번 두 대의 피아노 편곡(라벨)"
+ },
+ {
+  "pieceId": 1110,
+  "title": "Nocturnes, L. 91, CD 98: I. Nuages",
+  "mbids": [
+   "1e76bf89-9ea1-457f-a8af-53d6a071bf35"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<녹턴> 1번 두 대의 피아노 편곡(라벨)"
+ },
+ {
+  "pieceId": 1528,
+  "title": "Pour le piano: Sarabande",
+  "mbids": [
+   "52f5c604-f208-3adf-b552-c7e7b8aab0d0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<피아노를 위하여> 사라반드 관현악 편곡(라벨)"
+ },
+ {
+  "pieceId": 2387,
+  "title": "Première Rapsodie pour clarinette en si bémol, L. 116, CD 124b",
+  "mbids": [
+   "b9c4b0a8-bb2e-4e85-9bc1-1835948e412c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "드뷔시 자신의 관현악판(CD 124b). 카탈로그는 debussy-l116 한 작품으로 묶음(seed 7512)"
+ },
+ {
+  "pieceId": 2390,
+  "title": "Nocturnes, L. 91, CD 98: III. Sirènes",
+  "mbids": [
+   "ba4894d6-23c6-4e1d-8424-18e7a068da2a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<녹턴> 3번 두 대의 피아노 편곡(라벨)"
+ },
+ {
+  "pieceId": 2683,
+  "title": "Prélude à l’après-midi d’un faune, L. 86, CD 87",
+  "mbids": [
+   "dba3ad38-7770-4d49-bb65-19411a8386c8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "라벨의 두 대의 피아노 편곡"
+ },
+ {
+  "pieceId": 7431,
+  "title": "Premier Trio en sol majeur, L. 3, CD 5",
+  "mbids": [
+   "01d61d0c-fbbb-4db0-aecc-cbe965135c4e"
+  ],
+  "mapping": "work",
+  "key": "debussy-l3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7436,
+  "title": "Petite Pièce, L. 120, CD 127",
+  "mbids": [
+   "07dd8612-76f7-40a6-a000-fc4868685b56"
+  ],
+  "mapping": "work",
+  "key": "debussy-l120",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7439,
+  "title": "Tarantelle styrienne, L. 69, CD 77a",
+  "mbids": [
+   "0a19903e-2525-36cb-8ee0-69d9a0a3cc40"
+  ],
+  "mapping": "work",
+  "key": "debussy-l69",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7443,
+  "title": "La plus que lente, L. 121, CD 128",
+  "mbids": [
+   "0f39c280-5196-3ab3-ae91-4f6aed639fae"
+  ],
+  "mapping": "work",
+  "key": "debussy-l121",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7445,
+  "title": "美しい夕暮れ",
+  "mbids": [
+   "1205718a-09c7-4d89-82dd-6552117d7fa7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "<아름다운 저녁>의 일본어 제목 판(JASRAC 등록)"
+ },
+ {
+  "pieceId": 7446,
+  "title": "Mazurka, L. 67, CD 75",
+  "mbids": [
+   "12801889-c8c9-3cf5-9c4d-db3f119e8817"
+  ],
+  "mapping": "work",
+  "key": "debussy-l67",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7475,
+  "title": "Sonate pour violoncelle et piano, L. 135, CD 144",
+  "mbids": [
+   "347e5bc7-37d1-32f9-b4d5-35d6a94dd523"
+  ],
+  "mapping": "work",
+  "key": "debussy-l135",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7482,
+  "title": "Pour le piano, L. 95, CD 95",
+  "mbids": [
+   "3e401575-bb50-4a03-8ae1-33dece70a025"
+  ],
+  "mapping": "work",
+  "key": "debussy-l95",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7484,
+  "title": "Quatuor à cordes en sol mineur, op. 10, L. 85, CD 91",
+  "mbids": [
+   "42dbb579-7781-4ba5-be5d-a662c4e4517b"
+  ],
+  "mapping": "work",
+  "key": "debussy-l85",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7499,
+  "title": "Berceuse, L. 93, CD 100",
+  "mbids": [
+   "53e9814c-9666-4d34-b804-6f3d15360fa8"
+  ],
+  "mapping": "work",
+  "key": "debussy-l93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7500,
+  "title": "Khamma, L. 125, CD 132",
+  "mbids": [
+   "5519b25d-a7e6-4f59-9d0b-d729b80959de"
+  ],
+  "mapping": "work",
+  "key": "debussy-l125",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7508,
+  "title": "My Reverie (Debussy’s “Reverie”)",
+  "mbids": [
+   "64ef4a54-e44e-4377-89c9-2635102e8272"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "래리 클린턴의 대중가요 <My Reverie>"
+ },
+ {
+  "pieceId": 7510,
+  "title": "Nocturne, L. 82, CD 89",
+  "mbids": [
+   "65fdfe75-90e1-39fd-adbc-34f19fbf0f7a"
+  ],
+  "mapping": "work",
+  "key": "debussy-l82",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7512,
+  "title": "Première Rapsodie pour clarinette en si bémol, L. 116, CD 124a",
+  "mbids": [
+   "6a0aba7e-ec3c-4944-b294-90293a70b893"
+  ],
+  "mapping": "work",
+  "key": "debussy-l116",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7519,
+  "title": "Rêverie, L. 68, CD 76",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MBID 없음. 제목·L¹ 68/CD 76 이 운영 manual 456 <꿈>(debussy-l68)과 같음"
+ },
+ {
+  "pieceId": 7520,
+  "title": "Les Baisers d’amour, L. 48, CD 23 \"Non, les baisers d’amour\"",
+  "mbids": [
+   "71e5de47-f9f9-4790-9f1c-8dd15ecb5f9c"
+  ],
+  "mapping": "work",
+  "key": "debussy-l48",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7537,
+  "title": "Triolet à Philis “Zéphir”, L. 12, CD 19 “Si j’étais le zéphir ailé”",
+  "mbids": [
+   "8778d01a-b4f0-4d59-bba3-5ccb1fdf8aca"
+  ],
+  "mapping": "work",
+  "key": "debussy-l12",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7541,
+  "title": "Masques, L. 105, CD 110",
+  "mbids": [
+   "8ee004e5-b8c1-40ea-a3b9-c1c782b54f92"
+  ],
+  "mapping": "work",
+  "key": "debussy-l105",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7542,
+  "title": "L’Isle joyeuse, L. 106, CD 109",
+  "mbids": [
+   "8f8c2b3e-cdc5-435c-8b65-d1e6fd67900a"
+  ],
+  "mapping": "work",
+  "key": "debussy-l106",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7544,
+  "title": "Pierrot, L. 15, CD 30 \"Le bon Pierrot que la foule contemple\"",
+  "mbids": [
+   "92ee1c5e-2208-4558-af27-a6c983c8cb21"
+  ],
+  "mapping": "work",
+  "key": "debussy-l15",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7547,
+  "title": "Préludes, Livre I, L. 117: XII. Minstrels",
+  "mbids": [
+   "940f4da7-148f-45f7-984b-82f53908e565"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "1권 12번 민스트럴 MB 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 7553,
+  "title": "Sonate pour violon et piano (Intermède)",
+  "mbids": [
+   "99304db0-010c-49dc-829c-6e327fa96b20"
+  ],
+  "mapping": "part",
+  "key": "debussy-l140",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7575,
+  "title": "Marche écossaise sur un thème populaire, L. 77, CD 83b",
+  "mbids": [
+   "b104559d-e2ec-4f9f-859c-37511183660c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "드뷔시 자신의 관현악판(CD 83b). 카탈로그는 debussy-l77 한 작품으로 묶음(seed 10965)"
+ },
+ {
+  "pieceId": 7583,
+  "title": "Aimons-nous et dormons, L. 16, CD 7",
+  "mbids": [
+   "bd010e97-8739-495b-8ced-943ca8c22168"
+  ],
+  "mapping": "work",
+  "key": "debussy-l16",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7588,
+  "title": "Danse bohémienne, L. 9, CD 4",
+  "mbids": [
+   "c2b309aa-52e4-3f15-a009-2a0c12a476ff"
+  ],
+  "mapping": "work",
+  "key": "debussy-l9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7591,
+  "title": "Chanson triste, L. 47, CD 24 \"On entend un chant sur l’eau dans la brume\"",
+  "mbids": [
+   "c3ed41ad-4521-40ab-82f7-8a6299b554fe"
+  ],
+  "mapping": "work",
+  "key": "debussy-l47",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7613,
+  "title": "L’Archet, L. 46, CD 22 \"Elle avait de beaux cheveux, blonds\"",
+  "mbids": [
+   "e72625e6-576d-4ba8-916d-29762104225b"
+  ],
+  "mapping": "work",
+  "key": "debussy-l46",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7624,
+  "title": "Apparition, L. 53, CD 57",
+  "mbids": [
+   "f41643d1-e2a9-4ca0-ba40-2130727bbedf"
+  ],
+  "mapping": "work",
+  "key": "debussy-l53",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7628,
+  "title": "Sonate pour flûte, alto et harpe, L. 137, CD 145",
+  "mbids": [
+   "f8efedb2-ee47-415f-aa85-0093331917ed"
+  ],
+  "mapping": "work",
+  "key": "debussy-l137",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7650,
+  "title": "Rondel chinois, L. 17, CD 11 \"Sur le lac bordé d’azalée\"",
+  "mbids": [
+   "2077df2f-28ed-4816-b9c4-f401aa4ac6d2"
+  ],
+  "mapping": "work",
+  "key": "debussy-l17",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7651,
+  "title": "Jane, L. 19, CD 13 \"Je pâlis et tombe en langueur\"",
+  "mbids": [
+   "bec74574-8453-4dfb-a78e-6a15f1f214e4"
+  ],
+  "mapping": "work",
+  "key": "debussy-l19",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7652,
+  "title": "Caprice, L. 5, CD 6 \"Quand je baise, pâle de fièvre\"",
+  "mbids": [
+   "9f223f1e-9841-46c4-b64f-731461a2ab11"
+  ],
+  "mapping": "work",
+  "key": "debussy-l5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7653,
+  "title": "Helène, L. 20 bis, CD 14 \"Franchis les mers icariennes\"",
+  "mbids": [
+   "cb54194f-ba75-424f-9ff3-73fbbff23237"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "미완성 오페라 <엘렌>의 단편(CD 14)"
+ },
+ {
+  "pieceId": 7654,
+  "title": "Fantoches, L. 21, CD 26 “Scaramouche et Pulcinella”",
+  "mbids": [
+   "929b960e-fec7-4222-85ef-40498b483dd1"
+  ],
+  "mapping": "work",
+  "key": "debussy-l21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7720,
+  "title": "Passepied (Debussy)",
+  "mbids": [
+   "9decda55-cb9b-4424-a42d-c614938163b7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "4번 파스피에 편곡(저작권 단체 등록 편곡판)"
+ },
+ {
+  "pieceId": 7725,
+  "title": "夢想",
+  "mbids": [
+   "10afdb51-2f09-489e-893e-8d8f7f45bd9b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "<꿈>의 일본어 제목 판(JASRAC 등록)"
+ },
+ {
+  "pieceId": 7727,
+  "title": "Hommage à Joseph Haydn, L. 115, CD 123",
+  "mbids": [
+   "000fd7e2-a998-4913-995f-83b7c70dead5"
+  ],
+  "mapping": "work",
+  "key": "debussy-l115",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7739,
+  "title": "Le Palais du silence, L. 130, CD 138",
+  "mbids": [
+   "00ef9398-30ee-4b71-9b7f-9026be428151"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "발레 <No-ja-li>(CD 138). 미완성, 오렐지 복원(2015 초연)"
+ },
+ {
+  "pieceId": 7771,
+  "title": "Préludes 1er livre: III. Le vent dans la plaine (animé)",
+  "mbids": [
+   "032edaf2-a43f-4518-b666-db3cbee5b4d8"
+  ],
+  "mapping": "part",
+  "key": "debussy-l117",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7790,
+  "title": "Le Lilas, L. 22, CD 36 \"Ô floraison divine des lilas\"",
+  "mbids": [
+   "041fbe8d-4526-4fe1-bd95-6f7e154217cc"
+  ],
+  "mapping": "work",
+  "key": "debussy-l22",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7825,
+  "title": "Children's Corner: III. Serenade For The Doll (Allegretto Ma Non Troppo)",
+  "mbids": [
+   "064c873c-c0d4-427b-9045-aa7c74dfef29"
+  ],
+  "mapping": "part",
+  "key": "debussy-l113",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7828,
+  "title": "Rapsodie pour orchestre et saxophone",
+  "mbids": [
+   "0654834e-1c4f-4c7a-a5af-3604f0f15298"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "색소폰 랩소디의 색소폰·피아노 편곡(뱅상 다비드)"
+ },
+ {
+  "pieceId": 7834,
+  "title": "En blanc et noir",
+  "mbids": [
+   "06bd7537-31ee-4688-bb2f-a9b559e4bae4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<흰색과 검은색으로> 관현악 편곡(홀러웨이)"
+ },
+ {
+  "pieceId": 7848,
+  "title": "Le Diable dans le Beffroi, L. 101, CD 106",
+  "mbids": [
+   "0788d25d-d63f-40ee-abdd-da39359e4be6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "오페라 <종루의 악마>(CD 106). 미완성 스케치, 오렐지 복원"
+ },
+ {
+  "pieceId": 7852,
+  "title": "Suite bergamasque, L. 75, CD 82 : III. Clair de lune, pour violon et piano",
+  "mbids": [
+   "07f5aa2f-727c-4138-b3a4-169e48e364e7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "3번 달빛 바이올린·피아노 편곡(룰랑)"
+ },
+ {
+  "pieceId": 7860,
+  "title": "Douze Études, pour piano, L. 136, CD 143",
+  "mbids": [
+   "089505e0-b2b5-4972-899a-b4d251ce0e13"
+  ],
+  "mapping": "work",
+  "key": "debussy-l136",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7868,
+  "title": "Rondeau, L. 30, CD 17 \"Fut-il jamais douceur de cœur pareille\"",
+  "mbids": [
+   "094b15e2-137d-4d35-ac56-baa937f34ecf"
+  ],
+  "mapping": "work",
+  "key": "debussy-l30",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7877,
+  "title": "L'Enfant prodigue",
+  "mbids": [
+   "09b0ec99-e788-4be1-8f47-36238ac59fc5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "1884 원판 work. 카탈로그는 1908 개정판 debussy-l57(seed 8502)"
+ },
+ {
+  "pieceId": 7879,
+  "title": "Préludes, Livre I, L. 117: XII. Minstrels. Modéré",
+  "mbids": [
+   "09e0cc4e-0fa6-46c9-940c-c7f9b392ac57"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "1권 12번 민스트럴 바이올린·피아노 편곡(드뷔시 자신, L² 표 번호 없음)"
+ },
+ {
+  "pieceId": 7904,
+  "title": "Images, Livre 1, L. 110, CD 105",
+  "mbids": [
+   "0b5def1a-3892-4716-a7a2-2ee02b10c55f"
+  ],
+  "mapping": "work",
+  "key": "debussy-l110",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7919,
+  "title": "Suite bergamasque for Flute, Viola and Harp",
+  "mbids": [
+   "0c84e646-f04e-46c9-8b3a-a66e9c06387c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "다마즈의 플루트·비올라·하프 편곡"
+ },
+ {
+  "pieceId": 7921,
+  "title": "Children’s Corner, L. 113",
+  "mbids": [
+   "0ca0b44a-3fd8-4a31-8453-4f905ef8684b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 7926,
+  "title": "雨が映し出す物語",
+  "mbids": [
+   "0d0d8232-c49d-4b9a-9c3e-e460bc4e2d8c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "달빛에 일본어 가사를 붙인 노래(JASRAC 등록)"
+ },
+ {
+  "pieceId": 7928,
+  "title": "Nuits blanches, L. 94, CD 101",
+  "mbids": [
+   "0d3c3764-edb6-4f08-aa2f-15ca312fb165"
+  ],
+  "mapping": "work",
+  "key": "debussy-l94",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7929,
+  "title": "Trois Chansons de France, L. 102, CD 115",
+  "mbids": [
+   "0d55d921-8f2f-4519-8f9c-6fd100ab5093"
+  ],
+  "mapping": "work",
+  "key": "debussy-l102",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7948,
+  "title": "Deux danses, L. 103",
+  "mbids": [
+   "0ebe18b0-6652-4f9b-a3a0-cf992b2324f1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "드뷔시의 두 대의 피아노판. 카탈로그는 debussy-l103 한 작품으로 묶음"
+ },
+ {
+  "pieceId": 7949,
+  "title": "Les Elfes, CD 25 \"Du sentier des bois aux daims familiers\"",
+  "mbids": [
+   "0ede56e7-879a-4694-98b6-adfd6f863a57"
+  ],
+  "mapping": "work",
+  "key": "debussy-cd25",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7989,
+  "title": "Préludes 1er livre: V. Les collines d'anacapri (trés modéré)",
+  "mbids": [
+   "114af52f-82fb-4176-97b4-e3c77210efa4"
+  ],
+  "mapping": "part",
+  "key": "debussy-l117",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7993,
+  "title": "Images oubliées, L. 87: Sarabande. Avec une élégance grave et lente",
+  "mbids": [
+   "118f4233-ab39-48f5-beda-a3fd5ac19a13"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<잊혀진 영상> 2번 관현악 편곡(코치시)"
+ },
+ {
+  "pieceId": 8018,
+  "title": "Préludes, Livre I, L. 117, CD 125",
+  "mbids": [
+   "1319ddc3-910a-4c93-afc7-c5e5973f3b78"
+  ],
+  "mapping": "work",
+  "key": "debussy-l117",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8055,
+  "title": "The Tears of Billie Blue",
+  "mbids": [
+   "15486cd7-7fac-3f5c-a4ab-2754db5dd2c7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "달빛에 영어 가사를 붙인 재즈곡(체칠리에 노르비 작사)"
+ },
+ {
+  "pieceId": 8065,
+  "title": "Musique pour “Le Roi Lear”",
+  "mbids": [
+   "164c6659-2278-4569-a86f-ca4cbfc78238"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<리어 왕> 피아노 편곡(로제뒤카스)"
+ },
+ {
+  "pieceId": 8077,
+  "title": "Le Triomphe de Bacchus, L. 38, CD 33a",
+  "mbids": [
+   "17320acd-cd07-426b-a726-92762e71453a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<바쿠스의 승리> 피아노 연탄판(CD 33a). 3악장 소실·4악장 단편이라 뺌"
+ },
+ {
+  "pieceId": 8089,
+  "title": "Préludes 1er livre: VI. Des pas sur la neige (triste et lent)",
+  "mbids": [
+   "184e399e-b211-4892-90e8-acc7cd489ce7"
+  ],
+  "mapping": "part",
+  "key": "debussy-l117",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8095,
+  "title": "Minstrels",
+  "mbids": [
+   "18a6960b-00f8-49d2-a8c1-299e8e6d7ed0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "1권 12번 민스트럴 첼로·피아노 편곡(베르크만)"
+ },
+ {
+  "pieceId": 8107,
+  "title": "Romance, L. 52, CD 56 \"Voici que le printemps, ce fil léger d’avril\"",
+  "mbids": [
+   "197ef639-029b-4b49-9228-ea283bdebec3"
+  ],
+  "mapping": "work",
+  "key": "debussy-l52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8108,
+  "title": "Suite bergamasque: Clair de lune",
+  "mbids": [
+   "199790bc-a069-36ea-ace3-400dff7a2fc1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "3번 달빛 첼로·피아노 편곡"
+ },
+ {
+  "pieceId": 8115,
+  "title": "La Soirée dans Grenade",
+  "mbids": [
+   "19e16fcd-d40c-4b3f-afbc-7f4383fd9849"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<판화> 2번 관현악 편곡(스토코프스키)"
+ },
+ {
+  "pieceId": 8123,
+  "title": "Paysage sentimental, L. 45, CD 55 \"Le ciel d’hiver si doux, si triste, si dormant\"",
+  "mbids": [
+   "1a2e6108-7ac1-4747-8f4d-183298dac5a4"
+  ],
+  "mapping": "work",
+  "key": "debussy-l45",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8148,
+  "title": "Préludes, Livre II, L. 123: VI. Général Lavine - eccentric. Dans le style et le mouvement d'un Cakewalk",
+  "mbids": [
+   "1c6e4a90-b7d6-44b3-b831-fd8e9cab0a5e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "2권 6번 MB 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 8155,
+  "title": "Barcarolle, L. 58, CD 67 \"Viens ! L’heure est propice\"",
+  "mbids": [
+   "1d2f7aff-ea8a-4050-95f3-c439180ef56b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<Barcarolle>(CD 67). 위키백과 기준 소실"
+ },
+ {
+  "pieceId": 8219,
+  "title": "Fêtes galantes (1er recueil), L. 80, CD 86",
+  "mbids": [
+   "220f84a2-1a71-45f6-b245-c0c81b7e4c6f"
+  ],
+  "mapping": "work",
+  "key": "debussy-l80",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8226,
+  "title": "Images oubliées, L. 87, CD 94",
+  "mbids": [
+   "22b38581-2e90-4159-89ea-d2fbc908a07f"
+  ],
+  "mapping": "work",
+  "key": "debussy-l87",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8233,
+  "title": "Children's Corner: IV. The Snow Is Dancing (Modérément Animé)",
+  "mbids": [
+   "23d9aa18-d569-4d61-a78e-97611f2533cd"
+  ],
+  "mapping": "part",
+  "key": "debussy-l113",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8279,
+  "title": "Trois Chansons de France, L. 102: II. La Grotte: Auprès de cette grotte sombre",
+  "mbids": [
+   "27bacf8f-d69f-462d-b944-252f815b6991"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<프랑스의 노래 3곡> 2번 MB 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 8284,
+  "title": "Morceau de concours, L. 108, CD 117",
+  "mbids": [
+   "27f76249-b674-4d0f-80a0-3a55b4ee71c2"
+  ],
+  "mapping": "work",
+  "key": "debussy-l108",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8290,
+  "title": "Menuet from Suite bergamasque",
+  "mbids": [
+   "28b2337d-449f-46a8-8115-9b5e8c56fdb3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "2번 미뉴에트 관현악 편곡(클로에즈)"
+ },
+ {
+  "pieceId": 8306,
+  "title": "Préludes 1er livre: XII. Minstrels (modéré)",
+  "mbids": [
+   "2994e940-eb6e-4d7e-a9ee-c905441dd158"
+  ],
+  "mapping": "part",
+  "key": "debussy-l117",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8353,
+  "title": "Préludes 1er livre: X. La cathédrale engloutie (profondément calme)",
+  "mbids": [
+   "2d574e26-4e03-4853-b5a9-0c2aea41043e"
+  ],
+  "mapping": "part",
+  "key": "debussy-l117",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8359,
+  "title": "Ballet",
+  "mbids": [
+   "2db93da9-a73d-49bb-8dbc-481e7a8caf72"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<작은 모음곡> 4번 바이올린·피아노 편곡(로크)"
+ },
+ {
+  "pieceId": 8371,
+  "title": "Symphonie in B minor",
+  "mbids": [
+   "2e6443b3-a4d4-4373-81a5-bf4c94f9e043"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 B단조 관현악 편곡(팔트너)"
+ },
+ {
+  "pieceId": 8399,
+  "title": "Children's Corner: V. The Little Shepherd (Trés Modéré)",
+  "mbids": [
+   "3091b589-3d4d-4514-8f31-ae43c294bb59"
+  ],
+  "mapping": "part",
+  "key": "debussy-l113",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8441,
+  "title": "Hymnis, L. 37",
+  "mbids": [
+   "32a08d0e-e38f-41c7-965c-4f4c4de0b326"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "소실된 미완성 오페라 <Hymnis>(L¹ 37). 전하는 두 곡은 CD 34·CD 41 로 넣음"
+ },
+ {
+  "pieceId": 8453,
+  "title": "Children’s Corner",
+  "mbids": [
+   "3347385c-eb20-409b-b82a-85baabaaa867"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "카플레 관현악 편곡(드뷔시 감수, L² 표 번호 없음)"
+ },
+ {
+  "pieceId": 8502,
+  "title": "L’Enfant prodigue, L. 57, CD 61",
+  "mbids": [
+   "36e790a2-144d-4de7-8f2e-bb329e5f0138"
+  ],
+  "mapping": "work",
+  "key": "debussy-l57",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8526,
+  "title": "Nocturnes, L. 91, CD 98",
+  "mbids": [
+   "386d977f-4b1c-482e-b3a6-3a3e1a64fac2"
+  ],
+  "mapping": "work",
+  "key": "debussy-l91",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8528,
+  "title": "Le Balcon",
+  "mbids": [
+   "38c75bd5-fe0c-454d-ad9a-6e5521e57676"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<보들레르의 시 5편> 1번 관현악 편곡"
+ },
+ {
+  "pieceId": 8536,
+  "title": "La Saulaie, L. 89, CD 96",
+  "mbids": [
+   "39451601-8945-41c3-9dcb-408bf4026666"
+  ],
+  "mapping": "work",
+  "key": "debussy-l89",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8537,
+  "title": "Le Printemps, L. 24, CD 37 \"Salut printemps, jeune saison\" (catch-all for arrangements)",
+  "mbids": [
+   "395c72ea-6dae-4d01-a2d3-bf16e72e4b00"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "칸타타 <봄>(1882) MB 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 8540,
+  "title": "Fugue pour le concours de fugue 1881",
+  "mbids": [
+   "39a4597e-b24b-49e0-b196-f0dbd01a6764"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "푸가 콩쿠르 과제(1881, L² 부록)"
+ },
+ {
+  "pieceId": 8552,
+  "title": "Ariettes oubliées, L. 60: C’est l’extase langoureuse",
+  "mbids": [
+   "3a62e8d3-43e8-4f1d-93ad-db14d0049178"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<Ariettes oubliées> 1번 관현악 편곡(코치시)"
+ },
+ {
+  "pieceId": 8570,
+  "title": "Quatuor à cordes en sol mineur",
+  "mbids": [
+   "3bd20e12-55e1-49e4-9876-5a0c75df1966"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "현악 4중주 피아노 연탄 편곡(벤펠트)"
+ },
+ {
+  "pieceId": 8572,
+  "title": "Images, L 122",
+  "mbids": [
+   "3c15b03c-9886-4260-b637-410801541cf8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "관현악 <영상>의 피아노 연탄 편곡(카플레)"
+ },
+ {
+  "pieceId": 8578,
+  "title": "Les Baisers, CD 9 \"Plus de fois dans tes bras charmants\"",
+  "mbids": [
+   "3cfe9bc4-a615-4efb-a23f-58fef58bba7a"
+  ],
+  "mapping": "work",
+  "key": "debussy-cd9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8640,
+  "title": "Dans le jardin, L. 78, CD 107 \"Je regardais dans le jardin\"",
+  "mbids": [
+   "41ca8ded-58b5-462a-9db4-a0a23adfe9c9"
+  ],
+  "mapping": "work",
+  "key": "debussy-l78",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8643,
+  "title": "Ariettes oubliées, L. 60: No. 2. Il pleure dans mon coeur",
+  "mbids": [
+   "420a5ef3-93dd-4cab-abc4-701b80033672"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<Ariettes oubliées> 2번 피아노 편곡(에리쿠르)"
+ },
+ {
+  "pieceId": 8657,
+  "title": "La Grotte",
+  "mbids": [
+   "42b6f9ad-af0c-4593-a84d-1e8e8f8a15d9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<두 연인의 산책길> 2번 관현악 편곡(베이츠)"
+ },
+ {
+  "pieceId": 8679,
+  "title": "Préludes 1er livre: XI. La danse de puck (capricieux et léger)",
+  "mbids": [
+   "44378a49-1344-4f84-a643-c1485233402b"
+  ],
+  "mapping": "part",
+  "key": "debussy-l117",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8707,
+  "title": "Suite Bergamasque: IV. Passepied",
+  "mbids": [
+   "46439b4f-6784-4a83-931c-d35cb8025f56"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "4번 파스피에 기타 2중주 편곡(야마시타)"
+ },
+ {
+  "pieceId": 8724,
+  "title": "Et la lune descend sur le temple qui fut",
+  "mbids": [
+   "475d5ccf-66bd-4368-8177-cae0a52a70c9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<영상> 2집 2번 관현악 편곡(콜린 매슈스)"
+ },
+ {
+  "pieceId": 8744,
+  "title": "La Damoiselle élue",
+  "mbids": [
+   "48fd1c7f-2856-4075-a58a-035ec44db40c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<선택받은 처녀> 바이올린·피아노 편곡(로크)"
+ },
+ {
+  "pieceId": 8773,
+  "title": "Étude retrouvée",
+  "mbids": [
+   "4ac3fde2-6bd6-4dd6-b638-6f0f576514ee"
+  ],
+  "mapping": "work",
+  "key": "debussy-cd143a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8776,
+  "title": "En blanc et noir, L. 134, CD 142",
+  "mbids": [
+   "4ad4a1e9-aab4-436d-97ff-33efc3ea9440"
+  ],
+  "mapping": "work",
+  "key": "debussy-l134",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8784,
+  "title": "N° 5: The Film: Clair de lune",
+  "mbids": [
+   "4b98c4c3-41a1-3916-b5a1-1cadb98d2fcf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "크레이그 암스트롱의 샤넬 광고 영상용 달빛 편곡"
+ },
+ {
+  "pieceId": 8832,
+  "title": "Elegy for String Bass",
+  "mbids": [
+   "4f9e1979-0cda-4c07-b8fa-181453055b3d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<엘레지> 더블베이스 편곡"
+ },
+ {
+  "pieceId": 8875,
+  "title": "Ariettes oubliées : II. Il pleut doucement sur la ville",
+  "mbids": [
+   "51b063c1-c17d-443a-94d5-7acf1b7363a4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<Ariettes oubliées> 2번 첼로·관현악 편곡(론키니)"
+ },
+ {
+  "pieceId": 8876,
+  "title": "Suite bergamasque, L. 75, CD 82",
+  "mbids": [
+   "51c5a474-470e-48d8-a138-df81f568896a"
+  ],
+  "mapping": "work",
+  "key": "debussy-l75",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8886,
+  "title": "Petite Pièce",
+  "mbids": [
+   "526a65b1-b79e-49bc-9909-4f9c37c4a4c0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "클라리넷 소품의 색소폰 편곡"
+ },
+ {
+  "pieceId": 8897,
+  "title": "Debussy's 'Claire De Lune'",
+  "mbids": [
+   "534a40c6-f6e0-4689-bbaa-adbcfba00f51"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "MB 관계 없는 'Song' work. 달빛의 편곡·대중음악 판으로 보이나 근거 없음"
+ },
+ {
+  "pieceId": 8924,
+  "title": "Coquetterie posthume, L. 39, CD 50 \"Quand je mourrai, que l’on me mette\"",
+  "mbids": [
+   "555d46e4-5c95-4161-9e8d-e0d05b4a9faf"
+  ],
+  "mapping": "work",
+  "key": "debussy-l39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8933,
+  "title": "Préludes 1er livre: I. Danseuses de Delphes (lento et grave)",
+  "mbids": [
+   "55c9d740-8308-47b8-8d00-5e4f093c8d25"
+  ],
+  "mapping": "part",
+  "key": "debussy-l117",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8935,
+  "title": "L'Isle joyeuse, L. 106, CD 109",
+  "mbids": [
+   "55d23433-9874-4a2f-9969-c63145f21ef0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<기쁨의 섬> MB 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 8946,
+  "title": "Pelléas et Mélisande, Suite symphonique",
+  "mbids": [
+   "56b90748-6c69-4f86-aae5-3d6a12e05681"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<펠레아스와 멜리장드> 관현악 모음곡(조너선 노트 편)"
+ },
+ {
+  "pieceId": 8961,
+  "title": "Diane, CD 20",
+  "mbids": [
+   "57af2332-5995-4e08-bd13-e0cd08144f70"
+  ],
+  "mapping": "work",
+  "key": "debussy-cd20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9006,
+  "title": "Chansons de Bilitis: La Chevelure",
+  "mbids": [
+   "5a370e4f-3226-423e-a904-d72dfdb35924"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<빌리티스의 노래> 2번 바이올린·피아노 편곡(하이페츠)"
+ },
+ {
+  "pieceId": 9030,
+  "title": "Jeux",
+  "mbids": [
+   "5bc257d9-6d19-4448-add6-1dcce2d24e88"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<유희> 네 대의 피아노 편곡(마르턴 본)"
+ },
+ {
+  "pieceId": 9035,
+  "title": "Préludes, Livre I, L. 117: X. La cathédrale engloutie",
+  "mbids": [
+   "5c3dddce-53d5-425d-90d9-5a49724ca6a8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "1권 10번 가라앉은 성당 MB 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 9068,
+  "title": "Zuleima, L. 59, CD 64",
+  "mbids": [
+   "5ed7d610-8d6f-482b-a642-304ce248f2b4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "칸타타 <Zuléima>(CD 64). 소실"
+ },
+ {
+  "pieceId": 9090,
+  "title": "Children's Corner: VI. Golliwog's Cake-Walk (Allegro Giusto)",
+  "mbids": [
+   "6038f58b-93ee-4399-bf29-cdb10a6f5cda"
+  ],
+  "mapping": "part",
+  "key": "debussy-l113",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9121,
+  "title": "Chanson espagnole, L. 42, CD 49 \"Nous venions de voir le taureau\"",
+  "mbids": [
+   "622cf2a1-654a-485b-ad69-bc302e0fd372"
+  ],
+  "mapping": "work",
+  "key": "debussy-l42",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9122,
+  "title": "Printemps, L. 61, CD 68a",
+  "mbids": [
+   "6231d93f-e485-4517-ac07-dbf325439ac8"
+  ],
+  "mapping": "work",
+  "key": "debussy-l61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9172,
+  "title": "Danse (Tarantelle styrienne), L. 69",
+  "mbids": [
+   "66009d36-5620-47d5-ab9b-412daa82e058"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<스티리아풍 타란텔라> 관현악 편곡(코치시)"
+ },
+ {
+  "pieceId": 9183,
+  "title": "Tragédie, L. 18, CD 12 \"Les petites fleurs n’ont pu vivre\"",
+  "mbids": [
+   "67707045-929d-4e61-ad48-dfff3ffe0d4f"
+  ],
+  "mapping": "work",
+  "key": "debussy-l18",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9187,
+  "title": "Invocation, L. 40, CD 51 \"Élevez-vous voix de mon âme\"",
+  "mbids": [
+   "67bbe5a5-5646-4539-ab69-cfbf472ab053"
+  ],
+  "mapping": "work",
+  "key": "debussy-l40",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9224,
+  "title": "Trois Scènes au crépuscule, L. 83, CD 92",
+  "mbids": [
+   "6acf9644-8aea-4748-98cb-723f2a1ada2f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<황혼의 세 장면>(CD 92). 소실(<녹턴>의 첫 판)"
+ },
+ {
+  "pieceId": 9278,
+  "title": "Children’s Corner, L. 113: no. 6. Golliwog’s Cake-walk",
+  "mbids": [
+   "6e4d7815-233b-3d17-a791-11df779ba2ce"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "6번 색소폰 편곡"
+ },
+ {
+  "pieceId": 9304,
+  "title": "Prélude from Suite bergamasque",
+  "mbids": [
+   "70061f44-ff51-485c-a3e9-99ba3a2f30e0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "1번 전주곡 관현악 편곡(클로에즈)"
+ },
+ {
+  "pieceId": 9306,
+  "title": "Préludes 1er livre: VII. Ce qu'a vu le vent d'ouest (animé et tumultueux)",
+  "mbids": [
+   "70247be0-4330-4c52-9b69-7a029a359f5c"
+  ],
+  "mapping": "part",
+  "key": "debussy-l117",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9314,
+  "title": "Les Papillons, CD 21 \"Les papillons couleur de neige\"",
+  "mbids": [
+   "70814b82-a057-4b5f-99b3-b5e7836a00e3"
+  ],
+  "mapping": "work",
+  "key": "debussy-cd21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9350,
+  "title": "Images, Livre 2, L. 111, CD 120",
+  "mbids": [
+   "732c6498-cc95-43a7-be0a-f2092396bd88"
+  ],
+  "mapping": "work",
+  "key": "debussy-l111",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9373,
+  "title": "Ariettes oubliées, L. 60: Aquarelles II - Spleen",
+  "mbids": [
+   "74934f0c-8996-42ea-88c0-bf4cb61fd2d5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<Ariettes oubliées> 6번 관현악 편곡(코치시)"
+ },
+ {
+  "pieceId": 9381,
+  "title": "Première Suite d’orchestre, L. 50, CD 46 : Rêve",
+  "mbids": [
+   "74f0ddb7-3eb7-4b16-a7bf-fe4aac7fdb91"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "관현악 모음곡 1번 3악장 관현악 보완(마누리). 원래 관현악판 3악장은 소실"
+ },
+ {
+  "pieceId": 9393,
+  "title": "Ode à la France, L. 141, CD 149",
+  "mbids": [
+   "7584512b-29b6-42d4-8e56-4e00d6447d0f"
+  ],
+  "mapping": "work",
+  "key": "debussy-l141",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9397,
+  "title": "Trois Études, from Douze Études",
+  "mbids": [
+   "75bd735a-b778-41d1-b560-b37ae2c2fa22"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<12개의 연습곡> 중 세 곡 관현악 편곡(자렐)"
+ },
+ {
+  "pieceId": 9414,
+  "title": "Sonate pour violon et piano en sol mineur, L. 140",
+  "mbids": [
+   "776d55b7-9568-4c92-8afd-a13a2b433f0f"
+  ],
+  "mapping": "work",
+  "key": "debussy-l140",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9422,
+  "title": "Trois poèmes de Stéphane Mallarmé, L. 127, CD 135",
+  "mbids": [
+   "77d23155-864c-4102-9831-1e944d33f650"
+  ],
+  "mapping": "work",
+  "key": "debussy-l127",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9442,
+  "title": "Ballade à la lune: C'était dans la nuit brune, L. 1",
+  "mbids": [
+   "79850af1-9fe2-4bbe-b149-1ed9294f60b0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<달의 발라드>(L¹ 1). 소실, L² 판에서 빠짐"
+ },
+ {
+  "pieceId": 9486,
+  "title": "Divertissement, L. 36, CD 62",
+  "mbids": [
+   "7bfa040b-663b-487d-b1af-2bbdc0e18edd"
+  ],
+  "mapping": "work",
+  "key": "debussy-l36",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9513,
+  "title": "Extract from “The Afternoon of a Faun”",
+  "mbids": [
+   "7e0733a3-b69b-4f72-9b7c-95ea662795c1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "하이페츠의 바이올린·피아노 발췌 편곡"
+ },
+ {
+  "pieceId": 9529,
+  "title": "Pelléas et Mélisande - Concert Suite",
+  "mbids": [
+   "7eae259e-b478-4005-83f6-564cd6fceea1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<펠레아스와 멜리장드> 연주회용 모음곡(라인스도르프 편)"
+ },
+ {
+  "pieceId": 9537,
+  "title": "Ariettes oubliées, L. 60: Paysages belges. Chevaux de bois",
+  "mbids": [
+   "7f3b6d01-f7be-458c-b7ee-38c285f1dadc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<Ariettes oubliées> 4번 관현악 편곡(코치시)"
+ },
+ {
+  "pieceId": 9553,
+  "title": "Ode à la France",
+  "mbids": [
+   "80ee63ba-1e63-416b-b646-2f5ca9dc00a7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "가야르 완성판의 피아노 반주판(1928). 카탈로그는 debussy-l141 한 작품(seed 9393)"
+ },
+ {
+  "pieceId": 9563,
+  "title": "Ariettes oubliées: Il pleure dans mon cœur",
+  "mbids": [
+   "81b38676-ccba-401b-a84e-e3dc4cab7a2a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<Ariettes oubliées> 2번 바이올린·피아노 편곡(하르트만)"
+ },
+ {
+  "pieceId": 9582,
+  "title": "Six Épigraphes antiques",
+  "mbids": [
+   "833f94c0-8bd6-49fc-a92c-5fde5e8d4f96"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<6개의 고대 비명> 관현악 편곡(에셔)"
+ },
+ {
+  "pieceId": 9595,
+  "title": "Danse de la Poupée",
+  "mbids": [
+   "83dc673a-6382-4fbb-978b-7a008c777b5d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<장난감 상자> 1장 MB 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 9604,
+  "title": "Prélude de \"L’Enfant prodigue\"",
+  "mbids": [
+   "848a499b-5627-430a-8669-e94ba48b4ad7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<탕아> 전주곡 피아노 연탄 편곡(드뷔시, L² 표 번호 없음)"
+ },
+ {
+  "pieceId": 9610,
+  "title": "Images oubliées, L. 87: Quelques aspects de “Nous n’irons plus au bois” parce qu’il fait un temps insupportable",
+  "mbids": [
+   "850ccd87-4ec1-439b-aa6e-cbf1d9bd801f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<잊혀진 영상> 3번 관현악 편곡(코치시)"
+ },
+ {
+  "pieceId": 9627,
+  "title": "Fête galante, L. 23, CD 31 \"Voilà Sylandre et Lycas et Myrtil\"",
+  "mbids": [
+   "862853e8-0b25-411f-946e-c7fe5a10515b"
+  ],
+  "mapping": "work",
+  "key": "debussy-l23",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9631,
+  "title": "Le Martyre de Saint-Sébastien, fragments symphoniques",
+  "mbids": [
+   "8642dcab-a915-4294-a1d4-7edb8d90b7bf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excerpt_keep",
+  "note": "카플레가 드뷔시 감수로 엮은 연주회용 발췌(L² 표 번호 없음). 단독으로 널리 연주·녹음됨",
+  "titleKo": "<성 세바스티안의 순교> 교향적 단장",
+  "titleEn": "Le martyre de saint Sébastien, fragments symphoniques"
+ },
+ {
+  "pieceId": 9644,
+  "title": "Trois Mélodies, L. 81, CD 85",
+  "mbids": [
+   "875158b5-7960-4d60-b9b2-4f613365afdb"
+  ],
+  "mapping": "work",
+  "key": "debussy-l81",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9646,
+  "title": "Flots, palmes, sables, L. 25, CD 38 \"Loin des yeux du monde\"",
+  "mbids": [
+   "87623a71-a800-442c-8567-0672fd589a91"
+  ],
+  "mapping": "work",
+  "key": "debussy-l25",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9662,
+  "title": "Mandoline",
+  "mbids": [
+   "89052030-1e4a-4470-8e54-1ec6a6358e5b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<Mandoline> 관현악 편곡(베이츠)"
+ },
+ {
+  "pieceId": 9663,
+  "title": "Cinq poèmes de Baudelaire, L. 64, CD 70: III. Le Jet d'eau",
+  "mbids": [
+   "8909e8bc-8969-435c-a607-aed824e59851"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<보들레르의 시 5편> 3번 MB 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 9687,
+  "title": "Le Livre de Baudelaire",
+  "mbids": [
+   "8aa54ea7-0758-4d2c-b2a8-527fa0e7d53f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "존 애덤스가 <보들레르의 시 5편> 네 곡을 관현악으로 옮긴 <Le livre de Baudelaire>"
+ },
+ {
+  "pieceId": 9689,
+  "title": "Églogue, L. 49, CD 27 \"Chanteurs mélodieux, habitants des buissons\"",
+  "mbids": [
+   "8aaf9fd2-1ab9-4e8d-bb10-6a943fe9ae14"
+  ],
+  "mapping": "work",
+  "key": "debussy-l49",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9720,
+  "title": "La Soirée dans Grenade from Estampes",
+  "mbids": [
+   "8cee6def-808d-49b4-85e1-757a9389f2e7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<판화> 2번 관현악 편곡(뷔세르)"
+ },
+ {
+  "pieceId": 9740,
+  "title": "Fugue pour le concours de fugue 1882",
+  "mbids": [
+   "8edcc1b4-c200-4874-b225-ae7083cc4d83"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "푸가 콩쿠르 과제(1882, L² 부록)"
+ },
+ {
+  "pieceId": 9753,
+  "title": "La Boîte à joujoux, CD 136b",
+  "mbids": [
+   "8f7637af-a224-499f-9939-2af10bc7e507"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "카플레 관현악판(CD 136b). 카탈로그는 debussy-l128 한 작품으로 묶음(seed 9937)"
+ },
+ {
+  "pieceId": 9759,
+  "title": "Danse",
+  "mbids": [
+   "8fb62782-dc00-47db-8ab2-0f4af539291b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<스티리아풍 타란텔라> 클라리넷 4중주 편곡"
+ },
+ {
+  "pieceId": 9787,
+  "title": "Rodrigue et Chimène, L. 72, CD 80",
+  "mbids": [
+   "92109472-6c02-4283-abce-03ca32fd8de8"
+  ],
+  "mapping": "work",
+  "key": "debussy-l72",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9792,
+  "title": "Arabesques, L. 66 no. 1",
+  "mbids": [
+   "927cd80d-d9db-42f4-a7a9-ad5f2c4fa8ee"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "아라베스크 1번 바이올린·피아노 편곡(슈아넬)"
+ },
+ {
+  "pieceId": 9813,
+  "title": "Prélude à l'après-midi d'un faune",
+  "mbids": [
+   "93d9b217-6fca-4f0e-8f4b-d82680b18daa"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "렌스키의 플루트·피아노 편곡"
+ },
+ {
+  "pieceId": 9847,
+  "title": "Bilitis",
+  "mbids": [
+   "97034efb-1b17-4c91-b7ae-7d25f5165416"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<6개의 고대 비명> 플루트·피아노 편곡(렌스키)"
+ },
+ {
+  "pieceId": 9873,
+  "title": "Suite bergamasque, L. 75: III. Clair de lune. Andante très expressif",
+  "mbids": [
+   "98f44a97-2942-41f6-b82f-021bb95e46ea"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "3번 달빛 혼성 합창 편곡"
+ },
+ {
+  "pieceId": 9878,
+  "title": "Ariettes oubliées, L. 60: Aquarelles I - Green",
+  "mbids": [
+   "9937e0ec-1679-4fda-a4bb-61384f830174"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<Ariettes oubliées> 5번 관현악 편곡(코치시)"
+ },
+ {
+  "pieceId": 9917,
+  "title": "Préludes 1er livre: II. Voiles (modéré)",
+  "mbids": [
+   "9b447478-6273-4fb3-a48b-2a6e747007b8"
+  ],
+  "mapping": "part",
+  "key": "debussy-l117",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9937,
+  "title": "La Boîte à joujoux, L. 128, CD 136a",
+  "mbids": [
+   "9c4af9b7-b6c7-4c0d-a758-dd8d1906af06"
+  ],
+  "mapping": "work",
+  "key": "debussy-l128",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9952,
+  "title": "Prélude (from L’Enfant prodigue)",
+  "mbids": [
+   "9dc48ac1-23e0-405a-aafc-69915e5d4dee"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<탕아> 전주곡 바이올린·피아노 편곡(하이페츠)"
+ },
+ {
+  "pieceId": 9965,
+  "title": "Images pour orchestre, L. 122, CD 118",
+  "mbids": [
+   "9eec5902-4d9b-4ffc-806e-87e1e154ca4a"
+  ],
+  "mapping": "work",
+  "key": "debussy-l122",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9981,
+  "title": "Romance \"L’âme évaporée et souffrante\"",
+  "mbids": [
+   "a033ba3e-626d-4a82-90ae-a65ac3aeb83a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<Romance> CD 65 첼로·관현악 편곡(그레차니노프)"
+ },
+ {
+  "pieceId": 9997,
+  "title": "Daniel, L. 20, CD 35 \"Versez, que de l’ivresse, aux accents d’allégresse\"",
+  "mbids": [
+   "a1b42389-9b26-42da-b3dd-d18dbdf7f2f8"
+  ],
+  "mapping": "work",
+  "key": "debussy-l20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10040,
+  "title": "Estampes, L. 100, CD 108",
+  "mbids": [
+   "a418831e-509d-4986-837d-2216de83fe92"
+  ],
+  "mapping": "work",
+  "key": "debussy-l100",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10042,
+  "title": "Cinq poèmes de Baudelaire, L. 64, CD 70",
+  "mbids": [
+   "a4293137-c0af-428e-aa27-0302e1e10e7c"
+  ],
+  "mapping": "work",
+  "key": "debussy-l64",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10051,
+  "title": "Fêtes galantes (Deuxième recueil), L. 104, CD 114",
+  "mbids": [
+   "a48b35d0-76ff-449a-8275-06bc1926e3dd"
+  ],
+  "mapping": "work",
+  "key": "debussy-l104",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10061,
+  "title": "Les Chansons de Bilitis, L. 96, CD 102",
+  "mbids": [
+   "a58719c1-b067-41b8-9e36-70c08ee41207"
+  ],
+  "mapping": "work",
+  "key": "debussy-l96",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10070,
+  "title": "Andantino du Quatuor à cordes",
+  "mbids": [
+   "a632d166-c5c6-429a-bab8-947faacb4f7f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "현악 4중주 3악장 오르간 편곡(길망)"
+ },
+ {
+  "pieceId": 10072,
+  "title": "Ariettes oubliées, L. 60: Il pleure dans mon coeur",
+  "mbids": [
+   "a63a1e2b-13a9-43d9-a2ee-e7c19c102a8c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<Ariettes oubliées> 2번 관현악 편곡(코치시)"
+ },
+ {
+  "pieceId": 10084,
+  "title": "Le Printemps, L. 24, CD 37 \"Salut printemps, jeune saison\"",
+  "mbids": [
+   "a709e091-4db0-4f6e-a387-bd6d9524a2c0"
+  ],
+  "mapping": "work",
+  "key": "debussy-l24",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10183,
+  "title": "Romance, L 79 no. 1",
+  "mbids": [
+   "ae536e92-4061-420a-8e67-a8b087fcb580"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<Romance> CD 65 첼로·피아노 편곡(론키니)"
+ },
+ {
+  "pieceId": 10187,
+  "title": "Préludes 1er livre: IV. Les sons et les parfums tournent dans l'air du soir (modéré)",
+  "mbids": [
+   "ae6aa76b-db24-4d59-86fb-d53220d684f0"
+  ],
+  "mapping": "part",
+  "key": "debussy-l117",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10201,
+  "title": "Pelléas et Mélisande Symphonie",
+  "mbids": [
+   "af82a871-c13a-480a-a9b7-8188fc8c016f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<펠레아스와 멜리장드> 교향곡(콩스탕 편)"
+ },
+ {
+  "pieceId": 10231,
+  "title": "Children's Corner, L. 113: No. 5. The Little Shepherd",
+  "mbids": [
+   "b1ab5bb7-f89b-33c5-85c8-6796040953aa"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "5번 색소폰 편곡"
+ },
+ {
+  "pieceId": 10236,
+  "title": "Beau soir, L. 6, CD 84 “Lorsque au soleil couchant les rivières sont roses”",
+  "mbids": [
+   "b22cc511-fedd-3e09-a242-86245c1d2400"
+  ],
+  "mapping": "work",
+  "key": "debussy-l6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10254,
+  "title": "Petite Suite: Menuet",
+  "mbids": [
+   "b39e0b16-aeed-4728-b9b2-8695177f5ebc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<작은 모음곡> 3번 첼로·피아노 편곡"
+ },
+ {
+  "pieceId": 10259,
+  "title": "D’un cahier d’esquisses, L. 99, CD 112",
+  "mbids": [
+   "b3ddc7d1-50df-4292-957f-16c469d68153"
+  ],
+  "mapping": "work",
+  "key": "debussy-l99",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10263,
+  "title": "La Mer, L. 109",
+  "mbids": [
+   "b3fb78a0-8100-44a4-9a14-3fac3743e4d2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<바다> 두 대의 피아노 편곡(카플레)"
+ },
+ {
+  "pieceId": 10276,
+  "title": "Prélude à l’après‐midi d’un faune",
+  "mbids": [
+   "b54fdc28-5a88-4c1b-92f1-cf0f8853dfe1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "8중주 편곡"
+ },
+ {
+  "pieceId": 10304,
+  "title": "Le promenoir des deux amants, L. 118, CD 129",
+  "mbids": [
+   "b7656458-7906-4d64-9318-a1e7f2a8f943"
+  ],
+  "mapping": "work",
+  "key": "debussy-l118",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10306,
+  "title": "Suite bergamasque, L. 75, CD 82a, pour orchestre : III. Clair de lune",
+  "mbids": [
+   "b7b809a5-bd6d-47d3-a94f-4131c754a5e1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "3번 달빛 관현악 편곡(크립스)"
+ },
+ {
+  "pieceId": 10354,
+  "title": "Suite bergamasque, L. 75, CD 82a : I. Prélude",
+  "mbids": [
+   "bafcefb0-239f-4ff6-b91d-f32e5bb219b3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "1번 전주곡 MB 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 10373,
+  "title": "Fantaisie pour piano et orchestre, L. 73, CD 72",
+  "mbids": [
+   "bccb3d23-4e75-43a4-b398-0133cfb1f998"
+  ],
+  "mapping": "work",
+  "key": "debussy-l73",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10378,
+  "title": "Children’s Corner, L. 113, CD 119",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MBID 없음. 제목·L¹ 113/CD 119 가 운영 manual 223 <어린이 차지>(debussy-l113)와 같음"
+ },
+ {
+  "pieceId": 10381,
+  "title": "Diane au bois, L. 51, CD 48",
+  "mbids": [
+   "bd474906-f38e-445f-bc96-98dfaf26a750"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "미완성 오페라 <숲의 디안>의 2중창 단편(CD 48)"
+ },
+ {
+  "pieceId": 10386,
+  "title": "La Boîte à joujoux : Extraits pour le piano",
+  "mbids": [
+   "bd86ca5b-6b31-4ff9-85af-a9e93f1b6723"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<장난감 상자> 발췌 피아노 편곡(로크)"
+ },
+ {
+  "pieceId": 10397,
+  "title": "Préludes, Livre II, L. 123: XII. Feux d'artifice. Modérément animé",
+  "mbids": [
+   "be84ea56-d113-485d-9567-4ce107008816"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "2권 12번 MB 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 10403,
+  "title": "Suite pour violoncelle et orchestre",
+  "mbids": [
+   "bf4d5323-78ab-46eb-b0ad-9bc743f824f0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "비미시가 드뷔시 소품을 엮은 첼로·관현악 모음곡"
+ },
+ {
+  "pieceId": 10431,
+  "title": "Marche écossaise, L. 77",
+  "mbids": [
+   "c131b067-a668-40c0-89e8-e08e0f294669"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<스코틀랜드 행진곡> 관현악 편곡(코치시)"
+ },
+ {
+  "pieceId": 10448,
+  "title": "Pantomime, L. 31, CD 47 \"Pierrot, qui n’a rien d’un Clitandre\"",
+  "mbids": [
+   "c292f535-5ca7-4249-8f2e-8293479e203e"
+  ],
+  "mapping": "work",
+  "key": "debussy-l31",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10452,
+  "title": "Musique pour “Le Roi Lear”, L. 107, CD 116",
+  "mbids": [
+   "c32ebc34-a9e8-4420-aa89-b77703ab0c6b"
+  ],
+  "mapping": "work",
+  "key": "debussy-l107",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10465,
+  "title": "Nocturne et scherzo, L. 26, CD 39",
+  "mbids": [
+   "c3f90466-ed18-40a1-bb6b-bcbf34b1a546"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<녹턴과 스케르초>(CD 39). 녹턴이 소실되고 스케르초만 전해 뺌"
+ },
+ {
+  "pieceId": 10477,
+  "title": "Rêverie, L. 8, CD 3 \"Le Zéphir à la douce haleine\"",
+  "mbids": [
+   "c499ee89-f981-4e1c-b633-6687d17cffa5"
+  ],
+  "mapping": "work",
+  "key": "debussy-l8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10478,
+  "title": "Fugue pour le concours d'essai, Prix de Rome Competition, 1882",
+  "mbids": [
+   "c49f85d8-b5b7-4552-a3a8-967cb705eccc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "로마 대상 예선 푸가(1882, L² 부록)"
+ },
+ {
+  "pieceId": 10484,
+  "title": "Séguidille, L. 14, CD 44 \"Un jupon serré sur les hanches\"",
+  "mbids": [
+   "c5215bfb-2b3d-4fb7-9f86-251817b9ff53"
+  ],
+  "mapping": "work",
+  "key": "debussy-l14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10515,
+  "title": "Ariettes oubliées, L. 60, CD 63b",
+  "mbids": [
+   "c73c0741-7e8d-4b50-b16c-1f005f4fae4b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "카플레의 <Ariettes oubliées> 관현악 모음곡(CD 63b, 드뷔시 감수)"
+ },
+ {
+  "pieceId": 10530,
+  "title": "L’Isle joyeuse, L. 106",
+  "mbids": [
+   "c871f63c-99cf-4d0b-ae2a-090973a3f637"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<기쁨의 섬> 관현악 편곡(몰리나리)"
+ },
+ {
+  "pieceId": 10541,
+  "title": "La Romance d’Ariel, L. 54, CD 58 \"Au long de ces montagnes douces\"",
+  "mbids": [
+   "c9809295-9465-4d6f-a241-cd03ef34ba0b"
+  ],
+  "mapping": "work",
+  "key": "debussy-l54",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10542,
+  "title": "Ariettes oubliées, L. 60: L’ombre des arbres",
+  "mbids": [
+   "c9867258-4d64-46a7-b6b1-f9ed00848e4e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<Ariettes oubliées> 3번 관현악 편곡(코치시)"
+ },
+ {
+  "pieceId": 10547,
+  "title": "Fugue pour le concours de fugue 1883",
+  "mbids": [
+   "c9e80209-0eb0-4c71-b439-5fe08bf9f01a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "푸가 콩쿠르 과제(1883, L² 부록)"
+ },
+ {
+  "pieceId": 10566,
+  "title": "Clair de lune, L. 32, CD 45 “Votre âme est un paysage choisi”",
+  "mbids": [
+   "cb17578c-cbcd-4cee-86e0-19f4db3b928d"
+  ],
+  "mapping": "work",
+  "key": "debussy-l32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10577,
+  "title": "Fugue [incomplete] pour le concours d'essai, Prix de Rome Competition, 1883",
+  "mbids": [
+   "cbec95f8-9826-4b27-980c-2a375a1b3670"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "로마 대상 예선 푸가(1883, L² 부록). 31마디 미완"
+ },
+ {
+  "pieceId": 10579,
+  "title": "Pièce pour le Vêtement du blessé (Page d'album), L. 133",
+  "mbids": [
+   "cbfb195d-f120-4c48-968a-963997040717"
+  ],
+  "mapping": "work",
+  "key": "debussy-l133",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10581,
+  "title": "Sérénade, L. 34, CD 29 \"Las, Colombine a fermé le volet\"",
+  "mbids": [
+   "cc146e86-29de-490a-a04a-2106782a8485"
+  ],
+  "mapping": "work",
+  "key": "debussy-l34",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10584,
+  "title": "Pelléas et Mélisande Suite",
+  "mbids": [
+   "cc67c71f-b22f-470d-bfb9-148fcb2d54d4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<펠레아스와 멜리장드> 모음곡(알티노글루 편)"
+ },
+ {
+  "pieceId": 10608,
+  "title": "La Fille aux cheveux de lin, L. 33, CD 15 \"Sur la luzerne en fleur\"",
+  "mbids": [
+   "ce6806e6-e401-497b-8b2c-0f207a449d21"
+  ],
+  "mapping": "work",
+  "key": "debussy-l33",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10630,
+  "title": "Il dort encore, CD 34 \"Il dort encore, une main sur la lyre\"",
+  "mbids": [
+   "d005cfa0-ece5-4ff2-b82c-ebe0707d8760"
+  ],
+  "mapping": "work",
+  "key": "debussy-cd34",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10640,
+  "title": "Des pas sur la neige",
+  "mbids": [
+   "d0c4b702-4b62-4405-a1d9-8d172b464d00"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "1권 6번 눈 위의 발자국 합창 편곡(고트발트)"
+ },
+ {
+  "pieceId": 10642,
+  "title": "Chanson des brises, L. 35, CD 32 \"Réveillez-vous, arbres des bois\"",
+  "mbids": [
+   "d0f20dae-03cd-4142-9d00-68e679d16dc3"
+  ],
+  "mapping": "work",
+  "key": "debussy-l35",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10660,
+  "title": "Madrid, L. 2, CD 1 \"Madrid, princesse des Espagnes\"",
+  "mbids": [
+   "d1f003e0-061b-4000-aac0-e8c90d221763"
+  ],
+  "mapping": "work",
+  "key": "debussy-l2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10663,
+  "title": "Les Roses, L. 13, CD 28 \"Lorsque le ciel de Saphir\"",
+  "mbids": [
+   "d21c604a-800a-4986-8013-4784236ea7e1"
+  ],
+  "mapping": "work",
+  "key": "debussy-l13",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10664,
+  "title": "Axel, L. 63, CD 73",
+  "mbids": [
+   "d242de6d-9e3f-4547-b8ae-15b685bf7c54"
+  ],
+  "mapping": "work",
+  "key": "debussy-l63",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10698,
+  "title": "Fêtes galantes, ballade en 3 tableaux",
+  "mbids": [
+   "d513cade-bafe-4615-b291-3c4e6d7fecb4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "오페라발레 <Fêtes galantes>(CD 134). 소실·미작곡"
+ },
+ {
+  "pieceId": 10709,
+  "title": "Suite bergamasque, L75: III. Clair de Lune",
+  "mbids": [
+   "d6b496b1-5777-4527-a581-f03f5cadf366"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "3번 달빛 하프 편곡"
+ },
+ {
+  "pieceId": 10756,
+  "title": "Préludes 1er livre: VIII. La fille aux cheveux de lin (trés calme et doucement expressif)",
+  "mbids": [
+   "d93578b0-7f3a-4d83-902d-4e7b9948b3cc"
+  ],
+  "mapping": "part",
+  "key": "debussy-l117",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10759,
+  "title": "Regret, L. 55, CD 59 \"Devant le ciel d’été, tiède et calme\"",
+  "mbids": [
+   "d989b85a-fd47-43f0-8a9a-59985264886d"
+  ],
+  "mapping": "work",
+  "key": "debussy-l55",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10768,
+  "title": "My Reverie",
+  "mbids": [
+   "d9f92c8c-4a55-35ba-a6d8-8518e95f7e77"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "<My Reverie> 편곡(아티 쇼)"
+ },
+ {
+  "pieceId": 10784,
+  "title": "Souhait, L. 11, CD 18 \"Oh ! quand la mort que rien ne saurait apaiser\"",
+  "mbids": [
+   "db41b08d-81fa-4427-bd96-990173b159fd"
+  ],
+  "mapping": "work",
+  "key": "debussy-l11",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10801,
+  "title": "Khamma, L 125",
+  "mbids": [
+   "dce80963-567c-36f5-b078-b30fde49f722"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "쾨클랭이 완성한 관현악판(CD 132a). 카탈로그는 debussy-l125 한 작품으로 묶음(seed 7500)"
+ },
+ {
+  "pieceId": 10803,
+  "title": "Deux romances, L. 79, CD 65 et 66",
+  "mbids": [
+   "dd1861d2-72b2-436d-8e7d-fee6ee60f4a7"
+  ],
+  "mapping": "work",
+  "key": "debussy-l79",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10806,
+  "title": "Ode bachique, CD 41 \"À toi Lyaeos, glorieux Bacchos\"",
+  "mbids": [
+   "dd3231d0-7764-435a-95dd-2ef13166806f"
+  ],
+  "mapping": "work",
+  "key": "debussy-cd41",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10810,
+  "title": "En sourdine, L. 28, CD 42 “Calmes dans le demi-jour”",
+  "mbids": [
+   "dd4d7e5d-cb4b-4008-abd4-b4cf7a39c1e9"
+  ],
+  "mapping": "work",
+  "key": "debussy-l28",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10830,
+  "title": "Little Waltz",
+  "mbids": [
+   "dec0ad19-1954-4860-86d0-7ec61c89481f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "MB 관계 없는 work <Little Waltz>. 원곡을 확인하지 못함"
+ },
+ {
+  "pieceId": 10832,
+  "title": "Sonate pour violon et piano (Allegro vivo)",
+  "mbids": [
+   "def040f5-98e8-47ad-b725-d87f9d66c0d0"
+  ],
+  "mapping": "part",
+  "key": "debussy-l140",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10842,
+  "title": "Préludes, Livre II, L. 123",
+  "mbids": [
+   "df86a927-ca6a-49a7-baef-3fa0f37d5e0a"
+  ],
+  "mapping": "work",
+  "key": "debussy-l123",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10905,
+  "title": "La Chute de la maison Usher, K. 112, CD 121",
+  "mbids": [
+   "e53d561b-20cb-4cb0-8522-712b61d724a6"
+  ],
+  "mapping": "work",
+  "key": "debussy-l112",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10906,
+  "title": "Images oubliées, L. 87: Lent (Mélancolique et doux)",
+  "mbids": [
+   "e540d1e7-de78-4eac-b794-970807f36fc7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<잊혀진 영상> 1번 관현악 편곡(코치시)"
+ },
+ {
+  "pieceId": 10911,
+  "title": "Andante cantabile, CD 10",
+  "mbids": [
+   "e5895208-4c8b-4588-853e-4633244c50ef"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "안단테 칸타빌레와 장송 행진곡(CD 10). 2악장이 16마디 단편이라 뺌"
+ },
+ {
+  "pieceId": 10926,
+  "title": "Suite bergamasque, L. 75, CD 82a : II. Menuet",
+  "mbids": [
+   "e6512863-065e-4a83-8163-fb4f20b4c351"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "2번 미뉴에트 MB 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 10965,
+  "title": "Marche écossaise sur un thème populaire, L. 77, CD 83a",
+  "mbids": [
+   "e8df18a9-f695-41fd-af7c-e890deb97093"
+  ],
+  "mapping": "work",
+  "key": "debussy-l77",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10970,
+  "title": "Préludes 1er livre: IX. La sérénade interrompue (modérément animé)",
+  "mbids": [
+   "e94a6f17-feac-4b89-b3cb-9de34e5933e6"
+  ],
+  "mapping": "part",
+  "key": "debussy-l117",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10976,
+  "title": "Le Printemps, L. 56, CD 60 \"L’aimable printemps ramène dans la plaine\"",
+  "mbids": [
+   "e9cec25e-697b-429f-96cc-9838edfe2f1b"
+  ],
+  "mapping": "work",
+  "key": "debussy-l56",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10979,
+  "title": "Children's Corner: I. Doctor Gradus Ad Parnassum (Modérément Animé)",
+  "mbids": [
+   "e9db12a6-3e00-4933-a08c-e633f69b45c9"
+  ],
+  "mapping": "part",
+  "key": "debussy-l113",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11010,
+  "title": "Petite Suite, L. 65, CD 71, pour violon et piano : III. Menuet",
+  "mbids": [
+   "ec23d8a0-e9ff-4c14-a651-46abe20da263"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<작은 모음곡> 3번 바이올린·피아노 편곡"
+ },
+ {
+  "pieceId": 11013,
+  "title": "Passepied from Suite bergamasque",
+  "mbids": [
+   "ec43257f-240d-4133-9477-cda2641c428e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "4번 파스피에 관현악 편곡(클로에즈)"
+ },
+ {
+  "pieceId": 11031,
+  "title": "Le Martyre de Saint-Sébastien, L. 124",
+  "mbids": [
+   "ed98bb94-d93e-46a9-bfe0-31a47a43bd03"
+  ],
+  "mapping": "work",
+  "key": "debussy-l124",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11034,
+  "title": "Deux arabesques, L. 66, CD 74",
+  "mbids": [
+   "ede113fb-299f-4a1b-b2be-f96e44717b4d"
+  ],
+  "mapping": "work",
+  "key": "debussy-l66",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11048,
+  "title": "Printemps",
+  "mbids": [
+   "eee6a124-6e55-4448-a2bb-06488b23a922"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<봄> 피아노 3중주 편곡(브랑가)"
+ },
+ {
+  "pieceId": 11069,
+  "title": "Printemps, L. 61, CD 68b",
+  "mbids": [
+   "f0acd2c8-dede-45fb-8b29-cafb40ff23db"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "뷔세르 관현악판(CD 68b, 드뷔시 감수). 카탈로그는 debussy-l61 한 작품으로 묶음(seed 9122)"
+ },
+ {
+  "pieceId": 11080,
+  "title": "Le Triomphe de Bacchus, L. 38, CD 33b, suite d’orchestre",
+  "mbids": [
+   "f1e6dde5-b55f-41d5-a6d9-6db036d62cfd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<바쿠스의 승리> 관현악 모음곡(CD 33b). 원래 관현악판은 소실, 가야르가 1927년 다시 관현악화"
+ },
+ {
+  "pieceId": 11089,
+  "title": "Musique, L. 44, CD 54 \"La lune se levait, pure, mais plus glacée\"",
+  "mbids": [
+   "f2541181-f544-40fa-8b54-18d0080ef10c"
+  ],
+  "mapping": "work",
+  "key": "debussy-l44",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11098,
+  "title": "Children's Corner: II. Jimbo's Lullaby (Assez Modéré)",
+  "mbids": [
+   "f33797e0-64a8-4234-9381-bfc1cb7c45a9"
+  ],
+  "mapping": "part",
+  "key": "debussy-l113",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11159,
+  "title": "Le Gladiateur, L. 41, CD 52",
+  "mbids": [
+   "f7f52cec-e786-4a2f-a9c1-43cc753de372"
+  ],
+  "mapping": "work",
+  "key": "debussy-l41",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11180,
+  "title": "1ère Arabesque",
+  "mbids": [
+   "f8f3fc70-e92f-40e2-879d-ad6466a82afe"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "아라베스크 1번 하프 편곡"
+ },
+ {
+  "pieceId": 11280,
+  "title": "Images. Premier livre",
+  "mbids": [
+   "ff18ead7-da71-4ebf-a163-3e6eb89a2f78"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<영상> 1집 관현악 편곡(콜린 매슈스)"
+ }
+]
