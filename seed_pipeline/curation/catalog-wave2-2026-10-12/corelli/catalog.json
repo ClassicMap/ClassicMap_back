@@ -1,0 +1,4192 @@
+[
+ {
+  "key": "corelli-op1",
+  "kind": "collection",
+  "catalogue": "Op. 1",
+  "catalogueAlt": null,
+  "titleKo": "3성부 교회 소나타 Op. 1",
+  "titleEn": "12 Trio Sonatas (Sonate da chiesa), Op. 1",
+  "year": 1681,
+  "yearText": "1681",
+  "genre": "trio_sonata",
+  "authenticity": "authentic",
+  "note": null,
+  "mbid": "f324929b-4422-4ccc-9b1c-f090b62a4cbe",
+  "mbTitle": "12 sonate da chiesa, op. 1",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "4ea97409-5b5e-4d2f-ab0c-8d9f2cc0b2cb",
+    "nameKo": "교회 소나타 F장조",
+    "nameEn": "No. 1 in F major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in F major, op. 1 no. 1",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "67f1dd10-d819-39dd-83bb-0c3bd06b285f",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in F major, op. 1 no. 1: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "39e69ceb-2863-3051-bae7-ff0d8b3c2403",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da Chiesa a trè in F major, op. 1 no. 1: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "4cd8fb83-8de9-310f-970d-756d34c1246a",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in F major, op. 1 no. 1: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "d2064e99-5d4c-36b1-8b17-e5faaab356d3",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in F major, op. 1 no. 1: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 2,
+    "mbid": "f4250247-5b72-4019-8184-19332fcf04b4",
+    "nameKo": "교회 소나타 E단조",
+    "nameEn": "No. 2 in E minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in E minor, op. 1 no. 2",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "7dd0af9e-c7fc-37af-b0ae-fa9f0ff181d2",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in E minor, op. 1 no. 2: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "e3119e66-0a42-3c14-a53a-cc16f79cdb01",
+      "nameKo": "Vivace",
+      "nameEn": "II. Vivace",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in E minor, op. 1 no. 2: II. Vivace"
+     },
+     {
+      "seq": 3,
+      "mbid": "676d0ab1-1a86-38e4-a1c9-425fcf40baa6",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in E minor, op. 1 no. 2: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "012ee5ac-6769-345d-aa19-e4c9600d07b3",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in E minor, op. 1 no. 2: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 3,
+    "mbid": "1f69b9a3-8cb6-400f-adb9-82d747711f1f",
+    "nameKo": "교회 소나타 A장조",
+    "nameEn": "No. 3 in A major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in A major, op. 1 no. 3",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "0c189584-004f-36d2-8f78-bb9ddcd43b7b",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A major, op. 1 no. 3: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "84e79768-3888-385e-abfe-6a3f6ca4d450",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A major, op. 1 no. 3: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "b0f51cf3-9d07-3b45-83cf-e87a1f5b5e6c",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A major, op. 1 no. 3: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "c6357059-2c55-3973-a51f-c28678052bf5",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A major, op. 1 no. 3: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 4,
+    "mbid": "4d089b50-1702-4569-8e0e-bf24a0b1f7c0",
+    "nameKo": "교회 소나타 A단조",
+    "nameEn": "No. 4 in A minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in A minor, op. 1 no. 4",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "0ed9a7f2-1907-3f77-b743-9a25aa16ab3e",
+      "nameKo": "Vivace",
+      "nameEn": "I. Vivace",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A minor, op. 1 no. 4: I. Vivace"
+     },
+     {
+      "seq": 2,
+      "mbid": "efdea3ea-1ec8-353d-8e78-2106ad3193d6",
+      "nameKo": "Adagio",
+      "nameEn": "II. Adagio",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da Chiesa a trè in A minor, op. 1 no. 4: II. Adagio"
+     },
+     {
+      "seq": 3,
+      "mbid": "79d4c449-2641-3e1f-97de-90828c5a8392",
+      "nameKo": "Allegro",
+      "nameEn": "III. Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A minor, op. 1 no. 4: III. Allegro"
+     },
+     {
+      "seq": 4,
+      "mbid": "8c030d18-bc7a-3483-93aa-f7a6b6789102",
+      "nameKo": "Presto",
+      "nameEn": "IV. Presto",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A minor, op. 1 no. 4: IV. Presto"
+     }
+    ]
+   },
+   {
+    "seq": 5,
+    "mbid": "aa6fc439-7765-410c-a093-e28f52324008",
+    "nameKo": "교회 소나타 B♭장조",
+    "nameEn": "No. 5 in B♭ major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in B-flat major, op. 1 no. 5",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "1a89fb51-d13b-3f3c-b092-c69526ef4962",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B-flat major, op. 1 no. 5: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "956d9e32-b8a7-307d-babf-4e5b64305a3a",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B-flat major, op. 1 no. 5: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "1e4e05d2-209f-3ff9-a5fc-121c9a544ed1",
+      "nameKo": "Adagio – Allegro",
+      "nameEn": "III. Adagio – Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B-flat major, op. 1 no. 5: III. Adagio - Allegro"
+     },
+     {
+      "seq": 4,
+      "mbid": "91875b7d-d23d-3be5-9e05-339e21f8ad8c",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B-flat major, op. 1 no. 5: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 6,
+    "mbid": "fbf60bf2-d35d-4cad-958f-34df47926ae3",
+    "nameKo": "교회 소나타 B단조",
+    "nameEn": "No. 6 in B minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in B minor, op. 1 no. 6",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "577af906-e3d1-3707-82e8-642069d5bad4",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B minor, op. 1 no. 6: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "4cb1ee43-2094-3efe-b1f8-0b5ef42fcfad",
+      "nameKo": "Largo",
+      "nameEn": "II. Largo",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B minor, op. 1 no. 6: II. Largo"
+     },
+     {
+      "seq": 3,
+      "mbid": "2901cc70-40bf-3e11-b0ae-327bd966c014",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B minor, op. 1 no. 6: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "1770286e-f307-3255-a887-5910b40330ea",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B minor, op. 1 no. 6: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 7,
+    "mbid": "5b997059-6c34-4b71-ba42-ef7647fbe341",
+    "nameKo": "교회 소나타 C장조",
+    "nameEn": "No. 7 in C major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in C major, op. 1 no. 7",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "e6a94bae-a8d4-33a1-a144-3ca6015ea975",
+      "nameKo": "Allegro",
+      "nameEn": "I. Allegro",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in C major, op. 1 no. 7: I. Allegro"
+     },
+     {
+      "seq": 2,
+      "mbid": "a68c4603-7b27-3477-9377-44f01c3bff65",
+      "nameKo": "Grave",
+      "nameEn": "II. Grave",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in C major, op. 1 no. 7: II. Grave"
+     },
+     {
+      "seq": 3,
+      "mbid": "1c7d0c64-171f-3c1f-96a5-82bbd4e15ec5",
+      "nameKo": "Allegro",
+      "nameEn": "III. Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in C major, op. 1 no. 7: III. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 8,
+    "mbid": "0768b89f-2f57-404d-9740-662a738bf7bc",
+    "nameKo": "교회 소나타 C단조",
+    "nameEn": "No. 8 in C minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in C minor, op. 1 no. 8",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "80ac29fc-a9a0-35ac-a64b-bd34c10c562c",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in C minor, op. 1 no. 8: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "6723475d-822a-3859-bbda-4fab6a8a2253",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in C minor, op. 1 no. 8: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "eeaab564-ac67-3771-8097-4fc2047c8446",
+      "nameKo": "Largo",
+      "nameEn": "III. Largo",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in C minor, op. 1 no. 8: III. Largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "df503140-71bc-3e8b-85b0-e78084ea4dc9",
+      "nameKo": "Vivace",
+      "nameEn": "IV. Vivace",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in C minor, op. 1 no. 8: IV. Vivace"
+     }
+    ]
+   },
+   {
+    "seq": 9,
+    "mbid": "f65d0cf2-21d5-4900-95b4-adf54e45b801",
+    "nameKo": "교회 소나타 G장조",
+    "nameEn": "No. 9 in G major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in G major, op. 1 no. 9",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "4bc4c304-8d8b-39d4-bc6a-e80adc4441df",
+      "nameKo": "Allegro",
+      "nameEn": "I. Allegro",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G major, op. 1 no. 9: I. Allegro"
+     },
+     {
+      "seq": 2,
+      "mbid": "925d4432-3697-3ccb-97a9-3c7cf0e8a83d",
+      "nameKo": "Adagio – Allegro",
+      "nameEn": "II. Adagio – Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G major, op. 1 no. 9: II. Adagio - Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "eee01b86-2011-398e-92a3-cd0e18973628",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G major, op. 1 no. 9: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "f62ba44d-b0c4-3458-89b1-321466f89099",
+      "nameKo": "Allegro – Adagio",
+      "nameEn": "IV. Allegro – Adagio",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G major, op. 1 no. 9: IV. Allegro - Adagio"
+     }
+    ]
+   },
+   {
+    "seq": 10,
+    "mbid": "5412fb98-bbef-474f-9e25-3d25dc13c73f",
+    "nameKo": "교회 소나타 G단조",
+    "nameEn": "No. 10 in G minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in G minor, op. 1 no. 10",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "c28a6d0e-344e-34a4-8bba-447d889209e1",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G minor, op. 1 no. 10: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "8bb553aa-a198-3b04-b561-e473edf48351",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G minor, op. 1 no. 10: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "f247e606-6595-32ae-8425-ee5e4095e62e",
+      "nameKo": "Allegro",
+      "nameEn": "III. Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G minor, op. 1 no. 10: III. Allegro"
+     },
+     {
+      "seq": 4,
+      "mbid": "54bd7458-8235-349d-a135-62a25ec7fb59",
+      "nameKo": "Adagio",
+      "nameEn": "IV. Adagio",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G minor, op. 1 no. 10: IV. Adagio"
+     },
+     {
+      "seq": 5,
+      "mbid": "cef56529-ba0e-3b08-bc30-c094faaa3c8b",
+      "nameKo": "Allegro",
+      "nameEn": "V. Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G minor, op. 1 no. 10: V. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 11,
+    "mbid": "91bc2d97-d67a-4d1c-8990-f6cc0e91de0a",
+    "nameKo": "교회 소나타 D단조",
+    "nameEn": "No. 11 in D minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in D minor, op. 1 no. 11",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "558a055f-a962-3f9f-8fe5-26def4e9fa9d",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D minor, op. 1 no. 11: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "55ecc491-da8c-3513-89ba-1007210ca599",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D minor, op. 1 no. 11: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "cb47c6c0-7c70-3279-b316-46b9f8b4532e",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D minor, op. 1 no. 11: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "473866aa-ac8f-3e9f-83a9-ec01416b19fd",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D minor, op. 1 no. 11: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 12,
+    "mbid": "24c6924f-eb65-4517-a096-cea8d92d6269",
+    "nameKo": "교회 소나타 D장조",
+    "nameEn": "No. 12 in D major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in D major, op. 1 no. 12",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "3e2412db-8a70-3e85-9b5b-92bc21ce2b9e",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D major, op. 1 no. 12: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "10c1b583-86f4-348f-a9cc-8a1c2647b4dc",
+      "nameKo": "Largo e puntato",
+      "nameEn": "II. Largo e puntato",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D major, op. 1 no. 12: II. Largo e puntato"
+     },
+     {
+      "seq": 3,
+      "mbid": "e7e567e9-8a22-37b8-bc24-13eb13e84e84",
+      "nameKo": "Grave",
+      "nameEn": "III. Grave",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D major, op. 1 no. 12: III. Grave"
+     },
+     {
+      "seq": 4,
+      "mbid": "ce550d4d-1d58-3d8b-93ce-3206d2e45b4d",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D major, op. 1 no. 12: IV. Allegro"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "corelli-op2",
+  "kind": "collection",
+  "catalogue": "Op. 2",
+  "catalogueAlt": null,
+  "titleKo": "3성부 실내 소나타 Op. 2",
+  "titleEn": "12 Trio Sonatas (Sonate da camera), Op. 2",
+  "year": 1685,
+  "yearText": "1685",
+  "genre": "trio_sonata",
+  "authenticity": "authentic",
+  "note": null,
+  "mbid": "6ef1c22c-1584-46d8-841d-53616d057094",
+  "mbTitle": "12 sonate da camera, op. 2",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "5a34e568-b0f8-44e5-a64e-ba2dd21fc70d",
+    "nameKo": "실내 소나타 D장조",
+    "nameEn": "No. 1 in D major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in D major, op. 2 no. 1",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "77fbbfb9-593e-312f-a577-74f4c919c5c9",
+      "nameKo": "프렐류드",
+      "nameEn": "I. Preludio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D major, op. 2 no. 1: I. Preludio"
+     },
+     {
+      "seq": 2,
+      "mbid": "96ef63b8-01ad-3bba-bdec-fd1783178646",
+      "nameKo": "알르망드. Largo",
+      "nameEn": "II. Allemanda: Largo",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D major, op. 2 no. 1: II. Allemanda: Largo"
+     },
+     {
+      "seq": 3,
+      "mbid": "249c1d32-11ee-3ccc-8638-a436c98ad2b0",
+      "nameKo": "쿠랑트. Allegro",
+      "nameEn": "III. Corrente: Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D major, op. 2 no. 1: III. Corrente: Allegro"
+     },
+     {
+      "seq": 4,
+      "mbid": "7a62b3db-298f-3d5f-803c-fc167972c591",
+      "nameKo": "가보트. Allegro",
+      "nameEn": "IV. Gavotta: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D major, op. 2 no. 1: IV. Gavotta: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 2,
+    "mbid": "476933b6-17b3-4f9c-9498-c277689b3337",
+    "nameKo": "실내 소나타 D단조",
+    "nameEn": "No. 2 in D minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in D minor, op. 2 no. 2",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "dacf3fb5-ec25-35b8-b29c-d9d0ccf1a89f",
+      "nameKo": "알르망드. Adagio",
+      "nameEn": "I. Allemanda: Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D minor, op. 2 no. 2: I. Allemanda: Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "3284c15b-07ed-3ff5-896b-d20820009470",
+      "nameKo": "쿠랑트. Allegro",
+      "nameEn": "II. Corrente: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D minor, op. 2 no. 2: II. Corrente: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "824ed311-179f-39fa-b157-6f714a4259fb",
+      "nameKo": "지그. Allegro",
+      "nameEn": "III. Giga: Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D minor, op. 2 no. 2: III. Giga: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 3,
+    "mbid": "763e43e7-5e41-4186-b42d-5c23cbeda35e",
+    "nameKo": "실내 소나타 C장조",
+    "nameEn": "No. 3 in C major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in C major, op. 2 no. 3",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "4ffddeeb-e902-39f9-a1dd-1f8fa4191689",
+      "nameKo": "프렐류드. Largo",
+      "nameEn": "I. Preludio: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in C major, op. 2 no. 3: I. Preludio: Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "2d2b601e-def6-3be3-9711-dd3e32ffd2a4",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "II. Allemanda: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in C major, op. 2 no. 3: II. Allemanda: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "2626ddb0-3dd9-3e8e-8e2b-0eec4ee755a0",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in C major, op. 2 no. 3: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "7d88ca38-b252-384a-87d9-111db293b286",
+      "nameKo": "알르망드. Presto",
+      "nameEn": "IV. Allemanda: Presto",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in C major, op. 2 no. 3: IV. Allemanda: Presto"
+     }
+    ]
+   },
+   {
+    "seq": 4,
+    "mbid": "84ed2543-61e2-4f9c-b6c0-3388dc1a6f01",
+    "nameKo": "실내 소나타 E단조",
+    "nameEn": "No. 4 in E minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata da camera a trè in E minor, op. 2 no. 4",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "8899f4ad-91f9-3ab0-80d7-afcd1048ec9a",
+      "nameKo": "프렐류드. Adagio",
+      "nameEn": "I. Preludio: Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E minor, op. 2 no. 4: I. Preludio: Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "f749e47f-b992-30cd-919b-df052753ec0e",
+      "nameKo": "알르망드. Presto",
+      "nameEn": "II. Allemanda: Presto",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E minor, op. 2 no. 4: II. Allemanda: Presto"
+     },
+     {
+      "seq": 3,
+      "mbid": "f782eec1-5c95-383a-9569-f3412272f60b",
+      "nameKo": "Grave. Adagio",
+      "nameEn": "III. Grave: Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E minor, op. 2 no. 4: III. Grave: Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "1471dd13-2101-3f48-85e8-ff40af4e011a",
+      "nameKo": "지그. Allegro",
+      "nameEn": "IV. Giga: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E minor, op. 2 no. 4: IV. Giga: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 5,
+    "mbid": "eee46c8a-643b-424b-be18-296dd090d85f",
+    "nameKo": "실내 소나타 B♭장조",
+    "nameEn": "No. 5 in B♭ major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in B-flat major, op. 2 no. 5",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "de24c756-a183-3606-beae-34a0d9270572",
+      "nameKo": "프렐류드. Adagio",
+      "nameEn": "I. Preludio: Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B-flat major, op. 2 no. 5: I. Preludio: Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "05802317-6b1d-32d5-9243-e2a94b307cb2",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "II. Allemanda: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B-flat major, op. 2 no. 5: II. Allemanda: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "a3b57c96-4677-30c5-b7a3-c7738e978781",
+      "nameKo": "사라방드. Adagio",
+      "nameEn": "III. Sarabanda: Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B-flat major, op. 2 no. 5: III. Sarabanda: Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "b9c5b302-de24-36e8-9b17-0e7e380bb0ba",
+      "nameKo": "Tempo di gavotta. Allegro",
+      "nameEn": "IV. Tempo di gavotta: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B-flat major, op. 2 no. 5: IV. Tempo di gavotta: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 6,
+    "mbid": "b8ab49b9-5ff9-4a66-8855-c0d0955f34b8",
+    "nameKo": "실내 소나타 G단조",
+    "nameEn": "No. 6 in G minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in G minor, op. 2 no. 6",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "751a6e5e-1026-3145-bc86-3c9a47acf438",
+      "nameKo": "알르망드. Largo",
+      "nameEn": "I. Allemanda: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in G minor, op. 2 no. 6: I. Allemanda: Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "fa57b030-8150-312d-9515-ddd0bdb4e640",
+      "nameKo": "쿠랑트. Allegro",
+      "nameEn": "II. Corrente: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in G minor, op. 2 no. 6: II. Corrente: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "6341ce70-0942-3bac-b5f9-4ef9d5b69e84",
+      "nameKo": "지그. Allegro",
+      "nameEn": "III. Giga: Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in G minor, op. 2 no. 6: III. Giga: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 7,
+    "mbid": "7ec1614c-155c-47f9-bbf4-d3427cbc4e53",
+    "nameKo": "실내 소나타 F장조",
+    "nameEn": "No. 7 in F major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in F major, op. 2 no. 7",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "35b5dd69-b837-3974-836b-2888756cd9cb",
+      "nameKo": "프렐류드. Adagio",
+      "nameEn": "I. Preludio: Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in F major, op. 2 no. 7: I. Preludio: Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "cfb6bc8e-0379-3bbe-94d1-e62a60df27e6",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "II. Allemanda: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in F major, op. 2 no. 7: II. Allemanda: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "5ec8380d-ebc9-3706-b599-d6c0ea2720ab",
+      "nameKo": "쿠랑트. Allegro",
+      "nameEn": "III. Corrente: Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in F major, op. 2 no. 7: III. Corrente: Allegro"
+     },
+     {
+      "seq": 4,
+      "mbid": "96fe2860-216e-35e6-b23e-ca08df25ea23",
+      "nameKo": "지그. Allegro",
+      "nameEn": "IV. Giga: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in F major, op. 2 no. 7: IV. Giga: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 8,
+    "mbid": "18c5066d-77f6-4049-8016-1a543c0d9176",
+    "nameKo": "실내 소나타 B단조",
+    "nameEn": "No. 8 in B minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in B minor, op. 2 no. 8",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "dce4fe9c-f562-3cdc-aa32-668b79521078",
+      "nameKo": "프렐류드. Adagio",
+      "nameEn": "I. Preludio: Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B minor, op. 2 no. 8: I. Preludio: Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "929a6173-51f5-3a79-9a48-9c76bb5f82c1",
+      "nameKo": "알르망드. Largo",
+      "nameEn": "II. Allemanda: Largo",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B minor, op. 2 no. 8: II. Allemanda: Largo"
+     },
+     {
+      "seq": 3,
+      "mbid": "9356ec02-10e4-3832-a497-f69177e8e2c3",
+      "nameKo": "Tempo di sarabanda. Adagio",
+      "nameEn": "III. Tempo di sarabanda: Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B minor, op. 2 no. 8: III. Tempo di sarabanda: Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "a6427fc9-c90b-369b-9e15-d4f110c2aed4",
+      "nameKo": "Tempo di gavotta. Allegro",
+      "nameEn": "IV. Tempo di gavotta: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B minor, op. 2 no. 8: IV. Tempo di gavotta: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 9,
+    "mbid": "0cd14982-8ac7-4935-85a4-8f43abe4576a",
+    "nameKo": "실내 소나타 F#단조",
+    "nameEn": "No. 9 in F# minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in F-sharp minor, op. 2 no. 9",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "cde78d33-2825-30e8-9f41-5b2c59abae57",
+      "nameKo": "알르망드. Largo",
+      "nameEn": "I. Allemanda: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in F-sharp minor, op. 2 no. 9: I. Allemanda: Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "a13cde79-5a27-3456-8867-1f9865007da8",
+      "nameKo": "Tempo di sarabanda. Largo",
+      "nameEn": "II. Tempo di sarabanda: Largo",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in F-sharp minor, op. 2 no. 9: II. Tempo di sarabanda: Largo"
+     },
+     {
+      "seq": 3,
+      "mbid": "4222907e-dd00-303a-b4c7-e8784a1c4392",
+      "nameKo": "지그. Allegro",
+      "nameEn": "III. Giga: Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in F-sharp minor, op. 2 no. 9: III. Giga: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 10,
+    "mbid": "a65a1998-d6b9-4bfc-b2cd-ebfafbfcf9d6",
+    "nameKo": "실내 소나타 E장조",
+    "nameEn": "No. 10 in E major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in E major, op. 2 no. 10",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "0b73c26f-9dff-33e6-93d6-b94626820279",
+      "nameKo": "프렐류드. Adagio",
+      "nameEn": "I. Preludio: Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E major, op. 2 no. 10: I. Preludio: Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "d9c330f1-720c-3b1c-a4d4-ef4c03325aa9",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "II. Allemanda: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E major, op. 2 no. 10: II. Allemanda: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "507125bf-0eab-341f-a9b5-b8e1b08429f7",
+      "nameKo": "사라방드. Largo",
+      "nameEn": "III. Sarabanda: Largo",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E major, op. 2 no. 10: III. Sarabanda: Largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "94aea709-5a09-3029-bf2c-0a1ea98bdef1",
+      "nameKo": "쿠랑트. Allegro",
+      "nameEn": "IV. Corrente: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E major, op. 2 no. 10: IV. Corrente: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 11,
+    "mbid": "fc3af7cf-68d2-49c7-b620-ac1d81955026",
+    "nameKo": "실내 소나타 E♭장조",
+    "nameEn": "No. 11 in E♭ major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in E-flat major, op. 2 no. 11",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "b601d432-d2d7-3579-bc8c-629f92f62522",
+      "nameKo": "프렐류드. Adagio",
+      "nameEn": "I. Preludio: Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E-flat major, op. 2 no. 11: I. Preludio: Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "9778e8cd-f620-3356-b02e-687b297e5237",
+      "nameKo": "알르망드. Presto",
+      "nameEn": "II. Allemanda: Presto",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E-flat major, op. 2 no. 11: II. Allemanda: Presto"
+     },
+     {
+      "seq": 3,
+      "mbid": "ca2aab19-c4a8-3de1-a50b-d397a7b75431",
+      "nameKo": "지그. Allegro",
+      "nameEn": "III. Giga: Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E-flat major, op. 2 no. 11: III. Giga: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 12,
+    "mbid": "0bc74172-0c64-360a-83b2-655f53baa7c0",
+    "nameKo": "실내 소나타 G장조",
+    "nameEn": "No. 12 in G major (Ciacona)",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in G major, op. 2 no. 12: Ciacona: Largo-allegro",
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "corelli-op3",
+  "kind": "collection",
+  "catalogue": "Op. 3",
+  "catalogueAlt": null,
+  "titleKo": "3성부 교회 소나타",
+  "titleEn": "12 Trio Sonatas (Sonate da chiesa)",
+  "year": 1689,
+  "yearText": "1689",
+  "genre": "trio_sonata",
+  "authenticity": "authentic",
+  "note": null,
+  "mbid": "d2a0e142-ef43-4dfc-a4a8-0d255bdafc67",
+  "mbTitle": "12 sonate da chiesa, op. 3",
+  "existingPieceId": 60,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "ab2c147a-518b-4291-bb3f-b7351c96bcbc",
+    "nameKo": "교회 소나타 F장조",
+    "nameEn": "No. 1 in F major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in F major, op. 3 no. 1",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "370c4ecb-7a18-388b-b522-3b6fe40eda1a",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in F major, op. 3 no. 1: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "2a112bbc-1cbb-3a10-9726-1198ba6b1555",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in F major, op. 3 no. 1: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "f03601e6-dac1-3ba2-a2f1-3e6e5ea0be45",
+      "nameKo": "Vivace",
+      "nameEn": "III. Vivace",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in F major, op. 3 no. 1: III. Vivace"
+     },
+     {
+      "seq": 4,
+      "mbid": "0aaafc6f-b256-3915-a7c0-dc8393378a0e",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in F major, op. 3 no. 1: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 2,
+    "mbid": "2da85e99-7519-48a4-862e-e34c44547aa7",
+    "nameKo": "교회 소나타 D장조",
+    "nameEn": "No. 2 in D major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in D major, op. 3 no. 2",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "525d5eaa-e709-3b57-9190-90d0aac42d2b",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D major, op. 3 no. 2: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "eb8712c3-60cc-309c-a94a-9658fc2875f9",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D major, op. 3 no. 2: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "d148fb6c-2ac4-38ad-90fc-08930605fbeb",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D major, op. 3 no. 2: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "8d9e2594-8e3b-3bb0-84c8-798046b2308c",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D major, op. 3 no. 2: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 3,
+    "mbid": "97e30e42-daef-4b3f-8786-8b9a713890e9",
+    "nameKo": "교회 소나타 B♭장조",
+    "nameEn": "No. 3 in B♭ major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in B-flat major, op. 3 no. 3",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "715d20fa-d77b-39db-ad35-5e39ae33bba2",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B-flat major, op. 3 no. 3: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "6ffe7a03-7c9d-3d35-86ae-5f977ba57163",
+      "nameKo": "Vivace",
+      "nameEn": "II. Vivace",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B-flat major, op. 3 no. 3: II. Vivace"
+     },
+     {
+      "seq": 3,
+      "mbid": "00acb5a6-ee62-3d50-9ffd-0bb2e3c23776",
+      "nameKo": "Largo",
+      "nameEn": "III. Largo",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B-flat major, op. 3 no. 3: III. Largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "e7486673-0726-3669-8848-e8303a2845c7",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B-flat major, op. 3 no. 3: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 4,
+    "mbid": "d34537e9-3d6a-4dfb-911c-5217bf3f5ed4",
+    "nameKo": "교회 소나타 B단조",
+    "nameEn": "No. 4 in B minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in B minor, op. 3 no. 4",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "2ec04467-4029-3e54-891a-da296de84722",
+      "nameKo": "Largo",
+      "nameEn": "I. Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B minor, op. 3 no. 4: I. Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "28e64df4-0fb2-3ccf-9d4a-259607e652c9",
+      "nameKo": "Vivace",
+      "nameEn": "II. Vivace",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B minor, op. 3 no. 4: II. Vivace"
+     },
+     {
+      "seq": 3,
+      "mbid": "1ca5a94e-bf93-3a93-a0f1-fb93e94c1abe",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B minor, op. 3 no. 4: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "ad44dbf0-9b99-3313-9205-ecd2ecfac5fc",
+      "nameKo": "Presto",
+      "nameEn": "IV. Presto",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in B minor, op. 3 no. 4: IV. Presto"
+     }
+    ]
+   },
+   {
+    "seq": 5,
+    "mbid": "fba79dac-e025-4075-8777-97b48c291a75",
+    "nameKo": "교회 소나타 D단조",
+    "nameEn": "No. 5 in D minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in D minor, op. 3 no. 5",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "804495b0-884f-34a2-bfb8-181719da20d7",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D minor, op. 3 no. 5: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "a1dc689e-4bfe-3047-ab66-4c93f53475a8",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D minor, op. 3 no. 5: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "5b3d5242-3390-3df8-ba22-6021e480ccc3",
+      "nameKo": "Largo",
+      "nameEn": "III. Largo",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D minor, op. 3 no. 5: III. Largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "6172327d-c7e1-39f7-b1e1-1334071bc60c",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in D minor, op. 3 no. 5: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 6,
+    "mbid": "e85d1b7d-ce0a-4dbe-b576-89f8fc5516d0",
+    "nameKo": "교회 소나타 G장조",
+    "nameEn": "No. 6 in G major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in G major, op. 3 no. 6",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "7b25b27b-d174-3666-b27a-fefffdea6b7e",
+      "nameKo": "Vivace",
+      "nameEn": "I. Vivace",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G major, op. 3 no. 6: I. Vivace"
+     },
+     {
+      "seq": 2,
+      "mbid": "6f0fc3eb-111f-3d36-8947-f2d3eab11759",
+      "nameKo": "Grave",
+      "nameEn": "II. Grave",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G major, op. 3 no. 6: II. Grave"
+     },
+     {
+      "seq": 3,
+      "mbid": "3bb526b7-73b5-36a3-91de-c8cb1185e9cb",
+      "nameKo": "Allegro",
+      "nameEn": "III. Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G major, op. 3 no. 6: III. Allegro"
+     },
+     {
+      "seq": 4,
+      "mbid": "a0d1694a-2b92-3952-a0ae-cee9a4da343a",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G major, op. 3 no. 6: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 7,
+    "mbid": "eaab42d0-881a-4846-975d-a87fb0d499d5",
+    "nameKo": "교회 소나타 E단조",
+    "nameEn": "No. 7 in E minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da chiesa a trè in E minor, op. 3 no. 7",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "9f94a659-8486-3afb-a9b8-ce3577f72a82",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in E minor, op. 3 no. 7: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "d1ce9783-3966-3343-8a80-8c46acab91f5",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in E minor, op. 3 no. 7: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "f7e2d468-95b9-3577-b634-788869c02e32",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in E minor, op. 3 no. 7: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "965ac5b0-d74f-3025-875a-b01967ac5473",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in E minor, op. 3 no. 7: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 8,
+    "mbid": "338b8474-9e18-4c77-83fb-d1cf9f57940d",
+    "nameKo": "교회 소나타 C장조",
+    "nameEn": "No. 8 in C major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata da chiesa a trè in C major, op. 3 no. 8",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "bfc0fa7c-7265-371f-83bc-268aa9952768",
+      "nameKo": "Largo",
+      "nameEn": "I. Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in C major, op. 3 no. 8: I. Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "ad76fc03-a209-32ee-a0f2-561816d3dce7",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in C major, op. 3 no. 8: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "aacfaf6a-437d-30e2-821e-642e8e267e56",
+      "nameKo": "Largo",
+      "nameEn": "III. Largo",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in C major, op. 3 no. 8: III. Largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "9301c46c-7450-3fa1-810c-9c56629b787e",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in C major, op. 3 no. 8: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 9,
+    "mbid": "9a3b4038-1eb9-42f3-95cb-ee5fa2fffe91",
+    "nameKo": "교회 소나타 F단조",
+    "nameEn": "No. 9 in F minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata da chiesa a trè in F minor, op. 3 no. 9",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "e1d7a607-134b-3987-99e7-46588b0250a3",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in F minor, op. 3 no. 9: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "dc2cc148-82d3-369e-aabc-c8b6f574c218",
+      "nameKo": "Vivace",
+      "nameEn": "II. Vivace",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in F minor, op. 3 no. 9: II. Vivace"
+     },
+     {
+      "seq": 3,
+      "mbid": "7d72f9cc-584c-3ccc-89c1-2ae79cfdfeb7",
+      "nameKo": "Largo",
+      "nameEn": "III. Largo",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in F minor, op. 3 no. 9: III. Largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "8aa373a3-8c9b-30d5-9447-6c18b6c59316",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in F minor, op. 3 no. 9: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 10,
+    "mbid": "7221ae3a-ed6f-4082-ac5c-914208bd5c3c",
+    "nameKo": "교회 소나타 A단조",
+    "nameEn": "No. 10 in A minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata da chiesa a trè in A minor, op. 3 no. 10",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "939ce448-902e-30e9-aec7-7ca73d42548f",
+      "nameKo": "Vivace",
+      "nameEn": "I. Vivace",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A minor, op. 3 no. 10: I. Vivace"
+     },
+     {
+      "seq": 2,
+      "mbid": "e6fd5c3e-baf8-342f-9e3b-586921875543",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A minor, op. 3 no. 10: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "f8f5cfaf-e5c7-3efe-a10e-f5cbba545a7a",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A minor, op. 3 no. 10: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "c7d05480-bb5e-309e-9d9e-94a9a2d66efa",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A minor, op. 3 no. 10: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 11,
+    "mbid": "9cc8b127-9cfc-4f95-a5cf-19543003fc97",
+    "nameKo": "교회 소나타 G단조",
+    "nameEn": "No. 11 in G minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata da chiesa a trè in G minor, op. 3 no. 11",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "27d4d36c-4a11-37c8-a9d6-923fe62fc1b3",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G minor, op. 3 no. 11: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "acb810be-6283-3d31-88a7-a493dbd81102",
+      "nameKo": "Presto",
+      "nameEn": "II. Presto",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G minor, op. 3 no. 11: II. Presto"
+     },
+     {
+      "seq": 3,
+      "mbid": "135afddf-7e95-3620-8fde-7d050cf8d2da",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G minor, op. 3 no. 11: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "4d1611f5-35ed-3eac-9ea7-10947070182c",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in G minor, op. 3 no. 11: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 12,
+    "mbid": "26af8d66-d163-44a1-8251-c76a2e54ed7c",
+    "nameKo": "교회 소나타 A장조",
+    "nameEn": "No. 12 in A major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata da chiesa a trè in A major, op. 3 no. 12",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "b539199a-13fd-3e48-a339-fbc38296dab1",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A major, op. 3 no. 12: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "4165c27e-d567-36e2-8292-ae664115179b",
+      "nameKo": "Vivace",
+      "nameEn": "II. Vivace",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A major, op. 3 no. 12: II. Vivace"
+     },
+     {
+      "seq": 3,
+      "mbid": "df7e4523-d1e5-390f-9b55-54064b97c299",
+      "nameKo": "Allegro",
+      "nameEn": "III. Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A major, op. 3 no. 12: III. Allegro"
+     },
+     {
+      "seq": 4,
+      "mbid": "3db24ffb-9148-3ae5-beaf-263c65da717d",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A major, op. 3 no. 12: IV. Allegro"
+     },
+     {
+      "seq": 5,
+      "mbid": "2490ea57-ed72-392c-9b16-c604fd052a24",
+      "nameKo": "Allegro",
+      "nameEn": "V. Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da chiesa a trè in A major, op. 3 no. 12: V. Allegro"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "corelli-op4",
+  "kind": "collection",
+  "catalogue": "Op. 4",
+  "catalogueAlt": null,
+  "titleKo": "3성부 실내 소나타 Op. 4",
+  "titleEn": "12 Trio Sonatas (Sonate da camera), Op. 4",
+  "year": 1694,
+  "yearText": "1694",
+  "genre": "trio_sonata",
+  "authenticity": "authentic",
+  "note": null,
+  "mbid": "ea194734-04d3-45cc-a3c6-3ff2ffa546d3",
+  "mbTitle": "12 sonate da camera, op. 4",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "406b766b-920b-4892-b1b6-7dd14516e4c3",
+    "nameKo": "실내 소나타 C장조",
+    "nameEn": "No. 1 in C major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in C major, op. 4 no. 1",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "955936e1-cdb9-3781-be91-291adfe4a5c7",
+      "nameKo": "프렐류드. Largo",
+      "nameEn": "I. Preludio: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in C major, op. 4 no. 1: I. Preludio: Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "978496ad-4dd6-3c96-b180-b0c09bc04202",
+      "nameKo": "쿠랑트. Allegro",
+      "nameEn": "II. Corrente: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in C major, op. 4 no. 1: II. Corrente: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "52b36028-5e70-38a8-bec8-6f623837a7ad",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in C major, op. 4 no. 1: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "55fcea81-2cf7-3fc9-b810-bd26f708e9e5",
+      "nameKo": "알르망드. Presto",
+      "nameEn": "IV. Allemanda: Presto",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in C major, op. 4 no. 1: IV. Allemanda: Presto"
+     }
+    ]
+   },
+   {
+    "seq": 2,
+    "mbid": "c6d6d853-3b25-4c9f-9c5a-23779ab6b394",
+    "nameKo": "실내 소나타 G단조",
+    "nameEn": "No. 2 in G minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in G minor, op. 4 no. 2",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "a47e844a-1fb2-3bfc-a71f-328813341843",
+      "nameKo": "프렐류드. Grave",
+      "nameEn": "I. Preludio: Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in G minor, op. 4 no. 2: I. Preludio: Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "6046bee2-8cfe-3422-869f-3c9b090fbdb6",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "II. Allemanda: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in G minor, op. 4 no. 2: II. Allemanda: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "d988f520-f64a-3bf4-8ad2-9d271614c2af",
+      "nameKo": "Grave",
+      "nameEn": "III. Grave",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in G minor, op. 4 no. 2: III. Grave"
+     },
+     {
+      "seq": 4,
+      "mbid": "ae1dd405-6325-3d34-8339-36942d045d04",
+      "nameKo": "쿠랑트. Vivace",
+      "nameEn": "IV. Corrente: Vivace",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in G minor, op. 4 no. 2: IV. Corrente: Vivace"
+     }
+    ]
+   },
+   {
+    "seq": 3,
+    "mbid": "e56bc7d5-a60b-4887-aed4-fbee898e9fbb",
+    "nameKo": "실내 소나타 A장조",
+    "nameEn": "No. 3 in A major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in A major, op. 4 no. 3",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "43215f1d-a108-3f0c-8d10-30744c53e6fe",
+      "nameKo": "프렐류드. Largo",
+      "nameEn": "I. Preludio: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in A major, op. 4 no. 3: I. Preludio: Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "5bd04880-e5ea-3f0a-9193-cee3f40979e8",
+      "nameKo": "쿠랑트. Allegro",
+      "nameEn": "II. Corrente: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in A major, op. 4 no. 3: II. Corrente: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "d8db5263-4700-3ac7-a87b-053e5949c92a",
+      "nameKo": "사라방드. Largo",
+      "nameEn": "III. Sarabanda: Largo",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in A major, op. 4 no. 3: III. Sarabanda: Largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "9211a3f3-0b4e-320d-a77d-1744da4f94dc",
+      "nameKo": "Tempo di gavotta. Allegro",
+      "nameEn": "IV. Tempo di gavotta: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in A major, op. 4 no. 3: IV. Tempo di gavotta: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 4,
+    "mbid": "a2e44a20-4bc1-4258-ad3b-91e8ebec58c5",
+    "nameKo": "실내 소나타 D장조",
+    "nameEn": "No. 4 in D major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in D major, op. 4 no. 4",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "54386e19-edfc-38f0-bf68-77755c7f1928",
+      "nameKo": "프렐류드. Grave",
+      "nameEn": "I. Preludio: Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D major, op. 4 no. 4: I. Preludio: Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "ced2c8d7-516b-3e43-bb78-cbe8b5c7b093",
+      "nameKo": "쿠랑트. Allegro",
+      "nameEn": "II. Corrente: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D major, op. 4 no. 4: II. Corrente: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "31305a5f-db63-33f2-b97e-af941af18fdd",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D major, op. 4 no. 4: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "0d50247c-52db-3ed4-8190-6edeca09aa93",
+      "nameKo": "지그. Allegro",
+      "nameEn": "IV. Giga: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D major, op. 4 no. 4: IV. Giga: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 5,
+    "mbid": "4e2071af-7f37-4263-aab6-2016edf3f454",
+    "nameKo": "실내 소나타 A단조",
+    "nameEn": "No. 5 in A minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in A minor, op. 4 no. 5",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "ea850656-6e7c-308e-849f-07981deb4c9b",
+      "nameKo": "프렐류드. Adagio",
+      "nameEn": "I. Preludio: Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in A minor, op. 4 no. 5: I. Preludio: Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "cc82d30d-1e73-31bb-9561-02c2e3804aa8",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "II. Allemanda: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in A minor, op. 4 no. 5: II. Allemanda: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "272017f8-85b9-3566-b177-7bd0358dbc44",
+      "nameKo": "쿠랑트. Vivace",
+      "nameEn": "III. Corrente: Vivace",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in A minor, op. 4 no. 5: III. Corrente: Vivace"
+     },
+     {
+      "seq": 4,
+      "mbid": "214cb20f-b3f6-36d0-87ad-c41f17f29f20",
+      "nameKo": "가보트. Allegro",
+      "nameEn": "IV. Gavotta: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in A minor, op. 4 no. 5: IV. Gavotta: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 6,
+    "mbid": "f7a3cda4-eff6-4651-8669-1ee97b304acc",
+    "nameKo": "실내 소나타 E장조",
+    "nameEn": "No. 6 in E major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate da camera a trè in E major, op. 4 no. 6",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "6a318e13-a6d4-3f64-93bc-11f00520495f",
+      "nameKo": "프렐류드. Adagio – Allegro – Adagio – Allegro – Adagio",
+      "nameEn": "I. Preludio. Adagio – Allegro – Adagio – Allegro – Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E major, op. 4 no. 6: I. Preludio. Adagio - Allegro - Adagio - Allegro - Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "b16832e2-407a-3b1a-a354-fde173bb28c7",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "II. Allemanda. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E major, op. 4 no. 6: II. Allemanda. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "fa8121cd-69d3-3f35-a433-a0bd5f898311",
+      "nameKo": "지그. Allegro",
+      "nameEn": "III. Giga. Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in E major, op. 4 no. 6: III. Giga. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 7,
+    "mbid": "c13b05ea-2ef7-48ab-9de0-fb304ae612d5",
+    "nameKo": "실내 소나타 F장조",
+    "nameEn": "No. 7 in F major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata da camera a trè in F major, op. 4 no. 7",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "f49c791b-194e-3619-8d1c-dd3ec2274592",
+      "nameKo": "프렐류드. Largo",
+      "nameEn": "I. Preludio: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in F major, op. 4 no. 7: I. Preludio: Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "798ef3f9-91b6-3ca7-b211-800f75587034",
+      "nameKo": "쿠랑트. Allegro – Grave",
+      "nameEn": "II. Corrente: Allegro – Grave",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in F major, op. 4 no. 7: II. Corrente: Allegro - Grave"
+     },
+     {
+      "seq": 3,
+      "mbid": "d15ab832-5a2c-3a09-a7ea-d9cb93bf768f",
+      "nameKo": "사라방드. Vivace",
+      "nameEn": "III. Sarabanda: Vivace",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in F major, op. 4 no. 7: III. Sarabanda: Vivace"
+     },
+     {
+      "seq": 4,
+      "mbid": "990002c0-3a88-3db3-813a-5a4da211ecaa",
+      "nameKo": "지그. Allegro",
+      "nameEn": "IV. Giga: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in F major, op. 4 no. 7: IV. Giga: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 8,
+    "mbid": "a9db7565-ca30-4590-b812-7d72091198b6",
+    "nameKo": "실내 소나타 D단조",
+    "nameEn": "No. 8 in D minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata da camera a trè in D minor, op. 4 no. 8",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "1ec07b57-10ed-38d7-9701-e47fe8db8b09",
+      "nameKo": "프렐류드. Grave",
+      "nameEn": "I. Preludio: Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D minor, op. 4 no. 8: I. Preludio: Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "6d0f87d1-1f29-3468-ad40-d271466e1906",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "II. Allemanda: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D minor, op. 4 no. 8: II. Allemanda: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "10838541-78ac-3a40-b665-6c00763fca7b",
+      "nameKo": "사라방드. Allegro",
+      "nameEn": "III. Sarabanda: Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in D minor, op. 4 no. 8: III. Sarabanda: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 9,
+    "mbid": "3242c209-afca-4d92-81f4-19c1d06b45e4",
+    "nameKo": "실내 소나타 B♭장조",
+    "nameEn": "No. 9 in B♭ major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata da camera a trè in B-flat major, op. 4 no. 9",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "2ffafe30-361d-32a3-994b-3198196845b7",
+      "nameKo": "프렐류드. Largo",
+      "nameEn": "I. Preludio: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B-flat major, op. 4 no. 9: I. Preludio: Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "95daa56c-7ac5-37fa-b11c-2eed9700e1e3",
+      "nameKo": "쿠랑트. Allegro",
+      "nameEn": "II. Corrente: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B-flat major, op. 4 no. 9: II. Corrente: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "cb904f71-11aa-3f70-8d7a-2d0f1b461ef1",
+      "nameKo": "Grave",
+      "nameEn": "III. Grave",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B-flat major, op. 4 no. 9: III. Grave"
+     },
+     {
+      "seq": 4,
+      "mbid": "3e5f8a3a-da43-33f1-98f3-80a9be63e1c0",
+      "nameKo": "Tempo di gavotta. Allegro",
+      "nameEn": "IV. Tempo di gavotta: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B-flat major, op. 4 no. 9: IV. Tempo di gavotta: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 10,
+    "mbid": "6fb856cf-353d-461b-be46-04f5f7b45dda",
+    "nameKo": "실내 소나타 G장조",
+    "nameEn": "No. 10 in G major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata da camera a trè in G major, op. 4 no. 10",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "e434e79a-ab95-310c-a293-ac1f5dd046fa",
+      "nameKo": "프렐류드. Adagio – Allegro",
+      "nameEn": "I. Preludio: Adagio – Allegro",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in G major, op. 4 no. 10: I. Preludio: Adagio - Allegro"
+     },
+     {
+      "seq": 2,
+      "mbid": "a5bb0c62-b4ba-3e73-8424-237d464f6977",
+      "nameKo": "Grave",
+      "nameEn": "II. Grave",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in G major, op. 4 no. 10: II. Grave"
+     },
+     {
+      "seq": 3,
+      "mbid": "bc5e56f7-52a1-3ef5-a1c1-3d86594b8b22",
+      "nameKo": "Tempo di gavotta – Presto",
+      "nameEn": "III. Tempo di gavotta – Presto",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in G major, op. 4 no. 10: III. Tempo di gavotta - Presto"
+     }
+    ]
+   },
+   {
+    "seq": 11,
+    "mbid": "054c3063-b871-4834-89ff-9e2037545ef4",
+    "nameKo": "실내 소나타 C단조",
+    "nameEn": "No. 11 in C minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata da camera a trè in C minor, op. 4 no. 11",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "27c259fd-6438-30e2-b464-e273eb42be78",
+      "nameKo": "프렐류드. Largo",
+      "nameEn": "I. Preludio: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in C minor, op. 4 no. 11: I. Preludio: Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "8a6179cf-868e-3e45-9b93-c9b56a1737f2",
+      "nameKo": "쿠랑트. Allegro",
+      "nameEn": "II. Corrente: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in C minor, op. 4 no. 11: II. Corrente: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "31ab7df8-7aa6-3d83-9beb-a6f2fc697abd",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "III. Allemanda: Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in C minor, op. 4 no. 11: III. Allemanda: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 12,
+    "mbid": "9950c31a-f4bc-491a-856a-1e1fe58226ef",
+    "nameKo": "실내 소나타 B단조",
+    "nameEn": "No. 12 in B minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata da camera a trè in B minor, op. 4 no. 12",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "6cedf5ce-9fbe-3b7f-bebb-89683578f4cb",
+      "nameKo": "프렐류드. Largo",
+      "nameEn": "I. Preludio: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B minor, op. 4 no. 12: I. Preludio: Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "0f251ef0-6a9b-3070-ab07-a5e88477cd1a",
+      "nameKo": "알르망드. Presto",
+      "nameEn": "II. Allemanda: Presto",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B minor, op. 4 no. 12: II. Allemanda: Presto"
+     },
+     {
+      "seq": 3,
+      "mbid": "79f26502-3d50-33f5-a555-2a7713f59856",
+      "nameKo": "지그. Allegro",
+      "nameEn": "III. Giga: Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Sonate da camera a trè in B minor, op. 4 no. 12: III. Giga: Allegro"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "corelli-op5",
+  "kind": "collection",
+  "catalogue": "Op. 5",
+  "catalogueAlt": null,
+  "titleKo": "바이올린 소나타 Op. 5",
+  "titleEn": "12 Violin Sonatas, Op. 5",
+  "year": 1700,
+  "yearText": "1700",
+  "genre": "violin_sonata",
+  "authenticity": "authentic",
+  "note": null,
+  "mbid": "85c1b7f8-0e8b-49f2-b234-570365469329",
+  "mbTitle": "12 sonate a due per violino e basso continuo, op. 5",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "444b672c-e08d-4aa8-88c0-fcdc3b331317",
+    "nameKo": "바이올린 소나타 D장조",
+    "nameEn": "No. 1 in D major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Violin Sonata in D major, op. 5 no. 1",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "4c5f2efc-c0f2-3a3f-9717-14829f2dfb95",
+      "nameKo": "Grave – Allegro",
+      "nameEn": "I. Grave – Allegro",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in D major, op. 5 no. 1: I. Grave - Allegro"
+     },
+     {
+      "seq": 2,
+      "mbid": "fdb98c87-5a13-3dc2-90d4-2c8edea05259",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in D major, op. 5 no. 1: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "63753cea-c5ad-3793-9298-4fa57a178316",
+      "nameKo": "Allegro",
+      "nameEn": "III. Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in D major, op. 5 no. 1: III. Allegro"
+     },
+     {
+      "seq": 4,
+      "mbid": "2ad42e0f-0b3a-3aa1-83f6-41a2746f9a05",
+      "nameKo": "Adagio",
+      "nameEn": "IV. Adagio",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in D major, op. 5 no. 1: IV. Adagio"
+     },
+     {
+      "seq": 5,
+      "mbid": "88f72dff-902e-3720-89f6-62b320426c90",
+      "nameKo": "Allegro",
+      "nameEn": "V. Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in D major, op. 5 no. 1: V. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 2,
+    "mbid": "91d4391e-87c1-439a-828b-8e84eff04992",
+    "nameKo": "바이올린 소나타 B♭장조",
+    "nameEn": "No. 2 in B♭ major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Violin Sonata in B-flat major, op. 5 no. 2",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "3e797f35-28b6-3c07-8950-3352a6db3fc0",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in B-flat major, op. 5 no. 2: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "debba2d4-7071-3831-910c-8ec8ae139c07",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in B-flat major, op. 5 no. 2: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "e618a7a2-65d9-3ad5-83f3-974c6046a181",
+      "nameKo": "Vivace",
+      "nameEn": "III. Vivace",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in B-flat major, op. 5 no. 2: III. Vivace"
+     },
+     {
+      "seq": 4,
+      "mbid": "25c5b916-e53d-3ee3-90d9-daa3532b7ebd",
+      "nameKo": "Adagio",
+      "nameEn": "IV. Adagio",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in B-flat major, op. 5 no. 2: IV. Adagio"
+     },
+     {
+      "seq": 5,
+      "mbid": "6e5b2f85-537b-3918-98df-a24ba48cbf08",
+      "nameKo": "Vivace",
+      "nameEn": "V. Vivace",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in B-flat major, op. 5 no. 2: V. Vivace"
+     }
+    ]
+   },
+   {
+    "seq": 3,
+    "mbid": "4409d00d-48ec-499a-a084-5ab949612da0",
+    "nameKo": "바이올린 소나타 C장조",
+    "nameEn": "No. 3 in C major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Violin Sonata in C major, op. 5 no. 3",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "1853e7b1-c6b6-3b60-a22a-f04010123d22",
+      "nameKo": "Adagio",
+      "nameEn": "I. Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in C major, op. 5 no. 3: I. Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "cdca5b52-f762-35bf-b01a-e213e0caff11",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in C major, op. 5 no. 3: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "3308fe97-b70e-32e9-be2c-ba0700349976",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in C major, op. 5 no. 3: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "e4a48b5c-a254-3e4a-8973-0076f4e767ce",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in C major, op. 5 no. 3: IV. Allegro"
+     },
+     {
+      "seq": 5,
+      "mbid": "e25b89d6-a271-3abf-9573-e839c651f3fe",
+      "nameKo": "Allegro",
+      "nameEn": "V. Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in C major, op. 5 no. 3: V. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 4,
+    "mbid": "fea37be7-a2df-4f96-b393-f7eaa997c5f3",
+    "nameKo": "바이올린 소나타 F장조",
+    "nameEn": "No. 4 in F major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Violin Sonata in F major, op. 5 no. 4",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "b0fff44b-544f-3dd6-8ea6-5ae61f0592b0",
+      "nameKo": "Adagio",
+      "nameEn": "I. Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in F major, op. 5 no. 4: I. Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "a23b87e3-6f6d-3136-9f90-07e9d1954051",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in F major, op. 5 no. 4: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "434a532c-db5c-3a7c-989e-d70853fba9bf",
+      "nameKo": "Vivace",
+      "nameEn": "III. Vivace",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in F major, op. 5 no. 4: III. Vivace"
+     },
+     {
+      "seq": 4,
+      "mbid": "01900662-362d-36de-8190-768dbc1e9f69",
+      "nameKo": "Adagio",
+      "nameEn": "IV. Adagio",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in F major, op. 5 no. 4: IV. Adagio"
+     },
+     {
+      "seq": 5,
+      "mbid": "2debc0d8-1bb6-3478-aa1f-207b9193b7fe",
+      "nameKo": "Allegro",
+      "nameEn": "V. Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in F major, op. 5 no. 4: V. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 5,
+    "mbid": "b65e259b-eab4-4635-8c92-7eff3b058ce4",
+    "nameKo": "바이올린 소나타 G단조",
+    "nameEn": "No. 5 in G minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Violin Sonata in G minor, op. 5 no. 5",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "daf76523-74c1-36ad-bd1e-a76ca834229d",
+      "nameKo": "Adagio",
+      "nameEn": "I. Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in G minor, op. 5 no. 5: I. Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "f89089a0-8850-39e2-abba-e113329bffb7",
+      "nameKo": "Vivace",
+      "nameEn": "II. Vivace",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in G minor, op. 5 no. 5: II. Vivace"
+     },
+     {
+      "seq": 3,
+      "mbid": "a7a0f281-dd17-35f9-8f32-a193bb2e8cfc",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in G minor, op. 5 no. 5: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "5652ce01-d38d-34d6-b4e0-5fa69d991dd6",
+      "nameKo": "Vivace",
+      "nameEn": "IV. Vivace",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in G minor, op. 5 no. 5: IV. Vivace"
+     },
+     {
+      "seq": 5,
+      "mbid": "e6788294-2a54-39bd-81c7-a7cab92f72b4",
+      "nameKo": "지그. Allegro",
+      "nameEn": "V. Giga: Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in G minor, op. 5 no. 5: V. Giga: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 6,
+    "mbid": "f38f6402-d6f3-4db7-a8f3-2c452504176c",
+    "nameKo": "바이올린 소나타 A장조",
+    "nameEn": "No. 6 in A major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Violin Sonata in A major, op. 5 no. 6",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "ab5ed119-f058-3cce-9f1c-07e9e4ce5554",
+      "nameKo": "Grave",
+      "nameEn": "I. Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in A major, op. 5 no. 6: I. Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "8cdbbbfa-1397-36a8-b6f9-1b44b828d7e0",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in A major, op. 5 no. 6: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "b07b0c74-63c9-34b5-9071-b2f1dc41b937",
+      "nameKo": "Allegro",
+      "nameEn": "III. Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in A major, op. 5 no. 6: III. Allegro"
+     },
+     {
+      "seq": 4,
+      "mbid": "2856f3c4-1358-33d5-8cd7-ef7d24ebebca",
+      "nameKo": "Adagio",
+      "nameEn": "IV. Adagio",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in A major, op. 5 no. 6: IV. Adagio"
+     },
+     {
+      "seq": 5,
+      "mbid": "a00aedf3-e5a6-34a6-b94e-356516f0fe32",
+      "nameKo": "Allegro",
+      "nameEn": "V. Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in A major, op. 5 no. 6: V. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 7,
+    "mbid": "26a84781-e775-4b68-9d92-065a72c2b2a7",
+    "nameKo": "바이올린 소나타 D단조",
+    "nameEn": "No. 7 in D minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Violin Sonata in D minor, op. 5 no. 7",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "fc06b5a2-bd86-33a8-9a5b-f026dfc07e30",
+      "nameKo": "프렐류드. Vivace",
+      "nameEn": "I. Preludio: Vivace",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in D minor, op. 5 no. 7: I. Preludio: Vivace"
+     },
+     {
+      "seq": 2,
+      "mbid": "a0cdc4ee-b689-3ceb-8fe5-3ef9bf699342",
+      "nameKo": "쿠랑트. Allegro",
+      "nameEn": "II. Corrente: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in D minor, op. 5 no. 7: II. Corrente: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "a942ba2f-0a66-33dc-a708-ad5823459c54",
+      "nameKo": "사라방드. Largo",
+      "nameEn": "III. Sarabanda: Largo",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in D minor, op. 5 no. 7: III. Sarabanda: Largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "4b8feaa9-94eb-3830-b487-5e555e623c6d",
+      "nameKo": "지그. Allegro",
+      "nameEn": "IV. Giga: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in D minor, op. 5 no. 7: IV. Giga: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 8,
+    "mbid": "4c8d453b-0989-4e70-b15f-57ecbf72eb6a",
+    "nameKo": "바이올린 소나타 E단조",
+    "nameEn": "No. 8 in E minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Violin Sonata in E minor, op. 5 no. 8",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "b688d52d-cbe8-3374-b7ab-7267cdcf23f3",
+      "nameKo": "프렐류드. Largo",
+      "nameEn": "I. Preludio: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in E minor, op. 5 no. 8: I. Preludio: Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "6520d37b-6d2f-3777-8462-c9c482138b1c",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "II. Allemanda: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in E minor, op. 5 no. 8: II. Allemanda: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "3aa6a48e-cfbf-33e8-b59a-408d6c515932",
+      "nameKo": "사라방드. Largo",
+      "nameEn": "III. Sarabanda: Largo",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in E minor, op. 5 no. 8: III. Sarabanda: Largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "acc92b3b-d9e1-3c16-9d7c-f1c55d1b3d4a",
+      "nameKo": "지그. Allegro",
+      "nameEn": "IV. Giga: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in E minor, op. 5 no. 8: IV. Giga: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 9,
+    "mbid": "88b60b5f-a9b0-4386-80ae-56cf63011332",
+    "nameKo": "바이올린 소나타 A장조",
+    "nameEn": "No. 9 in A major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Violin Sonata in A major, op. 5 no. 9",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "ee225e96-48df-37a2-9010-777bb0d330dc",
+      "nameKo": "프렐류드. Largo",
+      "nameEn": "I. Preludio: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in A major, op. 5 no. 9: I. Preludio: Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "535df286-7dba-351d-83b0-fda3209590c0",
+      "nameKo": "지그. Allegro",
+      "nameEn": "II. Giga: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in A major, op. 5 no. 9: II. Giga: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "50f65b08-7f67-3d4c-95b6-597fb2482c94",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in A major, op. 5 no. 9: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "5106c491-51d2-3d58-b302-c1e1bd012a78",
+      "nameKo": "Tempo di gavotta. Allegro",
+      "nameEn": "IV. Tempo di gavotta: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in A major, op. 5 no. 9: IV. Tempo di gavotta: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 10,
+    "mbid": "ab60494c-e97f-4e6a-b242-13828cc4bcf8",
+    "nameKo": "바이올린 소나타 F장조",
+    "nameEn": "No. 10 in F major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Violin Sonata in F major, op. 5 no. 10",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "3194af26-a94f-3bdd-a001-231c0c650879",
+      "nameKo": "프렐류드. Adagio",
+      "nameEn": "I. Preludio: Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in F major, op. 5 no. 10: I. Preludio: Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "64314f45-b711-3171-b206-e636e5de499a",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "II. Allemanda: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in F major, op. 5 no. 10: II. Allemanda: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "383aa19b-113f-3a0f-b91e-9e391ce2204a",
+      "nameKo": "사라방드. Largo",
+      "nameEn": "III. Sarabanda: Largo",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in F major, op. 5 no. 10: III. Sarabanda: Largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "994b49e0-f02d-3bff-80a1-e003abf4dcb2",
+      "nameKo": "가보트. Allegro",
+      "nameEn": "IV. Gavotta: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in F major, op. 5 no. 10: IV. Gavotta: Allegro"
+     },
+     {
+      "seq": 5,
+      "mbid": "07e4b00c-e8a5-36c0-be53-50dc40132725",
+      "nameKo": "지그. Allegro",
+      "nameEn": "V. Giga: Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in F major, op. 5 no. 10: V. Giga: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 11,
+    "mbid": "f517ce89-55bb-418a-83b4-e9f4b152f3e0",
+    "nameKo": "바이올린 소나타 E장조",
+    "nameEn": "No. 11 in E major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Violin Sonata in E major, op. 5 no. 11",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "67e77824-a102-3399-b165-eba471fd76b9",
+      "nameKo": "프렐류드. Adagio",
+      "nameEn": "I. Preludio: Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in E major, op. 5 no. 11: I. Preludio: Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "1fb1895f-e257-3e00-a3c9-1066a3c06f13",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in E major, op. 5 no. 11: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "4229a877-2779-3166-a114-ac04d25b7568",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in E major, op. 5 no. 11: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "5ed543d2-5165-3504-b4eb-0d138bb511eb",
+      "nameKo": "Vivace",
+      "nameEn": "IV. Vivace",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in E major, op. 5 no. 11: IV. Vivace"
+     },
+     {
+      "seq": 5,
+      "mbid": "12aad1bd-af3f-3564-8d51-17f71870cad2",
+      "nameKo": "가보트. Allegro",
+      "nameEn": "V. Gavotta: Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Violin Sonata in E major, op. 5 no. 11: V. Gavotta: Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 12,
+    "mbid": "b279ae2e-5c7e-332d-882e-9294fb7ac92e",
+    "nameKo": "바이올린 소나타 D단조 \"라 폴리아\"",
+    "nameEn": "No. 12 in D minor \"La Folia\"",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 58,
+    "existingPartId": null,
+    "mbTitle": "Violin Sonata in D minor \"Follia\", op. 5 no. 12",
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "corelli-op6",
+  "kind": "collection",
+  "catalogue": "Op. 6",
+  "catalogueAlt": null,
+  "titleKo": "12개의 합주 협주곡",
+  "titleEn": "12 Concerti Grossi",
+  "year": 1714,
+  "yearText": "1680년대 작곡, 1714 출판",
+  "genre": "concerto",
+  "authenticity": "authentic",
+  "note": null,
+  "mbid": "f5155e79-1086-4359-bdf3-2c0757114ddb",
+  "mbTitle": "12 concerti grossi, op. 6",
+  "existingPieceId": 59,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "502d6fb7-7d0e-45fa-8cbd-b7a9fd827c92",
+    "nameKo": "합주 협주곡 D장조",
+    "nameEn": "No. 1 in D major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Concerto Grosso in D major, op. 6 no. 1",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "553b23c7-ac41-3dfd-867a-45bfc7b5ab2b",
+      "nameKo": "Largo",
+      "nameEn": "I. Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 1: I. Largo - Allegro"
+     },
+     {
+      "seq": 2,
+      "mbid": "1fbc1083-d4f0-3287-a23e-bc08dae05aa6",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 1: II. Largo - Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "49155e39-d23e-3e14-8b46-ddbb870427d7",
+      "nameKo": "Largo – Allegro",
+      "nameEn": "III. Largo – Allegro",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 1: III. Largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "4ae5a255-ab81-33fb-9f05-10af35960b8f",
+      "nameKo": "Largo – Allegro",
+      "nameEn": "IV. Largo – Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 1: IV. Allegro"
+     },
+     {
+      "seq": 5,
+      "mbid": "b65792aa-d27c-3703-b4d4-4061e3f8e6d0",
+      "nameKo": "Allegro",
+      "nameEn": "V. Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 1: V. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 2,
+    "mbid": "0e64fae8-af33-4757-b8be-80d147da475e",
+    "nameKo": "합주 협주곡 F장조",
+    "nameEn": "No. 2 in F major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Concerto Grosso in F major, op. 6 no. 2",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "352a615f-e2d8-3736-9d5c-1812c82f25d5",
+      "nameKo": "Vivace – Allegro – Adagio",
+      "nameEn": "I. Vivace – Allegro – Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 2: I. Vivace - Allegro - Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "2484d996-9aa6-35be-94ef-2b900d71ba84",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 2: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "08c1b6e4-0d0e-3415-94af-34fda9d5e094",
+      "nameKo": "Grave – Largo",
+      "nameEn": "III. Grave – Largo",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 2: III. Grave - Andante largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "0511cd5f-bdbb-3d45-b7a1-190fb9ed0746",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 2: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 3,
+    "mbid": "15206c9e-42f1-4e89-a239-5057578d0987",
+    "nameKo": "합주 협주곡 C단조",
+    "nameEn": "No. 3 in C minor",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Concerto Grosso in C minor, op. 6 no. 3",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "88aea9f8-a9e5-3de1-9e8a-96ef2ec0a5de",
+      "nameKo": "Largo",
+      "nameEn": "I. Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in C minor, op. 6 no. 3: I. Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "bef29f4f-17bb-3e2e-aec8-240540f7d5ee",
+      "nameKo": "Allegro – Adagio",
+      "nameEn": "II. Allegro – Adagio",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in C minor, op. 6 no. 3: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "0c462779-19c7-3f23-913c-f88824e43658",
+      "nameKo": "Grave",
+      "nameEn": "III. Grave",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in C minor, op. 6 no. 3: III. Grave"
+     },
+     {
+      "seq": 4,
+      "mbid": "4aaa8e82-a344-347b-92b6-c61796adcdea",
+      "nameKo": "Vivace",
+      "nameEn": "IV. Vivace",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in C minor, op. 6 no. 3: IV. Vivace"
+     },
+     {
+      "seq": 5,
+      "mbid": "315b1997-1e89-3227-ad74-63d5adebf425",
+      "nameKo": "Allegro",
+      "nameEn": "V. Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in C minor, op. 6 no. 3: V. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 4,
+    "mbid": "629402a8-83e7-45aa-9eb5-9bb61ed92c20",
+    "nameKo": "합주 협주곡 D장조",
+    "nameEn": "No. 4 in D major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Concerto Grosso in D major, op. 6 no. 4",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "a38e850e-7077-32ca-8b91-411a5c84646b",
+      "nameKo": "Adagio – Allegro",
+      "nameEn": "I. Adagio – Allegro",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 4: I. Adagio - Allegro"
+     },
+     {
+      "seq": 2,
+      "mbid": "a0d8945b-25bf-30cf-a2f4-3595f24926e8",
+      "nameKo": "Adagio",
+      "nameEn": "II. Adagio",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 4: II. Adagio"
+     },
+     {
+      "seq": 3,
+      "mbid": "864d94ac-accd-3a11-af83-e7f260c7ffdb",
+      "nameKo": "Vivace",
+      "nameEn": "III. Vivace",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 4: III. Vivace"
+     },
+     {
+      "seq": 4,
+      "mbid": "50651431-1596-3257-bcd4-009a0cbfbc35",
+      "nameKo": "Allegro – 지그. Presto",
+      "nameEn": "IV. Allegro – Giga: Presto",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 4: IV. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 5,
+    "mbid": "703cd02c-cd7d-4c5f-aed7-11ea772e045f",
+    "nameKo": "합주 협주곡 B♭장조",
+    "nameEn": "No. 5 in B♭ major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Concerto Grosso in B-flat major, op. 6 no. 5",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "c3a762c5-56a4-3514-8375-3bdbf5fe7798",
+      "nameKo": "Adagio – Allegro – Adagio",
+      "nameEn": "I. Adagio – Allegro – Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in B-flat major, op. 6 no. 5: I. Adagio - Allegro"
+     },
+     {
+      "seq": 2,
+      "mbid": "36e5c5e3-1cb5-3a8d-98a0-bbba85485107",
+      "nameKo": "Adagio",
+      "nameEn": "II. Adagio",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in B-flat major, op. 6 no. 5: II. Adagio"
+     },
+     {
+      "seq": 3,
+      "mbid": "3f34063a-3b53-39f2-b1b8-d922b9600e05",
+      "nameKo": "Allegro – Adagio",
+      "nameEn": "III. Allegro – Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in B-flat major, op. 6 no. 5: III. Allegro"
+     },
+     {
+      "seq": 4,
+      "mbid": "d3a2e701-05ae-37ee-a75e-e1d0241723e2",
+      "nameKo": "Largo",
+      "nameEn": "IV. Largo",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in B-flat major, op. 6 no. 5: IV. Largo"
+     },
+     {
+      "seq": 5,
+      "mbid": "76909406-f3e1-32ec-89d2-5b93e96a59b0",
+      "nameKo": "Allegro",
+      "nameEn": "V. Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in B-flat major, op. 6 no. 5: V. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 6,
+    "mbid": "976636d4-61a5-4d90-8127-d87217ae6406",
+    "nameKo": "합주 협주곡 F장조",
+    "nameEn": "No. 6 in F major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Concerto Grosso in F major, op. 6 no. 6",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "f3ab48fa-7247-39ab-adf8-ea459e1749bd",
+      "nameKo": "Adagio",
+      "nameEn": "I. Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 6: I. Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "cfb7b73f-faee-3698-8ba6-472d8e92b65a",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 6: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "3af83685-5b07-372d-b2a7-48e13d7ccc01",
+      "nameKo": "Largo",
+      "nameEn": "III. Largo",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 6: III. Largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "03f7319a-31f8-362d-9e43-11338bf66cfc",
+      "nameKo": "Vivace",
+      "nameEn": "IV. Vivace",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 6: IV. Vivace"
+     },
+     {
+      "seq": 5,
+      "mbid": "2f96e0ad-1cfa-366e-9cd7-dce80b2f361e",
+      "nameKo": "Allegro",
+      "nameEn": "V. Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 6: V. Allegro"
+     }
+    ]
+   },
+   {
+    "seq": 7,
+    "mbid": "eb73bde6-318d-45b8-ac05-2691eab3f911",
+    "nameKo": "합주 협주곡 D장조",
+    "nameEn": "No. 7 in D major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Concerto Grosso in D major, op. 6 no. 7",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "ae29001c-315d-3ed3-bda7-a1d70c3f141b",
+      "nameKo": "Vivace – Allegro – Adagio",
+      "nameEn": "I. Vivace – Allegro – Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 7: I. Vivace - Allegro - Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "f93273ba-75a6-3b05-8a49-06e9ac593326",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 7: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "70a0d81b-1e1f-357d-a8d3-7645e71c6fd1",
+      "nameKo": "Andante largo",
+      "nameEn": "III. Andante largo",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 7: III. Andante largo"
+     },
+     {
+      "seq": 4,
+      "mbid": "a7dea2ab-7189-343f-84a8-d2bc5bad8b65",
+      "nameKo": "Allegro",
+      "nameEn": "IV. Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 7: IV. Allegro"
+     },
+     {
+      "seq": 5,
+      "mbid": "4d3bc414-c7ba-3667-b815-c3191f8e3123",
+      "nameKo": "Vivace",
+      "nameEn": "V. Vivace",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in D major, op. 6 no. 7: V. Vivace"
+     }
+    ]
+   },
+   {
+    "seq": 8,
+    "mbid": "a5c09747-917c-41c8-9e17-a24a649fb95e",
+    "nameKo": "합주 협주곡 G단조 \"크리스마스 협주곡\"",
+    "nameEn": "No. 8 in G minor \"Christmas Concerto\"",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 57,
+    "existingPartId": null,
+    "mbTitle": "Concerto Grosso in G minor, op. 6 no. 8 “Fatto per la notte di Natale” (Christmas Concerto)",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "674bc0bd-4c45-3694-ab0e-5bcf83f84ebd",
+      "nameKo": "Vivace – Grave",
+      "nameEn": "I. Vivace – Grave",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in G minor, op. 6 no. 8 “Christmas Concerto”: I. Vivace - Grave"
+     },
+     {
+      "seq": 2,
+      "mbid": "c879457a-e00a-3332-ab78-d5e1ea2b61b8",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in G minor, op. 6 no. 8 “Christmas Concerto”: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "39c56318-f185-3f57-a033-1e42ef37a1f3",
+      "nameKo": "Adagio – Allegro – Adagio",
+      "nameEn": "III. Adagio – Allegro – Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in G minor, op. 6 no. 8 “Christmas Concerto”: III. Adagio - Allegro - Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "a0cfba5a-831f-37cd-874b-2d53c30da410",
+      "nameKo": "Vivace",
+      "nameEn": "IV. Vivace",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in G minor, op. 6 no. 8 “Christmas Concerto”: IV. Vivace"
+     },
+     {
+      "seq": 5,
+      "mbid": "c9996b31-b3bc-3121-9666-ceb34ffd1128",
+      "nameKo": "Allegro",
+      "nameEn": "V. Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in G minor, op. 6 no. 8 “Christmas Concerto”: V. Allegro"
+     },
+     {
+      "seq": 6,
+      "mbid": "fc74a1ae-5770-3f28-97a7-6d6ddbe225db",
+      "nameKo": "Largo – 파스토랄레 ad libitum",
+      "nameEn": "VI. Largo – Pastorale ad libitum",
+      "movementNumber": "VI",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in G minor, op. 6 no. 8 “Christmas Concerto”: VI. Pastorale (Largo)"
+     }
+    ]
+   },
+   {
+    "seq": 9,
+    "mbid": "f94e4505-8e8c-4695-bd7a-6e08a7d9f87d",
+    "nameKo": "합주 협주곡 F장조",
+    "nameEn": "No. 9 in F major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Concerto Grosso in F major, op. 6 no. 9",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "38303bed-95e7-3070-896c-b02c6f4079ea",
+      "nameKo": "프렐류드. Largo",
+      "nameEn": "I. Preludio: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 9: I. Preludio: Largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "4c7e4ffb-49b7-349d-bb53-fe49b104442b",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "II. Allemanda: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 9: II. Allemanda: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "65240f4d-30b2-3724-a4aa-03e52f41584d",
+      "nameKo": "쿠랑트. Vivace",
+      "nameEn": "III. Corrente: Vivace",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 9: III. Corrente: Vivace"
+     },
+     {
+      "seq": 4,
+      "mbid": "6ccc8da5-118e-3174-9bb9-1932184d4d9c",
+      "nameKo": "가보트. Allegro",
+      "nameEn": "IV. Gavotta: Allegro",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 9: IV. Gavotta: Allegro"
+     },
+     {
+      "seq": 5,
+      "mbid": "d0310e1d-3667-35f3-b32c-6b61ab33ef59",
+      "nameKo": "Adagio",
+      "nameEn": "V. Adagio",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 9: V. Adagio"
+     },
+     {
+      "seq": 6,
+      "mbid": "5360d0c3-9e3b-371e-a595-68369ba3d2a4",
+      "nameKo": "미뉴에트. Vivace",
+      "nameEn": "VI. Minuetto: Vivace",
+      "movementNumber": "VI",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 9: VI. Minuetto: Vivace"
+     }
+    ]
+   },
+   {
+    "seq": 10,
+    "mbid": "ad4ab223-323e-4e9a-a8fe-82a288725135",
+    "nameKo": "합주 협주곡 C장조",
+    "nameEn": "No. 10 in C major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Concerto Grosso in C major, op. 6 no. 10",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "6a3cb8f9-b1a7-3ea4-9ee6-78dfc6f13528",
+      "nameKo": "프렐류드. Largo",
+      "nameEn": "I. Preludio: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in C major, op. 6 no. 10: I. Preludio: Andante largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "7658caab-59e8-3682-a608-44f0572d2ac0",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "II. Allemanda: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in C major, op. 6 no. 10: II. Allemanda: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "73a1ed77-c98a-343c-bef2-c7c7a6ff81fe",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in C major, op. 6 no. 10: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "8b8b0f73-b57e-3a38-86bf-404a486834e9",
+      "nameKo": "쿠랑트. Vivace",
+      "nameEn": "IV. Corrente: Vivace",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in C major, op. 6 no. 10: IV. Corrente: Vivace"
+     },
+     {
+      "seq": 5,
+      "mbid": "5b98e2df-dfc7-3286-83a3-2f88a5a49658",
+      "nameKo": "Allegro",
+      "nameEn": "V. Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in C major, op. 6 no. 10: V. Allegro"
+     },
+     {
+      "seq": 6,
+      "mbid": "719f81c6-087d-30bf-939e-d210b48aad5c",
+      "nameKo": "미뉴에트. Vivace",
+      "nameEn": "VI. Minuetto: Vivace",
+      "movementNumber": "VI",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in C major, op. 6 no. 10: VI. Minuetto: Vivace"
+     }
+    ]
+   },
+   {
+    "seq": 11,
+    "mbid": "ea655a9b-3270-4d60-a72d-bef0ec044c0c",
+    "nameKo": "합주 협주곡 B♭장조",
+    "nameEn": "No. 11 in B♭ major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Concerto Grosso in B-flat major, op. 6 no. 11",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "5a892ae3-35d8-3428-8099-4d259c9ec318",
+      "nameKo": "프렐류드. Largo",
+      "nameEn": "I. Preludio: Largo",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in B-flat major, op. 6 no. 11: I. Preludio: Andante largo"
+     },
+     {
+      "seq": 2,
+      "mbid": "1bf20fed-f5f8-3da1-83bd-b50a0c693694",
+      "nameKo": "알르망드. Allegro",
+      "nameEn": "II. Allemanda: Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in B-flat major, op. 6 no. 11: II. Allemanda: Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "7e46c319-1776-3370-a2d5-9a28b5d75acf",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in B-flat major, op. 6 no. 11: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "f09a5c39-82e4-48e0-b100-c28d989f168d",
+      "nameKo": "Largo",
+      "nameEn": "IV. Largo",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in B-flat major, op. 6 no. 11: IV. Andante largo"
+     },
+     {
+      "seq": 5,
+      "mbid": "e6027d71-1039-3457-99cf-acc3cab7fa92",
+      "nameKo": "사라방드. Largo",
+      "nameEn": "V. Sarabanda: Largo",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in B-flat major, op. 6 no. 11: V. Sarabanda: Largo"
+     },
+     {
+      "seq": 6,
+      "mbid": "c6f7d116-762d-3bd9-b8d4-2c9126c7b289",
+      "nameKo": "지그. Vivace",
+      "nameEn": "VI. Giga: Vivace",
+      "movementNumber": "VI",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in B-flat major, op. 6 no. 11: VI. Giga: Vivace"
+     }
+    ]
+   },
+   {
+    "seq": 12,
+    "mbid": "3d2f2eec-e806-4f6e-b8c0-4d1d74fcddc3",
+    "nameKo": "합주 협주곡 F장조",
+    "nameEn": "No. 12 in F major",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Concerto Grosso in F major, op. 6 no. 12",
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "b556f98b-7bda-3e98-a6f8-222a29299be2",
+      "nameKo": "프렐류드. Adagio",
+      "nameEn": "I. Preludio: Adagio",
+      "movementNumber": "I",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 12: I. Preludio: Adagio"
+     },
+     {
+      "seq": 2,
+      "mbid": "7112f1b4-b18e-3b51-b2d8-71842833ea97",
+      "nameKo": "Allegro",
+      "nameEn": "II. Allegro",
+      "movementNumber": "II",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 12: II. Allegro"
+     },
+     {
+      "seq": 3,
+      "mbid": "cc258e8f-85d5-38cc-ab6f-d90cfcef261d",
+      "nameKo": "Adagio",
+      "nameEn": "III. Adagio",
+      "movementNumber": "III",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 12: III. Adagio"
+     },
+     {
+      "seq": 4,
+      "mbid": "900d18d6-3a44-352d-9fa7-b7e65a515137",
+      "nameKo": "사라방드. Vivace",
+      "nameEn": "IV. Sarabanda: Vivace",
+      "movementNumber": "IV",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 12: IV. Sarabanda: Vivace"
+     },
+     {
+      "seq": 5,
+      "mbid": "5dd321e8-1e30-388b-a523-d7120b76951e",
+      "nameKo": "지그. Allegro",
+      "nameEn": "V. Giga: Allegro",
+      "movementNumber": "V",
+      "existingPieceId": null,
+      "existingPartId": null,
+      "mbTitle": "Concerto Grosso in F major, op. 6 no. 12: V. Giga: Allegro"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "corelli-woo1",
+  "kind": "multi_movement",
+  "catalogue": "WoO 1",
+  "catalogueAlt": null,
+  "titleKo": "신포니아 D단조",
+  "titleEn": "Sinfonia in D minor to \"Santa Beatrice d'Este\"",
+  "year": 1689,
+  "yearText": "1689",
+  "genre": "orchestral",
+  "authenticity": "authentic",
+  "note": "룰리에르의 오라토리오 <에스테의 성 베아트리체> 서주",
+  "mbid": "cafca75c-4336-4c67-8b91-5e802c2aeafb",
+  "mbTitle": "Sinfonia to \"Santa Beatrice d’Este\" in D minor, WoO 1",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "38e616b5-3f9b-3512-a352-aac5cefe1b07",
+    "nameKo": "Grave",
+    "nameEn": "I. Grave",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sinfonia to \"Santa Beatrice d’Este\" in D minor, WoO 1: I. Grave"
+   },
+   {
+    "seq": 2,
+    "mbid": "e8a63725-901b-378f-a1f1-746642c4d0c6",
+    "nameKo": "Allegro",
+    "nameEn": "II. Allegro",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sinfonia to \"Santa Beatrice d’Este\" in D minor, WoO 1: II. Allegro"
+   },
+   {
+    "seq": 3,
+    "mbid": "7fa76e2b-8bab-336c-a362-7cf2c1405907",
+    "nameKo": "Adagio",
+    "nameEn": "III. Adagio",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sinfonia to \"Santa Beatrice d’Este\" in D minor, WoO 1: III. Adagio"
+   },
+   {
+    "seq": 4,
+    "mbid": "739cd241-cefe-3c4e-8292-77f420149dbc",
+    "nameKo": "Largo assai",
+    "nameEn": "IV. Largo assai",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sinfonia to \"Santa Beatrice d’Este\" in D minor, WoO 1: IV. Largo assai"
+   },
+   {
+    "seq": 5,
+    "mbid": "1bd32ae0-68eb-3549-972e-29c7a70bf558",
+    "nameKo": "Vivace",
+    "nameEn": "V. Vivace",
+    "movementNumber": "V",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sinfonia to \"Santa Beatrice d’Este\" in D minor, WoO 1: V. Vivace"
+   }
+  ]
+ },
+ {
+  "key": "corelli-woo2",
+  "kind": "multi_movement",
+  "catalogue": "WoO 2",
+  "catalogueAlt": null,
+  "titleKo": "4성부 소나타",
+  "titleEn": "Sonata a quattro",
+  "year": 1699,
+  "yearText": "1699년 무렵 출판",
+  "genre": "chamber",
+  "authenticity": "authentic",
+  "note": "조성 자료 없음(MB·위키백과 모두)",
+  "mbid": "dd09df0c-4e24-4034-b97d-0c4329608a3e",
+  "mbTitle": "Sonata a quattro, WoO 2",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "648adb1d-4a80-3662-aa64-a44e4b7e4b19",
+    "nameKo": "Adagio – Andante largo",
+    "nameEn": "I. Adagio – Andante largo",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata a quattro, WoO 2: I. Adagio - Andante largo"
+   },
+   {
+    "seq": 2,
+    "mbid": "757b773e-bf90-3c48-8225-e6c0e9f7f992",
+    "nameKo": "Allegro",
+    "nameEn": "II. Allegro",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata a quattro, WoO 2: II. Allegro"
+   },
+   {
+    "seq": 3,
+    "mbid": "e3cc5474-468e-3891-ad9b-8d0d85640598",
+    "nameKo": "Grave",
+    "nameEn": "III. Grave",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata a quattro, WoO 2: III. Grave"
+   },
+   {
+    "seq": 4,
+    "mbid": "b902463a-888a-31a2-807f-cd698a12a9c0",
+    "nameKo": "Presto",
+    "nameEn": "IV. Presto",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata a quattro, WoO 2: IV. Presto"
+   },
+   {
+    "seq": 5,
+    "mbid": "9b7e5e70-d7e6-3afc-9e49-288ee5919676",
+    "nameKo": "Vivace",
+    "nameEn": "V. Vivace",
+    "movementNumber": "V",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonata a quattro, WoO 2: V. Vivace"
+   }
+  ]
+ },
+ {
+  "key": "corelli-woo5",
+  "kind": "multi_movement",
+  "catalogue": "WoO 5",
+  "catalogueAlt": null,
+  "titleKo": "트리오 소나타 A장조",
+  "titleEn": "Trio Sonata in A major",
+  "year": 1714,
+  "yearText": "1714년 무렵 출판",
+  "genre": "trio_sonata",
+  "authenticity": "authentic",
+  "note": "사후 출판 「6개의 트리오 소나타」(WoO 5–10) 중 진위가 굳은 1곡",
+  "mbid": "2152af71-c602-4cae-8865-1893fe4cabcb",
+  "mbTitle": "Sonate a trè, WoO 5",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "0616cd36-994c-3b0a-b2ee-4caf65e08f49",
+    "nameKo": "Grave",
+    "nameEn": "I. Grave",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate a trè in A major, WoO 5: I. Grave"
+   },
+   {
+    "seq": 2,
+    "mbid": "88b70e34-d6c6-302d-a370-496c72bfa5b4",
+    "nameKo": "Allegro",
+    "nameEn": "II. Allegro",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate a trè in A major, WoO 5: II. Allegro"
+   },
+   {
+    "seq": 3,
+    "mbid": "a316e4c6-c8b0-3f1b-b5d9-e78423ff1b75",
+    "nameKo": "Adagio",
+    "nameEn": "III. Adagio",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate a trè in A major, WoO 5: III. Adagio"
+   },
+   {
+    "seq": 4,
+    "mbid": "4d589011-d364-399f-9ed0-53807f4a38d5",
+    "nameKo": "Allegro",
+    "nameEn": "IV. Allegro",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "mbTitle": "Sonate a trè in A major, WoO 5: IV. Allegro"
+   }
+  ]
+ }
+]
