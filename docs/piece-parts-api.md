@@ -14,7 +14,7 @@
 
 offset·limit 이 없으면 전체, 하나라도 있으면 페이지로 주는 동작은 그대로입니다.
 
-- **최상위만**: 같은 작곡가의 다른 작품의 보이는 part 가 `linked_piece_id`로 가리키는 작품은 뺍니다. 묶음을 펼치면 보이기 때문입니다. 숨은 part 가 가리키는 작품, 다른 작곡가의 묶음이 가리키는 작품, 자기 자신을 가리키는 part 는 빼지 않습니다.
+- **최상위만**: 같은 작곡가의 다른 작품의 보이는 part 가 `linked_piece_id`로 가리키는 작품은 뺍니다. 묶음을 펼치면 보이기 때문입니다. 숨은 part 가 가리키는 작품, 목록에서 숨긴 묶음이 가리키는 작품, 다른 작곡가의 묶음이 가리키는 작품, 자기 자신을 가리키는 part 는 빼지 않습니다. 목록에서 숨긴 작품(`hidden_reason`)은 빠집니다([목록 숨김](catalog-hidden.md)).
 - **`partCount`**: 응답 `Piece`에 보이는 최상위 part(`parent_part_id IS NULL`) 수를 더합니다. 0이면 낱곡, 1 이상이면 `/pieces/<id>/parts`로 펼칩니다. 기존 필드는 그대로입니다.
 - **`partKind`**: `"movement" | "work" | null`. 센 part 가 전부 악장 번호(`movement_number`, 빈 문자열은 없음으로 봄)를 가지면 `"movement"`(교향곡 "4악장"), 하나라도 없으면 `"work"`(연습곡집 "12곡"), `partCount`가 0이면 `null`입니다.
 - **정렬**: 들을 거리 하나로 먼저 나누고, 그 안에서 작품번호 순입니다.
@@ -26,7 +26,7 @@ offset·limit 이 없으면 전체, 하나라도 있으면 페이지로 주는 �
 
 예: `Op. 1` → `Op. 9, No. 2` → `Op. 10`(묶음, catalogue `Op.` + `10`) → `Op. 10 No. 3` → `Op. 28` → `Op. 74` → `B. 6` → `B. 49` → 번호 없음. 묶음(catalogue 칼럼)과 낱곡(opus_number)이 한 줄로 섞입니다.
 
-작곡가 `pieceCount`(`/composers/search`, `/composers/<id>`)도 같은 기준으로 최상위 작품만 셉니다.
+작곡가 `pieceCount`(`/composers/search`, `/composers/<id>`)도 같은 기준으로 숨기지 않은 최상위 작품만 셉니다.
 
 ## `GET /api/pieces/<id>/parts`
 
