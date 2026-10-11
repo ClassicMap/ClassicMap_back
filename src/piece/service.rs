@@ -1,4 +1,4 @@
-use super::model::{CreatePiece, Piece, PieceSearchResult, UpdatePiece};
+use super::model::{CreatePiece, Piece, PiecePart, PieceSearchResult, UpdatePiece};
 use super::repository::PieceRepository;
 use crate::db::DbPool;
 
@@ -58,6 +58,12 @@ impl PieceService {
         };
 
         pieces.map_err(|e| e.to_string())
+    }
+
+    pub async fn get_piece_parts(pool: &DbPool, piece_id: i32) -> Result<Vec<PiecePart>, String> {
+        PieceRepository::find_parts(pool, piece_id)
+            .await
+            .map_err(|e| e.to_string())
     }
 
     pub async fn search_pieces(
