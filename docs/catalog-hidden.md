@@ -7,7 +7,7 @@
 `202610120035_add_catalog_hidden_reason.sql`이 두 표에 칼럼을 더합니다.
 
 - `composers.hidden_reason VARCHAR(32) NULL`, `pieces.hidden_reason VARCHAR(32) NULL`. `NULL`이면 보이고, 값이 있으면 숨긴 까닭입니다.
-- 까닭 예: `non_classical`, `performer`, `catalog_unmatched`. API 는 값이 있는지만 보고 종류는 묶지 않습니다.
+- 까닭 예: `non_classical`, `performer`, `catalog_unmatched`(카탈로그에 대응이 없는 seed 작품), `duplicate`(같은 곡이 목록에 둘 뜨는 운영 작품). API 는 값이 있는지만 보고 종류는 묶지 않습니다.
 - 빈 문자열은 CHECK(`chk_composers_hidden_reason`, `chk_pieces_hidden_reason`)로 막습니다. 숨김 해제는 `NULL`입니다.
 - 인덱스 `idx_pieces_composer_hidden (composer_id, hidden_reason)`. 작곡가 작품 목록과 작품 수가 씁니다.
 - 기존 열과 행은 바꾸지 않습니다. 숨김은 별도 migration 의 `UPDATE`로 겁니다.
