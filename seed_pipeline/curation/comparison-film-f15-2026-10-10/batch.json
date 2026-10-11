@@ -1,0 +1,298 @@
+{
+  "batchId": "film-f15",
+  "note": "영화 속 클래식 15차. 4월은 너의 거짓말·피아니스트·노다메 칸타빌레·밀회·친절한 금자씨에 나온 실내악·피아노·협주곡 다섯.",
+  "pieces": [
+    {
+      "pieceId": 26029,
+      "workMbid": "87281f3c-67c6-48ff-be2b-a84d758d2831",
+      "composerQid": "Q255",
+      "titleKo": "바이올린 소나타 9번 A장조 \"크로이처\"",
+      "titleEn": "Violin Sonata No. 9 in A major \"Kreutzer\"",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "VIOLINIST",
+      "sector": {
+        "key": "mv1-adagio-to-presto",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Adagio sostenuto 서주부터 Presto 첫 주제까지",
+        "nameEn": "I. Adagio sostenuto introduction into the Presto",
+        "measureStart": "1",
+        "measureEnd": "",
+        "startCue": "바이올린 독주 A장조 화음 첫 음",
+        "endCue": "Presto 첫 주제 악구 끝(기준 연주에서 정함)"
+      },
+      "filmNote": "4월은 너의 거짓말 1번째 큐(1악장 Adagio sostenuto – Presto). 1악장만 담긴 영상. 피아니스트 크레딧은 스킬 문서 선례대로(마땅한 역할이 없으면 대표 하나만). 발췌는 기준 연주에서 referenceVideoId·start·end 로 잡음",
+      "videos": [
+        {
+          "videoId": "s2BYvSzZ_i4",
+          "artistId": 267,
+          "artistName": "Itzhak Perlman",
+          "wikidata": "Q215905",
+          "pianist": {
+            "name": "Vladimir Ashkenazy",
+            "wikidata": "Q157785"
+          }
+        },
+        {
+          "videoId": "4zdCSOS3MMI",
+          "artistId": 824,
+          "artistName": "Gidon Kremer",
+          "wikidata": "Q159915",
+          "pianist": {
+            "name": "Martha Argerich",
+            "wikidata": "Q156810"
+          }
+        },
+        {
+          "videoId": "G44X2weTEOg",
+          "artistId": 211,
+          "artistName": "Anne-Sophie Mutter",
+          "wikidata": "Q3374",
+          "pianist": {
+            "name": "Lambert Orkis",
+            "wikidata": "Q1250415"
+          }
+        }
+      ],
+      "excerpt": {
+        "referenceVideoId": "s2BYvSzZ_i4",
+        "start": 2.55,
+        "end": 143.9
+      }
+    },
+    {
+      "pieceId": 26036,
+      "workMbid": "4c9f3751-a09a-3b1a-8ef4-5a4fc098120a",
+      "composerQid": "Q1268",
+      "titleKo": "안단테 스피아나토와 화려한 대폴로네즈",
+      "titleEn": "Andante spianato et Grande polonaise brillante",
+      "composerNameEn": "Frédéric Chopin",
+      "composerNameKo": "프레데리크 쇼팽",
+      "role": "PIANIST",
+      "sector": {
+        "key": "grande-polonaise-opening",
+        "type": "EXCERPT",
+        "nameKo": "화려한 대폴로네즈 도입 (관현악 신호와 피아노 등장)",
+        "nameEn": "Grande polonaise: opening (orchestral call and piano entry)",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "대폴로네즈 첫 관현악 신호",
+        "endCue": "피아노가 폴로네즈 주제를 처음 다 친 뒤(기준 연주에서 정함)"
+      },
+      "filmNote": "피아니스트 2번째 큐(후반 대폴로네즈, 엔딩 크레딧 관현악 협연). 관현악판(피아니스트 + 지휘자·악단)만. 트랙이 Op. 22 전체면 발췌를 referenceVideoId·start·end 로 잡음",
+      "videos": [
+        {
+          "videoId": "NVoWuBkIBLI",
+          "artistId": 257,
+          "artistName": "Jan Lisiecki",
+          "wikidata": "Q548800",
+          "conductor": {
+            "name": "Krzysztof Urbański",
+            "wikidata": "Q975667"
+          },
+          "orchestra": {
+            "name": "NDR Elbphilharmonie Orchestra",
+            "wikidata": "Q706354"
+          }
+        },
+        {
+          "videoId": "F9U_9578amM",
+          "artistId": 366,
+          "artistName": "Krystian Zimerman",
+          "wikidata": "Q353461",
+          "conductor": {
+            "name": "Carlo Maria Giulini",
+            "wikidata": "Q430829"
+          },
+          "orchestra": {
+            "name": "Los Angeles Philharmonic",
+            "wikidata": "Q315715"
+          }
+        },
+        {
+          "videoId": "fb4zSw8rviw",
+          "artistId": 368,
+          "artistName": "Arthur Rubinstein",
+          "wikidata": "Q183182",
+          "conductor": {
+            "name": "Alfred Wallenstein",
+            "wikidata": "Q1284004"
+          },
+          "orchestra": {
+            "name": "Symphony of the Air",
+            "wikidata": "Q3507910"
+          }
+        }
+      ],
+      "excerpt": {
+        "referenceVideoId": "NVoWuBkIBLI",
+        "start": 0.44,
+        "end": 57.0
+      }
+    },
+    {
+      "pieceId": 26046,
+      "workMbid": "38d1a243-7432-4adf-8d5a-1f0ac8820e9c",
+      "composerQid": "Q254",
+      "titleKo": "두 대의 피아노를 위한 소나타 D장조",
+      "titleEn": "Sonata for Two Pianos in D major",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv1-allegro-con-spirito",
+        "type": "MOVEMENT",
+        "nameKo": "1악장 Allegro con spirito",
+        "nameEn": "I. Allegro con spirito",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "두 피아노의 유니즌 첫 화음",
+        "endCue": "마지막 화음과 잔향"
+      },
+      "filmNote": "노다메 칸타빌레(애니) 1번째 큐. 두 피아니스트 판(듀오 이름에 wikidata 가 있으면 ENSEMBLE, 아니면 01-selection 규칙). 반복 여부가 판마다 다르면 03-verification 사례 5 위험 — 반복이 같은 판끼리 고름",
+      "videos": [
+        {
+          "videoId": "y_mdwI9DxqI",
+          "artistId": 250,
+          "artistName": "Murray Perahia",
+          "wikidata": "Q326221",
+          "pianist": {
+            "name": "Radu Lupu",
+            "wikidata": "Q472114"
+          }
+        },
+        {
+          "videoId": "mUe2tRfefiQ",
+          "artistId": 208,
+          "artistName": "András Schiff",
+          "wikidata": "Q427319",
+          "pianist": {
+            "name": "Peter Serkin",
+            "wikidata": "Q1361841"
+          }
+        },
+        {
+          "videoId": "H9aflTidMNE",
+          "artistId": 684,
+          "artistName": "Christoph Eschenbach",
+          "wikidata": "Q60814",
+          "pianist": {
+            "name": "Justus Frantz",
+            "wikidata": "Q87878"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 26035,
+      "workMbid": "a0faa463-2708-46b3-8c68-77ff4aa18a15",
+      "composerQid": "Q254",
+      "titleKo": "네 손을 위한 피아노 소나타 C장조",
+      "titleEn": "Sonata for Piano Four Hands in C major",
+      "composerNameEn": "Wolfgang Amadeus Mozart",
+      "composerNameKo": "볼프강 아마데우스 모차르트",
+      "role": "PIANIST",
+      "sector": {
+        "key": "mv1-allegro",
+        "type": "MOVEMENT",
+        "nameKo": "1악장 Allegro",
+        "nameEn": "I. Allegro",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "첫 화음",
+        "endCue": "마지막 화음과 잔향"
+      },
+      "filmNote": "밀회 5번째 큐. 피아노 네 손 판. 크레딧은 위와 같은 규칙. 제시부 반복이 판마다 같아야 함",
+      "videos": [
+        {
+          "videoId": "RVdfoIPSqyg",
+          "artistId": 206,
+          "artistName": "Evgeny Kissin",
+          "wikidata": "Q160154",
+          "pianist": {
+            "name": "Martha Argerich",
+            "wikidata": "Q156810"
+          }
+        },
+        {
+          "videoId": "Haeo5oLwANA",
+          "artistId": 684,
+          "artistName": "Christoph Eschenbach",
+          "wikidata": "Q60814",
+          "pianist": {
+            "name": "Justus Frantz",
+            "wikidata": "Q87878"
+          }
+        },
+        {
+          "videoId": "PqkijXKvIJY",
+          "artistId": 739,
+          "artistName": "Rudolf Firkušný",
+          "wikidata": "Q2142506",
+          "pianist": {
+            "name": "Alan Weiss",
+            "wikidata": "Q2233138"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 26040,
+      "workMbid": "0b502d5b-dde4-4efb-8a19-6390811f872c",
+      "composerQid": "Q1340",
+      "titleKo": "바순 협주곡 E단조",
+      "titleEn": "Bassoon Concerto in E minor",
+      "composerNameEn": "Antonio Vivaldi",
+      "composerNameKo": "안토니오 비발디",
+      "role": "BASSOONIST",
+      "sector": {
+        "key": "mv3-allegro",
+        "type": "MOVEMENT",
+        "nameKo": "3악장 Allegro",
+        "nameEn": "III. Allegro",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "첫 투티 화음",
+        "endCue": "마지막 화음과 잔향"
+      },
+      "filmNote": "친절한 금자씨 6번째 큐(RV 484 3악장). 바순 독주자 + 지휘자·악단(앙상블). 녹음이 적으니 등록된 연주자부터",
+      "videos": [
+        {
+          "videoId": "_YDMl7sYJJY",
+          "artistName": "Klaus Thunemann",
+          "wikidata": "Q62660",
+          "orchestra": {
+            "name": "I Musici",
+            "wikidata": "Q1655249"
+          }
+        },
+        {
+          "videoId": "HJDRJxQ0yZc",
+          "artistName": "Matthias Rácz",
+          "wikidata": "Q1910264",
+          "conductor": {
+            "name": "Johannes Schlaefli",
+            "wikidata": "Q22919356"
+          },
+          "orchestra": {
+            "name": "Kurpfälzisches Kammerorchester",
+            "wikidata": "Q1793184"
+          }
+        },
+        {
+          "videoId": "4OlAQZIrY8c",
+          "artistName": "František Herman",
+          "wikidata": "Q12017059",
+          "conductor": {
+            "name": "Jaroslav Krček",
+            "wikidata": "Q6160622"
+          },
+          "orchestra": {
+            "name": "Capella Istropolitana",
+            "wikidata": "Q2937553"
+          }
+        }
+      ]
+    }
+  ]
+}

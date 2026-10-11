@@ -1,0 +1,292 @@
+{
+  "batchId": "film-f14",
+  "note": "영화 속 클래식 14차. 은하영웅전설·오페라가 뭐예요, 박사님? 에 나온 관현악 다섯의 첫머리 발췌.",
+  "pieces": [
+    {
+      "pieceId": 11293,
+      "workMbid": "0d459ba8-74cd-4f1c-82b6-4566a5e0778c",
+      "composerQid": "Q7304",
+      "titleKo": "교향곡 9번 D장조",
+      "titleEn": "Symphony No. 9 in D major",
+      "composerNameEn": "Gustav Mahler",
+      "composerNameKo": "구스타프 말러",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Andante comodo 도입",
+        "nameEn": "I. Andante comodo, opening",
+        "measureStart": "1",
+        "measureEnd": "",
+        "startCue": "첼로·호른이 엇갈려 짚는 첫 음",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "filmNote": "은하영웅전설 3번째 큐(1악장). 1악장만 담긴 영상(악장 25~30분, 영상 600초 넘어도 클립이 600초 안이면 됨)",
+      "videos": [
+        {
+          "videoId": "2U_a6eVr-8s",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "Qj0iP_VWwPA",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "9zE2E4kEtQU",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 11933,
+      "workMbid": "ddcca484-fa72-4703-a44e-7c84ac67a5ea",
+      "composerQid": "Q7304",
+      "titleKo": "교향곡 3번 D단조",
+      "titleEn": "Symphony No. 3 in D minor",
+      "composerNameEn": "Gustav Mahler",
+      "composerNameKo": "구스타프 말러",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 도입 (호른 여덟 대의 행진 주제)",
+        "nameEn": "I. Kräftig. Entschieden, opening (eight horns)",
+        "measureStart": "1",
+        "measureEnd": "",
+        "startCue": "호른 여덟 대가 함께 부는 첫 음",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 90
+      },
+      "filmNote": "은하영웅전설 1화 첫 내레이션. 1악장만 담긴 영상. 4악장 구간(356)에 쓴 번스타인·불레즈·하이팅크 영상과 다른 영상이어야 함",
+      "videos": [
+        {
+          "videoId": "73qSFXk-q3c",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "DoJYqL_hU5M",
+          "artistId": 574,
+          "artistName": "Zubin Mehta",
+          "wikidata": "Q157635",
+          "orchestra": {
+            "name": "Israel Philharmonic Orchestra",
+            "wikidata": "Q1062617"
+          }
+        },
+        {
+          "videoId": "Z4di7EO4WxQ",
+          "artistId": 288,
+          "artistName": "Mariss Jansons",
+          "wikidata": "Q158340",
+          "orchestra": {
+            "name": "Symphonieorchester des Bayerischen Rundfunks",
+            "wikidata": "Q636159"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 26056,
+      "workMbid": "ce1c5444-e952-48f3-a02a-ec0d235c6ade",
+      "composerQid": "Q81752",
+      "titleKo": "교향곡 9번 D단조",
+      "titleEn": "Symphony No. 9 in D minor",
+      "composerNameEn": "Anton Bruckner",
+      "composerNameKo": "안톤 브루크너",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 Feierlich, misterioso 도입",
+        "nameEn": "I. Feierlich, misterioso, opening",
+        "measureStart": "1",
+        "measureEnd": "",
+        "startCue": "현의 트레몰로 D 첫 음",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 120
+      },
+      "filmNote": "은하영웅전설 6번째 큐(1악장). 1악장만 담긴 영상",
+      "videos": [
+        {
+          "videoId": "XUSjS22Bxc8",
+          "artistId": 422,
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "gRICS6omtlY",
+          "artistId": 290,
+          "artistName": "Riccardo Chailly",
+          "wikidata": "Q371795",
+          "orchestra": {
+            "name": "Royal Concertgebouw Orchestra",
+            "wikidata": "Q827768"
+          }
+        },
+        {
+          "videoId": "MtsSdpIH7gE",
+          "artistId": 285,
+          "artistName": "Christian Thielemann",
+          "wikidata": "Q60813",
+          "orchestra": {
+            "name": "Wiener Philharmoniker",
+            "wikidata": "Q154685"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 26053,
+      "workMbid": "561be908-2cf7-445e-a4aa-5eaed98cfc86",
+      "composerQid": "Q1511",
+      "titleKo": "오페라 <방황하는 네덜란드인>",
+      "titleEn": "Opera <Der fliegende Holländer>",
+      "composerNameEn": "Richard Wagner",
+      "composerNameKo": "리하르트 바그너",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "overture-opening",
+        "type": "EXCERPT",
+        "nameKo": "서곡 도입 (폭풍과 네덜란드인 동기)",
+        "nameEn": "Overture, opening (storm and Dutchman motif)",
+        "measureStart": "1",
+        "measureEnd": "",
+        "startCue": "현의 트레몰로 위 호른·바순의 네덜란드인 동기 첫 음",
+        "endCue": "발췌 끝"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 90
+      },
+      "filmNote": "오페라가 뭐예요, 박사님? 2번째 큐(서곡). 서곡만 담긴 트랙",
+      "videos": [
+        {
+          "videoId": "eQNpcTSWKio",
+          "artistId": 293,
+          "artistName": "Andris Nelsons",
+          "wikidata": "Q511817",
+          "orchestra": {
+            "name": "Gewandhausorchester Leipzig",
+            "wikidata": "Q156515"
+          }
+        },
+        {
+          "videoId": "duqJM1_7OG8",
+          "artistId": 664,
+          "artistName": "Georg Solti",
+          "wikidata": "Q128085",
+          "orchestra": {
+            "name": "Chicago Symphony Orchestra",
+            "wikidata": "Q1050470"
+          }
+        },
+        {
+          "videoId": "5GLsEMYNcwk",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 26054,
+      "workMbid": "315a0fe2-4e5a-477f-a4b7-e9c66523b70e",
+      "composerQid": "Q1511",
+      "titleKo": "오페라 <리엔치>",
+      "titleEn": "Opera <Rienzi>",
+      "composerNameEn": "Richard Wagner",
+      "composerNameKo": "리하르트 바그너",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "overture-opening",
+        "type": "EXCERPT",
+        "nameKo": "서곡 도입 (트럼펫 신호와 리엔치의 기도 선율)",
+        "nameEn": "Overture, opening (trumpet call and Rienzi's prayer)",
+        "measureStart": "1",
+        "measureEnd": "",
+        "startCue": "트럼펫의 긴 A 첫 음",
+        "endCue": "현이 기도 선율을 처음 다 부른 뒤(기준 연주에서 정함)"
+      },
+      "excerpt": {
+        "referenceVideoId": "tYQcKX68kNU",
+        "start": 2.33,
+        "end": 177.45
+      },
+      "filmNote": "오페라가 뭐예요, 박사님? 3번째 큐(서곡). 서곡만 담긴 트랙. 발췌 끝은 기준 연주를 들어 기도 선율 첫 제시 끝으로 잡고 excerpt 를 referenceVideoId·start·end 로 바꿔도 됨",
+      "videos": [
+        {
+          "videoId": "tYQcKX68kNU",
+          "artistId": 782,
+          "artistName": "James Levine",
+          "wikidata": "Q336388",
+          "orchestra": {
+            "name": "Metropolitan Opera Orchestra",
+            "wikidata": "Q11343914"
+          }
+        },
+        {
+          "videoId": "HdgvEJwN8SA",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "AV-fES0JVOY",
+          "artistId": 574,
+          "artistName": "Zubin Mehta",
+          "wikidata": "Q157635",
+          "orchestra": {
+            "name": "Los Angeles Philharmonic",
+            "wikidata": "Q315715"
+          }
+        }
+      ]
+    }
+  ]
+}

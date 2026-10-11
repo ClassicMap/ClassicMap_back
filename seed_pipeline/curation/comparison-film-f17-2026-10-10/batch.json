@@ -1,0 +1,282 @@
+{
+  "batchId": "film-f17",
+  "note": "영화 속 클래식 17차. 기생충·2001: 스페이스 오디세이·마에스트라·환타지아에 나온 다섯.",
+  "pieces": [
+    {
+      "pieceId": 26024,
+      "workMbid": "ceee2305-8a7e-4fed-b7da-f52006958aec",
+      "composerQid": "Q7302",
+      "titleKo": "오페라 <로델린다>",
+      "titleEn": "Opera <Rodelinda>",
+      "composerNameEn": "George Frideric Handel",
+      "composerNameKo": "게오르크 프리드리히 헨델",
+      "role": "SOPRANO",
+      "sector": {
+        "key": "act3-mio-caro-bene",
+        "type": "EXCERPT",
+        "nameKo": "3막 로델린다의 아리아 「Mio caro bene」",
+        "nameEn": "Act III: Rodelinda's aria \"Mio caro bene\"",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "아리아의 첫 소리",
+        "endCue": "아리아 끝 화음"
+      },
+      "filmNote": "기생충 2번째 큐. 아리아만 담긴 트랙, 소프라노 + 지휘자·악단. 녹음이 적어 3종이 안 되면 보고",
+      "videos": [
+        {
+          "videoId": "cq3uAylhFHw",
+          "artistId": 295,
+          "artistName": "Renée Fleming",
+          "wikidata": "Q165637",
+          "conductor": {
+            "name": "Patrick Summers",
+            "wikidata": "Q16195351"
+          },
+          "orchestra": {
+            "name": "Metropolitan Opera Orchestra",
+            "wikidata": "Q11343914"
+          }
+        },
+        {
+          "videoId": "Lk9nznotFNM",
+          "artistId": 199,
+          "artistName": "Sumi Jo",
+          "wikidata": "Q235200",
+          "orchestra": {
+            "name": "I Musici",
+            "wikidata": "Q1655249"
+          }
+        },
+        {
+          "videoId": "_Srxco5obqA",
+          "artistName": "Inessa Galante",
+          "wikidata": "Q540714",
+          "orchestra": {
+            "name": "London Musici",
+            "wikidata": "Q27817675"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 26027,
+      "workMbid": "5d8d7e30-d89c-3967-9a1c-cd538636d00e",
+      "composerQid": "Q154331",
+      "titleKo": "룩스 에테르나",
+      "titleEn": "Lux aeterna",
+      "composerNameEn": "György Ligeti",
+      "composerNameKo": "죄르지 리게티",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "여성 합창의 첫 F 음",
+        "endCue": "마지막 소리가 사라지는 곳"
+      },
+      "filmNote": "2001: 스페이스 오디세이 4번째 큐. 무반주 16성부 합창. 지휘자 + 합창단. 음향 덩어리라 chroma 정렬이 근거가 못 될 수 있음 — 그러면 판정하지 말고 보고",
+      "videos": [
+        {
+          "videoId": "4ReCskCqLAY",
+          "artistId": 743,
+          "artistName": "Latvian Radio Choir",
+          "wikidata": "Q16361547",
+          "role": "CHOIR"
+        },
+        {
+          "videoId": "-XufvFDJTqA",
+          "artistName": "Daniel Reuss",
+          "wikidata": "Q592648",
+          "choir": {
+            "name": "Cappella Amsterdam",
+            "wikidata": "Q579493"
+          }
+        },
+        {
+          "videoId": "LGFWg5Kd6i4",
+          "artistName": "Yuval Weinberg",
+          "wikidata": "Q42404859",
+          "choir": {
+            "name": "SWR Vokalensemble",
+            "wikidata": "Q1167446"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 26028,
+      "workMbid": "25af274b-4a4f-3d80-8cb9-e34a1f147831",
+      "composerQid": "Q154331",
+      "titleKo": "아트모스페르",
+      "titleEn": "Atmosphères",
+      "composerNameEn": "György Ligeti",
+      "composerNameKo": "죄르지 리게티",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "첫 클러스터",
+        "endCue": "마지막 소리가 사라지는 곳"
+      },
+      "filmNote": "2001: 스페이스 오디세이 6번째 큐(스타게이트). 지휘자 + 악단. 음향 덩어리라 chroma 정렬이 근거가 못 될 수 있음 — 그러면 판정하지 말고 보고",
+      "videos": [
+        {
+          "videoId": "JIQQQfqbzwg",
+          "artistId": 594,
+          "artistName": "Claudio Abbado",
+          "wikidata": "Q151608",
+          "orchestra": {
+            "name": "Vienna Philharmonic Orchestra",
+            "wikidata": "Q154685"
+          }
+        },
+        {
+          "videoId": "iZ7H1aWKGyk",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        },
+        {
+          "videoId": "md82G9tHBjM",
+          "artistName": "Jonathan Nott",
+          "wikidata": "Q657928",
+          "orchestra": {
+            "name": "Berlin Philharmonic Orchestra",
+            "wikidata": "Q152222"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 26057,
+      "workMbid": "dcfeffa8-6a77-40ff-9d9c-486f0ca98a5d",
+      "composerQid": "Q7302",
+      "titleKo": "파사칼리아 G단조 (할보르센 편곡)",
+      "titleEn": "Passacaglia in G minor (Arr. by Halvorsen)",
+      "composerNameEn": "George Frideric Handel",
+      "composerNameKo": "게오르크 프리드리히 헨델",
+      "role": "SOLOIST",
+      "sector": {
+        "key": "whole-work",
+        "type": "WHOLE_WORK",
+        "nameKo": "전곡",
+        "nameEn": "Complete",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "첫 화음",
+        "endCue": "마지막 화음"
+      },
+      "filmNote": "마에스트라 2번째 큐. 할보르센 편곡 이중주. 같은 편성(바이올린·비올라 또는 바이올린·첼로) 셋으로 맞춤 — 편성이 섞이면 정렬이 흔들릴 수 있음. 두 연주자 크레딧은 01-selection 규칙",
+      "videos": [
+        {
+          "videoId": "O7FKv_ZURwU",
+          "artistId": 277,
+          "artistName": "Gautier Capuçon",
+          "wikidata": "Q689479",
+          "partners": [
+            {
+              "role": "VIOLINIST",
+              "name": "Renaud Capuçon",
+              "wikidata": "Q552845"
+            }
+          ]
+        },
+        {
+          "videoId": "A4l1XBIDE28",
+          "artistId": 773,
+          "artistName": "Lisa Batiashvili",
+          "wikidata": "Q271429",
+          "partners": [
+            {
+              "role": "CELLIST",
+              "name": "Kian Soltani",
+              "wikidata": "Q55640253"
+            }
+          ]
+        },
+        {
+          "videoId": "NVoQQxuJ0dw",
+          "artistId": 190,
+          "artistName": "Bomsori Kim",
+          "wikidata": "Q27537256",
+          "partners": [
+            {
+              "role": "CELLIST",
+              "name": "Taeguk Mun",
+              "wikidata": "Q114869541"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pieceId": 26051,
+      "workMbid": "39c69a8c-9279-320e-b90e-c3ff4217c293",
+      "composerQid": "Q215556",
+      "titleKo": "교향적 스케르초 <마법사의 제자>",
+      "titleEn": "Symphonic Scherzo <The Sorcerer's Apprentice>",
+      "composerNameEn": "Paul Dukas",
+      "composerNameKo": "폴 뒤카",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "introduction",
+        "type": "EXCERPT",
+        "nameKo": "도입 (마법사의 작업실과 빗자루 주제)",
+        "nameEn": "Introduction (the sorcerer's workshop and the broom theme)",
+        "measureStart": "1",
+        "measureEnd": "",
+        "startCue": "현의 여린 첫 화음",
+        "endCue": "바순이 빗자루 주제를 처음 다 불고 잦아든 직후(다음 대목이 들어오기 전)"
+      },
+      "excerpt": {
+        "referenceVideoId": "dZIXvHgzFpk",
+        "start": 0.25,
+        "end": 179.6
+      },
+      "filmNote": "환타지아 3번째 큐(미키 장면, 영화는 곡 전체). 곡 전체 트랙에서 발췌. 발췌 끝은 기준 연주에서 정해 referenceVideoId·start·end 로",
+      "videos": [
+        {
+          "videoId": "dZIXvHgzFpk",
+          "artistId": 581,
+          "artistName": "Charles Dutoit",
+          "wikidata": "Q116995",
+          "orchestra": {
+            "name": "Montreal Symphony Orchestra",
+            "wikidata": "Q1196259"
+          }
+        },
+        {
+          "videoId": "vg8JJ0S_Hus",
+          "artistId": 782,
+          "artistName": "James Levine",
+          "wikidata": "Q336388",
+          "orchestra": {
+            "name": "Berlin Philharmonic Orchestra",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "GxH-nY3iq7g",
+          "artistId": 605,
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        }
+      ]
+    }
+  ]
+}
