@@ -96,6 +96,7 @@ async fn rocket() -> _ {
                 piece::get_pieces,
                 piece::get_piece,
                 piece::get_pieces_by_composer,
+                piece::get_piece_parts,
                 piece::create_piece,
                 piece::update_piece,
                 piece::delete_piece,

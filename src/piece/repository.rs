@@ -1,7 +1,10 @@
-use super::model::{CreatePiece, Piece, PieceSearchResult, UpdatePiece};
+use super::model::{
+    order_part_tree, CreatePiece, Piece, PiecePart, PiecePartRow, PieceSearchResult, UpdatePiece,
+};
 use crate::db::DbPool;
 use crate::search::SearchText;
 use sqlx::Error;
+use ClassicMap_back::comparison::repository::PUBLIC_COMPARISON_CTE;
 
 pub struct PieceRepository;
 
@@ -119,6 +122,41 @@ impl PieceRepository {
             .bind(offset)
             .fetch_all(pool)
             .await
+    }
+
+    /// 작품의 part 를 화면 순서로 준다. 없는 작품이면 다른 `/pieces/<id>/…` 목록처럼 빈 목록이다.
+    /// 이어진 작품의 `comparable` 은 비교 화면과 같은 공개 기준(`PUBLIC_COMPARISON_CTE`)으로 본다.
+    pub async fn find_parts(pool: &DbPool, piece_id: i32) -> Result<Vec<PiecePart>, Error> {
+        let rows = sqlx::query_as::<_, PiecePartRow>(&format!(
+            "{PUBLIC_COMPARISON_CTE}
+             SELECT part.id,
+                    part.parent_part_id,
+                    part.sequence_number,
+                    part.movement_number,
+                    part.name_ko,
+                    part.name_en,
+                    linked.id AS linked_piece_id,
+                    linked.title AS linked_title,
+                    EXISTS (
+                        SELECT 1
+                        FROM public_sector
+                        JOIN performance_sectors sector ON sector.id = public_sector.sector_id
+                        WHERE sector.piece_id = linked.id
+                    ) AS linked_comparable,
+                    linked.spotify_url AS linked_spotify_url,
+                    linked.apple_music_url AS linked_apple_music_url
+             FROM piece_parts part
+             LEFT JOIN pieces linked ON linked.id = part.linked_piece_id
+             WHERE part.piece_id = ?"
+        ))
+        .bind(piece_id)
+        .fetch_all(pool)
+        .await?;
+
+        Ok(order_part_tree(rows)
+            .into_iter()
+            .map(PiecePart::from)
+            .collect())
     }
 
     /// 제목·영문 제목·별칭·작품번호·작곡가 이름으로 찾는다.

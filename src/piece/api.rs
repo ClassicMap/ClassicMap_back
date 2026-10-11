@@ -1,4 +1,4 @@
-use super::model::{CreatePiece, Piece, PieceSearchResult, UpdatePiece};
+use super::model::{CreatePiece, Piece, PiecePart, PieceSearchResult, UpdatePiece};
 use super::service::{PieceListRange, PieceService};
 use crate::auth::ModeratorUser;
 use crate::db::DbPool;
@@ -45,6 +45,25 @@ pub async fn get_piece(pool: &State<DbPool>, id: i32) -> Result<Json<Option<Piec
         Ok(piece) => Ok(Json(piece)),
         Err(e) => {
             Logger::error("API", &format!("Failed to get piece {}: {}", id, e));
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+/// 묶음 작품 안의 곡(악장·번호곡)을 화면 순서로 준다. 자식 part 는 부모 바로 뒤에 온다.
+/// 다른 작품 하위 목록(`/pieces/<id>/sectors` 등)처럼 없는 작품이면 빈 목록이다.
+#[get("/pieces/<id>/parts")]
+pub async fn get_piece_parts(
+    pool: &State<DbPool>,
+    id: i32,
+) -> Result<Json<Vec<PiecePart>>, Status> {
+    match PieceService::get_piece_parts(pool, id).await {
+        Ok(parts) => Ok(Json(parts)),
+        Err(e) => {
+            Logger::error(
+                "API",
+                &format!("Failed to get parts for piece {}: {}", id, e),
+            );
             Err(Status::InternalServerError)
         }
     }
