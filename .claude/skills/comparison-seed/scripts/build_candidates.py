@@ -15,7 +15,7 @@ from datetime import datetime, timezone
 
 import batch as batchlib
 
-UA = "ClassicMapSeed/1.0 (kecan0406@gmail.com)"
+UA = "ClassicMapSeed/1.0 (kang3171611@naver.com)"
 NOW = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 VERIFICATION_NOTE = (
     "박수와 무음을 걷어내고 조성 성분이 이어지는 구간을 작품으로 보아 경계를 잡았다. "
