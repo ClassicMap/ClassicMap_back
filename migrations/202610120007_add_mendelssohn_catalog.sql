@@ -1,0 +1,10003 @@
+-- 멘델스존 작품을 출판 단위로 채운다. 작품 200개(묶음 52, 다악장 53, 낱곡 95), part 450, 그 아래 49.
+-- 새 작품 195개, 기존 5개(MBID).
+--
+-- 정한 것
+--   무언가는 각 권(Op. 19b·30·38·53·62·67·85·102)을 6곡 묶음으로 둔다. 기존 125 「무언가 (선집)」은 그대로 둔다.
+--   123 「<한여름 밤의 꿈> 부수음악」은 MBID 와 비교 구간(「결혼 행진곡」)이 부수음악 Op. 61 이라 Op. 61 로 보고,
+--     서곡 Op. 21 은 새 작품으로 따로 둔다. 123 의 작품번호 "Opp. 21 & 61" 과 연도는 맨 끝에서 Op. 61·1842 로 고친다.
+--   교향곡 2번 <찬송가> 는 신포니아와 성악 9곡을 part 로, 시편·칸타타 같은 다른 성악 작품은 part 없이 둔다.
+--   멘델스존 이름으로 출판된 파니 헨젤 가곡 6곡(Op. 8·9 안)은 그 묶음의 part 로 둔다.
+--   미완성 Op. 97·98, 소실된 어린이 교향곡, 옛 판 7개, 네 손 편곡 Op. 83a 는 뺀다.
+--
+-- 공통: 자료는 seed_pipeline/curation/catalog-wave1-2026-10-11/<작곡가>/catalog.json 이고, 본문은 그 폴더의
+-- gen_catalog.py 가 만든다. 위키백과 영어판 작품 목록을 기준으로 MusicBrainz work 와 맞췄다.
+--   단위: 한 작품번호 아래 함께 출판된 곡은 묶음(작품 하나 + part), 악장으로 나뉜 작품은 악장을 part 로,
+--     묶음 안 곡이 다시 악장으로 나뉘면 그 아래 part(parent_part_id)로 둔다. 오페라·발레·오라토리오 같은
+--     무대·대형 성악 작품은 이번에는 part 없이 둔다.
+--   이름: 묶음 제목은 갈래만으로 구별이 안 되면 끝에 카탈로그를 넣고("현악 4중주 Op. 18") opus_number 를
+--     비운 채 catalogue_system·catalogue_number 를 채운다. 낱곡·다악장은 opus_number 에 카탈로그를 둔다.
+--     part 이름에는 "1번"·"1악장" 을 넣지 않는다(번호는 sequence_number). 악장만 movement_number 를 채운다.
+--     가곡 제목은 널리 쓰는 우리말이 확실할 때만 "우리말 (원제)", 아니면 원제다.
+--   빼는 것: 위작(의심만 붙은 곡은 작곡가별로 아래에 적었다), 소실, 단편·스케치, 남의 작품 편곡, 민요 편곡, 같은 곡의 옛 판.
+--   기존 작품: MBID 로 먼저, 없으면 카탈로그 번호로 맞춘다. 기존 작품의 제목·설명·링크는 바꾸지 않고, 비어 있는
+--     작품번호·연도만 채운다. 기존 작품에 없는 다른 판 MBID(원곡 work 등)는 식별자로 더하고 기존 식별자는 그대로 둔다.
+--     따로 있던 낱곡이 새 묶음 안 곡이면 part.linked_piece_id 로 잇는다.
+--   part 는 EDITOR_REVIEWED 로 넣는다. 같은 MBID 가 이미 다른 작품에 있으면 작품도 식별자도 넣지 않는다.
+--   방금 넣은 작품은 (작곡가, 제목, origin='manual') 로 찾는다. 두 번 돌려도 같다.
+
+-- Op. 1 피아노 4중주 1번 C단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 4중주 1번 C단조', 'Piano Quartet No. 1 in C minor', 'album', 'Op. 1', NULL, NULL, 1822, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 4중주 1번 C단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '851d354c-fab6-4843-825e-f4282406e9d1'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '851d354c-fab6-4843-825e-f4282406e9d1'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 1번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '851d354c-fab6-4843-825e-f4282406e9d1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:197d6bd2-4926-4ee7-9d15-86590ec3bc23', 1, 'I', 'Allegro vivace', 'I. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 1번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:197d6bd2-4926-4ee7-9d15-86590ec3bc23'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:324af36d-d694-434b-beed-d12f45077487', 2, 'II', 'Adagio', 'II. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 1번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:324af36d-d694-434b-beed-d12f45077487'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0deb7c81-f1c5-4c24-8bd7-47c72da89e81', 3, 'III', '스케르초', 'III. Scherzo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 1번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0deb7c81-f1c5-4c24-8bd7-47c72da89e81'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e155bcdf-381a-4429-b904-065b5ca8f1a6', 4, 'IV', 'Allegro moderato', 'IV. Allegro moderato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 1번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e155bcdf-381a-4429-b904-065b5ca8f1a6'
+);
+
+
+-- Op. 2 피아노 4중주 2번 F단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 4중주 2번 F단조', 'Piano Quartet No. 2 in F minor', 'album', 'Op. 2', NULL, NULL, 1823, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 4중주 2번 F단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '320d754f-e3cb-412f-92dd-830cc73600b3'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '320d754f-e3cb-412f-92dd-830cc73600b3'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 2번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '320d754f-e3cb-412f-92dd-830cc73600b3'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:43292fbe-536a-4145-8fee-d404de6d9cdc', 1, 'I', 'Allegro molto', 'I. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 2번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:43292fbe-536a-4145-8fee-d404de6d9cdc'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:901863f1-de76-45d6-8e59-a4e094072718', 2, 'II', 'Adagio', 'II. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 2번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:901863f1-de76-45d6-8e59-a4e094072718'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5bc6b72e-579d-4b18-9648-596f8897958b', 3, 'III', '인테르메초', 'III. Intermezzo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 2번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5bc6b72e-579d-4b18-9648-596f8897958b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:042d72af-8e03-4781-8aeb-2176995209b2', 4, 'IV', 'Allegro molto vivace', 'IV. Allegro molto vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 2번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:042d72af-8e03-4781-8aeb-2176995209b2'
+);
+
+
+-- Op. 3 피아노 4중주 3번 B단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 4중주 3번 B단조', 'Piano Quartet No. 3 in B minor', 'album', 'Op. 3', NULL, NULL, 1825, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 4중주 3번 B단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '89919e92-15fd-4bce-b5c0-ba7557570fac'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '89919e92-15fd-4bce-b5c0-ba7557570fac'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 3번 B단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '89919e92-15fd-4bce-b5c0-ba7557570fac'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:3eec057f-1f1e-4b0d-b68e-1393efd52e15', 1, 'I', 'Allegro molto', 'I. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 3번 B단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3eec057f-1f1e-4b0d-b68e-1393efd52e15'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:426cef9b-5803-48ab-80f0-06b9eb34c3a0', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 3번 B단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:426cef9b-5803-48ab-80f0-06b9eb34c3a0'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9dd4bdc2-b6a7-4f08-9388-436c93e129b1', 3, 'III', '스케르초. Allegro molto', 'III. Scherzo. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 3번 B단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9dd4bdc2-b6a7-4f08-9388-436c93e129b1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:699bf7a0-97d4-4d5d-8aa0-271245c013d4', 4, 'IV', '피날레. Allegro vivace', 'IV. Finale. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 4중주 3번 B단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:699bf7a0-97d4-4d5d-8aa0-271245c013d4'
+);
+
+
+-- Op. 4 바이올린 소나타 F단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '바이올린 소나타 F단조', 'Violin Sonata in F minor', 'album', 'Op. 4', NULL, NULL, 1823, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '바이올린 소나타 F단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a9358eb7-1286-419b-8ba3-8faccb81958b'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'a9358eb7-1286-419b-8ba3-8faccb81958b'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 소나타 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a9358eb7-1286-419b-8ba3-8faccb81958b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4accee08-b08f-3463-bbad-7683a6256066', 1, 'I', 'Adagio – Allegro moderato', 'I. Adagio – Allegro moderato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 소나타 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4accee08-b08f-3463-bbad-7683a6256066'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:32cf0a90-3f9b-3b5c-97ec-e794fa6bb35a', 2, 'II', 'Poco adagio', 'II. Poco adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 소나타 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:32cf0a90-3f9b-3b5c-97ec-e794fa6bb35a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ade7c0e0-1db6-3faa-b06e-50af14fddcdc', 3, 'III', 'Allegro agitato', 'III. Allegro agitato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 소나타 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ade7c0e0-1db6-3faa-b06e-50af14fddcdc'
+);
+
+
+-- Op. 5 카프리치오 F#단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '카프리치오 F#단조', 'Capriccio in F# minor', 'song', 'Op. 5', NULL, NULL, 1825, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '카프리치오 F#단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f19e394e-e575-374c-a3b5-467cbf27b2e8'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'f19e394e-e575-374c-a3b5-467cbf27b2e8'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '카프리치오 F#단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f19e394e-e575-374c-a3b5-467cbf27b2e8'
+);
+
+
+-- Op. 6 피아노 소나타 1번 E장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 소나타 1번 E장조', 'Piano Sonata No. 1 in E major', 'album', 'Op. 6', NULL, NULL, 1826, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 소나타 1번 E장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ab4be34c-8b56-4b37-a8af-f869437459ea'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'ab4be34c-8b56-4b37-a8af-f869437459ea'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 1번 E장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ab4be34c-8b56-4b37-a8af-f869437459ea'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:75de1518-4ba3-3765-8795-3426c485f56b', 1, 'I', 'Allegretto con espressione', 'I. Allegretto con espressione', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 1번 E장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:75de1518-4ba3-3765-8795-3426c485f56b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:101a14e4-5f35-3686-8c70-defd6b66c19f', 2, 'II', 'Tempo di menuetto', 'II. Tempo di menuetto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 1번 E장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:101a14e4-5f35-3686-8c70-defd6b66c19f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:348ad50d-6c9b-32ec-912d-e7236b8125f9', 3, 'III', 'Adagio e senza tempo', 'III. Adagio e senza tempo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 1번 E장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:348ad50d-6c9b-32ec-912d-e7236b8125f9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:debeaa83-a30b-36e0-a019-40ca68a095b3', 4, 'IV', 'Molto allegro e vivace', 'IV. Molto allegro e vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 1번 E장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:debeaa83-a30b-36e0-a019-40ca68a095b3'
+);
+
+
+-- Op. 7 성격적 소품 Op. 7
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '성격적 소품 Op. 7', '7 Characteristic Pieces, Op. 7', 'album', NULL, 'Op.', '7', 1827, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '성격적 소품 Op. 7'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '1035d2c0-faeb-40b8-a0cf-5cf047094b5b'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '1035d2c0-faeb-40b8-a0cf-5cf047094b5b'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '성격적 소품 Op. 7' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '1035d2c0-faeb-40b8-a0cf-5cf047094b5b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ed5d55ff-a806-396e-9c04-41eb17a4ec84', 1, NULL, 'E단조', 'No. 1 in E minor: Sanft und mit Empfindung', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '성격적 소품 Op. 7' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ed5d55ff-a806-396e-9c04-41eb17a4ec84'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:995bf7a8-49fd-3b82-a543-efc3bbf61582', 2, NULL, 'B단조', 'No. 2 in B minor: Mit heftiger Bewegung', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '성격적 소품 Op. 7' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:995bf7a8-49fd-3b82-a543-efc3bbf61582'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:3c6e5100-e7cf-38ee-984c-b1688cdc48f7', 3, NULL, 'D장조', 'No. 3 in D major: Kräftig und feurig', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '성격적 소품 Op. 7' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3c6e5100-e7cf-38ee-984c-b1688cdc48f7'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:460a8bbc-2a62-3adb-b6f4-e6a8ccadd225', 4, NULL, 'A장조', 'No. 4 in A major: Schnell und beweglich', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '성격적 소품 Op. 7' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:460a8bbc-2a62-3adb-b6f4-e6a8ccadd225'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d88ea14f-f718-3228-83b0-1cfc66cf04c4', 5, NULL, 'A장조', 'No. 5 in A major: Ernst und mit steigender Lebhaftigkeit', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '성격적 소품 Op. 7' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d88ea14f-f718-3228-83b0-1cfc66cf04c4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:94994ced-fb01-36d6-bbac-b69f5bb7ba8d', 6, NULL, 'E단조', 'No. 6 in E minor: Sehnsüchtig', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '성격적 소품 Op. 7' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:94994ced-fb01-36d6-bbac-b69f5bb7ba8d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:34dc5155-f503-30ac-be03-ba998c3df81a', 7, NULL, 'E장조', 'No. 7 in E major: Leicht und luftig', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '성격적 소품 Op. 7' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:34dc5155-f503-30ac-be03-ba998c3df81a'
+);
+
+
+-- Op. 8 가곡 Op. 8
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 Op. 8', '12 Songs, Op. 8', 'album', NULL, 'Op.', '8', 1828, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 Op. 8'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'd001c95a-6140-4f67-9c6e-9e08eaa484ff'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'd001c95a-6140-4f67-9c6e-9e08eaa484ff'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 8' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'd001c95a-6140-4f67-9c6e-9e08eaa484ff'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:192c2042-d19c-4158-bbdd-1aa8b0b72e51', 1, NULL, 'Minnelied im Mai', 'Minnelied im Mai', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 8' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:192c2042-d19c-4158-bbdd-1aa8b0b72e51'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c676d4ac-bb37-3d2f-847e-4a58464e57fb', 2, NULL, 'Das Heimweh', 'Das Heimweh', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 8' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c676d4ac-bb37-3d2f-847e-4a58464e57fb'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:13eaf2c3-200a-3178-967e-cfababda7bb0', 3, NULL, 'Italien', 'Italien', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 8' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:13eaf2c3-200a-3178-967e-cfababda7bb0'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a69dc0af-8da5-4990-a3e9-9c01a6c6a4dd', 4, NULL, 'Erntelied', 'Erntelied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 8' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a69dc0af-8da5-4990-a3e9-9c01a6c6a4dd'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:03030403-0644-4c18-8206-051b8f6fe83f', 5, NULL, 'Pilgerspruch', 'Pilgerspruch', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 8' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:03030403-0644-4c18-8206-051b8f6fe83f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ed3273af-e3b6-428e-a91c-5533ea006a93', 6, NULL, 'Frühlingslied', 'Frühlingslied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 8' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ed3273af-e3b6-428e-a91c-5533ea006a93'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ae9a9675-0246-41a4-9ad5-024b659b0508', 7, NULL, 'Maienlied', 'Maienlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 8' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ae9a9675-0246-41a4-9ad5-024b659b0508'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c5c53330-6ecd-4c08-b709-6e5bfd07b3f2', 8, NULL, 'Andres Maienlied (Hexenlied)', 'Andres Maienlied (Hexenlied)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 8' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c5c53330-6ecd-4c08-b709-6e5bfd07b3f2'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4afa8174-af65-471e-aea9-553de08c1d7a', 9, NULL, 'Abendlied', 'Abendlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 8' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4afa8174-af65-471e-aea9-553de08c1d7a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:88469126-fea5-4e84-b382-51031dd8ba23', 10, NULL, 'Romanze', 'Romanze', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 8' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:88469126-fea5-4e84-b382-51031dd8ba23'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ad25221e-5875-4ba2-8279-97b71ae103fd', 11, NULL, 'Im Grünen', 'Im Grünen', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 8' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ad25221e-5875-4ba2-8279-97b71ae103fd'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:70bbb7d0-ca95-473b-9879-e1c8861f4e0b', 12, NULL, 'Suleika und Hatem', 'Suleika und Hatem', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 8' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:70bbb7d0-ca95-473b-9879-e1c8861f4e0b'
+);
+
+
+-- Op. 9 가곡 Op. 9
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 Op. 9', '12 Songs, Op. 9', 'album', NULL, 'Op.', '9', 1830, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 Op. 9'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'd2b4c7d1-384a-4873-8a01-5818959c7133'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'd2b4c7d1-384a-4873-8a01-5818959c7133'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 9' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'd2b4c7d1-384a-4873-8a01-5818959c7133'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:bfebebb3-ec96-4b45-a72f-8294ce055e6c', 1, NULL, 'Frage', 'Frage', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 9' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bfebebb3-ec96-4b45-a72f-8294ce055e6c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9c5d9be4-66cc-48db-bd0a-e1cd65495530', 2, NULL, 'Geständnis', 'Geständnis', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 9' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9c5d9be4-66cc-48db-bd0a-e1cd65495530'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:2faaf0a2-43fa-4b96-bd27-83dcffb57289', 3, NULL, 'Wartend', 'Wartend', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 9' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2faaf0a2-43fa-4b96-bd27-83dcffb57289'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0b2ef7c3-0bfe-4a96-b5f6-e579cb5119ba', 4, NULL, 'Im Frühling', 'Im Frühling', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 9' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0b2ef7c3-0bfe-4a96-b5f6-e579cb5119ba'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5f5fc500-02b6-4688-8062-edbfbc243aad', 5, NULL, 'Im Herbst', 'Im Herbst', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 9' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5f5fc500-02b6-4688-8062-edbfbc243aad'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f9c09016-b388-44d0-adc1-7b6573969ef9', 6, NULL, 'Scheidend', 'Scheidend', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 9' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f9c09016-b388-44d0-adc1-7b6573969ef9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5a98bccc-4d2c-31f6-97ee-85bccfae8b5d', 7, NULL, 'Sehnsucht', 'Sehnsucht', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 9' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5a98bccc-4d2c-31f6-97ee-85bccfae8b5d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:2ca28263-dd4b-4711-bdb3-1cf94ae6dcea', 8, NULL, 'Frühlingsglaube', 'Frühlingsglaube', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 9' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2ca28263-dd4b-4711-bdb3-1cf94ae6dcea'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d72a3400-d12b-4922-99dd-7652397145d9', 9, NULL, 'Ferne', 'Ferne', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 9' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d72a3400-d12b-4922-99dd-7652397145d9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c2a108c0-c44a-3d40-9267-8715260ac253', 10, NULL, 'Verlust', 'Verlust', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 9' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c2a108c0-c44a-3d40-9267-8715260ac253'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:533d6496-edc7-4e03-9c96-f11ecf320d3a', 11, NULL, 'Entsagung', 'Entsagung', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 9' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:533d6496-edc7-4e03-9c96-f11ecf320d3a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d7c9828d-b009-3fb8-b3c4-27cc3cb238fd', 12, NULL, 'Die Nonne', 'Die Nonne', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 9' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d7c9828d-b009-3fb8-b3c4-27cc3cb238fd'
+);
+
+
+-- Op. 10 징슈필 <카마초의 결혼식>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '징슈필 <카마초의 결혼식>', 'Die Hochzeit des Camacho', 'song', 'Op. 10', NULL, NULL, 1825, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '징슈필 <카마초의 결혼식>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '65d7ab4a-af80-4258-9709-4b54ccc25e5b'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '65d7ab4a-af80-4258-9709-4b54ccc25e5b'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '징슈필 <카마초의 결혼식>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '65d7ab4a-af80-4258-9709-4b54ccc25e5b'
+);
+
+
+-- Op. 11 교향곡 1번 C단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '교향곡 1번 C단조', 'Symphony No. 1 in C minor', 'album', 'Op. 11', NULL, NULL, 1824, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '교향곡 1번 C단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'afa865c1-0f51-42e3-a693-a74ad9ee7fec'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'afa865c1-0f51-42e3-a693-a74ad9ee7fec'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 1번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'afa865c1-0f51-42e3-a693-a74ad9ee7fec'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c73f31c1-9b6c-3f8a-82d7-cfd4897cf490', 1, 'I', 'Allegro di molto', 'I. Allegro di molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 1번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c73f31c1-9b6c-3f8a-82d7-cfd4897cf490'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7ff23020-02e9-393d-a9e5-a07b13fbf594', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 1번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7ff23020-02e9-393d-a9e5-a07b13fbf594'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9e81e583-8a8d-3dec-97c1-cbf52d29ba0b', 3, 'III', '미뉴에트. Allegro molto', 'III. Menuetto. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 1번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9e81e583-8a8d-3dec-97c1-cbf52d29ba0b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a18344fd-291b-3a2d-955b-42aca0c0d019', 4, 'IV', 'Allegro con fuoco', 'IV. Allegro con fuoco', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 1번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a18344fd-291b-3a2d-955b-42aca0c0d019'
+);
+
+
+-- Op. 12 현악 4중주 1번 E♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현악 4중주 1번 E♭장조', 'String Quartet No. 1 in E♭ major', 'album', 'Op. 12', NULL, NULL, 1829, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현악 4중주 1번 E♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5be83523-0e2c-488b-95e5-4b1791511426'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '5be83523-0e2c-488b-95e5-4b1791511426'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 1번 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5be83523-0e2c-488b-95e5-4b1791511426'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:14f780f2-c9b2-36b0-9275-b1cba267c32b', 1, 'I', 'Adagio non troppo – Allegro non tardante', 'I. Adagio non troppo – Allegro non tardante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 1번 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:14f780f2-c9b2-36b0-9275-b1cba267c32b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a03f3f27-1777-3f08-bec3-eb5ec3efc904', 2, 'II', '칸초네타. Allegretto più mosso', 'II. Canzonetta. Allegretto più mosso', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 1번 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a03f3f27-1777-3f08-bec3-eb5ec3efc904'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6f716f94-2011-3dce-a4e5-c5c83174063d', 3, 'III', 'Andante espressivo', 'III. Andante espressivo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 1번 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6f716f94-2011-3dce-a4e5-c5c83174063d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:3d5d0108-98c4-3485-a8f6-ca775035a870', 4, 'IV', 'Molto allegro e vivace', 'IV. Molto allegro e vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 1번 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3d5d0108-98c4-3485-a8f6-ca775035a870'
+);
+
+
+-- Op. 13 현악 4중주 2번 A단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현악 4중주 2번 A단조', 'String Quartet No. 2 in A minor', 'album', 'Op. 13', NULL, NULL, 1827, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현악 4중주 2번 A단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '053396fb-89d8-499d-bdfc-269a4685cf77'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '053396fb-89d8-499d-bdfc-269a4685cf77'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 2번 A단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '053396fb-89d8-499d-bdfc-269a4685cf77'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:2692d34d-ec8a-3130-b4f2-dfe52cbe5046', 1, 'I', 'Adagio – Allegro vivace', 'I. Adagio – Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 2번 A단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2692d34d-ec8a-3130-b4f2-dfe52cbe5046'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:55514ced-9242-36a7-bbc8-da443906591a', 2, 'II', 'Adagio non lento', 'II. Adagio non lento', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 2번 A단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:55514ced-9242-36a7-bbc8-da443906591a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:15609550-1b15-3669-b0cf-c989615214f2', 3, 'III', '인테르메초. Allegretto con moto – Allegro di molto', 'III. Intermezzo. Allegretto con moto – Allegro di molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 2번 A단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:15609550-1b15-3669-b0cf-c989615214f2'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1b3d0e61-a21b-37c7-9809-bc8e745c2629', 4, 'IV', 'Presto – Adagio non lento', 'IV. Presto – Adagio non lento', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 2번 A단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1b3d0e61-a21b-37c7-9809-bc8e745c2629'
+);
+
+
+-- Op. 14 론도 카프리치오소 E장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '론도 카프리치오소 E장조', 'Rondo capriccioso in E major', 'song', 'Op. 14', NULL, NULL, 1830, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '론도 카프리치오소 E장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '592979bd-f636-4dbb-aef4-04d87396a46b'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '592979bd-f636-4dbb-aef4-04d87396a46b'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '론도 카프리치오소 E장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '592979bd-f636-4dbb-aef4-04d87396a46b'
+);
+
+
+-- Op. 15 <여름의 마지막 장미>에 의한 환상곡 E장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '<여름의 마지막 장미>에 의한 환상곡 E장조', 'Fantasia on "The Last Rose of Summer" in E major', 'song', 'Op. 15', NULL, NULL, 1827, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '<여름의 마지막 장미>에 의한 환상곡 E장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a5eafc2d-6080-3d3d-b7b9-bd7f560452ba'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'a5eafc2d-6080-3d3d-b7b9-bd7f560452ba'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '<여름의 마지막 장미>에 의한 환상곡 E장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a5eafc2d-6080-3d3d-b7b9-bd7f560452ba'
+);
+
+
+-- Op. 16 환상곡 또는 카프리스 Op. 16
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '환상곡 또는 카프리스 Op. 16', '3 Fantasies or Caprices, Op. 16', 'album', NULL, 'Op.', '16', 1829, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '환상곡 또는 카프리스 Op. 16'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '47911ba2-4416-4271-8bc9-81d7221af8ce'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '47911ba2-4416-4271-8bc9-81d7221af8ce'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '환상곡 또는 카프리스 Op. 16' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '47911ba2-4416-4271-8bc9-81d7221af8ce'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:24722303-9719-3ef0-b431-8bf5e591ea2d', 1, NULL, '환상곡 A단조', 'No. 1 Fantasia in A minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '환상곡 또는 카프리스 Op. 16' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:24722303-9719-3ef0-b431-8bf5e591ea2d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e40eaaaa-8a43-38f7-85ff-f5c33acca710', 2, NULL, '스케르초 E단조', 'No. 2 Scherzo in E minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '환상곡 또는 카프리스 Op. 16' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e40eaaaa-8a43-38f7-85ff-f5c33acca710'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d776b57c-32b7-320f-89a3-ec8ebe50bf39', 3, NULL, '환상곡 E장조', 'No. 3 Fantasia in E major "The Rivulet"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '환상곡 또는 카프리스 Op. 16' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d776b57c-32b7-320f-89a3-ec8ebe50bf39'
+);
+
+
+-- Op. 17 협주적 변주곡 D장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '협주적 변주곡 D장조', 'Variations concertantes in D major', 'song', 'Op. 17', NULL, NULL, 1829, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '협주적 변주곡 D장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f00046df-0080-37df-8b54-2c9aec65407e'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'f00046df-0080-37df-8b54-2c9aec65407e'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '협주적 변주곡 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f00046df-0080-37df-8b54-2c9aec65407e'
+);
+
+
+-- Op. 18 현악 5중주 1번 A장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현악 5중주 1번 A장조', 'String Quintet No. 1 in A major', 'album', 'Op. 18', NULL, NULL, 1832, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현악 5중주 1번 A장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '6d210288-1a15-42b0-a3cb-44d14d140c3d'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '6d210288-1a15-42b0-a3cb-44d14d140c3d'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 5중주 1번 A장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '6d210288-1a15-42b0-a3cb-44d14d140c3d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1a770a42-6c0b-4aff-9174-3e1338e32959', 1, 'I', 'Allegro con moto', 'I. Allegro con moto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 5중주 1번 A장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1a770a42-6c0b-4aff-9174-3e1338e32959'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d1e8c4c6-6b4e-45e4-a684-5e9c55f104ba', 2, 'II', '인테르메초. Andante sostenuto', 'II. Intermezzo. Andante sostenuto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 5중주 1번 A장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d1e8c4c6-6b4e-45e4-a684-5e9c55f104ba'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a8dfbe90-d72a-4809-a161-9b6871bd70a2', 3, 'III', '스케르초. Allegro di molto', 'III. Scherzo. Allegro di molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 5중주 1번 A장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a8dfbe90-d72a-4809-a161-9b6871bd70a2'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9ec568f6-89d5-4f6d-b80a-80c5a414c1ef', 4, 'IV', 'Allegro vivace', 'IV. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 5중주 1번 A장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9ec568f6-89d5-4f6d-b80a-80c5a414c1ef'
+);
+
+
+-- Op. 19a 가곡 Op. 19a
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 Op. 19a', '6 Songs, Op. 19a', 'album', NULL, 'Op.', '19a', 1834, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 Op. 19a'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'aca32518-cf94-4fb6-94fa-9587314e6be9'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'aca32518-cf94-4fb6-94fa-9587314e6be9'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 19a' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'aca32518-cf94-4fb6-94fa-9587314e6be9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0b2bd66f-aa67-4e10-83d9-2b362bc74987', 1, NULL, 'Frühlingslied', 'Frühlingslied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 19a' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0b2bd66f-aa67-4e10-83d9-2b362bc74987'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:41746bcc-09f5-4c16-b790-04d07c822bc8', 2, NULL, 'Das erste Veilchen', 'Das erste Veilchen', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 19a' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:41746bcc-09f5-4c16-b790-04d07c822bc8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e56b1880-b25a-49e3-8ed5-528d51c84643', 3, NULL, 'Winterlied', 'Winterlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 19a' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e56b1880-b25a-49e3-8ed5-528d51c84643'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:78d7328d-a298-4d23-9b0c-1c3a18965a6c', 4, NULL, 'Neue Liebe', 'Neue Liebe', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 19a' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:78d7328d-a298-4d23-9b0c-1c3a18965a6c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e26813db-66ce-4380-bebf-fa10d795f77c', 5, NULL, 'Gruß', 'Gruß', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 19a' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e26813db-66ce-4380-bebf-fa10d795f77c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:33b40ee9-ed32-4dbf-acdc-2445641ab9e5', 6, NULL, 'Reiselied', 'Reiselied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 19a' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:33b40ee9-ed32-4dbf-acdc-2445641ab9e5'
+);
+
+
+-- Op. 19b 무언가 Op. 19b
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '무언가 Op. 19b', 'Songs Without Words, Book 1, Op. 19b', 'album', NULL, 'Op.', '19b', 1830, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '무언가 Op. 19b'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f70722cf-13f0-4bde-816c-5306172133f8'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'f70722cf-13f0-4bde-816c-5306172133f8'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 19b' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f70722cf-13f0-4bde-816c-5306172133f8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a2b4ca7d-475e-3674-ab61-6b1c0135acc1', 1, NULL, 'E장조', 'No. 1 in E major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 19b' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a2b4ca7d-475e-3674-ab61-6b1c0135acc1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a50d2d00-5e57-39ce-b686-9c195009a856', 2, NULL, 'A단조', 'No. 2 in A minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 19b' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a50d2d00-5e57-39ce-b686-9c195009a856'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:394cb933-4c33-3dad-87f6-7c6100a7681c', 3, NULL, 'A장조 "사냥의 노래"', 'No. 3 in A major "Hunting Song"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 19b' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:394cb933-4c33-3dad-87f6-7c6100a7681c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e5df405c-0a9b-3cbc-8e83-8b6ab75ee3f5', 4, NULL, 'A장조', 'No. 4 in A major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 19b' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e5df405c-0a9b-3cbc-8e83-8b6ab75ee3f5'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9970ddf1-b745-30b9-a824-c5e9a03793f6', 5, NULL, 'F#단조', 'No. 5 in F# minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 19b' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9970ddf1-b745-30b9-a824-c5e9a03793f6'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a28570ad-f4a7-3b1a-98f0-0a0d024f3148', 6, NULL, 'G단조 "베네치아 뱃노래 1"', 'No. 6 in G minor "Venetian Boat Song No. 1"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 19b' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a28570ad-f4a7-3b1a-98f0-0a0d024f3148'
+);
+
+
+-- Op. 20 현악 8중주 E♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현악 8중주 E♭장조', 'String Octet in E♭ major', 'album', 'Op. 20', NULL, NULL, 1825, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현악 8중주 E♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '19dab9f1-ed2f-464e-8f61-c2dfebd84bf2'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '19dab9f1-ed2f-464e-8f61-c2dfebd84bf2'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 8중주 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '19dab9f1-ed2f-464e-8f61-c2dfebd84bf2'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:fa280ba0-f964-33b7-a819-d4322bb0d561', 1, 'I', 'Allegro moderato, ma con fuoco', 'I. Allegro moderato, ma con fuoco', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 8중주 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fa280ba0-f964-33b7-a819-d4322bb0d561'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6c6c329b-bfe5-3ad7-9ec1-c60a7f6bfbcc', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 8중주 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6c6c329b-bfe5-3ad7-9ec1-c60a7f6bfbcc'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:564953df-8ed6-3767-970c-49065f6582ff', 3, 'III', '스케르초. Allegro leggerissimo', 'III. Scherzo. Allegro leggerissimo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 8중주 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:564953df-8ed6-3767-970c-49065f6582ff'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:20de1df6-a94a-300c-8077-4931e8a22333', 4, 'IV', 'Presto', 'IV. Presto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 8중주 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:20de1df6-a94a-300c-8077-4931e8a22333'
+);
+
+
+-- Op. 21 <한여름 밤의 꿈> 서곡
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '<한여름 밤의 꿈> 서곡', 'A Midsummer Night''s Dream, Overture in E major', 'song', 'Op. 21', NULL, NULL, 1826, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '<한여름 밤의 꿈> 서곡'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '56f42454-be29-4a00-b1fd-4bef7ab8263c'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '56f42454-be29-4a00-b1fd-4bef7ab8263c'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '<한여름 밤의 꿈> 서곡' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '56f42454-be29-4a00-b1fd-4bef7ab8263c'
+);
+
+
+-- Op. 22 카프리치오 브릴란테 B단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '카프리치오 브릴란테 B단조', 'Capriccio brillant in B minor', 'song', 'Op. 22', NULL, NULL, 1832, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '카프리치오 브릴란테 B단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ea55fb28-2100-325d-be6f-d1bbfa1210d8'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'ea55fb28-2100-325d-be6f-d1bbfa1210d8'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '카프리치오 브릴란테 B단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ea55fb28-2100-325d-be6f-d1bbfa1210d8'
+);
+
+
+-- Op. 23 교회 음악 Op. 23
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '교회 음악 Op. 23', 'Kirchenmusik, 3 Sacred Pieces, Op. 23', 'album', NULL, 'Op.', '23', 1830, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '교회 음악 Op. 23'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f5734abe-4a20-4d00-a46e-87b1143e9c6a'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'f5734abe-4a20-4d00-a46e-87b1143e9c6a'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교회 음악 Op. 23' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f5734abe-4a20-4d00-a46e-87b1143e9c6a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a7cf1745-5af6-4942-b1fd-93bbcf331beb', 1, NULL, 'Aus tiefer Not schrei'' ich zu dir', 'Aus tiefer Not schrei'' ich zu dir', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교회 음악 Op. 23' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a7cf1745-5af6-4942-b1fd-93bbcf331beb'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:27a3bdb7-be21-4d16-96f1-19575e427168', 2, NULL, 'Ave Maria', 'Ave Maria', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교회 음악 Op. 23' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:27a3bdb7-be21-4d16-96f1-19575e427168'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8523b567-20af-38eb-b934-fb00a202e4da', 3, NULL, 'Mitten wir im Leben sind', 'Mitten wir im Leben sind', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교회 음악 Op. 23' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8523b567-20af-38eb-b934-fb00a202e4da'
+);
+
+
+-- Op. 24 관악을 위한 서곡 C장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '관악을 위한 서곡 C장조', 'Overture in C major for Wind Instruments', 'song', 'Op. 24', NULL, NULL, 1838, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '관악을 위한 서곡 C장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '70dbe851-e648-3b90-b41e-727690c55a54'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '70dbe851-e648-3b90-b41e-727690c55a54'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '관악을 위한 서곡 C장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '70dbe851-e648-3b90-b41e-727690c55a54'
+);
+
+
+-- Op. 25 피아노 협주곡 1번 G단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 협주곡 1번 G단조', 'Piano Concerto No. 1 in G minor', 'album', 'Op. 25', NULL, NULL, 1831, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 협주곡 1번 G단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '16dea66a-88e8-43f6-a091-41800a2acc45'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '16dea66a-88e8-43f6-a091-41800a2acc45'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 협주곡 1번 G단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '16dea66a-88e8-43f6-a091-41800a2acc45'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:795e442f-b0b3-3125-b042-e99985f719ba', 1, 'I', 'Molto allegro con fuoco', 'I. Molto allegro con fuoco', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 협주곡 1번 G단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:795e442f-b0b3-3125-b042-e99985f719ba'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f2c7639a-6a18-3783-89e2-76afd84611ce', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 협주곡 1번 G단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f2c7639a-6a18-3783-89e2-76afd84611ce'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7fa61c4c-96e2-3039-b323-50efaf82513c', 3, 'III', 'Presto – Molto allegro e vivace', 'III. Presto – Molto allegro e vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 협주곡 1번 G단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7fa61c4c-96e2-3039-b323-50efaf82513c'
+);
+
+
+-- Op. 27 <고요한 바다와 즐거운 항해> 서곡
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '<고요한 바다와 즐거운 항해> 서곡', 'Calm Sea and Prosperous Voyage (Meeresstille und glückliche Fahrt), Overture in D major', 'song', 'Op. 27', NULL, NULL, 1828, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '<고요한 바다와 즐거운 항해> 서곡'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5bb2fb25-39cb-316a-b65e-6dde64c3ec69'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '5bb2fb25-39cb-316a-b65e-6dde64c3ec69'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '<고요한 바다와 즐거운 항해> 서곡' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5bb2fb25-39cb-316a-b65e-6dde64c3ec69'
+);
+
+
+-- Op. 28 환상곡 F#단조 "스코틀랜드 소나타"
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '환상곡 F#단조 "스코틀랜드 소나타"', 'Fantasia in F# minor "Sonate écossaise"', 'album', 'Op. 28', NULL, NULL, 1833, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '환상곡 F#단조 "스코틀랜드 소나타"'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c7a2fd28-9036-4d91-a0b8-1522455db535'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'c7a2fd28-9036-4d91-a0b8-1522455db535'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '환상곡 F#단조 "스코틀랜드 소나타"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c7a2fd28-9036-4d91-a0b8-1522455db535'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:66bfd08a-3341-3b19-98a0-239fab8fbc6c', 1, 'I', 'Con moto agitato', 'I. Con moto agitato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '환상곡 F#단조 "스코틀랜드 소나타"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:66bfd08a-3341-3b19-98a0-239fab8fbc6c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c8e1c579-62ac-33f8-9b4d-70fb266ad111', 2, 'II', 'Allegro con moto', 'II. Allegro con moto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '환상곡 F#단조 "스코틀랜드 소나타"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c8e1c579-62ac-33f8-9b4d-70fb266ad111'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:47413c13-157f-3dab-94fe-98c9cfaff7da', 3, 'III', 'Presto', 'III. Presto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '환상곡 F#단조 "스코틀랜드 소나타"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:47413c13-157f-3dab-94fe-98c9cfaff7da'
+);
+
+
+-- Op. 29 론도 브릴란테 E♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '론도 브릴란테 E♭장조', 'Rondo brillant in E♭ major', 'song', 'Op. 29', NULL, NULL, 1834, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '론도 브릴란테 E♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ec6ab84e-6d55-362a-8155-b565079c4ff2'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'ec6ab84e-6d55-362a-8155-b565079c4ff2'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '론도 브릴란테 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ec6ab84e-6d55-362a-8155-b565079c4ff2'
+);
+
+
+-- Op. 30 무언가 Op. 30
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '무언가 Op. 30', 'Songs Without Words, Book 2, Op. 30', 'album', NULL, 'Op.', '30', 1834, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '무언가 Op. 30'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f839f497-443a-4056-9526-86ce87a9f7a3'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'f839f497-443a-4056-9526-86ce87a9f7a3'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 30' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f839f497-443a-4056-9526-86ce87a9f7a3'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0f72f716-4855-37dd-be95-604ab2add215', 1, NULL, 'E♭장조', 'No. 1 in E♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 30' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0f72f716-4855-37dd-be95-604ab2add215'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5f4648f8-9499-38c9-ad81-9b8834271850', 2, NULL, 'B♭단조', 'No. 2 in B♭ minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 30' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5f4648f8-9499-38c9-ad81-9b8834271850'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:fbaddaa7-dfdd-3257-9b5c-add7b28cdd47', 3, NULL, 'E장조', 'No. 3 in E major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 30' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fbaddaa7-dfdd-3257-9b5c-add7b28cdd47'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:518fa612-ad9a-3013-a4ef-c657fd472589', 4, NULL, 'B단조', 'No. 4 in B minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 30' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:518fa612-ad9a-3013-a4ef-c657fd472589'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:01523bcb-9599-336e-a159-d8018f15fedd', 5, NULL, 'D장조', 'No. 5 in D major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 30' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:01523bcb-9599-336e-a159-d8018f15fedd'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7665af43-a9f8-3876-bb06-93ad18581ea2', 6, NULL, 'F#단조 "베네치아 뱃노래 2"', 'No. 6 in F# minor "Venetian Boat Song No. 2"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 30' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7665af43-a9f8-3876-bb06-93ad18581ea2'
+);
+
+
+-- Op. 31 시편 115편
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 115편', 'Psalm 115 "Nicht unserm Namen, Herr"', 'song', 'Op. 31', NULL, NULL, 1830, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 115편'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'fe53e678-2ee5-46de-ab9d-7a21d3553780'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'fe53e678-2ee5-46de-ab9d-7a21d3553780'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 115편' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'fe53e678-2ee5-46de-ab9d-7a21d3553780'
+);
+
+
+-- Op. 32 <아름다운 멜루지네> 서곡
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '<아름다운 멜루지네> 서곡', 'The Fair Melusine (Das Märchen von der schönen Melusine), Overture in F major', 'song', 'Op. 32', NULL, NULL, 1835, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '<아름다운 멜루지네> 서곡'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '42d1efdb-9e21-3972-bf2a-51d2b237e362'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '42d1efdb-9e21-3972-bf2a-51d2b237e362'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '<아름다운 멜루지네> 서곡' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '42d1efdb-9e21-3972-bf2a-51d2b237e362'
+);
+
+
+-- Op. 33 카프리스 Op. 33
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '카프리스 Op. 33', '3 Caprices, Op. 33', 'album', NULL, 'Op.', '33', 1835, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '카프리스 Op. 33'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ff8e1d66-0c1b-4f9f-a42a-8011da6d3f02'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'ff8e1d66-0c1b-4f9f-a42a-8011da6d3f02'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '카프리스 Op. 33' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ff8e1d66-0c1b-4f9f-a42a-8011da6d3f02'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:27f62e78-d753-38f6-a95c-61ca060d3d2c', 1, NULL, 'A단조', 'No. 1 in A minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '카프리스 Op. 33' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:27f62e78-d753-38f6-a95c-61ca060d3d2c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d5ca9d59-ed1b-33d0-8454-e7164f270b8f', 2, NULL, 'E장조', 'No. 2 in E major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '카프리스 Op. 33' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d5ca9d59-ed1b-33d0-8454-e7164f270b8f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4bc61269-ae4d-30e0-8fbc-3eaf945f9ea2', 3, NULL, 'B♭단조', 'No. 3 in B♭ minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '카프리스 Op. 33' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4bc61269-ae4d-30e0-8fbc-3eaf945f9ea2'
+);
+
+
+-- Op. 34 가곡 Op. 34
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 Op. 34', '6 Songs, Op. 34', 'album', NULL, 'Op.', '34', 1836, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 Op. 34'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c2231a2a-0d91-4e4f-a205-45c83cda6460'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'c2231a2a-0d91-4e4f-a205-45c83cda6460'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 34' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c2231a2a-0d91-4e4f-a205-45c83cda6460'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0776e4ec-c04d-4ec3-b5a8-8b6fa247154a', 1, NULL, 'Minnelied', 'Minnelied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 34' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0776e4ec-c04d-4ec3-b5a8-8b6fa247154a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e2b0594b-e35c-3848-b17c-8e80e446b78f', 2, NULL, '노래의 날개 위에 (Auf Flügeln des Gesanges)', 'Auf Flügeln des Gesanges', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 34' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e2b0594b-e35c-3848-b17c-8e80e446b78f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6a375eb9-3d3c-4f3f-a50b-5a7bc7a657eb', 3, NULL, 'Frühlingslied', 'Frühlingslied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 34' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6a375eb9-3d3c-4f3f-a50b-5a7bc7a657eb'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7695dbb4-cffe-4208-a23b-ddda723be23d', 4, NULL, 'Suleika', 'Suleika', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 34' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7695dbb4-cffe-4208-a23b-ddda723be23d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9ec35c9e-f099-4754-8a84-20e19e2217f0', 5, NULL, 'Sonntagslied', 'Sonntagslied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 34' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9ec35c9e-f099-4754-8a84-20e19e2217f0'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0881e576-44bf-4724-8f3e-d73eac8fff9a', 6, NULL, 'Reiselied', 'Reiselied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 34' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0881e576-44bf-4724-8f3e-d73eac8fff9a'
+);
+
+
+-- Op. 35 전주곡과 푸가 Op. 35
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '전주곡과 푸가 Op. 35', '6 Preludes and Fugues, Op. 35', 'album', NULL, 'Op.', '35', 1837, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '전주곡과 푸가 Op. 35'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '3613ed45-af42-42c8-aef4-563bd6a5c9dd'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '3613ed45-af42-42c8-aef4-563bd6a5c9dd'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '3613ed45-af42-42c8-aef4-563bd6a5c9dd'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0f4737fa-e74e-4fc7-83c5-23e1e33f0a06', 1, NULL, 'E단조', 'No. 1 in E minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0f4737fa-e74e-4fc7-83c5-23e1e33f0a06'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:29c87782-d2ef-40d5-916b-a77739bcbc53', 1, 'I', '전주곡. Allegro con fuoco', 'I. Prelude. Allegro con fuoco', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:0f4737fa-e74e-4fc7-83c5-23e1e33f0a06'
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:29c87782-d2ef-40d5-916b-a77739bcbc53'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:1e2f261c-9b3b-4fb5-a3be-8a98d99e279f', 2, 'II', '푸가. Andante espressivo', 'II. Fugue. Andante espressivo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:0f4737fa-e74e-4fc7-83c5-23e1e33f0a06'
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1e2f261c-9b3b-4fb5-a3be-8a98d99e279f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ab861bda-741b-4a92-8795-e744bb38bab0', 2, NULL, 'D장조', 'No. 2 in D major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ab861bda-741b-4a92-8795-e744bb38bab0'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:c75d6ce3-a4ad-479f-bf14-d946cf56635e', 1, 'I', '전주곡. Allegretto', 'I. Prelude. Allegretto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:ab861bda-741b-4a92-8795-e744bb38bab0'
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c75d6ce3-a4ad-479f-bf14-d946cf56635e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:22c82baa-cf0b-41bf-ab95-f703ec04c923', 2, 'II', '푸가. Tranquillo e sempre legato', 'II. Fugue. Tranquillo e sempre legato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:ab861bda-741b-4a92-8795-e744bb38bab0'
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:22c82baa-cf0b-41bf-ab95-f703ec04c923'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f3b167c8-36a7-458e-9846-abbd75db90f2', 3, NULL, 'B단조', 'No. 3 in B minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f3b167c8-36a7-458e-9846-abbd75db90f2'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:a1600b5a-2813-423c-85bb-af93dc902f46', 1, 'I', '전주곡. Prestissimo staccato', 'I. Prelude. Prestissimo staccato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:f3b167c8-36a7-458e-9846-abbd75db90f2'
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a1600b5a-2813-423c-85bb-af93dc902f46'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:adb849b4-d4e4-4afa-9106-bbfc83b80a95', 2, 'II', '푸가. Allegro con brio', 'II. Fugue. Allegro con brio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:f3b167c8-36a7-458e-9846-abbd75db90f2'
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:adb849b4-d4e4-4afa-9106-bbfc83b80a95'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:39d34054-e1f9-4868-ab54-6121fa21e48e', 4, NULL, 'A♭장조', 'No. 4 in A♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:39d34054-e1f9-4868-ab54-6121fa21e48e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:85b5e2d2-4d73-44bb-94df-db0cd6b60bd9', 1, 'I', '전주곡. Con moto', 'I. Prelude. Con moto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:39d34054-e1f9-4868-ab54-6121fa21e48e'
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:85b5e2d2-4d73-44bb-94df-db0cd6b60bd9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:8b343990-222a-4326-8609-3a3abe534056', 2, 'II', '푸가. Con moto, ma sostenuto', 'II. Fugue. Con moto, ma sostenuto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:39d34054-e1f9-4868-ab54-6121fa21e48e'
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8b343990-222a-4326-8609-3a3abe534056'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f4b2e32f-6c0b-491a-a922-bb05292a013d', 5, NULL, 'F단조', 'No. 5 in F minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f4b2e32f-6c0b-491a-a922-bb05292a013d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:2c6c44db-e269-442e-baa8-6cdd657aaae6', 1, 'I', '전주곡. Andante lento', 'I. Prelude. Andante lento', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:f4b2e32f-6c0b-491a-a922-bb05292a013d'
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2c6c44db-e269-442e-baa8-6cdd657aaae6'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:34d73fd9-34f2-4364-bda7-c626c726ef28', 2, 'II', '푸가. Allegro con fuoco', 'II. Fugue. Allegro con fuoco', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:f4b2e32f-6c0b-491a-a922-bb05292a013d'
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:34d73fd9-34f2-4364-bda7-c626c726ef28'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:dfe203c4-b085-46e4-b2f5-cdd41a17e07e', 6, NULL, 'B♭장조', 'No. 6 in B♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:dfe203c4-b085-46e4-b2f5-cdd41a17e07e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:22d149ff-d404-4fd1-a1cf-36edeab8eb2d', 1, 'I', '전주곡. Maestoso moderato', 'I. Prelude. Maestoso moderato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:dfe203c4-b085-46e4-b2f5-cdd41a17e07e'
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:22d149ff-d404-4fd1-a1cf-36edeab8eb2d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:5ccd4a29-b957-4766-bcf2-9ea96127d2f6', 2, 'II', '푸가. Allegro con brio', 'II. Fugue. Allegro con brio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:dfe203c4-b085-46e4-b2f5-cdd41a17e07e'
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 Op. 35' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5ccd4a29-b957-4766-bcf2-9ea96127d2f6'
+);
+
+
+-- Op. 36 오라토리오 <성 바울>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '오라토리오 <성 바울>', 'St. Paul (Paulus)', 'song', 'Op. 36', NULL, NULL, 1836, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '오라토리오 <성 바울>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e78774a3-a577-4817-98ba-cd81dc4ec9b9'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'e78774a3-a577-4817-98ba-cd81dc4ec9b9'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '오라토리오 <성 바울>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e78774a3-a577-4817-98ba-cd81dc4ec9b9'
+);
+
+
+-- Op. 37 오르간 전주곡과 푸가 Op. 37
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '오르간 전주곡과 푸가 Op. 37', '3 Preludes and Fugues for Organ, Op. 37', 'album', NULL, 'Op.', '37', 1837, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '오르간 전주곡과 푸가 Op. 37'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '9dfd1e9c-ebc4-44d1-84ef-90dbb29ed020'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '9dfd1e9c-ebc4-44d1-84ef-90dbb29ed020'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '오르간 전주곡과 푸가 Op. 37' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '9dfd1e9c-ebc4-44d1-84ef-90dbb29ed020'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e1db4c68-097a-4932-be95-eed4dfe4b704', 1, NULL, 'C단조', 'No. 1 in C minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '오르간 전주곡과 푸가 Op. 37' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e1db4c68-097a-4932-be95-eed4dfe4b704'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:bb6b2878-52be-467d-8951-e1bf9064facf', 1, 'I', '전주곡', 'I. Prelude', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:e1db4c68-097a-4932-be95-eed4dfe4b704'
+WHERE p.composer_id = 27 AND p.title = '오르간 전주곡과 푸가 Op. 37' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bb6b2878-52be-467d-8951-e1bf9064facf'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:488735f2-76d7-4574-b685-db7e02980462', 2, 'II', '푸가', 'II. Fugue', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:e1db4c68-097a-4932-be95-eed4dfe4b704'
+WHERE p.composer_id = 27 AND p.title = '오르간 전주곡과 푸가 Op. 37' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:488735f2-76d7-4574-b685-db7e02980462'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9419163b-5e7e-4f72-9dab-286d73ecbdc9', 2, NULL, 'G장조', 'No. 2 in G major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '오르간 전주곡과 푸가 Op. 37' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9419163b-5e7e-4f72-9dab-286d73ecbdc9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:797ef3ef-845a-401a-abdd-292811c5967f', 1, 'I', '전주곡', 'I. Prelude', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:9419163b-5e7e-4f72-9dab-286d73ecbdc9'
+WHERE p.composer_id = 27 AND p.title = '오르간 전주곡과 푸가 Op. 37' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:797ef3ef-845a-401a-abdd-292811c5967f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:5e8352df-c434-47a1-9722-1cb944ed276f', 2, 'II', '푸가', 'II. Fugue', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:9419163b-5e7e-4f72-9dab-286d73ecbdc9'
+WHERE p.composer_id = 27 AND p.title = '오르간 전주곡과 푸가 Op. 37' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5e8352df-c434-47a1-9722-1cb944ed276f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4e629ed6-2eff-4420-879f-c3f93a9b0969', 3, NULL, 'D단조', 'No. 3 in D minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '오르간 전주곡과 푸가 Op. 37' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4e629ed6-2eff-4420-879f-c3f93a9b0969'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:4ddd4c5e-45c8-4653-87da-6f67b2c48513', 1, 'I', '전주곡', 'I. Prelude', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:4e629ed6-2eff-4420-879f-c3f93a9b0969'
+WHERE p.composer_id = 27 AND p.title = '오르간 전주곡과 푸가 Op. 37' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4ddd4c5e-45c8-4653-87da-6f67b2c48513'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:9259ff6c-81ca-4942-82d5-56e54355e950', 2, 'II', '푸가', 'II. Fugue', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:4e629ed6-2eff-4420-879f-c3f93a9b0969'
+WHERE p.composer_id = 27 AND p.title = '오르간 전주곡과 푸가 Op. 37' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9259ff6c-81ca-4942-82d5-56e54355e950'
+);
+
+
+-- Op. 38 무언가 Op. 38
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '무언가 Op. 38', 'Songs Without Words, Book 3, Op. 38', 'album', NULL, 'Op.', '38', 1837, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '무언가 Op. 38'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '04254138-1984-4cee-a085-7440a527aab2'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '04254138-1984-4cee-a085-7440a527aab2'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 38' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '04254138-1984-4cee-a085-7440a527aab2'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:09cf64cb-975b-3285-9d9d-9fb2f58a133c', 1, NULL, 'E♭장조', 'No. 1 in E♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 38' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:09cf64cb-975b-3285-9d9d-9fb2f58a133c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:50cb441e-0734-382a-a8b1-5c948ec7aafd', 2, NULL, 'C단조', 'No. 2 in C minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 38' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:50cb441e-0734-382a-a8b1-5c948ec7aafd'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:40357729-3638-34ea-8fe3-c10ec0ea5866', 3, NULL, 'E장조', 'No. 3 in E major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 38' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:40357729-3638-34ea-8fe3-c10ec0ea5866'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6bebd2c3-0f42-3c00-a77f-fe1fa6bbd07d', 4, NULL, 'A장조', 'No. 4 in A major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 38' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6bebd2c3-0f42-3c00-a77f-fe1fa6bbd07d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4d081638-f53e-33a2-8f9d-2ff2f5a056c1', 5, NULL, 'A단조', 'No. 5 in A minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 38' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4d081638-f53e-33a2-8f9d-2ff2f5a056c1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d6512c4c-c6d2-33ad-af2e-02961ef6b42a', 6, NULL, 'A♭장조 "듀엣"', 'No. 6 in A♭ major "Duetto"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 38' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d6512c4c-c6d2-33ad-af2e-02961ef6b42a'
+);
+
+
+-- Op. 39 모테트 Op. 39
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '모테트 Op. 39', '3 Motets, Op. 39', 'album', NULL, 'Op.', '39', 1830, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '모테트 Op. 39'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '25f4abc5-536d-47d0-8886-f600d8c34089'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '25f4abc5-536d-47d0-8886-f600d8c34089'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '모테트 Op. 39' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '25f4abc5-536d-47d0-8886-f600d8c34089'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d3a667f8-41ce-4c18-84fc-417b8c8218f6', 1, NULL, 'Veni, Domine', 'Veni, Domine', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '모테트 Op. 39' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d3a667f8-41ce-4c18-84fc-417b8c8218f6'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:41b3a4e2-b594-4399-9598-fade55a7e754', 2, NULL, 'Laudate pueri', 'Laudate pueri', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '모테트 Op. 39' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:41b3a4e2-b594-4399-9598-fade55a7e754'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9c2b3b99-0f62-4c25-855c-d824d67a8a51', 3, NULL, 'Surrexit pastor', 'Surrexit pastor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '모테트 Op. 39' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9c2b3b99-0f62-4c25-855c-d824d67a8a51'
+);
+
+
+-- Op. 40 피아노 협주곡 2번 D단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 협주곡 2번 D단조', 'Piano Concerto No. 2 in D minor', 'album', 'Op. 40', NULL, NULL, 1837, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 협주곡 2번 D단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e7479333-a2f9-4129-8229-802f908e6d6c'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'e7479333-a2f9-4129-8229-802f908e6d6c'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 협주곡 2번 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e7479333-a2f9-4129-8229-802f908e6d6c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:10ddd9b3-0233-332e-ae73-193556bf5787', 1, 'I', 'Allegro appassionato', 'I. Allegro appassionato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 협주곡 2번 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:10ddd9b3-0233-332e-ae73-193556bf5787'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:298bd530-b344-3f4e-b821-92d0ccbf4163', 2, 'II', 'Adagio. Molto sostenuto', 'II. Adagio. Molto sostenuto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 협주곡 2번 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:298bd530-b344-3f4e-b821-92d0ccbf4163'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:319b2ceb-7453-343d-ad9c-44647f22ea46', 3, 'III', '피날레. Presto scherzando', 'III. Finale. Presto scherzando', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 협주곡 2번 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:319b2ceb-7453-343d-ad9c-44647f22ea46'
+);
+
+
+-- Op. 41 혼성 합창곡 Op. 41
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '혼성 합창곡 Op. 41', '6 Part-Songs for Mixed Chorus, Op. 41', 'album', NULL, 'Op.', '41', 1838, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '혼성 합창곡 Op. 41'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c7c7acdb-db28-4910-8e02-dccb39e6ebff'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'c7c7acdb-db28-4910-8e02-dccb39e6ebff'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 41' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c7c7acdb-db28-4910-8e02-dccb39e6ebff'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a972710b-00b4-3097-90b5-fca5fea717be', 1, NULL, 'Im Walde', 'Im Walde', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 41' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a972710b-00b4-3097-90b5-fca5fea717be'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:689e95ac-70fc-3a27-ab87-883acac5146f', 2, NULL, 'Entflieh'' mit mir', 'Entflieh'' mit mir', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 41' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:689e95ac-70fc-3a27-ab87-883acac5146f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:3164ed4b-4f84-30a4-a0c7-b7648ec1d98a', 3, NULL, 'Es fiel ein Reif', 'Es fiel ein Reif', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 41' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3164ed4b-4f84-30a4-a0c7-b7648ec1d98a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:940f4aed-bf5f-318a-8106-62991fcf1461', 4, NULL, 'Auf ihrem Grab', 'Auf ihrem Grab', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 41' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:940f4aed-bf5f-318a-8106-62991fcf1461'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4f696bf8-936c-3d28-abbf-6e6b71bdea7b', 5, NULL, 'Mailied', 'Mailied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 41' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4f696bf8-936c-3d28-abbf-6e6b71bdea7b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:aaeeb9f1-c201-3f61-a42a-9885b5af49ad', 6, NULL, 'Auf dem See', 'Auf dem See', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 41' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:aaeeb9f1-c201-3f61-a42a-9885b5af49ad'
+);
+
+
+-- Op. 42 시편 42편
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 42편', 'Psalm 42 "Wie der Hirsch schreit"', 'song', 'Op. 42', NULL, NULL, 1837, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 42편'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ef413ec8-4ac9-4361-8729-88f4a460b9ef'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'ef413ec8-4ac9-4361-8729-88f4a460b9ef'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 42편' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ef413ec8-4ac9-4361-8729-88f4a460b9ef'
+);
+
+
+-- Op. 43 세레나데와 알레그로 조코소 B단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '세레나데와 알레그로 조코소 B단조', 'Serenade and Allegro giocoso in B minor', 'song', 'Op. 43', NULL, NULL, 1838, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '세레나데와 알레그로 조코소 B단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ee0b7e41-b530-38ea-9e4d-9c6f68ead53c'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'ee0b7e41-b530-38ea-9e4d-9c6f68ead53c'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '세레나데와 알레그로 조코소 B단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ee0b7e41-b530-38ea-9e4d-9c6f68ead53c'
+);
+
+
+-- Op. 44 현악 4중주 Op. 44
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현악 4중주 Op. 44', '3 String Quartets, Op. 44', 'album', NULL, 'Op.', '44', 1838, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현악 4중주 Op. 44'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '2da65d48-f954-43b6-a7be-534d46f42168'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '2da65d48-f954-43b6-a7be-534d46f42168'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '2da65d48-f954-43b6-a7be-534d46f42168'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0e2d88c8-5f1c-47ef-8830-5a28e910d611', 1, NULL, '현악 4중주 3번 D장조', 'String Quartet No. 3 in D major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0e2d88c8-5f1c-47ef-8830-5a28e910d611'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:3862c7f1-d740-30fb-9924-9e834eac6efa', 1, 'I', 'Molto allegro vivace', 'I. Molto allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:0e2d88c8-5f1c-47ef-8830-5a28e910d611'
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3862c7f1-d740-30fb-9924-9e834eac6efa'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:953d6313-5a40-34ea-8af8-06110b829b26', 2, 'II', '미뉴에트. Un poco allegretto', 'II. Menuetto. Un poco allegretto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:0e2d88c8-5f1c-47ef-8830-5a28e910d611'
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:953d6313-5a40-34ea-8af8-06110b829b26'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:91de85c4-8bff-3932-829a-c4b2be546e38', 3, 'III', 'Andante espressivo ma con moto', 'III. Andante espressivo ma con moto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:0e2d88c8-5f1c-47ef-8830-5a28e910d611'
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:91de85c4-8bff-3932-829a-c4b2be546e38'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:8b47753e-4403-3635-a8fa-d3fdeddd4d3d', 4, 'IV', 'Presto con brio', 'IV. Presto con brio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:0e2d88c8-5f1c-47ef-8830-5a28e910d611'
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8b47753e-4403-3635-a8fa-d3fdeddd4d3d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:68efe8e5-03ed-4b18-8169-87401cfb18da', 2, NULL, '현악 4중주 4번 E단조', 'String Quartet No. 4 in E minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:68efe8e5-03ed-4b18-8169-87401cfb18da'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:4aa6a10b-14b4-333e-ac99-6c9658faf929', 1, 'I', 'Allegro assai appassionato', 'I. Allegro assai appassionato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:68efe8e5-03ed-4b18-8169-87401cfb18da'
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4aa6a10b-14b4-333e-ac99-6c9658faf929'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:8055409b-1ac4-375c-901a-95855ba0f41f', 2, 'II', '스케르초. Allegro di molto', 'II. Scherzo. Allegro di molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:68efe8e5-03ed-4b18-8169-87401cfb18da'
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8055409b-1ac4-375c-901a-95855ba0f41f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:e6d02f4d-db47-39c1-91cd-8abfd40cf481', 3, 'III', 'Andante', 'III. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:68efe8e5-03ed-4b18-8169-87401cfb18da'
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e6d02f4d-db47-39c1-91cd-8abfd40cf481'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:f41b5e7a-26fc-3ac7-a589-de7d6770cddc', 4, 'IV', 'Presto agitato', 'IV. Presto agitato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:68efe8e5-03ed-4b18-8169-87401cfb18da'
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f41b5e7a-26fc-3ac7-a589-de7d6770cddc'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:caf78fd9-d051-47f5-93b3-45050a456c34', 3, NULL, '현악 4중주 5번 E♭장조', 'String Quartet No. 5 in E♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:caf78fd9-d051-47f5-93b3-45050a456c34'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:375d2bdf-97e6-3523-ba7c-1f0ec35002d1', 1, 'I', 'Allegro vivace', 'I. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:caf78fd9-d051-47f5-93b3-45050a456c34'
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:375d2bdf-97e6-3523-ba7c-1f0ec35002d1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:ff97bdd4-2ce7-317c-b8d6-9c1b9f15ae76', 2, 'II', '스케르초. Assai leggiero vivace', 'II. Scherzo. Assai leggiero vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:caf78fd9-d051-47f5-93b3-45050a456c34'
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ff97bdd4-2ce7-317c-b8d6-9c1b9f15ae76'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:06008b6e-ad99-394b-83da-0d73f8dae2cf', 3, 'III', 'Adagio non troppo', 'III. Adagio non troppo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:caf78fd9-d051-47f5-93b3-45050a456c34'
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:06008b6e-ad99-394b-83da-0d73f8dae2cf'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:8124dbb9-46fd-3249-ab42-8c86833ec8e5', 4, 'IV', 'Molto allegro con fuoco', 'IV. Molto allegro con fuoco', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:caf78fd9-d051-47f5-93b3-45050a456c34'
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 Op. 44' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8124dbb9-46fd-3249-ab42-8c86833ec8e5'
+);
+
+
+-- Op. 45 첼로 소나타 1번 B♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '첼로 소나타 1번 B♭장조', 'Cello Sonata No. 1 in B♭ major', 'album', 'Op. 45', NULL, NULL, 1838, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '첼로 소나타 1번 B♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '262a4985-0bbb-414b-a60c-59dcbc592063'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '262a4985-0bbb-414b-a60c-59dcbc592063'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '첼로 소나타 1번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '262a4985-0bbb-414b-a60c-59dcbc592063'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:2a4ed848-4b91-487a-a406-fdfae3ff3a4e', 1, 'I', 'Allegro vivace', 'I. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '첼로 소나타 1번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2a4ed848-4b91-487a-a406-fdfae3ff3a4e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:94cfdccf-403d-4f27-8917-38a7bcc5091d', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '첼로 소나타 1번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:94cfdccf-403d-4f27-8917-38a7bcc5091d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4558b6d0-223d-421e-a5ab-c07fcf2dc8f7', 3, 'III', 'Allegro assai', 'III. Allegro assai', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '첼로 소나타 1번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4558b6d0-223d-421e-a5ab-c07fcf2dc8f7'
+);
+
+
+-- Op. 46 시편 95편
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 95편', 'Psalm 95 "Kommt, lasst uns anbeten"', 'song', 'Op. 46', NULL, NULL, 1838, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 95편'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e56f8b4b-cb30-4398-9733-a2a8b19c0e48'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'e56f8b4b-cb30-4398-9733-a2a8b19c0e48'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 95편' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e56f8b4b-cb30-4398-9733-a2a8b19c0e48'
+);
+
+
+-- Op. 47 가곡 Op. 47
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 Op. 47', '6 Songs, Op. 47', 'album', NULL, 'Op.', '47', 1839, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 Op. 47'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '66ecdf5f-8efd-4441-90f5-e9cf500c57d4'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '66ecdf5f-8efd-4441-90f5-e9cf500c57d4'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 47' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '66ecdf5f-8efd-4441-90f5-e9cf500c57d4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c78c848e-9be1-4303-b398-ae1fc86186a0', 1, NULL, 'Minnelied', 'Minnelied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 47' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c78c848e-9be1-4303-b398-ae1fc86186a0'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:eeb627dc-5d8f-4da1-86d4-7b1d499958f3', 2, NULL, 'Morgengruß', 'Morgengruß', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 47' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:eeb627dc-5d8f-4da1-86d4-7b1d499958f3'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:646f7dd7-4994-4ddf-90f1-95a87d8ff1f0', 3, NULL, 'Frühlingslied', 'Frühlingslied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 47' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:646f7dd7-4994-4ddf-90f1-95a87d8ff1f0'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:dee2ea78-9410-4ea1-8633-c00f68fee4f9', 4, NULL, 'Volkslied', 'Volkslied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 47' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:dee2ea78-9410-4ea1-8633-c00f68fee4f9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:40a334d7-3b7f-4446-ac2a-4a97056e5577', 5, NULL, 'Der Blumenstrauß', 'Der Blumenstrauß', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 47' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:40a334d7-3b7f-4446-ac2a-4a97056e5577'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f6569faf-740b-42b6-9e4f-ab002d529f19', 6, NULL, 'Bei der Wiege', 'Bei der Wiege', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 47' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f6569faf-740b-42b6-9e4f-ab002d529f19'
+);
+
+
+-- Op. 48 혼성 합창곡 Op. 48
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '혼성 합창곡 Op. 48', 'Der erste Frühlingstag, 6 Part-Songs, Op. 48', 'album', NULL, 'Op.', '48', 1839, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '혼성 합창곡 Op. 48'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '49789f69-dc8b-4cda-a437-61b69831a383'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '49789f69-dc8b-4cda-a437-61b69831a383'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 48' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '49789f69-dc8b-4cda-a437-61b69831a383'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4accfdef-77ef-4d5d-ac51-4bff59a5f073', 1, NULL, 'Frühlingsahnung', 'Frühlingsahnung', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 48' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4accfdef-77ef-4d5d-ac51-4bff59a5f073'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a6ab2efc-b3c9-40f1-9372-3c8a24daf57b', 2, NULL, 'Die Primel', 'Die Primel', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 48' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a6ab2efc-b3c9-40f1-9372-3c8a24daf57b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:3c536da6-1c80-409c-8892-2399d17557df', 3, NULL, 'Frühlingsfeier', 'Frühlingsfeier', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 48' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3c536da6-1c80-409c-8892-2399d17557df'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:524a5ae2-bbc4-4dd9-9536-5fd08f663ecf', 4, NULL, 'Lerchengesang', 'Lerchengesang', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 48' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:524a5ae2-bbc4-4dd9-9536-5fd08f663ecf'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4608a994-5351-426e-8880-bfc9ca96f7eb', 5, NULL, 'Morgengebet', 'Morgengebet', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 48' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4608a994-5351-426e-8880-bfc9ca96f7eb'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:30a66e7f-0313-42c3-892a-dcc87397aa60', 6, NULL, 'Herbstlied', 'Herbstlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 48' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:30a66e7f-0313-42c3-892a-dcc87397aa60'
+);
+
+
+-- Op. 49 피아노 3중주 1번 D단조
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:cbbf8757-2b58-3beb-9ed0-685ac9f670c4', 1, 'I', 'Molto allegro', 'I. Molto allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 449 AND p.composer_id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cbbf8757-2b58-3beb-9ed0-685ac9f670c4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d7db0223-529b-3291-a1b8-da3065b6eac1', 2, 'II', 'Andante con moto tranquillo', 'II. Andante con moto tranquillo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 449 AND p.composer_id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d7db0223-529b-3291-a1b8-da3065b6eac1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ec2330dd-26e5-39de-9519-e9298f3250f7', 3, 'III', '스케르초. Leggiero e vivace', 'III. Scherzo. Leggiero e vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 449 AND p.composer_id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ec2330dd-26e5-39de-9519-e9298f3250f7'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:cb39b025-02cd-3026-a7f7-cd5113116b21', 4, 'IV', '피날레. Allegro assai appassionato', 'IV. Finale. Allegro assai appassionato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 449 AND p.composer_id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cb39b025-02cd-3026-a7f7-cd5113116b21'
+);
+
+
+-- Op. 50 남성 합창곡 Op. 50
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '남성 합창곡 Op. 50', '6 Part-Songs for Male Chorus, Op. 50', 'album', NULL, 'Op.', '50', 1840, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '남성 합창곡 Op. 50'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '177bf297-3484-45f6-a79f-77255354fd72'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '177bf297-3484-45f6-a79f-77255354fd72'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 50' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '177bf297-3484-45f6-a79f-77255354fd72'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1103a66c-c940-42fa-93fd-2846c50dde1d', 1, NULL, 'Türkisches Schenkenlied', 'Türkisches Schenkenlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 50' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1103a66c-c940-42fa-93fd-2846c50dde1d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:bae27fa2-1fba-4549-90e4-b11ef1d92d3f', 2, NULL, 'Der Jäger Abschied', 'Der Jäger Abschied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 50' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bae27fa2-1fba-4549-90e4-b11ef1d92d3f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:cf0dd268-5cfb-416a-8073-b108aa433c53', 3, NULL, 'Sommerlied', 'Sommerlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 50' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cf0dd268-5cfb-416a-8073-b108aa433c53'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9701a983-f469-4f76-b7c0-377f5f159efd', 4, NULL, 'Wasserfahrt', 'Wasserfahrt', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 50' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9701a983-f469-4f76-b7c0-377f5f159efd'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:eadf7be2-6837-4e25-bd12-de8c6e6f8ebe', 5, NULL, 'Liebe und Wein', 'Liebe und Wein', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 50' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:eadf7be2-6837-4e25-bd12-de8c6e6f8ebe'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:90b7abbf-a981-4a98-8461-ec711a21f726', 6, NULL, 'Wanderlied', 'Wanderlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 50' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:90b7abbf-a981-4a98-8461-ec711a21f726'
+);
+
+
+-- Op. 51 시편 114편
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 114편', 'Psalm 114 "Da Israel aus Ägypten zog"', 'song', 'Op. 51', NULL, NULL, 1839, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 114편'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a594bc34-04fb-4abc-b59f-4dd010e181fe'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'a594bc34-04fb-4abc-b59f-4dd010e181fe'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 114편' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a594bc34-04fb-4abc-b59f-4dd010e181fe'
+);
+
+
+-- Op. 52 교향곡 2번 B♭장조 "찬송가"
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '교향곡 2번 B♭장조 "찬송가"', 'Symphony No. 2 in B♭ major "Lobgesang"', 'album', 'Op. 52', NULL, NULL, 1840, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '교향곡 2번 B♭장조 "찬송가"'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '73906028-47ee-4865-87f6-60a8dfcd82a0'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '73906028-47ee-4865-87f6-60a8dfcd82a0'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 2번 B♭장조 "찬송가"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '73906028-47ee-4865-87f6-60a8dfcd82a0'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7a4de546-5a69-3184-a1d9-6959149773b8', 1, 'I', '신포니아', 'I. Sinfonia', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 2번 B♭장조 "찬송가"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7a4de546-5a69-3184-a1d9-6959149773b8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f62b1c57-6ff5-3229-ad30-1b2673bc50a3', 2, 'II', 'Alles, was Odem hat, lobe den Herrn', 'II. Alles, was Odem hat, lobe den Herrn', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 2번 B♭장조 "찬송가"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f62b1c57-6ff5-3229-ad30-1b2673bc50a3'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d4531e0a-ef53-30c7-87eb-267b02590673', 3, 'III', 'Saget es, die ihr erlöst seid', 'III. Saget es, die ihr erlöst seid', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 2번 B♭장조 "찬송가"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d4531e0a-ef53-30c7-87eb-267b02590673'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7fb9bf55-a468-32af-a7e2-cb99d9f59bc5', 4, 'IV', 'Sagt es, die ihr erlöset seid', 'IV. Sagt es, die ihr erlöset seid', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 2번 B♭장조 "찬송가"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7fb9bf55-a468-32af-a7e2-cb99d9f59bc5'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:53817440-78f7-3000-985b-64ba4b5a05b9', 5, 'V', 'Ich harrete des Herrn', 'V. Ich harrete des Herrn', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 2번 B♭장조 "찬송가"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:53817440-78f7-3000-985b-64ba4b5a05b9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:33edd99a-556c-3f19-b64a-34dc096853e5', 6, 'VI', 'Stricke des Todes hatten uns umfangen', 'VI. Stricke des Todes hatten uns umfangen', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 2번 B♭장조 "찬송가"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:33edd99a-556c-3f19-b64a-34dc096853e5'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0d2c9e84-b57b-3f8a-b831-6f3b50bcaf8a', 7, 'VII', 'Die Nacht ist vergangen', 'VII. Die Nacht ist vergangen', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 2번 B♭장조 "찬송가"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0d2c9e84-b57b-3f8a-b831-6f3b50bcaf8a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:67329e9b-0fb7-3f51-bcf2-01082a88b8ad', 8, 'VIII', 'Nun danket alle Gott', 'VIII. Nun danket alle Gott', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 2번 B♭장조 "찬송가"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:67329e9b-0fb7-3f51-bcf2-01082a88b8ad'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:215af820-6c6a-3975-8a57-a250affca253', 9, 'IX', 'Drum sing ich mit meinem Liede ewig', 'IX. Drum sing ich mit meinem Liede ewig', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 2번 B♭장조 "찬송가"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:215af820-6c6a-3975-8a57-a250affca253'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e52a490c-3121-3c6d-99dc-965dda72b003', 10, 'X', 'Ihr Völker, bringet her dem Herrn Ehre und Macht', 'X. Ihr Völker, bringet her dem Herrn Ehre und Macht', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 2번 B♭장조 "찬송가"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e52a490c-3121-3c6d-99dc-965dda72b003'
+);
+
+
+-- Op. 53 무언가 Op. 53
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '무언가 Op. 53', 'Songs Without Words, Book 4, Op. 53', 'album', NULL, 'Op.', '53', 1841, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '무언가 Op. 53'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '43607dad-bf8c-4684-b91d-a080d02c1a3d'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '43607dad-bf8c-4684-b91d-a080d02c1a3d'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 53' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '43607dad-bf8c-4684-b91d-a080d02c1a3d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:54493452-bffd-3988-8c80-5e9867916689', 1, NULL, 'A♭장조', 'No. 1 in A♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 53' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:54493452-bffd-3988-8c80-5e9867916689'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:eacd7cee-9cc4-32ca-8e7d-984a282eac9c', 2, NULL, 'E♭장조', 'No. 2 in E♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 53' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:eacd7cee-9cc4-32ca-8e7d-984a282eac9c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8e5614a7-9169-3a39-a8a6-1ec5cccbeed7', 3, NULL, 'G단조', 'No. 3 in G minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 53' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8e5614a7-9169-3a39-a8a6-1ec5cccbeed7'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9b5b4242-f66f-36f9-b78e-1f26915a6612', 4, NULL, 'F장조', 'No. 4 in F major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 53' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9b5b4242-f66f-36f9-b78e-1f26915a6612'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5b875b3e-1a60-3ff4-b1eb-a80cd1d0714b', 5, NULL, 'A단조 "민요"', 'No. 5 in A minor "Volkslied"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 53' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5b875b3e-1a60-3ff4-b1eb-a80cd1d0714b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:992d284b-90bf-3e3b-bca0-de68f9f9f49c', 6, NULL, 'A장조', 'No. 6 in A major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 53' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:992d284b-90bf-3e3b-bca0-de68f9f9f49c'
+);
+
+
+-- Op. 54 엄격 변주곡 D단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '엄격 변주곡 D단조', 'Variations sérieuses in D minor', 'song', 'Op. 54', NULL, NULL, 1841, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '엄격 변주곡 D단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '4bb2c66a-f87b-3479-989c-7e65468d3634'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '4bb2c66a-f87b-3479-989c-7e65468d3634'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '엄격 변주곡 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '4bb2c66a-f87b-3479-989c-7e65468d3634'
+);
+
+
+-- Op. 55 <안티고네> 부수음악
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '<안티고네> 부수음악', 'Antigone, Incidental Music', 'song', 'Op. 55', NULL, NULL, 1841, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '<안티고네> 부수음악'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '56aac38e-59cc-4a3d-b8f2-8a9a76923de3'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '56aac38e-59cc-4a3d-b8f2-8a9a76923de3'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '<안티고네> 부수음악' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '56aac38e-59cc-4a3d-b8f2-8a9a76923de3'
+);
+
+
+-- Op. 56 교향곡 3번 A단조 "스코틀랜드"
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '교향곡 3번 A단조 "스코틀랜드"', 'Symphony No. 3 in A minor "Scottish"', 'album', 'Op. 56', NULL, NULL, 1842, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '교향곡 3번 A단조 "스코틀랜드"'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '61647c3c-1f24-4f72-b6d5-8884d0332a2e'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '61647c3c-1f24-4f72-b6d5-8884d0332a2e'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 3번 A단조 "스코틀랜드"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '61647c3c-1f24-4f72-b6d5-8884d0332a2e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:13eff1b4-46b9-3ec6-909b-82a9da5dcfd6', 1, 'I', 'Andante con moto – Allegro un poco agitato', 'I. Andante con moto – Allegro un poco agitato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 3번 A단조 "스코틀랜드"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:13eff1b4-46b9-3ec6-909b-82a9da5dcfd6'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f56fa3f3-0b29-3d3b-bfc3-0f263750ce41', 2, 'II', 'Vivace non troppo', 'II. Vivace non troppo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 3번 A단조 "스코틀랜드"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f56fa3f3-0b29-3d3b-bfc3-0f263750ce41'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d5bdd231-2f16-34aa-8cdf-2284bc263bbb', 3, 'III', 'Adagio', 'III. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 3번 A단조 "스코틀랜드"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d5bdd231-2f16-34aa-8cdf-2284bc263bbb'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:902163db-344d-3b79-a711-fe0fcce97cd2', 4, 'IV', 'Allegro vivacissimo – Allegro maestoso assai', 'IV. Allegro vivacissimo – Allegro maestoso assai', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 3번 A단조 "스코틀랜드"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:902163db-344d-3b79-a711-fe0fcce97cd2'
+);
+
+
+-- Op. 57 가곡 Op. 57
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 Op. 57', '6 Songs, Op. 57', 'album', NULL, 'Op.', '57', 1842, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 Op. 57'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '05922828-19c9-4c28-bee7-16a4c7b80191'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '05922828-19c9-4c28-bee7-16a4c7b80191'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 57' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '05922828-19c9-4c28-bee7-16a4c7b80191'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9ab4a23a-0291-425d-8c72-fdab0f2510c1', 1, NULL, 'Altdeutsches Lied', 'Altdeutsches Lied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 57' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9ab4a23a-0291-425d-8c72-fdab0f2510c1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1a394640-5b12-4cfe-8dae-a42331fd3bf7', 2, NULL, 'Hirtenlied', 'Hirtenlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 57' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1a394640-5b12-4cfe-8dae-a42331fd3bf7'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8bb0ed43-d66a-4414-9981-904a831b12f4', 3, NULL, 'Suleika', 'Suleika', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 57' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8bb0ed43-d66a-4414-9981-904a831b12f4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a220cbf6-17f4-4ae4-8b8d-550bdcdaa5ab', 4, NULL, 'O Jugend, o schöne Rosenzeit!', 'O Jugend, o schöne Rosenzeit!', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 57' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a220cbf6-17f4-4ae4-8b8d-550bdcdaa5ab'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f4b2b9d6-2c60-4b45-b113-f4623f43e716', 5, NULL, 'Venetianisches Gondellied', 'Venetianisches Gondellied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 57' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f4b2b9d6-2c60-4b45-b113-f4623f43e716'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:24b0f592-20dc-4f67-9c74-7bcca0d4cb5d', 6, NULL, 'Wanderlied', 'Wanderlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 57' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:24b0f592-20dc-4f67-9c74-7bcca0d4cb5d'
+);
+
+
+-- Op. 58 첼로 소나타 2번 D장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '첼로 소나타 2번 D장조', 'Cello Sonata No. 2 in D major', 'album', 'Op. 58', NULL, NULL, 1843, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '첼로 소나타 2번 D장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '750a717e-7822-475b-a056-0e93cb5de87d'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '750a717e-7822-475b-a056-0e93cb5de87d'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '첼로 소나타 2번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '750a717e-7822-475b-a056-0e93cb5de87d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e82da4bf-7b78-4521-bbed-a7645a0406a1', 1, 'I', 'Allegro assai vivace', 'I. Allegro assai vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '첼로 소나타 2번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e82da4bf-7b78-4521-bbed-a7645a0406a1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:2378a6c7-00b9-4b59-8545-792729ecb8d8', 2, 'II', 'Allegretto scherzando', 'II. Allegretto scherzando', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '첼로 소나타 2번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2378a6c7-00b9-4b59-8545-792729ecb8d8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:befb34cc-b294-4906-9b92-11c1af7061ea', 3, 'III', 'Adagio', 'III. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '첼로 소나타 2번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:befb34cc-b294-4906-9b92-11c1af7061ea'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:cfd0131c-d9a7-4eaf-aa6d-93332f0aa0b2', 4, 'IV', 'Molto allegro e vivace', 'IV. Molto allegro e vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '첼로 소나타 2번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cfd0131c-d9a7-4eaf-aa6d-93332f0aa0b2'
+);
+
+
+-- Op. 59 혼성 합창곡 Op. 59
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '혼성 합창곡 Op. 59', 'Im Grünen, 6 Part-Songs, Op. 59', 'album', NULL, 'Op.', '59', 1843, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '혼성 합창곡 Op. 59'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'fdf5fa03-6b90-48bd-a572-27cfd64dda49'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'fdf5fa03-6b90-48bd-a572-27cfd64dda49'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 59' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'fdf5fa03-6b90-48bd-a572-27cfd64dda49'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:17b0332d-acb3-4759-bbd3-2dff6b07c392', 1, NULL, 'Im Grünen', 'Im Grünen', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 59' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:17b0332d-acb3-4759-bbd3-2dff6b07c392'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:24229bb0-466c-4feb-9ad1-dee72d4d8681', 2, NULL, 'Frühzeitiger Frühling', 'Frühzeitiger Frühling', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 59' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:24229bb0-466c-4feb-9ad1-dee72d4d8681'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:bfaf55fc-6b60-3c20-ba7e-42da491caa02', 3, NULL, 'Abschied vom Walde', 'Abschied vom Walde', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 59' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bfaf55fc-6b60-3c20-ba7e-42da491caa02'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b135eb0e-fd97-48ad-980d-3c89b8966c30', 4, NULL, 'Die Nachtigall', 'Die Nachtigall', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 59' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b135eb0e-fd97-48ad-980d-3c89b8966c30'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:692523cf-396f-41a9-a174-5c1444c1abf8', 5, NULL, 'Ruhetal', 'Ruhetal', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 59' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:692523cf-396f-41a9-a174-5c1444c1abf8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:708b048f-f658-495c-a125-8c44bc788869', 6, NULL, 'Jagdlied', 'Jagdlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 59' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:708b048f-f658-495c-a125-8c44bc788869'
+);
+
+
+-- Op. 60 칸타타 <첫 번째 발푸르기스의 밤>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '칸타타 <첫 번째 발푸르기스의 밤>', 'Die erste Walpurgisnacht', 'song', 'Op. 60', NULL, NULL, 1843, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '칸타타 <첫 번째 발푸르기스의 밤>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '2cffe9d3-4bf5-462a-bb3e-195955e6d279'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '2cffe9d3-4bf5-462a-bb3e-195955e6d279'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '칸타타 <첫 번째 발푸르기스의 밤>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '2cffe9d3-4bf5-462a-bb3e-195955e6d279'
+);
+
+
+-- Op. 62 무언가 Op. 62
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '무언가 Op. 62', 'Songs Without Words, Book 5, Op. 62', 'album', NULL, 'Op.', '62', 1844, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '무언가 Op. 62'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'fe2e9ed4-1a06-4dee-9b5d-7cade7072c93'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'fe2e9ed4-1a06-4dee-9b5d-7cade7072c93'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 62' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'fe2e9ed4-1a06-4dee-9b5d-7cade7072c93'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:bce81e9b-3297-39f2-ab90-dfb71c5b375a', 1, NULL, 'G장조', 'No. 1 in G major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 62' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bce81e9b-3297-39f2-ab90-dfb71c5b375a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:bc554a87-ab9f-3e50-8bb9-7e1b6126c093', 2, NULL, 'B♭장조', 'No. 2 in B♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 62' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bc554a87-ab9f-3e50-8bb9-7e1b6126c093'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:879048e6-a7b7-36e3-9d3a-4a1b3bbc1412', 3, NULL, 'E단조 "장송 행진곡"', 'No. 3 in E minor "Funeral March"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 62' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:879048e6-a7b7-36e3-9d3a-4a1b3bbc1412'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ffc176b7-fd77-3c0a-add2-a8397f3322d0', 4, NULL, 'G장조', 'No. 4 in G major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 62' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ffc176b7-fd77-3c0a-add2-a8397f3322d0'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:2cbd8f6f-ee73-31d7-a91c-4100587d14d5', 5, NULL, 'A단조 "베네치아 뱃노래 3"', 'No. 5 in A minor "Venetian Boat Song No. 3"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 62' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2cbd8f6f-ee73-31d7-a91c-4100587d14d5'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a9669983-0daa-35a1-8cbd-ac9ffd3c9624', 6, NULL, 'A장조 "봄의 노래"', 'No. 6 in A major "Spring Song"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 62' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a9669983-0daa-35a1-8cbd-ac9ffd3c9624'
+);
+
+
+-- Op. 63 2중창곡 Op. 63
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '2중창곡 Op. 63', '6 Duets, Op. 63', 'album', NULL, 'Op.', '63', 1845, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '2중창곡 Op. 63'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '0fc31207-57d4-4cbd-84a9-53ceed14e635'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '0fc31207-57d4-4cbd-84a9-53ceed14e635'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 Op. 63' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '0fc31207-57d4-4cbd-84a9-53ceed14e635'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ab8b1717-bcbf-4975-b16f-83a773c0e77b', 1, NULL, 'Ich wollt'' meine Lieb'' ergösse sich', 'Ich wollt'' meine Lieb'' ergösse sich', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 Op. 63' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ab8b1717-bcbf-4975-b16f-83a773c0e77b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5a87faa9-9666-44a5-9e2e-c4edb5accab9', 2, NULL, 'Abschiedslied der Zugvögel', 'Abschiedslied der Zugvögel', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 Op. 63' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5a87faa9-9666-44a5-9e2e-c4edb5accab9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8af9102f-bdfb-4e04-9aa5-01b340b6192a', 3, NULL, 'Gruß', 'Gruß', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 Op. 63' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8af9102f-bdfb-4e04-9aa5-01b340b6192a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4a7e1b5a-12cd-47cc-a1a1-c2011dfd4cc3', 4, NULL, 'Herbstlied', 'Herbstlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 Op. 63' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4a7e1b5a-12cd-47cc-a1a1-c2011dfd4cc3'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:cab32d37-1fbd-4236-bcf3-08fbaf97337d', 5, NULL, 'Volkslied', 'Volkslied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 Op. 63' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cab32d37-1fbd-4236-bcf3-08fbaf97337d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6d74909b-1f8f-48fd-a959-012b00dc9265', 6, NULL, 'Maiglöckchen und die Blümelein', 'Maiglöckchen und die Blümelein', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 Op. 63' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6d74909b-1f8f-48fd-a959-012b00dc9265'
+);
+
+
+-- Op. 64 바이올린 협주곡 E단조
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a15328c7-f30f-3c05-8fcc-27c9f46b1b22', 1, 'I', 'Allegro molto appassionato', 'I. Allegro molto appassionato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 122 AND p.composer_id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a15328c7-f30f-3c05-8fcc-27c9f46b1b22'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9241f25f-c16d-38e2-b18c-18e2d7004ed5', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 122 AND p.composer_id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9241f25f-c16d-38e2-b18c-18e2d7004ed5'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6e6efb69-17ea-3687-af9c-3ba6d06f8446', 3, 'III', 'Allegretto non troppo – Allegro molto vivace', 'III. Allegretto non troppo – Allegro molto vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 122 AND p.composer_id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6e6efb69-17ea-3687-af9c-3ba6d06f8446'
+);
+
+
+-- Op. 65 오르간 소나타 Op. 65
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '오르간 소나타 Op. 65', '6 Organ Sonatas, Op. 65', 'album', NULL, 'Op.', '65', 1845, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '오르간 소나타 Op. 65'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '9629143c-cf96-48b3-b227-20cd85de47ec'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '9629143c-cf96-48b3-b227-20cd85de47ec'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '9629143c-cf96-48b3-b227-20cd85de47ec'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:01c2d332-f48e-4c60-a2ae-36890b705115', 1, NULL, '오르간 소나타 1번 F단조', 'Sonata No. 1 in F minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:01c2d332-f48e-4c60-a2ae-36890b705115'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:9003befc-b7ca-4b75-9b34-8c453ae740c1', 1, 'I', 'Allegro moderato e serioso', 'I. Allegro moderato e serioso', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:01c2d332-f48e-4c60-a2ae-36890b705115'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9003befc-b7ca-4b75-9b34-8c453ae740c1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:c00b411b-e171-429c-b3e0-a53d77b18d3e', 2, 'II', 'Adagio', 'II. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:01c2d332-f48e-4c60-a2ae-36890b705115'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c00b411b-e171-429c-b3e0-a53d77b18d3e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:f63983bd-7117-47f5-8138-7357f5308d00', 3, 'III', 'Andante recitativo', 'III. Andante recitativo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:01c2d332-f48e-4c60-a2ae-36890b705115'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f63983bd-7117-47f5-8138-7357f5308d00'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:b4d87cf8-8d26-4181-9022-37d6a5dbec87', 4, 'IV', 'Allegro assai vivace', 'IV. Allegro assai vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:01c2d332-f48e-4c60-a2ae-36890b705115'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b4d87cf8-8d26-4181-9022-37d6a5dbec87'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:770adf4a-2467-4772-bd5f-f4086fea3c9d', 2, NULL, '오르간 소나타 2번 C단조', 'Sonata No. 2 in C minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:770adf4a-2467-4772-bd5f-f4086fea3c9d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:8faaa417-3252-478a-bcf9-258e33f2ab71', 1, 'I', 'Grave – Adagio', 'I. Grave – Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:770adf4a-2467-4772-bd5f-f4086fea3c9d'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8faaa417-3252-478a-bcf9-258e33f2ab71'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:dd2fdbe8-a6e7-4b05-a833-5e16ecae4fd8', 2, 'II', 'Allegro maestoso e vivace', 'II. Allegro maestoso e vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:770adf4a-2467-4772-bd5f-f4086fea3c9d'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:dd2fdbe8-a6e7-4b05-a833-5e16ecae4fd8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:6f2aab25-7646-4f8f-908f-f4c2de2c347f', 3, 'III', '푸가. Allegro moderato', 'III. Fuga. Allegro moderato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:770adf4a-2467-4772-bd5f-f4086fea3c9d'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6f2aab25-7646-4f8f-908f-f4c2de2c347f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c5a64b45-73e3-39ca-8a39-f1c5db50dbe8', 3, NULL, '오르간 소나타 3번 A장조', 'Sonata No. 3 in A major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c5a64b45-73e3-39ca-8a39-f1c5db50dbe8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:44c8f5b2-0aa8-4080-a91a-5cf4fa6e10ab', 1, 'I', 'Con moto maestoso', 'I. Con moto maestoso', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:c5a64b45-73e3-39ca-8a39-f1c5db50dbe8'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:44c8f5b2-0aa8-4080-a91a-5cf4fa6e10ab'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:3b2df590-74e1-490a-ac76-e02567a0aae9', 2, 'II', 'Andante tranquillo', 'II. Andante tranquillo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:c5a64b45-73e3-39ca-8a39-f1c5db50dbe8'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3b2df590-74e1-490a-ac76-e02567a0aae9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:cfd33155-0ac5-416f-8405-29017ba2af27', 4, NULL, '오르간 소나타 4번 B♭장조', 'Sonata No. 4 in B♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cfd33155-0ac5-416f-8405-29017ba2af27'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:e8ddbe04-3ca1-4201-b5c0-6f4da31b95a8', 1, 'I', 'Allegro con brio', 'I. Allegro con brio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:cfd33155-0ac5-416f-8405-29017ba2af27'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e8ddbe04-3ca1-4201-b5c0-6f4da31b95a8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:9094a2bf-b46d-4e04-94b4-83e4956d068f', 2, 'II', 'Andante religioso', 'II. Andante religioso', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:cfd33155-0ac5-416f-8405-29017ba2af27'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9094a2bf-b46d-4e04-94b4-83e4956d068f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:2cc7aa64-5839-4841-959a-2ed17e31705a', 3, 'III', 'Allegretto', 'III. Allegretto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:cfd33155-0ac5-416f-8405-29017ba2af27'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2cc7aa64-5839-4841-959a-2ed17e31705a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:660a8775-11f3-46cb-ad5f-7578e81ba103', 4, 'IV', 'Allegro maestoso', 'IV. Allegro maestoso', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:cfd33155-0ac5-416f-8405-29017ba2af27'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:660a8775-11f3-46cb-ad5f-7578e81ba103'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:62fb730b-6337-49cb-8525-504b9d296b8e', 5, NULL, '오르간 소나타 5번 D장조', 'Sonata No. 5 in D major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:62fb730b-6337-49cb-8525-504b9d296b8e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:00a52961-04db-4895-a61e-bd46f0f2b7a3', 1, 'I', 'Andante', 'I. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:62fb730b-6337-49cb-8525-504b9d296b8e'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:00a52961-04db-4895-a61e-bd46f0f2b7a3'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:fb50d12f-7f2a-4acf-9612-b6a1c80ba0d4', 2, 'II', 'Andante con moto', 'II. Andante con moto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:62fb730b-6337-49cb-8525-504b9d296b8e'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fb50d12f-7f2a-4acf-9612-b6a1c80ba0d4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:e50d5d07-2bdd-4051-85ca-cabee78869e4', 3, 'III', 'Allegro', 'III. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:62fb730b-6337-49cb-8525-504b9d296b8e'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e50d5d07-2bdd-4051-85ca-cabee78869e4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7d93cbb2-537f-4230-ae0d-1a3f355248c3', 6, NULL, '오르간 소나타 6번 D단조', 'Sonata No. 6 in D minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7d93cbb2-537f-4230-ae0d-1a3f355248c3'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:90d7dcbb-0c3c-437c-83f0-4165d736d25b', 1, 'I', '코랄 변주 – Andante sostenuto – Allegro molto', 'I. Choral-Variationen – Andante sostenuto – Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:7d93cbb2-537f-4230-ae0d-1a3f355248c3'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:90d7dcbb-0c3c-437c-83f0-4165d736d25b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:09e223fa-2fee-4b19-8d19-afbdc278e0f5', 2, 'II', '푸가', 'II. Fuge', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:7d93cbb2-537f-4230-ae0d-1a3f355248c3'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:09e223fa-2fee-4b19-8d19-afbdc278e0f5'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, parent.id, NULL, 'musicbrainz:fcb2897a-cf16-4ff6-8f78-c4f18b810c8c', 3, 'III', '피날레. Andante', 'III. Finale. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+JOIN piece_parts parent
+    ON parent.piece_id = p.id AND parent.part_key = 'musicbrainz:7d93cbb2-537f-4230-ae0d-1a3f355248c3'
+WHERE p.composer_id = 27 AND p.title = '오르간 소나타 Op. 65' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fcb2897a-cf16-4ff6-8f78-c4f18b810c8c'
+);
+
+
+-- Op. 66 피아노 3중주 2번 C단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 3중주 2번 C단조', 'Piano Trio No. 2 in C minor', 'album', 'Op. 66', NULL, NULL, 1845, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 3중주 2번 C단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '4342b5d4-3f1b-4935-b286-fae32c187d14'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '4342b5d4-3f1b-4935-b286-fae32c187d14'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 3중주 2번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '4342b5d4-3f1b-4935-b286-fae32c187d14'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f88069cd-8e01-37ee-8855-dd18d2f044ee', 1, 'I', 'Allegro energico e con fuoco', 'I. Allegro energico e con fuoco', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 3중주 2번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f88069cd-8e01-37ee-8855-dd18d2f044ee'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:fe1c95ab-c2c5-3cb6-bd74-6957a826588e', 2, 'II', 'Andante espressivo', 'II. Andante espressivo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 3중주 2번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fe1c95ab-c2c5-3cb6-bd74-6957a826588e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:340c3213-97e6-3b89-8047-2c8683dab51b', 3, 'III', '스케르초. Molto allegro – Quasi presto', 'III. Scherzo. Molto allegro – Quasi presto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 3중주 2번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:340c3213-97e6-3b89-8047-2c8683dab51b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:71c49f95-208c-396c-841b-d2809b7be686', 4, 'IV', '피날레. Allegro appassionato', 'IV. Finale. Allegro appassionato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 3중주 2번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:71c49f95-208c-396c-841b-d2809b7be686'
+);
+
+
+-- Op. 67 무언가 Op. 67
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '무언가 Op. 67', 'Songs Without Words, Book 6, Op. 67', 'album', NULL, 'Op.', '67', 1845, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '무언가 Op. 67'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '82b881e8-5c78-4399-b4a2-60cb16b70523'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '82b881e8-5c78-4399-b4a2-60cb16b70523'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 67' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '82b881e8-5c78-4399-b4a2-60cb16b70523'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:81474831-10ae-32a5-b3d0-633a92182d05', 1, NULL, 'E♭장조', 'No. 1 in E♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 67' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:81474831-10ae-32a5-b3d0-633a92182d05'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a646ba8a-01a3-306b-a4bf-411d8328e848', 2, NULL, 'F#단조', 'No. 2 in F# minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 67' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a646ba8a-01a3-306b-a4bf-411d8328e848'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0e760e57-7cfa-36d2-8833-0d5355db328f', 3, NULL, 'B♭장조', 'No. 3 in B♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 67' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0e760e57-7cfa-36d2-8833-0d5355db328f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:fa5ca3e5-9b31-3e0d-b5c9-55b26a0ee28e', 4, NULL, 'C장조 "실 잣는 노래"', 'No. 4 in C major "Spinning Song"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 67' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fa5ca3e5-9b31-3e0d-b5c9-55b26a0ee28e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:635a2cf9-37df-3bc8-996e-1e13087635a6', 5, NULL, 'B단조', 'No. 5 in B minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 67' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:635a2cf9-37df-3bc8-996e-1e13087635a6'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1bdae882-337e-3670-997b-1b14dea74db7', 6, NULL, 'E장조', 'No. 6 in E major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 67' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1bdae882-337e-3670-997b-1b14dea74db7'
+);
+
+
+-- Op. 68 칸타타 <예술가에게 바치는 축가>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '칸타타 <예술가에게 바치는 축가>', 'Festgesang an die Künstler', 'song', 'Op. 68', NULL, NULL, 1846, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '칸타타 <예술가에게 바치는 축가>'
+);
+
+
+-- Op. 69 모테트 Op. 69
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '모테트 Op. 69', '3 Motets, Op. 69', 'album', NULL, 'Op.', '69', 1847, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '모테트 Op. 69'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e032b01f-739d-4828-86be-ed5dc449a644'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'e032b01f-739d-4828-86be-ed5dc449a644'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '모테트 Op. 69' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e032b01f-739d-4828-86be-ed5dc449a644'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f3b7e3ea-c310-435a-8557-8b64bc2375b0', 1, NULL, 'Nunc dimittis', 'Nunc dimittis (Herr, nun lässest du deinen Diener)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '모테트 Op. 69' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f3b7e3ea-c310-435a-8557-8b64bc2375b0'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:68940e58-3138-4d7e-b109-1b2c17951790', 2, NULL, 'Jubilate', 'Jubilate (Jauchzet dem Herrn)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '모테트 Op. 69' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:68940e58-3138-4d7e-b109-1b2c17951790'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7a014ed0-7fe2-4b5f-802c-8b8655d7cda4', 3, NULL, 'Magnificat', 'Magnificat (Mein Herz erhebet Gott den Herrn)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '모테트 Op. 69' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7a014ed0-7fe2-4b5f-802c-8b8655d7cda4'
+);
+
+
+-- Op. 70 오라토리오 <엘리야>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '오라토리오 <엘리야>', 'Elijah (Elias)', 'song', 'Op. 70', NULL, NULL, 1846, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '오라토리오 <엘리야>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'aa4a21aa-ff3e-49e4-8c57-b325b45cdfab'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'aa4a21aa-ff3e-49e4-8c57-b325b45cdfab'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '오라토리오 <엘리야>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'aa4a21aa-ff3e-49e4-8c57-b325b45cdfab'
+);
+
+
+-- Op. 71 가곡 Op. 71
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 Op. 71', '6 Songs, Op. 71', 'album', NULL, 'Op.', '71', 1847, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 Op. 71'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e9b94c76-3e40-4791-a920-33436635003e'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'e9b94c76-3e40-4791-a920-33436635003e'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 71' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e9b94c76-3e40-4791-a920-33436635003e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6563863a-885c-4f1c-a9b3-d33394d9d2f3', 1, NULL, 'Tröstung', 'Tröstung', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 71' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6563863a-885c-4f1c-a9b3-d33394d9d2f3'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ea6efe22-2e7d-42c8-96a7-bdfe1b68bf84', 2, NULL, 'Frühlingslied', 'Frühlingslied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 71' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ea6efe22-2e7d-42c8-96a7-bdfe1b68bf84'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1a9d5e8e-1f64-44f0-9de0-0cb6dc2a9877', 3, NULL, 'An die Entfernte', 'An die Entfernte', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 71' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1a9d5e8e-1f64-44f0-9de0-0cb6dc2a9877'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a77f1946-a288-4909-8361-4425eb68b74e', 4, NULL, 'Schilflied', 'Schilflied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 71' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a77f1946-a288-4909-8361-4425eb68b74e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:48128016-9de8-4402-86ac-26cb8404502e', 5, NULL, 'Auf der Wanderschaft', 'Auf der Wanderschaft', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 71' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:48128016-9de8-4402-86ac-26cb8404502e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:86d00728-e372-4f72-ad96-a1cf488d6909', 6, NULL, 'Nachtlied', 'Nachtlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 71' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:86d00728-e372-4f72-ad96-a1cf488d6909'
+);
+
+
+-- Op. 72 어린이 소품 Op. 72
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '어린이 소품 Op. 72', '6 Kinderstücke, Op. 72', 'album', NULL, 'Op.', '72', 1842, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '어린이 소품 Op. 72'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e22f9d1d-374d-41f6-978c-e75ff1f68307'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'e22f9d1d-374d-41f6-978c-e75ff1f68307'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '어린이 소품 Op. 72' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e22f9d1d-374d-41f6-978c-e75ff1f68307'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1d91a8a8-b671-3426-a355-737dcecb1fbb', 1, NULL, 'G장조', 'No. 1 in G major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '어린이 소품 Op. 72' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1d91a8a8-b671-3426-a355-737dcecb1fbb'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:33af18cd-c549-3e30-a59b-8222f9577441', 2, NULL, 'E♭장조', 'No. 2 in E♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '어린이 소품 Op. 72' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:33af18cd-c549-3e30-a59b-8222f9577441'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ef03de57-b742-37b6-a2de-694d4250516f', 3, NULL, 'G장조', 'No. 3 in G major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '어린이 소품 Op. 72' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ef03de57-b742-37b6-a2de-694d4250516f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:29115b55-6148-3139-84d9-27b124e110cc', 4, NULL, 'D장조', 'No. 4 in D major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '어린이 소품 Op. 72' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:29115b55-6148-3139-84d9-27b124e110cc'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:fe65375b-9d00-3522-bc36-c8e90e7f51ed', 5, NULL, 'G단조', 'No. 5 in G minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '어린이 소품 Op. 72' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fe65375b-9d00-3522-bc36-c8e90e7f51ed'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:17f80978-9866-3713-8d4e-8c9bf257beb9', 6, NULL, 'F장조', 'No. 6 in F major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '어린이 소품 Op. 72' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:17f80978-9866-3713-8d4e-8c9bf257beb9'
+);
+
+
+-- Op. 73 칸타타 <라우다 시온>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '칸타타 <라우다 시온>', 'Lauda Sion', 'song', 'Op. 73', NULL, NULL, 1846, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '칸타타 <라우다 시온>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a302396d-736b-4924-932c-36f5a1df7c90'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'a302396d-736b-4924-932c-36f5a1df7c90'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '칸타타 <라우다 시온>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a302396d-736b-4924-932c-36f5a1df7c90'
+);
+
+
+-- Op. 74 <아탈리> 부수음악
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '<아탈리> 부수음악', 'Athalie, Incidental Music', 'song', 'Op. 74', NULL, NULL, 1845, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '<아탈리> 부수음악'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '3858255f-68c2-4327-85fb-37bf406d8129'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '3858255f-68c2-4327-85fb-37bf406d8129'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '<아탈리> 부수음악' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '3858255f-68c2-4327-85fb-37bf406d8129'
+);
+
+
+-- Op. 75 남성 합창곡 Op. 75
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '남성 합창곡 Op. 75', '4 Part-Songs for Male Chorus, Op. 75', 'album', NULL, 'Op.', '75', 1844, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '남성 합창곡 Op. 75'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'bcdc493a-6a1c-4168-84a6-df3cae01e219'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'bcdc493a-6a1c-4168-84a6-df3cae01e219'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 75' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'bcdc493a-6a1c-4168-84a6-df3cae01e219'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1ae8f040-6dc9-4dc9-ac8d-aff0cfcec7ab', 1, NULL, 'Der frohe Wandersmann', 'Der frohe Wandersmann', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 75' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1ae8f040-6dc9-4dc9-ac8d-aff0cfcec7ab'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:69c80715-78a0-40af-a4cc-6750edb1b4f6', 2, NULL, 'Abendständchen', 'Abendständchen', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 75' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:69c80715-78a0-40af-a4cc-6750edb1b4f6'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:55ff0f17-faff-4fa3-80eb-64c9f07d12ec', 3, NULL, 'Trinklied', 'Trinklied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 75' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:55ff0f17-faff-4fa3-80eb-64c9f07d12ec'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7fb5fe41-5b93-4866-b461-f03b9f882965', 4, NULL, 'Abschiedstafel', 'Abschiedstafel', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 75' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7fb5fe41-5b93-4866-b461-f03b9f882965'
+);
+
+
+-- Op. 76 남성 합창곡 Op. 76
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '남성 합창곡 Op. 76', '4 Part-Songs for Male Chorus, Op. 76', 'album', NULL, 'Op.', '76', 1846, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '남성 합창곡 Op. 76'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '86dd690e-fc73-4096-bca4-11c8639942ea'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '86dd690e-fc73-4096-bca4-11c8639942ea'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 76' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '86dd690e-fc73-4096-bca4-11c8639942ea'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9353905f-e365-4930-8002-40c57bbb77df', 1, NULL, 'Das Lied vom braven Mann', 'Das Lied vom braven Mann', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 76' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9353905f-e365-4930-8002-40c57bbb77df'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:bf076523-ad5f-4cba-b971-2fd31ef5bc37', 2, NULL, 'Rheinweinlied', 'Rheinweinlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 76' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bf076523-ad5f-4cba-b971-2fd31ef5bc37'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:87816a41-709f-4f8c-af84-0ad0d7d20edc', 3, NULL, 'Lied für die Deutschen in Lyon', 'Lied für die Deutschen in Lyon', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 76' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:87816a41-709f-4f8c-af84-0ad0d7d20edc'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:875665a5-ef94-4720-ab05-b32fc7ac6fb3', 4, NULL, 'Comitat', 'Comitat', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 76' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:875665a5-ef94-4720-ab05-b32fc7ac6fb3'
+);
+
+
+-- Op. 77 2중창곡 Op. 77
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '2중창곡 Op. 77', '3 Duets, Op. 77', 'album', NULL, 'Op.', '77', 1847, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '2중창곡 Op. 77'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '974a2b26-39f5-4239-b8cd-b56d501944fc'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '974a2b26-39f5-4239-b8cd-b56d501944fc'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 Op. 77' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '974a2b26-39f5-4239-b8cd-b56d501944fc'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c16e3acd-0328-43de-9fae-215760ba6939', 1, NULL, 'Sonntagsmorgen', 'Sonntagsmorgen', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 Op. 77' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c16e3acd-0328-43de-9fae-215760ba6939'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8fa0ebe8-e513-43c7-a425-0c092dc47079', 2, NULL, 'Das Ährenfeld', 'Das Ährenfeld', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 Op. 77' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8fa0ebe8-e513-43c7-a425-0c092dc47079'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0719bb24-f06c-4df5-a265-3e5c91648f3d', 3, NULL, 'Lied aus "Ruy Blas"', 'Lied aus "Ruy Blas"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 Op. 77' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0719bb24-f06c-4df5-a265-3e5c91648f3d'
+);
+
+
+-- Op. 78 시편 Op. 78
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 Op. 78', '3 Psalms, Op. 78', 'album', NULL, 'Op.', '78', 1844, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 Op. 78'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'bfc4fcc1-6daa-4e04-a56b-5cee6618cf26'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'bfc4fcc1-6daa-4e04-a56b-5cee6618cf26'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 Op. 78' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'bfc4fcc1-6daa-4e04-a56b-5cee6618cf26'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:809cd9cd-8173-4dba-876c-1a6bdb2949a7', 1, NULL, '시편 2편 "Warum toben die Heiden"', 'Psalm 2 "Warum toben die Heiden"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 Op. 78' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:809cd9cd-8173-4dba-876c-1a6bdb2949a7'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e735131a-abb8-4ff8-8d3e-5837cffd9379', 2, NULL, '시편 43편 "Richte mich, Gott"', 'Psalm 43 "Richte mich, Gott"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 Op. 78' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e735131a-abb8-4ff8-8d3e-5837cffd9379'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:2e8e5bc8-9a00-4720-a0ba-8c0ed068ef76', 3, NULL, '시편 22편 "Mein Gott, warum hast du mich verlassen"', 'Psalm 22 "Mein Gott, warum hast du mich verlassen"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 Op. 78' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2e8e5bc8-9a00-4720-a0ba-8c0ed068ef76'
+);
+
+
+-- Op. 79 6개의 격언 Op. 79
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '6개의 격언 Op. 79', '6 Anthems (Sechs Sprüche), Op. 79', 'album', NULL, 'Op.', '79', 1846, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '6개의 격언 Op. 79'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '72968563-860a-4645-ab28-3d5804624321'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '72968563-860a-4645-ab28-3d5804624321'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '6개의 격언 Op. 79' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '72968563-860a-4645-ab28-3d5804624321'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:956f90df-5daf-47cf-881b-9de35d7f18b0', 1, NULL, 'Frohlocket, ihr Völker auf Erden', 'Frohlocket, ihr Völker auf Erden (Christmas)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '6개의 격언 Op. 79' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:956f90df-5daf-47cf-881b-9de35d7f18b0'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d6d7ab4c-5de7-42c8-a930-ae112a7792b7', 2, NULL, 'Herr Gott, du bist unsre Zuflucht', 'Herr Gott, du bist unsre Zuflucht (New Year)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '6개의 격언 Op. 79' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d6d7ab4c-5de7-42c8-a930-ae112a7792b7'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:fa90d967-c2dd-463f-a1bd-cb997152e438', 3, NULL, 'Erhaben, o Herr, über alles Lob', 'Erhaben, o Herr, über alles Lob (Ascension)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '6개의 격언 Op. 79' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fa90d967-c2dd-463f-a1bd-cb997152e438'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8a23dfc3-c080-46c6-871c-665fbec6fb5f', 4, NULL, 'Herr, gedenke nicht unsrer Übeltaten', 'Herr, gedenke nicht unsrer Übeltaten (Passiontide)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '6개의 격언 Op. 79' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8a23dfc3-c080-46c6-871c-665fbec6fb5f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:336c5f9b-60d2-41be-b71a-2859d5ff1b46', 5, NULL, 'Lasset uns frohlocken', 'Lasset uns frohlocken (Advent)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '6개의 격언 Op. 79' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:336c5f9b-60d2-41be-b71a-2859d5ff1b46'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c5b7aef1-0b0c-484e-8306-1814ecea5d1a', 6, NULL, 'Um unsrer Sünden willen', 'Um unsrer Sünden willen (Good Friday)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '6개의 격언 Op. 79' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c5b7aef1-0b0c-484e-8306-1814ecea5d1a'
+);
+
+
+-- Op. 80 현악 4중주 6번 F단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현악 4중주 6번 F단조', 'String Quartet No. 6 in F minor', 'album', 'Op. 80', NULL, NULL, 1847, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현악 4중주 6번 F단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f5b8679c-8cb7-4f8a-b8d4-5d60fe8b9569'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'f5b8679c-8cb7-4f8a-b8d4-5d60fe8b9569'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 6번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f5b8679c-8cb7-4f8a-b8d4-5d60fe8b9569'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b161d7b3-ff66-3f78-a98f-b8da188c45c2', 1, 'I', 'Allegro vivace assai', 'I. Allegro vivace assai', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 6번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b161d7b3-ff66-3f78-a98f-b8da188c45c2'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c81c1bef-78ba-314f-ab06-c6399c6efef8', 2, 'II', 'Allegro assai', 'II. Allegro assai', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 6번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c81c1bef-78ba-314f-ab06-c6399c6efef8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1acff04b-64ef-330f-92e4-3ddc0eaf9493', 3, 'III', 'Adagio', 'III. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 6번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1acff04b-64ef-330f-92e4-3ddc0eaf9493'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1580ab9d-a93b-3867-ba4f-ff19bb7f1d85', 4, 'IV', '피날레. Allegro molto', 'IV. Finale. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 6번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1580ab9d-a93b-3867-ba4f-ff19bb7f1d85'
+);
+
+
+-- Op. 81 현악 4중주를 위한 소품 Op. 81
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현악 4중주를 위한 소품 Op. 81', '4 Pieces for String Quartet, Op. 81', 'album', NULL, 'Op.', '81', 1847, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현악 4중주를 위한 소품 Op. 81'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '6869a76f-9cdc-4c98-b1d4-ff3ae78b1ed6'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '6869a76f-9cdc-4c98-b1d4-ff3ae78b1ed6'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주를 위한 소품 Op. 81' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '6869a76f-9cdc-4c98-b1d4-ff3ae78b1ed6'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d870fe4b-ca20-33de-b5ce-f290664a7f67', 1, NULL, '주제와 변주 E장조', 'No. 1 Theme and Variations in E major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주를 위한 소품 Op. 81' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d870fe4b-ca20-33de-b5ce-f290664a7f67'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4a6bcf7f-dce0-31a6-9107-cc4f13c992c5', 2, NULL, '스케르초 A단조', 'No. 2 Scherzo in A minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주를 위한 소품 Op. 81' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4a6bcf7f-dce0-31a6-9107-cc4f13c992c5'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:95462024-602f-3a9d-964f-92745fc9be1a', 3, NULL, '카프리치오 E단조', 'No. 3 Capriccio in E minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주를 위한 소품 Op. 81' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:95462024-602f-3a9d-964f-92745fc9be1a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8e7d93df-d756-3e00-bd43-269c1754894e', 4, NULL, '푸가 E♭장조', 'No. 4 Fugue in E♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주를 위한 소품 Op. 81' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8e7d93df-d756-3e00-bd43-269c1754894e'
+);
+
+
+-- Op. 82 변주곡 E♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '변주곡 E♭장조', 'Variations in E♭ major', 'song', 'Op. 82', NULL, NULL, 1841, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '변주곡 E♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'cf90dd11-1728-3a2f-ba32-5fb7c5f5665d'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'cf90dd11-1728-3a2f-ba32-5fb7c5f5665d'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '변주곡 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'cf90dd11-1728-3a2f-ba32-5fb7c5f5665d'
+);
+
+
+-- Op. 83 변주곡 B♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '변주곡 B♭장조', 'Variations in B♭ major', 'song', 'Op. 83', NULL, NULL, 1841, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '변주곡 B♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e0deb6ec-d86e-38fc-9607-b233aab8724d'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'e0deb6ec-d86e-38fc-9607-b233aab8724d'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '변주곡 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e0deb6ec-d86e-38fc-9607-b233aab8724d'
+);
+
+
+-- Op. 84 가곡 Op. 84
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 Op. 84', '3 Songs, Op. 84', 'album', NULL, 'Op.', '84', 1839, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 Op. 84'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e48c06cd-27d4-4e33-ad0a-18afd083fae7'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'e48c06cd-27d4-4e33-ad0a-18afd083fae7'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 84' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e48c06cd-27d4-4e33-ad0a-18afd083fae7'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5ec56013-fb5f-4276-afe0-fd15f0e8ab15', 1, NULL, 'Da lieg'' ich unter den Bäumen', 'Da lieg'' ich unter den Bäumen', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 84' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5ec56013-fb5f-4276-afe0-fd15f0e8ab15'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0eb2844c-b1a1-44f0-8194-4cae2af03c14', 2, NULL, 'Herbstlied', 'Herbstlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 84' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0eb2844c-b1a1-44f0-8194-4cae2af03c14'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1b98dcc8-a3dd-42e6-942c-a22ec8f724eb', 3, NULL, 'Jagdlied', 'Jagdlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 84' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1b98dcc8-a3dd-42e6-942c-a22ec8f724eb'
+);
+
+
+-- Op. 85 무언가 Op. 85
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '무언가 Op. 85', 'Songs Without Words, Book 7, Op. 85', 'album', NULL, 'Op.', '85', 1845, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '무언가 Op. 85'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5fd94f7a-6a3e-4a46-aeb9-daa6f7d3ca25'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '5fd94f7a-6a3e-4a46-aeb9-daa6f7d3ca25'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 85' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5fd94f7a-6a3e-4a46-aeb9-daa6f7d3ca25'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b504f013-6701-34b8-9d2e-e81a57a881a7', 1, NULL, 'F장조', 'No. 1 in F major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 85' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b504f013-6701-34b8-9d2e-e81a57a881a7'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:500a2c35-accf-3260-871d-77b7d19d0dfe', 2, NULL, 'A단조', 'No. 2 in A minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 85' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:500a2c35-accf-3260-871d-77b7d19d0dfe'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:629812f9-f1c9-32ee-97b6-b6da880cf8f7', 3, NULL, 'E♭장조', 'No. 3 in E♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 85' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:629812f9-f1c9-32ee-97b6-b6da880cf8f7'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9794f989-28aa-345d-ae5b-a8cea3a8fd8c', 4, NULL, 'D장조', 'No. 4 in D major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 85' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9794f989-28aa-345d-ae5b-a8cea3a8fd8c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:acd2a709-26db-3a0d-96a9-517f7cdaad5a', 5, NULL, 'A장조', 'No. 5 in A major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 85' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:acd2a709-26db-3a0d-96a9-517f7cdaad5a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:996dc5de-1235-361e-9dec-08da35e10428', 6, NULL, 'B♭장조', 'No. 6 in B♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 85' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:996dc5de-1235-361e-9dec-08da35e10428'
+);
+
+
+-- Op. 86 가곡 Op. 86
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 Op. 86', '6 Songs, Op. 86', 'album', NULL, 'Op.', '86', 1847, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 Op. 86'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f4aec059-85bb-49ae-90c6-fc0f6380393e'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'f4aec059-85bb-49ae-90c6-fc0f6380393e'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 86' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f4aec059-85bb-49ae-90c6-fc0f6380393e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c3a70b90-214d-4f09-866f-75baa5d45787', 1, NULL, 'Es lauschte das Laub', 'Es lauschte das Laub', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 86' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c3a70b90-214d-4f09-866f-75baa5d45787'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:be5a2623-409a-45f9-a590-90c998cdb014', 2, NULL, 'Morgenlied', 'Morgenlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 86' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:be5a2623-409a-45f9-a590-90c998cdb014'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5ff6260f-196a-457a-b3ef-3336708d1cac', 3, NULL, 'Die Liebende schreibt', 'Die Liebende schreibt', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 86' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5ff6260f-196a-457a-b3ef-3336708d1cac'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:aabcc067-8261-4350-8971-24a167f8edc7', 4, NULL, 'Allnächtlich im Traume seh'' ich dich', 'Allnächtlich im Traume seh'' ich dich', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 86' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:aabcc067-8261-4350-8971-24a167f8edc7'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:93cc36c1-9783-4f80-8fd0-895356e44ac4', 5, NULL, 'Der Mond', 'Der Mond', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 86' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:93cc36c1-9783-4f80-8fd0-895356e44ac4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:dd59e625-3740-4764-8a28-4ce4aa7b5f8e', 6, NULL, 'Altdeutsches Frühlingslied', 'Altdeutsches Frühlingslied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 86' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:dd59e625-3740-4764-8a28-4ce4aa7b5f8e'
+);
+
+
+-- Op. 87 현악 5중주 2번 B♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현악 5중주 2번 B♭장조', 'String Quintet No. 2 in B♭ major', 'album', 'Op. 87', NULL, NULL, 1845, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현악 5중주 2번 B♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '8c33088a-9f66-4173-8f3a-b8969e344d6d'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '8c33088a-9f66-4173-8f3a-b8969e344d6d'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 5중주 2번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '8c33088a-9f66-4173-8f3a-b8969e344d6d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:659334fc-5795-44d8-b95a-01633e5ecb19', 1, 'I', 'Allegro vivace', 'I. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 5중주 2번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:659334fc-5795-44d8-b95a-01633e5ecb19'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:81c99835-7988-4425-8ef1-3e2acedb87e9', 2, 'II', 'Andante scherzando', 'II. Andante scherzando', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 5중주 2번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:81c99835-7988-4425-8ef1-3e2acedb87e9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:64271584-e9b9-42a0-b5f3-1f20b8943ba8', 3, 'III', 'Adagio e lento', 'III. Adagio e lento', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 5중주 2번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:64271584-e9b9-42a0-b5f3-1f20b8943ba8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:2a40b614-a216-48a1-88f3-ac8159e68768', 4, 'IV', 'Allegro molto vivace', 'IV. Allegro molto vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 5중주 2번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2a40b614-a216-48a1-88f3-ac8159e68768'
+);
+
+
+-- Op. 88 혼성 합창곡 Op. 88
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '혼성 합창곡 Op. 88', '6 Part-Songs for Mixed Chorus, Op. 88', 'album', NULL, 'Op.', '88', 1844, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '혼성 합창곡 Op. 88'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '456d9877-fe40-405c-9706-5c1bb3d7f2b0'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '456d9877-fe40-405c-9706-5c1bb3d7f2b0'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 88' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '456d9877-fe40-405c-9706-5c1bb3d7f2b0'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8601803b-f8af-48f8-99a2-eeb2a799c74b', 1, NULL, 'Neujahrslied', 'Neujahrslied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 88' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8601803b-f8af-48f8-99a2-eeb2a799c74b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:df3e3ddc-5321-4973-a319-97d9e1230f0e', 2, NULL, 'Der Glückliche', 'Der Glückliche', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 88' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:df3e3ddc-5321-4973-a319-97d9e1230f0e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c22e6e72-cbe1-4775-b174-6309fd8a9dbf', 3, NULL, 'Hirtenlied', 'Hirtenlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 88' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c22e6e72-cbe1-4775-b174-6309fd8a9dbf'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5d9a91f9-0eb1-45c1-bdca-179f605484df', 4, NULL, 'Die Waldvögelein', 'Die Waldvögelein', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 88' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5d9a91f9-0eb1-45c1-bdca-179f605484df'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:fd39f3b1-0751-4e4a-8d77-5f077fe76dd9', 5, NULL, 'Deutschland', 'Deutschland', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 88' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fd39f3b1-0751-4e4a-8d77-5f077fe76dd9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b410b008-412e-4a99-b9d0-7f4e6f0c7e4c', 6, NULL, 'Der wandernde Musikant', 'Der wandernde Musikant', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 88' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b410b008-412e-4a99-b9d0-7f4e6f0c7e4c'
+);
+
+
+-- Op. 89 리더슈필 <타향에서의 귀향>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '리더슈필 <타향에서의 귀향>', 'Die Heimkehr aus der Fremde (Son and Stranger)', 'song', 'Op. 89', NULL, NULL, 1829, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '리더슈필 <타향에서의 귀향>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '0c960fa8-3ca9-4e67-8fc9-fec96bfffd5e'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '0c960fa8-3ca9-4e67-8fc9-fec96bfffd5e'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '리더슈필 <타향에서의 귀향>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '0c960fa8-3ca9-4e67-8fc9-fec96bfffd5e'
+);
+
+
+-- Op. 90 교향곡 4번 A장조 "이탈리아"
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e69499b5-1cf1-34f5-84df-dd934ad0da15', 1, 'I', 'Allegro vivace', 'I. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 124 AND p.composer_id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e69499b5-1cf1-34f5-84df-dd934ad0da15'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:89f28401-3fb2-307c-8f72-6c03c62d5e5b', 2, 'II', 'Andante con moto', 'II. Andante con moto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 124 AND p.composer_id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:89f28401-3fb2-307c-8f72-6c03c62d5e5b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ff38f2fd-2a8a-351c-a21b-04f63b459e63', 3, 'III', 'Con moto moderato', 'III. Con moto moderato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 124 AND p.composer_id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ff38f2fd-2a8a-351c-a21b-04f63b459e63'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b746cf1f-16ea-3c72-acde-0216bb5208c3', 4, 'IV', '살타렐로. Presto', 'IV. Saltarello. Presto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 124 AND p.composer_id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b746cf1f-16ea-3c72-acde-0216bb5208c3'
+);
+
+
+-- Op. 91 시편 98편
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 98편', 'Psalm 98 "Singet dem Herrn ein neues Lied"', 'song', 'Op. 91', NULL, NULL, 1843, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 98편'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5a701c19-8681-4978-844e-0604bb55fcc2'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '5a701c19-8681-4978-844e-0604bb55fcc2'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 98편' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5a701c19-8681-4978-844e-0604bb55fcc2'
+);
+
+
+-- Op. 92 알레그로 브릴란테 A장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '알레그로 브릴란테 A장조', 'Allegro brillant in A major', 'song', 'Op. 92', NULL, NULL, 1841, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '알레그로 브릴란테 A장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '94931f5e-8a1c-4338-b3b5-75f16972ce80'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '94931f5e-8a1c-4338-b3b5-75f16972ce80'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '알레그로 브릴란테 A장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '94931f5e-8a1c-4338-b3b5-75f16972ce80'
+);
+
+
+-- Op. 93 <콜로노스의 오이디푸스> 부수음악
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '<콜로노스의 오이디푸스> 부수음악', 'Oedipus at Colonus, Incidental Music', 'song', 'Op. 93', NULL, NULL, 1845, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '<콜로노스의 오이디푸스> 부수음악'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '254666ec-9124-4cac-9110-49ae6396661c'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '254666ec-9124-4cac-9110-49ae6396661c'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '<콜로노스의 오이디푸스> 부수음악' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '254666ec-9124-4cac-9110-49ae6396661c'
+);
+
+
+-- Op. 94 콘서트 아리아 <인펠리체>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '콘서트 아리아 <인펠리체>', 'Concert Aria "Infelice"', 'song', 'Op. 94', NULL, NULL, 1842, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '콘서트 아리아 <인펠리체>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c932ca76-f8ec-4ae5-a7e1-c9ed33fcbe02'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'c932ca76-f8ec-4ae5-a7e1-c9ed33fcbe02'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '콘서트 아리아 <인펠리체>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c932ca76-f8ec-4ae5-a7e1-c9ed33fcbe02'
+);
+
+
+-- Op. 95 <루이 블라스> 서곡
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '<루이 블라스> 서곡', 'Ruy Blas, Overture in C minor', 'song', 'Op. 95', NULL, NULL, 1839, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '<루이 블라스> 서곡'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '48f08b23-16b2-3769-ba60-cffc11dd911e'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '48f08b23-16b2-3769-ba60-cffc11dd911e'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '<루이 블라스> 서곡' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '48f08b23-16b2-3769-ba60-cffc11dd911e'
+);
+
+
+-- Op. 96 찬가 <Lass, o Herr, mich Hülfe finden>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '찬가 <Lass, o Herr, mich Hülfe finden>', 'Hymn "Lass, o Herr, mich Hülfe finden" (3 Sacred Songs and Fugue)', 'song', 'Op. 96', NULL, NULL, 1843, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '찬가 <Lass, o Herr, mich Hülfe finden>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '50341c43-8e6f-444f-b543-395498be543e'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '50341c43-8e6f-444f-b543-395498be543e'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '찬가 <Lass, o Herr, mich Hülfe finden>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '50341c43-8e6f-444f-b543-395498be543e'
+);
+
+
+-- Op. 99 가곡 Op. 99
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 Op. 99', '6 Songs, Op. 99', 'album', NULL, 'Op.', '99', 1845, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 Op. 99'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '7959ee08-a127-40a5-8fc9-aab75b8573d3'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '7959ee08-a127-40a5-8fc9-aab75b8573d3'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 99' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '7959ee08-a127-40a5-8fc9-aab75b8573d3'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:bb488238-bd46-416c-9ece-794821f2f522', 1, NULL, 'Erster Verlust', 'Erster Verlust', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 99' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bb488238-bd46-416c-9ece-794821f2f522'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a74c525b-7976-4d15-95f4-b3f46883c383', 2, NULL, 'Die Sterne schau''n in stiller Nacht', 'Die Sterne schau''n in stiller Nacht', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 99' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a74c525b-7976-4d15-95f4-b3f46883c383'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d91c1542-befe-4f32-96eb-617734e22f79', 3, NULL, 'Lieblingsplätzchen', 'Lieblingsplätzchen', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 99' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d91c1542-befe-4f32-96eb-617734e22f79'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:edaf34f0-4c5d-4427-92fd-45e6420fa069', 4, NULL, 'Das Schifflein', 'Das Schifflein', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 99' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:edaf34f0-4c5d-4427-92fd-45e6420fa069'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:072f75dc-df01-4590-b14f-d057a55986ee', 5, NULL, 'Wenn sich zwei Herzen scheiden', 'Wenn sich zwei Herzen scheiden', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 99' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:072f75dc-df01-4590-b14f-d057a55986ee'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:32faf56a-a29a-46c2-9f33-d0759e05f197', 6, NULL, 'Es weiß und rät es doch keiner', 'Es weiß und rät es doch keiner', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 Op. 99' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:32faf56a-a29a-46c2-9f33-d0759e05f197'
+);
+
+
+-- Op. 100 혼성 합창곡 Op. 100
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '혼성 합창곡 Op. 100', '4 Part-Songs for Mixed Chorus, Op. 100', 'album', NULL, 'Op.', '100', 1844, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '혼성 합창곡 Op. 100'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '4958eef9-d13a-420d-a6e8-90859d66b4dd'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '4958eef9-d13a-420d-a6e8-90859d66b4dd'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 100' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '4958eef9-d13a-420d-a6e8-90859d66b4dd'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:255ffa65-0836-41c9-a19d-fb94ea8dd3dd', 1, NULL, 'Andenken', 'Andenken', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 100' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:255ffa65-0836-41c9-a19d-fb94ea8dd3dd'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:afa90eac-f2f3-457e-8282-dbeb559020eb', 2, NULL, 'Lob des Frühlings', 'Lob des Frühlings', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 100' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:afa90eac-f2f3-457e-8282-dbeb559020eb'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:362b9ec9-4e0a-4ef0-99d0-df24939c12b3', 3, NULL, 'Frühlingslied', 'Frühlingslied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 100' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:362b9ec9-4e0a-4ef0-99d0-df24939c12b3'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a7e9d703-6660-477e-96b8-c939f2178153', 4, NULL, 'Im Wald', 'Im Wald', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '혼성 합창곡 Op. 100' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a7e9d703-6660-477e-96b8-c939f2178153'
+);
+
+
+-- Op. 101 트럼펫 서곡 C장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '트럼펫 서곡 C장조', 'Trumpet Overture in C major', 'song', 'Op. 101', NULL, NULL, 1826, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '트럼펫 서곡 C장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '2108b2b4-1636-30c4-b87e-b68913c6a99c'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '2108b2b4-1636-30c4-b87e-b68913c6a99c'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '트럼펫 서곡 C장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '2108b2b4-1636-30c4-b87e-b68913c6a99c'
+);
+
+
+-- Op. 102 무언가 Op. 102
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '무언가 Op. 102', 'Songs Without Words, Book 8, Op. 102', 'album', NULL, 'Op.', '102', 1845, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '무언가 Op. 102'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '266dd526-4d5f-4854-9bfd-65be28c1ce6c'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '266dd526-4d5f-4854-9bfd-65be28c1ce6c'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 102' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '266dd526-4d5f-4854-9bfd-65be28c1ce6c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ab9e46bb-587c-31ba-ba0d-a3754e261361', 1, NULL, 'E단조', 'No. 1 in E minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 102' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ab9e46bb-587c-31ba-ba0d-a3754e261361'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9b9575d9-df83-300d-adcf-e09d444483ae', 2, NULL, 'D장조', 'No. 2 in D major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 102' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9b9575d9-df83-300d-adcf-e09d444483ae'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:219791cd-7499-300e-a0a9-93756c3462a4', 3, NULL, 'C장조', 'No. 3 in C major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 102' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:219791cd-7499-300e-a0a9-93756c3462a4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:78316a58-e2b1-3c62-ad12-430d501abc85', 4, NULL, 'G단조', 'No. 4 in G minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 102' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:78316a58-e2b1-3c62-ad12-430d501abc85'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b4bd545f-3cea-31ed-8439-5c5560383ea2', 5, NULL, 'A장조', 'No. 5 in A major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 102' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b4bd545f-3cea-31ed-8439-5c5560383ea2'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f3704258-b81f-3eab-97d4-cdea159c717f', 6, NULL, 'C장조', 'No. 6 in C major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무언가 Op. 102' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f3704258-b81f-3eab-97d4-cdea159c717f'
+);
+
+
+-- Op. 103 장송 행진곡 A단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '장송 행진곡 A단조', 'Funeral March in A minor', 'song', 'Op. 103', NULL, NULL, 1836, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '장송 행진곡 A단조'
+);
+
+
+-- Op. 104a 전주곡 Op. 104a
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '전주곡 Op. 104a', '3 Preludes, Op. 104a', 'album', NULL, 'Op.', '104a', 1834, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '전주곡 Op. 104a'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '457d961e-ba18-4926-84d2-d9980bf8fc39'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '457d961e-ba18-4926-84d2-d9980bf8fc39'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡 Op. 104a' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '457d961e-ba18-4926-84d2-d9980bf8fc39'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4bd06ab3-ed7b-3e57-8d41-c0a7f02ec405', 1, NULL, 'B♭장조', 'No. 1 in B♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡 Op. 104a' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4bd06ab3-ed7b-3e57-8d41-c0a7f02ec405'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1f21bc1a-57c6-3ecf-af06-170da20caf7d', 2, NULL, 'B단조', 'No. 2 in B minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡 Op. 104a' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1f21bc1a-57c6-3ecf-af06-170da20caf7d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5febeec3-d8b8-3dc1-a505-988e086e00ff', 3, NULL, 'D장조', 'No. 3 in D major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡 Op. 104a' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5febeec3-d8b8-3dc1-a505-988e086e00ff'
+);
+
+
+-- Op. 104b 연습곡 Op. 104b
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '연습곡 Op. 104b', '3 Études, Op. 104b', 'album', NULL, 'Op.', '104b', 1838, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '연습곡 Op. 104b'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'de9b5bad-d8a3-493f-b5ff-8b122b3233cb'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'de9b5bad-d8a3-493f-b5ff-8b122b3233cb'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '연습곡 Op. 104b' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'de9b5bad-d8a3-493f-b5ff-8b122b3233cb'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0cff8535-eb8b-3917-ad32-44762e8696cd', 1, NULL, 'B♭단조', 'No. 1 in B♭ minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '연습곡 Op. 104b' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0cff8535-eb8b-3917-ad32-44762e8696cd'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:848c7ea8-f451-33d3-b139-5d2b93d60b3a', 2, NULL, 'F장조', 'No. 2 in F major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '연습곡 Op. 104b' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:848c7ea8-f451-33d3-b139-5d2b93d60b3a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:406482a5-cad1-3368-b331-fa004b0148b9', 3, NULL, 'A단조', 'No. 3 in A minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '연습곡 Op. 104b' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:406482a5-cad1-3368-b331-fa004b0148b9'
+);
+
+
+-- Op. 105 피아노 소나타 2번 G단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 소나타 2번 G단조', 'Piano Sonata No. 2 in G minor', 'album', 'Op. 105', NULL, NULL, 1821, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 소나타 2번 G단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f1a9c317-f5c5-4d3e-aab6-bd8f8612a6ec'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'f1a9c317-f5c5-4d3e-aab6-bd8f8612a6ec'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 2번 G단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f1a9c317-f5c5-4d3e-aab6-bd8f8612a6ec'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7dce3add-6e77-3820-aa8b-5b21ecf4cdf1', 1, 'I', 'Allegro', 'I. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 2번 G단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7dce3add-6e77-3820-aa8b-5b21ecf4cdf1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:785c5583-749f-34dc-bcdc-a2f70ca0b588', 2, 'II', 'Adagio', 'II. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 2번 G단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:785c5583-749f-34dc-bcdc-a2f70ca0b588'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:dfe7bd41-ad42-37c2-ac0c-8147937dd75d', 3, 'III', 'Presto', 'III. Presto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 2번 G단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:dfe7bd41-ad42-37c2-ac0c-8147937dd75d'
+);
+
+
+-- Op. 106 피아노 소나타 3번 B♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 소나타 3번 B♭장조', 'Piano Sonata No. 3 in B♭ major', 'album', 'Op. 106', NULL, NULL, 1827, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 소나타 3번 B♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'da04835b-f802-4e2c-b3a9-8bf0b0b163a1'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'da04835b-f802-4e2c-b3a9-8bf0b0b163a1'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 3번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'da04835b-f802-4e2c-b3a9-8bf0b0b163a1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8f54e207-52be-31b7-a49b-c1e21c90e912', 1, 'I', 'Allegro vivace', 'I. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 3번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8f54e207-52be-31b7-a49b-c1e21c90e912'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b24bd4a5-1484-37ae-9e5b-0ef853f3382f', 2, 'II', '스케르초. Allegro non troppo', 'II. Scherzo. Allegro non troppo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 3번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b24bd4a5-1484-37ae-9e5b-0ef853f3382f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1e369398-a612-3662-a245-ae826e81f0f5', 3, 'III', 'Andante quasi allegretto', 'III. Andante quasi allegretto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 3번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1e369398-a612-3662-a245-ae826e81f0f5'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f9340836-e949-3620-b92f-beed86e0121a', 4, 'IV', 'Allegro moderato', 'IV. Allegro moderato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소나타 3번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f9340836-e949-3620-b92f-beed86e0121a'
+);
+
+
+-- Op. 107 교향곡 5번 D단조 "종교개혁"
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '교향곡 5번 D단조 "종교개혁"', 'Symphony No. 5 in D minor "Reformation"', 'album', 'Op. 107', NULL, NULL, 1830, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '교향곡 5번 D단조 "종교개혁"'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '2d78bb1b-2c08-4b30-a398-90f707a92212'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '2d78bb1b-2c08-4b30-a398-90f707a92212'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 5번 D단조 "종교개혁"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '2d78bb1b-2c08-4b30-a398-90f707a92212'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8379d81f-018c-3468-99bb-22e5843cb488', 1, 'I', 'Andante – Allegro con fuoco', 'I. Andante – Allegro con fuoco', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 5번 D단조 "종교개혁"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8379d81f-018c-3468-99bb-22e5843cb488'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e843b391-e0ef-340d-880a-df8f6acaaebc', 2, 'II', 'Allegro vivace', 'II. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 5번 D단조 "종교개혁"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e843b391-e0ef-340d-880a-df8f6acaaebc'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:82313d94-1173-3b14-a2dc-754b2fdddc95', 3, 'III', 'Andante', 'III. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 5번 D단조 "종교개혁"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:82313d94-1173-3b14-a2dc-754b2fdddc95'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6690e786-8bb8-38a2-9092-c01ff8de7f21', 4, 'IV', '코랄 "Ein feste Burg ist unser Gott". Andante con moto – Allegro vivace', 'IV. Choral "Ein feste Burg ist unser Gott". Andante con moto – Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '교향곡 5번 D단조 "종교개혁"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6690e786-8bb8-38a2-9092-c01ff8de7f21'
+);
+
+
+-- Op. 108 행진곡 D장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '행진곡 D장조', 'March in D major', 'song', 'Op. 108', NULL, NULL, 1841, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '행진곡 D장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '9a574d1a-73a5-4e90-839b-1edf077e5c1d'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '9a574d1a-73a5-4e90-839b-1edf077e5c1d'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '행진곡 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '9a574d1a-73a5-4e90-839b-1edf077e5c1d'
+);
+
+
+-- Op. 109 첼로와 피아노를 위한 무언가 D장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '첼로와 피아노를 위한 무언가 D장조', 'Song Without Words in D major for Cello and Piano', 'song', 'Op. 109', NULL, NULL, 1845, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '첼로와 피아노를 위한 무언가 D장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '1ab2a0ee-088b-4b36-b5ed-7728a0a3ee00'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '1ab2a0ee-088b-4b36-b5ed-7728a0a3ee00'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '첼로와 피아노를 위한 무언가 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '1ab2a0ee-088b-4b36-b5ed-7728a0a3ee00'
+);
+
+
+-- Op. 110 피아노 6중주 D장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 6중주 D장조', 'Piano Sextet in D major', 'album', 'Op. 110', NULL, NULL, 1824, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 6중주 D장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '3c244cfa-6467-4aff-90e5-64d6e4519dfc'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '3c244cfa-6467-4aff-90e5-64d6e4519dfc'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 6중주 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '3c244cfa-6467-4aff-90e5-64d6e4519dfc'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5dda9a38-e41a-4e4e-aefa-c1d070192e74', 1, 'I', 'Allegro vivace', 'I. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 6중주 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5dda9a38-e41a-4e4e-aefa-c1d070192e74'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:501923f0-8343-4782-a07d-aa7ff064d34f', 2, 'II', 'Adagio', 'II. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 6중주 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:501923f0-8343-4782-a07d-aa7ff064d34f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6fdf92a5-92eb-452c-a04d-56cc12106d58', 3, 'III', '미뉴에트', 'III. Menuetto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 6중주 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6fdf92a5-92eb-452c-a04d-56cc12106d58'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b207165a-9674-4035-9611-18e6452d3dcc', 4, 'IV', 'Allegro vivace', 'IV. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 6중주 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b207165a-9674-4035-9611-18e6452d3dcc'
+);
+
+
+-- Op. 111 합창곡 <Tu es Petrus>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '합창곡 <Tu es Petrus>', 'Tu es Petrus', 'song', 'Op. 111', NULL, NULL, 1827, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '합창곡 <Tu es Petrus>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'bd550e9d-35de-4ea4-b893-33f3ac4a8d52'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'bd550e9d-35de-4ea4-b893-33f3ac4a8d52'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '합창곡 <Tu es Petrus>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'bd550e9d-35de-4ea4-b893-33f3ac4a8d52'
+);
+
+
+-- Op. 112 종교 가곡 Op. 112
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '종교 가곡 Op. 112', '2 Sacred Songs, Op. 112', 'album', NULL, 'Op.', '112', 1835, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '종교 가곡 Op. 112'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f7710db9-827e-4d98-b30c-d7666204a6fa'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'f7710db9-827e-4d98-b30c-d7666204a6fa'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '종교 가곡 Op. 112' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f7710db9-827e-4d98-b30c-d7666204a6fa'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b64eb09b-55a8-4143-be23-2db292afc334', 1, NULL, 'Doch der Herr, er leitet die Irrenden recht', 'Doch der Herr, er leitet die Irrenden recht', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '종교 가곡 Op. 112' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b64eb09b-55a8-4143-be23-2db292afc334'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e7e5f51b-6854-4211-b2ab-94f36b957b1a', 2, NULL, 'Der du die Menschen lässest sterben', 'Der du die Menschen lässest sterben', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '종교 가곡 Op. 112' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e7e5f51b-6854-4211-b2ab-94f36b957b1a'
+);
+
+
+-- Op. 113 연주회 소품 1번 F단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '연주회 소품 1번 F단조', 'Concert Piece No. 1 in F minor', 'album', 'Op. 113', NULL, NULL, 1833, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '연주회 소품 1번 F단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f0fcd344-1e9d-44a1-8380-87f192766334'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'f0fcd344-1e9d-44a1-8380-87f192766334'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '연주회 소품 1번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f0fcd344-1e9d-44a1-8380-87f192766334'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5ef5eb3e-18da-4693-b008-1ac3c5e0459c', 1, 'I', 'Allegro molto', 'I. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '연주회 소품 1번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5ef5eb3e-18da-4693-b008-1ac3c5e0459c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4ac3ac6e-8f87-4a62-89e6-d6a62a374a1d', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '연주회 소품 1번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4ac3ac6e-8f87-4a62-89e6-d6a62a374a1d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7c7dfdfa-83ef-4c0e-879f-08576f5be380', 3, 'III', 'Allegro molto', 'III. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '연주회 소품 1번 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7c7dfdfa-83ef-4c0e-879f-08576f5be380'
+);
+
+
+-- Op. 114 연주회 소품 2번 D단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '연주회 소품 2번 D단조', 'Concert Piece No. 2 in D minor', 'album', 'Op. 114', NULL, NULL, 1833, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '연주회 소품 2번 D단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '8559b255-d1bd-49c3-9f73-a9bb6c91ce11'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '8559b255-d1bd-49c3-9f73-a9bb6c91ce11'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '연주회 소품 2번 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '8559b255-d1bd-49c3-9f73-a9bb6c91ce11'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d29b18ed-9ad7-40d6-860b-39c634817d66', 1, 'I', 'Presto', 'I. Presto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '연주회 소품 2번 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d29b18ed-9ad7-40d6-860b-39c634817d66'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:90e8220e-a967-41d6-b349-d8e813b5055e', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '연주회 소품 2번 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:90e8220e-a967-41d6-b349-d8e813b5055e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f7579941-c484-4f6e-83e5-2e7ce15850c9', 3, 'III', 'Allegro grazioso', 'III. Allegro grazioso', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '연주회 소품 2번 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f7579941-c484-4f6e-83e5-2e7ce15850c9'
+);
+
+
+-- Op. 115 종교 합창곡 Op. 115
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '종교 합창곡 Op. 115', '2 Sacred Choruses, Op. 115', 'album', NULL, 'Op.', '115', 1833, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '종교 합창곡 Op. 115'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5436c524-f4ff-426f-8cc9-9fdbf8929202'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '5436c524-f4ff-426f-8cc9-9fdbf8929202'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '종교 합창곡 Op. 115' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5436c524-f4ff-426f-8cc9-9fdbf8929202'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:aa37174b-fc72-41b2-a3b9-41a94fcbbb5c', 1, NULL, 'Beati mortui', 'Beati mortui', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '종교 합창곡 Op. 115' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:aa37174b-fc72-41b2-a3b9-41a94fcbbb5c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:100b766c-5291-40c8-9d4d-c9f67f1f2860', 2, NULL, 'Periti autem', 'Periti autem', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '종교 합창곡 Op. 115' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:100b766c-5291-40c8-9d4d-c9f67f1f2860'
+);
+
+
+-- Op. 116 장송가 G단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '장송가 G단조', 'Trauergesang in G minor', 'song', 'Op. 116', NULL, NULL, 1845, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '장송가 G단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'd3e71c16-2433-4540-b990-f91f1591da49'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'd3e71c16-2433-4540-b990-f91f1591da49'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '장송가 G단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'd3e71c16-2433-4540-b990-f91f1591da49'
+);
+
+
+-- Op. 117 앨범의 한 장 E단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '앨범의 한 장 E단조', 'Albumblatt in E minor', 'song', 'Op. 117', NULL, NULL, 1837, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '앨범의 한 장 E단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '940650d2-a9f6-3098-a743-cfcc491b4fa3'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '940650d2-a9f6-3098-a743-cfcc491b4fa3'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '앨범의 한 장 E단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '940650d2-a9f6-3098-a743-cfcc491b4fa3'
+);
+
+
+-- Op. 118 카프리치오 E장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '카프리치오 E장조', 'Capriccio in E major', 'song', 'Op. 118', NULL, NULL, 1837, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '카프리치오 E장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '1a647c50-aca5-3aee-9257-058d6dc438b7'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '1a647c50-aca5-3aee-9257-058d6dc438b7'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '카프리치오 E장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '1a647c50-aca5-3aee-9257-058d6dc438b7'
+);
+
+
+-- Op. 119 무궁동 C장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '무궁동 C장조', 'Perpetuum mobile in C major', 'song', 'Op. 119', NULL, NULL, NULL, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '무궁동 C장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a4b2c895-1e40-407e-ae7d-699cfe86e68a'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'a4b2c895-1e40-407e-ae7d-699cfe86e68a'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '무궁동 C장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a4b2c895-1e40-407e-ae7d-699cfe86e68a'
+);
+
+
+-- Op. 120 남성 합창곡 Op. 120
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '남성 합창곡 Op. 120', '4 Part-Songs for Male Chorus, Op. 120', 'album', NULL, 'Op.', '120', 1847, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '남성 합창곡 Op. 120'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a1f7fc56-3d03-45bf-88e7-873a00d66915', 1, NULL, 'Jagdlied', 'Jagdlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 120' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a1f7fc56-3d03-45bf-88e7-873a00d66915'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1244485a-a14c-44c3-af80-efdd513934b2', 2, NULL, 'Morgengruß des Thüringischen Sängerbundes', 'Morgengruß des Thüringischen Sängerbundes', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 120' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1244485a-a14c-44c3-af80-efdd513934b2'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a114203d-e534-4206-a650-627bf4e8bf21', 3, NULL, 'Im Süden', 'Im Süden', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 120' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a114203d-e534-4206-a650-627bf4e8bf21'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:29f98f3f-a93f-4247-8e47-db32189ec5bf', 4, NULL, 'Zigeunerlied', 'Zigeunerlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 Op. 120' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:29f98f3f-a93f-4247-8e47-db32189ec5bf'
+);
+
+
+-- Op. 121 남성 합창곡 <Adspice Domine de sede>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '남성 합창곡 <Adspice Domine de sede>', 'Adspice Domine de sede', 'song', 'Op. 121', NULL, NULL, 1833, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '남성 합창곡 <Adspice Domine de sede>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '1386bb9c-146d-4d69-82b2-fff2171f18ee'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '1386bb9c-146d-4d69-82b2-fff2171f18ee'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 <Adspice Domine de sede>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '1386bb9c-146d-4d69-82b2-fff2171f18ee'
+);
+
+
+-- MWV U 125 연습곡 F단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '연습곡 F단조', 'Étude in F minor', 'song', 'MWV U 125', NULL, NULL, 1826, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '연습곡 F단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'd0b8cae3-3788-41a9-8924-42fce743cca8'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'd0b8cae3-3788-41a9-8924-42fce743cca8'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '연습곡 F단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'd0b8cae3-3788-41a9-8924-42fce743cca8'
+);
+
+
+-- MWV U 69 스케르초 B단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '스케르초 B단조', 'Scherzo in B minor', 'song', 'MWV U 69', NULL, NULL, 1829, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '스케르초 B단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '156a751e-5574-3313-9adc-086c1c5edae7'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '156a751e-5574-3313-9adc-086c1c5edae7'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '스케르초 B단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '156a751e-5574-3313-9adc-086c1c5edae7'
+);
+
+
+-- MWV U 113 스케르초 아 카프리치오 F#단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '스케르초 아 카프리치오 F#단조', 'Scherzo a capriccio in F# minor', 'song', 'MWV U 113', NULL, NULL, 1836, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '스케르초 아 카프리치오 F#단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '992266b0-8703-306d-b962-98a3357995de'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '992266b0-8703-306d-b962-98a3357995de'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '스케르초 아 카프리치오 F#단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '992266b0-8703-306d-b962-98a3357995de'
+);
+
+
+-- WoO 4 로망스 WoO 4
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '로망스 WoO 4', '2 Romances (Byron), WoO 4', 'album', NULL, 'WoO', '4', 1834, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '로망스 WoO 4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'classicmap:mendelssohn:mendelssohn-woo4:1', 1, NULL, 'There be none of beauty''s daughters', 'There be none of beauty''s daughters', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '로망스 WoO 4' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'classicmap:mendelssohn:mendelssohn-woo4:1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9f7b6608-8695-4064-ae6a-7e88a0c896da', 2, NULL, 'Sun of the sleepless', 'Sun of the sleepless', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '로망스 WoO 4' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9f7b6608-8695-4064-ae6a-7e88a0c896da'
+);
+
+
+-- MWV A 11 코랄 칸타타 <Verleih uns Frieden>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '코랄 칸타타 <Verleih uns Frieden>', 'Verleih uns Frieden', 'song', 'MWV A 11', NULL, NULL, 1831, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '코랄 칸타타 <Verleih uns Frieden>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c3c8dca9-cacb-4155-98b1-05e1f4f9d889'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'c3c8dca9-cacb-4155-98b1-05e1f4f9d889'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '코랄 칸타타 <Verleih uns Frieden>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c3c8dca9-cacb-4155-98b1-05e1f4f9d889'
+);
+
+
+-- MWV U 141 안단테 칸타빌레와 프레스토 아지타토 B장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '안단테 칸타빌레와 프레스토 아지타토 B장조', 'Andante cantabile e Presto agitato in B major', 'song', 'MWV U 141', NULL, NULL, 1838, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '안단테 칸타빌레와 프레스토 아지타토 B장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'b7779d05-73bf-39cf-a5a7-089998d00719'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'b7779d05-73bf-39cf-a5a7-089998d00719'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '안단테 칸타빌레와 프레스토 아지타토 B장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'b7779d05-73bf-39cf-a5a7-089998d00719'
+);
+
+
+-- MWV K 44 가곡 <The Garland>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 <The Garland>', 'The Garland (Der Blumenkranz)', 'song', 'MWV K 44', NULL, NULL, 1829, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 <The Garland>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '890cc3ec-229f-4c91-bfd8-12524f423607'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '890cc3ec-229f-4c91-bfd8-12524f423607'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 <The Garland>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '890cc3ec-229f-4c91-bfd8-12524f423607'
+);
+
+
+-- MWV G 25 남성 합창곡 <Ersatz für Unbestand>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '남성 합창곡 <Ersatz für Unbestand>', 'Ersatz für Unbestand', 'song', 'MWV G 25', NULL, NULL, 1839, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '남성 합창곡 <Ersatz für Unbestand>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'b975998b-2511-4dc1-b92e-ae47ac555032'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'b975998b-2511-4dc1-b92e-ae47ac555032'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 <Ersatz für Unbestand>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'b975998b-2511-4dc1-b92e-ae47ac555032'
+);
+
+
+-- MWV D 4 칸타타 <구텐베르크 축전가>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '칸타타 <구텐베르크 축전가>', 'Festgesang (Gutenberg Cantata)', 'song', 'MWV D 4', NULL, NULL, 1840, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '칸타타 <구텐베르크 축전가>'
+);
+
+
+-- MWV U 136 곤돌라의 노래 A장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '곤돌라의 노래 A장조', 'Gondellied in A major', 'song', 'MWV U 136', NULL, NULL, 1837, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '곤돌라의 노래 A장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '74b5cf8f-c057-3eee-a343-030204aa8d63'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '74b5cf8f-c057-3eee-a343-030204aa8d63'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '곤돌라의 노래 A장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '74b5cf8f-c057-3eee-a343-030204aa8d63'
+);
+
+
+-- WoO 11 2중창곡 WoO 11
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '2중창곡 WoO 11', '3 Volkslieder (Duets), WoO 11', 'album', NULL, 'WoO', '11', 1836, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '2중창곡 WoO 11'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '97b4fb15-e05a-4b2e-ada6-bc2e871358f9'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '97b4fb15-e05a-4b2e-ada6-bc2e871358f9'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 WoO 11' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '97b4fb15-e05a-4b2e-ada6-bc2e871358f9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:81f8dae5-ba0f-4ba9-8fe8-2b8ea13dd3d8', 1, NULL, 'Wie kann ich froh und lustig sein?', 'Wie kann ich froh und lustig sein?', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 WoO 11' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:81f8dae5-ba0f-4ba9-8fe8-2b8ea13dd3d8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:10aea2cf-bea5-4bea-9171-a058a6c373bb', 2, NULL, 'Abendlied', 'Abendlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 WoO 11' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:10aea2cf-bea5-4bea-9171-a058a6c373bb'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d77a70f3-07d0-41a4-aa10-38875023621c', 3, NULL, 'Wasserfahrt', 'Wasserfahrt', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '2중창곡 WoO 11' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d77a70f3-07d0-41a4-aa10-38875023621c'
+);
+
+
+-- MWV B 27 합창곡 <Lord, have mercy upon us>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '합창곡 <Lord, have mercy upon us>', 'Lord, have mercy upon us', 'song', 'MWV B 27', NULL, NULL, 1833, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '합창곡 <Lord, have mercy upon us>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e7a819cc-6540-4690-a4b4-15c2baa993d1'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'e7a819cc-6540-4690-a4b4-15c2baa993d1'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '합창곡 <Lord, have mercy upon us>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'e7a819cc-6540-4690-a4b4-15c2baa993d1'
+);
+
+
+-- WoO 13 전주곡과 푸가 E단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '전주곡과 푸가 E단조', 'Prelude and Fugue in E minor', 'album', 'WoO 13', NULL, NULL, 1841, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '전주곡과 푸가 E단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '033d6b0e-91b7-45de-84bc-18b271d49f08'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '033d6b0e-91b7-45de-84bc-18b271d49f08'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 E단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '033d6b0e-91b7-45de-84bc-18b271d49f08'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:00806e39-87d1-4720-ab0d-d4d3ef98f607', 1, 'I', '전주곡', 'I. Prelude', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 E단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:00806e39-87d1-4720-ab0d-d4d3ef98f607'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:53192c6a-ef20-423c-8f1e-b5c968c3b580', 2, 'II', '푸가', 'II. Fugue', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '전주곡과 푸가 E단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:53192c6a-ef20-423c-8f1e-b5c968c3b580'
+);
+
+
+-- MWV B 49 찬가 <내 기도를 들으소서>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '찬가 <내 기도를 들으소서>', 'Hymn "Hear My Prayer" (Hör mein Bitten)', 'song', 'MWV B 49', NULL, NULL, 1844, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '찬가 <내 기도를 들으소서>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '46dce3a3-f671-4066-8a92-ac23150f789a'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '46dce3a3-f671-4066-8a92-ac23150f789a'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '찬가 <내 기도를 들으소서>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '46dce3a3-f671-4066-8a92-ac23150f789a'
+);
+
+
+-- MWV K 105 가곡 <Warnung vor dem Rhein>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 <Warnung vor dem Rhein>', 'Warnung vor dem Rhein', 'song', 'MWV K 105', NULL, NULL, 1840, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 <Warnung vor dem Rhein>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '1423cac7-21ce-47cc-9e49-9311824074da'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '1423cac7-21ce-47cc-9e49-9311824074da'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 <Warnung vor dem Rhein>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '1423cac7-21ce-47cc-9e49-9311824074da'
+);
+
+
+-- WoO 17 가곡 WoO 17
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 WoO 17', '2 Songs, WoO 17', 'album', NULL, 'WoO', '17', 1835, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 WoO 17'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'db7c4887-bcc2-4f1d-b38a-9cf5dffed52c'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'db7c4887-bcc2-4f1d-b38a-9cf5dffed52c'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 WoO 17' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'db7c4887-bcc2-4f1d-b38a-9cf5dffed52c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:fa86e096-8d29-423f-9004-f17ca2504a84', 1, NULL, 'Das Waldschloss', 'Das Waldschloss', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 WoO 17' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fa86e096-8d29-423f-9004-f17ca2504a84'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:04501710-b8c4-4835-beee-f6d6437a6d13', 2, NULL, 'Pagenlied', 'Pagenlied', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 WoO 17' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:04501710-b8c4-4835-beee-f6d6437a6d13'
+);
+
+
+-- WoO 18 가곡 WoO 18
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 WoO 18', '2 Songs, WoO 18', 'album', NULL, 'WoO', '18', 1841, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 WoO 18'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0203b0a8-f6f1-4245-a5e9-992ff87ab123', 1, NULL, 'Ich hör'' ein Vöglein', 'Ich hör'' ein Vöglein', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 WoO 18' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0203b0a8-f6f1-4245-a5e9-992ff87ab123'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'classicmap:mendelssohn:mendelssohn-woo18:2', 2, NULL, 'Todeslied der Bojaren', 'Todeslied der Bojaren', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 WoO 18' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'classicmap:mendelssohn:mendelssohn-woo18:2'
+);
+
+
+-- WoO 19 피아노 소품 WoO 19
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 소품 WoO 19', '2 Piano Pieces, WoO 19', 'album', NULL, 'WoO', '19', 1833, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 소품 WoO 19'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ea7d6e64-7a87-4d2d-b5ca-b4cd951ec0bd'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'ea7d6e64-7a87-4d2d-b5ca-b4cd951ec0bd'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소품 WoO 19' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ea7d6e64-7a87-4d2d-b5ca-b4cd951ec0bd'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c008d6b8-4355-4d37-b2bd-5f1c3818268f', 1, NULL, '안단테 칸타빌레 B♭장조', 'No. 1 Andante cantabile in B♭ major', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소품 WoO 19' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c008d6b8-4355-4d37-b2bd-5f1c3818268f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1a194a04-76f8-449e-8ab1-c3e941200f60', 2, NULL, '프레스토 아지타토 G단조', 'No. 2 Presto agitato in G minor', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 소품 WoO 19' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1a194a04-76f8-449e-8ab1-c3e941200f60'
+);
+
+
+-- MWV K 48 가곡 <Seemanns Scheidelied>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 <Seemanns Scheidelied>', 'Seemanns Scheidelied', 'song', 'MWV K 48', NULL, NULL, 1831, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 <Seemanns Scheidelied>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '7cf36ec7-1d4c-47e1-ae05-4cb7fa95fc61'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '7cf36ec7-1d4c-47e1-ae05-4cb7fa95fc61'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '가곡 <Seemanns Scheidelied>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '7cf36ec7-1d4c-47e1-ae05-4cb7fa95fc61'
+);
+
+
+-- MWV G 29 남성 합창곡 <Nachtgesang>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '남성 합창곡 <Nachtgesang>', 'Nachtgesang', 'song', 'MWV G 29', NULL, NULL, 1840, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '남성 합창곡 <Nachtgesang>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '76b68bc0-57ca-4b78-946a-94e3d6ca3749'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '76b68bc0-57ca-4b78-946a-94e3d6ca3749'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 <Nachtgesang>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '76b68bc0-57ca-4b78-946a-94e3d6ca3749'
+);
+
+
+-- MWV G 32 남성 합창곡 <Die Stiftungsfeier>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '남성 합창곡 <Die Stiftungsfeier>', 'Die Stiftungsfeier', 'song', 'MWV G 32', NULL, NULL, 1842, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '남성 합창곡 <Die Stiftungsfeier>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a8adf28f-b332-4c0e-bffc-52dfc8ebf7ed'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'a8adf28f-b332-4c0e-bffc-52dfc8ebf7ed'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '남성 합창곡 <Die Stiftungsfeier>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a8adf28f-b332-4c0e-bffc-52dfc8ebf7ed'
+);
+
+
+-- MWV K 25 가곡 <Des Mädchens Klage>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '가곡 <Des Mädchens Klage>', 'Des Mädchens Klage', 'song', 'MWV K 25', NULL, NULL, 1825, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '가곡 <Des Mädchens Klage>'
+);
+
+
+-- MWV O 9 베버 <프레치오사> 주제에 의한 협주적 2중주
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '베버 <프레치오사> 주제에 의한 협주적 2중주', 'Duo concertant: Variations on Weber''s "Preciosa" March', 'song', 'MWV O 9', NULL, NULL, 1833, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '베버 <프레치오사> 주제에 의한 협주적 2중주'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '4f76f4c1-f535-41ce-bf36-522b0a2b17da'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '4f76f4c1-f535-41ce-bf36-522b0a2b17da'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '베버 <프레치오사> 주제에 의한 협주적 2중주' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '4f76f4c1-f535-41ce-bf36-522b0a2b17da'
+);
+
+
+-- MWV B 45 시편 100편
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 100편', 'Psalm 100 "Jauchzet dem Herrn, alle Welt"', 'song', 'MWV B 45', NULL, NULL, 1844, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 100편'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'faf5af1a-fcb7-4b40-bcda-2d817728dda5'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'faf5af1a-fcb7-4b40-bcda-2d817728dda5'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 100편' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'faf5af1a-fcb7-4b40-bcda-2d817728dda5'
+);
+
+
+-- MWV B 25 테 데움 A장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '테 데움 A장조', 'Te Deum in A major', 'song', 'MWV B 25', NULL, NULL, 1832, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '테 데움 A장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5ee0111f-eed1-4838-8a2a-ec0590ae7469'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '5ee0111f-eed1-4838-8a2a-ec0590ae7469'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '테 데움 A장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5ee0111f-eed1-4838-8a2a-ec0590ae7469'
+);
+
+
+-- MWV O 1 피아노와 현을 위한 레치타티보 G단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노와 현을 위한 레치타티보 G단조', 'Recitative in G minor for Piano and Strings', 'song', 'MWV O 1', NULL, NULL, 1820, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노와 현을 위한 레치타티보 G단조'
+);
+
+
+-- MWV Q 3 피아노 3중주 C단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 3중주 C단조', 'Piano Trio in C minor (Piano, Violin and Viola)', 'album', 'MWV Q 3', NULL, NULL, 1820, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 3중주 C단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5c5f94b5-7aef-4464-82a1-e880d87bd558'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '5c5f94b5-7aef-4464-82a1-e880d87bd558'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 3중주 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5c5f94b5-7aef-4464-82a1-e880d87bd558'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:501305fc-baa8-4926-8d5b-0ed1e6bd34ed', 1, 'I', 'Allegro', 'I. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 3중주 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:501305fc-baa8-4926-8d5b-0ed1e6bd34ed'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6fd39600-5230-458c-b0f3-57562429e793', 2, 'II', '스케르초', 'II. Scherzo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 3중주 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6fd39600-5230-458c-b0f3-57562429e793'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:75701b6a-cd67-4fc3-bad1-2e4f449d1c2e', 3, 'III', 'Adagio', 'III. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 3중주 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:75701b6a-cd67-4fc3-bad1-2e4f449d1c2e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7e6fa533-f5a1-4e37-b337-f6766651fa6f', 4, 'IV', 'Allegro', 'IV. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 3중주 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7e6fa533-f5a1-4e37-b337-f6766651fa6f'
+);
+
+
+-- MWV Q 7 바이올린 소나타 F장조 (1820)
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '바이올린 소나타 F장조 (1820)', 'Violin Sonata in F major (1820)', 'album', 'MWV Q 7', NULL, NULL, 1820, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '바이올린 소나타 F장조 (1820)'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '7e6de414-7779-495d-8663-9d1f788cd456'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '7e6de414-7779-495d-8663-9d1f788cd456'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 소나타 F장조 (1820)' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '7e6de414-7779-495d-8663-9d1f788cd456'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:71113b94-1ac9-39da-9c6f-bb0850d58cf8', 1, 'I', 'Allegro', 'I. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 소나타 F장조 (1820)' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:71113b94-1ac9-39da-9c6f-bb0850d58cf8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b13ca354-0b16-36c4-a89a-2080eb2a9a22', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 소나타 F장조 (1820)' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b13ca354-0b16-36c4-a89a-2080eb2a9a22'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d08e6e41-1921-3f1a-8b41-66d2348457c0', 3, 'III', 'Presto', 'III. Presto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 소나타 F장조 (1820)' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d08e6e41-1921-3f1a-8b41-66d2348457c0'
+);
+
+
+-- MWV L 1 징슈필 <병사들의 연애 사건>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '징슈필 <병사들의 연애 사건>', 'Die Soldatenliebschaft', 'song', 'MWV L 1', NULL, NULL, 1820, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '징슈필 <병사들의 연애 사건>'
+);
+
+
+-- MWV N 1 현을 위한 교향곡 1번 C장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현을 위한 교향곡 1번 C장조', 'String Symphony No. 1 in C major', 'album', 'MWV N 1', NULL, NULL, 1821, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현을 위한 교향곡 1번 C장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '454205b2-d994-4db7-b372-e6aba502eab4'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '454205b2-d994-4db7-b372-e6aba502eab4'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 1번 C장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '454205b2-d994-4db7-b372-e6aba502eab4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b1e1f5c9-abad-4fc6-a5b6-c252d039b3ce', 1, 'I', 'Allegro', 'I. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 1번 C장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b1e1f5c9-abad-4fc6-a5b6-c252d039b3ce'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:cc0c36cd-4f21-435e-933d-2db3268704f6', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 1번 C장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cc0c36cd-4f21-435e-933d-2db3268704f6'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:458d722e-95f1-4ca5-ab15-7c3c3dee52ca', 3, 'III', 'Allegro', 'III. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 1번 C장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:458d722e-95f1-4ca5-ab15-7c3c3dee52ca'
+);
+
+
+-- MWV N 2 현을 위한 교향곡 2번 D장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현을 위한 교향곡 2번 D장조', 'String Symphony No. 2 in D major', 'album', 'MWV N 2', NULL, NULL, 1821, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현을 위한 교향곡 2번 D장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5b780498-ca84-4b72-a773-5ad607e61a07'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '5b780498-ca84-4b72-a773-5ad607e61a07'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 2번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5b780498-ca84-4b72-a773-5ad607e61a07'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e6ebe8f5-2961-4378-83a1-cd86c8e068a7', 1, 'I', 'Allegro', 'I. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 2번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e6ebe8f5-2961-4378-83a1-cd86c8e068a7'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:3eaa7c49-0f23-49ee-a1a7-b1e7f8115abb', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 2번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3eaa7c49-0f23-49ee-a1a7-b1e7f8115abb'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6d4b1351-926b-4704-b069-9bea7e54a9cf', 3, 'III', 'Allegro vivace', 'III. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 2번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6d4b1351-926b-4704-b069-9bea7e54a9cf'
+);
+
+
+-- MWV N 3 현을 위한 교향곡 3번 E단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현을 위한 교향곡 3번 E단조', 'String Symphony No. 3 in E minor', 'album', 'MWV N 3', NULL, NULL, 1821, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현을 위한 교향곡 3번 E단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '412d0b9d-d64d-4430-81c1-4d9791ee7acb'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '412d0b9d-d64d-4430-81c1-4d9791ee7acb'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 3번 E단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '412d0b9d-d64d-4430-81c1-4d9791ee7acb'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:cd4caca7-8a57-46ec-afbe-082fb0c90420', 1, 'I', 'Allegro di molto', 'I. Allegro di molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 3번 E단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cd4caca7-8a57-46ec-afbe-082fb0c90420'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:74b050a8-9bcd-4c6e-90b4-2c676554ad8c', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 3번 E단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:74b050a8-9bcd-4c6e-90b4-2c676554ad8c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:cd16fa6c-a316-4fd9-909d-d8beab94465f', 3, 'III', 'Allegro', 'III. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 3번 E단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cd16fa6c-a316-4fd9-909d-d8beab94465f'
+);
+
+
+-- MWV N 4 현을 위한 교향곡 4번 C단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현을 위한 교향곡 4번 C단조', 'String Symphony No. 4 in C minor', 'album', 'MWV N 4', NULL, NULL, 1821, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현을 위한 교향곡 4번 C단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '618ca68b-85d1-4151-b24e-f3e4ca5275f9'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '618ca68b-85d1-4151-b24e-f3e4ca5275f9'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 4번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '618ca68b-85d1-4151-b24e-f3e4ca5275f9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c1b53018-6e54-4d9f-99f9-ff42e6beb9db', 1, 'I', 'Grave – Allegro', 'I. Grave – Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 4번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c1b53018-6e54-4d9f-99f9-ff42e6beb9db'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5c55360a-7330-4d67-9a58-3af9c2717d7b', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 4번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5c55360a-7330-4d67-9a58-3af9c2717d7b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:69cdf20b-f734-4972-95e3-6d0d4480f0bc', 3, 'III', 'Allegro vivace', 'III. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 4번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:69cdf20b-f734-4972-95e3-6d0d4480f0bc'
+);
+
+
+-- MWV N 5 현을 위한 교향곡 5번 B♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현을 위한 교향곡 5번 B♭장조', 'String Symphony No. 5 in B♭ major', 'album', 'MWV N 5', NULL, NULL, 1821, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현을 위한 교향곡 5번 B♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '1d3610f9-f86a-470d-bed6-64b4935a90b4'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '1d3610f9-f86a-470d-bed6-64b4935a90b4'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 5번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '1d3610f9-f86a-470d-bed6-64b4935a90b4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:610dba7a-dddb-4528-98a9-991d624096ee', 1, 'I', 'Allegro vivace', 'I. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 5번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:610dba7a-dddb-4528-98a9-991d624096ee'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:253c4fff-3a26-4305-a2ef-7817afb83009', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 5번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:253c4fff-3a26-4305-a2ef-7817afb83009'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:109603d5-fb07-4265-b647-1b35fd1c810f', 3, 'III', 'Presto', 'III. Presto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 5번 B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:109603d5-fb07-4265-b647-1b35fd1c810f'
+);
+
+
+-- MWV N 6 현을 위한 교향곡 6번 E♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현을 위한 교향곡 6번 E♭장조', 'String Symphony No. 6 in E♭ major', 'album', 'MWV N 6', NULL, NULL, 1821, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현을 위한 교향곡 6번 E♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '0b63e07f-418d-4674-862a-edd65e645713'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '0b63e07f-418d-4674-862a-edd65e645713'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 6번 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '0b63e07f-418d-4674-862a-edd65e645713'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:bc527ced-e5e2-40ba-aed1-66e87523d9a1', 1, 'I', 'Allegro', 'I. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 6번 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bc527ced-e5e2-40ba-aed1-66e87523d9a1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e1b7313b-3372-43d1-b444-f906f56bf2df', 2, 'II', '미뉴에트', 'II. Menuetto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 6번 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e1b7313b-3372-43d1-b444-f906f56bf2df'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:239606db-e500-4a92-81bf-d84ed3781714', 3, 'III', 'Prestissimo', 'III. Prestissimo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 6번 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:239606db-e500-4a92-81bf-d84ed3781714'
+);
+
+
+-- MWV Q 10 피아노 4중주 D단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 4중주 D단조', 'Piano Quartet in D minor', 'song', 'MWV Q 10', NULL, NULL, 1821, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 4중주 D단조'
+);
+
+
+-- MWV L 2 징슈필 <두 교육자>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '징슈필 <두 교육자>', 'Die beiden Pädagogen', 'song', 'MWV L 2', NULL, NULL, 1821, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '징슈필 <두 교육자>'
+);
+
+
+-- MWV A 1 글로리아 E♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '글로리아 E♭장조', 'Gloria in E♭ major', 'song', 'MWV A 1', NULL, NULL, 1822, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '글로리아 E♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '30b8408a-c167-47dc-bf77-88b8d7f197e9'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '30b8408a-c167-47dc-bf77-88b8d7f197e9'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '글로리아 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '30b8408a-c167-47dc-bf77-88b8d7f197e9'
+);
+
+
+-- MWV A 2 마니피카트 D장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '마니피카트 D장조', 'Magnificat in D major', 'song', 'MWV A 2', NULL, NULL, 1822, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '마니피카트 D장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'be87ee98-ebda-43d2-8ce4-0efa167bc65d'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'be87ee98-ebda-43d2-8ce4-0efa167bc65d'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '마니피카트 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'be87ee98-ebda-43d2-8ce4-0efa167bc65d'
+);
+
+
+-- MWV N 7 현을 위한 교향곡 7번 D단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현을 위한 교향곡 7번 D단조', 'String Symphony No. 7 in D minor', 'album', 'MWV N 7', NULL, NULL, 1822, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현을 위한 교향곡 7번 D단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '6da167f2-472a-4e9a-9c68-0cbe2eaed0f1'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '6da167f2-472a-4e9a-9c68-0cbe2eaed0f1'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 7번 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '6da167f2-472a-4e9a-9c68-0cbe2eaed0f1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:098e836d-ce5d-4707-89ac-2854a98ad5ba', 1, 'I', 'Allegro', 'I. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 7번 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:098e836d-ce5d-4707-89ac-2854a98ad5ba'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:cd6c0da3-cfa5-483e-ad60-7eacb552af44', 2, 'II', 'Andante amorevole', 'II. Andante amorevole', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 7번 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cd6c0da3-cfa5-483e-ad60-7eacb552af44'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7270cc8c-5266-44ab-afde-f87dae1c8c15', 3, 'III', '미뉴에트', 'III. Menuetto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 7번 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7270cc8c-5266-44ab-afde-f87dae1c8c15'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b1a609f6-2467-4aaa-ac66-77d8df7e36e3', 4, 'IV', 'Allegro molto', 'IV. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 7번 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b1a609f6-2467-4aaa-ac66-77d8df7e36e3'
+);
+
+
+-- MWV N 8 현을 위한 교향곡 8번 D장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현을 위한 교향곡 8번 D장조', 'String Symphony No. 8 in D major', 'album', 'MWV N 8', NULL, NULL, 1822, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현을 위한 교향곡 8번 D장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '7d96f8b3-162a-457d-8db2-f92222909e2d'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '7d96f8b3-162a-457d-8db2-f92222909e2d'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 8번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '7d96f8b3-162a-457d-8db2-f92222909e2d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6397b13b-7942-4ff3-935d-8c446b41312a', 1, 'I', 'Adagio e grave – Allegro', 'I. Adagio e grave – Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 8번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6397b13b-7942-4ff3-935d-8c446b41312a'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8c360617-aa1d-4f64-8606-e504a2e25508', 2, 'II', 'Adagio', 'II. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 8번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8c360617-aa1d-4f64-8606-e504a2e25508'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0ff22347-768a-4997-b730-93fc14847ddc', 3, 'III', '미뉴에트', 'III. Menuetto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 8번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0ff22347-768a-4997-b730-93fc14847ddc'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e46729d0-b6b5-4ec4-ba20-387182294e6d', 4, 'IV', 'Allegro molto', 'IV. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 8번 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e46729d0-b6b5-4ec4-ba20-387182294e6d'
+);
+
+
+-- MWV O 2 피아노 협주곡 A단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '피아노 협주곡 A단조', 'Piano Concerto in A minor', 'album', 'MWV O 2', NULL, NULL, 1822, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '피아노 협주곡 A단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '3301c1a8-0351-4ca2-a9d4-9b34a5ab7c6d'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '3301c1a8-0351-4ca2-a9d4-9b34a5ab7c6d'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 협주곡 A단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '3301c1a8-0351-4ca2-a9d4-9b34a5ab7c6d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:dd2650af-8bb4-458d-b8cf-789da672ff97', 1, 'I', 'Allegro', 'I. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 협주곡 A단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:dd2650af-8bb4-458d-b8cf-789da672ff97'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c96ee0fd-1a41-4e79-8b23-f9027ba07003', 2, 'II', 'Adagio', 'II. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 협주곡 A단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c96ee0fd-1a41-4e79-8b23-f9027ba07003'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:dc72305b-7daf-4261-94a4-b76a1c203d79', 3, 'III', 'Allegro ma non troppo', 'III. Allegro ma non troppo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '피아노 협주곡 A단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:dc72305b-7daf-4261-94a4-b76a1c203d79'
+);
+
+
+-- MWV O 3 바이올린 협주곡 D단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '바이올린 협주곡 D단조', 'Violin Concerto in D minor', 'album', 'MWV O 3', NULL, NULL, 1823, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '바이올린 협주곡 D단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '296ab5d2-b7d0-4f02-af27-3a4a5f388ad4'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '296ab5d2-b7d0-4f02-af27-3a4a5f388ad4'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 협주곡 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '296ab5d2-b7d0-4f02-af27-3a4a5f388ad4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:208f54cb-fe78-306c-8038-a1a784ba0d88', 1, 'I', 'Allegro molto', 'I. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 협주곡 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:208f54cb-fe78-306c-8038-a1a784ba0d88'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7a805101-d036-34e2-aa98-f74fe7a00053', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 협주곡 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7a805101-d036-34e2-aa98-f74fe7a00053'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0708489d-fc7c-361f-b03f-6864647bc286', 3, 'III', 'Allegro', 'III. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 협주곡 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0708489d-fc7c-361f-b03f-6864647bc286'
+);
+
+
+-- MWV L 3 징슈필 <떠돌이 희극배우들>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '징슈필 <떠돌이 희극배우들>', 'Die wandernden Komödianten', 'song', 'MWV L 3', NULL, NULL, 1822, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '징슈필 <떠돌이 희극배우들>'
+);
+
+
+-- MWV N 9 현을 위한 교향곡 9번 C장조 "스위스"
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현을 위한 교향곡 9번 C장조 "스위스"', 'String Symphony No. 9 in C major "Swiss"', 'album', 'MWV N 9', NULL, NULL, 1823, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현을 위한 교향곡 9번 C장조 "스위스"'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'b78beb11-5976-4597-9d7d-e1cbbc3e5984'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'b78beb11-5976-4597-9d7d-e1cbbc3e5984'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 9번 C장조 "스위스"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'b78beb11-5976-4597-9d7d-e1cbbc3e5984'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:84097167-ce2f-4689-89c3-68a2c6246728', 1, 'I', 'Grave – Allegro', 'I. Grave – Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 9번 C장조 "스위스"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:84097167-ce2f-4689-89c3-68a2c6246728'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f35e40f6-5447-4eb5-b700-5d9b5abebadf', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 9번 C장조 "스위스"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f35e40f6-5447-4eb5-b700-5d9b5abebadf'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:3305984a-3397-46d4-982e-318e3b2c2c04', 3, 'III', '스케르초 – Trio più lento', 'III. Scherzo – Trio più lento', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 9번 C장조 "스위스"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3305984a-3397-46d4-982e-318e3b2c2c04'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:212a5c08-fcb8-4d42-9437-dc523691f78f', 4, 'IV', 'Allegro vivace', 'IV. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 9번 C장조 "스위스"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:212a5c08-fcb8-4d42-9437-dc523691f78f'
+);
+
+
+-- MWV N 10 현을 위한 교향곡 10번 B단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현을 위한 교향곡 10번 B단조', 'String Symphony No. 10 in B minor', 'song', 'MWV N 10', NULL, NULL, 1823, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현을 위한 교향곡 10번 B단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '971b1f9a-284c-387e-b22b-6e1e7b39cefe'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '971b1f9a-284c-387e-b22b-6e1e7b39cefe'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 10번 B단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '971b1f9a-284c-387e-b22b-6e1e7b39cefe'
+);
+
+
+-- MWV N 11 현을 위한 교향곡 11번 F장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현을 위한 교향곡 11번 F장조', 'String Symphony No. 11 in F major', 'album', 'MWV N 11', NULL, NULL, 1823, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현을 위한 교향곡 11번 F장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '6417717b-39da-4b37-840b-b7a94098bafb'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '6417717b-39da-4b37-840b-b7a94098bafb'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 11번 F장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '6417717b-39da-4b37-840b-b7a94098bafb'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:cd99b4e4-b969-39c4-8af1-37b6b624f4e8', 1, 'I', 'Adagio – Allegro molto', 'I. Adagio – Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 11번 F장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cd99b4e4-b969-39c4-8af1-37b6b624f4e8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:3b80f64d-0eb9-3d0a-8a8f-4352ac52b46c', 2, 'II', '스케르초. Comodo "Schweizerlied"', 'II. Scherzo. Comodo "Schweizerlied"', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 11번 F장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3b80f64d-0eb9-3d0a-8a8f-4352ac52b46c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:075dda30-9a0d-3155-9b7c-f58b4d0bd6fa', 3, 'III', 'Adagio', 'III. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 11번 F장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:075dda30-9a0d-3155-9b7c-f58b4d0bd6fa'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c8e8616a-3f60-3fef-8442-d37b545b8351', 4, 'IV', '미뉴에트. Allegro moderato', 'IV. Menuetto. Allegro moderato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 11번 F장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c8e8616a-3f60-3fef-8442-d37b545b8351'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c4278c14-e47c-3280-b9a1-fdcfbcceaa42', 5, 'V', 'Allegro molto', 'V. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 11번 F장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c4278c14-e47c-3280-b9a1-fdcfbcceaa42'
+);
+
+
+-- MWV N 12 현을 위한 교향곡 12번 G단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현을 위한 교향곡 12번 G단조', 'String Symphony No. 12 in G minor', 'album', 'MWV N 12', NULL, NULL, 1823, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현을 위한 교향곡 12번 G단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '00326b50-1be4-449c-a557-71fbeedf5056'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '00326b50-1be4-449c-a557-71fbeedf5056'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 12번 G단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '00326b50-1be4-449c-a557-71fbeedf5056'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:cdcc3121-2f7f-46db-9bb0-30bc9b097fd4', 1, 'I', '푸가. Grave – Allegro', 'I. Fuga. Grave – Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 12번 G단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cdcc3121-2f7f-46db-9bb0-30bc9b097fd4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ba8505e3-50a9-4156-a2c3-a8b72bc1906d', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 12번 G단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ba8505e3-50a9-4156-a2c3-a8b72bc1906d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:859dac0a-a9dd-4a72-9376-9362cae94f03', 3, 'III', 'Allegro molto', 'III. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 12번 G단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:859dac0a-a9dd-4a72-9376-9362cae94f03'
+);
+
+
+-- MWV N 14 현을 위한 교향곡 13번 C단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현을 위한 교향곡 13번 C단조', 'String Symphony No. 13 in C minor "Sinfoniesatz"', 'song', 'MWV N 14', NULL, NULL, 1823, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현을 위한 교향곡 13번 C단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '26514f91-a047-42d0-8ec4-06388464c287'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '26514f91-a047-42d0-8ec4-06388464c287'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현을 위한 교향곡 13번 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '26514f91-a047-42d0-8ec4-06388464c287'
+);
+
+
+-- MWV O 4 바이올린과 피아노를 위한 협주곡 D단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '바이올린과 피아노를 위한 협주곡 D단조', 'Concerto for Violin, Piano and Strings in D minor', 'album', 'MWV O 4', NULL, NULL, 1823, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '바이올린과 피아노를 위한 협주곡 D단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '0d3400ee-6e79-41c8-89e8-38413faac50e'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '0d3400ee-6e79-41c8-89e8-38413faac50e'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린과 피아노를 위한 협주곡 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '0d3400ee-6e79-41c8-89e8-38413faac50e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b5ae360d-6d43-3000-be20-3be629323703', 1, 'I', 'Allegro', 'I. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린과 피아노를 위한 협주곡 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b5ae360d-6d43-3000-be20-3be629323703'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4143f202-3c40-3bec-b567-52eecfdbbf1d', 2, 'II', 'Adagio', 'II. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린과 피아노를 위한 협주곡 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4143f202-3c40-3bec-b567-52eecfdbbf1d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:deeb0d18-c8e3-317b-9bfe-50055e98899c', 3, 'III', 'Allegro molto', 'III. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린과 피아노를 위한 협주곡 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:deeb0d18-c8e3-317b-9bfe-50055e98899c'
+);
+
+
+-- MWV O 5 두 대의 피아노를 위한 협주곡 E장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '두 대의 피아노를 위한 협주곡 E장조', 'Concerto for Two Pianos in E major', 'album', 'MWV O 5', NULL, NULL, 1823, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '두 대의 피아노를 위한 협주곡 E장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ea5d3af0-f5c6-4f7c-a639-1420cc83f164'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'ea5d3af0-f5c6-4f7c-a639-1420cc83f164'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '두 대의 피아노를 위한 협주곡 E장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ea5d3af0-f5c6-4f7c-a639-1420cc83f164'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:aa893668-8490-4579-b5ca-0c71ee16204f', 1, 'I', 'Allegro vivace', 'I. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '두 대의 피아노를 위한 협주곡 E장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:aa893668-8490-4579-b5ca-0c71ee16204f'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:29a0e044-05aa-4014-838d-571f07538fa8', 2, 'II', 'Adagio non troppo', 'II. Adagio non troppo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '두 대의 피아노를 위한 협주곡 E장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:29a0e044-05aa-4014-838d-571f07538fa8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f3765f3e-2d48-4212-8545-0d92fcd44be6', 3, 'III', 'Allegro', 'III. Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '두 대의 피아노를 위한 협주곡 E장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f3765f3e-2d48-4212-8545-0d92fcd44be6'
+);
+
+
+-- MWV R 18 현악 4중주 E♭장조 (1823)
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '현악 4중주 E♭장조 (1823)', 'String Quartet in E♭ major (1823)', 'album', 'MWV R 18', NULL, NULL, 1823, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '현악 4중주 E♭장조 (1823)'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '721de596-52f1-4a72-8995-96d972814fed'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '721de596-52f1-4a72-8995-96d972814fed'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 E♭장조 (1823)' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '721de596-52f1-4a72-8995-96d972814fed'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b4374ab0-bf6a-3b78-ba4d-4f3cf92c7a1e', 1, 'I', 'Allegro moderato', 'I. Allegro moderato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 E♭장조 (1823)' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b4374ab0-bf6a-3b78-ba4d-4f3cf92c7a1e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f3d8ec7c-f0da-35f9-a11c-b3ed0924f9a5', 2, 'II', 'Adagio non troppo', 'II. Adagio non troppo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 E♭장조 (1823)' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f3d8ec7c-f0da-35f9-a11c-b3ed0924f9a5'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9d7fb4e5-b960-316c-a20e-d9735b48d0c0', 3, 'III', '미뉴에트', 'III. Minuetto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 E♭장조 (1823)' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9d7fb4e5-b960-316c-a20e-d9735b48d0c0'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4f0aff6a-5d3d-3f3f-b528-a7f7746809c4', 4, 'IV', '푸가', 'IV. Fuga', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '현악 4중주 E♭장조 (1823)' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4f0aff6a-5d3d-3f3f-b528-a7f7746809c4'
+);
+
+
+-- MWV L 4 징슈필 <보스턴에서 온 삼촌>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '징슈필 <보스턴에서 온 삼촌>', 'Der Onkel aus Boston, oder Die beiden Neffen', 'song', 'MWV L 4', NULL, NULL, 1823, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '징슈필 <보스턴에서 온 삼촌>'
+);
+
+
+-- MWV B 12 키리에 C단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '키리에 C단조', 'Kyrie in C minor', 'song', 'MWV B 12', NULL, NULL, 1823, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '키리에 C단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '8e43e320-34bd-4bc0-927e-e0657f8f8726'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '8e43e320-34bd-4bc0-927e-e0657f8f8726'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '키리에 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '8e43e320-34bd-4bc0-927e-e0657f8f8726'
+);
+
+
+-- MWV Q 14 비올라 소나타 C단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '비올라 소나타 C단조', 'Viola Sonata in C minor', 'album', 'MWV Q 14', NULL, NULL, 1824, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '비올라 소나타 C단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'b40b0da8-7ce4-4ecd-ad5d-3f22b1081852'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'b40b0da8-7ce4-4ecd-ad5d-3f22b1081852'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '비올라 소나타 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'b40b0da8-7ce4-4ecd-ad5d-3f22b1081852'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e92db3d0-14db-42cd-b858-da04facd5b80', 1, 'I', 'Adagio – Allegro', 'I. Adagio – Allegro', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '비올라 소나타 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e92db3d0-14db-42cd-b858-da04facd5b80'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b0ee8048-935d-4c6a-a414-634600f52868', 2, 'II', '미뉴에트. Allegro molto', 'II. Menuetto. Allegro molto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '비올라 소나타 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b0ee8048-935d-4c6a-a414-634600f52868'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:03d18ef4-7f93-4311-ba3e-4f1ece3dfdd8', 3, 'III', 'Andante con variazioni', 'III. Andante con variazioni', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '비올라 소나타 C단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:03d18ef4-7f93-4311-ba3e-4f1ece3dfdd8'
+);
+
+
+-- MWV O 6 두 대의 피아노를 위한 협주곡 A♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '두 대의 피아노를 위한 협주곡 A♭장조', 'Concerto for Two Pianos in A♭ major', 'album', 'MWV O 6', NULL, NULL, 1824, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '두 대의 피아노를 위한 협주곡 A♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '16aaee65-7e29-4d1a-aada-cb84bba95bda'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '16aaee65-7e29-4d1a-aada-cb84bba95bda'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '두 대의 피아노를 위한 협주곡 A♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '16aaee65-7e29-4d1a-aada-cb84bba95bda'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0d190da8-6359-41f3-990c-ae330ca5cc29', 1, 'I', 'Allegro vivace', 'I. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '두 대의 피아노를 위한 협주곡 A♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0d190da8-6359-41f3-990c-ae330ca5cc29'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:05ec96be-2c3a-4752-9ebb-e771409199c4', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '두 대의 피아노를 위한 협주곡 A♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:05ec96be-2c3a-4752-9ebb-e771409199c4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:bc09baf5-3ba4-43d4-9b05-f77bb5c52020', 3, 'III', 'Allegro vivace', 'III. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '두 대의 피아노를 위한 협주곡 A♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bc09baf5-3ba4-43d4-9b05-f77bb5c52020'
+);
+
+
+-- MWV Q 15 클라리넷 소나타 E♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '클라리넷 소나타 E♭장조', 'Clarinet Sonata in E♭ major', 'album', 'MWV Q 15', NULL, NULL, 1824, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '클라리넷 소나타 E♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c897018c-ed3f-4c8a-b5ed-d61bdf54bcf0'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'c897018c-ed3f-4c8a-b5ed-d61bdf54bcf0'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '클라리넷 소나타 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c897018c-ed3f-4c8a-b5ed-d61bdf54bcf0'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:50fcf9c6-ee40-4f46-9934-8fd362ef602b', 1, 'I', 'Adagio – Allegro moderato', 'I. Adagio – Allegro moderato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '클라리넷 소나타 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:50fcf9c6-ee40-4f46-9934-8fd362ef602b'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:04bb91c0-3333-4426-90aa-2fb3f5a89883', 2, 'II', 'Andante', 'II. Andante', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '클라리넷 소나타 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:04bb91c0-3333-4426-90aa-2fb3f5a89883'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0ae0cc88-1bba-4be7-a1f8-b098eca31b2d', 3, 'III', 'Allegro moderato', 'III. Allegro moderato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '클라리넷 소나타 E♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0ae0cc88-1bba-4be7-a1f8-b098eca31b2d'
+);
+
+
+-- MWV A 3 키리에 D단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '키리에 D단조', 'Kyrie in D minor', 'song', 'MWV A 3', NULL, NULL, 1825, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '키리에 D단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '2825b4f3-2eae-474e-8471-1dbf737c8f9a'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '2825b4f3-2eae-474e-8471-1dbf737c8f9a'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '키리에 D단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '2825b4f3-2eae-474e-8471-1dbf737c8f9a'
+);
+
+
+-- MWV B 15 테 데움 D장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '테 데움 D장조', 'Te Deum in D major', 'song', 'MWV B 15', NULL, NULL, 1826, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '테 데움 D장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '7994a281-925d-4d46-a4c0-94e8f762badd'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '7994a281-925d-4d46-a4c0-94e8f762badd'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '테 데움 D장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '7994a281-925d-4d46-a4c0-94e8f762badd'
+);
+
+
+-- MWV Q 20 <저녁 종> B♭장조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '<저녁 종> B♭장조', 'The Evening Bell in B♭ major', 'song', 'MWV Q 20', NULL, NULL, 1829, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '<저녁 종> B♭장조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5d43f3cf-116c-465f-8a07-b728c6f11af3'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '5d43f3cf-116c-465f-8a07-b728c6f11af3'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '<저녁 종> B♭장조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5d43f3cf-116c-465f-8a07-b728c6f11af3'
+);
+
+
+-- MWV R 24 <목동의 노래> G단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '<목동의 노래> G단조', 'The Shepherd''s Song in G minor', 'song', 'MWV R 24', NULL, NULL, NULL, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '<목동의 노래> G단조'
+);
+
+
+-- MWV Q 25 아사이 트란퀼로 B단조
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '아사이 트란퀼로 B단조', 'Assai tranquillo in B minor', 'song', 'MWV Q 25', NULL, NULL, 1835, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '아사이 트란퀼로 B단조'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'eec8b385-7c79-41ae-b070-21ad0bdee457'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'eec8b385-7c79-41ae-b070-21ad0bdee457'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '아사이 트란퀼로 B단조' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'eec8b385-7c79-41ae-b070-21ad0bdee457'
+);
+
+
+-- MWV Q 26 바이올린 소나타 F장조 (1838)
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '바이올린 소나타 F장조 (1838)', 'Violin Sonata in F major (1838)', 'album', 'MWV Q 26', NULL, NULL, 1838, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '바이올린 소나타 F장조 (1838)'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'fd434e3f-2002-4d25-a1f9-b918e2b5fe72'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'fd434e3f-2002-4d25-a1f9-b918e2b5fe72'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 소나타 F장조 (1838)' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'fd434e3f-2002-4d25-a1f9-b918e2b5fe72'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:31d574fe-ab25-3644-b851-f74b86663cdf', 1, 'I', 'Allegro vivace', 'I. Allegro vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 소나타 F장조 (1838)' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:31d574fe-ab25-3644-b851-f74b86663cdf'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:66f6a3a9-e953-3d96-a908-cdbb1c4e46e8', 2, 'II', 'Adagio', 'II. Adagio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 소나타 F장조 (1838)' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:66f6a3a9-e953-3d96-a908-cdbb1c4e46e8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:27fe82b5-a63e-3e09-a934-d83c5f5fc614', 3, 'III', 'Assai vivace', 'III. Assai vivace', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '바이올린 소나타 F장조 (1838)' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:27fe82b5-a63e-3e09-a934-d83c5f5fc614'
+);
+
+
+-- MWV B 31 시편 5편
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 5편', 'Psalm 5 "Lord, hear the voice of my complaint"', 'song', 'MWV B 31', NULL, NULL, 1839, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 5편'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ba748714-3c73-4f62-ae8b-62041eb48dbe'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'ba748714-3c73-4f62-ae8b-62041eb48dbe'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 5편' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ba748714-3c73-4f62-ae8b-62041eb48dbe'
+);
+
+
+-- MWV B 32 시편 31편
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 31편', 'Psalm 31 "Defend me, Lord, from shame"', 'song', 'MWV B 32', NULL, NULL, 1839, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 31편'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '158396f5-9136-4a4a-b8e8-b4db5eb852db'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '158396f5-9136-4a4a-b8e8-b4db5eb852db'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 31편' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '158396f5-9136-4a4a-b8e8-b4db5eb852db'
+);
+
+
+-- MWV A 5 코랄 칸타타 <Christe, du Lamm Gottes>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '코랄 칸타타 <Christe, du Lamm Gottes>', 'Christe, du Lamm Gottes', 'song', 'MWV A 5', NULL, NULL, 1827, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '코랄 칸타타 <Christe, du Lamm Gottes>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a01bee4c-2b09-4cf8-8661-c1174e01601f'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'a01bee4c-2b09-4cf8-8661-c1174e01601f'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '코랄 칸타타 <Christe, du Lamm Gottes>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a01bee4c-2b09-4cf8-8661-c1174e01601f'
+);
+
+
+-- MWV A 6 코랄 칸타타 <Jesu, meine Freude>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '코랄 칸타타 <Jesu, meine Freude>', 'Jesu, meine Freude', 'song', 'MWV A 6', NULL, NULL, 1828, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '코랄 칸타타 <Jesu, meine Freude>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c7af8157-de51-41e0-a163-cfe73880f60d'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'c7af8157-de51-41e0-a163-cfe73880f60d'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '코랄 칸타타 <Jesu, meine Freude>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'c7af8157-de51-41e0-a163-cfe73880f60d'
+);
+
+
+-- MWV A 7 코랄 칸타타 <Wer nur den lieben Gott läßt walten>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '코랄 칸타타 <Wer nur den lieben Gott läßt walten>', 'Wer nur den lieben Gott läßt walten', 'song', 'MWV A 7', NULL, NULL, 1829, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '코랄 칸타타 <Wer nur den lieben Gott läßt walten>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '8b9d9675-4747-4c4c-a8fa-8fb0155a96df'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '8b9d9675-4747-4c4c-a8fa-8fb0155a96df'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '코랄 칸타타 <Wer nur den lieben Gott läßt walten>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '8b9d9675-4747-4c4c-a8fa-8fb0155a96df'
+);
+
+
+-- MWV A 8 코랄 칸타타 <O Haupt voll Blut und Wunden>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '코랄 칸타타 <O Haupt voll Blut und Wunden>', 'O Haupt voll Blut und Wunden', 'song', 'MWV A 8', NULL, NULL, 1830, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '코랄 칸타타 <O Haupt voll Blut und Wunden>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a93d192a-6bb1-450d-89ea-2b462346bfae'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'a93d192a-6bb1-450d-89ea-2b462346bfae'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '코랄 칸타타 <O Haupt voll Blut und Wunden>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'a93d192a-6bb1-450d-89ea-2b462346bfae'
+);
+
+
+-- MWV A 10 코랄 칸타타 <Vom Himmel hoch>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '코랄 칸타타 <Vom Himmel hoch>', 'Vom Himmel hoch', 'song', 'MWV A 10', NULL, NULL, 1831, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '코랄 칸타타 <Vom Himmel hoch>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '38f29d41-7bfc-4480-a422-86bf2a38f0eb'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '38f29d41-7bfc-4480-a422-86bf2a38f0eb'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '코랄 칸타타 <Vom Himmel hoch>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '38f29d41-7bfc-4480-a422-86bf2a38f0eb'
+);
+
+
+-- MWV A 12 코랄 칸타타 <Wir glauben all an einen Gott>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '코랄 칸타타 <Wir glauben all an einen Gott>', 'Wir glauben all an einen Gott', 'song', 'MWV A 12', NULL, NULL, 1831, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '코랄 칸타타 <Wir glauben all an einen Gott>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ff0babdb-7599-4769-ac0b-3fd510fffca8'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'ff0babdb-7599-4769-ac0b-3fd510fffca8'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '코랄 칸타타 <Wir glauben all an einen Gott>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'ff0babdb-7599-4769-ac0b-3fd510fffca8'
+);
+
+
+-- MWV A 13 코랄 칸타타 <Ach Gott, vom Himmel sieh darein>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '코랄 칸타타 <Ach Gott, vom Himmel sieh darein>', 'Ach Gott, vom Himmel sieh darein', 'song', 'MWV A 13', NULL, NULL, 1832, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '코랄 칸타타 <Ach Gott, vom Himmel sieh darein>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f7a72b90-d212-48c6-a6ee-109e2a418c0d'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'f7a72b90-d212-48c6-a6ee-109e2a418c0d'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '코랄 칸타타 <Ach Gott, vom Himmel sieh darein>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f7a72b90-d212-48c6-a6ee-109e2a418c0d'
+);
+
+
+-- MWV B 1 시편 119편 "Ich weiche nicht"
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 119편 "Ich weiche nicht"', 'Psalm 119 "Ich weiche nicht"', 'song', 'MWV B 1', NULL, NULL, 1822, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 119편 "Ich weiche nicht"'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'd3edf393-cdcd-48bd-990e-bb4ce7eae729'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'd3edf393-cdcd-48bd-990e-bb4ce7eae729'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 119편 "Ich weiche nicht"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'd3edf393-cdcd-48bd-990e-bb4ce7eae729'
+);
+
+
+-- MWV B 2 시편 119편 "Deine Rede präge ich in meinem Herzen"
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 119편 "Deine Rede präge ich in meinem Herzen"', 'Psalm 119 "Deine Rede präge ich in meinem Herzen"', 'song', 'MWV B 2', NULL, NULL, 1822, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 119편 "Deine Rede präge ich in meinem Herzen"'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '3dd5d547-b182-4a33-84b3-3f4d37708aad'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '3dd5d547-b182-4a33-84b3-3f4d37708aad'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 119편 "Deine Rede präge ich in meinem Herzen"' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '3dd5d547-b182-4a33-84b3-3f4d37708aad'
+);
+
+
+-- MWV B 5 시편 46편
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 46편', 'Psalm 46 "Gott, du bist unsre Zuversicht"', 'song', 'MWV B 5', NULL, NULL, 1821, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 46편'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'd7818052-30c9-4207-b50a-180093631f4e'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'd7818052-30c9-4207-b50a-180093631f4e'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 46편' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'd7818052-30c9-4207-b50a-180093631f4e'
+);
+
+
+-- MWV B 6 시편 19편
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 19편', 'Psalm 19 "Die Himmel erzählen"', 'song', 'MWV B 6', NULL, NULL, 1821, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 19편'
+);
+
+
+-- MWV B 9 시편 66편
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 66편', 'Psalm 66 "Jauchzet Gott, alle Lande"', 'song', 'MWV B 9', NULL, NULL, 1822, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 66편'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '25bd4799-b022-4fdb-9295-374c37b722a7'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '25bd4799-b022-4fdb-9295-374c37b722a7'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 66편' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '25bd4799-b022-4fdb-9295-374c37b722a7'
+);
+
+
+-- MWV B 53 시편 91편
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '시편 91편', 'Psalm 91 "Denn er hat seinen Engeln befohlen"', 'song', 'MWV B 53', NULL, NULL, 1844, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '시편 91편'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '01917a82-ff90-446e-955a-d24e756dd12e'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '01917a82-ff90-446e-955a-d24e756dd12e'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '시편 91편' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '01917a82-ff90-446e-955a-d24e756dd12e'
+);
+
+
+-- MWV B 57 합창곡 <독일 전례>
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, '합창곡 <독일 전례>', 'Die Deutsche Liturgie', 'album', 'MWV B 57', NULL, NULL, 1846, 'manual', 1
+FROM composers c
+WHERE c.id = 27
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = '합창곡 <독일 전례>'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f82195b8-9e43-42fe-8daa-ef0d011d3197'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', 'f82195b8-9e43-42fe-8daa-ef0d011d3197'
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '합창곡 <독일 전례>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'f82195b8-9e43-42fe-8daa-ef0d011d3197'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'classicmap:mendelssohn:mendelssohn-mwvb57:1', 1, 'I', '아멘', 'I. Amen', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '합창곡 <독일 전례>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'classicmap:mendelssohn:mendelssohn-mwvb57:1'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'classicmap:mendelssohn:mendelssohn-mwvb57:2', 2, 'II', '영광송 (Ehre sei dem Vater)', 'II. Ehre sei dem Vater', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '합창곡 <독일 전례>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'classicmap:mendelssohn:mendelssohn-mwvb57:2'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b259bc9d-b2a4-47f1-acf3-f2ae2f4a461e', 3, 'III', '키리에', 'III. Kyrie eleison', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '합창곡 <독일 전례>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b259bc9d-b2a4-47f1-acf3-f2ae2f4a461e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ef9dbe60-c03b-4b33-af73-c83faa0f927e', 4, 'IV', '글로리아 (Ehre sei Gott in der Höhe)', 'IV. Ehre sei Gott in der Höhe', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '합창곡 <독일 전례>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ef9dbe60-c03b-4b33-af73-c83faa0f927e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'classicmap:mendelssohn:mendelssohn-mwvb57:5', 5, 'V', 'Und mit deinem Geiste', 'V. Und mit deinem Geiste', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '합창곡 <독일 전례>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'classicmap:mendelssohn:mendelssohn-mwvb57:5'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'classicmap:mendelssohn:mendelssohn-mwvb57:6', 6, 'VI', '아멘 (본기도 뒤)', 'VI. Amen (after the Collect)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '합창곡 <독일 전례>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'classicmap:mendelssohn:mendelssohn-mwvb57:6'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'classicmap:mendelssohn:mendelssohn-mwvb57:7', 7, 'VII', '알렐루야', 'VII. Alleluja', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '합창곡 <독일 전례>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'classicmap:mendelssohn:mendelssohn-mwvb57:7'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'classicmap:mendelssohn:mendelssohn-mwvb57:8', 8, 'VIII', '아멘 (복음 낭독 뒤)', 'VIII. Amen (after the Gospel)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '합창곡 <독일 전례>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'classicmap:mendelssohn:mendelssohn-mwvb57:8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'classicmap:mendelssohn:mendelssohn-mwvb57:9', 9, 'IX', '아멘 (신앙 고백 뒤)', 'IX. Amen (after the Creed)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '합창곡 <독일 전례>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'classicmap:mendelssohn:mendelssohn-mwvb57:9'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:69dc7ba6-4313-4fca-8f71-48ff5b987d52', 10, 'X', '상투스 (Heilig)', 'X. Heilig', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 27 AND p.title = '합창곡 <독일 전례>' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:69dc7ba6-4313-4fca-8f71-48ff5b987d52'
+);
+
+
+-- 123 <한여름 밤의 꿈> 부수음악: 서곡 Op. 21 을 따로 두었으니 작품번호·연도를 부수음악 Op. 61 로 고친다.
+UPDATE pieces piece
+SET piece.opus_number = 'Op. 61', piece.composition_year = 1842
+WHERE piece.id = 123 AND piece.composer_id = 27 AND piece.opus_number = 'Opp. 21 & 61';
