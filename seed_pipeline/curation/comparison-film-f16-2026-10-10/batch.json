@@ -1,0 +1,309 @@
+{
+  "batchId": "film-f16",
+  "note": "영화 속 클래식 16차. 기생충·2001: 스페이스 오디세이·친절한 금자씨·노다메 칸타빌레에 나온 성악·관현악 다섯.",
+  "pieces": [
+    {
+      "pieceId": 26024,
+      "workMbid": "ceee2305-8a7e-4fed-b7da-f52006958aec",
+      "composerQid": "Q7302",
+      "titleKo": "오페라 <로델린다>",
+      "titleEn": "Opera <Rodelinda>",
+      "composerNameEn": "George Frideric Handel",
+      "composerNameKo": "게오르크 프리드리히 헨델",
+      "role": "SOPRANO",
+      "sector": {
+        "key": "act2-spietati",
+        "type": "EXCERPT",
+        "nameKo": "2막 로델린다의 아리아 「Spietati, io vi giurai」",
+        "nameEn": "Act II: Rodelinda's aria \"Spietati, io vi giurai\"",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "아리아의 첫 관현악 화음",
+        "endCue": "아리아 끝 화음(다 카포 뒤)"
+      },
+      "filmNote": "기생충 1번째 큐. 아리아만 담긴 트랙, 소프라노 + 지휘자·악단. 녹음이 적어 3종이 안 되면 보고. 같은 작품의 3막 아리아는 17차로 따로 간다(같은 pieceId 를 한 배치에 두지 않음)",
+      "videos": [
+        {
+          "videoId": "v3efeQp2LH0",
+          "artistName": "Simone Kermes",
+          "wikidata": "Q454282",
+          "conductor": {
+            "name": "Alan Curtis",
+            "wikidata": "Q965256"
+          },
+          "orchestra": {
+            "name": "Il Complesso Barocco",
+            "wikidata": "Q16215310"
+          }
+        },
+        {
+          "videoId": "ywuGqMJH5JI",
+          "artistName": "Lucy Crowe",
+          "wikidata": "Q15428992",
+          "conductor": {
+            "name": "Harry Bicket",
+            "wikidata": "Q1165541"
+          },
+          "orchestra": {
+            "name": "The English Concert",
+            "wikidata": "Q926326"
+          }
+        },
+        {
+          "videoId": "RvE6OJbGcjw",
+          "artistName": "Lisa Saffer",
+          "wikidata": "Q52617558",
+          "conductor": {
+            "name": "Nicholas McGegan",
+            "wikidata": "Q3136187"
+          },
+          "orchestra": {
+            "name": "Philharmonia Baroque Orchestra",
+            "wikidata": "Q7183039"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 2799,
+      "workMbid": "e7744d2c-85ab-4f20-b825-d10fede89f8b",
+      "composerQid": "Q152293",
+      "titleKo": "<가야네> 모음곡 1번",
+      "titleEn": "First Suite from the ballet \"Gayaneh\"",
+      "composerNameEn": "Aram Khachaturian",
+      "composerNameKo": "아람 하차투리안",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "no-adagio",
+        "type": "MOVEMENT",
+        "nameKo": "「가야네의 아다지오」",
+        "nameEn": "Gayane's Adagio",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "첼로의 첫 음",
+        "endCue": "마지막 화음과 잔향"
+      },
+      "filmNote": "2001: 스페이스 오디세이 5번째 큐(디스커버리호 장면의 아다지오). 아다지오만 담긴 트랙. 발레 전곡판 트랙이어도 아다지오 한 곡이면 됨",
+      "videos": [
+        {
+          "videoId": "2r1imkd6m8s",
+          "artistName": "Gennadi Rozhdestvensky",
+          "wikidata": "Q437262",
+          "orchestra": {
+            "name": "Leningrad Philharmonic Orchestra",
+            "wikidata": "Q1373970"
+          }
+        },
+        {
+          "videoId": "BYENvuGCcQI",
+          "artistName": "Loris Tjeknavorian",
+          "wikidata": "Q2984588",
+          "orchestra": {
+            "name": "National Philharmonic Orchestra",
+            "wikidata": "Q2394269"
+          }
+        },
+        {
+          "videoId": "su35PkXZsS8",
+          "artistName": "Anatole Fistoulari",
+          "wikidata": "Q487710",
+          "orchestra": {
+            "name": "London Symphony Orchestra",
+            "wikidata": "Q155805"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 26026,
+      "workMbid": "3e56e2c6-0d01-3911-9101-acd6a7aef8f8",
+      "composerQid": "Q154331",
+      "titleKo": "레퀴엠",
+      "titleEn": "Requiem",
+      "composerNameEn": "György Ligeti",
+      "composerNameKo": "죄르지 리게티",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv2-kyrie",
+        "type": "MOVEMENT",
+        "nameKo": "2악장 Kyrie",
+        "nameEn": "II. Kyrie",
+        "measureStart": "",
+        "measureEnd": "",
+        "startCue": "합창 첫 음",
+        "endCue": "마지막 소리와 잔향"
+      },
+      "filmNote": "2001: 스페이스 오디세이 2번째 큐(모노리스). 지휘자 + 합창단·악단(독창 둘은 있으면). 녹음이 적어 3종이 안 되면 보고. 음향 덩어리라 chroma 정렬이 근거가 못 될 수 있음 — 그러면 판정하지 말고 보고",
+      "videos": [
+        {
+          "videoId": "jqaGdIIUUQY",
+          "artistName": "Jonathan Nott",
+          "wikidata": "Q657928",
+          "choir": {
+            "name": "London Voices",
+            "wikidata": "Q9023617"
+          },
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "tjeLb5AOrio",
+          "artistName": "Péter Eötvös",
+          "wikidata": "Q389851",
+          "choir": {
+            "name": "WDR Rundfunkchor",
+            "wikidata": "Q2537040"
+          },
+          "orchestra": {
+            "name": "WDR Sinfonieorchester",
+            "wikidata": "Q829283"
+          },
+          "singers": [
+            {
+              "name": "SWR Vokalensemble",
+              "wikidata": "Q1167446",
+              "role": "CHOIR"
+            }
+          ]
+        },
+        {
+          "videoId": "BVKG9SNPpnk",
+          "artistName": "Michael Gielen",
+          "wikidata": "Q213913",
+          "choir": {
+            "name": "SWR Vokalensemble",
+            "wikidata": "Q1167446"
+          },
+          "orchestra": {
+            "name": "Radio-Sinfonieorchester Stuttgart",
+            "wikidata": "Q262477"
+          },
+          "singers": [
+            {
+              "name": "Chor des Bayerischen Rundfunks",
+              "wikidata": "Q881144",
+              "role": "CHOIR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pieceId": 26038,
+      "workMbid": "8df04551-8a82-46a7-b699-94e93703fefb",
+      "composerQid": "Q1340",
+      "titleKo": "칸타타 <그만, 이제 그만>",
+      "titleEn": "Cantata <Cessate, omai cessate>",
+      "composerNameEn": "Antonio Vivaldi",
+      "composerNameKo": "안토니오 비발디",
+      "role": "COUNTERTENOR",
+      "sector": {
+        "key": "no2-aria",
+        "type": "MOVEMENT",
+        "nameKo": "2곡 아리아 「Ah, ch'infelice sempre」",
+        "nameEn": "No. 2 Aria \"Ah, ch'infelice sempre\"",
+        "measureStart": "1",
+        "measureEnd": "final",
+        "startCue": "현의 피치카토 반주 첫 음",
+        "endCue": "마지막 화음"
+      },
+      "filmNote": "친절한 금자씨 1번째 큐(영화는 바이올린이 노래 대신). 원곡 성악판만(카운터테너·알토, 판마다 다르면 video.role 로). + 지휘자·앙상블",
+      "videos": [
+        {
+          "videoId": "QzxDYoTMRQ4",
+          "artistName": "Tim Mead",
+          "wikidata": "Q7803965",
+          "role": "COUNTERTENOR",
+          "conductor": {
+            "name": "Jonathan Cohen",
+            "wikidata": "Q15431044"
+          },
+          "orchestra": {
+            "name": "Arcangelo",
+            "wikidata": "Q28119855"
+          }
+        },
+        {
+          "videoId": "pl-k7hNY84g",
+          "artistName": "Delphine Galou",
+          "wikidata": "Q5254425",
+          "role": "CONTRALTO",
+          "conductor": {
+            "name": "Ottavio Dantone",
+            "wikidata": "Q963831"
+          },
+          "orchestra": {
+            "name": "Accademia Bizantina",
+            "wikidata": "Q3603929"
+          }
+        },
+        {
+          "videoId": "bO-kBXk8T_o",
+          "artistName": "Gérard Lesne",
+          "wikidata": "Q176713",
+          "role": "COUNTERTENOR",
+          "orchestra": {
+            "name": "Il Seminario Musicale",
+            "wikidata": "Q3148472"
+          }
+        }
+      ]
+    },
+    {
+      "pieceId": 77,
+      "workMbid": "80737426-8ef3-3a9c-a3a6-9507afb93e93",
+      "composerQid": "Q255",
+      "titleKo": "교향곡 3번 E♭장조 \"영웅\"",
+      "titleEn": "Symphony No. 3 in E♭ major \"Eroica\"",
+      "composerNameEn": "Ludwig van Beethoven",
+      "composerNameKo": "루트비히 판 베토벤",
+      "role": "CONDUCTOR",
+      "sector": {
+        "key": "mv1-opening",
+        "type": "EXCERPT",
+        "nameKo": "1악장 도입 (두 번의 E♭ 화음과 첼로 주제)",
+        "nameEn": "I. Allegro con brio, opening (two E♭ chords and cello theme)",
+        "measureStart": "1",
+        "measureEnd": "44",
+        "startCue": "총주 E♭ 화음 첫 번째",
+        "endCue": "첫 총주 주제(m.37) 뒤 경과부 직전(m.44 끝)"
+      },
+      "excerpt": {
+        "anchor": "head",
+        "seconds": 50.3
+      },
+      "filmNote": "노다메 칸타빌레(애니) 3번째 큐(7화 S오케 정기 공연, 1악장 전체 녹음). 1악장만 담긴 영상",
+      "videos": [
+        {
+          "videoId": "jrlAyokyKGU",
+          "artistName": "Herbert von Karajan",
+          "wikidata": "Q154895",
+          "orchestra": {
+            "name": "Berliner Philharmoniker",
+            "wikidata": "Q152222"
+          }
+        },
+        {
+          "videoId": "dTC7QhNmR1E",
+          "artistName": "Nikolaus Harnoncourt",
+          "wikidata": "Q78526",
+          "orchestra": {
+            "name": "Chamber Orchestra of Europe",
+            "wikidata": "Q661670"
+          }
+        },
+        {
+          "videoId": "mBZzjy8vzMM",
+          "artistName": "Leonard Bernstein",
+          "wikidata": "Q152505",
+          "orchestra": {
+            "name": "New York Philharmonic",
+            "wikidata": "Q471154"
+          }
+        }
+      ]
+    }
+  ]
+}
