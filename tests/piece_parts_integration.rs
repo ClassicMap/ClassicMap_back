@@ -142,11 +142,20 @@ struct NewPart<'a> {
 }
 
 async fn insert_part(pool: &db::DbPool, piece_id: i32, part: NewPart<'_>) -> u64 {
+    insert_part_as(pool, piece_id, part, "FACTS_VERIFIED").await
+}
+
+/// 국제 시드가 넣고 아직 확인하지 않은 part. 화면에는 나오지 않아야 한다
+async fn insert_seed_part(pool: &db::DbPool, piece_id: i32, part: NewPart<'_>) -> u64 {
+    insert_part_as(pool, piece_id, part, "IDENTIFIERS_MATCHED").await
+}
+
+async fn insert_part_as(pool: &db::DbPool, piece_id: i32, part: NewPart<'_>, status: &str) -> u64 {
     sqlx::query(
         "INSERT INTO piece_parts (
             piece_id, parent_part_id, linked_piece_id, part_key, sequence_number,
             movement_number, name_ko, name_en, editorial_status, origin
-         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'FACTS_VERIFIED', 'manual')",
+         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'manual')",
     )
     .bind(piece_id)
     .bind(part.parent)
@@ -156,6 +165,7 @@ async fn insert_part(pool: &db::DbPool, piece_id: i32, part: NewPart<'_>) -> u64
     .bind(part.movement)
     .bind(part.name_ko)
     .bind(part.name_en)
+    .bind(status)
     .execute(pool)
     .await
     .expect("part")
@@ -298,6 +308,8 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
     )
     .await;
     let op9 = insert_piece(&pool, composer, "녹턴", Some("Op. 9, No. 2"), None, true).await;
+    let concerto = insert_piece(&pool, composer, "협주곡", Some("Op. 11"), None, true).await;
+    let seed_only = insert_piece(&pool, composer, "시드 묶음", Some("Op. 25"), None, true).await;
     let other_bundle = insert_piece(&pool, other, "다른 묶음", Some("Op. 1"), None, true).await;
 
     let revolutionary_part = insert_part(
@@ -307,7 +319,7 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
             key: "op10-12",
             parent: None,
             sequence: 12,
-            movement: Some("12"),
+            movement: None,
             name_ko: None,
             name_en: Some("No. 12 in C minor \"Revolutionary\""),
             linked: Some(revolutionary),
@@ -370,6 +382,79 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
         },
     )
     .await;
+    // 확인 전 시드 part 와 그 아래 part 는 개수·목록·종류 어디에도 들어가지 않는다
+    let seed_part = insert_seed_part(
+        &pool,
+        bundle,
+        NewPart {
+            key: "op10-seed",
+            parent: None,
+            sequence: 5,
+            movement: Some("5"),
+            name_ko: None,
+            name_en: Some("Seed only"),
+            linked: None,
+        },
+    )
+    .await;
+    insert_part(
+        &pool,
+        bundle,
+        NewPart {
+            key: "op10-seed-child",
+            parent: Some(seed_part),
+            sequence: 1,
+            movement: None,
+            name_ko: Some("숨은 부모 아래"),
+            name_en: None,
+            linked: None,
+        },
+    )
+    .await;
+    insert_seed_part(
+        &pool,
+        seed_only,
+        NewPart {
+            key: "op25-seed",
+            parent: None,
+            sequence: 9,
+            movement: None,
+            name_ko: None,
+            name_en: Some("Butterfly"),
+            linked: None,
+        },
+    )
+    .await;
+    for (key, sequence, movement) in [("op11-1", 1, "I"), ("op11-2", 2, "II")] {
+        insert_part(
+            &pool,
+            concerto,
+            NewPart {
+                key,
+                parent: None,
+                sequence,
+                movement: Some(movement),
+                name_ko: None,
+                name_en: Some(movement),
+                linked: None,
+            },
+        )
+        .await;
+    }
+    insert_seed_part(
+        &pool,
+        concerto,
+        NewPart {
+            key: "op11-seed",
+            parent: None,
+            sequence: 3,
+            movement: None,
+            name_ko: None,
+            name_en: Some("Seed finale"),
+            linked: None,
+        },
+    )
+    .await;
     // 다른 작곡가의 묶음이 가리키는 작품, 자기 자신을 가리키는 part 는 목록에서 빼지 않는다
     insert_part(
         &pool,
@@ -405,6 +490,8 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
         op9,
         bundle,
         no3,
+        concerto,
+        seed_only,
         catalogued,
         cross_linked,
         op66,
@@ -424,15 +511,29 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
     let listed = PieceRepository::find_by_composer_id(&pool, composer)
         .await
         .expect("작품 목록");
-    let part_count = |id: i32| {
+    let summary = |id: i32| {
         listed
             .iter()
             .find(|piece| piece.id == id)
-            .map(|piece| piece.part_count)
+            .map(|piece| (piece.part_count, piece.part_kind.as_deref()))
     };
-    assert_eq!(part_count(bundle), Some(3), "최상위 part 만 센다");
-    assert_eq!(part_count(op66), Some(1));
-    assert_eq!(part_count(no3), Some(0));
+    assert_eq!(
+        summary(bundle),
+        Some((3, Some("work"))),
+        "확인된 최상위 part 만 센다. 악장 번호가 빠진 곡이 있으면 work"
+    );
+    assert_eq!(
+        summary(concerto),
+        Some((2, Some("movement"))),
+        "숨은 시드 part 는 종류도 바꾸지 않는다"
+    );
+    assert_eq!(
+        summary(seed_only),
+        Some((0, None)),
+        "시드 part 만 있으면 낱곡"
+    );
+    assert_eq!(summary(op66), Some((1, Some("work"))));
+    assert_eq!(summary(no3), Some((0, None)));
 
     // 작곡가 작품 수도 같은 기준으로 센다
     let detail = ComposerRepository::find_by_id(&pool, composer)
@@ -465,6 +566,7 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
         .expect("작품")
         .expect("묶음");
     assert_eq!(single.part_count, 3);
+    assert_eq!(single.part_kind.as_deref(), Some("work"));
     let found = PieceRepository::search(&pool, Some("파츠 통합 연습곡"), 0, 20)
         .await
         .expect("작품 검색");
@@ -502,6 +604,20 @@ async fn bundle_parts_hide_linked_pieces_and_order_by_catalogue() {
         .await
         .expect("없는 작품")
         .is_empty());
+    assert!(PieceRepository::find_parts(&pool, seed_only)
+        .await
+        .expect("시드 part 만 있는 작품")
+        .is_empty());
+    let concerto_parts = PieceRepository::find_parts(&pool, concerto)
+        .await
+        .expect("협주곡 part");
+    assert_eq!(
+        concerto_parts
+            .iter()
+            .map(|part| part.movement_number.as_deref())
+            .collect::<Vec<_>>(),
+        vec![Some("I"), Some("II")]
+    );
 
     // 비교 가능: 비교 화면과 같이 주연주자 3명이 모여야 켜진다
     let sector_id = sqlx::query(
