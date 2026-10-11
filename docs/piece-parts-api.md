@@ -39,8 +39,8 @@ offset·limit 이 없으면 전체, 하나라도 있으면 페이지로 주는 �
     "parentPartId": null,
     "sequenceNumber": 1,
     "movementNumber": null,
-    "name": "1번 C장조",
-    "nameKo": "1번 C장조",
+    "name": "C장조",
+    "nameKo": "C장조",
     "nameEn": "No. 1 in C major",
     "linkedPiece": null
   },
@@ -49,8 +49,8 @@ offset·limit 이 없으면 전체, 하나라도 있으면 페이지로 주는 �
     "parentPartId": null,
     "sequenceNumber": 12,
     "movementNumber": null,
-    "name": "12번 C단조 \"혁명\"",
-    "nameKo": "12번 C단조 \"혁명\"",
+    "name": "C단조 \"혁명\"",
+    "nameKo": "C단조 \"혁명\"",
     "nameEn": "No. 12 in C minor \"Revolutionary\"",
     "linkedPiece": {
       "id": 127,
