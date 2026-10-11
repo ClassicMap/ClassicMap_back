@@ -1,0 +1,3738 @@
+[
+ {
+  "pieceId": 462,
+  "title": "서정 소품집",
+  "mbids": [
+   "e6e5dee6-ef04-4fa6-9d44-7398868e28c5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "서정 소곡집 10권 전체를 묶은 운영 작품(MB 'Lyriske stykker'). 권별 묶음 grieg-op12…op71 로 나눔. 비교 구간 1, 숨기지 않음"
+ },
+ {
+  "pieceId": 13721,
+  "title": "Seks sanger med orkester",
+  "mbids": [
+   "02cf4f32-b25a-4038-b4b8-6cf30fb2a82b"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg177",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13730,
+  "title": "Fem digte, op. 69",
+  "mbids": [
+   "0928edbf-37f7-4aac-bd90-44dca23c7dce"
+  ],
+  "mapping": "work",
+  "key": "grieg-op69",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13734,
+  "title": "Lyriske stykker, op. 65 no. 6: Bryllupsdag på Troldhaugen",
+  "mbids": [
+   "0f559bfb-2b05-47ef-b425-a7f5f7194d65"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 65-6 관현악 편곡"
+ },
+ {
+  "pieceId": 13736,
+  "title": "An Old Norwegian Folksong with Variations, op. 51",
+  "mbids": [
+   "1045933e-1d45-3a19-a1b6-8a7163fb5714"
+  ],
+  "mapping": "work",
+  "key": "grieg-op51",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13740,
+  "title": "Julens vuggesang, EG 155",
+  "mbids": [
+   "123ebaba-f5fe-4971-9959-66883f085163"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg155",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13742,
+  "title": "Fuge i f-moll, EG 114",
+  "mbids": [
+   "1497fcee-53b5-41ca-ab5d-78b21e305ab7"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg114",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13743,
+  "title": "Peer Gynt Suite no. 1, op. 46: IV. I Dovregubbens hall (In the Hall of the Mountain King)",
+  "mbids": [
+   "16564661-d042-4867-a6dd-908fdf7945bf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 46-4 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 13747,
+  "title": "Folkelivsbilder, op. 19",
+  "mbids": [
+   "1959904c-b956-4809-af16-1bca6abfa1bc"
+  ],
+  "mapping": "work",
+  "key": "grieg-op19",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13750,
+  "title": "Two Melodies, op. 53",
+  "mbids": [
+   "1d0069d1-254f-44d0-8a8a-8f6fd706ab47"
+  ],
+  "mapping": "work",
+  "key": "grieg-op53",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13757,
+  "title": "Hjertets melodier, op. 5",
+  "mbids": [
+   "217b160c-90f8-4eff-bcaa-b1c7a4edf72f"
+  ],
+  "mapping": "work",
+  "key": "grieg-op5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13758,
+  "title": "Fædrelandssang, EG 151",
+  "mbids": [
+   "222e64e3-9d0b-4b52-9b24-5d627917b412"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg151",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13763,
+  "title": "Foran sydens kloster, op. 20",
+  "mbids": [
+   "29bcde9d-b583-4cd5-844d-17ed1a068fa9"
+  ],
+  "mapping": "work",
+  "key": "grieg-op20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13776,
+  "title": "Lyric Suite, op. 54",
+  "mbids": [
+   "360fe258-2f78-3b91-9ec1-949502878999"
+  ],
+  "mapping": "work",
+  "key": "grieg-op54-suite",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13778,
+  "title": "Sonata for Violin and Piano no. 1 in F major, op. 8",
+  "mbids": [
+   "3832f234-267d-4df2-bb40-1b492d92fe81"
+  ],
+  "mapping": "work",
+  "key": "grieg-op8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13783,
+  "title": "25 Norske Folkeviser og Danser, op. 17",
+  "mbids": [
+   "3e51678e-e05b-4050-a3fe-b1c3d616a7fc"
+  ],
+  "mapping": "work",
+  "key": "grieg-op17",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13784,
+  "title": "Fire sanger, op. 2",
+  "mbids": [
+   "3eb0c9f8-84dc-4144-b3e2-7b0c928c94ca"
+  ],
+  "mapping": "work",
+  "key": "grieg-op2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13785,
+  "title": "Slåtter (Norwegian Peasant Dances) op. 72",
+  "mbids": [
+   "3f3145cf-9fdd-456a-976a-a3d25cee4368"
+  ],
+  "mapping": "work",
+  "key": "grieg-op72",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13788,
+  "title": "Til en hunndjevel, EG 154",
+  "mbids": [
+   "40f77fdc-304d-4381-9b7c-0eb38aa48fc0"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg154",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13790,
+  "title": "Barnlige Sange",
+  "mbids": [
+   "423730f8-3dad-454a-9d92-6658d6f8a3cf"
+  ],
+  "mapping": "work",
+  "key": "grieg-op61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13793,
+  "title": "Lyric Pieces, op. 54: Bell-Ringing. Andante",
+  "mbids": [
+   "434c5b3b-47b2-333f-9ae7-e0c8850d29f4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 54-6 자이들 관현악 편곡"
+ },
+ {
+  "pieceId": 13796,
+  "title": "Påskesang, EG 146",
+  "mbids": [
+   "4456c679-5a1a-484e-b54b-21b397d8efb4"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg146",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13797,
+  "title": "Norges melodier, EG 108",
+  "mbids": [
+   "44e8f5b6-8380-4b9c-9274-b5004af4fc28"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 152곡: 민요·애국가·남의 노래를 쉬운 피아노로 옮긴 편곡집이라 뺌"
+ },
+ {
+  "pieceId": 13799,
+  "title": "Piano II til fire sonater av Mozart, EG 113",
+  "mbids": [
+   "457e1eec-4cd3-4cb0-a9fc-fc2eb1ddc119"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "EG 113 모차르트 소나타 4곡에 붙인 제2 피아노 파트(남의 작품 편곡)"
+ },
+ {
+  "pieceId": 13803,
+  "title": "Sechs Lieder, op. 48",
+  "mbids": [
+   "4628f913-ef51-4d3b-8554-6d6f2a531c3f"
+  ],
+  "mapping": "work",
+  "key": "grieg-op48",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13805,
+  "title": "Tåren, EG 128",
+  "mbids": [
+   "4741aa2c-1598-41d3-83dc-5ded7aa6b4cb"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg128",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13807,
+  "title": "Seks Norske fjellmelodier",
+  "mbids": [
+   "487c7bd8-b9ff-4b21-aed9-bb226fda0db8"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg108",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13812,
+  "title": "I Høst (In Autumn) – Concert Overture for Orchestra, op. 11",
+  "mbids": [
+   "4bc61280-1530-3b42-af15-305fab2c36c5"
+  ],
+  "mapping": "work",
+  "key": "grieg-op11",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13815,
+  "title": "Romancer og Sange, op. 18",
+  "mbids": [
+   "4e58604b-30f8-4a94-8649-bc7aab3aae6d"
+  ],
+  "mapping": "work",
+  "key": "grieg-op18",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13818,
+  "title": "Suk, EG 134",
+  "mbids": [
+   "4ff16d0c-ebb4-4c39-9efb-c70efea928ab"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg134",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13820,
+  "title": "Humoresker, op. 6",
+  "mbids": [
+   "51a21ef0-c7aa-4412-9c5f-de8d9a26e112"
+  ],
+  "mapping": "work",
+  "key": "grieg-op6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13825,
+  "title": "4 Salmer fritt efter gamle norske Kirkemelodier, op. 74",
+  "mbids": [
+   "54382f6d-aa16-49b6-a232-34c4644ecbd1"
+  ],
+  "mapping": "work",
+  "key": "grieg-op74",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13831,
+  "title": "Simpel sang, EG 147",
+  "mbids": [
+   "59b977be-8745-460a-b5db-ba192f45e1dd"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg147",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13834,
+  "title": "Romanser og ballader af A. Munch, op. 9",
+  "mbids": [
+   "5ce15bed-3b27-40c9-a0de-7be50fbd0282"
+  ],
+  "mapping": "work",
+  "key": "grieg-op9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13837,
+  "title": "Holberg-kantate EG 171",
+  "mbids": [
+   "5d80f845-7ac3-4df1-a41f-1a8a1e2d7230"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg171",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13842,
+  "title": "Den bergtekne, op. 32",
+  "mbids": [
+   "644e3d76-be49-4164-abd9-392de21196b8"
+  ],
+  "mapping": "work",
+  "key": "grieg-op32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13849,
+  "title": "Sonata for Violin and Piano no. 3 in C minor, op. 45",
+  "mbids": [
+   "67a15006-06a9-4d72-9f17-6dc9818169e2"
+  ],
+  "mapping": "work",
+  "key": "grieg-op45",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13855,
+  "title": "Fire pianostykker, op. 1",
+  "mbids": [
+   "6a5886ff-acc0-40db-9f4c-01466e8d5f80"
+  ],
+  "mapping": "work",
+  "key": "grieg-op1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13860,
+  "title": "Romancer",
+  "mbids": [
+   "6ecae07f-3788-4f6f-b619-015bf6ebf53e"
+  ],
+  "mapping": "work",
+  "key": "grieg-op15",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13864,
+  "title": "Return to Rundarne",
+  "mbids": [
+   "71690c4c-ca61-4368-9663-03aece5389dd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 33-9 'Ved Rundarne' 영어·프랑스어 제목"
+ },
+ {
+  "pieceId": 13872,
+  "title": "Andante con moto i c-moll, EG 116",
+  "mbids": [
+   "76a14881-5f34-4ce5-bca5-9a86ab0d6f91"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg116",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13873,
+  "title": "Sonate for Piano i e-moll, op. 7",
+  "mbids": [
+   "76e1591a-47af-4acd-bc73-db8fcc3e1a32"
+  ],
+  "mapping": "work",
+  "key": "grieg-op7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13874,
+  "title": "Gentlemen-menige, EG 156",
+  "mbids": [
+   "7756cb24-7b42-46f9-9564-4a61cd08b17a"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg156",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13880,
+  "title": "Til L. M. Lindemans Sølvbryllup, EG 135",
+  "mbids": [
+   "7acb63d4-4b94-4f54-85f5-01753f62d21c"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg135",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13882,
+  "title": "Лесная песня",
+  "mbids": [
+   "7baff3ca-1b62-4715-acd2-15ab1c9308b1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 10-2 편곡(러시아어 제목)"
+ },
+ {
+  "pieceId": 13884,
+  "title": "Til Generalkonsul Chr. Tønsberg, EG 136",
+  "mbids": [
+   "7d64ee2c-5def-4348-95b8-d54ed5f1aa0c"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg136",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13887,
+  "title": "Symphonic Dances, op. 64",
+  "mbids": [
+   "7e1bfeed-aa3e-432b-845a-ad0a0009f359"
+  ],
+  "mapping": "work",
+  "key": "grieg-op64",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13895,
+  "title": "Norske danser, op. 35",
+  "mbids": [
+   "82c5edde-24c8-4308-acf8-d82b28480c8d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 35 발현악기 편곡(Tewes)"
+ },
+ {
+  "pieceId": 13897,
+  "title": "Album for Mandssang, op. 30",
+  "mbids": [
+   "832abc10-de4e-40c8-9769-1088c40a28b9"
+  ],
+  "mapping": "work",
+  "key": "grieg-op30",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13905,
+  "title": "På Hamars ruiner, EG 140",
+  "mbids": [
+   "8ae98e57-7e6c-4bc5-bec3-857e8ebd5f8f"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg140",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13909,
+  "title": "To symfoniske stykker, op. 14",
+  "mbids": [
+   "8ff77f8d-c780-4975-bc68-fcdd04acc5f4"
+  ],
+  "mapping": "work",
+  "key": "grieg-op14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13917,
+  "title": "Klaverstykker etter egne sanger, hefte I, op. 41",
+  "mbids": [
+   "9893ae6b-478e-4b8a-b30a-bc359b4971d9"
+  ],
+  "mapping": "work",
+  "key": "grieg-op41",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13921,
+  "title": "Jeg elsker, EG 153",
+  "mbids": [
+   "9d0fcea2-006b-45e9-98e8-7fdc3926586c"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg153",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13927,
+  "title": "Danse norvégienne",
+  "mbids": [
+   "a10cc70d-6e53-362c-b0f4-401f5882061a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 35-2 편곡 'Danse norvégienne'"
+ },
+ {
+  "pieceId": 13931,
+  "title": "Odalisken synger, EG 131",
+  "mbids": [
+   "a3a35f3f-96e9-41f4-a737-40588c4c1678"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg131",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13935,
+  "title": "Poetiske Tonebilder, op. 3",
+  "mbids": [
+   "a5a6be8d-460a-4bac-95c5-6b2e232a9404"
+  ],
+  "mapping": "work",
+  "key": "grieg-op3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13937,
+  "title": "Under Juletraeet, EG 144",
+  "mbids": [
+   "a61e28b7-dd0a-45d3-b15b-454f95f379f9"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg144",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13940,
+  "title": "Sonata for Cello and Piano in A minor, op. 36",
+  "mbids": [
+   "a8491552-54f7-419b-bdf2-799a078fc47a"
+  ],
+  "mapping": "work",
+  "key": "grieg-op36",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13943,
+  "title": "Jenta, EG 141",
+  "mbids": [
+   "aa8911d2-ac16-4b77-ab8b-6dd41fd3a7a1"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg141",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13944,
+  "title": "Fire albumblad, op. 28",
+  "mbids": [
+   "aaca4aa3-9eeb-423e-9e9c-e5816027f926"
+  ],
+  "mapping": "work",
+  "key": "grieg-op28",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13945,
+  "title": "Jaegeren (Der Jäger), EG 157",
+  "mbids": [
+   "ac427eef-628d-4684-9759-2eb959119a98"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg157",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13955,
+  "title": "Attegløyma, EG 142",
+  "mbids": [
+   "b413b652-aaa7-475d-8e49-5412e7e0b94f"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg142",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13959,
+  "title": "Concerto in A minor for Piano and Orchestra, op. 16",
+  "mbids": [
+   "b95fea1e-8181-4b93-9779-1d0a414855dc"
+  ],
+  "mapping": "work",
+  "key": "grieg-op16",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13966,
+  "title": "Vesle gut, EG 129",
+  "mbids": [
+   "befa07e3-bbc5-4e1b-b98f-b3f07c6aa61c"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg129",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13967,
+  "title": "19 norske folkeviser, op. 66",
+  "mbids": [
+   "bf0f085f-8967-4cba-a162-7db75c48629c"
+  ],
+  "mapping": "work",
+  "key": "grieg-op66",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13969,
+  "title": "Siehst du das Meer, EG 121",
+  "mbids": [
+   "c22272ce-8b53-46e7-a53f-b459068248bd"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg121",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13974,
+  "title": "Two Lyric Pieces from op. 68",
+  "mbids": [
+   "c4c3a642-c7db-498d-bb21-f0562f9e246c"
+  ],
+  "mapping": "work",
+  "key": "grieg-op68-orch",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13975,
+  "title": "Blåbæret, EG 145",
+  "mbids": [
+   "c4d9c858-8c68-448a-9ee3-f7b630d32d3b"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg145",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13976,
+  "title": "Fem digte op. 70",
+  "mbids": [
+   "c605c578-827e-46bb-ab28-189ee002e95d"
+  ],
+  "mapping": "work",
+  "key": "grieg-op70",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13985,
+  "title": "Prinsessen, EG 133",
+  "mbids": [
+   "ce31b910-603e-45cf-8c2a-6b482a18629c"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg133",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13996,
+  "title": "Den blonde Pige (I), EG 130",
+  "mbids": [
+   "d899a56e-6888-48fc-ac6a-eb05a518f0ad"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg130",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13998,
+  "title": "Stemninger, op. 73",
+  "mbids": [
+   "d9c8663d-4230-4bbf-b62c-f530c5a27a9d"
+  ],
+  "mapping": "work",
+  "key": "grieg-op73",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13999,
+  "title": "7 fugues, EG 184",
+  "mbids": [
+   "daa97a05-7808-4995-8201-13ab05070bd7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 184 7개의 푸가: 라이프치히 학습 습작, 위키 목록(EG 101–181) 밖"
+ },
+ {
+  "pieceId": 14003,
+  "title": "Den blonde Pige (II), EG 138",
+  "mbids": [
+   "dfa766e5-c97f-4731-8a0b-f1bc15f0355d"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg138",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14006,
+  "title": "Symfoniske Danser, op. 64",
+  "mbids": [
+   "e3bb2ba1-d2c5-400c-8a12-3a02a1c9b54f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 64 피아노 연탄판(그리그 자신의 다른 편성 판)"
+ },
+ {
+  "pieceId": 14007,
+  "title": "Sonata for Violin and Piano no. 2 in G major, op. 13",
+  "mbids": [
+   "e3be6d2d-8967-47c5-b3cb-62248348afdd"
+  ],
+  "mapping": "work",
+  "key": "grieg-op13",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14011,
+  "title": "Ni barnestykker, EG 103",
+  "mbids": [
+   "e77c2cdc-938d-4e61-8644-53a7ce20bc21"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg103",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14012,
+  "title": "Valgsang, EG 149",
+  "mbids": [
+   "ea698082-c11d-4bef-909e-0552461ead8d"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg149",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14014,
+  "title": "Fire Norske danser, op. 35",
+  "mbids": [
+   "ebcd1c66-efaa-41d8-913c-6935555fd4a1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 35 피아노 독주판(원판은 연탄)"
+ },
+ {
+  "pieceId": 14017,
+  "title": "23 småstykker for klaver, EG 104",
+  "mbids": [
+   "edbeba65-5002-48a3-aa2c-a08cdf69980b"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg104",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14021,
+  "title": "Morgenbønn på skolen, EG 139",
+  "mbids": [
+   "ef8e3559-4894-4d47-b52e-54f4d7d4a194"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg139",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14022,
+  "title": "ソルヴェイグの歌",
+  "mbids": [
+   "ef93bcf8-3f0c-4b60-938f-9255e1cb7da8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "'솔베이그의 노래' 일본어 제목"
+ },
+ {
+  "pieceId": 14028,
+  "title": "Den hvite, røde rose, EG 137",
+  "mbids": [
+   "f2215e25-df48-40e0-84cc-5e87288f3a2a"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg137",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14034,
+  "title": "Dig elsker jeg! EG 127",
+  "mbids": [
+   "f6b16e3e-ea73-4bfa-9639-2143f488dfe5"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg127",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14035,
+  "title": "Min lille fugl, EG 126",
+  "mbids": [
+   "f9a43075-4389-45d3-bda2-40cd6978dcf4"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg126",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14040,
+  "title": "Soldaten, EG 125",
+  "mbids": [
+   "fe226462-4cbd-45be-9604-ebcc693341ff"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg125",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14043,
+  "title": "Väike lind",
+  "mbids": [
+   "18faf8a8-5478-42a2-839c-9cfc543c71bb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "에스토니아어 제목('작은 새')"
+ },
+ {
+  "pieceId": 14055,
+  "title": "みずうみ",
+  "mbids": [
+   "f388e521-afd7-4665-ae3e-5a07916848bb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "일본어 가사곡('みずうみ')"
+ },
+ {
+  "pieceId": 14057,
+  "title": "Was bin ich ohne dich",
+  "mbids": [
+   "612f2982-c39c-4650-89a5-e15f3dd55590"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "'솔베이그의 노래'를 바탕으로 한 독일어 대중가요"
+ },
+ {
+  "pieceId": 14059,
+  "title": "Grieg’s Piano Concerto",
+  "mbids": [
+   "101ef8f7-e7aa-4c28-8cf8-1c516c14f1ba"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "모어캠·와이즈 코미디 촌극"
+ },
+ {
+  "pieceId": 14067,
+  "title": "Norges melodier, EG 133 No. 12: Springdands",
+  "mbids": [
+   "0051a733-7631-3602-8892-253fb007bca8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14068,
+  "title": "25 Norske Folkeviser og Danser, op. 17 no. 13: Reiselåt",
+  "mbids": [
+   "006c38f7-2727-4867-affa-f9eefcea0a58"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 17-13 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 14096,
+  "title": "25 Norske Folkeviser og Danser, op. 17 no. 3: Springdans",
+  "mbids": [
+   "0423fb25-93ca-4e30-bb6e-57f7cc806d75"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 17-3 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 14098,
+  "title": "Fola, fola blakken",
+  "mbids": [
+   "0555f6c6-6866-401b-8073-7179adc89a38"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "grieg-op61 5번 'Kveldsang for Blakken' 첫 구절 제목(15281 을 그 part 에 이음)"
+ },
+ {
+  "pieceId": 14107,
+  "title": "Four Norwegian Dances, op. 35: No. 3",
+  "mbids": [
+   "06d7970c-b2d0-4ccc-9360-71a376d81437"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 35-3 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 14118,
+  "title": "Norges melodier, EG 133 No. 48: Sjugur aa trollbura",
+  "mbids": [
+   "08785d6f-a654-3eb0-a12a-023f5da6c10e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14121,
+  "title": "Ragnhild",
+  "mbids": [
+   "08ece533-69c2-428a-b6f6-b8338f7d9308"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 181 Ragnhild: Op. 44-3 의 옛 판"
+ },
+ {
+  "pieceId": 14122,
+  "title": "25 Norske Folkeviser og Danser, op. 17 no. 12: Solfager og ormekongen",
+  "mbids": [
+   "0906f648-e625-4826-99d0-783810eca65f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 17-12 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 14125,
+  "title": "Resignation, EG 182",
+  "mbids": [
+   "09773424-2376-4f3d-b8c9-eeaf189d7617"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 182 Resignation: 위키 목록 밖"
+ },
+ {
+  "pieceId": 14147,
+  "title": "I Høst",
+  "mbids": [
+   "0d85acbd-f4ac-4055-a679-ade10798d5e4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 11 피아노 연탄 원판(그리그 자신의 다른 편성 판). catalog 는 1887 관현악판"
+ },
+ {
+  "pieceId": 14148,
+  "title": "String Quartet in F major, EG 117",
+  "mbids": [
+   "0de77830-9bfd-470c-82d7-843edbf7236a"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg117",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14158,
+  "title": "Three Piano Pieces: Gnome's Tune",
+  "mbids": [
+   "0f1b1fdb-99fb-4be8-9bec-a294dd076bf5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "grieg-eg111 과 같음(영어 제목)"
+ },
+ {
+  "pieceId": 14163,
+  "title": "Der var engang, op. 71 nr. 1",
+  "mbids": [
+   "0f7643b0-d5d5-48e3-b4f3-cf5bb5e10f8b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 71-1 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 14180,
+  "title": "Fem Digte, op. 26 no. 4. With a Primrose",
+  "mbids": [
+   "121a7473-e6e4-44d4-823d-09b1f0ca5160"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 26-4 영어 가사"
+ },
+ {
+  "pieceId": 14182,
+  "title": "Vier Romancen",
+  "mbids": [
+   "12641de2-6db1-43ad-9d87-7808d59d0a85"
+  ],
+  "mapping": "work",
+  "key": "grieg-op10",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14186,
+  "title": "Dansen går, EG 112",
+  "mbids": [
+   "12c1d4e3-4441-301d-95f7-a89240be7635"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg112",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14191,
+  "title": "Danmark",
+  "mbids": [
+   "13b1e8b2-bbf8-47a1-8d75-1b9179435b98"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg161",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14198,
+  "title": "극음악 <페르 귄트>",
+  "mbids": [
+   "1418776f-764b-4e2e-b920-fbab3fa18e6e"
+  ],
+  "mapping": "work",
+  "key": "grieg-op23",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14200,
+  "title": "Norges melodier, EG 133 No. 1: Margrets vuggesang",
+  "mbids": [
+   "1449df37-7ce5-3112-bd7c-1bf9cde8ad70"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14236,
+  "title": "Ases Tod",
+  "mbids": [
+   "18cf2ccf-19b9-415a-b02c-265f9d6615e4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 23 '오세의 죽음' 독일어 편곡"
+ },
+ {
+  "pieceId": 14239,
+  "title": "19 norske folkeviser, op. 66: No. 7. Bådnlåt",
+  "mbids": [
+   "1912b3ad-b609-4eac-9161-4e37abd16aee"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 66-7 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 14240,
+  "title": "Norges melodier, EG 133 No. 40: Gjæterlivet",
+  "mbids": [
+   "191e482d-13a3-3475-a8f0-38006ec3f864"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14269,
+  "title": "Sjømannssang",
+  "mbids": [
+   "1d7588d2-d6bb-43e2-96ee-42d1266939f4"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg163",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14292,
+  "title": "Claras sang, EG 124",
+  "mbids": [
+   "21526726-fc2d-4caa-be00-c9b0415646bc"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg124",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14294,
+  "title": "Flaggvise",
+  "mbids": [
+   "217e6dca-7a76-422e-a0c0-f57e0e835ef3"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg172",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14296,
+  "title": "I Love Thee (op. 5, no. 3)",
+  "mbids": [
+   "2207730b-3332-4b0f-9622-167026b8235c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 5-3 성악·관현악 편곡"
+ },
+ {
+  "pieceId": 14306,
+  "title": "Peer Gynt, op. 23: No. 24. Night Scene",
+  "mbids": [
+   "233dd46d-8a23-3c98-8371-ed2d8416614e"
+  ],
+  "mapping": "part",
+  "key": "grieg-op23",
+  "path": [
+   26
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14312,
+  "title": "Lost Song",
+  "mbids": [
+   "23d9bc31-298c-4972-a14c-4e47cb7363ec"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 55-4 '솔베이그의 노래' 다른 가사판"
+ },
+ {
+  "pieceId": 14319,
+  "title": "Ved en ung hustrus båre",
+  "mbids": [
+   "24c348e3-85a7-42d1-b509-4fb6bf2d1219"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 39-5 성악·리드오르간판(위키 따로 행, 그리그 자신의 다른 편성)"
+ },
+ {
+  "pieceId": 14322,
+  "title": "Ballade op. 65/5",
+  "mbids": [
+   "2563bfc2-3f8a-4257-9b02-2636e7dadfca"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 65-5 현악 합주 편곡"
+ },
+ {
+  "pieceId": 14324,
+  "title": "Norges melodier, EG 133 No. 44: Jeg lagde mig saa silde",
+  "mbids": [
+   "259d7da8-a6f2-3ede-9daf-44157fe1ce99"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14332,
+  "title": "Romancer (ældre og nyere), op. 39",
+  "mbids": [
+   "26b5e8da-f15a-48b2-b427-32842932e98a"
+  ],
+  "mapping": "work",
+  "key": "grieg-op39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14336,
+  "title": "Norges melodier, EG 133 No. 51: Je tjente paa Kjølstad ifjor",
+  "mbids": [
+   "270cec91-e572-392a-8b92-fe9ba7c79691"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14358,
+  "title": "Klaverkontsert h moll, EG 120 (fragmenter)",
+  "mbids": [
+   "29bcfef9-e53a-43d7-9709-c04590f9e6f2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "EG 120 피아노 협주곡 B단조 단편"
+ },
+ {
+  "pieceId": 14360,
+  "title": "Til én I, op. 59 no. 3",
+  "mbids": [
+   "2a162390-2b36-4ef6-8ffe-04d4f4ae20c5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 59-3 관현악 편곡(Valdar)"
+ },
+ {
+  "pieceId": 14362,
+  "title": "Slåtter - Suite for orkester, op. 72 no. 2: John Væstafæs Springdans",
+  "mbids": [
+   "2a4f8ec2-c2cf-3ae1-8caf-7b730f21df00"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 72-2 관현악 편곡"
+ },
+ {
+  "pieceId": 14371,
+  "title": "Dans av dovergubbens datter, op. 23 no. 9",
+  "mbids": [
+   "2c7901ce-475d-3abe-b878-603d82d20f08"
+  ],
+  "mapping": "part",
+  "key": "grieg-op23",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14380,
+  "title": "Norges melodier, EG 133 No. 35: Springdands",
+  "mbids": [
+   "2d5520e5-8adc-376e-ab85-746ee68aef58"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14382,
+  "title": "Tre klaverstykker, EG 105",
+  "mbids": [
+   "2dcf7051-2e55-4aea-b214-22978999c2de"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg105",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14396,
+  "title": "Våren, op. 33, no. 2",
+  "mbids": [
+   "303aecaa-52d0-4a3d-8353-8f77a9f758bf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 33-2 'Våren' 스웨덴어 가사판(MB 언어 swe)"
+ },
+ {
+  "pieceId": 14397,
+  "title": "Norwegian Bridal Procession",
+  "mbids": [
+   "3078c247-7663-4527-86c8-ad6ae254f9b6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 19-2 관현악 편곡(델리어스)"
+ },
+ {
+  "pieceId": 14399,
+  "title": "Ved J. S. Welhavens Båre",
+  "mbids": [
+   "30b3c4de-ade9-4687-b3cc-463b3be2a994"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg165",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14402,
+  "title": "Norges melodier, EG 133 No. 15: Ro, ro te fiskeskjær",
+  "mbids": [
+   "31163727-9124-3e33-9ccf-8b57deaa687c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14403,
+  "title": "a-Moll Konzert",
+  "mbids": [
+   "31505345-4e26-31cf-9440-6e6f1f87050c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "grieg-op16 피아노 협주곡과 같음(독일어 제목)"
+ },
+ {
+  "pieceId": 14404,
+  "title": "Norges melodier, EG 133 No. 41: Huldra aa'n Ellan",
+  "mbids": [
+   "31685dbf-ab04-370b-b30a-c89efb6407f3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14405,
+  "title": "Canon à 4 voci, EG 179",
+  "mbids": [
+   "317160ac-1636-41dd-9087-0835b8470be7"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg179",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14421,
+  "title": "Peer Gynt, op. 23: VI. Peer Gynt og den grønnkledte",
+  "mbids": [
+   "35092578-e5f9-3caa-8e32-57bf7131cb8f"
+  ],
+  "mapping": "part",
+  "key": "grieg-op23",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14427,
+  "title": "Violin Sonata no. 2 in G major, op. 13: III. Allegro animato",
+  "mbids": [
+   "35fb24f2-9a56-442e-9435-db5b621208c9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 13 3악장 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 14429,
+  "title": "Der Wind wird zum Sturm (Nordische Weisen)",
+  "mbids": [
+   "36d62da8-9036-49a1-838a-9d8a663f6dc6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "'Der Wind wird zum Sturm (Nordische Weisen)' 원곡 확인 안 됨"
+ },
+ {
+  "pieceId": 14432,
+  "title": "Norges melodier, EG 133 No. 7: Vandring i skoven",
+  "mbids": [
+   "377abf1f-02eb-31a4-88db-5e0dbf926f03"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14443,
+  "title": "Improvista over to norske folkeviser, op. 29",
+  "mbids": [
+   "38faaa78-77c2-498a-a542-b6f40d928960"
+  ],
+  "mapping": "work",
+  "key": "grieg-op29",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14447,
+  "title": "Norges melodier, EG 133 No. 42: Reisesang",
+  "mbids": [
+   "39ef4d89-810e-37c7-a034-21f320775eba"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14459,
+  "title": "Norges melodier, EG 133 No. 43: Astri, mi Astri",
+  "mbids": [
+   "3bf0d503-1432-3023-8e23-733db8ce8be4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14461,
+  "title": "Der Fichtenbaum, op. 59 no. 2",
+  "mbids": [
+   "3c063050-7133-4cb1-9b9f-a45dc07141fa"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 59-2 독일어 번역"
+ },
+ {
+  "pieceId": 14463,
+  "title": "Fire digte fra Fiskerjenten, op. 21",
+  "mbids": [
+   "3c282bd9-0f00-4e3e-b2db-fa6213f71972"
+  ],
+  "mapping": "work",
+  "key": "grieg-op21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14468,
+  "title": "Møde",
+  "mbids": [
+   "3d933ca3-adfb-4779-9885-8e296c87e662"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "Møde: Op. 67-4 의 옛 판(위키 'alternate version' 행)"
+ },
+ {
+  "pieceId": 14492,
+  "title": "Solvejg's Song (op. 23, no. 1)",
+  "mbids": [
+   "418d04f1-918a-4789-90f6-91062d76c442"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 23 '솔베이그의 노래' 영어 가사 관현악 편곡"
+ },
+ {
+  "pieceId": 14516,
+  "title": "T‘estimo",
+  "mbids": [
+   "4472a5bf-8730-4130-b974-c5f680b95bdc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 5-3 카탈루냐어 번역"
+ },
+ {
+  "pieceId": 14521,
+  "title": "Ave maris stella",
+  "mbids": [
+   "44a3ce7a-f83d-4605-ace0-c078c33754d3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "EG 150 오르간 편곡(Gerhardt)"
+ },
+ {
+  "pieceId": 14527,
+  "title": "Ich liebe dich, op. 5 no. 3",
+  "mbids": [
+   "457b0fdc-bcee-40e8-b842-0616b08df7ed"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 5-3 독일어 번역"
+ },
+ {
+  "pieceId": 14540,
+  "title": "Lyriske stykker, hefte III, op. 43 no. 2: Ensom vandrer",
+  "mbids": [
+   "476e14fd-10db-4b80-adb8-e0d023d569bb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 43-2 바이올린·피아노 편곡"
+ },
+ {
+  "pieceId": 14542,
+  "title": "Ved Halfdan Kjerulfs minnestøtte, EG 167",
+  "mbids": [
+   "47ef7b7e-e6bc-47f4-8be6-11cea974ebdb"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg167",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14551,
+  "title": "Fire digte, op. 21: Det første møte",
+  "mbids": [
+   "49f912dd-e5cd-40ca-86c1-37882adeec70"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 21-1 성악·관현악판(위키 '편곡' 행)"
+ },
+ {
+  "pieceId": 14552,
+  "title": "Four Norwegian Dances, op. 35: No. 2",
+  "mbids": [
+   "4a11e64f-a968-4f4d-b405-9785c4baca6a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 35-2 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 14556,
+  "title": "6 songs, op. 48",
+  "mbids": [
+   "4b19e2e2-60e1-4519-84f8-9697c9857914"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 48 노르웨이어 번역판(원작은 독일어)"
+ },
+ {
+  "pieceId": 14559,
+  "title": "Three Piano Pieces: The Dance Goes On, EG 112",
+  "mbids": [
+   "4b82a653-9027-4d76-97f4-ad82ff869ea8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "grieg-eg112 와 같음(영어 제목)"
+ },
+ {
+  "pieceId": 14566,
+  "title": "19 norske folkeviser, op. 66 no. 15: Bådnlåt",
+  "mbids": [
+   "4c93c095-6ee4-4498-bbb6-82dea7fda603"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 66-15 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 14574,
+  "title": "Sangerhilsen, EG 170",
+  "mbids": [
+   "4d7a4b13-eda4-4c94-af91-c17bcf329700"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg170",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14578,
+  "title": "Inga Litamor",
+  "mbids": [
+   "4df9e0b4-3d59-47be-8345-19ff273ffa17"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg168",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14583,
+  "title": "Sanger fra Haugtussa som ikke er med i opus 67, EG 152",
+  "mbids": [
+   "4e72008d-b499-459f-8e11-1f6211cdb710"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg152",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14587,
+  "title": "Norges melodier, EG 133 No. 52: Paal paa haugje",
+  "mbids": [
+   "4ecadc5d-8782-3a05-a392-5ca1377edca6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14589,
+  "title": "Peer Gynt, op. 23: Act V: Solveig's Cradle Song",
+  "mbids": [
+   "4f185894-a974-4742-89b5-e5f1a3ea648d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 23 '솔베이그의 자장가' 영어 가사"
+ },
+ {
+  "pieceId": 14605,
+  "title": "Gavotte et Musette (Holberg Suite)",
+  "mbids": [
+   "527482dd-e121-428e-b7dc-cf898ee9cddc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 40 가보트 오르간 편곡(Jongen)"
+ },
+ {
+  "pieceId": 14612,
+  "title": "Norges melodier, EG 133 No. 16: Kjærringa mæ staven",
+  "mbids": [
+   "5313efac-fb45-3de5-bbc9-006fde5c3a35"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14614,
+  "title": "Intermezzo in A minor, EG 115",
+  "mbids": [
+   "5416840b-0285-430d-9e7c-4b4c792e3e49"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg115",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14616,
+  "title": "Stemninger, op. 73: No. 2. Scherzo-Impromtu",
+  "mbids": [
+   "543a96cc-29d7-406d-9242-bf270a0f250b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 73-2 바이올린·피아노 편곡(Achron)"
+ },
+ {
+  "pieceId": 14631,
+  "title": "Hall of the Mambo King",
+  "mbids": [
+   "563038bb-fb08-4f68-986e-649e5f88f662"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "'산속 마왕의 궁전에서' 맘보 편곡"
+ },
+ {
+  "pieceId": 14645,
+  "title": "Norges melodier, EG 133 No. 29: Den sidste laurdgskvelden",
+  "mbids": [
+   "57ada397-d056-349e-b28e-aa1c6d6e80ac"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14652,
+  "title": "Og jeg vil ha mig en silkevest, op. 60 no. 5",
+  "mbids": [
+   "58c60446-8f2d-4bc4-9e58-3b01cd2b696f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 60-5 편곡(Valdar)"
+ },
+ {
+  "pieceId": 14654,
+  "title": "Norges melodier, EG 133 No. 37: Ole's frieri",
+  "mbids": [
+   "5a586be3-0ead-3607-aa92-72a9e7fe3650"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14660,
+  "title": "Lyriske stykker, hefte X, op. 71 no. 3: Smaatrold",
+  "mbids": [
+   "5b3cde12-d677-493a-b6b9-7e74a8368556"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 71-3 바이올린·피아노 편곡(Achron)"
+ },
+ {
+  "pieceId": 14672,
+  "title": "Valse-kapriser",
+  "mbids": [
+   "5d7d22ad-2dfe-473e-9a02-f6cdcc33f40b"
+  ],
+  "mapping": "work",
+  "key": "grieg-op37",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14674,
+  "title": "Cello Concerto after Cello Sonata, op. 36",
+  "mbids": [
+   "5da6b5ea-d32c-4108-9d8c-7699b4500784"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 36 첼로 소나타를 협주곡으로 만든 남의 편곡"
+ },
+ {
+  "pieceId": 14678,
+  "title": "Norges melodier, EG 133 No. 24: Halling",
+  "mbids": [
+   "5e7be247-c232-3e86-8e28-a724c80914ce"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14682,
+  "title": "Six Songs, op. 48: No. 1. Greeting",
+  "mbids": [
+   "5eb9b92f-abb7-47fe-ab0e-b9a5150a31d9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 48-1 영어 가사"
+ },
+ {
+  "pieceId": 14698,
+  "title": "Landkjenning, op. 31",
+  "mbids": [
+   "618b4c0d-de9b-4b07-a974-624db653622a"
+  ],
+  "mapping": "work",
+  "key": "grieg-op31",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14711,
+  "title": "Symphony in C minor, EG 119",
+  "mbids": [
+   "6411df2b-1404-41ec-a2de-68bd8a59e030"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg119",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14729,
+  "title": "Letzter Frühling",
+  "mbids": [
+   "668d5995-4527-4862-acc4-da3d3a77044b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 33-2 독일어 번역"
+ },
+ {
+  "pieceId": 14733,
+  "title": "Norges melodier, EG 133 No. 6: Min tankes tanke",
+  "mbids": [
+   "67613fc4-13b0-326c-933a-18c01d186b3f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14742,
+  "title": "One More Night With You",
+  "mbids": [
+   "6865d6cb-c32b-3cf4-b82c-2da9dfa85cff"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "그리그 선율을 바탕으로 한 대중가요"
+ },
+ {
+  "pieceId": 14745,
+  "title": "Elegiske digte, op. 59",
+  "mbids": [
+   "68ad06de-ff59-4e0d-9fb3-64c11e9effec"
+  ],
+  "mapping": "work",
+  "key": "grieg-op59",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14747,
+  "title": "Den syngende Menighet, EG 122",
+  "mbids": [
+   "68c643f7-c09e-4a75-9776-9786f53d51ed"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg122",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14748,
+  "title": "Hail Star of Heaven",
+  "mbids": [
+   "68c687ac-63ab-41b6-956d-3af80bc39c30"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "EG 150 오르간 편곡(Asper), 영어 제목"
+ },
+ {
+  "pieceId": 14761,
+  "title": "Sigurd Jorsalfar, op. 22: I. Borghilds drøm",
+  "mbids": [
+   "6a814933-6076-337c-a7b9-831d4631eba7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 22/56 '보르힐드의 꿈' 피아노판"
+ },
+ {
+  "pieceId": 14770,
+  "title": "Three Songs from “Peer Gynt”, op. 23",
+  "mbids": [
+   "6b57dc53-01bb-4b18-a19d-490bf792c76f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 23 노래 3곡 성악·피아노판"
+ },
+ {
+  "pieceId": 14787,
+  "title": "Kantate til Karl Hals",
+  "mbids": [
+   "6e3af224-9177-4383-8df0-a89553b74ff7"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg164",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14789,
+  "title": "Allegretto in E major",
+  "mbids": [
+   "6e781b0f-4b8f-4b27-8027-e58b26a39bbf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 45 2악장 첼로·피아노 편곡"
+ },
+ {
+  "pieceId": 14799,
+  "title": "Norges melodier, EG 133 No. 21: Springdands",
+  "mbids": [
+   "710e1435-5e9e-3b28-97bd-064d02487000"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14816,
+  "title": "Sigurd Jorsalfar, op. 22",
+  "mbids": [
+   "728fa52a-5010-4393-a513-3cca80c34a72"
+  ],
+  "mapping": "work",
+  "key": "grieg-op22",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14820,
+  "title": "Norges melodier, EG 133 No. 50: Ho Guro",
+  "mbids": [
+   "72f5949b-b7cd-3a15-bd06-a61d34e7600a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14826,
+  "title": "Fire digte fra Fiskerjenten, op. 21: No. 2. Good Morning",
+  "mbids": [
+   "73a6ef65-5e48-4f4a-90a7-ac60f3b46198"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 21-2 영어 가사"
+ },
+ {
+  "pieceId": 14839,
+  "title": "On St. John's Eve (op. 60, no. 5)",
+  "mbids": [
+   "755d0336-f57a-4d73-95c2-5cadbc0a3b32"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 60-5 관현악 편곡(영어 제목)"
+ },
+ {
+  "pieceId": 14845,
+  "title": "Romancer, op. 39 nr. 5: I. Blegnet, segnet (Withered, Fallen)",
+  "mbids": [
+   "7634c3c1-2029-4cb0-86f2-c96b64b7a9fc"
+  ],
+  "mapping": "part",
+  "key": "grieg-op39",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14850,
+  "title": "Fire sanger for mannsstemmer, EG 160",
+  "mbids": [
+   "77338286-cc1d-4d5d-82c2-b0c266c8c0ef"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg160",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14866,
+  "title": "Norges melodier, EG 133 No. 27: Vuggevise",
+  "mbids": [
+   "7a408954-87bd-3504-a390-c763e7cd45a5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14869,
+  "title": "Norges melodier, EG 133 No. 14: Halling",
+  "mbids": [
+   "7ada2f35-017c-3435-b9ef-bab821a591ec"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14870,
+  "title": "Pièces lyriques (Notturno)",
+  "mbids": [
+   "7ae68753-dd7a-4072-8f17-4775b0a410aa"
+  ],
+  "mapping": "part",
+  "key": "grieg-op54",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14882,
+  "title": "Andante",
+  "mbids": [
+   "7bfb0ed5-92e2-45de-bf84-d376775cdb0c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "EG 180 스케치"
+ },
+ {
+  "pieceId": 14893,
+  "title": "Norges melodier, EG 133 No. 33: Huldrelok",
+  "mbids": [
+   "7d0857c1-6d65-3a99-a0f5-2e36e3f0635e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14899,
+  "title": "Tusseslåt, EG 111",
+  "mbids": [
+   "7e3a7c18-570f-3229-9279-43c2e47feebc"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg111",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14903,
+  "title": "Haugtussa, op. 67",
+  "mbids": [
+   "7f71e3e0-74dc-4aa7-88d7-3b9e3902363a"
+  ],
+  "mapping": "work",
+  "key": "grieg-op67",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14927,
+  "title": "Eros (op 70, no. 1)",
+  "mbids": [
+   "82cbb132-054c-44fa-bc6a-5af540ebf9df"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 70-1 관현악 편곡(영어 제목)"
+ },
+ {
+  "pieceId": 14928,
+  "title": "Sørgesrsj over Rikard Nordraak, EG 107",
+  "mbids": [
+   "82e2c416-d9ab-4c2d-bd01-bd88533833c7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "EG 107 금관 편곡"
+ },
+ {
+  "pieceId": 14934,
+  "title": "Klaverstykker etter egne sanger, op. 52",
+  "mbids": [
+   "840217e8-ff64-4142-bf1a-b0064e2095fb"
+  ],
+  "mapping": "work",
+  "key": "grieg-op52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14947,
+  "title": "Halling",
+  "mbids": [
+   "85948e1e-1d44-4545-abfe-42da3fc0741b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "EG 178 하르딩 피들 곡 기보 단편"
+ },
+ {
+  "pieceId": 14949,
+  "title": "Four Norwegian Dances, op. 35: No. 4",
+  "mbids": [
+   "859aba92-8cb7-47c0-aa9f-4953452f9e88"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 35-4 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 14955,
+  "title": "I Love Thee",
+  "mbids": [
+   "87699b03-71b4-4560-b1a8-802218ea55f3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 5-3 피아노 편곡"
+ },
+ {
+  "pieceId": 14957,
+  "title": "Sarabande (Holberg Suite)",
+  "mbids": [
+   "8789c4cd-4b5d-44a4-bcc7-78314012201b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 40 사라방드 오르간 편곡(Jongen)"
+ },
+ {
+  "pieceId": 14968,
+  "title": "Norges melodier, EG 133 No. 38: Stev",
+  "mbids": [
+   "8982adda-10bb-3359-9f87-8332a6c7f7c0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 14969,
+  "title": "Den bergtekne",
+  "mbids": [
+   "89a0f8b7-cfc6-40fd-8e35-2daf71aadeae"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 32 피아노 편곡(Stevenson)"
+ },
+ {
+  "pieceId": 14984,
+  "title": "To sanger av Jørgen Moe, EG 162",
+  "mbids": [
+   "8b39ccb7-55cc-433c-a090-cef0b55e23c5"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg162",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 14993,
+  "title": "Sex digte (Ibsensangene), op. 25",
+  "mbids": [
+   "8cb28df9-ca88-4570-bdba-99b09dd9fddb"
+  ],
+  "mapping": "work",
+  "key": "grieg-op25",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15018,
+  "title": "Norges melodier, EG 133 No. 2: Norsk sjømandssang",
+  "mbids": [
+   "9060633a-4edc-3a04-aec4-2497e9323b55"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15031,
+  "title": "Larvikspolka, EG 101",
+  "mbids": [
+   "91e1c0c9-7d98-3fbd-b004-d1ab3ca11789"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "spurious",
+  "note": "EG 101 위작 의심(위키 'Possibly spurious')"
+ },
+ {
+  "pieceId": 15037,
+  "title": "5 Songs of Norway, op. 58",
+  "mbids": [
+   "92e4e7c3-5215-49bf-9330-6dbd767df376"
+  ],
+  "mapping": "work",
+  "key": "grieg-op58",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15040,
+  "title": "Tolv melodier il digte af Aasmund Olavsson Vinje, op. 33",
+  "mbids": [
+   "94338cb0-7818-41b1-b169-39262787b309"
+  ],
+  "mapping": "work",
+  "key": "grieg-op33",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15043,
+  "title": "Tre klaverstykker, EG 102",
+  "mbids": [
+   "958a7b81-6759-435b-b795-db2bfb40712b"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg102",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15069,
+  "title": "Ase's Death",
+  "mbids": [
+   "996e5331-ee3c-3e5c-b89f-20136f2ed50b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "듀크 엘링턴 재즈판(MB 녹음 3개 모두 엘링턴 악단)"
+ },
+ {
+  "pieceId": 15074,
+  "title": "Kantate ved avsløringen av Christie-stauen",
+  "mbids": [
+   "9a6582e5-bcf0-4708-af85-c27cab021bb1"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg158",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15077,
+  "title": "Norges melodier, EG 133 No. 31: Stev fra Veggardshejen",
+  "mbids": [
+   "9a937840-46bd-330c-baa3-7bccf81b7d97"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15082,
+  "title": "Norges melodier, EG 133 No. 11: Eg seer deg ut før gluggjin",
+  "mbids": [
+   "9b1af3c2-a743-38e4-9750-bce6da2013a6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15091,
+  "title": "Four Norwegian Dances, op. 35: No. 1",
+  "mbids": [
+   "9cce93e5-590b-4653-8592-8b98aae4e49d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 35-1 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 15103,
+  "title": "Norges melodier, EG 133 No. 26: Ola Glomstulens brudeferd",
+  "mbids": [
+   "9f5b50c4-2e62-3b71-9aa2-e3f0eb7e5573"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15108,
+  "title": "Norges melodier, EG 133 No. 45: Den bakvende visa",
+  "mbids": [
+   "9fdea5a3-9bea-3067-9d72-87ffa36b5fb3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15118,
+  "title": "19 norske folkeviser, op. 66: No. 1. Kulokk",
+  "mbids": [
+   "a1084935-33b1-4871-9880-1959a46b0003"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 66-1 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 15136,
+  "title": "Peer Gynt, op. 23: Anitras dans",
+  "mbids": [
+   "a45bb40f-340f-425e-8170-79be844073ce"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 23 '아니트라의 춤' 첼로·피아노 편곡(Goltermann)"
+ },
+ {
+  "pieceId": 15161,
+  "title": "Fem Digte, op. 26",
+  "mbids": [
+   "a9779a27-803d-4d6e-bc5e-8ac72df1c966"
+  ],
+  "mapping": "work",
+  "key": "grieg-op26",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15166,
+  "title": "Bergmanden",
+  "mbids": [
+   "a9a20c2d-496d-4c34-841e-62cf109cef5c"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg132",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15171,
+  "title": "Norges melodier, EG 133 No. 46: Sæterreisen",
+  "mbids": [
+   "aada10c1-c9a5-3f3b-bc24-b2285569080e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15177,
+  "title": "To Mannskorsanger, EG 169",
+  "mbids": [
+   "ab6ffa08-0253-495f-8ff0-c9bcee4a44fc"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg169",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15180,
+  "title": "Norges melodier, EG 133 No. 19: Eg veit ei lita Gjente",
+  "mbids": [
+   "abc2520c-1aad-38f9-b210-504858f4e48b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15182,
+  "title": "Fragmenter av en pianokvintett EG 118",
+  "mbids": [
+   "ac6337de-a6d0-4fb2-82d2-cdf34a20ae24"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "EG 118 피아노 5중주 단편"
+ },
+ {
+  "pieceId": 15197,
+  "title": "Scentter fra \"Olav Trygvason\", op. 50",
+  "mbids": [
+   "ae9afbdb-c63c-4b83-bdd2-b5ceed06328b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "grieg-op50 <올라브 트뤼그바손>의 장면과 같은 작품의 다른 MB 행"
+ },
+ {
+  "pieceId": 15198,
+  "title": "Dyre Vaa",
+  "mbids": [
+   "ae9d0e8c-f4fe-455a-8264-20a7d1284dc3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "EG 143 단편"
+ },
+ {
+  "pieceId": 15200,
+  "title": "Norges melodier, EG 133 No. 28: Frieras ongkarän te jenta",
+  "mbids": [
+   "af5abad4-1769-3f50-8b3b-67c9faacf412"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15202,
+  "title": "Reiseminder fra Fjeld og Fjord, op. 44",
+  "mbids": [
+   "afc7e898-0ca0-49ca-bce6-d76a51ab6607"
+  ],
+  "mapping": "work",
+  "key": "grieg-op44",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15217,
+  "title": "Norges melodier, EG 133 No. 22: Efjor gjætt' eg geitinn",
+  "mbids": [
+   "b2e29d4b-fe38-3ee0-bea3-94d6c4d20784"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15235,
+  "title": "Norges melodier, EG 133 No. 32: Aa kjøre vatten aa kjøre ve",
+  "mbids": [
+   "b5ed4412-a419-3981-bc0f-92d02b4829f5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15240,
+  "title": "17 Chorales and Fugues",
+  "mbids": [
+   "b690e0b4-f2b0-4b23-badb-c395f792d304"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "17개의 코랄과 푸가: 학습 습작, 위키 목록 밖"
+ },
+ {
+  "pieceId": 15245,
+  "title": "Seks Dikte, op. 49",
+  "mbids": [
+   "b702c721-a0bd-4dd8-a82b-f7d375889520"
+  ],
+  "mapping": "work",
+  "key": "grieg-op49",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15246,
+  "title": "Norges melodier, EG 133 No. 47: Ha du'kji hoppa",
+  "mbids": [
+   "b72e2f22-fc48-35fb-893f-cc37daca19a0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15248,
+  "title": "Ein Traum",
+  "mbids": [
+   "b7421f50-5222-4c89-a848-62492397fe8f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 48-6 두 고음 성부·피아노 편곡"
+ },
+ {
+  "pieceId": 15253,
+  "title": "Oppsang for frihetsfolket i Norden",
+  "mbids": [
+   "b8e2fedc-970c-4811-871b-a9767cac0800"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg166",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15265,
+  "title": "Hvide skyer, EG 110",
+  "mbids": [
+   "bb85ec15-463a-34b3-b3a0-01d34594f1de"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg110",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15270,
+  "title": "Andante con moto, EG 137",
+  "mbids": [
+   "bc86bc3e-509e-4a60-98f5-9e38d9f5a7f4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "grieg-eg116 Andante con moto 와 같음(MB 제목의 'EG 137' 은 잘못된 번호)"
+ },
+ {
+  "pieceId": 15281,
+  "title": "Barnlige Sange (Children's Songs), op. 61 nr. 5: Kveldssang for Blakken (Goodnight Song for Dobbin)",
+  "mbids": [
+   "beb77ed6-5ff4-4c4a-8cec-7c5ad7e9f479"
+  ],
+  "mapping": "part",
+  "key": "grieg-op61",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15284,
+  "title": "Norges melodier, EG 133 No. 36: Eg gjætte Tulla",
+  "mbids": [
+   "bef6eb5c-6e99-3249-83bb-12fc49d7a815"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15286,
+  "title": "Norges melodier, EG 133 No. 49: Guten aa gjenta paa fjøshjellen",
+  "mbids": [
+   "bf19a848-3336-3463-9233-d88813146eac"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15293,
+  "title": "Danse paysanne",
+  "mbids": [
+   "c0193e91-3b79-3ce9-ad45-11f376740d55"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "'Danse paysanne' 원곡 확인 안 됨"
+ },
+ {
+  "pieceId": 15297,
+  "title": "Albumblad, EG 109",
+  "mbids": [
+   "c091187c-b8b8-36bd-9ede-1d39b37a6425"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg109",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15298,
+  "title": "Norges melodier, EG 133 No. 39: Husk op i ring",
+  "mbids": [
+   "c0b0aa83-5462-3186-841d-cb0ad501d46f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15306,
+  "title": "Norges melodier, EG 133 No. 25: Sinklar-visen",
+  "mbids": [
+   "c22a8f8a-5d76-3a7f-ad52-6f75830a481a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15308,
+  "title": "25 Norske Folkeviser og Danser, op. 17 no. 18: Stabbelpten",
+  "mbids": [
+   "c264aee1-e5cb-4b31-87d0-590256f8ae28"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 17-18 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 15317,
+  "title": "Norges melodier, EG 133 No. 10: Det første møde",
+  "mbids": [
+   "c360d6ca-9597-3ca8-93f3-db8cb8088e4e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15318,
+  "title": "Lyriske stykker, hefte III, op. 43 no. 5: Erotikk",
+  "mbids": [
+   "c378838c-4cdc-43ee-9f55-dedf5f1c5ec4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 43-5 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 15356,
+  "title": "Lyric Pieces: Melody",
+  "mbids": [
+   "ca423b31-c476-4baa-92fd-7a559eb902d2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "'Lyric Pieces: Melody' Op. 38-3 인지 Op. 47-3 인지 MB 도 모름"
+ },
+ {
+  "pieceId": 15363,
+  "title": "Norges melodier, EG 133 No. 30: En vise om Hellig Olav",
+  "mbids": [
+   "cba7a81f-38f1-36cc-a66c-16df853a4154"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15374,
+  "title": "Norges melodier, EG 133 No. 34: Brudeslaatten",
+  "mbids": [
+   "cddd06b5-4bfc-33b8-9059-1c8e3e2495de"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15376,
+  "title": "Bergliot, op. 42",
+  "mbids": [
+   "ce5d55bc-7667-37a7-bbd9-cd96c7b9de39"
+  ],
+  "mapping": "work",
+  "key": "grieg-op42",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15390,
+  "title": "A Dream (op. 48, no. 6)",
+  "mbids": [
+   "cff264d7-11d1-4960-bfba-9a489c0a3862"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 48-6 관현악 편곡(영어 제목)"
+ },
+ {
+  "pieceId": 15395,
+  "title": "Sigurd Jorsalfar, op. 22: III. Hyldningsmarsj",
+  "mbids": [
+   "d0a5264c-5fde-31a9-96c8-e0883ef6f6e1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 22/56 '충성 행진곡' 피아노판"
+ },
+ {
+  "pieceId": 15401,
+  "title": "Funeral March (In Memory of Richard Nordraak)",
+  "mbids": [
+   "d1194716-8dd9-48eb-908a-8942c2e6e846"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "EG 107 관현악 편곡(Wood)"
+ },
+ {
+  "pieceId": 15417,
+  "title": "Sex digte, op. 25: No. 2. En svane",
+  "mbids": [
+   "d48aa299-b087-4a69-ae05-188dc8740b8b"
+  ],
+  "mapping": "part",
+  "key": "grieg-eg177",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15422,
+  "title": "Tides of Spring, op. 33 no. 2",
+  "mbids": [
+   "d4dc6406-2773-4d03-81b2-90d3ba83e48f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 33-2 영어 번역"
+ },
+ {
+  "pieceId": 15424,
+  "title": "How Fair Is Thy Face",
+  "mbids": [
+   "d542b1a5-a882-4b1d-8330-c4f8344f2866"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 74-1 영어 번역"
+ },
+ {
+  "pieceId": 15426,
+  "title": "Jædervise",
+  "mbids": [
+   "d5756235-7399-4066-80aa-ba5e391ffd72"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg174",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15427,
+  "title": "Lyriske stykker, hefte III, op. 43 no. 3: I hjemmet",
+  "mbids": [
+   "d5a1b03a-ace9-4671-900f-417e7bd2bf88"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 43-3 바이올린·피아노 편곡"
+ },
+ {
+  "pieceId": 15431,
+  "title": "Peer Gynt: Death of Åse",
+  "mbids": [
+   "d6c51121-a10a-4bf0-ad54-0200efe3c2a4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 23/46 '오세의 죽음' 오르간 편곡(Jongen)"
+ },
+ {
+  "pieceId": 15439,
+  "title": "Le Djinn",
+  "mbids": [
+   "d831ba98-c306-45fb-b5e5-5d3981477716"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 71-3 관현악 편곡 'Le Djinn'"
+ },
+ {
+  "pieceId": 15448,
+  "title": "Im Kahne, op. 60 no. 3",
+  "mbids": [
+   "d8d81b91-601a-49c3-8d28-2a61e5dba1f5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 60-3 독일어 번역"
+ },
+ {
+  "pieceId": 15449,
+  "title": "Norges melodier, EG 133 No. 4: Ungbirkken",
+  "mbids": [
+   "d8fbe7e0-bc0e-3dc1-ad84-8dad2ad23896"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15450,
+  "title": "Petey’s King of France (“In the Hall of the Mountain King”)",
+  "mbids": [
+   "d918be9d-1afd-488c-b477-0ae35b177195"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "'산속 마왕의 궁전에서' 대중 편곡"
+ },
+ {
+  "pieceId": 15474,
+  "title": "Peer Gynt, op. 23: Overture",
+  "mbids": [
+   "dc32068a-aed5-3708-b7f4-f13aef2fb856"
+  ],
+  "mapping": "part",
+  "key": "grieg-op23",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15476,
+  "title": "Kristianiensernes Sangerhilsen",
+  "mbids": [
+   "dcc2fc4b-9250-41b1-b3be-951dd7672b44"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg173",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15478,
+  "title": "Norges melodier, EG 133 No. 3: Fremad!",
+  "mbids": [
+   "dd4a3aa1-796f-3252-9453-f79e22aaefb9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15491,
+  "title": "Norges melodier, EG 133 No. 5: Bjørneskytten",
+  "mbids": [
+   "def2cf8a-8ef4-3c68-b7ff-9422ac91da77"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15493,
+  "title": "Norges melodier, EG 133 No. 13: Strilevise",
+  "mbids": [
+   "df56050d-5ecd-36ac-a917-004310a642c2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15494,
+  "title": "Slåtter - Suite for orkester, op. 72 no. 4: Haugelåt - Halling",
+  "mbids": [
+   "df93da18-dca0-3542-9d69-cf88f3b004e1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 72-4 관현악 편곡"
+ },
+ {
+  "pieceId": 15503,
+  "title": "Norges melodier, EG 133 No. 17: En liten gut fra Tistedal'n",
+  "mbids": [
+   "e0f9e750-e834-3ac7-8d0a-08366fb31672"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15509,
+  "title": "A Swan, op. 25 no. 2",
+  "mbids": [
+   "e184fb11-9b99-4e13-94d2-f26563295fb2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 25-2 관현악 편곡(영어 제목)"
+ },
+ {
+  "pieceId": 15538,
+  "title": "Gammel norsk melodi med variasjoner, op. 51",
+  "mbids": [
+   "e655219f-9b7d-41e8-98ad-0ddcca635707"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 51 2대 피아노 원판(그리그 자신의 다른 편성 판). catalog 는 관현악판"
+ },
+ {
+  "pieceId": 15539,
+  "title": "Dona nobis pacem, EG 159",
+  "mbids": [
+   "e67a6181-9b36-48cb-9cf4-dc931a2b9197"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg159",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15545,
+  "title": "Norges melodier, EG 133 No. 9: Serenade til Welhaven",
+  "mbids": [
+   "e765698d-f10e-33b2-aa86-1fcb8b04056c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15547,
+  "title": "Impromptu til Griegs Mandskor i Fort Dodge, Iowa",
+  "mbids": [
+   "e79644e3-b86a-4ca1-9808-4d1bb4b850f6"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg175",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15549,
+  "title": "25 Norske Folkeviser og Danser, op. 17 no. 22: Kulokk",
+  "mbids": [
+   "e7f4c716-db2d-4d4c-829f-baca4c9fc98e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 17-22 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 15553,
+  "title": "Norges melodier, EG 133 No. 8: To brune Øjne",
+  "mbids": [
+   "e86c23c8-13d7-31be-af43-fdaec69114f8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15556,
+  "title": "Bønn fra \"Sigurd Jorsalfar\", op. 56 no. 1",
+  "mbids": [
+   "e8d658e5-81b6-4bd2-932a-318c57bc64dd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "'Bønn fra Sigurd Jorsalfar, op. 56 no. 1': Op. 56-1 은 전주곡이라 제목이 안 맞음"
+ },
+ {
+  "pieceId": 15564,
+  "title": "To lyriske stykker",
+  "mbids": [
+   "ea351406-6adf-4234-baaf-9875c93952a8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "grieg-op68-orch 와 같음(13974 를 work 로)"
+ },
+ {
+  "pieceId": 15567,
+  "title": "Anitra’s Dance",
+  "mbids": [
+   "ead8da0b-dc53-3242-8ba1-3020c9a44a2e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 46-3 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 15569,
+  "title": "Thanks for Thy Advice (op. 21, no.4)",
+  "mbids": [
+   "eb113b32-f56c-4178-bc5e-71368dd953fb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 21-4 관현악 편곡(영어 제목)"
+ },
+ {
+  "pieceId": 15584,
+  "title": "Agitato, EG 106",
+  "mbids": [
+   "ed7003f0-aaf9-39e0-bff2-21531e3b10cd"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg106",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15591,
+  "title": "Norske melodier, EG 108: No. 146. St. Thåmas Klukke-Låten",
+  "mbids": [
+   "eea30988-15d9-4c32-b491-1bbd9a49b33e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15604,
+  "title": "Sigurd Jorsalfar, op. 22: II. Ved mannjevningen. Marsj",
+  "mbids": [
+   "f0723450-58e1-3de9-a3bf-a626e5793192"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 22/56 '겨루기에서' 피아노판"
+ },
+ {
+  "pieceId": 15611,
+  "title": "Folkelivsbilder, op. 19 no. 2: Brudefølget drager forbi",
+  "mbids": [
+   "f25d0db1-9dcd-3b4d-a113-d8c86eb8479b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 19-2 관현악 편곡(할보르센)"
+ },
+ {
+  "pieceId": 15617,
+  "title": "Norges melodier, EG 133 No. 23: Dalebu Jonson",
+  "mbids": [
+   "f357af8e-977c-38cd-9792-d2b0b07b8f75"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15627,
+  "title": "Olav Trygvason, op. 50",
+  "mbids": [
+   "f4a10666-c284-4692-9dc8-681c7b92921c"
+  ],
+  "mapping": "work",
+  "key": "grieg-op50",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15631,
+  "title": "Peer Gynt, op. 23: Morgenstemning",
+  "mbids": [
+   "f5149417-814e-44ae-bf94-9ce1f87b4266"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 23 '아침 기분' 첼로·피아노 편곡(Goltermann)"
+ },
+ {
+  "pieceId": 15635,
+  "title": "5 Digte, op. 60, no. 2: The Mother Sings",
+  "mbids": [
+   "f5b11a6a-8544-4393-8b11-691398caba06"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 60-2 영어 가사"
+ },
+ {
+  "pieceId": 15639,
+  "title": "5 Digte, op. 60",
+  "mbids": [
+   "f66117b9-36c9-471b-bef4-beb272d3106c"
+  ],
+  "mapping": "work",
+  "key": "grieg-op60",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15646,
+  "title": "Til kirken hun vandrer, EG 123",
+  "mbids": [
+   "f75979d0-0e17-494e-b915-4a1760fc877f"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg123",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15649,
+  "title": "25 Norske Folkeviser og Danser, op. 17 no. 1: Springdans",
+  "mbids": [
+   "f7dc2c81-0287-47a2-9652-3b416d810f11"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 17-1 편곡 모음(catch-all)"
+ },
+ {
+  "pieceId": 15654,
+  "title": "Norges melodier, EG 133 No. 20: Fjeldbyggen agter paa tiden",
+  "mbids": [
+   "f8370c32-cf8e-3ebb-a796-84dfa2f01a88"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15655,
+  "title": "Lyriske stykker, hefte II, op. 38 no. 1: Vuggevise",
+  "mbids": [
+   "f878edfe-e73b-4d73-8838-2b15e931e1f8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 38-1 바이올린·피아노 편곡(Sitt)"
+ },
+ {
+  "pieceId": 15659,
+  "title": "Slåtter - Suite for orkester, op. 72 no. 8: Bruremarsj (etter Myllarguten)",
+  "mbids": [
+   "f907731c-f907-3d89-a077-5ea20776bb1a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 72-8 관현악 편곡"
+ },
+ {
+  "pieceId": 15661,
+  "title": "Nordic Folksongs and Dances, op. 17 no. 5: Dance from Jölster",
+  "mbids": [
+   "f9604aa0-dcd6-4153-8d46-0b6db45c0fa9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 17-5 바이올린·피아노 편곡"
+ },
+ {
+  "pieceId": 15673,
+  "title": "Peer Gynt, op. 23: Acte IV. Solveigs sang",
+  "mbids": [
+   "fafb905d-fe66-4f43-9883-ccfb57e2ce4b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 23 '솔베이그의 노래' 프랑스어 가사"
+ },
+ {
+  "pieceId": 15674,
+  "title": "Norges melodier, EG 133 No. 18: Island",
+  "mbids": [
+   "fb015710-80be-3cbd-9543-442d62527a26"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "EG 108 <노르웨이 선율집> 안 곡(편곡집 전체를 뺌)"
+ },
+ {
+  "pieceId": 15680,
+  "title": "Du retter tidt dit øjepar, EG 148",
+  "mbids": [
+   "fb796497-cf7c-4794-809e-a237131d7c16"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg148",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15686,
+  "title": "To Ole Bull, EG 176",
+  "mbids": [
+   "fc35cc2a-c68e-4960-975f-78fb6c245a89"
+  ],
+  "mapping": "work",
+  "key": "grieg-eg176",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15687,
+  "title": "Til én II, op. 59 no. 4",
+  "mbids": [
+   "fc45cd7a-a6d4-4bda-88ef-2df49f1218fe"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 59-4 관현악 편곡(Valdar)"
+ }
+]

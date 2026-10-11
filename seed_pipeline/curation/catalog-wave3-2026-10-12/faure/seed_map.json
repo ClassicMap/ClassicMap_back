@@ -1,0 +1,1900 @@
+[
+ {
+  "pieceId": 469,
+  "title": "뱃노래 3번 G♭장조 Op. 42",
+  "mbids": [
+   "04a3d8e3-ecd0-4d6f-936f-1ea65b1725f2"
+  ],
+  "mapping": "work",
+  "key": "faure-op42",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 473,
+  "title": "마주르카 B♭장조 Op. 32",
+  "mbids": [
+   "07739f84-8bc8-4da1-af54-a21df1c16c9d"
+  ],
+  "mapping": "work",
+  "key": "faure-op32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 482,
+  "title": "왈츠 카프리스 4번 A♭장조 Op. 62",
+  "mbids": [
+   "12fd0790-f164-4e1f-a4fc-78bad2ba931e"
+  ],
+  "mapping": "work",
+  "key": "faure-op62",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 502,
+  "title": "Barcarolle no. 4 in A‐flat major, op. 44",
+  "mbids": [
+   "2c9df3f3-2e52-4d46-b5c7-fa4ef04fcbb6"
+  ],
+  "mapping": "work",
+  "key": "faure-op44",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 505,
+  "title": "Barcarolle no. 7 in D minor, op. 90",
+  "mbids": [
+   "30c158a8-6ad4-466b-94b5-06d38336a311"
+  ],
+  "mapping": "work",
+  "key": "faure-op90",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 506,
+  "title": "Allegretto moderato for Two Cellos",
+  "mbids": [
+   "30f31cb1-440d-424d-8497-5b86c4f155c1"
+  ],
+  "mapping": "work",
+  "key": "faure-morceau-lecture-2vc",
+  "path": null,
+  "reason": null,
+  "note": "MB 이름 'Allegretto moderato for Two Cellos'(1897) = 위키백과 'Morceau de lecture for two cellos (1897)'"
+ },
+ {
+  "pieceId": 518,
+  "title": "Élégie pour violoncelle et piano, op. 24",
+  "mbids": [
+   "3ea7989b-888a-4d6b-8732-024a2563b131"
+  ],
+  "mapping": "work",
+  "key": "faure-op24",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 519,
+  "title": "Barcarolle no. 1 in A minor, op. 26",
+  "mbids": [
+   "412406d0-5972-4691-8304-5bd2094a0a0e"
+  ],
+  "mapping": "work",
+  "key": "faure-op26",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 520,
+  "title": "3 Songs for Voice and Piano, op. 18",
+  "mbids": [
+   "41c922e6-435b-4e17-8f69-670eb813ac2f"
+  ],
+  "mapping": "work",
+  "key": "faure-op18",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 527,
+  "title": "Barcarolle no. 6 in E‐flat major, op. 70",
+  "mbids": [
+   "49b9cedf-7fd9-4c35-8470-7df5f8e33a17"
+  ],
+  "mapping": "work",
+  "key": "faure-op70",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 532,
+  "title": "Sérénade du Bourgeois gentilhomme, op. posth.",
+  "mbids": [
+   "4f054b60-701a-3c8a-8dc9-6d71189a6942"
+  ],
+  "mapping": "work",
+  "key": "faure-serenade-bourgeois-gentilhomme",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 539,
+  "title": "Quintette pour piano et cordes no. 1 en ré mineur, op. 89",
+  "mbids": [
+   "567d0aab-7c76-4d99-bfbe-7c7008199086"
+  ],
+  "mapping": "work",
+  "key": "faure-op89",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 541,
+  "title": "Pleurs d’or, op. 72",
+  "mbids": [
+   "5a1a8cf6-0986-495c-af3b-d11f3309272c"
+  ],
+  "mapping": "work",
+  "key": "faure-op72",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 546,
+  "title": "Morceau de concours pour violon & piano (Concours 1903)",
+  "mbids": [
+   "5e39d3ac-f3c7-4254-b669-d3d74f4ca545"
+  ],
+  "mapping": "work",
+  "key": "faure-morceau-lecture-violin",
+  "path": null,
+  "reason": null,
+  "note": "MB 이름 'Morceau de concours pour violon & piano (Concours 1903)' = 위키백과 'Morceau de lecture (1903)'"
+ },
+ {
+  "pieceId": 549,
+  "title": "Berceuse for Violin (or Cello) and Piano in D major, op. 16",
+  "mbids": [
+   "621c4838-df42-3232-972c-4c2304a6e12b"
+  ],
+  "mapping": "work",
+  "key": "faure-op16",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 559,
+  "title": "Barcarolle no. 13 in C major, op. 116",
+  "mbids": [
+   "69f02628-88b2-47ad-bc87-31a9551ea6a0"
+  ],
+  "mapping": "work",
+  "key": "faure-op116",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 570,
+  "title": "Valse‐caprice no. 1 in A major, op. 30",
+  "mbids": [
+   "7ac2f519-26dc-4314-98f8-7cb6665ec9b6"
+  ],
+  "mapping": "work",
+  "key": "faure-op30",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 578,
+  "title": "Dolly, op. 56",
+  "mbids": [
+   "82123792-5376-4449-8ee2-3424954274f1"
+  ],
+  "mapping": "work",
+  "key": "faure-op56",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 582,
+  "title": "Barcarolle no. 11 in G minor, op. 105",
+  "mbids": [
+   "844b23e6-2a6d-407f-bed0-f3b19363b220"
+  ],
+  "mapping": "work",
+  "key": "faure-op105",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 583,
+  "title": "Barcarolle no. 5 in F‐sharp minor, op. 66",
+  "mbids": [
+   "85c1c6fa-2352-4817-8b2b-72debb7ed913"
+  ],
+  "mapping": "work",
+  "key": "faure-op66",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 591,
+  "title": "Fantaisie pour flûte & piano en ut majeur, op. 79",
+  "mbids": [
+   "8c9813e4-73dc-4930-ae79-e7ffb5a36111"
+  ],
+  "mapping": "work",
+  "key": "faure-op79",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 595,
+  "title": "Barcarolle no. 2 in G major, op. 41",
+  "mbids": [
+   "966fdf12-448e-4ad4-ab5c-2628711d00d3"
+  ],
+  "mapping": "work",
+  "key": "faure-op41",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 596,
+  "title": "C’est la paix, op. 114",
+  "mbids": [
+   "96e5034d-0e69-4988-be73-bc3fb11ba28a"
+  ],
+  "mapping": "work",
+  "key": "faure-op114",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 624,
+  "title": "Barcarolle no. 12 in E‐flat major, op. 106 bis",
+  "mbids": [
+   "bb20cef9-e818-4d81-a43b-88a5e8e89a67"
+  ],
+  "mapping": "work",
+  "key": "faure-op106bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 626,
+  "title": "Romance for Violin and Piano in B-flat major, op. 28",
+  "mbids": [
+   "c026c40f-dd71-4daa-a314-388b87fd411c"
+  ],
+  "mapping": "work",
+  "key": "faure-op28",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 628,
+  "title": "Valse‐caprice no. 3 in G‐flat major, op. 59",
+  "mbids": [
+   "c1218df5-4434-49ea-b4a9-fcb127aab9e7"
+  ],
+  "mapping": "work",
+  "key": "faure-op59",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 640,
+  "title": "Barcarolle no. 9 in A minor, op. 101",
+  "mbids": [
+   "d04b0dad-bc45-4d2d-976c-650e534875dd"
+  ],
+  "mapping": "work",
+  "key": "faure-op101",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 646,
+  "title": "Quintette pour piano et cordes no. 2 en ut mineur, op. 115",
+  "mbids": [
+   "dbd1b034-8d01-434b-a4ee-ad69b4c1f545"
+  ],
+  "mapping": "work",
+  "key": "faure-op115",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 660,
+  "title": "Barcarolle no. 8 in D‐flat major, op. 96",
+  "mbids": [
+   "f118f3c8-eb95-4427-bb40-dc93a3ee274f"
+  ],
+  "mapping": "work",
+  "key": "faure-op96",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 671,
+  "title": "Valse‐caprice no. 2 in D‐flat major, op. 38",
+  "mbids": [
+   "fb0db53f-1a05-40de-8bd6-fda45ac8a915"
+  ],
+  "mapping": "work",
+  "key": "faure-op38",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 672,
+  "title": "Nocturne no. 12 en Mi mineur, op. 107",
+  "mbids": [
+   "fb2cfb0a-aad7-336e-82d4-268c527da5a1"
+  ],
+  "mapping": "work",
+  "key": "faure-op107",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 675,
+  "title": "Andante pour violon & piano en si bémol majeur, op. 75",
+  "mbids": [
+   "fc07f345-e010-40ed-a45a-051b8223ec8a"
+  ],
+  "mapping": "work",
+  "key": "faure-op75",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 676,
+  "title": "Pavane in F-sharp minor, op. 50",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "파반느 manual 207 과 같은 작품(MBID 없음)"
+ },
+ {
+  "pieceId": 680,
+  "title": "שים שלום",
+  "mbids": [
+   "484616af-23c0-4b6c-85c4-79a68f251033"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "히브리어 가사(탈마 알리야곤)를 붙인 노래 「שים שלום」"
+ },
+ {
+  "pieceId": 745,
+  "title": "One Day",
+  "mbids": [
+   "66eb50e8-d833-460a-933a-6b140bf0b966"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "<돌리> 자장가를 바탕으로 한 대중가요 「One Day」(Louis Clark 편곡)"
+ },
+ {
+  "pieceId": 777,
+  "title": "Un rêve",
+  "mbids": [
+   "9b8c690a-9c68-4226-964f-57c069e27dd9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「꿈을 꾼 후에」 편곡 work 「Un rêve」"
+ },
+ {
+  "pieceId": 788,
+  "title": "Pavane, op, 50",
+  "mbids": [
+   "95f9d126-4807-4071-a7cf-a86b212be9d3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "파반느 브라스밴드 편곡(Langford)"
+ },
+ {
+  "pieceId": 825,
+  "title": "The story of the universe",
+  "mbids": [
+   "44dbb240-8583-4211-b6e5-9bf4881201d4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "일본 대중가요 「The story of the universe」"
+ },
+ {
+  "pieceId": 832,
+  "title": "Viaggio",
+  "mbids": [
+   "909811bc-8ec5-4147-a4b0-63de5a1b9fe2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "파반느를 바탕으로 한 「Viaggio」"
+ },
+ {
+  "pieceId": 842,
+  "title": "2 Songs, op. 67",
+  "mbids": [
+   "00a1ade7-0af8-42f3-b516-5ddc974ef6cb"
+  ],
+  "mapping": "work",
+  "key": "faure-op67",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 859,
+  "title": "Masques et bergamasques, comédie musicale en 1 acte",
+  "mbids": [
+   "027bee71-cd16-4d0d-a1a5-27a8fbbd9f3d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<마스크와 베르가마스크> 1919 무대판(8곡, 대부분 옛 곡 재사용) — 카탈로그는 Op. 112 모음곡(4곡)"
+ },
+ {
+  "pieceId": 881,
+  "title": "Impromptu no. 4 in D‐flat major, op. 91",
+  "mbids": [
+   "04b1a9ec-0c1b-4d2e-97c2-f8ef4e9698fc"
+  ],
+  "mapping": "work",
+  "key": "faure-op91",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 911,
+  "title": "Impromptu no. 1 in E‐flat major, op. 25",
+  "mbids": [
+   "08024868-66d6-47a1-a379-1bf461a5e56e"
+  ],
+  "mapping": "work",
+  "key": "faure-op25",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 943,
+  "title": "Deux Mélodies, op. 76",
+  "mbids": [
+   "0c0893bb-355a-4c2f-a74f-b7f7302605d0"
+  ],
+  "mapping": "work",
+  "key": "faure-op76",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 948,
+  "title": "2 Songs, op. 87",
+  "mbids": [
+   "0c50a70b-7b9a-494e-8c79-e0c0dde6d0c0"
+  ],
+  "mapping": "work",
+  "key": "faure-op87",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 949,
+  "title": "Vocalise no. 29",
+  "mbids": [
+   "0c7a7aa4-9e93-40e7-95b7-a652f05bd06c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "「Vocalise no. 29」 — 위키백과 목록에 없음(포레의 보칼리즈는 「보칼리즈-에튀드」 1곡). 콩세르바투아르 시험용 보칼리즈로 보임"
+ },
+ {
+  "pieceId": 981,
+  "title": "2 Songs, op. 1",
+  "mbids": [
+   "0fd34727-a60c-4e28-b66a-1fa7668d3f02"
+  ],
+  "mapping": "work",
+  "key": "faure-op1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 984,
+  "title": "Pie Jesu",
+  "mbids": [
+   "101540f8-8043-4fd4-94d3-13b2db4a3409"
+  ],
+  "mapping": "part",
+  "key": "faure-op48",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "MB 관계 없는 낱개 work(작곡가만 포레). 제목(「Pie Jesu」)으로 레퀴엠 4곡에 이음"
+ },
+ {
+  "pieceId": 995,
+  "title": "2 Duets, op. 10",
+  "mbids": [
+   "11588f4e-6196-412b-810f-917af2aad478"
+  ],
+  "mapping": "work",
+  "key": "faure-op10",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1013,
+  "title": "Chanson de Mélisande, op. 159bis",
+  "mbids": [
+   "1360999a-63e0-4e8f-8c5c-3b989e340b38"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「멜리장드의 노래」 쾨클랭 관현악 편곡"
+ },
+ {
+  "pieceId": 1023,
+  "title": "Nocturne no. 6 en Ré bémol majeur, op. 63",
+  "mbids": [
+   "1454140e-b57b-3e32-b021-4630cf8cf4f3"
+  ],
+  "mapping": "work",
+  "key": "faure-op63",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1030,
+  "title": "Nell, op. 18 no. 1",
+  "mbids": [
+   "154f6cb9-0885-4e84-9d35-d4463bf65592"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Nell」 그레인저 피아노 편곡"
+ },
+ {
+  "pieceId": 1032,
+  "title": "Impromptu no. 3 in A‐flat major, op. 34",
+  "mbids": [
+   "15838148-a552-4a1b-863e-e72de24e5d06"
+  ],
+  "mapping": "work",
+  "key": "faure-op34",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1039,
+  "title": "Nocturne no. 9 en Si mineur, op. 97",
+  "mbids": [
+   "16c0644b-2551-344a-818f-41e572e145f2"
+  ],
+  "mapping": "work",
+  "key": "faure-op97",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1099,
+  "title": "Sérénade pour violoncelle & piano en si mineur, op. 98",
+  "mbids": [
+   "1d5931bf-8c98-40c4-807e-dc5a488a3d3a"
+  ],
+  "mapping": "work",
+  "key": "faure-op98",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1106,
+  "title": "2 Mélodies, op. 46",
+  "mbids": [
+   "1e0b9759-be7b-4dea-872f-5a9b01d7e7ec"
+  ],
+  "mapping": "work",
+  "key": "faure-op46",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1136,
+  "title": "Les Berceaux, op. 23, no. 1",
+  "mbids": [
+   "20fb1e00-647b-4472-9bea-eea6002004af"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Les berceaux」 편곡 catch-all work"
+ },
+ {
+  "pieceId": 1137,
+  "title": "Andante (original version of Romance, op. 69)",
+  "mbids": [
+   "211fe27c-ae81-4bbe-adac-f90cfb7753df"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "로망스 Op. 69 의 첼로·오르간 원판 「Andante」(1894) — 옛 판"
+ },
+ {
+  "pieceId": 1157,
+  "title": "La Naissance de Vénus, op. 29",
+  "mbids": [
+   "234f7f20-31a4-48f1-9004-98ff12b167ce"
+  ],
+  "mapping": "work",
+  "key": "faure-op29",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1164,
+  "title": "L’Horizon chimérique, op. 118",
+  "mbids": [
+   "23d2ac67-04ad-42c4-9398-86249d748f22"
+  ],
+  "mapping": "work",
+  "key": "faure-op118",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1166,
+  "title": "Intermède symphonique",
+  "mbids": [
+   "24120720-51d1-486d-9df7-6d216bbf82ee"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "「Intermède symphonique」 — 위키백과 목록에 없음. Op. 20 모음곡·<마스크와 베르가마스크> 서곡의 원형으로 보임"
+ },
+ {
+  "pieceId": 1185,
+  "title": "Prométhée, op. 82",
+  "mbids": [
+   "2680dd34-cc13-457c-81fc-8a4adefa9863"
+  ],
+  "mapping": "work",
+  "key": "faure-op82",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1186,
+  "title": "Vocalise no. 20",
+  "mbids": [
+   "26c4a7cc-7592-4d8b-8bbf-95522f8fd721"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "「Vocalise no. 20」 — 위키백과 목록에 없음(포레의 보칼리즈는 「보칼리즈-에튀드」 1곡). 콩세르바투아르 시험용 보칼리즈로 보임"
+ },
+ {
+  "pieceId": 1211,
+  "title": "Trois mélodies, op. 7",
+  "mbids": [
+   "2b20a2a6-ace0-4b10-97a8-35d89db8ad23"
+  ],
+  "mapping": "work",
+  "key": "faure-op7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1223,
+  "title": "Madrigal, op. 35",
+  "mbids": [
+   "2c464fb6-9398-4480-a894-c1650639eaea"
+  ],
+  "mapping": "work",
+  "key": "faure-op35",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1253,
+  "title": "La Chanson d'Ève, op. 95",
+  "mbids": [
+   "2fb83e2b-8031-456b-8c77-77844a878e5c"
+  ],
+  "mapping": "work",
+  "key": "faure-op95",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1281,
+  "title": "Violin Concerto in D minor, op. 14",
+  "mbids": [
+   "345c294e-6113-4cb5-b0b8-ff743e010ffe"
+  ],
+  "mapping": "work",
+  "key": "faure-op14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1286,
+  "title": "Ecce fidelis servus, op. 54",
+  "mbids": [
+   "3568ce42-9fdd-4cf1-98f3-5fb95e1cf178"
+  ],
+  "mapping": "work",
+  "key": "faure-op54",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1305,
+  "title": "Nocturne no. 7 en Ut dièse mineur, op. 74",
+  "mbids": [
+   "3711bd0d-ae4f-3e10-8de1-b8a7432d08c9"
+  ],
+  "mapping": "work",
+  "key": "faure-op74",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1318,
+  "title": "Aurore, op. 39, no. 1",
+  "mbids": [
+   "392be84c-2379-44d9-9cad-ff87ee977c21"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Aurore」 편곡 catch-all work"
+ },
+ {
+  "pieceId": 1365,
+  "title": "Chant d'automne, op. 5, no. 1",
+  "mbids": [
+   "3e9da4e6-cd5f-44ac-9660-5819e0448fae"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Chant d'automne」 편곡 catch-all work"
+ },
+ {
+  "pieceId": 1394,
+  "title": "Le Secret, op. 23, no. 3",
+  "mbids": [
+   "4186d4a3-8758-40dd-b945-ba8bc1c645b6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Le secret」 편곡 catch-all work"
+ },
+ {
+  "pieceId": 1424,
+  "title": "Les Djinns, op. 12",
+  "mbids": [
+   "462fb304-ea22-4752-a1f1-50c33686cc62"
+  ],
+  "mapping": "work",
+  "key": "faure-op12",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1443,
+  "title": "Piano Trio in D minor, op. 120",
+  "mbids": [
+   "485b9771-090f-42c7-8610-9bdfd4bbdc40"
+  ],
+  "mapping": "work",
+  "key": "faure-op120",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1461,
+  "title": "Pavane (Allez les bleus)",
+  "mbids": [
+   "4a93601d-b8b4-46bd-b9dc-5e4b98bcab34"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "파반느를 바탕으로 한 「Allez les bleus」"
+ },
+ {
+  "pieceId": 1504,
+  "title": "Piano Quartet no. 2 in G minor, op. 45",
+  "mbids": [
+   "5025bbbe-a3bb-48df-a9cf-5dfb90c13ff6"
+  ],
+  "mapping": "work",
+  "key": "faure-op45",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1505,
+  "title": "Nocturne no. 13 en Si mineur, op. 119",
+  "mbids": [
+   "50513f08-231c-3048-ad0a-cad16a20d85c"
+  ],
+  "mapping": "work",
+  "key": "faure-op119",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1537,
+  "title": "Impromptu no. 5 in F‐sharp minor, op. 102",
+  "mbids": [
+   "549e79af-8288-4f8c-8195-a73e297941aa"
+  ],
+  "mapping": "work",
+  "key": "faure-op102",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1565,
+  "title": "Sonate pour violoncelle & piano no. 1, op. 109",
+  "mbids": [
+   "5869a0b5-aa8f-40d6-b5c7-7111adcc6b0b"
+  ],
+  "mapping": "work",
+  "key": "faure-op109",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1566,
+  "title": "Impromptu no. 2 in F minor, op. 31",
+  "mbids": [
+   "586ac0c1-4457-46df-a914-3337faf0a7ab"
+  ],
+  "mapping": "work",
+  "key": "faure-op31",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1574,
+  "title": "Huit pièces brèves, op. 84",
+  "mbids": [
+   "5993a2a4-1d29-499c-bdd7-f20688ab50d2"
+  ],
+  "mapping": "work",
+  "key": "faure-op84",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1576,
+  "title": "La Chanson du pêcheur (Lamento), op. 4, no. 1",
+  "mbids": [
+   "5a04a75b-b680-4bfe-aee5-b30ce59f39d3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Chanson du pêcheur」 편곡 catch-all work"
+ },
+ {
+  "pieceId": 1590,
+  "title": "Puisque j'ai mis ma lèvre",
+  "mbids": [
+   "5ba444ba-1281-4278-8e97-3294de089604"
+  ],
+  "mapping": "work",
+  "key": "faure-puisque-jai-mis-ma-levre",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1597,
+  "title": "3 Songs, op. 5",
+  "mbids": [
+   "5cae2896-6871-4f19-9c7d-87a3e8446a29"
+  ],
+  "mapping": "work",
+  "key": "faure-op5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1601,
+  "title": "2 Songs, op. 4",
+  "mbids": [
+   "5d115f7b-a9d6-475b-9206-33ac197856d5"
+  ],
+  "mapping": "work",
+  "key": "faure-op4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1604,
+  "title": "Poème d’un jour, op. 21",
+  "mbids": [
+   "5da85854-21ec-4b52-a6d0-0c3ddc7ee511"
+  ],
+  "mapping": "work",
+  "key": "faure-op21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1628,
+  "title": "Sonate pour violoncelle & piano no. 2, op. 117",
+  "mbids": [
+   "60e0e6ca-dc82-497d-b9c0-e16d0ca8893b"
+  ],
+  "mapping": "work",
+  "key": "faure-op117",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1718,
+  "title": "Pelleas et Melisande, op. 80: The King's Three Blind Daughers (Lento)",
+  "mbids": [
+   "6d41e79f-b51c-4786-b6bd-98e933247f9a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "「멜리장드의 노래」 영어 첫 줄 'The King's three blind daughters' work — faure-chanson-de-melisande 와 겹침"
+ },
+ {
+  "pieceId": 1732,
+  "title": "5 Mélodies “de Venise”, op. 58",
+  "mbids": [
+   "6f052afc-5f98-48ae-a145-2af617dbe1a1"
+  ],
+  "mapping": "work",
+  "key": "faure-op58",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1765,
+  "title": "4 Mélodies, op. 51",
+  "mbids": [
+   "72da9ccc-1cb7-44f9-964a-2291132ba806"
+  ],
+  "mapping": "work",
+  "key": "faure-op51",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1775,
+  "title": "Symphonic Suite in F major, op. 20",
+  "mbids": [
+   "73d11d1c-8386-453a-adec-3b2540dce4bc"
+  ],
+  "mapping": "work",
+  "key": "faure-op20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1781,
+  "title": "2 Pièces, op. 104",
+  "mbids": [
+   "7477ffff-34d0-4eb0-8baa-37b5529c1ef0"
+  ],
+  "mapping": "work",
+  "key": "faure-op104",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1826,
+  "title": "Tuscan Serenade",
+  "mbids": [
+   "78e9c6ad-48dd-4d33-9ac4-4ce4d6d69970"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Sérénade toscane」 그레인저 관악 편곡"
+ },
+ {
+  "pieceId": 1837,
+  "title": "Super flumina Babylonis",
+  "mbids": [
+   "7a303a29-a697-49b0-9022-b769e0262a91"
+  ],
+  "mapping": "work",
+  "key": "faure-super-flumina",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1880,
+  "title": "3 Songs, op. 23",
+  "mbids": [
+   "7e9bcd6d-8d28-4e6e-9bed-9c4fcfd70813"
+  ],
+  "mapping": "work",
+  "key": "faure-op23",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1905,
+  "title": "Mirages, op. 113",
+  "mbids": [
+   "81ef85d8-47a5-4eb4-8661-31c7d2d979ff"
+  ],
+  "mapping": "work",
+  "key": "faure-op113",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1915,
+  "title": "9 Préludes, op. 103",
+  "mbids": [
+   "82fb11eb-f365-4162-805c-b575bd6233d9"
+  ],
+  "mapping": "work",
+  "key": "faure-op103",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1929,
+  "title": "Nell, op. 18, no. 1",
+  "mbids": [
+   "844c8c8c-2708-4328-a065-7cf69037280e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Nell」 편곡 catch-all work"
+ },
+ {
+  "pieceId": 1944,
+  "title": "Le Ruisseau, op. 22",
+  "mbids": [
+   "85b675f1-eb0b-44bd-9659-5fcc47c6a1c1"
+  ],
+  "mapping": "work",
+  "key": "faure-op22",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1950,
+  "title": "Tantum ergo, op. 55",
+  "mbids": [
+   "86c325bd-161b-4615-9d7d-cf64d7ffd2aa"
+  ],
+  "mapping": "work",
+  "key": "faure-op55",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1957,
+  "title": "Nocturne no. 5 en Si bémol majeur, op. 37",
+  "mbids": [
+   "87935a10-88e3-3b3c-88f1-348cab625918"
+  ],
+  "mapping": "work",
+  "key": "faure-op37",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2008,
+  "title": "Morceau de concours pour violon & piano",
+  "mbids": [
+   "8dd06b09-84a4-4f93-ad51-318ba04cd755"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "바이올린 초견곡(1903) 편곡 catch-all work"
+ },
+ {
+  "pieceId": 2023,
+  "title": "5 Mélodies, op. 58, « De Venise », no. 2. En sourdine",
+  "mbids": [
+   "8eeda5a2-5354-460f-90b2-f1b10a4f7e61"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「En sourdine」 편곡 catch-all work"
+ },
+ {
+  "pieceId": 2030,
+  "title": "2 Songs, op. 27",
+  "mbids": [
+   "9053d7cd-1be7-4029-86c1-d22aad76699a"
+  ],
+  "mapping": "work",
+  "key": "faure-op27",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2081,
+  "title": "Tristesse d'Olympio",
+  "mbids": [
+   "9548522a-6ad8-4c89-a4cd-5aa4f54cfddf"
+  ],
+  "mapping": "work",
+  "key": "faure-tristesse-dolympio",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2093,
+  "title": "Chanson, op. 94",
+  "mbids": [
+   "96c01a64-3524-3476-82aa-7def650272b0"
+  ],
+  "mapping": "work",
+  "key": "faure-op94",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2110,
+  "title": "Mélisande's Song, op. posth.",
+  "mbids": [
+   "9804f6fe-456f-3ffc-bb0d-a99f8a341a50"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "「멜리장드의 노래」 영어 원가사 work(9804f6fe) — faure-chanson-de-melisande(seed 2944)와 겹침"
+ },
+ {
+  "pieceId": 2122,
+  "title": "L'Aurore, op. posth.",
+  "mbids": [
+   "993d6473-33ce-3c58-8c51-087067e75dda"
+  ],
+  "mapping": "work",
+  "key": "faure-laurore",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2128,
+  "title": "Fantaisie for piano and orchestra, op. 111",
+  "mbids": [
+   "9a0d2a00-c68b-4ab8-9d26-960a25786115"
+  ],
+  "mapping": "work",
+  "key": "faure-op111",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2134,
+  "title": "Libera Me",
+  "mbids": [
+   "9b9e80b8-1e84-4712-8fc3-c5417ee2e732"
+  ],
+  "mapping": "part",
+  "key": "faure-op48",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "MB 관계 없는 낱개 work(작곡가만 포레). 제목(「Libera me」)으로 레퀴엠 6곡에 이음. 1877 바리톤·오르간 원판일 가능성도 있음"
+ },
+ {
+  "pieceId": 2140,
+  "title": "2 Songs, op. 2",
+  "mbids": [
+   "9c67a7b8-6351-4096-ac74-4afdf2617644"
+  ],
+  "mapping": "work",
+  "key": "faure-op2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2143,
+  "title": "Piano Sonata in F major",
+  "mbids": [
+   "9cab4d2f-d1a5-42f6-88d8-2ac8409267e8"
+  ],
+  "mapping": "work",
+  "key": "faure-piano-sonata-f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2155,
+  "title": "Pénélope",
+  "mbids": [
+   "9e913286-6c0c-4bd4-b44b-d5b3a2810806"
+  ],
+  "mapping": "work",
+  "key": "faure-penelope",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2175,
+  "title": "Le Jardin clos, op. 106",
+  "mbids": [
+   "a1ba283c-8e63-48a0-939d-253db73b2712"
+  ],
+  "mapping": "work",
+  "key": "faure-op106",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2194,
+  "title": "Ave Maria in A major, op. posth.",
+  "mbids": [
+   "a39b652b-db5b-484b-821b-6158356f5ae2"
+  ],
+  "mapping": "work",
+  "key": "faure-ave-maria-1871",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2241,
+  "title": "Ave Maria, op. 93",
+  "mbids": [
+   "a8a67ebe-3668-49a4-86c0-3430b85dce51"
+  ],
+  "mapping": "work",
+  "key": "faure-op93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2244,
+  "title": "Pavane - Das globale Dorf",
+  "mbids": [
+   "a8cb27aa-a38b-3656-91f2-df49da1b58fd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "파반느에 가사를 붙인 「Das globale Dorf」"
+ },
+ {
+  "pieceId": 2279,
+  "title": "Nocturne no. 4 en Mi bémol majeur, op. 36",
+  "mbids": [
+   "ad422446-7e41-32ca-b9d3-788d3157df69"
+  ],
+  "mapping": "work",
+  "key": "faure-op36",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2300,
+  "title": "Messe basse",
+  "mbids": [
+   "b0b85f7e-51cd-422e-ae3c-75ab645f233a"
+  ],
+  "mapping": "work",
+  "key": "faure-messe-basse",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2305,
+  "title": "Au cimetière, op. 51, no. 2",
+  "mbids": [
+   "b1038824-7ad3-4038-bd41-b163d97f3818"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Au cimetière」 편곡 catch-all work"
+ },
+ {
+  "pieceId": 2338,
+  "title": "Au bord de l'eau, op. 8, no. 1",
+  "mbids": [
+   "b3cab8b4-abab-4c18-8b5f-3b8e96899343"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Au bord de l'eau」 편곡 catch-all work"
+ },
+ {
+  "pieceId": 2360,
+  "title": "Morceau de concours pour flûte et piano (Concours 1898)",
+  "mbids": [
+   "b63a0356-2a06-4039-b4b3-d94d1cc3f217"
+  ],
+  "mapping": "work",
+  "key": "faure-morceau-concours-flute",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2362,
+  "title": "Impromptu for harp in D-flat major, op. 86",
+  "mbids": [
+   "b69d291c-d2c8-4b06-b251-3219fe82e2e4"
+  ],
+  "mapping": "work",
+  "key": "faure-op86",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2363,
+  "title": "La Passion, N. 109 : Prélude",
+  "mbids": [
+   "b6aafd16-224a-43d0-9262-04b221a059fd"
+  ],
+  "mapping": "work",
+  "key": "faure-la-passion-prelude",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2388,
+  "title": "Le Don silencieux, op. 92",
+  "mbids": [
+   "b9e96437-6bb3-3322-9155-c4f19fcc1480"
+  ],
+  "mapping": "work",
+  "key": "faure-op92",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2399,
+  "title": "3 Nocturnes, op. 33",
+  "mbids": [
+   "bb3fb89f-fd1d-4e11-9d23-800f82d05310"
+  ],
+  "mapping": "work",
+  "key": "faure-op33",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2415,
+  "title": "Tu es Petrus",
+  "mbids": [
+   "bc69450e-3ebe-4d31-89bc-ea537c0afe85"
+  ],
+  "mapping": "work",
+  "key": "faure-tu-es-petrus",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2425,
+  "title": "Une châtelaine en sa tour, op. 110",
+  "mbids": [
+   "bcfa6a28-9a29-4219-9b10-ecafd239afc7"
+  ],
+  "mapping": "work",
+  "key": "faure-op110",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2443,
+  "title": "Papillon, op. 77",
+  "mbids": [
+   "bebad916-8fbc-492b-b4a6-c9840f58b588"
+  ],
+  "mapping": "work",
+  "key": "faure-op77",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2455,
+  "title": "2 Songs, op. 3",
+  "mbids": [
+   "c0970ea3-4ed7-4e9d-94bd-bde5b4849b55"
+  ],
+  "mapping": "work",
+  "key": "faure-op3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2461,
+  "title": "3 Songs, op. 6",
+  "mbids": [
+   "c0f2e505-6bf1-4938-bd21-6db4980eedbf"
+  ],
+  "mapping": "work",
+  "key": "faure-op6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2471,
+  "title": "Trois mélodies, op. 85",
+  "mbids": [
+   "c2b2a130-e6ff-41d5-835a-d8559e9c2900"
+  ],
+  "mapping": "work",
+  "key": "faure-op85",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2480,
+  "title": "3 Songs, op. 8",
+  "mbids": [
+   "c3d63275-949e-442e-8db9-3c7f694459b2"
+  ],
+  "mapping": "work",
+  "key": "faure-op8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2496,
+  "title": "Canta Con Me ～あの日の歌",
+  "mbids": [
+   "c57e0fa5-4534-4563-a8be-438a11dd1edd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "파반느를 바탕으로 한 일본 노래 「Canta Con Me ～あの日の歌」"
+ },
+ {
+  "pieceId": 2559,
+  "title": "Nocturne no. 10 en Mi mineur, op. 99",
+  "mbids": [
+   "cc8af0ed-b00c-3206-9f23-2ada041217c2"
+  ],
+  "mapping": "work",
+  "key": "faure-op99",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2607,
+  "title": "2 Motets, op. 65",
+  "mbids": [
+   "d27f6748-0a45-4275-ad47-d98d2b6ca384"
+  ],
+  "mapping": "work",
+  "key": "faure-op65",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2646,
+  "title": "String Quartet in E minor, op. 121",
+  "mbids": [
+   "d65466e4-cea2-488d-9ace-f92bf844f4fb"
+  ],
+  "mapping": "work",
+  "key": "faure-op121",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2677,
+  "title": "Impromptu no. 6 in D-flat major, op. 86bis",
+  "mbids": [
+   "da85dea9-3d8c-443d-8a07-b00a30c7ba99"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "하프 즉흥곡 Op. 86 의 코르토 피아노 편곡(「즉흥곡 6번」 Op. 86 bis)"
+ },
+ {
+  "pieceId": 2705,
+  "title": "Piano Quartet no. 1 in C minor, op. 15",
+  "mbids": [
+   "ddf3869c-d300-4b0e-aaa1-4b54a28f05c1"
+  ],
+  "mapping": "work",
+  "key": "faure-op15",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2717,
+  "title": "Hayalimde Mes-ut Bir Rüya",
+  "mbids": [
+   "df108699-c968-4170-889e-7d7bf209e7b5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "「꿈을 꾼 후에」 터키어 제목·가사판"
+ },
+ {
+  "pieceId": 2729,
+  "title": "Berceuse pour violon et piano op. 16",
+  "mbids": [
+   "e029d077-833c-44c9-a426-b0dcece5241e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "자장가 Op. 16 MB 중복 work(e029d077) — faure-op16(seed 549)과 겹침"
+ },
+ {
+  "pieceId": 2734,
+  "title": "The Day You Strayed",
+  "mbids": [
+   "e07f141b-5a38-4cd0-b12f-15bd380a47f6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "파반느를 바탕으로 한 대중가요 「The Day You Strayed」"
+ },
+ {
+  "pieceId": 2736,
+  "title": "2 Songs, op. 47",
+  "mbids": [
+   "e0f25deb-881b-4f0c-9a55-b6ef0043886c"
+  ],
+  "mapping": "work",
+  "key": "faure-op47",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2754,
+  "title": "4 Songs, op. 39",
+  "mbids": [
+   "e302e544-e159-4b84-b2be-f10149e6df8d"
+  ],
+  "mapping": "work",
+  "key": "faure-op39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2764,
+  "title": "Deux Mélodies, op. 43",
+  "mbids": [
+   "e4136edb-1a9b-4073-979f-e2e7954a6dbd"
+  ],
+  "mapping": "work",
+  "key": "faure-op43",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2772,
+  "title": "Berceuse for Violin and Orchestra, op. 16",
+  "mbids": [
+   "e4cd8650-7478-456f-bb84-2a770b2a748e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "자장가 Op. 16 의 바이올린·관현악판(포레 자신, 1880) — 다른 편성 판"
+ },
+ {
+  "pieceId": 2805,
+  "title": "Sancta mater",
+  "mbids": [
+   "e7b86525-0246-4bc4-9e9d-cb9da7a4968b"
+  ],
+  "mapping": "work",
+  "key": "faure-sancta-mater",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2839,
+  "title": "Caligula : musique de scène op. 52 pour chœur de femmes et orchestre",
+  "mbids": [
+   "eb0fd9ad-8b72-41a9-993d-7f002ca60da3"
+  ],
+  "mapping": "work",
+  "key": "faure-op52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2854,
+  "title": "Romance, op. 69",
+  "mbids": [
+   "ed25b369-bbec-43ae-a45c-e1065cc81735"
+  ],
+  "mapping": "work",
+  "key": "faure-op69",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2857,
+  "title": "Chant funéraire",
+  "mbids": [
+   "ed6cb59e-d488-4fe7-960d-fd5ff5108030"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "「장송곡」(1921, 관악) — 첼로 소나타 2번 2악장의 원형. 위키백과 목록에 없음"
+ },
+ {
+  "pieceId": 2881,
+  "title": "Violin Sonata in E minor, op. 108",
+  "mbids": [
+   "f0857c3e-2166-4ab2-b079-a17f05ea0bf9"
+  ],
+  "mapping": "work",
+  "key": "faure-op108",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2893,
+  "title": "Romance for Violin and Orchestra, op. 28",
+  "mbids": [
+   "f1a0e29f-5a5a-4c9b-8610-3d24237f3c3d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "로망스 Op. 28 의 고베르 관현악 편곡"
+ },
+ {
+  "pieceId": 2894,
+  "title": "2 Songs, op. 83",
+  "mbids": [
+   "f1a159f0-e046-45c4-93e2-860d11876802"
+  ],
+  "mapping": "work",
+  "key": "faure-op83",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2926,
+  "title": "Allegro symphonique, op. 68",
+  "mbids": [
+   "f4f523a3-d7d2-36bb-9f76-4fdfc788be58"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 20 모음곡 1악장의 보엘만 피아노 연탄 편곡(「Allegro symphonique」 Op. 68)"
+ },
+ {
+  "pieceId": 2944,
+  "title": "Chanson de Mélisande",
+  "mbids": [
+   "f6b00b15-6ac7-4c91-a8af-559114efe2e0"
+  ],
+  "mapping": "work",
+  "key": "faure-chanson-de-melisande",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2980,
+  "title": "Requiem, op. 48: Pie Jesu",
+  "mbids": [
+   "fb1f97f8-3410-37b1-8302-83fb890926b7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "레퀴엠 「Pie Jesu」 색소폰·관현악 편곡(Bauch)"
+ },
+ {
+  "pieceId": 7631,
+  "title": "Pavane, op. 50",
+  "mbids": [
+   "fea62425-85b7-4070-8a5e-9b9658e2ade0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "파반느 편곡 catch-all work"
+ },
+ {
+  "pieceId": 11526,
+  "title": "Cantique de Jean Racine, op. 11",
+  "mbids": [
+   "38025091-ecfa-4015-b062-4a86b0f07364"
+  ],
+  "mapping": "work",
+  "key": "faure-op11",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

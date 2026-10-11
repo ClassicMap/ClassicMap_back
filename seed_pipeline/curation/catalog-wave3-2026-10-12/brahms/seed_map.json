@@ -1,0 +1,3224 @@
+[
+  {
+    "pieceId": 491,
+    "title": "대학 축전 서곡 Op. 80",
+    "mbids": [
+      "21b72b56-e6eb-474e-a0cb-2a8debe25c6c"
+    ],
+    "mapping": "work",
+    "key": "brahms-op80",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 619,
+    "title": "Tragische Ouvertüre, op. 81",
+    "mbids": [
+      "b276bb79-d8e4-3e2d-9400-417760322f9a"
+    ],
+    "mapping": "work",
+    "key": "brahms-op81",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 645,
+    "title": "Variations on a Theme by Joseph Haydn, op. 56a",
+    "mbids": [
+      "d6565eab-6dae-353e-864e-f6c82c952d22"
+    ],
+    "mapping": "work",
+    "key": "brahms-op56a",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 1560,
+    "title": "Variations in F-sharp minor on a Theme by Robert Schumann, op. 9",
+    "mbids": [
+      "57e16131-a025-390c-815c-0eee8e8fc8d2"
+    ],
+    "mapping": "work",
+    "key": "brahms-op9",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 2603,
+    "title": "Serenade for Orchestra no. 1 in D major, op. 11: IV. Menuetto I – Menuetto II",
+    "mbids": [
+      "d2396f67-0e54-4fbd-8563-0ee36af29379"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "Op. 11 4악장 미뉴에트의 클라라 슈만 피아노 편곡"
+  },
+  {
+    "pieceId": 8535,
+    "title": "Op. 120 no. 1",
+    "mbids": [
+      "39431ceb-cb3d-4400-953a-bb8186eb57d0"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "Op. 120 1번의 베리오 클라리넷·관현악 편곡"
+  },
+  {
+    "pieceId": 11292,
+    "title": "Hungarian Dance no. 2 in B minor",
+    "mbids": [
+      "0d157d1b-1bea-4bca-a825-697307f7e808"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 2번 바이올린 편곡(클렝겔/깅골드)"
+  },
+  {
+    "pieceId": 11295,
+    "title": "Geistliches Lied, op. 30",
+    "mbids": [
+      "1667aa47-8bd4-3588-9b93-68d473e7f75a"
+    ],
+    "mapping": "work",
+    "key": "brahms-op30",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11299,
+    "title": "Sextet for 2 Violins, 2 Violas, and 2 Cellos no. 1 in B-flat major, op. 18",
+    "mbids": [
+      "21ed684a-d763-408e-b826-0b7a71be7f8c"
+    ],
+    "mapping": "work",
+    "key": "brahms-op18",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11300,
+    "title": "Schicksalslied, op. 54",
+    "mbids": [
+      "22f25328-dfd0-3ded-8be4-33385c4c3b1e"
+    ],
+    "mapping": "work",
+    "key": "brahms-op54",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11301,
+    "title": "Theme and Variations in D minor, op. 18b",
+    "mbids": [
+      "2373b9d1-6d74-3192-abc2-5c9731eb40e4"
+    ],
+    "mapping": "work",
+    "key": "brahms-op18b",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11306,
+    "title": "6 Klavierstücke, op. 118",
+    "mbids": [
+      "36f68bce-308b-4d2e-bcb1-061728667226"
+    ],
+    "mapping": "work",
+    "key": "brahms-op118",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11310,
+    "title": "Waltz in A major, op. 39 no. 15",
+    "mbids": [
+      "3a15c227-8303-3fe5-82c0-d840c243f488"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "왈츠 Op. 39 15번 바이올린 편곡"
+  },
+  {
+    "pieceId": 11311,
+    "title": "Sonata for Piano and Violin no. 3 in D minor, op. 108",
+    "mbids": [
+      "3b44283a-f6e0-4258-959d-0c31b99965eb"
+    ],
+    "mapping": "work",
+    "key": "brahms-op108",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11314,
+    "title": "Konzert für Violine und Orchester D-Dur, op. 77",
+    "mbids": [],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "duplicate",
+    "note": "바이올린 협주곡 Op. 77 — 운영 156(manual)과 같은 작품(MBID 없음, 제목·작품번호로 판단)"
+  },
+  {
+    "pieceId": 11315,
+    "title": "8 Klavierstücke, op. 76",
+    "mbids": [
+      "429d234c-11eb-4512-ae90-0c75386d5803"
+    ],
+    "mapping": "work",
+    "key": "brahms-op76",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11319,
+    "title": "Nänie, op. 82",
+    "mbids": [
+      "475a8025-57cd-3ee5-af2d-67e95dbe4588"
+    ],
+    "mapping": "work",
+    "key": "brahms-op82",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11321,
+    "title": "Der 13. Psalm, op. 27",
+    "mbids": [
+      "5343dab0-5a2c-3771-aade-d24b34b8bb56"
+    ],
+    "mapping": "work",
+    "key": "brahms-op27",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11324,
+    "title": "Gesang der Parzen, op. 89",
+    "mbids": [
+      "5c1cbcd1-c158-3c3c-b872-8d20b586dbb2"
+    ],
+    "mapping": "work",
+    "key": "brahms-op89",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11326,
+    "title": "Liebeslieder-Walzer, op. 52",
+    "mbids": [
+      "6ad1b636-f35d-4b38-813f-1c20c8aedd65"
+    ],
+    "mapping": "work",
+    "key": "brahms-op52",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11332,
+    "title": "Hungarian Dance no. 9 in E minor: Allegro non troppo",
+    "mbids": [
+      "7e75f178-a113-386b-8058-1aa84cfe9176"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 9번 바이올린 편곡"
+  },
+  {
+    "pieceId": 11334,
+    "title": "Hungarian Dance for Violin and Piano no. 5 in G minor (arr. Joachim/Saeger)",
+    "mbids": [
+      "88e4ad35-8b33-412e-9bee-a5c2248d2369"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 5번 요아힘 바이올린 편곡"
+  },
+  {
+    "pieceId": 11341,
+    "title": "Fugue for Organ in A-flat minor, WoO 8: Langsam",
+    "mbids": [
+      "9cd086c2-8ee6-3708-87a6-d71743176a59"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo8",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11344,
+    "title": "Alto Rhapsody, op. 53",
+    "mbids": [
+      "abf0cc42-69f6-3f14-9707-3b5f49f952a9"
+    ],
+    "mapping": "work",
+    "key": "brahms-op53",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11345,
+    "title": "5 Lieder, op. 49",
+    "mbids": [
+      "af4390fa-ca3f-485d-848e-d454f16c912e"
+    ],
+    "mapping": "work",
+    "key": "brahms-op49",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11350,
+    "title": "Sonata for Piano and Cello no. 2 in F major, op. 99",
+    "mbids": [
+      "c86bf9ef-12c4-4302-8b9e-c3aa1ac72eba"
+    ],
+    "mapping": "work",
+    "key": "brahms-op99",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11355,
+    "title": "Hungarian Dances for piano, 4 hands, WoO 1",
+    "mbids": [
+      "d5837f20-6803-4b59-8ca0-4db3059a46b5"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo1",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11356,
+    "title": "Sinfonie Nr. 2 D-Dur, op. 73",
+    "mbids": [
+      "e03985a4-9f29-4562-9669-83e20b86cc24"
+    ],
+    "mapping": "work",
+    "key": "brahms-op73",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11357,
+    "title": "Cadenza for Piano Concerto no. 20 in D minor, K. 466: I. Allegro, WoO 14",
+    "mbids": [
+      "e0b89e6c-194f-44f2-a1f3-4bad0d4b636a"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo14",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11364,
+    "title": "Klavierstücke, op. 119",
+    "mbids": [
+      "e7aa2f0b-ebba-4809-98e2-253b5882cda1"
+    ],
+    "mapping": "work",
+    "key": "brahms-op119",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11370,
+    "title": "Baby Alone in Babylone",
+    "mbids": [
+      "7b5936d7-acf6-4fe9-a3a7-97f2b83f8334"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "popular",
+    "note": "갱스부르 노래(교향곡 3번 3악장 선율)"
+  },
+  {
+    "pieceId": 11371,
+    "title": "I ha letscht Nacht e' Troum gha",
+    "mbids": [
+      "0ed1cc3d-a5da-4397-a6e3-a02eed03ee43"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "WoO 36 4번 민요 편곡의 스위스 독일어판"
+  },
+  {
+    "pieceId": 11372,
+    "title": "Close Your Eyes",
+    "mbids": [
+      "a956b8fa-36dd-48c8-afb5-c6d52412f3ec"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "popular",
+    "note": "<자장가> Op. 49 4번에 바탕한 영어 노래"
+  },
+  {
+    "pieceId": 11374,
+    "title": "ブラームスの子守歌",
+    "mbids": [
+      "aca92f0b-f63f-4c59-afd6-b72e571cd7c1"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "<자장가> Op. 49 4번 일본어판"
+  },
+  {
+    "pieceId": 11375,
+    "title": "ブラームスで子守唄",
+    "mbids": [
+      "47ea61f6-715d-4c40-8677-e9e75f7cb069"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "왈츠 Op. 39 바탕 일본 편곡"
+  },
+  {
+    "pieceId": 11376,
+    "title": "Guten Abend, gute Nacht",
+    "mbids": [
+      "bc479bce-ac58-44d8-b763-ba2c65249c9b"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "popular",
+    "note": "<자장가> Op. 49 4번 네나(Nena) 편곡"
+  },
+  {
+    "pieceId": 11377,
+    "title": "An mir soll es nicht liegen",
+    "mbids": [
+      "5384cd52-7fc3-419c-9767-c455078f8479"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "popular",
+    "note": "프랑크 파리안 편곡 독일 대중가요"
+  },
+  {
+    "pieceId": 11378,
+    "title": "Liebesmelodie",
+    "mbids": [
+      "67a322e9-6657-459b-a429-c6902867ee3b"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "popular",
+    "note": "하인츠 키슬링 편곡 독일 대중가요"
+  },
+  {
+    "pieceId": 11382,
+    "title": "Have I loved you well?",
+    "mbids": [
+      "21cd334d-639a-46c8-a9ee-4ccf47d4ed02"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "popular",
+    "note": "일본 대중가요(다무라 나오미 작사·편곡)"
+  },
+  {
+    "pieceId": 11384,
+    "title": "Cradle Song",
+    "mbids": [
+      "40f6f584-71ae-496e-90db-fc7d62b7ee5e"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "<자장가> 앤디 스콧 편곡"
+  },
+  {
+    "pieceId": 11386,
+    "title": "Danse Hongroise No 5",
+    "mbids": [
+      "ac17fd4b-8c74-4205-9e90-216722257617"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 5번 파캥-뷔키 편곡(Oktopus)"
+  },
+  {
+    "pieceId": 11389,
+    "title": "Hungarian Dance no. 2 in D minor: Allegro non assai",
+    "mbids": [
+      "001994da-575c-3562-a474-3824533eb66c"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 2번 바이올린 편곡"
+  },
+  {
+    "pieceId": 11390,
+    "title": "3 geistliche Chöre, op. 37",
+    "mbids": [
+      "007f1f96-c274-471a-b544-308d5ee62eb1"
+    ],
+    "mapping": "work",
+    "key": "brahms-op37",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11399,
+    "title": "5 Lieder, op. 47",
+    "mbids": [
+      "057a3f52-c924-4465-808a-9da87a37b7c0"
+    ],
+    "mapping": "work",
+    "key": "brahms-op47",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11400,
+    "title": "ヴァイオリン・ソナタ 第3番 二短調 作品108 = Violin Sonata no. 3 in D minor, op. 108: 第4楽章: Presto agitato",
+    "mbids": [
+      "062c14e0-4252-4d25-8ace-d037e62faae6"
+    ],
+    "mapping": "part",
+    "key": "brahms-op108",
+    "path": [
+      4
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11403,
+    "title": "ヴァイオリン・ソナタ 第3番 二短調 作品108 = Violin Sonata no. 3 in D minor, op. 108: 第1楽章: Allegro",
+    "mbids": [
+      "07bc9ce0-ba07-497c-aa87-a09fad5e73ab"
+    ],
+    "mapping": "part",
+    "key": "brahms-op108",
+    "path": [
+      1
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11404,
+    "title": "Ungarischer Tanz Nr. 5",
+    "mbids": [
+      "080ccff4-0174-4a05-9d6e-ac9ec5abd9b6"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "popular",
+    "note": "헝가리 무곡 5번 코미디언 하모니스츠 노래 편곡"
+  },
+  {
+    "pieceId": 11413,
+    "title": "28 deutsche Volkslieder, WoO 32",
+    "mbids": [
+      "0b5411c6-4318-423a-8b21-105d80ea8298"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "excluded_scope",
+    "note": "민요 편곡 WoO 32(28개의 독일 민요)"
+  },
+  {
+    "pieceId": 11414,
+    "title": "5 Lieder, op. 71",
+    "mbids": [
+      "0bd64c06-54cf-4c34-9431-e490c396bb2b"
+    ],
+    "mapping": "work",
+    "key": "brahms-op71",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11415,
+    "title": "Neue Liebeslieder, op. 65",
+    "mbids": [
+      "0ca6d33a-4ed3-441d-a27f-b83dbbbc40f3"
+    ],
+    "mapping": "work",
+    "key": "brahms-op65",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11424,
+    "title": "Trio for Piano, Violin, and Cello no. 2 in C major, op. 87",
+    "mbids": [
+      "105c3e6c-d551-497e-8814-a8e7c21ea356"
+    ],
+    "mapping": "work",
+    "key": "brahms-op87",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11426,
+    "title": "ヴァイオリン・ソナタ 第1番 ト長調 作品78 = Violin Sonata No. 1 in G major, op. 78: 第1楽章: Vivace ma non troppo",
+    "mbids": [
+      "11069863-4fd2-4713-9461-1cf8e01e2c2c"
+    ],
+    "mapping": "part",
+    "key": "brahms-op78",
+    "path": [
+      1
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11427,
+    "title": "ヴァイオリン・ソナタ 第3番 二短調 作品108 = Violin Sonata no. 3 in D minor, op. 108: 第3楽章: Un poco presto e con sentimento",
+    "mbids": [
+      "11123b38-3395-4158-a80f-b7cd3c06be83"
+    ],
+    "mapping": "part",
+    "key": "brahms-op108",
+    "path": [
+      3
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11436,
+    "title": "5 Romanzen und Lieder, op. 84",
+    "mbids": [
+      "145f5540-dbb8-4e36-9555-f84abaa88204"
+    ],
+    "mapping": "work",
+    "key": "brahms-op84",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11440,
+    "title": "Hymne zur Verherrlichung des grossen Joachim",
+    "mbids": [
+      "15a7173e-ba4e-4be7-a5ee-fd92120f793d"
+    ],
+    "mapping": "work",
+    "key": "brahms-anh3-1",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11442,
+    "title": "悠悠的風",
+    "mbids": [
+      "16366d82-7d75-3be0-8672-ed860380332d"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "popular",
+    "note": "왈츠 Op. 39 15번 바탕 광둥어 노래"
+  },
+  {
+    "pieceId": 11444,
+    "title": "Ballades, op. 10",
+    "mbids": [
+      "168a76c9-0ef7-4e82-ad3b-8d894cb5d8dd"
+    ],
+    "mapping": "work",
+    "key": "brahms-op10",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11447,
+    "title": "49 Deutsche Volkslieder, WoO 33",
+    "mbids": [
+      "17c9750b-e431-4c4a-a473-87d1cc1ebedd"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "excluded_scope",
+    "note": "민요 편곡 WoO 33(49개의 독일 민요)"
+  },
+  {
+    "pieceId": 11449,
+    "title": "Feldeinsamkeit",
+    "mbids": [
+      "17d40745-7d09-440c-b40b-3a61a4a6ffba"
+    ],
+    "mapping": "part",
+    "key": "brahms-op86",
+    "path": [
+      2
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11452,
+    "title": "Hungarian Dance no. 7 in A major: Allegretto",
+    "mbids": [
+      "18ce6a01-a37a-3e0e-8694-2c2f24381ecb"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 7번 요아힘 바이올린 편곡"
+  },
+  {
+    "pieceId": 11455,
+    "title": "7 Fantasias, op. 116",
+    "mbids": [
+      "1b9379af-25ea-4cec-acea-6e06d9d4093f"
+    ],
+    "mapping": "work",
+    "key": "brahms-op116",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11458,
+    "title": "6 Quartette, op. 112",
+    "mbids": [
+      "1ccfe135-b176-484e-8307-3577259183c3"
+    ],
+    "mapping": "work",
+    "key": "brahms-op112",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11459,
+    "title": "2 Motetten, op. 29",
+    "mbids": [
+      "1cf7c9d8-bbe1-48ff-ac6a-c691f0c0da83"
+    ],
+    "mapping": "work",
+    "key": "brahms-op29",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11462,
+    "title": "Two Sets of Variations for piano, op. 21",
+    "mbids": [
+      "1eff051e-f785-4312-9f10-ab29905a1ef2"
+    ],
+    "mapping": "work",
+    "key": "brahms-op21",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11463,
+    "title": "Hyljätty",
+    "mbids": [
+      "1f00b7e7-dc7a-4bde-99ff-76bc0767d06a"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "WoO 34 8번 <In stiller Nacht> 핀란드어판"
+  },
+  {
+    "pieceId": 11464,
+    "title": "Hungarian Dance no. 13",
+    "mbids": [
+      "1f72533e-0b52-4701-9241-bcad50465e99"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 13번 프뢰스트 클라리넷 편곡"
+  },
+  {
+    "pieceId": 11465,
+    "title": "Trio for Piano, Clarinet, and Cello in A minor, op. 114",
+    "mbids": [
+      "1fcd64b8-58eb-45f1-bdb8-04b41bcff104"
+    ],
+    "mapping": "work",
+    "key": "brahms-op114",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11467,
+    "title": "5 Lieder, op. 94",
+    "mbids": [
+      "20cf524c-0155-48a4-a443-bba9c40bad21"
+    ],
+    "mapping": "work",
+    "key": "brahms-op94",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11468,
+    "title": "Hungarian Dances for orchestra, WoO 1, Book 2, no. 6 in D-flat major: Vivace",
+    "mbids": [
+      "20dd6c39-f86d-4030-a8b0-f905fd43d89e"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 6번 이반 피셔 관현악 편곡"
+  },
+  {
+    "pieceId": 11469,
+    "title": "Dem dunkeln Schoss der heil'gen Erde, WoO posth. 20",
+    "mbids": [
+      "20f87c54-a880-49f8-b8c6-56f8843bb8e5"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo20",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11471,
+    "title": "20 deutsche Volkslieder, WoO 38",
+    "mbids": [
+      "21f8beac-0dee-41f9-9fb4-ddb04844ace5"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "excluded_scope",
+    "note": "민요 편곡 WoO 38(20개의 독일 민요)"
+  },
+  {
+    "pieceId": 11472,
+    "title": "Tafellied, op. 93b",
+    "mbids": [
+      "2208536e-92ce-48f7-b5a8-018af1db820a"
+    ],
+    "mapping": "work",
+    "key": "brahms-op93b",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11473,
+    "title": "4 Gesänge, op. 43",
+    "mbids": [
+      "2235257d-df6b-4620-998e-7cac763467f0"
+    ],
+    "mapping": "work",
+    "key": "brahms-op43",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11479,
+    "title": "6 Gesänge, op. 3",
+    "mbids": [
+      "24df3921-e281-4c95-9255-988897a12813"
+    ],
+    "mapping": "work",
+    "key": "brahms-op3",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11484,
+    "title": "8 Lieder und Romanzen, op. 14",
+    "mbids": [
+      "271a6f28-960a-4a42-b1bc-2fac0b5691de"
+    ],
+    "mapping": "work",
+    "key": "brahms-op14",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11489,
+    "title": "Black Swan",
+    "mbids": [
+      "2916c201-5ad3-4c01-875c-13c73c7e81ce"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "Op. 118 2번 관현악 편곡(<Black Swan>)"
+  },
+  {
+    "pieceId": 11492,
+    "title": "Sonate D-Dur für Klavier und Violoncello, op. 78",
+    "mbids": [
+      "29f644b7-d38c-4623-a320-01443051b4af"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "바이올린 소나타 1번 Op. 78 클렝겔 첼로 편곡(D장조)"
+  },
+  {
+    "pieceId": 11493,
+    "title": "Piano Quartet no. 2 in A major, op. 26",
+    "mbids": [
+      "2a0b5783-e164-4c0a-9248-1e3bcbecedb0"
+    ],
+    "mapping": "work",
+    "key": "brahms-op26",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11494,
+    "title": "Regenlied, WoO 23",
+    "mbids": [
+      "2a7e504b-7377-42d4-8415-ed9cc0a1dc50"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo23",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11502,
+    "title": "Die Müllerin, Anh III/13",
+    "mbids": [
+      "2e3276cf-c134-414f-bf6d-415279634e66"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "fragment",
+    "note": "Anh. III/13 <Die Müllerin> — 미완성"
+  },
+  {
+    "pieceId": 11504,
+    "title": "Quintet for Piano, 2 Violins, Viola, and Cello in F minor, op. 34",
+    "mbids": [
+      "2f53005d-103e-40d5-b10d-fb6b192c7775"
+    ],
+    "mapping": "work",
+    "key": "brahms-op34",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11507,
+    "title": "7 Lieder, op. 62",
+    "mbids": [
+      "2fc8658d-1f5a-4561-b055-16350612505c"
+    ],
+    "mapping": "work",
+    "key": "brahms-op62",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11509,
+    "title": "Concerto for Violin, Cello, and Orchestra in A minor, op. 102 “Double Concerto”",
+    "mbids": [
+      "304289a2-235e-4467-be0b-151a2acb530b"
+    ],
+    "mapping": "work",
+    "key": "brahms-op102",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11511,
+    "title": "Cadenzas for Beethoven's Piano Concerto no. 4 in G major (op. 58), WoO 12",
+    "mbids": [
+      "30866d29-83c3-40d5-a90d-f1924e2ceeaa"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo12",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11512,
+    "title": "Élégie des vieux amants",
+    "mbids": [
+      "3087619a-c52c-4e68-95fa-bf15bf71ad88"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "파캥-뷔키 편곡(Oktopus), 원곡 불명"
+  },
+  {
+    "pieceId": 11513,
+    "title": "Hungarian Dances nos. 8 and 9 for orchestra",
+    "mbids": [
+      "311cb9b0-ddbd-4104-a34f-cfaf54555e57"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 8·9번 갈 관현악 편곡"
+  },
+  {
+    "pieceId": 11514,
+    "title": "5 Gedichte, op. 19",
+    "mbids": [
+      "31b25699-5b73-4240-a417-fca48f67e825"
+    ],
+    "mapping": "work",
+    "key": "brahms-op19",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11515,
+    "title": "Two Gavottes, WoO posth. 3",
+    "mbids": [
+      "31c3f7af-7783-3865-a8a0-73844c5e0c22"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo3",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11516,
+    "title": "ヴァイオリン・ソナタ 第2番 イ長調 作品100 = Violin Sonata no. 2 in A major, op. 100: 第2楽章: Andante tranquillo - vivace",
+    "mbids": [
+      "32452014-1aae-46a3-9fa9-dd7cead966ce"
+    ],
+    "mapping": "part",
+    "key": "brahms-op100",
+    "path": [
+      2
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11518,
+    "title": "Canon in F minor, Anh. posth. III/2",
+    "mbids": [
+      "337651ba-e25d-3332-94a0-7238bb92483f"
+    ],
+    "mapping": "work",
+    "key": "brahms-anh3-2",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11522,
+    "title": "2 String Quartets, op. 51",
+    "mbids": [
+      "34f23db8-5107-4d2f-af58-74e5e552d4f6"
+    ],
+    "mapping": "work",
+    "key": "brahms-op51",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11523,
+    "title": "6 Lieder und Romanzen, op. 93a",
+    "mbids": [
+      "36458692-a9fd-4bea-ad0e-b0f2402cd626"
+    ],
+    "mapping": "work",
+    "key": "brahms-op93a",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11524,
+    "title": "14 Deutsche Volkslieder, WoO 34",
+    "mbids": [
+      "364e5e1a-6884-4079-9f92-f4b0a2f9ed94"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "excluded_scope",
+    "note": "민요 편곡 WoO 34(14개의 독일 민요)"
+  },
+  {
+    "pieceId": 11525,
+    "title": "Variations on a Theme by Paganini, op. 35",
+    "mbids": [
+      "3667b340-dbb0-4b75-8153-619c6638e58d"
+    ],
+    "mapping": "work",
+    "key": "brahms-op35",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11527,
+    "title": "Canon in F minor, Anh. posth. III/2 (inverted)",
+    "mbids": [
+      "394a88e6-b68a-3e6b-9109-a55c919e4d38"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "duplicate",
+    "note": "Anh. III/2 카논 F단조의 자리바꿈 판 — 11518 과 같은 작품"
+  },
+  {
+    "pieceId": 11528,
+    "title": "Hungarian Dances for piano, op. 260",
+    "mbids": [
+      "39b287ff-9e10-40ec-87d2-4a9d896562e7"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 모슈코프스키 피아노 편곡"
+  },
+  {
+    "pieceId": 11531,
+    "title": "The Cradle Song (Brahms’ Lullaby)",
+    "mbids": [
+      "3af25538-322f-4656-9de5-c4f8b7efbddd"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "<자장가> Op. 49 4번 영어판"
+  },
+  {
+    "pieceId": 11533,
+    "title": "Sonata for Piano no. 1 in C major, op. 1",
+    "mbids": [
+      "3ceba99b-e62b-4d0a-b4b0-c36e41974a0c"
+    ],
+    "mapping": "work",
+    "key": "brahms-op1",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11535,
+    "title": "Cans and Brahms",
+    "mbids": [
+      "3eb8cdd4-97af-3c7e-a45e-deeea9f9ae76"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "교향곡 4번 3악장 편곡(<Cans and Brahms>)"
+  },
+  {
+    "pieceId": 11536,
+    "title": "Intermezzo in A Major op. 118 no. 2 - Black Swan for orchestra (2010)",
+    "mbids": [
+      "3f36767a-a83f-4dd9-b0a9-26aafdf2ba3b"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "Op. 118 2번 브라이트 성 관현악 편곡"
+  },
+  {
+    "pieceId": 11537,
+    "title": "Violin Sonata No. 3 in D minor, Op. 108",
+    "mbids": [
+      "3f3b913c-6d39-4208-b3b8-c22658891285"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "duplicate",
+    "note": "바이올린 소나타 3번 Op. 108 — 11311 과 같은 작품(다른 MB work)"
+  },
+  {
+    "pieceId": 11542,
+    "title": "Sonata no. 1 in F minor, op. 120 no. 1",
+    "mbids": [
+      "433cbf70-451d-4c0f-b91d-e2fcfaddbc96"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "클라리넷 소나타 1번 Op. 120 비올라판(브람스 자신의 판)"
+  },
+  {
+    "pieceId": 11546,
+    "title": "Cadenzas for Mozart's Piano Concerto no. 17 in G major (K. 453), WoO 13",
+    "mbids": [
+      "44565e48-9c81-4e0c-8301-5388ef92c474"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo13",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11547,
+    "title": "Serenade no. 1 in D major, op. 11",
+    "mbids": [
+      "44a7551e-7bea-44ba-8f72-575fe49aa2cd"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "세레나데 1번 Op. 11 피아노 연탄판(MBID 가 연탄판)"
+  },
+  {
+    "pieceId": 11551,
+    "title": "6 Lieder, op. 85",
+    "mbids": [
+      "47e5186a-d6cb-4e64-8b30-85197547776a"
+    ],
+    "mapping": "work",
+    "key": "brahms-op85",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11554,
+    "title": "Hungarian Dance no. 3 in F major: Allegretto",
+    "mbids": [
+      "48e175bf-5867-47d6-a224-c8903574125b"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 3번 편곡 모음 work"
+  },
+  {
+    "pieceId": 11557,
+    "title": "Fest- und Gedenksprüche, op. 109",
+    "mbids": [
+      "4a310308-fee1-40de-a8d2-ba5570b8d914"
+    ],
+    "mapping": "work",
+    "key": "brahms-op109",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11559,
+    "title": "Hungarian Dance no. 17",
+    "mbids": [
+      "4abfcfd8-de52-452d-9414-6230071de90b"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 17번 크라이슬러 바이올린 편곡"
+  },
+  {
+    "pieceId": 11567,
+    "title": "Rinaldo, op. 50",
+    "mbids": [
+      "5008ac88-f9f1-4ead-a89e-677bf1e3b2c8"
+    ],
+    "mapping": "work",
+    "key": "brahms-op50",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11570,
+    "title": "Sister Dear",
+    "mbids": [
+      "50a52492-3b60-4929-af5b-958902561ea2"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "WoO 37 1번 민요 편곡 영어판"
+  },
+  {
+    "pieceId": 11571,
+    "title": "Sonata for Piano no. 3 in F minor, op. 5",
+    "mbids": [
+      "5188c466-6c11-4e53-a48a-1908d1f734f8"
+    ],
+    "mapping": "work",
+    "key": "brahms-op5",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11572,
+    "title": "6 Gesänge, op. 7",
+    "mbids": [
+      "523358be-af66-4d5b-be0a-24e2791fdc48"
+    ],
+    "mapping": "work",
+    "key": "brahms-op7",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11576,
+    "title": "Labu nakti, mans bērns",
+    "mbids": [
+      "53e711b7-f42c-3f80-946e-0a27474cf38f"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "<자장가> Op. 49 4번 라트비아어판"
+  },
+  {
+    "pieceId": 11580,
+    "title": "Hungarian Dances, WoO 1, Book 4: No. 20 in E minor. Poco allegretto – Vivace",
+    "mbids": [
+      "576d6106-d2cc-4f49-a406-bbcdf3802b37"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 20번 피아티 첼로 편곡"
+  },
+  {
+    "pieceId": 11581,
+    "title": "Meine Liebe ist grün",
+    "mbids": [
+      "576fc49d-bef8-4992-96ed-ee3057ea7b7f"
+    ],
+    "mapping": "part",
+    "key": "brahms-op63",
+    "path": [
+      5
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11583,
+    "title": "8 Lieder und Gesänge, op. 57",
+    "mbids": [
+      "58f43ba1-d633-4e63-9cd4-6cff3f88410f"
+    ],
+    "mapping": "work",
+    "key": "brahms-op57",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11592,
+    "title": "Sonata in E-flat major, op. 120 no. 2",
+    "mbids": [
+      "5d042966-2e31-4824-b9e3-1376bd5f8d62"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "클라리넷 소나타 2번 Op. 120 색소폰 편곡"
+  },
+  {
+    "pieceId": 11597,
+    "title": "Sonata for Violin and Piano no. 2 in A major, op. 100 \"Thun\"",
+    "mbids": [
+      "5f772c89-4c72-404d-ad11-85b143cf1c8f"
+    ],
+    "mapping": "work",
+    "key": "brahms-op100",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11602,
+    "title": "4 Gesänge, op. 17",
+    "mbids": [
+      "61a5d3d0-5709-44c9-bb94-b4b013e861a6"
+    ],
+    "mapping": "work",
+    "key": "brahms-op17",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11604,
+    "title": "2 Motetten, op. 74",
+    "mbids": [
+      "6289910e-b12d-4d8a-ae5f-0cba8c6bbe7e"
+    ],
+    "mapping": "work",
+    "key": "brahms-op74",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11605,
+    "title": "La Valse des regrets",
+    "mbids": [
+      "62dd9718-0542-4d4b-9c31-c37985107a6b"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "popular",
+    "note": "왈츠 Op. 39 15번에 가사를 붙인 프랑스 샹송"
+  },
+  {
+    "pieceId": 11606,
+    "title": "Trio for Piano, Violin and Cello in A major, op. posth.",
+    "mbids": [
+      "62fba905-a2cb-448c-a449-e105be3c4f2f"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "spurious",
+    "note": "피아노 3중주 A장조(Anh. IV/5) — 위작 의심"
+  },
+  {
+    "pieceId": 11610,
+    "title": "3 Quartette, op. 31",
+    "mbids": [
+      "641b9b2f-e30d-4109-abb7-32c39f9072c8"
+    ],
+    "mapping": "work",
+    "key": "brahms-op31",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11611,
+    "title": "Ophelia-Lieder, WoO posth. 22",
+    "mbids": [
+      "64c3ee1c-75ad-4821-9c26-2ffba15c746f"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo22",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11612,
+    "title": "Prelude and Fugue for Organ in G minor, WoO 10",
+    "mbids": [
+      "64e9f8fa-d3da-45f9-ab40-2a15769323db"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo10",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11615,
+    "title": "An English Requiem, op. 45",
+    "mbids": [
+      "65338adf-51a6-4c28-971f-fc1c0771d43d"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "<독일 레퀴엠> 영어판"
+  },
+  {
+    "pieceId": 11616,
+    "title": "14 Volks-Kinderlieder, WoO 31",
+    "mbids": [
+      "655459a1-9857-4929-9e3d-f5ba7f119762"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "excluded_scope",
+    "note": "민요 편곡 WoO 31(어린이 민요)"
+  },
+  {
+    "pieceId": 11621,
+    "title": "Waltz in A major, op. 39, no. 15 (piano accompaniment)",
+    "mbids": [
+      "67ad2439-3e62-3602-b0f9-891876db81eb"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "왈츠 Op. 39 15번 반주 편곡"
+  },
+  {
+    "pieceId": 11622,
+    "title": "Töne, lindernder Klang, WoO 28",
+    "mbids": [
+      "68715900-571a-4865-ac55-199ce26f7a39"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo28",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11623,
+    "title": "ヴァイオリン・ソナタ 第2番 イ長調 作品100 = Violin Sonata no. 2 in A major, op. 100: 第3楽章: Allegretto grazioso (quasi andante)",
+    "mbids": [
+      "68c20961-008c-4b16-8f36-b3bfa0b374a0"
+    ],
+    "mapping": "part",
+    "key": "brahms-op100",
+    "path": [
+      3
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11624,
+    "title": "5 Lieder, op. 49: Nr. 4. Wiegenlied „Guten Abend, gut’ Nacht“",
+    "mbids": [
+      "69117453-9245-4f31-bbb8-56aaad3b3ed8"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "<자장가> Op. 49 4번 합창 편곡"
+  },
+  {
+    "pieceId": 11626,
+    "title": "9 Gesänge, op. 69",
+    "mbids": [
+      "6932bdf5-7749-476b-8b2c-616725f5c024"
+    ],
+    "mapping": "work",
+    "key": "brahms-op69",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11628,
+    "title": "9 Lieder und Gesänge, op. 63",
+    "mbids": [
+      "695c323e-afb8-4e2f-9d71-0ea80fc673ce"
+    ],
+    "mapping": "work",
+    "key": "brahms-op63",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11629,
+    "title": "Hungarian Dance no. 5 in G minor: Allegro - Vivace",
+    "mbids": [
+      "698e5a3d-d7fa-3b04-a21b-822c69e85787"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 5번 바이올린·관현악 편곡"
+  },
+  {
+    "pieceId": 11630,
+    "title": "In stiller Nacht",
+    "mbids": [
+      "69a8715a-05c9-349a-bcd3-216c24c9ade8"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "WoO 33 42번 <In stiller Nacht>(민요 편곡) 편곡"
+  },
+  {
+    "pieceId": 11635,
+    "title": "Quintette à cordes (finale)",
+    "mbids": [
+      "6b9ca1e2-9ff6-40ba-972e-ca10dc7f3788"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "unknown",
+    "note": "'현악 5중주 피날레' — 어느 곡인지 알 수 없음(MB 관계 없음)"
+  },
+  {
+    "pieceId": 11638,
+    "title": "Dança húngara",
+    "mbids": [
+      "6c60be53-40c2-35d0-89e9-4c6914dd91fc"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "unknown",
+    "note": "'헝가리 무곡' — 번호·편성 알 수 없음(MB 관계 없음)"
+  },
+  {
+    "pieceId": 11641,
+    "title": "7 Lieder, op. 95",
+    "mbids": [
+      "6da69015-b454-44b3-a26f-73072d8ac0a6"
+    ],
+    "mapping": "work",
+    "key": "brahms-op95",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11652,
+    "title": "5 Duette, op. 66",
+    "mbids": [
+      "72654b4c-4ad8-440b-b67b-6de0c057ae59"
+    ],
+    "mapping": "work",
+    "key": "brahms-op66",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11656,
+    "title": "Kleine Hochzeitskantate, WoO posth. 16",
+    "mbids": [
+      "733f7f76-0377-4f71-98ac-8cb81f78b58b"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo16",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11659,
+    "title": "月滿窗",
+    "mbids": [
+      "7443356d-8fec-4bea-83f1-90fd89e428e0"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "popular",
+    "note": "<자장가> 바탕 광둥어 노래"
+  },
+  {
+    "pieceId": 11661,
+    "title": "Missa canonica, WoO 18",
+    "mbids": [
+      "766e20aa-7761-45ba-96a8-169a1da57591"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo18",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11671,
+    "title": "Concerto pour piano n° 2 (Allegro appassionato, extrait) : Stéréo",
+    "mbids": [
+      "7ab4edcc-c64d-4580-a8d4-85f0f79c2a93"
+    ],
+    "mapping": "part",
+    "key": "brahms-op83",
+    "path": [
+      2
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11673,
+    "title": "5 Lieder, op. 107",
+    "mbids": [
+      "7be8bd50-cecc-4a04-86b5-a22db9ce5523"
+    ],
+    "mapping": "work",
+    "key": "brahms-op107",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11677,
+    "title": "Variations on a Theme by Joseph Haydn, op. 56b",
+    "mbids": [
+      "7d028794-9ece-3a23-8ffd-45693c21767a"
+    ],
+    "mapping": "work",
+    "key": "brahms-op56b",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11678,
+    "title": "Fünf Ophelia-Lieder, WoO 22",
+    "mbids": [
+      "7e079323-14f9-48fa-b981-4bc45c55b933"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "<오필리아의 노래> WoO 22 라이만 현악 4중주 편곡"
+  },
+  {
+    "pieceId": 11680,
+    "title": "16 Waltzes, op. 39: No. 14",
+    "mbids": [
+      "7e9ae3f8-0cee-3676-b96e-e605fc59b703"
+    ],
+    "mapping": "part",
+    "key": "brahms-op39",
+    "path": [
+      14
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11682,
+    "title": "Piano Quartet no. 3 in C minor, op. 60",
+    "mbids": [
+      "7ee4e876-f0b7-4121-8421-eb7dbf227c67"
+    ],
+    "mapping": "work",
+    "key": "brahms-op60",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11683,
+    "title": "Hungarian Dances no. 5",
+    "mbids": [
+      "7f603ad9-9dd4-42b9-b529-786aece94198"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 5번 뒤팽 바이올린·현 편곡"
+  },
+  {
+    "pieceId": 11686,
+    "title": "Klavierstück in B-flat major, Anh. posth. III/4",
+    "mbids": [
+      "80becf55-03fb-35fe-8fc1-79f1df3b8289"
+    ],
+    "mapping": "work",
+    "key": "brahms-anh3-4",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11687,
+    "title": "Presto in G minor I after Bach",
+    "mbids": [
+      "81048668-c4ad-3b87-a4b3-8ddfc05733bb"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "excluded_scope",
+    "note": "Anh. Ia/1 연습곡 3번 — 바흐 곡 편곡"
+  },
+  {
+    "pieceId": 11688,
+    "title": "16 Waltzes, op. 39: No. 15 in A major",
+    "mbids": [
+      "81169c65-0d2a-4b28-a580-84b2ee4f4471"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "왈츠 Op. 39 15번 편곡 모음 work"
+  },
+  {
+    "pieceId": 11689,
+    "title": "4 Lieder, op. 96",
+    "mbids": [
+      "81b723b7-6bc5-4d01-9b71-d67099488a6a"
+    ],
+    "mapping": "work",
+    "key": "brahms-op96",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11691,
+    "title": "Neue Liebeslieder, op. 65a",
+    "mbids": [
+      "82355e50-73d4-4ecf-bd72-67ba7265bc67"
+    ],
+    "mapping": "work",
+    "key": "brahms-op65a",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11694,
+    "title": "Het zandmannetje",
+    "mbids": [
+      "83476abb-fae6-4813-8700-d9e14f91c8ad"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "WoO 31 4번 <Sandmännchen> 네덜란드어판"
+  },
+  {
+    "pieceId": 11697,
+    "title": "4 Duette, op. 61",
+    "mbids": [
+      "842054cf-7d6d-4a4b-b836-0d8bc49eb277"
+    ],
+    "mapping": "work",
+    "key": "brahms-op61",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11701,
+    "title": "Ave Maria, op. 12",
+    "mbids": [
+      "866b3bf2-c591-38de-8c0e-2382cf4b1070"
+    ],
+    "mapping": "work",
+    "key": "brahms-op12",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11703,
+    "title": "5 Chorale Preludes from op. 122",
+    "mbids": [
+      "88baf1df-3201-46c7-a3ee-176bd0726016"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "코랄 전주곡 Op. 122 앙게러 현악 합주 편곡"
+  },
+  {
+    "pieceId": 11704,
+    "title": "5 Gesänge, op. 72",
+    "mbids": [
+      "88d7e0ea-474d-431c-a38a-69d440085c19"
+    ],
+    "mapping": "work",
+    "key": "brahms-op72",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11705,
+    "title": "Spruch, WoO 27",
+    "mbids": [
+      "88efa6ac-eb8b-45d9-837f-032f7eda4323"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo27",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11708,
+    "title": "ヴァイオリン・ソナタ 第1番 ト長調 作品78 = Violin Sonata No. 1 in G major, op. 78: 第3楽章: Allegro molto moderato",
+    "mbids": [
+      "89734b5f-fec6-4342-85f4-07a05d529b18"
+    ],
+    "mapping": "part",
+    "key": "brahms-op78",
+    "path": [
+      3
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11710,
+    "title": "Mir lächelt kein Frühling, WoO 25",
+    "mbids": [
+      "8aab6567-7f72-4016-85db-cb68dc9b9a93"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo25",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11712,
+    "title": "Hungarian Dance no. 1",
+    "mbids": [
+      "8abf89ae-3ced-4792-a4a8-4ed0c7354e88"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 1번 프뢰스트 클라리넷 편곡"
+  },
+  {
+    "pieceId": 11714,
+    "title": "Sonatensatz, WoO 2",
+    "mbids": [
+      "8d5d68be-28f3-4d0b-ad54-e793bb5f8fad"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "F-A-E 스케르초 WoO 2 카팀스 비올라 편곡"
+  },
+  {
+    "pieceId": 11716,
+    "title": "ヴァイオリン・ソナタ 第3番 二短調 作品108 = Violin Sonata no. 3 in D minor, op. 108: 第2楽章: Adagio",
+    "mbids": [
+      "8dca6ffc-be08-44c7-8f90-50e244951c9a"
+    ],
+    "mapping": "part",
+    "key": "brahms-op108",
+    "path": [
+      2
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11718,
+    "title": "Concerto pour piano n° 2 (Allegro appassionato, extrait) : Transaural",
+    "mbids": [
+      "8e243850-91e2-4164-ba88-8f0f4ad91f34"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "duplicate",
+    "note": "Op. 83 2악장 발췌 녹음(트랜스오럴) — 11671 과 같은 대목"
+  },
+  {
+    "pieceId": 11719,
+    "title": "Let Nothing Ever Grieve Thee",
+    "mbids": [
+      "8e765fc3-242a-4c1c-88d5-b47fda83cd6c"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "<영적인 노래> Op. 30 영어판"
+  },
+  {
+    "pieceId": 11726,
+    "title": "Sonata for 2 Pianos in F minor, op. 34b",
+    "mbids": [
+      "9132f6e2-c6a3-4e6e-9d96-4883ef9935f1"
+    ],
+    "mapping": "work",
+    "key": "brahms-op34b",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11727,
+    "title": "3 intermezzi, op. 117",
+    "mbids": [
+      "915d1a6f-4817-48ae-91fa-c56bbff0c0e7"
+    ],
+    "mapping": "work",
+    "key": "brahms-op117",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11729,
+    "title": "Scherzo in E-flat minor, op. 4",
+    "mbids": [
+      "9237d4da-5e40-3569-aae1-0055ce791a20"
+    ],
+    "mapping": "work",
+    "key": "brahms-op4",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11731,
+    "title": "Hungarian Dance no. 6 in D: Vivace",
+    "mbids": [
+      "92eb904a-4e2d-447c-a4bd-887869fb08a8"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 6번 피아노 3중주 편곡"
+  },
+  {
+    "pieceId": 11732,
+    "title": "5 Lieder, op. 105",
+    "mbids": [
+      "935749f5-6e98-43ac-8dc8-6c31dfed45f2"
+    ],
+    "mapping": "work",
+    "key": "brahms-op105",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11734,
+    "title": "13 Canons, op. 113",
+    "mbids": [
+      "94e33182-49d1-4b8b-ad18-eb70d2403e0a"
+    ],
+    "mapping": "work",
+    "key": "brahms-op113",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11735,
+    "title": "Gavotte for piano in A major (after Gluck's \"Iphigénie en Aulide\"), Anh. 1a/2",
+    "mbids": [
+      "94fc9dd7-ca02-3d56-8408-1fb6725eeeab"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "excluded_scope",
+    "note": "Anh. Ia/2 글루크 가보트 편곡"
+  },
+  {
+    "pieceId": 11737,
+    "title": "Waltz in A minor, op. 39",
+    "mbids": [
+      "951ee974-139f-4b74-9dbe-f11ccab05605"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "왈츠 Op. 39 14번 편곡 모음 work"
+  },
+  {
+    "pieceId": 11746,
+    "title": "Mondnacht, WoO 21",
+    "mbids": [
+      "972331ea-1a12-38fe-9927-ee51ede2563a"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo21",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11747,
+    "title": "6 Chorale Preludes (after Brahms, op. 122), BV B 50",
+    "mbids": [
+      "97d62965-7189-43ac-a959-a7c2eabfeff0"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "부조니의 코랄 전주곡 Op. 122 피아노 편곡"
+  },
+  {
+    "pieceId": 11750,
+    "title": "Sonata in D minor, op. 120 no. 1",
+    "mbids": [
+      "97ffba98-f73b-4393-991a-745752d781d1"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "클라리넷 소나타 1번 Op. 120 바이올린판"
+  },
+  {
+    "pieceId": 11756,
+    "title": "5 Lieder, op. 106",
+    "mbids": [
+      "99e34c90-12b1-4eb0-81d9-8785d4f8c5e1"
+    ],
+    "mapping": "work",
+    "key": "brahms-op106",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11757,
+    "title": "Hungarian Dances for Solo Piano, WoO 1",
+    "mbids": [
+      "9a0304eb-1bd3-4bdd-9fa9-150511699a82"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 피아노 독주판(브람스 자신의 편곡)"
+  },
+  {
+    "pieceId": 11766,
+    "title": "Albumblatt a-Moll",
+    "mbids": [
+      "9d5455fe-7190-4733-817c-8182b029613d"
+    ],
+    "mapping": "work",
+    "key": "brahms-albumblatt",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11768,
+    "title": "Zwei Rhapsodien, op. 79",
+    "mbids": [
+      "9e3f1515-21e9-4195-b7d7-edffd3071652"
+    ],
+    "mapping": "work",
+    "key": "brahms-op79",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11771,
+    "title": "Sonata no. 2 in E-flat major, op. 120 no. 2",
+    "mbids": [
+      "9f8a38fe-dda3-4bcd-8439-45f7935342ba"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "클라리넷 소나타 2번 Op. 120 비올라판(브람스 자신의 판)"
+  },
+  {
+    "pieceId": 11773,
+    "title": "Hungarian Dances: No. 6 in D-flat major [trans. G major]",
+    "mbids": [
+      "a00aac30-5991-46b4-8f00-13cad34d5ba5"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 6번 클렝겔 바이올린 편곡"
+  },
+  {
+    "pieceId": 11777,
+    "title": "Fang den Augenblick (Walzer / op. 39 no. 15)",
+    "mbids": [
+      "a1930c92-01e1-44ad-a68f-e4ec525f1ba8"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "popular",
+    "note": "왈츠 Op. 39 15번에 가사를 붙인 독일 노래"
+  },
+  {
+    "pieceId": 11783,
+    "title": "Grausam erweiset sich Amor, WoO 24",
+    "mbids": [
+      "a43fe6fe-47cf-405d-9694-7e7c45d90b5a"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo24",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11787,
+    "title": "2 Gesänge, op. 91",
+    "mbids": [
+      "a5d462ec-678f-452c-8dd3-e16f56f02c90"
+    ],
+    "mapping": "work",
+    "key": "brahms-op91",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11790,
+    "title": "Piano Trio no. 4 in A major, op. posth.",
+    "mbids": [
+      "a6f68b52-28c2-4bda-b50b-d725605cae13"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "spurious",
+    "note": "피아노 3중주 A장조(Anh. IV/5) — 위작 의심, 11606 과 같은 곡"
+  },
+  {
+    "pieceId": 11791,
+    "title": "Hungarian Dance no. 6 in B-flat major",
+    "mbids": [
+      "a6f70211-475a-48b4-b22f-b3352d689c3f"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 6번 바이올린 편곡"
+  },
+  {
+    "pieceId": 11793,
+    "title": "Piano Exercises, WoO 6",
+    "mbids": [
+      "a7cd15a8-d908-4fcc-8d0f-54813338f48d"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo6",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11796,
+    "title": "3 Gesänge, op. 42",
+    "mbids": [
+      "a8b0c74b-f048-4a86-801f-ac7156163a22"
+    ],
+    "mapping": "work",
+    "key": "brahms-op42",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11797,
+    "title": "Zu Rauch, WoO 30",
+    "mbids": [
+      "a9902f4d-9f4f-4376-9bcd-925101000fe2"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo30",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11801,
+    "title": "Lullaby",
+    "mbids": [
+      "aa53b1cd-f084-448b-8d56-d53f745c5e43"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "<자장가> Op. 49 4번 다른 언어판"
+  },
+  {
+    "pieceId": 11803,
+    "title": "4 Duette, op. 28",
+    "mbids": [
+      "ab132b9f-c09b-47ff-bb25-47a45bfeb2ef"
+    ],
+    "mapping": "work",
+    "key": "brahms-op28",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11807,
+    "title": "6 Gesänge, op. 6",
+    "mbids": [
+      "acad3114-89c3-4006-9c6d-192256415374"
+    ],
+    "mapping": "work",
+    "key": "brahms-op6",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11808,
+    "title": "Concerto pour piano n° 2 (Allegro appassionato, extrait) : Binaural",
+    "mbids": [
+      "ad20e8a2-8785-4f8a-953d-bd10c0859d42"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "duplicate",
+    "note": "Op. 83 2악장 발췌 녹음(바이노럴) — 11671 과 같은 대목"
+  },
+  {
+    "pieceId": 11809,
+    "title": "Trio for Piano, Viola, and Cello in A minor, op. 114",
+    "mbids": [
+      "ad583688-7138-47fc-a750-208dfb264fb8"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "클라리넷 3중주 Op. 114 비올라판"
+  },
+  {
+    "pieceId": 11811,
+    "title": "Wann?, WoO 29",
+    "mbids": [
+      "ae1933a8-f582-44fb-b5ed-3b92e9bacb62"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo29",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11812,
+    "title": "3 Duette, op. 20",
+    "mbids": [
+      "ae3a7f7f-550c-44fc-985a-434cf17b6041"
+    ],
+    "mapping": "work",
+    "key": "brahms-op20",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11820,
+    "title": "4 Gesänge, op. 70",
+    "mbids": [
+      "b18de6e5-6abe-453a-9a09-ba2a00cde4f2"
+    ],
+    "mapping": "work",
+    "key": "brahms-op70",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11821,
+    "title": "Liebeslieder Waltzes, op. 52a",
+    "mbids": [
+      "b1971665-59e4-4fe2-a9f6-b8d807ac2e0b"
+    ],
+    "mapping": "work",
+    "key": "brahms-op52a",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11828,
+    "title": "Rondo alla Zingarese",
+    "mbids": [
+      "b36ec332-e8c8-4e00-9bd4-d72f5d154ae1"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "피아노 4중주 1번 Op. 25 4악장 편곡"
+  },
+  {
+    "pieceId": 11829,
+    "title": "Rakoczy March, Anh. posth. III/10",
+    "mbids": [
+      "b3cb7396-c395-3f43-9a8b-4bf389856592"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "fragment",
+    "note": "Anh. III/10 라코치 행진곡 — 단편"
+  },
+  {
+    "pieceId": 11830,
+    "title": "4 Quartette, op. 92",
+    "mbids": [
+      "b4376f77-c1ea-4a1c-bdb4-d93c1a4fd2f4"
+    ],
+    "mapping": "work",
+    "key": "brahms-op92",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11832,
+    "title": "Je connais une fleur",
+    "mbids": [
+      "b501b7ac-7280-46ce-83c4-b32457817bf8"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "popular",
+    "note": "영화 <Une fille sur la route> 노래"
+  },
+  {
+    "pieceId": 11840,
+    "title": "Sonate pour violoncelle n°2 (Allegro passionato)",
+    "mbids": [
+      "b7769c99-2a93-4e3b-813e-6635fbbd8063"
+    ],
+    "mapping": "part",
+    "key": "brahms-op99",
+    "path": [
+      3
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11841,
+    "title": "Trio for Piano, Violin, and Cello no. 3 in C minor, op. 101",
+    "mbids": [
+      "b7c96bb8-3875-4c62-ad0e-4e8ba798ce06"
+    ],
+    "mapping": "work",
+    "key": "brahms-op101",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11845,
+    "title": "Zwei Sarabanden für Klavier",
+    "mbids": [
+      "b99164b8-777f-439c-a173-7bac46f9f51e"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo5",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11847,
+    "title": "Cadenza for Mozart's Piano Concerto no. 24 in C minor (K. 491), WoO 15",
+    "mbids": [
+      "ba419ef8-dd3d-40e7-91e9-ceca8d543367"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo15",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11848,
+    "title": "Waltz, op. 39 no. 15",
+    "mbids": [
+      "ba86cbb4-030c-368f-aeb7-58afb662a0a7"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "왈츠 Op. 39 15번 편곡 모음 work"
+  },
+  {
+    "pieceId": 11851,
+    "title": "II-84 Canção de Ninar",
+    "mbids": [
+      "bb48782e-a609-4e7c-b35d-89ff7cc97030"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "<자장가> Op. 49 4번 포르투갈어판"
+  },
+  {
+    "pieceId": 11853,
+    "title": "12 Lieder und Romanzen, op. 44",
+    "mbids": [
+      "bb9d39aa-f00d-4484-abd2-10c36e253a99"
+    ],
+    "mapping": "work",
+    "key": "brahms-op44",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11855,
+    "title": "Begräbnisgesang, op. 13",
+    "mbids": [
+      "bc11c617-3ff3-3eea-8ac5-794e1920a371"
+    ],
+    "mapping": "work",
+    "key": "brahms-op13",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11859,
+    "title": "16 Waltzes: Waltz No. 15",
+    "mbids": [
+      "bda87c25-b1c9-34ad-b0af-619ba7728649"
+    ],
+    "mapping": "part",
+    "key": "brahms-op39",
+    "path": [
+      15
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11861,
+    "title": "8 deutsche Volkslieder, WoO 36",
+    "mbids": [
+      "be64eff8-ef10-4fc4-8f33-8efbdd5ce90a"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "excluded_scope",
+    "note": "민요 편곡 WoO 36(8개의 독일 민요)"
+  },
+  {
+    "pieceId": 11864,
+    "title": "ヴァイオリン・ソナタ 第1番 ト長調 作品78 = Violin Sonata No. 1 in G major, op. 78: 第2楽章: Adagio",
+    "mbids": [
+      "bf0e5bf9-4cc1-4c5e-91b7-7883e99aaac9"
+    ],
+    "mapping": "part",
+    "key": "brahms-op78",
+    "path": [
+      2
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11865,
+    "title": "String Quintet no. 2 in G major, op. 111",
+    "mbids": [
+      "bf160ab8-c4e1-4cc8-a650-f8b3dfd568cf"
+    ],
+    "mapping": "work",
+    "key": "brahms-op111",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11871,
+    "title": "Sonata for Piano no. 2 in F-sharp minor, op. 2",
+    "mbids": [
+      "bfe0067a-af44-4087-a999-df9819a72afe"
+    ],
+    "mapping": "work",
+    "key": "brahms-op2",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11872,
+    "title": "Hungarian Dance no. 12",
+    "mbids": [
+      "c22165df-6fc2-4e64-8779-6770edc1d7e9"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 12번 프뢰스트 클라리넷 편곡"
+  },
+  {
+    "pieceId": 11875,
+    "title": "Hungarian Dance no. 21",
+    "mbids": [
+      "c3adc40c-ce7c-4658-8840-21953e088e33"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 21번 프뢰스트 클라리넷 편곡"
+  },
+  {
+    "pieceId": 11876,
+    "title": "21 Hungarian Dances for Orchestra, WoO 1",
+    "mbids": [
+      "c424ebea-7fe1-4563-a797-830b576337db"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 관현악 편곡 모음 work"
+  },
+  {
+    "pieceId": 11880,
+    "title": "Prelude and Fugue for Organ in A minor, WoO 9",
+    "mbids": [
+      "c63611f3-64dc-45e7-865e-77c5dca60852"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo9",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11881,
+    "title": "5 Lieder, op. 41",
+    "mbids": [
+      "c73ab098-1665-4474-890c-843c58693a5a"
+    ],
+    "mapping": "work",
+    "key": "brahms-op41",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11884,
+    "title": "Hungarian Dance No. 7 in A major",
+    "mbids": [
+      "c8f9ba14-780e-4dac-8fdb-a9705225d8d1"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 7번 바이올린 편곡"
+  },
+  {
+    "pieceId": 11885,
+    "title": "Vier ernste Gesänge, op. 121",
+    "mbids": [
+      "c8ff626d-4161-4670-be69-5c2be8a9e9ad"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "<4개의 엄숙한 노래> Op. 121 사전트 관현악 편곡"
+  },
+  {
+    "pieceId": 11895,
+    "title": "Cadenza for J. S. Bach's keyboard concerto in D minor (BWV 1052), WoO 11",
+    "mbids": [
+      "cd0c3586-3ae4-4c41-a1ee-2cb21aee4772"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo11",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11902,
+    "title": "Hungarian Dances for orchestra, WoO 1, Book 1, No. 5 in G minor: Allegro",
+    "mbids": [
+      "d018bb33-a771-415c-9665-84a6bad9bf37"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 5번 패링턴 관현악 편곡"
+  },
+  {
+    "pieceId": 11904,
+    "title": "16 deutsche Volkslieder, WoO 37",
+    "mbids": [
+      "d080f8fa-d9a6-4cda-a984-fb6972dc5b9d"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "excluded_scope",
+    "note": "민요 편곡 WoO 37(16개의 독일 민요)"
+  },
+  {
+    "pieceId": 11910,
+    "title": "String Quartet no. 3 in B-flat major, op. 67",
+    "mbids": [
+      "d3247805-b3da-40c5-86ae-123af8a6eedc"
+    ],
+    "mapping": "work",
+    "key": "brahms-op67",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11911,
+    "title": "6 Lieder, op. 86",
+    "mbids": [
+      "d3734ef6-073c-4996-84ed-15d0872a2366"
+    ],
+    "mapping": "work",
+    "key": "brahms-op86",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11914,
+    "title": "Zwei Giguen für Klavier",
+    "mbids": [
+      "d40538c1-7053-487f-bbd3-0877f028de6d"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo4",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11916,
+    "title": "8 Lieder und Gesänge, op. 58",
+    "mbids": [
+      "d443e8e1-c4b4-4bcd-b66f-cade8f890307"
+    ],
+    "mapping": "work",
+    "key": "brahms-op58",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11917,
+    "title": "Symphony no. 2 in D major, op. 73",
+    "mbids": [
+      "d53ab82a-d06c-41fa-b17c-802adb851ef8"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "교향곡 2번 Op. 73 브람스 피아노 연탄판"
+  },
+  {
+    "pieceId": 11920,
+    "title": "String Quintet no. 1 in F major, op. 88",
+    "mbids": [
+      "d5e55ad1-fe65-4a9b-abc8-1e93701c1db7"
+    ],
+    "mapping": "work",
+    "key": "brahms-op88",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11922,
+    "title": "3 Quartette, op. 64",
+    "mbids": [
+      "d8afb5a4-a9d2-403f-b1d4-a379a5e46e2e"
+    ],
+    "mapping": "work",
+    "key": "brahms-op64",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11926,
+    "title": "Quintet for 2 Violins, 2 Violas, and Cello in B minor, op. 115",
+    "mbids": [
+      "da5342be-4a49-4d1c-bfd6-61c1968ffbbc"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "클라리넷 5중주 Op. 115 비올라판"
+  },
+  {
+    "pieceId": 11927,
+    "title": "A German Requiem, op. 45: I. Blessed Are They That Mourn",
+    "mbids": [
+      "dab25f7b-1dcb-40dd-9292-12e287e19f0a"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "<독일 레퀴엠> 1악장 영어판"
+  },
+  {
+    "pieceId": 11930,
+    "title": "6 Lieder, op. 97",
+    "mbids": [
+      "dbb0bd4a-a488-4d43-8232-d50eca62eb68"
+    ],
+    "mapping": "work",
+    "key": "brahms-op97",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11935,
+    "title": "Two Clarinet Sonatas, op. 120",
+    "mbids": [
+      "df0fdda1-0e44-4468-9548-c4e6e2a4441f"
+    ],
+    "mapping": "work",
+    "key": "brahms-op120",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11936,
+    "title": "Duerme y sueña",
+    "mbids": [
+      "df6cf7a3-ac3d-42aa-bc7a-7f197faba0c6"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "<자장가> Op. 49 4번 스페인어판"
+  },
+  {
+    "pieceId": 11939,
+    "title": "Vier Präludien und Ernste Gesänge",
+    "mbids": [
+      "e0275764-0704-4a8e-b538-7707cebd5efe"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "<4개의 엄숙한 노래> 글라네르트 관현악 편곡"
+  },
+  {
+    "pieceId": 11942,
+    "title": "12 deutsche Volkslieder, WoO posth. 35",
+    "mbids": [
+      "e171588d-2aa3-48f8-bac1-8d9a562054e8"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "excluded_scope",
+    "note": "민요 편곡 WoO 35(12개의 독일 민요)"
+  },
+  {
+    "pieceId": 11944,
+    "title": "Quintet for 2 Violins, 2 Violas and Cello No. 2 in G major, op. 111",
+    "mbids": [
+      "e19c1736-d441-4b25-9140-1890562ea6da"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "현악 5중주 2번 Op. 111 현악 합주 편곡"
+  },
+  {
+    "pieceId": 11946,
+    "title": "5 Gesänge, op. 104",
+    "mbids": [
+      "e290d999-ce9a-4b9a-b857-fd3b1690a596"
+    ],
+    "mapping": "work",
+    "key": "brahms-op104",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11947,
+    "title": "9 Lieder und Gesänge, op. 32",
+    "mbids": [
+      "e2a2f741-7bea-4ddb-8ff5-a334eb0f1c68"
+    ],
+    "mapping": "work",
+    "key": "brahms-op32",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11951,
+    "title": "Valse, op. 39",
+    "mbids": [
+      "e4326a5b-2168-400a-a0d8-1ff749e721c6"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "왈츠 Op. 39 15번 푸르셀 관현악 편곡"
+  },
+  {
+    "pieceId": 11953,
+    "title": "Souvenir de la Russie, Anh. 4/6",
+    "mbids": [
+      "e57b6dde-a22d-426a-8449-c018f3ff3f1d"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "spurious",
+    "note": "<러시아의 추억>(Anh. IV/6) — 위작 의심"
+  },
+  {
+    "pieceId": 11961,
+    "title": "Romanzen aus L. Tiecks \"Die schöne Magelone\", op. 33",
+    "mbids": [
+      "e932a915-8334-47b8-999a-b7399cb8e465"
+    ],
+    "mapping": "work",
+    "key": "brahms-op33",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11969,
+    "title": "O wie sanft!, WoO 26",
+    "mbids": [
+      "ec2f2757-c0f8-4efb-9786-9ce0cce5663b"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo26",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11970,
+    "title": "Hungarian Dances for piano, op. 260: No. 6 in D-flat major:",
+    "mbids": [
+      "ed461273-fdc7-4118-a657-f3118f783124"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 6번 치프라 피아노 편곡"
+  },
+  {
+    "pieceId": 11971,
+    "title": "Marienlieder, op. 22",
+    "mbids": [
+      "ed9f66c7-c490-4d93-a2b6-1723894cec28"
+    ],
+    "mapping": "work",
+    "key": "brahms-op22",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11972,
+    "title": "4 Lieder, op. 46",
+    "mbids": [
+      "ee5631c1-46d3-491c-899d-8e9334e66885"
+    ],
+    "mapping": "work",
+    "key": "brahms-op46",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11975,
+    "title": "Hungarian Dances for orchestra, WoO 1",
+    "mbids": [
+      "ef54cde3-f811-4e30-a76d-49ae664a870d"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "헝가리 무곡 1·3·10번 브람스 관현악 편곡"
+  },
+  {
+    "pieceId": 11978,
+    "title": "5 Lieder, op. 105: No. 1. Wie Melodien zieht es mir",
+    "mbids": [
+      "efebbc64-f5dd-4637-a653-c6c4e44c68fc"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "Op. 105 1번 비올라 편곡"
+  },
+  {
+    "pieceId": 11980,
+    "title": "8 Lieder und Gesänge, op. 59",
+    "mbids": [
+      "f0bfd63f-c25c-4e77-be2c-2daaafcbee38"
+    ],
+    "mapping": "work",
+    "key": "brahms-op59",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11983,
+    "title": "3 Motetten, op. 110",
+    "mbids": [
+      "f2081310-7c42-42c2-a605-e046de00e143"
+    ],
+    "mapping": "work",
+    "key": "brahms-op110",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11988,
+    "title": "4 Balladen und Romanzen, op. 75",
+    "mbids": [
+      "f414310a-d874-473c-8980-541399c7c279"
+    ],
+    "mapping": "work",
+    "key": "brahms-op75",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11991,
+    "title": "Dein Herzlein mild, WoO 19",
+    "mbids": [
+      "f674fdd1-cff4-4c67-835b-ab964cd47c43"
+    ],
+    "mapping": "work",
+    "key": "brahms-woo19",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11993,
+    "title": "ヴァイオリン・ソナタ 第2番 イ長調 作品100 = Violin Sonata no. 2 in A major, op. 100: 第1楽章: Allegro amabile",
+    "mbids": [
+      "f801c991-088e-4e03-819c-ffc259cefd39"
+    ],
+    "mapping": "part",
+    "key": "brahms-op100",
+    "path": [
+      1
+    ],
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 11994,
+    "title": "O Heart Subdued With Grieving",
+    "mbids": [
+      "f88d2d6c-54f1-4a9e-9448-f9591c0215f0"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "hymn_translation",
+    "note": "<영적인 노래> Op. 30 영어판"
+  },
+  {
+    "pieceId": 11995,
+    "title": "String Sextet no. 2 in G major, op. 36",
+    "mbids": [
+      "f8ff6b04-cf33-452f-8585-1882f18362fe"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "현악 6중주 2번 Op. 36 아테르베리 현악 합주 편곡(MBID 가 편곡판)"
+  },
+  {
+    "pieceId": 11996,
+    "title": "Ein deutsches Requiem",
+    "mbids": [
+      "f91ae703-57cc-44cd-abb9-29d7334bd6b2"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "<독일 레퀴엠> 피아노 연탄·독창·합창판"
+  },
+  {
+    "pieceId": 11997,
+    "title": "Il est bel et bon / The Bridegroom",
+    "mbids": [
+      "f9a3fb8e-a8c2-3743-b6c7-e3614c9c4edf"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "unknown",
+    "note": "파스로 <Il est bel et bon>과 <Der Bräutigam>(Op. 44 2번?)을 묶은 제목 — 알 수 없음"
+  },
+  {
+    "pieceId": 12000,
+    "title": "Wo gehst du hin, zu Stolze? WoO 33 no. 22",
+    "mbids": [
+      "fa88714a-6d12-4f09-89e5-a1cbd6116935"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "excluded_scope",
+    "note": "민요 편곡 WoO 33 22번"
+  },
+  {
+    "pieceId": 12011,
+    "title": "Variations in E-flat major on a Theme by Robert Schumann, op. 23",
+    "mbids": [
+      "ff5ffd73-2b6f-3ddb-a2d0-65c53bf97cc0"
+    ],
+    "mapping": "work",
+    "key": "brahms-op23",
+    "path": null,
+    "reason": null,
+    "note": null
+  },
+  {
+    "pieceId": 15368,
+    "title": "Piano Quartet no. 1 in G minor, op. 25",
+    "mbids": [
+      "cce981e2-3976-457f-a9cc-f49252bb1cb7"
+    ],
+    "mapping": "unmatched",
+    "key": null,
+    "path": null,
+    "reason": "arrangement",
+    "note": "피아노 4중주 1번 Op. 25 쇤베르크 관현악 편곡(MBID 가 편곡판, 제목은 원곡)"
+  }
+]

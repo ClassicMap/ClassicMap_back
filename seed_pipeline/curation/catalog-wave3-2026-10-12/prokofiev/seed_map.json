@@ -1,0 +1,2708 @@
+[
+ {
+  "pieceId": 576,
+  "title": "Peter and the Wolf, op. 67",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": "prokofiev-op067",
+  "path": null,
+  "reason": "duplicate",
+  "note": "MBID 없는 seed 행. 같은 작품은 manual 324 「음악 동화 <피터와 늑대>」(MBID 812b5cc4)"
+ },
+ {
+  "pieceId": 11291,
+  "title": "Le Fils prodigue: Suite symphonique tirée du ballet, Op. 46bis",
+  "mbids": [
+   "03ca9654-5371-49c8-831c-96071130cac7"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op046bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11294,
+  "title": "Cinderella, op. 87",
+  "mbids": [
+   "0ec132df-6012-40b8-bfb5-0609e696cd8c"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op087",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11297,
+  "title": "Шесть пьес из балета «Золушка» для Фортепиано, соч. 102",
+  "mbids": [
+   "1d61b5ec-04fc-407f-8587-2c5b8d00041b"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op102",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11302,
+  "title": "String Quartet no. 2 in F major, op. 92, on Kabardian themes",
+  "mbids": [
+   "24164a65-6f68-4952-969d-1689d51d0e62"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op092",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11303,
+  "title": "Autumnal Sketch, op. 8",
+  "mbids": [
+   "270306e1-f1a2-4731-afee-b514da9260a6"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op008",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11304,
+  "title": "Five Poems of Konstantin Balmont, op. 36",
+  "mbids": [
+   "3500c682-2b10-40e9-b5fe-586cdce7f0cb"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op036",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11308,
+  "title": "Расцветай, могучий край, op. 114",
+  "mbids": [
+   "3849a254-2aac-4a69-8d84-6c636e562825"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op114",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11312,
+  "title": "The Queen of Spades, op. 70",
+  "mbids": [
+   "3d22f822-a91b-45da-b466-9d6b7b6d61ae"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op070",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11316,
+  "title": "Скифская сюита, соч. 20",
+  "mbids": [
+   "440a162c-6d03-4718-a1ee-099e11369af9"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op020",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11317,
+  "title": "Piano Sonata no. 7 in B-flat major, op. 83",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": "prokofiev-op083",
+  "path": null,
+  "reason": "duplicate",
+  "note": "MBID 없는 seed 행. 같은 작품은 manual 326(MBID 45d6ee5d)"
+ },
+ {
+  "pieceId": 11320,
+  "title": "Symphony no. 5 in B-flat major, op. 100",
+  "mbids": [
+   "4c31264a-4181-4131-a54b-b88ada8ab53b"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op100",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11323,
+  "title": "Piano Sonata no. 4 in C minor, Op. 29",
+  "mbids": [
+   "599739eb-1de0-4c65-b662-7067a7a05c9a"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op029",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11325,
+  "title": "Boris Godunov, op. 70bis",
+  "mbids": [
+   "63defac0-5846-4726-9db9-96bbeb2b1e55"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op070bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11327,
+  "title": "Piano Concerto no. 3 in C major, op. 26",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": "prokofiev-op026",
+  "path": null,
+  "reason": "duplicate",
+  "note": "MBID 없는 seed 행. 같은 작품은 manual 325(MBID 7598a5f7). seed part 10개 있음"
+ },
+ {
+  "pieceId": 11328,
+  "title": "Сказки старой бабушки, соч. 31",
+  "mbids": [
+   "7795f9a3-d1ef-4f8b-b817-0494921df220"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op031",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11329,
+  "title": "Здравица, op. 85",
+  "mbids": [
+   "7850705f-60be-48dd-b83a-23582e32db15"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op085",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11330,
+  "title": "Hamlet, op. 77",
+  "mbids": [
+   "7bef1ba1-d196-4c3b-acd3-38f2914fbca6"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op077",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11331,
+  "title": "4 Pieces for Piano, op. 32",
+  "mbids": [
+   "7e055489-b219-4325-bbf9-05c7f72d7b26"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op032",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11333,
+  "title": "Five Poems of Anna Akhmatova, op. 27",
+  "mbids": [
+   "8891a3c3-d302-4266-b706-44aa7a72d40a"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op027",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11335,
+  "title": "Sonata for Violin and Piano no. 1 in F minor, op. 80",
+  "mbids": [
+   "8ebb47bc-da48-427a-8d54-a3940d28ede7"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op080",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11336,
+  "title": "Romeo and Juliet, op. 64",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": "prokofiev-op064",
+  "path": null,
+  "reason": "duplicate",
+  "note": "MBID 없는 seed 행. 같은 작품은 manual 322(MBID 91ceabb1). seed part 54개 있음"
+ },
+ {
+  "pieceId": 11337,
+  "title": "Violin Concerto no. 1 in D major, op. 19",
+  "mbids": [
+   "931b4200-2245-45b7-b662-effbef98c52d"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op019",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11338,
+  "title": "Cinq Mélodies, op. 35",
+  "mbids": [
+   "96c0225f-1f36-49ea-b941-3dd9989c6720"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op035",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11340,
+  "title": "Etudes for piano, op. 2",
+  "mbids": [
+   "9c6ded1f-5999-4509-8f1f-5d5b4db62197"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op002",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11343,
+  "title": "Кантата к двадцатилетию Октября, соч. 74",
+  "mbids": [
+   "abb2116f-f720-4a70-9140-9a10070635e0"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op074",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11346,
+  "title": "Piano Concerto no. 1 in D-flat major, op. 10",
+  "mbids": [
+   "b18bb93c-51b7-4f6d-a036-bf2eba45d2eb"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op010",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11347,
+  "title": "Chout, op. 21",
+  "mbids": [
+   "c4e44d6f-0d14-4174-8ada-4726a41a17d3"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op021",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11349,
+  "title": "Three Romances, op. 73",
+  "mbids": [
+   "c72c2efb-0518-4d3d-9d7e-22e317979d63"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op073",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11351,
+  "title": "Sonate pour deux violons, op. 56",
+  "mbids": [
+   "d074428f-93f0-4d3e-8874-7b74b8508e47"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op056",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11353,
+  "title": "Four Pieces, op. 4",
+  "mbids": [
+   "d420709e-741a-4990-9d49-8fe549cabebb"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op004",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11359,
+  "title": "Десять пьес из балета «Золушка» для Фортепиано, соч. 97",
+  "mbids": [
+   "e0f3763b-d2d6-405d-a3ec-990b82522887"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op097",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11361,
+  "title": "Symphony-Concerto for Cello and Orchestra in E minor, op. 125",
+  "mbids": [
+   "e28e0c50-ab2c-4a0e-9f5e-a12f45747b74"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op125",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11362,
+  "title": "3 Stücke aus „Romeo und Julia“ für Violine und Klavier",
+  "mbids": [
+   "e3c0b079-ad6d-485e-9722-69f28f3f7466"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<로미오와 줄리엣> 3곡의 바이올린·피아노 편곡(Grjunes)"
+ },
+ {
+  "pieceId": 11363,
+  "title": "Piano Sonata no. 6 in A major, op. 82",
+  "mbids": [
+   "e70d0050-2865-4fe3-ba10-450bf706b34f"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op082",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11365,
+  "title": "Masque",
+  "mbids": [
+   "ea8dd370-46d9-4395-af12-5e4af4b1b8ea"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 75-5 '가면'의 바이올린·피아노 편곡(하이페츠)"
+ },
+ {
+  "pieceId": 11367,
+  "title": "Поручик Киже",
+  "mbids": [
+   "f68995c7-4d1b-4b8d-a383-71d481544720"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-film-kije",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11387,
+  "title": "Overture",
+  "mbids": [
+   "729791eb-d67d-4ba2-a367-980fc690341a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "유대 주제에 의한 서곡의 편곡(Gabriel Paquin-Buki)"
+ },
+ {
+  "pieceId": 11391,
+  "title": "Winter Bonfire, op. 122",
+  "mbids": [
+   "0090a0d0-c627-4daa-8b83-76ba7c1512ee"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op122",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11395,
+  "title": "Symphony no. 6 in E-flat minor, op. 111",
+  "mbids": [
+   "0293e20b-341f-4f79-906e-602b16a4485c"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op111",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11396,
+  "title": "War and Peace, op. 91",
+  "mbids": [
+   "03b4640c-5d6d-4a3d-8e21-a299dd896f7a"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op091",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11398,
+  "title": "Cinderella: Gavotte",
+  "mbids": [
+   "050de6a4-ceab-4cf7-916d-1c7e4656f5d8"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op087",
+  "path": null,
+  "reason": "excerpt_keep",
+  "note": "녹음이 함부르크 필·메츠마허의 관현악 연주(원곡 관현악). 발레 1막 10번 가보트(모음곡 2번 2곡에도 쓰임), 단독 연주가 잦은 대목",
+  "titleKo": "발레 <신데렐라> 중 \"가보트\"",
+  "titleEn": "Cinderella: Gavotte"
+ },
+ {
+  "pieceId": 11401,
+  "title": "Scherzo in D major",
+  "mbids": [
+   "07b09a37-bfaa-4e85-8c1b-f7789cce71b3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "작품번호 없는 어린 시절 피아노 소품(1902–1908 무렵). 카탈로그 체계 없이 자필로 전해 이번 범위에서 뺌 — 출처 표기 없음, 같은 계열 소품으로 보임"
+ },
+ {
+  "pieceId": 11402,
+  "title": "Pensées, op. 62",
+  "mbids": [
+   "07b4750d-ba06-4872-b082-e49fdc676b50"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op062",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11405,
+  "title": "12 Russian Folksongs, op. 104",
+  "mbids": [
+   "08ccdfb3-a59c-47a8-8976-bc42a4a3025f"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op104",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11406,
+  "title": "The Love for Three Oranges, op. 33: Grand March",
+  "mbids": [
+   "08d11afe-ffdf-4161-9410-340492b1bdca"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<세 개의 오렌지> 행진곡의 바이올린·관현악 편곡"
+ },
+ {
+  "pieceId": 11407,
+  "title": "Ivan the Terrible, Concert Scenario",
+  "mbids": [
+   "08dd9784-c481-425c-90ba-8d37f520a760"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<이반 뇌제> 연주회용 구성(Concert Scenario, 남이 엮음). 원작 Op. 116 은 낱곡"
+ },
+ {
+  "pieceId": 11409,
+  "title": "Allegretto for piano in A minor",
+  "mbids": [
+   "0a67ff77-6ecf-4a49-b267-972427fb0ce7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "작품번호 없는 어린 시절 피아노 소품(1902–1908 무렵). 카탈로그 체계 없이 자필로 전해 이번 범위에서 뺌 — 녹음·출처 없음, 같은 계열 소품으로 보임"
+ },
+ {
+  "pieceId": 11410,
+  "title": "Marsch",
+  "mbids": [
+   "0a8905a8-df79-4f50-ba68-5d1a2a4075f6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "행진곡의 클라리넷 4대·베이스 클라리넷 편곡"
+ },
+ {
+  "pieceId": 11421,
+  "title": "Romeo and Juliet, op. 64: Act I. Masks",
+  "mbids": [
+   "0f715227-42e8-4e5d-a6f3-d1b58cfb84fb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 <로미오와 줄리엣> 번호의 남의 편곡(MB catch-all·편곡 work, arrangement of 원곡 번호) — 12번 '가면', Borisovsky 바이올린 편곡"
+ },
+ {
+  "pieceId": 11422,
+  "title": "Огненный ангел, op. 37",
+  "mbids": [
+   "0f8e4907-472f-4e84-bcd0-4d9476a16b07"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op037",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11429,
+  "title": "10 Pieces from Romeo and Juliet, op. 75",
+  "mbids": [
+   "111ef4a5-5283-45d5-85b7-e642c62265a7"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op075",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11430,
+  "title": "Waltz Suite, op. 110",
+  "mbids": [
+   "1369b15a-83a3-490f-9146-232ad7102ad9"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op110",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11432,
+  "title": "Violin Concerto no. 2 in G minor, op. 63",
+  "mbids": [
+   "13d340ea-9e48-4a0a-9872-af628d325a5d"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op063",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11434,
+  "title": "Pesenki, Series 2",
+  "mbids": [
+   "143b296b-a208-4c89-83b2-285d46f3543e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "작품번호 없는 어린 시절 피아노 소품(1902–1908 무렵). 카탈로그 체계 없이 자필로 전해 이번 범위에서 뺌 — Pesenki 2집"
+ },
+ {
+  "pieceId": 11437,
+  "title": "Overture on Hebrew Themes, op. 34",
+  "mbids": [
+   "146e01cf-56d8-4f8e-99fc-dfa9de325e2c"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op034",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11445,
+  "title": "Pekka ja susi, op. 67: \"Muuta silloin ilmestyi metsän reunasta näkyviin joukko metsästäjiä.\"",
+  "mbids": [
+   "16b48687-03cc-32cf-bbc6-385d86027fca"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op067",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "핀란드어 내레이션판 <피터와 늑대>(Pekka ja susi)의 대목. 원곡 Op. 67 은 낱곡(manual 324)"
+ },
+ {
+  "pieceId": 11448,
+  "title": "Quintet in G minor, op. 39",
+  "mbids": [
+   "17c9f61b-8471-4768-89a5-c1935d8b8502"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op039",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11453,
+  "title": "Peter and the Wolf: A Special Report",
+  "mbids": [
+   "18f59f47-5b86-4dec-a26c-ebea067c76b2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "NPR 라디오 패러디 각색 <Peter and the Wolf: A Special Report>"
+ },
+ {
+  "pieceId": 11456,
+  "title": "The Apprentice Theme (‘Dance of the Knights’)",
+  "mbids": [
+   "1be0cb0c-0295-416c-a57b-8ab6742a46e3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "TV 프로그램 <어프렌티스> 주제곡('기사들의 춤' 각색)"
+ },
+ {
+  "pieceId": 11457,
+  "title": "Pekka ja susi, op. 67: \"Aamulla varhain pikku Pekka avasi veräjän ja tuli suurelle, vihreälle niitylle.\"",
+  "mbids": [
+   "1cc47948-243e-3ec2-8b6a-caffdf706b3c"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op067",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "핀란드어 내레이션판 <피터와 늑대>(Pekka ja susi)의 대목. 원곡 Op. 67 은 낱곡(manual 324)"
+ },
+ {
+  "pieceId": 11460,
+  "title": "Pesenki, Series 3",
+  "mbids": [
+   "1e029d2c-66a2-4a19-8aa1-068425685231"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "작품번호 없는 어린 시절 피아노 소품(1902–1908 무렵). 카탈로그 체계 없이 자필로 전해 이번 범위에서 뺌 — Pesenki 3집"
+ },
+ {
+  "pieceId": 11461,
+  "title": "Three Pieces from Cinderella, op. 95",
+  "mbids": [
+   "1e8a9a91-1a0d-40b8-8a17-6b51d9cff404"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op095",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11470,
+  "title": "Adagio \"Cinderella and the Prince\", op. 97bis",
+  "mbids": [
+   "21a17bb5-85e6-46a2-9d9c-98dd36889df3"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op097bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11474,
+  "title": "The Tale of the Stone Flower, op. 118",
+  "mbids": [
+   "22bb3a02-eb0c-4093-9c23-d1d627607990"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op118",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11475,
+  "title": "Le Pas d'acier",
+  "mbids": [
+   "2314acc5-b694-44e5-a5b3-776bb03e911e"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op041",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11476,
+  "title": "Five Dances from Cinderella",
+  "mbids": [
+   "2409ad21-bca6-40ad-8f16-8e4ed0956c99"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<신데렐라> 5개의 춤 바이올린·피아노 편곡(Fichtenholz)"
+ },
+ {
+  "pieceId": 11477,
+  "title": "Cinderella op. 87: Act 2: Grand Waltz - Allegretto",
+  "mbids": [
+   "2444f550-c7de-476e-828e-a6fd4e26f3a9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<신데렐라> 큰 왈츠의 바이올린·관현악 편곡"
+ },
+ {
+  "pieceId": 11482,
+  "title": "They Are Seven, Cantata op. 30",
+  "mbids": [
+   "254bde4a-ca24-4238-9a11-fee02f59681f"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op030",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11487,
+  "title": "The Story of a Real Man, op. 117",
+  "mbids": [
+   "28532dc7-1503-451d-8873-08221996b6f2"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op117",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11490,
+  "title": "Romeo und Julia: Auszüge aus der Orchestersuite Nr. 1, op. 64 A und Nr. 2, op. 64 B: Tanz der Männer aus dem Hause Monague",
+  "mbids": [
+   "296e09bc-c6e5-3684-a7a6-7062728c777d"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op064ter",
+  "path": null,
+  "reason": "unknown",
+  "note": "독일어 발췌 음반 트랙. 제목('몬터규가 남자들의 춤')과 녹음 제목('백합을 든 소녀들의 춤')이 서로 달라 모음곡 어느 곡인지 못 정함"
+ },
+ {
+  "pieceId": 11495,
+  "title": "Piano Sonata no. 5, op. 38",
+  "mbids": [
+   "2af25560-4844-4f2a-8782-b87cb8388d40"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op038",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11496,
+  "title": "Ballade in C minor, for cello and piano, op. 15",
+  "mbids": [
+   "2b087bb6-741d-3c2c-89f1-4d2e48536bbc"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op015",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11498,
+  "title": "Concerto for Flute and Orchestra",
+  "mbids": [
+   "2cc86bea-2f53-4132-a5c2-64f72dd764a9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "플루트 소나타 Op. 94 의 플루트 협주곡 편곡(Christopher Palmer)"
+ },
+ {
+  "pieceId": 11499,
+  "title": "Cello Concerto in E minor, op. 58",
+  "mbids": [
+   "2d38d3aa-7ba0-4ac8-9306-c044ac3f8878"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op058",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11500,
+  "title": "2 Choruses, op. 66a",
+  "mbids": [
+   "2d448635-8285-4be2-bfe6-a0de2c4bacec"
+  ],
+  "mapping": "part",
+  "key": "prokofiev-op066",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "MBID 2d448635 = Op. 66a '2개의 대중가요'. Op. 66 을 66a(2곡)·66b(4곡) 두 겹으로 둠"
+ },
+ {
+  "pieceId": 11501,
+  "title": "Sonata for Cello and Piano in C major, op. 119",
+  "mbids": [
+   "2e07dba6-cd64-4d34-8644-a37f9a71030f"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op119",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11506,
+  "title": "Overture in B-flat major, for 17 instruments (or orchestra) (\"American\"), op. 42",
+  "mbids": [
+   "2f9aabb0-1ace-462a-9299-4f5d5560b873"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op042",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11508,
+  "title": "Ballade for the Boy Who Remained Unknown, Op. 93",
+  "mbids": [
+   "3012c5be-9051-46de-98ea-57d9fb6d6347"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op093",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11510,
+  "title": "2 Songs from Lieutenant Kijé, Op. 60bis",
+  "mbids": [
+   "306a677c-f773-4fa0-8069-fc5385f8531b"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op060bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11517,
+  "title": "The Year 1941, op. 90",
+  "mbids": [
+   "3324c6ee-2a0a-449c-88c6-f0c5b6be09bf"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op090",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11519,
+  "title": "Pekka ja susi, op. 67: \"Ja niinpä siitä tulikin komeata katseltavaa.\"",
+  "mbids": [
+   "33c38871-ee22-34a7-a7a6-e7eb6c14f5ba"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op067",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "핀란드어 내레이션판 <피터와 늑대>(Pekka ja susi)의 대목. 원곡 Op. 67 은 낱곡(manual 324)"
+ },
+ {
+  "pieceId": 11520,
+  "title": "Piano Sonata No. 10 in C minor, op. 137",
+  "mbids": [
+   "34c6e8ca-6987-4767-8f7c-bb144a43e2d3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "피아노 소나타 10번 Op. 137 — 44마디 단편(MB disambiguation 'fragment')"
+ },
+ {
+  "pieceId": 11521,
+  "title": "Gata Borralheira - Cinderella Goes to the Ball",
+  "mbids": [
+   "34d8004d-2b5b-320f-95c7-0767ff5a592d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "포르투갈어 <Gata Borralheira>(신데렐라) 음반 트랙. 여러 번호를 합친 발췌·각색이라 원곡 한 대목과 맞지 않음"
+ },
+ {
+  "pieceId": 11539,
+  "title": "Summer Night Suite from \"The Duenna\", op. 123",
+  "mbids": [
+   "40f961c6-e60c-4b28-b3a7-c322d19544f8"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op123",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11540,
+  "title": "Adagio, op. 97b, from Cinderella",
+  "mbids": [
+   "41e07814-4b78-3d8d-807c-533d520b4aa0"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op097bis",
+  "path": null,
+  "reason": "duplicate",
+  "note": "Op. 97bis 아다지오(첼로와 피아노)의 다른 seed 행. work 는 11470"
+ },
+ {
+  "pieceId": 11543,
+  "title": "Symphony no. 4 in C major, op. 112",
+  "mbids": [
+   "43788a31-caa2-4677-893f-f8e6b928479d"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op112",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11545,
+  "title": "Romeo and Juliet, op. 64: Act III. Epilogue. Death of Juliet",
+  "mbids": [
+   "4434f6f1-0cd8-43f4-852e-e83755d1a8f1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 <로미오와 줄리엣> 번호의 남의 편곡(MB catch-all·편곡 work, arrangement of 원곡 번호) — 52번 '줄리엣의 죽음', Borisovsky 바이올린 편곡"
+ },
+ {
+  "pieceId": 11555,
+  "title": "Piano Concerto no. 4 in B-flat major, op. 53",
+  "mbids": [
+   "491c53ed-387f-4ee1-b759-5ad04e420d21"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op053",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11565,
+  "title": "Symphony no. 4 in C major, op. 47",
+  "mbids": [
+   "4ea991a9-73fe-498d-864c-fc0e990f180e"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op047",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11566,
+  "title": "Symphony no. 2 in D minor, op. 40",
+  "mbids": [
+   "4f0ad7d0-b12f-47b9-ab9e-c53629cd2041"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op040",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11569,
+  "title": "Игрок, op. 24",
+  "mbids": [
+   "50a01eeb-8901-461f-b1c6-d98ee95f1d9a"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op024",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11574,
+  "title": "Suite aus „Romeo und Julia“",
+  "mbids": [
+   "52cf68b4-c1d8-4046-a9a7-276b33143fe5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<로미오와 줄리엣> 바이올린·피아노 모음곡 편곡(Baich/Fletzberger)"
+ },
+ {
+  "pieceId": 11575,
+  "title": "Music for Children, op. 65",
+  "mbids": [
+   "5362528e-2d47-4bb7-8771-2aff3c2c5aa8"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op065",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11578,
+  "title": "Pekka ja susi, op. 67: \"Korkeassa puussa istui pieni lintu, joka oli Pekan ystävä.\"",
+  "mbids": [
+   "556ff0c6-120a-367e-b1bf-71aa1b6d40a9"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op067",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "핀란드어 내레이션판 <피터와 늑대>(Pekka ja susi)의 대목. 원곡 Op. 67 은 낱곡(manual 324)"
+ },
+ {
+  "pieceId": 11579,
+  "title": "Piano Sonata no. 8 in B-flat major, op. 84",
+  "mbids": [
+   "57513a93-1e2e-4b80-9680-bf5fa33beca6"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op084",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11584,
+  "title": "Romeo and Juliet, op. 64: Act III. Scene III. No. 49. Dance of the girls with the lilies",
+  "mbids": [
+   "59590278-17a3-4243-97ca-0c641f9c675a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 <로미오와 줄리엣> 번호의 남의 편곡(MB catch-all·편곡 work, arrangement of 원곡 번호) — 49번 '백합을 든 소녀들의 춤' catch-all"
+ },
+ {
+  "pieceId": 11586,
+  "title": "Ivan the Terrible: Many Years!",
+  "mbids": [
+   "5a6afbee-15d8-467a-8790-bb6b30d42dff"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op116",
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "<이반 뇌제>의 37초짜리 합창 대목 '만수무강(Mnogaya leta)'. 원작은 낱곡이고 MB 에 순서 있는 part 목록이 없어 part 를 만들지 않음. 단독으로 널리 연주되는 대목은 아님"
+ },
+ {
+  "pieceId": 11588,
+  "title": "К Родине",
+  "mbids": [
+   "5bb7969e-4f6b-4449-88a7-662bd8f20704"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "가곡 'K Rodine'(미라 멘델손 시) — 위키 작품 목록·MB 관계 어디에도 소속이 없음"
+ },
+ {
+  "pieceId": 11590,
+  "title": "Four Pieces, op. 3",
+  "mbids": [
+   "5c84c2e8-fa4b-4f36-a51f-cb3fc3983581"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op003",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11593,
+  "title": "Sarcasms, op. 17",
+  "mbids": [
+   "5d5753e0-a430-4206-b33a-8db870391d8c"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op017",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11595,
+  "title": "Dreams, op. 6",
+  "mbids": [
+   "5ea80758-9d14-3cef-8e29-36b827d03af3"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op006",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11603,
+  "title": "Гавот и марш",
+  "mbids": [
+   "61b14c19-f469-4781-953f-62dae9d52299"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "'가보트와 행진곡' — 재즈 색소폰 연주자 알렉세이 코즐로프 편곡"
+ },
+ {
+  "pieceId": 11613,
+  "title": "Prelude in C major for harp, op. 12 no. 7",
+  "mbids": [
+   "64ff2bd1-1d5e-4ea1-b5ec-70fd7af3f1eb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 12-7 전주곡의 하프 편곡(MB arrangement of Op. 12 VII)"
+ },
+ {
+  "pieceId": 11614,
+  "title": "Trapèze",
+  "mbids": [
+   "6513edba-85cd-4fd9-9e23-14e8f1524282"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-ballet-trapeze",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11617,
+  "title": "Music for Children, op. 65: X. March",
+  "mbids": [
+   "668553d0-3b61-4e2e-9dde-3e5784af4eba"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 65-10 행진곡의 첼로·피아노 편곡(피아티고르스키)"
+ },
+ {
+  "pieceId": 11619,
+  "title": "Piano Concerto no. 5 in G major, op. 55",
+  "mbids": [
+   "66dadd60-cfc9-4e5e-9f9a-4317846a645f"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op055",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11620,
+  "title": "Peter and the Wolf, Suite after op. 67",
+  "mbids": [
+   "66ed3490-65b1-42c2-bce2-176955d5de19"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<피터와 늑대> 피아노 모음곡 편곡(Nikolayeva)"
+ },
+ {
+  "pieceId": 11631,
+  "title": "Suite from \"Love for Three Oranges\", op. 33A: III. Marche",
+  "mbids": [
+   "6a38b838-9c61-4a99-91b2-d9a59743459e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 33bis 행진곡의 catch-all 편곡 work"
+ },
+ {
+  "pieceId": 11632,
+  "title": "Sonata for Solo Violin in D major, op. 115",
+  "mbids": [
+   "6a790a0f-864c-425c-a59b-f3365ced3da6"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op115",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11640,
+  "title": "Things in Themselves, op. 45",
+  "mbids": [
+   "6d107a4b-8b86-4bbd-b674-de519dd4462d"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op045",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11642,
+  "title": "Romeo and Juliet, op. 64: Act I. Dance of the Knights",
+  "mbids": [
+   "6dd69a5b-43a8-45aa-a2fa-f1568f1674f0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 <로미오와 줄리엣> 번호의 남의 편곡(MB catch-all·편곡 work, arrangement of 원곡 번호) — 13번 '기사들의 춤', Borisovsky 바이올린 편곡"
+ },
+ {
+  "pieceId": 11643,
+  "title": "Romeo and Juliet, op. 64: Act II. Scene I. No. 24. Dance of the five couples",
+  "mbids": [
+   "6e87bb4d-49da-4832-886d-5e7e3e82b3c0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 <로미오와 줄리엣> 번호의 남의 편곡(MB catch-all·편곡 work, arrangement of 원곡 번호) — 24번 catch-all"
+ },
+ {
+  "pieceId": 11644,
+  "title": "Scherzo for Violin and Piano",
+  "mbids": [
+   "6f2849f3-3c3e-40f6-82f4-3cf401c45b7c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "바이올린 협주곡 1번 2악장 스케르초의 바이올린·피아노 편곡"
+ },
+ {
+  "pieceId": 11646,
+  "title": "Sonata for Violin and Piano no. 2 in D major, op. 94a",
+  "mbids": [
+   "7048a029-9b9b-41dc-a423-6c5a03963f1f"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op094bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11647,
+  "title": "Soldiers’ Marching Song, op. 121",
+  "mbids": [
+   "70bdb407-b5c9-4740-96e3-d43a026325bf"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op121",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11648,
+  "title": "Andante from Piano Sonata no. 4, op. 29bis",
+  "mbids": [
+   "712fa58d-dce0-4888-96b5-ed94e2761613"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op029bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11653,
+  "title": "Cinderella Suite no. 2, op. 108",
+  "mbids": [
+   "7281bf17-ed23-413e-a3e6-3b13ba89ac23"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op108",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11654,
+  "title": "March and Scherzo from The Love for Three Oranges, op. 33ter",
+  "mbids": [
+   "72b5fbfe-e223-4f48-895e-1096285e5251"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op033ter",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11655,
+  "title": "Зелёный кувшин",
+  "mbids": [
+   "72cc1907-c0bc-4d6d-a1d9-ca4c0e88694b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "노래 'Zelyonyy kuvshin'(민요 가사) — 위키 작품 목록·MB 관계 어디에도 소속이 없음"
+ },
+ {
+  "pieceId": 11657,
+  "title": "Valzer dal balletto \"Il fiore di pietra\" op. 118 - allegro capriccioso",
+  "mbids": [
+   "73bb8513-5b6a-4acb-ba2c-205fe5a0b3b9"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op118",
+  "path": null,
+  "reason": "arrangement",
+  "note": "<석화> 왈츠의 첼로·피아노 편곡 — 녹음이 다비드 게링가스(첼로)·아사 아민테바(피아노) 1981년 음반"
+ },
+ {
+  "pieceId": 11660,
+  "title": "Chout (The Buffoon) Suite, op. 21a",
+  "mbids": [
+   "74c32a9f-86e0-4660-bea9-a921a6496696"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op021bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11663,
+  "title": "Gata Borralheira - Cinderella in the Castle",
+  "mbids": [
+   "77584eaa-2f25-3f59-8ba6-0d851064bab6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "포르투갈어 <Gata Borralheira>(신데렐라) 음반 트랙. 여러 번호를 합친 발췌·각색이라 원곡 한 대목과 맞지 않음"
+ },
+ {
+  "pieceId": 11665,
+  "title": "Suite from the Ballet \"Cinderella\", op. 87",
+  "mbids": [
+   "7812632a-abbf-491c-9065-6b181ddef440"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<신데렐라> 모음곡 두 대의 피아노 편곡(플레트뇨프)"
+ },
+ {
+  "pieceId": 11667,
+  "title": "The Prodigal Son, op. 46",
+  "mbids": [
+   "7872b88d-dcb3-449b-91bc-565968372d3f"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op046",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11668,
+  "title": "Symphonic Suite from \"War and Peace\"",
+  "mbids": [
+   "78c692b2-ebf6-4480-b14f-fa3f53ff9822"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<전쟁과 평화> 교향 모음곡 — 작곡가가 엮은 모음곡 아님(사후 편성, 위키 목록에 없음)"
+ },
+ {
+  "pieceId": 11669,
+  "title": "Gypsy Fantasy, op. 127",
+  "mbids": [
+   "791ff805-eb94-4b40-9f5c-078d59396bd2"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op127",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11672,
+  "title": "L'Amour des trois oranges, op. 33",
+  "mbids": [
+   "7b49e538-a250-422b-ba7a-1234ed789ecb"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op033",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11674,
+  "title": "Piano Sonata no. 2 in D minor, op. 14",
+  "mbids": [
+   "7c2b2fbe-2965-49f2-84ef-fbfba3201849"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op014",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11675,
+  "title": "Ivan the Terrible",
+  "mbids": [
+   "7c7bdaa4-47f8-43bc-8107-bdcc265ad094"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<이반 뇌제> Michael Lankester 판 오라토리오"
+ },
+ {
+  "pieceId": 11676,
+  "title": "The Dazzling Bright Cylindrical Object Which Had Crashed Into Tunguska, Siberia",
+  "mbids": [
+   "7cc2a8f5-21ec-41cc-b510-721cfaea2882"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "대중음악 트랙(MB based on 관계만 있음)"
+ },
+ {
+  "pieceId": 11681,
+  "title": "Romeo and Juliet, op. 64: Act I. Scene I. No. 1. Introduction",
+  "mbids": [
+   "7ebc22c8-26ab-48ee-affb-c18b0c9c3157"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 <로미오와 줄리엣> 번호의 남의 편곡(MB catch-all·편곡 work, arrangement of 원곡 번호) — 1번 서주 catch-all"
+ },
+ {
+  "pieceId": 11685,
+  "title": "Gata Borralheira - Apotheosis-Finale",
+  "mbids": [
+   "80bb3596-e45b-3f76-b654-c58e9adf9641"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "포르투갈어 <Gata Borralheira>(신데렐라) 음반 트랙. 여러 번호를 합친 발췌·각색이라 원곡 한 대목과 맞지 않음"
+ },
+ {
+  "pieceId": 11692,
+  "title": "Symphony no. 7 in C-sharp minor, op. 131",
+  "mbids": [
+   "823c1986-d2ea-443b-b249-0cac3fb217a1"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op131",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11693,
+  "title": "Piano Sonata no. 9, op. 103",
+  "mbids": [
+   "82cd7fc6-e09c-4497-a660-f4b14e382e6c"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op103",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11695,
+  "title": "Pesenki, Series 4",
+  "mbids": [
+   "83857586-0374-4aee-8eb9-a3be9702d3eb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "작품번호 없는 어린 시절 피아노 소품(1902–1908 무렵). 카탈로그 체계 없이 자필로 전해 이번 범위에서 뺌 — Pesenki 4집"
+ },
+ {
+  "pieceId": 11696,
+  "title": "Suite from the Ballet “Romeo and Juliet”",
+  "mbids": [
+   "840b21b1-dcae-4314-a6d5-9c9586d8fc5a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<로미오와 줄리엣> 취주악 모음곡 편곡(de Meij)"
+ },
+ {
+  "pieceId": 11698,
+  "title": "Violin Sonata no. 2 in D, op. 94bis",
+  "mbids": [
+   "85294d15-4fe7-46f9-9488-7af897b4317e"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op094bis",
+  "path": null,
+  "reason": "duplicate",
+  "note": "바이올린 소나타 2번 Op. 94bis(=94a)의 다른 seed 행·다른 MB work. work 는 11646(MB 7048a029)"
+ },
+ {
+  "pieceId": 11709,
+  "title": "Romeo and Juliet, op. 64: Act I. Scene II. No. 10. Juliet as a young girl",
+  "mbids": [
+   "8a071722-c9dc-4557-a6b2-f64d05867b12"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 <로미오와 줄리엣> 번호의 남의 편곡(MB catch-all·편곡 work, arrangement of 원곡 번호) — 10번 '소녀 줄리엣' catch-all"
+ },
+ {
+  "pieceId": 11711,
+  "title": "5 Poems, op. 23",
+  "mbids": [
+   "8ab86281-986b-448a-87a5-5139c1e10538"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op023",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11717,
+  "title": "Pekka ja susi, op. 67: Esittely: \"Tämän sadun jokaista henkilöä ja eläintä esittää määrätty orkesterin soitin\"",
+  "mbids": [
+   "8de003b4-9665-3ca6-a856-c6efa0bcdee7"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op067",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "핀란드어 내레이션판 <피터와 늑대>(Pekka ja susi)의 대목. 원곡 Op. 67 은 낱곡(manual 324)"
+ },
+ {
+  "pieceId": 11720,
+  "title": "A Summer Day, op. 65b",
+  "mbids": [
+   "8f95adf7-61cb-4d61-8b3b-248c20f34134"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op065bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11724,
+  "title": "Fragments from the Ballet \"Chout\", op. 21",
+  "mbids": [
+   "90d32f88-d8a3-483b-9ba7-8921c75df7c8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<어릿광대> 발췌 첼로·피아노 편곡(Sapozhnikov)"
+ },
+ {
+  "pieceId": 11733,
+  "title": "Cinderella Suite no. 1, op. 107",
+  "mbids": [
+   "93d2a361-4e12-49c1-b78b-c3e5eefe7ffa"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op107",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11740,
+  "title": "Pekka ja susi, op. 67: \"Mutta nytpä ilmestyi isoisä veräjälle.\"",
+  "mbids": [
+   "95cf1a6d-bd98-3775-9b4f-20335693f225"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op067",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "핀란드어 내레이션판 <피터와 늑대>(Pekka ja susi)의 대목. 원곡 Op. 67 은 낱곡(manual 324)"
+ },
+ {
+  "pieceId": 11742,
+  "title": "Three Pieces for piano, op. 59",
+  "mbids": [
+   "961c6f4c-3428-4cef-b985-53d934a959b3"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op059",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11743,
+  "title": "Pekka ja susi, op. 67: \"Jo olikin aika, sillä samalla ilmestyi metsänreunaan suuri, harmaa susi.\"",
+  "mbids": [
+   "9643d9ad-a6c0-3299-a570-473aaaa82adc"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op067",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "핀란드어 내레이션판 <피터와 늑대>(Pekka ja susi)의 대목. 원곡 Op. 67 은 낱곡(manual 324)"
+ },
+ {
+  "pieceId": 11745,
+  "title": "Pushkin Waltzes, op. 120",
+  "mbids": [
+   "97153f16-dc42-4e4c-9a12-0c843ab3108a"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op120",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11751,
+  "title": "Cinderella, op. 87: Grand Waltz",
+  "mbids": [
+   "984c0e4b-99bb-43ae-98b7-2880a4e76c0e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<신데렐라> 큰 왈츠의 바이올린·피아노·앙상블 편곡(Sedlar)"
+ },
+ {
+  "pieceId": 11752,
+  "title": "Andante, op. 50bis",
+  "mbids": [
+   "98620fee-84f9-4b2f-871c-df0f2c6eb3b1"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op050bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11753,
+  "title": "Pekka ja susi, op. 67: \"Yhtäkkiä Pekka häristi korviaan: hän huomasi, että ruohikossa hiiviskeli kissa.\"",
+  "mbids": [
+   "994bd9f7-948f-3020-a55d-02cbca8ca312"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op067",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "핀란드어 내레이션판 <피터와 늑대>(Pekka ja susi)의 대목. 원곡 Op. 67 은 낱곡(manual 324)"
+ },
+ {
+  "pieceId": 11763,
+  "title": "Semyon Kotko, symphonic suite, op. 81bis",
+  "mbids": [
+   "9b59a764-cca7-4fe7-a8b9-8f054ed1f55f"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op081bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11765,
+  "title": "Andante in G minor, from the Cello Concertino, op. 132",
+  "mbids": [
+   "9bbec45a-b790-43e3-a322-6dd8fb651053"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "첼로 소협주곡 2악장의 첼로·피아노 편곡"
+ },
+ {
+  "pieceId": 11767,
+  "title": "String Quartet no. 1 in B minor, op. 50",
+  "mbids": [
+   "9e02aca2-2e99-446b-8f35-5d8db75a66aa"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op050",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11772,
+  "title": "Russian Overture, op. 72",
+  "mbids": [
+   "9fd09d79-94b4-3bbb-984d-99a7b7df0db7"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op072",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11774,
+  "title": "Ten Pieces from Cinderella, op. 97: IV. Winter Fairy",
+  "mbids": [
+   "a05926bf-61d6-4c14-86bd-7279c67c0df4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 97-4 '겨울의 요정' catch-all 편곡 work"
+ },
+ {
+  "pieceId": 11775,
+  "title": "Ten Small Pieces, op. 12",
+  "mbids": [
+   "a146eddc-0269-4f7b-bd88-3d0898ae2f03"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op012",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11776,
+  "title": "3 Pieces for Piano, op. 96",
+  "mbids": [
+   "a17f6db3-0cad-42f3-af35-6a593140a68d"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op096",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11784,
+  "title": "Scherzo humoristique, op. 12bis",
+  "mbids": [
+   "a47c57f5-40c4-4cd7-8d44-21ae3816e189"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op012bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11789,
+  "title": "Tarantella in D minor",
+  "mbids": [
+   "a6be34ec-5d98-40e6-8841-015264078cb5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "작품번호 없는 어린 시절 피아노 소품(1902–1908 무렵). 카탈로그 체계 없이 자필로 전해 이번 범위에서 뺌 — MB 'Juvenilia' 녹음의 1곡 '타란텔라 D단조'"
+ },
+ {
+  "pieceId": 11799,
+  "title": "March from The Love for Three Oranges",
+  "mbids": [
+   "aa0a4e8a-4b1a-4ff2-aac7-3c451e8a1b95"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<세 개의 오렌지> 행진곡의 바이올린·피아노 편곡(하이페츠)"
+ },
+ {
+  "pieceId": 11800,
+  "title": "Gata Borralheira - Cinderella's Waltz-Midnight",
+  "mbids": [
+   "aa1cc3ea-6444-3aaa-8e9b-06a5b264518a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "포르투갈어 <Gata Borralheira>(신데렐라) 음반 트랙. 여러 번호를 합친 발췌·각색이라 원곡 한 대목과 맞지 않음"
+ },
+ {
+  "pieceId": 11802,
+  "title": "Examination Fugue in D major",
+  "mbids": [
+   "aad1efac-06e1-4de2-bdfc-3afa6e933206"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "1908년 음악원 시험용 푸가 D장조. 작품번호 없는 어린 시절 피아노 소품(1902–1908 무렵). 카탈로그 체계 없이 자필로 전해 이번 범위에서 뺌"
+ },
+ {
+  "pieceId": 11805,
+  "title": "3 детские песни, op. 68",
+  "mbids": [
+   "ab6b5360-d814-4aa2-8693-b4fd411c437b"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op068",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11810,
+  "title": "Symphonic Song, op. 57",
+  "mbids": [
+   "ae12b285-3f83-4c13-83fc-a7dfec15edb6"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op057",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11814,
+  "title": "Pierre et le Loup",
+  "mbids": [
+   "af8683c0-9a53-4716-834e-dd0cb42a72ff"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op067",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "프랑스어 내레이션판 <피터와 늑대>(Pierre et le Loup, MB other version)"
+ },
+ {
+  "pieceId": 11817,
+  "title": "Ivan the Terrible, op. 116: Dance of the Oprichniks",
+  "mbids": [
+   "b02e70ae-2ce6-4fdd-84ed-95c3770f89ce"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op116",
+  "path": null,
+  "reason": "excerpt_keep",
+  "note": "<이반 뇌제>의 '오프리치니키의 춤'. 원작은 낱곡, 단독 연주·녹음이 잦은 대목",
+  "titleKo": "영화 음악 <이반 뇌제> 중 \"오프리치니키의 춤\"",
+  "titleEn": "Ivan the Terrible: Dance of the Oprichniki"
+ },
+ {
+  "pieceId": 11818,
+  "title": "Sonata for Flute and Piano in D major, op. 94",
+  "mbids": [
+   "b0571a57-b25b-4cf3-8a53-4f5ae9dcfe69"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op094",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11819,
+  "title": "3 Songs from Alexander Nevsky, Op. 78bis",
+  "mbids": [
+   "b066a40a-9ace-4558-be80-14a93f86e11d"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op078bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11822,
+  "title": "Dumka",
+  "mbids": [
+   "b1c4ac55-100c-4fdc-8a8d-71bc2ab5e968"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-dumka",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11825,
+  "title": "2 Duets, op. 106",
+  "mbids": [
+   "b2f65b0e-73d5-4e11-a215-1dd14d465e08"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op106",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11826,
+  "title": "The Steel Step Suite, op. 41bis",
+  "mbids": [
+   "b3018be2-b330-4c11-93a8-bfdeae91edaf"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op041bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11827,
+  "title": "Intro (Opus 32 No. 3)",
+  "mbids": [
+   "b32cbb5a-6e82-32d5-81b9-06451b409543"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "1989년 음반의 52초짜리 인트로 트랙(Op. 32-3 가보트 인용)"
+ },
+ {
+  "pieceId": 11834,
+  "title": "Romeo and Juliet, op. 64: Act III. Dance of the Lily Maidens",
+  "mbids": [
+   "b5b693f8-5092-4bd7-8005-6f8e94138f63"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 <로미오와 줄리엣> 번호의 남의 편곡(MB catch-all·편곡 work, arrangement of 원곡 번호) — 49번, Borisovsky 바이올린 편곡"
+ },
+ {
+  "pieceId": 11836,
+  "title": "Sinfonietta, op. 48",
+  "mbids": [
+   "b667e30f-ffea-4b6c-8527-36e744a93334"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op048",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11839,
+  "title": "Pekka ja susi, op. 67: \"Yhtäkkiä tepasteli niitylle ankka.\"",
+  "mbids": [
+   "b76e1d18-5f43-3f14-a1b0-3a0c1f8bb42c"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op067",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "핀란드어 내레이션판 <피터와 늑대>(Pekka ja susi)의 대목. 원곡 Op. 67 은 낱곡(manual 324)"
+ },
+ {
+  "pieceId": 11842,
+  "title": "Peter and the Wolf",
+  "mbids": [
+   "b8102ee7-9816-4121-afe8-9310210b36be"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "Wendy Carlos/'Weird Al' Yankovic 판 <피터와 늑대>"
+ },
+ {
+  "pieceId": 11844,
+  "title": "Sonatinas for piano, op. 54",
+  "mbids": [
+   "b8fc915b-2aa8-4143-b811-fc11f961ff5d"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op054",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11852,
+  "title": "Piano Sonata no. 3 in A minor, op. 28",
+  "mbids": [
+   "bb6a6a90-1559-44f1-b64e-b3fb4333768e"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op028",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11860,
+  "title": "Pesenki, Series 5",
+  "mbids": [
+   "bdd190c2-f64f-420f-9e4d-456767ff4043"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "작품번호 없는 어린 시절 피아노 소품(1902–1908 무렵). 카탈로그 체계 없이 자필로 전해 이번 범위에서 뺌 — Pesenki 5집"
+ },
+ {
+  "pieceId": 11862,
+  "title": "Divertimento, op. 43",
+  "mbids": [
+   "be6815f1-c150-4a42-a52b-60fb63772b9f"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op043",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11863,
+  "title": "\"The Gambler\", four portraits, op. 49",
+  "mbids": [
+   "bea1416a-3338-4fcc-8d6d-e7bf08bc8f01"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op049",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11868,
+  "title": "Piano Sonata no. 1, op. 1",
+  "mbids": [
+   "bf8cbe23-cb46-410e-8368-07aee182f2e9"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op001",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11869,
+  "title": "Alexander Nevsky, op. 78",
+  "mbids": [
+   "bfa47ae2-a283-4785-a614-b88693cd9887"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op078",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11870,
+  "title": "Piano Sonata no. 1 in A minor “From Old Notebooks”, op. 28: Allegro tempestoso - Moderato - Allegro tempestoso - Moderato - Più lento - Più animato - Allegro I - Poco più mosso",
+  "mbids": [
+   "bfd4d07c-cf8b-4fbc-8dfd-7b3b2a3af50c"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op028",
+  "path": null,
+  "reason": "duplicate",
+  "note": "피아노 소나타 3번 Op. 28(단악장)의 다른 seed 행. 제목의 'no. 1'은 MB 오기. work 는 11852"
+ },
+ {
+  "pieceId": 11873,
+  "title": "Juvenilia",
+  "mbids": [
+   "c26d0453-9188-48e0-a287-cf7ecb4ff4e0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "작품번호 없는 어린 시절 피아노 소품(1902–1908 무렵). 카탈로그 체계 없이 자필로 전해 이번 범위에서 뺌 — 'Juvenilia' 녹음 묶음(Pesenki 등에서 고른 곡)"
+ },
+ {
+  "pieceId": 11879,
+  "title": "Six Pieces, op. 52",
+  "mbids": [
+   "c5b03742-6d16-476a-ae0e-c9f89fa6dc07"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op052",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11882,
+  "title": "On the Dnieper, op. 51",
+  "mbids": [
+   "c870f7b4-b2ff-4173-b47b-1d356fa3ae60"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op051",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11883,
+  "title": "Two Poems, op. 9",
+  "mbids": [
+   "c873fb15-f3bd-43b6-b93c-baf56391e173"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op009",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11886,
+  "title": "7 Songs, op. 79",
+  "mbids": [
+   "c941f2c6-d197-43f9-a392-0eb4e15a2a75"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op079",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11887,
+  "title": "March no. 1, op. 12",
+  "mbids": [
+   "c9f2d128-9e28-34de-87cb-7329ea0db21e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 12-1 행진곡의 바이올린·피아노 편곡(하이페츠)"
+ },
+ {
+  "pieceId": 11891,
+  "title": "Славься, наш могучий край!",
+  "mbids": [
+   "cb139447-1ea9-4126-80b7-d652e43fdf3a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "칸타타 Op. 114 의 어린이 합창 편곡"
+ },
+ {
+  "pieceId": 11892,
+  "title": "Gata Borralheira - Fairy of Spring-Fairy of Summer",
+  "mbids": [
+   "cbcaf9cf-d6b7-32ca-a0ba-d55943cadfe5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "포르투갈어 <Gata Borralheira>(신데렐라) 음반 트랙. 여러 번호를 합친 발췌·각색이라 원곡 한 대목과 맞지 않음"
+ },
+ {
+  "pieceId": 11894,
+  "title": "Suite from \"Love for Three Oranges\", op. 33A",
+  "mbids": [
+   "cc2d3f24-3fd2-44f0-b09b-c473e55a4477"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op033bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11897,
+  "title": "The Queen of Spades Symphonic Suite",
+  "mbids": [
+   "ce6d9f28-705a-4e19-9eb8-dc2f6f464175"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<스페이드의 여왕> 교향 모음곡(Michael Berkeley 편). 원작 Op. 70 은 낱곡"
+ },
+ {
+  "pieceId": 11898,
+  "title": "Symphony no. 3 in C minor, op. 44",
+  "mbids": [
+   "ced0d6b7-662b-4cf2-8b87-0b791c6b33a9"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op044",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11900,
+  "title": "Pieces for Viola and Piano from “Romeo and Juliet”",
+  "mbids": [
+   "cfd0fdd4-6349-4531-854a-a7a12f51ccb2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<로미오와 줄리엣> 비올라·피아노 편곡 7곡"
+ },
+ {
+  "pieceId": 11901,
+  "title": "The Love for Three Oranges, Op. 33ter: No. 1, Marche",
+  "mbids": [
+   "d010a455-34ee-4805-9416-abc368219d02"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 33ter 행진곡의 바이올린·피아노 편곡(하이페츠)"
+ },
+ {
+  "pieceId": 11903,
+  "title": "The Love for Three Oranges, op. 33A: III. March",
+  "mbids": [
+   "d0540f4e-d659-4369-9f0b-0b7b7594a6c8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 33bis 행진곡의 현악 4중주 편곡(Haveron)"
+ },
+ {
+  "pieceId": 11907,
+  "title": "Party Like a Russian",
+  "mbids": [
+   "d263d160-4da5-4360-a8f4-425eae30c7d9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "로비 윌리엄스 'Party Like a Russian'(기사들의 춤 인용)"
+ },
+ {
+  "pieceId": 11912,
+  "title": "פטר והזאב",
+  "mbids": [
+   "d3a88a7e-f9ff-4db0-a059-c200a1af64af"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op067",
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "히브리어 오디오 드라마판 <피터와 늑대>(MB adaptation)"
+ },
+ {
+  "pieceId": 11918,
+  "title": "Five Melodies for Violin and Piano, op. 35bis",
+  "mbids": [
+   "d57aa142-b098-4abd-97f5-a83a9a16297f"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op035bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11919,
+  "title": "Songs of Our Days, op. 76",
+  "mbids": [
+   "d5ac7215-65ac-4dc1-84c6-494b9874b59c"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op076",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11923,
+  "title": "Romeo and Juliet, op. 64: Act I. Scene II. No. 19. Balcony scene",
+  "mbids": [
+   "d8e53fc5-74cc-469b-a38f-500681703229"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 <로미오와 줄리엣> 번호의 남의 편곡(MB catch-all·편곡 work, arrangement of 원곡 번호) — 19번 발코니 장면 catch-all"
+ },
+ {
+  "pieceId": 11932,
+  "title": "Chout (The Buffoon) Suite, op. 21b (excerpts)",
+  "mbids": [
+   "dcec249c-e5e5-4bf2-9492-093ea621016d"
+  ],
+  "mapping": "unmatched",
+  "key": "prokofiev-op021bis",
+  "path": null,
+  "reason": "duplicate",
+  "note": "<어릿광대> 모음곡 Op. 21bis 의 발췌 녹음용 MB work(9곡). work 는 11660"
+ },
+ {
+  "pieceId": 11937,
+  "title": "Romeo and Juliet, op. 64: Act I. Scene II. No. 15. Mercutio",
+  "mbids": [
+   "df729b6b-5212-4e04-8888-1f83c65a268a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 <로미오와 줄리엣> 번호의 남의 편곡(MB catch-all·편곡 work, arrangement of 원곡 번호) — 15번 머큐쇼 catch-all"
+ },
+ {
+  "pieceId": 11943,
+  "title": "Eugene Onegin, op. 71",
+  "mbids": [
+   "e1791061-93d7-4c82-84a2-477571d9f5e4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<예브게니 오네긴> 춤곡 3곡 — 로즈데스트벤스키가 엮은 <푸시키니아나>에 실린 발췌. 원작 Op. 71 은 낱곡"
+ },
+ {
+  "pieceId": 11949,
+  "title": "Wedding Suite, op. 126",
+  "mbids": [
+   "e3506d28-426b-4e87-800f-7806bdefd390"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op126",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11950,
+  "title": "Two Poems for Female Chorus and Orchestra, op. 7: 1. White Swan",
+  "mbids": [
+   "e38fea6b-51c3-4a52-84c6-491e973ba751"
+  ],
+  "mapping": "part",
+  "key": "prokofiev-op007",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "MBID e38fea6b 가 Op. 7 1번 '백조'(제목 'op. 7: 1. White Swan')"
+ },
+ {
+  "pieceId": 11952,
+  "title": "Romeo und Julia: Auszüge aus der Orchestersuite Nr. 1, op. 64 A und Nr. 2, op. 64 B: Julia",
+  "mbids": [
+   "e43cfb6e-1250-326e-9917-595552e2ba0f"
+  ],
+  "mapping": "part",
+  "key": "prokofiev-op064ter",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "독일어 발췌 음반 트랙 'Julia', 녹음 제목 'Julias Kindheit' → 모음곡 2번 2곡 '소녀 줄리엣'(제목·녹음으로 맞춤)"
+ },
+ {
+  "pieceId": 11959,
+  "title": "Ode to the End of the War, op. 105",
+  "mbids": [
+   "e92039d2-7c80-4a13-a98c-618e6166a2f6"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op105",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11960,
+  "title": "Romeo and Juliet, op. 64: Mercutio",
+  "mbids": [
+   "e92868b9-d274-4892-a9fb-be93d22943af"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 <로미오와 줄리엣> 번호의 남의 편곡(MB catch-all·편곡 work, arrangement of 원곡 번호) — 머큐쇼, Baich & Fletzberger 바이올린 편곡"
+ },
+ {
+  "pieceId": 11966,
+  "title": "Boris Godunov, op. 70 bis: Fountain Scene and Polonaise",
+  "mbids": [
+   "eba3fb69-b214-4bf6-8ac7-f63c68112704"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<보리스 고두노프> '분수 장면과 폴로네즈' — <푸시키니아나>(로즈데스트벤스키 엮음)의 발췌. 원작 Op. 70bis 는 낱곡"
+ },
+ {
+  "pieceId": 11973,
+  "title": "Romeo und Julia: Auszüge aus der Orchestersuite Nr. 1, op. 64 A und Nr. 2, op. 64 B: Szene: Im Haus der Capulets",
+  "mbids": [
+   "eee4ae35-3c86-3fa6-a731-5b485a1a9f16"
+  ],
+  "mapping": "part",
+  "key": "prokofiev-op064bis",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "독일어 발췌 음반 트랙 'Szene', 녹음 제목 'II. Szene' → 모음곡 1번 2곡 '장면'(제목·녹음으로 맞춤, 부제 '카풀렛 집'은 맞지 않음)"
+ },
+ {
+  "pieceId": 11977,
+  "title": "Divertissement, op. 43bis",
+  "mbids": [
+   "efc6ce7e-1cf2-406e-944d-f5088547d6a7"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op043bis",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11982,
+  "title": "Lieutenant Kijé Suite, op. 60",
+  "mbids": [
+   "f168363e-9a3c-34d4-879f-2c20e0b87b52"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op060",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11984,
+  "title": "On Guard for Peace, op. 124",
+  "mbids": [
+   "f250f64f-b87c-49a7-84c1-b03461fe55e7"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op124",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11985,
+  "title": "Scythian Suite, op. 20: II. The Enemy God and the Dance of the Spirits of Darkness",
+  "mbids": [
+   "f26e54bc-c436-42fd-82b8-9d65eb14bbdb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "스키타이 모음곡 2악장 catch-all 편곡 work"
+ },
+ {
+  "pieceId": 11987,
+  "title": "Romeo and Juliet, op. 64: Act II. Scene III. No. 35. Romeo decides to avenge Mercutio's death",
+  "mbids": [
+   "f38558c4-889b-4eb8-a26a-ef9035a4a20a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "발레 <로미오와 줄리엣> 번호의 남의 편곡(MB catch-all·편곡 work, arrangement of 원곡 번호) — 35번 catch-all"
+ },
+ {
+  "pieceId": 11999,
+  "title": "Gata Borralheira - Cinderella and the Prince",
+  "mbids": [
+   "f9ffec1d-d4f8-3d4f-b931-0cae66ea4d49"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "포르투갈어 <Gata Borralheira>(신데렐라) 음반 트랙. 여러 번호를 합친 발췌·각색이라 원곡 한 대목과 맞지 않음"
+ },
+ {
+  "pieceId": 12003,
+  "title": "Cinderella Suite no. 3, op. 109",
+  "mbids": [
+   "fce44c02-7330-445f-bcc4-a3ad685fd555"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op109",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12004,
+  "title": "The Meeting of the Volga and the Don, op. 130",
+  "mbids": [
+   "fcf1f4a5-b190-4049-ba87-afdd7de0550b"
+  ],
+  "mapping": "work",
+  "key": "prokofiev-op130",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12005,
+  "title": "The Mistress of the Copper Mountain, op. 129",
+  "mbids": [
+   "fe3935a5-f8ba-4da5-9060-45160e534aaa"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "Op. 129 모음곡 <구리산의 여주인>은 작곡가가 완성하지 못함(위키 'unrealized'). MB 는 발레 <석화> 프롤로그 1번의 다른 판으로 둠"
+ },
+ {
+  "pieceId": 12007,
+  "title": "Athletic Festival March, op. 69, no. 1",
+  "mbids": [
+   "fe89110a-c718-4a8c-825b-28c05d97b7c3"
+  ],
+  "mapping": "part",
+  "key": "prokofiev-op069",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "MBID fe89110a 'Athletic Festival March, op. 69, no. 1' = Op. 69 1번"
+ },
+ {
+  "pieceId": 12008,
+  "title": "Romeo and Juliet",
+  "mbids": [
+   "fe99ac3d-e454-4023-b421-c7a7cfb2c0ce"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<로미오와 줄리엣> 비올라·관현악 편곡(François Vallières)"
+ }
+]

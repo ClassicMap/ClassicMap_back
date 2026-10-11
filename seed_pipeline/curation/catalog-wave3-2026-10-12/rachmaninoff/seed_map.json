@@ -1,0 +1,1830 @@
+[
+ {
+  "pieceId": 474,
+  "title": "2개의 가곡 TN ii/50: 제1곡 “거룩한 처소의 문에서” G단조",
+  "mbids": [
+   "090824fd-79c8-4dad-aa5b-02f120f890f2"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-tn-ii-50",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 496,
+  "title": "6개의 로망스 Op. 4",
+  "mbids": [
+   "299a18c5-dcec-4dc2-bee5-92c3e2cf8c93"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 516,
+  "title": "Song Without Words in D minor, TN ii/11: Lento",
+  "mbids": [
+   "3a1b310b-e114-4389-9e4e-9477c672aac6"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-11",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 530,
+  "title": "Panteley the Healer, TN ii/63",
+  "mbids": [
+   "4c707668-1f6d-4e12-86ec-08282452c3bf"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-63",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 542,
+  "title": "Symphony in D minor \"Youth Symphony\", TN ii/43: Grave - Allegro moderato",
+  "mbids": [
+   "5ad36925-0312-380d-80d4-ba066d06d946"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-43",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 552,
+  "title": "Variations on a Theme of Chopin, op. 22",
+  "mbids": [
+   "64a79c76-e8cf-3c28-ab35-65709296f510"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op22",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 556,
+  "title": "Опять встрепенулось ты, сердце, TN ii/51",
+  "mbids": [
+   "66783e47-a5a0-44a3-9deb-a6d899d00466"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-51",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 563,
+  "title": "12 Romances, op. 21",
+  "mbids": [
+   "6ef09dd6-2b30-428c-89e0-000b4350d7b6"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 569,
+  "title": "The Miserly Knight, op. 24",
+  "mbids": [
+   "7a1a7b3d-cc70-422b-b714-52b3e05dadd0"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op24",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 571,
+  "title": "Scherzo in D minor, TN ii/40",
+  "mbids": [
+   "7c825fd4-37f5-3b5e-94ae-63c7e6d1726b"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-40",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 577,
+  "title": "Prelude in F major, TN ii/15: Commodo",
+  "mbids": [
+   "81c3126f-1eb5-451f-a7cd-a09bed39ff0e"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-15",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 588,
+  "title": "Lied (Romance) in F minor, TN ii/32",
+  "mbids": [
+   "890720b5-011b-4431-942d-2ad89d5870c8"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 597,
+  "title": "Spring, Cantata for Baritone, Chorus and Orchestra, op. 20",
+  "mbids": [
+   "983963c7-8d87-3f53-b08c-ff38e1681969"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 598,
+  "title": "O Mother of God vigilantly praying, TN ii/61",
+  "mbids": [
+   "9ac6f639-b225-4909-b3f0-9a887b23bbff"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 610,
+  "title": "The Rock, Fantasy for Orchestra, op. 7",
+  "mbids": [
+   "a72fe3dd-8cef-3f27-9ae6-d1c50b0b6366"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 613,
+  "title": "Chorus of Spirits, TN ii/62",
+  "mbids": [
+   "ac636b9c-4b3d-4c39-8d02-dab343b4ec9d"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-62",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 618,
+  "title": "Всенощное бдение, op. 37",
+  "mbids": [
+   "b0d23c87-c845-4989-b2c6-38803fcee6db"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op37",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 622,
+  "title": "“Were You Hiccoughing?” in F major, TN ii/54",
+  "mbids": [
+   "b612a33c-5cc2-46fb-81b9-f8f785e2ef14"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-54",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 629,
+  "title": "Russian Rhapsody, TN ii/23",
+  "mbids": [
+   "c346cd9d-68ee-4e8e-8025-622d07bbd5bc"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-23",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 681,
+  "title": "Aleko, TN ii/70",
+  "mbids": [
+   "2bd9f082-1054-425c-a5ab-d23ee2a4c70e"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-70",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 689,
+  "title": "Études-tableaux, op. 39",
+  "mbids": [
+   "e17caba7-83fd-489f-b612-c1521ccfa025"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 701,
+  "title": "10 Preludes, op. 23",
+  "mbids": [
+   "820e42e0-a3ea-4d23-981b-16e20ccd87e9"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op23",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 702,
+  "title": "Sonata for Cello and Piano in G minor, op. 19",
+  "mbids": [
+   "f2ad7b77-1f4f-411f-aadd-7c7cd5b17c0c"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op19",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 708,
+  "title": "Études-tableaux, op. 33",
+  "mbids": [
+   "b54c2649-c9a3-4b09-8505-c07bd7552b28"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op33",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 796,
+  "title": "Symphony no. 3 in A minor, op. 44",
+  "mbids": [
+   "3f320752-3fc9-3e86-82c7-b0ea52d7b58b"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op44",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 819,
+  "title": "The Bells, op. 35",
+  "mbids": [
+   "778f2004-3a8c-41bd-92b5-65177f18f786"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op35",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 821,
+  "title": "Full Moon and Empty Arms",
+  "mbids": [
+   "83386046-6d03-36ca-bb37-639feea1b840"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "「Full Moon and Empty Arms」 — 피아노 협주곡 2번을 바탕으로 한 대중가요"
+ },
+ {
+  "pieceId": 822,
+  "title": "Six Morceaux, op. 11",
+  "mbids": [
+   "fbfc280e-40b4-48b2-98b7-9ea608c7f665"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op11",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 827,
+  "title": "Sky High",
+  "mbids": [
+   "28b1ed28-c1ed-4f24-890e-32c05aa6c3df"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "「Sky High」 — 일본 대중가요(작사 安岡優), 라흐마니노프 선율 차용"
+ },
+ {
+  "pieceId": 838,
+  "title": "Они отвечали",
+  "mbids": [
+   "006c4adf-3a0c-4533-b585-8d2b562ad0b6"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op21",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "seed 838 「Они отвечали」(러시아어 원제, 가사 첫머리 「Спросили они…」)는 parts 관계 없는 따로 work. 원제로 맞춤"
+ },
+ {
+  "pieceId": 849,
+  "title": "Concerto pour piano n° 4 : III. Allegro vivace",
+  "mbids": [
+   "015cf64a-3035-4b3b-8b7a-7c0441c4eef6"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op40",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "seed 849 「Concerto pour piano n° 4 : III. Allegro vivace」는 parts 관계 없는 따로 work. 작품·악장 번호로 맞춤"
+ },
+ {
+  "pieceId": 866,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation XIV : L'istesso tempo",
+  "mbids": [
+   "0351553f-8657-43ee-94bf-d0348f9a4b6e"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 880,
+  "title": "6 Choruses, op. 15",
+  "mbids": [
+   "0453fac5-e291-4c8b-b72b-13249bbe2c4f"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op15",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 939,
+  "title": "Bad Trip",
+  "mbids": [
+   "0b8c988c-ffc2-492f-9636-d49f9b06b1ce"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "「Bad Trip」 — 전주곡 C#단조를 바탕으로 한 대중음악"
+ },
+ {
+  "pieceId": 967,
+  "title": "First Quartet (unfinished): Romance. Andante espressivo",
+  "mbids": [
+   "0eb8318d-9ef7-4063-8318-f39ea2556325"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-tn-ii-30",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "seed 967 「First Quartet (unfinished): Romance. Andante espressivo」는 parts 관계 없는 따로 work. 제목으로 맞춤"
+ },
+ {
+  "pieceId": 971,
+  "title": "3 Pieces, TN ii/19",
+  "mbids": [
+   "0f251d0f-feaa-478c-bf3b-9673397b9f72"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-19",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 975,
+  "title": "Morceaux de salon, op. 10",
+  "mbids": [
+   "0f5782d3-1bdf-49a1-bca7-1c513ecbdf22"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op10",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1035,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation VII : Meno mosso, a tempo moderato",
+  "mbids": [
+   "1633008e-e18f-4d4d-9a4c-bc8de50f444e"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 1040,
+  "title": "Morceaux de fantaisie, op. 3: No. 2. Prélude in C-sharp minor",
+  "mbids": [
+   "16cc143e-ae21-4e18-a57f-d433e6964f0e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 「catch all for arrangements」 work(전주곡 C#단조 Op. 3-2 의 여러 편곡). 원곡 part 는 manual 229 가 잇는다"
+ },
+ {
+  "pieceId": 1077,
+  "title": "Sad is the night... (Noch' pechal'na), op. 26 no. 12",
+  "mbids": [
+   "1abb333f-3506-494d-a803-2b0cd502d603"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 26-12 「Noch' pechal'na」의 편곡 work"
+ },
+ {
+  "pieceId": 1100,
+  "title": "Concerto élégiaque in D minor, op. 9b",
+  "mbids": [
+   "1d5df6c4-5a7c-4493-8858-0d9ee53f90ac"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Concerto élégiaque」 — 피아노 3중주 2번 Op. 9 를 남이 피아노와 관현악으로 옮긴 것"
+ },
+ {
+  "pieceId": 1102,
+  "title": "Romance in G major, TN ii/20",
+  "mbids": [
+   "1d8607c5-8dcd-4eae-9c45-32d7530f3eee"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1114,
+  "title": "Danses Symphoniques, op. 45 : II. Andante con motto (Tempo di valse)",
+  "mbids": [
+   "1eee4e6f-9d30-4512-92ae-c48b4cc8dc46"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op45",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "seed 1114 「Danses Symphoniques, op. 45 : II. …」는 parts 관계 없는 따로 work. 작품·악장 번호로 맞춤"
+ },
+ {
+  "pieceId": 1116,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation XX : Un poco più vivo",
+  "mbids": [
+   "1f3938d2-13d6-4c49-9d70-46c935e9fd9a"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   22
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 1121,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation X : L'istesso tempo",
+  "mbids": [
+   "200993fb-e05e-4d6e-8547-4af681336ce7"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 1138,
+  "title": "First Quartet (unfinished): Scherzo. Allegro",
+  "mbids": [
+   "216b4078-dca9-4a91-ad9a-8e66d59baef9"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-tn-ii-30",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "seed 1138 「First Quartet (unfinished): Scherzo. Allegro」는 parts 관계 없는 따로 work. 제목으로 맞춤"
+ },
+ {
+  "pieceId": 1151,
+  "title": "Nunc dimittis",
+  "mbids": [
+   "229e60d3-e7e5-4499-9cf6-d05cba39a8e8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "철야 기도 5번 「Nyne otpushchayeshi」의 작곡가 자신의 피아노 편곡"
+ },
+ {
+  "pieceId": 1192,
+  "title": "Symphony no. 1 in D minor, op. 13",
+  "mbids": [
+   "283fa84b-9e6f-488a-b0ec-ae6b1bf19fc7"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op13",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1195,
+  "title": "Rejoice O Virgin",
+  "mbids": [
+   "2871ebcf-7644-4633-a07a-192790425b12"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op37",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "seed 1195 「Rejoice O Virgin」은 parts 관계 없는 따로 work. 「Bogoroditse Devo」의 영어 관례 제목, 녹음 길이 2:57 로 맞춤"
+ },
+ {
+  "pieceId": 1220,
+  "title": "Symphonic Dances op. 45",
+  "mbids": [
+   "2c385799-a174-4ca3-a250-ffe98303622c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 「catch-all for arrangements」 work(교향적 춤곡의 편곡들, 두 대 피아노판 등). 원곡 a452d093… 은 새 작품 rachmaninoff-op45"
+ },
+ {
+  "pieceId": 1255,
+  "title": "Die Toteninsel, Tondichtung, op. 29",
+  "mbids": [
+   "2fd582ee-0212-3855-b262-e40165dd6c30"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<죽음의 섬> 오르간 편곡(Langmann). 원곡 ab65bc19… 은 새 작품 rachmaninoff-op29"
+ },
+ {
+  "pieceId": 1287,
+  "title": "Danses Symphoniques, op. 45 : I. Non allegro",
+  "mbids": [
+   "357f62ad-05c8-4ece-95e5-fabf522b81c5"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op45",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "seed 1287 「Danses Symphoniques, op. 45 : I. Non allegro」는 parts 관계 없는 따로 work. 작품·악장 번호로 맞춤"
+ },
+ {
+  "pieceId": 1302,
+  "title": "Rhapsody on a Theme of Paganini, op. 43: Variation XVIII",
+  "mbids": [
+   "36866c5f-d684-4f2a-b066-5db3ace59c8b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "파가니니 광시곡 18변주의 바이올린·피아노 편곡(크라이슬러)"
+ },
+ {
+  "pieceId": 1342,
+  "title": "3 Nocturnes, TN ii/13",
+  "mbids": [
+   "3ba356d4-6929-40e0-a9d1-e42ea7bca3b4"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-13",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1355,
+  "title": "Étude-Tableau, op. 33 no. 8",
+  "mbids": [
+   "3d2b644b-ac4c-488a-bbcc-ab9995524d62"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "「Étude-Tableau, op. 33 no. 8」 — 번호 체계에 따라 C#단조(8곡 번호) 또는 G단조(9곡 번호). MB work 에 조성이 없고 유일한 녹음(RCM 교재 음반)으로도 가릴 수 없어 잇지 않음"
+ },
+ {
+  "pieceId": 1496,
+  "title": "Piano Piece in D minor: [Moderato]",
+  "mbids": [
+   "4f124533-8b95-4f05-92b6-388566893fd8"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-piece-d-minor",
+  "path": null,
+  "reason": null,
+  "note": "MB work 4f124533(seed 1496)을 위키백과 「Lento in D minor」와 같은 곡으로 봄(IMSLP 「Piano Piece in D minor」)"
+ },
+ {
+  "pieceId": 1518,
+  "title": "Trio élégiaque no. 1 in G minor, TN ii/34",
+  "mbids": [
+   "517350e1-daf3-3b4c-805b-d0ab69a5e1d1"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-34",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1521,
+  "title": "Melodie on a Theme by S. Rachmaninov, for cello (or violin) & piano in D major, TN ii/33",
+  "mbids": [
+   "521bf6ec-7bff-4641-a191-6ae793cebcae"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-33",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1555,
+  "title": "2 Monologues from “Boris Godunov”",
+  "mbids": [
+   "56aaddef-d8a7-41e5-9d95-e0f78e4affa7"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-monologues",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1571,
+  "title": "Prelude in G major, op. 32 no. 5",
+  "mbids": [
+   "5943edd6-a803-4432-ad85-2f99756f3474"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "전주곡 Op. 32-5 관현악 편곡(Lucien Cailliet)"
+ },
+ {
+  "pieceId": 1578,
+  "title": "6 Romances, op. 38: no. 3 \"Daisies\"",
+  "mbids": [
+   "5a4e807c-1e30-4703-af4b-27bb7cf20136"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<데이지> Op. 38-3 바이올린·피아노 편곡(하이페츠)"
+ },
+ {
+  "pieceId": 1603,
+  "title": "Piano Sonata no. 1 in D minor, op. 28",
+  "mbids": [
+   "5d7dc856-4e6d-477f-ac9b-c2deb1ab6408"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op28",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1619,
+  "title": "10 Preludes, op. 23, no. 10 in G-flat major: Largo",
+  "mbids": [
+   "5fcc903c-f437-48d5-b04d-0daa865231e4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "전주곡 Op. 23-10 첼로·피아노 편곡(브란두코프)"
+ },
+ {
+  "pieceId": 1621,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation XV : Più vivo scherzando",
+  "mbids": [
+   "5fee5d0d-59d5-4caf-be11-a1ded7d89061"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 1623,
+  "title": "Canon in E minor, TN ii/14",
+  "mbids": [
+   "600449b8-ee83-4a7b-990d-ad19ee7aa14b"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1639,
+  "title": "Prelude in C-sharp minor",
+  "mbids": [
+   "6252709a-3d21-4eef-9921-843947dec49b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "전주곡 C#단조 Op. 3-2 관현악 편곡(스토코프스키)"
+ },
+ {
+  "pieceId": 1651,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation II : L'istesso tempo",
+  "mbids": [
+   "639eb525-8c24-4160-a1c8-2c00237699d9"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 1652,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation V : Tempo precedente",
+  "mbids": [
+   "63bda1ee-a1ae-4678-ba1d-81b4391eaf7b"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 1655,
+  "title": "Deus Meus, TN ii/60",
+  "mbids": [
+   "63d76938-1298-48b5-b21b-8e3bd2baadfb"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-60",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1681,
+  "title": "Oriental Sketch",
+  "mbids": [
+   "68541d81-d69a-4310-8fe2-c94bfb8a8c36"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<동양풍 스케치> TN ii/19-2 바이올린·피아노 편곡(하이페츠)"
+ },
+ {
+  "pieceId": 1694,
+  "title": "Monna Vanna, TN ii/71",
+  "mbids": [
+   "6a355bc6-e527-480d-b59f-17e4582ead5d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "오페라 <몬나 반나> TN ii/71 — 1막만 피아노 악보로 남은 미완성(관현악은 부케토프가 붙임). 범위에서 뺌"
+ },
+ {
+  "pieceId": 1698,
+  "title": "Nostalgia (La mia nostalgia)",
+  "mbids": [
+   "6afbfdf3-66fe-4c9b-9bbf-8926dc5819f5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "「Nostalgia (La mia nostalgia)」 — 피아노 협주곡 2번을 바탕으로 한 노래"
+ },
+ {
+  "pieceId": 1710,
+  "title": "The Silver Sleigh Bells",
+  "mbids": [
+   "6c57998b-aa1f-4a9b-953e-0c0d360b9ea2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<종> 1악장 피아노 편곡(다닐 트리포노프 「The Silver Sleigh Bells」)"
+ },
+ {
+  "pieceId": 1737,
+  "title": "5 Études‐tableaux per orchestra",
+  "mbids": [
+   "6fb20437-e4f8-4efd-a3ae-99dd330a2d1b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "회화적 연습곡 5곡의 관현악 편곡(레스피기)"
+ },
+ {
+  "pieceId": 1738,
+  "title": "Romance in A minor, TN ii/31",
+  "mbids": [
+   "6fbd122d-a3a0-4c87-bde4-965cd99f7907"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-31",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1760,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation XIX : A tempo vivace",
+  "mbids": [
+   "71e48c2c-ba5d-4482-b459-81535691407c"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   21
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 1787,
+  "title": "Prince Rostislav, TN ii/44",
+  "mbids": [
+   "75375658-d92a-4a05-944e-0157c6e0d28c"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-44",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1842,
+  "title": "2 Pieces for Cello and Piano, op. 2",
+  "mbids": [
+   "7ac12187-133e-4ada-a222-785ccc1d3b7e"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1854,
+  "title": "Polka italienne",
+  "mbids": [
+   "7c0af38c-90e6-4972-9c8e-b9fb0479765b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "이탈리아 폴카의 피아노 독주 편곡(실로티)"
+ },
+ {
+  "pieceId": 1857,
+  "title": "2 Pieces, TN ii/17",
+  "mbids": [
+   "7c99f99f-4c4c-43df-95a5-a056866a9306"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-17",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1859,
+  "title": "2 Morceaux de salon, op. 6",
+  "mbids": [
+   "7cdeec56-d60a-4333-88eb-77e3e6add6c1"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1885,
+  "title": "Concerto pour piano n° 4 : II. Largo",
+  "mbids": [
+   "7f8a4a86-1550-4ebc-9b5a-3ed6a2779f84"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op40",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "seed 1885 「Concerto pour piano n° 4 : II. Largo」는 parts 관계 없는 따로 work. 작품·악장 번호로 맞춤"
+ },
+ {
+  "pieceId": 1894,
+  "title": "2 Songs, TN ii/52",
+  "mbids": [
+   "80f3553e-9078-40c0-8c61-6f5afc200e6e"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1920,
+  "title": "Morceaux de fantaisie, op. 3",
+  "mbids": [
+   "8391d2e2-52e8-4a26-bcab-da13a17d9ba7"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1926,
+  "title": "“Letter to K.S. Stanislavsky” in E‐flat major, TN ii/56",
+  "mbids": [
+   "840837d0-4560-4a50-9f55-26e8d59e5ad6"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-56",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1934,
+  "title": "Nunc dimittis (catch all arrangement)",
+  "mbids": [
+   "84c32ade-cbd2-4a7f-baed-e8c1a755fe71"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "철야 기도 5번 「Nyne otpushchayeshi」 편곡 catch-all work"
+ },
+ {
+  "pieceId": 1990,
+  "title": "Danses Symphoniques, op. 45 : III. Lento assai - Allegro vivace",
+  "mbids": [
+   "8c1b6d7f-826e-4422-a6cf-e13f880f3948"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op45",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "seed 1990 「Danses Symphoniques, op. 45 : III. …」는 parts 관계 없는 따로 work. 작품·악장 번호로 맞춤"
+ },
+ {
+  "pieceId": 1996,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Tema : L'istesso tempo",
+  "mbids": [
+   "8c7d8ecc-56c1-4446-89ec-1c30e73aabb8"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 2009,
+  "title": "Dreams, op. 38 no. 5",
+  "mbids": [
+   "8dda6e31-d6ff-4cdc-a827-24b84e3d3a75"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<꿈> Op. 38-5 피아노 독주 편곡(얼 와일드)"
+ },
+ {
+  "pieceId": 2017,
+  "title": "Francesca da Rimini, op. 25",
+  "mbids": [
+   "8e80e463-951d-40ff-97f7-02681202597c"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op25",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2020,
+  "title": "Album leaf (transcription of Daisies, op. 38/3 from Rachmaninoff)",
+  "mbids": [
+   "8ec59c1a-31eb-4435-a14c-237a357d8625"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<데이지> Op. 38-3 바이올린·피아노 편곡(크라이슬러 「Album leaf」)"
+ },
+ {
+  "pieceId": 2027,
+  "title": "O Cease Thy Singing Maiden Fair, op. 4 no. 4",
+  "mbids": [
+   "8fad180b-9f59-49b7-a53b-8074ace3826b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 4-4 「Ne poy, krasavitsa」의 영어 가사판(MB other version)"
+ },
+ {
+  "pieceId": 2053,
+  "title": "Nocturne (Intermezzo from Aleko)",
+  "mbids": [
+   "9272e99d-b1b2-4fcc-87fa-72df91e630d2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "오페라 <알레코> 간주곡의 피아노 편곡(Kursanov)"
+ },
+ {
+  "pieceId": 2060,
+  "title": "Rhapsody on a Theme of Paganini, op. 43: Var. 18. Andante cantabile",
+  "mbids": [
+   "9356ac83-29cf-4ffb-91c2-a4f890d0804a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "파가니니 광시곡 18변주의 피아노 독주 편곡(Korepanova)"
+ },
+ {
+  "pieceId": 2083,
+  "title": "How Fair This Place",
+  "mbids": [
+   "956329f4-e17d-4e9c-b587-6cd1ffe4c228"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "Op. 21-7 「Zdes' khorosho」의 영어 가사판 「How Fair This Place」(MB other version)"
+ },
+ {
+  "pieceId": 2089,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation IX : L'istesso tempo",
+  "mbids": [
+   "9655ac15-e56f-425b-9895-704d1d76cfab"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 2092,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation XXIV : A tempo un poco meno mosso",
+  "mbids": [
+   "96b6f08d-26b6-4cc4-b307-f6103ae13013"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   26
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 2108,
+  "title": "Romance in F minor (arr. Lloyd webber)",
+  "mbids": [
+   "97f8f7ef-b71d-3de3-b023-1f0bef91257e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Romance in F minor (arr. Lloyd Webber)」 — 남의 편곡"
+ },
+ {
+  "pieceId": 2111,
+  "title": "Piano Concerto no. 4 in G minor, op. 40: III. Allegro vivace (1926 version)",
+  "mbids": [
+   "982b4463-b0e9-3a44-a70b-77aed0cc3ad5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "피아노 협주곡 4번 3악장의 1926년 원판. 옛 판이라 뺌(작품은 rachmaninoff-op40)"
+ },
+ {
+  "pieceId": 2137,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation XIII : Allegro",
+  "mbids": [
+   "9c2f63fc-7384-4951-b232-a2c27c35ae56"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 2270,
+  "title": "Rhapsody on a Theme of Paganini op. 43",
+  "mbids": [
+   "ac3b66de-c22c-4da9-a00c-7d61c2507fea"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 「catch-all for arrangements」 work(파가니니 광시곡 편곡들). 원곡은 manual 227"
+ },
+ {
+  "pieceId": 2283,
+  "title": "14 Romances, op. 34",
+  "mbids": [
+   "adc3e233-2cc5-4b1e-83d3-c745922c9186"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op34",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2311,
+  "title": "Etude-tableau in E-flat, op. 33 no. 4",
+  "mbids": [
+   "b1b2ab55-8ce1-40a0-ac3f-e7d2346c4b22"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "회화적 연습곡 Op. 33 E♭장조의 바이올린·피아노 편곡(하이페츠)"
+ },
+ {
+  "pieceId": 2318,
+  "title": "13 Preludes, op. 32",
+  "mbids": [
+   "b1fc68bd-e444-40d7-b019-5623cce498dd"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2336,
+  "title": "Études-tableaux, op. 33: No. 2 in C major",
+  "mbids": [
+   "b3ad20f5-04f6-40f1-b0bc-d1c81c359cbd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 「catch-all for arrangements」 work(회화적 연습곡 Op. 33-2 편곡들)"
+ },
+ {
+  "pieceId": 2368,
+  "title": "Композиция по мотивам второго фортепианного концерта С. Рахманинова",
+  "mbids": [
+   "b74098de-bc1f-4a45-b30a-1f1ce84a0483"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "피아노 협주곡 2번 주제에 의한 재즈 편곡(알렉세이 코즐로프)"
+ },
+ {
+  "pieceId": 2376,
+  "title": "E sarà così",
+  "mbids": [
+   "b88b8b54-cbcb-4f64-aba8-03dc4d20f299"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "「E sarà così」 — 파가니니 광시곡 18변주를 바탕으로 한 노래"
+ },
+ {
+  "pieceId": 2386,
+  "title": "“From the Gospel of St John” in A minor, TN ii/57",
+  "mbids": [
+   "b9a57edd-17e3-435a-a772-da099b748b91"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-57",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2408,
+  "title": "Не пой, красавица",
+  "mbids": [
+   "bbfc329d-b11d-4bcd-a474-87cc912667ac"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op4",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "seed 2408 「Не пой, красавица」(러시아어 원제, 작사 푸시킨)는 MB 에서 parts 관계 없이 따로 있는 work. 원제로 맞춤"
+ },
+ {
+  "pieceId": 2410,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation XXII : Un poco più vivo (alla breve)",
+  "mbids": [
+   "bc110c93-556d-4312-8efa-b937e5642810"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   24
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 2421,
+  "title": "Caprice Bohémien, op. 12",
+  "mbids": [
+   "bca8d396-4464-4022-b2f2-bcde0ade6102"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op12",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2427,
+  "title": "It’s Lovely Here, op. 21 no. 7",
+  "mbids": [
+   "bd4d4a3c-0674-4474-81ea-d3585cecea8f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 21-7 「Zdes' khorosho」 두 대 피아노 편곡(바빈)"
+ },
+ {
+  "pieceId": 2447,
+  "title": "Where Beauty Dwells, op. 21 no. 7",
+  "mbids": [
+   "bf5a4a6f-49eb-4160-baee-b43def461726"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 21-7 「Zdes' khorosho」 피아노 독주 편곡(얼 와일드)"
+ },
+ {
+  "pieceId": 2464,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation IV : Più vivo",
+  "mbids": [
+   "c16d1796-59b0-4143-ab2f-19c5afed17fe"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 2488,
+  "title": "Concerto pour piano n° 4 : I. Allegro vivace (alla breve)",
+  "mbids": [
+   "c482c8c6-e513-4b6a-a92b-5d1a34458dce"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op40",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "seed 2488 「Concerto pour piano n° 4 : I. Allegro vivace (alla breve)」는 parts 관계 없는 따로 work. 작품·악장 번호로 맞춤"
+ },
+ {
+  "pieceId": 2490,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation XVII : Allegretto",
+  "mbids": [
+   "c4a3f1df-9071-476d-bdcf-d2b82a8c9069"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 2508,
+  "title": "Как мне больно",
+  "mbids": [
+   "c70d0255-a489-4504-9faa-0f0b791b5e97"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op21",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "seed 2508 「Как мне больно」(러시아어 원제, 가사 첫머리 일치)는 parts 관계 없는 따로 work. 원제로 맞춤"
+ },
+ {
+  "pieceId": 2512,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation VI : L'istesso tempo",
+  "mbids": [
+   "c755e950-09f0-4719-b36b-64bc6a5eae4b"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 2567,
+  "title": "6 Romances, op. 38",
+  "mbids": [
+   "cd67c82c-5de4-4889-bff9-d689115d1b4e"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op38",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2604,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation XVI : Allegretto",
+  "mbids": [
+   "d244739c-e59d-4689-ad8b-c842c5ec0754"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 2608,
+  "title": "3 Songs, TN ii/53",
+  "mbids": [
+   "d27ff906-59e8-4e4b-ae6c-7d27299058ef"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-53",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2611,
+  "title": "Cadenza for Liszt's Hungarian Rhapsody no. 2, TN iii/6",
+  "mbids": [
+   "d2c948fd-c7f3-4748-a9ef-12591e47789f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "리스트 <헝가리 광시곡 2번>에 붙인 카덴차(TN iii/6) — 남의 작품에 붙인 것이라 편곡과 함께 범위 밖"
+ },
+ {
+  "pieceId": 2618,
+  "title": "2 Songs, TN ii/58",
+  "mbids": [
+   "d30a77ca-99a1-4a82-9b83-01f0dca88306"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-58",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2650,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation XXIII : L'istesso tempo",
+  "mbids": [
+   "d6c47419-fb13-4e93-bfd5-2a51eaeb25de"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   25
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 2689,
+  "title": "String Quartet no. 2, TN ii/35",
+  "mbids": [
+   "dc6be314-8b8f-4455-9312-8941285fa662"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-35",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2712,
+  "title": "4 Pieces, TN ii/12",
+  "mbids": [
+   "dedda73d-e3de-4d9b-a087-76d661224518"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-12",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2750,
+  "title": "“Night” in A minor, TN ii/55",
+  "mbids": [
+   "e25edaf3-aee3-407b-bc4a-2d7eb9f69a56"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-55",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2761,
+  "title": "Я опять одинок",
+  "mbids": [
+   "e3a60382-d91a-43a6-a793-5cf1c171c3a7"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op26",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "seed 2761 「Я опять одинок」(러시아어 원제, 가사 첫머리 「Как светла, как нарядна весна!」 부닌 시)는 parts 관계 없는 따로 work. 원제로 맞춤"
+ },
+ {
+  "pieceId": 2776,
+  "title": "Canon in E minor",
+  "mbids": [
+   "e50cc45a-51b0-497f-bbff-68a7394da512"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "「Canon in E minor」 — TN ii/14 카논 E단조(seed 1623, rachmaninoff-tn-ii-14)와 같은 곡의 두 번째 MB work"
+ },
+ {
+  "pieceId": 2788,
+  "title": "Andante in F major",
+  "mbids": [
+   "e642e305-c95f-49d9-bf0c-d800cc185d84"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "「Andante in F major」 — 피아노 3중주 2번 Op. 9 의 하모늄 파트를 따로 뽑은 것"
+ },
+ {
+  "pieceId": 2803,
+  "title": "2 Songs, TN ii/50: no. 2 “I Shall Tell You Nothing” in C minor",
+  "mbids": [
+   "e7a0ae53-dfdc-46f7-87d7-84ef941a29b4"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-tn-ii-50",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2834,
+  "title": "Проходит всё",
+  "mbids": [
+   "eadcbb59-144a-4738-a316-28a5c0dd8ca0"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op26",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "seed 2834 「Проходит всё」(러시아어 원제, 가사 첫머리 일치)는 parts 관계 없는 따로 work. 원제로 맞춤"
+ },
+ {
+  "pieceId": 2838,
+  "title": "12 Romances, op. 14",
+  "mbids": [
+   "eb0aa33c-b3d6-443b-8bc8-c83a49fef6dd"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2844,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation VIII : Tempo I",
+  "mbids": [
+   "ebc3cbec-2ef6-4439-b4ea-23031c2eabe3"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 2871,
+  "title": "The Little Island, op. 14 no. 2",
+  "mbids": [
+   "eec80175-1d23-49b2-ae12-28f3101224b6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "Op. 14-2 「Ostrovok」 피아노 독주 편곡(얼 와일드)"
+ },
+ {
+  "pieceId": 2876,
+  "title": "Adagio from Symphony no. 2",
+  "mbids": [
+   "efa7c990-f795-4fd3-8edd-12cfdca873d8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 2번 3악장 아다지오의 밴드·코넷 편곡(Farr)"
+ },
+ {
+  "pieceId": 2883,
+  "title": "Three Russian Folk Songs for Chorus and Orchestra, op. 41",
+  "mbids": [
+   "f0eeb1f5-c0c0-43a5-90f7-88f8bd428363"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op41",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2912,
+  "title": "The Theotokos",
+  "mbids": [
+   "f375aab9-203b-40a1-a41d-c6a9e7e3fd34"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "「The Theotokos」 — 녹음 제목 「The Theotokos, Ever-Vigilant in Prayer」(7~8분). TN ii/61 합창 협주곡(seed 598, rachmaninoff-tn-ii-61)과 같은 곡"
+ },
+ {
+  "pieceId": 2920,
+  "title": "String Quartet no. 1, TN ii/30",
+  "mbids": [
+   "f4595173-a18b-4702-845c-562d89666e33"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-tn-ii-30",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2975,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation XXI : Un poco più vivo",
+  "mbids": [
+   "fa943eba-206d-4e83-9c30-66565be3c535"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   23
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 2977,
+  "title": "Liturgy of St. John Chrysostom, op. 31",
+  "mbids": [
+   "fad2ed54-95c8-42a8-be72-b7e968c5ecec"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op31",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2995,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation XII : Tempo di minuetto",
+  "mbids": [
+   "fd1be76e-9764-4aaa-a966-9902233595c4"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 3005,
+  "title": "15 Romances, op. 26",
+  "mbids": [
+   "fdfbb4c3-98d7-45c9-8eba-88eeca589f97"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op26",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 3018,
+  "title": "Rhapsodie sur un thème de Paganini, op. 43 : Variation III : L'istesso tempo",
+  "mbids": [
+   "fffa05c3-ed7b-4b34-bce6-86b843af5c82"
+  ],
+  "mapping": "part",
+  "key": "rachmaninoff-op43",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "MB parts 관계 없는 따로 work(프랑스 음반 제목 꼴). 작품번호와 변주 번호로 맞춤"
+ },
+ {
+  "pieceId": 12182,
+  "title": "Trio élégiaque no. 2 in D minor, op. 9",
+  "mbids": [
+   "0a2929f8-4589-4cb6-9913-676f74843dba"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13290,
+  "title": "Suite no. 1, op. 5",
+  "mbids": [
+   "b99a07c5-ec66-422d-a99c-6b891c3a2992"
+  ],
+  "mapping": "work",
+  "key": "rachmaninoff-op5",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

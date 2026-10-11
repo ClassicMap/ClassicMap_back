@@ -1,0 +1,3454 @@
+[
+ {
+  "pieceId": 476,
+  "title": "플루트와 관현악을 위한 오들레트 Op. 162",
+  "mbids": [
+   "0c10d93a-9436-41c7-9030-b22e61e398c2"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op162",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 495,
+  "title": "오페라 <헨리 8세>",
+  "mbids": [
+   "27d1b1e1-7220-47b4-8540-12f1ec5ba984"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r291",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 508,
+  "title": "Violin Concerto no. 1 in A major, op. 20",
+  "mbids": [
+   "31c32292-cc70-4cda-8caf-3395302b957b"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 510,
+  "title": "Piano Quartet in E major",
+  "mbids": [
+   "32ea6032-c33d-4d47-a488-d3c517429a7a"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r107",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 511,
+  "title": "Havanaise in E major, op. 83",
+  "mbids": [
+   "3397838b-5ba5-3d4e-a07c-3e859e692aad"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op83",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 536,
+  "title": "Messe, op. 4",
+  "mbids": [
+   "5542f2ad-0a75-41be-bc87-88e52625e4d5"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 537,
+  "title": "Tarantelle pour flûte, clarinette et orchestre, op. 6",
+  "mbids": [
+   "5553363e-2e00-4f59-a079-404d87f6d94f"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 567,
+  "title": "白鳥",
+  "mbids": [
+   "793e31a3-f55a-4755-babb-39afe7437d72"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "「백조」 일본어 가사 노래(JASRAC, MB arrangement 관계)"
+ },
+ {
+  "pieceId": 584,
+  "title": "Prière, op. 158",
+  "mbids": [
+   "863f61b4-9e6f-4bf4-ad94-dd02ec26c40e"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op158",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 604,
+  "title": "Symphony no. 3 in C minor “avec orgue”, op. 78",
+  "mbids": [
+   "a388629a-9979-49eb-a5c3-b22ad8be85a3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "교향곡 3번(운영 manual 254 로 씀)과 같은 작품. MBID a388629a 를 이 seed 가 쥠"
+ },
+ {
+  "pieceId": 621,
+  "title": "Valse-Caprice for Piano and Strings in A-flat major, op. 76 \"Wedding Cake\"",
+  "mbids": [
+   "b5ec929f-85f8-33d3-80eb-82c768a47fa3"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op76",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 627,
+  "title": "Oratorio de Noël, op. 12",
+  "mbids": [
+   "c115a1da-7a89-4ca1-90bb-c56789604204"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op12",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 631,
+  "title": "Sonata for Violin and Piano no. 1 in D minor, op. 75",
+  "mbids": [
+   "c52d14fc-e2b2-40e2-920a-4b499dd56f1e"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op75",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 654,
+  "title": "Concerto pour piano nº 2 en sol mineur, op. 22",
+  "mbids": [
+   "eb86844b-1186-4b85-bbc4-6f0e40510023"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op22",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 662,
+  "title": "2 chœurs, op. 68",
+  "mbids": [
+   "f294369b-852d-4650-b7a1-997f76baa758"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op68",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 665,
+  "title": "Sansone e Dalila, opera in tre atti, op. 47",
+  "mbids": [
+   "f419280b-34ee-4a1b-9a57-089d51c87c11"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "<삼손과 데릴라> 이탈리아어 판(MB 'other version')"
+ },
+ {
+  "pieceId": 673,
+  "title": "Concerto pour piano et orchestre n° 5 en fa majeur, op. 103 \"L'Égyptien\"",
+  "mbids": [
+   "fb9586d6-869c-4400-ae2f-0481acb3cbea"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op103",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 737,
+  "title": "Bitter Sweet",
+  "mbids": [
+   "68def46d-5d11-477a-87e4-dbc1f6a01b13"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "「백조」에 바탕한 대중가요(Bitter Sweet)"
+ },
+ {
+  "pieceId": 773,
+  "title": "寒月",
+  "mbids": [
+   "1c916335-e35d-44a7-9346-0768c3898f1e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "일본 대중가요(JASRAC 등록 「寒月」)"
+ },
+ {
+  "pieceId": 785,
+  "title": "If I Had Words",
+  "mbids": [
+   "5966b941-bad0-4bd8-b774-f87d61d9f6ee"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "교향곡 3번 주제 팝송(If I Had Words, 1977)"
+ },
+ {
+  "pieceId": 839,
+  "title": "Samson and Delilah : Act II, Scene 3. “Softly Awakes My Heart”",
+  "mbids": [
+   "00738039-0e45-41c3-9758-e2f4e4c2dadd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "「Mon cœur s'ouvre à ta voix」 영어 가사판(Softly Awakes My Heart)"
+ },
+ {
+  "pieceId": 840,
+  "title": "Album, op. 72 : I. Prélude",
+  "mbids": [
+   "008d1551-fd6b-48fe-9a13-2751d61a7b89"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op72",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 845,
+  "title": "Scherzo sur “Les Pêcheurs de perles”",
+  "mbids": [
+   "00e988fe-e0b1-43db-958c-6314c24cdb80"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "비제 <진주조개잡이> 주제 스케르초(남의 작품에 의함, 위키 목록에 없음)"
+ },
+ {
+  "pieceId": 848,
+  "title": "Violin Concerto no. 2 in C major, op. 58",
+  "mbids": [
+   "012d08a6-3780-4fdb-9e90-e6e9372950db"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op58",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 857,
+  "title": "Berceuse, op. 38",
+  "mbids": [
+   "026b3426-bc49-4c31-b844-1716c26c304d"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op38",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 875,
+  "title": "Pas redoublé",
+  "mbids": [
+   "03e0941c-88f1-49ea-9808-7bd29fce74f7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "빠른 행진곡 Op. 86 관악 편곡(Frackenpohl)"
+ },
+ {
+  "pieceId": 876,
+  "title": "Deus Abraham",
+  "mbids": [
+   "03ef7b1b-8093-47f6-8160-0cd844f0f760"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w312",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 877,
+  "title": "Theme from Samson and Delilah",
+  "mbids": [
+   "0414eafa-d9b5-4771-9702-be7a72c0d89d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Mon cœur s'ouvre à ta voix」 편곡(MB arrangement 관계)"
+ },
+ {
+  "pieceId": 879,
+  "title": "Symphony no. 1 in E-flat major, op. 2",
+  "mbids": [
+   "041de844-72a5-42c5-8c57-1728b931d7e2"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 891,
+  "title": "Airs de ballet d'Ascanio : Adagio et Variation",
+  "mbids": [
+   "05d662e4-931b-498f-b287-4fe172395294"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<아스카니오> 발레의 Adagio·Variation 두 곡을 묶은 발췌·편곡판"
+ },
+ {
+  "pieceId": 892,
+  "title": "Valse nonchalante, for piano in D-flat major, op. 110",
+  "mbids": [
+   "06047ba4-ca26-46c6-ae5e-839708b228a1"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op110",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 909,
+  "title": "Temps nouveau",
+  "mbids": [
+   "07dc88dd-0410-4b2a-9847-a05c607676a4"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-w434",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "MB 「Temps nouveau」. 위키 <옛 노래> 1번"
+ },
+ {
+  "pieceId": 915,
+  "title": "Symphony in A major",
+  "mbids": [
+   "08640588-34a6-4e30-9b72-48f90156e3bf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "교향곡 A장조 — seed 2161(같은 교향곡, R. 159)과 겹침"
+ },
+ {
+  "pieceId": 917,
+  "title": "Barcarolle in F major, op. 108",
+  "mbids": [
+   "086caa2f-08dc-4c42-a5c7-540d6275a4ee"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op108",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 921,
+  "title": "Album, op. 72 : V. Chanson napolitaine",
+  "mbids": [
+   "089c4ae5-572b-494b-a321-cb89d8dd23d8"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op72",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 928,
+  "title": "Sonata for Clarinet and Piano in E-flat major, op. 167",
+  "mbids": [
+   "0913461b-0cc2-43a2-b9df-9f319bb03a2d"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op167",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 932,
+  "title": "Phryné",
+  "mbids": [
+   "0ab99704-1321-4b17-b0fd-4ea80ea33295"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r294",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 934,
+  "title": "Samson et Dalila, op. 47: Acte 3. Bacchanale",
+  "mbids": [
+   "0b13b39b-431b-45e3-a511-dd48aea3daa4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<삼손과 데릴라> 바카날 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 940,
+  "title": "Six Bagatelles for Piano, op. 3",
+  "mbids": [
+   "0bce0b38-d4ce-442e-a4a3-9d57e9c47789"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 956,
+  "title": "Trio avec piano n°1 en fa majeur opus 18 : III. Scherzo. Presto",
+  "mbids": [
+   "0d54f5dc-167f-437d-a158-4e3a926ec70f"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op18",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "MBID 다름(따로 떨어진 악장 work). 제목(3중주 1번 3악장)으로 맞춤"
+ },
+ {
+  "pieceId": 957,
+  "title": "L’Attente",
+  "mbids": [
+   "0d5f8ebc-2799-4722-9614-74b2b2d2634b"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w339",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 961,
+  "title": "Mon cœur s'ouvre à ta voix",
+  "mbids": [
+   "0e3bfbe5-a7a5-4841-b543-6cd5151aa74e"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op47",
+  "path": [
+   2,
+   14
+  ],
+  "reason": null,
+  "note": "MB 「Mon cœur s'ouvre à ta voix」(Aria) 따로 떨어진 work. MB 'arrangement' 관계로 2막 3장 번호와 이어짐. 제목으로 맞춤"
+ },
+ {
+  "pieceId": 968,
+  "title": "Lola, op. 116",
+  "mbids": [
+   "0eba8a4d-b8c9-44ec-acce-4b17c8468664"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op116",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 977,
+  "title": "Mazurka no. 1 in G minor, op. 21",
+  "mbids": [
+   "0f87b687-4c7b-4b94-a244-e7c4e407e285"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 987,
+  "title": "Chant saphique, op. 91",
+  "mbids": [
+   "108d1428-31dc-43c3-88be-41a547eec6d1"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op91",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 990,
+  "title": "Suite algérienne, op. 60",
+  "mbids": [
+   "10c4410f-b365-42b9-8a03-8c32d026ecc2"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op60",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 994,
+  "title": "7 Improvisations, op. 150",
+  "mbids": [
+   "114aaed5-63d5-4095-9436-7205fdc4fa7d"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op150",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 999,
+  "title": "La Fiancée du timbalier, op. 82",
+  "mbids": [
+   "11aade4e-7628-49fa-8b2f-7a9566c91bda"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op82",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1010,
+  "title": "Veni Creator Spiritus",
+  "mbids": [
+   "1303faf7-44b3-41c4-a0ef-6c90ad89e2e5"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w231",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1012,
+  "title": "Gavotte for cello and piano in G minor",
+  "mbids": [
+   "13476f0c-5c20-41dd-9b7b-2bf1c01edd6b"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w128",
+  "path": null,
+  "reason": null,
+  "note": "MB 「Gavotte for cello and piano in G minor」. 위키 첼로 가보트(번호 없음)"
+ },
+ {
+  "pieceId": 1021,
+  "title": "Ave verum",
+  "mbids": [
+   "1412ffa5-a89e-44c6-abfc-b0aaf601b9e3"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w299",
+  "path": null,
+  "reason": null,
+  "note": "조성 없는 「Ave verum (for mixed choir)」 — 혼성 4성부판(B♭)으로 봄"
+ },
+ {
+  "pieceId": 1055,
+  "title": "Romance, op. 51",
+  "mbids": [
+   "1848eba3-8e0d-44f5-8dc5-f95706a02753"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op51",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1066,
+  "title": "Guitare",
+  "mbids": [
+   "19c31518-c12d-4326-9e49-521fd8fe9eb6"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w326",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1085,
+  "title": "Chanson à boire du vieux temps",
+  "mbids": [
+   "1baf980c-67e8-4743-91c3-5dce28ca3c37"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w377",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1088,
+  "title": "Aimons-nous",
+  "mbids": [
+   "1c31bf3a-2ae1-41ac-bc9e-78c8c372a8f9"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w384",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1104,
+  "title": "My Heart at Thy Sweet Voice",
+  "mbids": [
+   "1dbd5bd2-3380-4903-993c-f0ffa7529354"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Mon cœur s'ouvre à ta voix」 오르간 편곡(Lemare)"
+ },
+ {
+  "pieceId": 1107,
+  "title": "Triptyque, op. 136",
+  "mbids": [
+   "1e357d67-1987-403f-a07a-d9ec5bb36f1e"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op136",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1119,
+  "title": "Le Cygne",
+  "mbids": [
+   "1fa14d3d-ea7d-4a87-811b-acdf754d72fe"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "「백조」에 M. 바케 가사를 붙인 노래"
+ },
+ {
+  "pieceId": 1120,
+  "title": "Bagatelle I",
+  "mbids": [
+   "1fa9976d-68fc-4787-b0c6-02ca33c2023f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "「Bagatelle I」 — 바가텔 Op. 3 1번일 수 있으나 근거 없음"
+ },
+ {
+  "pieceId": 1122,
+  "title": "Symphony no. 2 in A minor, op. 55",
+  "mbids": [
+   "2010d938-7ee3-4381-ba92-11d61c262c64"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op55",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1128,
+  "title": "Rapsodie d'Auvergne for Piano and Orchestra in C major, op. 73",
+  "mbids": [
+   "205bee0a-7330-471f-bb7b-1f734dbe0cd2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<오베르뉴 랩소디> 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 1129,
+  "title": "Samson et Dalila : Acte I, scène 6. « Printemps qui commence » (Dalila)",
+  "mbids": [
+   "205c48c9-778c-4f86-900d-8d8f44973513"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Printemps qui commence」 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 1132,
+  "title": "Le Pas d'armes du Roi Jean",
+  "mbids": [
+   "2097306e-ada3-4b4b-b866-c63ef6563b4b"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w332",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1152,
+  "title": "The Swan (The Carnival of Animals No. 13)",
+  "mbids": [
+   "22d6e225-a5a0-4df3-99b0-8db079481316"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "「백조」 노래판(MB Song)"
+ },
+ {
+  "pieceId": 1158,
+  "title": "Jonathan Creek Theme (Introduction to ‘Danse Macabre’)",
+  "mbids": [
+   "23599fd8-ff2b-461a-840c-7fe884a87292"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "TV 드라마 <Jonathan Creek> 주제곡(<죽음의 무도> 서주 편곡)"
+ },
+ {
+  "pieceId": 1159,
+  "title": "Le Lever de la lune",
+  "mbids": [
+   "2364c8d6-f52a-4189-91e9-a6716ecc011e"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w340",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1162,
+  "title": "Menuet et Gavotte du Septuor, op. 65",
+  "mbids": [
+   "23b3d5eb-552b-4dc0-a8a4-583ca7b622b9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "7중주 Op. 65 미뉴에트·가보트 두 대 피아노 편곡"
+ },
+ {
+  "pieceId": 1165,
+  "title": "Viens !",
+  "mbids": [
+   "23d51ef6-887f-49d5-a9f2-7b6ce12578c9"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w344",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1167,
+  "title": "Adagio de la 3e symphonie, op. 78",
+  "mbids": [
+   "2414cfed-c15a-4549-9d2f-a6a9817cfe94"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 3번 1악장 Adagio 오르간 편곡(Bernard)"
+ },
+ {
+  "pieceId": 1178,
+  "title": "Suite for Cello and Orchestra, op. 16b",
+  "mbids": [
+   "25bd5d0f-a1a6-419e-8af5-af83a1513556"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op16b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1188,
+  "title": "Pavane (Ètienne Marcel)",
+  "mbids": [
+   "277b2b9c-69e7-4143-851f-01ba3b05622b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<에티엔 마르셀> 파반 첼로·피아노 편곡(Delsart)"
+ },
+ {
+  "pieceId": 1189,
+  "title": "La Foi, op. 130",
+  "mbids": [
+   "27854f65-6f10-4847-ac67-2fe7f1f73967"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op130-incidental",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1200,
+  "title": "Fantasie pour harpe, op. 95",
+  "mbids": [
+   "28eca37e-167e-4949-b89f-176387fd4e6f"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op95",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1210,
+  "title": "Symphony No. 1 in E-Flat Major, Op. 2: I. Adagio – Allegro",
+  "mbids": [
+   "2aca0d55-b9f1-4cfa-a6a4-f1c4a505a2de"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op2",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "MBID 다름(따로 떨어진 악장 work). 제목(교향곡 1번 1악장)으로 맞춤"
+ },
+ {
+  "pieceId": 1228,
+  "title": "Sonata no. 2 for Cello and Piano in F major, op. 123",
+  "mbids": [
+   "2ca6bddb-b79b-4558-9088-de997c870613"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op123",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1261,
+  "title": "Der Schwan (Le Cygne)",
+  "mbids": [
+   "30bcc522-3cd8-4db3-ad42-e520e0a4eadc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "「백조」 독일어 가사판"
+ },
+ {
+  "pieceId": 1262,
+  "title": "Fantaisie pour orgue-Aeolian",
+  "mbids": [
+   "30dcc38c-6953-4cfa-aecb-c1cf8e49e139"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "에올리언 오르간용 환상곡 — 위키 목록에 없음"
+ },
+ {
+  "pieceId": 1274,
+  "title": "Parysatis: Airs de ballet",
+  "mbids": [
+   "32d883fb-3180-4ae6-8aa7-4d23fa1ffe6e"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-r312",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "MB 「Parysatis: Airs de ballet」(based on Parysatis)"
+ },
+ {
+  "pieceId": 1277,
+  "title": "Valse gaie, op. 139",
+  "mbids": [
+   "336065f2-ecce-4a38-8644-c88910be226c"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op139",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1299,
+  "title": "Élégie, op. 143",
+  "mbids": [
+   "36756e9f-d68d-40fe-bcc7-b4467217638a"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op143",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1303,
+  "title": "Orient et Occident, op. 25",
+  "mbids": [
+   "36e93b84-ab55-484a-b717-4b7640f8f8a3"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op25",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1316,
+  "title": "Violin Sonata in B‐flat major, R 103",
+  "mbids": [
+   "38f387c6-b653-4ba9-8207-bf19bbb10b90"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "바이올린 소나타 B♭장조 R 103(어릴 때 작품) — 위키 목록에 없음"
+ },
+ {
+  "pieceId": 1320,
+  "title": "Romance in C major for Violin and Orchestra, op. 48",
+  "mbids": [
+   "39b207d8-18d9-432b-a57c-6c4c990c3aba"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op48",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1340,
+  "title": "Paraphrase sur Gallia de Gounod",
+  "mbids": [
+   "3b602619-c0f8-45fe-9d70-58d736059c05"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "구노 <갈리아> 패러프레이즈(남의 작품)"
+ },
+ {
+  "pieceId": 1345,
+  "title": "Piano Quartet in B-flat major, op. 41",
+  "mbids": [
+   "3c0092d6-de3a-4401-b596-0af62620283c"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op41",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1371,
+  "title": "Danse macabre, de laatste symfonie",
+  "mbids": [
+   "3f2f0f08-b045-496b-89a0-ed371da610a2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "<죽음의 무도>에 바탕한 네덜란드어 노래"
+ },
+ {
+  "pieceId": 1378,
+  "title": "Verset in F major",
+  "mbids": [
+   "4015d4f5-33c1-4d49-af92-29ca4ce6b99c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "오르간 베르세 F장조 — 위키 목록에 없음"
+ },
+ {
+  "pieceId": 1386,
+  "title": "Morceau de concert, op. 62",
+  "mbids": [
+   "40c9ecdf-22e7-400b-9e83-8b4e46f2c8b8"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op62",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1390,
+  "title": "Suzette et Suzon",
+  "mbids": [
+   "413de67f-7697-4e91-93a9-b0b79c52b998"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w381",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1392,
+  "title": "Fantaisie no. 2 in D-flat major, op. 101",
+  "mbids": [
+   "4173e4e2-3284-4092-890d-010d5491cb7c"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op101",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1398,
+  "title": "Feuillet d'Album, op. 169",
+  "mbids": [
+   "41f86103-1e92-4313-adde-e4698bb9eb98"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op169",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1400,
+  "title": "Caprice sur des airs Danois et Russes, op. 79",
+  "mbids": [
+   "425b0f77-e3c3-4e77-9b53-89405406a173"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op79",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1417,
+  "title": "La Feuille de peuplier",
+  "mbids": [
+   "443bcacb-e649-4f3f-bb74-fa69f3771012"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w334",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1432,
+  "title": "Parysatis",
+  "mbids": [
+   "47418f91-04a3-453c-a331-51f79abe077a"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r312",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1438,
+  "title": "Fantasie sur l’hymne national russe",
+  "mbids": [
+   "47d811a2-fb50-4bb9-b2a1-8f79ce3428d0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "러시아 국가 주제 환상곡(남의 곡에 의함, 위키 목록에 없음)"
+ },
+ {
+  "pieceId": 1455,
+  "title": "Mazurka no. 2 in G minor, op. 24",
+  "mbids": [
+   "4a533542-d610-4b12-aeb8-858741426024"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op24",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1480,
+  "title": "Album, op. 72 : III. Toccata",
+  "mbids": [
+   "4cf08b98-8cd7-418b-97d8-136e1b2e243a"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op72",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1483,
+  "title": "Samson et Dalila, op. 47: Acte 1: Danse des prêtresses de Dagon",
+  "mbids": [
+   "4d36e251-ad9b-4f29-a5c6-c6bb720cd022"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<삼손과 데릴라> 다곤 여사제들의 춤 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 1488,
+  "title": "Beyaz Penbe Çiçekli İlkbahar (Samson et Dalila)",
+  "mbids": [
+   "4daf1a73-dd43-40a1-9810-008d6a38c4e3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "<삼손과 데릴라> 주제 튀르키예어 노래"
+ },
+ {
+  "pieceId": 1489,
+  "title": "Sonnet",
+  "mbids": [
+   "4e350e98-30f9-4363-bd38-9b449edf77ee"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w406",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1506,
+  "title": "Chanson (Nouvelle chanson sur un vieil air)",
+  "mbids": [
+   "5053d31d-9624-46fd-8925-b9c4b24ce1ee"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w427",
+  "path": null,
+  "reason": null,
+  "note": "위고 시 「Nouvelle chanson sur un vieil air」=「S'il est un charmant gazon」. 시로 맞춤"
+ },
+ {
+  "pieceId": 1507,
+  "title": "Paraphrase sur La isleña de Paladilhe",
+  "mbids": [
+   "5061f848-9629-43a6-a7ba-d257395488da"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "팔라딜 「La Isleña」 패러프레이즈(남의 작품)"
+ },
+ {
+  "pieceId": 1508,
+  "title": "Symphony in F major ‘Urbs Roma’",
+  "mbids": [
+   "5069b80f-a4e3-47d0-bf17-73a1a23335ee"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r163",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1514,
+  "title": "Si vous n'avez rien à me dire",
+  "mbids": [
+   "50d9a720-d4db-4a0a-a58f-eba765e05031"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w367",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1515,
+  "title": "Désir d'amour",
+  "mbids": [
+   "50d9afb9-20f1-4927-bd6e-b622d3cbb830"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w409",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1527,
+  "title": "Caprice arabe, op. 96",
+  "mbids": [
+   "52b1850a-2eda-4bb1-91b9-d943869750de"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op96",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1536,
+  "title": "3 Preludes and Fugues, op. 99",
+  "mbids": [
+   "548e8feb-ea85-47b3-b5a5-49464d0e66b6"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op99",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1564,
+  "title": "Sonata for Bassoon and Piano, op. 168",
+  "mbids": [
+   "5848141a-ff2f-46b7-9bf1-ef6eb597b01c"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op168",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1567,
+  "title": "Souvenances",
+  "mbids": [
+   "587654f4-12d8-4911-af06-22bc75b010c9"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w349",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1568,
+  "title": "La Princesse jaune, op. 30",
+  "mbids": [
+   "58802690-d03a-40a3-92fd-4016db6fb705"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op30",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1592,
+  "title": "2 chœurs, op. 141",
+  "mbids": [
+   "5c3b2608-3604-4d69-ad8c-e7f440775175"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op141",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1605,
+  "title": "Samson et Dalila : Acte II, scène 3. « Mon cœur s'ouvre à ta voix » (Dalila)",
+  "mbids": [
+   "5db1eeff-cabd-4086-8578-08d32700fdf9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Mon cœur s'ouvre à ta voix」 피아노 독주 편곡(MB: for piano solo)"
+ },
+ {
+  "pieceId": 1610,
+  "title": "Les Guerriers, op. 84",
+  "mbids": [
+   "5e292026-b7c7-4d7c-8d42-c42835abb165"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op84",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1613,
+  "title": "Praise Ye the Lord",
+  "mbids": [
+   "5e9fde60-35c4-4b94-9391-547e20b814bb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "<크리스마스 오라토리오> 10번 「Tollite hostias」 영어 가사판(Praise Ye the Lord)"
+ },
+ {
+  "pieceId": 1626,
+  "title": "Six Études pour la main gauche seule, op. 135",
+  "mbids": [
+   "6059e3b2-ee37-4e01-bde6-0e60a3d1a863"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op135",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1636,
+  "title": "Plainte",
+  "mbids": [
+   "61cfc33e-1354-4940-8671-ca36d562d7ac"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w343",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1644,
+  "title": "Une Flûte invisible",
+  "mbids": [
+   "62abdffa-c485-407c-ab30-73afcac7b461"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w379",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1646,
+  "title": "Saltarelle, op. 74",
+  "mbids": [
+   "62d6d644-0642-40c4-b609-7b5ba33a02bd"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op74",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1654,
+  "title": "Samson & Dalila, op. 47: Improvisation",
+  "mbids": [
+   "63ce84ee-9a9f-42fc-8751-5c3ba5ad5097"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<삼손과 데릴라>에 의한 즉흥 연주(편곡)"
+ },
+ {
+  "pieceId": 1659,
+  "title": "ハバネラ",
+  "mbids": [
+   "64389ffa-4900-4c12-83a2-bd0abf4de0bd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "하바네즈 편곡(일본어 제목, MB arrangement 관계)"
+ },
+ {
+  "pieceId": 1663,
+  "title": "La Foi, trois tableaux symphoniques",
+  "mbids": [
+   "6507fcb1-31c1-4d82-bc9d-ebfe283855c8"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op130",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1689,
+  "title": "Clair de lune",
+  "mbids": [
+   "695cc1a1-c42d-4a12-a963-cf6edafadd14"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w357",
+  "path": null,
+  "reason": null,
+  "note": "위키 「Claire de lune」(c. 1865)와 같은 곡으로 봄"
+ },
+ {
+  "pieceId": 1701,
+  "title": "Piano Quintet in A minor, op. 14",
+  "mbids": [
+   "6b3625ed-2c2c-4ac9-a84e-9fcc5bed989c"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1715,
+  "title": "Dans ton coeur",
+  "mbids": [
+   "6cec24b0-b517-488f-99b2-7e597d179b6f"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w372",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1719,
+  "title": "Sonata for Cello and Piano no. 3 in D major, op. posth",
+  "mbids": [
+   "6d42aac5-9efa-4a5d-a90b-04fe2cda5263"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "첼로 소나타 3번 D장조 — 미완성(두 악장), 위키 목록에 없음"
+ },
+ {
+  "pieceId": 1723,
+  "title": "Spartacus Overture in E-flat major",
+  "mbids": [
+   "6dca7b01-4620-44c6-a0f2-a49e4fabe318"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r166",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1727,
+  "title": "Le timbre d'argent",
+  "mbids": [
+   "6e3f0bfd-7db2-4f02-936f-8d074d1cc06f"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r289",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1743,
+  "title": "Sonata for Violin and Piano no. 2 in E-flat major, op. 102",
+  "mbids": [
+   "6fea2c9c-1dc8-4391-a1df-a45830f72d1d"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op102",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1748,
+  "title": "Piano Concerto no. 3 in E-flat major, op. 29",
+  "mbids": [
+   "70a4e4cc-d6ea-47df-bdc2-b286278e5e87"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op29",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1749,
+  "title": "Ascanio, R 293: Premier Acte, Deuxième Tableau",
+  "mbids": [
+   "70a88111-4114-41f3-9e38-96ac40cfbcce"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "<아스카니오> 1막 2경 — 2028 의 1막 part 와 겹침(두 겹 제한으로 경 단위 자리를 두지 않음)"
+ },
+ {
+  "pieceId": 1761,
+  "title": "Mélodies persanes, op. 26",
+  "mbids": [
+   "71ed8cb0-43d5-4067-8562-099dca756b9d"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op26",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1771,
+  "title": "Balkanale",
+  "mbids": [
+   "73a500ac-fd8d-4c67-99e8-96368f57cac5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "「Balkanale」 — MB 정보 없음, 생상스 작품 목록에 없음"
+ },
+ {
+  "pieceId": 1778,
+  "title": "Quam dilecta, op. 148",
+  "mbids": [
+   "7401accc-c850-4a38-9a11-91ee25b42e6d"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op148",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1785,
+  "title": "L'Assassinat du Duc de Guise, op. 128",
+  "mbids": [
+   "7513936b-2615-40c2-a2cd-c712ed800626"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op128",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1804,
+  "title": "Les Cloches de la mer",
+  "mbids": [
+   "769b341f-4824-4f26-98a2-bfcf329f7624"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w407",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1808,
+  "title": "Album, op. 72 : II. Carillon",
+  "mbids": [
+   "76eb56cc-402a-4795-9db3-62eaab87ae7d"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op72",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1810,
+  "title": "Carnival of the Animals",
+  "mbids": [
+   "76faa20e-3744-44e8-9948-25113ee885a9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<동물의 사육제>에 P. 쉬켈레 낭송 글을 붙인 판"
+ },
+ {
+  "pieceId": 1813,
+  "title": "Carnival of the Animals - A Zoological Fantasy",
+  "mbids": [
+   "77347cc7-f2a5-4158-af83-6964ca420d8d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<동물의 사육제>에 M. 루니그 낭송 글을 붙인 판"
+ },
+ {
+  "pieceId": 1816,
+  "title": "Tristesse",
+  "mbids": [
+   "77624167-7ce1-48e2-b264-74f9330c8422"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w363",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1817,
+  "title": "Panis angelicus",
+  "mbids": [
+   "7792544c-9174-495d-bed9-5ac497e3aae6"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w314",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1853,
+  "title": "2 chœurs, op. 71",
+  "mbids": [
+   "7bff3f5b-602c-42e2-952e-ef853df34999"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op71",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1855,
+  "title": "Le chant de ceux qui s'en vont sur la mer (Air breton)",
+  "mbids": [
+   "7c234ba1-a8ec-44ac-b20e-091550b25ebc"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w360",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1856,
+  "title": "Mon cœur s’ouvre à ta voix",
+  "mbids": [
+   "7c4c9f0e-004d-46fd-b151-ab58eb0b3b24"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Mon cœur s'ouvre à ta voix」 첼로·피아노 편곡(Papin)"
+ },
+ {
+  "pieceId": 1868,
+  "title": "Les Fées",
+  "mbids": [
+   "7da5978e-8e00-424d-b820-1151f284c8c1"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w387",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1870,
+  "title": "Henry VIII, Acte IV, Deuxième tableau, Scène I: “Fêtons le jour où naquit notre Roi”",
+  "mbids": [
+   "7dad364d-8d74-447b-bca9-f49ee21c8ab8"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-r291",
+  "path": [
+   5,
+   8
+  ],
+  "reason": null,
+  "note": "MB 막 나무에 빠진 4막 2경 1장 work. 그 자리에 끼워 이음"
+ },
+ {
+  "pieceId": 1878,
+  "title": "Septuor, op. 65",
+  "mbids": [
+   "7e919a26-f64d-45d5-8f42-b982fc896758"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op65",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1888,
+  "title": "Suite in D major for Orchestra, op. 49",
+  "mbids": [
+   "8001cd77-d522-481f-accb-b3a0c56be408"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op49",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1898,
+  "title": "La mort d'Ophélie",
+  "mbids": [
+   "8175dcb8-790a-4d7a-bb98-d72e73588952"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w346",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1906,
+  "title": "Violons dans le soir",
+  "mbids": [
+   "82026e8e-6048-3991-a15c-2f9cb55af074"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w418",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1909,
+  "title": "Mon cœur s’ouvre à ta voix (Samson et Dalila)",
+  "mbids": [
+   "823cfec3-2a5c-4e9a-8e83-420f06607b8d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "「Mon cœur s'ouvre à ta voix」 편곡 모음 work(catch-all)"
+ },
+ {
+  "pieceId": 1911,
+  "title": "Sarabande (Offertoire)",
+  "mbids": [
+   "82940f77-511f-4cf8-b86b-96ede521ad36"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "오르간 「Sarabande (Offertoire)」 D장조 — 위키 목록에 없음"
+ },
+ {
+  "pieceId": 1918,
+  "title": "D2",
+  "mbids": [
+   "83396974-e5ff-3727-974c-a0ee14688a55"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "<죽음의 무도> 다른 판 「D2」(MB 'other version', 대중음악 재해석으로 봄)"
+ },
+ {
+  "pieceId": 1919,
+  "title": "Samson et Dalila: Grand Fantasia",
+  "mbids": [
+   "835072c4-717a-4b61-bf7c-bb4efbf6dd01"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<삼손과 데릴라> 주제 대환상곡(남의 편곡, MB 'based on')"
+ },
+ {
+  "pieceId": 1930,
+  "title": "Duettino for Piano Duet in G major, op. 11",
+  "mbids": [
+   "84693a9a-e335-47bc-9728-6b056c592277"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op11",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1939,
+  "title": "Prelude in E-flat major",
+  "mbids": [
+   "857c8ebd-8113-3f57-a1f6-b0c520a39d47"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "전주곡 E♭장조 — 위키 목록에 없음"
+ },
+ {
+  "pieceId": 1960,
+  "title": "Symphony No. 3, Second Movement (Excerpt)",
+  "mbids": [
+   "87eaddcc-f3e6-4c11-b7f0-8fd562f48c62"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "교향곡 3번 2악장 발췌 녹음 — 교향곡 3번(manual 254)과 겹침"
+ },
+ {
+  "pieceId": 1973,
+  "title": "Fantaisie sur des motifs d'Oberon",
+  "mbids": [
+   "89877d39-dd83-4b42-bae9-6b7d61295c2b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "베버 <오베론> 주제 환상곡(남의 작품에 의함, 위키 목록에 없음)"
+ },
+ {
+  "pieceId": 1974,
+  "title": "Morceau de concert pour harpe et orchestre, op. 154",
+  "mbids": [
+   "89927dcb-ee6c-400c-9a61-d5a52c1c6b72"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op154",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1977,
+  "title": "Suite in D major for Orchestra, op. 49: Romance",
+  "mbids": [
+   "89e246eb-e1ad-4fa6-92ed-909917234fd7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "관현악 모음곡 Op. 49 로망스 오르간 편곡(Renaud)"
+ },
+ {
+  "pieceId": 1984,
+  "title": "La Cloche",
+  "mbids": [
+   "8ae08249-e5f5-4ae7-9082-c1eb86cf61ff"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w338",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1988,
+  "title": "Ave Maria, op. 145",
+  "mbids": [
+   "8ba67ff8-9002-4b92-8497-5c6ef7c3251b"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op145",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2007,
+  "title": "Souvenir d'Ismaïlia, op. 100",
+  "mbids": [
+   "8dbfe5d8-384c-45f2-a68a-0c7a057f4b10"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op100",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2021,
+  "title": "Ascanio, R 293: Quatrième Acte, Sixième Tableau",
+  "mbids": [
+   "8ed025bc-faef-4300-bfd4-b9ff7b25bcfd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "<아스카니오> 4막 6경 — 2028 의 4막 part 와 겹침"
+ },
+ {
+  "pieceId": 2028,
+  "title": "Ascanio, R 293",
+  "mbids": [
+   "901008b3-223f-4839-9052-f1dd5712ba54"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r293",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2035,
+  "title": "Andromaque",
+  "mbids": [
+   "909314f9-e49f-4cdc-9ae9-f270ef04539e"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r320",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2037,
+  "title": "Prelude in F major",
+  "mbids": [
+   "9095aba1-4ca0-4fe1-862d-dddb00f91457"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w145",
+  "path": null,
+  "reason": null,
+  "note": "MB 「Prelude in F major (for organ)」. 위키 오르간 전주곡 F장조"
+ },
+ {
+  "pieceId": 2039,
+  "title": "Élévation ou communion, op. 13",
+  "mbids": [
+   "90ce79f8-d28b-4b10-9da0-2e9c31340c29"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op13",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2052,
+  "title": "Bagatelle II",
+  "mbids": [
+   "9269d29e-6f4c-4ccb-b121-859c10c1afa3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "「Bagatelle II」 — 바가텔 Op. 3 2번일 수 있으나 근거 없음"
+ },
+ {
+  "pieceId": 2072,
+  "title": "Samson et Dalila: Fantasia",
+  "mbids": [
+   "9442da9a-1b58-45d0-b670-f2710c1ad09f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<삼손과 데릴라> 주제 환상곡(남의 편곡, MB 'based on')"
+ },
+ {
+  "pieceId": 2080,
+  "title": "Hélène",
+  "mbids": [
+   "953cb28b-9610-4300-95c8-c6af3a775d2a"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r296",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2094,
+  "title": "Papillons",
+  "mbids": [
+   "96c1a799-7988-4c15-91a8-ba51fdc88d9b"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w431",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2107,
+  "title": "L'enlèvement",
+  "mbids": [
+   "97f2460a-564e-4f34-8162-be1e47d1e059"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w359",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2120,
+  "title": "Morceau de Concert, for Horn & Orchestra in F major, op. 94",
+  "mbids": [
+   "992fb6a7-9663-4443-9c61-570e11f1605b"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op94",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2131,
+  "title": "Marquise, vous souvenez-vous ?",
+  "mbids": [
+   "9a1f174f-0cce-420b-abc4-3648e7241d9d"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w365",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2136,
+  "title": "Samson et Dalila, op. 47",
+  "mbids": [
+   "9be19051-799d-486c-94c4-dc1afc1a983e"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op47",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2142,
+  "title": "3 chœurs, op. 151",
+  "mbids": [
+   "9c6f5552-14ac-47ce-a3dd-b572d6294975"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op151",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2149,
+  "title": "Verset in E minor",
+  "mbids": [
+   "9d5eddf1-a3db-4044-b0b9-9b76d6065c74"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "오르간 베르세 E단조 — 위키 목록에 없음"
+ },
+ {
+  "pieceId": 2151,
+  "title": "Ouverture d'un opéra-comique inachevé, Op. 140, R. 162",
+  "mbids": [
+   "9dddcfb9-8d38-4813-9d43-3947bd8370fa"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r162",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2154,
+  "title": "Sarabande et Rigaudon, op. 93",
+  "mbids": [
+   "9e01861d-f48c-4cc2-bfcb-81668844613f"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2156,
+  "title": "Valse mignonne, op. 104",
+  "mbids": [
+   "9e91ce92-782b-47f4-8f32-3ae4314389aa"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op104",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2159,
+  "title": "Menuet et valse, op. 56",
+  "mbids": [
+   "9f025449-df91-4276-b90a-f49f59ea80d7"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op56",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2161,
+  "title": "Symphony in A major, R. 159",
+  "mbids": [
+   "9f7a20a3-bf9e-4bcc-a66a-8ed795cd25e5"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r159",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2162,
+  "title": "Cyprès et lauriers, op. 156",
+  "mbids": [
+   "9f7a3354-9ffc-4d48-bde6-f5126dfaedc0"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op156",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2169,
+  "title": "Piano Trio no. 1 in F major, op. 18",
+  "mbids": [
+   "a0c2d048-2464-47a1-8477-6b2e371c522c"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op18",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2177,
+  "title": "Ascanio, R 293:Ascanio, R 293: Deuxième Acte, Quatrième Tableau, Scène 4, Ah! Me taire... je ne le puis Deuxième Acte, Quatrième Tableau, Scène 4",
+  "mbids": [
+   "a1bd926e-12eb-42de-b11e-155d6c5a1454"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-r293",
+  "path": [
+   2,
+   22
+  ],
+  "reason": null,
+  "note": "MBID 다름(제목이 겹쳐 적힌 work). 제목(2막 4경 4장 「Ah! Me taire... je ne le puis」)으로 맞춤"
+ },
+ {
+  "pieceId": 2186,
+  "title": "Trio avec piano n°1 en fa majeur opus 18 : II. Andante",
+  "mbids": [
+   "a2c66cda-bff3-4f77-8cec-9fe4fe89d98b"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op18",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "MBID 다름(따로 떨어진 악장 work). 제목(3중주 1번 2악장)으로 맞춤"
+ },
+ {
+  "pieceId": 2197,
+  "title": "Konzertstück for Violin and Piano, op. 20",
+  "mbids": [
+   "a3b91ed6-ce32-4fcb-87bf-b800375db21a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "바이올린 협주곡 1번 바이올린·피아노 편곡(Spiering)"
+ },
+ {
+  "pieceId": 2205,
+  "title": "Romance, op. 67",
+  "mbids": [
+   "a48d703c-8ec0-4fef-b1f9-d04c0517192b"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op67",
+  "path": null,
+  "reason": null,
+  "note": "MB 「Romance, op. 67 for horn and piano」. 작품번호로 맞춤"
+ },
+ {
+  "pieceId": 2212,
+  "title": "Paraphrase sur Mandolinata de Paladilhe",
+  "mbids": [
+   "a52b287d-ce3c-4e64-8d8b-27f18f6d8626"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "팔라딜 「Mandolinata」 패러프레이즈(남의 작품)"
+ },
+ {
+  "pieceId": 2216,
+  "title": "Andantino (Violin Concerto no. 3, op. 61)",
+  "mbids": [
+   "a58af75b-1e7b-4e74-97ef-f1b2bc2a5530"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "바이올린 협주곡 3번 2악장 첼로·피아노 편곡(Vantiev)"
+ },
+ {
+  "pieceId": 2254,
+  "title": "Ave Maria en si bémol majeur",
+  "mbids": [
+   "aa2e8f82-4b28-433f-bb1f-dc527ad6eca3"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w296",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2264,
+  "title": "Album, op. 72 : IV. Valse",
+  "mbids": [
+   "ab3c6df1-47b2-4049-9b32-fcec5f7d6000"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op72",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2266,
+  "title": "Sonata no. 1 for Cello and Piano in C minor, op. 32",
+  "mbids": [
+   "ab69ba0d-c10a-48ef-9118-71eced7dcd12"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2275,
+  "title": "Fantaisie no. 1 in E-flat major",
+  "mbids": [
+   "acee8dd4-34b3-3177-815d-cede449b93ca"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r78",
+  "path": null,
+  "reason": null,
+  "note": "MB 「Fantaisie no. 1 in E-flat major」. 위키 R 78"
+ },
+ {
+  "pieceId": 2292,
+  "title": "Angélus",
+  "mbids": [
+   "afd03484-4137-4648-a01e-ac7d8d615816"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w429",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2298,
+  "title": "Mazurka no. 3 in B minor, op. 66",
+  "mbids": [
+   "b06ba8c6-44a8-40b2-baed-4654dd414512"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op66",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2302,
+  "title": "Désir de l’orient",
+  "mbids": [
+   "b0e43eb6-b4a4-473e-901a-fa947d786d3a"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w369",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2303,
+  "title": "Aux conquérants de l’air, op. 164",
+  "mbids": [
+   "b0ecb1e1-6c14-4fd7-9d6b-c54e2d856c11"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op164",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2306,
+  "title": "L'Air de la pendule",
+  "mbids": [
+   "b10f9c2a-009e-48c8-bf6b-6cc2f91f3d8a"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w120",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2312,
+  "title": "Cinq Poèmes de Ronsard",
+  "mbids": [
+   "b1b68f7a-3ee9-439d-8b10-ad2a7abc3a7c"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w416",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2314,
+  "title": "Javotte",
+  "mbids": [
+   "b1cf61ae-3602-4528-80e7-92cf94153947"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r306",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2327,
+  "title": "Violin Sonata in F major, R 106 “Unfinished”",
+  "mbids": [
+   "b2d99743-8271-490b-867e-b36ffebabedc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "fragment",
+  "note": "바이올린 소나타 F장조 R 106 — 미완성, 위키 목록에 없음"
+ },
+ {
+  "pieceId": 2341,
+  "title": "Carnival of the Animals Suite",
+  "mbids": [
+   "b40b5aa3-576a-4f2e-8cf3-96ac7a670456"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<동물의 사육제> 금관 편곡(Langford)"
+ },
+ {
+  "pieceId": 2354,
+  "title": "Piano Trio no. 2 in E minor, op. 92",
+  "mbids": [
+   "b53a6ccd-0a69-4a7f-83f5-a6166a0271b7"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op92",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2371,
+  "title": "Oboe Sonata, op. 166",
+  "mbids": [
+   "b7be7d51-d652-421b-be12-bedc739f0bf8"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op166",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2377,
+  "title": "Symphony No. 1 in E-Flat Major, Op. 2: II. Marche-Scherzo. Allegretto scherzando",
+  "mbids": [
+   "b88fc56f-6561-4778-a7bf-406b0d32d587"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op2",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "MBID 다름(따로 떨어진 악장 work). 제목(교향곡 1번 2악장)으로 맞춤"
+ },
+ {
+  "pieceId": 2378,
+  "title": "Fantaisie no. 3 en ut majeur, op. 157",
+  "mbids": [
+   "b8a5832e-bf97-4b54-9724-c33d265994af"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op157",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2384,
+  "title": "Trio avec piano n°1 en fa majeur opus 18 : IV. Allegro",
+  "mbids": [
+   "b96b842c-9d98-4d6d-9efe-598b69aaa596"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op18",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "MBID 다름(따로 떨어진 악장 work). 제목(3중주 1번 4악장)으로 맞춤"
+ },
+ {
+  "pieceId": 2385,
+  "title": "Ascanio, R. 293",
+  "mbids": [
+   "b9739790-fe2c-4a78-aec8-8ef8abb217e2"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-r293",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "MB 발레 work(아스카니오 3막 발레만 따로). 3막 발레 part 로 이음"
+ },
+ {
+  "pieceId": 2398,
+  "title": "Samson et Dalila: Amour viens aider (O Love From Thy Power)",
+  "mbids": [
+   "bb3dc59c-4568-422c-a4e0-bd5232f6f3c7"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op47",
+  "path": [
+   2,
+   2
+  ],
+  "reason": null,
+  "note": "MB 「Amour viens aider」(Aria) 따로 떨어진 work. 제목으로 2막 1장 번호에 맞춤"
+ },
+ {
+  "pieceId": 2428,
+  "title": "Gavotte in C minor, op. 23",
+  "mbids": [
+   "bd4e2bb7-999c-47e6-b22a-fc062e5ab8f7"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op23",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2440,
+  "title": "Scherzo, op. 87",
+  "mbids": [
+   "be4d57fa-0712-4e7e-9fe7-e2481568ed6b"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op87",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2441,
+  "title": "Havanaise, op. 83",
+  "mbids": [
+   "be9f72ac-5409-4934-b4fa-09146a8d1e26"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "하바네즈 바이올린·피아노판(MB arrangement 관계)"
+ },
+ {
+  "pieceId": 2450,
+  "title": "Piano Concerto no. 4 in C minor, op. 44",
+  "mbids": [
+   "bff74e36-99ea-47ad-ba7f-8e7165be3d2d"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op44",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2451,
+  "title": "3 Preludes and Fugues, op. 109",
+  "mbids": [
+   "c01b4097-99ac-495e-8913-c1b046d5f93b"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op109",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2458,
+  "title": "Thème varié, op. 97",
+  "mbids": [
+   "c0cd074b-6c46-45ae-83cd-dfb7713ca3b5"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op97",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2468,
+  "title": "Suite pour violoncelle et piano, op. 16",
+  "mbids": [
+   "c23a1fa6-a1e4-41f3-99d6-f23dae10e4a4"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op16",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2495,
+  "title": "Le feu céleste, op. 115",
+  "mbids": [
+   "c56e05c0-344e-4cd6-857f-b0d817b1d1f6"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op115",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2507,
+  "title": "Album, op. 72 : VI. Final",
+  "mbids": [
+   "c7003242-ccc4-49c3-88ba-06a05e77c263"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op72",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2509,
+  "title": "Ave Maria en la majeur",
+  "mbids": [
+   "c71d2033-94f0-48f7-a105-448cb42aa384"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w306",
+  "path": null,
+  "reason": null,
+  "note": "「Ave Maria en la majeur」(Aria) — A장조 두 곡 중 독창판(1865)으로 봄"
+ },
+ {
+  "pieceId": 2511,
+  "title": "Le Vent dans la plaine",
+  "mbids": [
+   "c74c9d6f-93a1-4ac3-a824-d890a7f788ee"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w421",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2514,
+  "title": "Cadenzas to Beethoven’s Piano Concerto no. 4",
+  "mbids": [
+   "c7dc11d2-ef99-4a41-9b48-1443a12f70bc"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w67",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2523,
+  "title": "Samson and Delilah: Act II. Tonight seeking hither my presence … O love, from thy power",
+  "mbids": [
+   "c8d5640c-bf70-4d8d-99e0-a890c9828008"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "「Amour, viens aider ma faiblesse」 영어 가사판"
+ },
+ {
+  "pieceId": 2529,
+  "title": "Proserpine",
+  "mbids": [
+   "c95161d9-a9ba-480f-84c0-7ba2a4df23c6"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r292",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2538,
+  "title": "Six Études, op. 52",
+  "mbids": [
+   "ca470913-22be-4e33-8515-0b720d4ffc2a"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2548,
+  "title": "Piano Duet in B major, op. 87: Scherzo",
+  "mbids": [
+   "cb4f745d-1d25-457c-9692-03242afeb086"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "두 대의 피아노를 위한 스케르초 Op. 87 — seed 2440 과 겹침"
+ },
+ {
+  "pieceId": 2549,
+  "title": "Trois rhapsodies sur des cantiques bretons, op. 7",
+  "mbids": [
+   "cbb48ee8-2a3b-4e2b-8834-cb6abded94b3"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2571,
+  "title": "Samson und Dalila",
+  "mbids": [
+   "cde741c1-c91d-4759-a176-9d9a23dab392"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "<삼손과 데릴라> 독일어 판(MB 'other version')"
+ },
+ {
+  "pieceId": 2582,
+  "title": "El desdichado",
+  "mbids": [
+   "ceeb1921-aa8d-4865-96a7-22c077d74fad"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w370",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2585,
+  "title": "Polonaise, op. 77",
+  "mbids": [
+   "cf75a5a9-246d-4d37-a5c3-3feb5715bc27"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op77",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2586,
+  "title": "Il canto del cigno",
+  "mbids": [
+   "cfb89270-59e0-4d8b-a7f5-87fb7c2227e8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "「백조」 이탈리아어 가사판"
+ },
+ {
+  "pieceId": 2587,
+  "title": "Extase",
+  "mbids": [
+   "cfc6405c-af5c-4a40-add0-592b1dde00ff"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w352",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2593,
+  "title": "Concerto for Cello and Orchestra no. 2 in D minor, op. 119",
+  "mbids": [
+   "d09b7906-51a9-41a2-9a15-0b8154a7b271"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op119",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2600,
+  "title": "Caprice brillant en si mineur",
+  "mbids": [
+   "d1c4d39b-a0d2-4299-be21-74a789cbe155"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w90",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2620,
+  "title": "Le Matin",
+  "mbids": [
+   "d33c7ab8-e28f-4e73-b9d4-931011e799dc"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w356",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2627,
+  "title": "Cadenzas to Mozart’s Piano Concerto no. 24 in C minor",
+  "mbids": [
+   "d3e61597-5763-432f-a520-3ec5d55a37dc"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r279",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2628,
+  "title": "Valse langoureuse in E major, op. 120",
+  "mbids": [
+   "d3f4d833-153d-4205-a32e-b682df38d225"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op120",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2633,
+  "title": "Feuillet d'album, op. 81",
+  "mbids": [
+   "d4649877-b7a4-4cc5-907b-8fe5f3a99316"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op81",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2661,
+  "title": "Souvenir d’Italie in G major, op. 80",
+  "mbids": [
+   "d7b87048-f1e3-4b53-ad10-7bbc4c551271"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op80",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2663,
+  "title": "Dalilas ārija no operas \"Samsons un Dalila\"",
+  "mbids": [
+   "d7ddf1e5-167f-3169-a8d4-4c48af3a9f8d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "hymn_translation",
+  "note": "<삼손과 데릴라> 데릴라 아리아 라트비아어 제목"
+ },
+ {
+  "pieceId": 2672,
+  "title": "Ascanio, R 293: Cinquième Acte, Septième Tableau",
+  "mbids": [
+   "d9311667-0af4-4ac6-8c7f-a171baf23c8b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "<아스카니오> 5막 7경 — 2028 의 5막 part 와 겹침"
+ },
+ {
+  "pieceId": 2674,
+  "title": "Étienne Marcel",
+  "mbids": [
+   "d9e9d2b0-cb34-4b73-b439-5f3cd4c6b3b2"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-r290",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2687,
+  "title": "Caprice héroïque, op. 106",
+  "mbids": [
+   "dc4a4652-8399-4c77-9b11-0eba665446f6"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op106",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2694,
+  "title": "La Coccinelle",
+  "mbids": [
+   "dd0206e8-bac5-40e5-9b60-73474c467ce9"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w361",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2714,
+  "title": "Improvisation",
+  "mbids": [
+   "def76cb8-e022-45d8-bdc8-425ae4f635f3"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w208",
+  "path": null,
+  "reason": null,
+  "note": "MB 「Improvisation (Album du Gaulois)」. 위키 1885년 Improvisation"
+ },
+ {
+  "pieceId": 2716,
+  "title": "Andante pour cor et orgue",
+  "mbids": [
+   "deff65a9-6974-46a9-9460-e8f2c412140e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "「Andante pour cor et orgue」 — 위키 R 108 「Adagio E♭장조(호른과 오르간)」일 수 있으나 제목이 달라 잇지 않음"
+ },
+ {
+  "pieceId": 2732,
+  "title": "Fantaisie, op. 124",
+  "mbids": [
+   "e0675947-8595-4bbd-845f-e1dfdf38edfe"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op124",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2738,
+  "title": "Valse Canariote in A minor, op. 88",
+  "mbids": [
+   "e1174406-089e-452c-86b5-da7d047607ed"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op88",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2741,
+  "title": "Le Déluge, op. 45",
+  "mbids": [
+   "e133507f-9a66-4ef3-a3c1-87bd5a8b9652"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op45",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2743,
+  "title": "Cœli enarrant, op. 42",
+  "mbids": [
+   "e17e9e3d-9ce4-493b-83fb-1050795feddb"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op42",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2756,
+  "title": "Rhapsodie bretonne, op. 7b",
+  "mbids": [
+   "e308efac-9a7f-411a-8eed-e4d8b3fbbe08"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op7b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2784,
+  "title": "Réquiem, op. 54",
+  "mbids": [
+   "e5974d67-8fe5-4509-bb95-8fcbbeca6396"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op54",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2790,
+  "title": "Ascanio, R 293: Deuxième Acte, Troisième Tableau",
+  "mbids": [
+   "e661ccb0-6684-42d9-ac70-385a8c99575e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "<아스카니오> 2막 3경 — 2028 의 2막 part 와 겹침"
+ },
+ {
+  "pieceId": 2794,
+  "title": "Thème, variations et choral sur le \"Dies irae\"",
+  "mbids": [
+   "e6d56962-d0d2-4778-abf5-b0a33492c2ea"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unknown",
+  "note": "「Thème, variations et choral sur le 'Dies irae'」 — 위키 목록에 없음, 출처 불명"
+ },
+ {
+  "pieceId": 2810,
+  "title": "Variations on a Theme of Beethoven, op. 35",
+  "mbids": [
+   "e8613638-f121-4ea3-b7e0-8f6b0a69ea02"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op35",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2813,
+  "title": "La jeunesse d'Hercule, op. 50",
+  "mbids": [
+   "e8a824a6-3e6c-4bba-bb93-92237f3ca739"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op50",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2825,
+  "title": "Violin Concerto no. 3 in B minor, op. 61",
+  "mbids": [
+   "e9effa77-b56b-4b1f-bbae-15935f2363b0"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2826,
+  "title": "Le Rouet d'Omphale",
+  "mbids": [
+   "ea009121-a525-4afe-8245-eb0a178f3de5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<옴팔레의 물레> 피아노 편곡(Earl Wild)"
+ },
+ {
+  "pieceId": 2837,
+  "title": "Soirée en mer",
+  "mbids": [
+   "eb032a7c-cc3b-4bd7-97ad-84bcfa4c02ea"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w354",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2853,
+  "title": "Piano Concerto no. 2 in G minor, GB T39",
+  "mbids": [
+   "ed0cc528-8508-40af-ac65-5fdcce05a2f3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "피아노 협주곡 2번 피아노 독주 편곡(비제)"
+ },
+ {
+  "pieceId": 2861,
+  "title": "Marche militaire française",
+  "mbids": [
+   "edfe81c3-f602-47cc-b2ac-a15f68214c31"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<알제리 모음곡> 프랑스 군대 행진곡 관악 편곡(Kenyon)"
+ },
+ {
+  "pieceId": 2863,
+  "title": "Cadenza to Beethoven’s Violin Concerto in D major, op. 61: I. Allegro ma non troppo",
+  "mbids": [
+   "ee17f56c-1080-473d-8c32-5941aac32952"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w78",
+  "path": null,
+  "reason": null,
+  "note": "MB 는 1악장 카덴차 work. 위키 「베토벤 바이올린 협주곡 카덴차」에 맞춤"
+ },
+ {
+  "pieceId": 2864,
+  "title": "Piano Concerto no. 1 in D major, op. 17",
+  "mbids": [
+   "ee45211c-72d2-407a-a15b-a4aa313e243b"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op17",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2870,
+  "title": "Trio avec piano n°1 en fa majeur opus 18 : I. Allegro vivace",
+  "mbids": [
+   "ee7880bb-bfa1-488e-9383-d0d3fbf3d1a4"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-op18",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "MBID 다름(따로 떨어진 악장 work). 제목(3중주 1번 1악장)으로 맞춤"
+ },
+ {
+  "pieceId": 2902,
+  "title": "Phaéton, op. 39",
+  "mbids": [
+   "f24455ef-5a31-3388-acef-2e581cf592d6"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2909,
+  "title": "Quatuor de Henry VIII",
+  "mbids": [
+   "f369c57a-9174-43e7-8239-4a098cb498e8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<헨리 8세> 4중창 피아노 편곡(MB arrangement 관계)"
+ },
+ {
+  "pieceId": 2910,
+  "title": "Improvisation sur la Beethoven-Cantate",
+  "mbids": [
+   "f36aa58d-391d-4154-9cc7-941dcb94fb2f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "리스트 <베토벤 칸타타> 즉흥 패러프레이즈(남의 작품)"
+ },
+ {
+  "pieceId": 2927,
+  "title": "String Quartet no. 2 in G major, op. 153",
+  "mbids": [
+   "f4f5c30d-ef94-4b28-83e5-fc4d3302372a"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op153",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2934,
+  "title": "Six Fugues, op. 161",
+  "mbids": [
+   "f5ce5277-30b8-4610-b6b7-9218214b9695"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op161",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2935,
+  "title": "Oeuvres de J.-S. Bach, Douze transcriptions pour le piano",
+  "mbids": [
+   "f5f27f90-bffd-49d6-9e47-89e01f3b4f5c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "바흐 작품 피아노 편곡 12곡(남의 작품)"
+ },
+ {
+  "pieceId": 2957,
+  "title": "2 chœurs, op. 53",
+  "mbids": [
+   "f85ce61d-bae5-4923-bbea-4cd3f7fe18c8"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op53",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2959,
+  "title": "Ascanio, R 293: Deuxième Acte, Quatrième Tableau",
+  "mbids": [
+   "f8c37c73-18ff-403d-bd43-66a9b6b13c29"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "<아스카니오> 2막 4경 — 2028 의 2막 part 와 겹침"
+ },
+ {
+  "pieceId": 2985,
+  "title": "Finale from Symphony no. 3 \"Organ Symphony\"",
+  "mbids": [
+   "fbf015d0-b4b9-4e0f-8840-3899f7d11a6a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "교향곡 3번 피날레 관악 편곡(Slocum)"
+ },
+ {
+  "pieceId": 2998,
+  "title": "Danse macabre, S. 555, R. 240",
+  "mbids": [
+   "fd5d01fb-9853-44f1-a7d7-7f192b8ba232"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<죽음의 무도> 리스트 피아노 편곡(S. 555)"
+ },
+ {
+  "pieceId": 3002,
+  "title": "String Quartet no. 1 in E minor, op. 112",
+  "mbids": [
+   "fdb28780-0813-4249-b5d4-e4c787fb6688"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op112",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 3003,
+  "title": "Piano Suite, op. 90",
+  "mbids": [
+   "fdf34e78-d32d-491c-9dfc-8f2267c9f089"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op90",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 3004,
+  "title": "Six Études, op. 111",
+  "mbids": [
+   "fdf8c9c4-61df-46bc-87c5-187c8aaf1449"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op111",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 3006,
+  "title": "Romance du soir, op. 118",
+  "mbids": [
+   "fe2d74a6-2e96-4dcf-8aa7-f595e7ec16dd"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-op118",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 3011,
+  "title": "Les barbares, R. 295: Prologue",
+  "mbids": [
+   "feae6a91-0979-4cd2-9158-9e767d729fc4"
+  ],
+  "mapping": "part",
+  "key": "saint-saens-r295",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "MB 「Les barbares, R. 295: Prologue」"
+ },
+ {
+  "pieceId": 3014,
+  "title": "À quoi bon entendre les oiseaux des bois ?",
+  "mbids": [
+   "fed7aa68-fd6a-452c-b9d8-5e164eecb741"
+  ],
+  "mapping": "work",
+  "key": "saint-saens-w364",
+  "path": null,
+  "reason": null,
+  "note": "위키 「À quoi bon attendre」(위고 시 줄임)과 같은 곡"
+ },
+ {
+  "pieceId": 9089,
+  "title": "Caprice sur les airs de ballet d'Alceste de Gluck",
+  "mbids": [
+   "6025c2d0-21ee-44c7-b420-9be0e9203e12"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "글루크 <알체스테> 카프리스의 드뷔시 두 대 피아노 편곡"
+ },
+ {
+  "pieceId": 9851,
+  "title": "Danse macabre",
+  "mbids": [
+   "97725112-0a80-457b-b034-26d84224f062"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<죽음의 무도> 호로비츠 피아노 편곡(리스트판에 의함)"
+ },
+ {
+  "pieceId": 11189,
+  "title": "Introduction et Rondo capriccioso en la mineur, op. 28",
+  "mbids": [
+   "f957191c-7538-478b-b3b9-0ab3b35ba198"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<서주와 론도 카프리치오소> 드뷔시 두 대 피아노 편곡"
+ },
+ {
+  "pieceId": 11889,
+  "title": "Introduction et Rondo capriccioso, op. 28",
+  "mbids": [
+   "ca9480ce-4569-4e3a-b1cb-e858c4f8d0b8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "<서주와 론도 카프리치오소> 비제 바이올린·피아노 편곡"
+ }
+]
