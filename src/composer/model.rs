@@ -40,7 +40,8 @@ pub struct ComposerWithMajorPieces {
     pub style: Option<String>,
     pub influence: Option<String>,
     pub major_pieces: Option<String>,
-    /// 목록(`Composer.piece_count`)과 같은 기준: 이 작곡가의 전체 작품 수.
+    /// 목록(`Composer.piece_count`)과 같은 기준: 이 작곡가의 최상위 작품 수.
+    /// 다른 작품(묶음)의 part 로 이어진 작품은 묶음 안에서 보이므로 세지 않는다.
     pub piece_count: Option<i64>,
 }
 
