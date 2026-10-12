@@ -1,0 +1,1862 @@
+[
+ {
+  "pieceId": 7543,
+  "title": "Concerto in G minor for organ, strings and timpani, FP 93",
+  "mbids": [
+   "9255a7b4-829f-3f23-b8b3-25e896bd658b"
+  ],
+  "mapping": "work",
+  "key": "poulenc-9255a7b4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7633,
+  "title": "Figure humaine",
+  "mbids": [
+   "98a428c3-b92d-4c05-b9db-b44dc9c86972"
+  ],
+  "mapping": "work",
+  "key": "poulenc-98a428c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7638,
+  "title": "Sonata for Violin and Piano, FP 119",
+  "mbids": [
+   "d4deb759-c3a4-412c-9f9d-7c9f93a4328f"
+  ],
+  "mapping": "work",
+  "key": "poulenc-d4deb759",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7649,
+  "title": "Un soir de neige",
+  "mbids": [
+   "43659bb8-aee3-4b79-bd96-9589e8596eb9"
+  ],
+  "mapping": "work",
+  "key": "poulenc-43659bb8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7768,
+  "title": "3 Novelettes, FP 47/173",
+  "mbids": [
+   "0301ddf1-e20f-4119-afa5-829006b3e984"
+  ],
+  "mapping": "work",
+  "key": "poulenc-0301ddf1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7827,
+  "title": "Chansons gaillardes, FP 42",
+  "mbids": [
+   "06514c19-8dad-432d-b851-68a616520299"
+  ],
+  "mapping": "work",
+  "key": "poulenc-06514c19",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7844,
+  "title": "Dialogues des Carmélites",
+  "mbids": [
+   "0769979a-558f-4eaa-b947-f1754de6c00f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 8341,
+  "title": "Rapsodie nègre",
+  "mbids": [
+   "2c7ba6db-6237-478c-9947-5d57f963ff1d"
+  ],
+  "mapping": "work",
+  "key": "poulenc-2c7ba6db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8487,
+  "title": "Mélancolie",
+  "mbids": [
+   "35c50d6b-da4e-4cd1-957c-cd977dc486b3"
+  ],
+  "mapping": "work",
+  "key": "poulenc-35c50d6b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8492,
+  "title": "Die Geschichte von Babar dem kleinen Elefanten, FP 129",
+  "mbids": [
+   "36691d71-c336-4bd8-8fba-bdb524097723"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8612,
+  "title": "Deux poèmes de Louis Aragon, FP 122",
+  "mbids": [
+   "406b6520-f750-4121-8d52-78cd6d13c776"
+  ],
+  "mapping": "work",
+  "key": "poulenc-406b6520",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8613,
+  "title": "Trois pièces, FP 48",
+  "mbids": [
+   "407c6b21-925c-4323-b429-190bfe623957"
+  ],
+  "mapping": "work",
+  "key": "poulenc-407c6b21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8716,
+  "title": "Exultate Deo, FP 109",
+  "mbids": [
+   "46cd79dd-4b6f-4e9c-a666-5b947004356e"
+  ],
+  "mapping": "work",
+  "key": "poulenc-46cd79dd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9285,
+  "title": "Sarabande, FP 179",
+  "mbids": [
+   "6e9b8706-1d46-3f5b-8159-d2f742d93ab4"
+  ],
+  "mapping": "work",
+  "key": "poulenc-6e9b8706",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9924,
+  "title": "Les Soirées de Nazelles, FP 84",
+  "mbids": [
+   "9ba46f08-1f2c-4f60-ba54-50f2870ed443"
+  ],
+  "mapping": "work",
+  "key": "poulenc-9ba46f08",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9972,
+  "title": "La Voix Humaine, FP 171",
+  "mbids": [
+   "9fa06884-d93a-4aa5-a649-de39fc7b11d0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10136,
+  "title": "Élégie pour cor et piano",
+  "mbids": [
+   "aaf799f2-a868-4b9b-b917-f7c0b30e1978"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10399,
+  "title": "Les Chemins de l’amour",
+  "mbids": [
+   "bf06290c-aaec-4f7a-b587-44c71310dc61"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10529,
+  "title": "Les Mamelles de Tirésias",
+  "mbids": [
+   "c86a5a6b-557e-43ec-ab85-757b500cbb26"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10545,
+  "title": "Deux marches et un intermède",
+  "mbids": [
+   "c9ddcf23-c8d2-4092-b0d9-d2c6d148ad72"
+  ],
+  "mapping": "work",
+  "key": "poulenc-c9ddcf23",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10596,
+  "title": "Concerto for Two Pianos and Orchestra in D minor, FP 61",
+  "mbids": [
+   "cd2d9db3-4d24-4265-b50a-fdbcef536ebd"
+  ],
+  "mapping": "work",
+  "key": "poulenc-cd2d9db3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10604,
+  "title": "Léocadia, FP 106",
+  "mbids": [
+   "ce39cf50-6dae-4959-896d-fd1a19a958b4"
+  ],
+  "mapping": "work",
+  "key": "poulenc-ce39cf50",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10998,
+  "title": "Videntes stellam",
+  "mbids": [
+   "eb2608d6-9492-4aa2-b72e-44fef2c642a2"
+  ],
+  "mapping": "work",
+  "key": "poulenc-eb2608d6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7438,
+  "title": "Sonate pour piano à quatre mains, FP 8",
+  "mbids": [
+   "08dd1405-f57e-4f0f-86af-e8f767b041aa"
+  ],
+  "mapping": "work",
+  "key": "poulenc-08dd1405",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7460,
+  "title": "Sonate pour clarinette et piano en si bémol majeur, FP 184",
+  "mbids": [
+   "1d53db6d-297c-42d2-851b-df77c909b653"
+  ],
+  "mapping": "work",
+  "key": "poulenc-1d53db6d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7554,
+  "title": "Sonate pour hautbois et piano",
+  "mbids": [
+   "9bbef64b-afab-4e39-bc43-5c78c93888d4"
+  ],
+  "mapping": "work",
+  "key": "poulenc-9bbef64b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7603,
+  "title": "Bagatelle en ré mineur, FP 60.III",
+  "mbids": [
+   "d87770f2-7e08-4828-9ba5-423dd5c27ccb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7611,
+  "title": "Les Chemins de l’amour, FP 106a",
+  "mbids": [
+   "e1e65a4d-87a7-4b62-9cf6-dcbaf7f54581"
+  ],
+  "mapping": "work",
+  "key": "poulenc-e1e65a4d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7629,
+  "title": "Sextet for Piano and Wind Quintet, FP 100",
+  "mbids": [
+   "f9ca8290-a9de-456d-9d2b-183204e9a1ec"
+  ],
+  "mapping": "work",
+  "key": "poulenc-f9ca8290",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7634,
+  "title": "Gloria, for Soprano, Chorus and Orchestra, FP 177",
+  "mbids": [
+   "396c6c73-0728-42a6-9540-c1c2358bdefa"
+  ],
+  "mapping": "work",
+  "key": "poulenc-396c6c73",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7637,
+  "title": "Quatre motets pour le temps de Noël, FP 152",
+  "mbids": [
+   "7b1e1f24-ea72-4f6a-81ba-7396606ab666"
+  ],
+  "mapping": "work",
+  "key": "poulenc-7b1e1f24",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7646,
+  "title": "8 chansons françaises, FP 130",
+  "mbids": [
+   "53e94a5b-3ecc-4b20-a62d-eae989506baa"
+  ],
+  "mapping": "work",
+  "key": "poulenc-53e94a5b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7708,
+  "title": "Ave verum corpus, FP 154",
+  "mbids": [
+   "bf496bc8-01c4-4064-b2e4-ad862b96072b"
+  ],
+  "mapping": "work",
+  "key": "poulenc-bf496bc8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7734,
+  "title": "Sonate pour hautbois et piano: I. Élégie. PaisiblementElegie. Paisiblement",
+  "mbids": [
+   "00adc409-bf78-4e80-8fbd-48dd3642c5ac"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7745,
+  "title": "Humoresque for piano, FP 72",
+  "mbids": [
+   "013de575-648f-4f68-803a-b74581d30d98"
+  ],
+  "mapping": "work",
+  "key": "poulenc-013de575",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7785,
+  "title": "Quatre poèmes de Guillaume Apollinaire, FP 58",
+  "mbids": [
+   "03e4f741-1826-4a4d-ae0a-a4019d1c96ed"
+  ],
+  "mapping": "work",
+  "key": "poulenc-03e4f741",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7871,
+  "title": "Les Biches Suite, FP 36",
+  "mbids": [
+   "095e94f0-5f5f-476d-a075-e747bbb24592"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7899,
+  "title": "Cinq poèmes de Max Jacob, FP 59",
+  "mbids": [
+   "0af95869-66cb-4e5e-811b-f360a63508e6"
+  ],
+  "mapping": "work",
+  "key": "poulenc-0af95869",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7914,
+  "title": "Suite for piano in C major, FP 19",
+  "mbids": [
+   "0c033a32-a418-4452-b396-66acc4e497dd"
+  ],
+  "mapping": "work",
+  "key": "poulenc-0c033a32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7918,
+  "title": "Cocardes, FP 16a",
+  "mbids": [
+   "0c78990c-8d52-41e4-846c-827b3c76d639"
+  ],
+  "mapping": "work",
+  "key": "poulenc-0c78990c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7947,
+  "title": "Bourrée au pavillon d'Auvergne, FP 87",
+  "mbids": [
+   "0eb7696a-1aa4-4611-b29c-bdafd352748d"
+  ],
+  "mapping": "work",
+  "key": "poulenc-0eb7696a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7973,
+  "title": "Trio for flute, cello and piano",
+  "mbids": [
+   "10a4c9a0-63f9-4779-9224-5bd2a33d66aa"
+  ],
+  "mapping": "work",
+  "key": "poulenc-10a4c9a0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7980,
+  "title": "Intermède en ré mineur, FP 60.II",
+  "mbids": [
+   "10e9fdab-499b-4e14-ba69-d569dcded1a3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8002,
+  "title": "Salve Regina, FP 110",
+  "mbids": [
+   "1201591a-beb2-497f-9269-a21982e9c31b"
+  ],
+  "mapping": "work",
+  "key": "poulenc-1201591a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8011,
+  "title": "Française for Piano, FP 103",
+  "mbids": [
+   "1268b982-e988-4f5c-8cd9-2f2e1eb3ba44"
+  ],
+  "mapping": "work",
+  "key": "poulenc-1268b982",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8047,
+  "title": "Les biches, suite pour piano, FP 36c",
+  "mbids": [
+   "14b2611c-6a5c-4f52-9942-a31c9aba54e8"
+  ],
+  "mapping": "work",
+  "key": "poulenc-14b2611c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8074,
+  "title": "Caprice, FP 60.I",
+  "mbids": [
+   "16e093d4-499d-45d6-b720-1463c7c1d40f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8134,
+  "title": "Mouvement perpétuel",
+  "mbids": [
+   "1b891987-9125-4967-ada3-8e5828e744c5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8144,
+  "title": "Sept répons des ténèbres, FP 181",
+  "mbids": [
+   "1c31d828-dc02-4c06-8aa8-6a7476a6c839"
+  ],
+  "mapping": "work",
+  "key": "poulenc-1c31d828",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8172,
+  "title": "Mouvements Perpétuels: No. 2.",
+  "mbids": [
+   "1e790048-ba0f-4241-bd61-b398ff335c2d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8176,
+  "title": "Vocalise, FP 44",
+  "mbids": [
+   "1ea7ba84-2f1e-4b35-99ba-bb1a97e02429"
+  ],
+  "mapping": "work",
+  "key": "poulenc-1ea7ba84",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8214,
+  "title": "Viens, une flûte invisible soupire",
+  "mbids": [
+   "216baefd-f21e-42fa-952b-992df98a5c5e"
+  ],
+  "mapping": "work",
+  "key": "poulenc-216baefd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8318,
+  "title": "Vive Nadia, FP 167",
+  "mbids": [
+   "2ac0a411-6e5f-48cf-ab78-317948924fdf"
+  ],
+  "mapping": "work",
+  "key": "poulenc-2ac0a411",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8376,
+  "title": "Nos souvenirs qui chantent, FP 182",
+  "mbids": [
+   "2ec330dd-fd21-4860-991f-4876df6dfa90"
+  ],
+  "mapping": "work",
+  "key": "poulenc-2ec330dd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8385,
+  "title": "La grenouillère, FP 96",
+  "mbids": [
+   "2f543d45-aefb-47fb-8167-dd370abbe9e0"
+  ],
+  "mapping": "work",
+  "key": "poulenc-2f543d45",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8440,
+  "title": "8 Nocturnes, FP 56",
+  "mbids": [
+   "32848b90-0332-4b83-8d89-cf70547de36d"
+  ],
+  "mapping": "work",
+  "key": "poulenc-32848b90",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8466,
+  "title": "Épitaphe, FP 55",
+  "mbids": [
+   "343bf886-5966-4a36-a6dd-74ce2168cbcf"
+  ],
+  "mapping": "work",
+  "key": "poulenc-343bf886",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8467,
+  "title": "Cinq poèmes de Paul Éluard, FP 77",
+  "mbids": [
+   "3442f793-84da-46c1-9b9e-2bc223f28040"
+  ],
+  "mapping": "work",
+  "key": "poulenc-3442f793",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8719,
+  "title": "Mouvements Perpétuels: No. 1.",
+  "mbids": [
+   "46f2adb1-f29e-492e-8c73-7b964d7370b1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8828,
+  "title": "Sinfonietta pour orchestre, FP 141",
+  "mbids": [
+   "4f216bf4-b261-4ad5-97fd-0df976a9ad89"
+  ],
+  "mapping": "work",
+  "key": "poulenc-4f216bf4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8844,
+  "title": "Une chanson de porcelaine, FP 169",
+  "mbids": [
+   "5067c38c-2cb7-47fd-8558-935eb4b0c647"
+  ],
+  "mapping": "work",
+  "key": "poulenc-5067c38c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8846,
+  "title": "Miroirs brûlants, FP 98",
+  "mbids": [
+   "50781d4a-cb52-490a-8543-6ec6e656eadc"
+  ],
+  "mapping": "work",
+  "key": "poulenc-50781d4a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8851,
+  "title": "La Reine de Saba",
+  "mbids": [
+   "50bc7dfd-84d8-406f-99cb-09f56100b2ed"
+  ],
+  "mapping": "work",
+  "key": "poulenc-50bc7dfd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8882,
+  "title": "Poèmes de Ronsard, FP 38",
+  "mbids": [
+   "52481920-3778-4f15-991e-a981ea4e2f2e"
+  ],
+  "mapping": "work",
+  "key": "poulenc-52481920",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8899,
+  "title": "Quatre poèmes de Max Jacob",
+  "mbids": [
+   "537056bb-7c20-4b41-a025-b1b6ef2a75cb"
+  ],
+  "mapping": "work",
+  "key": "poulenc-537056bb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9014,
+  "title": "Cocardes, FP 16b",
+  "mbids": [
+   "5aa71f61-199d-411d-a8a4-f03518173293"
+  ],
+  "mapping": "work",
+  "key": "poulenc-5aa71f61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9015,
+  "title": "Valse des Musiques de soie",
+  "mbids": [
+   "5aabb4e5-daae-4730-9602-b0e856d51dab"
+  ],
+  "mapping": "work",
+  "key": "poulenc-5aabb4e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9049,
+  "title": "Métamorphoses, FP 121",
+  "mbids": [
+   "5d382319-232e-4489-b754-ab7e25225441"
+  ],
+  "mapping": "work",
+  "key": "poulenc-5d382319",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9099,
+  "title": "Capriccio d’après Le Bal masqué, FP 155",
+  "mbids": [
+   "60e4fce7-e28b-30c7-bcf4-01c9c536396c"
+  ],
+  "mapping": "work",
+  "key": "poulenc-60e4fce7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9100,
+  "title": "Presto in B-flat",
+  "mbids": [
+   "61038a89-a77e-4859-84a9-12645cfd70d1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9144,
+  "title": "Le Voyage en Amérique, Original Film Score FP 149",
+  "mbids": [
+   "63cf7407-eeb1-4090-a747-0b85a02bada9"
+  ],
+  "mapping": "work",
+  "key": "poulenc-63cf7407",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9228,
+  "title": "Le Disparu, FP 134",
+  "mbids": [
+   "6b1badb3-459f-42cb-b1a7-43e7ee6546a1"
+  ],
+  "mapping": "work",
+  "key": "poulenc-6b1badb3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9245,
+  "title": "L'Embarquement pour Cythère, FP 150",
+  "mbids": [
+   "6bba55a0-a502-3d7d-a7d4-f06f6a724538"
+  ],
+  "mapping": "work",
+  "key": "poulenc-6bba55a0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9270,
+  "title": "Tel jour telle nuit, FP 86",
+  "mbids": [
+   "6d92eb48-2577-43da-b88b-f41de535b6c0"
+  ],
+  "mapping": "work",
+  "key": "poulenc-6d92eb48",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9275,
+  "title": "Trois mouvements perpétuels",
+  "mbids": [
+   "6e051c63-d2e8-4d1a-a2fc-6b15125c8e24"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9293,
+  "title": "Bleuet, FP 102",
+  "mbids": [
+   "6f056af4-7a3e-4eae-97b3-e14aa18a08b1"
+  ],
+  "mapping": "work",
+  "key": "poulenc-6f056af4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9312,
+  "title": "Musique pour faire plaisir",
+  "mbids": [
+   "707fd9c8-33e2-4820-998e-d2a38965869d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9323,
+  "title": "Le Gendarme incompris, FP 20a",
+  "mbids": [
+   "71247b03-00a7-4721-bb49-740141e4d6e6"
+  ],
+  "mapping": "work",
+  "key": "poulenc-71247b03",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9335,
+  "title": "Trois mouvements perpétuels, FP 14b",
+  "mbids": [
+   "7192041f-5856-432c-8af1-028d82847686"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9345,
+  "title": "Le portrait, FP 92",
+  "mbids": [
+   "724934b2-1f7e-4511-ab2e-9bdf64cef3f1"
+  ],
+  "mapping": "work",
+  "key": "poulenc-724934b2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9353,
+  "title": "Pierrot, FP 66",
+  "mbids": [
+   "73494ab4-0df2-4492-a875-33cdf1b80816"
+  ],
+  "mapping": "work",
+  "key": "poulenc-73494ab4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9354,
+  "title": "Le travail du peintre, FP 161",
+  "mbids": [
+   "73498b18-2b3d-4b46-b6af-8dc70ea0ac29"
+  ],
+  "mapping": "work",
+  "key": "poulenc-73498b18",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9378,
+  "title": "Deux mélodies de Guillaume Apollinaire, FP 127",
+  "mbids": [
+   "74d513ef-b66a-48fe-bbe8-fe288647d114"
+  ],
+  "mapping": "work",
+  "key": "poulenc-74d513ef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9431,
+  "title": "Un joueur de flûte berce les ruines",
+  "mbids": [
+   "787434c8-914a-4b66-8717-824d19cfa442"
+  ],
+  "mapping": "work",
+  "key": "poulenc-787434c8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9435,
+  "title": "Quatre motets pour un temps de pénitence, FP 97",
+  "mbids": [
+   "790c53cd-0b9f-4b7b-979a-2129cc8abf78"
+  ],
+  "mapping": "work",
+  "key": "poulenc-790c53cd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9457,
+  "title": "Trois poèmes de Louise Lalanne, FP 57",
+  "mbids": [
+   "7a9f80ef-6962-4829-9f4d-eb2c562b6648"
+  ],
+  "mapping": "work",
+  "key": "poulenc-7a9f80ef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9503,
+  "title": "5 Impromptus, FP 21",
+  "mbids": [
+   "7d1144eb-52bd-4e85-bc19-b75d9c74533f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9505,
+  "title": "Chanson de marin",
+  "mbids": [
+   "7d232248-4ec6-4348-9a38-2160d6ea3452"
+  ],
+  "mapping": "work",
+  "key": "poulenc-7d232248",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9526,
+  "title": "Sonata for two pianos, FP 156",
+  "mbids": [
+   "7ea97d09-15ee-4f15-98f4-38f381b75f6f"
+  ],
+  "mapping": "work",
+  "key": "poulenc-7ea97d09",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9601,
+  "title": "Trio pour piano, hautbois et basson, FP 43",
+  "mbids": [
+   "846e887b-30cd-4a79-8fb6-eddccde63474"
+  ],
+  "mapping": "work",
+  "key": "poulenc-846e887b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9672,
+  "title": "Petites voix, FP 83",
+  "mbids": [
+   "89b712ed-725a-4c69-ad54-5d087617535a"
+  ],
+  "mapping": "work",
+  "key": "poulenc-89b712ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9738,
+  "title": "Souvenirs",
+  "mbids": [
+   "8ed648d0-3470-476a-a846-4c0f03334b3d"
+  ],
+  "mapping": "work",
+  "key": "poulenc-8ed648d0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9746,
+  "title": "Colloque, FP 108",
+  "mbids": [
+   "8f2622d3-600f-4c1f-8826-1ef5024dc34b"
+  ],
+  "mapping": "work",
+  "key": "poulenc-8f2622d3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9789,
+  "title": "Dernièr poème, FP 163",
+  "mbids": [
+   "924f6859-0929-460c-a988-1cfddbfd32f8"
+  ],
+  "mapping": "work",
+  "key": "poulenc-924f6859",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9796,
+  "title": "Trois pastorales, FP 5",
+  "mbids": [
+   "92a1a994-55e7-4d98-89ee-e0f48b3ebc93"
+  ],
+  "mapping": "work",
+  "key": "poulenc-92a1a994",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9812,
+  "title": "Main dominée par le cœur, FP 135",
+  "mbids": [
+   "93b6fb55-1fbc-475d-9020-ca9318941bd1"
+  ],
+  "mapping": "work",
+  "key": "poulenc-93b6fb55",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9829,
+  "title": "Quatre chansons pour enfants, FP 75",
+  "mbids": [
+   "95575d71-0632-4388-8036-b77059c48da9"
+  ],
+  "mapping": "work",
+  "key": "poulenc-95575d71",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9838,
+  "title": "Promenades, FP 24",
+  "mbids": [
+   "9626401f-2ce6-46a2-b24a-5d6653edb7d6"
+  ],
+  "mapping": "work",
+  "key": "poulenc-9626401f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9844,
+  "title": "Villanelle, FP 74",
+  "mbids": [
+   "969112ed-9fef-4a55-9282-002d9af43d0a"
+  ],
+  "mapping": "work",
+  "key": "poulenc-969112ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9862,
+  "title": "Violon",
+  "mbids": [
+   "9851f73c-02a5-45db-a52c-c5328772e9f1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9865,
+  "title": "Feuillets d'album, FP 68",
+  "mbids": [
+   "988a826e-d1d5-4e5c-94f8-8fac93d2387f"
+  ],
+  "mapping": "work",
+  "key": "poulenc-988a826e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9885,
+  "title": "Calligrammes, FP 140",
+  "mbids": [
+   "998e9bfc-8601-4f21-812b-8df6b6774374"
+  ],
+  "mapping": "work",
+  "key": "poulenc-998e9bfc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9905,
+  "title": "Fanfare, FP 25",
+  "mbids": [
+   "9a73a8e2-ff8a-43cc-aa6c-22b3c16ad449"
+  ],
+  "mapping": "work",
+  "key": "poulenc-9a73a8e2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9921,
+  "title": "Badinage, FP 73",
+  "mbids": [
+   "9b8a9258-594d-411b-8a11-ae26b80148ad"
+  ],
+  "mapping": "work",
+  "key": "poulenc-9b8a9258",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9922,
+  "title": "Le bal masqué, FP 60",
+  "mbids": [
+   "9b935a9b-7098-4f7c-9c46-8e97d9928491"
+  ],
+  "mapping": "work",
+  "key": "poulenc-9b935a9b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9945,
+  "title": "Priez pour paix, FP 95",
+  "mbids": [
+   "9cd8d055-81b4-45c8-b075-e8d72a2104b8"
+  ],
+  "mapping": "work",
+  "key": "poulenc-9cd8d055",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9995,
+  "title": "Deux mélodies, FP 162",
+  "mbids": [
+   "a19b2c72-f8e2-45d2-8760-75812e5a4c49"
+  ],
+  "mapping": "work",
+  "key": "poulenc-a19b2c72",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10036,
+  "title": "Sécheresses, FP 90",
+  "mbids": [
+   "a3f3d9b6-8aab-4baa-be8d-10dd881838af"
+  ],
+  "mapping": "work",
+  "key": "poulenc-a3f3d9b6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10156,
+  "title": "Fiançailles pour rire, FP 101",
+  "mbids": [
+   "aca2800f-da39-4e3f-b857-e73c4d259a01"
+  ],
+  "mapping": "work",
+  "key": "poulenc-aca2800f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10168,
+  "title": "Valse-improvisation sur le nom de Bach, for piano, FP 62",
+  "mbids": [
+   "ad806075-8473-4f51-8324-6d226885d39a"
+  ],
+  "mapping": "work",
+  "key": "poulenc-ad806075",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10204,
+  "title": "Trois chansons de F. García Lorca, FP 136",
+  "mbids": [
+   "af8f59d1-d840-4d80-8ab4-fce7b26aa273"
+  ],
+  "mapping": "work",
+  "key": "poulenc-af8f59d1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10252,
+  "title": "Deux poèmes de Guillaume Apollinaire, FP 94",
+  "mbids": [
+   "b365b392-1775-40eb-880e-bddafe3c673d"
+  ],
+  "mapping": "work",
+  "key": "poulenc-b365b392",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10281,
+  "title": "Presto for piano in B-flat major, FP 70",
+  "mbids": [
+   "b5fb2180-da36-4ee6-b308-b7bfd9590339"
+  ],
+  "mapping": "work",
+  "key": "poulenc-b5fb2180",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10357,
+  "title": "Élégie (en accords alternés) pour deux pianos, FP 175",
+  "mbids": [
+   "bb5dd83a-15e1-3c3e-b4b3-07800b7a8da5"
+  ],
+  "mapping": "work",
+  "key": "poulenc-bb5dd83a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10365,
+  "title": "Hymne, FP 144",
+  "mbids": [
+   "bbfb85b2-bf25-49a0-b8be-fa50a669e3ad"
+  ],
+  "mapping": "work",
+  "key": "poulenc-bbfb85b2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10368,
+  "title": "Trois poèmes de Louise de Vilmorin, FP 91",
+  "mbids": [
+   "bc61003d-6c6e-4932-9cff-aad0575141d2"
+  ],
+  "mapping": "work",
+  "key": "poulenc-bc61003d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10425,
+  "title": "Thème varié, FP 151",
+  "mbids": [
+   "c0867b0b-3c0c-4795-bc54-1c8e611b3935"
+  ],
+  "mapping": "work",
+  "key": "poulenc-c0867b0b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10439,
+  "title": "Deux mélodies sur des poèmes de Guillaume Apollinaire, FP 131",
+  "mbids": [
+   "c208c38a-aabf-44d3-9374-0047049a50b3"
+  ],
+  "mapping": "work",
+  "key": "poulenc-c208c38a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10518,
+  "title": "Chanson à boire, FP 31",
+  "mbids": [
+   "c779a17b-9180-4a73-a3bc-ab2469e42135"
+  ],
+  "mapping": "work",
+  "key": "poulenc-c779a17b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10531,
+  "title": "Ce doux petit visage, FP 99",
+  "mbids": [
+   "c879730d-042c-48dc-8dc9-4487be26019f"
+  ],
+  "mapping": "work",
+  "key": "poulenc-c879730d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10534,
+  "title": "3 Intermezzi, FP 71 & FP 118",
+  "mbids": [
+   "c8e93ed3-51d6-42d2-b0a4-ecf43872bbc0"
+  ],
+  "mapping": "work",
+  "key": "poulenc-c8e93ed3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10556,
+  "title": "Fancy, FP 174",
+  "mbids": [
+   "ca605389-e992-48b1-bac4-36a1f2ed3a53"
+  ],
+  "mapping": "work",
+  "key": "poulenc-ca605389",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10567,
+  "title": "Toréador, FP 11",
+  "mbids": [
+   "cb32751e-d27c-4e03-b738-e78c514c5bc2"
+  ],
+  "mapping": "work",
+  "key": "poulenc-cb32751e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10585,
+  "title": "Airs chantés, FP 46",
+  "mbids": [
+   "cc7a513f-6bc1-4b31-b70a-42b647dd73b4"
+  ],
+  "mapping": "work",
+  "key": "poulenc-cc7a513f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10586,
+  "title": "Élégie pour cor et piano, FP 168",
+  "mbids": [
+   "cc7c7316-755d-34bb-9d91-607d60ccd5ec"
+  ],
+  "mapping": "work",
+  "key": "poulenc-cc7c7316",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10623,
+  "title": "Stabat Mater, FP 148",
+  "mbids": [
+   "cf702e1c-a5c9-46af-b514-c32816e506d0"
+  ],
+  "mapping": "work",
+  "key": "poulenc-cf702e1c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10637,
+  "title": "Messe en sol majeur, FP 89",
+  "mbids": [
+   "d07da7a4-f5e6-4530-8f55-f5b0d77664b4"
+  ],
+  "mapping": "work",
+  "key": "poulenc-d07da7a4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10644,
+  "title": "Huit chansons polonaises, FP 69",
+  "mbids": [
+   "d1146905-624e-4a14-8726-02ec1eec43ae"
+  ],
+  "mapping": "work",
+  "key": "poulenc-d1146905",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10712,
+  "title": "Trois mouvements perpétuels, FP 14a",
+  "mbids": [
+   "d6ecf8df-eb30-4964-ba76-22b5a9dc562b"
+  ],
+  "mapping": "work",
+  "key": "poulenc-d6ecf8df",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10730,
+  "title": "Sept chansons, FP 81",
+  "mbids": [
+   "d7f102f1-8a51-49c9-afc9-3dc3edb65d64"
+  ],
+  "mapping": "work",
+  "key": "poulenc-d7f102f1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10732,
+  "title": "Banalités, FP 107",
+  "mbids": [
+   "d80bb6bc-3207-40f9-901f-9ec8585c6b1a"
+  ],
+  "mapping": "work",
+  "key": "poulenc-d80bb6bc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10736,
+  "title": "6 Impromptus, FP 21",
+  "mbids": [
+   "d81aed5b-b928-485f-87b3-df84687e3f37"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10792,
+  "title": "... mais mourir, FP 137",
+  "mbids": [
+   "dbe417e2-944f-4dfb-9f98-309ccbb50cc7"
+  ],
+  "mapping": "work",
+  "key": "poulenc-dbe417e2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10834,
+  "title": "Quatre petites prières de Saint François d’Assise, FP 142",
+  "mbids": [
+   "defd4d4f-e982-48e9-9f91-0619badec20f"
+  ],
+  "mapping": "work",
+  "key": "poulenc-defd4d4f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10849,
+  "title": "Aubade, FP 51",
+  "mbids": [
+   "e04dfc83-c6e2-469b-906b-ebcf82a9879a"
+  ],
+  "mapping": "work",
+  "key": "poulenc-e04dfc83",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10858,
+  "title": "Improvisations (15) for piano, FP 63, 113, 170, 176",
+  "mbids": [
+   "e0d015c3-f108-4808-b100-aa5ac9b8d6cf"
+  ],
+  "mapping": "work",
+  "key": "poulenc-e0d015c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10891,
+  "title": "La fraîcheur et le feu, FP 147",
+  "mbids": [
+   "e4373d5d-2622-4124-8b9f-c1c00e0ceac6"
+  ],
+  "mapping": "work",
+  "key": "poulenc-e4373d5d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10899,
+  "title": "Laudes de Saint Antoine de Padoue, FP 172",
+  "mbids": [
+   "e4ca20d7-a45d-44db-ab32-c4cb7abef406"
+  ],
+  "mapping": "work",
+  "key": "poulenc-e4ca20d7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10909,
+  "title": "Rosemonde, FP 158",
+  "mbids": [
+   "e5838fe9-eeaa-4b3b-9daf-00ebf9516873"
+  ],
+  "mapping": "work",
+  "key": "poulenc-e5838fe9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10914,
+  "title": "Piano Concerto in C-sharp minor, FP 146",
+  "mbids": [
+   "e59e9bcc-8bc5-42dd-87ce-867697ed3b44"
+  ],
+  "mapping": "work",
+  "key": "poulenc-e59e9bcc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10934,
+  "title": "Les Chemins de l’amour, FP 106b",
+  "mbids": [
+   "e70ef81a-adff-4d87-85f4-40caafcd93ea"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10944,
+  "title": "La puce",
+  "mbids": [
+   "e7ced73a-fa54-4916-9d7e-b14a32115209"
+  ],
+  "mapping": "work",
+  "key": "poulenc-e7ced73a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10954,
+  "title": "L'Invitation au château, FP 138",
+  "mbids": [
+   "e881f49e-a1ed-44ae-9416-bfeeefe13243"
+  ],
+  "mapping": "work",
+  "key": "poulenc-e881f49e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10963,
+  "title": "Parisiana, FP 157",
+  "mbids": [
+   "e8b1d729-74e1-46ad-a6a8-62725db87433"
+  ],
+  "mapping": "work",
+  "key": "poulenc-e8b1d729",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10969,
+  "title": "La Courte Paille, FP 178",
+  "mbids": [
+   "e93a57eb-e101-4e32-a0f1-52032bbba273"
+  ],
+  "mapping": "work",
+  "key": "poulenc-e93a57eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11004,
+  "title": "Pièce brève sur le nom d'Albert Roussel, FP 50",
+  "mbids": [
+   "ebb57447-2de3-4cff-a74d-1f284b04533d"
+  ],
+  "mapping": "work",
+  "key": "poulenc-ebb57447",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11033,
+  "title": "Napoli, FP 40",
+  "mbids": [
+   "edd7d33a-2cc0-4888-b7b0-1f7030966edd"
+  ],
+  "mapping": "work",
+  "key": "poulenc-edd7d33a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11075,
+  "title": "Sonate pour violoncelle et piano, FP 143",
+  "mbids": [
+   "f16b46ce-0611-37b1-af66-a46f5208d173"
+  ],
+  "mapping": "work",
+  "key": "poulenc-f16b46ce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11085,
+  "title": "Les Animaux modèles, FP 111",
+  "mbids": [
+   "f21f8a8b-3aca-42bd-95bd-935178f71cd0"
+  ],
+  "mapping": "work",
+  "key": "poulenc-f21f8a8b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11124,
+  "title": "Petite Complainte",
+  "mbids": [
+   "f51d2195-3208-4c56-92e0-dd26baaacb08"
+  ],
+  "mapping": "work",
+  "key": "poulenc-f51d2195",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11156,
+  "title": "Paul et Virginie, FP 132",
+  "mbids": [
+   "f797004b-c42e-4eb3-b458-ee153753c2c8"
+  ],
+  "mapping": "work",
+  "key": "poulenc-f797004b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11164,
+  "title": "Deux mélodies inédites du bestiaire, FP 15b",
+  "mbids": [
+   "f80ac4d8-3869-45f9-8d21-f866251a7376"
+  ],
+  "mapping": "work",
+  "key": "poulenc-f80ac4d8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11168,
+  "title": "Chansons villageoises, FP 117",
+  "mbids": [
+   "f83a5f63-6e30-4bb0-ad91-e8c23fbeb85e"
+  ],
+  "mapping": "work",
+  "key": "poulenc-f83a5f63",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11244,
+  "title": "À sa guitare, FP 79",
+  "mbids": [
+   "fd3ef7ca-4fd0-4133-9bbe-21a0352aec5d"
+  ],
+  "mapping": "work",
+  "key": "poulenc-fd3ef7ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11283,
+  "title": "Le bestiaire, ou Cortège d'Orphée, FP 15a",
+  "mbids": [
+   "ff78eff4-9e33-4dde-8a0e-cf6a9801d486"
+  ],
+  "mapping": "work",
+  "key": "poulenc-ff78eff4",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

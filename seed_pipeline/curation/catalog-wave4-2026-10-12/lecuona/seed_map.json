@@ -1,0 +1,1394 @@
+[
+ {
+  "pieceId": 16046,
+  "title": "Ante el Escorial",
+  "mbids": [
+   "03665502-e303-4783-a942-ebf08b2e0351"
+  ],
+  "mapping": "work",
+  "key": "lecuona-03665502",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16421,
+  "title": "Danzas afro-cubanas",
+  "mbids": [
+   "18a1d98b-ed31-48f2-afed-6e14ef3e82c9"
+  ],
+  "mapping": "work",
+  "key": "lecuona-18a1d98b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17934,
+  "title": "Vals del Sena",
+  "mbids": [
+   "7435d12b-eafa-432b-8946-22993ee55513"
+  ],
+  "mapping": "work",
+  "key": "lecuona-7435d12b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18655,
+  "title": "A la antigua",
+  "mbids": [
+   "a2edc0c9-6eec-4ac8-b31d-1193e3ec208c"
+  ],
+  "mapping": "work",
+  "key": "lecuona-a2edc0c9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19364,
+  "title": "Rosa la China",
+  "mbids": [
+   "d03d12b1-2aeb-422a-98e7-c9c9d9d6db17"
+  ],
+  "mapping": "work",
+  "key": "lecuona-d03d12b1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19587,
+  "title": "Andalucía",
+  "mbids": [
+   "df63330c-b551-48a1-8d5b-6c06674eba32"
+  ],
+  "mapping": "work",
+  "key": "lecuona-49b4b8e3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19677,
+  "title": "Danzas Cubanas",
+  "mbids": [
+   "e5d85949-612f-4573-86f6-56dc85ca6d2b"
+  ],
+  "mapping": "work",
+  "key": "lecuona-e5d85949",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19887,
+  "title": "Vals azul",
+  "mbids": [
+   "f38ee4f9-a76a-41f2-af74-fb695ad169a6"
+  ],
+  "mapping": "work",
+  "key": "lecuona-f38ee4f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15808,
+  "title": "Siempre en mi corazón",
+  "mbids": [
+   "a3d11abe-65d6-4ff3-9ba1-8e20276c551c"
+  ],
+  "mapping": "work",
+  "key": "lecuona-a3d11abe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15824,
+  "title": "The Breeze and I",
+  "mbids": [
+   "d59e6eb6-2b87-31ab-a2fb-73b96a1fe94c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 15849,
+  "title": "醉朦朧",
+  "mbids": [
+   "f7d84960-fe18-462e-b631-7e6e5840ee3d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 15900,
+  "title": "Always in My Heart",
+  "mbids": [
+   "b76be1d6-a7cc-4c73-9eab-b5c1d60b215d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 15903,
+  "title": "Para Vigo me voy",
+  "mbids": [
+   "7bfc669c-453a-4da2-a215-4d19dc2adc0f"
+  ],
+  "mapping": "work",
+  "key": "lecuona-7bfc669c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15914,
+  "title": "Jungle Drums",
+  "mbids": [
+   "f51b923c-84be-4fa5-8b30-d4a4110bdf08"
+  ],
+  "mapping": "work",
+  "key": "lecuona-f51b923c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15918,
+  "title": "Say “si si”",
+  "mbids": [
+   "980ff759-762f-481a-8cce-312122077c5e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16168,
+  "title": "Allá en la sierra (from \"Córdoba\"",
+  "mbids": [
+   "0a9d05c1-d44c-40e3-aea9-61cedbab7bd3"
+  ],
+  "mapping": "work",
+  "key": "lecuona-0a9d05c1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16186,
+  "title": "¿Por qué te vas?",
+  "mbids": [
+   "0bc72dd9-1a65-4cc2-9293-7d137118b6e1"
+  ],
+  "mapping": "work",
+  "key": "lecuona-0bc72dd9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16199,
+  "title": "Vals Azul (from “Lola Cruz”)",
+  "mbids": [
+   "0c849875-88be-48ee-ab51-a05590cde052"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16239,
+  "title": "Danzas cubanas al estilo del siglo XIX",
+  "mbids": [
+   "0e8d90c7-3f99-4146-b5b5-11dd627152e0"
+  ],
+  "mapping": "work",
+  "key": "lecuona-0e8d90c7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16272,
+  "title": "Canción del amor triste",
+  "mbids": [
+   "10843cbf-c6fc-4d3a-b1a9-0973bbbd9e69"
+  ],
+  "mapping": "work",
+  "key": "lecuona-10843cbf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16298,
+  "title": "Black Cat (One-Step)",
+  "mbids": [
+   "11bc2535-9a74-4618-a5fd-97a0df9b6aa7"
+  ],
+  "mapping": "work",
+  "key": "lecuona-11bc2535",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16333,
+  "title": "Primavera de ilusión",
+  "mbids": [
+   "13f4e150-3098-4be9-b204-a6b170a352ac"
+  ],
+  "mapping": "work",
+  "key": "lecuona-13f4e150",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16373,
+  "title": "¡No es por ti!",
+  "mbids": [
+   "160ef1cc-32b9-40c8-b990-99d38547a54d"
+  ],
+  "mapping": "work",
+  "key": "lecuona-160ef1cc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16387,
+  "title": "Rapsodia negra",
+  "mbids": [
+   "16a3aa21-cac7-4e06-a844-f1f2f7a53736"
+  ],
+  "mapping": "work",
+  "key": "lecuona-16a3aa21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16393,
+  "title": "Siboneja",
+  "mbids": [
+   "16d016ea-2657-4b7f-9808-f18ac2315f59"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16485,
+  "title": "Noches de Primavera",
+  "mbids": [
+   "1c4d075a-795a-4bfc-b6ce-d47ecd161855"
+  ],
+  "mapping": "work",
+  "key": "lecuona-1c4d075a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16525,
+  "title": "Se Fue",
+  "mbids": [
+   "1f39c007-2d96-49f3-8ed6-2ead2006b399"
+  ],
+  "mapping": "work",
+  "key": "lecuona-1f39c007",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16554,
+  "title": "Aragonesa",
+  "mbids": [
+   "20de1668-4f34-4005-9202-f2bf7940cda9"
+  ],
+  "mapping": "work",
+  "key": "lecuona-20de1668",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16618,
+  "title": "... y la negra bailaba!",
+  "mbids": [
+   "25849298-2515-417c-b5dd-11000eb96a8e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16620,
+  "title": "Voilà",
+  "mbids": [
+   "258883fd-60b9-48a0-801b-ab89ee39b49b"
+  ],
+  "mapping": "work",
+  "key": "lecuona-258883fd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16621,
+  "title": "Porcelana china (danza de muñecos)",
+  "mbids": [
+   "259cb8b7-54bf-4b9b-8dd5-4e92fbf1c8d3"
+  ],
+  "mapping": "work",
+  "key": "lecuona-259cb8b7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16716,
+  "title": "Vals de la Mariposa",
+  "mbids": [
+   "2b774f7e-9771-4b5f-9b7b-e489738afc39"
+  ],
+  "mapping": "work",
+  "key": "lecuona-2b774f7e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16808,
+  "title": "Rumba mejoral",
+  "mbids": [
+   "315510e6-80da-4aed-b808-d96d4d78456e"
+  ],
+  "mapping": "work",
+  "key": "lecuona-315510e6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16825,
+  "title": "Impromptu",
+  "mbids": [
+   "323cb4c6-53a1-4b6a-ad8a-7f51c905cca1"
+  ],
+  "mapping": "work",
+  "key": "lecuona-323cb4c6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16842,
+  "title": "Damisela encantadora",
+  "mbids": [
+   "332fc87f-e0cb-4216-9373-08ec5f8b960a"
+  ],
+  "mapping": "work",
+  "key": "lecuona-332fc87f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16849,
+  "title": "19-Century Cuban Dances",
+  "mbids": [
+   "336d76ac-1349-487d-ba56-9dbea9c34dab"
+  ],
+  "mapping": "work",
+  "key": "lecuona-336d76ac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16888,
+  "title": "Parisiana",
+  "mbids": [
+   "3599da3b-5b71-410f-8334-56aa32671cb7"
+  ],
+  "mapping": "work",
+  "key": "lecuona-3599da3b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16890,
+  "title": "Quasi bolero",
+  "mbids": [
+   "35adf18c-2f99-4ef7-88cc-3ecb71e990ec"
+  ],
+  "mapping": "work",
+  "key": "lecuona-35adf18c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16904,
+  "title": "Musetta",
+  "mbids": [
+   "36412a1f-fe4b-4da6-b4da-b6a244bee15f"
+  ],
+  "mapping": "work",
+  "key": "lecuona-36412a1f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16917,
+  "title": "Que risa me da",
+  "mbids": [
+   "3732f65c-531e-4844-b717-98d2b25394ac"
+  ],
+  "mapping": "work",
+  "key": "lecuona-3732f65c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16924,
+  "title": "Canto karabali",
+  "mbids": [
+   "37b8684c-0956-424c-95f4-873fecc015e3"
+  ],
+  "mapping": "work",
+  "key": "lecuona-37b8684c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16956,
+  "title": "Devuélveme el corazón",
+  "mbids": [
+   "397ef688-822f-4fbb-9e74-a7b1dff04df8"
+  ],
+  "mapping": "work",
+  "key": "lecuona-397ef688",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17022,
+  "title": "Noche azul",
+  "mbids": [
+   "3d7b942f-d533-433d-8f5b-6a4fdcd65de1"
+  ],
+  "mapping": "work",
+  "key": "lecuona-3d7b942f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17027,
+  "title": "Aragón (vals España)",
+  "mbids": [
+   "3d9d1b6c-2f90-4c2d-91bf-79f8ee949cb0"
+  ],
+  "mapping": "work",
+  "key": "lecuona-3d9d1b6c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17038,
+  "title": "是這樣的",
+  "mbids": [
+   "3e5a8a80-0468-4845-bd68-2b0519190d2d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17079,
+  "title": "Malagueña (from Suite Andalucía)",
+  "mbids": [
+   "41253427-ec6c-497f-992e-b8349d898b70"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17086,
+  "title": "Suite from El sombrero de Yarey",
+  "mbids": [
+   "4194d6b0-b4e5-478e-9829-f3a2ae247ca5"
+  ],
+  "mapping": "work",
+  "key": "lecuona-4194d6b0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17188,
+  "title": "No me mires ni me hables",
+  "mbids": [
+   "47490a32-aa6e-468e-9404-bb572456cc43"
+  ],
+  "mapping": "work",
+  "key": "lecuona-47490a32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17199,
+  "title": "Vals de los mares",
+  "mbids": [
+   "47c090de-3233-4d11-a0a7-6fbc9ecdddf7"
+  ],
+  "mapping": "work",
+  "key": "lecuona-47c090de",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17235,
+  "title": "Andalucía (Suite española)",
+  "mbids": [
+   "49b4b8e3-daa6-487e-8571-68b108214a9f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 17285,
+  "title": "At the Cross-Roads",
+  "mbids": [
+   "4cf0117a-e403-45db-802c-bc3c5f5c1de9"
+  ],
+  "mapping": "work",
+  "key": "lecuona-4cf0117a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17287,
+  "title": "Two Hearts That Pass in the Night",
+  "mbids": [
+   "4d4d4da1-9f3e-4678-9381-18b4e1ab72c9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17350,
+  "title": "Preludio en la noche",
+  "mbids": [
+   "5219c618-1af3-48e1-b35e-4154aec8d2f7"
+  ],
+  "mapping": "work",
+  "key": "lecuona-5219c618",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17439,
+  "title": "¡Mira! (from \"La Habanera\")",
+  "mbids": [
+   "56ec234c-08f1-4534-8b73-cffc7141fc56"
+  ],
+  "mapping": "work",
+  "key": "lecuona-56ec234c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17518,
+  "title": "¡Échate pa' allá, María!",
+  "mbids": [
+   "5b92f219-76d9-40a1-ad3e-0c0e4eae80c9"
+  ],
+  "mapping": "work",
+  "key": "lecuona-5b92f219",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17543,
+  "title": "Cuba and America (March and Two-Step)",
+  "mbids": [
+   "5d25757f-7c3c-428b-8959-e9728d9ee2fe"
+  ],
+  "mapping": "work",
+  "key": "lecuona-5d25757f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17547,
+  "title": "Un amor vendrá",
+  "mbids": [
+   "5dc7286a-a932-4244-9363-8e77648d70d5"
+  ],
+  "mapping": "work",
+  "key": "lecuona-5dc7286a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17576,
+  "title": "Paso Doble de los Mantones",
+  "mbids": [
+   "5f78b24d-faac-400c-9b39-16e151172a60"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17597,
+  "title": "The Angels Came Through",
+  "mbids": [
+   "60be1074-0480-473d-905d-831d7d4d7838"
+  ],
+  "mapping": "work",
+  "key": "lecuona-60be1074",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17656,
+  "title": "Three Miniatures: Music Box",
+  "mbids": [
+   "6448c6db-3c4e-4789-b5fb-3fcf20952b6a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17668,
+  "title": "Eclipse",
+  "mbids": [
+   "64e5d777-393b-4d83-82b2-9a91f64e8fe9"
+  ],
+  "mapping": "work",
+  "key": "lecuona-64e5d777",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17696,
+  "title": "Vals de Danubio",
+  "mbids": [
+   "66c52a26-6494-4ebe-abfa-2a63a52c77ec"
+  ],
+  "mapping": "work",
+  "key": "lecuona-66c52a26",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17781,
+  "title": "Valses fantásticos",
+  "mbids": [
+   "6ba0e7db-3bfb-4f98-afb8-f4c7548892a7"
+  ],
+  "mapping": "work",
+  "key": "lecuona-6ba0e7db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17807,
+  "title": "Diary of a Child",
+  "mbids": [
+   "6d5c0679-d423-4aea-820e-f56620312d5d"
+  ],
+  "mapping": "work",
+  "key": "lecuona-6d5c0679",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17868,
+  "title": "Cuba at Arms (One-Step)",
+  "mbids": [
+   "70564789-0931-4227-a9f1-e8ff4395893c"
+  ],
+  "mapping": "work",
+  "key": "lecuona-70564789",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17890,
+  "title": "Морской ветерок",
+  "mbids": [
+   "719235ae-2952-47a4-9616-fdf246f53b5b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17931,
+  "title": "Zambra gitana",
+  "mbids": [
+   "73fc9040-6571-44ff-88ae-9df7781f1ead"
+  ],
+  "mapping": "work",
+  "key": "lecuona-73fc9040",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17964,
+  "title": "Como presiento",
+  "mbids": [
+   "76db5627-7f38-488f-a2d4-aa7b023850f4"
+  ],
+  "mapping": "work",
+  "key": "lecuona-76db5627",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18053,
+  "title": "No me engañarás",
+  "mbids": [
+   "7bf4a27e-0057-4cbd-b762-f5bb6cc43909"
+  ],
+  "mapping": "work",
+  "key": "lecuona-7bf4a27e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18079,
+  "title": "Dame el amor",
+  "mbids": [
+   "7db9bd93-3ded-4f90-981d-5e9e963e71c4"
+  ],
+  "mapping": "work",
+  "key": "lecuona-7db9bd93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18212,
+  "title": "Three Miniatures: Bellflower",
+  "mbids": [
+   "87941085-f158-4929-b365-9682607c48d9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18282,
+  "title": "Yo te quiero siempre",
+  "mbids": [
+   "8c321a5f-1bba-4a37-8b72-41c2cb34d4f3"
+  ],
+  "mapping": "work",
+  "key": "lecuona-8c321a5f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18298,
+  "title": "En una noche así (from the film \"Carnival in Costa Rica\")",
+  "mbids": [
+   "8cd685e1-5acc-49a7-a157-47202266632d"
+  ],
+  "mapping": "work",
+  "key": "lecuona-8cd685e1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18386,
+  "title": "Vals Gitano",
+  "mbids": [
+   "91c5b008-aa4a-42ca-87f1-f3d07e5fd316"
+  ],
+  "mapping": "work",
+  "key": "lecuona-91c5b008",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18403,
+  "title": "Siete danzas cubanas típicas",
+  "mbids": [
+   "92c49107-36a5-4167-a375-2d3c5c5f39ef"
+  ],
+  "mapping": "work",
+  "key": "lecuona-92c49107",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18432,
+  "title": "Soñaba contigo",
+  "mbids": [
+   "947d935b-0e06-4446-a95d-7f4d96a5e268"
+  ],
+  "mapping": "work",
+  "key": "lecuona-947d935b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18519,
+  "title": "Tabou",
+  "mbids": [
+   "99e09e50-0f68-4af6-8c5a-33b3b5be8d19"
+  ],
+  "mapping": "work",
+  "key": "lecuona-99e09e50",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18587,
+  "title": "Rumba-Rhapsody for piano, orchestra and chorus",
+  "mbids": [
+   "9eaa1902-e96d-4f5c-aa1d-25bae9de8700"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18590,
+  "title": "Canto Indio",
+  "mbids": [
+   "9eb594ed-9199-4240-9da7-21d66d87f206"
+  ],
+  "mapping": "work",
+  "key": "lecuona-9eb594ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18621,
+  "title": "Locura",
+  "mbids": [
+   "a0d3ce52-26c5-49b3-b4f6-5525d7cd7259"
+  ],
+  "mapping": "work",
+  "key": "lecuona-a0d3ce52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18696,
+  "title": "Bésame",
+  "mbids": [
+   "a51782db-ff1b-4019-9ba8-5d1ed0f795cb"
+  ],
+  "mapping": "work",
+  "key": "lecuona-a51782db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18783,
+  "title": "Como el arrullo de palma",
+  "mbids": [
+   "aa5af4c7-ebf7-4bb4-a194-758eaad50da3"
+  ],
+  "mapping": "work",
+  "key": "lecuona-aa5af4c7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18802,
+  "title": "Mi corazón se fué",
+  "mbids": [
+   "ab8130ab-e985-403d-b9d6-4e6e412e5b9a"
+  ],
+  "mapping": "work",
+  "key": "lecuona-ab8130ab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18870,
+  "title": "Al fin",
+  "mbids": [
+   "b01d729c-73b4-4a04-9100-26b32d9bf3db"
+  ],
+  "mapping": "work",
+  "key": "lecuona-b01d729c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18904,
+  "title": "Granada",
+  "mbids": [
+   "b2769f47-91f2-4fcf-9b32-250abdc0ca6f"
+  ],
+  "mapping": "work",
+  "key": "lecuona-b2769f47",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18943,
+  "title": "Vals del Nilo",
+  "mbids": [
+   "b49761c6-9e11-404e-bd30-dd961a3cbe5b"
+  ],
+  "mapping": "work",
+  "key": "lecuona-b49761c6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18994,
+  "title": "Mazurka en glissando",
+  "mbids": [
+   "b8225ece-6c32-41be-b801-259ccf2c14ce"
+  ],
+  "mapping": "work",
+  "key": "lecuona-b8225ece",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19017,
+  "title": "Havannan yö",
+  "mbids": [
+   "ba3f3aea-f968-423f-a0b4-be9e8fde1e19"
+  ],
+  "mapping": "work",
+  "key": "lecuona-ba3f3aea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19107,
+  "title": "Se abrieron las flores",
+  "mbids": [
+   "bf718b3f-d9bd-4b9f-90e4-b0b72bfe74ec"
+  ],
+  "mapping": "work",
+  "key": "lecuona-bf718b3f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19141,
+  "title": "Juventud",
+  "mbids": [
+   "c1d0bfda-f2ca-48f3-9f2b-260c187fb9af"
+  ],
+  "mapping": "work",
+  "key": "lecuona-c1d0bfda",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19187,
+  "title": "Amorosa",
+  "mbids": [
+   "c4c719c3-7aa9-49e9-bf94-c54bc0aeea33"
+  ],
+  "mapping": "work",
+  "key": "lecuona-c4c719c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19233,
+  "title": "La habanera",
+  "mbids": [
+   "c6fd0f1f-0c4f-4d77-97fd-dd0998fd7287"
+  ],
+  "mapping": "work",
+  "key": "lecuona-c6fd0f1f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19298,
+  "title": "Amor tardio",
+  "mbids": [
+   "cb9f0247-24af-4c26-a6d2-779b3d56c821"
+  ],
+  "mapping": "work",
+  "key": "lecuona-cb9f0247",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19332,
+  "title": "Adiós a las trincheras (One-Step)",
+  "mbids": [
+   "ce079d99-2f2b-47d6-b410-b02187168e08"
+  ],
+  "mapping": "work",
+  "key": "lecuona-ce079d99",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19333,
+  "title": "Conga Cuba",
+  "mbids": [
+   "ce12e736-9708-4345-9086-51304db27a32"
+  ],
+  "mapping": "work",
+  "key": "lecuona-ce12e736",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19423,
+  "title": "Crisantemo",
+  "mbids": [
+   "d3c40adb-9bda-435d-b0cf-1be9a4c19a6f"
+  ],
+  "mapping": "work",
+  "key": "lecuona-d3c40adb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19450,
+  "title": "Me has dejado",
+  "mbids": [
+   "d588a53b-c238-4cad-9aaa-5232e575f090"
+  ],
+  "mapping": "work",
+  "key": "lecuona-d588a53b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19486,
+  "title": "A Media Noche",
+  "mbids": [
+   "d80b6ca3-887b-444f-b0eb-0f8f5de09539"
+  ],
+  "mapping": "work",
+  "key": "lecuona-d80b6ca3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19571,
+  "title": "Mi amor fue una flor",
+  "mbids": [
+   "de4ff794-55fc-4fc2-9f30-df0ea7b03cb2"
+  ],
+  "mapping": "work",
+  "key": "lecuona-de4ff794",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19577,
+  "title": "Zambra",
+  "mbids": [
+   "deb90378-86c6-4774-9ae6-8c7e5f3f34e2"
+  ],
+  "mapping": "work",
+  "key": "lecuona-deb90378",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19614,
+  "title": "Broken Blossoms",
+  "mbids": [
+   "e0eb6ce1-a569-436d-bfec-1957cdc0997c"
+  ],
+  "mapping": "work",
+  "key": "lecuona-e0eb6ce1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19628,
+  "title": "Tu no tienes corazón",
+  "mbids": [
+   "e1bbaee0-98bf-462b-a87b-5403abe52852"
+  ],
+  "mapping": "work",
+  "key": "lecuona-e1bbaee0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19686,
+  "title": "El pregón de las flores",
+  "mbids": [
+   "e62f3015-3dc2-4b51-a451-685b8f6bb22f"
+  ],
+  "mapping": "work",
+  "key": "lecuona-e62f3015",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19765,
+  "title": "Ojos triunfadores",
+  "mbids": [
+   "ec4a7684-d3d7-405f-9a29-2b31a39fe8bc"
+  ],
+  "mapping": "work",
+  "key": "lecuona-ec4a7684",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19767,
+  "title": "Gardenia",
+  "mbids": [
+   "ec88e64d-59bf-406a-b836-b86b75a4ee6a"
+  ],
+  "mapping": "work",
+  "key": "lecuona-ec88e64d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19769,
+  "title": "Rapsodia cubana (On Cuban Airs)",
+  "mbids": [
+   "ecd0bb6d-4d2a-4817-bd73-f350d929ffc1"
+  ],
+  "mapping": "work",
+  "key": "lecuona-ecd0bb6d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19772,
+  "title": "Noche de estrellas",
+  "mbids": [
+   "ecf309dc-1b79-4583-93dd-43487039c833"
+  ],
+  "mapping": "work",
+  "key": "lecuona-ecf309dc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19774,
+  "title": "La Conga se va",
+  "mbids": [
+   "ed0df632-095d-4ebf-b682-9ab492105b74"
+  ],
+  "mapping": "work",
+  "key": "lecuona-ed0df632",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19782,
+  "title": "Three Miniatures: Polchinella",
+  "mbids": [
+   "edcda4e2-d37c-4c53-b420-44ae0911af99"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19804,
+  "title": "Polka de los enanos",
+  "mbids": [
+   "ee8a2520-b55c-421a-b078-367902b99ef7"
+  ],
+  "mapping": "work",
+  "key": "lecuona-ee8a2520",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19839,
+  "title": "Canto del guajiro",
+  "mbids": [
+   "f103c20a-288e-456a-80c1-e4a5b4a23960"
+  ],
+  "mapping": "work",
+  "key": "lecuona-f103c20a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19881,
+  "title": "Barba-Azul",
+  "mbids": [
+   "f359f536-ff1d-47bc-99ae-99a61032a733"
+  ],
+  "mapping": "work",
+  "key": "lecuona-f359f536",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19934,
+  "title": "San Francisco el Grande",
+  "mbids": [
+   "f6224b4f-4cc1-49f5-8903-03c4240c09d8"
+  ],
+  "mapping": "work",
+  "key": "lecuona-f6224b4f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20053,
+  "title": "Palomitas Blancas",
+  "mbids": [
+   "fcf48cd9-210f-49a0-b431-e935dc22dfcf"
+  ],
+  "mapping": "work",
+  "key": "lecuona-fcf48cd9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20066,
+  "title": "Rapsodia argentina",
+  "mbids": [
+   "fe35a37c-e650-44e0-a11f-3e60d21ec84f"
+  ],
+  "mapping": "work",
+  "key": "lecuona-fe35a37c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 26017,
+  "title": "Siboney",
+  "mbids": [
+   "9bcba307-81a7-331d-ab01-1bcde739a3dd"
+  ],
+  "mapping": "work",
+  "key": "lecuona-9bcba307",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

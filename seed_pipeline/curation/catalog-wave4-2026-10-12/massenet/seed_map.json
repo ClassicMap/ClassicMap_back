@@ -1,0 +1,1814 @@
+[
+ {
+  "pieceId": 7578,
+  "title": "Scènes pittoresques",
+  "mbids": [
+   "b472b512-5d01-423c-965e-a32a48f2a795"
+  ],
+  "mapping": "work",
+  "key": "massenet-b472b512",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7636,
+  "title": "Poème d’amour",
+  "mbids": [
+   "8a1aff49-5846-49d5-9963-06c51d88e155"
+  ],
+  "mapping": "work",
+  "key": "massenet-8a1aff49",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7779,
+  "title": "Roma",
+  "mbids": [
+   "03c54515-fa5f-45d0-bebc-a0d0b862a5e9"
+  ],
+  "mapping": "work",
+  "key": "massenet-03c54515",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7987,
+  "title": "Les amoureuses sont des folles",
+  "mbids": [
+   "113c9a85-67a2-4bd9-90cc-1df1ab173059"
+  ],
+  "mapping": "work",
+  "key": "massenet-113c9a85",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8010,
+  "title": "Werther",
+  "mbids": [
+   "12665222-986e-488d-aaad-aa92f400db97"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8024,
+  "title": "Le Cid",
+  "mbids": [
+   "135a3646-f4ef-40e0-b91b-6993527eec3d"
+  ],
+  "mapping": "work",
+  "key": "massenet-135a3646",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8106,
+  "title": "Sept Improvisations",
+  "mbids": [
+   "19746a5b-ea24-4a2e-bb93-27837114a286"
+  ],
+  "mapping": "work",
+  "key": "massenet-19746a5b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8171,
+  "title": "Don César de Bazan",
+  "mbids": [
+   "1e73fd93-bd06-4190-8dee-610647adfd15"
+  ],
+  "mapping": "work",
+  "key": "massenet-1e73fd93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8323,
+  "title": "La Navarraise",
+  "mbids": [
+   "2b2093d0-d0eb-422e-b496-09b592643bc6"
+  ],
+  "mapping": "work",
+  "key": "massenet-2b2093d0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8437,
+  "title": "Amoureuse",
+  "mbids": [
+   "327261cf-55b2-4239-9701-133c8f91296c"
+  ],
+  "mapping": "work",
+  "key": "massenet-327261cf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8521,
+  "title": "Bacchus",
+  "mbids": [
+   "3842f690-c12e-4f7b-8b56-f5e96b708c02"
+  ],
+  "mapping": "work",
+  "key": "massenet-3842f690",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8548,
+  "title": "La Vierge",
+  "mbids": [
+   "3a02254b-ef26-4926-aa46-98ac7c066f2a"
+  ],
+  "mapping": "work",
+  "key": "massenet-3a02254b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8745,
+  "title": "Thérèse",
+  "mbids": [
+   "4916720f-dd4d-49f0-a57e-532e4a4998f3"
+  ],
+  "mapping": "work",
+  "key": "massenet-4916720f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8783,
+  "title": "Cendrillon",
+  "mbids": [
+   "4b667f3a-ed36-4f4e-a56e-1284ac745a98"
+  ],
+  "mapping": "work",
+  "key": "massenet-4b667f3a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8798,
+  "title": "Ariane",
+  "mbids": [
+   "4d007fa3-e134-417c-933e-77c52828c01b"
+  ],
+  "mapping": "work",
+  "key": "massenet-4d007fa3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8866,
+  "title": "Rêvons, c'est l'heure",
+  "mbids": [
+   "516e0bc9-db1a-4466-88c9-cbc30ecfc041"
+  ],
+  "mapping": "work",
+  "key": "massenet-516e0bc9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8920,
+  "title": "Poème du souvenir",
+  "mbids": [
+   "551481d7-8b26-40f9-98cf-f3283567199e"
+  ],
+  "mapping": "work",
+  "key": "massenet-551481d7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9201,
+  "title": "Werther: Acte III. « Toute mon âme est là ! Pourquoi me réveiller ? » (Werther)",
+  "mbids": [
+   "692bf8ff-58ce-4eea-9c7f-8eed9a6b1d41"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9301,
+  "title": "Cendrillon: Suite d'orchestre",
+  "mbids": [
+   "6f669d22-c7a0-4a24-b0cc-8910eef90399"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9613,
+  "title": "Deux impromptus",
+  "mbids": [
+   "85270aae-4870-4c79-9734-b6674d71ded0"
+  ],
+  "mapping": "work",
+  "key": "massenet-85270aae",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9748,
+  "title": "Ève",
+  "mbids": [
+   "8f33ecad-4066-4654-99ee-5d25fcaa0aab"
+  ],
+  "mapping": "work",
+  "key": "massenet-8f33ecad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10163,
+  "title": "Le Mage",
+  "mbids": [
+   "ad3bb6ae-4b29-455f-ab29-4334204541f7"
+  ],
+  "mapping": "work",
+  "key": "massenet-ad3bb6ae",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10346,
+  "title": "Hérodiade",
+  "mbids": [
+   "ba8c4cc1-ef52-4cca-8ee7-b3a08732c029"
+  ],
+  "mapping": "work",
+  "key": "massenet-ba8c4cc1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10370,
+  "title": "Grisélidis",
+  "mbids": [
+   "bc7631da-64ec-4140-aa0f-d37e294cad6e"
+  ],
+  "mapping": "work",
+  "key": "massenet-bc7631da",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10741,
+  "title": "Sapho",
+  "mbids": [
+   "d8508564-a846-4f21-892e-37be70de3bb9"
+  ],
+  "mapping": "work",
+  "key": "massenet-d8508564",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11011,
+  "title": "Le Roi de Lahore",
+  "mbids": [
+   "ec3e6405-47a1-44ef-b7bd-ff77fed72115"
+  ],
+  "mapping": "work",
+  "key": "massenet-ec3e6405",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11046,
+  "title": "Suite from Esclarmonde",
+  "mbids": [
+   "eecb0e91-a5e6-473e-bad4-bd19ea351122"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11169,
+  "title": "Scènes alsaciennes",
+  "mbids": [
+   "f84fa358-9b63-4fd1-987e-ced1be2c76f9"
+  ],
+  "mapping": "work",
+  "key": "massenet-f84fa358",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1674,
+  "title": "La Mort de Thaïs",
+  "mbids": [
+   "674fb9e6-cf55-4988-bb3e-0f136e418841"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7469,
+  "title": "Élégie (« Ô doux printemps d'autrefois … »)",
+  "mbids": [
+   "2a003bb1-b300-3e62-bbbf-a5b3d1f280a0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7766,
+  "title": "Grande fantaisie de concert sur \"Le pardon de Ploërmel\"",
+  "mbids": [
+   "02cba3dc-2cbb-4505-b015-50369df4129b"
+  ],
+  "mapping": "work",
+  "key": "massenet-02cba3dc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7772,
+  "title": "Le Carillon",
+  "mbids": [
+   "034b8cdb-9626-4558-b19a-6f955c2b0da8"
+  ],
+  "mapping": "work",
+  "key": "massenet-034b8cdb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7773,
+  "title": "Les Alcyons",
+  "mbids": [
+   "0369b666-391e-4cda-9280-0e171e810142"
+  ],
+  "mapping": "work",
+  "key": "massenet-0369b666",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7832,
+  "title": "Sainte Thérèse prie",
+  "mbids": [
+   "06a0ff50-7ceb-45f2-b76b-3461a9ebdb16"
+  ],
+  "mapping": "work",
+  "key": "massenet-06a0ff50",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7835,
+  "title": "Suite No. 5: Scènes napolitaines: III. La fete",
+  "mbids": [
+   "06c03761-e958-4fb8-9a35-4232db378597"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 7884,
+  "title": "Élégie for Cello and Orchestra, op. 10 no. 5",
+  "mbids": [
+   "0a123fec-f21a-47b2-9c3c-36bd3fb18ca2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7894,
+  "title": "Oh! Si les fleurs avaient des yeux",
+  "mbids": [
+   "0aa1fad2-718a-4f31-8569-11525d7a7eba"
+  ],
+  "mapping": "work",
+  "key": "massenet-0aa1fad2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7895,
+  "title": "Hymne d’amour",
+  "mbids": [
+   "0abc3686-0b85-4878-bfde-24da04537785"
+  ],
+  "mapping": "work",
+  "key": "massenet-0abc3686",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7925,
+  "title": "Printemps dernier",
+  "mbids": [
+   "0d00cefe-48a1-4e32-9de9-59d509ba8920"
+  ],
+  "mapping": "work",
+  "key": "massenet-0d00cefe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8050,
+  "title": "Poème d'octobre",
+  "mbids": [
+   "14f6cc4f-22e8-48d1-a4e8-c5960df656a0"
+  ],
+  "mapping": "work",
+  "key": "massenet-14f6cc4f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8067,
+  "title": "Souhait",
+  "mbids": [
+   "16a1bc05-5be0-41ba-8532-947d0ed23c32"
+  ],
+  "mapping": "work",
+  "key": "massenet-16a1bc05",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8088,
+  "title": "Première danse",
+  "mbids": [
+   "183eef4d-5d05-4a0d-8329-01cd483abca8"
+  ],
+  "mapping": "work",
+  "key": "massenet-183eef4d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8110,
+  "title": "Ce que disent les cloches",
+  "mbids": [
+   "19a15482-a665-4270-9685-20f9b2d519df"
+  ],
+  "mapping": "work",
+  "key": "massenet-19a15482",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8170,
+  "title": "Espada",
+  "mbids": [
+   "1e226f23-ac88-4dd8-8ae3-d6c7df7af1f5"
+  ],
+  "mapping": "work",
+  "key": "massenet-1e226f23",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8186,
+  "title": "Trois marches",
+  "mbids": [
+   "1f1959a1-d44a-4f96-bcc1-9c50698528df"
+  ],
+  "mapping": "work",
+  "key": "massenet-1f1959a1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8202,
+  "title": "Suite from Les Érinnyes",
+  "mbids": [
+   "205bdcf2-0ee8-4099-b19b-7cd55702706c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8243,
+  "title": "Expressions lyriques: No. 1. Dialogue",
+  "mbids": [
+   "250170da-e32f-4110-8662-33fa8aa61d29"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8257,
+  "title": "Piano Concerto in E-flat major",
+  "mbids": [
+   "26756dab-b2f1-420a-81e3-0d07a274028c"
+  ],
+  "mapping": "work",
+  "key": "massenet-26756dab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8298,
+  "title": "La Terre Promise",
+  "mbids": [
+   "290328d1-b9ee-4795-bf86-59298668bb92"
+  ],
+  "mapping": "work",
+  "key": "massenet-290328d1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8320,
+  "title": "Expressions lyriques: No. 8. Mélancolie",
+  "mbids": [
+   "2ada5045-a1d2-483f-96e5-f2df387c5283"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8327,
+  "title": "Ariane (acte I, finale)",
+  "mbids": [
+   "2b61e257-c5b3-4e21-9b4b-294cd1a779de"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 8332,
+  "title": "Dix pièces de genre, op. 10",
+  "mbids": [
+   "2ba8c719-975b-4310-8fb8-4df9ccfcb0ab"
+  ],
+  "mapping": "work",
+  "key": "massenet-2ba8c719",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8373,
+  "title": "Baiser-Impromptu",
+  "mbids": [
+   "2e75a7af-c021-49cb-b18a-da80c1b10a01"
+  ],
+  "mapping": "work",
+  "key": "massenet-2e75a7af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8378,
+  "title": "Suite No. 6: Scènes de feerie: IV. Bacchanale",
+  "mbids": [
+   "2ee6200a-8045-46a4-9833-d150b7ed962c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8392,
+  "title": "Rêverie du pauvre",
+  "mbids": [
+   "3009eb75-c8ec-4e1d-9441-29e1cd2401e9"
+  ],
+  "mapping": "work",
+  "key": "massenet-3009eb75",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8394,
+  "title": "Brumaire",
+  "mbids": [
+   "302a7928-34db-47a3-a45f-338048e9705f"
+  ],
+  "mapping": "work",
+  "key": "massenet-302a7928",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8433,
+  "title": "Chansons des bois d’Amaranthe: II. Oiseau des bois",
+  "mbids": [
+   "3259d86f-fea5-4ffa-b34b-52a5568f7e1f"
+  ],
+  "mapping": "work",
+  "key": "massenet-3259d86f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8447,
+  "title": "Il pleuvait",
+  "mbids": [
+   "32f6cd3d-9386-45c0-8238-4ec2b86d400b"
+  ],
+  "mapping": "work",
+  "key": "massenet-32f6cd3d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8483,
+  "title": "Pensée d'automne",
+  "mbids": [
+   "3570caa9-f669-4944-bf10-49af54915577"
+  ],
+  "mapping": "work",
+  "key": "massenet-3570caa9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8498,
+  "title": "Deux berceuses",
+  "mbids": [
+   "36b6c27e-1070-4942-b4bf-46228c26ddc7"
+  ],
+  "mapping": "work",
+  "key": "massenet-36b6c27e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8518,
+  "title": "Le Cid: Akt III. „Ach! Alles sinkt hinab - Du, den ich stets im Sinn getragen”",
+  "mbids": [
+   "380977e3-003f-4661-8a8d-5c343b552180"
+  ],
+  "mapping": "work",
+  "key": "massenet-380977e3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8609,
+  "title": "Chansons des bois d’Amaranthe: IV. Ô ruisseau",
+  "mbids": [
+   "3ffd9bcd-7f22-4dc2-b4b1-7cbe3d9a7809"
+  ],
+  "mapping": "work",
+  "key": "massenet-3ffd9bcd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8624,
+  "title": "À Colombine",
+  "mbids": [
+   "4112989d-1965-4bff-96f6-8cc90f3b5a38"
+  ],
+  "mapping": "work",
+  "key": "massenet-4112989d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8655,
+  "title": "Devant la Madonne",
+  "mbids": [
+   "429b4de0-0f9d-4a54-915f-e1452a76df1d"
+  ],
+  "mapping": "work",
+  "key": "massenet-429b4de0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8725,
+  "title": "Marie‐Magdeleine : Acte III. « Ô bien aimé »",
+  "mbids": [
+   "4765defe-dfb8-4723-a9ee-58cc79ff53ee"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8732,
+  "title": "Musique pour 'bercer les petits enfants'",
+  "mbids": [
+   "47e7a2aa-ad06-4562-8999-56839a538903"
+  ],
+  "mapping": "work",
+  "key": "massenet-47e7a2aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8765,
+  "title": "Expressions lyriques: No. 4. Battements d’ailes",
+  "mbids": [
+   "4a538487-85ae-4d65-8a36-8eddda5b87be"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8874,
+  "title": "La Vierge, danse galiléenne",
+  "mbids": [
+   "51a862c3-0b16-4142-8313-ecca06e7a3a0"
+  ],
+  "mapping": "work",
+  "key": "massenet-51a862c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8880,
+  "title": "Ballet Suite from \"Hérodiade\"",
+  "mbids": [
+   "5216cb30-7b27-4167-8dbe-d60856a2df6c"
+  ],
+  "mapping": "work",
+  "key": "massenet-5216cb30",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8918,
+  "title": "Un adieu",
+  "mbids": [
+   "54fb1da1-c63e-4358-ad39-76a00b2df8e7"
+  ],
+  "mapping": "work",
+  "key": "massenet-54fb1da1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8986,
+  "title": "Poème d'un soir",
+  "mbids": [
+   "591132df-13ed-4eb6-b394-7355592bc357"
+  ],
+  "mapping": "work",
+  "key": "massenet-591132df",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9000,
+  "title": "Madrigal",
+  "mbids": [
+   "59ee778d-d9a9-41b9-ba75-01cefbc17c4b"
+  ],
+  "mapping": "work",
+  "key": "massenet-59ee778d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9026,
+  "title": "Année passée III",
+  "mbids": [
+   "5b79f1c8-6ada-4c09-a6ec-eb8cfa320195"
+  ],
+  "mapping": "work",
+  "key": "massenet-5b79f1c8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9032,
+  "title": "Suite No. 5: Scènes napolitaines: II. La procession",
+  "mbids": [
+   "5bdf1aa9-d066-4e97-8049-37cca85454f6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9069,
+  "title": "Si tu veux, Mignonne",
+  "mbids": [
+   "5f0eba4a-2302-4975-986e-54e24f79fc15"
+  ],
+  "mapping": "work",
+  "key": "massenet-5f0eba4a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9073,
+  "title": "Valse très lente",
+  "mbids": [
+   "5f421d01-4341-4935-a249-08d6364d0733"
+  ],
+  "mapping": "work",
+  "key": "massenet-5f421d01",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9091,
+  "title": "Année passée II",
+  "mbids": [
+   "603aff86-95bf-4049-9201-076b85efeb9c"
+  ],
+  "mapping": "work",
+  "key": "massenet-603aff86",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9111,
+  "title": "Les enfants",
+  "mbids": [
+   "619b00b5-1a29-451b-9e43-8c74b5be1028"
+  ],
+  "mapping": "work",
+  "key": "massenet-619b00b5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9112,
+  "title": "Première Suite, op. 11",
+  "mbids": [
+   "619c60ba-f6f8-48cd-b23b-0d527f36ae84"
+  ],
+  "mapping": "work",
+  "key": "massenet-619c60ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9113,
+  "title": "Les Érinnyes",
+  "mbids": [
+   "61a35302-a74e-423d-aa83-619f945601b7"
+  ],
+  "mapping": "work",
+  "key": "massenet-61a35302",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9118,
+  "title": "Suite No. 2: Scènes hongroises",
+  "mbids": [
+   "6208b2b6-723f-4620-a2ab-1a66b108d1e6"
+  ],
+  "mapping": "work",
+  "key": "massenet-6208b2b6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9200,
+  "title": "Chansons des bois d’Amaranthe: III. Chères fleurs",
+  "mbids": [
+   "6909c1dd-7350-4e28-bb80-0376e0b38451"
+  ],
+  "mapping": "work",
+  "key": "massenet-6909c1dd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9248,
+  "title": "Souvenez-vous, Vierge Marie !",
+  "mbids": [
+   "6c2027d3-ec87-4a27-8f61-8c1eded54fcc"
+  ],
+  "mapping": "work",
+  "key": "massenet-6c2027d3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9265,
+  "title": "Pitchounette",
+  "mbids": [
+   "6d17ad92-ce6c-4505-86fe-eb309e04efe6"
+  ],
+  "mapping": "work",
+  "key": "massenet-6d17ad92",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9291,
+  "title": "Les Enfants / Marquise",
+  "mbids": [
+   "6eee14d9-2c82-4883-89e2-eef0af9096d6"
+  ],
+  "mapping": "work",
+  "key": "massenet-6eee14d9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9310,
+  "title": "L’Âme des fleurs",
+  "mbids": [
+   "7073857c-2a4f-4872-a1af-397f72b4b447"
+  ],
+  "mapping": "work",
+  "key": "massenet-7073857c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9313,
+  "title": "Esclarmonde. Opéra romanesque en quatre actes",
+  "mbids": [
+   "7080a744-b433-470c-bef5-2cf2741492f8"
+  ],
+  "mapping": "work",
+  "key": "massenet-7080a744",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9347,
+  "title": "Sœur d’élection",
+  "mbids": [
+   "72b9a140-1b35-4fbb-ab0f-fb5f4670de07"
+  ],
+  "mapping": "work",
+  "key": "massenet-72b9a140",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9382,
+  "title": "Année passée IV",
+  "mbids": [
+   "74fc5c78-1d59-407b-b556-1e3166e28bd8"
+  ],
+  "mapping": "work",
+  "key": "massenet-74fc5c78",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9386,
+  "title": "Suite No. 6: Scènes de feerie: II. Ballet",
+  "mbids": [
+   "752c106b-370b-44bb-b4c3-486cbf529296"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9416,
+  "title": "Phèdre",
+  "mbids": [
+   "7787594e-fb82-447c-a15d-688eff6f5481"
+  ],
+  "mapping": "work",
+  "key": "massenet-7787594e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9501,
+  "title": "Valse folle",
+  "mbids": [
+   "7cf0111c-a88e-465e-ae55-4250e08ee2bd"
+  ],
+  "mapping": "work",
+  "key": "massenet-7cf0111c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9565,
+  "title": "La Nuit",
+  "mbids": [
+   "81e84d40-14eb-431b-a119-ece71e5079d2"
+  ],
+  "mapping": "work",
+  "key": "massenet-81e84d40",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9602,
+  "title": "Le roman d’Arlequin",
+  "mbids": [
+   "847cbc9e-3146-45e3-b9cd-2d7bf66a15ea"
+  ],
+  "mapping": "work",
+  "key": "massenet-847cbc9e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9603,
+  "title": "Expressions lyriques: No. 7. Nocturne",
+  "mbids": [
+   "8481dcf6-9c83-40f6-945e-bbd8c771dd15"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9626,
+  "title": "Souvenir de Venise",
+  "mbids": [
+   "861653ed-9dab-401e-bb0b-44d59c40a144"
+  ],
+  "mapping": "work",
+  "key": "massenet-861653ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9641,
+  "title": "La Vie de bohème",
+  "mbids": [
+   "870e5941-1f29-445d-a1c9-af4dd85e44cc"
+  ],
+  "mapping": "work",
+  "key": "massenet-870e5941",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9648,
+  "title": "Le sais‐tu ?",
+  "mbids": [
+   "8787fb74-ddac-4a52-8076-63060b0716b7"
+  ],
+  "mapping": "work",
+  "key": "massenet-8787fb74",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9699,
+  "title": "Suite No. 6: Scènes de feerie: I. Cortège",
+  "mbids": [
+   "8b0d17ef-1d5d-43af-8224-0934b3f464f3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9702,
+  "title": "Chérubin",
+  "mbids": [
+   "8b4e7eb9-a85a-4c01-ba93-2fb4b6482b9b"
+  ],
+  "mapping": "work",
+  "key": "massenet-8b4e7eb9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9731,
+  "title": "Départ",
+  "mbids": [
+   "8deef655-7b00-4162-93b8-e761e139bb38"
+  ],
+  "mapping": "work",
+  "key": "massenet-8deef655",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9876,
+  "title": "Sérénade d’automne",
+  "mbids": [
+   "9923bf6e-d4f2-46ea-9f5c-161add144302"
+  ],
+  "mapping": "work",
+  "key": "massenet-9923bf6e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9884,
+  "title": "Dors, ami",
+  "mbids": [
+   "998d0030-a478-42c2-9b8c-d1870c21bdce"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10004,
+  "title": "La Mélodie des baisers",
+  "mbids": [
+   "a1f18992-6419-4494-940d-7a27f3f6dcf1"
+  ],
+  "mapping": "work",
+  "key": "massenet-a1f18992",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10039,
+  "title": "2 Duos, op. 2",
+  "mbids": [
+   "a40f1419-486b-4736-9478-79ab3e2a8868"
+  ],
+  "mapping": "work",
+  "key": "massenet-a40f1419",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10077,
+  "title": "Chanson pour elle",
+  "mbids": [
+   "a6858df7-a287-4c9c-8b60-4fb259ecb544"
+  ],
+  "mapping": "work",
+  "key": "massenet-a6858df7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10097,
+  "title": "Les Yeux clos",
+  "mbids": [
+   "a7da73cc-355a-4ada-adeb-eb8b05f574ba"
+  ],
+  "mapping": "work",
+  "key": "massenet-a7da73cc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10130,
+  "title": "Passionnément",
+  "mbids": [
+   "aa7d461d-243d-4e9e-a100-0394745c30c2"
+  ],
+  "mapping": "work",
+  "key": "massenet-aa7d461d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10169,
+  "title": "Panurge : Acte I. « Touraine est un pays » (Panurge)",
+  "mbids": [
+   "ad828ec6-c0ba-48ba-81c1-2f3910911757"
+  ],
+  "mapping": "work",
+  "key": "massenet-ad828ec6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10188,
+  "title": "Suite no. 1, op. 13",
+  "mbids": [
+   "ae856384-0d18-4192-8dba-3b46ac01da23"
+  ],
+  "mapping": "work",
+  "key": "massenet-ae856384",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10267,
+  "title": "Expressions lyriques",
+  "mbids": [
+   "b44e572a-7da5-459e-adaf-b9fa3e2c4a87"
+  ],
+  "mapping": "work",
+  "key": "massenet-b44e572a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10277,
+  "title": "Six danses",
+  "mbids": [
+   "b58354ec-15be-40ad-8c98-e6c1c04cacf6"
+  ],
+  "mapping": "work",
+  "key": "massenet-b58354ec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10342,
+  "title": "Marquise",
+  "mbids": [
+   "ba4012e6-b2f0-49be-9a7b-e9dc15e36207"
+  ],
+  "mapping": "work",
+  "key": "massenet-ba4012e6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10417,
+  "title": "Méditation: Andante religioso",
+  "mbids": [
+   "bfebf05a-6707-3121-b347-cd4d8b6a2000"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 10419,
+  "title": "Fantasy for cello & orchestra: Animé – Modéré – Animé",
+  "mbids": [
+   "c028644c-cf8d-4d9b-815a-c842600fde02"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 10426,
+  "title": "Cléopâtre",
+  "mbids": [
+   "c08e0386-35a2-4aec-93c3-44972e3e8870"
+  ],
+  "mapping": "work",
+  "key": "massenet-c08e0386",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10471,
+  "title": "Suite No. 5: Scènes napolitaines: I. La danse",
+  "mbids": [
+   "c4675284-3eb6-4750-b1fa-99121d34642e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 10499,
+  "title": "Chansons des bois d’Amaranthe: V. Chantez !",
+  "mbids": [
+   "c6094765-b660-40e7-ad80-9c2daf209ebc"
+  ],
+  "mapping": "work",
+  "key": "massenet-c6094765",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10503,
+  "title": "Expressions lyriques: No. 2. Les Nuages",
+  "mbids": [
+   "c619a4bf-9e8f-495d-8f67-c05866c24d0f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10507,
+  "title": "Avril est amoureux",
+  "mbids": [
+   "c697924d-729e-4a52-9d55-e0249b342a82"
+  ],
+  "mapping": "work",
+  "key": "massenet-c697924d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10519,
+  "title": "On dit !",
+  "mbids": [
+   "c78bb7f0-94df-4e6f-b940-35f6139a7119"
+  ],
+  "mapping": "work",
+  "key": "massenet-c78bb7f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10525,
+  "title": "Manon Ballet (L’Histoire de Manon)",
+  "mbids": [
+   "c80867be-1781-4a97-aa70-8c59c583dc77"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10544,
+  "title": "Le Jongleur de Notre-Dame",
+  "mbids": [
+   "c9d886df-b7f5-467e-a027-e7d76d7daed9"
+  ],
+  "mapping": "work",
+  "key": "massenet-c9d886df",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10563,
+  "title": "Un momento musicale",
+  "mbids": [
+   "cafbcdff-9a94-443a-997d-9a16d3a4ce17"
+  ],
+  "mapping": "work",
+  "key": "massenet-cafbcdff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10595,
+  "title": "Chansons des bois d’Amaranthe: I. Ô bon printemps",
+  "mbids": [
+   "cd20682c-d924-4e07-ab66-10c61bd18057"
+  ],
+  "mapping": "work",
+  "key": "massenet-cd20682c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10599,
+  "title": "Poème pastoral",
+  "mbids": [
+   "cd877caa-7f9d-474d-92bd-c27911395d5a"
+  ],
+  "mapping": "work",
+  "key": "massenet-cd877caa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10618,
+  "title": "Deux pièces pour piano",
+  "mbids": [
+   "cf19a601-34ae-4b1c-8a78-01b75495c1c7"
+  ],
+  "mapping": "work",
+  "key": "massenet-cf19a601",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10672,
+  "title": "Cigale. Ballet en deux actes",
+  "mbids": [
+   "d3235fa5-94b1-4b54-acc6-f2dadbe4de9a"
+  ],
+  "mapping": "work",
+  "key": "massenet-d3235fa5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10700,
+  "title": "Visions",
+  "mbids": [
+   "d5375e13-da6f-43c8-92d9-44c761b4615b"
+  ],
+  "mapping": "work",
+  "key": "massenet-d5375e13",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10705,
+  "title": "Larmes maternelles",
+  "mbids": [
+   "d61371b6-9853-4b2b-9fe9-5b13221b45bd"
+  ],
+  "mapping": "work",
+  "key": "massenet-d61371b6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10715,
+  "title": "Soleil couchant",
+  "mbids": [
+   "d702e214-2ef7-49af-88b3-4c321fe78f46"
+  ],
+  "mapping": "work",
+  "key": "massenet-d702e214",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10724,
+  "title": "L’Éventail",
+  "mbids": [
+   "d7a48f60-e1e5-4b41-8339-87cbb4448a8a"
+  ],
+  "mapping": "work",
+  "key": "massenet-d7a48f60",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10752,
+  "title": "Je t'aime",
+  "mbids": [
+   "d904e417-16ca-407e-bac0-7ff2f41f5fb2"
+  ],
+  "mapping": "work",
+  "key": "massenet-d904e417",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10758,
+  "title": "Chansons des bois d'Amaranthe",
+  "mbids": [
+   "d97910d4-0912-4388-aa32-cadba78e08f7"
+  ],
+  "mapping": "work",
+  "key": "massenet-d97910d4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10775,
+  "title": "Poème d'avril, op. 14",
+  "mbids": [
+   "da7ccbf5-b6c6-4693-9f5b-8e07d61e655f"
+  ],
+  "mapping": "work",
+  "key": "massenet-da7ccbf5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10827,
+  "title": "Crépuscule",
+  "mbids": [
+   "de84e7c3-8c2d-43ad-ae0f-be5bf62b1fcd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10854,
+  "title": "Pensée de printemps",
+  "mbids": [
+   "e0a60fc1-1c89-43ad-8efc-7cd29acbbb17"
+  ],
+  "mapping": "work",
+  "key": "massenet-e0a60fc1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10856,
+  "title": "Chant provençal",
+  "mbids": [
+   "e0c6e08b-dfbb-4b9a-a344-e70054b03ac9"
+  ],
+  "mapping": "work",
+  "key": "massenet-e0c6e08b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10882,
+  "title": "Souvenance",
+  "mbids": [
+   "e340e536-f075-4dc7-b854-f130b042b692"
+  ],
+  "mapping": "work",
+  "key": "massenet-e340e536",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10918,
+  "title": "Thaïs: Acte II, Scène II. Divertissement VI. La Charmeuse (avec chant)",
+  "mbids": [
+   "e6063300-3382-4767-94d9-8e233dc4109e"
+  ],
+  "mapping": "work",
+  "key": "massenet-e6063300",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10928,
+  "title": "Elle s’en est allée",
+  "mbids": [
+   "e67b6fb3-14a1-4d06-be15-72e6ab2f1ce9"
+  ],
+  "mapping": "work",
+  "key": "massenet-e67b6fb3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10959,
+  "title": "Jour de noces",
+  "mbids": [
+   "e89b2133-7411-413c-ab1a-0474c38d43f9"
+  ],
+  "mapping": "work",
+  "key": "massenet-e89b2133",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10994,
+  "title": "L’improvisatore",
+  "mbids": [
+   "eacd44d4-6349-4d7b-ac38-4b467a35fda4"
+  ],
+  "mapping": "work",
+  "key": "massenet-eacd44d4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11032,
+  "title": "Elēģija",
+  "mbids": [
+   "edab7f66-520d-4ea9-8920-989754fdb7c8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11060,
+  "title": "Orphelines",
+  "mbids": [
+   "efaaa1b2-9951-4ebe-9ea5-7a69df3a7e17"
+  ],
+  "mapping": "work",
+  "key": "massenet-efaaa1b2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11067,
+  "title": "Don Quichotte. Opéra. Poème de Henri Cain, d'après Le Lorrain",
+  "mbids": [
+   "f076da47-9505-4bff-95c1-e1384026098d"
+  ],
+  "mapping": "work",
+  "key": "massenet-f076da47",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11070,
+  "title": "Année passée I",
+  "mbids": [
+   "f0ae7be4-e07e-4fdc-a4f3-6c4646562986"
+  ],
+  "mapping": "work",
+  "key": "massenet-f0ae7be4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11076,
+  "title": "Sérénade du passant",
+  "mbids": [
+   "f18533c9-b25c-4f18-8590-399633cb9363"
+  ],
+  "mapping": "work",
+  "key": "massenet-f18533c9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11093,
+  "title": "Le Poète et le Fantôme",
+  "mbids": [
+   "f2682a37-be50-4cb8-ad36-28e1b10a6c07"
+  ],
+  "mapping": "work",
+  "key": "massenet-f2682a37",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11121,
+  "title": "Heure vécue",
+  "mbids": [
+   "f4cf1ce7-c6fd-4272-b4db-5b9a7bc9e8e1"
+  ],
+  "mapping": "work",
+  "key": "massenet-f4cf1ce7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11155,
+  "title": "Suite No. 6: Scènes de feerie: III. Apparition",
+  "mbids": [
+   "f781d59c-fa3c-4f96-bb74-73af240c450a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ }
+]

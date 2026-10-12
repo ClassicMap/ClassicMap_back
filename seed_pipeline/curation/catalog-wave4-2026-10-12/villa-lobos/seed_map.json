@@ -1,0 +1,2858 @@
+[
+ {
+  "pieceId": 7616,
+  "title": "Bachianas Brasileiras nº 5, W391",
+  "mbids": [
+   "eac2a679-2e48-465f-9663-3b12bbc0d77e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7770,
+  "title": "Rudepoêma, W184",
+  "mbids": [
+   "032c87ab-4704-3302-8768-8eea2e09dd76"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-032c87ab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7820,
+  "title": "Bachianas Brasileiras nº 2, W568",
+  "mbids": [
+   "0600a3d1-6298-4377-9990-b81d9d35c567"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7855,
+  "title": "Symphony no. 1 \"O Imprevisto\"",
+  "mbids": [
+   "083d4289-b7df-4b98-9e99-8424291e5791"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-083d4289",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7875,
+  "title": "String Quartet no. 4",
+  "mbids": [
+   "09a2bc19-dc59-4438-a36a-8dd6cde9f653"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-09a2bc19",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7889,
+  "title": "Bachianas Brasileiras nº 4, W424",
+  "mbids": [
+   "0a746adc-c680-4539-a799-e17f935db826"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7891,
+  "title": "Little Train",
+  "mbids": [
+   "0a88ff2a-f19f-4311-a423-6ba0d44de845"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7935,
+  "title": "Sonate-fantaisie no. 1 \"Désespérance\", W051",
+  "mbids": [
+   "0db5b4cb-d65c-3d89-a510-d3abd23f2f45"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-0db5b4cb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7951,
+  "title": "String Quartet no. 13",
+  "mbids": [
+   "0eeb617a-e99f-4c98-acd1-f116f3e6e8b3"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-c3ceef1e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7961,
+  "title": "Modinhas e canções nº 1, W365",
+  "mbids": [
+   "0f9e6dcf-0dde-4845-b68b-273585dabb3f"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-0f9e6dcf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8022,
+  "title": "Guia prático nº 10, W284",
+  "mbids": [
+   "132e29b4-bcb3-4be6-92ed-a45d546b9256"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-132e29b4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8030,
+  "title": "Missa São Sebastião, W383",
+  "mbids": [
+   "13b5a50b-2659-4729-8fd0-534671ce2397"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-13b5a50b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8061,
+  "title": "Guia prático nº 4, W280",
+  "mbids": [
+   "15f4aeb0-62f3-489d-bb65-b4ccfe4c3578"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-15f4aeb0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8296,
+  "title": "Momoprecoce, W240",
+  "mbids": [
+   "28f972a8-62b0-4b3a-a362-3d6508da5b44"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-28f972a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8328,
+  "title": "Descobrimento do Brasil nº 4, W380",
+  "mbids": [
+   "2b6c882b-d9eb-4120-99e3-159beb79478b"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-2b6c882b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8417,
+  "title": "Prole do bebê nº 2, W180",
+  "mbids": [
+   "31939c15-f1b6-4c22-b65e-c962f8ab4c90"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-31939c15",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8464,
+  "title": "Schottisch choro",
+  "mbids": [
+   "342ac353-e9e4-4b00-b7e2-5a9f2634087e"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-342ac353",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8479,
+  "title": "String Quartet no. 16",
+  "mbids": [
+   "353863a6-1ee4-40cc-b7c3-90955f245bf2"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-353863a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8539,
+  "title": "Valsa da dor, W316",
+  "mbids": [
+   "3985ccfc-13a7-458f-958b-926d7abb799e"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-3985ccfc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8571,
+  "title": "String Quartet no. 2",
+  "mbids": [
+   "3bd2e4d3-ad02-4722-b50c-6d31266bccd5"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-3bd2e4d3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8580,
+  "title": "Sexteto místico, W131",
+  "mbids": [
+   "3d1c4663-febf-4b0d-8923-6f3b73dd7338"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-3d1c4663",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8595,
+  "title": "Guia prático nº 9, W359",
+  "mbids": [
+   "3ee44692-7c3b-45be-a365-5408123d978f"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-3ee44692",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8659,
+  "title": "Descobrimento do Brasil nº 2, W378",
+  "mbids": [
+   "42cf26bd-fe35-4d2f-b090-8bb52f590f54"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-42cf26bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8710,
+  "title": "Melodia sentimental (Floresta do Amazonas)",
+  "mbids": [
+   "4674526c-af44-4228-ad14-7d44960365e0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8728,
+  "title": "New York Skyline Melody, W408",
+  "mbids": [
+   "478f5afc-d0f1-46c5-a7fa-3c098030bc2e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8736,
+  "title": "Harmonica Concerto",
+  "mbids": [
+   "4846570d-a754-4bd8-ba2f-6ffa02b09c93"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-4846570d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8796,
+  "title": "String Quartet no. 17, W537",
+  "mbids": [
+   "4cce33d0-78cb-4a87-b57c-e0762e119050"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-4cce33d0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8911,
+  "title": "Guia prático nº 8, W358",
+  "mbids": [
+   "54756a07-027a-4312-9b92-5a1866740d89"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-54756a07",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8990,
+  "title": "Whistle Train",
+  "mbids": [
+   "594614d2-58e9-45b0-bf36-d09e2ca7dccf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8993,
+  "title": "Guia prático nº 3, W279",
+  "mbids": [
+   "59902b76-5bf8-49c0-b6e4-327136cbf9cb"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-59902b76",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9002,
+  "title": "Floresta do Amazonas, W551",
+  "mbids": [
+   "5a01e00a-e793-493c-b71d-e353d7b48098"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-5a01e00a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9066,
+  "title": "Choros nº 2, W198",
+  "mbids": [
+   "5eba6394-64d8-4587-8a88-5a353f84d3f9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9127,
+  "title": "Choros nº 1",
+  "mbids": [
+   "62e0cd95-c257-4931-9953-1c6b57b71ced"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9247,
+  "title": "Uirapurú, W448",
+  "mbids": [
+   "6c1bc08e-fad8-4771-8ee4-e7a4832e4753"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9465,
+  "title": "Suíte floral, op. 97, W117",
+  "mbids": [
+   "7ad0ccdb-893f-4b1e-b454-ec663548bd7f"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-7ad0ccdb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9545,
+  "title": "Guia prático nº 2, W278",
+  "mbids": [
+   "802b3a65-514b-4b47-876b-923bcb83a270"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-802b3a65",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9625,
+  "title": "String Quartet no. 1, W099",
+  "mbids": [
+   "86088062-20b5-4b3d-936b-6525cf6ee418"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9715,
+  "title": "Descobrimento do Brasil nº 1, W377",
+  "mbids": [
+   "8c81f5a5-3de2-4544-8c38-3a825c2846c8"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-8c81f5a5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9836,
+  "title": "String Quartet no. 12",
+  "mbids": [
+   "9616a8ca-09e1-4935-a090-d59050bedb6e"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-9616a8ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9914,
+  "title": "Bachianas Brasileiras nº 5",
+  "mbids": [
+   "9b04a582-d146-37db-b39c-12c103e5d25b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9935,
+  "title": "Rudepoêma, W310",
+  "mbids": [
+   "9c299802-4297-423e-9525-419cac11d580"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10014,
+  "title": "Guia prático nº 7, W283",
+  "mbids": [
+   "a2723e6a-4368-4670-bd2e-90a6ad40e694"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-a2723e6a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10142,
+  "title": "2 choros bis, W227",
+  "mbids": [
+   "ab364310-dc0d-45c3-a8df-4ad508a8a412"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-ab364310",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10198,
+  "title": "Rasga o Coração",
+  "mbids": [
+   "af528444-bfca-449f-8fb0-7a7378c0f948"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10243,
+  "title": "Bachianas Brasileiras",
+  "mbids": [
+   "b302ae53-9af1-492d-8d63-35010e2edbd6"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-b302ae53",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10249,
+  "title": "As três Marias, W411",
+  "mbids": [
+   "b3609568-74a9-40fd-b6a7-a665ff8f9430"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-b3609568",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10325,
+  "title": "String Quartet no. 6, W399",
+  "mbids": [
+   "b9182190-fa56-494f-9c48-9b9e558e5047"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-b9182190",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10372,
+  "title": "Prole do bebê nº 1, W140",
+  "mbids": [
+   "bcb08b17-5ea1-488e-8a08-ea5ae73eba71"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-bcb08b17",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10375,
+  "title": "Assobio a játo, W493",
+  "mbids": [
+   "bcf4ff0c-5e98-45db-8a54-49e4264a9919"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-bcf4ff0c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10436,
+  "title": "Symphony no. 10 \"Amerindia\", W511",
+  "mbids": [
+   "c199ecec-7918-475a-9a8c-545324832226"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-c199ecec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10445,
+  "title": "String Quartet no. 8, W446",
+  "mbids": [
+   "c2481cb7-51c4-4190-a93c-b03a0164540a"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-c2481cb7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10462,
+  "title": "String Quartet No. 13, W503",
+  "mbids": [
+   "c3ceef1e-8989-49ec-b4b5-38da0883f672"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 10493,
+  "title": "Descobrimento do Brasil nº 3, W379",
+  "mbids": [
+   "c5c14896-3027-47e5-a2d3-88484f8b960e"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-c5c14896",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10589,
+  "title": "String Quartet no. 9",
+  "mbids": [
+   "cc89a4c2-0101-471c-85f1-2756e266d412"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-cc89a4c2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10673,
+  "title": "Uirapurú, W133",
+  "mbids": [
+   "d34200dd-54cb-38d9-9fc2-18bb55c64082"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-d34200dd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10804,
+  "title": "String Quartet no. 10",
+  "mbids": [
+   "dd2201bf-2c67-400a-9c47-0d61c47836a4"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-dd2201bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10925,
+  "title": "Guia prático nº 6, W282",
+  "mbids": [
+   "e63991b8-3b64-4c7a-8fc0-839f00d132ce"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-e63991b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10991,
+  "title": "Guia prático, nº 11, W473",
+  "mbids": [
+   "ea683773-a01b-4b36-9fc4-c1a3081fd8a5"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-ea683773",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11007,
+  "title": "String Quartet no. 14, W519",
+  "mbids": [
+   "ebe6ab3d-be3b-45ab-9c4c-00b21ae2272c"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-ebe6ab3d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11012,
+  "title": "Modinhas e canções nº 2, W441",
+  "mbids": [
+   "ec42a0ba-451c-4f70-988a-f79a508002d7"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-ec42a0ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11112,
+  "title": "Suite populaire brésilienne, W020",
+  "mbids": [
+   "f44a70bd-feff-4ade-9503-eec0efdcd62f"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-f44a70bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11214,
+  "title": "Saudades das selvas brasileiras, W226",
+  "mbids": [
+   "fb0389b6-974c-4ece-8a9b-34d7c8aad724"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-fb0389b6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11288,
+  "title": "String Quartet no. 3, W112",
+  "mbids": [
+   "ffdf4c2d-7187-4e00-a37a-389884bb841d"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-ffdf4c2d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7430,
+  "title": "Alvorada na floresta tropical, W513",
+  "mbids": [
+   "00a36039-d51a-41da-ab49-5e2041c926f7"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-00a36039",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7456,
+  "title": "Concerto para violão e pequena orquestra, W501",
+  "mbids": [
+   "172dab20-d980-48b1-8634-df00c2565fcc"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-172dab20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7485,
+  "title": "Erosão, W495",
+  "mbids": [
+   "43f04da4-95be-4269-a876-d238c43bb067"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-43f04da4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7573,
+  "title": "Cinco prelúdios, W419",
+  "mbids": [
+   "aea43c88-80ca-4136-b0bd-53a8e4765279"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-aea43c88",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7681,
+  "title": "Prelude / A Wedding Song",
+  "mbids": [
+   "52a60f57-9908-4932-a291-da50c433737a"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-52a60f57",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7735,
+  "title": "New York Skyline Melody, W407",
+  "mbids": [
+   "00c3d51f-d89c-462f-83a9-91d54f773eac"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-00c3d51f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7756,
+  "title": "Magdalena: a Musical Adventure",
+  "mbids": [
+   "01f19979-106a-4e0d-8556-6174d797e295"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 7760,
+  "title": "Choros nº 8, W208",
+  "mbids": [
+   "022f448e-31bd-3e80-b5e4-21bec4fab76e"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-022f448e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7762,
+  "title": "Trio, W182",
+  "mbids": [
+   "0297f49d-4a53-49a2-9e79-f3b9c35c1c0c"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-0297f49d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7764,
+  "title": "Petizada, W048",
+  "mbids": [
+   "02bae27a-7d12-42be-9308-8fdb4ae0e8bb"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-02bae27a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7775,
+  "title": "Concerto para violoncello e orquestra nº 2, W516",
+  "mbids": [
+   "03a2575e-439b-4fd2-a74e-8762ed84a122"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-03a2575e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7777,
+  "title": "Élégie, op. 87, W108",
+  "mbids": [
+   "03be5588-2674-4d51-bc34-a882935d30fc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7787,
+  "title": "Ibericarabé, W077",
+  "mbids": [
+   "03fdad4c-697c-4565-a954-368afc662e3d"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-03fdad4c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7833,
+  "title": "Choro typico",
+  "mbids": [
+   "06a6ba37-959a-47e7-855b-d05ad29a5066"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-06a6ba37",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7950,
+  "title": "Canções típicas brasileiras, W158",
+  "mbids": [
+   "0ee6301f-9132-4755-9755-859f41c9127f"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-0ee6301f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7963,
+  "title": "Cirandas, W220",
+  "mbids": [
+   "0fcada70-6dbe-4170-8a50-7d748969a870"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-0fcada70",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7977,
+  "title": "Song of Our Country",
+  "mbids": [
+   "10db0059-efa5-4e38-a7b2-33538fdacfd2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7981,
+  "title": "Serestas, W216",
+  "mbids": [
+   "10f54e38-c633-4cf4-848d-1f491edfb00a"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-10f54e38",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8003,
+  "title": "Tarantela, W033",
+  "mbids": [
+   "120d50c8-6d05-4ef4-8833-d6d70f313193"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-120d50c8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8066,
+  "title": "Prelúdio nº 2, op. 20, W065",
+  "mbids": [
+   "169814c8-7cda-4ddf-ac5d-007f53f125be"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-169814c8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8091,
+  "title": "Canção do poeta do século XVIII, W564",
+  "mbids": [
+   "187318f3-3911-405c-8f39-887b1b6b1ec3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8092,
+  "title": "Ibericarabé, W078",
+  "mbids": [
+   "188881fc-e52e-41c9-8999-98cfbfd6c25f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8112,
+  "title": "Choros nº 11, W228",
+  "mbids": [
+   "19c2a6b4-674e-4dd7-b38e-845ef763da1f"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-19c2a6b4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8129,
+  "title": "Canções típicas brasileiras, W159",
+  "mbids": [
+   "1a8bca9d-6f1a-4bbd-8d45-d45bc056bd5c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8143,
+  "title": "Prelude Nº 5",
+  "mbids": [
+   "1c1f42dc-78e4-4c95-b1b8-0e10e92b2912"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-1c1f42dc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8154,
+  "title": "Symphony no. 2 \"Ascensão\"",
+  "mbids": [
+   "1d07c64b-9c6e-4a51-b707-350ea0204c28"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-1d07c64b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8157,
+  "title": "Rudá",
+  "mbids": [
+   "1d54959b-02e2-4094-98e6-a3de2fb4de5b"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-1d54959b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8187,
+  "title": "Samba clássico, W498",
+  "mbids": [
+   "1f327c95-a6ce-4b07-84d4-f1f3cbfe6b35"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-1f327c95",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8203,
+  "title": "Symphony no. 6 \"On the Outline of the Mountains of Brazil\"",
+  "mbids": [
+   "205ee36c-15ad-4146-ab8f-150c8ce2ce94"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-205ee36c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8250,
+  "title": "Suíte para canto e violino",
+  "mbids": [
+   "25ba6050-c54b-482d-8cfd-ddc390c8f5e4"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-25ba6050",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8259,
+  "title": "Poema singelo, W434",
+  "mbids": [
+   "26b106d2-2e9c-42cc-863f-90013ae3f702"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-26b106d2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8260,
+  "title": "Capriccio, op. 49, W091",
+  "mbids": [
+   "26b35d8d-fb06-411e-9297-40792ffaceec"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-26b35d8d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8273,
+  "title": "Marquesa de Santos, W396",
+  "mbids": [
+   "273f64b0-5e6b-457f-9b81-94e7f4d57ea1"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-273f64b0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8291,
+  "title": "Fábulas características, op. 65, W076",
+  "mbids": [
+   "28baf9be-7126-4d9e-bd59-57b04334535c"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-28baf9be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8310,
+  "title": "Ondulando, op. 31, W082",
+  "mbids": [
+   "29cde3a8-45ea-436f-872c-467fe82482a3"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-29cde3a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8315,
+  "title": "Cello Sonata no. 2, op. 66, W103",
+  "mbids": [
+   "2a6bfa84-36be-48d5-a2ec-46166c34b4a9"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-2a6bfa84",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8321,
+  "title": "Symphony no. 7",
+  "mbids": [
+   "2af88072-9ef8-4ab1-9bfe-2363e4cdf247"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-2af88072",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8355,
+  "title": "12 estudos, W235",
+  "mbids": [
+   "2d7f282e-2b1c-4dfb-93de-1cc074eef29c"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-2d7f282e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8405,
+  "title": "Pegasus",
+  "mbids": [
+   "30ecf27b-dfdb-41b1-97f0-80ff996c51e6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8409,
+  "title": "Symphony no. 4 \"A Vitória\", W153",
+  "mbids": [
+   "312f6050-abe4-4681-88db-bc9c82167d48"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-312f6050",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8435,
+  "title": "Danças características africanas, W085",
+  "mbids": [
+   "3265d477-46e3-4d10-ba1d-ea275a35eeb9"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-3265d477",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8448,
+  "title": "Concerto Grosso for Woodwind Quartet and Wind Orchestra",
+  "mbids": [
+   "330b96a5-6327-4d37-bcfe-1d301d279649"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-330b96a5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8481,
+  "title": "A lenda do caboclo, W166",
+  "mbids": [
+   "35502df5-31a9-4450-88c5-b17c52aec519"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-35502df5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8501,
+  "title": "Feijoada sem perigo",
+  "mbids": [
+   "36e73f0c-dc94-42fe-a0ef-98e840380f89"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-36e73f0c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8503,
+  "title": "Introdução aos choros, W239",
+  "mbids": [
+   "36ea30a2-12fb-463d-81e1-c02118f6d3de"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-36ea30a2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8508,
+  "title": "Cinco prelúdios",
+  "mbids": [
+   "3740c34e-11b3-4f3d-9239-bf32e68016a1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8514,
+  "title": "The Tide Came In",
+  "mbids": [
+   "37a15dfa-0141-4dfe-b2ee-aac28776a9d8"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-37a15dfa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8519,
+  "title": "Simples coletânea, W134",
+  "mbids": [
+   "3822d70b-2343-4c97-a87a-a8c93e7aaf6a"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-3822d70b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8520,
+  "title": "Sonhar, op. 14, W084",
+  "mbids": [
+   "38230b73-fd43-4bf2-b6c7-70599cda547d"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-38230b73",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8545,
+  "title": "Man of the Forest",
+  "mbids": [
+   "39e72138-b239-4e5a-b06c-772d149e0de6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8558,
+  "title": "Guia prático nº 1, W277",
+  "mbids": [
+   "3ab3b5b4-6a8c-42f7-9a59-7443373b702a"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-3ab3b5b4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8587,
+  "title": "Magnificat Alleluia, W554",
+  "mbids": [
+   "3e209803-26ee-454b-b2ff-4517ec509361"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-3e209803",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8607,
+  "title": "Lembrança do sertão, W252",
+  "mbids": [
+   "3fde8bd7-5dd2-4d1e-b824-c2d6a09688a9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8642,
+  "title": "String Trio, W460",
+  "mbids": [
+   "4200f167-9eb9-47a9-a526-1ef56e8e3955"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-4200f167",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8669,
+  "title": "Choros nº 5 \"Alma brasileira\", W207",
+  "mbids": [
+   "43925070-fab2-3c1d-bcaa-26d5a0b53d6b"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-43925070",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8670,
+  "title": "String Quartet No. 11, W481",
+  "mbids": [
+   "4394d4f3-bd84-4b5e-a051-23b99f81f40e"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-4394d4f3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8698,
+  "title": "Xangô",
+  "mbids": [
+   "45bd6fb6-9a3d-37d9-bf8c-8302e2c97b65"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8760,
+  "title": "Martírio dos insetos, W213",
+  "mbids": [
+   "4a26d0eb-56d5-43e3-94b3-90f82493319c"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-4a26d0eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8768,
+  "title": "Concerto para piano nº 4, W505",
+  "mbids": [
+   "4a7bc799-68f1-41c4-acb2-58eb60217c96"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-4a7bc799",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8790,
+  "title": "Sonata fantasia no. 2, op. 29, W083",
+  "mbids": [
+   "4c251a15-120d-4e89-8bba-9a3f215e65c7"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-4c251a15",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8821,
+  "title": "Ciclo brasileiro, W374",
+  "mbids": [
+   "4e6c985d-1433-4d14-a56d-90fad1466bfc"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-4e6c985d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8884,
+  "title": "Valsa lenta, W043",
+  "mbids": [
+   "52651faf-8fff-41c6-9582-8843e5823804"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-52651faf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8921,
+  "title": "Piano Trio no. 3, W142",
+  "mbids": [
+   "5514adc7-1e75-443d-a924-ca49dde10922"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-5514adc7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8931,
+  "title": "Fantasia para cello e orquestra, W454",
+  "mbids": [
+   "55c04d8b-5558-4500-bb70-6f0fa0b02d87"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-55c04d8b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8976,
+  "title": "Valsa-scherzo, op. 17, W070",
+  "mbids": [
+   "587b94e0-8749-4890-b6f5-a6812dae27f8"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-587b94e0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8987,
+  "title": "O Salutaris Hostia, W101",
+  "mbids": [
+   "591b3ed7-7cf9-421d-b521-7fd1d0715ce5"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-591b3ed7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8989,
+  "title": "Guia prático, W276, nº 121: Sôdade",
+  "mbids": [
+   "592f0e3f-bf9b-4686-933d-81b3cad45df3"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-592f0e3f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8994,
+  "title": "Noneto, W191",
+  "mbids": [
+   "59950518-8199-4a72-a8c7-01777c2c8cf2"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-59950518",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9033,
+  "title": "A menina das nuvens, W540",
+  "mbids": [
+   "5c00553a-90b9-4c5a-b176-b6f7b8b1c521"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-5c00553a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9034,
+  "title": "Bendita sabedoria, W 543",
+  "mbids": [
+   "5c1b140d-82a6-42ab-9382-fb9f875e9aa2"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-5c1b140d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9083,
+  "title": "O papagaio do moleque, W302",
+  "mbids": [
+   "5fb2a286-21f7-4508-83ab-220b74e94746"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-5fb2a286",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9109,
+  "title": "Canção de cristal, W494",
+  "mbids": [
+   "616e47bf-c70f-44e7-9d50-321a6c668a6d"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-616e47bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9175,
+  "title": "Concerto para piano nº 2, W487",
+  "mbids": [
+   "66497c6c-2d00-4315-8974-aabcec80fd7a"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-66497c6c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9184,
+  "title": "Naufrágio de Kleônicos, W111",
+  "mbids": [
+   "678208bb-bff5-4188-9de5-38a89a8d688a"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-678208bb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9190,
+  "title": "Dança dos Mosquitos, W187",
+  "mbids": [
+   "67e96020-a059-4d63-8525-22947643f38a"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-67e96020",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9214,
+  "title": "Pensées d'Enfant",
+  "mbids": [
+   "69ffe47f-e0a1-416d-93a2-b9677d2cf3b2"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-69ffe47f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9225,
+  "title": "Fantasia para saxophone e orquestra, W490",
+  "mbids": [
+   "6af2f096-b73b-41e5-b483-c9bbd6af71c3"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-6af2f096",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9230,
+  "title": "Quarteto para instrumentos de sopro, W230",
+  "mbids": [
+   "6b2a1f29-19c4-4747-86bf-a2806960f4c0"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-6b2a1f29",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9235,
+  "title": "Homenagem a Chopin, W474",
+  "mbids": [
+   "6b48c82e-add0-47d4-9c02-fbbd3c7b95d0"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-6b48c82e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9263,
+  "title": "Música sacra, W507",
+  "mbids": [
+   "6cf4a255-21e2-4730-a694-835083e429fa"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-6cf4a255",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9380,
+  "title": "Dança frenética, W144",
+  "mbids": [
+   "74ea371b-b108-49e4-b738-4cee720c6b36"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-74ea371b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9398,
+  "title": "Suite infantil nº 1, W053",
+  "mbids": [
+   "75d3905c-6788-4e4f-9d3f-538a96ec370b"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-75d3905c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9447,
+  "title": "Ciranda das sete notas, W325",
+  "mbids": [
+   "79fa9bf9-f243-4c67-884e-68156d0d640f"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-79fa9bf9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9451,
+  "title": "Symphony no. 12",
+  "mbids": [
+   "7a74d288-dcb1-4b6d-89d0-98b5c1f67695"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-7a74d288",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9461,
+  "title": "Berceuse, op. 50, W088",
+  "mbids": [
+   "7aafa996-7c14-43e7-ab75-30bcd93f4df7"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-7aafa996",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9478,
+  "title": "Cantiga Caicó",
+  "mbids": [
+   "7b772cbe-baff-43f5-87a0-39a684ad0b54"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9480,
+  "title": "Piano Trio no. 2, W105",
+  "mbids": [
+   "7bbd1e4b-7324-44ca-823d-4f270c6a82a6"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-7bbd1e4b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9495,
+  "title": "Choros nº 7, W199",
+  "mbids": [
+   "7c927d2a-2a61-404e-b689-64272828e2b6"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-7c927d2a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9504,
+  "title": "Symphony no. 3 \"War\"",
+  "mbids": [
+   "7d154b69-3562-4359-b422-dee66be01979"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-7d154b69",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9533,
+  "title": "Valse-Chôro",
+  "mbids": [
+   "7ef14522-875a-4fbb-9144-14ee665d3f18"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-7ef14522",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9535,
+  "title": "Concerto para harpa e orquestra, W515",
+  "mbids": [
+   "7f2083a8-2e4e-41f5-bfe9-fbd90a56093f"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-7f2083a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9541,
+  "title": "Melodia da montanha (Serra da Piedade de Belo Horizonte)",
+  "mbids": [
+   "7fe00825-ff16-4958-8601-b975525ff74d"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-7fe00825",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9546,
+  "title": "José, W455",
+  "mbids": [
+   "804b3dcd-9993-4516-b26c-c245a912c543"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-804b3dcd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9557,
+  "title": "Desejo",
+  "mbids": [
+   "81102c41-2206-4c6d-a108-f0c4862996d4"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-81102c41",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9573,
+  "title": "アリア",
+  "mbids": [
+   "82b257ea-3690-48ae-bf37-40089b838e4e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9575,
+  "title": "Choros nº 5 \"Alma brasileira\"",
+  "mbids": [
+   "82f87bed-6897-4cd7-a5df-c659bd149e83"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9668,
+  "title": "Vela-X Pulsar",
+  "mbids": [
+   "89373a80-348e-4f89-81dd-1a786580775d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9717,
+  "title": "Four Songs from \"The Forest of the Amazon\"",
+  "mbids": [
+   "8ca4b81d-b4ce-409b-9ce8-da15d4768b60"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9737,
+  "title": "Gênesis, W522",
+  "mbids": [
+   "8ec6dfa4-a44e-433c-88ff-3ec03f248019"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-8ec6dfa4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9756,
+  "title": "Choros nº 6, W219",
+  "mbids": [
+   "8f8e68e7-5a56-3d9c-ae86-6c6793d26708"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-8f8e68e7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9769,
+  "title": "Cortejo nupcial",
+  "mbids": [
+   "90a48b14-f9d3-4616-9a71-7ce725a55d86"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9807,
+  "title": "Amazonas, W118",
+  "mbids": [
+   "934e62a8-c562-4f5d-9012-95e10316020d"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-934e62a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9815,
+  "title": "Duas lendas ameríndias em nheengatu, W506",
+  "mbids": [
+   "93ff14e6-f894-44c8-825c-34413fc13f53"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-93ff14e6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9817,
+  "title": "Fantasia concertante, W517",
+  "mbids": [
+   "9409fb68-6f23-4bb3-a4a7-95c5712c1b3d"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-9409fb68",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9824,
+  "title": "Valsa romântica, W016",
+  "mbids": [
+   "949d4ace-4a4b-474e-98d1-9cd61e4d82c5"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-949d4ace",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9837,
+  "title": "Veleiro",
+  "mbids": [
+   "9618b812-de6e-4cdc-bba7-8d5fbd8c6956"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9849,
+  "title": "Martírio dos insetos",
+  "mbids": [
+   "974021e1-1881-458f-876c-92e7c3333c2e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9886,
+  "title": "Veleiros, W562",
+  "mbids": [
+   "999025f2-17ae-4bfd-be4d-83cbe3aebc1c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9896,
+  "title": "Danças características africanas, W107",
+  "mbids": [
+   "9a016627-8ddf-4ba9-9c82-13efd273f8f1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9910,
+  "title": "Histórias da Carochinha, W148",
+  "mbids": [
+   "9aa78bc0-d4e0-4541-907e-d9444574f57a"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-9aa78bc0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9916,
+  "title": "String Quartet no. 15, W523",
+  "mbids": [
+   "9b31a054-291a-4867-b7aa-e8f5a2f91081"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-9b31a054",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9919,
+  "title": "Ouverture de l'homme Tel, W508",
+  "mbids": [
+   "9b66eed6-ce7d-4478-9180-e56d1141e489"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-9b66eed6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9946,
+  "title": "Canção do poeta do século XVIII, W514",
+  "mbids": [
+   "9ce0ed98-20b6-42ac-8199-1188e7dda2d8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9960,
+  "title": "Suite from Magdalena",
+  "mbids": [
+   "9e8ff0ec-33cd-4ee3-a8b0-258e6d73662a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9990,
+  "title": "Brinquedo de roda, W045",
+  "mbids": [
+   "a0ebab85-dbe9-42cc-87c5-99dc30cd75c7"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-a0ebab85",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9996,
+  "title": "Solfejos, 2.º volume, W459",
+  "mbids": [
+   "a1a4cbbc-9994-44b3-8997-933cfe31bfd0"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-a1a4cbbc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10006,
+  "title": "Francette et Pià, W237",
+  "mbids": [
+   "a219fa72-c210-480d-8c0d-33e5a825fa88"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-a219fa72",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10026,
+  "title": "Amor y perfidia, W135",
+  "mbids": [
+   "a32d31c0-a3e9-42d0-806d-fef74baaea78"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-a32d31c0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10050,
+  "title": "Amazonas, bailado indígena Brasileiro, W119",
+  "mbids": [
+   "a483847f-f927-4b2a-846e-4a36d817305f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10059,
+  "title": "Piano Trio no. 1, op. 25, W042",
+  "mbids": [
+   "a55a5888-1cc7-4da3-a45c-516e47d8b939"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-a55a5888",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10063,
+  "title": "Fantasia em três movimentos em forma de chôros",
+  "mbids": [
+   "a5e99424-2418-41a7-9352-1a1ac70bc54b"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-a5e99424",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10068,
+  "title": "Duo para oboé e fagote, W535",
+  "mbids": [
+   "a616ec2c-74b3-4d53-aa90-5870dc7f7bcb"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-a616ec2c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10080,
+  "title": "Dawn Chorus",
+  "mbids": [
+   "a69c937e-95b8-403f-9ff7-5d61048ce24c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10087,
+  "title": "Valsa sentimental, W373",
+  "mbids": [
+   "a733d365-edaf-4a35-a60b-d10df0faab18"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-a733d365",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10106,
+  "title": "Quinteto em forma de chôros, W231",
+  "mbids": [
+   "a8ce40ab-7ac3-41a5-aff4-247b041c80d3"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-a8ce40ab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10115,
+  "title": "Panis Angelicus, W509",
+  "mbids": [
+   "a979f6e6-255a-4ed9-a842-764e75d89e90"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-a979f6e6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10131,
+  "title": "Cortejo nupcial, W491",
+  "mbids": [
+   "aa80a92e-4183-4d10-86b6-dfe50d7a5565"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-aa80a92e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10229,
+  "title": "Prelude Nº1",
+  "mbids": [
+   "b1a456dd-21ce-4b91-b230-79bf797252ed"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10230,
+  "title": "Concerto para piano nº 1, W453",
+  "mbids": [
+   "b1a4ca5f-f4c7-4fed-9b42-16fe190497fb"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-b1a4ca5f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10261,
+  "title": "Simples, W040",
+  "mbids": [
+   "b3f6a693-3bd5-4a5b-bace-e210347da314"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-b3f6a693",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10303,
+  "title": "Tristorosa, W034",
+  "mbids": [
+   "b72c37eb-558b-45f1-b370-b3bddec0c767"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-b72c37eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10309,
+  "title": "Choros nº 3 \"Picapau\", W206",
+  "mbids": [
+   "b7dae847-1f87-472a-9fb4-ed92c8cfc593"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-b7dae847",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10337,
+  "title": "Suite infantil nº 2, W067",
+  "mbids": [
+   "b9f203fc-26b0-4039-9afe-4e0c57f8c837"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-b9f203fc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10341,
+  "title": "Sonhar, op. 14, W086",
+  "mbids": [
+   "ba28015e-6429-45cb-964d-f2119b896e91"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-ba28015e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10385,
+  "title": "Bachianas Brasileiras nº 2, W569: III. Dansa (Lembrança do sertão)",
+  "mbids": [
+   "bd7ed50f-8411-4971-a005-650dd66f07b1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10416,
+  "title": "Caixinha de música quebrada, W256",
+  "mbids": [
+   "bfe42187-0325-4f16-b36b-987c78a38694"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-bfe42187",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10437,
+  "title": "String Quartet no. 7, W435",
+  "mbids": [
+   "c1de0652-bc07-4582-b299-b3340a453400"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-c1de0652",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10438,
+  "title": "Duo para violino e viola, W463",
+  "mbids": [
+   "c1fd659a-6bbc-4983-aaf4-2b52ce87f75f"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-c1fd659a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10455,
+  "title": "Sul America, W217",
+  "mbids": [
+   "c360ccaa-02e9-4e3f-aa07-a9ba0deddbf0"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-c360ccaa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10480,
+  "title": "Distribuição de flores, W381",
+  "mbids": [
+   "c4adaf81-e2b4-40f3-8e35-d27e93cc09ed"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-c4adaf81",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10494,
+  "title": "Préces sem palavras",
+  "mbids": [
+   "c5cb0da4-463d-42dd-9884-877c2801f36a"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-c5cb0da4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10552,
+  "title": "Choros nº 4, W218",
+  "mbids": [
+   "ca3f715a-8cbb-3828-9401-955992ac7437"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-ca3f715a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10565,
+  "title": "Zoé, W156",
+  "mbids": [
+   "cb09f41a-1a2f-43b6-b144-32e5e7d72554"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-cb09f41a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10583,
+  "title": "Concerto para piano nº 5, W521",
+  "mbids": [
+   "cc4fe6f3-ef98-482f-9c42-fbdbff8186e8"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-cc4fe6f3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10591,
+  "title": "Divagação, W461",
+  "mbids": [
+   "ccc33ef7-dbef-4759-b194-5901539febdf"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-ccc33ef7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10602,
+  "title": "Suíte para quinteto duplo de cordas, W054",
+  "mbids": [
+   "ce0000f9-c9be-4fd5-808e-aeef8d110b5a"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-ce0000f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10658,
+  "title": "Canções de cordialidade",
+  "mbids": [
+   "d1e9a0ba-8cad-4c6f-abc3-e3c36bfe912e"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-d1e9a0ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10680,
+  "title": "Fantasia Concertante, W549",
+  "mbids": [
+   "d3aa7622-39e0-4b70-be8b-a8ba4a0bbd8c"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-d3aa7622",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10742,
+  "title": "Bachiana Brazil, No. 5",
+  "mbids": [
+   "d8588f16-045a-494d-a93d-abb6b2302dfd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10753,
+  "title": "O canto do cisne negro, W123",
+  "mbids": [
+   "d90b65a7-1758-3113-a047-42b0e45367db"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10754,
+  "title": "A fiandeira, W176",
+  "mbids": [
+   "d914753c-4960-4fdc-b23c-429a9bc0b383"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-d914753c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10764,
+  "title": "Concerto para violoncello e orquestra nº 1, W095",
+  "mbids": [
+   "d9c50603-0828-4147-a1f8-92f0917699df"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-d9c50603",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10773,
+  "title": "Estrela é lua nova, W331",
+  "mbids": [
+   "da35c0b2-9000-49f2-a333-ba1cf8952463"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10776,
+  "title": "Quinteto instrumental, W538",
+  "mbids": [
+   "da7fd04a-df47-4046-8a7c-fcbe66d8e256"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-da7fd04a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10782,
+  "title": "Quarteto simbólico, W181",
+  "mbids": [
+   "db2f5e24-b27d-4259-9686-5c45fd8eee2f"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-db2f5e24",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10785,
+  "title": "Violin Sonata no. 3, W171",
+  "mbids": [
+   "db43a2a8-9d84-498e-b1a1-a14f6efddbf5"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-db43a2a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10791,
+  "title": "Canção do poeta do século XVIII, W486",
+  "mbids": [
+   "db8ced9b-e913-49ad-9fc0-400cdad59e46"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-db8ced9b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10809,
+  "title": "Concerto para piano nº 3, W512",
+  "mbids": [
+   "dd45cb89-fc5b-4439-88bc-3954d46bde19"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-dd45cb89",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10811,
+  "title": "Guia prático nº 5, W281",
+  "mbids": [
+   "dd57bbba-1aab-4cd6-9012-59609f74501e"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-dd57bbba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10816,
+  "title": "Pequena suíte, W064",
+  "mbids": [
+   "ddb64aa5-7ea4-45f8-8d82-4d0c9bb1db09"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-ddb64aa5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10826,
+  "title": "Canto orfeônico, 2.º volume, W500",
+  "mbids": [
+   "de78ad00-b4ce-4ce8-b656-86f241ed32ca"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-de78ad00",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10838,
+  "title": "Martírio dos insetos, W214",
+  "mbids": [
+   "df47c794-d95b-4c87-91ef-f1dbce73fa22"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10848,
+  "title": "Carnaval das crianças, W157",
+  "mbids": [
+   "e03daff3-d05f-4de4-b8be-995a180662b4"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-e03daff3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10860,
+  "title": "Sinfonietta no. 1 \"Em memória de Mozart\", W115",
+  "mbids": [
+   "e0ef0241-ec44-4f7c-80ff-45655f56c532"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-e0ef0241",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10868,
+  "title": "Cirandinhas, W210",
+  "mbids": [
+   "e2087d8b-8a5b-46d2-bf1a-a864ae999b87"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-e2087d8b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10931,
+  "title": "Fantasia para saxophone e piano",
+  "mbids": [
+   "e6c95bff-6ff8-4bd6-8309-ec06c0557d1b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10974,
+  "title": "Invocação em defesa da pátria, W439",
+  "mbids": [
+   "e9bbf949-47ad-4f6b-b90c-bb6c9d94e562"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-e9bbf949",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11006,
+  "title": "כשהשושנה נובלת",
+  "mbids": [
+   "ebe18ab2-2c25-41ad-8a77-c74906863d7f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11051,
+  "title": "Bailado infantil, W035",
+  "mbids": [
+   "ef0c59a6-c8d5-4711-8a33-1efce78ce723"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-ef0c59a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11165,
+  "title": "Choros nº 12, W233",
+  "mbids": [
+   "f81a477b-500c-4a19-8d34-49c6e07d1f42"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-f81a477b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11186,
+  "title": "Bailado infernal, W160",
+  "mbids": [
+   "f92f16bb-8979-47f3-a948-1f029c3f2c18"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11204,
+  "title": "Improviso, W096",
+  "mbids": [
+   "fa50c1a4-0ce4-4345-b76e-67476caf7ba8"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-fa50c1a4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11240,
+  "title": "Choros nº 9, W232",
+  "mbids": [
+   "fd1f6cc9-ab31-37a0-aedf-2327e055369d"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-fd1f6cc9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11262,
+  "title": "The Emperor Jones, W531",
+  "mbids": [
+   "fddd8820-37a8-4ac4-9257-24f19aac8202"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-fddd8820",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11264,
+  "title": "Epigramas irônicos e sentimentais, W183",
+  "mbids": [
+   "fdfb762c-40bd-4b6d-9c22-d9d39b876ab6"
+  ],
+  "mapping": "work",
+  "key": "villa-lobos-fdfb762c",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

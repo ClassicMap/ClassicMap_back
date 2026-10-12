@@ -1,0 +1,1858 @@
+[
+ {
+  "pieceId": 2799,
+  "title": "<가야네> 모음곡 1번",
+  "mbids": [
+   "e7744d2c-85ab-4f20-b825-d10fede89f8b"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-e7744d2c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 830,
+  "title": "Sabre Dance",
+  "mbids": [
+   "91715ca9-43d5-49d9-a700-3cba390c8267"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-91715ca9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1038,
+  "title": "Flute Concerto",
+  "mbids": [
+   "16bdcfe5-4f25-49d3-9f37-d7478457f039"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-16bdcfe5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1071,
+  "title": "Piano Concerto, op. 38",
+  "mbids": [
+   "1a2ae0f0-b3ef-45ce-8ca7-f3a849850322"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-1a2ae0f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1449,
+  "title": "Ivan Sings",
+  "mbids": [
+   "496640bd-b530-4ef9-b872-735b80a3b310"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2253,
+  "title": "Violin Concerto in D minor, op. 46",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2442,
+  "title": "Sonata-Monologue for violin solo",
+  "mbids": [
+   "bea7668f-0d9a-4a1b-80c7-c8c3c6da0521"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-bea7668f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2492,
+  "title": "Masquerade",
+  "mbids": [
+   "c4fbe53c-1feb-38a6-8a74-7f39ac528ab3"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-c4fbe53c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2520,
+  "title": "Circus: Ballet Music",
+  "mbids": [
+   "c8bb432d-d8d0-4216-81be-675b321993de"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2584,
+  "title": "Masquerade Suite",
+  "mbids": [
+   "cf67a9db-e0e3-4335-a5f4-f1f29ef5472b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2964,
+  "title": "Gayane: Sabre Dance",
+  "mbids": [
+   "f9afd00b-141f-4071-83af-db9dfc78755f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 486,
+  "title": "어린이 앨범 제2권 Op. 100",
+  "mbids": [
+   "1a9e03db-dfe0-409a-9af1-804afbe510d3"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-1a9e03db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 555,
+  "title": "Flute Concerto in D minor, op. 46B",
+  "mbids": [
+   "66397e9c-695e-4b8e-b9ad-30bf8e48fc70"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 599,
+  "title": "Children’s Album, Book I, op. 62",
+  "mbids": [
+   "9bc6448e-c530-4edf-a6be-844945eb2f48"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-9bc6448e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 603,
+  "title": "Triumphal Poem (Festive Poem) in D major for orchestra, op. 75",
+  "mbids": [
+   "a372eda3-fc64-4009-8ab8-42419639af20"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-a372eda3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 633,
+  "title": "Piano Sonata in E-flat major, op. 95",
+  "mbids": [
+   "c8728f5c-70b4-43bf-96ac-c5be95753092"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-c8728f5c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 713,
+  "title": "Charlotte for Ever",
+  "mbids": [
+   "216abcee-dcfb-4b01-aaf9-64c08c252c2b"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-216abcee",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 725,
+  "title": "Spartacus, op. 82",
+  "mbids": [
+   "eda2e2b3-4d74-4966-83a8-b32c47e561db"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 831,
+  "title": "The Onedin Line",
+  "mbids": [
+   "a1bd5015-07a0-4bfe-8eae-e6eec97b6f60"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 835,
+  "title": "Concerto-Rhapsody for violin and orchestra in B-flat minor, op. 96",
+  "mbids": [
+   "002ff6af-6806-4cfc-bcc9-514fd6ecb896"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-002ff6af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 847,
+  "title": "Second Suite from the ballet \"Spartacus\" for orchestra, op. 82B",
+  "mbids": [
+   "012651dc-cbb6-4239-8e58-87e19ac2ca30"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 856,
+  "title": "Music to the Film \"Salavat Iulaev\", op. 49",
+  "mbids": [
+   "021ce6da-7b5a-47e7-a3bb-9a20fb1f5e0e"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-021ce6da",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 864,
+  "title": "Suite from Music to the Film \"The Battle of Stalingrad\" for orchestra, op. 74a",
+  "mbids": [
+   "02f78590-dd27-4f79-a5f3-c0608db7b358"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 886,
+  "title": "Nocturne for violin and piano, op. 48c",
+  "mbids": [
+   "0565cd8d-400e-4827-8476-45424e9f48aa"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 888,
+  "title": "Music to the Film \"The Battle of Stalingrad\", op. 74",
+  "mbids": [
+   "05953c4e-4ece-40bc-9e33-e1694d691d9a"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-05953c4e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 903,
+  "title": "Arrangement of Piano Concerto in D-flat major for two pianos, op. 38a",
+  "mbids": [
+   "0782c0ef-386e-4e49-8ea8-8f053d686945"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 966,
+  "title": "Arrangement of Violin Concerto in D minor for violin and piano, op. 46a",
+  "mbids": [
+   "0ea4d8a1-8563-4673-9c06-3f057e67e222"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 978,
+  "title": "Sonatina in C major for piano, op. 93",
+  "mbids": [
+   "0f9a4cae-57c3-431b-a2df-5ce8f4a152c6"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-0f9a4cae",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 979,
+  "title": "Zdravitsa",
+  "mbids": [
+   "0fbe8249-dd76-4cdc-af70-8faa09fa27d2"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-0fbe8249",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 997,
+  "title": "Triumphal Fanfares in F major for trumpets and drums, op. 105",
+  "mbids": [
+   "116b8be6-7e03-48e5-889c-30886bdb8afb"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-116b8be6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1017,
+  "title": "(Everytime They Play the) Sabre Dance",
+  "mbids": [
+   "1390df00-f65e-47da-a40e-e2cfc7eac921"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1018,
+  "title": "Music to the Film “Prisoner no. 217”, op. 64",
+  "mbids": [
+   "1396628a-af0d-4cea-97f5-0e296c413398"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-1396628a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1019,
+  "title": "Pantomime for oboe and piano, op. 13",
+  "mbids": [
+   "13c9dae2-4958-49b2-9b05-67f9c0608884"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-13c9dae2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1022,
+  "title": "Music to the Documentary Film \"The Tocsin of Peace\", op. 98",
+  "mbids": [
+   "1426a53d-0984-4281-bf1f-da1d6c43d2b5"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-1426a53d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1033,
+  "title": "Army March no. 1 in A-flat major for wind orchestra, op. 20",
+  "mbids": [
+   "158e01c0-6bca-4c04-9538-84964e445c31"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-158e01c0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1043,
+  "title": "Arrangement of Concerto-Rhapsody in D-flat major for two pianos, op. 102a",
+  "mbids": [
+   "16e16ec4-fcae-463c-846c-e5653940a24d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1050,
+  "title": "Third Suite from the ballet “Gayaneh” for orchestra, op. 55",
+  "mbids": [
+   "17e6f714-f2a4-4ded-aefc-dc987328721f"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-17e6f714",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1063,
+  "title": "Dance Suite for orchestra, op. 32",
+  "mbids": [
+   "197aec7a-05b9-4067-98bb-6019ec518897"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-197aec7a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1078,
+  "title": "Music to Iu. Chepurin's Play \"Spring Stream\", op. 81",
+  "mbids": [
+   "1ac32873-4a38-49b9-9502-66958ecf2dc1"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-1ac32873",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1082,
+  "title": "Poem in C-sharp minor for piano, op. 12",
+  "mbids": [
+   "1b5f2299-67f3-4edd-b8c1-5e9352106f96"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-1b5f2299",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1086,
+  "title": "Music to V. Shkvarkin's Play \"The Last Day\", op. 63",
+  "mbids": [
+   "1be4a1ba-5579-47b8-847e-5b9edaa9a9cb"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-1be4a1ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1092,
+  "title": "\"Budionovka\", mass dance for piano, op. 47",
+  "mbids": [
+   "1c642caa-f1ef-4d35-b589-1e5cd6809e6a"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-1c642caa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1096,
+  "title": "State Anthem of the Armenian SSR for chorus and symphony orchestra, op. 60",
+  "mbids": [
+   "1d2b6b12-abc9-43ab-b26b-f0ca21926b40"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-1d2b6b12",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1117,
+  "title": "String Quartet, op. 23",
+  "mbids": [
+   "1f474618-555f-4db3-be5f-d0f659baea85"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-1f474618",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1169,
+  "title": "March from the film \"Zangezur\" for wind orchestra, op. 42a",
+  "mbids": [
+   "2436c1a0-c010-4447-88b9-f9239c82189f"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-2436c1a0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1179,
+  "title": "Mass Dance for bayan, op. 25",
+  "mbids": [
+   "25f4c522-61b5-4bcd-9d83-1c631d57cdc6"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-25f4c522",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1182,
+  "title": "Choreographic Waltz for piano, op. 58",
+  "mbids": [
+   "26144d99-b810-4502-aba6-a7fe6453ced2"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-26144d99",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1225,
+  "title": "Happiness, ballet in three acts, op. 43",
+  "mbids": [
+   "2c58b01b-9e1a-4f17-8041-2b47ea214dae"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-2c58b01b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1231,
+  "title": "Dance no. 1 in B-flat major for violin and piano, op. 11",
+  "mbids": [
+   "2d1f0b81-c8ce-4913-a6e1-6a407061912f"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-2d1f0b81",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1236,
+  "title": "Music to A. Paronian's Play \"The Eastern Dentist\", op. 17",
+  "mbids": [
+   "2dccb864-38f6-49e1-a1dd-5169be72c62e"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-2dccb864",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1242,
+  "title": "Music to G. Sundukian's Play \"Khatabala\", op. 15",
+  "mbids": [
+   "2e62b06e-fd53-4d90-ae97-79a07841e3f8"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-2e62b06e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1250,
+  "title": "Music to N. Nikitin's Play \"Baku\", op. 40",
+  "mbids": [
+   "2f23435c-f5b5-4213-a0c6-119f53f8771a"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-2f23435c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1263,
+  "title": "Concerto-Rhapsody, op. 99",
+  "mbids": [
+   "30f1cafe-9767-44d2-9822-4795927eb4db"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1289,
+  "title": "Piece for cello and piano, op. 7",
+  "mbids": [
+   "35b69010-c4be-4f59-873e-54b4cb9574ff"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-35b69010",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1290,
+  "title": "Symphony no. 2 “The Bell” in E minor, op. 56",
+  "mbids": [
+   "35c5492f-6bf7-467b-b89a-16880d37192e"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-35c5492f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1311,
+  "title": "Music to W. Shakespeare's Tragedy \"Macbeth\", op. 84",
+  "mbids": [
+   "386743eb-e137-4187-a2b8-d9e2d450bcb7"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-386743eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1322,
+  "title": "Dream for cello and piano, op. 3",
+  "mbids": [
+   "3a0055e6-fe77-457f-bc6d-933e6617578e"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-3a0055e6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1332,
+  "title": "Masquerade Suite, op. 48a",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1334,
+  "title": "March of the Gladiators",
+  "mbids": [
+   "3afbcf8e-19c7-4c3c-b7f2-040a60a2fd4f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1373,
+  "title": "Symphony no. 3 in C major “Simfoniya-poema”, op. 67",
+  "mbids": [
+   "3f60b2c9-bd23-411a-86d6-826cf7cbeb95"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-3f60b2c9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1376,
+  "title": "Music to the Documentary Film \"Vladimir Ilich Lenin\", op. 72",
+  "mbids": [
+   "40046af5-4e12-4750-bf2a-45aaceef3e41"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-40046af5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1414,
+  "title": "Fourth Suite from the ballet \"Spartacus\", op. 82d",
+  "mbids": [
+   "44309282-9b79-4019-b1a1-7fac9d4d69e7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1419,
+  "title": "Light Lunch",
+  "mbids": [
+   "44d7a05e-ded3-3937-8c8f-75f5726bb83c"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-44d7a05e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1426,
+  "title": "Fantasy on Russian Themes for symphony orchestra, op. 59",
+  "mbids": [
+   "465c2a6e-8959-445a-a5a3-607ce8ff8816"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-465c2a6e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1434,
+  "title": "Music to G. Sundukian's Play \"The Ravaged Hearth\", op. 36",
+  "mbids": [
+   "476e26d1-e178-45d8-b443-062d509ff725"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-476e26d1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1445,
+  "title": "Suite from the Music to Lavrenev’s Play “Lermontov” for orchestra, op. 94",
+  "mbids": [
+   "490dc702-8992-4929-9f10-45fda5944871"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-490dc702",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1492,
+  "title": "Symphony no. 1 in E minor, op. 35",
+  "mbids": [
+   "4e625a39-8224-4228-8676-5642206ee647"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-4e625a39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1502,
+  "title": "Lezghinka",
+  "mbids": [
+   "4fee2257-f445-42aa-9725-a02615143866"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1509,
+  "title": "Variations on the Theme \"Solveig\" for piano, op. 16",
+  "mbids": [
+   "50755afd-29ba-4998-976b-55a7ce4d33ea"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-50755afd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1550,
+  "title": "Armenian Dances",
+  "mbids": [
+   "55e4a3f6-10c7-40e9-b378-5459e221bd0e"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-55e4a3f6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1553,
+  "title": "Dance no. 3 for piano, op. 31",
+  "mbids": [
+   "561af6c9-cc34-4c1c-b024-98fded5de64d"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-561af6c9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1562,
+  "title": "Poem for Piano, op. 1",
+  "mbids": [
+   "581c143a-ec45-4f95-9dac-4956717e2e93"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-581c143a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1570,
+  "title": "Concerto for Cello and Orchestra in E minor, op. 65",
+  "mbids": [
+   "5910bfb5-ff4f-4728-a518-f51a4130f9ba"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-5910bfb5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1629,
+  "title": "Music to S. Mikhalkov's Play \"Ilia Golovin\", op. 73",
+  "mbids": [
+   "611ce50b-ed87-4581-b1ae-d9c3cfea1f52"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-611ce50b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1642,
+  "title": "Gayaneh: Sabre Dance",
+  "mbids": [
+   "628186e4-895c-4fcf-8735-a48e8b5eb8fc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1650,
+  "title": "Music to W. Shakespeare's Tragedy \"Macbeth\", op. 33",
+  "mbids": [
+   "63906474-8914-4aec-a4a2-f3afb1c1b45d"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-63906474",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1670,
+  "title": "Music to I. Mikitenko's Play \"An Affair of Honour\", op. 22",
+  "mbids": [
+   "6693932c-2256-4df8-8ac1-42b1d8d56528"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-6693932c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1672,
+  "title": "Trio in C minor for B-flat Clarinet, Violin and Piano, op. 30",
+  "mbids": [
+   "66e44a67-9b4f-4f5c-987d-783af80a598d"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-66e44a67",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1680,
+  "title": "Three Pieces for two pianos, op. 61",
+  "mbids": [
+   "6834b40f-137c-4401-86b5-9edbdc47243a"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-6834b40f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1687,
+  "title": "Gayaneh, op. 50",
+  "mbids": [
+   "693e681e-98a1-4d21-9bc8-e084a248461d"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-693e681e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1692,
+  "title": "Gayaneh: Usundara",
+  "mbids": [
+   "69e85f8a-43a2-48ab-a1fc-f6cfe67c76fd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1708,
+  "title": "Concerto-Rhapsody for piano and orchestra in D-flat major, op. 102",
+  "mbids": [
+   "6bef8c2d-9684-42d7-b06e-d4cd690cea1c"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-6bef8c2d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1729,
+  "title": "Polovtsian Dances no. 17",
+  "mbids": [
+   "6e55e5e1-fdef-4995-bc7c-e604fd15a65f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1744,
+  "title": "Music to the Film “Secret Mission”, op. 77",
+  "mbids": [
+   "6ff3ddee-deec-4108-a615-359f4050302e"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-6ff3ddee",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1786,
+  "title": "Suite from Lermontov's Drama \"Masquerada\" for piano, op. 48b",
+  "mbids": [
+   "752e80b8-fd91-4f76-9d81-c51c7d7c1c2c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1797,
+  "title": "Music to the Film \"The Garden\", op. 44",
+  "mbids": [
+   "75d69c2c-16a1-42a3-bf3b-dc9a7fa48daa"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-75d69c2c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1802,
+  "title": "Andantino for piano, op. 5",
+  "mbids": [
+   "766d84d2-e147-4d12-a56e-c552142e4496"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-766d84d2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1807,
+  "title": "Concerto-Rhapsody in D minor for cello and orchestra, op. 99",
+  "mbids": [
+   "76dc7239-b442-4238-9c13-8c3cf14df2bf"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-76dc7239",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1819,
+  "title": "Suite for piano, op. 28",
+  "mbids": [
+   "77eb7981-f30a-43db-8139-fc3a820fb99e"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-77eb7981",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1833,
+  "title": "“Ode To Joy”, cantata for mezzo-soprano, mixed chorus, ensemble of violinists, ensemble of harps and orchestra, op. 88",
+  "mbids": [
+   "798014bb-bcdb-435d-a042-0afff0c6517e"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-798014bb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1845,
+  "title": "Music to the Film of K. Simonov's Play \"The Russian Question\", op. 70",
+  "mbids": [
+   "7b10b2f7-e5a1-42bc-aa32-a24c5881f3ac"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-7b10b2f7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1860,
+  "title": "Suite from the Music to the Film \"Othello\" for orchestra, op. 87a",
+  "mbids": [
+   "7d09fa68-b2cc-4a2f-a7c2-93230376df61"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1864,
+  "title": "Dance in G minor for piano, op. 9",
+  "mbids": [
+   "7d354085-f3be-4b89-9f10-f2e67aec2058"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-7d354085",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1892,
+  "title": "Music to M. Aliger's Play \"A Tale of Truth\", op. 68",
+  "mbids": [
+   "809bf906-e0bd-44de-801e-d72645e7834c"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-809bf906",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1902,
+  "title": "Music to N. Pogodin's Play \"The Kremlin Chimes\", op. 51",
+  "mbids": [
+   "81deea36-a7b7-4476-b7f8-5e2494f7397e"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-81deea36",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1916,
+  "title": "Prologue",
+  "mbids": [
+   "830541bd-b886-3fdc-9f1d-e48fc9237603"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-830541bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1946,
+  "title": "Second Suite from the ballet “Gayaneh” for orchestra, op. 54",
+  "mbids": [
+   "86501eb3-ee93-41d4-8e5a-4202f6e5a886"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-86501eb3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1948,
+  "title": "Recitatives and Fugues for piano, op. 101",
+  "mbids": [
+   "867de628-9393-4f11-9a4a-64862f971b83"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-867de628",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1951,
+  "title": "Music to M. Lermontov's Drama \"Masquerada\", op. 48",
+  "mbids": [
+   "86cd27fb-02fa-4ae2-9675-049d6f416e0b"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-86cd27fb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1956,
+  "title": "Army March no. 2 in F minor for wind orchestra, op. 21",
+  "mbids": [
+   "877be533-8458-437a-9df3-0c42646d5511"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-877be533",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1958,
+  "title": "Toccata in B-flat minor",
+  "mbids": [
+   "879fbfbf-333b-465e-a39a-f5547538e047"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-879fbfbf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1963,
+  "title": "Suite from the Music to Lope de Vega’s Comedy “The Valencian Widow” for orchestra, op. 45a",
+  "mbids": [
+   "8802276a-0bfe-42eb-975c-5bd4b879ad6b"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-8802276a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1983,
+  "title": "Music to V. Kirshon's Play \"The Big Day\", op. 39",
+  "mbids": [
+   "8ab09165-fe4a-4a53-b3e3-7b2796abbf7c"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-8ab09165",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2003,
+  "title": "Lullaby for violin and piano, op. 10",
+  "mbids": [
+   "8d5fa1d0-fd94-4c68-b5aa-5fecb4a2a5f0"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-8d5fa1d0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2016,
+  "title": "Music to the Film of Shakespeare's tragedy \"Othello\", op. 87",
+  "mbids": [
+   "8e78f299-cec1-49ac-b7e4-de856e9255f3"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-8e78f299",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2024,
+  "title": "Song of the Strolling Ashug for cello and piano, op. 2",
+  "mbids": [
+   "8ef50a26-1b70-4db0-a03c-3fbac741cfcb"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-8ef50a26",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2076,
+  "title": "Ode in Memory of Vladimir Ilich Lenin for orchestra, op. 71",
+  "mbids": [
+   "94c00ae0-08a8-401d-a98e-0cb66e924c3a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2087,
+  "title": "Three Concert Arias for high voice and orchestra, op. 66",
+  "mbids": [
+   "95d2c91e-2672-4717-ac93-3f4b14215c3a"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-95d2c91e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2121,
+  "title": "Music to Lope de Vega's Comedy \"The Valencian Widow\", op. 45",
+  "mbids": [
+   "9935f084-d7fd-458c-a386-d579c60f8f01"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-9935f084",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2145,
+  "title": "Music to the Film \"The Bonfire of Immortality / Undying Flame\", op. 86",
+  "mbids": [
+   "9ce9d2f2-be01-41c9-a804-f4160443c6b8"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-9ce9d2f2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2182,
+  "title": "Cadenza to Violin Concerto in D minor, op. 46: I. Allegro con fermezza",
+  "mbids": [
+   "a28b3393-e7c7-43ce-a2d9-22126a43b3a1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2217,
+  "title": "Ocean Heart (Oceano cuore)",
+  "mbids": [
+   "a5a270ab-9a99-45f2-ba41-9eee75e083e4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2219,
+  "title": "Toccata in E-flat minor for piano, op. 24",
+  "mbids": [
+   "a5c8bd09-6b23-41aa-a4d5-d05f546f89a5"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-a5c8bd09",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2224,
+  "title": "Song-Poem, op. 19 \"In Honor of Ashugs\"",
+  "mbids": [
+   "a63b3dca-97f6-4140-ad3f-f847a4be4391"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-a63b3dca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2257,
+  "title": "Gayaneh, ballet in three acts and seven scenes, op. 89",
+  "mbids": [
+   "aa3ec2dd-b192-44ea-b7f1-0b4b72c9c0a1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2262,
+  "title": "Sonata-Fantasy in C major for cello solo, op. 104",
+  "mbids": [
+   "aad799c6-930c-41ae-af1e-2c170cd0293d"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-aad799c6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2269,
+  "title": "Ballad of the Motherland for bass and orchestra, op. 97",
+  "mbids": [
+   "ac29eff6-167f-4383-ba9d-38b656efa42e"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-ac29eff6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2330,
+  "title": "Gayaneh: Alsha's Dance",
+  "mbids": [
+   "b3127de5-920a-4dcc-950f-1564a534ea62"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2351,
+  "title": "Elegy in G minor for cello and piano, op. 4",
+  "mbids": [
+   "b4f85564-48bf-4305-b321-7e1bee9c230e"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-b4f85564",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2352,
+  "title": "Two Pieces on Themes of Armenian Folk Songs for wind orchestra, op. 27",
+  "mbids": [
+   "b4febd60-6765-405c-9c9d-e63f8948184c"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-b4febd60",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2367,
+  "title": "Third Suite from the ballet \"Spartacus\" for orchestra, op. 82C",
+  "mbids": [
+   "b731e8a7-8b08-434b-96a8-364a96cd6418"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2374,
+  "title": "Марш московской милиции",
+  "mbids": [
+   "b82351f6-ba7b-4258-a3ae-6d54f0c63afd"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-b82351f6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2389,
+  "title": "Two Pieces on Themes of Uzbek Folk Songs for wind orchestra, op. 26",
+  "mbids": [
+   "b9f8a41b-fdd3-44ba-ba84-fec4dad9406a"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-b9f8a41b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2420,
+  "title": "Music to A. Kron's Play \"Detailed Reconnaissance\", op. 57",
+  "mbids": [
+   "bca1a21b-865e-45e4-8527-62e628ef6cc3"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-bca1a21b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2426,
+  "title": "Music to the Film \"Ships Storming the Bastions\", op. 79",
+  "mbids": [
+   "bd350eeb-53b0-43cd-8c91-4c66e4f76209"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-bd350eeb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2436,
+  "title": "March no. 3 for piano, op. 34",
+  "mbids": [
+   "bde5d3e7-06be-42d7-91a3-4c209e5c3938"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-bde5d3e7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2439,
+  "title": "Sonata-Song for viola solo, op. 107",
+  "mbids": [
+   "be29f8d1-7c7c-4873-9ab1-3eefc749d81b"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-be29f8d1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2446,
+  "title": "Music to the film “Admiral Ushakov”, op. 78",
+  "mbids": [
+   "bf4beb46-276a-4909-9a98-18531c441aaf"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-bf4beb46",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2522,
+  "title": "First Suite from the ballet \"Spartacus\", op. 82A",
+  "mbids": [
+   "c8cbfa43-7d08-401b-8737-4f0f963506e4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2528,
+  "title": "Waltz-Caprice in C-sharp minor for piano, op. 8",
+  "mbids": [
+   "c95103ee-fb17-4046-b569-037349178956"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-c95103ee",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2551,
+  "title": "Epilogue",
+  "mbids": [
+   "cbe76edb-706b-3ad6-8316-54f0aca41eea"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-cbe76edb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2573,
+  "title": "Music to the Film of A. Kuprin's Story \"The Duel\", op. 90",
+  "mbids": [
+   "ce12db00-1087-430e-bc0b-709eec19448d"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-ce12db00",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2577,
+  "title": "Five Pieces for Wind Band",
+  "mbids": [
+   "ceb74edb-1e39-4ee8-bb32-b643a9644ec4"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-ceb74edb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2578,
+  "title": "Music to A. Iakobson's Play \"The Angel-Protector from Nebraska\", op. 80",
+  "mbids": [
+   "cecf5e17-a658-4411-a107-3386619a4595"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-cecf5e17",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2579,
+  "title": "Allegretto for violin and piano, op. 18",
+  "mbids": [
+   "ced60fe3-183a-47cf-ab70-2f6efb1aa296"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-ced60fe3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2596,
+  "title": "\"To the Heroes of the Patriotic War\", march in A-flat major for wind band, op. 52",
+  "mbids": [
+   "d10a6a38-870b-4de7-a3d3-148502e9e684"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-d10a6a38",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2658,
+  "title": "Music to A. Perventsev's Play \"The Southern Junction\", op. 69",
+  "mbids": [
+   "d79ce092-04a6-4560-a9ac-b1d71759815a"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-d79ce092",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2678,
+  "title": "Poem about Stalin \"Song of the Ashug\" for orchestra and mixed chorus, op. 41",
+  "mbids": [
+   "da8802d1-c394-4d7a-8e84-19b9e0acbed1"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-da8802d1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2726,
+  "title": "Music to B. Lavrenev's Play \"Lermontov\", op. 83",
+  "mbids": [
+   "e0056320-49b0-4cc9-9b3f-84e574922474"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-e0056320",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2733,
+  "title": "Iwans Lied",
+  "mbids": [
+   "e0697f47-68e1-4632-82e3-b65eec44d682"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-e0697f47",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2769,
+  "title": "Spartak: Adagio",
+  "mbids": [
+   "e4899cd6-1157-4fa6-8723-91fca25a18c7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2777,
+  "title": "Greeting Overture in D-flat major for orchestra, op. 91",
+  "mbids": [
+   "e51b5824-c593-43e5-bede-6780c7334188"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-e51b5824",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2781,
+  "title": "Gayaneh: Adagio",
+  "mbids": [
+   "e57c9ce2-cf4e-4291-b8d2-a09a8625fed7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2812,
+  "title": "Lullaby, from the ballet Gayaneh",
+  "mbids": [
+   "e8a7c455-8d3d-482e-baf0-2609cabc3b1b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2819,
+  "title": "Sonata for cello and piano, op. 29a",
+  "mbids": [
+   "e92acdb6-6fb0-4061-9466-68d911ece608"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-e92acdb6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2835,
+  "title": "Music to A. Paronian's Play \"Uncle Bagdasar\", op. 14",
+  "mbids": [
+   "eaf66602-be05-4d60-8bc2-677cf343a684"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-eaf66602",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2841,
+  "title": "Music to the Film “Pepo”, op. 37",
+  "mbids": [
+   "eb35353c-afcb-4fa4-bb89-46296b9192ca"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-eb35353c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2887,
+  "title": "Symphonic Pictures from scenes 4 and 5 of the ballet “Spartacus”, op. 82E",
+  "mbids": [
+   "f12c9c46-7845-42cf-a893-4992d9900cbf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2891,
+  "title": "Music to W. Shakespeare's Tragedy \"King Lear\", op. 92",
+  "mbids": [
+   "f16dfb35-4701-438e-bb87-d14fc476cc38"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-f16dfb35",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2903,
+  "title": "Waltz-Etude for piano, op. 6",
+  "mbids": [
+   "f26857f3-06e0-4ca6-bf90-83931294b35e"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-f26857f3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2928,
+  "title": "Music to the Film \"Saltanat\", op. 85",
+  "mbids": [
+   "f510f4f8-b63d-48dc-96c4-ba266cebd1ad"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-f510f4f8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2954,
+  "title": "Sonata for violin and piano, op. 29",
+  "mbids": [
+   "f7ee5f87-f08e-4014-8c38-4561de6009a0"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-f7ee5f87",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2955,
+  "title": "Garun Yerevan",
+  "mbids": [
+   "f7fc0efa-1a79-4062-aa64-7f7e7990b17f"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-f7fc0efa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2961,
+  "title": "Symphonic Pictures from scene 9 of the ballet \"Spartacus\", op. 82F",
+  "mbids": [
+   "f8e0f19e-c983-4a49-ac93-211267db94d5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 3001,
+  "title": "Vocalise in C major for piano",
+  "mbids": [
+   "fd7c1de4-58be-43c9-807a-a20f59946d4e"
+  ],
+  "mapping": "work",
+  "key": "khachaturian-fd7c1de4",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

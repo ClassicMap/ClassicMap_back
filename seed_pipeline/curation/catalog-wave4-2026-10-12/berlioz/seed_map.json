@@ -1,0 +1,1716 @@
+[
+ {
+  "pieceId": 507,
+  "title": "Symphonie fantastique, op. 14 : Épisode de la vie d’un artiste … en cinq parties",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 540,
+  "title": "Grande symphonie funèbre et triomphale, op. 15",
+  "mbids": [
+   "577ebb9c-43ac-4551-a288-02b65d465821"
+  ],
+  "mapping": "work",
+  "key": "berlioz-577ebb9c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 553,
+  "title": "La Damnation de Faust, op. 24",
+  "mbids": [
+   "6574405c-252a-478f-ae4e-a6ac3ca4891d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 607,
+  "title": "Les Troyens",
+  "mbids": [
+   "a50436d3-33b7-4bf6-916e-b0f9cfc23cb6"
+  ],
+  "mapping": "work",
+  "key": "berlioz-a50436d3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 609,
+  "title": "Roman Carnival Overture",
+  "mbids": [
+   "a6687756-56b5-471a-aa5a-a857a952743f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 616,
+  "title": "La Mort d’Orphée",
+  "mbids": [
+   "af8ddedf-455b-45bf-bc8b-e9fc381aca06"
+  ],
+  "mapping": "work",
+  "key": "berlioz-af8ddedf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 647,
+  "title": "Lélio, ou Le Retour à la vie, op. 14b",
+  "mbids": [
+   "e0ada192-f61e-4e5d-86c2-43e15bf53f87"
+  ],
+  "mapping": "work",
+  "key": "berlioz-e0ada192",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 651,
+  "title": "Rêverie et caprice, op. 8, H. 88",
+  "mbids": [
+   "e858c951-70ac-3ba6-b6b1-79cbd6df56cf"
+  ],
+  "mapping": "work",
+  "key": "berlioz-e858c951",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 661,
+  "title": "Harold en Italie, op. 16",
+  "mbids": [
+   "f1add72b-eb01-407b-8b92-a227a13caee4"
+  ],
+  "mapping": "work",
+  "key": "berlioz-f1add72b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 674,
+  "title": "Roméo et Juliette, symphonie dramatique pour alto, ténor, basse, chœur et orchestre, op. 17, H. 79",
+  "mbids": [
+   "fba5a8e3-2352-46a9-8f1b-75b581396b53"
+  ],
+  "mapping": "work",
+  "key": "berlioz-fba5a8e3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 836,
+  "title": "Huit scènes de Faust",
+  "mbids": [
+   "004fb475-d100-40bd-ae55-db05077ebcd3"
+  ],
+  "mapping": "work",
+  "key": "berlioz-004fb475",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 953,
+  "title": "La révolution grecque (Scène héroïque), H. 21A",
+  "mbids": [
+   "0d09a28c-a3a4-441b-ab67-9a61f8117f1e"
+  ],
+  "mapping": "work",
+  "key": "berlioz-0d09a28c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1224,
+  "title": "Les Nuits d’été, H. 81, op. 7",
+  "mbids": [
+   "2c56f266-3e21-4bf3-b26b-03a963450abc"
+  ],
+  "mapping": "work",
+  "key": "berlioz-2c56f266",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1315,
+  "title": "Messe solennelle",
+  "mbids": [
+   "38b26f25-bda7-4ae9-a8f4-e14a63bbb9a6"
+  ],
+  "mapping": "work",
+  "key": "berlioz-38b26f25",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1370,
+  "title": "Tristia, op. 18",
+  "mbids": [
+   "3f2ad3cf-3db6-4d25-b322-ee4b1f6a292f"
+  ],
+  "mapping": "work",
+  "key": "berlioz-3f2ad3cf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1380,
+  "title": "Herminie, H. 29",
+  "mbids": [
+   "4020c1e6-1fb4-48d3-801e-ad3b94574681"
+  ],
+  "mapping": "work",
+  "key": "berlioz-4020c1e6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1391,
+  "title": "Te Deum, op. 22",
+  "mbids": [
+   "4159e363-97d8-4131-a232-131dd3872439"
+  ],
+  "mapping": "work",
+  "key": "berlioz-4159e363",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1395,
+  "title": "La menace des Francs, H. 117",
+  "mbids": [
+   "41addc7f-11bf-42b6-ada2-e300afbab53b"
+  ],
+  "mapping": "work",
+  "key": "berlioz-41addc7f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1600,
+  "title": "La Damnation De Faust - Hungarian March",
+  "mbids": [
+   "5d103aa8-eeaf-4fe5-b179-1b73e804c3b0"
+  ],
+  "mapping": "work",
+  "key": "berlioz-5d103aa8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1814,
+  "title": "Intrata di Rob-Roy MacGregor, H. 54",
+  "mbids": [
+   "774b250a-abea-4a08-83bd-c3e4a624c350"
+  ],
+  "mapping": "work",
+  "key": "berlioz-774b250a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2082,
+  "title": "Les Francs-Juges, H 23",
+  "mbids": [
+   "955e94db-eec7-43a1-93e9-2725f9c11746"
+  ],
+  "mapping": "work",
+  "key": "berlioz-955e94db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2407,
+  "title": "La Révolution grecque (scène héroïque)",
+  "mbids": [
+   "bbef431d-9f30-42fa-9e88-561eb56e6bbe"
+  ],
+  "mapping": "work",
+  "key": "berlioz-bbef431d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2449,
+  "title": "La Damnation de Faust, op. 24: Première Partie, scène 3. “Marche hongroise”",
+  "mbids": [
+   "bf744d7c-0049-4188-b86e-f2c6e9d2ced4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2563,
+  "title": "Symphonie fantastique",
+  "mbids": [
+   "ccb5e986-fc9f-4019-819c-527a87bf4215"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2612,
+  "title": "Lélio oder Die Rückkehr ins Leben, op. 14b",
+  "mbids": [
+   "d2cc38c5-2291-4902-acee-6f6d2665643e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2718,
+  "title": "Prélude à Les Troyens à Carthage",
+  "mbids": [
+   "df1edaa5-7b72-4664-aacd-5177bcd8d233"
+  ],
+  "mapping": "work",
+  "key": "berlioz-df1edaa5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2731,
+  "title": "Le Dépit de la bergère",
+  "mbids": [
+   "e0606923-9cea-4e03-a7c9-06896eaf1d3b"
+  ],
+  "mapping": "work",
+  "key": "berlioz-e0606923",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2770,
+  "title": "L'Enfance du Christ",
+  "mbids": [
+   "e49d8194-aa12-4e56-9152-01e8dc6a8769"
+  ],
+  "mapping": "work",
+  "key": "berlioz-e49d8194",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2932,
+  "title": "La Damnation de Faust : Quatrième partie : Romance : « D'amour l'ardente flamme »",
+  "mbids": [
+   "f594ca1e-ef02-4c67-b40b-365903fa717c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2941,
+  "title": "Requiem, op. 5 « Grande Messe des Morts »",
+  "mbids": [
+   "f67ae3bd-22a9-418c-9624-e52410c4d3ec"
+  ],
+  "mapping": "work",
+  "key": "berlioz-f67ae3bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2967,
+  "title": "La mort d’Ophélie",
+  "mbids": [
+   "f9d11f6d-67f8-4275-8b84-54145e002353"
+  ],
+  "mapping": "work",
+  "key": "berlioz-f9d11f6d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 475,
+  "title": "포로가 된 여인 (동방풍) H. 60C",
+  "mbids": [
+   "0a98aebf-1f16-4ad2-af9c-c1d8a1d639b6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 503,
+  "title": "Le Corsaire op. 21: Ouverture, H 101",
+  "mbids": [
+   "2d616703-46c2-4351-96e8-03483f0978b5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 512,
+  "title": "Grande Ouverture de Waverly, op. 1, H. 26",
+  "mbids": [
+   "33b341ff-e562-4c04-a676-d3038537be2d"
+  ],
+  "mapping": "work",
+  "key": "berlioz-33b341ff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 517,
+  "title": "Le chasseur danois, op. 19 no. 6, H. 104A",
+  "mbids": [
+   "3b4b93ef-a29a-4d83-a37d-d8b6d445af8f"
+  ],
+  "mapping": "work",
+  "key": "berlioz-3b4b93ef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 533,
+  "title": "Marche troyenne, H. 133B",
+  "mbids": [
+   "4fc00025-6adf-4ddf-b40b-e920fe595dc5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 538,
+  "title": "Grande Ouverture du « Roi Lear » op. 4, H. 53",
+  "mbids": [
+   "55f81691-c700-4e56-bdda-36b2859ad624"
+  ],
+  "mapping": "work",
+  "key": "berlioz-55f81691",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 562,
+  "title": "La Mort de Cléopâtre, scène lyrique",
+  "mbids": [
+   "6e383667-fe56-4b06-ba2c-c65a7c7e31c8"
+  ],
+  "mapping": "work",
+  "key": "berlioz-6e383667",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 837,
+  "title": "Adieu Bessy, op. 2b no. 8, H. 46B",
+  "mbids": [
+   "005ba51a-edf2-4cce-811e-9888ac7c34cc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 841,
+  "title": "Ouverture des Francs-Juges, S. 471",
+  "mbids": [
+   "009fd225-2ca8-49b8-8b48-c83e01f616a3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 860,
+  "title": "La Damnation de Faust : Deuxième partie : « Sans regrets j'ai quitté les riantes campagnes »",
+  "mbids": [
+   "02a66437-7d46-4adb-a0d2-452686c5e797"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 907,
+  "title": "Aubade, H. 78A",
+  "mbids": [
+   "07d5d61b-a986-430f-a880-08a5488bc2da"
+  ],
+  "mapping": "work",
+  "key": "berlioz-07d5d61b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 914,
+  "title": "Sara la baigneuse, op. 11, H. 69C",
+  "mbids": [
+   "085fb2b8-13a4-4c9d-ba59-92e16de3c3a1"
+  ],
+  "mapping": "work",
+  "key": "berlioz-085fb2b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 935,
+  "title": "Danse des Sylphes, S. 475",
+  "mbids": [
+   "0b19a766-1f8e-482e-9147-27b2365050ee"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 989,
+  "title": "Quartetto e coro dei maggi, H. 59",
+  "mbids": [
+   "10992c5b-ee1c-4c81-b41f-1765c68ff87e"
+  ],
+  "mapping": "work",
+  "key": "berlioz-10992c5b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1001,
+  "title": "La Damnation de Faust : Bonus : Sérénade de Méphistophélès : « Devant la maison »",
+  "mbids": [
+   "1220a716-fc6d-401f-bb0d-33e53396c47c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1045,
+  "title": "Toi qui l'aimas, verse des pleurs, H. 16",
+  "mbids": [
+   "17587b99-bee1-4227-9536-d26d709250e3"
+  ],
+  "mapping": "work",
+  "key": "berlioz-17587b99",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1061,
+  "title": "Marche au supplice de la Symphonie fantastique, S. 470a no. 2",
+  "mbids": [
+   "1926a656-e27d-4eac-b2e3-74fba9769f04"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1123,
+  "title": "La Damnation de Faust : Troisième partie : Le Roi de Thulé (Chanson gothique)",
+  "mbids": [
+   "2018b1a7-ef25-4850-ad48-d053b50698e6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1124,
+  "title": "La Nonne sanglante, H. 91",
+  "mbids": [
+   "202687db-6bef-47f8-afd9-662a0c862174"
+  ],
+  "mapping": "work",
+  "key": "berlioz-202687db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1154,
+  "title": "La Damnation de Faust : Première partie : Ronde des paysans : « Les bergers quittent leurs troupeaux »",
+  "mbids": [
+   "230df80f-8e3c-4f01-a0f7-5bb2a63339d6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1171,
+  "title": "Le chasseur danois, op. 19 no. 6, H. 104B",
+  "mbids": [
+   "246ec2c8-ac7e-435e-9884-ed5e729f73e5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1212,
+  "title": "Introduction to \"La Fuite en Égypte\"",
+  "mbids": [
+   "2b4b3b4a-dd5a-412e-81c8-a1864b0a2f88"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1221,
+  "title": "Chant sacré, op. 2b no. 6, H. 44B",
+  "mbids": [
+   "2c3a14b3-7a3f-4bcb-94f7-4785606908c5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1233,
+  "title": "Fleurs des landes, op. 13, H. 124",
+  "mbids": [
+   "2d41d00d-cb20-4408-95de-666fbd95b810"
+  ],
+  "mapping": "work",
+  "key": "berlioz-2d41d00d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1259,
+  "title": "Le jeune pâtre breton, op. 13 no. 4, H. 65C",
+  "mbids": [
+   "30a545b0-1aea-4b26-92c5-7b32c4cbdf07"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1275,
+  "title": "Paimenten jäähyväiset pyhälle perheelle",
+  "mbids": [
+   "3315a259-dbbf-4ce8-8ed3-da9ca7844f21"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1294,
+  "title": "Chansonette de M. Léon de Wailly",
+  "mbids": [
+   "361dd596-40b4-4343-a386-dca287da83fc"
+  ],
+  "mapping": "work",
+  "key": "berlioz-361dd596",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1309,
+  "title": "Marche des pèlerins chantant la prière du soir, S. 473/2",
+  "mbids": [
+   "37c2d5b5-6139-478c-b783-c1b33754b29d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1344,
+  "title": "La Damnation de Faust : Troisième partie : Duo : « Grand Dieu ! Que vois-je ? »",
+  "mbids": [
+   "3bf694e3-4de4-42d2-a073-4e382e47762c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1346,
+  "title": "Messe solennelle: IX. Resurrexit (revised version)",
+  "mbids": [
+   "3c026ea0-2020-3d7b-92a6-d6d1be7e5d96"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1360,
+  "title": "Canon libre à la quinte",
+  "mbids": [
+   "3e0a0d31-dd2c-4419-9c51-fec582e4f1e2"
+  ],
+  "mapping": "work",
+  "key": "berlioz-3e0a0d31",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1362,
+  "title": "Neuf Mélodies Irlandaises, op. 2b, H. 38",
+  "mbids": [
+   "3e1a7cea-4b53-4f09-9ea8-a72b0a3e598f"
+  ],
+  "mapping": "work",
+  "key": "berlioz-3e1a7cea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1396,
+  "title": "La Damnation de Faust : Troisième partie : Sérénade de Méphistophélès avec chœur de feux follets",
+  "mbids": [
+   "41b3aca7-01cc-4e45-86c2-c3a9b1163f12"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1397,
+  "title": "La Damnation de Faust : Troisième partie : Evocation : « Esprits des flammes inconstantes »",
+  "mbids": [
+   "41bd9685-4347-4be7-8bc7-b9dcb56f887b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1408,
+  "title": "Le Montagnard exilé",
+  "mbids": [
+   "436cfdb7-31f0-4226-8356-9b4894303af8"
+  ],
+  "mapping": "work",
+  "key": "berlioz-436cfdb7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1413,
+  "title": "Je crois en vous",
+  "mbids": [
+   "440aab21-a805-404f-a387-b0a9ebb99f16"
+  ],
+  "mapping": "work",
+  "key": "berlioz-440aab21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1425,
+  "title": "La belle voyageuse, op. 2b no. 4, H. 42C",
+  "mbids": [
+   "4659d9e0-3b2c-4a0c-852b-548050ed4da1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1460,
+  "title": "Chant sacré, op. 2b no. 6, H. 44C",
+  "mbids": [
+   "4a9140b2-31bb-4a59-8f39-29a88fe9892c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1462,
+  "title": "Le jeune pâtre breton, op. 13 no. 4, H. 65D",
+  "mbids": [
+   "4aa8468c-16da-4721-80f1-e304382a6601"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1487,
+  "title": "La Mort de Sardanapale, H. 50",
+  "mbids": [
+   "4da59242-6f34-4f84-8fc6-d9201591fd95"
+  ],
+  "mapping": "work",
+  "key": "berlioz-4da59242",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1501,
+  "title": "Le Maure jaloux",
+  "mbids": [
+   "4fe4fdf9-c642-435d-94fe-dca79a661d8e"
+  ],
+  "mapping": "work",
+  "key": "berlioz-4fe4fdf9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1516,
+  "title": "La Damnation de Faust : Troisième partie : Air de Faust : « Merci, doux crépuscule ! »",
+  "mbids": [
+   "5117eaa6-5b40-4b31-ab93-a0dad958988a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1532,
+  "title": "La Damnation de Faust : Troisième partie : « Tambours et trompettes sonnent la retraite »",
+  "mbids": [
+   "53d6c243-2243-4f7f-a9b9-15338789f306"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1542,
+  "title": "La Damnation de Faust : Deuxième partie : Chant de la fête de Pâques",
+  "mbids": [
+   "54ea6bf0-f7ac-40fd-9df1-af200b283230"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1554,
+  "title": "Marche des pèlerins chantant la prière du soir, S. 473/1",
+  "mbids": [
+   "561b47df-a4d2-4c6c-9c68-ef9ffacc5430"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1573,
+  "title": "La Captive orientale, H. 60E",
+  "mbids": [
+   "597100d2-fd86-45bb-8110-5e25a443b375"
+  ],
+  "mapping": "work",
+  "key": "berlioz-597100d2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1596,
+  "title": "Hymne de la fête de pâques",
+  "mbids": [
+   "5caaefe5-e64b-49a1-99ec-16ebb930e5af"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1638,
+  "title": "La Damnation de Faust : Deuxième partie : « O pure émotion ! Enfant du saint parvis ! »",
+  "mbids": [
+   "621d8758-0972-43ab-a943-7ee2ec35c575"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1677,
+  "title": "Béatrice et Bénédict, op. 27, H. 138",
+  "mbids": [
+   "67df5a68-e52c-412c-8706-ee8410609cd4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1709,
+  "title": "The Trojans: Act III, no. 18. “Hail, all hail to the Queen”",
+  "mbids": [
+   "6c132418-740c-4144-9f4d-1ac7b18382b2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1736,
+  "title": "Aubade, H. 78B",
+  "mbids": [
+   "6f81acfa-dd64-4f9f-9901-78c660a7df34"
+  ],
+  "mapping": "work",
+  "key": "berlioz-6f81acfa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1792,
+  "title": "Le Cinq mai, op. 6",
+  "mbids": [
+   "758ce512-4c50-4bea-98c2-a3c605e0f3c9"
+  ],
+  "mapping": "work",
+  "key": "berlioz-758ce512",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1793,
+  "title": "Toccata, H. 99",
+  "mbids": [
+   "7592a088-cb62-422a-90a9-ef8fe3caafe7"
+  ],
+  "mapping": "work",
+  "key": "berlioz-7592a088",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1799,
+  "title": "La Damnation de Faust : Première partie : Marche Hongroise",
+  "mbids": [
+   "75f997f1-8150-490a-a69a-7a11153c7703"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1809,
+  "title": "La révolution grecque (Scène héroïque), H. 21B",
+  "mbids": [
+   "76f34973-a715-4876-aa43-fba815b2d663"
+  ],
+  "mapping": "work",
+  "key": "berlioz-76f34973",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1830,
+  "title": "Oraison funèbre",
+  "mbids": [
+   "7902376a-b3d4-4c09-bcec-0c4baf9d2e24"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1858,
+  "title": "La Captive. Orientale for mezzo‐soprano and orchestra, op. 12",
+  "mbids": [
+   "7ca12faf-1948-4954-ba96-1665cf58d2ff"
+  ],
+  "mapping": "work",
+  "key": "berlioz-7ca12faf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1882,
+  "title": "Amitié reprends ton empire",
+  "mbids": [
+   "7ee77d1b-2c8b-4b9a-b95a-f817fcf74673"
+  ],
+  "mapping": "work",
+  "key": "berlioz-7ee77d1b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1891,
+  "title": "Le Ballet des ombres, op. 2",
+  "mbids": [
+   "8050d72f-af7b-4ba3-94bf-8df58d079c64"
+  ],
+  "mapping": "work",
+  "key": "berlioz-8050d72f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1921,
+  "title": "La Damnation de Faust : Quatrième partie : Récitatif et chasse : « A la voûte azurée »",
+  "mbids": [
+   "83b33136-4ab6-416b-915a-2d02741d3fb5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1927,
+  "title": "La Damnation de Faust : Première partie : Introduction : « Le vieil hiver a fait place au printemps »",
+  "mbids": [
+   "8411e2d7-7953-48fc-a5e6-89fce357c471"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1932,
+  "title": "Le jeune pâtre breton, op. 13 no. 4, H. 65B",
+  "mbids": [
+   "8497e659-e4ff-4713-8a8b-dcbddcc4bba5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1954,
+  "title": "Hélène, op. 2b no. 2, H. 40B",
+  "mbids": [
+   "86f66399-f1aa-421f-b047-582c697b1d48"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1991,
+  "title": "L'Impériale, op. 26, H. 129",
+  "mbids": [
+   "8c30d19f-9dae-4b47-84f5-193faedb7d6a"
+  ],
+  "mapping": "work",
+  "key": "berlioz-8c30d19f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2046,
+  "title": "Ouverture \"Rob Roy\"",
+  "mbids": [
+   "919bbfc0-0202-40ef-bc70-feda3e4ac451"
+  ],
+  "mapping": "work",
+  "key": "berlioz-919bbfc0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2056,
+  "title": "Pleure pauvre Colette",
+  "mbids": [
+   "92da20db-1d8b-44d4-b362-7cc62ec27bfa"
+  ],
+  "mapping": "work",
+  "key": "berlioz-92da20db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2066,
+  "title": "La belle voyageuse, op. 2b no. 4, H. 42B",
+  "mbids": [
+   "93a7f484-925a-4a47-8b46-2e5a7036b7a8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2101,
+  "title": "Je vais donc quitter pour jamais, H. 6",
+  "mbids": [
+   "972557df-00d6-4e7f-9361-e82bec720f08"
+  ],
+  "mapping": "work",
+  "key": "berlioz-972557df",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2109,
+  "title": "Danse des sylphes de La damnation de Faust de Hector Berlioz, S. 474a",
+  "mbids": [
+   "97fcb70a-f268-4b98-a2bb-237fc40007a4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2116,
+  "title": "Tantum Ergo, H. 142",
+  "mbids": [
+   "98a0ab93-8a69-45ae-bd29-00ab0c3a5f47"
+  ],
+  "mapping": "work",
+  "key": "berlioz-98a0ab93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2132,
+  "title": "Sérénade agreste à la madone sur la thème des pifferari romains, H 98",
+  "mbids": [
+   "9aa658c7-6331-4892-9ca6-a514b5afe860"
+  ],
+  "mapping": "work",
+  "key": "berlioz-9aa658c7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2150,
+  "title": "Fleuve du tage, H. 5",
+  "mbids": [
+   "9db5364a-9af8-418b-b662-a7ad27c33ea1"
+  ],
+  "mapping": "work",
+  "key": "berlioz-9db5364a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2172,
+  "title": "Le Temple universel, H. 137B",
+  "mbids": [
+   "a1119b5e-9397-4a0e-af68-e789fb043ac1"
+  ],
+  "mapping": "work",
+  "key": "berlioz-a1119b5e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2174,
+  "title": "Feuillets d’album, op. 19",
+  "mbids": [
+   "a1560d09-ae5d-4a75-9528-20038ccfc970"
+  ],
+  "mapping": "work",
+  "key": "berlioz-a1560d09",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2196,
+  "title": "Chant du neuf Thermidor",
+  "mbids": [
+   "a3b7c1e5-2984-472a-8a55-31491b9b4b25"
+  ],
+  "mapping": "work",
+  "key": "berlioz-a3b7c1e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2211,
+  "title": "Les Troyens: Acte I, scène 3. \"Du peuple et des soldats\"",
+  "mbids": [
+   "a520629f-11eb-3768-a192-615e2be51768"
+  ],
+  "mapping": "work",
+  "key": "berlioz-a520629f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2228,
+  "title": "La Damnation de Faust : Deuxième partie : Chanson de Brander : « Certain rat, dans une cuisine »",
+  "mbids": [
+   "a6dede2d-0e13-48da-b36f-dad2727cbf79"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2256,
+  "title": "Ouverture du Roi Lear, S. 474",
+  "mbids": [
+   "aa30c80d-1b33-4b08-bcb7-719c83373a56"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2295,
+  "title": "Harold en Italie, S. 472",
+  "mbids": [
+   "b04cd217-595f-40e0-be16-c6975680fee5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2324,
+  "title": "Nocturne à deux voix",
+  "mbids": [
+   "b2901197-e120-4d23-a9b7-6cc8c0678f9b"
+  ],
+  "mapping": "work",
+  "key": "berlioz-b2901197",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2329,
+  "title": "Le chant des bretons, op. 13 no. 5, H. 71B",
+  "mbids": [
+   "b30cf46f-bcc4-44a0-8b6c-f54e93f51fcc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2348,
+  "title": "Hymne à la France, H. 97",
+  "mbids": [
+   "b4d26f53-ce0c-445e-9821-92493090a14f"
+  ],
+  "mapping": "work",
+  "key": "berlioz-b4d26f53",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2349,
+  "title": "Le Temple universel",
+  "mbids": [
+   "b4d64639-6449-43cd-b29a-e98cd1cc4596"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2356,
+  "title": "La belle voyageuse, op. 2b no. 4, H. 42D",
+  "mbids": [
+   "b5a3caee-08f6-40d6-aaf4-7ad80d201cb3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2470,
+  "title": "Rákóczi March from La Damnation de Faust",
+  "mbids": [
+   "c259c345-3510-4be0-b11c-e5053bcdea2a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2489,
+  "title": "La Damnation de Faust : Deuxième partie : Chœur de buveurs : « A boire encor ! Du Vin »",
+  "mbids": [
+   "c4892347-702f-4916-88f1-72b267741de4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2533,
+  "title": "Les Troyens: Acte IV, scène 2. \"Ah! quand viendra l'insant …\"",
+  "mbids": [
+   "c9fc5391-3c35-3f60-9485-ed4fa30ec6a5"
+  ],
+  "mapping": "work",
+  "key": "berlioz-c9fc5391",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2543,
+  "title": "Le jeune Pâtre breton, H 65",
+  "mbids": [
+   "cae7ef72-167f-419e-a514-d628c29618e5"
+  ],
+  "mapping": "work",
+  "key": "berlioz-cae7ef72",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2599,
+  "title": "Hymne pour la consécration du nouveau tabernacle",
+  "mbids": [
+   "d1b01c7c-0237-4f9d-8038-07d5e75ed79a"
+  ],
+  "mapping": "work",
+  "key": "berlioz-d1b01c7c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2624,
+  "title": "Symphonie fantastique, S. 470",
+  "mbids": [
+   "d39f34f2-4145-4501-8544-bc793de4768e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2669,
+  "title": "Le Temple universel, H. 137A",
+  "mbids": [
+   "d8b53fb4-37da-459b-895c-79d9e119a6e6"
+  ],
+  "mapping": "work",
+  "key": "berlioz-d8b53fb4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2675,
+  "title": "La Damnation de Faust : Quatrième partie : La course à l'abîme : « Dans mon cœur retentit sa voix »",
+  "mbids": [
+   "da3a9746-cf2e-43b8-8447-99b4f2fbc6bc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2681,
+  "title": "Fugue à 3 sujets, H. 35",
+  "mbids": [
+   "db1b9477-8392-4e6b-ade5-3eebf8b5dfed"
+  ],
+  "mapping": "work",
+  "key": "berlioz-db1b9477",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2690,
+  "title": "L'Adieu des Bergers",
+  "mbids": [
+   "dc8605e4-99a8-4a7b-9b43-ca4f0ebed78b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2693,
+  "title": "Les champs, op. 19 no. 2, H. 67B",
+  "mbids": [
+   "dcf960bc-4663-42db-8de9-9df67bfab43c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2703,
+  "title": "Veni Creator, H. 141",
+  "mbids": [
+   "ddb7b405-6ff0-477c-af3e-ca3183b68eb2"
+  ],
+  "mapping": "work",
+  "key": "berlioz-ddb7b405",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2704,
+  "title": "Les Troyens: Acte V, scène 1. \"En un dernier naufrage\"",
+  "mbids": [
+   "ddd47bab-a642-305d-a4cc-cf42ed768a27"
+  ],
+  "mapping": "work",
+  "key": "berlioz-ddd47bab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2780,
+  "title": "Le roi de Thulé",
+  "mbids": [
+   "e5629dce-70c0-4b54-8ce7-d8144f86bff7"
+  ],
+  "mapping": "work",
+  "key": "berlioz-e5629dce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2793,
+  "title": "La Damnation de Faust : Troisième partie : « Que l'air est étouffant ! »",
+  "mbids": [
+   "e6bbca5e-c11d-4488-acb8-c0824de2264c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2827,
+  "title": "La Captive orientale, H. 60B",
+  "mbids": [
+   "ea2fcf60-5eaa-46ec-953f-58b8395e5799"
+  ],
+  "mapping": "work",
+  "key": "berlioz-ea2fcf60",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2846,
+  "title": "La Captive orientale, H. 60A",
+  "mbids": [
+   "ec9b570a-47d5-4ac0-9677-97e2572065a4"
+  ],
+  "mapping": "work",
+  "key": "berlioz-ec9b570a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2862,
+  "title": "La Damnation de Faust : Quatrième partie : Invocation : « Nature immense, impénétrable et fière »",
+  "mbids": [
+   "edfef15a-6a55-4f0a-8c46-742175a2dc0b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2904,
+  "title": "La Captive orientale, H. 60F",
+  "mbids": [
+   "f2db00dc-36a0-4027-8018-b109812eaa52"
+  ],
+  "mapping": "work",
+  "key": "berlioz-f2db00dc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2906,
+  "title": "Hymne pour l'élévation, H. 100",
+  "mbids": [
+   "f329dd8c-0427-4195-95db-8d76bd702a69"
+  ],
+  "mapping": "work",
+  "key": "berlioz-f329dd8c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2953,
+  "title": "Prière du matin",
+  "mbids": [
+   "f7ee27de-024a-4ffe-a613-570c39e91bd1"
+  ],
+  "mapping": "work",
+  "key": "berlioz-f7ee27de",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2958,
+  "title": "The Shepherds’ Farewell",
+  "mbids": [
+   "f87dd7f5-9732-4f58-880d-694e7a085776"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2963,
+  "title": "La Damnation de Faust : Quatrième partie : Pandemonium. Epilogue : « Alors l'enfer se tut »",
+  "mbids": [
+   "f99e3c7c-e6e4-4dd9-84ca-e82690478d1d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2969,
+  "title": "La Captive orientale, H. 60D",
+  "mbids": [
+   "fa10a351-8ef3-42d9-836e-778b1abf4c6d"
+  ],
+  "mapping": "work",
+  "key": "berlioz-fa10a351",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2974,
+  "title": "Sara la baigneuse, op. 11",
+  "mbids": [
+   "fa78672f-44d9-432c-bb9f-e4bff0a5ae6e"
+  ],
+  "mapping": "work",
+  "key": "berlioz-fa78672f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2997,
+  "title": "Fugue, H. 22",
+  "mbids": [
+   "fd468176-91a2-47e5-b611-f252f3afa84b"
+  ],
+  "mapping": "work",
+  "key": "berlioz-fd468176",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 3007,
+  "title": "La Damnation de Faust : Deuxième Partie. Ballet des Sylphes",
+  "mbids": [
+   "fe2e1a86-e940-48b0-9dfc-31ba62c4475c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 3010,
+  "title": "Marche hongroise de “La Damnation de Faust”",
+  "mbids": [
+   "fe685e89-c54c-49ba-8c96-fd15ef270bf8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ }
+]

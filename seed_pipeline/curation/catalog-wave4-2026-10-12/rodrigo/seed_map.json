@@ -1,0 +1,1142 @@
+[
+ {
+  "pieceId": 15798,
+  "title": "Elogio de la guitarra",
+  "mbids": [
+   "9a499e7b-619f-494e-b416-e63bf3a00f5e"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-9a499e7b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15816,
+  "title": "Invocación y danza",
+  "mbids": [
+   "bbebcf1b-2c49-3995-8dfc-1fd9d3eaba42"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 15902,
+  "title": "Aranjuez, mon amour",
+  "mbids": [
+   "6815e26f-f6b2-30f0-962b-419d35fc2091"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16256,
+  "title": "Concierto serenata",
+  "mbids": [
+   "0f80bd25-659e-4399-8b88-b3057e3eaa24"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-0f80bd25",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16358,
+  "title": "Tiento antiguo",
+  "mbids": [
+   "15446054-9609-3e5b-96b1-ac69957a4fe7"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-15446054",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16636,
+  "title": "A la busca del más allá",
+  "mbids": [
+   "269b75a7-f1d2-4178-b4b7-38fece912374"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-269b75a7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16690,
+  "title": "Tres canciones españolas",
+  "mbids": [
+   "29f9b253-505b-4905-80f6-45b6cc347766"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-29f9b253",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16755,
+  "title": "Concierto para una fiesta",
+  "mbids": [
+   "2e2712ca-b815-4076-a532-8dfe12fa01ba"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-2e2712ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16796,
+  "title": "Ausencias de Dulcinea",
+  "mbids": [
+   "309cb937-f1a8-4065-bb09-487da7ed7b84"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-309cb937",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16961,
+  "title": "Concerto in modo galante",
+  "mbids": [
+   "3a1d8b72-a5ae-4a49-9485-ee3d4eb111a0"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-3a1d8b72",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16963,
+  "title": "Pequeña fantasía",
+  "mbids": [
+   "3a4419b5-2154-4666-b831-e840522a9407"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-3a4419b5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16978,
+  "title": "Concierto pastoral",
+  "mbids": [
+   "3b515385-c7db-4a39-a86c-f0c18483f628"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-3b515385",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17110,
+  "title": "Concierto andaluz",
+  "mbids": [
+   "43335123-0c4e-480e-bfe7-2a4d9a0d0f77"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-43335123",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17206,
+  "title": "Concerto D'Aranjuez",
+  "mbids": [
+   "482306b4-2418-436a-b114-0d4e69d7778c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17421,
+  "title": "Cuatro madrigales amatorios",
+  "mbids": [
+   "55853a51-5944-4eb5-bc3f-463cf5ece05a"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-55853a51",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17944,
+  "title": "Soleriana",
+  "mbids": [
+   "74d3c37f-9842-47f6-b294-14302e5a6400"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-74d3c37f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17955,
+  "title": "Concierto madrigal",
+  "mbids": [
+   "75fa3bc3-e617-4d71-9cb1-67ab16cbd048"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-75fa3bc3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18631,
+  "title": "Concierto heroico",
+  "mbids": [
+   "a141cb54-98ea-4cdd-82e6-1ef350216bd1"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-a141cb54",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18739,
+  "title": "Sonata giocosa",
+  "mbids": [
+   "a7642c77-d59e-41c9-8761-733fc7d135d0"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-a7642c77",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18772,
+  "title": "Tres piezas españolas",
+  "mbids": [
+   "a9dfbd3f-c62f-406e-a7c9-3037252eb150"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-a9dfbd3f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19004,
+  "title": "En Aranjuez con tu amor",
+  "mbids": [
+   "b8d8f8b4-556b-4e7e-8a60-f72e44e0adbf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19191,
+  "title": "Canción y danza",
+  "mbids": [
+   "c4d4d625-8c66-4737-8bbc-b675e5afe309"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-c4d4d625",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19363,
+  "title": "Concierto de estío",
+  "mbids": [
+   "d032cdc2-4e71-460c-bc0f-bf10be64379c"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-d032cdc2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19456,
+  "title": "Aranjuez, ma pensée",
+  "mbids": [
+   "d60b4899-9460-4208-84cb-bd96e5c22f11"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-d60b4899",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19479,
+  "title": "Aranjuez la tua voce",
+  "mbids": [
+   "d7af9f5b-caa7-4711-8c4d-57bcb3b75acc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 26015,
+  "title": "Concierto de Aranjuez",
+  "mbids": [
+   "4344e777-556c-3f2f-b4fd-96c852f9f1e9"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-4344e777",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 26016,
+  "title": "Zarabanda lejana",
+  "mbids": [
+   "8b457d10-c518-3d42-8541-d71ba3417a74"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-8b457d10",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15794,
+  "title": "Sones en la Giralda",
+  "mbids": [
+   "8be075bf-4faa-3e53-964d-9bfa015293b2"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-8be075bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15828,
+  "title": "Pájaros de primavera",
+  "mbids": [
+   "dc5fb124-9126-3f0b-81ef-2649fb8b82c5"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-dc5fb124",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15969,
+  "title": "Wind of Change",
+  "mbids": [
+   "257cf15d-6d1d-400a-b735-b7d2c673264f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16022,
+  "title": "Atardecer",
+  "mbids": [
+   "0218b2fa-3ac1-4cf9-aba9-50826af79a4b"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-0218b2fa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16069,
+  "title": "Fino cristal",
+  "mbids": [
+   "04a772ba-3e59-4edf-a35c-587382423e1c"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-04a772ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16195,
+  "title": "Canción del cucú",
+  "mbids": [
+   "0c5788c0-4a7a-4a6d-89ea-42f3abbd9bc9"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-0c5788c0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16364,
+  "title": "Preludio para un poema a la Alhambra",
+  "mbids": [
+   "15a5987d-9477-4ce7-afd2-a22a6ce268d8"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-15a5987d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16365,
+  "title": "Follow Me",
+  "mbids": [
+   "15adfed0-aa2f-4273-a0ef-d2221b90d2aa"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16375,
+  "title": "Bagatela",
+  "mbids": [
+   "163cdf48-f486-4cf1-8e5a-38bb3973c7fc"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-163cdf48",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16447,
+  "title": "Dos miniaturas andaluzas",
+  "mbids": [
+   "1a07bfeb-5011-4c9d-b793-3da6cae9207b"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-1a07bfeb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16484,
+  "title": "Air de ballet sur le nom d’une jeune fille",
+  "mbids": [
+   "1c3efa75-8e21-4ff1-b849-561147b55e2c"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-1c3efa75",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16601,
+  "title": "Dos poemas de Juan Ramón Jiménez",
+  "mbids": [
+   "24887ef6-d864-4570-bc87-9c1a1dc1504a"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-24887ef6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16639,
+  "title": "Tres viejos aires de danza",
+  "mbids": [
+   "26eef47b-aaae-418a-b492-4f8f185eab3d"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-26eef47b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16647,
+  "title": "Cántico de San Francisco de Asís",
+  "mbids": [
+   "2755c800-13af-431c-9419-c02435958ba7"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-2755c800",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16722,
+  "title": "Romance de Durandarte",
+  "mbids": [
+   "2bb2b10d-182b-4503-a673-92e62b2e0356"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-2bb2b10d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16879,
+  "title": "Rumaniana",
+  "mbids": [
+   "34d13d11-24db-498c-9505-e5af9a811b24"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-34d13d11",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16895,
+  "title": "A l’ombre de Torre Bermeja",
+  "mbids": [
+   "35e447c8-e24a-4492-b957-d52c95257df2"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-35e447c8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16933,
+  "title": "Serenata al alba del día",
+  "mbids": [
+   "38398e38-3b13-46fb-b0bf-c2bbb4d9a0fa"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-38398e38",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17023,
+  "title": "Danza de la amapola",
+  "mbids": [
+   "3d7e7206-8110-46ce-821d-c831dcf072b2"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-3d7e7206",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17062,
+  "title": "Coplas del pastor enamorado",
+  "mbids": [
+   "4025355c-a600-426e-83b5-b310dbe6df12"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-4025355c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17117,
+  "title": "Set cançons valencianes",
+  "mbids": [
+   "43b4534e-b7f0-4409-9297-6d1b76dbefdf"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-43b4534e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17176,
+  "title": "All My Life",
+  "mbids": [
+   "466d9846-2a99-4a15-81fa-84b3a53a2b88"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17213,
+  "title": "Zarabanda lejana y Villancico",
+  "mbids": [
+   "489dfef9-b88c-4d1c-a02c-9d158d72024d"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-489dfef9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17326,
+  "title": "Cantos de amor y de guerra",
+  "mbids": [
+   "504e4358-bc23-45fb-ab7a-3ed693a7d168"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-504e4358",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17369,
+  "title": "Cuatro estampas andaluzas",
+  "mbids": [
+   "534975fb-15f8-4ef8-8297-03212a8a5b56"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-534975fb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17376,
+  "title": "Retablo de Navidad",
+  "mbids": [
+   "53aca7d8-c61a-4fab-9141-633ddcd26d32"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-53aca7d8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17384,
+  "title": "Homenaje a la Tempranica",
+  "mbids": [
+   "53e66919-ee15-41ac-8120-ebdfc62be28a"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-53e66919",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17446,
+  "title": "Sonata pimpante",
+  "mbids": [
+   "5775d2e5-4da5-4216-9b21-1f1caef7352c"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-5775d2e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17516,
+  "title": "Música para un jardín",
+  "mbids": [
+   "5b79877e-9577-461b-8b10-51b466c24f86"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-5b79877e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17541,
+  "title": "Sonata a la española",
+  "mbids": [
+   "5ce61af7-6b4c-4b17-af6c-a311b0340321"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-5ce61af7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17596,
+  "title": "Concierto como un divertimento",
+  "mbids": [
+   "60bb88bd-8ef5-4139-b4c1-a49c7bad8d48"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-60bb88bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17740,
+  "title": "Adagio para instrumentos de viento",
+  "mbids": [
+   "691db9b5-0848-4bce-865c-f34d69dba3f8"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-691db9b5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17756,
+  "title": "Tres pequeñas piezas",
+  "mbids": [
+   "69ed9559-a3ad-4a92-9ab6-74279bc0abc8"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-69ed9559",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17815,
+  "title": "Deux berceuses",
+  "mbids": [
+   "6dbbb53b-cc8e-4328-bac7-c7309202cba5"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-6dbbb53b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18139,
+  "title": "Quatre cançons en llengua catalana",
+  "mbids": [
+   "8213e71b-7751-49f1-a506-b82fbb45b2e4"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-8213e71b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18153,
+  "title": "Música para un códice salmantino",
+  "mbids": [
+   "82de5100-0b8f-4255-ac55-1c3ba53e8711"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-82de5100",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18416,
+  "title": "Rosaliana",
+  "mbids": [
+   "937a6564-9641-46b2-b758-c1b341c369b6"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-937a6564",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18441,
+  "title": "Himnos de los neófitos de Qumran",
+  "mbids": [
+   "94f07034-f822-4b21-ac26-659f19c1bad1"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-94f07034",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18478,
+  "title": "Gran marcha de los subsecretarios",
+  "mbids": [
+   "974b1eb7-8917-48a3-84e7-8f5116c7396f"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-974b1eb7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18635,
+  "title": "Preludio y ritornello",
+  "mbids": [
+   "a15970df-966c-4111-94a8-c7e20beeaadb"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-a15970df",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18678,
+  "title": "Hommage à Paul Dukas",
+  "mbids": [
+   "a44c422d-b567-4a9b-8b4a-511390cabea2"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-a44c422d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18688,
+  "title": "Dos pequeñas fantasías",
+  "mbids": [
+   "a4d3e567-2f93-4c96-b4b9-31c72f81a866"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-a4d3e567",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18750,
+  "title": "Sonatas de Castilla",
+  "mbids": [
+   "a84996c5-9ba2-4694-840f-02a028e53601"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-a84996c5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18880,
+  "title": "Líricas castellanas",
+  "mbids": [
+   "b13b423c-4907-4ce8-8af6-9cd1ab86641b"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-b13b423c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18908,
+  "title": "Suite para piano",
+  "mbids": [
+   "b2844edd-72d6-4624-ad93-50b08f7f842f"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-b2844edd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18933,
+  "title": "Tríptic de Mossèn Cinto",
+  "mbids": [
+   "b4419976-04a8-464e-9c94-cf7f95209a80"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-b4419976",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18944,
+  "title": "Capriccio (Ofrenda a Sarasate)",
+  "mbids": [
+   "b4a1e1c4-ddd9-471b-bbfe-0f54cfeb4614"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-b4a1e1c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18957,
+  "title": "Palillos y panderetas",
+  "mbids": [
+   "b593b9f2-4411-4411-b63d-c78c3af3dfe7"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-b593b9f2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19058,
+  "title": "Tres evocaciones",
+  "mbids": [
+   "bcb00e61-52c1-4b63-8e23-3f5580a4a128"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-bcb00e61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19099,
+  "title": "Preludio de añoranza",
+  "mbids": [
+   "bf26e35d-8f71-4303-9a6a-9df4d911d87f"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-bf26e35d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19114,
+  "title": "Por los campos de España",
+  "mbids": [
+   "bfdb5198-85c5-416e-83af-a433e719e730"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-bfdb5198",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19177,
+  "title": "Seis arias de \"El hijo fingido\"",
+  "mbids": [
+   "c3ac1d5f-84cb-4c73-9f3b-2fc3993a8eb5"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-c3ac1d5f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19214,
+  "title": "הקונצ'רטו לארנחואז (שיר הקשת)",
+  "mbids": [
+   "c6086d7c-87f2-4393-b2b6-a04c68415848"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19257,
+  "title": "Dos preludios",
+  "mbids": [
+   "c920784b-eac3-4f8b-9d30-35a04a470782"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-c920784b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19340,
+  "title": "Romance del Comendador de Ocaña",
+  "mbids": [
+   "ce983482-6ebd-4e9c-a67b-47d6d26440b4"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-ce983482",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19398,
+  "title": "Dos danzas españolas",
+  "mbids": [
+   "d28a26c4-93cf-4e0e-93d2-f2f9d46ad079"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-d28a26c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19480,
+  "title": "Ecos de Sefarad",
+  "mbids": [
+   "d7b673bb-8e8f-4646-91fa-b7d6e7e6c2c6"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-d7b673bb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19511,
+  "title": "Preludio al gallo mañanero",
+  "mbids": [
+   "da3063ad-901c-41d1-a198-d5d46a4b664d"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-da3063ad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19533,
+  "title": "Serenata española",
+  "mbids": [
+   "db94a3d4-9270-4766-bbf7-07452c219a26"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-db94a3d4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19640,
+  "title": "Un tiempo fue Itálica famosa",
+  "mbids": [
+   "e246d5a8-69a8-4d00-89be-3a09e8a72b4b"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-e246d5a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19666,
+  "title": "Tres danzas de España",
+  "mbids": [
+   "e4a09441-d17b-40ac-a67c-aab560df1e5a"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-e4a09441",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19720,
+  "title": "Cinco piezas infantiles",
+  "mbids": [
+   "e98c5bed-9cbb-4b93-bf58-b43795f09aeb"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-e98c5bed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19780,
+  "title": "Cuatro canciones sefardíes",
+  "mbids": [
+   "edbf5f8e-c5a7-4b91-8f13-365dbd7d1c9e"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-edbf5f8e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19846,
+  "title": "Fandango del ventorrillo",
+  "mbids": [
+   "f1699dda-4b93-4a81-b933-30178dc3eca6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19909,
+  "title": "Dos esbozos",
+  "mbids": [
+   "f51540f9-6523-4399-93dc-c6632d408d99"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-f51540f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19910,
+  "title": "Cántico de la esposa",
+  "mbids": [
+   "f5206c4a-2cd7-408a-b95d-ceb4da6bad7d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19943,
+  "title": "Sonatina para dos muñecas",
+  "mbids": [
+   "f6939c94-f5cd-488a-9721-5a1227cee423"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-f6939c94",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19965,
+  "title": "Canción del grumete",
+  "mbids": [
+   "f75e70a6-deb0-4394-8307-159631dd91c5"
+  ],
+  "mapping": "work",
+  "key": "rodrigo-f75e70a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

@@ -1,0 +1,1694 @@
+[
+ {
+  "pieceId": 16380,
+  "title": "Piano Quintet in E minor, op. 5",
+  "mbids": [
+   "16721d89-4562-4517-bbbf-34165ca76171"
+  ],
+  "mapping": "work",
+  "key": "sinding-16721d89",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17393,
+  "title": "6 Stücke, op. 32",
+  "mbids": [
+   "543d6b4e-cf1d-4f08-844a-f6f95bed7d68"
+  ],
+  "mapping": "work",
+  "key": "sinding-543d6b4e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17805,
+  "title": "Légende",
+  "mbids": [
+   "6d488413-50e5-4fac-bd6a-eba4e0658561"
+  ],
+  "mapping": "work",
+  "key": "sinding-6d488413",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17852,
+  "title": "Suite im alten Stil, op. 10",
+  "mbids": [
+   "6f8ec9e9-ab95-4d72-86ce-eaf712c067ac"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17953,
+  "title": "Violin Concerto no. 1 in A major, op. 45",
+  "mbids": [
+   "75df1f62-c315-43e2-8955-22abef5a3392"
+  ],
+  "mapping": "work",
+  "key": "sinding-75df1f62",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17986,
+  "title": "Frühlingsrauschen for solo piano, op. 32, nr. 3",
+  "mbids": [
+   "7842103a-a9b4-492c-9fba-7ce0be720949"
+  ],
+  "mapping": "work",
+  "key": "sinding-7842103a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18391,
+  "title": "Suite for Violin and Piano in A minor, op. 10 \"Suite im alten Stil\"",
+  "mbids": [
+   "91e7d2fc-ba3b-4f25-9ccf-0ede0108cce4"
+  ],
+  "mapping": "work",
+  "key": "sinding-91e7d2fc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18477,
+  "title": "6 Characterstucke, op. 33",
+  "mbids": [
+   "973f7de1-75be-48d1-b322-9e5f3237117d"
+  ],
+  "mapping": "work",
+  "key": "sinding-973f7de1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15996,
+  "title": "Berceuse, Op. 106, No. 2",
+  "mbids": [
+   "006eaed1-0969-4f8d-895f-d5358e221956"
+  ],
+  "mapping": "work",
+  "key": "sinding-006eaed1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16032,
+  "title": "Schlagende Herzen (Bierbaum) Op.57.9",
+  "mbids": [
+   "028bb4dd-98ef-4f8f-b181-e2e16b17edb9"
+  ],
+  "mapping": "work",
+  "key": "sinding-028bb4dd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16037,
+  "title": "Ein Vaartanke (Utbø) Op.68.2",
+  "mbids": [
+   "02c6206b-4d13-4b23-9d60-996376afdb7f"
+  ],
+  "mapping": "work",
+  "key": "sinding-02c6206b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16060,
+  "title": "Du skog, som bøygjer deg imot (Vinje) Op.55.3",
+  "mbids": [
+   "045a020e-0f55-4d1f-904f-e796558e749a"
+  ],
+  "mapping": "work",
+  "key": "sinding-045a020e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16083,
+  "title": "Andante aus dem Klavierquintett, op. 5",
+  "mbids": [
+   "054b1141-210d-41c9-b32a-048646946a11"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16123,
+  "title": "Abendstimmung, Op. 120a",
+  "mbids": [
+   "07b6ac10-9797-4f95-ac3b-44d8af50246e"
+  ],
+  "mapping": "work",
+  "key": "sinding-07b6ac10",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16167,
+  "title": "Ei Rjupa ifraa Vidda / A grouse from moorlands high",
+  "mbids": [
+   "0a698045-99a8-49f1-96ce-3d6483aa8614"
+  ],
+  "mapping": "work",
+  "key": "sinding-0a698045",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16175,
+  "title": "Det gule Haaret / Her golden hair",
+  "mbids": [
+   "0ade046d-6e20-4ed5-a719-b84a26176044"
+  ],
+  "mapping": "work",
+  "key": "sinding-0ade046d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16223,
+  "title": "Danse orientale",
+  "mbids": [
+   "0dbfa832-9216-4388-bcd0-8fff243c169c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16244,
+  "title": "3 Elegische Stücke, op. 106: No. 1, Elegie",
+  "mbids": [
+   "0efe4e9f-dae6-484e-99aa-37418bf36cea"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16271,
+  "title": "Vi vil os et land (Sivle) Op.38.1",
+  "mbids": [
+   "104b291f-58cb-4c92-9d2f-254e882cb3d9"
+  ],
+  "mapping": "work",
+  "key": "sinding-104b291f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16274,
+  "title": "Songs from 'Des Knaben Wunderhorn', Op. 15 - Die Bettelfrau singt",
+  "mbids": [
+   "108cd885-f6ac-4926-99cb-06ed6fd0c86c"
+  ],
+  "mapping": "work",
+  "key": "sinding-108cd885",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16310,
+  "title": "Ballade, Op. 61, No. 3",
+  "mbids": [
+   "12768cf9-c5db-4ce2-bc92-a3facd2fbc9d"
+  ],
+  "mapping": "work",
+  "key": "sinding-12768cf9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16316,
+  "title": "Piano Concerto in D-flat major, op. 6",
+  "mbids": [
+   "12a78d8d-35a4-4bbf-9aba-9061613b121f"
+  ],
+  "mapping": "work",
+  "key": "sinding-12a78d8d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16346,
+  "title": "Des Narren Regenlied (Bierbaum) Op.57.13",
+  "mbids": [
+   "149664da-7d6f-48ae-8377-2661fcbb2aef"
+  ],
+  "mapping": "work",
+  "key": "sinding-149664da",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16363,
+  "title": "Vuggesang i Mørketiden (Grieg) Op.130.5",
+  "mbids": [
+   "15926294-3f93-46a8-bf42-ee7d8d8eab49"
+  ],
+  "mapping": "work",
+  "key": "sinding-15926294",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16446,
+  "title": "Elegy In D Minor, Op. 61, No. 2",
+  "mbids": [
+   "1a07b3a0-00ee-4ede-9bff-943b600d3056"
+  ],
+  "mapping": "work",
+  "key": "sinding-1a07b3a0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16516,
+  "title": "3 Stücke, op. 89",
+  "mbids": [
+   "1e7fffa5-b419-4ef0-b4c8-691d83f640f9"
+  ],
+  "mapping": "work",
+  "key": "sinding-1e7fffa5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16520,
+  "title": "Suite for Violin and Orchestra in A minor, op. 10",
+  "mbids": [
+   "1ed859dc-c9ba-4ba3-b4e1-fb0e5beb14b7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16574,
+  "title": "Aus der Ferne in der Nacht (Bierbaum) Op.57.14",
+  "mbids": [
+   "22785095-da20-4876-8479-0e826670ca1a"
+  ],
+  "mapping": "work",
+  "key": "sinding-22785095",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16602,
+  "title": "Pinselilje (Wildenvey) Op.90.3",
+  "mbids": [
+   "24899cd3-6a37-4eb3-adda-bf9da5c2b3b7"
+  ],
+  "mapping": "work",
+  "key": "sinding-24899cd3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16629,
+  "title": "Es sitzen drei Weiber zu weben / Three women sit and weave, op. 26.8 (Fitger)",
+  "mbids": [
+   "26003fc6-7e71-4196-bb3e-495dbcd922b9"
+  ],
+  "mapping": "work",
+  "key": "sinding-26003fc6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16645,
+  "title": "Aa me hev sulla ihop so lengje / How long we've carried on with our song",
+  "mbids": [
+   "2739be53-b6ae-4c56-b0b2-f7d3cfba4318"
+  ],
+  "mapping": "work",
+  "key": "sinding-2739be53",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16657,
+  "title": "Im Walde liegt ein stiller See (Sergel) Op.77.2",
+  "mbids": [
+   "27c3a349-2e77-4d2b-b768-b4913f30e035"
+  ],
+  "mapping": "work",
+  "key": "sinding-27c3a349",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16762,
+  "title": "Symphony no. 1 in D minor, op. 21",
+  "mbids": [
+   "2e6098d4-dbaa-4a5e-92bc-0504ecca4220"
+  ],
+  "mapping": "work",
+  "key": "sinding-2e6098d4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16774,
+  "title": "Ad kendte Veje / Upon familiar paths, op. 4.3",
+  "mbids": [
+   "2f75e278-8980-4faf-8cff-299035fd3800"
+  ],
+  "mapping": "work",
+  "key": "sinding-2f75e278",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16817,
+  "title": "Symphony no. 4, op. 129 \"Winter and Spring\"",
+  "mbids": [
+   "31e5ff6c-43b9-4d7f-989c-4e0f845fd9c2"
+  ],
+  "mapping": "work",
+  "key": "sinding-31e5ff6c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16841,
+  "title": "O Mo'r, vor gamle Mo'r! / O mother, dear old mother!, op. 13.1",
+  "mbids": [
+   "332f1234-6c0e-4411-abd6-cdf968322eb8"
+  ],
+  "mapping": "work",
+  "key": "sinding-332f1234",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16913,
+  "title": "So kom du daa atter (Sivle) Op.69.4",
+  "mbids": [
+   "36fc8fcb-2f30-4685-9e92-cf4f966f8da1"
+  ],
+  "mapping": "work",
+  "key": "sinding-36fc8fcb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17010,
+  "title": "Siehst du den Stern / Dost thou see the star, op. 11.2 (Keller)",
+  "mbids": [
+   "3cff491c-bf0d-4e17-a521-1a8bd7299329"
+  ],
+  "mapping": "work",
+  "key": "sinding-3cff491c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17019,
+  "title": "Letzer Wunsch (Bierbaum) Op.57.10",
+  "mbids": [
+   "3d4a7b8b-72ab-4540-ae06-6b12f7e456a9"
+  ],
+  "mapping": "work",
+  "key": "sinding-3d4a7b8b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17113,
+  "title": "Albumblatt, Op. 81, No. 2",
+  "mbids": [
+   "435aeaa2-f646-45cd-84ae-6531188a97d4"
+  ],
+  "mapping": "work",
+  "key": "sinding-435aeaa2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17121,
+  "title": "Ravnen han flyver om Aftnen / The raven flies by night, op. 39.1 (trad.)",
+  "mbids": [
+   "43eb3bdc-11ee-4cb9-bf6d-0e6bae9643cb"
+  ],
+  "mapping": "work",
+  "key": "sinding-43eb3bdc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17159,
+  "title": "Sonata for Piano in B minor, op. 91",
+  "mbids": [
+   "459ccec3-65fd-49b8-820c-98a511580a7a"
+  ],
+  "mapping": "work",
+  "key": "sinding-459ccec3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17164,
+  "title": "D'er 'kje Draumar som leikar / Dreams don't revel",
+  "mbids": [
+   "45feba8c-ef7a-4408-a0c6-ec672d3ede09"
+  ],
+  "mapping": "work",
+  "key": "sinding-45feba8c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17180,
+  "title": "Presto per violoncello e pianoforte",
+  "mbids": [
+   "469dbbf1-dd18-4307-bbad-2291f38c7cdd"
+  ],
+  "mapping": "work",
+  "key": "sinding-469dbbf1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17189,
+  "title": "Songs from 'Des Knaben Wunderhorn', Op. 15 - Rosmarin",
+  "mbids": [
+   "4749f802-327f-4ef9-90df-57238255c31b"
+  ],
+  "mapping": "work",
+  "key": "sinding-4749f802",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17198,
+  "title": "Piano Trio no. 2, op. 64a",
+  "mbids": [
+   "47ad45fb-ed8e-4a2f-aef4-91ab07c6ef2e"
+  ],
+  "mapping": "work",
+  "key": "sinding-47ad45fb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17212,
+  "title": "Songs from 'Des Knaben Wunderhorn', Op. 15 - Fuge",
+  "mbids": [
+   "489d5c0c-c6da-4927-ae0d-0186e525c10d"
+  ],
+  "mapping": "work",
+  "key": "sinding-489d5c0c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17216,
+  "title": "Kokain",
+  "mbids": [
+   "48d1ce03-1ed5-409c-b45e-e75b424467ac"
+  ],
+  "mapping": "work",
+  "key": "sinding-48d1ce03",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17219,
+  "title": "Der var Roser i Dale / There were roses in the dales, op. 39.3 (Winther)",
+  "mbids": [
+   "48e41e9a-045a-4b4b-8ee7-0d55723f7b80"
+  ],
+  "mapping": "work",
+  "key": "sinding-48e41e9a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17220,
+  "title": "End er jeg stemt / Still I'm inspired, w/o. op. (from Russian, T. Lange)",
+  "mbids": [
+   "48e49cd9-77cd-4c0c-97bd-103a37a7e850"
+  ],
+  "mapping": "work",
+  "key": "sinding-48e49cd9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17238,
+  "title": "Abendstimmung, op. 120",
+  "mbids": [
+   "4a23225c-4a5f-4aec-afb2-d405e3c65075"
+  ],
+  "mapping": "work",
+  "key": "sinding-4a23225c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17260,
+  "title": "Triolet (Rückert) Op.64.8",
+  "mbids": [
+   "4b7f58f5-decc-4187-8c80-29ccabc075b1"
+  ],
+  "mapping": "work",
+  "key": "sinding-4b7f58f5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17325,
+  "title": "Signe heiter Gjenta mi / Signe is my sweetheart's name",
+  "mbids": [
+   "504c9e97-ee58-4f76-b93f-e54a9ed58ddd"
+  ],
+  "mapping": "work",
+  "key": "sinding-504c9e97",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17329,
+  "title": "Den Jomfru gik i Valmu-Vang, op. 50 no. 5",
+  "mbids": [
+   "509b3337-cdac-4b4d-b66f-321532221f9b"
+  ],
+  "mapping": "work",
+  "key": "sinding-509b3337",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17332,
+  "title": "Naar Sola ski'ne / When the sun is ashine",
+  "mbids": [
+   "50a3eedb-07d9-4a63-b64d-34249f68ca0e"
+  ],
+  "mapping": "work",
+  "key": "sinding-50a3eedb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17343,
+  "title": "Barcarole (Øverland) Op.128.4",
+  "mbids": [
+   "515ddb5e-5149-4b5a-9651-4ec31c48b578"
+  ],
+  "mapping": "work",
+  "key": "sinding-515ddb5e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17357,
+  "title": "Jeg havde mig en Hjærtenskær / I had in sooth a sweetheart once, op. 19.4",
+  "mbids": [
+   "52a53b95-994f-41c2-abb7-5047377b1521"
+  ],
+  "mapping": "work",
+  "key": "sinding-52a53b95",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17359,
+  "title": "Lieder aus \"Des Knaben Wunderhorn\", op. 15",
+  "mbids": [
+   "52d8376f-4913-41e8-a76a-eebbd57a9aab"
+  ],
+  "mapping": "work",
+  "key": "sinding-52d8376f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17370,
+  "title": "Ich liege dir zu Füssen / I lie at your feet, op. 26.4 (Fitger)",
+  "mbids": [
+   "534ddffe-cd0b-4d7c-9f4a-764eab317124"
+  ],
+  "mapping": "work",
+  "key": "sinding-534ddffe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17458,
+  "title": "Sonate Im Alten Stil, Op. 99: I. Marcato",
+  "mbids": [
+   "57fd4a9a-acc9-477a-9098-b3dbce14c4fd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17478,
+  "title": "Symphony no. 2 in D major, op. 83",
+  "mbids": [
+   "58e90429-cdb1-4800-98a2-6b617f8a5c32"
+  ],
+  "mapping": "work",
+  "key": "sinding-58e90429",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17495,
+  "title": "Serenade for Two Violins and Piano no. 2 in A major, op. 92",
+  "mbids": [
+   "5a14024a-146b-43bb-a366-e10b38f08c1a"
+  ],
+  "mapping": "work",
+  "key": "sinding-5a14024a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17504,
+  "title": "D'er vondt aa vera hugen sjuk (Mortensson) Op.37.5",
+  "mbids": [
+   "5ab6e622-3818-43d8-aefa-c8fa73c7e7f5"
+  ],
+  "mapping": "work",
+  "key": "sinding-5ab6e622",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17522,
+  "title": "Waltz In E Minor, Op. 59, No. 4",
+  "mbids": [
+   "5bc0bbf3-17a9-4803-a12c-fd9e5cb7c617"
+  ],
+  "mapping": "work",
+  "key": "sinding-5bc0bbf3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17527,
+  "title": "So gehen die Tage zu Ende (Sergel) Op.77.2",
+  "mbids": [
+   "5c21b59e-e010-42f1-ae16-0c04f773ccca"
+  ],
+  "mapping": "work",
+  "key": "sinding-5c21b59e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17537,
+  "title": "Songs from 'Des Knaben Wunderhorn', Op. 15 - Es Starben zwei Schwestern",
+  "mbids": [
+   "5ca94e21-ffb6-4508-90b5-75af6f8cd262"
+  ],
+  "mapping": "work",
+  "key": "sinding-5ca94e21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17546,
+  "title": "Suite im alten Stil, op. 10: Presto",
+  "mbids": [
+   "5d9ab224-2b15-402b-ae91-1bda236dcbd2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17563,
+  "title": "Paa Stranden skælver ej det mindste Blad / No single leaf's astir on the shore, op. 8.2",
+  "mbids": [
+   "5e9f48e7-d157-427a-9a08-3da69b3f01cc"
+  ],
+  "mapping": "work",
+  "key": "sinding-5e9f48e7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17566,
+  "title": "Air, Op. 81, No. 1",
+  "mbids": [
+   "5ecadace-5e7e-4064-aac1-958213f30f46"
+  ],
+  "mapping": "work",
+  "key": "sinding-5ecadace",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17610,
+  "title": "Der skreg en fugl / A bird's cry rang, op. 18.5 (Vilhelm Krag)",
+  "mbids": [
+   "614bded9-2a86-4294-99d0-e683a0dc2820"
+  ],
+  "mapping": "work",
+  "key": "sinding-614bded9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17703,
+  "title": "Vi lo jo før saa længe / How much we always laughed, op. 8.3",
+  "mbids": [
+   "670ce12c-a431-4b86-abd7-8f45308bc22c"
+  ],
+  "mapping": "work",
+  "key": "sinding-670ce12c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17713,
+  "title": "Og der gik Dage / And there were days, op. 36.3 (Nils Collett Vogt)",
+  "mbids": [
+   "67b14578-1499-4d42-8e31-8ac1bca1f7ec"
+  ],
+  "mapping": "work",
+  "key": "sinding-67b14578",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17730,
+  "title": "Støvskyer stiger for hvert et Skridt / With every step the dust clouds rise, op. 13.2",
+  "mbids": [
+   "689d3c7c-6f87-465a-9c04-1578ba2cc799"
+  ],
+  "mapping": "work",
+  "key": "sinding-689d3c7c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17759,
+  "title": "Songs from 'Des Knaben Wunderhorn', Op. 15 - Wiegenlied",
+  "mbids": [
+   "6a247f30-4977-4de0-8530-74057b10f045"
+  ],
+  "mapping": "work",
+  "key": "sinding-6a247f30",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17800,
+  "title": "Løv (Sivle) Op.38.3",
+  "mbids": [
+   "6cee4dce-ca90-47a6-8906-37b74162fafc"
+  ],
+  "mapping": "work",
+  "key": "sinding-6cee4dce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17809,
+  "title": "Aud der Wiese (Sergel) Op.77.2",
+  "mbids": [
+   "6d6b751b-fed9-4a79-808c-52378226b787"
+  ],
+  "mapping": "work",
+  "key": "sinding-6d6b751b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17820,
+  "title": "Es war im sonnigen Monat März / In the sunny month of March, op. 26.7 (Fitger)",
+  "mbids": [
+   "6df573f1-7c8f-4485-842f-fdf9fb7c9f8d"
+  ],
+  "mapping": "work",
+  "key": "sinding-6df573f1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17824,
+  "title": "Suite for Violin & Orchestra, op. 10 “im alten Stil”: II. Adagio",
+  "mbids": [
+   "6e2f9b89-33e6-4d84-b671-d2efb9ca48bd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17851,
+  "title": "Suite für Violine Solo, op. 123",
+  "mbids": [
+   "6f823aef-45b8-4c96-83fd-502be2ede7d1"
+  ],
+  "mapping": "work",
+  "key": "sinding-6f823aef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17946,
+  "title": "Graagjæs (Grieg) Op.130.3",
+  "mbids": [
+   "74fa6927-eec5-4876-87e3-62b61f37da39"
+  ],
+  "mapping": "work",
+  "key": "sinding-74fa6927",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17961,
+  "title": "Andante Religioso, Op. 106, No. 3",
+  "mbids": [
+   "763cb99b-b19e-4128-bc78-aeafe119f08b"
+  ],
+  "mapping": "work",
+  "key": "sinding-763cb99b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17992,
+  "title": "Traum durch die Dämmerung (Bierbaum) Op.57.8",
+  "mbids": [
+   "789ae020-d8f0-4f56-999c-6c466d69ac01"
+  ],
+  "mapping": "work",
+  "key": "sinding-789ae020",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18003,
+  "title": "Symphony no. 3 in F major, op. 121",
+  "mbids": [
+   "791c76bd-72c9-4bd8-a982-1e6a4327dfa0"
+  ],
+  "mapping": "work",
+  "key": "sinding-791c76bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18129,
+  "title": "Meine Töne , still und heiter (Rückert) Op.64.7",
+  "mbids": [
+   "812ea25f-b695-46a1-9da9-5d967b17cecc"
+  ],
+  "mapping": "work",
+  "key": "sinding-812ea25f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18142,
+  "title": "Sonate Im Alten Stil, Op. 99: III. Menuetto",
+  "mbids": [
+   "8221f237-3e4b-4667-b871-92692a5ce87c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18165,
+  "title": "I Seraillets Have / In the Seraglio's garden, op. 17.4 (. P. Jacobsen)",
+  "mbids": [
+   "840e42a4-c71d-4130-a4c9-7fc53d88b926"
+  ],
+  "mapping": "work",
+  "key": "sinding-840e42a4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18172,
+  "title": "Det bødes der for / Through long, long years, op. 17.3 (. P. Jacobsen)",
+  "mbids": [
+   "84825222-a098-452c-9bc4-92fee1547e46"
+  ],
+  "mapping": "work",
+  "key": "sinding-84825222",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18191,
+  "title": "Der skreg en fugl, op. 18 no. 5",
+  "mbids": [
+   "85b33d2b-9fab-4029-8a96-29f437ff96d0"
+  ],
+  "mapping": "work",
+  "key": "sinding-85b33d2b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18249,
+  "title": "Cantus Doloris, Op. 78",
+  "mbids": [
+   "8a38f17d-48cb-4664-9ede-982119364ee3"
+  ],
+  "mapping": "work",
+  "key": "sinding-8a38f17d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18271,
+  "title": "Eg vil deg 'kje elske / I don't want to love you",
+  "mbids": [
+   "8b6675bb-7ceb-4884-8e0a-583559f43383"
+  ],
+  "mapping": "work",
+  "key": "sinding-8b6675bb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18328,
+  "title": "Jane Grey (Amman) Op.109.3",
+  "mbids": [
+   "8e79b80c-6a79-474e-bcb8-239e1b8d23e9"
+  ],
+  "mapping": "work",
+  "key": "sinding-8e79b80c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18360,
+  "title": "Elegy In B Flat Major, Op. 106, No. 1",
+  "mbids": [
+   "8fee8b16-767a-4dbb-a74f-92d26f084ecb"
+  ],
+  "mapping": "work",
+  "key": "sinding-8fee8b16",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18384,
+  "title": "Und wenn in ihrem Liebesglanz (Rückert) Op.64.6",
+  "mbids": [
+   "91a3c24c-eca8-414a-94ec-f68dee189f95"
+  ],
+  "mapping": "work",
+  "key": "sinding-91a3c24c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18423,
+  "title": "Du Mor, som einsam heime gjeng / Oh mother, all alone at home r 36. D'er 'kje Draumar som leikar / Dreams don't revel",
+  "mbids": [
+   "93cb87c2-2923-438a-af54-1b52b658ba44"
+  ],
+  "mapping": "work",
+  "key": "sinding-93cb87c2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18463,
+  "title": "Det er Sommerkvæld som da / It is summer evening as before, op. 36.7 (Nils Collett Vogt)",
+  "mbids": [
+   "966dc5db-59f0-4a36-a785-6b4b8a272886"
+  ],
+  "mapping": "work",
+  "key": "sinding-966dc5db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18511,
+  "title": "Morten han var liten og fæit",
+  "mbids": [
+   "98f536f0-20c8-4b4d-97f5-ac962d3d000a"
+  ],
+  "mapping": "work",
+  "key": "sinding-98f536f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18512,
+  "title": "Sakuntala / Sakuntala, op. 4.4",
+  "mbids": [
+   "9926dc00-9ae2-4352-9132-bb095497a2eb"
+  ],
+  "mapping": "work",
+  "key": "sinding-9926dc00",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18527,
+  "title": "No maa eg slutte aa vera gla / All joy I must abandon now",
+  "mbids": [
+   "9a5cd232-4eb0-4ce4-ad3b-32f1ab3a2fd6"
+  ],
+  "mapping": "work",
+  "key": "sinding-9a5cd232",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18533,
+  "title": "De gjeng tebakar (Telnes) Op.55.6",
+  "mbids": [
+   "9a9e3fe5-6b6f-463a-8e1d-edc24dfcac9f"
+  ],
+  "mapping": "work",
+  "key": "sinding-9a9e3fe5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18617,
+  "title": "Haust (Sivle) Op.38.4",
+  "mbids": [
+   "a05d20f7-d7f6-45ef-b6aa-94d7740b2571"
+  ],
+  "mapping": "work",
+  "key": "sinding-a05d20f7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18622,
+  "title": "Leit etter livet og liv det!, op. 55 no. 5",
+  "mbids": [
+   "a0deb85c-680c-428f-a27a-0cb2361ce0d3"
+  ],
+  "mapping": "work",
+  "key": "sinding-a0deb85c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18629,
+  "title": "De hellige tre Kongsers Reise (Heine, Wergeland)",
+  "mbids": [
+   "a1247eb2-6d9c-4b62-b0e8-7b1d1587eb31"
+  ],
+  "mapping": "work",
+  "key": "sinding-a1247eb2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18640,
+  "title": "Ritter raet dem Knappen dies (Bierbaum) Op.57.2",
+  "mbids": [
+   "a1e59444-f2c0-495e-86b2-8dbbb7e66e82"
+  ],
+  "mapping": "work",
+  "key": "sinding-a1e59444",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18708,
+  "title": "Mainat, op. 22 no. 3",
+  "mbids": [
+   "a5a88fce-1ea2-45d2-8e8f-0740b982397d"
+  ],
+  "mapping": "work",
+  "key": "sinding-a5a88fce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18756,
+  "title": "Hugen leikar (Mortensson) Op.69.3",
+  "mbids": [
+   "a8b941ef-019d-402b-9e5e-a2b0350e6c1d"
+  ],
+  "mapping": "work",
+  "key": "sinding-a8b941ef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18787,
+  "title": "Waltzes, op. 59: No. 3 in G major",
+  "mbids": [
+   "aaa54ebd-e605-4ac1-91d0-545070dfcbc9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18799,
+  "title": "4 Morceaux, op. 43: No. 3, Prêlude",
+  "mbids": [
+   "ab5258ec-336c-4247-bf64-3de75d16112f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18800,
+  "title": "Den Jomfru gik i Valmu-vang / A maiden walked in the poppy field, op. 50.5 (Ewald)",
+  "mbids": [
+   "ab58e372-5393-4643-9fc9-448b51695db0"
+  ],
+  "mapping": "work",
+  "key": "sinding-ab58e372",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18877,
+  "title": "Songs from 'Des Knaben Wunderhorn', Op. 15 - Maria Gnademutter",
+  "mbids": [
+   "b0fbef4d-1fc4-4239-8c22-77532ccfebb9"
+  ],
+  "mapping": "work",
+  "key": "sinding-b0fbef4d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19001,
+  "title": "Prélude, Op. 43, No. 3",
+  "mbids": [
+   "b8abad32-5c22-4393-ab9d-bf5bf5e05b97"
+  ],
+  "mapping": "work",
+  "key": "sinding-b8abad32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19032,
+  "title": "Ofte Du sang for de Andre / Often you sang for others, op. 13.7",
+  "mbids": [
+   "bb514f9a-1288-4054-9b73-07902d41b787"
+  ],
+  "mapping": "work",
+  "key": "sinding-bb514f9a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19104,
+  "title": "Romance In E Minor, Op. 30",
+  "mbids": [
+   "bf59279a-279b-4f2a-af3a-40d654717dd8"
+  ],
+  "mapping": "work",
+  "key": "sinding-bf59279a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19106,
+  "title": "Wie glänzt der helle Mond / How bright the moon shines, op. 1.5 (Keller)",
+  "mbids": [
+   "bf63761d-2113-49ee-8a1a-ea6c95da9355"
+  ],
+  "mapping": "work",
+  "key": "sinding-bf63761d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19147,
+  "title": "Spruch (Sergel) Op.77.2",
+  "mbids": [
+   "c240173d-1448-4255-b345-0c64a3111fbf"
+  ],
+  "mapping": "work",
+  "key": "sinding-c240173d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19173,
+  "title": "Totengräberlied / Grave-digger's song, op. 11.6 (Hölty)",
+  "mbids": [
+   "c387166e-b00d-480a-b27e-288be2b331c0"
+  ],
+  "mapping": "work",
+  "key": "sinding-c387166e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19203,
+  "title": "Paa andre Aare / 'Tis been more than a year",
+  "mbids": [
+   "c5583426-c482-4423-af22-df457f852e8d"
+  ],
+  "mapping": "work",
+  "key": "sinding-c5583426",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19230,
+  "title": "Sylvelin, op. 55 no. 1",
+  "mbids": [
+   "c6de3cad-91df-42ae-a750-4ef5bb225558"
+  ],
+  "mapping": "work",
+  "key": "sinding-c6de3cad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19244,
+  "title": "Kirschenballade (Weller) Op.109.2",
+  "mbids": [
+   "c802e8f9-2ce9-41fc-998f-4b9fa634232f"
+  ],
+  "mapping": "work",
+  "key": "sinding-c802e8f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19270,
+  "title": "Velkomen atter hit (Aasen) Op.69.1",
+  "mbids": [
+   "c9d2571d-0472-4f16-aef4-afc8a54cf163"
+  ],
+  "mapping": "work",
+  "key": "sinding-c9d2571d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19378,
+  "title": "Fatum - Piano Variations, Op.94",
+  "mbids": [
+   "d12c31a5-bb56-4f1c-a8e1-274d1cbe809a"
+  ],
+  "mapping": "work",
+  "key": "sinding-d12c31a5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19383,
+  "title": "Immer wieder (Sergel) Op.77.2",
+  "mbids": [
+   "d1b11efb-b433-4f93-b80a-4027049a9f16"
+  ],
+  "mapping": "work",
+  "key": "sinding-d1b11efb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19426,
+  "title": "Viel Träume / Many Dreams, op. 11.4 (Hamerling)",
+  "mbids": [
+   "d4168212-d2cc-4a8c-8b50-2f3c108a9661"
+  ],
+  "mapping": "work",
+  "key": "sinding-d4168212",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19530,
+  "title": "Romance, op. 30",
+  "mbids": [
+   "db7151e4-7b87-4d3d-99ea-8f59995bae70"
+  ],
+  "mapping": "work",
+  "key": "sinding-db7151e4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19540,
+  "title": "Et seil glir bort i kveldens blå (Øverland) Op.128.2",
+  "mbids": [
+   "dbe8ea7c-8ad0-4374-a4d1-b9ff83313226"
+  ],
+  "mapping": "work",
+  "key": "sinding-dbe8ea7c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19599,
+  "title": "Dei seier, naar Tia skrie / 'Tis said that time in passing",
+  "mbids": [
+   "e027f490-82f4-46e4-9d1f-a3b774485ae6"
+  ],
+  "mapping": "work",
+  "key": "sinding-e027f490",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19610,
+  "title": "Romance In D Major, Op. 79, No. 2",
+  "mbids": [
+   "e0c38774-b3cb-4d7e-9823-dbb31ad0f4b6"
+  ],
+  "mapping": "work",
+  "key": "sinding-e0c38774",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19626,
+  "title": "Rav / Amber, op. 19.2",
+  "mbids": [
+   "e18983b2-6b93-4428-99ea-85e595e66e14"
+  ],
+  "mapping": "work",
+  "key": "sinding-e18983b2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19650,
+  "title": "Sorte Ravner (Schou) Op.95.1",
+  "mbids": [
+   "e2f54bb6-fefc-4244-bd1e-ba2dc69ad6cc"
+  ],
+  "mapping": "work",
+  "key": "sinding-e2f54bb6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19661,
+  "title": "Sonate Im Alten Stil, Op. 99: IV. Allegretto",
+  "mbids": [
+   "e3baa2be-ca72-4c15-8e7d-59e825ad685c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19733,
+  "title": "Tanzlied (Bierbaum) Op.57.3",
+  "mbids": [
+   "ea28781b-e509-4716-8c16-af79cc441649"
+  ],
+  "mapping": "work",
+  "key": "sinding-ea28781b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19746,
+  "title": "Eg veit meg aldri / I just do not know",
+  "mbids": [
+   "eae9ab5a-3c8c-4dfd-b7bd-758bbfc95d08"
+  ],
+  "mapping": "work",
+  "key": "sinding-eae9ab5a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19756,
+  "title": "Neemt, Frouwe, disen Kranz (Bierbaum) Op.57.1",
+  "mbids": [
+   "eb9fdc8a-e842-4300-b8f5-eea829e11970"
+  ],
+  "mapping": "work",
+  "key": "sinding-eb9fdc8a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19762,
+  "title": "Sonate Im Alten Stil, Op. 99: V. Un Poco Maestoso",
+  "mbids": [
+   "ec2655e8-7c22-401f-b870-24c0cf6c7afa"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19824,
+  "title": "Eg tarv ikkje Ljose aa kvejkje / I need not kindle the light",
+  "mbids": [
+   "f034d36b-d603-4d8c-8bbf-c33b0792e387"
+  ],
+  "mapping": "work",
+  "key": "sinding-f034d36b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19831,
+  "title": "O verzweifle nicht am Glücke (Hamerling) Op.104.4",
+  "mbids": [
+   "f0904ea2-0fac-43a7-b0d5-08e2361cc5a0"
+  ],
+  "mapping": "work",
+  "key": "sinding-f0904ea2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19920,
+  "title": "Sylvelin (Vislie) Op.55.1",
+  "mbids": [
+   "f57297d8-58ab-4fd4-b709-bab8917aaab3"
+  ],
+  "mapping": "work",
+  "key": "sinding-f57297d8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19940,
+  "title": "Jeg bærer den Hat, som jeg vil / I'll wear any hat that I like, op. 4.1",
+  "mbids": [
+   "f661fa56-fa83-49e2-83d7-8c46b5f6a8ad"
+  ],
+  "mapping": "work",
+  "key": "sinding-f661fa56",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19941,
+  "title": "Eg tykkjer det er reint langsamt / So dreary all around me seems",
+  "mbids": [
+   "f6691594-3933-45ea-9161-872d21dd45e1"
+  ],
+  "mapping": "work",
+  "key": "sinding-f6691594",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19950,
+  "title": "Romance, op. 9",
+  "mbids": [
+   "f6db4ae9-7043-42fc-a7bc-e06e9dc7ec86"
+  ],
+  "mapping": "work",
+  "key": "sinding-f6db4ae9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19992,
+  "title": "Sonate Im Alten Stil, Op. 99: II. Andante Doloroso",
+  "mbids": [
+   "f8e15d0d-7a14-4283-b18b-3ec99cab6d99"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19997,
+  "title": "Fattigmandstrøst (Wildenvey) Op.90.4",
+  "mbids": [
+   "f91b0806-8d86-4fa7-b1a9-9adbe1cbcc49"
+  ],
+  "mapping": "work",
+  "key": "sinding-f91b0806",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

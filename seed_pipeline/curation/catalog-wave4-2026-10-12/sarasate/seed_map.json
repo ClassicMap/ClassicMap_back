@@ -1,0 +1,686 @@
+[
+ {
+  "pieceId": 7792,
+  "title": "Nocturne-sérénade, op. 45",
+  "mbids": [
+   "0439efb7-f0ef-40dc-a948-eb6c6717a350"
+  ],
+  "mapping": "work",
+  "key": "sarasate-0439efb7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8680,
+  "title": "Introduction et tarantelle, op. 43",
+  "mbids": [
+   "443af009-1d74-35b0-9291-aeeeaa144e65"
+  ],
+  "mapping": "work",
+  "key": "sarasate-443af009",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9834,
+  "title": "Rêverie, op. 4",
+  "mbids": [
+   "95e74a82-4dce-4138-a4c8-744978f65f30"
+  ],
+  "mapping": "work",
+  "key": "sarasate-95e74a82",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9903,
+  "title": "Spanish Dances, op. 23",
+  "mbids": [
+   "9a51f880-19e9-4dc9-9238-b418c975b680"
+  ],
+  "mapping": "work",
+  "key": "sarasate-9a51f880",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7769,
+  "title": "Fantaisie sur Der Freischütz de Weber, op. 14",
+  "mbids": [
+   "0307407f-eeae-4fbc-9d99-eeca811b1893"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7776,
+  "title": "Le Sommeil, op. 11",
+  "mbids": [
+   "03a6b286-1a04-478e-bf27-72e3be6999b4"
+  ],
+  "mapping": "work",
+  "key": "sarasate-03a6b286",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7859,
+  "title": "Peteneras, capriccio espagnol, op. 35",
+  "mbids": [
+   "086bbe65-86db-4d0a-a766-4997f8a2520c"
+  ],
+  "mapping": "work",
+  "key": "sarasate-086bbe65",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7886,
+  "title": "Bolero, op. 30",
+  "mbids": [
+   "0a2e1ac8-3d1c-476a-a289-00e8d50f4a13"
+  ],
+  "mapping": "work",
+  "key": "sarasate-0a2e1ac8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8021,
+  "title": "Introduction et caprice-jota, op. 41",
+  "mbids": [
+   "13261adf-98f6-4ee2-82ad-eecdd5f51e02"
+  ],
+  "mapping": "work",
+  "key": "sarasate-13261adf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8101,
+  "title": "Spanish Dances, op. 26",
+  "mbids": [
+   "1916c0ad-3b3b-4a2c-903f-73424204a1de"
+  ],
+  "mapping": "work",
+  "key": "sarasate-1916c0ad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8240,
+  "title": "Souvenir de Domont, op. 8",
+  "mbids": [
+   "24e8a013-93a0-4201-be3d-691fc157d471"
+  ],
+  "mapping": "work",
+  "key": "sarasate-24e8a013",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8282,
+  "title": "Fantaisie Caprice",
+  "mbids": [
+   "27e3cba6-a852-487d-a336-ab9b5a44e234"
+  ],
+  "mapping": "work",
+  "key": "sarasate-27e3cba6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8347,
+  "title": "Caprice sur Mireille de Gounod, op. 6",
+  "mbids": [
+   "2cde0d86-1333-408b-975b-ddd6f0f4d395"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8396,
+  "title": "永遠のロダン",
+  "mbids": [
+   "30389afe-8051-49db-9e91-6eeff13404f1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8577,
+  "title": "Moscovienne, op. 12",
+  "mbids": [
+   "3cf19558-e535-4195-ad7d-d8719d749cdc"
+  ],
+  "mapping": "work",
+  "key": "sarasate-3cf19558",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8589,
+  "title": "Spanish Dances, op. 22",
+  "mbids": [
+   "3e4252d1-5285-40bf-8b9a-f729a6be09b1"
+  ],
+  "mapping": "work",
+  "key": "sarasate-3e4252d1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8599,
+  "title": "Concert Fantasy on themes from Gounod's \"Faust\", op. 13",
+  "mbids": [
+   "3f113315-f190-4988-bb89-3dd795240010"
+  ],
+  "mapping": "work",
+  "key": "sarasate-3f113315",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8626,
+  "title": "Concert Fantasy on Mozart’s Die Zauberflöte, op. 54",
+  "mbids": [
+   "413784ff-8371-4f9f-88cf-c89ff9c9be9f"
+  ],
+  "mapping": "work",
+  "key": "sarasate-413784ff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8638,
+  "title": "Navarra, op. 33",
+  "mbids": [
+   "41aeb40e-ef7c-4114-914b-2ee26123c075"
+  ],
+  "mapping": "work",
+  "key": "sarasate-41aeb40e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8906,
+  "title": "Fantaisie sur le Don Juan de Mozart, op. 51",
+  "mbids": [
+   "53fc12b2-9274-4a56-a104-cb9797027ad0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8923,
+  "title": "Spanish Dances, op. 21",
+  "mbids": [
+   "55584e8a-af04-44a8-9f9b-9ffce9b7ac4d"
+  ],
+  "mapping": "work",
+  "key": "sarasate-55584e8a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8925,
+  "title": "Confidences, op. 7",
+  "mbids": [
+   "55614900-9d61-4c47-8797-e2ef1f2b366a"
+  ],
+  "mapping": "work",
+  "key": "sarasate-55614900",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8980,
+  "title": "Introduction and Tarantelle, op. 43",
+  "mbids": [
+   "589ca374-016d-4ded-bf3c-575da2211c1f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9053,
+  "title": "Concert Fantasy on Gounod’s Roméo et Juliette, op. 5",
+  "mbids": [
+   "5d5c4ad4-ab83-4abe-a04f-c4f93d1a8ff6"
+  ],
+  "mapping": "work",
+  "key": "sarasate-5d5c4ad4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9095,
+  "title": "Jota de San Fermín, op. 36",
+  "mbids": [
+   "60812971-da91-46cf-b27b-a74dc33826c8"
+  ],
+  "mapping": "work",
+  "key": "sarasate-60812971",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9162,
+  "title": "Airs espagnols, op. 18",
+  "mbids": [
+   "6533f459-6c12-4e77-8e7e-5a295a264e5b"
+  ],
+  "mapping": "work",
+  "key": "sarasate-6533f459",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9193,
+  "title": "Mélodie roumaine, op. 47",
+  "mbids": [
+   "683d5b31-e0b9-4113-b0eb-1740d02a9099"
+  ],
+  "mapping": "work",
+  "key": "sarasate-683d5b31",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9266,
+  "title": "Balada, op. 31",
+  "mbids": [
+   "6d328595-7556-4c82-abe8-5a16a4c4da02"
+  ],
+  "mapping": "work",
+  "key": "sarasate-6d328595",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9389,
+  "title": "Jota de Pamplona, op. 50",
+  "mbids": [
+   "75322e0c-3656-4447-8c72-b21931f2c560"
+  ],
+  "mapping": "work",
+  "key": "sarasate-75322e0c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9520,
+  "title": "Gondoliéra veneziana, op. 46",
+  "mbids": [
+   "7e644f57-3802-443e-ac56-6708715be984"
+  ],
+  "mapping": "work",
+  "key": "sarasate-7e644f57",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9534,
+  "title": "Introduction et Fandango varié, op. 40",
+  "mbids": [
+   "7f0b26e5-998c-4217-932c-0c5b3c04f3bf"
+  ],
+  "mapping": "work",
+  "key": "sarasate-7f0b26e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9750,
+  "title": "El canto del ruiseñor, op. 29",
+  "mbids": [
+   "8f56309d-cd76-4d19-8e81-44318427250e"
+  ],
+  "mapping": "work",
+  "key": "sarasate-8f56309d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9767,
+  "title": "Spanish Dances, op. 23: No. 2. Zapateado",
+  "mbids": [
+   "904af6a3-904c-4300-a887-30f2af1d5fd2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9791,
+  "title": "Les Adieux, op. 9",
+  "mbids": [
+   "926fbf2c-3a83-46ee-82e9-f80b0c4a3772"
+  ],
+  "mapping": "work",
+  "key": "sarasate-926fbf2c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9794,
+  "title": "Fantaisie de concert sur La forza del destino, op. 1",
+  "mbids": [
+   "92950961-b378-4932-80d5-d34152620020"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9853,
+  "title": "Jota de Pablo, op. 52",
+  "mbids": [
+   "978458ac-edda-4f8b-b107-5bfec9f1c418"
+  ],
+  "mapping": "work",
+  "key": "sarasate-978458ac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10085,
+  "title": "Fantaisie sur La Flûte enchantée de Mozart Op. 54",
+  "mbids": [
+   "a70e4502-8968-46a7-9e73-7e816a59b092"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10160,
+  "title": "Serenata andaluza, op. 28",
+  "mbids": [
+   "ad046125-a462-4390-b346-0ff0e8cb8eac"
+  ],
+  "mapping": "work",
+  "key": "sarasate-ad046125",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10170,
+  "title": "Prière et Berceuse, op. 17",
+  "mbids": [
+   "ad831fa2-e415-414e-aebf-dc3f4bfb2cbd"
+  ],
+  "mapping": "work",
+  "key": "sarasate-ad831fa2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10177,
+  "title": "Le Rêve, op. 53",
+  "mbids": [
+   "add39f00-6a2e-46ba-81f4-4fcc91c8ded4"
+  ],
+  "mapping": "work",
+  "key": "sarasate-add39f00",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10331,
+  "title": "Fantaisie de concert sur Martha, op. 19",
+  "mbids": [
+   "b998b10b-8553-4015-891a-84e19b8aaf95"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10395,
+  "title": "Canciones rusas, op. 49",
+  "mbids": [
+   "be6c98eb-cd99-4515-b148-620787c91ca8"
+  ],
+  "mapping": "work",
+  "key": "sarasate-be6c98eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10433,
+  "title": "Airs écossais, op. 34",
+  "mbids": [
+   "c1761aa2-d354-4577-88ff-cd89e8f7204f"
+  ],
+  "mapping": "work",
+  "key": "sarasate-c1761aa2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10520,
+  "title": "Mosaïque de Zampa, op. 15",
+  "mbids": [
+   "c7b42571-dd38-4bc6-b611-63a09ba8591c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10546,
+  "title": "La Chasse, op. 44",
+  "mbids": [
+   "c9e604f6-3d08-49da-904b-d9b920df9a0a"
+  ],
+  "mapping": "work",
+  "key": "sarasate-c9e604f6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10564,
+  "title": "Fantasie sur La Dame Blanche, op. 3",
+  "mbids": [
+   "cb0171e3-eadd-4599-89ce-e4b3f5acb0bb"
+  ],
+  "mapping": "work",
+  "key": "sarasate-cb0171e3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10649,
+  "title": "Zortzico de Iparraguirre, op. 39",
+  "mbids": [
+   "d17c522c-23a5-4ae8-a887-56947418588f"
+  ],
+  "mapping": "work",
+  "key": "sarasate-d17c522c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10691,
+  "title": "Sérénade andalouse, op. 10",
+  "mbids": [
+   "d46d49e2-5198-4bb9-ade1-c7ac0a3be413"
+  ],
+  "mapping": "work",
+  "key": "sarasate-d46d49e2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10793,
+  "title": "Souvenirs de Faust",
+  "mbids": [
+   "dc1ae4ba-ae0a-4113-804b-8b76e410ce48"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10814,
+  "title": "Los pájaros de Chile",
+  "mbids": [
+   "ddb0b0dc-541b-4b2e-ae9d-afbe3fa55877"
+  ],
+  "mapping": "work",
+  "key": "sarasate-ddb0b0dc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10870,
+  "title": "Jota aragonesa, op. 27",
+  "mbids": [
+   "e24a4728-49a5-4a45-b40c-6db8e6688891"
+  ],
+  "mapping": "work",
+  "key": "sarasate-e24a4728",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10894,
+  "title": "Danse espagnole, op. 37 \"Adiós montañas mías\"",
+  "mbids": [
+   "e46a38d9-8211-47a1-a721-7d03ff75574b"
+  ],
+  "mapping": "work",
+  "key": "sarasate-e46a38d9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10953,
+  "title": "Homenaje a Rossini, op. 2",
+  "mbids": [
+   "e85492bc-94ed-4254-888f-a22033c28c20"
+  ],
+  "mapping": "work",
+  "key": "sarasate-e85492bc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11146,
+  "title": "¡Viva Sevilla!, op. 38",
+  "mbids": [
+   "f6d83ecf-639c-4247-9a9c-c1bcf04eb8e0"
+  ],
+  "mapping": "work",
+  "key": "sarasate-f6d83ecf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11198,
+  "title": "Gavota de Mignon, op. 16",
+  "mbids": [
+   "fa30b7ee-670d-4e67-ad9e-4c412f526c70"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11230,
+  "title": "Miramar, op. 42",
+  "mbids": [
+   "fc429f38-57a2-4697-850c-21cbba2de581"
+  ],
+  "mapping": "work",
+  "key": "sarasate-fc429f38",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11275,
+  "title": "L’Esprit follet, op. 48",
+  "mbids": [
+   "fe98a0ff-8a6d-4847-b344-ab8607a28b80"
+  ],
+  "mapping": "work",
+  "key": "sarasate-fe98a0ff",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

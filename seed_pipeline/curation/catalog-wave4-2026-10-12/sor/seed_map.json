@@ -1,0 +1,1262 @@
+[
+ {
+  "pieceId": 15764,
+  "title": "24 Progressive Lessons for Beginners, op. 31",
+  "mbids": [
+   "54af1c02-cccb-493b-8308-f556006670ae"
+  ],
+  "mapping": "work",
+  "key": "sor-54af1c02",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15804,
+  "title": "Introduction and Variations on a Theme by Mozart, op. 9",
+  "mbids": [
+   "a0d4d9e9-23cd-37a1-afb5-cf95d6629b51"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16338,
+  "title": "12 estudios, op. 29",
+  "mbids": [
+   "1429009b-c663-4530-8c26-2a8589d67ecb"
+  ],
+  "mapping": "work",
+  "key": "sor-1429009b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16597,
+  "title": "3 Pièces de société, op. 36",
+  "mbids": [
+   "2439711e-54cc-44ac-8b3b-69eaf4214a2d"
+  ],
+  "mapping": "work",
+  "key": "sor-2439711e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16983,
+  "title": "6 bagatelles, op. 43 \"Mes Ennuis\"",
+  "mbids": [
+   "3bb37f22-6f10-44d1-8725-5b51826296f3"
+  ],
+  "mapping": "work",
+  "key": "sor-3bb37f22",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17548,
+  "title": "24 Pièces progressives, op. 44",
+  "mbids": [
+   "5dc78bcd-95ff-4096-96a3-49c8a72c409e"
+  ],
+  "mapping": "work",
+  "key": "sor-5dc78bcd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17630,
+  "title": "Morceau de concert, op. 54",
+  "mbids": [
+   "6252e817-904b-4280-93aa-50f05f844c9f"
+  ],
+  "mapping": "work",
+  "key": "sor-6252e817",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17725,
+  "title": "12 Seguidillas",
+  "mbids": [
+   "6858b29b-8841-4d11-a0e0-5ebff46d0a8d"
+  ],
+  "mapping": "work",
+  "key": "sor-6858b29b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18123,
+  "title": "Six petites pièces, op. 47",
+  "mbids": [
+   "80a604de-fc41-4dd4-9afa-b47ffdb99436"
+  ],
+  "mapping": "work",
+  "key": "sor-80a604de",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18283,
+  "title": "Twenty Studies for the Guitar by Fernando Sor",
+  "mbids": [
+   "8c38ae1f-8315-4c66-b6f9-1d5e42eaf634"
+  ],
+  "mapping": "work",
+  "key": "sor-8c38ae1f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18909,
+  "title": "La romanesca",
+  "mbids": [
+   "b293f3ca-c8d0-497a-afa7-5d6938875607"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18993,
+  "title": "Sonata in C major, op. 15b",
+  "mbids": [
+   "b80808e6-6c7a-4c66-bac4-794603295b06"
+  ],
+  "mapping": "work",
+  "key": "sor-b80808e6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18995,
+  "title": "Six Divertimenti, op. 1",
+  "mbids": [
+   "b83178de-0a51-4f47-bde2-e5c393efbcce"
+  ],
+  "mapping": "work",
+  "key": "sor-b83178de",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19108,
+  "title": "6 Short Pieces, op. 32",
+  "mbids": [
+   "bf7703b2-d464-4201-b0be-ae5a2b146021"
+  ],
+  "mapping": "work",
+  "key": "sor-bf7703b2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19354,
+  "title": "12 estudios, op. 6",
+  "mbids": [
+   "cfb02a85-168c-415a-a54c-f4e821c31ad0"
+  ],
+  "mapping": "work",
+  "key": "sor-cfb02a85",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19814,
+  "title": "24 Exercises, op. 35",
+  "mbids": [
+   "ef9c8273-924e-4643-a178-5df492eea126"
+  ],
+  "mapping": "work",
+  "key": "sor-ef9c8273",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15720,
+  "title": "Six Divertimenti, op. 13",
+  "mbids": [
+   "06b10fa0-304b-4096-b1af-6cba73b5ef36"
+  ],
+  "mapping": "work",
+  "key": "sor-06b10fa0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15749,
+  "title": "Les Folies d'Espagne, op. 15",
+  "mbids": [
+   "3dac63a7-3b76-4245-91d2-df436555720b"
+  ],
+  "mapping": "work",
+  "key": "sor-3dac63a7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15779,
+  "title": "Fantasie no. 3, op. 10",
+  "mbids": [
+   "77a1b9c1-8d70-4682-91c8-025deab4766d"
+  ],
+  "mapping": "work",
+  "key": "sor-77a1b9c1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15835,
+  "title": "Eight Small Pieces, op. 24",
+  "mbids": [
+   "e2be5196-47b7-47d7-8370-bf0da21ea600"
+  ],
+  "mapping": "work",
+  "key": "sor-e2be5196",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16196,
+  "title": "\"Les Adieux\", op. 21",
+  "mbids": [
+   "0c57918e-40f4-48dc-b90b-511a46c808bc"
+  ],
+  "mapping": "work",
+  "key": "sor-0c57918e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16315,
+  "title": "Moderato",
+  "mbids": [
+   "12999f50-d340-39f6-b646-7b7c33c74937"
+  ],
+  "mapping": "work",
+  "key": "sor-12999f50",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16368,
+  "title": "Boleras del Caramba",
+  "mbids": [
+   "15bbe7f5-e121-46c4-8018-183ae1ba361d"
+  ],
+  "mapping": "work",
+  "key": "sor-15bbe7f5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16405,
+  "title": "Estudio V",
+  "mbids": [
+   "17838697-3d4f-4d35-8752-e86fcd06ca75"
+  ],
+  "mapping": "work",
+  "key": "sor-17838697",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16515,
+  "title": "Introduction et Thême varié, op. 20",
+  "mbids": [
+   "1e72d8aa-b331-4768-ad20-b31a4d446dc7"
+  ],
+  "mapping": "work",
+  "key": "sor-1e72d8aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16519,
+  "title": "Fantasie no. 2, op. 4",
+  "mbids": [
+   "1ec7259c-f911-4539-b982-2ab04d08f8ac"
+  ],
+  "mapping": "work",
+  "key": "sor-1ec7259c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16563,
+  "title": "Fantaisie, op. 30",
+  "mbids": [
+   "21e5246b-3a0f-45d0-8b9b-2fc4d747e760"
+  ],
+  "mapping": "work",
+  "key": "sor-21e5246b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16589,
+  "title": "Io mentitor!",
+  "mbids": [
+   "238218dd-0f12-403c-86b7-2e7a35da5f33"
+  ],
+  "mapping": "work",
+  "key": "sor-238218dd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16702,
+  "title": "Fantaisie, op. 54b",
+  "mbids": [
+   "2acb5ed0-297d-4823-a2f1-484db361af26"
+  ],
+  "mapping": "work",
+  "key": "sor-2acb5ed0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16747,
+  "title": "Ti ricordi che giurasti",
+  "mbids": [
+   "2d9e793b-b2a6-4eb2-8cf4-be2bc2f06779"
+  ],
+  "mapping": "work",
+  "key": "sor-2d9e793b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16767,
+  "title": "Six valses, op. 44b",
+  "mbids": [
+   "2f0a3277-2aee-4699-83d5-a55ef65d0c57"
+  ],
+  "mapping": "work",
+  "key": "sor-2f0a3277",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16779,
+  "title": "Marche funèbre pour harpolyre",
+  "mbids": [
+   "2fc017b1-6a1f-4b9b-9d6c-4f22ff1741f6"
+  ],
+  "mapping": "work",
+  "key": "sor-2fc017b1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16800,
+  "title": "Lagrime mie d'affanno",
+  "mbids": [
+   "30d47a90-6946-48c7-856f-5c2274b416a8"
+  ],
+  "mapping": "work",
+  "key": "sor-30d47a90",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16856,
+  "title": "Fantaisie, op. 41 \"Les Deux amis\"",
+  "mbids": [
+   "33d535c1-5784-4c62-98d9-a3170c1d0b50"
+  ],
+  "mapping": "work",
+  "key": "sor-33d535c1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16863,
+  "title": "Grande Sonate in C major, op. 22",
+  "mbids": [
+   "341ef83e-9358-479e-9909-04b7bccfc160"
+  ],
+  "mapping": "work",
+  "key": "sor-341ef83e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16914,
+  "title": "O crux ave",
+  "mbids": [
+   "36fcc052-2cab-42b6-bc6a-d8fce0a14b05"
+  ],
+  "mapping": "work",
+  "key": "sor-36fcc052",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17053,
+  "title": "Thème varié suivi d'un menuet, op. 3",
+  "mbids": [
+   "3f63c413-722c-4985-8cd9-192e1cde4cff"
+  ],
+  "mapping": "work",
+  "key": "sor-3f63c413",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17059,
+  "title": "Trois petits divertissements, op. 61",
+  "mbids": [
+   "3fcd89e9-33d5-45af-afe3-58666e3d9f57"
+  ],
+  "mapping": "work",
+  "key": "sor-3fcd89e9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17142,
+  "title": "Introduction et variation sur l'air \"Que ne suis-je la fougère!\", op. 26",
+  "mbids": [
+   "450c0652-4afc-41db-a376-ff0d3839e226"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17243,
+  "title": "Al mediator jugando",
+  "mbids": [
+   "4a382c98-11ca-497b-ad40-91229ab8599c"
+  ],
+  "mapping": "work",
+  "key": "sor-4a382c98",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17299,
+  "title": "\"Le premier pas vers moi\", op. 53",
+  "mbids": [
+   "4e0b97cc-18cc-43b3-9106-6540612c1807"
+  ],
+  "mapping": "work",
+  "key": "sor-4e0b97cc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17303,
+  "title": "Symphony no. 3 in F major",
+  "mbids": [
+   "4e9051dd-945d-4966-b88f-7228cfe01d46"
+  ],
+  "mapping": "work",
+  "key": "sor-4e9051dd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17336,
+  "title": "No doblarán campanas (No bells will toll)",
+  "mbids": [
+   "50f0f749-b6d0-4464-95e3-18ceac409eb9"
+  ],
+  "mapping": "work",
+  "key": "sor-50f0f749",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17347,
+  "title": "Divertissement, op. 38",
+  "mbids": [
+   "51ef99ac-488d-4c35-bef3-fc25bf73ca39"
+  ],
+  "mapping": "work",
+  "key": "sor-51ef99ac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17386,
+  "title": "Favores ni desprecios",
+  "mbids": [
+   "53fe5e0c-d74a-448d-a9b5-d7bd07f51b09"
+  ],
+  "mapping": "work",
+  "key": "sor-53fe5e0c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17388,
+  "title": "Povero cor t'inganni",
+  "mbids": [
+   "54063d1d-eb59-4942-9f04-c2cfabb59957"
+  ],
+  "mapping": "work",
+  "key": "sor-54063d1d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17469,
+  "title": "Grande Sonate in C major, op. 25",
+  "mbids": [
+   "5874841e-cd39-4af9-ac12-b7f0f7c81120"
+  ],
+  "mapping": "work",
+  "key": "sor-5874841e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17502,
+  "title": "Le Calme, caprice, op. 50",
+  "mbids": [
+   "5a9e6130-380a-4d15-84f2-922c5f883fab"
+  ],
+  "mapping": "work",
+  "key": "sor-5a9e6130",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17510,
+  "title": "Divertissement, op. 62",
+  "mbids": [
+   "5b1596af-654f-46bd-8f22-4d6f8341a7a9"
+  ],
+  "mapping": "work",
+  "key": "sor-5b1596af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17605,
+  "title": "Fantasia in C minor, op. 7",
+  "mbids": [
+   "60fece56-f6d4-4090-8302-632b139e3bfc"
+  ],
+  "mapping": "work",
+  "key": "sor-60fece56",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17644,
+  "title": "Marche du ballet de \"Cendrillon\", op. 15c",
+  "mbids": [
+   "635c69c0-5990-45eb-8f87-635b404f9d7f"
+  ],
+  "mapping": "work",
+  "key": "sor-635c69c0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17723,
+  "title": "Perduta l'anima",
+  "mbids": [
+   "6838399e-f115-41bb-993f-67b546da5850"
+  ],
+  "mapping": "work",
+  "key": "sor-6838399e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17789,
+  "title": "Appel des nègres aux Français",
+  "mbids": [
+   "6c1adfac-3ccb-423f-b3b4-fd2248b7b538"
+  ],
+  "mapping": "work",
+  "key": "sor-6c1adfac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17873,
+  "title": "Fantaisie élégiaque, op. 59",
+  "mbids": [
+   "708c531c-6eec-48cf-bdd6-60b6d35c2e0c"
+  ],
+  "mapping": "work",
+  "key": "sor-708c531c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17906,
+  "title": "Fantaisie, op. 63 \"Souvenir de Russie\"",
+  "mbids": [
+   "72aefb73-765c-4beb-87c9-20506f91e4d5"
+  ],
+  "mapping": "work",
+  "key": "sor-72aefb73",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17924,
+  "title": "Estudio 19 en Si Menor",
+  "mbids": [
+   "7387a467-d6cb-3af2-8d1a-7cbf26717dfb"
+  ],
+  "mapping": "work",
+  "key": "sor-7387a467",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17970,
+  "title": "Six valses et un galop, op. 57",
+  "mbids": [
+   "7730706d-bc92-4b59-8544-15c76819d3de"
+  ],
+  "mapping": "work",
+  "key": "sor-7730706d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18019,
+  "title": "6 Pieces, op. 45",
+  "mbids": [
+   "7a4f6927-5631-4837-b61e-77ec9bff4d9b"
+  ],
+  "mapping": "work",
+  "key": "sor-7a4f6927",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18035,
+  "title": "Fantaisie et variations sur un air écossais, op. 40",
+  "mbids": [
+   "7b16f6b8-f250-41de-9406-0e1318a68889"
+  ],
+  "mapping": "work",
+  "key": "sor-7b16f6b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18151,
+  "title": "Trois Pièces de société, op. 33",
+  "mbids": [
+   "82c75257-10f1-4183-aead-f07f48368dfd"
+  ],
+  "mapping": "work",
+  "key": "sor-82c75257",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18257,
+  "title": "Six valses composées pour l'orchestre par différents auteurs, op. 39",
+  "mbids": [
+   "8aa0e422-a0e9-40d0-9d71-acc1fbb25928"
+  ],
+  "mapping": "work",
+  "key": "sor-8aa0e422",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18275,
+  "title": "Valse du ballet de Cendrillon",
+  "mbids": [
+   "8bb15c42-97f3-4b9a-9556-39ad15a735e8"
+  ],
+  "mapping": "work",
+  "key": "sor-8bb15c42",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18277,
+  "title": "Six Waltzes, op. 18",
+  "mbids": [
+   "8bc6f3fb-297e-416c-84b7-153d6700af86"
+  ],
+  "mapping": "work",
+  "key": "sor-8bc6f3fb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18339,
+  "title": "Trois duos, op. 55",
+  "mbids": [
+   "8f28fde5-d394-4aa6-bf07-308e424349bc"
+  ],
+  "mapping": "work",
+  "key": "sor-8f28fde5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18415,
+  "title": "Fantaisie, op. 56 \"Souvenirs d'une soirée à Berlin\"",
+  "mbids": [
+   "93790851-8dcc-487f-9b53-a832168dc90e"
+  ],
+  "mapping": "work",
+  "key": "sor-93790851",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18418,
+  "title": "Las quejas de Maruja",
+  "mbids": [
+   "9383b6eb-8c5e-4d48-8871-60c02cf61da0"
+  ],
+  "mapping": "work",
+  "key": "sor-9383b6eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18449,
+  "title": "6 Short Pieces, op. 5",
+  "mbids": [
+   "956fc7b4-64fc-4498-bad6-dfa18c1a1da0"
+  ],
+  "mapping": "work",
+  "key": "sor-956fc7b4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18495,
+  "title": "Los defensores de la pátria",
+  "mbids": [
+   "985a6cb5-a05a-49cd-8308-b87f65a254e0"
+  ],
+  "mapping": "work",
+  "key": "sor-985a6cb5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18500,
+  "title": "Six Waltzes, op. 17",
+  "mbids": [
+   "989a3322-ae0a-49de-bdd9-97cc01a74dca"
+  ],
+  "mapping": "work",
+  "key": "sor-989a3322",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18510,
+  "title": "Andante expressivo for guitar",
+  "mbids": [
+   "98eaab26-6c74-4eb0-ba60-e5a027e71ed6"
+  ],
+  "mapping": "work",
+  "key": "sor-98eaab26",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18531,
+  "title": "Ausente de mi dueño",
+  "mbids": [
+   "9a93bd98-7e56-4491-90ea-0c52f8c4ca00"
+  ],
+  "mapping": "work",
+  "key": "sor-9a93bd98",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18535,
+  "title": "Fantaisie pour guitare seule, op. 58",
+  "mbids": [
+   "9adb484d-5740-4d1c-b89c-85b0a1e46aa9"
+  ],
+  "mapping": "work",
+  "key": "sor-9adb484d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18576,
+  "title": "Estudio XII",
+  "mbids": [
+   "9d7994d5-681e-4903-8154-20999ebd4dc1"
+  ],
+  "mapping": "work",
+  "key": "sor-9d7994d5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18609,
+  "title": "Est ce bien ça?, op. 48",
+  "mbids": [
+   "a003948c-8a10-4b20-9935-1d6172f02400"
+  ],
+  "mapping": "work",
+  "key": "sor-a003948c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18639,
+  "title": "Si mis ojos te dicen (If my eyes are telling you)",
+  "mbids": [
+   "a1d03a21-398f-479a-939a-cbc9f0935f49"
+  ],
+  "mapping": "work",
+  "key": "sor-a1d03a21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18689,
+  "title": "6 divertissements, op. 8",
+  "mbids": [
+   "a4d5c96c-8682-4e85-9179-d9082c2384fc"
+  ],
+  "mapping": "work",
+  "key": "sor-a4d5c96c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18710,
+  "title": "Fantaisie, op. 16",
+  "mbids": [
+   "a5ea17e2-53ad-4d33-b016-83254780bb11"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18738,
+  "title": "Fantaisie pour guitare seule",
+  "mbids": [
+   "a7585f1f-1e75-4b0e-afee-6b26e1f1bf73"
+  ],
+  "mapping": "work",
+  "key": "sor-a7585f1f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18778,
+  "title": "Fantasie no. 4, op. 12",
+  "mbids": [
+   "aa1da8e3-ea46-4ae8-9456-14dae0ae2b17"
+  ],
+  "mapping": "work",
+  "key": "sor-aa1da8e3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18818,
+  "title": "Fantaisie, op. 46 \"Souvenir d'amitié\"",
+  "mbids": [
+   "acecabe3-e30f-431b-af07-87752657a985"
+  ],
+  "mapping": "work",
+  "key": "sor-acecabe3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18834,
+  "title": "Introduction and Variations on “Malborough s’en va-t-en guerre”, op. 28",
+  "mbids": [
+   "addb1546-841b-4526-baee-338bb45e1a82"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18922,
+  "title": "Six Divertimenti, op. 2",
+  "mbids": [
+   "b3b3fcac-8ebe-434e-82a3-3f741bada752"
+  ],
+  "mapping": "work",
+  "key": "sor-b3b3fcac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18928,
+  "title": "O vous, que Mars rend invincible",
+  "mbids": [
+   "b3f4e24e-9cb6-45bb-9c91-a5a20c3a5053"
+  ],
+  "mapping": "work",
+  "key": "sor-b3f4e24e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19006,
+  "title": "Thème varié in C major, op. 15c",
+  "mbids": [
+   "b8fad821-46a3-46c9-b9d1-cb77db80dfc2"
+  ],
+  "mapping": "work",
+  "key": "sor-b8fad821",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19077,
+  "title": "Air varié, WoO",
+  "mbids": [
+   "bdff4fa0-7213-410a-8edf-b2dac671de27"
+  ],
+  "mapping": "work",
+  "key": "sor-bdff4fa0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19197,
+  "title": "Mon dernier mot",
+  "mbids": [
+   "c51d8fa4-861b-43c5-9f69-8992d94d0762"
+  ],
+  "mapping": "work",
+  "key": "sor-c51d8fa4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19209,
+  "title": "Le Candeur, petite rêverie",
+  "mbids": [
+   "c5c4cdf3-91dc-48c5-9128-8ec473e71dab"
+  ],
+  "mapping": "work",
+  "key": "sor-c5c4cdf3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19223,
+  "title": "6 Airs from \"The Magic Flute\", op. 19",
+  "mbids": [
+   "c68417b9-fd21-4c80-8a8e-254f8e6e6e35"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19243,
+  "title": "Fantaisie villageoise, op. 52",
+  "mbids": [
+   "c7dca726-50ee-4056-bc24-5463900c5c4e"
+  ],
+  "mapping": "work",
+  "key": "sor-c7dca726",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19253,
+  "title": "Duet for guitars \"L'encouragement\", op. 34",
+  "mbids": [
+   "c8f5892c-fa5d-466c-a04f-3f7d79a3de5c"
+  ],
+  "mapping": "work",
+  "key": "sor-c8f5892c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19316,
+  "title": "Divertissement, op. 23",
+  "mbids": [
+   "cd0a7731-d786-437d-9691-978bc54b9d8b"
+  ],
+  "mapping": "work",
+  "key": "sor-cd0a7731",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19353,
+  "title": "Laurette",
+  "mbids": [
+   "cfa694ad-75e2-4ba7-882c-ac45ef6245b8"
+  ],
+  "mapping": "work",
+  "key": "sor-cfa694ad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19500,
+  "title": "Minuet in C",
+  "mbids": [
+   "d953ab23-4390-32ec-ab54-d818081d750e"
+  ],
+  "mapping": "work",
+  "key": "sor-d953ab23",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19501,
+  "title": "Cendrillon",
+  "mbids": [
+   "d972dc07-1f14-490c-bf07-0b67f8393567"
+  ],
+  "mapping": "work",
+  "key": "sor-d972dc07",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19580,
+  "title": "Introduction and Variations on \"Gentil Houssard\", op. 27",
+  "mbids": [
+   "deda3eb1-150e-44b8-ad74-77e0c2161d7e"
+  ],
+  "mapping": "work",
+  "key": "sor-deda3eb1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19631,
+  "title": "¿Adónde vas, Fernando incauto?",
+  "mbids": [
+   "e1d79820-31e9-4864-b571-d9cdd44d7254"
+  ],
+  "mapping": "work",
+  "key": "sor-e1d79820",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19632,
+  "title": "Andante maestoso for guitar",
+  "mbids": [
+   "e1da5678-ff15-49b9-a2fe-20c52e8fb1bd"
+  ],
+  "mapping": "work",
+  "key": "sor-e1da5678",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19698,
+  "title": "A conquistar tu plaza",
+  "mbids": [
+   "e7340293-034c-44e3-b526-e1de704b03dd"
+  ],
+  "mapping": "work",
+  "key": "sor-e7340293",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19732,
+  "title": "Les favorites des salons",
+  "mbids": [
+   "ea24ffa3-0185-4f5a-b6e8-bb78eecbf1ea"
+  ],
+  "mapping": "work",
+  "key": "sor-ea24ffa3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19865,
+  "title": "À la bonne heure, op. 51",
+  "mbids": [
+   "f27ac77f-7c39-42ac-bada-d2ae9abc3251"
+  ],
+  "mapping": "work",
+  "key": "sor-f27ac77f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19917,
+  "title": "2 Varied Themes and 12 Minuets, op. 11",
+  "mbids": [
+   "f556d2ed-2ebd-4e2e-9203-670406437c23"
+  ],
+  "mapping": "work",
+  "key": "sor-f556d2ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20041,
+  "title": "Divertissement militaire, op. 49",
+  "mbids": [
+   "fc1827e3-51ff-4183-a4fc-6a95cd4fdb1c"
+  ],
+  "mapping": "work",
+  "key": "sor-fc1827e3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20065,
+  "title": "Seguidillas del Requiem eternam",
+  "mbids": [
+   "fddf66b1-376f-4cc5-be6e-02656fb3245c"
+  ],
+  "mapping": "work",
+  "key": "sor-fddf66b1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20071,
+  "title": "25 Progressive Studies, op. 60",
+  "mbids": [
+   "fe5fee3a-dc25-4b92-8c72-69a87260bd54"
+  ],
+  "mapping": "work",
+  "key": "sor-fe5fee3a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20079,
+  "title": "Grand Solo, op. 14",
+  "mbids": [
+   "fed0cba7-b991-401d-bacc-10b32ccce015"
+  ],
+  "mapping": "work",
+  "key": "sor-fed0cba7",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

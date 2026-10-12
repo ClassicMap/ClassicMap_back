@@ -1,0 +1,1298 @@
+[
+ {
+  "pieceId": 7434,
+  "title": "On an Overgrown Path",
+  "mbids": [
+   "05e1bae9-de77-42c1-afeb-740c5aab8f48"
+  ],
+  "mapping": "work",
+  "key": "janacek-05e1bae9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7435,
+  "title": "Věc Makropulos",
+  "mbids": [
+   "066ae187-c83c-471d-b89c-a19d3bc92dd6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7450,
+  "title": "Otče náš",
+  "mbids": [
+   "13c4cf89-f77f-4a9f-95ee-db9038fb3b47"
+  ],
+  "mapping": "work",
+  "key": "janacek-13c4cf89",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7473,
+  "title": "From the House of the Dead",
+  "mbids": [
+   "317e5245-7e86-40b2-b4b5-c7f354674fcf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7509,
+  "title": "The Cunning Little Vixen",
+  "mbids": [
+   "6520049f-67c5-4cf0-8c36-67b146502b32"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7601,
+  "title": "Káťa Kabanová",
+  "mbids": [
+   "d4e501f5-90b2-4978-b421-c8e572532e73"
+  ],
+  "mapping": "work",
+  "key": "janacek-d4e501f5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7619,
+  "title": "String Quartet no. 1, JW VII/8 “Kreutzer Sonata”",
+  "mbids": [
+   "ed491125-4b9b-44c3-94e0-76c4698695c3"
+  ],
+  "mapping": "work",
+  "key": "janacek-ed491125",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8080,
+  "title": "Sonata 1. X. 1905",
+  "mbids": [
+   "1768b942-731e-4c70-8ea7-8ce8ab47c3b3"
+  ],
+  "mapping": "work",
+  "key": "janacek-1768b942",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8109,
+  "title": "Adagio, JW VI/5",
+  "mbids": [
+   "1998160a-b1f6-4b77-a59b-4ae5c7ca5ec5"
+  ],
+  "mapping": "work",
+  "key": "janacek-1998160a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8151,
+  "title": "Zdrávas Maria",
+  "mbids": [
+   "1c9a8591-8c20-468b-afce-0cd4cd58a91b"
+  ],
+  "mapping": "work",
+  "key": "janacek-1c9a8591",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8346,
+  "title": "\"The Danube\" Symphony: I. Andante",
+  "mbids": [
+   "2ccb0738-e4df-451b-bdbe-fc1046f5d830"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8614,
+  "title": "15 Moravian Folksongs, JW VIII/23",
+  "mbids": [
+   "407d2506-a95d-35bc-8bfe-09392d309afb"
+  ],
+  "mapping": "work",
+  "key": "janacek-407d2506",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8673,
+  "title": "Idyll for String Orchestra, JW VI/3",
+  "mbids": [
+   "43e87efd-43b7-41cb-b62a-37296f2643f5"
+  ],
+  "mapping": "work",
+  "key": "janacek-43e87efd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8802,
+  "title": "Dumka, JW VII/4",
+  "mbids": [
+   "4d2881b9-de02-355e-b1d3-6c5b7ee501fb"
+  ],
+  "mapping": "work",
+  "key": "janacek-4d2881b9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8910,
+  "title": "\"The Danube\" Symphony: II. Adagio",
+  "mbids": [
+   "54489dae-17d8-4e51-8631-7a115a7de165"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8984,
+  "title": "Suite, JW VI/2",
+  "mbids": [
+   "590781e9-a974-442a-bfa9-81584e50237d"
+  ],
+  "mapping": "work",
+  "key": "janacek-590781e9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9296,
+  "title": "The Cunning Little Vixen Suite",
+  "mbids": [
+   "6f3f461e-029a-42db-8500-3940bc398d2f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9401,
+  "title": "The Excursions of Mr Brouček",
+  "mbids": [
+   "7617e957-dbf1-43f6-b99a-8a5a26a79b16"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9477,
+  "title": "Three Moravian Dances",
+  "mbids": [
+   "7b68e7ff-02ad-4b86-84c9-aef5b52b6a17"
+  ],
+  "mapping": "work",
+  "key": "janacek-7b68e7ff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9651,
+  "title": "String Quartet no. 2 \"Intimate Letters\" (viola d’amore)",
+  "mbids": [
+   "87a6a8d3-8a71-40a2-9728-c02ff77dd07e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9846,
+  "title": "String Quartet no. 2 “Intimate Letters”",
+  "mbids": [
+   "96adb6a3-b1e0-4832-85f5-751296a1d237"
+  ],
+  "mapping": "work",
+  "key": "janacek-96adb6a3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9974,
+  "title": "Amarus",
+  "mbids": [
+   "9fcc1b9b-c51d-4756-88ca-95a02148e807"
+  ],
+  "mapping": "work",
+  "key": "janacek-9fcc1b9b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10013,
+  "title": "\"The Danube\" Symphony: III. Allegro",
+  "mbids": [
+   "a25ed1c7-f94b-4b2c-87a8-0ad44165b9cf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 10086,
+  "title": "\"The Danube\" Symphony: IV.",
+  "mbids": [
+   "a718f485-10c5-4565-b1f2-1565e9ea6443"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 10414,
+  "title": "Taras Bulba",
+  "mbids": [
+   "bfcbf232-8169-415f-bd2e-dc07c1f7d492"
+  ],
+  "mapping": "work",
+  "key": "janacek-bfcbf232",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10955,
+  "title": "Jenůfa",
+  "mbids": [
+   "e884f81a-60f2-43ce-9879-a65f2dcf44d7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 7432,
+  "title": "Česká legie, JW IV/42",
+  "mbids": [
+   "03a9d178-3e58-4c3b-9e39-3172e93d1f3e"
+  ],
+  "mapping": "work",
+  "key": "janacek-03a9d178",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7440,
+  "title": "Šumařovo dítě, JW 6/14",
+  "mbids": [
+   "0b88ecea-66c3-48b0-84a8-8973c0b8cf4f"
+  ],
+  "mapping": "work",
+  "key": "janacek-0b88ecea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7451,
+  "title": "Vínek, JW IV/31",
+  "mbids": [
+   "140f9123-73a4-42f0-b9ab-1d36f5bc9829"
+  ],
+  "mapping": "work",
+  "key": "janacek-140f9123",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7455,
+  "title": "Osud, JW 1/5",
+  "mbids": [
+   "16e4aa16-5a40-401c-9558-4e8f77a17371"
+  ],
+  "mapping": "work",
+  "key": "janacek-16e4aa16",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7457,
+  "title": "Kantor Halfar",
+  "mbids": [
+   "177292f9-7c41-4cb3-b077-ee9b195051b1"
+  ],
+  "mapping": "work",
+  "key": "janacek-177292f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7462,
+  "title": "Orání, JW IV/1",
+  "mbids": [
+   "1e2461db-092f-45b0-be49-a7000e1f6099"
+  ],
+  "mapping": "work",
+  "key": "janacek-1e2461db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7464,
+  "title": "Tema con variazioni",
+  "mbids": [
+   "1e83747b-9fdc-36d3-ae1c-2a64d414c13b"
+  ],
+  "mapping": "work",
+  "key": "janacek-1e83747b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7466,
+  "title": "Valašské tance",
+  "mbids": [
+   "21699e53-fad9-45fa-8fb3-d329bd8d2b83"
+  ],
+  "mapping": "work",
+  "key": "janacek-21699e53",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7472,
+  "title": "Perina, JW IV/38",
+  "mbids": [
+   "2ff11b85-e9c2-4e77-b7b0-f025b1ce7783"
+  ],
+  "mapping": "work",
+  "key": "janacek-2ff11b85",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7477,
+  "title": "Láska opravdivá, JW 4/8",
+  "mbids": [
+   "376f6692-b8b4-4a79-b3f7-3648f176f886"
+  ],
+  "mapping": "work",
+  "key": "janacek-376f6692",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7478,
+  "title": "Výlety páně Broučkovy",
+  "mbids": [
+   "37813c98-2787-461b-a0a7-cbaaea757bd3"
+  ],
+  "mapping": "work",
+  "key": "janacek-37813c98",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7479,
+  "title": "Čtvero mužských sborů moravských, JW IV/28",
+  "mbids": [
+   "3a597ebe-5e1e-49ee-b78f-14a31d06849e"
+  ],
+  "mapping": "work",
+  "key": "janacek-3a597ebe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7495,
+  "title": "Vzpomínka",
+  "mbids": [
+   "4b2d92d7-2817-3d70-af5e-6fdee39c8e0e"
+  ],
+  "mapping": "work",
+  "key": "janacek-4b2d92d7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7501,
+  "title": "Čtveřice mužských sborů, JW IV/17",
+  "mbids": [
+   "5568c5a9-83bf-4064-b2c7-89c7a1b2e359"
+  ],
+  "mapping": "work",
+  "key": "janacek-5568c5a9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7505,
+  "title": "Zárlivost",
+  "mbids": [
+   "5f6e1eb5-a199-4b58-8be3-b6c5d4993d26"
+  ],
+  "mapping": "work",
+  "key": "janacek-5f6e1eb5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7506,
+  "title": "Kačena divoká, JW 4/18",
+  "mbids": [
+   "625b63b3-4fe2-4504-b1e4-84d8b89f6920"
+  ],
+  "mapping": "work",
+  "key": "janacek-625b63b3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7513,
+  "title": "Kozácek, JW 6/12",
+  "mbids": [
+   "6af328a2-d149-4c69-9cd2-24cfb149be29"
+  ],
+  "mapping": "work",
+  "key": "janacek-6af328a2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7516,
+  "title": "Putování dušičky",
+  "mbids": [
+   "6f43bf85-1157-3ec8-9d6a-b952630e5f04"
+  ],
+  "mapping": "work",
+  "key": "janacek-6f43bf85",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7524,
+  "title": "Dvĕ sklaydby pro varhany, JW VIII/7",
+  "mbids": [
+   "766d1fca-92e5-44f7-999a-ab1eca27e370"
+  ],
+  "mapping": "work",
+  "key": "janacek-766d1fca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7526,
+  "title": "Pochod modráčků",
+  "mbids": [
+   "7b0b3b79-51ee-4be4-b7ec-a86613962347"
+  ],
+  "mapping": "work",
+  "key": "janacek-7b0b3b79",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7534,
+  "title": "Tři mužské sbory, JW 4/19",
+  "mbids": [
+   "81e97ae5-7bd4-4596-9689-ba8729b71c2e"
+  ],
+  "mapping": "work",
+  "key": "janacek-81e97ae5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7540,
+  "title": "Ukvalská lidová poezie v písních",
+  "mbids": [
+   "8e7febc4-48ce-4cff-8405-b5b961576a12"
+  ],
+  "mapping": "work",
+  "key": "janacek-8e7febc4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7552,
+  "title": "Na památku",
+  "mbids": [
+   "992ccedc-41c6-49ba-b320-3f7a9272d4bd"
+  ],
+  "mapping": "work",
+  "key": "janacek-992ccedc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7555,
+  "title": "Což ta naše bříza, JW IV/22",
+  "mbids": [
+   "9c3bd4fc-8199-4927-ae96-8c05398d32c3"
+  ],
+  "mapping": "work",
+  "key": "janacek-9c3bd4fc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7556,
+  "title": "V mlhách",
+  "mbids": [
+   "9ce7ecb3-4aa4-433c-982f-2e88d3e866db"
+  ],
+  "mapping": "work",
+  "key": "janacek-9ce7ecb3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7566,
+  "title": "Srbské kolo, JW 6/13",
+  "mbids": [
+   "a9d57f8e-1a18-4392-a732-187618bcb5f6"
+  ],
+  "mapping": "work",
+  "key": "janacek-a9d57f8e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7576,
+  "title": "Potulný šílenec, JW IV/43",
+  "mbids": [
+   "b20eaba2-d5f2-4b57-8cc8-f2f21aa1c71f"
+  ],
+  "mapping": "work",
+  "key": "janacek-b20eaba2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7579,
+  "title": "Lašské Tance, JW 6/17",
+  "mbids": [
+   "b6396efd-d6c0-48dd-a6bb-dcc15f46b266"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7592,
+  "title": "Sedmdesát tisíc",
+  "mbids": [
+   "c5725072-830d-49e6-819b-08c51b7f689b"
+  ],
+  "mapping": "work",
+  "key": "janacek-c5725072",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7600,
+  "title": "Věčné evangelium",
+  "mbids": [
+   "d49ed513-97c4-490a-894e-309ba4662489"
+  ],
+  "mapping": "work",
+  "key": "janacek-d49ed513",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7604,
+  "title": "Příhody lišky Bystroušky",
+  "mbids": [
+   "dbdd22c7-4e35-43e2-a2e6-860018e22c2c"
+  ],
+  "mapping": "work",
+  "key": "janacek-dbdd22c7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7606,
+  "title": "Moravské tance, JW 6/7",
+  "mbids": [
+   "dcef18f2-699c-40a0-b3e9-082854cc07ca"
+  ],
+  "mapping": "work",
+  "key": "janacek-dcef18f2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7608,
+  "title": "Hudba ke kroužení kužely",
+  "mbids": [
+   "e03ad89b-d29e-42da-b924-f2e11e876210"
+  ],
+  "mapping": "work",
+  "key": "janacek-e03ad89b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7620,
+  "title": "Balada Blanická",
+  "mbids": [
+   "f0714cf6-37e0-4c63-822f-24a79cbeece8"
+  ],
+  "mapping": "work",
+  "key": "janacek-f0714cf6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7799,
+  "title": "Quatuor à cordes n° 2 (Andante - Con moto - Allegro)",
+  "mbids": [
+   "0497625a-0dfe-4fc8-8c62-e83721ee2731"
+  ],
+  "mapping": "work",
+  "key": "janacek-0497625a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7819,
+  "title": "VIčí stopa",
+  "mbids": [
+   "05d95339-09b9-465a-b5b9-7a5c333c03c0"
+  ],
+  "mapping": "work",
+  "key": "janacek-05d95339",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8004,
+  "title": "Capriccio for Piano (Left Hand) & Seven Wind Instruments \"Defiance\", JW 7/12",
+  "mbids": [
+   "120e0c4d-6ce5-4d22-bfc1-6cb2d5a2d346"
+  ],
+  "mapping": "work",
+  "key": "janacek-120e0c4d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8114,
+  "title": "Sonata for Violin & Piano, JW VII/7",
+  "mbids": [
+   "19dd75a1-eb17-4019-8f1e-fc82e4760df5"
+  ],
+  "mapping": "work",
+  "key": "janacek-19dd75a1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8121,
+  "title": "Hradčanské písničky: 1. Zlatá ulička",
+  "mbids": [
+   "1a21233b-cc14-49bd-85b0-67f16af6a810"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8189,
+  "title": "Andante",
+  "mbids": [
+   "1f4d5f34-cb3d-49e6-b81d-bfa6a10b785e"
+  ],
+  "mapping": "work",
+  "key": "janacek-1f4d5f34",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8211,
+  "title": "Suscepimus Deus, JW 2/9",
+  "mbids": [
+   "21051659-3a75-43a4-91ae-bc77a44559b1"
+  ],
+  "mapping": "work",
+  "key": "janacek-21051659",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8251,
+  "title": "Sokol Fanfare",
+  "mbids": [
+   "25d8e8bf-d903-4147-93a3-203a4036b769"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8451,
+  "title": "Eligie na smrt dcery Olgy",
+  "mbids": [
+   "332b1a04-7598-4f71-a610-b1e3a610918f"
+  ],
+  "mapping": "work",
+  "key": "janacek-332b1a04",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8473,
+  "title": "In Nomine Jesu",
+  "mbids": [
+   "34dc36e2-b56a-474b-8f7b-62d02fca686f"
+  ],
+  "mapping": "work",
+  "key": "janacek-34dc36e2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8512,
+  "title": "Kašpar Rucký",
+  "mbids": [
+   "378a1198-9bb9-4c8a-aa29-ac4a52aaa0b6"
+  ],
+  "mapping": "work",
+  "key": "janacek-378a1198",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8542,
+  "title": "Pochod modráčků, JW 7/9",
+  "mbids": [
+   "39c51e2e-ed41-4d4a-a530-7c65a050abd4"
+  ],
+  "mapping": "work",
+  "key": "janacek-39c51e2e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8594,
+  "title": "Allegro (discarded from the Violin Sonata)",
+  "mbids": [
+   "3ed1cf9a-4411-32eb-a192-0c9e8c4ecccc"
+  ],
+  "mapping": "work",
+  "key": "janacek-3ed1cf9a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8610,
+  "title": "Quartet no. 1, JW VII/8",
+  "mbids": [
+   "3ffef946-4554-4b11-8397-c5a81d1d827a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8684,
+  "title": "Moravská lidová poezie v písních, JW 5/2",
+  "mbids": [
+   "448907e1-2e12-4772-a1c9-e4ec949f05e7"
+  ],
+  "mapping": "work",
+  "key": "janacek-448907e1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9067,
+  "title": "Hradčanské písničky: 2. Plačící fontána",
+  "mbids": [
+   "5ed4dae5-05ce-4461-9fa9-51b7f6d1d1f9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9137,
+  "title": "Říkadla, JW V/16",
+  "mbids": [
+   "63616bfe-6b4f-48fd-84e2-53c74ed3ac96"
+  ],
+  "mapping": "work",
+  "key": "janacek-63616bfe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9267,
+  "title": "Příhody Lišky Bystroušky, JW I/9",
+  "mbids": [
+   "6d6d679d-8c91-408e-a21f-d3a1380cb7a8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9359,
+  "title": "Romance, JW VII/3",
+  "mbids": [
+   "73a9414a-30e4-3f3f-8f62-846d87d28102"
+  ],
+  "mapping": "work",
+  "key": "janacek-73a9414a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9402,
+  "title": "Music for the Gymnastics",
+  "mbids": [
+   "7685fca3-84c4-33ca-9951-63e516583ffb"
+  ],
+  "mapping": "work",
+  "key": "janacek-7685fca3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9436,
+  "title": "Three Fugues",
+  "mbids": [
+   "791153e7-5772-460b-a1c8-fbebae03c03b"
+  ],
+  "mapping": "work",
+  "key": "janacek-791153e7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9579,
+  "title": "Skladby, JW 8/7",
+  "mbids": [
+   "832e9b20-f7a7-45f2-9160-385516739e81"
+  ],
+  "mapping": "work",
+  "key": "janacek-832e9b20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9732,
+  "title": "From the House of the Dead: Finale",
+  "mbids": [
+   "8dfd41ce-5a21-469a-9ac7-abe22b985614"
+  ],
+  "mapping": "work",
+  "key": "janacek-8dfd41ce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9841,
+  "title": "Schulk und Jau",
+  "mbids": [
+   "965fc340-e141-4da8-be6b-ea05660843dd"
+  ],
+  "mapping": "work",
+  "key": "janacek-965fc340",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9893,
+  "title": "Holubička",
+  "mbids": [
+   "99f859e5-debf-428e-9b5a-5dfd6999d834"
+  ],
+  "mapping": "work",
+  "key": "janacek-99f859e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9975,
+  "title": "Hradčanské písničky: 3. Belveder",
+  "mbids": [
+   "9fdb587c-9aff-4bbc-85f0-bd27056810d3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 10132,
+  "title": "Moravian Dances: Dymák - Starodávný - Valaška - Požehnanyý - Pilky Kalamajka - Trojky - Sekerečka - Kolo - Čeladenský",
+  "mbids": [
+   "aa80e065-4a47-3f48-9ac5-c78fe4fc7681"
+  ],
+  "mapping": "work",
+  "key": "janacek-aa80e065",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10221,
+  "title": "Rákos Rákoczy, JW I/2",
+  "mbids": [
+   "b0e3881d-ed16-4d03-b4a2-d8f1202d7bba"
+  ],
+  "mapping": "work",
+  "key": "janacek-b0e3881d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10362,
+  "title": "Allegro, JW IX/9",
+  "mbids": [
+   "bb9672ba-7dad-40b3-b8e0-0940c284e23f"
+  ],
+  "mapping": "work",
+  "key": "janacek-bb9672ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10413,
+  "title": "Intimní skici",
+  "mbids": [
+   "bfc9583e-6d09-432f-a3c8-07fa3062f154"
+  ],
+  "mapping": "work",
+  "key": "janacek-bfc9583e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10476,
+  "title": "Exaudi Deus, JW 2/3",
+  "mbids": [
+   "c492700b-39ca-42cc-8aef-2b2f000bcda8"
+  ],
+  "mapping": "work",
+  "key": "janacek-c492700b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10491,
+  "title": "From the House of the Dead: Act II. The Play of Kedril and Juan",
+  "mbids": [
+   "c57ac0d2-7e43-4eaf-9bd0-67e6988d6216"
+  ],
+  "mapping": "work",
+  "key": "janacek-c57ac0d2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10639,
+  "title": "Quatuor n° 1 (Con moto)",
+  "mbids": [
+   "d0ac6766-6db4-49eb-885a-a22f27d5a9c4"
+  ],
+  "mapping": "work",
+  "key": "janacek-d0ac6766",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10690,
+  "title": "Maryčka Magdónova, JW IV/34",
+  "mbids": [
+   "d464aeac-7aed-4cfa-b22c-916c7b936661"
+  ],
+  "mapping": "work",
+  "key": "janacek-d464aeac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10719,
+  "title": "Dunaj, JW IX / 7: IV. Vivo",
+  "mbids": [
+   "d75e1f74-2075-44f9-8392-767d4bfb6cf4"
+  ],
+  "mapping": "work",
+  "key": "janacek-d75e1f74",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10750,
+  "title": "Presto for cello & piano, JW 7/6",
+  "mbids": [
+   "d8e37686-bfc5-44a2-a753-e68257ceb791"
+  ],
+  "mapping": "work",
+  "key": "janacek-d8e37686",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10798,
+  "title": "Klaviertrio \"Kreutzersonate\"",
+  "mbids": [
+   "dcc1b3f2-9258-4789-941f-9dde4fdb88d2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10822,
+  "title": "Lístek odvanutý",
+  "mbids": [
+   "de30f3dc-0d13-3d27-8468-8f74e2a8decf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10852,
+  "title": "1.X.1905 (Z ulice dne 1. října 1905)",
+  "mbids": [
+   "e09600ab-f9f3-432b-b2c3-673d16714be2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10886,
+  "title": "Suite, op. 3, JW VI/6",
+  "mbids": [
+   "e396f2c2-0fe1-4a01-8b5b-91e3386724be"
+  ],
+  "mapping": "work",
+  "key": "janacek-e396f2c2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10921,
+  "title": "Concertino for Piano & Chamber Orchestra, JW 7/11",
+  "mbids": [
+   "e60e6d85-d176-4319-9dd6-908f5bc3ac6d"
+  ],
+  "mapping": "work",
+  "key": "janacek-e60e6d85",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10938,
+  "title": "Veni sancte spiritus",
+  "mbids": [
+   "e71cf9bf-3cf8-4b91-aea0-6bf6fa776303"
+  ],
+  "mapping": "work",
+  "key": "janacek-e71cf9bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11192,
+  "title": "To My Olga",
+  "mbids": [
+   "f98e7348-ccc6-3b25-9f33-c64469f19006"
+  ],
+  "mapping": "work",
+  "key": "janacek-f98e7348",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11203,
+  "title": "String Quartet no. 1: IV. Con moto - Adagio - Maestoso",
+  "mbids": [
+   "fa4ca2f6-b2a5-44b1-a6f1-37bfaf61a10e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11224,
+  "title": "Regnum Mundi, JW 2/7",
+  "mbids": [
+   "fbe984f2-8924-4642-82bc-8491ef4125fc"
+  ],
+  "mapping": "work",
+  "key": "janacek-fbe984f2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11233,
+  "title": "String Quartet no. 1: I. Adagio - Con moto",
+  "mbids": [
+   "fc783d1a-7673-4d76-a651-bde4135b8788"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11271,
+  "title": "String Quartet no. 1: III. Con moto - Vivo - Andante",
+  "mbids": [
+   "fe48f5ec-4198-4aee-8871-ecc2b51fd465"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11273,
+  "title": "Symphonic Suite from Jenůfa",
+  "mbids": [
+   "fe82053e-d4ba-40fd-a658-c7b1da660897"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ }
+]

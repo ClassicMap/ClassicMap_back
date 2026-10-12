@@ -1,0 +1,1790 @@
+[
+ {
+  "pieceId": 16408,
+  "title": "Naxos Quartet no. 3",
+  "mbids": [
+   "17c35865-16e1-466e-8435-51ca9456a19b"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-17c35865",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17001,
+  "title": "Sea Eagle",
+  "mbids": [
+   "3c976654-568b-4024-a9ea-43120e566442"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-3c976654",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17594,
+  "title": "Naxos Quartet no. 8",
+  "mbids": [
+   "60b36566-d3e1-4c91-9e5a-852cc5c5319a"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-60b36566",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17956,
+  "title": "Miss Donnithorne's Maggot, op. 60",
+  "mbids": [
+   "76017986-1d24-4753-b19f-d892bd54af28"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-76017986",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18237,
+  "title": "Farewell to Stromness",
+  "mbids": [
+   "897145d3-e41c-32f8-a837-960b99ab28e9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 26018,
+  "title": "Farewell to Stromness, op. 89 no. 1",
+  "mbids": [
+   "0f28cba8-5657-4206-80bd-9c69340d90d1"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-0f28cba8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15892,
+  "title": "Symphony no. 6, op. 176",
+  "mbids": [
+   "aafce715-c4e2-4034-8474-3bc490727d5e"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-aafce715",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16054,
+  "title": "Worldes Blis, op. 38",
+  "mbids": [
+   "03fbbbe0-cbf2-4a83-b790-55fce54e65d8"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-03fbbbe0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16090,
+  "title": "Maxwell's Reel, With Northern Lights, op. 191",
+  "mbids": [
+   "05d979e5-bd5c-4a01-94c7-afc427196839"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-05d979e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16130,
+  "title": "Time and the Raven, op. 172",
+  "mbids": [
+   "081a36f3-3efa-4bd7-8aaf-7b1665e81d49"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-081a36f3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16138,
+  "title": "Musica Benevolens, op. 312",
+  "mbids": [
+   "08a529c1-3baa-454e-a920-4c8380b42c8f"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-08a529c1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16152,
+  "title": "Gray’s Pier",
+  "mbids": [
+   "098ce1be-ef4d-4ce0-80d1-30a5529b449e"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-098ce1be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16260,
+  "title": "Into the Labyrinth, op. 111",
+  "mbids": [
+   "0fa69ce5-da3f-4dd2-8bb7-86d354e30ba9"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-0fa69ce5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16280,
+  "title": "A Reel of Seven Fishermen",
+  "mbids": [
+   "10d45c9e-2d97-4086-a210-45e82bd89e50"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-10d45c9e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16294,
+  "title": "String Trio, op. 290",
+  "mbids": [
+   "119181af-4bb5-4a48-a71b-e7622dbac519"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-119181af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16343,
+  "title": "Taverner, op. 45",
+  "mbids": [
+   "1461031a-d68d-44e2-8093-5498cfa59b1a"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-1461031a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16349,
+  "title": "Piano Sonata, op. 93",
+  "mbids": [
+   "14c1d756-45fb-45ae-8c07-38f9301a1318"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-14c1d756",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16355,
+  "title": "Strathclyde Concerto no. 1, op. 128",
+  "mbids": [
+   "151cb456-389b-4763-857d-378dbdc151fe"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-151cb456",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16377,
+  "title": "Concerto for Violin and Orchestra, op. 123",
+  "mbids": [
+   "163feeea-c3d9-4285-8187-655da19b136c"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-163feeea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16379,
+  "title": "Caroline Mathilde, op. 144a",
+  "mbids": [
+   "1667b433-bfd2-4700-8eed-822e13604baf"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-1667b433",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16394,
+  "title": "Linguae ignis, op. 223",
+  "mbids": [
+   "16e5f21b-741c-487d-a0eb-f88ed155df6a"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-16e5f21b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16493,
+  "title": "First Fantasia on an In Nomine of John Taverner, op. 19",
+  "mbids": [
+   "1cc5af28-9808-4105-bfc4-c0de5182ec6c"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-1cc5af28",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16503,
+  "title": "The Martyrdom of St. Magnus, op. 72",
+  "mbids": [
+   "1d611f97-ece4-40fb-a0df-5b0457aa0c03"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-1d611f97",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16553,
+  "title": "A Little Birthday Music, op. 270",
+  "mbids": [
+   "20c7a515-2f54-4eed-a589-fa74b205fdd3"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-20c7a515",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16594,
+  "title": "Little Quartet no. 1, op. 77 no. 1",
+  "mbids": [
+   "24053af4-3d33-4914-a6d1-130c41cdbf77"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-24053af4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16604,
+  "title": "Caroline Mathilde, Suite from Act 1, op. 144b",
+  "mbids": [
+   "24b4dbb7-fb02-448a-89b3-1a32fef9fae2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16611,
+  "title": "Three Voluntaries, op. 61",
+  "mbids": [
+   "252d8642-c8a6-487a-9a99-8499977764d4"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-252d8642",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16612,
+  "title": "Spinning Jenny, op. 203",
+  "mbids": [
+   "2532c4ef-0c69-4cae-970a-31cc1781ab64"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-2532c4ef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16615,
+  "title": "Naxos Quartet no. 5, op. 253 \"Lighthouses of Orkney and Shetland\"",
+  "mbids": [
+   "25524b4b-193a-48fe-a7b0-11ed98b8ad6d"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-25524b4b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16627,
+  "title": "Five Carols: 2. Ave domina – for thro our sins",
+  "mbids": [
+   "25e7c8e7-7c6c-4fab-809d-718cd7baaeb8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16675,
+  "title": "The Lighthouse, op. 86",
+  "mbids": [
+   "28f77170-43c0-4de1-956f-7ccfa6664741"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-28f77170",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16724,
+  "title": "Veni Sancte - Veni Creator Spiritus, op. 56",
+  "mbids": [
+   "2bcfa09b-2647-4cdf-95ae-ff58fd1009e9"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-2bcfa09b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16748,
+  "title": "Threnody on a Plainsong for Michael Vyner, op. 141",
+  "mbids": [
+   "2da37353-c644-4ae0-bde7-c7cf5d9a33d4"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-2da37353",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16772,
+  "title": "Five Klee Pictures, op. 12",
+  "mbids": [
+   "2f5d85b3-f583-49ad-8343-5dd7146126c2"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-2f5d85b3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16784,
+  "title": "Symphony no. 10, op. 327 \"Alla ricerca di Borromini\"",
+  "mbids": [
+   "2ff8671c-dbe8-4b1a-9d69-836dde6dceb4"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-2ff8671c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16802,
+  "title": "Symphony no. 1, op. 71",
+  "mbids": [
+   "30ed0b5c-e313-46ae-9da7-0bea5cd4e2eb"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-30ed0b5c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16819,
+  "title": "The Devils, op. 49a",
+  "mbids": [
+   "31f75ad0-b7d1-4a94-bc22-219bd0cae717"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-31f75ad0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16833,
+  "title": "The Beltane Fire, op. 171",
+  "mbids": [
+   "32a3c2e9-17e8-4ec3-aa6a-d7a5db6acf73"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-32a3c2e9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16869,
+  "title": "An Orkney Wedding, with Sunrise, op. 120b",
+  "mbids": [
+   "347cab25-4f52-4601-a7a8-116265480df6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16886,
+  "title": "A Spell for Green Corn: The MacDonald Dances, op. 161",
+  "mbids": [
+   "3552e18e-506c-441c-a961-7ca6e0809ddc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16916,
+  "title": "Missa super \"L'homme armé\", op. 36",
+  "mbids": [
+   "372ca39c-d416-4c5c-adcc-1c669ae2d8dc"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-372ca39c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16941,
+  "title": "Blind Man's Buff, op. 51",
+  "mbids": [
+   "388ae68b-2e6e-4fe8-bb09-fb0e43ed2114"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-388ae68b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16947,
+  "title": "Strathclyde Concerto no. 4, op. 143",
+  "mbids": [
+   "38d974a6-f667-44cd-b45d-4adf57b2b5fa"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-38d974a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17011,
+  "title": "Dove, Star-Folded, op. 216",
+  "mbids": [
+   "3d02e06e-80ea-4f33-9a10-5e5fcbe0e8f9"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-3d02e06e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17020,
+  "title": "Naxos Quartet no. 7 \"Metafore sul Borromini\"",
+  "mbids": [
+   "3d597b79-4ff6-49ab-a8fb-cb3b15bcf7ce"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-3d597b79",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17052,
+  "title": "Veni Creator Spiritus, op. 225",
+  "mbids": [
+   "3f469c03-581a-4c15-9f40-c3d43eb3f149"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-3f469c03",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17058,
+  "title": "Eight Songs for a Mad King, op. 39",
+  "mbids": [
+   "3faaba3d-915e-4965-8322-16382b2547b2"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-3faaba3d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17064,
+  "title": "Oboe Quartet, op. 323",
+  "mbids": [
+   "402c2100-9419-4c59-87c3-641521f8d1c9"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-402c2100",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17090,
+  "title": "House of Winter, op. 125",
+  "mbids": [
+   "41b5b462-6d44-436d-9831-af3cd491e177"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-41b5b462",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17127,
+  "title": "A Postcard from Sanday, op. 318",
+  "mbids": [
+   "4422a42a-fa78-4c6b-ae4d-e115d0d0ebab"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-4422a42a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17179,
+  "title": "One Star at Last, op. 118",
+  "mbids": [
+   "46895706-e35b-4004-ad6e-a6d38ad9ad46"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-46895706",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17183,
+  "title": "Guitar Sonata, op. 117",
+  "mbids": [
+   "46f0dfad-08e7-4747-8a49-7b3656fb33b4"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-46f0dfad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17263,
+  "title": "Tenebrae super Gesualdo, op. 54b",
+  "mbids": [
+   "4ba2ea94-c581-4bd9-b43c-de326e7fd228"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17271,
+  "title": "Jimmack the Postie, op. 124",
+  "mbids": [
+   "4bc53d97-37f8-4144-ae4d-12ea38a87e32"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-4bc53d97",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17282,
+  "title": "Yesnaby Ground, op. 89 no. 2",
+  "mbids": [
+   "4c9b23d8-f942-4784-8598-d98d4f6fa305"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-4c9b23d8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17305,
+  "title": "Hymnos, op. 35",
+  "mbids": [
+   "4eb63a8f-9f21-4ada-bebc-5db9485e4ac2"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-4eb63a8f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17306,
+  "title": "A Calendar of Kings",
+  "mbids": [
+   "4f161850-bf86-42f2-9494-eeffbe9b75e1"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-4f161850",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17320,
+  "title": "Resurrection",
+  "mbids": [
+   "501696a6-00e2-4558-abfc-e2b888b51bed"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-501696a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17354,
+  "title": "Il rozzo martello, op. 186",
+  "mbids": [
+   "52882fa1-7510-418c-8b61-d193b0af8083"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-52882fa1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17367,
+  "title": "Two Nocturnes, op. 307",
+  "mbids": [
+   "53370134-48fd-4a14-950d-db02d4c9cba0"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-53370134",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17435,
+  "title": "Mavis in Las Vegas, op. 184",
+  "mbids": [
+   "56c5b1ba-b72a-45b2-afa0-1807a6f0554f"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-56c5b1ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17500,
+  "title": "Seven Songs Home, op. 101",
+  "mbids": [
+   "5a897025-7a98-4f22-b5a9-a314c78816de"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-5a897025",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17505,
+  "title": "Revelation and Fall, op. 31",
+  "mbids": [
+   "5acbdb0b-a669-4575-a783-9dca124e37d5"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-5acbdb0b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17554,
+  "title": "Violin Concerto no. 2, op. 299 \"Fiddler on the Shore\"",
+  "mbids": [
+   "5e5ed689-e877-4fd5-8461-cc1a4b192df5"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-5e5ed689",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17562,
+  "title": "Five Pieces, op. 2",
+  "mbids": [
+   "5e98b16d-a7e6-4844-8456-19d8e909061f"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-5e98b16d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17571,
+  "title": "Five Carols: 3. What tidings bringest thou",
+  "mbids": [
+   "5f04c11f-e416-4f81-bbf7-f041b523551b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17588,
+  "title": "The Two Fiddlers, op. 78a",
+  "mbids": [
+   "60552945-cc1e-4804-aaeb-563ee9faa6a8"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-60552945",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17624,
+  "title": "Runes from a Holy Island, op. 74",
+  "mbids": [
+   "62158443-0abd-42a4-84ec-0a00584986f4"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-62158443",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17648,
+  "title": "Sonatina for Violin Alone, op. 334",
+  "mbids": [
+   "638b1bbf-2f71-43f6-9b04-f6ddd9b67f4e"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-638b1bbf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17694,
+  "title": "Sonata for Violin and Piano, op. 289",
+  "mbids": [
+   "66b04541-c80f-4604-a00e-f5590c694a70"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-66b04541",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17709,
+  "title": "Symphony no. 8, op. 215 \"Antarctic Symphony\"",
+  "mbids": [
+   "675a6889-0922-41ef-bdb7-c6facfbf8912"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-675a6889",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17716,
+  "title": "The Kestrel Road",
+  "mbids": [
+   "67cc8c92-9ea4-4f75-bb8d-b5c120adea36"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-67cc8c92",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17754,
+  "title": "Cross Lane Fair, op. 167",
+  "mbids": [
+   "69b6abc8-07ab-46e4-a741-31304ab13955"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-69b6abc8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17776,
+  "title": "Antechrist, op. 34",
+  "mbids": [
+   "6b6b3ea7-c31e-4fe9-b3fc-172e7759ee9e"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-6b6b3ea7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17841,
+  "title": "Five Carols: 5. Make we joy now in this fest",
+  "mbids": [
+   "6ef968d7-778d-4b2e-8b00-f54e822396c8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17871,
+  "title": "Job: An Oratorio",
+  "mbids": [
+   "70780f52-7ea3-4940-8aba-17d56d9935e5"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-70780f52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17879,
+  "title": "Snow Cloud Over Lochan, op. 239",
+  "mbids": [
+   "70e6422d-d6a1-4ca1-b77e-eefd3ede36ea"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-70e6422d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17886,
+  "title": "Dances from \"The Two Fiddlers\", op. 78c",
+  "mbids": [
+   "71656704-7eae-4c1a-a5af-3300394427c1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17902,
+  "title": "Sinfonia concertante, op. 106",
+  "mbids": [
+   "7280c91c-f5f6-4149-b640-5257ed743391"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-7280c91c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17921,
+  "title": "Tenebrae super Gesualdo, op. 54a",
+  "mbids": [
+   "736c1fd5-000e-407f-bb02-445263a72e98"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17923,
+  "title": "O Magnum Mysterium, op. 13a",
+  "mbids": [
+   "7377f401-03cf-4989-9196-bc992f494834"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-7377f401",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17945,
+  "title": "Symphony no. 2, op. 91",
+  "mbids": [
+   "74f21711-737f-4986-b479-c5b2ab69506c"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-74f21711",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18065,
+  "title": "Sinfonietta Accademica, op. 112",
+  "mbids": [
+   "7c8cc2ca-997c-496e-ac83-cc953f4c8243"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-7c8cc2ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18069,
+  "title": "Hymn to St. Magnus, op. 53",
+  "mbids": [
+   "7cdc556f-8711-4bc1-a0e5-ae9d572549e1"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-7cdc556f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18130,
+  "title": "Naxos Quartet no. 2, op. 234",
+  "mbids": [
+   "81679cfd-485f-409c-abe9-5bda447b0c13"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-81679cfd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18181,
+  "title": "Suite from The Boyfriend, op. 50a",
+  "mbids": [
+   "850806e1-7f8e-49ac-acfe-83466255089e"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-850806e1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18204,
+  "title": "Reliqui Domum Meum, op. 177",
+  "mbids": [
+   "8702c552-a126-45e0-8918-7306f9e0f5f1"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-8702c552",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18268,
+  "title": "Concert Overture \"Ebb of Winter\", op. 326",
+  "mbids": [
+   "8b3201d1-9047-4283-a2bf-7a9ccc9b89d1"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-8b3201d1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18278,
+  "title": "Naxos Quartet no. 4 “Children’s Games”",
+  "mbids": [
+   "8be001c1-4502-4ed3-bc16-336b07f12235"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-8be001c1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18279,
+  "title": "The Fall of the Leafe, op. 254",
+  "mbids": [
+   "8be32b44-41a9-4eb0-ad70-2336401885ef"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-8be32b44",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18361,
+  "title": "Ojai Festival Overture, op. 147",
+  "mbids": [
+   "8ff8ead5-9ccb-4597-a636-3e8bf3ad1c6b"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-8ff8ead5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18363,
+  "title": "St. Thomas Wake, op. 37",
+  "mbids": [
+   "900ccffd-2059-3469-847c-ab6eb5baf6e6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18374,
+  "title": "Lullaby for Violin and Cello",
+  "mbids": [
+   "910a6747-4ef0-4b2a-a22e-c5bc22f4d82d"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-910a6747",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18396,
+  "title": "Naxos Quartet no. 6, op. 257",
+  "mbids": [
+   "9236892a-a60d-4ad9-93fe-5de3d225794a"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-9236892a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18404,
+  "title": "A Hoy Calendar, op. 165",
+  "mbids": [
+   "92e4adeb-e308-44a9-ae02-759e5790c10f"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-92e4adeb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18414,
+  "title": "Orkney Saga I, op. 185",
+  "mbids": [
+   "935de45d-b3a8-45fb-b746-a85ce26ab8c0"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-935de45d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18458,
+  "title": "Symphony no. 9, op. 315",
+  "mbids": [
+   "962ef76a-0baa-42ab-956b-89ddd4546ea2"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-962ef76a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18484,
+  "title": "Five Carols: 4. Ah man, assay",
+  "mbids": [
+   "979da445-10d7-4f46-9b4d-ba191de5ee91"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18539,
+  "title": "Dances from \"The Two Fiddlers\", op. 78b",
+  "mbids": [
+   "9b436c15-a18b-4c1f-8e0f-8d12668d6f20"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18553,
+  "title": "Piccolo Concerto, op. 182",
+  "mbids": [
+   "9bff8bfe-2256-4dde-9f5b-9257b122eb8d"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-9bff8bfe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18579,
+  "title": "Caroline Mathilde, Suite from Act 2, op. 144c",
+  "mbids": [
+   "9dcf7839-6486-4643-a9cb-d9e5f9f39300"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18607,
+  "title": "St. Francis of Assisi, op. 302",
+  "mbids": [
+   "9ff47d0a-e102-4c7f-8e3f-e81a5b744359"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-9ff47d0a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18608,
+  "title": "A Mirror of Whitening Light, op. 75",
+  "mbids": [
+   "9ff853e1-545f-4b40-9730-ec360bb11c3e"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-9ff853e1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18665,
+  "title": "A Birthday Card for Jennifer",
+  "mbids": [
+   "a40a4026-8e42-4eb5-b4c2-44196f28d62c"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-a40a4026",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18730,
+  "title": "Sinfonia, op. 20",
+  "mbids": [
+   "a6e55bfd-f7eb-4a62-b86f-97079dbeda9c"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-a6e55bfd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18776,
+  "title": "An Orkney Wedding, with Sunrise, op. 120a",
+  "mbids": [
+   "aa0017ff-aa9e-4d30-bd29-84907cb38be2"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-aa0017ff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18785,
+  "title": "Hymn to the Word of God",
+  "mbids": [
+   "aa96b0aa-2d96-4c0c-a3f3-75e8eddef2b7"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-aa96b0aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18867,
+  "title": "Lullabye for Lucy, op. 99",
+  "mbids": [
+   "affcb894-1abb-448f-ab47-8b4759bd281d"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-affcb894",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18903,
+  "title": "The Last Island, op. 301",
+  "mbids": [
+   "b2767e2b-bce3-4ac9-be86-e6db94af2da2"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-b2767e2b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18905,
+  "title": "Solstice of Light, op. 83",
+  "mbids": [
+   "b2800442-26cb-4236-b879-341f2031c8fc"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-b2800442",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18907,
+  "title": "Five Carols: 1. Goday, my lord Sire Christemas",
+  "mbids": [
+   "b282ba94-0600-4135-977a-f1ab91b2a20d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18979,
+  "title": "Quartet Movement",
+  "mbids": [
+   "b71cdebf-37a5-41d4-b01b-5afcfed14fec"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-b71cdebf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19014,
+  "title": "Mass, op. 226",
+  "mbids": [
+   "ba1a4eca-8e2e-443c-927f-d9ac9f702da5"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-ba1a4eca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19015,
+  "title": "String Quartet Movement, op. 338",
+  "mbids": [
+   "ba25d180-a457-4f30-a17c-51d752e6d94c"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-ba25d180",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19019,
+  "title": "From Stone to Thorn, op. 47",
+  "mbids": [
+   "ba6c1f31-1235-4d44-9a8b-5d3367f2e1d7"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-ba6c1f31",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19031,
+  "title": "Symphony no. 3, op. 119",
+  "mbids": [
+   "bb4770ee-8fbf-4a4c-bbb7-78609b6339e6"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-bb4770ee",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19048,
+  "title": "Little Quartet no. 2, op. 77 no. 2",
+  "mbids": [
+   "bbfc3fda-419f-4282-8b45-cdb3ee5d5fc5"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-bbfc3fda",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19051,
+  "title": "Symphony no. 5, op. 166",
+  "mbids": [
+   "bc465098-a4a0-40fc-af34-5b2e71ed3fa4"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-bc465098",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19088,
+  "title": "Sunday Morning, op. 160",
+  "mbids": [
+   "be61a8f8-a6b9-47a4-b840-e9013257d644"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-be61a8f8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19130,
+  "title": "Stone Litany: Runes from a House of the Dead, op. 57",
+  "mbids": [
+   "c0bfaa55-699a-4822-911f-4f526465ad36"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19171,
+  "title": "Chat Moss, op. 164",
+  "mbids": [
+   "c3723107-783d-4879-b0e6-1bd78a080ab6"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-c3723107",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19228,
+  "title": "Ave Rex Angelorum, op. 76",
+  "mbids": [
+   "c6d17690-d2d9-469d-a88a-8cf5a489258e"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-c6d17690",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19229,
+  "title": "Hill Runes, op. 96",
+  "mbids": [
+   "c6d218f4-e49d-4eb6-a9fe-2cab9a207b3a"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-c6d218f4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19295,
+  "title": "Leopardi Fragments, op. 18",
+  "mbids": [
+   "cb687878-1707-4f1e-8777-bcae634e1530"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-cb687878",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19321,
+  "title": "Dark Angels, op. 59",
+  "mbids": [
+   "cd73d308-106f-42e6-ab6a-649e54e5fe33"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-cd73d308",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19343,
+  "title": "Carolísima, op. 168",
+  "mbids": [
+   "ceb7d76a-3e4b-4340-b70e-3243b1c5f82c"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-ceb7d76a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19357,
+  "title": "Ave Maria-Hail, Blessed Flower",
+  "mbids": [
+   "cfc892a8-2193-42c6-b97c-03b5e494b01e"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-cfc892a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19366,
+  "title": "Two Latin Motets, op. 235",
+  "mbids": [
+   "d08aba64-bb9c-4a59-9a62-118e4855f666"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-d08aba64",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19405,
+  "title": "Kings and Shepherds, op. 256 no. 5",
+  "mbids": [
+   "d2b3234a-bef4-48ce-9c5e-a771bdd54c45"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-d2b3234a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19483,
+  "title": "The Bairns of Brugh, op. 97",
+  "mbids": [
+   "d7e79e68-01dc-4fb3-bede-960988d19821"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-d7e79e68",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19537,
+  "title": "Throstle's Nest Junction, op. 181",
+  "mbids": [
+   "dbcfec2a-c98c-4a1c-9e0b-27aff57c7386"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-dbcfec2a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19551,
+  "title": "Corpus Christi, with Cat and Mouse",
+  "mbids": [
+   "dc756a94-8f12-4b99-93a5-d9e9066dfc17"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-dc756a94",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19557,
+  "title": "Symphony no. 4, op. 136",
+  "mbids": [
+   "dcc90d71-e059-41ed-a1d3-f5aead90b51e"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-dcc90d71",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19623,
+  "title": "Suite from The Devils, op. 19b",
+  "mbids": [
+   "e1640ef6-309a-4977-9c7b-f986f3c5851d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19655,
+  "title": "Sonata for Trumpet and Piano, op. 1",
+  "mbids": [
+   "e3965b6c-ed8e-4128-baec-fc7f36fead66"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-e3965b6c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19668,
+  "title": "Concerto for Trumpet and Orchestra, op. 132",
+  "mbids": [
+   "e4bac69b-e188-4006-9a7f-02efb102a351"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-e4bac69b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19680,
+  "title": "Fleecy Care Carol",
+  "mbids": [
+   "e5fb3beb-9539-4358-9bb5-e0f5e1a27209"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-e5fb3beb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19747,
+  "title": "Fanfare Salute to Dennis Brain",
+  "mbids": [
+   "eaeba61b-5871-4f99-9e82-f1ce88a721c9"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-eaeba61b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19778,
+  "title": "Seven In Nomine, op. 28",
+  "mbids": [
+   "ed61b764-57fd-4aa3-abee-6bb917288976"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-ed61b764",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19789,
+  "title": "Last Door of Light, op. 293",
+  "mbids": [
+   "ee18a2f9-a28f-4a80-a874-a641d853ce44"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-ee18a2f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19803,
+  "title": "Midhouse Air, op. 180b",
+  "mbids": [
+   "ee802f8d-3cbf-472b-8699-acd654d42f6c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19806,
+  "title": "Roma amor, op. 195",
+  "mbids": [
+   "eeaafb2b-bf19-4f90-8de2-e8b44f26d35a"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-eeaafb2b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19815,
+  "title": "Midhouse Air, op. 180a",
+  "mbids": [
+   "efbbc688-406c-4464-b815-53eba18434d3"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-efbbc688",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19837,
+  "title": "Black Pentecost, op. 82",
+  "mbids": [
+   "f0bf8ec5-45cb-4476-b819-77d06b53bc29"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-f0bf8ec5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19849,
+  "title": "Missa parvula, op. 233",
+  "mbids": [
+   "f18ba02b-ce71-4bb1-8a06-65ad8e7c9084"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-f18ba02b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19874,
+  "title": "Naxos Quartet no. 1, op. 229",
+  "mbids": [
+   "f314810e-6da9-4971-a432-36a2bca5d763"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-f314810e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19990,
+  "title": "Almighty god, we beseech thee, op. 286",
+  "mbids": [
+   "f8bf05d5-ab7b-4bee-94e1-0ed3418a4f4e"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-f8bf05d5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20009,
+  "title": "Symphony no. 7, op. 211",
+  "mbids": [
+   "fa1b6321-1947-4319-806f-6b55a169ad7b"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-fa1b6321",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20035,
+  "title": "Westerlings, op. 73a",
+  "mbids": [
+   "fbb1c289-93cf-4a05-8cc3-cedd87f6592d"
+  ],
+  "mapping": "work",
+  "key": "maxwell-davies-fbb1c289",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

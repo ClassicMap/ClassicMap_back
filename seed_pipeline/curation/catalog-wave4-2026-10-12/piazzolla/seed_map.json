@@ -1,0 +1,3026 @@
+[
+ {
+  "pieceId": 544,
+  "title": "Camorra II",
+  "mbids": [
+   "5b938f1e-a1cf-3451-b455-b76545c4e43b"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-5b938f1e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 606,
+  "title": "María de Buenos Aires",
+  "mbids": [
+   "a49efc4f-d8b1-442b-bc74-6564a9a576f0"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-a49efc4f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 634,
+  "title": "Concierto para bandoneón y orquesta",
+  "mbids": [
+   "c8fc981a-9210-4198-8444-2cadde41fc21"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-c8fc981a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 637,
+  "title": "Buenos Aires hora cero",
+  "mbids": [
+   "cafcb05e-f78f-318d-9deb-fa404c1ce344"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-cafcb05e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 715,
+  "title": "Vuelvo al sur",
+  "mbids": [
+   "c2761ce0-0780-3854-a8cb-600453b4b87c"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-c2761ce0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 727,
+  "title": "Lunfardo",
+  "mbids": [
+   "b88c5cff-5cb5-4a99-ba0d-813cddce584b"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-b88c5cff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 751,
+  "title": "Balada para mi muerte",
+  "mbids": [
+   "1418ccdf-fa2a-45d9-bbd1-60ed52a9bd6f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-1418ccdf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 798,
+  "title": "Contrastes",
+  "mbids": [
+   "dfcd7e06-4f44-4cd9-b9bc-cb6200608d0f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-dfcd7e06",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 801,
+  "title": "Marrón y azul",
+  "mbids": [
+   "3fd928b4-9976-31dd-86ef-12adeee52054"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-3fd928b4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 802,
+  "title": "Prepárense",
+  "mbids": [
+   "7de07643-aead-4c47-a2ba-b9caf415dc33"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-7de07643",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 804,
+  "title": "Tzigane tango",
+  "mbids": [
+   "387a2d96-fc1f-4f2f-9754-1e66f9012e29"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-387a2d96",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 806,
+  "title": "Moi, je suis tango",
+  "mbids": [
+   "ada171b2-cea9-407c-a2e3-da2838669924"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-ada171b2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 811,
+  "title": "Siempre se vuelve a Buenos Aires",
+  "mbids": [
+   "e66b5330-64fb-48fb-8347-fc9a5f75c7c0"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-e66b5330",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 834,
+  "title": "Maria Magdalena",
+  "mbids": [
+   "351b27d0-6d81-4f64-b429-c4f46ea65b9b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 904,
+  "title": "La muerte del angel",
+  "mbids": [
+   "079a4387-5380-4a60-8fd0-c855d2e59ba3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 947,
+  "title": "Jorge adiós",
+  "mbids": [
+   "0c4f2850-7796-4871-99c4-f9a330558472"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-0c4f2850",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 950,
+  "title": "Nuevo tango",
+  "mbids": [
+   "0c7f6e00-9b51-3920-ac33-21f4b3934b69"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-0c7f6e00",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1020,
+  "title": "Prelude to the Cyclical Night, Part Two",
+  "mbids": [
+   "13dfca2c-6445-4bce-9b38-375fc000ed08"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-13dfca2c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1034,
+  "title": "Tango del Diablo",
+  "mbids": [
+   "15cc950a-8cc1-41a2-89c0-deb761efbfec"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-15cc950a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1074,
+  "title": "Laura's Dream",
+  "mbids": [
+   "1a935593-c220-4686-8e0c-360ecf0ca527"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-1a935593",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1084,
+  "title": "La Camorra",
+  "mbids": [
+   "1b7c8b2d-7644-4902-bd2a-14ee8f7fc592"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-1b7c8b2d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1229,
+  "title": "Nuestro tiempo",
+  "mbids": [
+   "2ce0b63d-7254-4874-af34-330d21ff247c"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-2ce0b63d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1283,
+  "title": "Camorra I",
+  "mbids": [
+   "3521eff6-3c7e-4b4c-9d6d-e646b2302620"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-3521eff6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1317,
+  "title": "Lo que vendrá",
+  "mbids": [
+   "38f4664b-31e7-3ec3-9b71-a66cc3e405c8"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-38f4664b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1352,
+  "title": "Prelude to the Cyclical Night, Part One",
+  "mbids": [
+   "3cabf48c-db8a-4335-91e1-cc6da9d07153"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-3cabf48c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1451,
+  "title": "Pulsacion No. 2",
+  "mbids": [
+   "49924652-353f-328a-abd2-2d85087c3c54"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-49924652",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1466,
+  "title": "Concierto para quinteto",
+  "mbids": [
+   "4b1dc360-0488-332e-b0ad-16db2465b6e2"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-4b1dc360",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1474,
+  "title": "Street Tango",
+  "mbids": [
+   "4c74df96-e2cb-48ab-82a7-d09b84cd2ef7"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-4c74df96",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1512,
+  "title": "Recordando",
+  "mbids": [
+   "50b33edf-eaef-44f0-a893-949e1800b31c"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-50b33edf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1557,
+  "title": "Milonga",
+  "mbids": [
+   "56e86ec7-627d-4168-bf1a-736cb41ddc56"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-56e86ec7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1608,
+  "title": "Nuevo mondo",
+  "mbids": [
+   "5ddf66bd-702a-3dd9-b18f-5ce43ff69612"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-5ddf66bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1609,
+  "title": "Suite Punta del Este",
+  "mbids": [
+   "5df066e2-2d09-4da4-9ad4-f7986161fcd8"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-5df066e2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1611,
+  "title": "Sinfonietta",
+  "mbids": [
+   "5e5e1ede-f0c3-4d8e-ac6d-42768e33d415"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-5e5e1ede",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1649,
+  "title": "Cité Tango",
+  "mbids": [
+   "636616f9-aced-4ef2-9c10-4e22e830b552"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-636616f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1662,
+  "title": "Tango Suite for Saxophone and Orchestra",
+  "mbids": [
+   "65051199-d33c-46af-abc8-7b3adbb4c061"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1696,
+  "title": "Suite no. 2",
+  "mbids": [
+   "6a956b50-dd84-4740-b27e-ab2daf1d59d6"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-6a956b50",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1776,
+  "title": "Milonga en re",
+  "mbids": [
+   "73e9bd9f-6a9f-3bed-b7f1-2d891c4d2157"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-73e9bd9f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1818,
+  "title": "Todo Buenos Aires",
+  "mbids": [
+   "77cfc8e4-5753-4cd4-b98c-98dce3a0b972"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1839,
+  "title": "En 3x4",
+  "mbids": [
+   "7a6925d1-f34e-4768-8ca4-3e9840d6bf4a"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-7a6925d1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1999,
+  "title": "Oda para un hippie",
+  "mbids": [
+   "8ca629d0-9d14-43e9-8d2c-1ff83f3eb870"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-8ca629d0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2029,
+  "title": "Melancolico Buenos Aires",
+  "mbids": [
+   "90175a27-72d5-4f8a-9937-3104880b9e08"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-90175a27",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2051,
+  "title": "Éxtasis",
+  "mbids": [
+   "92469469-5cf0-3ccb-a273-11c129359fa4"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-92469469",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2065,
+  "title": "Tango Suite",
+  "mbids": [
+   "9399df6d-cc64-413f-8fa1-834b59109f2b"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-9399df6d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2126,
+  "title": "Tangazo",
+  "mbids": [
+   "99c7ef1c-97da-44d5-973e-51bada3f2cc4"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-99c7ef1c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2153,
+  "title": "Camorra III",
+  "mbids": [
+   "9e0124fb-bd04-4554-bafe-e92a9a792cab"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-9e0124fb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2288,
+  "title": "Tango del ángel",
+  "mbids": [
+   "aed0a98e-4f53-4374-a0e9-1686d22744a1"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-aed0a98e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2323,
+  "title": "Solo",
+  "mbids": [
+   "b26d67f5-6dd3-306b-946e-1715df57d29b"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-b26d67f5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2373,
+  "title": "Homenaje a Córdoba",
+  "mbids": [
+   "b822811d-ae1c-463d-8e89-3aa251713087"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-b822811d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2375,
+  "title": "Tres piezas para orquesta de cámara",
+  "mbids": [
+   "b8709350-2fed-41ae-94b7-d9a9402f64f5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2491,
+  "title": "El tango",
+  "mbids": [
+   "c4cb5228-da3d-4fd8-b3fc-f1d7c81b916d"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-c4cb5228",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2504,
+  "title": "Oblivión",
+  "mbids": [
+   "c681304a-8cab-4b2e-8125-0de1fcc93008"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2537,
+  "title": "María de Buenos Aires Suite",
+  "mbids": [
+   "ca31fc44-9b24-409b-ac3e-d8c4d749fc39"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2547,
+  "title": "Tres piezas breves",
+  "mbids": [
+   "cb36f3e0-1de1-4c79-8077-62c6d6643ec0"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-cb36f3e0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2747,
+  "title": "Tango seis",
+  "mbids": [
+   "e21ddaf3-d062-48f3-99e2-43662f27b736"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-e21ddaf3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2918,
+  "title": "Imágenes 676",
+  "mbids": [
+   "f447ab0c-cdb7-4134-a874-0813a1bed213"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-f447ab0c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2925,
+  "title": "El penúltimo",
+  "mbids": [
+   "f4dd664a-e548-4675-b990-72410ee72224"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-f4dd664a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2988,
+  "title": "Triunfal",
+  "mbids": [
+   "fc955d77-2354-4d48-a1f0-b0af46c98298"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-fc955d77",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 3017,
+  "title": "Balada para un loco",
+  "mbids": [
+   "ff563f63-bbef-49bd-990f-bd60e33d47d1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 478,
+  "title": "사랑",
+  "mbids": [
+   "0e0dd1c5-f1bd-4c6b-8475-b57a4b0f0a88"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-0e0dd1c5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 485,
+  "title": "6중주",
+  "mbids": [
+   "188a05dc-a0d7-4b6d-a7db-c6623b7fa521"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-188a05dc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 498,
+  "title": "무무키",
+  "mbids": [
+   "2a784b59-a208-4cdc-aa50-214652dbeb9f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-2a784b59",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 526,
+  "title": "Tango para una ciudad, Parte 2",
+  "mbids": [
+   "48b5a0b4-1cb8-3086-9d9e-5e6075aa1051"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-48b5a0b4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 568,
+  "title": "Tango para una ciudad, Parte 1",
+  "mbids": [
+   "79ae928d-4abe-3965-bab0-83a377bad287"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-79ae928d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 574,
+  "title": "Milonga para tres",
+  "mbids": [
+   "7f87776d-ae57-4757-bcb5-25473fa6c721"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-7f87776d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 581,
+  "title": "Concierto de nácar",
+  "mbids": [
+   "83b7a609-e8d5-4d5b-8f09-7990ba28a80a"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-83b7a609",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 586,
+  "title": "Jacinto Chiclana",
+  "mbids": [
+   "880468d2-5686-3709-a19d-4c488fcba3d1"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-880468d2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 615,
+  "title": "Close Your Eyes and Listen",
+  "mbids": [
+   "aebcfba1-c8e7-4f8b-b95a-ec524670de6f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-aebcfba1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 617,
+  "title": "Onda 9",
+  "mbids": [
+   "afed9728-4cff-4425-9633-803aba335eea"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-afed9728",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 638,
+  "title": "Fuga 9",
+  "mbids": [
+   "cc45602c-300e-3530-9391-abbd0ded2c5a"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-cc45602c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 643,
+  "title": "Realidad",
+  "mbids": [
+   "d2e8f97d-08e6-466c-ae21-b9386fc992eb"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-d2e8f97d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 653,
+  "title": "Soledad",
+  "mbids": [
+   "eb838496-9908-407b-bb32-d0e5640ca6ce"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-eb838496",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 709,
+  "title": "Lames",
+  "mbids": [
+   "7d0892a7-e6e6-317b-88fc-cde8a3347cf4"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-7d0892a7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 772,
+  "title": "I’ve Seen That Face Before (Libertango)",
+  "mbids": [
+   "974b0710-9c3b-4fce-a138-69a5aff6ac98"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 797,
+  "title": "Bandó",
+  "mbids": [
+   "39d3252c-275b-4f4d-a39b-c4448b12a3ef"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-39d3252c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 799,
+  "title": "Imperial",
+  "mbids": [
+   "377f8ad5-badb-4c5e-8819-37b685f744e3"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-377f8ad5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 800,
+  "title": "Luz y sombra",
+  "mbids": [
+   "81d47857-3f44-45eb-b1e6-f2c8e96a8ee3"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-81d47857",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 803,
+  "title": "Río Sena",
+  "mbids": [
+   "22fa3a0e-9d0d-440e-90d6-e8dc0729624f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-22fa3a0e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 805,
+  "title": "Introducción al ángel",
+  "mbids": [
+   "9003e132-81b3-4adf-841e-3c5123004736"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-9003e132",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 807,
+  "title": "Kicho",
+  "mbids": [
+   "30aded90-46f6-4569-bd68-14d210c96a56"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-30aded90",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 808,
+  "title": "Chin Chin",
+  "mbids": [
+   "f62b44f8-b911-43c7-bb26-86c8d6360482"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-7987864e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 809,
+  "title": "Tristezas de un doble A",
+  "mbids": [
+   "2497d8a3-a874-449c-ad26-6a450ebfb724"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-2497d8a3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 815,
+  "title": "Contrabajísimo",
+  "mbids": [
+   "2764022c-7d65-4b01-8e09-eb1ecc82bfd5"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-2764022c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 828,
+  "title": "Dos piezas breves para viola y piano",
+  "mbids": [
+   "ab1f1880-d751-44eb-bf8d-1e915c9ee986"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-ab1f1880",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 851,
+  "title": "Tangata",
+  "mbids": [
+   "01afc727-7c4d-4de4-8531-cb0868d5852b"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-c0d28734",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 868,
+  "title": "Mufa sesenta y dos",
+  "mbids": [
+   "0378ae40-91a7-4b1e-b91f-259c2ed5c68b"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-0378ae40",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 890,
+  "title": "Luna",
+  "mbids": [
+   "05d1209c-d6b6-4b68-9959-76953a6a30db"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-05d1209c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 913,
+  "title": "Por millones de niños",
+  "mbids": [
+   "084ae942-d321-48ec-9016-1e1a00461f94"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-084ae942",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 931,
+  "title": "Preludio no. 1 for Violin and Piano",
+  "mbids": [
+   "0a6131a7-20ab-47e4-b1e4-5c64d975a7fe"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-0a6131a7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 965,
+  "title": "Double Concerto \"Hommage à Liège\"",
+  "mbids": [
+   "0e8da8a3-0eaf-47ac-a7f3-dc09d9cd3c00"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 972,
+  "title": "Vibraphonissimo",
+  "mbids": [
+   "0f28e88a-332b-4f5c-a2b5-599829b9269d"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-0f28e88a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 985,
+  "title": "6 Études tanguistiques: No. 4, Lento. Meditativo",
+  "mbids": [
+   "10583000-9e19-40e0-bc06-045b04af8e6d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 992,
+  "title": "Butcher‘s Death",
+  "mbids": [
+   "1139a0b6-acb4-486c-baf4-cb6eb21a4a1f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-1139a0b6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1000,
+  "title": "Gracia Amor",
+  "mbids": [
+   "1220579a-d0d8-4090-a24a-14d4176243ab"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-1220579a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1008,
+  "title": "3 Préludes pour piano",
+  "mbids": [
+   "12c95709-08ad-49e8-b68e-e8d705ba49e0"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-12c95709",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1054,
+  "title": "Suite lumière",
+  "mbids": [
+   "182e5da9-72b3-44bf-8ed8-3884248b8d43"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-182e5da9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1065,
+  "title": "Murmullo sensual",
+  "mbids": [
+   "19b1a963-78e7-4132-aff4-7db0e24370b3"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-19b1a963",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1079,
+  "title": "Viaje de bodas",
+  "mbids": [
+   "1b04f80d-39f2-473d-9cfb-820c26768421"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-1b04f80d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1080,
+  "title": "Summit",
+  "mbids": [
+   "1b0e0d84-647a-476a-acd4-c98be526563a"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-1b0e0d84",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1091,
+  "title": "Presagio",
+  "mbids": [
+   "1c56fb1a-a5f7-4707-98ab-871b3eb274de"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-1c56fb1a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1115,
+  "title": "Divagación",
+  "mbids": [
+   "1f16080c-60f6-3a96-bc44-e5b84bd30903"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-1f16080c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1126,
+  "title": "Prologue (Tango apasionado)",
+  "mbids": [
+   "204e7d37-6436-480a-9dca-860860d97712"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-204e7d37",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1145,
+  "title": "Isa Rizzo",
+  "mbids": [
+   "21cf9a0b-54f8-4c3b-a1f6-0c2ded1c4907"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-21cf9a0b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1153,
+  "title": "Bailongo",
+  "mbids": [
+   "22f437ba-d37d-476f-ba47-fa451f787639"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-22f437ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1176,
+  "title": "Leijia’s Game",
+  "mbids": [
+   "259d95f7-65b3-471c-8781-407739e157b7"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-259d95f7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1201,
+  "title": "Coral",
+  "mbids": [
+   "28ffb572-63d5-4a20-90a8-3021a0783eb9"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-28ffb572",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1202,
+  "title": "Romance del diablo",
+  "mbids": [
+   "290208ca-a67d-420a-ae46-d9811fef16a3"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-290208ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1240,
+  "title": "Hommage à Liège",
+  "mbids": [
+   "2e387fc0-5f2e-49c8-aa71-6d673e126a89"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1245,
+  "title": "Homenaje a Lieja",
+  "mbids": [
+   "2e92a3a3-e94b-4dbc-8260-94f188cc89ca"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-2e92a3a3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1266,
+  "title": "Tres tangos",
+  "mbids": [
+   "315bc32a-755c-4c27-9095-d7a5fdc075db"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-315bc32a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1271,
+  "title": "La Felure",
+  "mbids": [
+   "329a698f-4c26-40a4-916b-c4d792c125b5"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-329a698f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1273,
+  "title": "El títere",
+  "mbids": [
+   "32bc8293-d6b4-42ec-af87-261c3c82cfaf"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-32bc8293",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1280,
+  "title": "El hombre de la esquina rosada",
+  "mbids": [
+   "3449a476-7175-4e28-a750-80b331c26bc9"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-3449a476",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1297,
+  "title": "El Infierno Tan Temido",
+  "mbids": [
+   "366f943a-b619-41a5-af48-d14968ea564d"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-366f943a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1301,
+  "title": "Orchestre Du Theatre",
+  "mbids": [
+   "36850916-efab-40d7-ad9d-c77451d9f433"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-36850916",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1323,
+  "title": "Uomo del Sud",
+  "mbids": [
+   "3a1612ad-9618-46c4-b3b4-81eaed7cbc3f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-3a1612ad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1350,
+  "title": "Pia-Sol-La-Sol",
+  "mbids": [
+   "3c39f1ad-f68b-4c51-8dea-01fdeaa8e8b3"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-3c39f1ad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1353,
+  "title": "Tristeza, separación",
+  "mbids": [
+   "3cc58465-0a69-3e5f-aef8-6e0f700ceed4"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-3cc58465",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1356,
+  "title": "Vardarito",
+  "mbids": [
+   "3d365c09-bf37-3fde-ade3-29eaf9f31a1e"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-3d365c09",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1359,
+  "title": "Marejadilla",
+  "mbids": [
+   "3dfbd35f-8a23-4141-ae73-f2b59b525828"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-3dfbd35f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1361,
+  "title": "Tres minutos con la realidad",
+  "mbids": [
+   "3e0f10c0-18f2-4ec4-9f8b-6857a777e16b"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-3e0f10c0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1404,
+  "title": "Canción de las Venusinas",
+  "mbids": [
+   "430a27eb-631e-4d39-9c79-270b6ea25638"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-430a27eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1410,
+  "title": "Se fue sin decirme adios",
+  "mbids": [
+   "43b8e8ac-739a-4f3e-a99c-a7fffd1f9e30"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-43b8e8ac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1441,
+  "title": "Mandat d'amener",
+  "mbids": [
+   "4834e649-cfd1-3759-819c-ab72bdcead20"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-4834e649",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1442,
+  "title": "Improvisation sur le thème \"Libertango\"",
+  "mbids": [
+   "48362f73-2741-4b5e-9ce1-1d61aace3351"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1467,
+  "title": "Biyuya",
+  "mbids": [
+   "4b9d3805-dfd8-3b07-aebc-71251edd826e"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-4b9d3805",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1473,
+  "title": "J’oublie",
+  "mbids": [
+   "4c51fe77-a4ca-4427-b86f-bd95aa0e15d6"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-4c51fe77",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1479,
+  "title": "Iracundo",
+  "mbids": [
+   "4cd1ce16-1dc6-339f-9fc5-266a91ca287c"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-4cd1ce16",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1481,
+  "title": "Palabras",
+  "mbids": [
+   "4d127126-b98d-3732-a08f-dd6c38408019"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-4d127126",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1493,
+  "title": "Les Draps blancs",
+  "mbids": [
+   "4e8566a7-801a-3cc2-90c7-92899d589e35"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-4e8566a7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1519,
+  "title": "Desperado",
+  "mbids": [
+   "51f9973b-64ae-4453-9447-b1e071eb363b"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-51f9973b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1522,
+  "title": "Elegante Canyenguito",
+  "mbids": [
+   "521e9b3b-d420-4627-9272-2d694d02e0cf"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-521e9b3b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1526,
+  "title": "Doble concierto para bandoneón y guitarra \"Hommage à Liège\"",
+  "mbids": [
+   "52971244-d623-486c-9068-7df388d58f2f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-52971244",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1549,
+  "title": "Windy",
+  "mbids": [
+   "55dd9abe-b4f4-3fb6-b6b8-4e45cf3c78fb"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-55dd9abe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1559,
+  "title": "Meditango",
+  "mbids": [
+   "5760a352-0c49-40c2-a0aa-cb6ce77f02f2"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-5760a352",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1580,
+  "title": "Milonga picaresque",
+  "mbids": [
+   "5a6ea34e-7673-4171-b8f8-6c30b55dd0cb"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-5a6ea34e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1591,
+  "title": "Dúo de amor",
+  "mbids": [
+   "5be5818a-8824-3c4f-8152-9c2a321181fc"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-5be5818a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1598,
+  "title": "Largo Tangabile",
+  "mbids": [
+   "5cd28ea3-4e76-497a-a76c-415d129e518a"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-5cd28ea3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1616,
+  "title": "Tango no. 1 para orquesta de cuerda",
+  "mbids": [
+   "5f13b770-223a-4166-84b5-586551b0428a"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-5f13b770",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1620,
+  "title": "Undertango",
+  "mbids": [
+   "5fe8b274-2e22-4f60-bb4b-753fabecc111"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-5fe8b274",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1633,
+  "title": "Final",
+  "mbids": [
+   "61ad9596-b976-453f-b8c7-cf658f176c33"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-61ad9596",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1658,
+  "title": "Tango Fever (Penalty)",
+  "mbids": [
+   "64317187-bd8f-47ca-ac26-6087642b2434"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-64317187",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1685,
+  "title": "Canto y fuga",
+  "mbids": [
+   "68ae86b8-18a5-4c77-ba3a-6ac4562595ed"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-68ae86b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1688,
+  "title": "Celos",
+  "mbids": [
+   "694147de-d394-3184-8de0-0d8f28acf4d2"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-694147de",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1700,
+  "title": "Olhos de Ressaca",
+  "mbids": [
+   "6b2e3222-45dc-41f3-9c9f-95a8406f0773"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-6b2e3222",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1702,
+  "title": "J'attends",
+  "mbids": [
+   "6b3e8cb0-abb5-4779-8ad8-ead7c12f6853"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-6b3e8cb0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1722,
+  "title": "Suite, op. 2",
+  "mbids": [
+   "6dbeb64c-9ca6-4cdb-939d-df2cdaa880f1"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-6dbeb64c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1724,
+  "title": "El mundo de los dos",
+  "mbids": [
+   "6e287233-85ba-350f-9a5f-12c5343744c4"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-6e287233",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1726,
+  "title": "Revirado",
+  "mbids": [
+   "6e3b535f-8e74-3194-8b50-7b36ce71e6f6"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-6e3b535f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1733,
+  "title": "Tango no. 2 para orquesta de cuerda",
+  "mbids": [
+   "6f0962a0-6e94-42d7-9f58-329d598c2086"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-6f0962a0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1751,
+  "title": "Alguien le dice al tango",
+  "mbids": [
+   "70b759bb-6d77-415f-b3f8-04d1aab55adb"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-70b759bb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1767,
+  "title": "Fracanapa",
+  "mbids": [
+   "7341eec0-0d99-40e6-9aba-39c80800f329"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-7341eec0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1784,
+  "title": "Chant et Fugue",
+  "mbids": [
+   "75072543-93b9-45dc-9029-73f8c35c43be"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-75072543",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1803,
+  "title": "Sonata no. 1, op. 7",
+  "mbids": [
+   "768cfff1-b159-42cf-ae20-85af69706c39"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-768cfff1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1806,
+  "title": "Qui crie ?",
+  "mbids": [
+   "76c62db4-35ca-3710-9160-e67f7993ba88"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-76c62db4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1821,
+  "title": "蜘蛛女之吻",
+  "mbids": [
+   "7872229b-7f3c-49fe-9a1d-30af19a289e3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1829,
+  "title": "20 Years After",
+  "mbids": [
+   "78f26d14-2a69-491f-819a-a1d66b68998f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-78f26d14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1834,
+  "title": "Chinchin",
+  "mbids": [
+   "7987864e-d327-4780-a068-00819cdd6ebf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 1844,
+  "title": "Milonga loca",
+  "mbids": [
+   "7acc6f65-53c4-4f64-99b8-bc56df8df872"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-7acc6f65",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1849,
+  "title": "Le Haut Mur",
+  "mbids": [
+   "7bbf3570-a404-36e5-b181-29a61b7f88b1"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-7bbf3570",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1850,
+  "title": "Deus Xangô",
+  "mbids": [
+   "7bc81b8f-860d-4647-ab5b-f2d6f139718c"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-7bc81b8f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1851,
+  "title": "Fleurs fanées",
+  "mbids": [
+   "7bdefdf3-dbb9-3b58-8b01-eb20ae12e4c2"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-7bdefdf3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1869,
+  "title": "Der alte Pierre",
+  "mbids": [
+   "7dac197f-52c9-4820-9c43-f2cfe03b6161"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-7dac197f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1879,
+  "title": "Preludio y Fuga",
+  "mbids": [
+   "7e9ac349-1cdc-48c4-8be8-a7a93d2f9d31"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-7e9ac349",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1899,
+  "title": "Ballade pour un fou (Loco, loco)",
+  "mbids": [
+   "818fdfbe-6f89-4dbf-95e2-d93adcc0c5e2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1923,
+  "title": "Thriller (Mundial 78)",
+  "mbids": [
+   "83e3bc54-b8a8-47fb-9c4a-e405cace406a"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-83e3bc54",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1942,
+  "title": "Four for Tango",
+  "mbids": [
+   "85981856-8de4-4dc5-96b2-b41ebe9bd401"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-85981856",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1947,
+  "title": "Preludio 9",
+  "mbids": [
+   "86589c77-7950-4d5c-ac95-91cca29b1d2f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-86589c77",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1952,
+  "title": "Leonora’s Song",
+  "mbids": [
+   "86d9dd3b-7c9b-46b2-a906-af9e31cc7bdf"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-86d9dd3b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1968,
+  "title": "Leonora's Love Theme",
+  "mbids": [
+   "88b1fb04-96ae-4087-836c-c8c22d712df3"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-88b1fb04",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1986,
+  "title": "Masque noir",
+  "mbids": [
+   "8b174db5-7099-3782-aaa0-02d787921e4e"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-8b174db5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1994,
+  "title": "Novitango",
+  "mbids": [
+   "8c6553f4-781c-4c49-8456-d11ba0e729b3"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-8c6553f4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1995,
+  "title": "Baires Promenade (Wing)",
+  "mbids": [
+   "8c730814-f226-44a6-8d1a-6c83d0505f35"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-8c730814",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2025,
+  "title": "Tema de María",
+  "mbids": [
+   "8f02a78b-983e-4843-98cc-7652a8779c84"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2038,
+  "title": "Tanguedia Ⅲ",
+  "mbids": [
+   "90c360da-303c-362b-8a55-1450b165f917"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-90c360da",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2040,
+  "title": "Los sueños",
+  "mbids": [
+   "90d02ee4-5f03-3676-9be3-9abd8420514b"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-90d02ee4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2068,
+  "title": "Tangueria 1",
+  "mbids": [
+   "93ec5c39-e9fb-42c1-ab58-0ffbec2d6be2"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-93ec5c39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2069,
+  "title": "Concierto del ángel",
+  "mbids": [
+   "93f6e70e-355e-40c4-94f3-37221387e4d0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2086,
+  "title": "Divertimento 9",
+  "mbids": [
+   "95c31196-1473-4404-85d5-ba70eacf530f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-95c31196",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2102,
+  "title": "Tangazo (Variations on Buenos Aires)",
+  "mbids": [
+   "97934718-5401-4615-8870-baadfb2914d5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 2103,
+  "title": "20 Years Ago",
+  "mbids": [
+   "97b02750-a059-463b-b4d3-5ea8fc5fc39c"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-97b02750",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2105,
+  "title": "Tema di Grazia",
+  "mbids": [
+   "97b8acf4-1d58-430c-bc9b-132528bb8b1d"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-97b8acf4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2117,
+  "title": "Ausencias",
+  "mbids": [
+   "98c22239-dbeb-3178-a3ae-f3a8eb297300"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-98c22239",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2164,
+  "title": "Tres movimientos tanguísticos porteños",
+  "mbids": [
+   "a06e2656-77b6-43fd-91b6-98a79303dafc"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-a06e2656",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2181,
+  "title": "As Ilhas",
+  "mbids": [
+   "a2635571-451d-43d5-acfc-48b2b9277efc"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-a2635571",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2188,
+  "title": "Rosa río",
+  "mbids": [
+   "a300bccc-ab60-442e-9fb1-bce03d62da29"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-a300bccc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2231,
+  "title": "Jeanne y Paul",
+  "mbids": [
+   "a772346e-6711-42d6-bcfc-46814a0baa45"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-a772346e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2236,
+  "title": "Preludio 1953",
+  "mbids": [
+   "a7f977af-1cac-44cd-abc2-b8b7bebfb982"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-a7f977af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2237,
+  "title": "Coups de cœur",
+  "mbids": [
+   "a853319f-188c-360e-9804-aaff1246ac5e"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-a853319f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2239,
+  "title": "Movimiento continuo",
+  "mbids": [
+   "a870440e-188b-496a-afa4-8b2672cb9f14"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-a870440e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2243,
+  "title": "Reminiscence",
+  "mbids": [
+   "a8ca8363-c068-48ef-bdfd-fb89ef696a86"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-a8ca8363",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2247,
+  "title": "Look Out",
+  "mbids": [
+   "a994c6e6-3e47-4892-95a3-b04ad8fbbeaf"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-a994c6e6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2252,
+  "title": "Suite Troileana",
+  "mbids": [
+   "a9e870ef-5eec-4da2-bc64-2e117983339d"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-a9e870ef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2259,
+  "title": "El gordo triste",
+  "mbids": [
+   "aaa7730d-3516-48d5-a994-1cdc4141ae40"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-aaa7730d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2265,
+  "title": "Loving",
+  "mbids": [
+   "ab3d6a3d-15aa-4c53-b24d-6389ebf22472"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-ab3d6a3d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2280,
+  "title": "Five Tango Sensations, for Bandoneón and String Quartet",
+  "mbids": [
+   "ad6537bf-8f6f-4689-a82f-8efa4e7e7fc8"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-ad6537bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2281,
+  "title": "Los Paraguas de Buenos Aires",
+  "mbids": [
+   "ad8ed2ce-ebef-479a-8be1-896963209f1e"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-ad8ed2ce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2296,
+  "title": "Villeguita",
+  "mbids": [
+   "b04ed0ea-2175-3b40-8764-60c54a6d75f6"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-b04ed0ea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2308,
+  "title": "Fotografia",
+  "mbids": [
+   "b12fe776-7632-4fb6-be8e-b75db21a12f7"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-b12fe776",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2310,
+  "title": "Cinco piezas",
+  "mbids": [
+   "b14e6aba-6318-4300-b3dc-fcf7fe6744c3"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-b14e6aba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2342,
+  "title": "Tristango",
+  "mbids": [
+   "b43634a4-42c7-4f57-93cc-4cd602553d98"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-b43634a4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2365,
+  "title": "2 Tangos for String Orchestra",
+  "mbids": [
+   "b6d02e8d-397d-4f36-a330-7585c11d6858"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-b6d02e8d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2370,
+  "title": "La bicicleta blanca",
+  "mbids": [
+   "b779e730-e902-4593-b975-2aa282ccd411"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-b779e730",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2372,
+  "title": "Tango blues (Campeon)",
+  "mbids": [
+   "b7f63821-173b-426b-a3e4-161ff9679ccc"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-b7f63821",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2393,
+  "title": "Oda intima a Buenos Aires",
+  "mbids": [
+   "ba911759-d6f9-4484-9533-512dce3946bd"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-ba911759",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2394,
+  "title": "Romanza del duende",
+  "mbids": [
+   "ba9416e8-7ed1-4694-b92d-b6d356f38426"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-ba9416e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2402,
+  "title": "A Don Nicanor Paredes",
+  "mbids": [
+   "bb67b15b-8ac9-4572-a088-0388cf793d69"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-bb67b15b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2419,
+  "title": "Un día de paz",
+  "mbids": [
+   "bc9c27f9-a955-4d53-81c5-27adacde7ecb"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-bc9c27f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2423,
+  "title": "Michelangelo ’70",
+  "mbids": [
+   "bcc22e0a-f5f7-4a02-8641-d75243714bcf"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-bcc22e0a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2459,
+  "title": "Tangata (Silfo y Ondina)",
+  "mbids": [
+   "c0d28734-c79f-417b-a220-2eeb447b8cc5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 2482,
+  "title": "Η καταιγίδα (Los pajaros perdidos)",
+  "mbids": [
+   "c406e1b8-362d-4465-9225-92d180f0f1b7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2486,
+  "title": "Melodía en la menor (Canto de octubre)",
+  "mbids": [
+   "c42d391c-64e1-48b7-9395-e92459ebc170"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-c42d391c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2503,
+  "title": "Persecuta",
+  "mbids": [
+   "c63e059f-80f5-4e97-a287-b4fca0c7962f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-c63e059f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2510,
+  "title": "Alienacion",
+  "mbids": [
+   "c7341ac8-7a26-4c42-bf58-a8fd23137b0b"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-c7341ac8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2517,
+  "title": "Se armó",
+  "mbids": [
+   "c88ad207-e3f1-3340-a0ca-fcd5b4870d19"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-c88ad207",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2518,
+  "title": "Gracia Alegre",
+  "mbids": [
+   "c88d79ed-32d5-4c2e-b47b-93fcf6a7d398"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-c88d79ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2525,
+  "title": "La evasión",
+  "mbids": [
+   "c926a968-1b07-47b1-9ef3-8aab2f485e16"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-c926a968",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2534,
+  "title": "Tango–Étude No. 5 (arr. Solo Clarinet)",
+  "mbids": [
+   "ca06ef32-9955-43a4-a2de-4d18ce3616ce"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2557,
+  "title": "Calambre",
+  "mbids": [
+   "cc606c50-ee5f-4b60-8406-99832e5b2383"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-cc606c50",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2568,
+  "title": "Knife Fight",
+  "mbids": [
+   "cd79829b-0691-41b4-be07-73e5d79ee01b"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-cd79829b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2570,
+  "title": "Cavalcata",
+  "mbids": [
+   "cde1e0a3-3580-4147-9c20-8c0716857db9"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-cde1e0a3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2597,
+  "title": "Pedro y Pedro",
+  "mbids": [
+   "d15f03b6-2cc7-36fd-a862-01a3a3c8f60f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-d15f03b6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2598,
+  "title": "Adios Nonino / Vuelvo al sur / Buenos Aires hora cero",
+  "mbids": [
+   "d1a751ec-5511-42cb-8593-db728373a126"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2619,
+  "title": "Tanguedia I",
+  "mbids": [
+   "d31a7f4c-9af5-42ac-9245-0d779c20734d"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-d31a7f4c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2643,
+  "title": "Enrico IV",
+  "mbids": [
+   "d5e16ee6-1388-4707-8e25-2e06e4996406"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-d5e16ee6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2645,
+  "title": "Caliente",
+  "mbids": [
+   "d644e491-cb12-405d-b380-86564cf24656"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-d644e491",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2648,
+  "title": "Chador (Gambeta)",
+  "mbids": [
+   "d67e0f87-5d96-407c-b812-5c353dc84a95"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-d67e0f87",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2652,
+  "title": "Weidmann",
+  "mbids": [
+   "d7115ecd-3ec3-35a3-8341-e471bc8438e3"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-d7115ecd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2657,
+  "title": "Milonga del trovador",
+  "mbids": [
+   "d7545b89-557d-4311-9cbb-dc1236d2c5ed"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-d7545b89",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2679,
+  "title": "Amelitango",
+  "mbids": [
+   "dad1209c-d059-48a8-a362-0711c0f7d596"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-dad1209c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2696,
+  "title": "Tout va bien",
+  "mbids": [
+   "dd10efe8-6288-31db-bb66-4fc01b63d75d"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-dd10efe8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2706,
+  "title": "Milonga for Three",
+  "mbids": [
+   "ddf3f21d-4fbc-4c40-b150-a0af8a94e9d1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2728,
+  "title": "Goooal ! (Golazo)",
+  "mbids": [
+   "e0263b1c-f6f1-46f1-a66d-b3ae5bf5bd57"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-e0263b1c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2739,
+  "title": "Remembrance",
+  "mbids": [
+   "e1189a3b-6a09-4831-8a93-600572d86b0a"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-e1189a3b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2755,
+  "title": "Raviens vers moi",
+  "mbids": [
+   "e304a71e-e51f-35ba-b937-63e1d97b6dab"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-e304a71e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2785,
+  "title": "Moderato Tangabile",
+  "mbids": [
+   "e5ae29a9-3265-4ae9-9794-b554af4df0e5"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-e5ae29a9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2797,
+  "title": "Zum",
+  "mbids": [
+   "e74657d0-6a66-46c5-9907-f1f356e0b6d0"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-e74657d0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2800,
+  "title": "María y las aves",
+  "mbids": [
+   "e776bff3-f22a-408b-bcdb-b30b1c7f530d"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-e776bff3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2815,
+  "title": "Eduardo y Juliana",
+  "mbids": [
+   "e8f2314c-2dc3-4375-88fa-39ce82c9f81d"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-e8f2314c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2816,
+  "title": "Finale (Tango apasionado)",
+  "mbids": [
+   "e90156ae-c07c-4db7-ab99-cd1b7055e97a"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-e90156ae",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2850,
+  "title": "L’Évasion",
+  "mbids": [
+   "ece37175-029e-4927-9330-4098763e448c"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-ece37175",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2855,
+  "title": "Tardecita pampeana",
+  "mbids": [
+   "ed2685b4-8000-43cb-ad1d-33b77b12113c"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-ed2685b4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2880,
+  "title": "Awake",
+  "mbids": [
+   "f0713044-c94d-403a-b523-fe34c4c21a92"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-f0713044",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2885,
+  "title": "Panic (Marcacion)",
+  "mbids": [
+   "f106251a-f185-4a13-af2a-ee9ef8cbcda7"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-f106251a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2922,
+  "title": "Baires '72",
+  "mbids": [
+   "f4807881-f838-4520-9948-4276e828aebe"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-f4807881",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2923,
+  "title": "Tanguedia II",
+  "mbids": [
+   "f4923830-a02d-4d9e-8276-09bf17fb6d57"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-f4923830",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2924,
+  "title": "Danza criolla",
+  "mbids": [
+   "f4cbdbed-65cb-464b-b5dc-052cb5450482"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2938,
+  "title": "Milonga strip (Corner)",
+  "mbids": [
+   "f60b9d0c-e16f-4936-afb3-198590bb33cd"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-f60b9d0c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2942,
+  "title": "Introduzione",
+  "mbids": [
+   "f69f8a56-b672-4d20-bb27-5378113e138f"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-f69f8a56",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2946,
+  "title": "Sinfonia Buenos Aires, op. 15",
+  "mbids": [
+   "f6f48027-62b0-4a6c-afb5-bd505f706993"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-f6f48027",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2948,
+  "title": "Revolucionario",
+  "mbids": [
+   "f7832035-7b4b-4d92-be4e-6bdc1e6d2865"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-f7832035",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2965,
+  "title": "Idioot",
+  "mbids": [
+   "f9bd7d14-08fa-3f5d-9060-ea6617f422de"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-f9bd7d14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2973,
+  "title": "Decarísimo",
+  "mbids": [
+   "fa639f3f-1c06-4758-8e51-49b3dbb2744e"
+  ],
+  "mapping": "work",
+  "key": "piazzolla-fa639f3f",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

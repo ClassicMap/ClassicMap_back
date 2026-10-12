@@ -1,0 +1,2804 @@
+[
+ {
+  "pieceId": 564,
+  "title": "Prelude and Fugue for 18-Part String Orchestra, op. 29",
+  "mbids": [
+   "703e04f0-8f28-400e-839d-3be5d773d14a"
+  ],
+  "mapping": "work",
+  "key": "britten-703e04f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 565,
+  "title": "Quatre chansons françaises",
+  "mbids": [
+   "72efdec6-807c-4f55-a857-8601a0d6d08b"
+  ],
+  "mapping": "work",
+  "key": "britten-72efdec6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 602,
+  "title": "Four Burns Songs",
+  "mbids": [
+   "a1eabc63-547d-4bb8-81ed-baae87c38315"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 641,
+  "title": "Jubilate Deo in C major",
+  "mbids": [
+   "d149966c-54cb-32d8-bfca-eb7c24fa36d6"
+  ],
+  "mapping": "work",
+  "key": "britten-d149966c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 756,
+  "title": "Hymn to St. Cecilia, op. 27",
+  "mbids": [
+   "657e8f5c-70c9-4fd3-93f1-56072952d258"
+  ],
+  "mapping": "work",
+  "key": "britten-657e8f5c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 790,
+  "title": "Choral Dances from Gloriana",
+  "mbids": [
+   "f2542cd0-448f-4fb3-abc8-a39212cb0279"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 794,
+  "title": "The Turn of the Screw",
+  "mbids": [
+   "582c7168-17fd-47d7-a317-4bdf3a4f7e34"
+  ],
+  "mapping": "work",
+  "key": "britten-582c7168",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 852,
+  "title": "The Poet’s Echo",
+  "mbids": [
+   "01b836a3-0141-43b4-b7d9-117ce6739732"
+  ],
+  "mapping": "work",
+  "key": "britten-01b836a3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 867,
+  "title": "Canticle II, op. 51 \"Abraham and Isaac\"",
+  "mbids": [
+   "035c7e12-0121-4a4b-b0f5-2be9b39422a4"
+  ],
+  "mapping": "work",
+  "key": "britten-035c7e12",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1007,
+  "title": "A Suite on English Folk Tunes, op. 90 \"A Time There Was\"",
+  "mbids": [
+   "12ab6596-e5c3-43db-9fe1-a145131fb3ae"
+  ],
+  "mapping": "work",
+  "key": "britten-12ab6596",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1024,
+  "title": "War Requiem, op. 66",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1048,
+  "title": "Three Divertimenti for String Quartet",
+  "mbids": [
+   "179ead74-1544-45cf-bdb8-4958acdf2a9c"
+  ],
+  "mapping": "work",
+  "key": "britten-179ead74",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1059,
+  "title": "Fanfare for St. Edmondsbury",
+  "mbids": [
+   "1912f1d4-074d-4120-a0db-e19e1f67afa1"
+  ],
+  "mapping": "work",
+  "key": "britten-1912f1d4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1163,
+  "title": "Suite for Violin and Piano, op. 6",
+  "mbids": [
+   "23d0d271-b4f2-42c7-9c87-b9677a7b9931"
+  ],
+  "mapping": "work",
+  "key": "britten-23d0d271",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1193,
+  "title": "Missa Brevis in D major, op. 63",
+  "mbids": [
+   "2840ccb1-42d6-4858-98ca-48543ed51833"
+  ],
+  "mapping": "work",
+  "key": "britten-2840ccb1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1197,
+  "title": "Symphony for Cello and Orchestra, op. 68",
+  "mbids": [
+   "28bf5d11-b536-4c1a-a7c7-e361347c1c92"
+  ],
+  "mapping": "work",
+  "key": "britten-28bf5d11",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1216,
+  "title": "String Quartet no. 3, op. 94",
+  "mbids": [
+   "2bd12137-c758-4ccb-8a34-9d7650922e48"
+  ],
+  "mapping": "work",
+  "key": "britten-2bd12137",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1326,
+  "title": "Now Sleeps the Crimson Petal",
+  "mbids": [
+   "3a70b2df-59c3-3cad-acd9-ebc9c5f642c3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1354,
+  "title": "Suite from The Prince of the Pagodas",
+  "mbids": [
+   "3d2a4a22-cb15-4877-b688-01ed994f046f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1369,
+  "title": "Young Apollo, op. 16",
+  "mbids": [
+   "3f1e9acc-782e-474b-a0f4-ff410ad84d86"
+  ],
+  "mapping": "work",
+  "key": "britten-3f1e9acc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1405,
+  "title": "Tit for Tat",
+  "mbids": [
+   "4318ef62-8c50-45e3-ae30-6cfea0aab906"
+  ],
+  "mapping": "work",
+  "key": "britten-4318ef62",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1418,
+  "title": "Cello Suite no. 1, op. 72",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1421,
+  "title": "Les Illuminations, op. 18",
+  "mbids": [
+   "45b00a38-28ee-4a71-b89e-3de0b8721436"
+  ],
+  "mapping": "work",
+  "key": "britten-45b00a38",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1468,
+  "title": "Diversions for Piano Left Hand and Orchestra, op. 21",
+  "mbids": [
+   "4baeb45a-f35a-45b4-9db1-1c75896d1532"
+  ],
+  "mapping": "work",
+  "key": "britten-4baeb45a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1471,
+  "title": "Advance Democracy",
+  "mbids": [
+   "4c219f0a-065b-4e06-bbb2-3e6376d1a995"
+  ],
+  "mapping": "work",
+  "key": "britten-4c219f0a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1475,
+  "title": "Sinfonietta, op. 1",
+  "mbids": [
+   "4c88c36a-8786-4cbf-8a36-7e6fb1a8438c"
+  ],
+  "mapping": "work",
+  "key": "britten-4c88c36a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1513,
+  "title": "Deus in adjutorium meum",
+  "mbids": [
+   "50bd5047-de43-3f4c-a3fb-117be9939c73"
+  ],
+  "mapping": "work",
+  "key": "britten-50bd5047",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1545,
+  "title": "Owen Wingrave",
+  "mbids": [
+   "5555ee0b-f1ef-45a6-bcc5-c89ac9ea5d58"
+  ],
+  "mapping": "work",
+  "key": "britten-5555ee0b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1594,
+  "title": "Two Portraits",
+  "mbids": [
+   "5c63ec84-494a-4834-9dc5-ddbac9d0c8b9"
+  ],
+  "mapping": "work",
+  "key": "britten-5c63ec84",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1653,
+  "title": "The Children and Sir Nameless",
+  "mbids": [
+   "63cbe0ab-bfaf-4380-8d50-db7a7d6d6555"
+  ],
+  "mapping": "work",
+  "key": "britten-63cbe0ab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1660,
+  "title": "Two Pieces for Violin, Viola and Piano",
+  "mbids": [
+   "6444a2cc-c9a0-46a4-bf7b-82173a03209f"
+  ],
+  "mapping": "work",
+  "key": "britten-6444a2cc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1755,
+  "title": "Cello Suite no. 3, op. 87",
+  "mbids": [
+   "715f4608-5b96-4bf1-adb8-50785473c24e"
+  ],
+  "mapping": "work",
+  "key": "britten-715f4608",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1764,
+  "title": "Lachrymae: Reflections on a song of Dowland, op. 48",
+  "mbids": [
+   "723d8b5b-ca78-4f7a-a1ec-4c1804eedeec"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1811,
+  "title": "Simple Symphony, op. 4",
+  "mbids": [
+   "76fbff20-b881-4ea7-bbc5-c4d6236d34d0"
+  ],
+  "mapping": "work",
+  "key": "britten-76fbff20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1820,
+  "title": "Violin Concerto, op. 15",
+  "mbids": [
+   "7820c34b-32b5-460c-9902-8dc0b1a9578c"
+  ],
+  "mapping": "work",
+  "key": "britten-7820c34b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1848,
+  "title": "Night Mail",
+  "mbids": [
+   "7bbb30a4-460f-40be-bf63-0d1a7f1f59a8"
+  ],
+  "mapping": "work",
+  "key": "britten-7bbb30a4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1863,
+  "title": "Te Deum in C major",
+  "mbids": [
+   "7d24b8b2-2175-46ac-b89e-d8898e6e29ab"
+  ],
+  "mapping": "work",
+  "key": "britten-7d24b8b2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1887,
+  "title": "Variations et fugue sur un theme de Purcell",
+  "mbids": [
+   "7feae610-1506-4575-98fb-3642e2b5ebc9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1896,
+  "title": "Lachrymae: Reflections on a song of Dowland, op. 48a",
+  "mbids": [
+   "81235110-6d67-34b5-bf3c-e7f9a151a630"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1903,
+  "title": "Movements for a Clarinet Concerto",
+  "mbids": [
+   "81e29ed4-b79e-465a-aeae-5c236385dab9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1933,
+  "title": "The Ballad of Little Musgrave and Lady Barnard",
+  "mbids": [
+   "84bd6ef5-e4c5-4a9f-b78c-815555ea8a49"
+  ],
+  "mapping": "work",
+  "key": "britten-84bd6ef5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1962,
+  "title": "Three Two-Part Songs",
+  "mbids": [
+   "87fe639c-6d72-4a21-9dd1-efa82a47662d"
+  ],
+  "mapping": "work",
+  "key": "britten-87fe639c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1979,
+  "title": "Prelude and Fugue on a Theme of Vittoria",
+  "mbids": [
+   "8a1a9513-6106-4524-bae3-8437ffaab8e5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2014,
+  "title": "Suite from Death in Venice",
+  "mbids": [
+   "8e5af62e-0b81-4aad-82e1-001ecebeb999"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2062,
+  "title": "Alla Marcia",
+  "mbids": [
+   "936066da-829c-363d-a8da-0e1bac0f32b2"
+  ],
+  "mapping": "work",
+  "key": "britten-936066da",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2091,
+  "title": "Sinfonia da Requiem, op. 20",
+  "mbids": [
+   "969ddbd6-59ea-49f5-b35c-5e4657957f89"
+  ],
+  "mapping": "work",
+  "key": "britten-969ddbd6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2100,
+  "title": "A Hymn of St Columba",
+  "mbids": [
+   "9719bae0-d032-3919-a013-4746ddb38809"
+  ],
+  "mapping": "work",
+  "key": "britten-9719bae0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2129,
+  "title": "Holiday Diary, op. 5",
+  "mbids": [
+   "9a0dd7e8-8b46-4ea1-b534-084d31f750fb"
+  ],
+  "mapping": "work",
+  "key": "britten-9a0dd7e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2139,
+  "title": "Two Insect Pieces for oboe and piano",
+  "mbids": [
+   "9c60780e-b753-4c97-b575-1134698be06b"
+  ],
+  "mapping": "work",
+  "key": "britten-9c60780e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2152,
+  "title": "Peter Grimes, op. 33",
+  "mbids": [
+   "9de3b750-23da-439a-bc17-bc5711b1a66e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 2185,
+  "title": "Cello Suite no. 2, op. 80",
+  "mbids": [
+   "a2c33c32-e81a-413b-9882-134728e848cb"
+  ],
+  "mapping": "work",
+  "key": "britten-a2c33c32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2193,
+  "title": "Our Hunting Fathers, op. 8",
+  "mbids": [
+   "a367e79d-ced0-4143-8a3b-73ff7b941aa8"
+  ],
+  "mapping": "work",
+  "key": "britten-a367e79d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2210,
+  "title": "String Quartet in F",
+  "mbids": [
+   "a4e153b5-42b3-4bf7-929c-571cd1fc5217"
+  ],
+  "mapping": "work",
+  "key": "britten-a4e153b5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2226,
+  "title": "Night Piece \"Notturno\"",
+  "mbids": [
+   "a68086e1-5783-460f-b795-5930e7e92fcc"
+  ],
+  "mapping": "work",
+  "key": "britten-a68086e1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2235,
+  "title": "Russian Funeral",
+  "mbids": [
+   "a7eca496-a912-4296-a43e-498870616618"
+  ],
+  "mapping": "work",
+  "key": "britten-a7eca496",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2274,
+  "title": "The Young Person’s Guide to the Orchestra, op. 34",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2284,
+  "title": "Fanfare for St. Edmundsbury",
+  "mbids": [
+   "ade538ba-4003-4928-9238-a56e37d35819"
+  ],
+  "mapping": "work",
+  "key": "britten-ade538ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2357,
+  "title": "The Rape of Lucretia, op. 37",
+  "mbids": [
+   "b5c36dbb-2c42-408d-886c-610340347979"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2403,
+  "title": "String Quartet in D major",
+  "mbids": [
+   "bb73a401-ca23-4103-af76-bf75e8c5b7b7"
+  ],
+  "mapping": "work",
+  "key": "britten-bb73a401",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2454,
+  "title": "Nocturnal after John Dowland, op. 70",
+  "mbids": [
+   "c064374f-2a4a-456d-a857-fd9c31bf4994"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2481,
+  "title": "Twelve Variations on a Theme",
+  "mbids": [
+   "c3e0659e-855b-4622-9675-b0f8cdec6381"
+  ],
+  "mapping": "work",
+  "key": "britten-c3e0659e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2516,
+  "title": "Elegy for viola solo",
+  "mbids": [
+   "c85e0297-ed7a-4364-9e82-394e44696065"
+  ],
+  "mapping": "work",
+  "key": "britten-c85e0297",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2552,
+  "title": "The Heart of the Matter",
+  "mbids": [
+   "cc0c8924-27f0-46f3-8032-bc5f4c4d5e40"
+  ],
+  "mapping": "work",
+  "key": "britten-cc0c8924",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2561,
+  "title": "Seven Sonnets of Michelangelo, op. 22",
+  "mbids": [
+   "cca66d2f-f89d-4325-875f-cf30d247c78c"
+  ],
+  "mapping": "work",
+  "key": "britten-cca66d2f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2592,
+  "title": "Britten's Blues",
+  "mbids": [
+   "d0915b7b-bcc4-4aa4-b9df-96e6c4c5c566"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2634,
+  "title": "A Shepherd's Carol",
+  "mbids": [
+   "d476313b-3269-4ede-9480-8966b2a9eb84"
+  ],
+  "mapping": "work",
+  "key": "britten-d476313b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2638,
+  "title": "St. Nicolas, op. 42",
+  "mbids": [
+   "d57024e3-6b5d-4d28-9f3d-daf04017e600"
+  ],
+  "mapping": "work",
+  "key": "britten-d57024e3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2653,
+  "title": "Spring Symphony, op. 44",
+  "mbids": [
+   "d71dbc7b-ff7e-451c-964d-d6da13c0794d"
+  ],
+  "mapping": "work",
+  "key": "britten-d71dbc7b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2666,
+  "title": "Friday Afternoons, op. 7",
+  "mbids": [
+   "d846117f-4f6e-4a8e-99bd-e894a1a91e0b"
+  ],
+  "mapping": "work",
+  "key": "britten-d846117f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2668,
+  "title": "Paul Bunyan, op. 17",
+  "mbids": [
+   "d8834231-f3c9-437d-86a2-9ed709e83526"
+  ],
+  "mapping": "work",
+  "key": "britten-d8834231",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2670,
+  "title": "Christ’s Nativity",
+  "mbids": [
+   "d8b61df4-93b7-4845-b4e3-f081ed8d6b18"
+  ],
+  "mapping": "work",
+  "key": "britten-d8b61df4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2719,
+  "title": "Symphonic Suite from “Gloriana”, op. 53a",
+  "mbids": [
+   "df282891-0dc4-4420-842c-00e0b1248158"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2751,
+  "title": "Variations",
+  "mbids": [
+   "e298b397-dfb1-46b6-8079-57813f8e70ef"
+  ],
+  "mapping": "work",
+  "key": "britten-e298b397",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2786,
+  "title": "Death in Venice",
+  "mbids": [
+   "e600a9ce-f6b3-4455-8ca6-af40e4788b9b"
+  ],
+  "mapping": "work",
+  "key": "britten-e600a9ce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2831,
+  "title": "Cello Sonata in C major, op. 65",
+  "mbids": [
+   "eaade9f8-d82f-4e8f-9f90-ca859d23f60e"
+  ],
+  "mapping": "work",
+  "key": "britten-eaade9f8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2858,
+  "title": "Elegy for Strings",
+  "mbids": [
+   "ed9d515b-b5d0-43da-8b32-beb07d5a30c4"
+  ],
+  "mapping": "work",
+  "key": "britten-ed9d515b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2914,
+  "title": "Gloriana",
+  "mbids": [
+   "f3a08ec7-df3d-40d8-b571-426eb2a6eddf"
+  ],
+  "mapping": "work",
+  "key": "britten-f3a08ec7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2917,
+  "title": "At the Mid Hour of Night",
+  "mbids": [
+   "f4356c06-f09c-44b4-bc70-d2a7aa024f17"
+  ],
+  "mapping": "work",
+  "key": "britten-f4356c06",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2989,
+  "title": "Cabaret Songs",
+  "mbids": [
+   "fc9aceac-d36a-45db-8be8-1a04e0353088"
+  ],
+  "mapping": "work",
+  "key": "britten-fc9aceac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2996,
+  "title": "Children's Crusade, op. 82",
+  "mbids": [
+   "fd33fc32-6f48-44a4-81ab-e861be470552"
+  ],
+  "mapping": "work",
+  "key": "britten-fd33fc32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 3000,
+  "title": "Miniature Suite",
+  "mbids": [
+   "fd61c963-2aad-4361-b23a-e6179c54b3d0"
+  ],
+  "mapping": "work",
+  "key": "britten-fd61c963",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 3009,
+  "title": "Passacaglia from Peter Grimes, op. 33b",
+  "mbids": [
+   "fe661a48-4752-32be-b84b-9acdb752bd17"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 483,
+  "title": "칸티클 1번 Op. 40 “내 사랑은 나의 것”",
+  "mbids": [
+   "166fa322-35e7-4076-a7f0-02b968fa863e"
+  ],
+  "mapping": "work",
+  "key": "britten-166fa322",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 528,
+  "title": "Sechs Hölderlin‐Fragmente, op. 61",
+  "mbids": [
+   "4a06b8cd-0dfa-4d80-9c94-ca297a873e39"
+  ],
+  "mapping": "work",
+  "key": "britten-4a06b8cd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 551,
+  "title": "Phantasy Quartet, op. 2",
+  "mbids": [
+   "646e42e3-d058-4f45-98fb-bf23bda1da5f"
+  ],
+  "mapping": "work",
+  "key": "britten-646e42e3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 558,
+  "title": "Rhapsody",
+  "mbids": [
+   "68b572fd-ad2e-4a4f-997c-ef3e5b508f05"
+  ],
+  "mapping": "work",
+  "key": "britten-68b572fd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 566,
+  "title": "A.M.D.G.",
+  "mbids": [
+   "76da2640-49ac-40a1-9933-cfe1f9f55925"
+  ],
+  "mapping": "work",
+  "key": "britten-76da2640",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 589,
+  "title": "Phantasy in F minor",
+  "mbids": [
+   "8aaa7c7c-4a45-44f0-a046-bc2b267f495f"
+  ],
+  "mapping": "work",
+  "key": "britten-8aaa7c7c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 787,
+  "title": "The Birds",
+  "mbids": [
+   "bdf67241-f137-405a-8ade-af68f0d42afd"
+  ],
+  "mapping": "work",
+  "key": "britten-bdf67241",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 795,
+  "title": "Venite exultemus domino",
+  "mbids": [
+   "5bf1935a-3592-4dea-826d-f856e09f645a"
+  ],
+  "mapping": "work",
+  "key": "britten-5bf1935a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 818,
+  "title": "Five Flower Songs, op. 47",
+  "mbids": [
+   "60156d07-87f2-4c18-996e-8ff4352fada9"
+  ],
+  "mapping": "work",
+  "key": "britten-60156d07",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 843,
+  "title": "A Midsummer Night’s Dream, op. 64",
+  "mbids": [
+   "00c5f74d-8946-4bd8-a134-037bb867c8dc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 844,
+  "title": "The Prince of the Pagodas: Prelude and Dances, op. 57b: 1. Prelude",
+  "mbids": [
+   "00e24fb1-66ed-358d-9710-30690538d27d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 887,
+  "title": "The Ascent of F6",
+  "mbids": [
+   "05678da0-6714-467f-9bec-1440ce9aa88c"
+  ],
+  "mapping": "work",
+  "key": "britten-05678da0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 910,
+  "title": "The Spirit of the Lord (The World of the Spirit)",
+  "mbids": [
+   "07fc879f-78c6-4335-a282-64dd342fd344"
+  ],
+  "mapping": "work",
+  "key": "britten-07fc879f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 924,
+  "title": "If it's ever Spring again",
+  "mbids": [
+   "08f693de-371e-458c-ada2-4d79b81ecc21"
+  ],
+  "mapping": "work",
+  "key": "britten-08f693de",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 927,
+  "title": "Psalm 150, op. 67",
+  "mbids": [
+   "0911dd29-db37-41d0-849c-f90a66005448"
+  ],
+  "mapping": "work",
+  "key": "britten-0911dd29",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 933,
+  "title": "Night Covers Up the Rigid Land",
+  "mbids": [
+   "0b0033c2-adbe-442c-95f9-b0b44b3ffcbf"
+  ],
+  "mapping": "work",
+  "key": "britten-0b0033c2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 936,
+  "title": "Who Are These Children?, op. 84",
+  "mbids": [
+   "0b40ff98-7f95-472c-b1ba-df7f6b7ac264"
+  ],
+  "mapping": "work",
+  "key": "britten-0b40ff98",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 938,
+  "title": "Not Even Summer Yet",
+  "mbids": [
+   "0b713e08-4124-4897-abd8-490cf30e7040"
+  ],
+  "mapping": "work",
+  "key": "britten-0b713e08",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 958,
+  "title": "Movement for Wind Sextet",
+  "mbids": [
+   "0d6a3809-c224-4a2a-a199-126b926af807"
+  ],
+  "mapping": "work",
+  "key": "britten-0d6a3809",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 970,
+  "title": "Untitled Fragment for Strings",
+  "mbids": [
+   "0f1d7056-69b9-41e7-9b9e-c0ded35536da"
+  ],
+  "mapping": "work",
+  "key": "britten-0f1d7056",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 982,
+  "title": "Village Organist's Piece",
+  "mbids": [
+   "1006df80-506b-4169-95db-2edd96d70722"
+  ],
+  "mapping": "work",
+  "key": "britten-1006df80",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 986,
+  "title": "Rondo concertante",
+  "mbids": [
+   "106ced92-e7d7-499a-9b05-d409a8fd31d5"
+  ],
+  "mapping": "work",
+  "key": "britten-106ced92",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 996,
+  "title": "Fanfare \"The Eagle has two Heads\"",
+  "mbids": [
+   "115cf21a-b664-454e-a63c-b106563f43e1"
+  ],
+  "mapping": "work",
+  "key": "britten-115cf21a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1004,
+  "title": "Voluntary on Tallis' Lamentations",
+  "mbids": [
+   "125253af-a7c4-4f96-87af-dab4402baf62"
+  ],
+  "mapping": "work",
+  "key": "britten-125253af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1036,
+  "title": "A Wealden Trio: Christmas song of the women",
+  "mbids": [
+   "1676975a-5ed7-412f-9807-7664160e904a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1076,
+  "title": "The Sun Shines Down",
+  "mbids": [
+   "1ab2363a-78d9-43b3-b1eb-8883afefc355"
+  ],
+  "mapping": "work",
+  "key": "britten-1ab2363a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1098,
+  "title": "Reveille",
+  "mbids": [
+   "1d4b7f3f-ddfd-4894-b833-a6746cbe7c5a"
+  ],
+  "mapping": "work",
+  "key": "britten-1d4b7f3f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1105,
+  "title": "Curlew River, op. 71",
+  "mbids": [
+   "1e011d83-b1f5-45b4-9e3f-041d354ceace"
+  ],
+  "mapping": "work",
+  "key": "britten-1e011d83",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1127,
+  "title": "This Way to the Tomb",
+  "mbids": [
+   "20574910-bde2-4535-b3d2-2b435fe02d62"
+  ],
+  "mapping": "work",
+  "key": "britten-20574910",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1130,
+  "title": "Jubilate Deo in E-flat",
+  "mbids": [
+   "207548da-1c4c-4fef-a735-da30182b51a5"
+  ],
+  "mapping": "work",
+  "key": "britten-207548da",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1143,
+  "title": "As It Is, Plenty",
+  "mbids": [
+   "21a04bda-9fcb-3dba-b891-c27af1c5d3cc"
+  ],
+  "mapping": "work",
+  "key": "britten-21a04bda",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1144,
+  "title": "A Boy Was Born, op. 3",
+  "mbids": [
+   "21c5636a-112c-42ee-b463-bd6d0094337e"
+  ],
+  "mapping": "work",
+  "key": "britten-21c5636a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1173,
+  "title": "Plymouth Town",
+  "mbids": [
+   "24b10423-15f9-4248-bf68-70d5873321d6"
+  ],
+  "mapping": "work",
+  "key": "britten-24b10423",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1191,
+  "title": "A Birthday Hansel, op. 92",
+  "mbids": [
+   "27b3e12d-d658-4fb7-a4d1-edad74f7ea4d"
+  ],
+  "mapping": "work",
+  "key": "britten-27b3e12d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1194,
+  "title": "A Fanfare for June 30th 1970",
+  "mbids": [
+   "285af684-f541-41b1-8ba2-180e9cb14b0e"
+  ],
+  "mapping": "work",
+  "key": "britten-285af684",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1205,
+  "title": "Somnus",
+  "mbids": [
+   "29d63f5f-3d6a-4535-90c4-4156fa20473a"
+  ],
+  "mapping": "work",
+  "key": "britten-29d63f5f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1227,
+  "title": "Songs and Proverbs of William Blake, op. 74",
+  "mbids": [
+   "2c7b48db-49cc-4de1-851c-3630c38b669a"
+  ],
+  "mapping": "work",
+  "key": "britten-2c7b48db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1232,
+  "title": "When You’re Feeling Like Expressing Your Affection",
+  "mbids": [
+   "2d3612a4-2a75-4797-8154-c8637c6e132b"
+  ],
+  "mapping": "work",
+  "key": "britten-2d3612a4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1235,
+  "title": "Voices for Today, op. 75",
+  "mbids": [
+   "2d98bf7f-bf94-44ff-9c43-1a77f9e80a2e"
+  ],
+  "mapping": "work",
+  "key": "britten-2d98bf7f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1237,
+  "title": "The Prince of the Pagodas: Prelude and Dances, op. 57b: 3. The King of the West",
+  "mbids": [
+   "2dd7e2df-ced7-3c31-a1fb-c84c19c9011b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1238,
+  "title": "Reflection",
+  "mbids": [
+   "2df9cb9f-0087-429f-ac0b-23f09fbba98d"
+  ],
+  "mapping": "work",
+  "key": "britten-2df9cb9f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1249,
+  "title": "I Will Give My Love an Apple",
+  "mbids": [
+   "2f1c255a-20f7-4036-a67c-82ad2c95ec39"
+  ],
+  "mapping": "work",
+  "key": "britten-2f1c255a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1268,
+  "title": "The Holy Sonnets of John Donne, op. 35",
+  "mbids": [
+   "31fb2891-6202-4908-8e8c-7d979ddbf1d3"
+  ],
+  "mapping": "work",
+  "key": "britten-31fb2891",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1276,
+  "title": "The Building of the House, op. 79",
+  "mbids": [
+   "33530bef-8771-4a90-8f8b-552d3e8a1d38"
+  ],
+  "mapping": "work",
+  "key": "britten-33530bef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1293,
+  "title": "Britain to America: Where do we go from here?",
+  "mbids": [
+   "35f3f636-7a1d-414a-a0e9-b9ffad495b8f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1306,
+  "title": "Festival Te Deum, op. 32",
+  "mbids": [
+   "3739ee18-7a10-3d14-b7b8-167e5c4d0575"
+  ],
+  "mapping": "work",
+  "key": "britten-3739ee18",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1310,
+  "title": "String Quartet no. 2 in C major, op. 36",
+  "mbids": [
+   "37e50d50-1d75-40e1-887f-17421f21898f"
+  ],
+  "mapping": "work",
+  "key": "britten-37e50d50",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1312,
+  "title": "Phrase",
+  "mbids": [
+   "387590d8-afa3-4fbe-b969-98998991b701"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1335,
+  "title": "Scottish Ballad, op. 26",
+  "mbids": [
+   "3b225fab-56f9-4d2c-8778-8962d9d66eaa"
+  ],
+  "mapping": "work",
+  "key": "britten-3b225fab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1338,
+  "title": "If Thou Wilt Ease Thine Heart",
+  "mbids": [
+   "3b405ccc-cc75-4bf5-b24b-93f033abde53"
+  ],
+  "mapping": "work",
+  "key": "britten-3b405ccc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1372,
+  "title": "Irish Reel",
+  "mbids": [
+   "3f32b580-d3eb-4f63-9ae3-4448e840fcf4"
+  ],
+  "mapping": "work",
+  "key": "britten-3f32b580",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1384,
+  "title": "The Prince of the Pagodas: Prelude and Dances, op. 57b: 4. Belle Rose",
+  "mbids": [
+   "408d7fab-46c3-369d-b6e9-b229f23adbf8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1387,
+  "title": "The Prince of the Pagodas, op. 57",
+  "mbids": [
+   "40d28882-69c8-4fcf-96e7-19b75b197f54"
+  ],
+  "mapping": "work",
+  "key": "britten-40d28882",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1435,
+  "title": "Underneath the Abject Willow",
+  "mbids": [
+   "4797a1fc-b678-4abc-bfdb-b20d3fd45858"
+  ],
+  "mapping": "work",
+  "key": "britten-4797a1fc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1448,
+  "title": "Six Metamorphoses after Ovid for Oboe Solo, op. 49",
+  "mbids": [
+   "4948b31a-75cf-4b78-acac-a4958fb79657"
+  ],
+  "mapping": "work",
+  "key": "britten-4948b31a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1453,
+  "title": "I Lov'd a Lass",
+  "mbids": [
+   "49daa54c-1956-474b-8bb7-b4dfe2e51414"
+  ],
+  "mapping": "work",
+  "key": "britten-49daa54c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1456,
+  "title": "The Prince of the Pagodas: Prelude and Dances, op. 57b: 5. Variation of the Prince",
+  "mbids": [
+   "4a5f19e9-2e5a-37be-ad7e-ea9d853228b9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1457,
+  "title": "Cradle Song for Eleanor",
+  "mbids": [
+   "4a636f32-e222-4822-bc6f-a44ee57cae72"
+  ],
+  "mapping": "work",
+  "key": "britten-4a636f32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1484,
+  "title": "The Little Sweep, op. 45",
+  "mbids": [
+   "4d7efeef-d69a-43c5-bfd8-3afcb06a4314"
+  ],
+  "mapping": "work",
+  "key": "britten-4d7efeef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1485,
+  "title": "Sonatina romantica",
+  "mbids": [
+   "4d80294d-61c2-4575-b002-e18e996bb168"
+  ],
+  "mapping": "work",
+  "key": "britten-4d80294d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1491,
+  "title": "Voluntary on Tallis' Lamentation",
+  "mbids": [
+   "4e546b45-8e9d-45d4-ac22-4afa3e379e40"
+  ],
+  "mapping": "work",
+  "key": "britten-4e546b45",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1499,
+  "title": "Now the Leaves Are Falling Fast",
+  "mbids": [
+   "4faf2581-09e5-3364-87ee-2442e1f89794"
+  ],
+  "mapping": "work",
+  "key": "britten-4faf2581",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1511,
+  "title": "Let the Florid Music Praise!",
+  "mbids": [
+   "50ace8f7-77b0-3681-a632-d134eb224ab7"
+  ],
+  "mapping": "work",
+  "key": "britten-50ace8f7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1533,
+  "title": "Pieces for 2 pianos, op. 23",
+  "mbids": [
+   "53e2741b-b72a-4d6d-909f-0272f4105569"
+  ],
+  "mapping": "work",
+  "key": "britten-53e2741b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1547,
+  "title": "Three Character Pieces",
+  "mbids": [
+   "55a6bfd6-eddf-4111-966e-4b069bc34ecb"
+  ],
+  "mapping": "work",
+  "key": "britten-55a6bfd6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1551,
+  "title": "Suite from King Arthur",
+  "mbids": [
+   "55e85cbe-5380-4fd7-90bc-c57493256b8c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1563,
+  "title": "Cantata academica, op. 62",
+  "mbids": [
+   "582279d8-d877-41bb-ad7e-dfadc1009110"
+  ],
+  "mapping": "work",
+  "key": "britten-582279d8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1582,
+  "title": "Nocturne, op. 60",
+  "mbids": [
+   "5acb1623-54e3-451a-812a-3287d2f019a3"
+  ],
+  "mapping": "work",
+  "key": "britten-5acb1623",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1602,
+  "title": "Phaedra, op. 93",
+  "mbids": [
+   "5d6a21bc-a6a3-4bf1-819b-0db06c4a05a6"
+  ],
+  "mapping": "work",
+  "key": "britten-5d6a21bc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1630,
+  "title": "Fish in the Unruffled Lakes",
+  "mbids": [
+   "6145eaf3-7339-4ae5-866c-bc3b2491cda2"
+  ],
+  "mapping": "work",
+  "key": "britten-6145eaf3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1647,
+  "title": "The Golden Vanity, op. 78",
+  "mbids": [
+   "632e3fe8-a6c3-4bf0-828d-26d2fd3520da"
+  ],
+  "mapping": "work",
+  "key": "britten-632e3fe8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1669,
+  "title": "Alpine Suite",
+  "mbids": [
+   "664212ac-bfbf-4ef9-a094-0f667f3d3375"
+  ],
+  "mapping": "work",
+  "key": "britten-664212ac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1697,
+  "title": "Balulalow",
+  "mbids": [
+   "6ad9efed-dc87-45ce-b168-927cf30a0c06"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1728,
+  "title": "Johnson over Jordan",
+  "mbids": [
+   "6e4f9d04-c799-4e51-949c-d90177119704"
+  ],
+  "mapping": "work",
+  "key": "britten-6e4f9d04",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1730,
+  "title": "À une raison",
+  "mbids": [
+   "6e996ca4-aaaf-4115-a7b4-676bff2008e0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1731,
+  "title": "Temporal Variations for Oboe and Piano, op. posth.",
+  "mbids": [
+   "6eee3183-9dfd-4e74-895d-dc5f92f1cb34"
+  ],
+  "mapping": "work",
+  "key": "britten-6eee3183",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1739,
+  "title": "The Second Lute Song of the Earl of Essex",
+  "mbids": [
+   "6fbfca6e-ca2f-4a0b-90b7-2b321ce560d4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1753,
+  "title": "Wild With Passion",
+  "mbids": [
+   "7135d6fd-f117-484f-bc17-8c4c1281d94a"
+  ],
+  "mapping": "work",
+  "key": "britten-7135d6fd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1772,
+  "title": "An American in England",
+  "mbids": [
+   "73ba255d-6196-4fe5-89ce-383d50721419"
+  ],
+  "mapping": "work",
+  "key": "britten-73ba255d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1777,
+  "title": "Serenade for Tenor, Horn and Strings, op. 31",
+  "mbids": [
+   "73f8d401-fe09-4444-a427-ad3e01daaf72"
+  ],
+  "mapping": "work",
+  "key": "britten-73f8d401",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1782,
+  "title": "Tema \"Sacher\"",
+  "mbids": [
+   "74d01dae-a025-418a-8a8f-4c75b1ebe95a"
+  ],
+  "mapping": "work",
+  "key": "britten-74d01dae",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1805,
+  "title": "Noye's Fludde, op. 59",
+  "mbids": [
+   "76ba10af-e70f-4de1-be90-8a2f8cb10c6d"
+  ],
+  "mapping": "work",
+  "key": "britten-76ba10af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1823,
+  "title": "To Lie Flat on the Back With the Knees Flexed",
+  "mbids": [
+   "788117e2-a2a9-4639-883e-8ac93640662f"
+  ],
+  "mapping": "work",
+  "key": "britten-788117e2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1828,
+  "title": "The Shooting Of His Dear",
+  "mbids": [
+   "78ef4e1e-3578-4afa-99fc-80c4ce53f246"
+  ],
+  "mapping": "work",
+  "key": "britten-78ef4e1e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1862,
+  "title": "Canticle V, op. 89 \"The Death of Saint Narcissus\"",
+  "mbids": [
+   "7d1dcede-552a-47b8-b078-9b8fa56de3c2"
+  ],
+  "mapping": "work",
+  "key": "britten-7d1dcede",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1872,
+  "title": "The Prince of the Pagodas: Prelude and Dances, op. 57b: 5. Variation of Belle Rose",
+  "mbids": [
+   "7dd77189-096e-3c58-94b0-655a2304dcee"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1874,
+  "title": "Johnson over Jordan Suite",
+  "mbids": [
+   "7e2adc48-3aa7-4219-910a-f812d48659af"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1893,
+  "title": "Lift Boy",
+  "mbids": [
+   "80cf04c4-52d6-4545-ad0a-7afd6d4d307f"
+  ],
+  "mapping": "work",
+  "key": "britten-80cf04c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1907,
+  "title": "Sacred and Profane, op. 91",
+  "mbids": [
+   "820fe25e-8a02-42ef-b59a-c70219da7c62"
+  ],
+  "mapping": "work",
+  "key": "britten-820fe25e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1913,
+  "title": "The Burning Fiery Furnace, op. 77",
+  "mbids": [
+   "82c66049-8e6a-46ba-9d24-f26f4e326c15"
+  ],
+  "mapping": "work",
+  "key": "britten-82c66049",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1931,
+  "title": "The Prince of the Pagodas: Prelude and Dances, op. 57b: 6. Finale",
+  "mbids": [
+   "846aec9a-03b5-3c2b-a43f-ee8aee695164"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1941,
+  "title": "The Prince of the Pagodas: Prelude and Dances, op. 57b: 3. The King of the North",
+  "mbids": [
+   "859073f3-aae6-3b19-baec-06795ccc33c7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1953,
+  "title": "Hadrian's Wall: Roman Wall Blues",
+  "mbids": [
+   "86edec89-47ea-4e00-af4f-cd354d2be76b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1972,
+  "title": "Canadian Carnival, op. 19",
+  "mbids": [
+   "89587878-bb34-4a3d-8d4f-bc298335d893"
+  ],
+  "mapping": "work",
+  "key": "britten-89587878",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1975,
+  "title": "Two Lullabies for Piano Duo",
+  "mbids": [
+   "899aeb9f-38eb-4edc-b578-897bc3b4a334"
+  ],
+  "mapping": "work",
+  "key": "britten-899aeb9f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1976,
+  "title": "Le Petit Ramoneur, op. 45",
+  "mbids": [
+   "89d4854d-9457-43cb-bfe5-d1ba504b647c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1998,
+  "title": "The Company of Heaven",
+  "mbids": [
+   "8c931698-a9cf-4643-8f38-6721d9fc360f"
+  ],
+  "mapping": "work",
+  "key": "britten-8c931698",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2032,
+  "title": "Tradition",
+  "mbids": [
+   "9061cc68-d1e0-45ed-bbee-a9ba0549bbc0"
+  ],
+  "mapping": "work",
+  "key": "britten-9061cc68",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2061,
+  "title": "Soirées musicales, op. 9",
+  "mbids": [
+   "93591af0-fd2b-44e8-8037-9bd7a8420b88"
+  ],
+  "mapping": "work",
+  "key": "britten-93591af0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2074,
+  "title": "The Prince of the Pagodas: Prelude and Dances, op. 57b: 3. The King of the East",
+  "mbids": [
+   "94a92adc-847b-3fe3-a99b-3af6010b001d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2090,
+  "title": "The Sword in the Stone",
+  "mbids": [
+   "9658c4d9-e50f-4636-8cb1-332e86091909"
+  ],
+  "mapping": "work",
+  "key": "britten-9658c4d9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2095,
+  "title": "Albert Herring, op. 39",
+  "mbids": [
+   "96d7a13c-e7d5-4108-9a02-8f23b65a4ffb"
+  ],
+  "mapping": "work",
+  "key": "britten-96d7a13c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2097,
+  "title": "Songs from the Chinese, op. 58",
+  "mbids": [
+   "97006a24-e6ce-4813-b4af-1083363ceb1a"
+  ],
+  "mapping": "work",
+  "key": "britten-97006a24",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2168,
+  "title": "Timpani Piece for Jimmy",
+  "mbids": [
+   "a0c0dbdc-29be-4cd9-ac37-3fa058daa250"
+  ],
+  "mapping": "work",
+  "key": "britten-a0c0dbdc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2183,
+  "title": "The Sally Gardens",
+  "mbids": [
+   "a2a73d87-9e00-44e8-b63e-ffccdebf2cf1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2184,
+  "title": "Love From a Stranger",
+  "mbids": [
+   "a2b6ae64-0d6c-4e71-95e5-7ebbd7bfa552"
+  ],
+  "mapping": "work",
+  "key": "britten-a2b6ae64",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2202,
+  "title": "On the Frontier",
+  "mbids": [
+   "a468eb2b-b97f-43e5-88b1-4174276a2d62"
+  ],
+  "mapping": "work",
+  "key": "britten-a468eb2b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2206,
+  "title": "Lacrymae, op. 48a",
+  "mbids": [
+   "a4be6718-d2f6-4671-bc46-a3287e59577e"
+  ],
+  "mapping": "work",
+  "key": "britten-a4be6718",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2233,
+  "title": "The Red Cockatoo",
+  "mbids": [
+   "a7a8663a-e6ee-4e3b-865d-4c7ff94cb8c4"
+  ],
+  "mapping": "work",
+  "key": "britten-a7a8663a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2246,
+  "title": "Tom Bowling and Other Song Arrangements",
+  "mbids": [
+   "a949ae3a-d3c3-4e5c-971e-b9a7e12bbafc"
+  ],
+  "mapping": "work",
+  "key": "britten-a949ae3a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2272,
+  "title": "Suite for Harp Solo, op. 83",
+  "mbids": [
+   "ac90d582-2c08-4284-a165-e41ce80e87af"
+  ],
+  "mapping": "work",
+  "key": "britten-ac90d582",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2307,
+  "title": "Chorale After an Old French Carol",
+  "mbids": [
+   "b11a90fa-197f-4c70-8b21-a32fe78ed76b"
+  ],
+  "mapping": "work",
+  "key": "britten-b11a90fa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2339,
+  "title": "Matinées musicales, op. 24",
+  "mbids": [
+   "b3f7c5b9-683f-4026-bcdb-65e24c351503"
+  ],
+  "mapping": "work",
+  "key": "britten-b3f7c5b9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2343,
+  "title": "Gemini Variations, Twelve Variations and Fugue on an Epigram of Zoltàn Kodaly, op. 73",
+  "mbids": [
+   "b47cb6bb-cb35-4aef-92f2-d89e47d9fc8d"
+  ],
+  "mapping": "work",
+  "key": "britten-b47cb6bb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2353,
+  "title": "Antiphon, op. 56b",
+  "mbids": [
+   "b526e344-492b-4d0c-ab35-8644246dccec"
+  ],
+  "mapping": "work",
+  "key": "britten-b526e344",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2406,
+  "title": "Occasional Overture, op. 27 \"An American Overture\"",
+  "mbids": [
+   "bbebb792-22d4-4105-9302-f7cc588a62b1"
+  ],
+  "mapping": "work",
+  "key": "britten-bbebb792",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2409,
+  "title": "What's in Your Mind?",
+  "mbids": [
+   "bbfccaed-e505-475f-a57e-d70c31d82b16"
+  ],
+  "mapping": "work",
+  "key": "britten-bbfccaed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2432,
+  "title": "Cantata misericordium, op. 69",
+  "mbids": [
+   "bd77f28a-b14b-48e7-8946-1d94017c9788"
+  ],
+  "mapping": "work",
+  "key": "britten-bd77f28a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2434,
+  "title": "The Sycamore Tree",
+  "mbids": [
+   "bd9a9f46-e69a-493a-a4d0-4a8df26f3411"
+  ],
+  "mapping": "work",
+  "key": "britten-bd9a9f46",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2453,
+  "title": "Sonetto XXX",
+  "mbids": [
+   "c060b33f-47e1-4e84-a2c7-bae9f47acd0a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2472,
+  "title": "Canticle IV, op. 86 \"The Journey of the Magi\"",
+  "mbids": [
+   "c2b7492e-4c69-4d7a-b370-1f6523fa6e03"
+  ],
+  "mapping": "work",
+  "key": "britten-c2b7492e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2473,
+  "title": "Birthday Song for Erwin",
+  "mbids": [
+   "c2d2fd2b-762e-4242-a071-08b77894b19e"
+  ],
+  "mapping": "work",
+  "key": "britten-c2d2fd2b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2476,
+  "title": "Dawtie’s Devotion",
+  "mbids": [
+   "c36ac291-3133-4789-ac60-68e7b57266e2"
+  ],
+  "mapping": "work",
+  "key": "britten-c36ac291",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2483,
+  "title": "Aube",
+  "mbids": [
+   "c41084b8-17e1-4c3e-8540-63cbd02601e1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2554,
+  "title": "Men of Goodwill: Variations on a Christmas Carol",
+  "mbids": [
+   "cc29ceee-a9f8-4d76-91d3-f09155a8dafc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2562,
+  "title": "The Prince of the Pagodas: Prelude and Dances, op. 57b: 2. March and Gavotte",
+  "mbids": [
+   "ccac9f64-58a4-3326-bdd4-1dd5a2104746"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2609,
+  "title": "A Poison Tree",
+  "mbids": [
+   "d2874e88-d78f-46ff-8dab-eb2136032781"
+  ],
+  "mapping": "work",
+  "key": "britten-d2874e88",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2613,
+  "title": "Canticle III, op. 55 \"Still Falls the Rain - the Raids, 1940, Night and Dawn\"",
+  "mbids": [
+   "d2d7fa89-b705-41f9-aa88-55030ece4a4e"
+  ],
+  "mapping": "work",
+  "key": "britten-d2d7fa89",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2656,
+  "title": "A Sweet Lullaby",
+  "mbids": [
+   "d742c5eb-45cd-4792-b301-1126e9055841"
+  ],
+  "mapping": "work",
+  "key": "britten-d742c5eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2680,
+  "title": "Fancie",
+  "mbids": [
+   "db024520-2f36-4897-a3b3-0fde38478b7d"
+  ],
+  "mapping": "work",
+  "key": "britten-db024520",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2686,
+  "title": "Variations on a Theme by Frank Bridge, op. 10",
+  "mbids": [
+   "dc44e863-b521-48d0-ad48-f5340a7cb57e"
+  ],
+  "mapping": "work",
+  "key": "britten-dc44e863",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2720,
+  "title": "On This Island, op. 11",
+  "mbids": [
+   "df60c0c7-3399-4a1a-a46c-66a68f8da261"
+  ],
+  "mapping": "work",
+  "key": "britten-df60c0c7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2748,
+  "title": "The Way to the Sea",
+  "mbids": [
+   "e23074b3-1296-454a-b7ca-708f3e6fd8ee"
+  ],
+  "mapping": "work",
+  "key": "britten-e23074b3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2760,
+  "title": "Seascape",
+  "mbids": [
+   "e38f5a09-5210-3dc3-9f39-903cb1801e54"
+  ],
+  "mapping": "work",
+  "key": "britten-e38f5a09",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2762,
+  "title": "The Oxen",
+  "mbids": [
+   "e3aa6b59-871a-4c20-b881-b75bfbdf20dd"
+  ],
+  "mapping": "work",
+  "key": "britten-e3aa6b59",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2766,
+  "title": "Five Waltzes",
+  "mbids": [
+   "e43b66f0-ead4-4680-aeeb-738843b338ec"
+  ],
+  "mapping": "work",
+  "key": "britten-e43b66f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2767,
+  "title": "Prelude on \"They Walk Alone\"",
+  "mbids": [
+   "e45167aa-f069-4b0c-9fa7-e23a961097bc"
+  ],
+  "mapping": "work",
+  "key": "britten-e45167aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2801,
+  "title": "A Little Idyll",
+  "mbids": [
+   "e783308c-4763-4625-b08b-3187ec84e5a3"
+  ],
+  "mapping": "work",
+  "key": "britten-e783308c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2806,
+  "title": "Quartettino",
+  "mbids": [
+   "e7c03187-756d-4bf3-a373-99e4072602b0"
+  ],
+  "mapping": "work",
+  "key": "britten-e7c03187",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2829,
+  "title": "Hymn to St. Peter, op. 56a",
+  "mbids": [
+   "ea84c1a1-381b-433c-9bc3-9fbff137a2a9"
+  ],
+  "mapping": "work",
+  "key": "britten-ea84c1a1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2833,
+  "title": "A Wedding Anthem, op. 46",
+  "mbids": [
+   "ead68b1b-4c50-4c17-9d94-17fb026654fc"
+  ],
+  "mapping": "work",
+  "key": "britten-ead68b1b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2866,
+  "title": "Um Mitternacht",
+  "mbids": [
+   "ee5e9046-c3e4-4150-beba-d176c1f5f0cd"
+  ],
+  "mapping": "work",
+  "key": "britten-ee5e9046",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2868,
+  "title": "The Prodigal Son, op. 81",
+  "mbids": [
+   "ee7667d5-273d-4c96-b31d-e3934a25a695"
+  ],
+  "mapping": "work",
+  "key": "britten-ee7667d5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2884,
+  "title": "String Quartet no. 1 in D major, op. 25",
+  "mbids": [
+   "f0f8b1ac-a350-4426-98f0-7ec99efd422c"
+  ],
+  "mapping": "work",
+  "key": "britten-f0f8b1ac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2947,
+  "title": "The Gully",
+  "mbids": [
+   "f751a70b-d7c4-4853-ade7-f626d6fe6cee"
+  ],
+  "mapping": "work",
+  "key": "britten-f751a70b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2976,
+  "title": "Paul Bunyan, op. 17: Overture",
+  "mbids": [
+   "faaffda1-1131-49c6-be68-47867a09fdcd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2979,
+  "title": "The Prince of the Pagodas: Prelude and Dances, op. 57b: 3. The King of the South",
+  "mbids": [
+   "fb1e69bf-4fbe-3d13-92d2-933f386357b3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2984,
+  "title": "The Prince of the Pagodas: Prelude and Dances, op. 57b: 4. Belle Epine",
+  "mbids": [
+   "fbee2b29-c1af-3e8c-88c9-f7168afaf67c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2987,
+  "title": "Peter Grimes: Act I Scene I: \"What harbour shelters peace\" (Peter)",
+  "mbids": [
+   "fc74a68f-da41-3cd2-adc8-990cdab0470d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2990,
+  "title": "Welcome Ode, op. 95",
+  "mbids": [
+   "fcd37275-2749-44fb-9fa3-6e999fd81db0"
+  ],
+  "mapping": "work",
+  "key": "britten-fcd37275",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2999,
+  "title": "Scherzo for Recorder Quartet",
+  "mbids": [
+   "fd61364c-036d-4ea3-90fd-ef0f0d5f4ca0"
+  ],
+  "mapping": "work",
+  "key": "britten-fd61364c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 3013,
+  "title": "Ballad of Heroes, op. 14",
+  "mbids": [
+   "febf6df8-7445-47f0-9390-dbbfcf494ee4"
+  ],
+  "mapping": "work",
+  "key": "britten-febf6df8",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

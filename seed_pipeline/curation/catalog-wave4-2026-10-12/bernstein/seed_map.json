@@ -1,0 +1,1608 @@
+[
+ {
+  "pieceId": 585,
+  "title": "West Side Story Selections",
+  "mbids": [
+   "870743f1-1b7c-420f-9067-aeec293235ab"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 757,
+  "title": "Symphony no. 1 “Jeremiah”",
+  "mbids": [
+   "151a0e05-3336-4456-90fd-4618f2ebf042"
+  ],
+  "mapping": "work",
+  "key": "bernstein-151a0e05",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 761,
+  "title": "Symphonic Dances from West Side Story",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 762,
+  "title": "Symphony no. 3 “Kaddish”",
+  "mbids": [
+   "cf371c19-1b7a-4134-b2eb-ec61c34fded4"
+  ],
+  "mapping": "work",
+  "key": "bernstein-cf371c19",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 870,
+  "title": "Halil",
+  "mbids": [
+   "039afc24-81e9-3da3-a648-97e807387090"
+  ],
+  "mapping": "work",
+  "key": "bernstein-039afc24",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 900,
+  "title": "Symphonic Suite from On the Waterfront",
+  "mbids": [
+   "06ceee89-4d34-3d83-b35e-cefc22ac527c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 918,
+  "title": "Gee, Officer Krupke (from West Side Story)",
+  "mbids": [
+   "087b56cf-ac5c-4270-979b-61b486f5fc24"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 944,
+  "title": "Thirteen Anniversaries",
+  "mbids": [
+   "0c38080b-0eaa-49a1-935c-59ce906540ba"
+  ],
+  "mapping": "work",
+  "key": "bernstein-0c38080b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1006,
+  "title": "Fancy Free",
+  "mbids": [
+   "127e1113-4295-4d71-8169-7e15b8c355e3"
+  ],
+  "mapping": "work",
+  "key": "bernstein-127e1113",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1031,
+  "title": "West Side - Variants",
+  "mbids": [
+   "1561e1a7-57d8-41cf-87f7-25f90f3d7f4c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1037,
+  "title": "1600 Pennsylvania Avenue",
+  "mbids": [
+   "168dd69e-f664-46ae-9428-b80fd9c6fddd"
+  ],
+  "mapping": "work",
+  "key": "bernstein-168dd69e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1073,
+  "title": "Four Anniversaries",
+  "mbids": [
+   "1a80d70a-4e44-46dd-934c-8432e81755fb"
+  ],
+  "mapping": "work",
+  "key": "bernstein-a4dcadd7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1125,
+  "title": "Divertimento for Orchestra",
+  "mbids": [
+   "203ef9d9-5285-4254-abdc-00f27dd900b4"
+  ],
+  "mapping": "work",
+  "key": "bernstein-203ef9d9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1147,
+  "title": "Serenade after Plato’s “Symposium”",
+  "mbids": [
+   "22393fc2-0cf0-4551-8001-44f9330dec39"
+  ],
+  "mapping": "work",
+  "key": "bernstein-22393fc2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1150,
+  "title": "Candide",
+  "mbids": [
+   "22936d59-4417-4b10-b5c7-087a0dc3a798"
+  ],
+  "mapping": "work",
+  "key": "bernstein-22936d59",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1327,
+  "title": "Dance Suite",
+  "mbids": [
+   "3a89b6f8-076a-45b7-86ce-aa091288eead"
+  ],
+  "mapping": "work",
+  "key": "bernstein-3a89b6f8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1333,
+  "title": "America from West Side Story",
+  "mbids": [
+   "3aea1cd7-9619-4840-8a8e-e34384a669ad"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1358,
+  "title": "Silhouette (Galilee)",
+  "mbids": [
+   "3d8f9283-550b-44c7-ba6a-18a6adf87431"
+  ],
+  "mapping": "work",
+  "key": "bernstein-3d8f9283",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1381,
+  "title": "Suite from Candide",
+  "mbids": [
+   "402c3a3c-e53f-4575-a486-626834f5f8e7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1459,
+  "title": "Scenes from West Side Story",
+  "mbids": [
+   "4a879947-b13d-452a-b1f7-b2c8efff2b32"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1470,
+  "title": "Selections from 'Wonderful Town'",
+  "mbids": [
+   "4c1df1c9-c952-4eda-95a5-23c854091cdf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1500,
+  "title": "A White House Cantata",
+  "mbids": [
+   "4fc81208-ddac-42f8-b0c4-531b3c9972ed"
+  ],
+  "mapping": "work",
+  "key": "bernstein-4fc81208",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1541,
+  "title": "Dream With Me",
+  "mbids": [
+   "54e47853-1cdd-30d9-8cd1-dcb23b5d8bf7"
+  ],
+  "mapping": "work",
+  "key": "bernstein-54e47853",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1615,
+  "title": "The Story of My Life",
+  "mbids": [
+   "5eec13ab-7f50-3b93-a04a-35bb00ef5191"
+  ],
+  "mapping": "work",
+  "key": "bernstein-5eec13ab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1648,
+  "title": "Trouble in Tahiti",
+  "mbids": [
+   "635cde88-badc-4d8b-9f13-7aed68316369"
+  ],
+  "mapping": "work",
+  "key": "bernstein-635cde88",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1679,
+  "title": "Mass: A Theatre Piece for Singers, Players, and Dancers",
+  "mbids": [
+   "681f6297-01a3-487e-9177-6220ac3b546d"
+  ],
+  "mapping": "work",
+  "key": "bernstein-681f6297",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1712,
+  "title": "CBS Music",
+  "mbids": [
+   "6c6c43ea-cbb4-41b4-b70d-dd2cea74474e"
+  ],
+  "mapping": "work",
+  "key": "bernstein-6c6c43ea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1720,
+  "title": "Dybbuk",
+  "mbids": [
+   "6d6c8c39-2b00-425a-89b2-63fac7649ae3"
+  ],
+  "mapping": "work",
+  "key": "bernstein-6d6c8c39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1832,
+  "title": "Love Theme from Candide",
+  "mbids": [
+   "7948c84b-d1dd-482d-86e5-f2db1bc319a5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1846,
+  "title": "\"West Side Story\" Suite",
+  "mbids": [
+   "7b47a58c-df26-4d73-8c45-a69f54f1fa5a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1890,
+  "title": "Piano Trio",
+  "mbids": [
+   "8030e1f2-7b3a-4f0c-8eaf-148bf1b4cbfd"
+  ],
+  "mapping": "work",
+  "key": "bernstein-8030e1f2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1928,
+  "title": "A Quiet Place",
+  "mbids": [
+   "8445e990-9719-4e11-8416-5b8649d9131a"
+  ],
+  "mapping": "work",
+  "key": "bernstein-8445e990",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1967,
+  "title": "Suite of Dances from West Side Story",
+  "mbids": [
+   "88a26399-d50e-4af8-bc64-4f44fdd00121"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1989,
+  "title": "Somewhere from West Side Story",
+  "mbids": [
+   "8bc4a60b-a27a-42f3-b35d-5aaf80c7d041"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2123,
+  "title": "West Side Story Suite for Piano Trio",
+  "mbids": [
+   "995f12e7-b4f1-46b6-93e5-1a2783d1a4f1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2133,
+  "title": "West Side Story Suite for Violin and Piano",
+  "mbids": [
+   "9ae5e5da-cdff-47b5-8434-a1409858eae4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2208,
+  "title": "Seven Anniversaries",
+  "mbids": [
+   "a4dcadd7-5710-4f94-bc06-793d915ef9ea"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 2260,
+  "title": "Suite from West Side Story",
+  "mbids": [
+   "aac37189-76db-4750-a8d5-cff176077bde"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2263,
+  "title": "Arias & Barcarolles",
+  "mbids": [
+   "aaf85dea-2cfb-4ae1-84d5-53bad3da9b35"
+  ],
+  "mapping": "work",
+  "key": "bernstein-aaf85dea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2287,
+  "title": "Wonderful Town",
+  "mbids": [
+   "aec48be7-a1ab-4512-aaba-9edb87e97007"
+  ],
+  "mapping": "work",
+  "key": "bernstein-aec48be7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2301,
+  "title": "Prelude, Fugue and Riffs",
+  "mbids": [
+   "b0e20a59-61e7-3589-a9d5-d8d14562a075"
+  ],
+  "mapping": "work",
+  "key": "bernstein-b0e20a59",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2391,
+  "title": "On the Town",
+  "mbids": [
+   "ba516d52-f254-496c-b55d-f8619b7e2b8a"
+  ],
+  "mapping": "work",
+  "key": "bernstein-ba516d52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2392,
+  "title": "Peter Pan",
+  "mbids": [
+   "ba597da5-fee7-4841-ab62-9eaf45ae9441"
+  ],
+  "mapping": "work",
+  "key": "bernstein-ba597da5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2418,
+  "title": "Dybbuk Suite no. 1: IV. Possession",
+  "mbids": [
+   "bc9780d2-97c6-4e1b-84e8-f84496677017"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2469,
+  "title": "West Side Story Concerto",
+  "mbids": [
+   "c25957cd-57ec-42c7-ae1a-47c64b1007ac"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2475,
+  "title": "Anniversaries",
+  "mbids": [
+   "c329ad79-7591-45da-8454-2966af4fc6cb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2477,
+  "title": "Dybbuk Suite no. 2: IV. Dream",
+  "mbids": [
+   "c38659da-7ff6-43e4-9b3a-570dbdd8e50a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2545,
+  "title": "Music for the Dance no. 2",
+  "mbids": [
+   "cb1a9220-1b26-45ec-beb2-6f1cedfa017d"
+  ],
+  "mapping": "work",
+  "key": "bernstein-cb1a9220",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2583,
+  "title": "Facsimile: Choreographic Essay for Orchestra",
+  "mbids": [
+   "ceff08b8-20ab-303f-8784-9bcef16cab49"
+  ],
+  "mapping": "work",
+  "key": "bernstein-ceff08b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2671,
+  "title": "Sonata for Violin",
+  "mbids": [
+   "d9031b93-d6b6-4546-9e42-f44bcfa5eeea"
+  ],
+  "mapping": "work",
+  "key": "bernstein-d9031b93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2695,
+  "title": "Bernstein: A Choral Tribute",
+  "mbids": [
+   "dd07e3ef-d2ea-4a11-bac1-9e467b5ae640"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2771,
+  "title": "Suite From \"A Quiet Place\"",
+  "mbids": [
+   "e4a48470-8e4d-4403-ac06-5d5cc0235954"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2830,
+  "title": "Missa Brevis",
+  "mbids": [
+   "eaa56c14-907e-429a-9665-8904821b6ad4"
+  ],
+  "mapping": "work",
+  "key": "bernstein-eaa56c14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2842,
+  "title": "Clarinet Sonata",
+  "mbids": [
+   "eb77577c-a178-4c35-9312-4b9cdc911a79"
+  ],
+  "mapping": "work",
+  "key": "bernstein-eb77577c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2852,
+  "title": "Touches",
+  "mbids": [
+   "ecf40883-224d-4f53-99d4-40adf1cf6399"
+  ],
+  "mapping": "work",
+  "key": "bernstein-ecf40883",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2898,
+  "title": "So Pretty",
+  "mbids": [
+   "f1d403e5-3d63-435d-ba4f-50b896de2361"
+  ],
+  "mapping": "work",
+  "key": "bernstein-f1d403e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2907,
+  "title": "Sonata for the Piano",
+  "mbids": [
+   "f33b7a28-9fc1-45f0-8311-1be5240d6b53"
+  ],
+  "mapping": "work",
+  "key": "bernstein-f33b7a28",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2937,
+  "title": "Three Dance Episodes from “On the Town”",
+  "mbids": [
+   "f606abf4-8311-4033-8bf9-9cc2e898e5f9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2943,
+  "title": "Five Anniversaries",
+  "mbids": [
+   "f6aa813a-846f-4854-a997-0113ad00bd85"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 2971,
+  "title": "Tonight",
+  "mbids": [
+   "fa1ac304-5169-4ed1-bcb7-95f464df4a3f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 477,
+  "title": "슬라바! 관현악을 위한 정치적 서곡",
+  "mbids": [
+   "0c3ccba1-e68b-4e02-959a-28b5fa3538df"
+  ],
+  "mapping": "work",
+  "key": "bernstein-0c3ccba1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 494,
+  "title": "<웨스트 사이드 스토리> 중 “마리아”",
+  "mbids": [
+   "264b3190-fd4d-454f-8b56-5f9ce48b8c79"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 752,
+  "title": "Symphony no. 2 for Piano and Orchestra “The Age of Anxiety” (after W. H. Auden)",
+  "mbids": [
+   "3fc5665b-501f-4b79-bf96-49370f7eefb5"
+  ],
+  "mapping": "work",
+  "key": "bernstein-3fc5665b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 765,
+  "title": "Who Am I?",
+  "mbids": [
+   "927f9c67-5207-4ae6-8b02-b3e1a3508831"
+  ],
+  "mapping": "work",
+  "key": "bernstein-927f9c67",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 769,
+  "title": "Gutter Cat vs. The Jets",
+  "mbids": [
+   "b315773e-cf68-4ad8-8f7e-be5840a8c71a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 779,
+  "title": "Zu zweit, zu zweit",
+  "mbids": [
+   "e6340890-2932-4601-a41e-c0b88bd6480a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 817,
+  "title": "Olympic Hymn",
+  "mbids": [
+   "956e04bd-660b-4d0f-af20-ba1e59aa9b02"
+  ],
+  "mapping": "work",
+  "key": "bernstein-956e04bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 951,
+  "title": "Dybbuk Suite no. 1: III. Kabbalah",
+  "mbids": [
+   "0cfd2e64-bbb9-4f09-9aa0-379e3c033351"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 952,
+  "title": "Choruses from 'The Lark': Gloria",
+  "mbids": [
+   "0d0108fa-70f1-4517-8a23-b38e541892e9"
+  ],
+  "mapping": "work",
+  "key": "bernstein-0d0108fa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1011,
+  "title": "Say When",
+  "mbids": [
+   "1320bdc0-8a4c-4a04-9e8d-bc949752a0cc"
+  ],
+  "mapping": "work",
+  "key": "bernstein-1320bdc0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1057,
+  "title": "Hashkiveinu",
+  "mbids": [
+   "1878c5eb-76c0-41d4-b62d-11954e3be174"
+  ],
+  "mapping": "work",
+  "key": "bernstein-1878c5eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1070,
+  "title": "Up! Up! Up!",
+  "mbids": [
+   "19fa1f50-36d0-4552-b0cc-0ce24a88d5a2"
+  ],
+  "mapping": "work",
+  "key": "bernstein-19fa1f50",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1103,
+  "title": "Boy, Boy, ruhig Blut",
+  "mbids": [
+   "1dad3ac8-1900-490e-a9f2-86b63d19d133"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1134,
+  "title": "Three Meditations From \"Mass\" for Cello and Piano",
+  "mbids": [
+   "20c6aee0-6885-4d18-aa10-2ad57ef24f9a"
+  ],
+  "mapping": "work",
+  "key": "bernstein-20c6aee0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1260,
+  "title": "Three Meditations From \"Mass\" for Cello and Orchestra",
+  "mbids": [
+   "30b5a71d-0df5-4d3a-8910-eb4dcc3f16a8"
+  ],
+  "mapping": "work",
+  "key": "bernstein-30b5a71d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1298,
+  "title": "Suite for Orchestra from 1600 Pennsylvania Avenue",
+  "mbids": [
+   "36744b6a-9b32-4b37-9417-12dd30b3a427"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1375,
+  "title": "I Hate Music: Five Kid Songs for Soprano and Piano",
+  "mbids": [
+   "3ffe1b78-24aa-4878-8017-e0cb222dbf42"
+  ],
+  "mapping": "work",
+  "key": "bernstein-3ffe1b78",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1399,
+  "title": "Brass Music: Elegy for Mippy II",
+  "mbids": [
+   "4205c010-2f20-4691-9008-ca94ce7a4274"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1409,
+  "title": "Mein Herz schlägt nur für dich allein",
+  "mbids": [
+   "43a4cef3-fed3-45a8-a2aa-27354e35f724"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1423,
+  "title": "Spring Will Come Again",
+  "mbids": [
+   "45f2abd2-53bd-4a3e-9485-914399959c8c"
+  ],
+  "mapping": "work",
+  "key": "bernstein-45f2abd2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1433,
+  "title": "Simchu Na",
+  "mbids": [
+   "476d1009-1c13-41cd-b56c-87f08e3a8387"
+  ],
+  "mapping": "work",
+  "key": "bernstein-476d1009",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1465,
+  "title": "West Side Story: End Credits",
+  "mbids": [
+   "4ae1da56-9a62-4648-82d4-21f7cd51928a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1494,
+  "title": "Ik ben happy",
+  "mbids": [
+   "4ec6e3b7-af9e-4a50-acaa-2785d91be37e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1531,
+  "title": "Dybbuk Suite no. 2: I. The Messengers",
+  "mbids": [
+   "53a8e4aa-b9d1-4f8c-99d3-c58fc538661d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1540,
+  "title": "Brass Music: Waltz for Mippy III",
+  "mbids": [
+   "54d1e619-2f20-4c54-9177-647a5bd33658"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1617,
+  "title": "A West Side Story Fantasy",
+  "mbids": [
+   "5f28e184-b48d-471b-953d-a8e920a43c66"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1657,
+  "title": "Amerika je Amerika",
+  "mbids": [
+   "6429ea07-c98f-4ac4-9301-24cf6c1cb862"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1665,
+  "title": "My New Friends",
+  "mbids": [
+   "65611fd5-6adb-4285-81cb-4cf12cdadc78"
+  ],
+  "mapping": "work",
+  "key": "bernstein-65611fd5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1690,
+  "title": "Slava!",
+  "mbids": [
+   "697e75a6-b67b-4b02-b8b5-1f7914675f9b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1691,
+  "title": "Dybbuk Suite no. 1: VI. Exorcism",
+  "mbids": [
+   "69c48ee1-80e0-4b3d-9633-7092ce097d96"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1699,
+  "title": "Dybbuk Suite no. 1: I. Invocation and Trance",
+  "mbids": [
+   "6b0eeab5-55c0-43a9-bf16-562f2c9d94c3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 1713,
+  "title": "Hallo, Sergeant Krupke",
+  "mbids": [
+   "6c7704c0-3a43-4624-8745-7ec1053c5e80"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1747,
+  "title": "Four Sabras",
+  "mbids": [
+   "70875e1a-030e-459d-8535-7e2c8947922b"
+  ],
+  "mapping": "work",
+  "key": "bernstein-70875e1a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1756,
+  "title": "Ich gefall' mir",
+  "mbids": [
+   "71774b7d-3475-434f-a705-9b0743eee43c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1824,
+  "title": "Non troppo presto",
+  "mbids": [
+   "78e12c78-dcac-4c21-bd53-38cc33acba4f"
+  ],
+  "mapping": "work",
+  "key": "bernstein-78e12c78",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1883,
+  "title": "散‧聚",
+  "mbids": [
+   "7f36de13-04a3-4946-a003-c74581f89eb9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1904,
+  "title": "Warm-Up",
+  "mbids": [
+   "81e941e3-5923-45db-90c2-39389239b3b2"
+  ],
+  "mapping": "work",
+  "key": "bernstein-81e941e3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1945,
+  "title": "Choruses from 'The Lark': Benedictus",
+  "mbids": [
+   "86342857-8e6b-4690-b6a0-615e53dd0a0c"
+  ],
+  "mapping": "work",
+  "key": "bernstein-86342857",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1966,
+  "title": "The Lark (French Choruses)",
+  "mbids": [
+   "8888b2e8-ac07-46b6-8102-610982333f3c"
+  ],
+  "mapping": "work",
+  "key": "bernstein-8888b2e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2015,
+  "title": "Me siento hermosa (I Feel Pretty)",
+  "mbids": [
+   "8e6cbbc2-a5e5-432b-8184-f56a74589c58"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2036,
+  "title": "Songfest: A Cycle of American Poems for Six Singers and Orchestra",
+  "mbids": [
+   "90951037-5b3f-4c36-bb84-9078be7a5ca7"
+  ],
+  "mapping": "work",
+  "key": "bernstein-90951037",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2042,
+  "title": "Die Melodie von Amerika",
+  "mbids": [
+   "90f2941b-270d-45fa-9db2-2b563567dfa6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2071,
+  "title": "トゥナイト",
+  "mbids": [
+   "9404793b-4ce8-4aee-aabc-b0042dfa303d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2077,
+  "title": "Touches: Chorale, Eight Variations and Coda",
+  "mbids": [
+   "94cc84c4-3d26-43a4-90f8-8b626177a839"
+  ],
+  "mapping": "work",
+  "key": "bernstein-94cc84c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2232,
+  "title": "Rhywle",
+  "mbids": [
+   "a7a40a1d-7350-4fbb-88a8-b81e4c5b1a95"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2238,
+  "title": "Elegy for Mippy I",
+  "mbids": [
+   "a86bf63f-b604-4424-8290-c3b83d62c93c"
+  ],
+  "mapping": "work",
+  "key": "bernstein-a86bf63f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2245,
+  "title": "Choruses from 'The Lark': Requiem",
+  "mbids": [
+   "a8e08108-925c-4a43-8659-7dd944908b68"
+  ],
+  "mapping": "work",
+  "key": "bernstein-a8e08108",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2248,
+  "title": "Moby Dyptich",
+  "mbids": [
+   "a9952640-75e0-4fe4-95e3-07fb2016defa"
+  ],
+  "mapping": "work",
+  "key": "bernstein-a9952640",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2276,
+  "title": "Un pays pour nous",
+  "mbids": [
+   "ad058afb-24ab-4bbb-9a93-aff24ee1ed9f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2282,
+  "title": "Presto barbaro from \"On the Waterfront\"",
+  "mbids": [
+   "ada0850a-cf9d-4f6c-8e1d-15794a2b9026"
+  ],
+  "mapping": "work",
+  "key": "bernstein-ada0850a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2322,
+  "title": "Mundania",
+  "mbids": [
+   "b2680b3f-15ac-471e-b8f2-134f7af4b08c"
+  ],
+  "mapping": "work",
+  "key": "bernstein-b2680b3f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2332,
+  "title": "Un hombre así (A Boy Like That)",
+  "mbids": [
+   "b34f783f-e0d7-487f-8f25-1509319010fe"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2395,
+  "title": "Dybbuk Suite no. 1: II. The Pledge",
+  "mbids": [
+   "bad28b9e-5cd2-4485-acaa-4260605409ad"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2416,
+  "title": "Overture to Wonderful Town",
+  "mbids": [
+   "bc7b8fe9-ceb7-48bb-9123-73c09c6b97a6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2437,
+  "title": "Dybbuk Suite no. 2: III. Five Kabbalah Variations",
+  "mbids": [
+   "be09d699-38a7-4ba5-a999-d84748826ce9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2448,
+  "title": "アイ フィール プリティ",
+  "mbids": [
+   "bf6b8212-1da3-4c75-b828-6266f3a50e5c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2484,
+  "title": "Two Love Songs",
+  "mbids": [
+   "c421fd48-eb9c-4722-833b-1fb3639060b5"
+  ],
+  "mapping": "work",
+  "key": "bernstein-c421fd48",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2505,
+  "title": "West Side Story: Melodies",
+  "mbids": [
+   "c6af7c6e-06f8-3c88-951a-8caaf0654707"
+  ],
+  "mapping": "work",
+  "key": "bernstein-c6af7c6e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2531,
+  "title": "Piccola Serenata",
+  "mbids": [
+   "c9a43843-1961-43f3-96bd-eab3c4b8b539"
+  ],
+  "mapping": "work",
+  "key": "bernstein-c9a43843",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2532,
+  "title": "Dybbuk Suite no. 2: II. Leah",
+  "mbids": [
+   "c9bcfe53-dba5-4c8b-9116-1b0c1b5f4488"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2580,
+  "title": "Concerto for Orchestra \"Jubilee Games\"",
+  "mbids": [
+   "ced641cd-12f6-4baf-8894-a7ca81ff1d5c"
+  ],
+  "mapping": "work",
+  "key": "bernstein-ced641cd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2581,
+  "title": "Als ich dich sah",
+  "mbids": [
+   "cee8884b-4ba9-4e92-8849-2991d4c52218"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2591,
+  "title": "Marija",
+  "mbids": [
+   "d0773faf-2ca6-4860-8187-b6f19f77ddaa"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2659,
+  "title": "Choruses from 'The Lark': Sanctus",
+  "mbids": [
+   "d7a1a15e-ab31-44bc-8c3f-3972fdb21117"
+  ],
+  "mapping": "work",
+  "key": "bernstein-d7a1a15e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2697,
+  "title": "Rondo for Lifey",
+  "mbids": [
+   "dd2f3d1a-3009-4ff4-ae14-3ee08ea47066"
+  ],
+  "mapping": "work",
+  "key": "bernstein-dd2f3d1a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2721,
+  "title": "Choruses from 'The Lark'",
+  "mbids": [
+   "df7c28fd-c6b5-4972-ba2d-43e3ceab1b53"
+  ],
+  "mapping": "work",
+  "key": "bernstein-df7c28fd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2773,
+  "title": "Conch Town",
+  "mbids": [
+   "e4d5e1d8-0d42-47c0-a805-a0b9e5e9df74"
+  ],
+  "mapping": "work",
+  "key": "bernstein-e4d5e1d8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2789,
+  "title": "Choruses from 'The Lark': Prelude",
+  "mbids": [
+   "e6545913-f212-4748-b93c-389affc8b72e"
+  ],
+  "mapping": "work",
+  "key": "bernstein-e6545913",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2807,
+  "title": "Dybbuk Suite no. 1: V. Pas de deux",
+  "mbids": [
+   "e7d98a79-7ecf-4087-b61d-2d4485eb4950"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 2888,
+  "title": "The Lark",
+  "mbids": [
+   "f139d8a9-ca72-4ab2-8426-57c378f5a6ac"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2895,
+  "title": "A Musical Toast",
+  "mbids": [
+   "f1b24259-75e4-44ef-88f4-7da66a6565fd"
+  ],
+  "mapping": "work",
+  "key": "bernstein-f1b24259",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2900,
+  "title": "Jet Song",
+  "mbids": [
+   "f20b39a6-51a9-42e6-9465-433182190cf4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2908,
+  "title": "In Our Time",
+  "mbids": [
+   "f35c1f80-447c-4e7c-8ebb-a112d727e70d"
+  ],
+  "mapping": "work",
+  "key": "bernstein-f35c1f80",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 3016,
+  "title": "אולי",
+  "mbids": [
+   "ff32d660-3eca-4a3b-8c45-55732ae72e11"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ }
+]
