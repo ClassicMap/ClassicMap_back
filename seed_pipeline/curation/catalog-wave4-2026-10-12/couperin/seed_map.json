@@ -1,0 +1,1250 @@
+[
+ {
+  "pieceId": 23457,
+  "title": "La Steinkerque",
+  "mbids": [
+   "171d504a-f472-4544-a266-ccfdcb85f939"
+  ],
+  "mapping": "work",
+  "key": "couperin-171d504a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23594,
+  "title": "Pièces d'orgue",
+  "mbids": [
+   "23189826-54b4-473d-bac3-1877d6d445f7"
+  ],
+  "mapping": "work",
+  "key": "couperin-23189826",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23637,
+  "title": "Les goûts-réunis, ou Nouveaux concerts",
+  "mbids": [
+   "27387192-65b1-4b29-be4e-172a8c26e834"
+  ],
+  "mapping": "work",
+  "key": "couperin-27387192",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23684,
+  "title": "Les Baricades mystérieuses",
+  "mbids": [
+   "2c270462-9fee-46c7-94a5-571a4cad003e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23692,
+  "title": "Salve Regina",
+  "mbids": [
+   "2d303ef7-b72b-45b6-bd94-3bc0f2e3ea8a"
+  ],
+  "mapping": "work",
+  "key": "couperin-2d303ef7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23851,
+  "title": "L'Apothéose de Lully",
+  "mbids": [
+   "3c875719-355e-4974-bbca-feb9bfda31e8"
+  ],
+  "mapping": "work",
+  "key": "couperin-3c875719",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24233,
+  "title": "Ariane consolée par Bacchus",
+  "mbids": [
+   "609ce89a-eb58-4514-bb75-a9e36ac966ef"
+  ],
+  "mapping": "work",
+  "key": "couperin-609ce89a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24400,
+  "title": "Leçons de ténèbres",
+  "mbids": [
+   "707c56da-b240-4d15-ace5-042919002f10"
+  ],
+  "mapping": "work",
+  "key": "couperin-707c56da",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24438,
+  "title": "L’art de toucher le clavecin",
+  "mbids": [
+   "7395b9eb-5c74-4ca6-8056-40ffd2ef1a08"
+  ],
+  "mapping": "work",
+  "key": "couperin-7395b9eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24592,
+  "title": "1re Suite de viole en mi mineur",
+  "mbids": [
+   "802b454e-533e-4f93-8de5-d237b0d57bfd"
+  ],
+  "mapping": "work",
+  "key": "couperin-802b454e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24677,
+  "title": "Les Nations",
+  "mbids": [
+   "884a5deb-fc93-40e3-b9d6-cdb6aba6f093"
+  ],
+  "mapping": "work",
+  "key": "couperin-884a5deb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24765,
+  "title": "La Sultanne",
+  "mbids": [
+   "904a6a43-eaec-43a1-9bed-d56817a739ca"
+  ],
+  "mapping": "work",
+  "key": "couperin-904a6a43",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24884,
+  "title": "Pièces de violes",
+  "mbids": [
+   "9ae83645-6e07-4369-ac86-190946b699f1"
+  ],
+  "mapping": "work",
+  "key": "couperin-9ae83645",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25464,
+  "title": "Première suite: Passacaille ou chaconne",
+  "mbids": [
+   "d126a023-f395-4538-b6d9-18ebabffa09a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25718,
+  "title": "Concerts Royaux",
+  "mbids": [
+   "e6c9a832-5570-4d82-8375-986ff06c9d6d"
+  ],
+  "mapping": "work",
+  "key": "couperin-e6c9a832",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25724,
+  "title": "Les goûts réunis: Concert no. 11 in C minor",
+  "mbids": [
+   "e7655f9b-60ee-4bda-be70-51f37aa050b0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25788,
+  "title": "Exultent superi, \"Motet for Ste Suzanne\"",
+  "mbids": [
+   "ed6a89d8-d883-4cb1-ac69-de57cbd9b7e3"
+  ],
+  "mapping": "work",
+  "key": "couperin-ed6a89d8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25819,
+  "title": "Livres de pièces de Clavecin",
+  "mbids": [
+   "f0594c4b-2b69-4001-a56b-8ef97c67092c"
+  ],
+  "mapping": "work",
+  "key": "couperin-f0594c4b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23071,
+  "title": "Aria F-Dur, BWV 587",
+  "mbids": [
+   "528d83bd-44a3-3c58-890c-ff8df95896a5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23207,
+  "title": "Sept versets d'un motet: IV. v10 \"Dux itineris fuisti\"",
+  "mbids": [
+   "01101a3a-07b8-4209-ad6a-646a37085bda"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23211,
+  "title": "Audite omnes et expavescite",
+  "mbids": [
+   "01379a72-11be-465c-a071-04a78f164a18"
+  ],
+  "mapping": "work",
+  "key": "couperin-01379a72",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23237,
+  "title": "Le Rossignol-en-amour",
+  "mbids": [
+   "04c8a49c-4551-4f46-b457-1bee8002c179"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23245,
+  "title": "Sept versets d'un motet: V. v11 \"Operuit montes umbra ejus\"",
+  "mbids": [
+   "0585f837-c76e-4cf0-aa0a-0fda9d7a7a19"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23258,
+  "title": "Deuxième concert: Plainte pour les violes",
+  "mbids": [
+   "06cf1f59-3536-4811-892b-a088fd7d248f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23299,
+  "title": "Première suite: Prelude",
+  "mbids": [
+   "0ae7b14d-f59b-49ab-87a1-4e99372b7fd6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23347,
+  "title": "Concert a deux Violoncelles",
+  "mbids": [
+   "0d9dc2bd-779e-4c75-bed0-acb42c1a4820"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23367,
+  "title": "Sept versets d'un motet: VII. v15 \"Deus virtutum convertere\"",
+  "mbids": [
+   "0fa9a485-e817-4b1f-a20d-1b5509b18099"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23437,
+  "title": "Pièces en Concert for Cello & Strings",
+  "mbids": [
+   "15c082d9-159a-4ce4-ac9b-6d99001477f4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23483,
+  "title": "O Domine quia refugiam",
+  "mbids": [
+   "18c3e861-05d3-4eb8-bfee-07d97a6b991f"
+  ],
+  "mapping": "work",
+  "key": "couperin-18c3e861",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23510,
+  "title": "Sept versets d'un motet: I. v4 \"Converte nos Deus\"",
+  "mbids": [
+   "1b67a22d-9c22-4ffb-aed0-2ee37ed84161"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23526,
+  "title": "Première concert: La Flore",
+  "mbids": [
+   "1cbd8cf8-527a-4fc9-a565-17e42c9c8ca7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23558,
+  "title": "Rondeau, BWV Anh. 183",
+  "mbids": [
+   "1fc50af9-5fae-3636-9424-46b11284ab11"
+  ],
+  "mapping": "work",
+  "key": "couperin-1fc50af9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23568,
+  "title": "Precatio ad Deum",
+  "mbids": [
+   "20bb889a-5706-4ed4-ab5d-7e46245fa460"
+  ],
+  "mapping": "work",
+  "key": "couperin-20bb889a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23646,
+  "title": "Deuxième suite: La Chemise-blanche",
+  "mbids": [
+   "27e3bd6e-3715-4417-8ff6-06e6039e4299"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23651,
+  "title": "Livre de clavecin no. 2, 6ème ordre: Les Baricades Mistérieuses",
+  "mbids": [
+   "28264e7b-8824-4f02-b048-a632f8da1b36"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23681,
+  "title": "Sonate \"La Sultane\"",
+  "mbids": [
+   "2bb5fb77-ac63-470a-96d0-9318446b109a"
+  ],
+  "mapping": "work",
+  "key": "couperin-2bb5fb77",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23693,
+  "title": "Laudate pueri Dominum",
+  "mbids": [
+   "2d524e69-bd11-40c6-b0b9-8be4ead8d89c"
+  ],
+  "mapping": "work",
+  "key": "couperin-2d524e69",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23731,
+  "title": "Première suite: Courante",
+  "mbids": [
+   "31c536c7-dbc6-4e7e-b5ea-3b705d47c830"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23749,
+  "title": "Jucunda vox Ecclesiae",
+  "mbids": [
+   "336b4d20-d714-4c13-be26-ea58ac94c551"
+  ],
+  "mapping": "work",
+  "key": "couperin-336b4d20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23751,
+  "title": "Qu’on ne me dise plus que c’est la seule absence",
+  "mbids": [
+   "3380f8bc-e38e-4563-b3bb-f2930e6bca22"
+  ],
+  "mapping": "work",
+  "key": "couperin-3380f8bc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23754,
+  "title": "Sept versets d'un motet: IV. v8 \"Audiam quid loquatur\"",
+  "mbids": [
+   "33d715a9-31f6-48c0-af69-e7088228bd31"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23797,
+  "title": "Quatre versets du motet: I. Tabescere me fecit",
+  "mbids": [
+   "3763c8d5-d37c-4def-9d0d-21510457ac52"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23801,
+  "title": "Sonate «La Visionnaire»",
+  "mbids": [
+   "37e911c0-1796-43d3-8cb3-34dd0fafcb6f"
+  ],
+  "mapping": "work",
+  "key": "couperin-37e911c0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23802,
+  "title": "2e Suite de viole en la majeur",
+  "mbids": [
+   "37f6aa28-f12a-4e3c-9107-c2e66482ccd4"
+  ],
+  "mapping": "work",
+  "key": "couperin-37f6aa28",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23812,
+  "title": "Sonate «La Steinquerque»",
+  "mbids": [
+   "38c82719-4722-432f-a5bb-7cda33fda275"
+  ],
+  "mapping": "work",
+  "key": "couperin-38c82719",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23827,
+  "title": "Domine salvum fac regem",
+  "mbids": [
+   "3a3c52e0-c52a-4df9-b89b-ff42288a3ce7"
+  ],
+  "mapping": "work",
+  "key": "couperin-3a3c52e0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23925,
+  "title": "Lauda Sion Salvatorem",
+  "mbids": [
+   "43c73bfe-e5b2-4ee7-878d-ae1280692cb3"
+  ],
+  "mapping": "work",
+  "key": "couperin-43c73bfe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24003,
+  "title": "Première concert: L'Enchanteresse",
+  "mbids": [
+   "4b6f81f3-fa87-4bcc-9daf-5a3a45f9e678"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24038,
+  "title": "Venite exultemus Domino",
+  "mbids": [
+   "4f393da2-8756-4656-bf78-e16b47aaf271"
+  ],
+  "mapping": "work",
+  "key": "couperin-4f393da2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24093,
+  "title": "Laetentur coeli (Motet de Saint Barthélemy)",
+  "mbids": [
+   "547f4c4c-3ec1-47f9-9de1-677025c432d5"
+  ],
+  "mapping": "work",
+  "key": "couperin-547f4c4c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24094,
+  "title": "Première concert: Les Satires, chevre-pieds",
+  "mbids": [
+   "548b4205-4ad6-4d1b-a46c-7d035899ee81"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24095,
+  "title": "Sept versets d'un motet: II. v5 \"Numquid in aeternum\"",
+  "mbids": [
+   "5492f885-7ca6-4bd6-ab8f-c93857a72ce4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24120,
+  "title": "Tantum ergo sacramentum",
+  "mbids": [
+   "56e69521-321a-4cbb-95cc-5f1ca11646bd"
+  ],
+  "mapping": "work",
+  "key": "couperin-56e69521",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24143,
+  "title": "Sonate «L'Astrée»",
+  "mbids": [
+   "590c6df6-6a26-4ad0-8b97-3a691a55a521"
+  ],
+  "mapping": "work",
+  "key": "couperin-590c6df6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24255,
+  "title": "Motet de Sainte Suzanne",
+  "mbids": [
+   "6321ba45-170a-4b47-9f41-8ba5a9309555"
+  ],
+  "mapping": "work",
+  "key": "couperin-6321ba45",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24272,
+  "title": "Quatre versets du motet: II. Ignitum eloquium",
+  "mbids": [
+   "652a2ee7-5ee4-4ac5-9d1b-0402edfca132"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24341,
+  "title": "Première suite: Gavotte",
+  "mbids": [
+   "6ba44448-5f86-4b58-a8a2-eb2051cc207a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24414,
+  "title": "Quatre versets du motet: III. Adolescentus sum ego",
+  "mbids": [
+   "716491e8-4fa7-40c2-a301-35fdc44d8733"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24468,
+  "title": "Pièces de clavecin, Book 3, Ordre XV in A: IV. Musette de Choisy - V. Musette de Taverny",
+  "mbids": [
+   "75cac456-a34f-4b80-9a4b-9639171f48ba"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24525,
+  "title": "Resonent organa, \"Motet for Ste Cecile\"",
+  "mbids": [
+   "7ab2f9f0-abaa-423b-84ab-f5df497c2fe4"
+  ],
+  "mapping": "work",
+  "key": "couperin-7ab2f9f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24532,
+  "title": "Messe Grecque de Saint Denis",
+  "mbids": [
+   "7bb087b7-4787-4898-9435-116684f3497a"
+  ],
+  "mapping": "work",
+  "key": "couperin-7bb087b7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24556,
+  "title": "La Superbe",
+  "mbids": [
+   "7d6ddbf5-0f51-417e-a4e9-7a026adb845e"
+  ],
+  "mapping": "work",
+  "key": "couperin-7d6ddbf5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24557,
+  "title": "Sonate «La Convalescente»",
+  "mbids": [
+   "7d98263c-7901-44f2-85a0-1d21139a9fdd"
+  ],
+  "mapping": "work",
+  "key": "couperin-7d98263c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24653,
+  "title": "Deuxième suite: Pompe funèbre",
+  "mbids": [
+   "8594f361-6ebc-4032-8811-fd8b1f8114a1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24680,
+  "title": "Deuxième suite: Prelude",
+  "mbids": [
+   "8899ca9a-e98a-457c-9231-c88f825cbf13"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24697,
+  "title": "Sept versets d'un motet: III. v9 \"Vineam de Aegypto\"",
+  "mbids": [
+   "8a200687-b5f2-48b4-8674-cdafae5d9dc0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24717,
+  "title": "Sonate «La Pucelle»",
+  "mbids": [
+   "8c2a8df5-a121-442c-a7b8-875f47981dff"
+  ],
+  "mapping": "work",
+  "key": "couperin-8c2a8df5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24741,
+  "title": "Motet pour le jour de Pâques",
+  "mbids": [
+   "8de5822a-0a3e-408b-8d3f-52b2515ea965"
+  ],
+  "mapping": "work",
+  "key": "couperin-8de5822a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24805,
+  "title": "Première suite: Allemande",
+  "mbids": [
+   "93f1006f-7c49-4f13-9a7f-3c1f962001f4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24822,
+  "title": "Gavotte",
+  "mbids": [
+   "9593ae1e-f796-456a-a8d3-7d45ef5cf959"
+  ],
+  "mapping": "work",
+  "key": "couperin-9593ae1e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24846,
+  "title": "Deuxième suite: Fuguette",
+  "mbids": [
+   "971ee0f6-457f-4b11-a478-83022461bae5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24865,
+  "title": "Zephire, modère en ces lieux",
+  "mbids": [
+   "98c1c0fd-ccd8-4879-a263-52868bde84f3"
+  ],
+  "mapping": "work",
+  "key": "couperin-98c1c0fd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24979,
+  "title": "Sept versets d'un motet: I. v1 \"Qui regis Israel\"",
+  "mbids": [
+   "a19f814c-1c80-4ac1-94ee-1036211e431b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25013,
+  "title": "Usquequo, Domine",
+  "mbids": [
+   "a458458d-30c3-4db4-9a5d-f2316a3d8dcf"
+  ],
+  "mapping": "work",
+  "key": "couperin-a458458d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25020,
+  "title": "Forlane",
+  "mbids": [
+   "a4f06fa9-9475-4e86-9343-b3b68e7b4683"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 25033,
+  "title": "La Ménétou",
+  "mbids": [
+   "a616a820-77c5-4546-8923-3e854e77d887"
+  ],
+  "mapping": "work",
+  "key": "couperin-a616a820",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25096,
+  "title": "Allemande 'L'Auguste'",
+  "mbids": [
+   "abe3d7f9-c6a8-4b74-b600-f15d063aa5d1"
+  ],
+  "mapping": "work",
+  "key": "couperin-abe3d7f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25100,
+  "title": "Première suite: Sarabande",
+  "mbids": [
+   "ac4f8bdd-1f1f-4275-8509-ea3106c1ea18"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25115,
+  "title": "Deuxième concert: Les Vergers fleuris",
+  "mbids": [
+   "ae2d4b23-78be-4059-89c8-80aab67cb67d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25133,
+  "title": "Sept versets d'un motet: VI. v12 \"Extendit palmitos suos\"",
+  "mbids": [
+   "af550eea-7fd7-4658-863c-146742e9fbb1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25157,
+  "title": "Sarabande 'La Majestueuse'",
+  "mbids": [
+   "b240db3b-1f10-4925-a999-c9c4e251ce09"
+  ],
+  "mapping": "work",
+  "key": "couperin-b240db3b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25177,
+  "title": "Sept versets d'un motet: VII. v13 \"Etenim Dominus\"",
+  "mbids": [
+   "b4a9c7f2-f8e9-42d3-a12f-23d41cbfe029"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25277,
+  "title": "Ornate aras",
+  "mbids": [
+   "be79b0b3-3877-4609-a537-9cae27fd6674"
+  ],
+  "mapping": "work",
+  "key": "couperin-be79b0b3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25323,
+  "title": "Le Parnasse, ou l'apothéose de Corelli - Grande Sonade en Trio",
+  "mbids": [
+   "c2fa3aae-364f-4b0c-97bc-e740c2dd74cc"
+  ],
+  "mapping": "work",
+  "key": "couperin-c2fa3aae",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25408,
+  "title": "Respice in me",
+  "mbids": [
+   "cb3d8f29-69d3-43ff-a3e6-87afe74f4ac3"
+  ],
+  "mapping": "work",
+  "key": "couperin-cb3d8f29",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25471,
+  "title": "Doux liens de mon cœur",
+  "mbids": [
+   "d19c1d3a-f2da-432d-a898-111be275de5f"
+  ],
+  "mapping": "work",
+  "key": "couperin-d19c1d3a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25496,
+  "title": "Prélude",
+  "mbids": [
+   "d4025d78-df2d-403e-bf34-0e4eeceec126"
+  ],
+  "mapping": "work",
+  "key": "couperin-d4025d78",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25498,
+  "title": "Les Barricades mistérieuses",
+  "mbids": [
+   "d42d12e0-f2ba-4ba7-b8ef-864c70caf59b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 25521,
+  "title": "Deuxième concert: L'Angélique",
+  "mbids": [
+   "d5f32644-64ca-42e2-89e2-e41549769584"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25541,
+  "title": "O misterium ineffabile, \"Elevation\"",
+  "mbids": [
+   "d75b8de7-8dc5-4e55-93cd-18acb90a6019"
+  ],
+  "mapping": "work",
+  "key": "couperin-d75b8de7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25573,
+  "title": "Ad te levavi oculos meos",
+  "mbids": [
+   "d9fe481c-ec28-4132-9763-19659a2bd9c9"
+  ],
+  "mapping": "work",
+  "key": "couperin-d9fe481c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25622,
+  "title": "Sept versets d'un motet: V. v11 \"Misericordia et veritas\"",
+  "mbids": [
+   "dec29c19-0022-4814-bdab-3c3fe23c1e0f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25626,
+  "title": "Deuxième concert: La Seduisante",
+  "mbids": [
+   "defe93bf-f0e3-4e05-ad68-f13830a05482"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25660,
+  "title": "Sept versets d'un motet: II. v3 \"Excita potentiam tuam\"",
+  "mbids": [
+   "e1ed6909-171e-46ec-bd2d-6f4b0a4366fb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25665,
+  "title": "Première suite: Gigue",
+  "mbids": [
+   "e283337b-c526-4a8a-99f5-2c6b8723ed82"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25690,
+  "title": "Sept versets d'un motet: VI. v12 \"Veritas de terra\"",
+  "mbids": [
+   "e4e6ac4c-edd4-41e0-bfcd-1daefa6c01ad"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25694,
+  "title": "Sept versets d'un motet: III. v7 \"Ostende nobis Domine\"",
+  "mbids": [
+   "e51f74df-7d26-4472-b287-0cd53b145e8d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25704,
+  "title": "Première concert: Les Silvains",
+  "mbids": [
+   "e5a29a3b-ba1b-4e08-94db-3b9d174a41c1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25746,
+  "title": "Verset du motet de l'année dernière: \"Qui dat nivem\"",
+  "mbids": [
+   "e8d0b430-9678-4ec6-8c13-c77b3121c0ed"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25873,
+  "title": "Dialogus inter Jesum et hominem",
+  "mbids": [
+   "f43e3848-0399-4b9a-982b-9cadbae36a74"
+  ],
+  "mapping": "work",
+  "key": "couperin-f43e3848",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25900,
+  "title": "Quid retribuam tibi Domine",
+  "mbids": [
+   "f6b35f79-7924-4763-861f-05e20169ec40"
+  ],
+  "mapping": "work",
+  "key": "couperin-f6b35f79",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25907,
+  "title": "Quatre versets du motet: IV. Justitia tua",
+  "mbids": [
+   "f74c517c-4ea3-4fbf-a8bb-3b98f8ab7401"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 25916,
+  "title": "Gigue 'La Milordine'",
+  "mbids": [
+   "f80166fc-c566-4517-919c-cf5ea743cf03"
+  ],
+  "mapping": "work",
+  "key": "couperin-f80166fc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25969,
+  "title": "Chaconne En Rondeau 'La Favourite'",
+  "mbids": [
+   "fcf690c8-371a-4408-98e4-f978e0410271"
+  ],
+  "mapping": "work",
+  "key": "couperin-fcf690c8",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

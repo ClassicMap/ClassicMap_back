@@ -1,0 +1,806 @@
+[
+ {
+  "pieceId": 554,
+  "title": "Concerto for Two Pianos and Orchestra, op. 88a",
+  "mbids": [
+   "65fdd34f-55c0-46cc-9503-61d9cb314540"
+  ],
+  "mapping": "work",
+  "key": "bruch-65fdd34f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 644,
+  "title": "Violin Concerto no. 1 in G minor, op. 26",
+  "mbids": [
+   "d56d43b0-2cf6-3522-ad40-30807b9eea91"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 863,
+  "title": "Scottish Fantasy in E-flat major, op. 46",
+  "mbids": [
+   "02f290d4-49a1-38f1-81dd-41d906f04d50"
+  ],
+  "mapping": "work",
+  "key": "bruch-02f290d4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1230,
+  "title": "Concerto for Clarinet and Viola, op. 88",
+  "mbids": [
+   "2cf52373-49cb-49fb-b3cb-76c3154a20dc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1337,
+  "title": "Septet in E-flat major",
+  "mbids": [
+   "3b310a2f-01c2-46a2-87f9-61afa2aa1917"
+  ],
+  "mapping": "work",
+  "key": "bruch-3b310a2f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1588,
+  "title": "Trio for Violin, Violoncello and Piano in C minor, op. 5",
+  "mbids": [
+   "5b674b82-5af5-408d-ad6f-9815d7d68f90"
+  ],
+  "mapping": "work",
+  "key": "bruch-5b674b82",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1656,
+  "title": "Violin Concerto no. 2 in D minor, op. 44",
+  "mbids": [
+   "63db5fbf-1252-49a6-b416-4c2e712d943c"
+  ],
+  "mapping": "work",
+  "key": "bruch-63db5fbf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1675,
+  "title": "Symphony no. 1 in E-flat major, op. 28",
+  "mbids": [
+   "6755a742-5371-43de-b389-9415c6dbab89"
+  ],
+  "mapping": "work",
+  "key": "bruch-6755a742",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1790,
+  "title": "Ave Maria, op. 61",
+  "mbids": [
+   "75750e55-722b-4958-9bee-955a5de9fb9c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2096,
+  "title": "8 Pieces for Clarinet, Viola and Piano, op. 83",
+  "mbids": [
+   "96ebb350-d831-4cf5-acc3-e18ff6207127"
+  ],
+  "mapping": "work",
+  "key": "bruch-96ebb350",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2157,
+  "title": "Suite on Russian Folk Melodies, op. 79b",
+  "mbids": [
+   "9eda8e2f-c92c-4a54-89ec-a2d687f14bae"
+  ],
+  "mapping": "work",
+  "key": "bruch-9eda8e2f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2334,
+  "title": "Violin Concerto no. 3 in D minor, op. 58",
+  "mbids": [
+   "b378bb43-bf55-444f-8b94-b6306ee9f660"
+  ],
+  "mapping": "work",
+  "key": "bruch-b378bb43",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2355,
+  "title": "Swedish Dances for Piano 4 Hands, op. 63",
+  "mbids": [
+   "b5754628-f2a2-3744-8a54-03ad8a5ebdd1"
+  ],
+  "mapping": "work",
+  "key": "bruch-b5754628",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2502,
+  "title": "Das Lied von der Glocke, op. 45",
+  "mbids": [
+   "c6213ae9-4091-4591-b68c-0c3c0cc7a37b"
+  ],
+  "mapping": "work",
+  "key": "bruch-c6213ae9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2945,
+  "title": "Concerto for violin & viola, op. 88",
+  "mbids": [
+   "f6e9f131-7a94-40ed-975a-c5c2e132fdc0"
+  ],
+  "mapping": "work",
+  "key": "bruch-f6e9f131",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 3008,
+  "title": "Piano Quintet in G minor",
+  "mbids": [
+   "fe363820-f258-4f1d-878f-53878fffb5d1"
+  ],
+  "mapping": "work",
+  "key": "bruch-fe363820",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 883,
+  "title": "String Octet in B-flat major, op. posth.",
+  "mbids": [
+   "0536001c-4094-42b9-8466-b742dd0f1ae7"
+  ],
+  "mapping": "work",
+  "key": "bruch-0536001c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 895,
+  "title": "In Memoriam, op. 65",
+  "mbids": [
+   "0683310e-b32a-35f0-b606-2a05def41bbe"
+  ],
+  "mapping": "work",
+  "key": "bruch-0683310e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 919,
+  "title": "String Quintet in A minor, op. posth.",
+  "mbids": [
+   "08833d80-d752-43e0-86fc-a1f57e5a4ea7"
+  ],
+  "mapping": "work",
+  "key": "bruch-08833d80",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 945,
+  "title": "Goldne Brücken, op. 15 no. 4",
+  "mbids": [
+   "0c42262e-25b1-4b4a-9f5d-e6b37fc7e33a"
+  ],
+  "mapping": "work",
+  "key": "bruch-0c42262e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1028,
+  "title": "Adagio on Celtic Themes, op. 56",
+  "mbids": [
+   "1520a973-9a74-4114-b903-4894f0f86caf"
+  ],
+  "mapping": "work",
+  "key": "bruch-1520a973",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1052,
+  "title": "Durch die wolkige Maiennacht, op. 97 no. 2",
+  "mbids": [
+   "1817a7eb-f394-47ef-b27e-21269929f100"
+  ],
+  "mapping": "work",
+  "key": "bruch-1817a7eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1101,
+  "title": "12 Schottische Volkslieder",
+  "mbids": [
+   "1d6ec7e1-02de-4c32-a55e-5214d10db93c"
+  ],
+  "mapping": "work",
+  "key": "bruch-1d6ec7e1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1108,
+  "title": "Konzertstück in F-sharp minor, op. 84",
+  "mbids": [
+   "1e57efaf-1156-4785-b025-474ce66625d2"
+  ],
+  "mapping": "work",
+  "key": "bruch-1e57efaf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1140,
+  "title": "Mein Liebchen naht, Blumen zu pflücken, op. 97 no. 1",
+  "mbids": [
+   "2189d369-2f2e-4cd6-94a4-a0059884c4dd"
+  ],
+  "mapping": "work",
+  "key": "bruch-2189d369",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1172,
+  "title": "Siechentrost-Lieder, op. 54",
+  "mbids": [
+   "24885a8d-e607-46e9-8ccd-83b7807d5715"
+  ],
+  "mapping": "work",
+  "key": "bruch-24885a8d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1181,
+  "title": "Fantasia in D minor for Two Pianos, op. 11",
+  "mbids": [
+   "2610aebc-9bb4-3547-995f-56369082df44"
+  ],
+  "mapping": "work",
+  "key": "bruch-2610aebc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1198,
+  "title": "Serenade for Violin and Orchestra, op. 75",
+  "mbids": [
+   "28c08bff-a3c4-491d-bb83-9a1a2a84ec3b"
+  ],
+  "mapping": "work",
+  "key": "bruch-28c08bff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1226,
+  "title": "String Quartet no. 2 in E major, op. 10",
+  "mbids": [
+   "2c5ea54a-a738-4de3-ba82-492b1bd6692b"
+  ],
+  "mapping": "work",
+  "key": "bruch-2c5ea54a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1244,
+  "title": "Um Mitternacht, op. 59 no. 1",
+  "mbids": [
+   "2e8f8e6b-04c8-4607-8f2e-4683a6dc7c29"
+  ],
+  "mapping": "work",
+  "key": "bruch-2e8f8e6b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1308,
+  "title": "An die heilige Jungfrau, op. 18 no. 3",
+  "mbids": [
+   "37b5a4e5-e773-4c46-bae0-c4765d772411"
+  ],
+  "mapping": "work",
+  "key": "bruch-37b5a4e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1415,
+  "title": "String Quartet in C minor, op. posth.",
+  "mbids": [
+   "443791ec-650b-407a-9323-8b030d8a9420"
+  ],
+  "mapping": "work",
+  "key": "bruch-443791ec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1429,
+  "title": "Klavierstücke, op. 14",
+  "mbids": [
+   "46e3998c-e5a7-49b5-83b8-cf17270d6ec8"
+  ],
+  "mapping": "work",
+  "key": "bruch-46e3998c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1606,
+  "title": "Im tiefen Thale, op. 15 no. 3",
+  "mbids": [
+   "5dd9ab57-7b76-4072-be19-61af2f88ad86"
+  ],
+  "mapping": "work",
+  "key": "bruch-5dd9ab57",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1752,
+  "title": "Symphony no. 3 in E major, op. 51",
+  "mbids": [
+   "70d61f6f-6c94-44fc-ba27-ba17c5b30d37"
+  ],
+  "mapping": "work",
+  "key": "bruch-70d61f6f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1768,
+  "title": "In der Nacht, op. 72",
+  "mbids": [
+   "737706f2-65af-4660-a688-a52ab010ab69"
+  ],
+  "mapping": "work",
+  "key": "bruch-737706f2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1847,
+  "title": "An den Jesusknaben, op. 17 no. 3",
+  "mbids": [
+   "7bae8c43-ed24-4991-94ce-cd4d376e64aa"
+  ],
+  "mapping": "work",
+  "key": "bruch-7bae8c43",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1969,
+  "title": "Sieben Schottische Lieder",
+  "mbids": [
+   "88bf1fed-893e-431c-be38-070f27976ba1"
+  ],
+  "mapping": "work",
+  "key": "bruch-88bf1fed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2013,
+  "title": "Von den Rosen komm’ ich, op. 17 no. 4",
+  "mbids": [
+   "8e259cb3-141e-45ea-8d4e-daed25fd58b7"
+  ],
+  "mapping": "work",
+  "key": "bruch-8e259cb3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2112,
+  "title": "String Quartet no. 1 in C minor, op. 9",
+  "mbids": [
+   "98397634-95fd-4beb-a85e-bb0659443a92"
+  ],
+  "mapping": "work",
+  "key": "bruch-98397634",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2189,
+  "title": "Dein gedenk’ ich Margaretha, op. 33 no. 3",
+  "mbids": [
+   "a313306f-35c3-4168-8eb5-cda0d7cc7f17"
+  ],
+  "mapping": "work",
+  "key": "bruch-a313306f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2195,
+  "title": "Ein Mädchen und ein Gläschen Wein, op. 97 no. 5",
+  "mbids": [
+   "a3aa8f10-2e20-4f18-a1bd-daec552747da"
+  ],
+  "mapping": "work",
+  "key": "bruch-a3aa8f10",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2203,
+  "title": "Odysseus, op. 41",
+  "mbids": [
+   "a47ac123-2a23-445b-a063-e4fc2b7ea31a"
+  ],
+  "mapping": "work",
+  "key": "bruch-a47ac123",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2221,
+  "title": "Four Pieces for Cello and Piano, op. 70",
+  "mbids": [
+   "a5e53c77-5d94-44c0-a837-15cf58942d8b"
+  ],
+  "mapping": "work",
+  "key": "bruch-a5e53c77",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2255,
+  "title": "Das Feuerkreuz, op. 52",
+  "mbids": [
+   "aa2f2ee1-68e8-4dd0-addb-9dc97ea1b748"
+  ],
+  "mapping": "work",
+  "key": "bruch-aa2f2ee1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2267,
+  "title": "Adagio aus dem Violinkonzert, op. 26",
+  "mbids": [
+   "ab83a8fa-2fd7-4fce-9c69-9a4cf0a3f1aa"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2290,
+  "title": "Altes Lied, op. 7 no. 1",
+  "mbids": [
+   "af5cb463-67bf-413d-a77a-c1cb8adc7389"
+  ],
+  "mapping": "work",
+  "key": "bruch-af5cb463",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2297,
+  "title": "Klavierstücke, op. 12",
+  "mbids": [
+   "b06b7bd6-f352-48eb-9fb7-8e858fb1af9e"
+  ],
+  "mapping": "work",
+  "key": "bruch-b06b7bd6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2380,
+  "title": "Einleitung zur Oper Die Loreley",
+  "mbids": [
+   "b8ddbc41-a75a-423d-aa8a-bb9e4b1be3dc"
+  ],
+  "mapping": "work",
+  "key": "bruch-b8ddbc41",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2405,
+  "title": "2 Cantatas, op. 31",
+  "mbids": [
+   "bbc6b275-cdab-40f7-b4fe-891f157dcbec"
+  ],
+  "mapping": "work",
+  "key": "bruch-bbc6b275",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2445,
+  "title": "Zwölf Walisische Lieder",
+  "mbids": [
+   "bf13678f-5483-4261-9cd3-547c416510ba"
+  ],
+  "mapping": "work",
+  "key": "bruch-bf13678f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2465,
+  "title": "Adagio appassionato, op. 57",
+  "mbids": [
+   "c1882b78-e933-36da-b34f-b748b3e63ca0"
+  ],
+  "mapping": "work",
+  "key": "bruch-c1882b78",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2546,
+  "title": "Neun Lieder, op. 60",
+  "mbids": [
+   "cb2021a0-859b-4a0d-a177-9932f6d5fad8"
+  ],
+  "mapping": "work",
+  "key": "bruch-cb2021a0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2564,
+  "title": "Wettspiele zu Ehren des Patroklus",
+  "mbids": [
+   "ccecf4e0-d4fc-405d-bae9-5ea48e45d41b"
+  ],
+  "mapping": "work",
+  "key": "bruch-ccecf4e0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2595,
+  "title": "Klosterlied, op. 17 no. 10",
+  "mbids": [
+   "d0edeef9-1ace-425c-8dd3-fd8b78860949"
+  ],
+  "mapping": "work",
+  "key": "bruch-d0edeef9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2615,
+  "title": "Die Loreley, op. 16",
+  "mbids": [
+   "d2e6f095-0177-4f35-bfdb-5713cf4037d7"
+  ],
+  "mapping": "work",
+  "key": "bruch-d2e6f095",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2616,
+  "title": "String Quintet in E-flat major, op. posth.",
+  "mbids": [
+   "d2eaa79e-9568-4297-82f6-dd699f657aa0"
+  ],
+  "mapping": "work",
+  "key": "bruch-d2eaa79e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2654,
+  "title": "Concerto for Violin and Orchestra no. 1 in G minor, op. 26: II. Adagio",
+  "mbids": [
+   "d72378dc-027f-4b11-bdf2-ea82c5572413"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2662,
+  "title": "Jubilate-Amen, op. 3",
+  "mbids": [
+   "d7d123b3-561d-4e63-a85e-aef956494625"
+  ],
+  "mapping": "work",
+  "key": "bruch-d7d123b3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2665,
+  "title": "Der Landsknecht, op. 18 no. 2",
+  "mbids": [
+   "d82815a0-efc8-4bea-9d61-878398ec23a7"
+  ],
+  "mapping": "work",
+  "key": "bruch-d82815a0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2709,
+  "title": "Lieder für gemischten Chor, op. 86",
+  "mbids": [
+   "de35650a-4ab2-4bb7-9fde-fa06633f61d7"
+  ],
+  "mapping": "work",
+  "key": "bruch-de35650a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2723,
+  "title": "Fünf Lieder, op. 38",
+  "mbids": [
+   "dfdd1250-12df-4e70-97bb-eee4c7a8a753"
+  ],
+  "mapping": "work",
+  "key": "bruch-dfdd1250",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2740,
+  "title": "Symphony no. 2 in F minor, op. 36",
+  "mbids": [
+   "e121114a-815b-4a5c-9374-020de3247ae3"
+  ],
+  "mapping": "work",
+  "key": "bruch-e121114a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2742,
+  "title": "Suite für Orgel und Orchester, op. 88b",
+  "mbids": [
+   "e1584dea-527c-439f-8f2f-572ded819d79"
+  ],
+  "mapping": "work",
+  "key": "bruch-e1584dea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2882,
+  "title": "An die heilige Jungfrau, op. 17 no. 1",
+  "mbids": [
+   "f0e299a7-3f0d-4a06-b4cb-360c4177db60"
+  ],
+  "mapping": "work",
+  "key": "bruch-f0e299a7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2899,
+  "title": "Sieben Gesänge, op. 71",
+  "mbids": [
+   "f1d8355e-9344-4ade-b173-2705937e2719"
+  ],
+  "mapping": "work",
+  "key": "bruch-f1d8355e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2916,
+  "title": "Tannhäuser, op. 17 no. 8",
+  "mbids": [
+   "f4225c20-d6d9-4fe0-915e-07549eb43579"
+  ],
+  "mapping": "work",
+  "key": "bruch-f4225c20",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

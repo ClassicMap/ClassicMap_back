@@ -1,0 +1,746 @@
+[
+ {
+  "pieceId": 16628,
+  "title": "Organ Symphonies, op. 13",
+  "mbids": [
+   "25f84f27-f09e-4e5b-84f9-1c0e414e5e33"
+  ],
+  "mapping": "work",
+  "key": "widor-25f84f27",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16766,
+  "title": "Symphonies pour orgue, op. 42",
+  "mbids": [
+   "2ed0c416-197a-4d88-9932-97c91ac54600"
+  ],
+  "mapping": "work",
+  "key": "widor-2ed0c416",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16884,
+  "title": "Bach's Memento",
+  "mbids": [
+   "352d4d87-a0ff-4246-873d-a70b47a5b3ae"
+  ],
+  "mapping": "work",
+  "key": "widor-352d4d87",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17009,
+  "title": "Cello Concerto, op. 41",
+  "mbids": [
+   "3cf671ae-c10a-4709-814a-cdce1dfb1ce0"
+  ],
+  "mapping": "work",
+  "key": "widor-3cf671ae",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19013,
+  "title": "12 feuillets d'album, op. 31",
+  "mbids": [
+   "ba102ed7-a965-4e1b-9490-e6876ea30ae3"
+  ],
+  "mapping": "work",
+  "key": "widor-ba102ed7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19434,
+  "title": "La nuit",
+  "mbids": [
+   "d45aeca3-8884-46b4-8911-4e9201b31e8b"
+  ],
+  "mapping": "work",
+  "key": "widor-d45aeca3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19779,
+  "title": "Symphonie pour orgue et orchestre",
+  "mbids": [
+   "ed887e4b-2cf1-4b31-9a3a-17c21b27de10"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 15756,
+  "title": "Salvum fac populum tuum, op. 84",
+  "mbids": [
+   "46b6c4cd-d066-4ad0-9ab1-76e09f1b633d"
+  ],
+  "mapping": "work",
+  "key": "widor-46b6c4cd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16018,
+  "title": "Piano Concerto no. 2 in C minor, op. 77",
+  "mbids": [
+   "01cfffc5-36a7-4284-9c66-4d412989df07"
+  ],
+  "mapping": "work",
+  "key": "widor-01cfffc5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16048,
+  "title": "Suite pour flûte et piano, op. 34",
+  "mbids": [
+   "038ae0f3-ca7c-4e8e-b562-572e781811cc"
+  ],
+  "mapping": "work",
+  "key": "widor-038ae0f3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16087,
+  "title": "Fugue sur le nom d'Haydn",
+  "mbids": [
+   "05b89ff3-bfd3-4d76-8c87-9b960d1a6fde"
+  ],
+  "mapping": "work",
+  "key": "widor-05b89ff3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16105,
+  "title": "Nuit mystérieuse",
+  "mbids": [
+   "06a07163-52f8-4e3b-a03b-43f25f61f661"
+  ],
+  "mapping": "work",
+  "key": "widor-06a07163",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16165,
+  "title": "Symphonie antique, op. 83",
+  "mbids": [
+   "0a6090ce-fea2-47f7-8823-9bc76a68f3f2"
+  ],
+  "mapping": "work",
+  "key": "widor-0a6090ce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16216,
+  "title": "Romance pour violon et piano, op. 46",
+  "mbids": [
+   "0d336abf-b84e-4337-ac7d-ce0bde8421d0"
+  ],
+  "mapping": "work",
+  "key": "widor-0d336abf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16241,
+  "title": "La korrigane",
+  "mbids": [
+   "0eb96b5d-6a8b-40d6-807b-ef461601d3ca"
+  ],
+  "mapping": "work",
+  "key": "widor-0eb96b5d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16401,
+  "title": "Symphony no. 2 in A major, op. 54",
+  "mbids": [
+   "1735bdef-9a40-4c27-9416-d0c1642258df"
+  ],
+  "mapping": "work",
+  "key": "widor-1735bdef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16448,
+  "title": "Trois Nouvelles Pieces, op. 87",
+  "mbids": [
+   "1a0ee871-ce20-4b11-ae2b-034388ec80e8"
+  ],
+  "mapping": "work",
+  "key": "widor-1a0ee871",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16536,
+  "title": "Maître Ambros",
+  "mbids": [
+   "1fcc3203-c465-4f54-98a7-57e8c576ba6d"
+  ],
+  "mapping": "work",
+  "key": "widor-1fcc3203",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16607,
+  "title": "Sérénade, op. 10",
+  "mbids": [
+   "24d04eac-ff77-4215-a06c-4fd6da7dfdee"
+  ],
+  "mapping": "work",
+  "key": "widor-24d04eac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16699,
+  "title": "Six morceaux de salon, op. 15",
+  "mbids": [
+   "2aa61e3a-0ae3-4f1c-82ed-3d76e13daeb2"
+  ],
+  "mapping": "work",
+  "key": "widor-2aa61e3a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16740,
+  "title": "Suite Latine, op. 86",
+  "mbids": [
+   "2d29c7f4-3684-4724-b285-96265e8f647c"
+  ],
+  "mapping": "work",
+  "key": "widor-2d29c7f4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16805,
+  "title": "Symphonie pour orgue nº 9 en ut mineur, op. 70 \"Symphonie gothique\"",
+  "mbids": [
+   "3127b0fa-7132-45fd-9ece-8dc03dc2ea0f"
+  ],
+  "mapping": "work",
+  "key": "widor-3127b0fa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16845,
+  "title": "Trois mélodies italiennes, op. 35",
+  "mbids": [
+   "334213d0-e4f7-4400-874c-596134faa36b"
+  ],
+  "mapping": "work",
+  "key": "widor-334213d0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16873,
+  "title": "Tantum ergo, op. 18 no. 1",
+  "mbids": [
+   "349f22c9-db63-4f24-8ddd-e1f87c15f19d"
+  ],
+  "mapping": "work",
+  "key": "widor-349f22c9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16918,
+  "title": "Fragments symphoniques des Pêcheurs de Saint-Jean",
+  "mbids": [
+   "37372b27-6198-4c93-88ec-8ef16f2b5da7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17074,
+  "title": "2 Duos, op. 30",
+  "mbids": [
+   "409774f6-5bf2-43e0-b8ce-5ea0393f3d16"
+  ],
+  "mapping": "work",
+  "key": "widor-409774f6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17173,
+  "title": "Trois mélodies italiennes, op. 32",
+  "mbids": [
+   "4642e862-1721-40ec-9a18-c987165b18d6"
+  ],
+  "mapping": "work",
+  "key": "widor-4642e862",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17258,
+  "title": "2 Duos, op. 52",
+  "mbids": [
+   "4b5a87e5-9b15-4e16-bead-cba7f9eae9b9"
+  ],
+  "mapping": "work",
+  "key": "widor-4b5a87e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17389,
+  "title": "Psalm 83, op. 23 no. 1",
+  "mbids": [
+   "54094645-7d0d-42b0-a837-7cc10cacb956"
+  ],
+  "mapping": "work",
+  "key": "widor-54094645",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17411,
+  "title": "Scherzo in E major \"La Chasse\"",
+  "mbids": [
+   "5527c064-c0c7-4cf6-95ff-64170fbdecb5"
+  ],
+  "mapping": "work",
+  "key": "widor-5527c064",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17471,
+  "title": "Symphonie pour orgue nº 10 en re majeur, op. 73 \"Symphonie romane\"",
+  "mbids": [
+   "589a9b99-a431-4f12-8890-053065498c63"
+  ],
+  "mapping": "work",
+  "key": "widor-589a9b99",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17542,
+  "title": "Organ Symphony no. 1 in C minor, op. 13 no. 1: II. Allegro",
+  "mbids": [
+   "5d1a4430-4e6d-473a-841e-e238f2141840"
+  ],
+  "mapping": "work",
+  "key": "widor-5d1a4430",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17639,
+  "title": "La Nuit de Walpurgis, op. 60",
+  "mbids": [
+   "63185f0b-8d48-418a-8e87-20c73da29205"
+  ],
+  "mapping": "work",
+  "key": "widor-63185f0b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17681,
+  "title": "Violin Sonata no. 1, op. 50",
+  "mbids": [
+   "65eb0a7c-c598-4087-aa61-de4a19a30d1f"
+  ],
+  "mapping": "work",
+  "key": "widor-65eb0a7c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17712,
+  "title": "Dormez, Mèlité…",
+  "mbids": [
+   "67ac55cf-c38c-42b2-925f-97f5eb7a4ff9"
+  ],
+  "mapping": "work",
+  "key": "widor-67ac55cf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17752,
+  "title": "Gyropod (Tune 3)",
+  "mbids": [
+   "69a0fe29-3caa-4be2-9565-0249d8c00427"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17763,
+  "title": "Piano Concerto no. 1 in F minor, op. 39",
+  "mbids": [
+   "6a42546d-5d1b-47f4-8de9-5bff1bbace88"
+  ],
+  "mapping": "work",
+  "key": "widor-6a42546d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17835,
+  "title": "3 Pièces, op. 21",
+  "mbids": [
+   "6eb337af-8929-40e6-9aca-3ac0d6e82c3d"
+  ],
+  "mapping": "work",
+  "key": "widor-6eb337af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18099,
+  "title": "Allegro vivace in F major",
+  "mbids": [
+   "7ec1cbd9-485e-412a-963a-539fa44c39b8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18349,
+  "title": "Surrexit a mortuis, op. 23 no. 3",
+  "mbids": [
+   "8faf6b88-fcdd-490b-815c-6daae1fead38"
+  ],
+  "mapping": "work",
+  "key": "widor-8faf6b88",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18454,
+  "title": "Quatre Pièces en trio",
+  "mbids": [
+   "95ba1b76-5cfa-4082-b2d0-7cdc295b1b45"
+  ],
+  "mapping": "work",
+  "key": "widor-95ba1b76",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18485,
+  "title": "Fantaisie in A-flat major, op. 62",
+  "mbids": [
+   "97a0f960-71b6-486c-94fc-feb4d935df7a"
+  ],
+  "mapping": "work",
+  "key": "widor-97a0f960",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18529,
+  "title": "Piano Quintet in D minor for Piano and Strings, op. 7",
+  "mbids": [
+   "9a6b94aa-6c80-4880-85cb-a85d8106ae17"
+  ],
+  "mapping": "work",
+  "key": "widor-9a6b94aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18547,
+  "title": "Les Pêcheurs de Saint-Jean",
+  "mbids": [
+   "9b998f49-af54-49dd-867a-abf3ed1b91c4"
+  ],
+  "mapping": "work",
+  "key": "widor-9b998f49",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18643,
+  "title": "Piano Trio in B-flat major for Piano, Violin and Cello, op. 19",
+  "mbids": [
+   "a1fa18eb-0a64-418d-8838-67ef38dd38cb"
+  ],
+  "mapping": "work",
+  "key": "widor-a1fa18eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18758,
+  "title": "2 Duos, op. 40",
+  "mbids": [
+   "a8fa5f61-60c9-4ded-a5c9-9867f913a4ed"
+  ],
+  "mapping": "work",
+  "key": "widor-a8fa5f61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18817,
+  "title": "Six valses caractéristiques",
+  "mbids": [
+   "acec098c-52ee-419b-b205-73f51f19132c"
+  ],
+  "mapping": "work",
+  "key": "widor-acec098c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18894,
+  "title": "Trois pièces",
+  "mbids": [
+   "b1fdcedc-b83d-46f2-8142-47af8bd15d98"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18902,
+  "title": "Air en style ancien",
+  "mbids": [
+   "b2757542-9853-491c-a822-d3818f35da22"
+  ],
+  "mapping": "work",
+  "key": "widor-b2757542",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18960,
+  "title": "Messe à deux chœurs et deux orgues, op. 36",
+  "mbids": [
+   "b601e2b7-00f9-4162-a33c-f5cd927664a0"
+  ],
+  "mapping": "work",
+  "key": "widor-b601e2b7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19037,
+  "title": "Tristesse infinie",
+  "mbids": [
+   "bb9b1a90-bbf2-463b-bb0d-9bcbc3e6f3ab"
+  ],
+  "mapping": "work",
+  "key": "widor-bb9b1a90",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19119,
+  "title": "Oublieras-tu que d’heures douces",
+  "mbids": [
+   "c04fa3aa-c978-4417-9a91-90a3bc4921da"
+  ],
+  "mapping": "work",
+  "key": "widor-c04fa3aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19215,
+  "title": "Soirs d'Alsace, op. 52",
+  "mbids": [
+   "c612845b-54cb-44d1-8e4c-f5fa17540b2c"
+  ],
+  "mapping": "work",
+  "key": "widor-c612845b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19455,
+  "title": "Organ Symphony no. 2 in D major, op. 13 no. 2: I. Prélude",
+  "mbids": [
+   "d5ffceff-1b96-4105-bda4-5398370e3eef"
+  ],
+  "mapping": "work",
+  "key": "widor-d5ffceff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19475,
+  "title": "Cello Sonata in A major, op. 80",
+  "mbids": [
+   "d77f427b-5aee-4eaa-b621-5ca0c7f18e4f"
+  ],
+  "mapping": "work",
+  "key": "widor-d77f427b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19670,
+  "title": "Marche nuptiale (Conte d'avril)",
+  "mbids": [
+   "e4d45fd1-7884-4fb6-b0d3-11c8a9dee83f"
+  ],
+  "mapping": "work",
+  "key": "widor-e4d45fd1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19713,
+  "title": "Symphony no. 1, op. 16",
+  "mbids": [
+   "e8ae8f2a-eeb4-43d5-9d7e-730c6bbc0358"
+  ],
+  "mapping": "work",
+  "key": "widor-e8ae8f2a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19736,
+  "title": "Conte d'avril, op. 64",
+  "mbids": [
+   "ea37c57d-cc93-4bec-8471-81d15f18abaa"
+  ],
+  "mapping": "work",
+  "key": "widor-ea37c57d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19791,
+  "title": "Chansons de mer, op. 75",
+  "mbids": [
+   "ee1e28f0-3461-4d18-8dd0-cd55bd7ac75a"
+  ],
+  "mapping": "work",
+  "key": "widor-ee1e28f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19838,
+  "title": "Sinfonia sacra, op. 81",
+  "mbids": [
+   "f0ccdb0d-f938-4297-a7b2-6cc3878bd449"
+  ],
+  "mapping": "work",
+  "key": "widor-f0ccdb0d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19868,
+  "title": "Symphony no. 3 for Organ and Orchestra, op. 69",
+  "mbids": [
+   "f2afd6c8-78bf-4577-841f-ad440e085b6d"
+  ],
+  "mapping": "work",
+  "key": "widor-f2afd6c8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19895,
+  "title": "Tu es Petrus, op. 23 no. 2",
+  "mbids": [
+   "f41762ae-13b7-4d56-94ef-cc07c2f4bb70"
+  ],
+  "mapping": "work",
+  "key": "widor-f41762ae",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

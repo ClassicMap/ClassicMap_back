@@ -1,0 +1,722 @@
+[
+ {
+  "pieceId": 23238,
+  "title": "Maracatu de Chico Rei",
+  "mbids": [
+   "04d0af4a-36ba-412a-a80f-d4fa7563c1d0"
+  ],
+  "mapping": "work",
+  "key": "mignone-04d0af4a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23318,
+  "title": "Brazilian Song",
+  "mbids": [
+   "0c1ecf6f-c32a-4f7c-a182-6073a7c6b3d5"
+  ],
+  "mapping": "work",
+  "key": "mignone-0c1ecf6f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23432,
+  "title": "Sinfonia Tropical",
+  "mbids": [
+   "15798472-3354-45bb-a2e9-55f4fa1aa646"
+  ],
+  "mapping": "work",
+  "key": "mignone-15798472",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23489,
+  "title": "Valsa chôro no. 2",
+  "mbids": [
+   "19586fdc-754f-413f-bf57-d70c25f5327c"
+  ],
+  "mapping": "work",
+  "key": "mignone-19586fdc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23650,
+  "title": "Valsa chôro no. 1",
+  "mbids": [
+   "27ee3d3d-913e-4cd9-820c-cbcbe4f6f751"
+  ],
+  "mapping": "work",
+  "key": "mignone-27ee3d3d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23652,
+  "title": "Valsa de esquina no. 11",
+  "mbids": [
+   "283f0efd-1f92-466d-8c77-ecc79b1a7cf6"
+  ],
+  "mapping": "work",
+  "key": "mignone-283f0efd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23748,
+  "title": "Valsa de esquina no. 9",
+  "mbids": [
+   "335a3d38-9e48-4fb9-8387-e504f56aec80"
+  ],
+  "mapping": "work",
+  "key": "mignone-335a3d38",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24083,
+  "title": "Festa das igrejas",
+  "mbids": [
+   "53868312-401c-45fd-b692-076105d63b61"
+  ],
+  "mapping": "work",
+  "key": "mignone-53868312",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24089,
+  "title": "Valsa de esquina",
+  "mbids": [
+   "540a8373-8982-4f31-ace5-9f11491abc08"
+  ],
+  "mapping": "work",
+  "key": "mignone-540a8373",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24091,
+  "title": "Valsa de esquina no. 6",
+  "mbids": [
+   "54647edf-7cd8-4814-9e21-8c4c502de6cd"
+  ],
+  "mapping": "work",
+  "key": "mignone-54647edf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24151,
+  "title": "Burlesca e Toccata",
+  "mbids": [
+   "599238be-0f59-49bd-867b-a162f70e360e"
+  ],
+  "mapping": "work",
+  "key": "mignone-599238be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24153,
+  "title": "Valsa chôro no. 9",
+  "mbids": [
+   "59ab6a46-6902-4a84-b54f-1d097209d6be"
+  ],
+  "mapping": "work",
+  "key": "mignone-59ab6a46",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24276,
+  "title": "Guitar Concerto",
+  "mbids": [
+   "65b4bedc-1eb3-4513-ac30-b4e570a6943b"
+  ],
+  "mapping": "work",
+  "key": "mignone-65b4bedc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24314,
+  "title": "Valsa de esquina no. 5",
+  "mbids": [
+   "6979c8da-96df-4e58-8e20-ed746bedb66f"
+  ],
+  "mapping": "work",
+  "key": "mignone-6979c8da",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24370,
+  "title": "Valsa chôro no. 10",
+  "mbids": [
+   "6dc22e4b-a9b5-43e0-aec5-bf6a1fdaa1e5"
+  ],
+  "mapping": "work",
+  "key": "mignone-6dc22e4b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24498,
+  "title": "Valsa de esquina no. 7",
+  "mbids": [
+   "786e3335-a0e0-4ba2-af40-f29a030f1a5d"
+  ],
+  "mapping": "work",
+  "key": "mignone-786e3335",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24509,
+  "title": "Valsa de esquina no. 12",
+  "mbids": [
+   "793b3f42-d0e2-4821-a5e7-a3847a322cbe"
+  ],
+  "mapping": "work",
+  "key": "mignone-793b3f42",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24519,
+  "title": "Valsa de esquina no. 1",
+  "mbids": [
+   "79eb2168-c761-4368-abd5-b7d33852186e"
+  ],
+  "mapping": "work",
+  "key": "mignone-79eb2168",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24542,
+  "title": "Valsa de esquina no. 10",
+  "mbids": [
+   "7c4d9ab0-ce1f-4c9c-8937-3609270545c1"
+  ],
+  "mapping": "work",
+  "key": "mignone-7c4d9ab0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24733,
+  "title": "Valsa chôro no. 12",
+  "mbids": [
+   "8d74e791-8a10-4816-a2e1-0202e809ac9a"
+  ],
+  "mapping": "work",
+  "key": "mignone-8d74e791",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24917,
+  "title": "Valsa de esquina no. 8",
+  "mbids": [
+   "9d514db9-c217-4650-a6c4-89d707e77d3a"
+  ],
+  "mapping": "work",
+  "key": "mignone-9d514db9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25016,
+  "title": "Valsa chôro no. 11",
+  "mbids": [
+   "a48ba3cd-f127-446f-88b9-273ec4708a88"
+  ],
+  "mapping": "work",
+  "key": "mignone-a48ba3cd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25214,
+  "title": "Valsa chôro no. 3",
+  "mbids": [
+   "b8be40a4-27a5-4de7-871e-d2c5c1b90b07"
+  ],
+  "mapping": "work",
+  "key": "mignone-b8be40a4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25232,
+  "title": "Valsa chôro no. 8",
+  "mbids": [
+   "b9d270ce-015f-4613-8ca6-b3b9eee5dd81"
+  ],
+  "mapping": "work",
+  "key": "mignone-b9d270ce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25328,
+  "title": "Valsa de esquina no. 4",
+  "mbids": [
+   "c392e57b-ac39-4266-bd19-fdd9c5f51f48"
+  ],
+  "mapping": "work",
+  "key": "mignone-c392e57b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25511,
+  "title": "Valsa chôro no. 4",
+  "mbids": [
+   "d5800269-db66-4122-b353-fdd681fe65de"
+  ],
+  "mapping": "work",
+  "key": "mignone-d5800269",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25572,
+  "title": "Valsa chôro no. 6",
+  "mbids": [
+   "d9f45525-64c0-4c6e-91b5-83671b54ecb5"
+  ],
+  "mapping": "work",
+  "key": "mignone-d9f45525",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25592,
+  "title": "Choro",
+  "mbids": [
+   "dbbcb03a-6c5a-40d3-9349-db328aba4257"
+  ],
+  "mapping": "work",
+  "key": "mignone-dbbcb03a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25716,
+  "title": "Valsa chôro no. 5",
+  "mbids": [
+   "e68b8c7e-f42e-47d7-af92-c72fbbb08de5"
+  ],
+  "mapping": "work",
+  "key": "mignone-e68b8c7e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25899,
+  "title": "Valsa de esquina no. 2",
+  "mbids": [
+   "f69aeae3-175b-3b5f-b9d7-34caa8f38c68"
+  ],
+  "mapping": "work",
+  "key": "mignone-f69aeae3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25920,
+  "title": "Valsa chôro no. 7",
+  "mbids": [
+   "f86156ad-cbd3-4d44-8116-6d9075d81a6c"
+  ],
+  "mapping": "work",
+  "key": "mignone-f86156ad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25928,
+  "title": "Valsa de esquina no. 3",
+  "mbids": [
+   "f94895f3-a34b-4079-a47c-2cf1e5bcc9fe"
+  ],
+  "mapping": "work",
+  "key": "mignone-f94895f3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25998,
+  "title": "Modinha",
+  "mbids": [
+   "fe8b6aa8-0ec7-42f9-bcb0-9b1acc7c662f"
+  ],
+  "mapping": "work",
+  "key": "mignone-fe8b6aa8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23525,
+  "title": "Momento musical",
+  "mbids": [
+   "1cb19755-05b1-4817-9641-6787748c5812"
+  ],
+  "mapping": "work",
+  "key": "mignone-1cb19755",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23531,
+  "title": "Sonata para violino n.º 3",
+  "mbids": [
+   "1d3e2346-343c-448f-a57c-a8141351653f"
+  ],
+  "mapping": "work",
+  "key": "mignone-1d3e2346",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23537,
+  "title": "Sonata para violino n.º 1",
+  "mbids": [
+   "1db86050-b9b0-48cb-a8e7-5555b8249ae0"
+  ],
+  "mapping": "work",
+  "key": "mignone-1db86050",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23550,
+  "title": "Concertino for clarinet & orchestra",
+  "mbids": [
+   "1ed61c19-86c0-4694-8633-240f1db323d5"
+  ],
+  "mapping": "work",
+  "key": "mignone-1ed61c19",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23565,
+  "title": "Fantasia Brasileira nº 2",
+  "mbids": [
+   "208a9b86-7e52-4076-b00d-7995c9d55e45"
+  ],
+  "mapping": "work",
+  "key": "mignone-208a9b86",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23822,
+  "title": "Sonata para violino em sol maior",
+  "mbids": [
+   "39a71795-9e5c-4f6a-b6bb-cbb00ad5664a"
+  ],
+  "mapping": "work",
+  "key": "mignone-39a71795",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23861,
+  "title": "2 Essays",
+  "mbids": [
+   "3d412e93-7513-4ca8-8f56-643f9e0dc61d"
+  ],
+  "mapping": "work",
+  "key": "mignone-3d412e93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23907,
+  "title": "Sonata para violino em lá maior",
+  "mbids": [
+   "428555ca-2f75-46af-83fa-e29af6a5f38e"
+  ],
+  "mapping": "work",
+  "key": "mignone-428555ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23919,
+  "title": "Caixinha de Brinquedos",
+  "mbids": [
+   "434bc4bd-3a09-4f2b-ab1e-797432f4501d"
+  ],
+  "mapping": "work",
+  "key": "mignone-434bc4bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23995,
+  "title": "Romanza for Violin and Piano",
+  "mbids": [
+   "4a9aea4b-eb3a-46df-9837-451e57bf1d63"
+  ],
+  "mapping": "work",
+  "key": "mignone-4a9aea4b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23998,
+  "title": "O Contratador de Diamantes: Minueto",
+  "mbids": [
+   "4ad484b2-c944-461a-89fc-2e61708bb17b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24018,
+  "title": "Valse Elegante",
+  "mbids": [
+   "4d90b247-3b18-4e30-9eae-021f04f420b5"
+  ],
+  "mapping": "work",
+  "key": "mignone-4d90b247",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24054,
+  "title": "Repinicando",
+  "mbids": [
+   "50b0af10-1f82-42a9-b5e7-0feaf1d6d954"
+  ],
+  "mapping": "work",
+  "key": "mignone-50b0af10",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24138,
+  "title": "Dona Janaína",
+  "mbids": [
+   "58796b8a-7050-47ca-9ef4-967438d5666f"
+  ],
+  "mapping": "work",
+  "key": "mignone-58796b8a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24222,
+  "title": "Marvadinho",
+  "mbids": [
+   "5fe286e4-5c3f-4757-b5b9-5ba25d27279e"
+  ],
+  "mapping": "work",
+  "key": "mignone-5fe286e4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24393,
+  "title": "Fantasia Brasileira nº 1",
+  "mbids": [
+   "6fcf6eef-ec40-4a43-a96b-80191b0fdf4a"
+  ],
+  "mapping": "work",
+  "key": "mignone-6fcf6eef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24555,
+  "title": "3 Spanish Songs",
+  "mbids": [
+   "7d5cb245-376d-4565-a3f2-6318e6e22d8a"
+  ],
+  "mapping": "work",
+  "key": "mignone-7d5cb245",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24656,
+  "title": "Concertino for bassoon & orchestra",
+  "mbids": [
+   "85bf181b-c492-40ea-baef-3ad61a4d4129"
+  ],
+  "mapping": "work",
+  "key": "mignone-85bf181b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24694,
+  "title": "Fantasia Brasileira nº 4",
+  "mbids": [
+   "89cffa08-e7b8-45bd-a660-ea6a560be166"
+  ],
+  "mapping": "work",
+  "key": "mignone-89cffa08",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25310,
+  "title": "Sonata para violino n.º 2",
+  "mbids": [
+   "c189dff2-5202-4f05-9a03-79ae7fbbc53a"
+  ],
+  "mapping": "work",
+  "key": "mignone-c189dff2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25394,
+  "title": "Danca do Botocudo",
+  "mbids": [
+   "c9e8f8db-9f15-452f-b124-4c59315e813e"
+  ],
+  "mapping": "work",
+  "key": "mignone-c9e8f8db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25504,
+  "title": "Quatro Peças Para Pequena Orquestra de Câmara",
+  "mbids": [
+   "d4cced80-385f-4431-af0e-d112ebc9ee67"
+  ],
+  "mapping": "work",
+  "key": "mignone-d4cced80",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25744,
+  "title": "Fantasia Brasileira nº 3",
+  "mbids": [
+   "e8c1bd67-b117-4a74-9c5d-4c0e89d8fb83"
+  ],
+  "mapping": "work",
+  "key": "mignone-e8c1bd67",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25801,
+  "title": "Quatro Pecas Brasileiras",
+  "mbids": [
+   "ee5fd0f7-5de1-43d2-98ce-8b22f42c1000"
+  ],
+  "mapping": "work",
+  "key": "mignone-ee5fd0f7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25914,
+  "title": "Seresta no. 2",
+  "mbids": [
+   "f7d91b88-df40-41c6-a5df-7ac256d58bd8"
+  ],
+  "mapping": "work",
+  "key": "mignone-f7d91b88",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25973,
+  "title": "Minueto‐Fantasia",
+  "mbids": [
+   "fd4033b9-b73d-4cd8-80dd-7fcccbbf4522"
+  ],
+  "mapping": "work",
+  "key": "mignone-fd4033b9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25980,
+  "title": "Cateretê",
+  "mbids": [
+   "fda296a4-0211-41d3-95e5-297cc35f8839"
+  ],
+  "mapping": "work",
+  "key": "mignone-fda296a4",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

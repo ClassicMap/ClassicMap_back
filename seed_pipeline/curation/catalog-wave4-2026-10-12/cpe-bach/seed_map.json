@@ -1,0 +1,4244 @@
+[
+ {
+  "pieceId": 12014,
+  "title": "6 Symphonies, Wq. 182",
+  "mbids": [
+   "078eed8c-e7d1-4c61-9b6a-d8c7c7ee05cb"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-078eed8c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12065,
+  "title": "Die Israeliten in der Wüste",
+  "mbids": [
+   "aca935fa-020e-4065-9e7d-bc90f0e3fd1d"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-aca935fa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12085,
+  "title": "Violin Sonata in B minor, Wq. 76, H. 512",
+  "mbids": [
+   "ce6e1393-895e-4f6b-aead-9b422a0cf365"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12125,
+  "title": "Magnificat, Wq. 215, H. 772",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 12139,
+  "title": "Oboe Sonata in G minor, Wq. 135, H. 549",
+  "mbids": [
+   "033b8752-0d98-42a0-9029-e5587d70c616"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-033b8752",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12155,
+  "title": "Sinfonia in B-flat major",
+  "mbids": [
+   "06b491bf-2427-4648-b5c8-43ffe1c9f759"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-06b491bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12169,
+  "title": "Cello Concerto in B-flat major, Wq. 171, H. 436",
+  "mbids": [
+   "08c0d637-90d4-4943-9090-9c874f552ded"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12299,
+  "title": "Geistliche Oden und Lieder mit Melodien, Wq. 194, H. 686",
+  "mbids": [
+   "1ae0ec0e-1f7b-4ea3-8f4e-cfa1d73be819"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-1ae0ec0e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12331,
+  "title": "4 Symphonies, Wq. 183 \"Hamburger Sinfonien\"",
+  "mbids": [
+   "20e0921c-f578-4b68-8006-d6716743c127"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-20e0921c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12445,
+  "title": "6 Harpsichord Concertos, Wq. 43: no. 3 in E-flat major (H. 473)",
+  "mbids": [
+   "33550eb2-c0dc-4612-84c8-c93226cdde1f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12543,
+  "title": "6 Harpsichord Concertos, Wq. 43: no. 2 in D major (H. 472)",
+  "mbids": [
+   "42669dcb-65a6-4a5b-8c0c-b320f2aa6ae4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12768,
+  "title": "6 harpsichord concerti, Wq. 43",
+  "mbids": [
+   "695ba309-66fc-4cc0-a295-8ff9899c8350"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-695ba309",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12798,
+  "title": "Oboe Concerto in E-flat major, Wq. 165, H. 468",
+  "mbids": [
+   "6d163ea8-7da5-4e3f-89f2-cfd73b8ff0b2"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-6d163ea8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12825,
+  "title": "Concerto in D minor, Wq. 23, H 427",
+  "mbids": [
+   "70ad6b11-da59-48de-b93d-1672b75759e1"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-70ad6b11",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13324,
+  "title": "Flute Concerto in A major, Wq. 168, H. 438",
+  "mbids": [
+   "bde80863-a195-406e-9654-304fec2a8b94"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13338,
+  "title": "Die letzten Leiden des Erlösers",
+  "mbids": [
+   "bf787762-e783-4cd4-8cda-7ef3eef77d79"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-bf787762",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13539,
+  "title": "Solfeggietto",
+  "mbids": [
+   "e30700d4-8e7c-39f3-b880-583b66334845"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13697,
+  "title": "Flute Concerto in D minor, H. 484.1",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 13722,
+  "title": "Sonata in G minor, H. 542.5",
+  "mbids": [
+   "03770728-8b70-4648-a290-c11276a7203c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12018,
+  "title": "Sonatine für zwei Cembali und Orchester D-Dur, Wq. 109, H. 543",
+  "mbids": [
+   "0aab084d-b4cd-4bbd-9e5b-c5711c6576be"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-0aab084d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12029,
+  "title": "Ich ruf zu dir, Herr Jesu Christ",
+  "mbids": [
+   "354c18f2-af61-4ddc-881d-58b679f7437f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12031,
+  "title": "Keyboard Concerto in E major, Wq. 14, H. 417",
+  "mbids": [
+   "38a64e10-4de3-44c2-aec0-bce1ed6880a4"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-38a64e10",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12039,
+  "title": "Cello Concerto in A major, Wq. 172, H. 439",
+  "mbids": [
+   "501f5f8d-353c-491a-b011-baaac4741e39"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12050,
+  "title": "Sonata for Flute and b.c. in G major, Wq. 133, H. 564 \"Hamburg Sonata\"",
+  "mbids": [
+   "73e73a0b-7e61-4b13-a7ed-be367942d819"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-73e73a0b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12057,
+  "title": "Quartet no. 1 in A minor, Wq. 93, H. 537",
+  "mbids": [
+   "88e7c1ed-f176-4fa8-8575-9e4e1671a415"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-88e7c1ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12076,
+  "title": "Trio Sonata in F major, Wq 163, H. 588",
+  "mbids": [
+   "ba75e2dd-6427-4ef3-8756-680e81e94277"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12081,
+  "title": "Marche in G major, BWV Anh. 124, H. 1/3",
+  "mbids": [
+   "c1d6c1a6-2fdf-3a0b-9acc-14ab00fbe743"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-c1d6c1a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12088,
+  "title": "Konzert für Cembalo, Klavier und Orchester in Es-Dur, Wq 47, H 479",
+  "mbids": [
+   "d094ca66-b920-41a5-951c-d29ba0c78d4b"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-d094ca66",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12094,
+  "title": "Polonaise in G minor, BWV Anh. 125, H. 1/4",
+  "mbids": [
+   "e89ae717-eef9-3628-82d8-a69b44b0eae8"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e89ae717",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12109,
+  "title": "Bonfire",
+  "mbids": [
+   "ac5c9010-1b99-447e-8507-c5336d23dd46"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-ac5c9010",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12119,
+  "title": "Sonata in B-flat major, Wq. 50 no. 5, H 126",
+  "mbids": [
+   "0093fac6-08a5-4536-bf02-27946ff545b9"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-0093fac6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12126,
+  "title": "Fantasia in E-flat major, Wq. deest., H 348",
+  "mbids": [
+   "01248af2-8e0c-4978-a061-2e93013ac5fb"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-01248af2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12127,
+  "title": "Keyboard Concerto in C minor, Wq. 31, H. 441",
+  "mbids": [
+   "01425c7f-3c8e-42b4-9245-4b064930e7a7"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-01425c7f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12144,
+  "title": "Allegro in D major, H. 255",
+  "mbids": [
+   "0485dbb0-5736-4bac-bc3a-40ba023f67e0"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-0485dbb0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12149,
+  "title": "Concerto in Es-Dur: III. Allegro ma non troppo (arranged for trumpet)",
+  "mbids": [
+   "05aaabc2-8c75-35a7-b83f-170b3c2ad6b3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12154,
+  "title": "Concerto in D major, Wq. 45, H. 478",
+  "mbids": [
+   "0673bc0b-bf4e-4935-88ab-c7aa47a9f3e4"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-0673bc0b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12158,
+  "title": "Concerto in D minor, Wq. 17, H. 420",
+  "mbids": [
+   "0763e374-17bf-4d19-b4c6-774e95bdddaf"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-0763e374",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12160,
+  "title": "Sonata in G major, Wq. 50 no. 2, H 137",
+  "mbids": [
+   "07be524e-2691-48f8-8963-3487c05fe27b"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-07be524e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12162,
+  "title": "Concerto in A major, Wq. 8, H. 411",
+  "mbids": [
+   "07fe5035-5837-4dde-a3d5-c234fac4743a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-07fe5035",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12172,
+  "title": "Fantasia in D major, Wq 117 no. 14, H 160",
+  "mbids": [
+   "090ef217-d79d-43d3-a17d-ba7a7f7f0a40"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-090ef217",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12179,
+  "title": "Menuet I & II in D major, Wq 116 no. 3, H 214",
+  "mbids": [
+   "099fbcd7-f3ff-40e4-8ac7-f815092dc7df"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-099fbcd7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12183,
+  "title": "6 Keyboard Trios, Wq. 89",
+  "mbids": [
+   "0a29d59b-c495-4471-9181-36f1702b900f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-0a29d59b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12186,
+  "title": "Concerto in F major, Wq 46, H 408",
+  "mbids": [
+   "0b37d22c-bfdf-4507-8416-9cbea0f68980"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-0b37d22c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12187,
+  "title": "Violin Sonata in D major, Wq. 74, H. 507",
+  "mbids": [
+   "0b77a068-06c0-4071-b589-3cc74efaba43"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-0b77a068",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12198,
+  "title": "Keyboard Concerto in A major, Wq. 19, H. 422",
+  "mbids": [
+   "0d65a9ec-c8b3-44f8-8ca1-3c7eb32eac1d"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-0d65a9ec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12203,
+  "title": "L´Aly Rupalich, Wq. 117 no. 27, H 95",
+  "mbids": [
+   "0db62821-419a-4aa1-ba17-9aecde3e422a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-0db62821",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12204,
+  "title": "Sonata no. 3 in A major, Wq. 56/6 (H. 270): Ia. Allegretto",
+  "mbids": [
+   "0e070304-59a0-4bfa-9400-50c3ce3142fa"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 12228,
+  "title": "Siciliana",
+  "mbids": [
+   "10cb2dea-831d-393a-9f66-cb27a61719bb"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-10cb2dea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12229,
+  "title": "Trio Sonata in B-flat major, Wq. 158, H. 584",
+  "mbids": [
+   "10dc9dd4-5513-4f56-8f63-b484be0a1c52"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-10dc9dd4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12237,
+  "title": "Sonata in A minor, Wq. 53 no. 3, H. 181",
+  "mbids": [
+   "11cf605b-781c-4557-a4c8-c762b2a001b5"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-11cf605b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12240,
+  "title": "Menuet in F major, Wq. 116 no. 7, H 218",
+  "mbids": [
+   "123636f6-c0a4-4dd2-8af4-36d2e65b5a2e"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-123636f6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12243,
+  "title": "Romance avec 12 Variations in G major, Wq. 118 no. 6, H 226",
+  "mbids": [
+   "1298d943-10b2-4a32-950b-fdffb2acde99"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-1298d943",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12251,
+  "title": "March in D, H. 614, Wq. 185 no.1",
+  "mbids": [
+   "13c787d7-e77f-4e50-a1e4-2fc66b896c2f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-13c787d7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12253,
+  "title": "Sonatina in E-flat major, Wq. 105, H 464",
+  "mbids": [
+   "13f1dc1a-0063-403a-b0c1-e54ad65ff25c"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-13f1dc1a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12256,
+  "title": "Duet for Flute and Violin in E minor, H. 598, Wq. 140",
+  "mbids": [
+   "144687a5-2791-4f7e-9bb8-15d27bd2a0cd"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-144687a5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12262,
+  "title": "Clavier-Sonaten nebst einigen Rondos fürs Forte-Piano für Kenner und Liebhaber, Zweite Sammlung, Wq. 56",
+  "mbids": [
+   "159c3b07-ed0c-4006-a1a9-af2cc53d53c6"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-159c3b07",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12266,
+  "title": "Harpsichord Concerto in E-flat major, Wq. 41, H. 469",
+  "mbids": [
+   "15ec699f-c116-46b7-97e3-7061eecbd9e2"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-15ec699f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12274,
+  "title": "March",
+  "mbids": [
+   "172e6c54-ca95-444b-aeb1-31f89717e928"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-172e6c54",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12275,
+  "title": "La Louise, Wq. 117 no. 36, H 114",
+  "mbids": [
+   "17389731-7ef1-4c71-b309-bc83356c071f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-17389731",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12287,
+  "title": "Petites Pièces",
+  "mbids": [
+   "186638ab-04d8-4fae-bcd3-3a4d5cc032e1"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-186638ab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12290,
+  "title": "Allegro in F major, H. 256",
+  "mbids": [
+   "18cf9943-1ad3-4062-945a-3527621f1c34"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-18cf9943",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12298,
+  "title": "Sonata for Flute and Basso Continuo in G major, Wq. 134, H. 548",
+  "mbids": [
+   "1ac87fa9-b12e-49ce-a445-d214dfd049e3"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-1ac87fa9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12302,
+  "title": "Flute Sonata in D major, H. 505, Wq. 83",
+  "mbids": [
+   "1b36b5c2-6677-4520-8a52-608317c67245"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-1b36b5c2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12306,
+  "title": "Harpsichord Concerto in C minor, Wq. 37, H. 448",
+  "mbids": [
+   "1b8c8bc8-268a-44d9-8245-79fa304e79e9"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-1b8c8bc8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12308,
+  "title": "Heilig ist Gott, Wq. 217, H. 778",
+  "mbids": [
+   "1bdeb1c5-45ef-48dd-9a80-8b67dfb599ad"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-1bdeb1c5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12315,
+  "title": "Trio Sonata for Flute, Violin and Continuo in G major, H. 568, Wq. 144",
+  "mbids": [
+   "1ca978a0-c0ec-483b-bb26-996504aa4792"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-1ca978a0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12321,
+  "title": "Clavier-Sonaten nebst einigen Rondos fürs Fortepiano für Kenner und Liebhaber, Dritte Samlung, Wq. 57",
+  "mbids": [
+   "1e3fc549-4d47-4b83-8122-46ed4b2a3f4b"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-1e3fc549",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12323,
+  "title": "Trio Sonata in A minor, Wq. 148, H. 572",
+  "mbids": [
+   "1ee8e70d-7ae2-440d-8550-42ec49a304c3"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-1ee8e70d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12324,
+  "title": "Alla Polacca in D major, Wq. 112 no. 17, H. 170",
+  "mbids": [
+   "1ef3cc74-f5d9-4cb8-92a6-d541148a9dd5"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-1ef3cc74",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12330,
+  "title": "Sonata in G major, H. 509, Wq. 86",
+  "mbids": [
+   "205bd572-463f-4754-9197-3cf53fc3ef7e"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-205bd572",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12337,
+  "title": "Duetto in E minor, Wq. 140, H. 598",
+  "mbids": [
+   "21fa61c2-42e3-4f81-b0f0-3ea1e776cab8"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-21fa61c2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12351,
+  "title": "Minuetto I & II in D major, Wq. 112 no. 9, H. 165",
+  "mbids": [
+   "23670bf6-32e1-4dd0-b664-f267e218f082"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-23670bf6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12352,
+  "title": "Concerto in D major, Wq. 18, H. 421",
+  "mbids": [
+   "236ced9e-c853-405f-ad3b-318aca26aa72"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-236ced9e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12367,
+  "title": "4 Keyboard Pieces: Allegro in D major, Wq. 116 no. 56, H. 326",
+  "mbids": [
+   "2578a0c4-0dce-4a15-954b-77db201416ee"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 12374,
+  "title": "Violin Sonata in B-flat major, Wq. 77, H. 513",
+  "mbids": [
+   "268d5339-8eb0-430a-ab91-6c91b3649d14"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-268d5339",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12381,
+  "title": "Sonata in C, H.634, Wq.184/6",
+  "mbids": [
+   "27f26a5d-c873-4b4a-aff9-ee3528b4c294"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-27f26a5d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12393,
+  "title": "Solfeggio in G major, Wq. 112 no. 4, H. 145",
+  "mbids": [
+   "2a72e24f-81c7-46b0-bf78-13c069d14642"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-2a72e24f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12398,
+  "title": "Sonata in G minor, Wq. 62 no. 18, H. 118",
+  "mbids": [
+   "2b051d0e-3b51-44b2-b3a4-92a99d854e62"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-2b051d0e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12400,
+  "title": "Flute Concerto in B-flat major, Wq. 167, H. 435",
+  "mbids": [
+   "2b355928-9760-4ba4-82db-78838ce77f52"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12405,
+  "title": "Minuetto I & II in A major, Wq. 112 no. 16, H. 169",
+  "mbids": [
+   "2c04d555-fc6a-4573-aec4-dadbe21dc8dc"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-2c04d555",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12412,
+  "title": "Kurze und leichte Clavierstücke: Erste Sammlung, Wq. 113",
+  "mbids": [
+   "2c7d3037-7567-4d00-a1f8-f2135a342b9a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-2c7d3037",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12415,
+  "title": "Stücke für Spieluhren auch Drehorgeln, Wq. 193",
+  "mbids": [
+   "2d318e0a-174c-45f6-b54f-a3c7c419b777"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-2d318e0a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12418,
+  "title": "Symphony in E-flat major, Wq. 179, H. 654",
+  "mbids": [
+   "2d5e269e-1550-4072-a91e-4177090d6666"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-2d5e269e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12425,
+  "title": "L´Herrmann, Wq. 117 no. 23, H 92",
+  "mbids": [
+   "2eeaf5be-75a3-410f-b0ab-1e5b8faaa0cd"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-2eeaf5be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12428,
+  "title": "Fantasia in F major, Wq. 112 no. 15, H. 148",
+  "mbids": [
+   "2fa9c40d-556b-4a61-9e0c-5a5cfad1b599"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-2fa9c40d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12429,
+  "title": "Sturms geistliche Gesänge mit Melodien, Zweite Sammlung, Wq. 198, H. 752",
+  "mbids": [
+   "302bea93-1969-4d06-9fc5-cc85e6e2e049"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-302bea93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12433,
+  "title": "Sonata no. 6 in A major, Wq. 54 no. 6, H 207",
+  "mbids": [
+   "30c4b1da-e208-4901-9721-ac027cc21bd1"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-30c4b1da",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12436,
+  "title": "Sonata for Flute and Basso Continuo in D major, Wq. 129, H. 556",
+  "mbids": [
+   "3181000c-df54-4405-a1dc-d305dd736c0b"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-3181000c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12443,
+  "title": "Sonata no. 3 in D minor, Wq. 54 no. 3, H 184",
+  "mbids": [
+   "3303b672-15b5-41a8-8237-08903a5816dc"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-3303b672",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12444,
+  "title": "Violin Sonata in D major, Wq. 71, H. 502",
+  "mbids": [
+   "33206bcf-3a4d-42ca-a1ef-b562df4890cd"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-33206bcf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12448,
+  "title": "Rondo in C minor Wq.67",
+  "mbids": [
+   "339a6b73-4807-463f-a1f7-1263ef4f8771"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-339a6b73",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12451,
+  "title": "Alla Polacca in G minor, Wq. 112 no. 11, H. 168",
+  "mbids": [
+   "346d0787-b06b-47f9-9660-f208d5d111a1"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-346d0787",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12453,
+  "title": "Alla polacca in D major, Wq 116 no. 6, H 217",
+  "mbids": [
+   "34dd8bf7-5d7e-44f2-aabe-a02e8345bcc6"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-34dd8bf7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12457,
+  "title": "Duet for Clarinets in C major, Wq. 142, H. 636",
+  "mbids": [
+   "356f64d8-108b-4e5b-b47e-a7d7d9070cc4"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-356f64d8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12460,
+  "title": "La Gabriel, Wq. 117 no. 35, H 97",
+  "mbids": [
+   "35f8b016-0dff-4ef0-b884-9f4b3cbbdf7a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-35f8b016",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12476,
+  "title": "Concerto in G minor, Wq. 6, H. 409",
+  "mbids": [
+   "390b9711-273a-45aa-9e0d-9777bdac22d9"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-390b9711",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12480,
+  "title": "Concerto in Es-Dur: I. Allegro (arranged for trumpet)",
+  "mbids": [
+   "39f4b59b-fd8c-324f-9b1e-979c90a451ac"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12482,
+  "title": "Menuet I & II in C major, Wq 116 no. 15, H 159",
+  "mbids": [
+   "3a224e8f-6789-45a8-b4f1-d0e2d4ac4190"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-3a224e8f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12486,
+  "title": "Sonata in B-flat major, Wq. 53 no. 2, H. 180",
+  "mbids": [
+   "3a736981-f75a-4b32-8049-7129a2963db7"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-3a736981",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12487,
+  "title": "Concerto in B-flat major, Wq. 25, H. 429",
+  "mbids": [
+   "3a74441f-8c00-4bf7-85bb-132d0998c5c6"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-3a74441f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12502,
+  "title": "Sonata in F major, Wq. 65 no. 1, H. 3: II. Andante",
+  "mbids": [
+   "3caaa524-426e-4db1-965d-9cbbdac6d2e8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12510,
+  "title": "Violin Sonata in D minor, Wq. 72, H. 503",
+  "mbids": [
+   "3dfcde03-c9d9-4aa6-9700-065f88cfc908"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-3dfcde03",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12517,
+  "title": "Sonatina in C major, Wq. 101, H. 460",
+  "mbids": [
+   "3f09ccba-a386-46fe-b4ed-216ecffcb1e3"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-3f09ccba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12518,
+  "title": "Sonata in B-flat major, Wq. 62 no. 1, H. 2: III. Allegro assai",
+  "mbids": [
+   "3f193a2b-d895-41c1-90ac-ae737b16c8b5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12519,
+  "title": "Polonaise in G minor, BWV Anh. 123, H. 1/2",
+  "mbids": [
+   "3f2b9143-f6bc-3a9b-b0ad-5a357c17bd6d"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-3f2b9143",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12523,
+  "title": "Keyboard Concerto in D minor, Wq. 22, H. 425",
+  "mbids": [
+   "3f85bc43-d0ab-428e-afb2-f1bc4bf436a2"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-3f85bc43",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12525,
+  "title": "La Bergius, Wq. 117 no. 20, H.90",
+  "mbids": [
+   "3fe0f79a-d04e-4a7d-a4b7-4636b70a5c8a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-3fe0f79a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12533,
+  "title": "Fantasie in F-sharp minor, H 300, Wq. 67",
+  "mbids": [
+   "4158a0a6-19f7-48c0-b2c8-2ed183402f3e"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-4158a0a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12538,
+  "title": "Sinfonia in A minor for Two Violins and Basso Continuo, Wq. 156, H. 582",
+  "mbids": [
+   "4205c9d2-31a2-4c53-97c6-00a249bdd745"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-4205c9d2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12539,
+  "title": "Concerto in B-flat major, Wq. 164, H. 466",
+  "mbids": [
+   "4206a9aa-bd28-4b51-958e-e1fd87bdfc5b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12548,
+  "title": "Polonoise in G minor, Wq. 116 no. 22 , H 154",
+  "mbids": [
+   "43bc01a2-738b-4f2b-a8d4-e607b98bc4c2"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-43bc01a2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12555,
+  "title": "Concerto in E-flat major, Wq. 165, H. 468",
+  "mbids": [
+   "451ba726-a22e-422c-998e-9dc283701e1c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12556,
+  "title": "Trio Sonata in C major, Wq. 149, H. 573",
+  "mbids": [
+   "455241f8-51ee-462f-9b99-a1df92763a66"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12558,
+  "title": "Harpsichord Concerto in B minor, Wq. 30, H. 440",
+  "mbids": [
+   "45cbbe9a-4ba1-468e-abc6-f0c27117291b"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-45cbbe9a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12565,
+  "title": "La Philippine, Wq. 117 no. 34, H 96",
+  "mbids": [
+   "4702dcb3-bea4-4faf-8abd-8fd9912c31cf"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-4702dcb3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12568,
+  "title": "Sonatina in G major, Wq. 98, H. 451",
+  "mbids": [
+   "48264131-53a6-4b81-90ce-ef7dc19fc2f3"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-48264131",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12569,
+  "title": "Konzert für Cembalo, Streicher und Basso Continuo in F-Dur, Wq. 33, H. 443",
+  "mbids": [
+   "486427a2-cdc1-402e-a0d7-6ee38bcc0423"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-486427a2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12570,
+  "title": "Concerto in G major, Wq. 3, H. 405",
+  "mbids": [
+   "48b50f7d-e5ca-423a-bfd6-fe1a910c6c4a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-48b50f7d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12573,
+  "title": "Quartet no. 2 in D major, Wq. 94, H. 538",
+  "mbids": [
+   "4924723e-240d-4b25-a80f-7e35853ac4dd"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-4924723e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12581,
+  "title": "Sonata for Flute and Basso Continuo in A minor, Wq. 128, H. 555",
+  "mbids": [
+   "4a11124f-bdde-4069-8e08-fc4a854fb238"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-4a11124f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12584,
+  "title": "Clavier-Sonaten und freye Fantasien, nebst einigen Rondos fürs Fortepiano, für Kenner und Liebhaber, Vierte Sammlung, Wq. 58",
+  "mbids": [
+   "4a4d5ded-acc6-470e-acaa-3f3f395c73c4"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-4a4d5ded",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12585,
+  "title": "Les Folies d'Espagne",
+  "mbids": [
+   "4a62d7ca-1d8b-420d-a6bb-d4956670d8d5"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-4a62d7ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12589,
+  "title": "Symphony in E minor, Wq. 177, H. 652",
+  "mbids": [
+   "4b371913-6e8f-41ad-9ea7-24142149d1a4"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-4b371913",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12592,
+  "title": "L'Auguste, Wq. 117 no. 22, H 122",
+  "mbids": [
+   "4b6cedfe-5fec-39bf-94cf-d40ecf237ad6"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-4b6cedfe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12606,
+  "title": "Sonata in D minor, Wq 62 no. 4, H 38",
+  "mbids": [
+   "4db171ec-358e-45f7-b3c5-8fdc0e27440d"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-4db171ec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12608,
+  "title": "Fantasia in D major, Wq. 112 no. 2, H. 144",
+  "mbids": [
+   "4df7f68e-2f71-42e7-ab92-d8f76e4aa912"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-4df7f68e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12612,
+  "title": "6 Sonaten, Wq 63",
+  "mbids": [
+   "4ecf4e57-050b-4d12-87f0-8f8d6e9f3f6d"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-4ecf4e57",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12617,
+  "title": "Sonata for Viola da gamba and Continuo in D major, H. 559, Wq. 137",
+  "mbids": [
+   "4f84f73f-910c-4323-8da1-a9b576f28f72"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-4f84f73f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12626,
+  "title": "La Sophie, Wq. 117 no. 40, H 125",
+  "mbids": [
+   "510c89fa-937b-4038-a5fe-b7ed4ab9bb22"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-510c89fa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12635,
+  "title": "La Stahl, Wq. 117 no. 25, H 94",
+  "mbids": [
+   "5278b6b5-5539-43de-95e1-cd5ab3eb385a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-5278b6b5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12641,
+  "title": "Cramers übersetzte Psalmen mit Melodien, Wq. 196, H. 733",
+  "mbids": [
+   "53420883-8680-4225-bf3d-56142a033e9c"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-53420883",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12642,
+  "title": "Symphony in G major, Wq. 173, H. 648",
+  "mbids": [
+   "536a5b63-1fd1-4fa7-adaf-2a4340206d9f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-536a5b63",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12644,
+  "title": "Sonata for Flute and Basso Continuo in G major, Wq. 127, H. 554",
+  "mbids": [
+   "53a0ed9e-d77f-4127-8aff-ba8983998dee"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-53a0ed9e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12651,
+  "title": "Symphony in F major, Wq. 181, H. 656",
+  "mbids": [
+   "54500def-eb68-4c45-9fd9-8f099102cda9"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-54500def",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12657,
+  "title": "Hamlet, der über den Selbstmord raisoniert",
+  "mbids": [
+   "5602bfcf-d91b-46af-bc50-4043a73a9f63"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12667,
+  "title": "Sonata in E-flat major, H50, Wq. 52/1",
+  "mbids": [
+   "58b060d3-64df-45c7-b32d-1bbbb68fdb1c"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-58b060d3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12677,
+  "title": "Allegro in C major, Wq. 116 no. 21, H 153",
+  "mbids": [
+   "5a463f20-8abf-4feb-88a0-ba10106ec571"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-5a463f20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12685,
+  "title": "Flute Concerto in A minor, Wq. 166, H. 431",
+  "mbids": [
+   "5bcce73e-8985-42c6-88e8-17e8c253a2f0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12690,
+  "title": "Flute Sonata in B-flat major, Wq. 125, H. 552",
+  "mbids": [
+   "5c9b16ef-999b-40c4-b916-e6d16ab35b05"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-5c9b16ef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12696,
+  "title": "Sonata in C major, H. 515, Wq. 87",
+  "mbids": [
+   "5db1669e-1446-4500-8c89-b58dec340673"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-5db1669e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12703,
+  "title": "Sonata in D minor, Wq. 50 no. 4, H 139",
+  "mbids": [
+   "5f331480-5072-4f9f-b0e6-352b5c64436a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-5f331480",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12711,
+  "title": "Concerto in F major, H. 415, Wq. 12",
+  "mbids": [
+   "6138d85f-d349-43eb-ba70-bd5bf414c98f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-6138d85f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12717,
+  "title": "Adagio in D minor, H. 352",
+  "mbids": [
+   "625446c5-350e-4d22-b4fe-4206125c7626"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-625446c5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12721,
+  "title": "Minuet in C major, H. 1/5, Wq. 111",
+  "mbids": [
+   "633f6e6d-27cd-48e7-b50d-c58522e7096f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-633f6e6d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12728,
+  "title": "Sonata in B-flat major, Wq. 62 no. 1, H. 2: I. Presto",
+  "mbids": [
+   "63d13a25-6b3a-459b-943d-d536e835eff6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12733,
+  "title": "4 Keyboard Pieces: Allegro in G major, Wq. 116 no. 54, H. 328",
+  "mbids": [
+   "643cdd12-78e8-481a-b8ae-cebab3953508"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 12749,
+  "title": "Concerto in D major, Wq. 13, H. 416",
+  "mbids": [
+   "66f041e4-002f-46a4-bbf9-675f1fe78d97"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-66f041e4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12752,
+  "title": "Sonatina in C major, Wq. 103",
+  "mbids": [
+   "6762c870-6de5-4f12-9141-547f0ec646c9"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-6762c870",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12755,
+  "title": "Pastorale in A minor",
+  "mbids": [
+   "67a957fe-a3b7-4bc7-aad9-0fa1a4c74759"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-67a957fe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12783,
+  "title": "La Buchholz, Wq. 117 no. 24, H 93",
+  "mbids": [
+   "6ad1a1c3-a34a-4e0b-a560-6c981859fbda"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-6ad1a1c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12785,
+  "title": "Sonata in G major, Wq 62 no. 11, H 63",
+  "mbids": [
+   "6af2c933-6eea-448b-a8d8-72c54cf04ddc"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-6af2c933",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12787,
+  "title": "Sonata in A minor for Solo Flute, Wq. 132, H. 562",
+  "mbids": [
+   "6b2f785f-6c6e-44cc-b10c-a1086e9d16ce"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-6b2f785f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12791,
+  "title": "Sonata in A major, H. 542",
+  "mbids": [
+   "6bd0ca08-6d1c-46e8-89e9-c0ce3fa18904"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12806,
+  "title": "Sonatina in D minor, H. 463, Wq. 104",
+  "mbids": [
+   "6ea7591b-9fdd-404a-9af2-177c6cf3e787"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-6ea7591b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12811,
+  "title": "Fürsten sind am Lebensziele, H. 761, Wq. 214",
+  "mbids": [
+   "6f6d3b40-9e2c-4f43-9b1e-be973b22aeda"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-6f6d3b40",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12817,
+  "title": "Concerto in C minor, Wq. 5, H. 407",
+  "mbids": [
+   "6fccf328-aeff-4912-a495-d859005c9295"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-6fccf328",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12819,
+  "title": "Fantasia in D minor, Wq 117 no. 12, H 224",
+  "mbids": [
+   "6fdf2766-faff-4794-a60a-ba29b09c343c"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-6fdf2766",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12827,
+  "title": "Sonata in B-flat major, Wq. 62 no. 1, H. 2",
+  "mbids": [
+   "7159517e-a5f6-4c10-ab1d-86cdeb3d3001"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12828,
+  "title": "Fantasia in B major, Wq. 112 no. 8, H 146",
+  "mbids": [
+   "715cb245-20aa-452c-af50-5c957ad70fed"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-715cb245",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12847,
+  "title": "Zur Einführung des H. P. Gasie, Wq. 250, H. 821l",
+  "mbids": [
+   "74ae5029-b227-4adb-9833-15830babbc60"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-74ae5029",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12852,
+  "title": "Minuetto I & II in D major, Wq. 112 no. 3, H. 165",
+  "mbids": [
+   "75c5d435-a807-49c5-bc1f-0cf2bdc08e42"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-75c5d435",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12855,
+  "title": "Sonata in A, H.633 Wq.184/5",
+  "mbids": [
+   "75f56d17-f8c1-408a-a440-bb7202b3dfcf"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-75f56d17",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12858,
+  "title": "Fugue in E-flat major, Wq. 119 no. 6 - Alla breve moderato",
+  "mbids": [
+   "762e0867-5ddd-4ab1-8012-538bd58efce8"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-762e0867",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12870,
+  "title": "Suite in E minor, Wq. 62 no. 12, H. 66",
+  "mbids": [
+   "79d02dcf-f2f4-452b-87ed-28bf16150680"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-79d02dcf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12871,
+  "title": "Einleitung zum Credo, H 848",
+  "mbids": [
+   "7a80f560-5950-4a21-a0b6-d92992ce1a69"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-7a80f560",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12875,
+  "title": "Sonata in E major, Wq. 62 no. 17, H 117",
+  "mbids": [
+   "7bfa9f85-d23b-4a41-81b9-ddece6abccd8"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-7bfa9f85",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12881,
+  "title": "7 Organ Sonatas, Wq. 70",
+  "mbids": [
+   "7d1c4678-ad3f-4bfe-a0fb-0abcbe270e4f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-7d1c4678",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12886,
+  "title": "Sonata in B-flat major, Wq. 62 no. 1, H. 2: II. Andante",
+  "mbids": [
+   "7e07cfaf-9d85-47e1-ac47-6242e21bb18f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12887,
+  "title": "Sinfonia for 2 Oboes, 2 Horns, Strings and Basso Continuo in G major, H. 655, Wq. 180",
+  "mbids": [
+   "7e38e099-d15e-45a4-9995-55518c72c224"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-7e38e099",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12902,
+  "title": "Flute Sonata in B-flat major, Wq. 130, H. 560",
+  "mbids": [
+   "7ff0bd9d-22ff-447b-bd4e-e0604de548f5"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-7ff0bd9d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12903,
+  "title": "Two Trio Sonatas, Wq. 161",
+  "mbids": [
+   "802c1bcb-5304-4910-8a3d-63666c9e5b39"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-802c1bcb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12906,
+  "title": "Sonata in D, H.629 Wq.184/1",
+  "mbids": [
+   "805fd831-99a2-4efe-9160-2d6e9829980b"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-805fd831",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12910,
+  "title": "Symphony in E minor, Wq. 178, H. 653",
+  "mbids": [
+   "80bb889b-bea0-45a4-8a49-0d0b3556aa1b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12916,
+  "title": "Concerto in G minor, Wq, 32, H. 442",
+  "mbids": [
+   "81fb5641-f007-4b09-a3f1-bb7f4c046060"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-81fb5641",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12924,
+  "title": "Allegro ma non troppo in E-flat major, Wq. 116/52 (H. 326)",
+  "mbids": [
+   "8274df0f-c1b9-4540-a14a-6c4394573e36"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12925,
+  "title": "Trio Sonata in D minor, Wq. 145, H. 569 (BWV 1036)",
+  "mbids": [
+   "827f0134-be49-4cea-84b4-062205f64efb"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-827f0134",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12926,
+  "title": "Sonata in G major, Wq 62 no. 14, H 77",
+  "mbids": [
+   "829ce6f1-1dd9-4fe9-aebf-bd7e0df93d12"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-829ce6f1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12927,
+  "title": "Aus der Tiefe rufe ich",
+  "mbids": [
+   "82d1c953-55e4-46e8-8d27-037f35b214f6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12942,
+  "title": "Concerto in A minor, H. 403, Wq. 1",
+  "mbids": [
+   "84773c5c-b7fe-487e-8078-29cf2a7a028a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-84773c5c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12946,
+  "title": "Kurze und leichte Clavierstücke: Zweyte Sammlung, Wq. 114",
+  "mbids": [
+   "85085815-0787-4832-8cfc-d432a6b9e7c0"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-85085815",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12953,
+  "title": "Sammlung von Menuetten, Polonaisen und andern Handstücken fürs Clavier, Wq. 161",
+  "mbids": [
+   "8646c06e-9e5c-4b7e-9a17-35eab830c648"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-8646c06e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12956,
+  "title": "Sonata in C major, Wq. 62 no. 10, H. 59",
+  "mbids": [
+   "868b7765-43c2-4f53-8be5-c8b364a084ce"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-868b7765",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12963,
+  "title": "Vollständige sammlung aller ungedruckten Clavier-Sonaten, Wq. 65",
+  "mbids": [
+   "871f682f-3bd6-42f2-b38c-507d8028b065"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-871f682f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12967,
+  "title": "Sonata in F major, Wq. 62 no. 24, H. 240",
+  "mbids": [
+   "880ff1f3-fd04-417b-adf6-3e14973f5365"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-880ff1f3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12973,
+  "title": "Menuet in C major, Wq. 116 no. 5, H 216",
+  "mbids": [
+   "88f37729-0854-4dd2-8a8c-4555f5042016"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-88f37729",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12974,
+  "title": "Concerto in A major, H. 410, Wq. 7",
+  "mbids": [
+   "8902d580-6dae-4fdd-aa1a-e4c6729e9732"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-8902d580",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12976,
+  "title": "I sentimenti di Carl Philipp Emanuel Bach",
+  "mbids": [
+   "8947a844-a978-4894-886c-356124f218d8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12978,
+  "title": "3 Keyboard Trios, Wq. 90",
+  "mbids": [
+   "89cbbdf0-b158-416f-93ad-10017453a06f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-89cbbdf0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12979,
+  "title": "Concerto in G major, Wq. 44, H. 477",
+  "mbids": [
+   "89db05a7-b030-4245-aeaf-00d30835a922"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-89db05a7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12980,
+  "title": "Sonata in A minor, Wq. 62 no. 21, H 131",
+  "mbids": [
+   "89fe2b20-d52d-45f5-8cc8-d68245ec08d1"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-89fe2b20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12984,
+  "title": "Trio Sonata in C major, Wq. 147, H. 571",
+  "mbids": [
+   "8a80bde7-dc67-41c8-a52a-e840ebe3b563"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-8a80bde7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12985,
+  "title": "Flute Sonata in G major, Wq. 85, H. 508",
+  "mbids": [
+   "8b1f7aa3-e31a-4cbd-afe3-6ba59158688d"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-8b1f7aa3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12991,
+  "title": "La Gleim, Wq. 117 no. 19, H 89",
+  "mbids": [
+   "8c0609aa-b88d-4f32-a520-1d6e11ab44ae"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-8c0609aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13001,
+  "title": "Sonata in B minor, Wq. 62 no. 22, H 132",
+  "mbids": [
+   "8da3767d-20c8-4299-a203-a2837ead4ed1"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-8da3767d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13003,
+  "title": "Selma, H 739 (Wq. 236)",
+  "mbids": [
+   "8e114e91-0322-4b92-be4c-011f75fc897f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-8e114e91",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13004,
+  "title": "Sonata in F minor, Wq 62 no. 6, H 40",
+  "mbids": [
+   "8e24b636-2ad9-49e8-9706-283e091cbd25"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-8e24b636",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13018,
+  "title": "Sonata in C major, Wq. 53 no. 1, H. 162",
+  "mbids": [
+   "908925c7-88f4-4817-8415-312a5fb8d6f0"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-908925c7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13025,
+  "title": "Marche Es-dur, BWV Anh. 127",
+  "mbids": [
+   "91b50176-7579-4e30-b47d-8f9cf177edf5"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-91b50176",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13028,
+  "title": "Trio Sonata in D major, Wq. 151, H. 575",
+  "mbids": [
+   "9206d59c-8864-438c-9b74-929acc7455bf"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-9206d59c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13029,
+  "title": "Trio Sonata in B-flat major, Wq. 159, H. 587",
+  "mbids": [
+   "921ad125-e548-4322-9a6c-b4e0a480f388"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-921ad125",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13031,
+  "title": "Violin Sonata in C major, Wq. 73, H. 504",
+  "mbids": [
+   "92a711f1-47ce-40f2-90f9-6e5ed1613b25"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-92a711f1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13037,
+  "title": "Sturms geistliche Gesänge mit Melodien, Erste Sammlung, Wq. 197, H. 749",
+  "mbids": [
+   "93944b73-c824-4605-8c67-2b8b4f7517d0"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-93944b73",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13041,
+  "title": "Württembergische Sonaten, Wq. 49",
+  "mbids": [
+   "93fbd404-9241-459d-994a-2cf904474578"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-93fbd404",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13044,
+  "title": "Auf, schicke dich recht feierlich, Wq. 249, H. 815",
+  "mbids": [
+   "946b2922-a976-4af8-a7cd-93e5d7c30228"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-946b2922",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13052,
+  "title": "Sonatina in E-flat major, Wq. 108, H. 462",
+  "mbids": [
+   "95e69562-6d39-4536-be17-efddef0d50f4"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-95e69562",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13058,
+  "title": "Hebt an, ihr Chöre der Freuden, H 822a",
+  "mbids": [
+   "96def91c-d708-4bad-b71f-98575803bca5"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-96def91c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13060,
+  "title": "Sonata in D minor, Wq. 112 no. 7, H. 179",
+  "mbids": [
+   "971c677b-26a5-408f-9e4e-b29ebaa1013a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-971c677b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13061,
+  "title": "5 Sinfonie, Wq. 122",
+  "mbids": [
+   "9759e407-4969-42bf-a9f8-5cd9ca77733d"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-9759e407",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13062,
+  "title": "Trio Sonata in G major, Wq. 157",
+  "mbids": [
+   "9781265a-1e95-4ceb-9e44-179c9921bbc9"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-9781265a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13063,
+  "title": "Concerto in D major, Wq. 27, H. 433",
+  "mbids": [
+   "978d7174-716a-47bf-90e1-6f81984aa2bc"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-978d7174",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13066,
+  "title": "Sonata in D minor, Wq. 62 no. 15, H 105",
+  "mbids": [
+   "981b4ef6-75d7-49da-87fe-ef28f459776a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-981b4ef6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13067,
+  "title": "March in D, H. 619, Wq. 185 no.6",
+  "mbids": [
+   "982357ca-5e29-455e-96fc-cd16adc88af1"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-982357ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13068,
+  "title": "4 Keyboard Pieces: Allegro in E-flat major, Wq. 116 no. 55, H. 327",
+  "mbids": [
+   "986d2865-c11b-48a9-af4a-66d9b58343e5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 13069,
+  "title": "Concerto for Harpsichord, Strings and Basso Continuo, Wq 20",
+  "mbids": [
+   "98c630e4-9c15-4d5c-8c43-fb5779a79bca"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-98c630e4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13075,
+  "title": "Alla Polacca in A minor, Wq. 112 no. 5, H. 166",
+  "mbids": [
+   "99676f9a-d7ae-4a63-bfba-3e231da1cc1d"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-99676f9a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13077,
+  "title": "Sonata in E major, Wq 62 no. 5, H 39",
+  "mbids": [
+   "99d7fe40-0a08-476c-9dfc-28b012b88657"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-99d7fe40",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13078,
+  "title": "Sonata no. 4 in B-flat major, Wq. 54 no. 4, H 206",
+  "mbids": [
+   "99e52e61-8cc6-4c0c-b8e8-b7a706309f5e"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-99e52e61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13080,
+  "title": "Keyboard Concerto in B-flat major, Wq. 36, H. 447",
+  "mbids": [
+   "9a1ac084-38df-46ca-a3af-04481cc9c19a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-9a1ac084",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13082,
+  "title": "Harpsichord Concerto in F major, Wq. 38, H. 454",
+  "mbids": [
+   "9a737d0f-d03f-4d5e-934c-941508e6ecca"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-9a737d0f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13083,
+  "title": "Clavier-Sonaten und freye Fantasien, nebst einigen Rondos fürs Fortepiano für Kenner und Liebhaber, Sechste Sammlung, Wq. 61",
+  "mbids": [
+   "9a7650e9-ab0c-4f35-b27c-e1ea332335cc"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-9a7650e9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13093,
+  "title": "Menuet in F major, H. 258",
+  "mbids": [
+   "9c1a732e-d0eb-4d96-83fd-590bfff48a06"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-9c1a732e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13114,
+  "title": "Sonata in G major, Wq. 62 no. 19, H. 119",
+  "mbids": [
+   "9f43b8ed-8c41-4538-b832-1b1c18b748b4"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-9f43b8ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13115,
+  "title": "March in D, H. 637, Wq. 187 no.2",
+  "mbids": [
+   "9f49fe5b-fc60-4816-987d-8b0efbfbaccf"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-9f49fe5b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13136,
+  "title": "Three Arias for Tenor, H. 669, Wq. 211",
+  "mbids": [
+   "a2391567-2506-4748-b8fb-d423e60c87bd"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-a2391567",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13137,
+  "title": "Concerto in E minor, Wq. 15, H. 418",
+  "mbids": [
+   "a243a3ab-db0e-4716-afb2-e3c5489b79ef"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-a243a3ab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13138,
+  "title": "Flute Sonata in D major, Wq. 126, H. 553",
+  "mbids": [
+   "a286e66f-2ded-4d55-aa8c-a0b4b822736c"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-a286e66f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13141,
+  "title": "Trio Sonata for Flute, Violin and Continuo in B minor, H. 567, Wq 143",
+  "mbids": [
+   "a2af2b04-eaee-4b2d-8df3-6b8ffec72e54"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-a2af2b04",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13145,
+  "title": "Sonata in E major, H. 506, Wq. 84",
+  "mbids": [
+   "a343fa24-bb91-4ca0-8991-8b29cf1c5147"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-a343fa24",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13158,
+  "title": "Sonata in F, H.630, Wq.184/2",
+  "mbids": [
+   "a4f05f39-4ce6-47ec-9fb2-34499790f599"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-a4f05f39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13162,
+  "title": "Sechs Clavier-Sonaten für Kenner und Liebhaber, Erste Sammlung, Wq. 55",
+  "mbids": [
+   "a55a1970-e437-424a-b06f-342cf892bc99"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-a55a1970",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13165,
+  "title": "6 Keyboard Sonatas, Wq. 51",
+  "mbids": [
+   "a5ff58ec-dd5b-46aa-b011-0f5428bbc453"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-a5ff58ec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13166,
+  "title": "Der Frühling, Wq. 237, H. 723",
+  "mbids": [
+   "a60f00c1-ac97-425b-bbbe-bdbe7e6b2567"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13177,
+  "title": "Fantasia in F-sharp minor, Wq. 80, H. 536",
+  "mbids": [
+   "a832031e-b1f4-49cc-a3ab-50a531dac8b8"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-a832031e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13191,
+  "title": "Allegro in E major, Wq. 116/37 (H. 311)",
+  "mbids": [
+   "aa933c86-2d55-4462-b3b6-40f1ba1d8492"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13192,
+  "title": "6 Keyboard Sonatas, Wq. 52",
+  "mbids": [
+   "aa961cec-3e85-4b67-9be7-d64ac3e15131"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-aa961cec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13193,
+  "title": "Anbetung dem Erbarmer, Wq. 243, H. 807",
+  "mbids": [
+   "aabaac8f-fd8b-4697-bf91-8f52f12562ee"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-aabaac8f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13198,
+  "title": "4 Keyboard Pieces: Allegro in C major, Wq. 116 no. 53, H. 327",
+  "mbids": [
+   "ab0950b7-d4a1-4d88-ae20-16ad154dda10"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 13200,
+  "title": "Polonoise in E-flat major, Wq. 116/44 (H. 318)",
+  "mbids": [
+   "ab2c78ee-5d67-4763-9c66-81a89976f907"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13201,
+  "title": "Keyboard Concerto in A major, Wq. 29, H. 437",
+  "mbids": [
+   "abb07d38-45dc-4359-9103-6ec279ae04b5"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-abb07d38",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13202,
+  "title": "Sonata in C minor, Wq. 50 no. 6, H 140",
+  "mbids": [
+   "ac1a5d30-fa75-471b-90eb-91477c146300"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-ac1a5d30",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13204,
+  "title": "Der Herr lebet, Wq. 251, H. 821g",
+  "mbids": [
+   "ac628b96-08bd-4549-8a77-82505fdbdd1c"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-ac628b96",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13211,
+  "title": "Concerto in E-flat major, Wq. 40, H. 467",
+  "mbids": [
+   "ad3e0440-592e-4359-b8e3-d913e485e0c3"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-ad3e0440",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13221,
+  "title": "La Caroline, Wq. 117 no. 39, H 98",
+  "mbids": [
+   "ae11c066-5d5f-4c34-9dde-1e47cf1ff7eb"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-ae11c066",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13223,
+  "title": "Fantasia in G major, Wq 117 no. 11, H 223",
+  "mbids": [
+   "ae197e9e-23ff-474f-812f-5d49f4198a26"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-ae197e9e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13224,
+  "title": "Sonata in G minor, Wq 88",
+  "mbids": [
+   "ae1bb3b3-6d5f-47ae-8438-8e79f0656cda"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-ae1bb3b3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13225,
+  "title": "Fantasia in G minor, Wq. 117 no. 13, H 225",
+  "mbids": [
+   "ae2ab94b-21d8-4def-b0e5-f326e21d6455"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-ae2ab94b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13228,
+  "title": "Alla Polacca in G major, Wq. 116 no. 8, H 219",
+  "mbids": [
+   "aedc865f-ca7a-4ca0-818f-25cd5832649b"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-aedc865f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13234,
+  "title": "Sammlung von Clavier- und Orgel-Fügen, Wq. 119",
+  "mbids": [
+   "af96b24d-9a1d-4aa2-9ce8-bc1dd9ed72dc"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-af96b24d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13238,
+  "title": "March in C for the Ark, H. 621, Wq. 188 (for Three Trumpets and Timpani)",
+  "mbids": [
+   "afed9d69-3924-45f8-a067-a9bf88d0fd31"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-afed9d69",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13244,
+  "title": "Sinfonia in E-flat major",
+  "mbids": [
+   "b17659a9-74cf-4d4c-af4b-1783d7b51d32"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b17659a9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13245,
+  "title": "Flute Sonata in E-flat major, H. 545",
+  "mbids": [
+   "b1f13d9a-bd6d-441e-a1a0-fd01a4fbe456"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b1f13d9a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13246,
+  "title": "Alla polacca in C major, Wq 116 no. 4, H 215",
+  "mbids": [
+   "b1f17298-888e-47cd-9331-91e66649593a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b1f17298",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13249,
+  "title": "Flute Concerto in G major, Wq. 169, H. 445",
+  "mbids": [
+   "b2ea8759-cc57-402b-a789-78b85404a930"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13252,
+  "title": "Trio Sonata in G major, Wq. 150, H. 574",
+  "mbids": [
+   "b3b7aec9-e02d-4322-96a2-139e4855f974"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b3b7aec9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13259,
+  "title": "Flute Sonata in G major, Wq. 123, H. 550",
+  "mbids": [
+   "b4ad5039-0334-499b-a47b-a1b01e658b34"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b4ad5039",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13263,
+  "title": "La Prinzette, Wq. 117 no. 21, H 91",
+  "mbids": [
+   "b505565d-a500-419b-80ed-1f11ab7ba676"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b505565d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13264,
+  "title": "Solfeggio in G major, Wq. 112 no. 18, H. 149",
+  "mbids": [
+   "b5221f5d-5738-4017-be92-f1bc230bc10f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b5221f5d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13269,
+  "title": "Menuet in G major, Wq. 116/48 (H. 322)",
+  "mbids": [
+   "b5e42354-e853-477a-a36f-ed247441fe82"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13270,
+  "title": "Sonata in F major, Wq. 65 no. 1, H. 3: III. Presto",
+  "mbids": [
+   "b60a1241-7c20-42a4-a870-df732a61879c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13275,
+  "title": "Abschied von meinem Silbermannischen Claviere in einem Rondo, Wq. 66, H. 272",
+  "mbids": [
+   "b6f51aa1-e06d-4649-90a4-1c94b7cd94da"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b6f51aa1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13278,
+  "title": "Sonata no. 5 in D major, Wq. 54 no. 5, H 185",
+  "mbids": [
+   "b736c4dd-8257-4814-bc18-01f2b3f93214"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b736c4dd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13280,
+  "title": "Sonata in B-flat major, Wq. 62 no. 16, H. 116",
+  "mbids": [
+   "b789783c-1b80-4c9a-ac9b-033e043fdc60"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b789783c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13281,
+  "title": "Sonata in D major, Wq. 62 no. 13, H 67",
+  "mbids": [
+   "b794f97e-5e14-4aad-a9b7-545405a67f0a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b794f97e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13282,
+  "title": "Fantasia in D major, Wq 117, no. 8",
+  "mbids": [
+   "b7ab73cd-94f3-4356-a035-bb7951ff72d4"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b7ab73cd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13286,
+  "title": "Klopstocks Morgengesang am Schöpfungsfeste, Wq. 239, H. 779",
+  "mbids": [
+   "b8576160-0a1e-42d1-b09a-794d4542e23b"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b8576160",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13287,
+  "title": "Sonata in D minor, Wq. 69 (H. 53)",
+  "mbids": [
+   "b8da7f6e-c0b8-4dd0-9b1b-1d47140947a5"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b8da7f6e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13289,
+  "title": "Oden mit Melodien, Wq. 199",
+  "mbids": [
+   "b9664b72-94c9-4e48-84ef-7e6304f12dfa"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b9664b72",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13291,
+  "title": "Wer sich rühmen will, H. 821o",
+  "mbids": [
+   "b9aea150-113f-403d-b271-93efe0dea158"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-b9aea150",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13294,
+  "title": "Sammlung verschiedener Clavierstücke mit Veränderungen, Wq. 118",
+  "mbids": [
+   "baa16369-dcc4-491a-bfa3-4c7b3042d56f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-baa16369",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13298,
+  "title": "Menuet in G major, Wq. 116/30 (H. 304)",
+  "mbids": [
+   "bb2e12f7-fc80-4312-af88-809726c9f64c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13301,
+  "title": "Sammlung von 56 geistlichen und weltlichen Oden und Liedern, Wq. 202",
+  "mbids": [
+   "bb78874a-feb0-4aae-84f4-c4fd668ef011"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-bb78874a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13302,
+  "title": "Ich will dem Herrn lobsingen, H. 821b",
+  "mbids": [
+   "bb906218-c764-431e-85b9-ee480d3869b5"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-bb906218",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13314,
+  "title": "Concerto in B-flat major, Wq. 39, H 465",
+  "mbids": [
+   "bca11279-9376-4ee3-a2f8-5f9ee57c71a6"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-bca11279",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13317,
+  "title": "Aus der Tiefe rufe ich, BWV 745",
+  "mbids": [
+   "bcca8243-0d72-30fe-a266-81181d80b6f3"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-bcca8243",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13319,
+  "title": "Symphony in F major, Wq. 175, H. 650",
+  "mbids": [
+   "bceda927-a076-4da7-8aa9-9ddd801f46ce"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-bceda927",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13331,
+  "title": "Concerto in G major, H. 406, Wq. 4",
+  "mbids": [
+   "beec2d91-5483-4087-b8ef-83d844423fc6"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-beec2d91",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13332,
+  "title": "Trio Sonata for Clarinet, Bassoon and Keyboard in E-flat major Wq.92/5 H.520",
+  "mbids": [
+   "bef54997-4dee-4bd6-ad28-7e41b5d740d3"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-bef54997",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13337,
+  "title": "Sonate für Flöte und Basso Continuo in D-Dur",
+  "mbids": [
+   "bf643b31-ba51-462e-aae1-2a748d67417c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 13339,
+  "title": "Quartet no 3 in G major, Wq. 95, H. 539",
+  "mbids": [
+   "bfa5b63c-504b-4d4c-a827-fc12782704f8"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-bfa5b63c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13346,
+  "title": "Allegretto in D major, H. 257",
+  "mbids": [
+   "c0faf496-9a2b-4eb4-b1c4-102265c6c970"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-c0faf496",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13360,
+  "title": "4 Keyboard Trios, Wq. 91",
+  "mbids": [
+   "c4ffe817-da28-46de-84ca-83ad92c4a062"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-c4ffe817",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13364,
+  "title": "March in F major, Wq. 116/45 (H. 319)",
+  "mbids": [
+   "c53c26de-9447-486b-8398-8e54a9d82637"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13370,
+  "title": "Sonata in F major, Wq. 65 no. 1, H. 3: I. Allegretto",
+  "mbids": [
+   "c5e2cb26-d6ac-4f84-bb24-b898c3ab782c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13372,
+  "title": "Concerto in E-flat major, Wq. 35, H. 446",
+  "mbids": [
+   "c633f94a-f52c-401e-b8d0-ba1071dbac63"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-c633f94a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13377,
+  "title": "Sonata in F major, Wq. 62 no. 9, H 58",
+  "mbids": [
+   "c6bfbede-ba65-4818-b48a-4a00418207d1"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-c6bfbede",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13380,
+  "title": "Sonata in B minor, Wq. 53 no. 4, H. 182",
+  "mbids": [
+   "c75412bd-8fec-4066-a00d-0fc3bdb4050a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-c75412bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13387,
+  "title": "Solfeggio in C major, Wq. 112 no. 10, H. 147",
+  "mbids": [
+   "c86c5f09-d3f4-4ff9-8744-7938de3abb8c"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-c86c5f09",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13389,
+  "title": "Harpsichord Concerto in F major, Wq. 42, H. 470",
+  "mbids": [
+   "c883b30b-45ac-4fcc-8530-3043bb3383e1"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-c883b30b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13390,
+  "title": "Sonata in B-flat major, Wq. 65 no. 9, H. 18: I. Andante",
+  "mbids": [
+   "c8b775a5-6498-4bc2-b303-ee399004a33a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13395,
+  "title": "6 Sonatine nuove",
+  "mbids": [
+   "c9a58675-28a0-4e61-a847-12e8e5fe4afd"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-c9a58675",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13403,
+  "title": "March in F, H. 637, Wq. 187 no.1",
+  "mbids": [
+   "cb946c8e-79e2-4629-8c52-394ab5431914"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-cb946c8e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13409,
+  "title": "Freymaurer-Lieder, H. 764",
+  "mbids": [
+   "cbe5e047-7182-474c-8521-ea5c30327c60"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-cbe5e047",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13415,
+  "title": "Concerto in Es-Dur: II. Adagio ma mon troppo (arranged for trumpet)",
+  "mbids": [
+   "ccb92a86-1cfd-3b2d-9192-5fa6ec77a946"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13416,
+  "title": "Clavier-Sonaten und freye Fantasien, nebst einigen Rondos fürs Fortepiano, für Kenner und Liebhaber, Fünfte Sammlung, Wq. 59",
+  "mbids": [
+   "cceb704f-d8af-4f56-a755-486efde0d12b"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-cceb704f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13437,
+  "title": "Violin Sonata in C minor, Wq. 78, H. 514",
+  "mbids": [
+   "d0664305-5f1a-4530-8304-01c85540737c"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-d0664305",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13447,
+  "title": "Sonata in D major, Wq 62 no. 3, H 22",
+  "mbids": [
+   "d1b76f61-1969-4fcc-974e-367135584227"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-d1b76f61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13451,
+  "title": "4 Kleine Duetten, Wq. 115",
+  "mbids": [
+   "d2bc2af5-e35d-46fc-b638-7e2013a93f52"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-d2bc2af5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13457,
+  "title": "Sonata in C minor, Wq. 60, H. 209",
+  "mbids": [
+   "d356fde2-2e72-42a5-bfe7-3f526fb6d1bf"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-d356fde2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13460,
+  "title": "Arioso con variazioni in A major, Wq. 79, H. 535",
+  "mbids": [
+   "d397a759-0892-4662-9fc3-60968ee8fc69"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-d397a759",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13461,
+  "title": "Sonata for Solo Harp, Wq. 139, H. 563",
+  "mbids": [
+   "d3af7ad7-31b3-469c-a794-9e40e353cd91"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-d3af7ad7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13470,
+  "title": "March in C, H. 615, Wq. 185 no.2",
+  "mbids": [
+   "d63ffde1-07f1-477c-9290-7eb97c42a298"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-d63ffde1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13472,
+  "title": "Allegro in D major, Wq. 116 no. 20, H 302",
+  "mbids": [
+   "d6a8c518-bd2c-4391-b257-1ecb962599e0"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-d6a8c518",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13474,
+  "title": "Concerto in A minor, Wq. 26, H. 430",
+  "mbids": [
+   "d6ef23bd-1de0-40e2-b074-a58c9637c93f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-d6ef23bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13476,
+  "title": "Sonata no. 2 in C major, Wq. 54 no. 2, H 205",
+  "mbids": [
+   "d706a259-0e4a-4535-b7a0-1c8060f16948"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-d706a259",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13480,
+  "title": "Sonata in C major, Wq 62 no. 7, H 41",
+  "mbids": [
+   "d7a6b347-5b29-4af6-bca7-4e0bfe5a0c55"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-d7a6b347",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13485,
+  "title": "Sonata in G major, Wq. 62 no. 2, H. 20",
+  "mbids": [
+   "d8577dac-1ac4-4819-b133-19d680551700"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-d8577dac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13491,
+  "title": "March in E Flat, H. 618, Wq. 185 no.5",
+  "mbids": [
+   "da6f1f79-89c6-4e78-88e4-aadaa6cb067f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-da6f1f79",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13497,
+  "title": "Symphony in E-flat major, Wq 179 (H. 654)",
+  "mbids": [
+   "dbeb48fe-0b56-462b-87c6-31eb90f75b3c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13499,
+  "title": "Sonata in F major, Wq. 53 no. 6, H. 183",
+  "mbids": [
+   "dc1a72a5-529f-420e-a020-cddb6d8bc1cd"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-dc1a72a5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13501,
+  "title": "Keyboard Concerto in B-flat major, Wq. 28, H. 434",
+  "mbids": [
+   "dc315cfe-7b8b-4592-8fe5-9e5c822984ca"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-dc315cfe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13510,
+  "title": "Concerto in G major for Organ & Strings, Wq. 34, H. 444",
+  "mbids": [
+   "ddb9481b-4348-4c7d-a9a6-5af4971b120b"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-ddb9481b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13512,
+  "title": "Cello Concerto in A minor, Wq. 170, H. 432",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 13519,
+  "title": "Andantino in D minor, Wq 116 no. 18, H 108",
+  "mbids": [
+   "df456d2c-167d-4558-9423-98721cf23270"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-df456d2c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13521,
+  "title": "Sonata in B-flat major, Wq. 65 no. 9, H. 18: II. Adagio",
+  "mbids": [
+   "dfd1e903-6977-41b0-9106-90d4560dfaf3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13523,
+  "title": "6 leichte Clavier-Stückgen",
+  "mbids": [
+   "e04a79de-9873-458c-ba08-bc047638762d"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e04a79de",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13536,
+  "title": "Viola da gamba Sonata in G minor, H. 510, Wq. 88",
+  "mbids": [
+   "e271386a-6b84-4428-96f2-bffde892a2fe"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e271386a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13540,
+  "title": "Violin Sonata in F major, Wq. 75, H. 511",
+  "mbids": [
+   "e30df5f8-9f58-46b7-a294-12e3a400e70c"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e30df5f8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13545,
+  "title": "Sonata in A minor, Wq. 50 no. 3, H 138",
+  "mbids": [
+   "e3ba6b29-f918-43a3-9f44-70ac8d74dfd1"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e3ba6b29",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13549,
+  "title": "Concerto in A minor, Wq. 21, H. 424",
+  "mbids": [
+   "e40fedbc-f6d4-43db-9ba6-257f8277029f"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e40fedbc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13550,
+  "title": "Solfeggio in A major, Wq 117 no. 4, H 222",
+  "mbids": [
+   "e4354c26-fc41-4d35-ae35-ffb87e75c069"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e4354c26",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13555,
+  "title": "March in F, H. 616, Wq. 185 no.3",
+  "mbids": [
+   "e539c313-e589-425f-9132-e708cea296c3"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e539c313",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13565,
+  "title": "Sonata in F major, Wq. 50 no. 1, H 136",
+  "mbids": [
+   "e689347f-8c8d-47ba-81de-b5d766246f9d"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e689347f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13566,
+  "title": "Clavierstück für die rechte oder linke Hand allein, Wq 117 no. 1, H 241",
+  "mbids": [
+   "e69407bf-9d46-44a7-a56b-99aa8124decd"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e69407bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13567,
+  "title": "Sonatina in D major, Wq. 96, H. 449",
+  "mbids": [
+   "e6ff9b77-fed6-48d5-8626-6cd64af922ad"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e6ff9b77",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13569,
+  "title": "6 Sonatinas, Wq. 64",
+  "mbids": [
+   "e713d85f-53c5-4be0-9ac1-49b3cb49a00a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13577,
+  "title": "Oboe Concerto in B-flat major, Wq. 164, H. 466",
+  "mbids": [
+   "e86bfc4f-648f-4931-9f63-3490bcdaca80"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e86bfc4f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13578,
+  "title": "Der Trommeln Schlag, der Pfeifen Spiel, H. 822b",
+  "mbids": [
+   "e8701483-2583-4944-872e-ad7dec46400a"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e8701483",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13581,
+  "title": "\"Wer ist so würdig als du\", Wq. 222, H. 831",
+  "mbids": [
+   "e8c10bc4-c39e-461a-b077-9b59a95774ee"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e8c10bc4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13583,
+  "title": "Trio Sonata in A major, Wq. 146, H. 570",
+  "mbids": [
+   "e9417307-e664-48ac-b203-9aa1b166b4b4"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-e9417307",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13585,
+  "title": "Sonata in B-flat major, Wq. 65 no. 9, H. 18: III. Presto",
+  "mbids": [
+   "e9a9886c-e161-4795-b3a5-1f8db6495242"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13587,
+  "title": "Sonata no. 1 in F major, Wq. 54 no. 1, H 204",
+  "mbids": [
+   "ea3413c4-beaf-44ae-84f1-e009c6347252"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-ea3413c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13598,
+  "title": "Trio in E major, Wq. 162",
+  "mbids": [
+   "eceb6776-14d4-4b32-af0b-a628ae59f080"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-eceb6776",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13608,
+  "title": "Die Auferstehung und Himmelfahrt Jesu, H. 777, Wq. 240",
+  "mbids": [
+   "eea44cc9-ca2c-4e3e-ad05-3a9e6f2179e3"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-eea44cc9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13618,
+  "title": "La Xenophon & La Sybille, Wq. 117 no. 29, H 123",
+  "mbids": [
+   "f10f880f-09f5-4ee1-81f1-cce69f06e4b0"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-f10f880f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13619,
+  "title": "Sonata in A minor, Wq. 62 no. 8, H. 55",
+  "mbids": [
+   "f1296804-1f30-47de-b367-fa1f6b3ef591"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-f1296804",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13626,
+  "title": "L’Ernestine, Wq. 117 no. 38, H 124",
+  "mbids": [
+   "f22bff94-a95b-4b5a-a10a-e8419e5a09c7"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-f22bff94",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13638,
+  "title": "March in G, H. 617, Wq. 185 no.4",
+  "mbids": [
+   "f42c2558-06ce-462b-a843-c701d696a2ad"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-f42c2558",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13640,
+  "title": "Keyboard Concerto in D major, Wq. 11, H. 414",
+  "mbids": [
+   "f45344c6-1b02-4554-b11d-46666a47c787"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-f45344c6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13642,
+  "title": "Sonata in G minor, Wq. 62 no. 23, H 210",
+  "mbids": [
+   "f4a5ec7a-5575-48f9-a336-1543155ab5a7"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-f4a5ec7a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13643,
+  "title": "Sonata in E flat, H.632, Wq.184/4",
+  "mbids": [
+   "f532e8f3-76af-4a52-9aba-e94ab18fdc5d"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-f532e8f3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13646,
+  "title": "Flute Sonata in D major, Wq. 131, H. 561",
+  "mbids": [
+   "f5b577f0-1090-4f4e-bd3b-f52e170298b8"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-f5b577f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13664,
+  "title": "Allegretto in F major, Wq. 116 no. 19, H 301",
+  "mbids": [
+   "f7d29d36-bf6d-477a-8d44-8fd3f5d6d3fe"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-f7d29d36",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13665,
+  "title": "Solfeggio in E-flat major, Wq 117 no. 3, H 221",
+  "mbids": [
+   "f826dd81-2d63-48cd-b06b-83d82113930b"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-f826dd81",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13668,
+  "title": "Sonata in G, H.631, Wq.184/3",
+  "mbids": [
+   "f8a16efb-0740-412c-a652-9c8cf2b4f860"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-f8a16efb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13670,
+  "title": "Sinfonia D-dur, H 585",
+  "mbids": [
+   "f8e0908d-db15-429e-b988-7b95f916ec13"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13678,
+  "title": "Zwölf geistliche Oden und Lieder als ein Anhang zu Gellerts geistlichen Oden und Liedern mit Melodien, Wq. 195, H. 696",
+  "mbids": [
+   "f9ee1e86-f766-49af-8471-da959f1896cf"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-f9ee1e86",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13681,
+  "title": "Sonata in C major, Wq. 62 no. 20, H. 120",
+  "mbids": [
+   "fa8358dd-b564-45ea-b685-3829631089dd"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-fa8358dd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13685,
+  "title": "Preußische Sonaten, Wq. 48",
+  "mbids": [
+   "fad5ff69-ae62-48c5-a185-a872c6a9edc6"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-fad5ff69",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13694,
+  "title": "Concerto in E-flat major, H. 404, Wq. 2",
+  "mbids": [
+   "fc127677-0972-4ba3-97bf-ac8f6fdf9004"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-fc127677",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13702,
+  "title": "Polonoise in E-flat major, Wq 116 no. 2, H 172",
+  "mbids": [
+   "fdbbe4fc-78b3-47ef-90cd-5edee3bb1bf5"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-fdbbe4fc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13703,
+  "title": "Flute Sonata in E minor, Wq 124, H. 551",
+  "mbids": [
+   "fe0956ae-ff83-418a-ab52-7eed83eca751"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-fe0956ae",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13704,
+  "title": "Keyboard Concerto in C major, Wq. 112 no. 1, H. 190",
+  "mbids": [
+   "fe1041cf-a371-4eb2-a2f8-dece48c0c175"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-fe1041cf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13712,
+  "title": "Sonatina in B-flat major, Wq. 110, H. 459",
+  "mbids": [
+   "ff4dbb52-7998-465b-a8bd-ec03efe2e276"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-ff4dbb52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13714,
+  "title": "Sonata for Viola da gamba and Continuo in C major, H. 558, Wq. 136",
+  "mbids": [
+   "ff8873de-ae44-4cb4-b57b-0e151bbc2b35"
+  ],
+  "mapping": "work",
+  "key": "cpe-bach-ff8873de",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

@@ -1,0 +1,1670 @@
+[
+ {
+  "pieceId": 16066,
+  "title": "Bram Stoker’s Dracula",
+  "mbids": [
+   "04924c5c-a713-4ff9-a810-c8b92984fc8c"
+  ],
+  "mapping": "work",
+  "key": "kilar-04924c5c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16286,
+  "title": "Vocalise – Theme From The Ninth Gate (reprise)",
+  "mbids": [
+   "11228a7d-020b-444e-a784-c9264827bae4"
+  ],
+  "mapping": "work",
+  "key": "kilar-27ae5443",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16640,
+  "title": "Hymn paschalny",
+  "mbids": [
+   "26ef9eb4-a5e1-4f04-8643-d2a60cd994fd"
+  ],
+  "mapping": "work",
+  "key": "kilar-26ef9eb4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16654,
+  "title": "Vocalise – Theme From The Ninth Gate",
+  "mbids": [
+   "27ae5443-3383-423b-b5a3-35319cb09acc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 16669,
+  "title": "La chasse à l'oiseau",
+  "mbids": [
+   "2872b992-383d-429b-af69-9aebd156731d"
+  ],
+  "mapping": "work",
+  "key": "kilar-2872b992",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17171,
+  "title": "Victoria",
+  "mbids": [
+   "463e1b4a-6d5e-4659-8535-f89fddecec5c"
+  ],
+  "mapping": "work",
+  "key": "kilar-463e1b4a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17525,
+  "title": "Kościelec 1909",
+  "mbids": [
+   "5bd893f1-41a5-480e-a954-a180e341c8a2"
+  ],
+  "mapping": "work",
+  "key": "kilar-5bd893f1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17996,
+  "title": "Dracula Revealed",
+  "mbids": [
+   "78c37edd-ee24-4efd-aa40-fec1f95633b2"
+  ],
+  "mapping": "work",
+  "key": "kilar-78c37edd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18433,
+  "title": "The Ninth Gate",
+  "mbids": [
+   "9493f6f6-3013-4c75-a32f-8383bf2d4cd7"
+  ],
+  "mapping": "work",
+  "key": "kilar-9493f6f6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18861,
+  "title": "Uwertura uroczysta",
+  "mbids": [
+   "afa04d52-0e58-4a99-9593-06072bb164f3"
+  ],
+  "mapping": "work",
+  "key": "kilar-afa04d52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18912,
+  "title": "Orawa",
+  "mbids": [
+   "b2cbef2b-0a1e-49d1-b441-0a611b5635b5"
+  ],
+  "mapping": "work",
+  "key": "kilar-b2cbef2b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18983,
+  "title": "Exodus",
+  "mbids": [
+   "b77ccb14-2078-4d19-a5d3-e6f3b388b1e3"
+  ],
+  "mapping": "work",
+  "key": "kilar-b77ccb14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19166,
+  "title": "Le roi et l'oiseau",
+  "mbids": [
+   "c345c115-dcfd-4924-beb7-f9a9301d148c"
+  ],
+  "mapping": "work",
+  "key": "kilar-c345c115",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15793,
+  "title": "Siwa mgła",
+  "mbids": [
+   "8bbf09ff-44ff-4a64-aeb7-c840c7199059"
+  ],
+  "mapping": "work",
+  "key": "kilar-8bbf09ff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15970,
+  "title": "Walc",
+  "mbids": [
+   "b7b461fd-c081-4540-bde7-0848d2ce2253"
+  ],
+  "mapping": "work",
+  "key": "kilar-b7b461fd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16003,
+  "title": "So Cold",
+  "mbids": [
+   "013df3d0-6f19-424b-b7e3-93b161ec7d9a"
+  ],
+  "mapping": "work",
+  "key": "kilar-013df3d0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16008,
+  "title": "La Bergère et le Ramoneur",
+  "mbids": [
+   "017f0067-d20a-49e4-9308-4c0f169b51a1"
+  ],
+  "mapping": "work",
+  "key": "kilar-017f0067",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16064,
+  "title": "Race Against the Sunset",
+  "mbids": [
+   "0463d0c6-dd0d-4547-a422-65c5a12f345a"
+  ],
+  "mapping": "work",
+  "key": "kilar-0463d0c6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16078,
+  "title": "Plane To Spain",
+  "mbids": [
+   "0529b6b2-b822-4174-a63f-bebf6cd3b509"
+  ],
+  "mapping": "work",
+  "key": "kilar-0529b6b2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16102,
+  "title": "Mina / Jonathan",
+  "mbids": [
+   "068125a8-e51c-480d-a116-964a02159ae6"
+  ],
+  "mapping": "work",
+  "key": "kilar-068125a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16161,
+  "title": "Die Hinrichtung",
+  "mbids": [
+   "0a2179e0-3897-4963-8d8c-2ccbee26bb2e"
+  ],
+  "mapping": "work",
+  "key": "kilar-0a2179e0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16178,
+  "title": "Cypresses",
+  "mbids": [
+   "0b10e55c-f5ac-4601-8148-f648c1a5519a"
+  ],
+  "mapping": "work",
+  "key": "kilar-0b10e55c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16189,
+  "title": "Dracula Toolbox: Tears to Diamonds",
+  "mbids": [
+   "0be5e299-e0fb-4646-b327-0414f852c841"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16194,
+  "title": "Szepty i łzy (Whispers and Tears)",
+  "mbids": [
+   "0c4f53fa-b01b-4e2f-88a5-ea31256dddad"
+  ],
+  "mapping": "work",
+  "key": "kilar-0c4f53fa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16200,
+  "title": "Riff 62",
+  "mbids": [
+   "0c9625d5-d39a-48a3-b652-ee11aeb74f93"
+  ],
+  "mapping": "work",
+  "key": "kilar-0c9625d5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16240,
+  "title": "The Cinema",
+  "mbids": [
+   "0e96925e-f021-46f3-8acd-1caae89ab71c"
+  ],
+  "mapping": "work",
+  "key": "kilar-0e96925e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16312,
+  "title": "Le Portrait du Roi",
+  "mbids": [
+   "1289638f-adc9-4dd7-aadd-9905da76c4a2"
+  ],
+  "mapping": "work",
+  "key": "kilar-1289638f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16313,
+  "title": "Engele - Melodie",
+  "mbids": [
+   "129786a6-6577-455b-bdbd-f33ad7e94852"
+  ],
+  "mapping": "work",
+  "key": "kilar-129786a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16361,
+  "title": "From a Far Countrty",
+  "mbids": [
+   "155f72cc-961d-4ca9-9afe-e4a757104450"
+  ],
+  "mapping": "work",
+  "key": "kilar-155f72cc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16391,
+  "title": "Mina Possessed",
+  "mbids": [
+   "16c03348-0b72-4632-afbd-a99d2a05c8f3"
+  ],
+  "mapping": "work",
+  "key": "kilar-16c03348",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16474,
+  "title": "Lucy’s Neck",
+  "mbids": [
+   "1b5faa1b-f0be-4333-9996-2c55168535f9"
+  ],
+  "mapping": "work",
+  "key": "kilar-1b5faa1b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16680,
+  "title": "Dracula Toolbox D18B",
+  "mbids": [
+   "2973c932-799a-4692-84de-461bfc3c4ff0"
+  ],
+  "mapping": "work",
+  "key": "kilar-2973c932",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16694,
+  "title": "Les Appartements Secrets",
+  "mbids": [
+   "2a1365bf-db45-4119-b458-a551adb97da6"
+  ],
+  "mapping": "work",
+  "key": "kilar-2a1365bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16745,
+  "title": "Krzesany",
+  "mbids": [
+   "2d89139d-b645-4236-89bc-d3bd255cb1c4"
+  ],
+  "mapping": "work",
+  "key": "kilar-2d89139d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16756,
+  "title": "Miserere - Die Büßer",
+  "mbids": [
+   "2e3869a0-d54c-4b68-8529-9a1472541ab6"
+  ],
+  "mapping": "work",
+  "key": "kilar-2e3869a0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16771,
+  "title": "Prélude au mariage",
+  "mbids": [
+   "2f45d333-0616-4770-a84b-0a9638786ebe"
+  ],
+  "mapping": "work",
+  "key": "kilar-2f45d333",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16783,
+  "title": "Que la vie était belle",
+  "mbids": [
+   "2fd9a5ae-d12d-4606-9fed-571353ee0622"
+  ],
+  "mapping": "work",
+  "key": "kilar-2fd9a5ae",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16813,
+  "title": "Whispered Drac",
+  "mbids": [
+   "31a7972a-bf7b-4bec-b970-f0caa53edfc5"
+  ],
+  "mapping": "work",
+  "key": "kilar-31a7972a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16828,
+  "title": "Blood On His Face",
+  "mbids": [
+   "3268c0e5-31a2-4ef7-936f-2528bf1d55dd"
+  ],
+  "mapping": "work",
+  "key": "kilar-3268c0e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16851,
+  "title": "The Stake",
+  "mbids": [
+   "33724098-aeca-47d6-b327-b86f4add2192"
+  ],
+  "mapping": "work",
+  "key": "kilar-33724098",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16878,
+  "title": "Gloria (Schluß)",
+  "mbids": [
+   "34cd8ce6-0b8f-4605-a149-d340365ddb11"
+  ],
+  "mapping": "work",
+  "key": "kilar-34cd8ce6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16970,
+  "title": "La course du fils à travers les puces",
+  "mbids": [
+   "3a8df42d-b109-4c41-8d96-03eed2e3d39c"
+  ],
+  "mapping": "work",
+  "key": "kilar-3a8df42d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16996,
+  "title": "The Black Sun - Version 1",
+  "mbids": [
+   "3c344ffc-cd31-46b9-90e5-2bbe3f30ed5b"
+  ],
+  "mapping": "work",
+  "key": "kilar-3c344ffc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17004,
+  "title": "La complainte de l'aveugle",
+  "mbids": [
+   "3cac9cb3-aa20-4875-a476-67e7d4ce768c"
+  ],
+  "mapping": "work",
+  "key": "kilar-3cac9cb3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17013,
+  "title": "Die Belagerung",
+  "mbids": [
+   "3d0b904c-47f2-4e65-a366-90d79cf3cbcf"
+  ],
+  "mapping": "work",
+  "key": "kilar-3d0b904c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17030,
+  "title": "Le Petit Clown",
+  "mbids": [
+   "3de44eb0-77cc-40d5-8da2-49ac126a58b3"
+  ],
+  "mapping": "work",
+  "key": "kilar-3de44eb0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17065,
+  "title": "Paulina's Vigil",
+  "mbids": [
+   "40460ce0-7b77-4e0b-b04d-88d98db8c45d"
+  ],
+  "mapping": "work",
+  "key": "kilar-40460ce0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17104,
+  "title": "Salvo's Theme",
+  "mbids": [
+   "42c7ada2-c501-497a-b839-609e64c651f9"
+  ],
+  "mapping": "work",
+  "key": "kilar-42c7ada2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17203,
+  "title": "Générique Fin",
+  "mbids": [
+   "47f05144-5ac2-4152-b511-0380fb21d89f"
+  ],
+  "mapping": "work",
+  "key": "kilar-47f05144",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17254,
+  "title": "Odwiązała Mi Się",
+  "mbids": [
+   "4b01217c-97a7-4796-87dc-78e8cd7c51d7"
+  ],
+  "mapping": "work",
+  "key": "kilar-4b01217c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17312,
+  "title": "La Polka Des Lions",
+  "mbids": [
+   "4fb06a64-3800-4dc0-b22f-488fd02724ca"
+  ],
+  "mapping": "work",
+  "key": "kilar-4fb06a64",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17324,
+  "title": "Prologue: My Life Before Me",
+  "mbids": [
+   "503127f1-246f-486b-b157-8b971e533e53"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17348,
+  "title": "L'escalier Aux Cent-Mille Marches",
+  "mbids": [
+   "52145883-2bc5-4559-a856-4eb8ce396068"
+  ],
+  "mapping": "work",
+  "key": "kilar-52145883",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17380,
+  "title": "La Table Tournante",
+  "mbids": [
+   "53c887a8-f67b-4de0-beac-54dd109cb0f2"
+  ],
+  "mapping": "work",
+  "key": "kilar-53c887a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17401,
+  "title": "Dracula Toolbox D18C",
+  "mbids": [
+   "54a2e050-7e4d-4f20-9d97-47e06e36b0ce"
+  ],
+  "mapping": "work",
+  "key": "kilar-54a2e050",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17422,
+  "title": "Rules Café Waltz",
+  "mbids": [
+   "55925d34-0285-414f-b18e-b98ede3d09a4"
+  ],
+  "mapping": "work",
+  "key": "kilar-55925d34",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17426,
+  "title": "Lucy Squirms",
+  "mbids": [
+   "561cd663-c92e-4c82-9910-99607c6d401a"
+  ],
+  "mapping": "work",
+  "key": "kilar-561cd663",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17438,
+  "title": "Agata's Theme",
+  "mbids": [
+   "56eae70d-53c5-4120-a2d5-b7ef618a7e29"
+  ],
+  "mapping": "work",
+  "key": "kilar-56eae70d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17470,
+  "title": "Agata's Theme - Version 1",
+  "mbids": [
+   "589413e3-a18f-48a6-bd60-00b99fd0d4cd"
+  ],
+  "mapping": "work",
+  "key": "kilar-589413e3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17472,
+  "title": "Corso And The Girl",
+  "mbids": [
+   "58a81be3-1c80-4424-afe8-a2ac95f15e68"
+  ],
+  "mapping": "work",
+  "key": "kilar-58a81be3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17489,
+  "title": "Spilled Ink",
+  "mbids": [
+   "59e2cdc0-c929-4c34-b8a0-94d8219e6f7c"
+  ],
+  "mapping": "work",
+  "key": "kilar-59e2cdc0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17492,
+  "title": "Lucy’s Lullaby",
+  "mbids": [
+   "5a028974-d6e4-4865-91ef-eb78f2ccb76f"
+  ],
+  "mapping": "work",
+  "key": "kilar-5a028974",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17553,
+  "title": "Phantasms of Love",
+  "mbids": [
+   "5e40b57f-eb63-4c9c-b27b-450c3089f984"
+  ],
+  "mapping": "work",
+  "key": "kilar-5e40b57f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17557,
+  "title": "Rules Café",
+  "mbids": [
+   "5e6d9502-ae0e-4ae8-b5d5-f8ccfbc17337"
+  ],
+  "mapping": "work",
+  "key": "kilar-5e6d9502",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17564,
+  "title": "Valse des Fantômes",
+  "mbids": [
+   "5eb5e80c-9df6-425e-8d4e-a776ac20d0f0"
+  ],
+  "mapping": "work",
+  "key": "kilar-5eb5e80c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17572,
+  "title": "À Biarritz, au Casino un soir d'été",
+  "mbids": [
+   "5f14396c-c8ae-48b5-90fb-82f24d419cf3"
+  ],
+  "mapping": "work",
+  "key": "kilar-5f14396c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17664,
+  "title": "Dracula Toolbox: Lucy’s Lullaby",
+  "mbids": [
+   "64c37425-b215-434f-a5cc-e9cd4b9b8e39"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17714,
+  "title": "Engeles Traum",
+  "mbids": [
+   "67bbf8fa-141a-44cc-a13d-8b996ab081b2"
+  ],
+  "mapping": "work",
+  "key": "kilar-67bbf8fa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17742,
+  "title": "Agnus Dei - Clarissas Thema",
+  "mbids": [
+   "6937056c-2f1f-4bc0-96da-795692989380"
+  ],
+  "mapping": "work",
+  "key": "kilar-6937056c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17836,
+  "title": "L’Envol",
+  "mbids": [
+   "6ed4869a-a29f-495f-85d5-06cb7b24b66b"
+  ],
+  "mapping": "work",
+  "key": "kilar-6ed4869a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17837,
+  "title": "Une Française à New-York",
+  "mbids": [
+   "6ed65fb4-a580-4ad1-95cb-ec4a028d3a08"
+  ],
+  "mapping": "work",
+  "key": "kilar-6ed65fb4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17847,
+  "title": "Twilight Cellos",
+  "mbids": [
+   "6f591149-0453-49e4-9ee9-2544da75e3ca"
+  ],
+  "mapping": "work",
+  "key": "kilar-6f591149",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17948,
+  "title": "The Journey",
+  "mbids": [
+   "7587ab81-3d97-4a02-9fa8-4d8bf470bbcb"
+  ],
+  "mapping": "work",
+  "key": "kilar-7587ab81",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17972,
+  "title": "Paulina's Escape",
+  "mbids": [
+   "777a9fbe-c687-4013-a92a-2f6ba11f85f7"
+  ],
+  "mapping": "work",
+  "key": "kilar-777a9fbe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18037,
+  "title": "The Kiss",
+  "mbids": [
+   "7b464430-8df8-4f3b-b86b-6bbee168fa42"
+  ],
+  "mapping": "work",
+  "key": "kilar-7b464430",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18054,
+  "title": "Die unmögliche Liebe",
+  "mbids": [
+   "7c03f624-95ba-4f8a-a2e5-8b45ebe1a978"
+  ],
+  "mapping": "work",
+  "key": "kilar-7c03f624",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18055,
+  "title": "Der falsche Engel",
+  "mbids": [
+   "7c191be7-c086-4f33-be48-0d61d916aa1c"
+  ],
+  "mapping": "work",
+  "key": "kilar-7c191be7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18097,
+  "title": "Le Fou du Roi",
+  "mbids": [
+   "7e9f8242-123d-452c-b36f-1f55028b1d33"
+  ],
+  "mapping": "work",
+  "key": "kilar-7e9f8242",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18115,
+  "title": "Knipperdollings Tanz",
+  "mbids": [
+   "7fdbc5ac-0179-4c23-8208-31f993fd7df0"
+  ],
+  "mapping": "work",
+  "key": "kilar-7fdbc5ac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18118,
+  "title": "Oboe Solo",
+  "mbids": [
+   "800eba0a-2f26-4388-bede-e782fb0a41b4"
+  ],
+  "mapping": "work",
+  "key": "kilar-800eba0a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18185,
+  "title": "Theme for Oboe and Orchestra",
+  "mbids": [
+   "855c6a39-d5fb-4c5b-8687-f0c4388faf97"
+  ],
+  "mapping": "work",
+  "key": "kilar-855c6a39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18355,
+  "title": "Le Fantôme, son Fils, son Chauffeur et sa Voiture",
+  "mbids": [
+   "8fd9d002-daec-4335-8b2e-12aa9f75e6d7"
+  ],
+  "mapping": "work",
+  "key": "kilar-8fd9d002",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18412,
+  "title": "The Funeral",
+  "mbids": [
+   "93482cc3-94f7-46fd-ba40-3132abcfed13"
+  ],
+  "mapping": "work",
+  "key": "kilar-93482cc3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18422,
+  "title": "Dracula Toolbox D21",
+  "mbids": [
+   "93bc4c8c-00cb-48b1-a2e8-1b2f010828b7"
+  ],
+  "mapping": "work",
+  "key": "kilar-93bc4c8c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18428,
+  "title": "Paulina's Revenge",
+  "mbids": [
+   "942fa700-b024-418c-8d63-c13ec2a1f652"
+  ],
+  "mapping": "work",
+  "key": "kilar-942fa700",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18434,
+  "title": "Deux fantômes au paradis",
+  "mbids": [
+   "949e6454-bc3d-4be6-bdd4-3d3223b892ac"
+  ],
+  "mapping": "work",
+  "key": "kilar-949e6454",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18440,
+  "title": "Angelus",
+  "mbids": [
+   "94eac66c-499b-4f8b-8ac1-6783ecde357a"
+  ],
+  "mapping": "work",
+  "key": "kilar-94eac66c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18448,
+  "title": "Die Eroberung",
+  "mbids": [
+   "954e5a9a-dcb6-463a-837a-0e83eab82d87"
+  ],
+  "mapping": "work",
+  "key": "kilar-954e5a9a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18591,
+  "title": "Paulina's Theme",
+  "mbids": [
+   "9ebcbc42-b498-4a9f-8f35-e37fb9ea23b5"
+  ],
+  "mapping": "work",
+  "key": "kilar-9ebcbc42",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18687,
+  "title": "Jo Z Opola",
+  "mbids": [
+   "a4c81a8d-3588-4679-8f54-8b88ac7c08ba"
+  ],
+  "mapping": "work",
+  "key": "kilar-a4c81a8d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18709,
+  "title": "Flowers of Firenze",
+  "mbids": [
+   "a5e71ec9-2aaa-4a56-802e-dee5c7c8cd65"
+  ],
+  "mapping": "work",
+  "key": "kilar-a5e71ec9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18764,
+  "title": "La Fin du Grand Automate",
+  "mbids": [
+   "a9537337-4250-469a-b150-dd3dd27c4df2"
+  ],
+  "mapping": "work",
+  "key": "kilar-a9537337",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18822,
+  "title": "Liana’s Death",
+  "mbids": [
+   "ad0903c1-db18-41ce-bae5-9f056068f285"
+  ],
+  "mapping": "work",
+  "key": "kilar-ad0903c1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18881,
+  "title": "Paulina In Charge",
+  "mbids": [
+   "b140da1f-f0b4-4655-b0c0-ce94198f3728"
+  ],
+  "mapping": "work",
+  "key": "kilar-b140da1f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19011,
+  "title": "Ghetto",
+  "mbids": [
+   "b99a28c2-8483-4b4b-acb8-2022e2a30f5a"
+  ],
+  "mapping": "work",
+  "key": "kilar-b99a28c2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19030,
+  "title": "V Symfonia \"Adwentowa\"",
+  "mbids": [
+   "bb3efeea-36de-423a-a147-757a397016ac"
+  ],
+  "mapping": "work",
+  "key": "kilar-bb3efeea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19060,
+  "title": "A Certain Light",
+  "mbids": [
+   "bcc0c079-5c62-4344-8000-761b95532edf"
+  ],
+  "mapping": "work",
+  "key": "kilar-bcc0c079",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19069,
+  "title": "Carillon",
+  "mbids": [
+   "bd6e82b8-f389-4895-9084-7e6eb9ec6e81"
+  ],
+  "mapping": "work",
+  "key": "kilar-bd6e82b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19134,
+  "title": "The Book",
+  "mbids": [
+   "c134cf6b-c0b3-45fc-aa53-dbecc48639bd"
+  ],
+  "mapping": "work",
+  "key": "kilar-c134cf6b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19184,
+  "title": "Kalwaria",
+  "mbids": [
+   "c475c659-54c9-446a-80ae-b9c55c879fd9"
+  ],
+  "mapping": "work",
+  "key": "kilar-c475c659",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19207,
+  "title": "La Marche Nuptiale",
+  "mbids": [
+   "c5c172b3-b77b-4304-b3e8-f83fe0862690"
+  ],
+  "mapping": "work",
+  "key": "kilar-c5c172b3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19300,
+  "title": "Chateau Saint Martin",
+  "mbids": [
+   "cbc25489-440f-483d-9fe5-1d30ef6b69be"
+  ],
+  "mapping": "work",
+  "key": "kilar-cbc25489",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19325,
+  "title": "Meditation",
+  "mbids": [
+   "cda08151-6969-478a-8607-5c8a3f94fdec"
+  ],
+  "mapping": "work",
+  "key": "kilar-cda08151",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19347,
+  "title": "Les Deux Rois",
+  "mbids": [
+   "cf69bda6-24a1-4dad-843c-3094152363b7"
+  ],
+  "mapping": "work",
+  "key": "kilar-cf69bda6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19351,
+  "title": "Nowa Huta",
+  "mbids": [
+   "cf8d71bf-4c60-47b2-aee7-7ce41630a6e5"
+  ],
+  "mapping": "work",
+  "key": "kilar-cf8d71bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19365,
+  "title": "The Fire",
+  "mbids": [
+   "d04f4ae0-f4e1-42fd-8fef-e2c3c293c8e7"
+  ],
+  "mapping": "work",
+  "key": "kilar-d04f4ae0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19396,
+  "title": "The Motorbike",
+  "mbids": [
+   "d26a66a7-234b-4467-954d-dadd521c2a43"
+  ],
+  "mapping": "work",
+  "key": "kilar-d26a66a7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19407,
+  "title": "Liana",
+  "mbids": [
+   "d2f43ddb-5a0d-4745-9af6-1a8d78b7b705"
+  ],
+  "mapping": "work",
+  "key": "kilar-d2f43ddb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19445,
+  "title": "Papa, tu es toujours là ?",
+  "mbids": [
+   "d54200c2-650d-4d90-a5f8-9060556a24b1"
+  ],
+  "mapping": "work",
+  "key": "kilar-d54200c2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19458,
+  "title": "The Letter II",
+  "mbids": [
+   "d66451d2-b7d9-4148-b58b-149658f3acf1"
+  ],
+  "mapping": "work",
+  "key": "kilar-d66451d2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19491,
+  "title": "Le Cardinal",
+  "mbids": [
+   "d8826dde-7cee-42d5-8237-f7b769db3acc"
+  ],
+  "mapping": "work",
+  "key": "kilar-d8826dde",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19498,
+  "title": "Dracula Toolbox D18A",
+  "mbids": [
+   "d8e6f149-4448-40cd-826b-76cfe83c025b"
+  ],
+  "mapping": "work",
+  "key": "kilar-d8e6f149",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19502,
+  "title": "Missa Pro Pace A. D. 2000",
+  "mbids": [
+   "d976f533-f1a2-4269-b41d-aad4e167b358"
+  ],
+  "mapping": "work",
+  "key": "kilar-d976f533",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19512,
+  "title": "The Confession",
+  "mbids": [
+   "da4127af-ff75-438f-920b-374326bca675"
+  ],
+  "mapping": "work",
+  "key": "kilar-da4127af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19523,
+  "title": "The Legacy",
+  "mbids": [
+   "db1a1fc8-d6f0-4ac0-aa47-9499f136ced3"
+  ],
+  "mapping": "work",
+  "key": "kilar-db1a1fc8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19542,
+  "title": "La Révolte Des Fauves",
+  "mbids": [
+   "dc234c9d-a95b-45ad-87b7-4fb28bf61dc8"
+  ],
+  "mapping": "work",
+  "key": "kilar-dc234c9d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19556,
+  "title": "Piano Solo",
+  "mbids": [
+   "dcb853c3-30b9-4140-b8f0-3fd01a3e23a7"
+  ],
+  "mapping": "work",
+  "key": "kilar-dcb853c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19637,
+  "title": "Corso",
+  "mbids": [
+   "e22f891c-238f-4d3f-90b2-779944a42278"
+  ],
+  "mapping": "work",
+  "key": "kilar-e22f891c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19647,
+  "title": "Les Grands Ateliers du Roi",
+  "mbids": [
+   "e2abb28c-e9a1-45ec-94a3-77831bb4e548"
+  ],
+  "mapping": "work",
+  "key": "kilar-e2abb28c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19685,
+  "title": "Miserere - Engeles Kind",
+  "mbids": [
+   "e62dccda-40bf-4f89-9b0e-38c8c3d0962a"
+  ],
+  "mapping": "work",
+  "key": "kilar-e62dccda",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19690,
+  "title": "“BOO !” / The Chase",
+  "mbids": [
+   "e699d3ca-0c43-4e25-a6b7-735c3efb8ae5"
+  ],
+  "mapping": "work",
+  "key": "kilar-e699d3ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19740,
+  "title": "Clarissas Tod",
+  "mbids": [
+   "eabde9f8-a29a-42c1-ac60-d486acc1a211"
+  ],
+  "mapping": "work",
+  "key": "kilar-eabde9f8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19822,
+  "title": "Sanctus - Der Prophet",
+  "mbids": [
+   "f027b90a-874e-4a7d-87f0-8061ee7d0a17"
+  ],
+  "mapping": "work",
+  "key": "kilar-f027b90a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19827,
+  "title": "Paulina's Secret",
+  "mbids": [
+   "f06a3e20-8990-488b-a035-e221b27f5b77"
+  ],
+  "mapping": "work",
+  "key": "kilar-f06a3e20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19866,
+  "title": "To the Brides",
+  "mbids": [
+   "f295390f-3aea-41aa-8af7-9e1c06a71397"
+  ],
+  "mapping": "work",
+  "key": "kilar-f295390f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19889,
+  "title": "Balkan’s Death",
+  "mbids": [
+   "f3b26d14-0353-4727-8ccb-9dec8c75e412"
+  ],
+  "mapping": "work",
+  "key": "kilar-f3b26d14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19928,
+  "title": "The Castle",
+  "mbids": [
+   "f5c75efb-2b40-4c82-814b-55ead2062934"
+  ],
+  "mapping": "work",
+  "key": "kilar-f5c75efb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19936,
+  "title": "Roberto Trapped",
+  "mbids": [
+   "f63baa62-16dc-48bb-a8c4-86cb5dbc3ae0"
+  ],
+  "mapping": "work",
+  "key": "kilar-f63baa62",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19938,
+  "title": "The Black Sun",
+  "mbids": [
+   "f64df67b-0cd6-4449-9afc-2155ef5c9a9d"
+  ],
+  "mapping": "work",
+  "key": "kilar-f64df67b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19955,
+  "title": "Gloria - Die Wiedertäufer",
+  "mbids": [
+   "f70b080e-b656-4db0-9eb1-0e4fc71f15bf"
+  ],
+  "mapping": "work",
+  "key": "kilar-f70b080e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19967,
+  "title": "Chez Toutankhamon",
+  "mbids": [
+   "f7769266-2842-40e7-bf72-dc2cfefbaa6f"
+  ],
+  "mapping": "work",
+  "key": "kilar-f7769266",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20024,
+  "title": "Epilogue: The Portrait of a Lady",
+  "mbids": [
+   "fb03c045-f662-4f5e-b818-ad1c0850b5c6"
+  ],
+  "mapping": "work",
+  "key": "kilar-fb03c045",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20032,
+  "title": "Roberto's Last Chance",
+  "mbids": [
+   "fb7f8049-33f8-48d4-a914-17828ccf2683"
+  ],
+  "mapping": "work",
+  "key": "kilar-fb7f8049",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20033,
+  "title": "Missing Book / Stalking Corso",
+  "mbids": [
+   "fbaaa584-a37f-489e-9898-5b14dc0a0df3"
+  ],
+  "mapping": "work",
+  "key": "kilar-fbaaa584",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20039,
+  "title": "Bernie Is Dead",
+  "mbids": [
+   "fbe6dc9e-73d3-4ccb-bf1d-889f8ca6c3b2"
+  ],
+  "mapping": "work",
+  "key": "kilar-fbe6dc9e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20056,
+  "title": "Manfredi's Death",
+  "mbids": [
+   "fd3c8d3a-88c1-4956-8f9b-4d413dd9b0cf"
+  ],
+  "mapping": "work",
+  "key": "kilar-fd3c8d3a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20074,
+  "title": "Love Remains",
+  "mbids": [
+   "fe8015e2-90be-4c6d-bbba-e3119232909d"
+  ],
+  "mapping": "work",
+  "key": "kilar-fe8015e2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20081,
+  "title": "Lucy’s Window",
+  "mbids": [
+   "fee8b5c6-7f11-4b00-83a3-b6cbe3364142"
+  ],
+  "mapping": "work",
+  "key": "kilar-fee8b5c6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20095,
+  "title": "Moving to the Ghetto Oct. 31, 1940",
+  "mbids": [
+   "ffceb145-ba3f-435b-9239-fde7b4b2a523"
+  ],
+  "mapping": "work",
+  "key": "kilar-ffceb145",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

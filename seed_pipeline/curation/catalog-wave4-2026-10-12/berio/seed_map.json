@@ -1,0 +1,1226 @@
+[
+ {
+  "pieceId": 632,
+  "title": "Sinfonia",
+  "mbids": [
+   "c7c52b9d-11ab-4145-a47a-0df4785c5b08"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 7452,
+  "title": "Lied",
+  "mbids": [
+   "141ea9ed-d80c-4b78-bb39-cc76930a4a46"
+  ],
+  "mapping": "work",
+  "key": "berio-141ea9ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7559,
+  "title": "A-ronne",
+  "mbids": [
+   "9ffa5112-b410-4af9-bdf7-f87c659f038a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7622,
+  "title": "Canticum novissimi testamenti",
+  "mbids": [
+   "f0efe367-5500-4927-8f42-962c5443b7de"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7687,
+  "title": "Chamber Music",
+  "mbids": [
+   "c625f4ac-6f6a-4bca-a542-5dae731cd537"
+  ],
+  "mapping": "work",
+  "key": "berio-c625f4ac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7689,
+  "title": "Chemins II",
+  "mbids": [
+   "0adebc4b-3cb0-4bc9-aa3a-e922b0b3018e"
+  ],
+  "mapping": "work",
+  "key": "berio-0adebc4b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7750,
+  "title": "Opus no. Zoo",
+  "mbids": [
+   "0186dd3c-1d12-49da-a395-85927b76bcf6"
+  ],
+  "mapping": "work",
+  "key": "berio-0186dd3c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8198,
+  "title": "Due pezzi",
+  "mbids": [
+   "2005e1eb-4d6f-4e38-a709-e451be26155e"
+  ],
+  "mapping": "work",
+  "key": "berio-2005e1eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8383,
+  "title": "Rendering",
+  "mbids": [
+   "2f36ad3c-9ddc-4e6f-b401-47103fac0665"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8494,
+  "title": "Kol Od (Chemins VI)",
+  "mbids": [
+   "3685918b-f584-4cf5-9eb3-4a06b40efa5f"
+  ],
+  "mapping": "work",
+  "key": "berio-3685918b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8688,
+  "title": "Sequenza XII for Bassoon",
+  "mbids": [
+   "45212f8b-08a1-4872-ba04-d928de11961d"
+  ],
+  "mapping": "work",
+  "key": "berio-45212f8b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8711,
+  "title": "Chanson pour Pierre Boulez",
+  "mbids": [
+   "46788585-e74d-4958-b085-a2566c780bc7"
+  ],
+  "mapping": "work",
+  "key": "berio-46788585",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8767,
+  "title": "SOLO",
+  "mbids": [
+   "4a69b115-1893-49c6-8128-eeaa0795cfb7"
+  ],
+  "mapping": "work",
+  "key": "berio-4a69b115",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8833,
+  "title": "Notturno (Quartetto III)",
+  "mbids": [
+   "4f9e511d-d195-4bae-8803-5b526da83503"
+  ],
+  "mapping": "work",
+  "key": "berio-4f9e511d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9001,
+  "title": "Récit (Chemins VII)",
+  "mbids": [
+   "59fdfdd8-ca92-4106-99c5-448fbf8911cf"
+  ],
+  "mapping": "work",
+  "key": "berio-59fdfdd8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9300,
+  "title": "Wasserklavier",
+  "mbids": [
+   "6f56d879-2530-4661-af9a-fed95d3e8319"
+  ],
+  "mapping": "work",
+  "key": "berio-6f56d879",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9404,
+  "title": "Sequenza IX for Clarinet",
+  "mbids": [
+   "76ba72dd-93e7-4b22-aadc-47e7472e9ada"
+  ],
+  "mapping": "work",
+  "key": "berio-76ba72dd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9589,
+  "title": "Sequenza VII for Oboe",
+  "mbids": [
+   "838cf0fc-4f55-4fe8-8435-6ae886b6547f"
+  ],
+  "mapping": "work",
+  "key": "berio-838cf0fc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9707,
+  "title": "Quartetto per archi",
+  "mbids": [
+   "8bc93852-b40f-4e70-9433-7b582f1103fd"
+  ],
+  "mapping": "work",
+  "key": "berio-8bc93852",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9735,
+  "title": "Requies",
+  "mbids": [
+   "8e9d7b75-7619-4292-892c-fa1492338d97"
+  ],
+  "mapping": "work",
+  "key": "berio-8e9d7b75",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9766,
+  "title": "Sequenza V for Trombone",
+  "mbids": [
+   "9036644f-5a0b-4d69-911e-ad4a1c9d1797"
+  ],
+  "mapping": "work",
+  "key": "berio-9036644f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9868,
+  "title": "Duetti per due violini",
+  "mbids": [
+   "98a90f08-6ba0-4819-a791-18dc2a22ad58"
+  ],
+  "mapping": "work",
+  "key": "berio-98a90f08",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9912,
+  "title": "Corale",
+  "mbids": [
+   "9ac5b8c4-def6-49f8-a58a-798e089ad3e6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10363,
+  "title": "Chemins IV",
+  "mbids": [
+   "bbe09147-f041-413d-b35d-01e8ebd3024f"
+  ],
+  "mapping": "work",
+  "key": "berio-bbe09147",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10391,
+  "title": "Ekphrasis (Continuo II)",
+  "mbids": [
+   "be0f891f-2671-44bb-98b6-9c88b3066085"
+  ],
+  "mapping": "work",
+  "key": "berio-be0f891f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10528,
+  "title": "Coro",
+  "mbids": [
+   "c863d2d6-1918-4358-8641-7ac0b927e43f"
+  ],
+  "mapping": "work",
+  "key": "berio-c863d2d6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10615,
+  "title": "Sequenza I for Flute",
+  "mbids": [
+   "cef5d352-6507-4c52-aae9-817a7a0a0dae"
+  ],
+  "mapping": "work",
+  "key": "berio-cef5d352",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10651,
+  "title": "Sequenza IXb for Alto Saxophone",
+  "mbids": [
+   "d1a18b63-bef5-4e71-bd96-548724bcae99"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10878,
+  "title": "Points on the Curve to Find…",
+  "mbids": [
+   "e2f76017-dfd8-406d-b0cc-bdb68540d6de"
+  ],
+  "mapping": "work",
+  "key": "berio-e2f76017",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10937,
+  "title": "Concerto for Two Pianos and Orchestra",
+  "mbids": [
+   "e7137a94-9ea2-4f6d-91bc-fe4b9391639c"
+  ],
+  "mapping": "work",
+  "key": "berio-e7137a94",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11104,
+  "title": "Chemins III",
+  "mbids": [
+   "f3932804-044a-4b2f-9483-67fba935ac27"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11178,
+  "title": "Six Encores",
+  "mbids": [
+   "f8e7a89f-e51a-40d2-a563-aa50b48bec71"
+  ],
+  "mapping": "work",
+  "key": "berio-f8e7a89f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11208,
+  "title": "Chemins I",
+  "mbids": [
+   "fabbb205-12ae-4fe7-ad9b-aec40acb87d6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11268,
+  "title": "Sequenza VIII for Violin",
+  "mbids": [
+   "fe1bf10d-f204-49ab-a3fc-c3bd18cfdd1f"
+  ],
+  "mapping": "work",
+  "key": "berio-fe1bf10d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7488,
+  "title": "Calmo",
+  "mbids": [
+   "464cd0e8-0303-482c-aaf7-af546a6f287d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7609,
+  "title": "Call",
+  "mbids": [
+   "e074c4e5-7288-4c5f-886b-465b493d37be"
+  ],
+  "mapping": "work",
+  "key": "berio-e074c4e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7679,
+  "title": "Circles",
+  "mbids": [
+   "ab27c3d6-e6e7-4d75-bff7-e22c44073e11"
+  ],
+  "mapping": "work",
+  "key": "berio-ab27c3d6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7688,
+  "title": "Gesti",
+  "mbids": [
+   "1d09394b-d927-49e1-bbd3-71cf124eb723"
+  ],
+  "mapping": "work",
+  "key": "berio-1d09394b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7690,
+  "title": "Sequenza XIII for Accordion ‘Chanson’",
+  "mbids": [
+   "25170595-1393-43b1-b7a4-e09b48985943"
+  ],
+  "mapping": "work",
+  "key": "berio-25170595",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7706,
+  "title": "Allelujah I",
+  "mbids": [
+   "2fcc49c6-6ff4-4273-bd25-eee7c12b461b"
+  ],
+  "mapping": "work",
+  "key": "berio-2fcc49c6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7707,
+  "title": "Allelujah II",
+  "mbids": [
+   "e235a170-666b-4f84-aa49-b6fab6fb2d17"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7802,
+  "title": "Sequenza XIV for Cello",
+  "mbids": [
+   "04ab6b01-0f22-4cb1-8e13-2d52f2f38465"
+  ],
+  "mapping": "work",
+  "key": "berio-04ab6b01",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7880,
+  "title": "Chants parallèles",
+  "mbids": [
+   "09f42da8-f8bc-4616-92cd-b3354144ca79"
+  ],
+  "mapping": "work",
+  "key": "berio-09f42da8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7991,
+  "title": "Shofar",
+  "mbids": [
+   "116eb675-b2af-4ef2-95b8-e3124fd59de5"
+  ],
+  "mapping": "work",
+  "key": "berio-116eb675",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8056,
+  "title": "Ora",
+  "mbids": [
+   "1579d3ac-ddba-408c-886b-a47cb2103137"
+  ],
+  "mapping": "work",
+  "key": "berio-1579d3ac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8192,
+  "title": "O King",
+  "mbids": [
+   "1f68d9c4-36a6-43dc-b43f-669f6730cdb3"
+  ],
+  "mapping": "work",
+  "key": "berio-1f68d9c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8223,
+  "title": "Nones",
+  "mbids": [
+   "22531471-f602-4d4a-8530-9d07ac6811c4"
+  ],
+  "mapping": "work",
+  "key": "berio-22531471",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8229,
+  "title": "Gute Nacht",
+  "mbids": [
+   "233fd935-7371-4eb4-8a0e-4f0ce7c3a87a"
+  ],
+  "mapping": "work",
+  "key": "berio-233fd935",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8264,
+  "title": "Concerto II \"Echoing Curves\"",
+  "mbids": [
+   "26e3ffbd-69b2-43b6-a815-f5030064f9fb"
+  ],
+  "mapping": "work",
+  "key": "berio-26e3ffbd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8294,
+  "title": "Quattro versioni originali della Ritirata Notturna di Madrid di L. Boccherini",
+  "mbids": [
+   "28e20424-f756-4861-9cd2-d6dec33b2904"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8367,
+  "title": "Momenti",
+  "mbids": [
+   "2e3cea55-b44b-4936-af61-47192cff1a78"
+  ],
+  "mapping": "work",
+  "key": "berio-2e3cea55",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8407,
+  "title": "Sincronie",
+  "mbids": [
+   "310b06b7-4449-466c-9658-ea0ccf441af6"
+  ],
+  "mapping": "work",
+  "key": "berio-310b06b7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8459,
+  "title": "Voci",
+  "mbids": [
+   "33a760c3-ff41-423c-a19f-4caa5204adbb"
+  ],
+  "mapping": "work",
+  "key": "berio-33a760c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8480,
+  "title": "Serenata I",
+  "mbids": [
+   "353d23cc-c7be-4d0d-837c-42bba529033c"
+  ],
+  "mapping": "work",
+  "key": "berio-353d23cc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8489,
+  "title": "E si fussi pisci",
+  "mbids": [
+   "3633caa3-bec1-4e04-9068-0e45ed6043a5"
+  ],
+  "mapping": "work",
+  "key": "berio-3633caa3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8525,
+  "title": "Sequenza III for Woman's Voice",
+  "mbids": [
+   "386d33c9-da88-4ed3-96fb-e7899aeccba9"
+  ],
+  "mapping": "work",
+  "key": "berio-386d33c9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8563,
+  "title": "Un re in ascolto",
+  "mbids": [
+   "3ae4dfda-20e7-402e-a7af-4c1021c30496"
+  ],
+  "mapping": "work",
+  "key": "berio-3ae4dfda",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8656,
+  "title": "Chemins IIb",
+  "mbids": [
+   "42a2e923-25a5-4ca0-bebc-592930dae3c5"
+  ],
+  "mapping": "work",
+  "key": "berio-42a2e923",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8715,
+  "title": "Stanze",
+  "mbids": [
+   "46c83f4d-de11-4a3c-9d57-8ae89a487cfa"
+  ],
+  "mapping": "work",
+  "key": "berio-46c83f4d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8753,
+  "title": "Epifanie",
+  "mbids": [
+   "4988ac09-b557-4e56-b0ea-1e29a0ec86d0"
+  ],
+  "mapping": "work",
+  "key": "berio-4988ac09",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8800,
+  "title": "Formazioni",
+  "mbids": [
+   "4d186040-3df6-48d2-98b6-b15b7842774b"
+  ],
+  "mapping": "work",
+  "key": "berio-4d186040",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8826,
+  "title": "Eindrücke",
+  "mbids": [
+   "4f1b9736-907c-47c8-9fe4-c523f0d80ae5"
+  ],
+  "mapping": "work",
+  "key": "berio-4f1b9736",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8960,
+  "title": "Un ballo",
+  "mbids": [
+   "574acc3f-8c98-37bb-ace6-3b99af096592"
+  ],
+  "mapping": "work",
+  "key": "berio-574acc3f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9017,
+  "title": "Musica leggera",
+  "mbids": [
+   "5af2b36d-cc32-4cfa-84d7-92642fa518e6"
+  ],
+  "mapping": "work",
+  "key": "berio-5af2b36d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9084,
+  "title": "Sequenza II for Harp",
+  "mbids": [
+   "5fb91d6e-69e9-4807-8a53-003cf0482401"
+  ],
+  "mapping": "work",
+  "key": "berio-5fb91d6e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9147,
+  "title": "Les mots sont allés ...",
+  "mbids": [
+   "641130df-b0cd-4bcf-b115-1c0dac0c6242"
+  ],
+  "mapping": "work",
+  "key": "berio-641130df",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9371,
+  "title": "Sequenza VIb for Cello",
+  "mbids": [
+   "747bafd1-b446-4c02-9343-bf5681a68e11"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9429,
+  "title": "Passaggio",
+  "mbids": [
+   "784a8838-7896-41ff-93ba-cac99a6366be"
+  ],
+  "mapping": "work",
+  "key": "berio-784a8838",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9455,
+  "title": "Psy",
+  "mbids": [
+   "7a80ee09-32d4-4c7b-965c-0dc38afe3d24"
+  ],
+  "mapping": "work",
+  "key": "berio-7a80ee09",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9484,
+  "title": "Il ritorno degli snovidenia",
+  "mbids": [
+   "7bdf483c-f9f5-4cd6-bbe5-522e7c901214"
+  ],
+  "mapping": "work",
+  "key": "berio-7bdf483c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9597,
+  "title": "Study",
+  "mbids": [
+   "84443013-fdd4-4359-a117-b7bf7f2c0874"
+  ],
+  "mapping": "work",
+  "key": "berio-84443013",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9628,
+  "title": "Continuo",
+  "mbids": [
+   "862c7369-3031-4bb2-8ef7-362524be7413"
+  ],
+  "mapping": "work",
+  "key": "berio-862c7369",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9639,
+  "title": "Naturale",
+  "mbids": [
+   "86f74246-fe85-488f-89dc-0da751b1e676"
+  ],
+  "mapping": "work",
+  "key": "berio-86f74246",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9706,
+  "title": "Comma",
+  "mbids": [
+   "8badb957-dc4d-41ab-8c3e-91d3a63dc542"
+  ],
+  "mapping": "work",
+  "key": "berio-8badb957",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9741,
+  "title": "Sonata for piano",
+  "mbids": [
+   "8ede186d-6503-4e8e-bafb-8e494a136f28"
+  ],
+  "mapping": "work",
+  "key": "berio-8ede186d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9770,
+  "title": "Quatuor no. 1",
+  "mbids": [
+   "90b02004-8ca9-45d3-8292-7eefba1040e8"
+  ],
+  "mapping": "work",
+  "key": "berio-90b02004",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9783,
+  "title": "Sequenza XI for Guitar",
+  "mbids": [
+   "91e9bc3f-b195-4c98-a444-b743b5098b1e"
+  ],
+  "mapping": "work",
+  "key": "berio-91e9bc3f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9860,
+  "title": "Fa - Si",
+  "mbids": [
+   "97de9e03-1a59-4d7f-877b-3022215f41d6"
+  ],
+  "mapping": "work",
+  "key": "berio-97de9e03",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9897,
+  "title": "Altra voce",
+  "mbids": [
+   "9a042685-2e29-4503-afa6-419c74ab3484"
+  ],
+  "mapping": "work",
+  "key": "berio-9a042685",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9964,
+  "title": "Sequenza X for Trumpet in C and Piano Resonance",
+  "mbids": [
+   "9ee929d1-81bf-4d6f-9215-f50970ed7f4c"
+  ],
+  "mapping": "work",
+  "key": "berio-9ee929d1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10023,
+  "title": "Diario immaginario",
+  "mbids": [
+   "a3093608-3691-49c8-955b-85c04b87eab6"
+  ],
+  "mapping": "work",
+  "key": "berio-a3093608",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10150,
+  "title": "Sequenza IXc for Bass Clarinet",
+  "mbids": [
+   "ac2cf001-929b-4bba-9d80-5330e51eefa1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10152,
+  "title": "Laborintus II",
+  "mbids": [
+   "ac47868e-b54f-40e1-a909-421a869cba71"
+  ],
+  "mapping": "work",
+  "key": "berio-ac47868e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10197,
+  "title": "Concertino",
+  "mbids": [
+   "af431474-70aa-4bbe-a56b-0268e49166b9"
+  ],
+  "mapping": "work",
+  "key": "berio-af431474",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10218,
+  "title": "Perspectives",
+  "mbids": [
+   "b06a3bd5-47ea-4071-b3ed-e2c2299a246c"
+  ],
+  "mapping": "work",
+  "key": "berio-b06a3bd5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10222,
+  "title": "Cinque variazioni",
+  "mbids": [
+   "b0e53e64-ad51-41ee-9a9a-2bf290fd9bae"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10227,
+  "title": "Chemins V",
+  "mbids": [
+   "b1685970-7a5d-49e4-9dc2-21fe4efe4b7a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10361,
+  "title": "Glosse",
+  "mbids": [
+   "bb93a7c2-4f03-40c9-8200-18fc1cdbbae0"
+  ],
+  "mapping": "work",
+  "key": "berio-bb93a7c2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10380,
+  "title": "Sequenza VIIb for Soprano Saxophone",
+  "mbids": [
+   "bd2fb5e8-ab8c-4683-b4bf-6f94d74469f4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10402,
+  "title": "Différences",
+  "mbids": [
+   "bf2a82e1-bd9d-43ea-8f88-69a0cb60f6b1"
+  ],
+  "mapping": "work",
+  "key": "berio-bf2a82e1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10469,
+  "title": "Linea",
+  "mbids": [
+   "c417e001-881c-478c-a016-4ca866f3f865"
+  ],
+  "mapping": "work",
+  "key": "berio-c417e001",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10537,
+  "title": "Good Night",
+  "mbids": [
+   "c9033690-956d-4840-ba47-ebde84c4a02b"
+  ],
+  "mapping": "work",
+  "key": "berio-c9033690",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10675,
+  "title": "There is no tune",
+  "mbids": [
+   "d3587091-4bcd-4284-9ce5-d5baaf729130"
+  ],
+  "mapping": "work",
+  "key": "berio-d3587091",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10706,
+  "title": "Chemins IIc",
+  "mbids": [
+   "d626a7d7-0db1-4dbc-8484-47134a677916"
+  ],
+  "mapping": "work",
+  "key": "berio-d626a7d7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10707,
+  "title": "Thema (Omaggio a Joyce)",
+  "mbids": [
+   "d6416a78-970e-4e6c-abf0-fd1ff4227439"
+  ],
+  "mapping": "work",
+  "key": "berio-d6416a78",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10761,
+  "title": "Sequenza VI for Viola",
+  "mbids": [
+   "d9ab5f39-430f-4b46-b3ae-ea81237c7d41"
+  ],
+  "mapping": "work",
+  "key": "berio-d9ab5f39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10772,
+  "title": "Sequenza XIVb for Contrabass",
+  "mbids": [
+   "da13ba12-f24c-4977-be49-ab39a003a63d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10956,
+  "title": "Quattro canzoni popolari",
+  "mbids": [
+   "e88978f9-dd23-408d-b9b8-80ab1807acaf"
+  ],
+  "mapping": "work",
+  "key": "berio-e88978f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11038,
+  "title": "Recital I (for Cathy)",
+  "mbids": [
+   "ee5ec25c-171f-4be0-a870-1639360c8ed5"
+  ],
+  "mapping": "work",
+  "key": "berio-ee5ec25c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11052,
+  "title": "Sequenza IV",
+  "mbids": [
+   "ef5571cc-eb54-4409-99e1-50bd624cedc6"
+  ],
+  "mapping": "work",
+  "key": "berio-ef5571cc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11100,
+  "title": "Touch",
+  "mbids": [
+   "f34ab775-5b59-4c94-a801-386293ed0052"
+  ],
+  "mapping": "work",
+  "key": "berio-f34ab775",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11122,
+  "title": "Visage",
+  "mbids": [
+   "f4cf8e97-6aad-49dd-9553-5fdf08b469ce"
+  ],
+  "mapping": "work",
+  "key": "berio-f4cf8e97",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

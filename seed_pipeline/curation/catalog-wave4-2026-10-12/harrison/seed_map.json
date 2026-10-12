@@ -1,0 +1,998 @@
+[
+ {
+  "pieceId": 17671,
+  "title": "Concerto no. 1 for Flute and Percussion",
+  "mbids": [
+   "6525a839-8855-40d6-a332-6ec36f3e44da"
+  ],
+  "mapping": "work",
+  "key": "harrison-6525a839",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23057,
+  "title": "Concerto for Violin and Percussion Orchestra",
+  "mbids": [
+   "15715bc2-c701-4a91-906f-ce18ef254fa0"
+  ],
+  "mapping": "work",
+  "key": "harrison-15715bc2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23080,
+  "title": "Fugue for Percussion",
+  "mbids": [
+   "7a89d076-2b51-4831-8fc2-02aae470c927"
+  ],
+  "mapping": "work",
+  "key": "harrison-7a89d076",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23289,
+  "title": "Double Concerto for Violin and Cello with Javanese Gamelan",
+  "mbids": [
+   "0a017d06-c531-4130-8557-1a03485530b2"
+  ],
+  "mapping": "work",
+  "key": "harrison-0a017d06",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23290,
+  "title": "Concerto for Piano with Javanese Gamelan",
+  "mbids": [
+   "0a04e9ee-d128-490c-8037-c0df0ab187f9"
+  ],
+  "mapping": "work",
+  "key": "harrison-0a04e9ee",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23298,
+  "title": "The Perilous Chapel",
+  "mbids": [
+   "0ade77de-bc02-419a-9d06-2e318ae7d80d"
+  ],
+  "mapping": "work",
+  "key": "harrison-0ade77de",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23372,
+  "title": "Suite for Percussion",
+  "mbids": [
+   "0fe48ee3-b391-4642-8ae8-3e0339780d22"
+  ],
+  "mapping": "work",
+  "key": "harrison-0fe48ee3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23436,
+  "title": "Suite for Violin, Piano and Small Orchestra",
+  "mbids": [
+   "158f0170-0a16-4481-8e37-621b9b728db3"
+  ],
+  "mapping": "work",
+  "key": "harrison-158f0170",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23563,
+  "title": "Seven Pastorales",
+  "mbids": [
+   "2038c02c-2998-4e85-9b81-a7fece42a866"
+  ],
+  "mapping": "work",
+  "key": "harrison-2038c02c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23587,
+  "title": "Canticle Nº 3",
+  "mbids": [
+   "229875e0-5cc6-367b-87fa-269cfaf315ba"
+  ],
+  "mapping": "work",
+  "key": "harrison-229875e0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23621,
+  "title": "String Quartet Set",
+  "mbids": [
+   "265184b1-91c5-4d31-9a6a-4e93b63c39bf"
+  ],
+  "mapping": "work",
+  "key": "harrison-265184b1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23667,
+  "title": "Rhymes With Silver",
+  "mbids": [
+   "29dbb4f1-bfac-4565-baa0-ec4ed53df567"
+  ],
+  "mapping": "work",
+  "key": "harrison-29dbb4f1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23711,
+  "title": "Solstice",
+  "mbids": [
+   "2fbf1086-8553-48ed-9f53-1d3b9c609200"
+  ],
+  "mapping": "work",
+  "key": "harrison-2fbf1086",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23720,
+  "title": "Suite for Symphonic Strings",
+  "mbids": [
+   "30a0e794-82dc-4ba9-8601-dfd7584c5231"
+  ],
+  "mapping": "work",
+  "key": "harrison-30a0e794",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23736,
+  "title": "Suite for Guitar no. 1",
+  "mbids": [
+   "32ab7d52-42ea-4c6e-9f04-5dd174a8205e"
+  ],
+  "mapping": "work",
+  "key": "harrison-32ab7d52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24168,
+  "title": "Canticle no. 1",
+  "mbids": [
+   "5b0cf23d-ebfa-4433-b894-c75415c6db4e"
+  ],
+  "mapping": "work",
+  "key": "harrison-5b0cf23d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24270,
+  "title": "Suite for Violin and American Gamelan",
+  "mbids": [
+   "650d7d46-94e7-4a26-83a0-c7634307ea45"
+  ],
+  "mapping": "work",
+  "key": "harrison-650d7d46",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24482,
+  "title": "New First Suite for Strings",
+  "mbids": [
+   "775266e5-b2ac-4213-b064-01145ad0e7dc"
+  ],
+  "mapping": "work",
+  "key": "harrison-775266e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24500,
+  "title": "Suite for Cello and Piano",
+  "mbids": [
+   "78ae271f-5296-4813-a08b-2652d6e390bd"
+  ],
+  "mapping": "work",
+  "key": "harrison-78ae271f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24544,
+  "title": "Concerto in Slendro",
+  "mbids": [
+   "7c5eabc9-31af-4d79-a2a0-9248dc5a98b4"
+  ],
+  "mapping": "work",
+  "key": "harrison-7c5eabc9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24616,
+  "title": "Strict Songs",
+  "mbids": [
+   "82834592-e8f3-455a-8293-12c87c99d2d1"
+  ],
+  "mapping": "work",
+  "key": "harrison-82834592",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24809,
+  "title": "Suite for Guitar no. 2",
+  "mbids": [
+   "947363df-5936-437d-b71f-c6e20514f247"
+  ],
+  "mapping": "work",
+  "key": "harrison-947363df",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25160,
+  "title": "Grand Duo",
+  "mbids": [
+   "b252d8c3-93cc-49c7-8a28-87c5e17cf831"
+  ],
+  "mapping": "work",
+  "key": "harrison-b252d8c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25194,
+  "title": "Bomba",
+  "mbids": [
+   "b5efb496-e3c1-4521-abc5-89e4204c272d"
+  ],
+  "mapping": "work",
+  "key": "harrison-b5efb496",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25369,
+  "title": "Ariadne",
+  "mbids": [
+   "c783598e-b849-4451-827d-3d8fc1d9bc2d"
+  ],
+  "mapping": "work",
+  "key": "harrison-c783598e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25386,
+  "title": "Concerto for Organ with Percussion Orchestra",
+  "mbids": [
+   "c9345fad-8aa2-4951-b665-fa59bb016785"
+  ],
+  "mapping": "work",
+  "key": "harrison-c9345fad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25623,
+  "title": "Scenes from Cavafy",
+  "mbids": [
+   "dec6b4b7-7006-45cb-bb06-af37f4c1b5b6"
+  ],
+  "mapping": "work",
+  "key": "harrison-dec6b4b7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25646,
+  "title": "Labrynth no. 3",
+  "mbids": [
+   "e0cf0611-71e4-48ca-91a6-05ae85e72efe"
+  ],
+  "mapping": "work",
+  "key": "harrison-e0cf0611",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25672,
+  "title": "Serenade for Guitar and Percussion",
+  "mbids": [
+   "e30ea7e2-5bd7-4633-a8eb-f8782fcf99c5"
+  ],
+  "mapping": "work",
+  "key": "harrison-e30ea7e2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25757,
+  "title": "Labyrinth no. 3",
+  "mbids": [
+   "ea4e06f9-52a5-42b5-956c-8cbfeaadea1f"
+  ],
+  "mapping": "work",
+  "key": "harrison-ea4e06f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25909,
+  "title": "La Koro Sutro",
+  "mbids": [
+   "f79bd99a-8eb5-4ecd-abc1-db68d13cb77e"
+  ],
+  "mapping": "work",
+  "key": "harrison-f79bd99a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23199,
+  "title": "Mass for St. Cecilia's Day",
+  "mbids": [
+   "001ce61b-3fde-402f-add1-a189ae3aa7bf"
+  ],
+  "mapping": "work",
+  "key": "harrison-001ce61b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23266,
+  "title": "Harpsichord Sonata",
+  "mbids": [
+   "0818d0e1-78b4-4483-8c0d-386d4c069105"
+  ],
+  "mapping": "work",
+  "key": "harrison-0818d0e1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23334,
+  "title": "Suite for National Steel Guitar",
+  "mbids": [
+   "0d29e945-df9e-4d21-8bec-44a81cc6f5ff"
+  ],
+  "mapping": "work",
+  "key": "harrison-0d29e945",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23374,
+  "title": "King David's Lament for Jonathan",
+  "mbids": [
+   "10490891-ca78-4ff1-bda6-3f2cb7084e75"
+  ],
+  "mapping": "work",
+  "key": "harrison-10490891",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23505,
+  "title": "New York Waltzes",
+  "mbids": [
+   "1b40f46d-e1d5-4e11-9fc1-8e617b8c9fae"
+  ],
+  "mapping": "work",
+  "key": "harrison-1b40f46d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23567,
+  "title": "Jarabe",
+  "mbids": [
+   "20aa07f3-0cce-4f43-8a86-8c4852550c08"
+  ],
+  "mapping": "work",
+  "key": "harrison-20aa07f3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23612,
+  "title": "Triphony",
+  "mbids": [
+   "255d971e-ec2e-41e9-8336-7ae31509d96d"
+  ],
+  "mapping": "work",
+  "key": "harrison-255d971e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23644,
+  "title": "When I Heard at the Close of Day",
+  "mbids": [
+   "27bed9be-ac00-4f46-a295-7efcd573d6d4"
+  ],
+  "mapping": "work",
+  "key": "harrison-27bed9be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23718,
+  "title": "Main Bersama-Sama",
+  "mbids": [
+   "307d4448-291f-4ec4-81b3-0ad41f70070a"
+  ],
+  "mapping": "work",
+  "key": "harrison-307d4448",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23725,
+  "title": "Simfony #13",
+  "mbids": [
+   "3101ad39-3745-4a07-bea9-3659f3356f57"
+  ],
+  "mapping": "work",
+  "key": "harrison-3101ad39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23740,
+  "title": "Sailors' Chorus",
+  "mbids": [
+   "3305ed29-042b-45ac-a3d7-596072f0e053"
+  ],
+  "mapping": "work",
+  "key": "harrison-3305ed29",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23741,
+  "title": "String Trio",
+  "mbids": [
+   "33078c8f-37b6-4069-b15d-88810f3943fc"
+  ],
+  "mapping": "work",
+  "key": "harrison-33078c8f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23813,
+  "title": "Serenade for Frank Wigglesworth",
+  "mbids": [
+   "38d31988-9ac4-4393-83e9-5ee99959f798"
+  ],
+  "mapping": "work",
+  "key": "harrison-38d31988",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23824,
+  "title": "In Honor of the Divine Mr. Handel",
+  "mbids": [
+   "39e01fc7-aaa3-414e-9bd5-07cccb2273f1"
+  ],
+  "mapping": "work",
+  "key": "harrison-39e01fc7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23885,
+  "title": "Scenes From Nek Chand",
+  "mbids": [
+   "405fa85d-b7e1-4b0a-8583-0dae6b0907ff"
+  ],
+  "mapping": "work",
+  "key": "harrison-405fa85d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23895,
+  "title": "Solo to Anthony Cirone",
+  "mbids": [
+   "416c1cf6-3501-4f2e-ac59-8dc040abc41f"
+  ],
+  "mapping": "work",
+  "key": "harrison-416c1cf6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24011,
+  "title": "Avalokiteshvara",
+  "mbids": [
+   "4c821b11-680c-49ed-a434-68d732798cd9"
+  ],
+  "mapping": "work",
+  "key": "harrison-4c821b11",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24066,
+  "title": "Fifth Simfony",
+  "mbids": [
+   "51e4b33b-57f8-499e-9044-0e30c3023042"
+  ],
+  "mapping": "work",
+  "key": "harrison-51e4b33b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24084,
+  "title": "A 12-Tone Morning After to Amuse Henry",
+  "mbids": [
+   "538d9a81-e43e-4392-8154-b74594c85f8c"
+  ],
+  "mapping": "work",
+  "key": "harrison-538d9a81",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24119,
+  "title": "Largo ostinato",
+  "mbids": [
+   "56de6e7e-d423-482e-b5fe-e0cda390bacc"
+  ],
+  "mapping": "work",
+  "key": "harrison-56de6e7e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24165,
+  "title": "Round",
+  "mbids": [
+   "5ac40aa5-a11c-4776-880e-123bc6f6de91"
+  ],
+  "mapping": "work",
+  "key": "harrison-5ac40aa5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24186,
+  "title": "Oh You Whom I Often & Silently Come",
+  "mbids": [
+   "5cddbc71-c962-4b6e-a639-384b9d1b33ad"
+  ],
+  "mapping": "work",
+  "key": "harrison-5cddbc71",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24245,
+  "title": "Song of Quetzalcoatl",
+  "mbids": [
+   "61e08579-0099-4d21-bd35-101cd56a5fdc"
+  ],
+  "mapping": "work",
+  "key": "harrison-61e08579",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24298,
+  "title": "Gigue & Musette",
+  "mbids": [
+   "67b35208-f2cf-46bb-9bd3-9d7a1c86611a"
+  ],
+  "mapping": "work",
+  "key": "harrison-67b35208",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24333,
+  "title": "Air",
+  "mbids": [
+   "6ab7d298-d6a0-49e6-8400-ef33a0475ed7"
+  ],
+  "mapping": "work",
+  "key": "harrison-6ab7d298",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24441,
+  "title": "Cornish Lancaran",
+  "mbids": [
+   "73d7fe98-edd5-4278-92d4-efce299dc36c"
+  ],
+  "mapping": "work",
+  "key": "harrison-73d7fe98",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24455,
+  "title": "May Rain",
+  "mbids": [
+   "74cbef19-b6c9-4c4b-8def-cb01716cae16"
+  ],
+  "mapping": "work",
+  "key": "harrison-74cbef19",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24461,
+  "title": "Symphony no. 2 \"Elegiac\"",
+  "mbids": [
+   "755b7616-366d-4bd9-8dcd-e61aa9c78649"
+  ],
+  "mapping": "work",
+  "key": "harrison-755b7616",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24493,
+  "title": "A Soedjatmoko Set",
+  "mbids": [
+   "781865ca-20e5-4222-80b5-46987c85818d"
+  ],
+  "mapping": "work",
+  "key": "harrison-781865ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24547,
+  "title": "A Summerfield Set",
+  "mbids": [
+   "7cb5925d-db94-465b-a2a6-d172c07217a7"
+  ],
+  "mapping": "work",
+  "key": "harrison-7cb5925d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24581,
+  "title": "Six Sonatas for Cembalo",
+  "mbids": [
+   "7f55a4d4-9e5e-408f-9e5a-7a488103d78d"
+  ],
+  "mapping": "work",
+  "key": "harrison-7f55a4d4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24631,
+  "title": "Serenade for Betty Freeman and Franco Assetto",
+  "mbids": [
+   "83be5af9-a14f-4d8c-b212-c2989bfcd3db"
+  ],
+  "mapping": "work",
+  "key": "harrison-83be5af9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24942,
+  "title": "At the Tomb of Charles Ives",
+  "mbids": [
+   "9eee615d-f81d-4a31-8007-ac65e2d56c32"
+  ],
+  "mapping": "work",
+  "key": "harrison-9eee615d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24972,
+  "title": "Pipa Concerto",
+  "mbids": [
+   "a14a6b81-778a-4bbb-a904-9ed352357cf6"
+  ],
+  "mapping": "work",
+  "key": "harrison-a14a6b81",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24976,
+  "title": "Ditone Set",
+  "mbids": [
+   "a16ffa5f-8649-4734-a865-993d1bcdcc55"
+  ],
+  "mapping": "work",
+  "key": "harrison-a16ffa5f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25053,
+  "title": "Saraband",
+  "mbids": [
+   "a83b30b4-b278-4d92-8ba3-dd0b7f421de3"
+  ],
+  "mapping": "work",
+  "key": "harrison-a83b30b4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25083,
+  "title": "The Open Road",
+  "mbids": [
+   "aac45927-72e2-447e-bb31-6061de519c88"
+  ],
+  "mapping": "work",
+  "key": "harrison-aac45927",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25141,
+  "title": "Suite for Cello and Harp",
+  "mbids": [
+   "affd1375-92ff-43b7-b85d-cef1c0c7f8c0"
+  ],
+  "mapping": "work",
+  "key": "harrison-affd1375",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25154,
+  "title": "Incidental Music for Corneille's \"Cinna\"",
+  "mbids": [
+   "b19920f0-eb0c-43b0-bb5c-99e4526c362d"
+  ],
+  "mapping": "work",
+  "key": "harrison-b19920f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25164,
+  "title": "Threnody for Carlos Chavez",
+  "mbids": [
+   "b2defb2d-6404-4cf9-a249-b9caa2c85cf3"
+  ],
+  "mapping": "work",
+  "key": "harrison-b2defb2d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25175,
+  "title": "Gending Pak Chokro",
+  "mbids": [
+   "b48bdaa5-acaf-45a7-a04e-8b791b2d4466"
+  ],
+  "mapping": "work",
+  "key": "harrison-b48bdaa5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25184,
+  "title": "Music for Violin with Various Instruments – European, Asian & African",
+  "mbids": [
+   "b540012f-bad0-4242-9d41-0dd697f1c4d5"
+  ],
+  "mapping": "work",
+  "key": "harrison-b540012f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25243,
+  "title": "Bubaran Robert",
+  "mbids": [
+   "ba9d9fe7-6ac3-409a-8f0f-82d20b665a6b"
+  ],
+  "mapping": "work",
+  "key": "harrison-ba9d9fe7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25293,
+  "title": "Philemon and Baukis",
+  "mbids": [
+   "bfab968d-a0d5-41ff-abf1-93c9934a5780"
+  ],
+  "mapping": "work",
+  "key": "harrison-bfab968d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25300,
+  "title": "Homage to Pacifica",
+  "mbids": [
+   "c0ab7e44-b5c8-4b9e-ab2e-499c92ac410b"
+  ],
+  "mapping": "work",
+  "key": "harrison-c0ab7e44",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25443,
+  "title": "Village Music",
+  "mbids": [
+   "ceeb032f-89d3-4550-9269-a4be8a46db36"
+  ],
+  "mapping": "work",
+  "key": "harrison-ceeb032f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25729,
+  "title": "Suite for Sangen",
+  "mbids": [
+   "e799a9fb-0f1a-4902-b074-3f084b87b9bd"
+  ],
+  "mapping": "work",
+  "key": "harrison-e799a9fb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25773,
+  "title": "In Honor of Munakata Shiko",
+  "mbids": [
+   "eb956ce3-16f1-4acd-88ba-b0c75f5ebc80"
+  ],
+  "mapping": "work",
+  "key": "harrison-eb956ce3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25790,
+  "title": "Suite for Violin with String Orchestra",
+  "mbids": [
+   "ed89d3c5-5bc2-44bd-bd51-fb03fe6878e4"
+  ],
+  "mapping": "work",
+  "key": "harrison-ed89d3c5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25818,
+  "title": "Gending Alexander",
+  "mbids": [
+   "f04c5b98-a5f7-46ca-9494-9713d8403e49"
+  ],
+  "mapping": "work",
+  "key": "harrison-f04c5b98",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25855,
+  "title": "Western Dance",
+  "mbids": [
+   "f31a1ea2-dbac-4cf9-85dd-a1057adca565"
+  ],
+  "mapping": "work",
+  "key": "harrison-f31a1ea2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25989,
+  "title": "Gending in Honor of Aphrodite",
+  "mbids": [
+   "fe15caf6-abd1-4e57-b825-498c90837806"
+  ],
+  "mapping": "work",
+  "key": "harrison-fe15caf6",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

@@ -1,0 +1,1298 @@
+[
+ {
+  "pieceId": 658,
+  "title": "Clarinet Concerto, op. 57",
+  "mbids": [
+   "f038a8b6-ff2e-3eac-b75f-18f5d0895438"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7437,
+  "title": "Fynsk foraar, op. 42",
+  "mbids": [
+   "082fa04c-7ee0-4461-b55b-7d79c67f9f2e"
+  ],
+  "mapping": "work",
+  "key": "nielsen-082fa04c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7546,
+  "title": "Saga-Drøm, op. 39",
+  "mbids": [
+   "93cf672c-c0e2-46b0-b7ba-e442815a3de3"
+  ],
+  "mapping": "work",
+  "key": "nielsen-93cf672c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7548,
+  "title": "Saul og David, FS 25",
+  "mbids": [
+   "961f0960-e210-4495-8526-796e84106714"
+  ],
+  "mapping": "work",
+  "key": "nielsen-961f0960",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7580,
+  "title": "Concerto for Violin and Orchestra, op. 33",
+  "mbids": [
+   "b7e417ed-0979-4a0f-9559-1e4340b3787f"
+  ],
+  "mapping": "work",
+  "key": "nielsen-b7e417ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7751,
+  "title": "Derfor kan vort øje glædes, CNW 239",
+  "mbids": [
+   "0194c2e8-4fc2-4dfb-a3dd-e1243d8121a8"
+  ],
+  "mapping": "work",
+  "key": "nielsen-0194c2e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7995,
+  "title": "Aladdin Suite, op. 34",
+  "mbids": [
+   "11a3d66b-4d58-4688-be8f-da33d1408ba8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8102,
+  "title": "Maskarade, FS 39",
+  "mbids": [
+   "194cd716-d21f-4966-bc4f-e12fed65d102"
+  ],
+  "mapping": "work",
+  "key": "nielsen-194cd716",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8125,
+  "title": "Violin Sonata no. 2, op. 35",
+  "mbids": [
+   "1a3716c6-39c2-41e7-bf91-9b7a031b13c7"
+  ],
+  "mapping": "work",
+  "key": "nielsen-1a3716c6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8295,
+  "title": "Aladdin, op. 34",
+  "mbids": [
+   "28f8d566-7ac8-45ac-98a7-b0db56d0aa81"
+  ],
+  "mapping": "work",
+  "key": "nielsen-28f8d566",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8651,
+  "title": "Derfor kan vort øje glædes",
+  "mbids": [
+   "42848ce5-2cc5-4c1e-829d-cb182d912455"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9123,
+  "title": "String Quintet in G major, FS 5",
+  "mbids": [
+   "62689a32-034a-4c49-b951-b3275c519d4e"
+  ],
+  "mapping": "work",
+  "key": "nielsen-62689a32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9244,
+  "title": "Serenata in vano",
+  "mbids": [
+   "6ba9c963-ecf2-423d-ab8f-bf7241e6f7c1"
+  ],
+  "mapping": "work",
+  "key": "nielsen-6ba9c963",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9375,
+  "title": "Andante tranquillo e Scherzo, CNW 31",
+  "mbids": [
+   "74b6a4a6-884a-4cfa-beb8-a99cca791a91"
+  ],
+  "mapping": "work",
+  "key": "nielsen-74b6a4a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9593,
+  "title": "Symphony no. 5, op. 50",
+  "mbids": [
+   "83d29ec3-e60f-415c-b4e0-e72b9b3d43b0"
+  ],
+  "mapping": "work",
+  "key": "nielsen-83d29ec3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9685,
+  "title": "Symphony no. 3 \"Sinfonia Espansiva\", op. 27, FS 60",
+  "mbids": [
+   "8a8dfc85-7abc-467f-a3c4-83e39cab56d4"
+  ],
+  "mapping": "work",
+  "key": "nielsen-8a8dfc85",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10112,
+  "title": "Flute Concerto, FS 119",
+  "mbids": [
+   "a917e909-e878-4fcc-98a5-84f817b8b8e5"
+  ],
+  "mapping": "work",
+  "key": "nielsen-a917e909",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10174,
+  "title": "Pan og Syrinx, op. 49",
+  "mbids": [
+   "adb4ad4f-8e49-4137-8766-4259b41847d2"
+  ],
+  "mapping": "work",
+  "key": "nielsen-adb4ad4f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10684,
+  "title": "Symphony no. 6, FS 116 \"Sinfonia semplice\"",
+  "mbids": [
+   "d3e37663-f405-4932-a0d4-aab61d4c2460"
+  ],
+  "mapping": "work",
+  "key": "nielsen-d3e37663",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10796,
+  "title": "Symphony no. 4, op. 29, FS 76 “The Inextinguishable”",
+  "mbids": [
+   "dc59f081-58e6-4276-bd01-0794b61b0809"
+  ],
+  "mapping": "work",
+  "key": "nielsen-dc59f081",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10884,
+  "title": "Symphony no. 2, op. 16, FS 29 “The Four Temperaments”",
+  "mbids": [
+   "e38af1ec-71bb-48b8-b9be-1b8721888d73"
+  ],
+  "mapping": "work",
+  "key": "nielsen-e38af1ec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10997,
+  "title": "Symphony no. 1, op. 7, FS 16",
+  "mbids": [
+   "eb210715-961a-43aa-a79b-21988b3b0c1e"
+  ],
+  "mapping": "work",
+  "key": "nielsen-eb210715",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11044,
+  "title": "Helios Overture, op. 17",
+  "mbids": [
+   "eec2a68b-470e-4fd6-b36b-72611ffc4c38"
+  ],
+  "mapping": "work",
+  "key": "nielsen-eec2a68b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7441,
+  "title": "Salmer og aandelige Sange, FS 83, CNW 153-201",
+  "mbids": [
+   "0cb809eb-9dd7-4ab2-9a6e-64d68bf03283"
+  ],
+  "mapping": "work",
+  "key": "nielsen-0cb809eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7449,
+  "title": "Symfonisk rhapsodi",
+  "mbids": [
+   "13a96811-cd9b-4468-a4c9-b2b51f91cbc4"
+  ],
+  "mapping": "work",
+  "key": "nielsen-13a96811",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7458,
+  "title": "Lille suite for strygere, op. 1",
+  "mbids": [
+   "184c1cd9-6cd9-4dfc-baff-0d8610c0f1ad"
+  ],
+  "mapping": "work",
+  "key": "nielsen-184c1cd9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7465,
+  "title": "Aftenstemning, FS 48",
+  "mbids": [
+   "1f91625e-fc2c-4d27-bbd8-37c496db0bba"
+  ],
+  "mapping": "work",
+  "key": "nielsen-1f91625e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7471,
+  "title": "Rhapsodic Overture: A Fantasy Journey to the Faroes, FS 123",
+  "mbids": [
+   "2e3f3ccd-aea6-4a72-8395-077180dd23ad"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 7487,
+  "title": "Fantasistykke for klarinet og klaver",
+  "mbids": [
+   "45e422d3-7167-4dc1-8a12-369d3cae34a6"
+  ],
+  "mapping": "work",
+  "key": "nielsen-45e422d3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7494,
+  "title": "Amor og Digteren",
+  "mbids": [
+   "4a4a4313-07a3-4816-b7f3-94a7a9464e61"
+  ],
+  "mapping": "work",
+  "key": "nielsen-4a4a4313",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7498,
+  "title": "29 Little Preludes, FS 136, op. 51",
+  "mbids": [
+   "52669a15-5d73-41e3-a055-23c7892be3e4"
+  ],
+  "mapping": "work",
+  "key": "nielsen-52669a15",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7518,
+  "title": "Kantate til Studentersamfundet, FS 31",
+  "mbids": [
+   "70ac8196-4cb1-40e0-b708-4b6f2ae4304b"
+  ],
+  "mapping": "work",
+  "key": "nielsen-70ac8196",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7521,
+  "title": "Hjemvee, CNW 205",
+  "mbids": [
+   "729ac331-e110-4c32-9f25-631b379e3e1e"
+  ],
+  "mapping": "work",
+  "key": "nielsen-729ac331",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7527,
+  "title": "Kvintet for fløjte, obo, klarinet, horn og fagot, op. 43",
+  "mbids": [
+   "7bf75592-0a3e-4f8c-902c-933380834683"
+  ],
+  "mapping": "work",
+  "key": "nielsen-7bf75592",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7549,
+  "title": "Ved en ung kunstners baare, FS 58",
+  "mbids": [
+   "96545472-65f0-4df8-a54d-50eaf0d2f821"
+  ],
+  "mapping": "work",
+  "key": "nielsen-96545472",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7550,
+  "title": "Melodi, CNW 97",
+  "mbids": [
+   "96e94db7-43fc-476b-9c96-17ccb9f9450d"
+  ],
+  "mapping": "work",
+  "key": "nielsen-96e94db7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7612,
+  "title": "Mit hjerte altid vanker",
+  "mbids": [
+   "e3e82a6c-0285-4bdc-ba2e-e8d1145a5df6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7615,
+  "title": "To præludier, FS 137, CNW 98",
+  "mbids": [
+   "e9b2a75d-539a-4ef4-930e-7d752a7df7ca"
+  ],
+  "mapping": "work",
+  "key": "nielsen-e9b2a75d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7747,
+  "title": "Jeg bærer med smil min byrde",
+  "mbids": [
+   "016f9cc4-d38a-4db1-9a00-94f303659a13"
+  ],
+  "mapping": "work",
+  "key": "nielsen-016f9cc4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7814,
+  "title": "Vocalise-Étude, CNW 317",
+  "mbids": [
+   "0584ea1c-11be-4a00-8251-81cb87f1352c"
+  ],
+  "mapping": "work",
+  "key": "nielsen-0584ea1c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7838,
+  "title": "Hymnus amoris, op. 12",
+  "mbids": [
+   "06dcbe7d-17a0-4182-9303-0bba0ca77e52"
+  ],
+  "mapping": "work",
+  "key": "nielsen-06dcbe7d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7885,
+  "title": "Humoreske-bagateller, op. 11",
+  "mbids": [
+   "0a2b04ce-50d1-4fea-9b04-90ef0bf0d59c"
+  ],
+  "mapping": "work",
+  "key": "nielsen-0a2b04ce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7920,
+  "title": "Tre motetter, op. 55",
+  "mbids": [
+   "0c874d35-40b3-48d7-8c64-a34c9dbe4c78"
+  ],
+  "mapping": "work",
+  "key": "nielsen-0c874d35",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7992,
+  "title": "String Quartet no. 3 in E-flat major, op. 14",
+  "mbids": [
+   "118dc4dc-7506-4585-8eb1-aab765d2d5f2"
+  ],
+  "mapping": "work",
+  "key": "nielsen-118dc4dc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8032,
+  "title": "5 Klavierstücke, op. 3",
+  "mbids": [
+   "13c78568-7262-412c-b0e6-3a6ad6f1657b"
+  ],
+  "mapping": "work",
+  "key": "nielsen-13c78568",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8054,
+  "title": "Frydeligt med jubelkor, CNW 375",
+  "mbids": [
+   "15444dd7-3338-4fb5-9e9d-6b3d8c754f68"
+  ],
+  "mapping": "work",
+  "key": "nielsen-15444dd7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8104,
+  "title": "Klaverstykke in C major, FS 159",
+  "mbids": [
+   "195543ca-8930-49ca-b051-13134dedf546"
+  ],
+  "mapping": "work",
+  "key": "nielsen-195543ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8133,
+  "title": "Nu lyser løv i lunde, CNW 256",
+  "mbids": [
+   "1b7a247e-edb2-4e35-b063-e74c807f9043"
+  ],
+  "mapping": "work",
+  "key": "nielsen-1b7a247e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8239,
+  "title": "Violin Sonata no. 1 in A major, op. 9",
+  "mbids": [
+   "24e2c3f2-3fba-45df-bc8d-4efa55056cae"
+  ],
+  "mapping": "work",
+  "key": "nielsen-24e2c3f2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8275,
+  "title": "Den danske sang er en ung, blond pige, CNW 271",
+  "mbids": [
+   "2763db9f-d7b3-4f23-9993-165775e7d590"
+  ],
+  "mapping": "work",
+  "key": "nielsen-2763db9f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8369,
+  "title": "Påskeblomst! Hvad vil du her?",
+  "mbids": [
+   "2e4e87bf-2189-4607-adf8-6f8dbe599686"
+  ],
+  "mapping": "work",
+  "key": "nielsen-2e4e87bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8402,
+  "title": "Romance for Violin and Piano in D major, CNW 61",
+  "mbids": [
+   "30a66fe0-7641-4c32-998c-c783c423734d"
+  ],
+  "mapping": "work",
+  "key": "nielsen-30a66fe0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8442,
+  "title": "Frihed er det bedste guld, CNW 255",
+  "mbids": [
+   "32a6bc03-06ca-4c66-8ac1-243296db29be"
+  ],
+  "mapping": "work",
+  "key": "nielsen-32a6bc03",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8468,
+  "title": "Piano Trio in G major, FS 3i",
+  "mbids": [
+   "34515d34-ab14-44cd-8178-c10b1e641916"
+  ],
+  "mapping": "work",
+  "key": "nielsen-34515d34",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8484,
+  "title": "Åh, hvor er jeg glad i dag",
+  "mbids": [
+   "357b4f61-c6bc-422b-a196-c4d96e9bfa04"
+  ],
+  "mapping": "work",
+  "key": "nielsen-357b4f61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8495,
+  "title": "Danmark, i tusind år",
+  "mbids": [
+   "368b4f7a-d7cf-487e-af72-b85d773e5cb6"
+  ],
+  "mapping": "work",
+  "key": "nielsen-368b4f7a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8522,
+  "title": "Sange af Ludvig Holstein, op. 10",
+  "mbids": [
+   "38635eb8-a671-450a-a350-3390cbc8e540"
+  ],
+  "mapping": "work",
+  "key": "nielsen-38635eb8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8603,
+  "title": "I solen går jeg bag min plov, CNW 129",
+  "mbids": [
+   "3f8a50c3-bfcc-4b74-9f33-e80534c6e7f8"
+  ],
+  "mapping": "work",
+  "key": "nielsen-3f8a50c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8660,
+  "title": "Du danske mand! af al din magt, CNW 288",
+  "mbids": [
+   "42df1855-9ba3-4fa3-a202-d82a95629361"
+  ],
+  "mapping": "work",
+  "key": "nielsen-42df1855",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8702,
+  "title": "Commotio, op. 58, FS. 155",
+  "mbids": [
+   "45e7eddb-7a7a-4032-897b-956d54f9363e"
+  ],
+  "mapping": "work",
+  "key": "nielsen-45e7eddb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8714,
+  "title": "De snekker mødtes i kvæld på hav",
+  "mbids": [
+   "46b21391-7f1f-47bb-ba59-f3d8f70b9e96"
+  ],
+  "mapping": "work",
+  "key": "nielsen-46b21391",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8847,
+  "title": "Vi sletternes sønner har drømme i sind",
+  "mbids": [
+   "507cf552-d5bb-45fe-8a47-a2f1b0eaa6bc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8869,
+  "title": "Hr. Oluf han rider",
+  "mbids": [
+   "519084a7-68c3-43c2-93bf-ad12a679b6c1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8948,
+  "title": "Symfonisk Suite, FS 19, op. 8",
+  "mbids": [
+   "56cdfbb2-9bb9-43a3-b3b9-a41bbb9ac8f4"
+  ],
+  "mapping": "work",
+  "key": "nielsen-56cdfbb2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8962,
+  "title": "Der sad en fisker så tankefuld, CNW 244",
+  "mbids": [
+   "57bdf5a8-1f43-4a93-bdd2-ccf7ed9171b3"
+  ],
+  "mapping": "work",
+  "key": "nielsen-57bdf5a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8973,
+  "title": "Havet omkring Danmark, CNW 146",
+  "mbids": [
+   "585e37bc-e287-4dfe-a2af-a5a44824a1e7"
+  ],
+  "mapping": "work",
+  "key": "nielsen-585e37bc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9005,
+  "title": "Tunge, mørke natteskyer, CNW 250",
+  "mbids": [
+   "5a3130aa-1b7c-4d67-becb-0b5dd8459364"
+  ],
+  "mapping": "work",
+  "key": "nielsen-5a3130aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9151,
+  "title": "Viser og vers af J.P. Jacobsen, op. 6",
+  "mbids": [
+   "64819a7b-bf94-4c45-82f3-793defaa6c66"
+  ],
+  "mapping": "work",
+  "key": "nielsen-64819a7b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9202,
+  "title": "Three Piano Pieces, op. 59",
+  "mbids": [
+   "694da7cf-017e-4871-8f3a-69de42b4f023"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9206,
+  "title": "Irmelin Rose op. 4 nr. 4",
+  "mbids": [
+   "696a9ec4-205e-4729-a2d6-aef00d40606c"
+  ],
+  "mapping": "work",
+  "key": "nielsen-696a9ec4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9272,
+  "title": "En Snes danske Viser, FS 78",
+  "mbids": [
+   "6dafd2b9-02e2-4fe9-bf83-b81710356969"
+  ],
+  "mapping": "work",
+  "key": "nielsen-6dafd2b9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9311,
+  "title": "Allegretto in C major",
+  "mbids": [
+   "70780aa6-d7d7-4e10-9d58-337782cab3bf"
+  ],
+  "mapping": "work",
+  "key": "nielsen-70780aa6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9427,
+  "title": "Solen er så rød, mor",
+  "mbids": [
+   "78371ac2-77c8-4099-b329-9cc1cee87727"
+  ],
+  "mapping": "work",
+  "key": "nielsen-78371ac2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9467,
+  "title": "Canto serioso für Horn und Klavier, FS 132",
+  "mbids": [
+   "7ad6c58f-e046-4917-936e-681205319581"
+  ],
+  "mapping": "work",
+  "key": "nielsen-7ad6c58f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9512,
+  "title": "String Quartet no. 4 in F major, op. 44",
+  "mbids": [
+   "7dc975c6-38e9-4cae-af9a-a767ad5b9a31"
+  ],
+  "mapping": "work",
+  "key": "nielsen-7dc975c6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9649,
+  "title": "Moderen, op. 41, FS 94",
+  "mbids": [
+   "878cca86-f55c-4990-ac05-346e069d890e"
+  ],
+  "mapping": "work",
+  "key": "nielsen-878cca86",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9700,
+  "title": "Udrundne er de gamle dage, CNW 253",
+  "mbids": [
+   "8b2546f8-a8be-4ec6-af77-48a5dc044566"
+  ],
+  "mapping": "work",
+  "key": "nielsen-8b2546f8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9739,
+  "title": "Tema med variationer, FS 81, op. 40",
+  "mbids": [
+   "8edaecb2-d671-4354-84d6-68802efd7442"
+  ],
+  "mapping": "work",
+  "key": "nielsen-8edaecb2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9777,
+  "title": "Drømmen om \"Glade Jul\" (Dream of a \"Merry Christmas\"), FS 34",
+  "mbids": [
+   "917c4c3e-0e82-488d-bc56-3311fa901937"
+  ],
+  "mapping": "work",
+  "key": "nielsen-917c4c3e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9816,
+  "title": "Søvnen, op. 18",
+  "mbids": [
+   "94097cdb-6ba0-471b-98b0-2cd380ab28d6"
+  ],
+  "mapping": "work",
+  "key": "nielsen-94097cdb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9828,
+  "title": "Hjemlige Jul, straaler Du nu!, CNW 314",
+  "mbids": [
+   "954686bf-5454-4e81-bdbb-b3b150ed374a"
+  ],
+  "mapping": "work",
+  "key": "nielsen-954686bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9833,
+  "title": "Ariels Sang, CNW 302",
+  "mbids": [
+   "95b1738b-f11e-4c08-9397-54aa377cf02a"
+  ],
+  "mapping": "work",
+  "key": "nielsen-95b1738b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9942,
+  "title": "Bøhmisk-dansk folketone, paraphrase for string orchestra, FS 130",
+  "mbids": [
+   "9c97e9ba-b419-4bb5-a300-a3f949019ec4"
+  ],
+  "mapping": "work",
+  "key": "nielsen-9c97e9ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10064,
+  "title": "På det jævne, på det jævne!, CNW 238",
+  "mbids": [
+   "a5f276e5-9836-4984-a46f-1635575a4040"
+  ],
+  "mapping": "work",
+  "key": "nielsen-a5f276e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10107,
+  "title": "Jeg lægger mig så trygt til ro",
+  "mbids": [
+   "a8cf301f-0cbd-4a3d-9b30-e98adafd6638"
+  ],
+  "mapping": "work",
+  "key": "nielsen-a8cf301f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10178,
+  "title": "Hvor sødt i Sommer-Aftenstunden",
+  "mbids": [
+   "addf63a8-2a59-43d0-ae52-3b7e1c0455d0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10209,
+  "title": "Betragt mit svage spind, CNW 254",
+  "mbids": [
+   "affb239b-d625-4721-a25f-65635c3b298f"
+  ],
+  "mapping": "work",
+  "key": "nielsen-affb239b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10364,
+  "title": "String Quartet no. 1 in G minor, op. 13",
+  "mbids": [
+   "bbe2aff0-52bf-43ca-9576-aabcb9895f41"
+  ],
+  "mapping": "work",
+  "key": "nielsen-bbe2aff0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10366,
+  "title": "Nu skal det åbenbares, CNW 261",
+  "mbids": [
+   "bc3cfad8-ac36-4408-ad94-14bac7553328"
+  ],
+  "mapping": "work",
+  "key": "nielsen-bc3cfad8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10458,
+  "title": "9 sange arrangeret for blandet kor af John Høybye",
+  "mbids": [
+   "c381502f-e064-4c8c-ad99-ae59c41fbb14"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10522,
+  "title": "Som en rejselysten flåde, CNW 237",
+  "mbids": [
+   "c7c97189-7d55-4f7d-b47c-d4b3ae4b1b6d"
+  ],
+  "mapping": "work",
+  "key": "nielsen-c7c97189",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10582,
+  "title": "Musik til fem Digte af J.P. Jacobsen, op. 4",
+  "mbids": [
+   "cc155b5e-abe5-4e28-8e83-d4f715fd5dd6"
+  ],
+  "mapping": "work",
+  "key": "nielsen-cc155b5e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10613,
+  "title": "Prelude & Theme With Variations for Solo Violin, op. 48, FS 104",
+  "mbids": [
+   "cee8305f-3d49-49e8-b2cd-efe42943cd40"
+  ],
+  "mapping": "work",
+  "key": "nielsen-cee8305f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10620,
+  "title": "String Quartet no. 2 in F minor",
+  "mbids": [
+   "cf25a619-d207-49b6-a6a2-a208f99d8987"
+  ],
+  "mapping": "work",
+  "key": "nielsen-cf25a619",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10659,
+  "title": "Tre Klaverstykker, FS 131, op. 59",
+  "mbids": [
+   "d1ef2c4a-c5b2-47b7-a34a-a8b5dbf40c73"
+  ],
+  "mapping": "work",
+  "key": "nielsen-d1ef2c4a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10687,
+  "title": "Klavermusik for små og store, FS 148, op. 53",
+  "mbids": [
+   "d4172001-306d-4b0b-ad6a-390a26af20d1"
+  ],
+  "mapping": "work",
+  "key": "nielsen-d4172001",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10725,
+  "title": "Strofiske sange, op. 21",
+  "mbids": [
+   "d7b2367b-2cc9-4e6b-9295-df41a8dcd6b6"
+  ],
+  "mapping": "work",
+  "key": "nielsen-d7b2367b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10728,
+  "title": "Fest-præludium ved Aarhundredskiftet, CNW 84",
+  "mbids": [
+   "d7e0355b-566b-4405-aa2b-039b09602c0c"
+  ],
+  "mapping": "work",
+  "key": "nielsen-d7e0355b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10734,
+  "title": "Paraphrase on \"Nærmere Gud til dig\", FS 63",
+  "mbids": [
+   "d816aa5a-7e2d-41d1-bc7c-0ddd19c623d4"
+  ],
+  "mapping": "work",
+  "key": "nielsen-d816aa5a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10857,
+  "title": "Jeg gik i marken og vogtede får",
+  "mbids": [
+   "e0cf8995-1472-4eb9-85a6-0e82d55ccbff"
+  ],
+  "mapping": "work",
+  "key": "nielsen-e0cf8995",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10866,
+  "title": "Suite \"Den Luciferiske\", op. 45 (FS 91)",
+  "mbids": [
+   "e1a8f0fd-0e73-46d1-ad50-417daacc0b16"
+  ],
+  "mapping": "work",
+  "key": "nielsen-e1a8f0fd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10867,
+  "title": "Vi sletternes sønner har drømme i sind, CNW 147",
+  "mbids": [
+   "e1c8a1c0-dd34-454b-9225-990f250ff4a7"
+  ],
+  "mapping": "work",
+  "key": "nielsen-e1c8a1c0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10945,
+  "title": "Preludio & Presto, op. 52, FS 128",
+  "mbids": [
+   "e7e86ee7-fb26-476f-8eeb-56af6502c315"
+  ],
+  "mapping": "work",
+  "key": "nielsen-e7e86ee7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11086,
+  "title": "Theme and Variations, op. 40",
+  "mbids": [
+   "f23806a6-abdb-4e4b-8505-c2b9794a4c27"
+  ],
+  "mapping": "work",
+  "key": "nielsen-f23806a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11132,
+  "title": "Chaconne for klaver, op. 32, FS 79",
+  "mbids": [
+   "f5a1bfc1-2d3b-4009-a15a-af0ad6b40c4a"
+  ],
+  "mapping": "work",
+  "key": "nielsen-f5a1bfc1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11161,
+  "title": "Børnene spiller",
+  "mbids": [
+   "f7fbbd4c-9d20-48ef-9258-bc96105dabe5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11207,
+  "title": "Polka for Solo Violin",
+  "mbids": [
+   "fa9767a7-4317-46dc-a4ac-651c66e2d4fd"
+  ],
+  "mapping": "work",
+  "key": "nielsen-fa9767a7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11285,
+  "title": "Bidrag til “Tillæg til Folkehøjskolens Melodibog”",
+  "mbids": [
+   "ffa12538-f967-423e-ae5f-b56dc65774ad"
+  ],
+  "mapping": "work",
+  "key": "nielsen-ffa12538",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

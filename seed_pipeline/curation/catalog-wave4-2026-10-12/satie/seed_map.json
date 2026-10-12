@@ -1,0 +1,2222 @@
+[
+ {
+  "pieceId": 1831,
+  "title": "Socrate",
+  "mbids": [
+   "7910bfe1-4589-49ee-93c3-c1902ec00053"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7448,
+  "title": "12 petits chorals",
+  "mbids": [
+   "1383f44b-0db2-3d84-8ff2-d456ed8facb4"
+  ],
+  "mapping": "work",
+  "key": "satie-1383f44b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7535,
+  "title": "Uspud : Ballet chrétien en 3 actes",
+  "mbids": [
+   "83f743ad-ea86-422c-910a-640f312378d8"
+  ],
+  "mapping": "work",
+  "key": "satie-83f743ad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7593,
+  "title": "Relâche",
+  "mbids": [
+   "caaf03ed-e6f1-4cb9-849c-8448c8ca6ddd"
+  ],
+  "mapping": "work",
+  "key": "satie-caaf03ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7635,
+  "title": "Gymnopédies",
+  "mbids": [
+   "c29c5a25-8859-3957-b0fa-3988a7dcaf75"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7639,
+  "title": "Fantaisie‐valse",
+  "mbids": [
+   "192ce526-1baf-3656-8ad9-8cc7ed9eaff2"
+  ],
+  "mapping": "work",
+  "key": "satie-192ce526",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7648,
+  "title": "Quatre Ogives",
+  "mbids": [
+   "9b001b67-ab86-4c03-9785-e6b56b1880f6"
+  ],
+  "mapping": "work",
+  "key": "satie-9b001b67",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7655,
+  "title": "La Chanson de Satie",
+  "mbids": [
+   "6e329211-e0ec-464f-aa3b-58939ea7d3ba"
+  ],
+  "mapping": "work",
+  "key": "satie-6e329211",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7682,
+  "title": "Pièces froides",
+  "mbids": [
+   "5fbf5d13-40a4-45dd-b595-6f5ee5b3b450"
+  ],
+  "mapping": "work",
+  "key": "satie-5fbf5d13",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7693,
+  "title": "Gymnopédie no. 1",
+  "mbids": [
+   "ebb05c6c-530d-4671-aa01-36c18b759ba2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7699,
+  "title": "Trois Gymnopedies (first movement)",
+  "mbids": [
+   "69a80559-4a7b-393b-8ec9-300828d2591c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7729,
+  "title": "Prélude du Nazaréen : En deux parties",
+  "mbids": [
+   "00288c25-4be8-4c3f-8878-822738ccac6e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7746,
+  "title": "Gymnopédie Nº 1",
+  "mbids": [
+   "014afbad-24bf-4607-931b-8330587b7bfe"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7801,
+  "title": "Gnossienne Nº 1",
+  "mbids": [
+   "04a23765-795a-4f34-be09-5502d63aa987"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7813,
+  "title": "Gymnopédie No. 1 (Dominik Eulberg Rework)",
+  "mbids": [
+   "057a1110-f31b-4fc2-bcf7-ca415ac66f37"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7998,
+  "title": "Le Fils des étoiles (Préludes)",
+  "mbids": [
+   "11c190cc-537d-3745-b119-6573e3a5ddf0"
+  ],
+  "mapping": "work",
+  "key": "satie-06438de8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8000,
+  "title": "Heures séculaires et Instantanées",
+  "mbids": [
+   "11c9dc95-1f90-463f-a7d4-8de7f7d6cae6"
+  ],
+  "mapping": "work",
+  "key": "satie-11c9dc95",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8072,
+  "title": "Le Fils des Étoiles, préludes (n° 1 et 2)",
+  "mbids": [
+   "16da56d3-b5bd-462a-aeb6-b19679af770c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8326,
+  "title": "Le Fils des étoiles: Prelude 3",
+  "mbids": [
+   "2b5e3c71-e1e8-3115-a509-940571453f42"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8344,
+  "title": "Quatre petites mélodies",
+  "mbids": [
+   "2cb03609-a4e5-40fa-af84-05469006745f"
+  ],
+  "mapping": "work",
+  "key": "satie-2cb03609",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8403,
+  "title": "Quatre préludes",
+  "mbids": [
+   "30be3832-0f52-45ee-a3c9-a20f716417cb"
+  ],
+  "mapping": "work",
+  "key": "satie-30be3832",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8523,
+  "title": "Gymnopédie no. 1 (Re‐imagined)",
+  "mbids": [
+   "3869207a-fab5-427f-bd97-0e1e1a3377b0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8677,
+  "title": "Le Fils des étoiles: Prelude 1",
+  "mbids": [
+   "4418bee4-aec6-35ec-9914-f7fc412e375f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8683,
+  "title": "Trois gnossiennes: No. 1",
+  "mbids": [
+   "444d6612-b966-43f1-bb21-e9e6de95c09e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8705,
+  "title": "Pièces Froides No. 2",
+  "mbids": [
+   "45fd82c0-9430-39ef-8080-8fd6f8353d8e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8734,
+  "title": "Vexations (version 1)",
+  "mbids": [
+   "481824b1-1f17-3314-9a0d-9b080c075d27"
+  ],
+  "mapping": "work",
+  "key": "satie-481824b1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8788,
+  "title": "Gymnopédie no. 1: Lent et douloureux",
+  "mbids": [
+   "4c0bc6e8-e200-391e-aca6-fba4fb687089"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8817,
+  "title": "Rêverie de L'enfance de Pantagruel",
+  "mbids": [
+   "4e1aebc7-0477-4cbb-b33f-e5ad8bfc6800"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8850,
+  "title": "Trois gnossiennes: No. 2",
+  "mbids": [
+   "50b294ca-c64a-4db6-ab86-d77b05469599"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8889,
+  "title": "Trois Sonneries de la Rose+Croix",
+  "mbids": [
+   "52cec92a-231a-4bff-b457-05263589a47f"
+  ],
+  "mapping": "work",
+  "key": "satie-52cec92a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8956,
+  "title": "Trois gnossiennes: No. 3",
+  "mbids": [
+   "57157ef9-b2e5-480b-8678-b71656d9c3d6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8966,
+  "title": "Fugue-valse",
+  "mbids": [
+   "57ddc0f8-3bb3-4d67-996a-2a124d49f1c7"
+  ],
+  "mapping": "work",
+  "key": "satie-57ddc0f8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9101,
+  "title": "Trois Airs à faire fuir",
+  "mbids": [
+   "61061937-eb89-498f-8e36-65a16e877c07"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9221,
+  "title": "Uspud — ballet chrétien en trois actes : Acte 1",
+  "mbids": [
+   "6a955c8c-26ef-4a8f-818d-5d1a5af16f2b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9262,
+  "title": "Avant-dernières pensées",
+  "mbids": [
+   "6cbe9e89-20fd-4b90-93c0-a730947c6cce"
+  ],
+  "mapping": "work",
+  "key": "satie-6cbe9e89",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9277,
+  "title": "Sylvie",
+  "mbids": [
+   "6e3bac5d-b65e-4e6d-b8c7-ff893f297c4f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9289,
+  "title": "Sonneries de la Rose+Croix: I. Air de l'Ordre (Sascha Braemer 5pm Remix)",
+  "mbids": [
+   "6ea3985e-4f47-40af-a64e-a899512038ad"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9292,
+  "title": "Pièces froides, Danses de travers : Passer",
+  "mbids": [
+   "6f0224ef-2a0e-4bab-bffd-4c8f1745257c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9334,
+  "title": "Trois Gnossiennes (I–III)",
+  "mbids": [
+   "7187de3f-9add-4f72-8c5c-3160eff614a2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9336,
+  "title": "Vexations (version 2)",
+  "mbids": [
+   "71aac897-bca1-3886-be71-c156500a4895"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 9483,
+  "title": "Gnossienne No. 1 (Kid Francescoli Rework)",
+  "mbids": [
+   "7bcfd986-2fb5-42b6-9bfb-97ed062ca79b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9497,
+  "title": "Uspud — ballet chrétien en trois actes : Acte 2",
+  "mbids": [
+   "7cb0e429-efce-4486-a907-97b22db77078"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9583,
+  "title": "Trois Gymnopédies",
+  "mbids": [
+   "834ab130-3b05-46ad-99d1-b2d9734f5ef5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9697,
+  "title": "Messe des pauvres",
+  "mbids": [
+   "8af6c761-ce0b-44cf-9df9-9adb3a96fc7c"
+  ],
+  "mapping": "work",
+  "key": "satie-8af6c761",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9703,
+  "title": "Rag-Time Parade",
+  "mbids": [
+   "8b4fba94-2d51-4257-bb1d-9a7b55098f6e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9711,
+  "title": "Danse de travers II",
+  "mbids": [
+   "8c1f656f-0c0e-4127-81c4-a414d919c96a"
+  ],
+  "mapping": "work",
+  "key": "satie-8c1f656f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9962,
+  "title": "Pièces froides, Danses de travers : Encore",
+  "mbids": [
+   "9eb64e31-2f2a-49ae-a4da-b79e3c3292f0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10034,
+  "title": "Petite Sonate",
+  "mbids": [
+   "a39bce2d-56af-404b-a891-849cf1b2ce1e"
+  ],
+  "mapping": "work",
+  "key": "satie-a39bce2d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10071,
+  "title": "Gymnopedie no. 1 (Erik Satie - Reimagined)",
+  "mbids": [
+   "a6393429-e7aa-429f-90cf-2414fc975a24"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10196,
+  "title": "Gnossienne No. 1 (Grandbrothers Rework)",
+  "mbids": [
+   "af00cf2a-8df6-4044-b79b-83fc8cb6bc13"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10274,
+  "title": "Uspud",
+  "mbids": [
+   "b530b03b-984b-3c0e-a25f-e79b7df61fd3"
+  ],
+  "mapping": "work",
+  "key": "satie-b530b03b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10283,
+  "title": "Trois Gnossiennes (IV–VI)",
+  "mbids": [
+   "b62365cd-5fe8-480d-8926-cfce62351111"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10296,
+  "title": "Deux Ogives",
+  "mbids": [
+   "b6f166a1-1bf8-4ded-a380-fcc9c1546098"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10313,
+  "title": "Menus Propos Enfantins",
+  "mbids": [
+   "b80f9d60-bf2f-4883-b72c-5e20babf4915"
+  ],
+  "mapping": "work",
+  "key": "satie-b80f9d60",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10349,
+  "title": "Vexations (version 3)",
+  "mbids": [
+   "bad2cef7-b633-34ef-9546-fcaa2f122429"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 10447,
+  "title": "Trois Sarabandes",
+  "mbids": [
+   "c289322d-962f-3c62-9c41-a1c47f7be15c"
+  ],
+  "mapping": "work",
+  "key": "satie-c289322d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10456,
+  "title": "Embryons desséchés",
+  "mbids": [
+   "c36ac6a3-092c-373a-9f70-0d8be7437bdb"
+  ],
+  "mapping": "work",
+  "key": "satie-c36ac6a3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10617,
+  "title": "Uspud — ballet chrétien en trois actes : Acte 3",
+  "mbids": [
+   "cf0fc428-db7b-4781-badc-b33efe8f0bbf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10799,
+  "title": "Gymnopédies : II. Lent et triste",
+  "mbids": [
+   "dccbdd22-36a1-4716-8f99-952dc23a7f11"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10802,
+  "title": "Gymnopédie no. 3",
+  "mbids": [
+   "dd14690d-986c-3d4c-baf0-fbe0c983b8ce"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10942,
+  "title": "Trois Gnossiennes",
+  "mbids": [
+   "e7b9f29a-588d-4a4b-b986-8999c2c86dbf"
+  ],
+  "mapping": "work",
+  "key": "satie-e7b9f29a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10947,
+  "title": "Gnossienne No. 5 (French 79 Rework)",
+  "mbids": [
+   "e8147a27-1753-49d8-89d9-1b4295b8b18b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11015,
+  "title": "Bonjour Biqui, Bonjour!",
+  "mbids": [
+   "ec4d9c49-3389-4ea9-8755-9d7a9dacd914"
+  ],
+  "mapping": "work",
+  "key": "satie-ec4d9c49",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11074,
+  "title": "Le Fils des étoiles: Prelude 2",
+  "mbids": [
+   "f14b939e-b880-39d7-bcc8-2c98224e661a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11081,
+  "title": "Enfantillages pittoresques: II. Berceuse (Christian Löffler Rework)",
+  "mbids": [
+   "f1f7a767-f40f-4e26-8514-370bed1246a8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11133,
+  "title": "Sports et divertissements",
+  "mbids": [
+   "f5a71eec-70fa-4244-96bb-e84ccf769b39"
+  ],
+  "mapping": "work",
+  "key": "satie-f5a71eec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11194,
+  "title": "Illusion",
+  "mbids": [
+   "f9b6a66e-9d9e-4224-9693-4c85541520a9"
+  ],
+  "mapping": "work",
+  "key": "satie-f9b6a66e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7511,
+  "title": "Le Piccadilly",
+  "mbids": [
+   "6946ee61-ed1c-36b3-bc5c-dc4288cf0cc3"
+  ],
+  "mapping": "work",
+  "key": "satie-6946ee61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7522,
+  "title": "Prélude de la porte héroïque du ciel",
+  "mbids": [
+   "73c458a6-81ba-30fd-aa88-ba118b924d81"
+  ],
+  "mapping": "work",
+  "key": "satie-73c458a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7561,
+  "title": "Le Poisson rêveur",
+  "mbids": [
+   "a0767a9c-1343-4052-9562-0cfa9ecaa470"
+  ],
+  "mapping": "work",
+  "key": "satie-a0767a9c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7562,
+  "title": "Sonatine bureaucratique",
+  "mbids": [
+   "a2b86925-e938-33c6-98c2-cd7678bc68e9"
+  ],
+  "mapping": "work",
+  "key": "satie-a2b86925",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7590,
+  "title": "Prélude de la porte héroïque du ciel (arr. Tim Story)",
+  "mbids": [
+   "c33ad783-30c1-3d60-abff-d5fd6a65ed04"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7599,
+  "title": "Le Fils des étoiles: Prélude I. La Vocation",
+  "mbids": [
+   "d44fc00d-7929-4157-8f28-e5cab6fb897d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7621,
+  "title": "Chez le docteur",
+  "mbids": [
+   "f09c8ed0-244c-4c25-82c8-3b6dee145cdd"
+  ],
+  "mapping": "work",
+  "key": "satie-f09c8ed0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7623,
+  "title": "Premier Menuet",
+  "mbids": [
+   "f33853ca-9a18-4eb2-b9e4-b50c01d37983"
+  ],
+  "mapping": "work",
+  "key": "satie-f33853ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7640,
+  "title": "Valse-ballet, op. 62",
+  "mbids": [
+   "10e2b732-5368-3a64-9094-f40b6b5ed136"
+  ],
+  "mapping": "work",
+  "key": "satie-10e2b732",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7641,
+  "title": "L'Omnibus-automobile",
+  "mbids": [
+   "8f9573fe-f304-4067-b0b5-79d875c370b2"
+  ],
+  "mapping": "work",
+  "key": "satie-8f9573fe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7642,
+  "title": "Ludions",
+  "mbids": [
+   "a1d32b63-b3f4-47f3-a39e-22fa45fbf065"
+  ],
+  "mapping": "work",
+  "key": "satie-a1d32b63",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7643,
+  "title": "Allons-y, Chochotte",
+  "mbids": [
+   "a62becb3-2f23-4496-b4b4-08b41f4afef2"
+  ],
+  "mapping": "work",
+  "key": "satie-a62becb3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7644,
+  "title": "[Hymne pour le] Salut drapeau !",
+  "mbids": [
+   "11ed1676-65b0-399b-9163-819bae52c01c"
+  ],
+  "mapping": "work",
+  "key": "satie-11ed1676",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7645,
+  "title": "Chanson, op. 52",
+  "mbids": [
+   "244ddcca-ccef-30f9-a763-f8d9c35197c8"
+  ],
+  "mapping": "work",
+  "key": "satie-244ddcca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7647,
+  "title": "Daphénéo",
+  "mbids": [
+   "ae68e65e-9a70-479b-9c93-b8777a2da082"
+  ],
+  "mapping": "work",
+  "key": "satie-ae68e65e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7662,
+  "title": "Shine",
+  "mbids": [
+   "64eb29b0-346d-4c8b-a5ca-a23f18dcd8ff"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7695,
+  "title": "Drifting, Dreaming",
+  "mbids": [
+   "630883e4-dc93-40ae-a1c5-f26708d241fd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7757,
+  "title": "Embarquement pour Cythère",
+  "mbids": [
+   "02099f11-d447-465b-b539-bd92d5eab91a"
+  ],
+  "mapping": "work",
+  "key": "satie-02099f11",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7780,
+  "title": "J’avais un ami",
+  "mbids": [
+   "03ca869b-6b48-4ef9-a07e-cb47b67373fc"
+  ],
+  "mapping": "work",
+  "key": "satie-03ca869b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7839,
+  "title": "Embryons desséchés : I. d'Holothurie",
+  "mbids": [
+   "06e60def-4fa4-4636-9e55-e78037172512"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7903,
+  "title": "Le Tango From Sport et divertissements (Sport and Entertainment)",
+  "mbids": [
+   "0b4ad4fb-8638-478c-ba79-24cdba8d97ab"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7953,
+  "title": "Sonnerie pour réveiller le bon gros roi des singes",
+  "mbids": [
+   "0ef95b3b-788b-4d49-a68f-01800d003bba"
+  ],
+  "mapping": "work",
+  "key": "satie-0ef95b3b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8084,
+  "title": "Cinq Grimaces (pour \"Le Songe d'une Nuit d'Été\")",
+  "mbids": [
+   "17a91436-5feb-4340-b7f7-adee1843c100"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8098,
+  "title": "Un dîner à l'Élysée",
+  "mbids": [
+   "18da6334-209f-4d32-ab81-e7b7502076eb"
+  ],
+  "mapping": "work",
+  "key": "satie-18da6334",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8099,
+  "title": "Allegro",
+  "mbids": [
+   "1904f8b0-6900-409f-93c3-c8f528fe03d3"
+  ],
+  "mapping": "work",
+  "key": "satie-1904f8b0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8179,
+  "title": "Musique d’ameublement: Tenture de cabinet préfectoral",
+  "mbids": [
+   "1ece67c3-39da-41fe-ac89-6207d1ebd36a"
+  ],
+  "mapping": "work",
+  "key": "satie-1ece67c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8182,
+  "title": "Dapheneo",
+  "mbids": [
+   "1ee47add-b84e-47d6-9ea0-49bdbd945570"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8209,
+  "title": "Bourrée",
+  "mbids": [
+   "20f72a19-107b-4f4f-b26d-39cf686bd531"
+  ],
+  "mapping": "work",
+  "key": "satie-20f72a19",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8213,
+  "title": "Petit recueil des fêtes",
+  "mbids": [
+   "21088807-b05b-4de6-b1ed-b16eee6ed209"
+  ],
+  "mapping": "work",
+  "key": "satie-21088807",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8228,
+  "title": "Sans titre, ?gnossienne : Petite Ouverture à danser",
+  "mbids": [
+   "22eaf43e-3bd4-449f-bbcd-71bc515d8c72"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8267,
+  "title": "La más soñada",
+  "mbids": [
+   "26f992a9-f605-45e9-9783-ad37b376a147"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8340,
+  "title": "Petite rêvasserie nocturne",
+  "mbids": [
+   "2c5cd59f-36b3-4f06-82cc-c362cdfd1bf7"
+  ],
+  "mapping": "work",
+  "key": "satie-2c5cd59f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8349,
+  "title": "Trois poèmes d’amour",
+  "mbids": [
+   "2d1f09cc-8f3b-46ac-bb55-99246b8b074c"
+  ],
+  "mapping": "work",
+  "key": "satie-2d1f09cc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8389,
+  "title": "Aperçus désagréables",
+  "mbids": [
+   "2fbe2303-6d7e-43fa-85d4-d1bb63dbf7f5"
+  ],
+  "mapping": "work",
+  "key": "satie-2fbe2303",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8404,
+  "title": "Passacaille (pas trop vif)",
+  "mbids": [
+   "30d70ac0-ee20-4774-82ab-9d9d7a0caa4f"
+  ],
+  "mapping": "work",
+  "key": "satie-30d70ac0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8411,
+  "title": "Pièces Froides No. 3",
+  "mbids": [
+   "314b716f-87ab-3195-b30e-22c84337ae5f"
+  ],
+  "mapping": "work",
+  "key": "satie-314b716f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8419,
+  "title": "Poudre d’or",
+  "mbids": [
+   "31b62101-e9cb-332c-8a00-df9c4956d5ff"
+  ],
+  "mapping": "work",
+  "key": "satie-31b62101",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8454,
+  "title": "Réflexions nocturnes nos. 1 & 2",
+  "mbids": [
+   "336b56a5-3a6d-4b70-b713-eb731a26296b"
+  ],
+  "mapping": "work",
+  "key": "satie-336b56a5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8457,
+  "title": "Vieux Sequins et Vieilles Cuirasses",
+  "mbids": [
+   "337ded6f-4aa5-3b8b-bb56-4bacbad71fc4"
+  ],
+  "mapping": "work",
+  "key": "satie-337ded6f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8493,
+  "title": "Trois Nouvelles pièces froides",
+  "mbids": [
+   "3681fe57-7922-46c9-a5cf-bfcb5b0cca78"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8543,
+  "title": "Chapitres tournés en tous sens",
+  "mbids": [
+   "39cf425a-f1d8-40de-941b-f27222333005"
+  ],
+  "mapping": "work",
+  "key": "satie-39cf425a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8623,
+  "title": "Croquis et agaceries d’un gros bonhomme en bois",
+  "mbids": [
+   "40cf4217-a408-4c20-86d4-bec58d7f092a"
+  ],
+  "mapping": "work",
+  "key": "satie-40cf4217",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8627,
+  "title": "La Belle Excentrique (Fantasie sérieuse)",
+  "mbids": [
+   "4138c361-4f19-4228-866f-0ab0b72c199f"
+  ],
+  "mapping": "work",
+  "key": "satie-4138c361",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8637,
+  "title": "Where Silence Has Lease: First Gymnopédie (M53A)",
+  "mbids": [
+   "41a9def1-8be5-3937-bd30-731111a9e14c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8653,
+  "title": "Sarabandes I & II",
+  "mbids": [
+   "4290727e-b715-43f4-a22a-e5b94c30ac9c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8665,
+  "title": "No Air",
+  "mbids": [
+   "43530985-6cc3-326c-85e1-53b4f87d48b4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8769,
+  "title": "Songe creux",
+  "mbids": [
+   "4a7f8c58-2460-40cc-8ec1-5f9812f5e30e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8849,
+  "title": "Enfantillages pittoresques",
+  "mbids": [
+   "50a3c781-e161-41d4-b501-c4b3614b7f47"
+  ],
+  "mapping": "work",
+  "key": "satie-50a3c781",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8855,
+  "title": "Improvisation",
+  "mbids": [
+   "50f05982-74d5-462a-b06e-34a4ff8e4ba5"
+  ],
+  "mapping": "work",
+  "key": "satie-50f05982",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8877,
+  "title": "Le Veuf",
+  "mbids": [
+   "51d3b501-bc40-439c-b811-4ee0a6a2a2ee"
+  ],
+  "mapping": "work",
+  "key": "satie-51d3b501",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8885,
+  "title": "Air du Grand Prieur",
+  "mbids": [
+   "5268dafb-acc1-38b7-bdb5-5abdb91bc055"
+  ],
+  "mapping": "work",
+  "key": "satie-5268dafb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8896,
+  "title": "Quatre Préludes : Prélude d'Eginhard",
+  "mbids": [
+   "533b0aab-d3de-4221-a473-96d2bd8b50b5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8908,
+  "title": "La belle excentrique : Valse du « Mystérieux baiser dans l’oeil »",
+  "mbids": [
+   "5415f7f7-49f1-4f1c-b034-3161e267089b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8917,
+  "title": "San Bernardo",
+  "mbids": [
+   "54f0bde4-ac80-4ef2-a2dc-4f25f04254fb"
+  ],
+  "mapping": "work",
+  "key": "satie-54f0bde4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8945,
+  "title": "Peccadilles importunes",
+  "mbids": [
+   "56b893d2-c7d7-4c7a-9284-9c29287f95aa"
+  ],
+  "mapping": "work",
+  "key": "satie-56b893d2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8979,
+  "title": "Relâche, musique pour le ballet instantanéiste",
+  "mbids": [
+   "589541ef-8d60-4e9b-8d63-657ad527ac60"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8982,
+  "title": "Variations on a Theme by Erik Satie (1st and 2nd movements, adapted from “Trois Gymnopédies”)",
+  "mbids": [
+   "58ddf411-b8a3-3ed8-a17d-33f864039746"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8996,
+  "title": "Relâche: Entr’acte symphonique",
+  "mbids": [
+   "59b1a025-c702-4832-8fb8-76c9ff21d790"
+  ],
+  "mapping": "work",
+  "key": "satie-59b1a025",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8997,
+  "title": "Verset laïque et somptueux",
+  "mbids": [
+   "59cc9cf7-ae58-4d29-9017-924917f43dca"
+  ],
+  "mapping": "work",
+  "key": "satie-59cc9cf7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9029,
+  "title": "Sites auriculaires pour 2 pianos",
+  "mbids": [
+   "5bb2016e-9406-43bb-8578-8a38263b761e"
+  ],
+  "mapping": "work",
+  "key": "satie-5bb2016e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9071,
+  "title": "Musiques intimes et secrètes",
+  "mbids": [
+   "5f163489-23ef-43fc-af06-a050e1f06c3d"
+  ],
+  "mapping": "work",
+  "key": "satie-5f163489",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9149,
+  "title": "Six Pièces de la période 1906–1913",
+  "mbids": [
+   "64329a62-1c07-4a47-8182-669e671784fd"
+  ],
+  "mapping": "work",
+  "key": "satie-64329a62",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9155,
+  "title": "Sans titre, peut‐être pour la messe des pauvres : Modéré",
+  "mbids": [
+   "64dc1502-6a47-4dfa-be4c-e9c5f0886a62"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9164,
+  "title": "La Chemise",
+  "mbids": [
+   "656f324e-acb0-4b97-815f-558913ef4223"
+  ],
+  "mapping": "work",
+  "key": "satie-656f324e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9255,
+  "title": "Choses vues à droite et à gauche (sans lunettes)",
+  "mbids": [
+   "6c964736-d5c7-46f8-a51f-78722cc13654"
+  ],
+  "mapping": "work",
+  "key": "satie-6c964736",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9294,
+  "title": "Chanson médiévale",
+  "mbids": [
+   "6f291d9a-ed52-342f-aa5c-e2fc89ecf685"
+  ],
+  "mapping": "work",
+  "key": "satie-6f291d9a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9298,
+  "title": "Prière",
+  "mbids": [
+   "6f4f7f35-2aba-3270-9282-65c6842b7677"
+  ],
+  "mapping": "work",
+  "key": "satie-6f4f7f35",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9327,
+  "title": "Variations on a Theme by Erik Satie (1st movement, adapted from \"Trois Gymnopédies\")",
+  "mbids": [
+   "715d2ebd-ff29-3121-b426-646c316ac8c3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9409,
+  "title": "Carnet d’esquisses et de croquis",
+  "mbids": [
+   "76f00611-f027-4b02-b0bc-fb420750d5c3"
+  ],
+  "mapping": "work",
+  "key": "satie-76f00611",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9420,
+  "title": "No Phrase",
+  "mbids": [
+   "77d09e4c-7f5b-3413-83cd-8fa4e67c80a2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9450,
+  "title": "Danse de travers (Avant-première en forme d’air à faire fuir)",
+  "mbids": [
+   "7a4a21c4-8e4f-4e16-bf72-1ad63f260a2d"
+  ],
+  "mapping": "work",
+  "key": "satie-7a4a21c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9489,
+  "title": "Esquisses bitonales",
+  "mbids": [
+   "7c253f51-c919-441f-b79a-90187d2bee02"
+  ],
+  "mapping": "work",
+  "key": "satie-7c253f51",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9499,
+  "title": "Les pantins dansent",
+  "mbids": [
+   "7ce248a4-c967-4cf0-a4c6-b863655c763c"
+  ],
+  "mapping": "work",
+  "key": "satie-7ce248a4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9516,
+  "title": "Nostalgie",
+  "mbids": [
+   "7e1cecda-8b41-33b6-8ddf-cb25f48a171f"
+  ],
+  "mapping": "work",
+  "key": "satie-7e1cecda",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9518,
+  "title": "Embryons desséchés : II. d'Edriopthalma",
+  "mbids": [
+   "7e3b60dc-ebdf-4144-b590-9400d76717a9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9559,
+  "title": "Entr’acte symphonique de “Relâche”",
+  "mbids": [
+   "8146a803-fb62-4023-896e-8de3e2728dcf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9645,
+  "title": "Le Chapelier",
+  "mbids": [
+   "875c124a-ad6a-4a95-aa8a-99334336a119"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9709,
+  "title": "Deux rêveries nocturnes",
+  "mbids": [
+   "8c015114-3e00-442b-b692-d9d8db4c301d"
+  ],
+  "mapping": "work",
+  "key": "satie-8c015114",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9721,
+  "title": "Sports et Divertissement (Arr. Orsen/Colombat)",
+  "mbids": [
+   "8cf69c37-d4c1-4729-a7f3-e619a2189663"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9751,
+  "title": "Autour du 1er Nocturne",
+  "mbids": [
+   "8f5cedef-f73a-4852-b3c8-4a43ccab2cca"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9755,
+  "title": "3 véritables préludes flasques",
+  "mbids": [
+   "8f87c7fb-707e-4de6-93df-d05e792a2b0f"
+  ],
+  "mapping": "work",
+  "key": "satie-8f87c7fb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9915,
+  "title": "Trois mélodies sans paroles",
+  "mbids": [
+   "9b08a01a-0cf2-4228-adc5-fce65bb3cb13"
+  ],
+  "mapping": "work",
+  "key": "satie-9b08a01a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9949,
+  "title": "Légende californienne",
+  "mbids": [
+   "9d71774c-c5b4-4070-80da-fc84c2f63d34"
+  ],
+  "mapping": "work",
+  "key": "satie-9d71774c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9953,
+  "title": "Modéré",
+  "mbids": [
+   "9dec375a-21d0-4fa3-903b-13f8d2810243"
+  ],
+  "mapping": "work",
+  "key": "satie-9dec375a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10010,
+  "title": "Danse de l’homme et de la femme From Relâche",
+  "mbids": [
+   "a22f7e0d-e7b2-47f4-9006-e28ba5ae608f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10031,
+  "title": "Tango perpetuel",
+  "mbids": [
+   "a37eed54-a202-4ad0-b0b7-569e777c65d8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10038,
+  "title": "6ème nocturne",
+  "mbids": [
+   "a407a49f-f71c-4ce1-b158-3d35bf5d2522"
+  ],
+  "mapping": "work",
+  "key": "satie-a407a49f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10089,
+  "title": "Leit-motiv du « Panthée »",
+  "mbids": [
+   "a73bfbd0-9bd0-47e2-841e-3a917071ff4a"
+  ],
+  "mapping": "work",
+  "key": "satie-a73bfbd0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10105,
+  "title": "Pièces froides, Airs à faire fuir nº 2 (version plus chromatique)",
+  "mbids": [
+   "a8aa64a1-f7a9-49e5-92ae-28175555dbbe"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10121,
+  "title": "L'Enfance de Ko-quo (recommandations maternelles)",
+  "mbids": [
+   "a9c6b394-f84a-4b6a-9a3b-ac68b552e8a4"
+  ],
+  "mapping": "work",
+  "key": "satie-a9c6b394",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10181,
+  "title": "Imperial-Oxford",
+  "mbids": [
+   "adfea54d-aa4c-41af-9e34-1322f4a5efd1"
+  ],
+  "mapping": "work",
+  "key": "satie-adfea54d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10242,
+  "title": "Émergence du 4e Nocturne",
+  "mbids": [
+   "b2f3fca3-7d1e-4849-b795-1d48c063b997"
+  ],
+  "mapping": "work",
+  "key": "satie-b2f3fca3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10315,
+  "title": "Pièces froides, Danses de travers : En y regardant à deux fois",
+  "mbids": [
+   "b8215522-8317-4cca-bb59-24e02765c3b3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10390,
+  "title": "Pages mystiques",
+  "mbids": [
+   "bdf2d7f8-a609-4401-8c16-b4c1eb6845f5"
+  ],
+  "mapping": "work",
+  "key": "satie-bdf2d7f8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10432,
+  "title": "Prélude de « La Porte héroïque du ciel »",
+  "mbids": [
+   "c142d97a-859b-4473-9397-d5f781dcb777"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10449,
+  "title": "Réflexion nocturne no. 3",
+  "mbids": [
+   "c2c6c42d-010f-442b-9cdb-b2e45a1f8f73"
+  ],
+  "mapping": "work",
+  "key": "satie-c2c6c42d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10472,
+  "title": "Valse",
+  "mbids": [
+   "c4718088-684f-4c34-919b-81e96e6fa229"
+  ],
+  "mapping": "work",
+  "key": "satie-c4718088",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10500,
+  "title": "Cinq Nocturnes",
+  "mbids": [
+   "c61004b5-f84b-4e4a-8c37-da6d5cd4bd20"
+  ],
+  "mapping": "work",
+  "key": "satie-c61004b5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10504,
+  "title": "Chanson",
+  "mbids": [
+   "c6687b0e-e495-4dc6-b4f5-63069c42aa3a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10576,
+  "title": "Cinq Grimaces (pour “Le Songe d’une Nuit d’Été”)",
+  "mbids": [
+   "cbeba4af-7828-4f3c-99fd-016d27a7bd1e"
+  ],
+  "mapping": "work",
+  "key": "satie-cbeba4af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10594,
+  "title": "Soupirs fanés",
+  "mbids": [
+   "cd170b5a-9acb-485b-a945-fd1709c9ee47"
+  ],
+  "mapping": "work",
+  "key": "satie-cd170b5a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10621,
+  "title": "La belle excentrique : Marche Franco-Lunaire",
+  "mbids": [
+   "cf4688df-1087-4d01-b00c-c90099c9a96a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10635,
+  "title": "Prélude en tapisserie",
+  "mbids": [
+   "d03b68c4-da71-3e92-b560-32133b8fc333"
+  ],
+  "mapping": "work",
+  "key": "satie-d03b68c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10652,
+  "title": "Le Vizir autrichien",
+  "mbids": [
+   "d1b41d41-ac65-49b8-9c05-ebd06abd669f"
+  ],
+  "mapping": "work",
+  "key": "satie-d1b41d41",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10655,
+  "title": "Pièces Froides No. 1",
+  "mbids": [
+   "d1dc2f6c-bedb-34cd-8082-c7e6ff48b132"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10704,
+  "title": "Nocturne en filigrane",
+  "mbids": [
+   "d5a2114d-01f5-40ae-8933-013acc2c6f63"
+  ],
+  "mapping": "work",
+  "key": "satie-d5a2114d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10713,
+  "title": "Nouvelles pièces froides",
+  "mbids": [
+   "d6ff15f7-938c-4114-9f8c-17050ab2f58d"
+  ],
+  "mapping": "work",
+  "key": "satie-d6ff15f7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10721,
+  "title": "優しい夜",
+  "mbids": [
+   "d7773bdf-21ec-404e-81b8-6640f8fa8c6e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10786,
+  "title": "Trois nouvelles enfantines",
+  "mbids": [
+   "db51de6c-05c9-4bc3-be1f-ba399124d3c8"
+  ],
+  "mapping": "work",
+  "key": "satie-db51de6c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10887,
+  "title": "La statue retrouvée (Divertissement pour trompette en ut et orgue)",
+  "mbids": [
+   "e3a67013-62cc-3a99-9a9f-83a905c1c2fb"
+  ],
+  "mapping": "work",
+  "key": "satie-e3a67013",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10960,
+  "title": "Descriptions automatiques",
+  "mbids": [
+   "e8a623e6-2179-4a56-821b-9cfae6efc056"
+  ],
+  "mapping": "work",
+  "key": "satie-e8a623e6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10967,
+  "title": "Rêverie d’un plat",
+  "mbids": [
+   "e9150ab1-4d85-4471-91bb-92792259af7b"
+  ],
+  "mapping": "work",
+  "key": "satie-e9150ab1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10980,
+  "title": "Les Trois Valses distinguées du précieux dégoûté",
+  "mbids": [
+   "e9dc5490-4b48-4de0-bebd-6c351563f9cf"
+  ],
+  "mapping": "work",
+  "key": "satie-e9dc5490",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11026,
+  "title": "Deux Préludes posthumes et une Gnossienne, FP 104",
+  "mbids": [
+   "ed50a556-6642-491d-bf32-eac4ae92deda"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11055,
+  "title": "La Statue de Bronze",
+  "mbids": [
+   "ef72e670-3649-4301-8714-b19527482a77"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11185,
+  "title": "Deux Révèries nocturnes",
+  "mbids": [
+   "f921fae3-e299-4975-955d-164b194a1e2d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11219,
+  "title": "Pièces froides, Airs à faire fuir : S’inviter",
+  "mbids": [
+   "fb96e52b-a0a4-44e4-b20a-377718f88220"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11232,
+  "title": "La Belle Excentrique, fantaisie sérieuse pour piano à quatre mains",
+  "mbids": [
+   "fc5d9372-40ae-41cf-aa0e-ce61d03a74c2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ }
+]

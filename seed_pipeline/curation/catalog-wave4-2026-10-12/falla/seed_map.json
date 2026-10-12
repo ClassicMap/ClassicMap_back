@@ -1,0 +1,686 @@
+[
+ {
+  "pieceId": 1587,
+  "title": "Fanfare pour une fête",
+  "mbids": [
+   "5b58b294-49fc-4dd6-98bb-9e154b70390d"
+  ],
+  "mapping": "work",
+  "key": "falla-5b58b294",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2602,
+  "title": "Interludio y danza de \"La vida breve\"",
+  "mbids": [
+   "d211fc24-75ae-4c06-978a-27048fa37877"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7433,
+  "title": "Fantasía baetica, G. 55",
+  "mbids": [
+   "04171df0-ddbd-4a31-82a8-d3421730e8aa"
+  ],
+  "mapping": "work",
+  "key": "falla-04171df0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7489,
+  "title": "El sombrero de tres picos, suite no. 1",
+  "mbids": [
+   "47e36558-9fc7-40c7-a186-0bd44381f1da"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7507,
+  "title": "Siete canciones populares españolas, G. 40",
+  "mbids": [
+   "63f6de21-3718-4338-855f-5c5037177558"
+  ],
+  "mapping": "work",
+  "key": "falla-63f6de21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7597,
+  "title": "El sombrero de tres picos, suite no. 2",
+  "mbids": [
+   "ce22eeec-326d-4132-bc73-6e17b82ca875"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7598,
+  "title": "Noches en los jardines de España",
+  "mbids": [
+   "d0c2f4fe-e012-419e-be4c-09b9951266c1"
+  ],
+  "mapping": "work",
+  "key": "falla-d0c2f4fe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7906,
+  "title": "El retablo de maese Pedro",
+  "mbids": [
+   "0b6d2ccd-648b-4f22-a327-acfe007b7969"
+  ],
+  "mapping": "work",
+  "key": "falla-0b6d2ccd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8014,
+  "title": "Pour le tombeau de Paul Dukas",
+  "mbids": [
+   "12cf91f6-c3c9-445d-8293-e097c0400a3d"
+  ],
+  "mapping": "work",
+  "key": "falla-12cf91f6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8015,
+  "title": "El corregidor y la molinera",
+  "mbids": [
+   "12d7ecc1-c597-42ad-9617-7bfeebe31dd5"
+  ],
+  "mapping": "work",
+  "key": "falla-12d7ecc1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8087,
+  "title": "El amor brujo, G. 69",
+  "mbids": [
+   "17fde840-ccca-49c7-a06e-ede86db06fc0"
+  ],
+  "mapping": "work",
+  "key": "falla-17fde840",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8700,
+  "title": "7 Canciones populares españolas: No. 6, Canción",
+  "mbids": [
+   "45d92a41-3d14-488e-aac0-8e42d8ae0fdc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8930,
+  "title": "Spanish Dance no. 1 from La vida breve",
+  "mbids": [
+   "55b15a61-580a-4a5e-818b-60747a24f0a5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9044,
+  "title": "7 Canciones populares españolas: No. 5, Nana",
+  "mbids": [
+   "5cf8f06d-4798-4521-a86c-cb8b26145546"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9316,
+  "title": "La vida breve",
+  "mbids": [
+   "70c44f92-aeb8-4f9c-a40c-ce0b22cbdf39"
+  ],
+  "mapping": "work",
+  "key": "falla-70c44f92",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9340,
+  "title": "Fantasía baetica",
+  "mbids": [
+   "71d8c1ff-985f-448a-857e-a2a0b22ec3ef"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9421,
+  "title": "El sombrero de tres picos",
+  "mbids": [
+   "77d14ad5-e467-48a4-b15c-2c446f777a61"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9742,
+  "title": "Tres obras",
+  "mbids": [
+   "8f052d81-f01c-4146-a990-694a26a74748"
+  ],
+  "mapping": "work",
+  "key": "falla-8f052d81",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10486,
+  "title": "Psyché",
+  "mbids": [
+   "c53c7f9d-fecd-49b1-b346-ceab53481e78"
+  ],
+  "mapping": "work",
+  "key": "falla-c53c7f9d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10872,
+  "title": "Danza",
+  "mbids": [
+   "e26cf63f-8f2a-441c-bcfc-c028fda88b40"
+  ],
+  "mapping": "work",
+  "key": "falla-e26cf63f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10986,
+  "title": "Cuatro piezas españolas",
+  "mbids": [
+   "ea084cc4-49c5-43df-9ff9-3c2001e2a179"
+  ],
+  "mapping": "work",
+  "key": "falla-ea084cc4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7461,
+  "title": "Balada de Mallorca",
+  "mbids": [
+   "1dc5b1e3-0248-485e-9bd7-f3f5eecbdbda"
+  ],
+  "mapping": "work",
+  "key": "falla-1dc5b1e3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7557,
+  "title": "Homenaje, pour le tombeau de Claude Debussy",
+  "mbids": [
+   "9eb94098-2785-409c-a2f2-48020c2eb0c0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7567,
+  "title": "Concierto para clave, flauta, oboe, clarinete, violín y violoncelo",
+  "mbids": [
+   "aa5a44fe-6648-4e84-a158-bf7219440048"
+  ],
+  "mapping": "work",
+  "key": "falla-aa5a44fe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7676,
+  "title": "Tus ojillos negros, G. 28",
+  "mbids": [
+   "694d8b19-6360-49c0-81a1-b20cca655741"
+  ],
+  "mapping": "work",
+  "key": "falla-694d8b19",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7728,
+  "title": "Danza del corregidor",
+  "mbids": [
+   "0021080d-cf33-4663-a670-4c29fe928102"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7740,
+  "title": "Danza ritual del fuego",
+  "mbids": [
+   "00f82a13-bcfc-41ed-8294-c323439daea8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8194,
+  "title": "Cantares de Nochebuena",
+  "mbids": [
+   "1fa78c2d-fdc5-4a5f-b2a9-c7d72edd3799"
+  ],
+  "mapping": "work",
+  "key": "falla-1fa78c2d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8249,
+  "title": "Allegro de concierto",
+  "mbids": [
+   "25b27359-958a-4131-b903-45a3d4ca8bad"
+  ],
+  "mapping": "work",
+  "key": "falla-25b27359",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8277,
+  "title": "Danse espagnole",
+  "mbids": [
+   "278576bf-4000-4e80-8d31-ffd27d63b76f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8474,
+  "title": "Fire Dance",
+  "mbids": [
+   "34e12e21-81fc-4d49-a031-adbb3c707c1a"
+  ],
+  "mapping": "work",
+  "key": "falla-34e12e21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8561,
+  "title": "Preludios, G. 16",
+  "mbids": [
+   "3ad6443c-b407-4b83-ba9b-906ff70860b9"
+  ],
+  "mapping": "work",
+  "key": "falla-3ad6443c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8806,
+  "title": "Deux Danses espagnoles de La vida breve",
+  "mbids": [
+   "4d3a3498-6dd9-4b49-9a4e-3f81a6c29e9b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8834,
+  "title": "Mazurka en do menor",
+  "mbids": [
+   "4fa323e4-962d-4c5e-abc7-9ecf5cb48764"
+  ],
+  "mapping": "work",
+  "key": "falla-4fa323e4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8900,
+  "title": "Danza de La vida breve",
+  "mbids": [
+   "53a52cad-6824-4800-8c64-d1d5afb386d6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8937,
+  "title": "Pantomima and Canción from El amor brujo",
+  "mbids": [
+   "55e47803-cdfa-420c-9078-2775ee40776c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9041,
+  "title": "7 Canciones populares españolas: No. 2, Seguidilla murciana",
+  "mbids": [
+   "5cc4f0f5-032a-42ba-bfea-9965a9d752a0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9152,
+  "title": "Cortejo de gnomos, G. 21",
+  "mbids": [
+   "649b7bf5-c5f2-49ad-8255-f704d86250a8"
+  ],
+  "mapping": "work",
+  "key": "falla-649b7bf5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9177,
+  "title": "Oración de las madres que tienen a sus hijos en brazos",
+  "mbids": [
+   "6659154a-3534-486e-91e9-9e19f6605523"
+  ],
+  "mapping": "work",
+  "key": "falla-6659154a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9337,
+  "title": "El pan de Ronda que sabe a verdad, G. 47",
+  "mbids": [
+   "71ab4a12-4d4b-4605-9da6-b435e050498f"
+  ],
+  "mapping": "work",
+  "key": "falla-71ab4a12",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9366,
+  "title": "Canción",
+  "mbids": [
+   "7432fdf8-24d4-4fae-9835-44f172294c24"
+  ],
+  "mapping": "work",
+  "key": "falla-7432fdf8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9492,
+  "title": "¡Dios mío, qué solos se quedan los muertos!, G. 20",
+  "mbids": [
+   "7c6184b0-0404-4523-836a-2c1a50d31839"
+  ],
+  "mapping": "work",
+  "key": "falla-7c6184b0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9558,
+  "title": "Serenata andaluza",
+  "mbids": [
+   "8132762c-09d2-4857-89c1-6ca6539e8b4d"
+  ],
+  "mapping": "work",
+  "key": "falla-8132762c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9585,
+  "title": "Two Spanish Dances from La vida breve",
+  "mbids": [
+   "8352ee86-be04-46bc-9585-12f85c3c3b20"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9618,
+  "title": "Скажите, девушки",
+  "mbids": [
+   "859bdcba-fc21-49b4-91c7-d7b02d83be7f"
+  ],
+  "mapping": "work",
+  "key": "falla-859bdcba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9660,
+  "title": "Nocturno",
+  "mbids": [
+   "88e99b3a-8b7e-4341-8fae-e1403546963b"
+  ],
+  "mapping": "work",
+  "key": "falla-88e99b3a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9694,
+  "title": "Danza del terror",
+  "mbids": [
+   "8ae829f5-534c-41d5-845a-e0a508f444a9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9881,
+  "title": "El amor brujo: Pantomima",
+  "mbids": [
+   "9954b1fe-077b-400c-b10f-0e144be7c33a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10312,
+  "title": "Song of Injured Love",
+  "mbids": [
+   "b7f9c823-f8d8-4ad0-8bd2-8812ec6d61c6"
+  ],
+  "mapping": "work",
+  "key": "falla-b7f9c823",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10593,
+  "title": "Escena Tres: Escena-Allegro",
+  "mbids": [
+   "ccf64001-39f5-4e2e-b4b6-78521d836892"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 10669,
+  "title": "Olas gigantes, G. 19",
+  "mbids": [
+   "d29bffa3-05c5-4218-a72c-1c963a8c6a4c"
+  ],
+  "mapping": "work",
+  "key": "falla-d29bffa3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10718,
+  "title": "Soneto a Córdoba",
+  "mbids": [
+   "d75ca7fc-c7c8-49d8-b4b9-1348a06a6463"
+  ],
+  "mapping": "work",
+  "key": "falla-d75ca7fc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10892,
+  "title": "Invocatio ad Individuam Trinitatem",
+  "mbids": [
+   "e44592b5-a0ff-4e9e-808b-8fb106830c96"
+  ],
+  "mapping": "work",
+  "key": "falla-e44592b5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10999,
+  "title": "Vals-capricho, G. 15",
+  "mbids": [
+   "eb3fe1b7-8efe-4a20-8988-b05db2bc8b0d"
+  ],
+  "mapping": "work",
+  "key": "falla-eb3fe1b7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11036,
+  "title": "Montañesa",
+  "mbids": [
+   "ee3b8740-cf47-4bb9-b4a5-d87753fdf381"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11078,
+  "title": "Canto de los remeros del Volga",
+  "mbids": [
+   "f1c012b7-bda4-4017-a9d3-2187f51f365e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11191,
+  "title": "Homenajes",
+  "mbids": [
+   "f988e4bb-2000-4efe-b553-bd26901b64ab"
+  ],
+  "mapping": "work",
+  "key": "falla-f988e4bb",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

@@ -1,0 +1,1946 @@
+[
+ {
+  "pieceId": 490,
+  "title": "<아를의 여인> 모음곡 1번 중 미뉴에트",
+  "mbids": [
+   "1e59128d-b612-4957-a21c-95bd696335d3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 657,
+  "title": "Habanera (from Carmen)",
+  "mbids": [
+   "eef9a258-d2ac-455c-8f6f-bbd3b2314d0f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11296,
+  "title": "Petite Suite d'orchestre (Jeux d'enfants), op. 22",
+  "mbids": [
+   "1aaa044f-8b92-4b61-838d-62ce6f25ac98"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11307,
+  "title": "Symphonie no. 1 en ut majeur",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 11318,
+  "title": "Carmen, WD 31",
+  "mbids": [
+   "45efd8f4-4c40-4145-9e5c-4d11ed7babde"
+  ],
+  "mapping": "work",
+  "key": "bizet-45efd8f4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11342,
+  "title": "L’Arlésienne Suite no. 1, op. 23bis",
+  "mbids": [
+   "a4578f4c-92ea-4632-8250-41534abfe716"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11394,
+  "title": "Ivan IV",
+  "mbids": [
+   "02861629-e192-43fc-ae65-da00ea72c43e"
+  ],
+  "mapping": "work",
+  "key": "bizet-02861629",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11397,
+  "title": "Carmen Suite no. 1",
+  "mbids": [
+   "04173a43-7deb-4f26-af6f-031399444388"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11451,
+  "title": "Carmen for Orchestra",
+  "mbids": [
+   "18a98719-841a-40b1-9d74-91a4619fba9a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11454,
+  "title": "Carmen Jones",
+  "mbids": [
+   "1aeaf3cf-47a4-4f5d-8a70-aa88996165b0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11483,
+  "title": "Djamileh, WD 27",
+  "mbids": [
+   "2570519c-1ff0-4826-9115-e4a0d14cab46"
+  ],
+  "mapping": "work",
+  "key": "bizet-2570519c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11486,
+  "title": "Carmen Suite no. 2",
+  "mbids": [
+   "280ebc4d-5beb-4e63-9f17-029e3134e30e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11503,
+  "title": "Carmen Medley",
+  "mbids": [
+   "2e546615-4b0b-4fdc-9db1-a5980761d0f3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11544,
+  "title": "Carmen's Choice",
+  "mbids": [
+   "43c739f6-8266-40ad-bd24-bc820d15c246"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11560,
+  "title": "Variations chromatiques de concert, WD 54",
+  "mbids": [
+   "4b190d5a-19ee-4097-bbef-096aeb0e5082"
+  ],
+  "mapping": "work",
+  "key": "bizet-4b190d5a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11563,
+  "title": "Carmen Suite no. 1: VI. Les toréadors",
+  "mbids": [
+   "4d7079d7-430c-4483-a9cf-ebdc673771ac"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11577,
+  "title": "L’Arlésienne Suite no. 1",
+  "mbids": [
+   "552b6e4d-aa3d-4812-abd9-0628bc9dcd8b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11582,
+  "title": "L'Arlésienne: Farandole",
+  "mbids": [
+   "587a0dd6-8123-4335-aa2e-8872d653aeca"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11596,
+  "title": "Les Pêcheurs de perles : «Au fond du temple saint »",
+  "mbids": [
+   "5f3797b4-58bf-4168-8451-d98d03321178"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11608,
+  "title": "Te Deum, WD 122, GB 36",
+  "mbids": [
+   "6355316a-e5e1-4262-9302-302d9a92028a"
+  ],
+  "mapping": "work",
+  "key": "bizet-6355316a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11625,
+  "title": "Don Procopio",
+  "mbids": [
+   "692c7b8b-98dd-4aef-9f31-8bb22daffc11"
+  ],
+  "mapping": "work",
+  "key": "bizet-692c7b8b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11627,
+  "title": "Seguidilla",
+  "mbids": [
+   "69494188-65d6-4281-ba66-158860ce8541"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11636,
+  "title": "La Jolie Fille de Perth",
+  "mbids": [
+   "6c08180b-1f05-442c-a159-d9e812c990f2"
+  ],
+  "mapping": "work",
+  "key": "bizet-6c08180b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11637,
+  "title": "Toreador",
+  "mbids": [
+   "6c54570c-ea81-3d97-8945-13a1603e8b3b"
+  ],
+  "mapping": "work",
+  "key": "bizet-6c54570c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11649,
+  "title": "L’Arlésienne",
+  "mbids": [
+   "716d1b86-9998-4ebe-aba4-9bf2e69d455d"
+  ],
+  "mapping": "work",
+  "key": "bizet-716d1b86",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11679,
+  "title": "Les Pêcheurs de perles: Overture",
+  "mbids": [
+   "7e2d7851-f74e-4bba-a6b9-c23f3e68f332"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11690,
+  "title": "Clovis et Clotilde, WD 121, GB 55",
+  "mbids": [
+   "82306c1e-2d46-4871-9526-037d665ee8aa"
+  ],
+  "mapping": "work",
+  "key": "bizet-82306c1e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11700,
+  "title": "Carmen : Séguédille « Près des remparts de Séville »",
+  "mbids": [
+   "861f8093-26a9-4e1a-aa3f-fda5249b39a3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11713,
+  "title": "Spanish Kick (\"Carmen Habanera\")",
+  "mbids": [
+   "8c867572-2881-3dcb-8c7c-298191164680"
+  ],
+  "mapping": "work",
+  "key": "bizet-8c867572",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11722,
+  "title": "Chants du Rhin",
+  "mbids": [
+   "90b7a725-47db-44d6-8575-cd46c44781eb"
+  ],
+  "mapping": "work",
+  "key": "bizet-90b7a725",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11738,
+  "title": "Carmen: Abertura",
+  "mbids": [
+   "951f5840-2263-32db-b522-c0fa64f50528"
+  ],
+  "mapping": "work",
+  "key": "bizet-951f5840",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11748,
+  "title": "Variations chromatiques",
+  "mbids": [
+   "97eb38ef-5ab2-4e5e-9f06-46619d8db301"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11755,
+  "title": "Carmen Concerto",
+  "mbids": [
+   "99b35dbd-9596-40f7-8365-d6118bdf3dc0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11760,
+  "title": "Les Pêcheurs de perles : « Je crois entendre encore »",
+  "mbids": [
+   "9ab0b232-edf5-4869-a84d-2a4421ed0d90"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11762,
+  "title": "L’Arlesienne: Intermezzo",
+  "mbids": [
+   "9b572fc1-e19c-4ebd-bf31-772c7c0c4cd3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11780,
+  "title": "Au fond du temple saint from Les Pêcheurs de perles",
+  "mbids": [
+   "a30350c2-8e39-40d3-a750-0dc875f4febe"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11794,
+  "title": "Jeux d'enfants, op. 22",
+  "mbids": [
+   "a7e702fa-68a4-4330-9800-702fa88f0d0f"
+  ],
+  "mapping": "work",
+  "key": "bizet-a7e702fa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11835,
+  "title": "Le Docteur Miracle",
+  "mbids": [
+   "b5f9a0f6-7ccd-4cc3-82e9-36a993ae569f"
+  ],
+  "mapping": "work",
+  "key": "bizet-b5f9a0f6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11846,
+  "title": "Habanera (L'Amour est un oiseau rebelle)",
+  "mbids": [
+   "b9d1dd36-083d-4182-8015-f0965402c2c2"
+  ],
+  "mapping": "work",
+  "key": "bizet-b9d1dd36",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11856,
+  "title": "Carmen Fantasy",
+  "mbids": [
+   "bd08b2a4-9242-4cea-a361-a1688cbcfc6c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11858,
+  "title": "L'Arlésienne: Intermezzo",
+  "mbids": [
+   "bda65b9f-166e-4b6e-b453-102d78b90ad6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11890,
+  "title": "Les Pêcheurs de perles: “Au fond du temple saint”",
+  "mbids": [
+   "cabd11d8-aa66-4622-844d-36efbf0a49d7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11905,
+  "title": "L'Arlésienne: Prélude",
+  "mbids": [
+   "d1735ce9-9cbb-49e3-a24f-92b6c772b49b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11941,
+  "title": "Vingt mélodies, op. 21",
+  "mbids": [
+   "e11f7c77-e99e-44d8-b5fb-aea70d1f2fd7"
+  ],
+  "mapping": "work",
+  "key": "bizet-e11f7c77",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11990,
+  "title": "Suite from \"Carmen\"",
+  "mbids": [
+   "f63a2cb3-6bd7-47ca-9adf-0378d652dbbe"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12009,
+  "title": "Habanera de Carmen",
+  "mbids": [
+   "fea4d3a0-8853-4a5c-9a34-093d96337fc9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9973,
+  "title": "Patrie, ouverture dramatique, op. 19, WD 41",
+  "mbids": [
+   "9fc8ef34-3cae-4c2d-8c75-0271843160bf"
+  ],
+  "mapping": "work",
+  "key": "bizet-9fc8ef34",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11309,
+  "title": "Symphony in C major \"Roma\"",
+  "mbids": [
+   "395011dc-b1b1-4cfa-83ec-d518815bd413"
+  ],
+  "mapping": "work",
+  "key": "bizet-395011dc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11313,
+  "title": "1er nocturne en ré majeur",
+  "mbids": [
+   "3f464d77-f4dd-4bf1-8316-906b589b425b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11354,
+  "title": "Scènes bohémiennes from « La Jolie Fille de Perth »",
+  "mbids": [
+   "d4e7b351-a7bc-4122-8475-760a366ecc6e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11366,
+  "title": "Carmen Fantasie",
+  "mbids": [
+   "f012f8a6-0633-3719-afc9-83b3163d4d14"
+  ],
+  "mapping": "work",
+  "key": "bizet-f012f8a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11373,
+  "title": "小さな木の実",
+  "mbids": [
+   "eeca26bb-c7e9-4320-bdb8-c0354ebe4449"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11380,
+  "title": "March of the Kings",
+  "mbids": [
+   "1e38f6c3-e788-3be3-82f1-a950406c5003"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11381,
+  "title": "March of the Kings (non-choir)",
+  "mbids": [
+   "771b397b-bff2-3ac6-9478-cc0a8b228432"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11385,
+  "title": "The March of the Kings",
+  "mbids": [
+   "4394ca91-c938-4737-9fed-c2aaa38a16bb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11392,
+  "title": "Away You'd Come With Me (Là-bas, là-bas, tu me suivrais)",
+  "mbids": [
+   "0107724b-9133-4b40-842b-3aa61ce35d8a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11393,
+  "title": "Chanson “De mon ami”",
+  "mbids": [
+   "0112a467-6fc7-46a9-9688-de7dab26c012"
+  ],
+  "mapping": "work",
+  "key": "bizet-0112a467",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11412,
+  "title": "The Quintette Plays Carmen",
+  "mbids": [
+   "0ab24ee1-ce60-347d-ae18-c0d2bf19a1b4"
+  ],
+  "mapping": "work",
+  "key": "bizet-0ab24ee1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11416,
+  "title": "Pastel, WD 107",
+  "mbids": [
+   "0d033743-5321-4979-90fd-460df43930d2"
+  ],
+  "mapping": "work",
+  "key": "bizet-0d033743",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11417,
+  "title": "Trois Esquisses musicales",
+  "mbids": [
+   "0d57cf5d-6d9b-4594-ab33-0932bac2f8ed"
+  ],
+  "mapping": "work",
+  "key": "bizet-0d57cf5d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11418,
+  "title": "Carmen: Acte II. Entr’acte",
+  "mbids": [
+   "0e15363f-b277-4804-8591-16abdd508863"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11420,
+  "title": "Conte, WD 101",
+  "mbids": [
+   "0ee0062a-01a0-4321-aebc-c9c9f821f294"
+  ],
+  "mapping": "work",
+  "key": "bizet-0ee0062a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11423,
+  "title": "Parelvissers",
+  "mbids": [
+   "0fa31143-7a68-4704-9ffd-5429556679c4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11431,
+  "title": "La Mort s’avance, WD 133",
+  "mbids": [
+   "13a5def6-e83d-4e32-af05-86395a0aea1e"
+  ],
+  "mapping": "work",
+  "key": "bizet-13a5def6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11433,
+  "title": "Marche funèbre",
+  "mbids": [
+   "14181db7-0f20-41b9-a69a-1e7213563071"
+  ],
+  "mapping": "work",
+  "key": "bizet-14181db7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11441,
+  "title": "Bizet Has His Day (\"Marche des Rois\")",
+  "mbids": [
+   "1617b615-73c1-39f7-99c5-7a416162ea96"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11443,
+  "title": "Carmen: Act II. Entr'acte. Les Dragons d’Alcala",
+  "mbids": [
+   "16561c0c-4063-4cc6-aa9b-52dcb8334d80"
+  ],
+  "mapping": "work",
+  "key": "bizet-16561c0c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11446,
+  "title": "Colin-maillard",
+  "mbids": [
+   "17360a7b-f75c-4903-934f-77ec100ab93e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11478,
+  "title": "4 Préludes, op. 2",
+  "mbids": [
+   "24c31814-34fa-485c-adff-75f13352d302"
+  ],
+  "mapping": "work",
+  "key": "bizet-24c31814",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11480,
+  "title": "The Ball from Children's Games",
+  "mbids": [
+   "2503fcec-2ea3-4fb2-844c-08e5bceb2242"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11481,
+  "title": "Le Gascon",
+  "mbids": [
+   "251cb98b-177f-4e1a-915a-2329648c899d"
+  ],
+  "mapping": "work",
+  "key": "bizet-251cb98b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11485,
+  "title": "Vœu",
+  "mbids": [
+   "2766e1be-ef83-40b1-ad22-47e70cc1eb1d"
+  ],
+  "mapping": "work",
+  "key": "bizet-2766e1be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11488,
+  "title": "Chœur d’étudiants, WD 111",
+  "mbids": [
+   "28a497c5-190c-4f94-8dcf-1c7155d0b05a"
+  ],
+  "mapping": "work",
+  "key": "bizet-28a497c5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11491,
+  "title": "Marine",
+  "mbids": [
+   "29de7450-f84c-4761-895d-2596196d27cd"
+  ],
+  "mapping": "work",
+  "key": "bizet-29de7450",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11505,
+  "title": "Djamileh, WD 27: Sortie d’Haroun et de ses Amis",
+  "mbids": [
+   "2f8020c3-e225-4e83-8333-11daacdc89c2"
+  ],
+  "mapping": "part",
+  "key": "bizet-2570519c",
+  "path": [
+   25
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11529,
+  "title": "Carmen : Flower Song « La fleur que tu m’avais jetée »",
+  "mbids": [
+   "39bb8585-939f-4e5b-b475-4c26e5a7fd9e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11541,
+  "title": "Die Perlenfischer",
+  "mbids": [
+   "429b2992-df19-4871-a622-17c4d15b56fb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11552,
+  "title": "N’oublions pas ! WD 105",
+  "mbids": [
+   "48071e36-f2c0-432b-a587-75dfb51eb462"
+  ],
+  "mapping": "work",
+  "key": "bizet-48071e36",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11556,
+  "title": "Agnus Dei",
+  "mbids": [
+   "4a2e78cd-8d47-3525-a3a8-81df44d62940"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11561,
+  "title": "Vocalise pour ténor, WD 109",
+  "mbids": [
+   "4b398c84-8273-4844-a76b-66310225225b"
+  ],
+  "mapping": "work",
+  "key": "bizet-4b398c84",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11562,
+  "title": "Chanson bohème (from Carmen)",
+  "mbids": [
+   "4cd2f4b9-1de8-31c1-a358-241fb6da022e"
+  ],
+  "mapping": "work",
+  "key": "bizet-4cd2f4b9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11564,
+  "title": "卡門",
+  "mbids": [
+   "4dc86ec5-2cde-42db-9c7a-2f531fa7056f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11568,
+  "title": "Aimons, rêvons !, WD 102",
+  "mbids": [
+   "505eca05-5b9c-47c8-a904-fbc6e70791d5"
+  ],
+  "mapping": "work",
+  "key": "bizet-505eca05",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11587,
+  "title": "Carmen: Malaguena",
+  "mbids": [
+   "5aca4fec-8cd3-48cc-ae1f-93d0d8119e83"
+  ],
+  "mapping": "work",
+  "key": "bizet-5aca4fec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11594,
+  "title": "Jeux d’enfants, op. 22: I. L’Escarpolette",
+  "mbids": [
+   "5d92c624-5362-460d-9f0c-e701b947f1fd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11598,
+  "title": "La Rose et l’Abeille",
+  "mbids": [
+   "5fe79465-331b-4b46-9def-6971c6abfd6e"
+  ],
+  "mapping": "work",
+  "key": "bizet-5fe79465",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11599,
+  "title": "Le Retour de Virginie",
+  "mbids": [
+   "60c34063-3650-453c-9761-82edb75625d8"
+  ],
+  "mapping": "work",
+  "key": "bizet-60c34063",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11600,
+  "title": "Si vous aimez, WD 106",
+  "mbids": [
+   "615da2f1-1f81-412a-a95d-431a064757e1"
+  ],
+  "mapping": "work",
+  "key": "bizet-615da2f1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11607,
+  "title": "Manuelita's Dream",
+  "mbids": [
+   "6303455b-dc92-4ba0-824d-767488fcac0c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11609,
+  "title": "Carmen : Trio des cartes « Mêlons ! Coupons ! »",
+  "mbids": [
+   "63d1ce45-f7a4-4c57-956d-5ae24001cf6b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11618,
+  "title": "Don José and Micaëla (Parle-moi de ma mère)",
+  "mbids": [
+   "66a17607-74bc-4102-a0aa-2e7a8231f146"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11633,
+  "title": "Carmen : Chanson bohème « Les tringles des sistres tintaient »",
+  "mbids": [
+   "6ad83e94-2131-4a56-a1ac-aa0574f0a60d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11634,
+  "title": "Perlenfischer-Tango",
+  "mbids": [
+   "6b27fa9a-5b40-4184-95d1-0f1860958d41"
+  ],
+  "mapping": "work",
+  "key": "bizet-6b27fa9a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11639,
+  "title": "Introduction",
+  "mbids": [
+   "6ce48ee5-d4f4-430f-bab5-c67d9c6cd3a6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11645,
+  "title": "Improvisations sur ouverture",
+  "mbids": [
+   "6fed5d44-0de5-489f-bc02-f7a73bed5420"
+  ],
+  "mapping": "work",
+  "key": "bizet-6fed5d44",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11650,
+  "title": "Étude",
+  "mbids": [
+   "718c2f87-fb92-4d3c-91b3-4da316832619"
+  ],
+  "mapping": "work",
+  "key": "bizet-718c2f87",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11651,
+  "title": "Barcarolle, mélodie sans paroles, WD 110",
+  "mbids": [
+   "71a26859-872c-4f66-bb39-4dd85400a1f7"
+  ],
+  "mapping": "work",
+  "key": "bizet-71a26859",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11662,
+  "title": "Valse en do majeur, op. 1",
+  "mbids": [
+   "76e70040-9e83-48ae-ad2c-83be690ee4c8"
+  ],
+  "mapping": "work",
+  "key": "bizet-76e70040",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11664,
+  "title": "Ouverture, WD 32, GB 116",
+  "mbids": [
+   "77ba4169-90ae-43c5-850a-5903a119741e"
+  ],
+  "mapping": "work",
+  "key": "bizet-77ba4169",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11666,
+  "title": "Jeux d'enfants, op. 22: IV. Les chevaux de bois",
+  "mbids": [
+   "7844f1aa-959d-43e3-bdca-ef798db91a1e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11670,
+  "title": "I pescatori di perle",
+  "mbids": [
+   "7aa76874-7a2a-47df-9c2f-aee77a465bff"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11699,
+  "title": "Carmen: Carmen's Aria [In Card Scene]",
+  "mbids": [
+   "85c74d6c-5a99-4bbf-836d-2a943311aa26"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11702,
+  "title": "Le Matin",
+  "mbids": [
+   "86b0a9d6-6a28-4e93-a4d9-5094ca6c3a57"
+  ],
+  "mapping": "work",
+  "key": "bizet-86b0a9d6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11706,
+  "title": "Thème brillant",
+  "mbids": [
+   "8923ef88-d4fd-49e9-94ae-8137c00a85b9"
+  ],
+  "mapping": "work",
+  "key": "bizet-8923ef88",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11715,
+  "title": "Enter the Drums (Entr'acte)",
+  "mbids": [
+   "8d862b56-8b52-4eb5-95ae-d76c659ff998"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11721,
+  "title": "Romance sans paroles, GB 133",
+  "mbids": [
+   "90ab83c4-9f16-422a-b6b9-731491ef0727"
+  ],
+  "mapping": "work",
+  "key": "bizet-90ab83c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11728,
+  "title": "La Fuite, WD 135",
+  "mbids": [
+   "923398ff-12cf-404f-8aa6-6f556062cec3"
+  ],
+  "mapping": "work",
+  "key": "bizet-923398ff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11736,
+  "title": "Lamento",
+  "mbids": [
+   "951e7ca5-c055-4df9-b568-903db4aa6b4b"
+  ],
+  "mapping": "work",
+  "key": "bizet-951e7ca5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11739,
+  "title": "Carmen : « Votre toast » (Air du toréador)",
+  "mbids": [
+   "9524ce0a-d7d9-44fc-abbf-cfacd572c001"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11744,
+  "title": "Habanera Variations",
+  "mbids": [
+   "967ee7b2-280b-4e0b-b4f4-a010b6b38e1c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11749,
+  "title": "Petite Marguerite",
+  "mbids": [
+   "97f52d54-77df-46e7-b071-f8d48d84c647"
+  ],
+  "mapping": "work",
+  "key": "bizet-97f52d54",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11754,
+  "title": "Ogenbliksem",
+  "mbids": [
+   "99a597b4-4180-47bf-8b1b-314352c3a1ab"
+  ],
+  "mapping": "work",
+  "key": "bizet-99a597b4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11758,
+  "title": "La Foi, l’Espérance et la Charité",
+  "mbids": [
+   "9a24df2b-fd49-453d-ab92-45471b7c0b98"
+  ],
+  "mapping": "work",
+  "key": "bizet-9a24df2b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11759,
+  "title": "Le Doute, WD 89",
+  "mbids": [
+   "9a374579-cca5-44d8-869c-7673055bd449"
+  ],
+  "mapping": "work",
+  "key": "bizet-9a374579",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11761,
+  "title": "悪魔を呼びそうなイギリスの唄",
+  "mbids": [
+   "9af71b3e-f9cb-4bbb-a8d4-85b07f173162"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11769,
+  "title": "La Chanson du rouet, WD 120",
+  "mbids": [
+   "9ec2aa1d-cdb1-4afd-ae69-f367658ac6e2"
+  ],
+  "mapping": "work",
+  "key": "bizet-9ec2aa1d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11770,
+  "title": "Chromatic Variations C Major",
+  "mbids": [
+   "9f3465f2-96ef-4174-b2ac-3ba866cc8dda"
+  ],
+  "mapping": "work",
+  "key": "bizet-9f3465f2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11778,
+  "title": "Jeux d'enfants, op. 22: V. Le Volant",
+  "mbids": [
+   "a2299612-1d43-499c-8833-a35673d70c04"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11779,
+  "title": "Feuilles d'album",
+  "mbids": [
+   "a26bfbe6-1e4f-46cc-8fe3-00287307de43"
+  ],
+  "mapping": "work",
+  "key": "bizet-a26bfbe6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11782,
+  "title": "Gypsy Dance (Chanson bohème)",
+  "mbids": [
+   "a40dbcf6-1c7d-4a72-97aa-fb8d1aeac7de"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11785,
+  "title": "Pourquoi pleurer",
+  "mbids": [
+   "a4eb9faf-d307-4b02-855c-59fd6633f932"
+  ],
+  "mapping": "work",
+  "key": "bizet-a4eb9faf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11786,
+  "title": "L'Abandonnée",
+  "mbids": [
+   "a54c6e92-812a-4ce9-b064-7f8046b9cd9c"
+  ],
+  "mapping": "work",
+  "key": "bizet-a54c6e92",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11788,
+  "title": "1er nocturne en fa majeur, op. 2",
+  "mbids": [
+   "a663523e-5672-3bc3-a87c-b6bead543d87"
+  ],
+  "mapping": "work",
+  "key": "bizet-a663523e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11792,
+  "title": "Grande Valse de concert in E-flat major",
+  "mbids": [
+   "a796d166-30d6-4bb9-be5a-5fab79b2b6f6"
+  ],
+  "mapping": "work",
+  "key": "bizet-a796d166",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11795,
+  "title": "La Rose et l’Abeille, WD 70",
+  "mbids": [
+   "a874e963-33c4-46a9-99d2-6e9b22e5f157"
+  ],
+  "mapping": "work",
+  "key": "bizet-a874e963",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11798,
+  "title": "Venise (paraphrase sur la romance de Nadir extrait des Pêcheurs de Perles)",
+  "mbids": [
+   "a9d12daf-d60e-4e7b-b5f0-de9ceccb0bec"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11804,
+  "title": "Vasco da Gama. Ode-symphonie, WD 124",
+  "mbids": [
+   "ab2e41c5-ef83-48f1-be4a-0f3e571f50f2"
+  ],
+  "mapping": "work",
+  "key": "bizet-ab2e41c5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11813,
+  "title": "Carmen: Atto III. “Andiam, la mia sorte sappiam!” (Carmen, il Dancairo, Frasquita)",
+  "mbids": [
+   "ae71d446-1a4d-47c4-b0d6-e32f3597c03e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11816,
+  "title": "Rêvons",
+  "mbids": [
+   "b00cdfd9-033c-4d8a-9043-d76432219c93"
+  ],
+  "mapping": "work",
+  "key": "bizet-b00cdfd9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11823,
+  "title": "Les Nymphes des bois, WD 132",
+  "mbids": [
+   "b1d0d0a4-1d89-40a7-aaeb-5d09227f20d1"
+  ],
+  "mapping": "work",
+  "key": "bizet-b1d0d0a4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11824,
+  "title": "1er Caprice original en do dièse mineur, op. 3",
+  "mbids": [
+   "b1fbe129-838f-43f0-a490-b81cfd449c3b"
+  ],
+  "mapping": "work",
+  "key": "bizet-b1fbe129",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11831,
+  "title": "Menuet in E-flat major",
+  "mbids": [
+   "b4f1c2b0-3d04-365c-b77f-f502ab765e6c"
+  ],
+  "mapping": "work",
+  "key": "bizet-b4f1c2b0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11833,
+  "title": "Méditation religieuse",
+  "mbids": [
+   "b5256492-b7ab-47aa-ad37-f0d2457084f4"
+  ],
+  "mapping": "work",
+  "key": "bizet-b5256492",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11838,
+  "title": "Aragonaise (from \"Carmen Suite No. 1\")",
+  "mbids": [
+   "b6ee645b-e713-3ec5-bca9-9af47baea400"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11849,
+  "title": "La Sirène, WD 88",
+  "mbids": [
+   "bacd5d07-f057-49b8-9b41-52ffbe5c6755"
+  ],
+  "mapping": "work",
+  "key": "bizet-bacd5d07",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11850,
+  "title": "Romance sans paroles, GB 129",
+  "mbids": [
+   "bae03ad3-1b0e-4616-91fa-c2f3aaea71da"
+  ],
+  "mapping": "work",
+  "key": "bizet-bae03ad3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11857,
+  "title": "Jeux d’enfants, op. 22 : X. Saute-mouton",
+  "mbids": [
+   "bd3092b8-c736-4dcf-8534-b57fdbafef1e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11874,
+  "title": "Song for a Toreador",
+  "mbids": [
+   "c2d51402-1465-456a-90ac-015a246ae269"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11877,
+  "title": "Rhapsodie sur Carmen",
+  "mbids": [
+   "c51e90e1-5826-4873-ba28-7a5dbf896314"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11893,
+  "title": "Grand Selection from Carmen",
+  "mbids": [
+   "cc2d3c3a-b872-4d82-98b4-5697fd17a417"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11899,
+  "title": "Ouverture",
+  "mbids": [
+   "cee02ede-b017-4af6-9cdc-8ccdb16a749c"
+  ],
+  "mapping": "work",
+  "key": "bizet-cee02ede",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11906,
+  "title": "Carmen: Entr'acte Act III. / IV.",
+  "mbids": [
+   "d1f558b4-bd70-465f-919e-0c5e8ed12cdd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11909,
+  "title": "Qui donc t’aimera mieux ?",
+  "mbids": [
+   "d2fc443d-669b-4504-87f3-f23a3cb57620"
+  ],
+  "mapping": "work",
+  "key": "bizet-d2fc443d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11913,
+  "title": "Jeux d'enfants, op. 22: 2 La toupie (The top) Impromptu",
+  "mbids": [
+   "d3c3e129-21d6-47b8-a94a-4276a9134984"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11915,
+  "title": "Sérénade",
+  "mbids": [
+   "d435a38f-a9ab-4ab3-9022-ebeae8fe3c74"
+  ],
+  "mapping": "work",
+  "key": "bizet-d435a38f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11921,
+  "title": "Casilda",
+  "mbids": [
+   "d685b17d-81fa-465a-9397-4caaade5b45d"
+  ],
+  "mapping": "work",
+  "key": "bizet-d685b17d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11924,
+  "title": "Duet on Subjects from Bizet’s Carmen",
+  "mbids": [
+   "d97f00bc-2eef-4782-bf3b-7aa4151047de"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11938,
+  "title": "Aubade, WD 99",
+  "mbids": [
+   "dfdeddb4-a2a0-4845-8c96-e05e909fef4d"
+  ],
+  "mapping": "work",
+  "key": "bizet-dfdeddb4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11945,
+  "title": "Le Golfe de Baïa, WD 119",
+  "mbids": [
+   "e21078d2-efd5-4051-b640-5167c6396825"
+  ],
+  "mapping": "work",
+  "key": "bizet-e21078d2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11948,
+  "title": "Romance : L’âme triste est pareille au doux ciel, WD 68",
+  "mbids": [
+   "e2da583c-1805-42b8-9bbe-b8fa47990bd4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 11956,
+  "title": "2ème Caprice original en do majeur, op. 5",
+  "mbids": [
+   "e7446350-cac5-4bda-8fe5-dd14a24d60c6"
+  ],
+  "mapping": "work",
+  "key": "bizet-e7446350",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11957,
+  "title": "Spanish Gypsy Dance (from “Carmen”)",
+  "mbids": [
+   "e86e2aea-e04e-3201-a21e-50e6e4d2e750"
+  ],
+  "mapping": "work",
+  "key": "bizet-e86e2aea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11958,
+  "title": "Grand Fantasia on Carmen",
+  "mbids": [
+   "e8c9547e-b895-4859-a64e-d1956f3e7885"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11962,
+  "title": "Chasse fantastique, WD 51",
+  "mbids": [
+   "e9a4673c-a769-4b79-9e5c-a2e11b19b8e4"
+  ],
+  "mapping": "work",
+  "key": "bizet-e9a4673c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11964,
+  "title": "Jeux d'enfants, op. 22: VII. Les bulles de savon",
+  "mbids": [
+   "eb2dfa7d-053c-4ef1-96d0-645cfc13e13c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11965,
+  "title": "Le Colibri",
+  "mbids": [
+   "eb2f556b-f35d-4378-82e0-53b7474b5254"
+  ],
+  "mapping": "work",
+  "key": "bizet-eb2f556b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11967,
+  "title": "Ah ! Qu’elle est belle à voir",
+  "mbids": [
+   "ebf9963b-345a-4f7b-84f5-714694247865"
+  ],
+  "mapping": "work",
+  "key": "bizet-ebf9963b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11974,
+  "title": "La Chanson de la rose, WD 103",
+  "mbids": [
+   "eeffddb9-d0dc-46e2-9913-e079b3dbc851"
+  ],
+  "mapping": "work",
+  "key": "bizet-eeffddb9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11986,
+  "title": "Rose d’amour, WD 80",
+  "mbids": [
+   "f275677e-c62a-4ce4-81c0-bee2e1a68216"
+  ],
+  "mapping": "work",
+  "key": "bizet-f275677e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12001,
+  "title": "Chains of Love",
+  "mbids": [
+   "fca93c53-d839-4e7c-8060-ff02dc0b159e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12002,
+  "title": "Misericorda",
+  "mbids": [
+   "fcbb4e5a-79a7-3714-aa4c-e55dd892c39a"
+  ],
+  "mapping": "work",
+  "key": "bizet-fcbb4e5a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12010,
+  "title": "Le Retour, WD 130",
+  "mbids": [
+   "feb8bf76-1bb1-4ccc-b7e9-7caf0d868ce8"
+  ],
+  "mapping": "work",
+  "key": "bizet-feb8bf76",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

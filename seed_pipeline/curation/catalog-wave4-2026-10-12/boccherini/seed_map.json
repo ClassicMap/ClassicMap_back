@@ -1,0 +1,3148 @@
+[
+ {
+  "pieceId": 7810,
+  "title": "Cello Concerto no. 9 in B-flat major, G. 482",
+  "mbids": [
+   "0504aa1a-d311-4ed9-a22a-d0c8e4906f65"
+  ],
+  "mapping": "work",
+  "key": "boccherini-0504aa1a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7887,
+  "title": "Adagio and Allegro for Cello and String Orchestra in A major",
+  "mbids": [
+   "0a3430f2-a6b0-4731-aa2e-6fe0319721cb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7898,
+  "title": "Sonata no. 2 in C major, G. 2",
+  "mbids": [
+   "0af4abb4-0fda-41b0-ac5d-4a61d1e78acf"
+  ],
+  "mapping": "work",
+  "key": "boccherini-0af4abb4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8100,
+  "title": "String Quartet in C major, op. 2 no. 6, G. 164",
+  "mbids": [
+   "190547de-7221-45a6-a8cb-44eb80b1c999"
+  ],
+  "mapping": "work",
+  "key": "boccherini-190547de",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8119,
+  "title": "Sonata for Harpsichord and Violin no. 5 in G minor, op. 5 no. 5, G. 29",
+  "mbids": [
+   "1a02a7fa-af30-4996-8f9e-302a3d89a2e4"
+  ],
+  "mapping": "work",
+  "key": "boccherini-1a02a7fa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8166,
+  "title": "Sonata for Violin an Cello in D major",
+  "mbids": [
+   "1df41e81-02dd-47c9-a7aa-780bc0b52039"
+  ],
+  "mapping": "work",
+  "key": "boccherini-1df41e81",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8227,
+  "title": "Sonata for Harpsichord and Violin no. 4 in D major, op. 5 no. 4, G. 28",
+  "mbids": [
+   "22df44b0-f9ce-42cd-90ee-5008b1665a6c"
+  ],
+  "mapping": "work",
+  "key": "boccherini-22df44b0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8231,
+  "title": "Stabat Mater, G. 532",
+  "mbids": [
+   "23b5a826-431f-4748-aef1-ed9f04de7228"
+  ],
+  "mapping": "work",
+  "key": "boccherini-23b5a826",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8431,
+  "title": "Trio Sonata for Harpsichord, Violin and Cello no. 4 in D major, G. 146",
+  "mbids": [
+   "3246e34d-c25d-4b1b-b095-2803e55a33e0"
+  ],
+  "mapping": "work",
+  "key": "boccherini-3246e34d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8541,
+  "title": "Sonata in G major “La Tirana”",
+  "mbids": [
+   "39abf89d-cf03-4b67-90a0-16dd244ffe5d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8574,
+  "title": "Aria Accademica “Se d’un amor tiranno”, G 557",
+  "mbids": [
+   "3c6c06b1-da8e-4bdf-b705-a7a0269440ac"
+  ],
+  "mapping": "work",
+  "key": "boccherini-3c6c06b1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8644,
+  "title": "Sonata in A major",
+  "mbids": [
+   "420a9136-4db4-4901-a60f-f4584a270866"
+  ],
+  "mapping": "work",
+  "key": "boccherini-e807cfca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8756,
+  "title": "Trio Sonata for Harpsichord, Violin and Cello no. 6 in G minor, G. 148",
+  "mbids": [
+   "49e6a9a3-edc5-45cc-b108-fb7de253695e"
+  ],
+  "mapping": "work",
+  "key": "boccherini-49e6a9a3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8775,
+  "title": "6 String Quartets, op. 58",
+  "mbids": [
+   "4ad3209f-b89e-489c-92a7-aecadbb86d75"
+  ],
+  "mapping": "work",
+  "key": "boccherini-4ad3209f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9243,
+  "title": "Cello Concerto in B-flat major, G. 482",
+  "mbids": [
+   "6ba86680-581e-4c81-b937-3486e183f52a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9400,
+  "title": "Quintet no. 4 for Guitar and Strings in D major, G. 448 \"Fandango\"",
+  "mbids": [
+   "75edf154-eb37-42a2-a4ae-b08193d7a801"
+  ],
+  "mapping": "work",
+  "key": "boccherini-75edf154",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9426,
+  "title": "Musica notturna delle strade di Madrid, op. 30 no. 6",
+  "mbids": [
+   "7832b138-7257-4726-91ac-531763c482aa"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9519,
+  "title": "Cello Concerto no. 6 in D major",
+  "mbids": [
+   "7e5e7545-27a9-46a5-93cd-07ca31c963b1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9600,
+  "title": "Clementina",
+  "mbids": [
+   "84688040-a12d-4ad6-b8e0-1504e4ba6415"
+  ],
+  "mapping": "work",
+  "key": "boccherini-84688040",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9669,
+  "title": "String Trio in D major, G. 98",
+  "mbids": [
+   "894345f0-d9bf-45a8-bb77-9f2e4f26c48d"
+  ],
+  "mapping": "work",
+  "key": "boccherini-894345f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9993,
+  "title": "6 String Quartets, op. 32",
+  "mbids": [
+   "a14fe184-ba62-46bb-88d9-390a34691276"
+  ],
+  "mapping": "work",
+  "key": "boccherini-a14fe184",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10327,
+  "title": "Six Flute Sextets, op. 16",
+  "mbids": [
+   "b937d940-26c8-4310-b031-132300998046"
+  ],
+  "mapping": "work",
+  "key": "boccherini-b937d940",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10915,
+  "title": "Celebrated Menuet",
+  "mbids": [
+   "e5bd4125-ebce-4cab-ac40-fd7e0451ea0b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10985,
+  "title": "String Quartet in C minor, op. 2 no. 1, G. 159",
+  "mbids": [
+   "e9fd6243-9be7-4b2e-a704-f051eec33aeb"
+  ],
+  "mapping": "work",
+  "key": "boccherini-e9fd6243",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11014,
+  "title": "Sonata I",
+  "mbids": [
+   "ec4c719d-b7b1-4e53-838c-7cfdf41f51d5"
+  ],
+  "mapping": "work",
+  "key": "boccherini-ec4c719d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11065,
+  "title": "Quintet no. 6 for Guitar and Strings in G major, G. 450",
+  "mbids": [
+   "f005da0d-aa03-4d45-a090-874ddef62732"
+  ],
+  "mapping": "work",
+  "key": "boccherini-f005da0d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7444,
+  "title": "Quintet no. 60 in C major, G. 324 \"La Musica Notturna delle strade di Madrid\" op. 30 no. 6",
+  "mbids": [
+   "0f44c546-260c-4700-b425-6d3c34900218"
+  ],
+  "mapping": "work",
+  "key": "boccherini-0f44c546",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7474,
+  "title": "Cello Concerto no. 10 in D major, G. 483",
+  "mbids": [
+   "33ae53e6-eaff-4e32-9c28-80a2ec3b5928"
+  ],
+  "mapping": "work",
+  "key": "boccherini-33ae53e6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7492,
+  "title": "6 String Quintets, op. 11 (G.271-276)",
+  "mbids": [
+   "491aba59-27da-4fa4-b00a-a82c05ca66d5"
+  ],
+  "mapping": "work",
+  "key": "boccherini-491aba59",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7497,
+  "title": "Cello Concerto no. 7 in G major, G. 480",
+  "mbids": [
+   "4f42394e-f466-44f3-8ea6-0ac270d9d611"
+  ],
+  "mapping": "work",
+  "key": "boccherini-4f42394e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7538,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 4 in A major, G. 4",
+  "mbids": [
+   "89c2c2fd-108c-4d45-9336-4d2e06ac6b8c"
+  ],
+  "mapping": "work",
+  "key": "boccherini-89c2c2fd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7569,
+  "title": "String Quintet in F minor, G. 348, op. 37 no. 19",
+  "mbids": [
+   "ab250afa-aa1a-4886-9374-9310dc5832ba"
+  ],
+  "mapping": "work",
+  "key": "boccherini-ab250afa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7595,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 17 in C major, G. 17",
+  "mbids": [
+   "cc348219-203b-412a-b1a4-c560f8a90951"
+  ],
+  "mapping": "work",
+  "key": "boccherini-cc348219",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7602,
+  "title": "Cello Concerto no. 3 in D major, G. 476",
+  "mbids": [
+   "d7aba79d-6dba-468f-a6cf-acdb5f491004"
+  ],
+  "mapping": "work",
+  "key": "boccherini-d7aba79d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7659,
+  "title": "Cello Concerto no. 6 in D major, G. 479 (Paris no. 2)",
+  "mbids": [
+   "585abd42-cc0f-47cf-a3d7-686189bd7df1"
+  ],
+  "mapping": "work",
+  "key": "boccherini-585abd42",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7743,
+  "title": "Cello Quintet, op. 37 no. 7",
+  "mbids": [
+   "01091a28-eeba-41ce-969c-4bd4eb3a3d47"
+  ],
+  "mapping": "work",
+  "key": "boccherini-01091a28",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7752,
+  "title": "Six Quatuors pour le clavecin ou pianoforte, violon, viola et basse obligé G. 529",
+  "mbids": [
+   "01b30d1f-3528-40fc-a45b-b88ccb438277"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7754,
+  "title": "Sonata No. 6 in C Major, G. 6 : II. Largo assai",
+  "mbids": [
+   "01d1bd27-479f-44b4-8a65-304e3ab4cdb7"
+  ],
+  "mapping": "part",
+  "key": "boccherini-5a422fdd",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7826,
+  "title": "Quintet for 2 Violins, Viola, and 2 Cellos No. 74 in F major, Op. 39 No. 2 G. 338: II. Adagio ma non tanto",
+  "mbids": [
+   "064d8add-8804-436e-8926-f67c24481d7d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 7843,
+  "title": "Menuett",
+  "mbids": [
+   "071d2f22-8a90-449b-aafb-29c20799cdbe"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7861,
+  "title": "Sonata No. 9 in F Major, G. 9 : III. Tempo di minuetto amoroso",
+  "mbids": [
+   "089e0fcc-9b20-4320-92a3-8da0275dd75d"
+  ],
+  "mapping": "part",
+  "key": "boccherini-74398a76",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 7864,
+  "title": "Quintet for 2 Violins, Viola, and 2 Cellos No. 73 in B-flat major, Op. 39 No. 1 G. 337: V. Rondeau. Allegro non tanto",
+  "mbids": [
+   "091902a7-d34d-41b2-8d25-e14055ebaace"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 7866,
+  "title": "Quintet for flute and strings in C major, G 427: II. Rondeau grazioso",
+  "mbids": [
+   "09406a11-bb9f-4e82-99f7-ec1ffee2cdda"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 7869,
+  "title": "Symphony in D major, G. 490",
+  "mbids": [
+   "09536824-c39b-4d29-a72e-5756d30f5a87"
+  ],
+  "mapping": "work",
+  "key": "boccherini-09536824",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7893,
+  "title": "Cello Concerto no. 1 in E-flat major, G. 474",
+  "mbids": [
+   "0a9ce0ff-e1f6-4cda-8025-2ac89b0552c5"
+  ],
+  "mapping": "work",
+  "key": "boccherini-0a9ce0ff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7907,
+  "title": "String Quintet in G minor, G. 351, op. 37 no. 13",
+  "mbids": [
+   "0bb297a0-238c-4f18-a474-c805ceff31e4"
+  ],
+  "mapping": "work",
+  "key": "boccherini-0bb297a0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7931,
+  "title": "Quintet for 2 Violins, Viola, and 2 Cellos No. 75 in D major, Op. 39 No. 3 G. 339: III. Finale. Presto",
+  "mbids": [
+   "0d82232d-031d-4a71-ae0a-926695d27a28"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 7937,
+  "title": "String Quartet in F major, op. 8 no. 5",
+  "mbids": [
+   "0deb03a2-a11d-4d2b-82e3-2d313fded28d"
+  ],
+  "mapping": "work",
+  "key": "boccherini-0deb03a2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7986,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 1 in F major, G. 1",
+  "mbids": [
+   "11376c32-252d-4581-ad3f-1b7c97087225"
+  ],
+  "mapping": "work",
+  "key": "boccherini-11376c32",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8009,
+  "title": "Sonata No. 2 in C Minor, G. 2b : I. Adagio",
+  "mbids": [
+   "12619ae8-9eb0-497f-bf3f-43b55ad0da1a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8017,
+  "title": "Quintet no. 13 for Flute (Or Oboe) & Strings in G major, op. 55 no. 1, G. 431",
+  "mbids": [
+   "12f411b8-1f70-425a-8551-0321ca118af4"
+  ],
+  "mapping": "work",
+  "key": "boccherini-12f411b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8034,
+  "title": "Quintet for Piano and Strings no. 8 in B-flat major, op. 57 no. 2, G. 414",
+  "mbids": [
+   "13ec934e-4738-4d58-923b-8bfcd29df68b"
+  ],
+  "mapping": "work",
+  "key": "boccherini-13ec934e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8053,
+  "title": "Quintet for flute and strings in B flat major, G 429: II. Presto assai",
+  "mbids": [
+   "15388f41-4a53-40cd-bb34-d373e67faf20"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8060,
+  "title": "String Quintett no. 23 in D major, op. 62, no. 5, G. 401",
+  "mbids": [
+   "15ead650-a17e-4d6d-9ce9-92c3e7001dd1"
+  ],
+  "mapping": "work",
+  "key": "boccherini-15ead650",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8116,
+  "title": "Quintet no. 16 for Flute (or Oboe) and Strings in A major, op. 55 no. 4, G. 434",
+  "mbids": [
+   "19e43e5c-443c-474a-87f2-2cd970482407"
+  ],
+  "mapping": "work",
+  "key": "boccherini-19e43e5c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8126,
+  "title": "6 Fugues for 2 bassoons or cellos, G. 73",
+  "mbids": [
+   "1a584f8d-1f8f-47fd-9856-a686c77fa2d7"
+  ],
+  "mapping": "work",
+  "key": "boccherini-1a584f8d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8132,
+  "title": "String Quintet no. 72 in F major, op. 36 no. 6, G 336 \"Quintetto dello Scacciapensiero\"",
+  "mbids": [
+   "1b74bd37-f7d5-4fba-9b63-b2dfa0bb0409"
+  ],
+  "mapping": "work",
+  "key": "boccherini-1b74bd37",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8140,
+  "title": "Quintet for Piano and Strings no. 9 in E minor, op. 57 no. 3, G. 415",
+  "mbids": [
+   "1c064c5e-47af-472c-a2d4-42a44c1137ef"
+  ],
+  "mapping": "work",
+  "key": "boccherini-1c064c5e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8145,
+  "title": "Quintet for flute and strings in D major, G 430 \"Las Parejas\": III. Entrada - Marcia",
+  "mbids": [
+   "1c498122-c96c-4e22-81ad-44df6d71954e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8156,
+  "title": "Concerto In Si Bemolle Maggiore Per Violoncello E Orchestra: I. Allegro Moderato",
+  "mbids": [
+   "1d3b42ee-46b0-4aed-842e-3e870b209879"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8195,
+  "title": "Sonata No. 6 in C Major, G. 6 : III. Allegro moderato",
+  "mbids": [
+   "1fa791e8-bf08-49e9-b972-72a8f012fb24"
+  ],
+  "mapping": "part",
+  "key": "boccherini-5a422fdd",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8197,
+  "title": "Trio in G minor op. 6 no. 5, G. 93",
+  "mbids": [
+   "1fc82da7-7036-4c95-bc29-ac0abe116086"
+  ],
+  "mapping": "work",
+  "key": "boccherini-1fc82da7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8210,
+  "title": "Sonata in D major, G. 24 no. 4",
+  "mbids": [
+   "20ff1c1f-6474-498e-8b3c-0b512f2b92b9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8218,
+  "title": "Symphony no. 13 in C major, op. 37 no. 1, G. 515",
+  "mbids": [
+   "21e352b8-93c6-4a5e-b8e0-03675af50b8e"
+  ],
+  "mapping": "work",
+  "key": "boccherini-21e352b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8242,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 16 in E-flat major, G. 16",
+  "mbids": [
+   "24f9fde6-454c-48c2-b006-126eaa2f4735"
+  ],
+  "mapping": "work",
+  "key": "boccherini-24f9fde6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8246,
+  "title": "Quintet no. 3 for Piano and Strings in C major, G. 409, op. 56 no. 3",
+  "mbids": [
+   "255b9573-1d9e-4519-aa25-25eec2be1405"
+  ],
+  "mapping": "work",
+  "key": "boccherini-255b9573",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8268,
+  "title": "Quintet for 2 Violins, Viola, and 2 Cellos No. 75 in D major, Op. 39 No. 3 G. 339: II. Pastorale. Amoroso ma non lento",
+  "mbids": [
+   "26fa1eae-51f4-46b4-8ed1-9bb75398ae26"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8283,
+  "title": "Quintet no. 49, in D major, for 2 violins, viola and 2 cellos G.313, op. 29/1",
+  "mbids": [
+   "27e5717e-d2c6-484e-a263-12c18ccde0b8"
+  ],
+  "mapping": "work",
+  "key": "boccherini-27e5717e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8338,
+  "title": "String Quintet in A major, op. 27 no. 1, G. 301",
+  "mbids": [
+   "2c3a533e-dac3-4b04-852f-0ed98bed5ac2"
+  ],
+  "mapping": "work",
+  "key": "boccherini-2c3a533e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8351,
+  "title": "Quintet no. 3 for Guitar and Strings in B-flat major, G. 447",
+  "mbids": [
+   "2d32a2e1-9330-4e63-8ece-33429d3f2546"
+  ],
+  "mapping": "work",
+  "key": "boccherini-2d32a2e1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8357,
+  "title": "Quintet no. 9 for Guitar and Strings in C major, G. 453 \"La Ritirada di Madrid\"",
+  "mbids": [
+   "2d9b37c8-10fb-4334-94ed-1cc596037e6e"
+  ],
+  "mapping": "work",
+  "key": "boccherini-2d9b37c8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8390,
+  "title": "String Quartet in A major, op. 8 no. 6",
+  "mbids": [
+   "2fc79e30-b379-4934-9271-3565ec870d5c"
+  ],
+  "mapping": "work",
+  "key": "boccherini-2fc79e30",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8406,
+  "title": "Trio Sonata for Harpsichord, Violin and Cello no. 5 in B-flat major, G. 147",
+  "mbids": [
+   "31080a48-a516-480f-9cb9-c11b340c32f6"
+  ],
+  "mapping": "work",
+  "key": "boccherini-31080a48",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8429,
+  "title": "Cello Concerto no. 2 in A major, G. 475",
+  "mbids": [
+   "323fcf62-e8a4-4214-bbe9-a80bbeaba79e"
+  ],
+  "mapping": "work",
+  "key": "boccherini-323fcf62",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8465,
+  "title": "Quintet for flute and strings in E flat major, G 425: I. Allegro con moto",
+  "mbids": [
+   "343a28c6-6df3-4cea-b9e1-7beb93569567"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8470,
+  "title": "Quintette en Fa mineur G 347, op. 41 no. 2",
+  "mbids": [
+   "3477cbbf-8c4d-49a5-b700-c96dfdeff2ed"
+  ],
+  "mapping": "work",
+  "key": "boccherini-3477cbbf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8482,
+  "title": "Cello Concerto no. 12 in E-flat major, G. deest",
+  "mbids": [
+   "356cb9f2-5e1f-4d24-aba7-fe705047fd80"
+  ],
+  "mapping": "work",
+  "key": "boccherini-356cb9f2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8530,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 3 in C major, G. 3",
+  "mbids": [
+   "38ded703-3cb8-4d0c-b705-eb49386d8eea"
+  ],
+  "mapping": "work",
+  "key": "boccherini-38ded703",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8531,
+  "title": "Sonata No. 17 in C Major, G. 17 : II. Largo assai",
+  "mbids": [
+   "38e41095-5eec-4c57-aed9-80adaf58ebb8"
+  ],
+  "mapping": "part",
+  "key": "boccherini-cc348219",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 8533,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 2b in C minor, G. 2b",
+  "mbids": [
+   "390eccb2-d7b0-492a-8671-bf7cdff6ee59"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8554,
+  "title": "Quintet for 2 Violins, Viola, and 2 Cellos No. 73 in B-flat major, Op. 39 No. 1 G. 337: III. Tempo di Minuetto",
+  "mbids": [
+   "3a858143-a627-42fb-99c1-9b126c2a40d0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8582,
+  "title": "Symphony in C major, op. 10 no. 4 G. 523",
+  "mbids": [
+   "3d5b4ed3-748d-4b2c-b405-ee860f6a8f90"
+  ],
+  "mapping": "work",
+  "key": "boccherini-3d5b4ed3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8598,
+  "title": "Allegretto",
+  "mbids": [
+   "3f0313f6-3758-4a76-abbb-e279dec07d69"
+  ],
+  "mapping": "work",
+  "key": "boccherini-3f0313f6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8620,
+  "title": "Sonata No. 15 in G Major, G. 15 : II. Larghetto",
+  "mbids": [
+   "409e8462-a923-4909-8ec6-2509d2e9b182"
+  ],
+  "mapping": "part",
+  "key": "boccherini-902b41c9",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 8628,
+  "title": "6 concerti a grande orchestra, op. 12",
+  "mbids": [
+   "414a3837-6c2d-4bb8-88cb-74a317881d03"
+  ],
+  "mapping": "work",
+  "key": "boccherini-414a3837",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8671,
+  "title": "String Quintet in G minor, op. 46 no. 4, G. 362",
+  "mbids": [
+   "43b63bf9-fb06-4e6a-a524-490c6d73f212"
+  ],
+  "mapping": "work",
+  "key": "boccherini-43b63bf9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8675,
+  "title": "Quintet for flute and strings in B flat major, G 429: I. Allegro moderato",
+  "mbids": [
+   "4414d65f-0c19-49c7-8e4f-196a70b98bf2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8693,
+  "title": "String Quartet no. 90 in F major, op. 64 no. 1, G. 248",
+  "mbids": [
+   "4585f6a5-ef9a-461f-8f95-f7b20846d08f"
+  ],
+  "mapping": "work",
+  "key": "boccherini-4585f6a5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8694,
+  "title": "Quintet for 2 Violins, Viola, and 2 Cellos No. 74 in F major, Op. 39 No. 2 G. 338: I. Allegro vivo ma non presto",
+  "mbids": [
+   "458fd4b3-a46b-48ed-8af9-6a80a206c72d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8695,
+  "title": "String Quintet in B minor, G. 350, op. 42 no. 3",
+  "mbids": [
+   "459da90f-17da-4c70-be0d-e53d49f480af"
+  ],
+  "mapping": "work",
+  "key": "boccherini-459da90f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8726,
+  "title": "Symphony in E-flat major, op. 12 no. 2 G. 504",
+  "mbids": [
+   "47720c1b-42bc-4e03-9e18-a488028d53c7"
+  ],
+  "mapping": "work",
+  "key": "boccherini-47720c1b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8749,
+  "title": "String Quintet (Quintettino) for 2 violins, viola & 2 cellos in D major (\"Fandango\"), G. 341 (op. 40/2)",
+  "mbids": [
+   "494e03c9-98ff-44ea-b740-a2cf8f2ac6e8"
+  ],
+  "mapping": "work",
+  "key": "boccherini-494e03c9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8755,
+  "title": "Flute Quintet no. 6 in E-flat major, G. 424",
+  "mbids": [
+   "49e1c3d3-79ad-4b32-a5e6-2ae41aaae623"
+  ],
+  "mapping": "work",
+  "key": "boccherini-49e1c3d3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8762,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 5 in G major, G. 5",
+  "mbids": [
+   "4a28f217-346e-4062-89ef-a0aba388d570"
+  ],
+  "mapping": "work",
+  "key": "boccherini-4a28f217",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8763,
+  "title": "String Quintet in E minor, op. 27 no. 3, G. 303",
+  "mbids": [
+   "4a3edef9-d631-4c11-8b41-6eef98c3b899"
+  ],
+  "mapping": "work",
+  "key": "boccherini-4a3edef9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8782,
+  "title": "Concerto In Si Bemolle Maggiore Per Violoncello E Orchestra: II. Adagio Non Troppo",
+  "mbids": [
+   "4b63b3b3-c913-4630-a56e-3d5c95a3870d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8818,
+  "title": "6 String Quintets, op. 20 (G. 289-294)",
+  "mbids": [
+   "4e4725a6-1a69-404a-9202-5641ebabc2bd"
+  ],
+  "mapping": "work",
+  "key": "boccherini-4e4725a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8841,
+  "title": "Quintet for flute and strings in D major, G 430 \"Las Parejas\": I. Entrada - Marcia",
+  "mbids": [
+   "503e7962-84c9-4cfa-986e-f5de0bb39790"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8853,
+  "title": "Quintet no. 52, in A major, for 2 violins, viola and 2 cellos G.316, op. 29/4",
+  "mbids": [
+   "50e264e4-11a4-4392-a309-a35d46292179"
+  ],
+  "mapping": "work",
+  "key": "boccherini-50e264e4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8860,
+  "title": "Quintet no. 50, in C minor, for 2 violins, viola and 2 cellos G.314, op. 29/2",
+  "mbids": [
+   "511f6019-0d96-4013-8790-b8b40452b5ef"
+  ],
+  "mapping": "work",
+  "key": "boccherini-511f6019",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8878,
+  "title": "String Quartet in C major, G. 232, op. 52 no. 1",
+  "mbids": [
+   "51ebb0ed-48be-4ab1-8f74-e73943a620f9"
+  ],
+  "mapping": "work",
+  "key": "boccherini-51ebb0ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8881,
+  "title": "String Quartet in G minor, op. 8 no. 4",
+  "mbids": [
+   "523747a2-5d3a-43fa-aa25-2911800d58bc"
+  ],
+  "mapping": "work",
+  "key": "boccherini-523747a2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8902,
+  "title": "Symphony in A major, op. 35 no. 3, G. 511",
+  "mbids": [
+   "53e6783b-b041-4f4d-8a12-851329b95d3c"
+  ],
+  "mapping": "work",
+  "key": "boccherini-53e6783b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8927,
+  "title": "Quintet for 2 Violins, Viola, and 2 Cellos No. 74 in F major, Op. 39 No. 2 G. 338: III. Minuetto e Trio",
+  "mbids": [
+   "5596b974-b03a-4194-ae9e-58043d78ed7a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 8955,
+  "title": "Sonata No. 4 in A Major, G. 4 : III. Affetuoso",
+  "mbids": [
+   "57138e90-60c0-477a-b926-9bca7b77a7a5"
+  ],
+  "mapping": "part",
+  "key": "boccherini-89c2c2fd",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 8985,
+  "title": "Obiad rodzinny",
+  "mbids": [
+   "590cc875-41fb-416a-8b6c-083add2c0095"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9018,
+  "title": "Quintet for Piano and Strings no. 7 in A major, op. 57 no. 1, G. 413",
+  "mbids": [
+   "5b029208-1c10-4332-b416-766954593dc6"
+  ],
+  "mapping": "work",
+  "key": "boccherini-5b029208",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9043,
+  "title": "Sonata No. 4 in A Major, G. 4 : I. Allegro moderato",
+  "mbids": [
+   "5cdc1cb4-b83f-486a-8484-670e8e7b9571"
+  ],
+  "mapping": "part",
+  "key": "boccherini-89c2c2fd",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 9046,
+  "title": "Sonata No. 8 in B-Flat Major, G. 8 : III. Allegro",
+  "mbids": [
+   "5d1dd2aa-7af2-49f3-b9e3-1f6e319205bc"
+  ],
+  "mapping": "part",
+  "key": "boccherini-7dc30749",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 9048,
+  "title": "Symphony no. 16 in A major, op. 37 no. 4, G. 518",
+  "mbids": [
+   "5d2b22c7-f26b-4c95-82a1-8570131d8f0c"
+  ],
+  "mapping": "work",
+  "key": "boccherini-5d2b22c7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9057,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 4b in A major, G. 4b",
+  "mbids": [
+   "5dc5b8c5-a2da-449b-8369-1cf1c100efd0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9119,
+  "title": "Sonata for Cello and Continuo in A major “L’imperatrice”",
+  "mbids": [
+   "6216b244-ae08-4fac-a796-1879809f384e"
+  ],
+  "mapping": "work",
+  "key": "boccherini-6216b244",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9139,
+  "title": "Quintet for 2 Violins, Viola, and 2 Cellos No. 73 in B-flat major, Op. 39 No. 1 G. 337: II. Allegro vivo",
+  "mbids": [
+   "6372e5c4-dc84-4afc-b4ab-42c096ec12d3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9169,
+  "title": "Trio Sonata for Harpsichord, Violin and Cello no. 3 in E-flat major, G. 145",
+  "mbids": [
+   "659948cb-5c72-4a03-ae88-9e036afd798f"
+  ],
+  "mapping": "work",
+  "key": "boccherini-659948cb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9170,
+  "title": "Symphony op. 21 No. 5 (G 497) in B-flat",
+  "mbids": [
+   "65d01bc3-bbd3-4558-9767-a270af549bfa"
+  ],
+  "mapping": "work",
+  "key": "boccherini-65d01bc3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9174,
+  "title": "Sonata No. 3 in C Major, G. 3 : II. Andante",
+  "mbids": [
+   "6636dde3-0401-44e9-8de0-d234471b7ccc"
+  ],
+  "mapping": "part",
+  "key": "boccherini-38ded703",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 9205,
+  "title": "Quintet for flute and strings in D major, G 430 \"Las Parejas\": II. Galope",
+  "mbids": [
+   "6965a6a4-0cda-4ea9-b9e7-5ac43917f1fc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9209,
+  "title": "Symphony no. 20 in D minor, op. 45, G. 522",
+  "mbids": [
+   "69aaaacd-1c6a-4034-9fb4-4cea2a1e40fb"
+  ],
+  "mapping": "work",
+  "key": "boccherini-69aaaacd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9217,
+  "title": "String Quartet in D major, G. 237 (Op. 53/2)",
+  "mbids": [
+   "6a435fdd-3596-4f48-acf5-12ddc2e6190e"
+  ],
+  "mapping": "work",
+  "key": "boccherini-6a435fdd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9219,
+  "title": "Quintet no. 14 for Flute (or Oboe) and Strings in F major, op. 55 no. 2, G. 432",
+  "mbids": [
+   "6a53912a-a9d2-43b9-908c-2766dc0d2f86"
+  ],
+  "mapping": "work",
+  "key": "boccherini-6a53912a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9232,
+  "title": "Quartett für Flöte, Violine, Viola und Violoncello in D-Dur: Menuett (Pro-Arte-Quartett)",
+  "mbids": [
+   "6b2bc105-33d8-3791-9fdf-3d9e01b2e201"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9233,
+  "title": "Quintet no. 17 for Flute (or Oboe) and Strings in E-flat major, op. 55 no. 5, G. 435",
+  "mbids": [
+   "6b363117-371f-4bd8-b1e1-c4389d5616e7"
+  ],
+  "mapping": "work",
+  "key": "boccherini-6b363117",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9249,
+  "title": "String Quartet in C minor, op. 8 no. 2",
+  "mbids": [
+   "6c42d2c3-416e-4bca-baa2-94224d6a7a23"
+  ],
+  "mapping": "work",
+  "key": "boccherini-6c42d2c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9251,
+  "title": "String Quintet in E-flat major, op. 27 no. 4, G. 304",
+  "mbids": [
+   "6c7b42b8-c612-46ef-a859-30ae6aa93338"
+  ],
+  "mapping": "work",
+  "key": "boccherini-6c7b42b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9254,
+  "title": "Quartet for 2 Violins, Viola and Cello No. 91 in D major, Op. 64 No. 2 G. 249: I. Allegro con brio",
+  "mbids": [
+   "6c859ba6-687b-4c60-8047-77f12775edf8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9256,
+  "title": "6 String Quintets, op. 28 (G. 308-312)",
+  "mbids": [
+   "6c99566d-1bad-46b9-b58a-3041dc71f41f"
+  ],
+  "mapping": "work",
+  "key": "boccherini-6c99566d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9271,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 2 in C minor, G. 2",
+  "mbids": [
+   "6da6cf65-0f9b-4bc3-8f10-9a0f3d21d553"
+  ],
+  "mapping": "work",
+  "key": "boccherini-6da6cf65",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9282,
+  "title": "Symphony in D major, G. 500",
+  "mbids": [
+   "6e63cc98-a384-4d7f-b52b-f4980801e9f9"
+  ],
+  "mapping": "work",
+  "key": "boccherini-6e63cc98",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9328,
+  "title": "Symphony in E-flat major, op. 35 no. 2, G. 510",
+  "mbids": [
+   "716278cd-7a08-447e-b30a-14483eca91a4"
+  ],
+  "mapping": "work",
+  "key": "boccherini-716278cd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9363,
+  "title": "Sonata in C minor, G. 43",
+  "mbids": [
+   "73ecacd5-8fed-4978-a89d-730b7b23710a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9365,
+  "title": "Quintet no. 2 for Guitar and Strings in E major, G 446",
+  "mbids": [
+   "741981ba-6e3b-4c89-96e6-ceb934fb08db"
+  ],
+  "mapping": "work",
+  "key": "boccherini-741981ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9368,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 9 in F major, G 9",
+  "mbids": [
+   "74398a76-9467-4b07-ba6f-0e479447af33"
+  ],
+  "mapping": "work",
+  "key": "boccherini-74398a76",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9374,
+  "title": "Quartett für Flöte, Violine, Viola und Violoncello in D-Dur: Finale: Presto (Pro-Arte-Quartett)",
+  "mbids": [
+   "749d7b07-8c46-3894-aa6f-89f49001fe7a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9388,
+  "title": "Sonata for Cello Solo and Basso Continuo in E-flat major, Gdeest",
+  "mbids": [
+   "75319e68-a636-4aa6-953f-f3d55eb174aa"
+  ],
+  "mapping": "work",
+  "key": "boccherini-df035aff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9391,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 10 in E-flat major, G 10",
+  "mbids": [
+   "75756eba-1294-4814-bf2c-6b550aee6c76"
+  ],
+  "mapping": "work",
+  "key": "boccherini-75756eba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9395,
+  "title": "Symphony in D major, op. 35 no. 1, G. 509",
+  "mbids": [
+   "75b2fc07-5eb1-46d1-8c2d-b38978f84261"
+  ],
+  "mapping": "work",
+  "key": "boccherini-75b2fc07",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9441,
+  "title": "Quintet for flute and strings in D major, G 428: II. Minuetto con moto",
+  "mbids": [
+   "7980644a-53e8-4e45-ae9c-16392da1ea7b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9458,
+  "title": "Quintet for flute and strings in C major, G 427: I. Andante non tanto",
+  "mbids": [
+   "7aa6fdf3-f0a6-43cc-abce-3076bf026b40"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9463,
+  "title": "Sonata No. 16 in E-Flat Major, G. 16 : II. Amoroso (Minuetto)",
+  "mbids": [
+   "7ac23dec-7128-474c-97b2-36a3eeade393"
+  ],
+  "mapping": "part",
+  "key": "boccherini-24f9fde6",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 9466,
+  "title": "Sonata for Harpsichord and Violin no. 3 in B-flat major, op. 5 no. 3, G. 27",
+  "mbids": [
+   "7ad5553e-ba71-4cc5-bc90-40cfa691b171"
+  ],
+  "mapping": "work",
+  "key": "boccherini-7ad5553e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9468,
+  "title": "Sonata No. 13 in A Major, G. 13 : II. Largo",
+  "mbids": [
+   "7af5808a-e844-48b3-91cf-d4b0db289b09"
+  ],
+  "mapping": "part",
+  "key": "boccherini-ab19e75b",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 9471,
+  "title": "Sonata No. 17 in C Major, G. 17 : III. Rondo. Allegro",
+  "mbids": [
+   "7b16efd0-34c3-4615-a6ac-255a7a59d734"
+  ],
+  "mapping": "part",
+  "key": "boccherini-cc348219",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 9506,
+  "title": "Symphony in B-flat major, op. 35 no. 6, G. 514",
+  "mbids": [
+   "7d54b25f-743e-44c6-a7e8-7341468cf428"
+  ],
+  "mapping": "work",
+  "key": "boccherini-7d54b25f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9510,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 8 in B-flat major, G 8",
+  "mbids": [
+   "7dc30749-2e72-4c0a-9b56-e13001502eaf"
+  ],
+  "mapping": "work",
+  "key": "boccherini-7dc30749",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9511,
+  "title": "Symphony no. 18 in D major, op. 42, G. 520",
+  "mbids": [
+   "7dc76dcc-d855-49ad-87c4-f76b4a0851d2"
+  ],
+  "mapping": "work",
+  "key": "boccherini-7dc76dcc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9521,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 7 in C major, G 7",
+  "mbids": [
+   "7e6af9ff-3306-4c55-8f8e-47c61f11e4fe"
+  ],
+  "mapping": "work",
+  "key": "boccherini-7e6af9ff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9523,
+  "title": "Quintet no. 5 for Piano and Strings in D major, G. 411, op. 56 no. 5",
+  "mbids": [
+   "7e6df6d4-e335-49a0-be65-e95fbcacb6c9"
+  ],
+  "mapping": "work",
+  "key": "boccherini-7e6df6d4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9524,
+  "title": "Quartet op. 41(G 214) No. 1 in C minor",
+  "mbids": [
+   "7e75dc1e-8735-4c47-a916-a19999d1d65c"
+  ],
+  "mapping": "work",
+  "key": "boccherini-7e75dc1e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9536,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 6 in C major, G 6",
+  "mbids": [
+   "7f2dc953-b089-44b1-9630-606e28e130b5"
+  ],
+  "mapping": "work",
+  "key": "boccherini-7f2dc953",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9540,
+  "title": "Sonata No. 4 in A Major, G. 4 : II. Adagio",
+  "mbids": [
+   "7fc02638-e88b-48f5-a195-b493bcb2f7a9"
+  ],
+  "mapping": "part",
+  "key": "boccherini-89c2c2fd",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 9566,
+  "title": "String Quintet in C major, op. 50 no. 5, G. 374",
+  "mbids": [
+   "82046953-3eb0-4b0b-a6dd-0ae1240c2831"
+  ],
+  "mapping": "work",
+  "key": "boccherini-82046953",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9568,
+  "title": "String Quartet in G major “La Tiranna”, op. 44 no. 4, G. 223",
+  "mbids": [
+   "8234677f-f22d-4f83-9bd6-23fc28c9d1f3"
+  ],
+  "mapping": "work",
+  "key": "boccherini-8234677f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9574,
+  "title": "Quintet no. 1 for Guitar and Strings in D minor, G. 445",
+  "mbids": [
+   "82f32fb4-e5c4-4255-8145-d66f5017947b"
+  ],
+  "mapping": "work",
+  "key": "boccherini-82f32fb4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9578,
+  "title": "Quintet no. 18 for Flute (or Oboe) and Strings in D minor, op. 55 no. 6, G. 436",
+  "mbids": [
+   "831220c8-c2ed-4da1-a624-e3c4f52a96b5"
+  ],
+  "mapping": "work",
+  "key": "boccherini-831220c8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9592,
+  "title": "Quartet in E-flat major, op. 6 no. 3",
+  "mbids": [
+   "83baf64e-4ef6-48c0-adcc-d6342506741e"
+  ],
+  "mapping": "work",
+  "key": "boccherini-83baf64e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9594,
+  "title": "Sonata No. 9 in F Major, G. 9 : I. Andantino",
+  "mbids": [
+   "83dbf804-a6f6-4918-a34b-b41671d96679"
+  ],
+  "mapping": "part",
+  "key": "boccherini-74398a76",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 9608,
+  "title": "Sonata No. 2 in C Minor, G. 2b : III. Allegretto",
+  "mbids": [
+   "84ec5de4-7b36-4a38-ab93-4ea020b08b56"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9629,
+  "title": "Sonata for Harpsichord and Violin no. 1 in B-flat major, op. 5 no. 1, G. 25",
+  "mbids": [
+   "8636c90e-f6a2-4283-bb7c-9c1b215ed862"
+  ],
+  "mapping": "work",
+  "key": "boccherini-8636c90e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9633,
+  "title": "Sonata No. 6 in C Major, G. 6 : I. Allegro",
+  "mbids": [
+   "865242bb-ca47-4373-8c02-c83804606bc3"
+  ],
+  "mapping": "part",
+  "key": "boccherini-5a422fdd",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9656,
+  "title": "Symphony op. 21 No. 2 (G 494) in E-flat",
+  "mbids": [
+   "882d66be-0ed7-461f-8b21-c0964813bf6b"
+  ],
+  "mapping": "work",
+  "key": "boccherini-882d66be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9657,
+  "title": "Quintet no. 6 for Piano and Strings in A minor, G. 412, op. 56 no. 6",
+  "mbids": [
+   "883deef3-1396-4c14-bb6c-b3b5790259b3"
+  ],
+  "mapping": "work",
+  "key": "boccherini-883deef3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9665,
+  "title": "Sonata in C major “La Seguidilla”",
+  "mbids": [
+   "89180975-0104-4a67-a877-a6f0bcaaf592"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9674,
+  "title": "Octet in G major, op. 38 no. 4, G. 470 \"Notturno\"",
+  "mbids": [
+   "89cddb0f-fea5-41eb-8987-eb4bc70f342e"
+  ],
+  "mapping": "work",
+  "key": "boccherini-89cddb0f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9679,
+  "title": "Symphony no. 17 in C minor, op. 41, G. 519",
+  "mbids": [
+   "8a2538be-939f-46a5-891e-5c423d24cee4"
+  ],
+  "mapping": "work",
+  "key": "boccherini-8a2538be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9704,
+  "title": "String Quintet no. 15 in A major, op. 60, no. 3, G. 393",
+  "mbids": [
+   "8b5c2570-5785-4b5f-bc1d-d3e2d3ac2aa3"
+  ],
+  "mapping": "work",
+  "key": "boccherini-8b5c2570",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9708,
+  "title": "String Quartet no. 13 in C minor, op. 9 no. 1, G. 171",
+  "mbids": [
+   "8bc95db1-9455-4b3a-892f-715ad60bc314"
+  ],
+  "mapping": "work",
+  "key": "boccherini-8bc95db1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9713,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 12 in B-flat major, G. 12",
+  "mbids": [
+   "8c2e9eab-0825-4652-92c0-07b32a9bef17"
+  ],
+  "mapping": "work",
+  "key": "boccherini-8c2e9eab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9714,
+  "title": "String Quintet in C major, G. 349, op. 42 no. 2",
+  "mbids": [
+   "8c48a161-7241-4cda-842f-e7e07d2e8da6"
+  ],
+  "mapping": "work",
+  "key": "boccherini-8c48a161",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9722,
+  "title": "Cello Concerto no. 11 in C major, G. 573",
+  "mbids": [
+   "8d15a11b-731d-43c3-a4da-3c68c297eb7b"
+  ],
+  "mapping": "work",
+  "key": "boccherini-8d15a11b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9724,
+  "title": "Cello Concerto no. 8 in C major, G. 481",
+  "mbids": [
+   "8d985e11-3c4e-43c7-962d-f884c39134e7"
+  ],
+  "mapping": "work",
+  "key": "boccherini-8d985e11",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9728,
+  "title": "Quintet for Piano and Strings no. 12 in C major, op. 57 no. 6, G. 418",
+  "mbids": [
+   "8dd70633-56cd-4795-b7c2-289adacf9449"
+  ],
+  "mapping": "work",
+  "key": "boccherini-8dd70633",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9744,
+  "title": "Sonata No. 14 in E-Flat Major, G. 14 : I. Allegro brillante",
+  "mbids": [
+   "8f1c3ed6-4a9e-452f-bfbd-8b10c014c37b"
+  ],
+  "mapping": "part",
+  "key": "boccherini-fddc30aa",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 9757,
+  "title": "Quintet for 2 Violins, Viola, and 2 Cellos No. 75 in D major, Op. 39 No. 3 G. 339: I. Allegro vivo",
+  "mbids": [
+   "8f9bfc13-9ec1-4d4f-b2a3-63b16009ee02"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9758,
+  "title": "6 String Sextets, op. 23 (G. 454-459)",
+  "mbids": [
+   "8f9f1224-e428-42fa-8804-ea0d1e0a86ad"
+  ],
+  "mapping": "work",
+  "key": "boccherini-8f9f1224",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9765,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 15 in G major, G. 15",
+  "mbids": [
+   "902b41c9-b09e-45eb-af40-cd2fd97640db"
+  ],
+  "mapping": "work",
+  "key": "boccherini-902b41c9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9823,
+  "title": "Sonata No. 15 in G Major, G. 15 : I. Allegro",
+  "mbids": [
+   "94904ad1-37c5-4afb-9dd6-9b9c9643023c"
+  ],
+  "mapping": "part",
+  "key": "boccherini-902b41c9",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 9845,
+  "title": "String Quintet in C major, op. 45 no. 4, G. 358",
+  "mbids": [
+   "9698076b-6945-478d-8b0b-615c3cf5f119"
+  ],
+  "mapping": "work",
+  "key": "boccherini-9698076b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9848,
+  "title": "Sonata No. 3 in C Major, G. 3 : I. Allegro",
+  "mbids": [
+   "9719a55b-0e0b-4763-8db6-668910e86975"
+  ],
+  "mapping": "part",
+  "key": "boccherini-38ded703",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 9867,
+  "title": "Symphony in F major, op. 35 no. 4, G. 512",
+  "mbids": [
+   "98a7def3-effd-4ad5-a1ee-4680a5c65b98"
+  ],
+  "mapping": "work",
+  "key": "boccherini-98a7def3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9870,
+  "title": "Quintet no. 7 for Guitar and Strings in E minor, G. 451",
+  "mbids": [
+   "98c1240d-07e7-4a88-974b-41684ca75007"
+  ],
+  "mapping": "work",
+  "key": "boccherini-98c1240d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9875,
+  "title": "Sonata No. 8 in B-Flat Major, G. 8 : I. Allegro",
+  "mbids": [
+   "992155c5-d095-4855-9f0d-5d710f1c8f31"
+  ],
+  "mapping": "part",
+  "key": "boccherini-7dc30749",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 9882,
+  "title": "String Quintet no. 62 in D major, op. 31, no. 2, G. 326",
+  "mbids": [
+   "996f4c3d-be0c-47fb-b5ad-b52913114261"
+  ],
+  "mapping": "work",
+  "key": "boccherini-996f4c3d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9923,
+  "title": "Quintet for flute and strings in D major, G 428: I. Adagio assai",
+  "mbids": [
+   "9b96bdc3-8c41-4365-a960-2259b361666d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9931,
+  "title": "Sonata No. 2 in C Minor, G. 2b : II. Allegro",
+  "mbids": [
+   "9bf9399b-ac38-43ec-a9e9-7b12b8b274b9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 9934,
+  "title": "Quintet no. 54, in G minor, for 2 violins, viola and 2 cellos G.318, op. 29/6",
+  "mbids": [
+   "9c28c151-e3a1-4d0c-8fd0-58646b3a87c1"
+  ],
+  "mapping": "work",
+  "key": "boccherini-9c28c151",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9989,
+  "title": "String Quartet no. 36 in G minor, op. 24 no. 6, G. 194",
+  "mbids": [
+   "a0e0ca68-ff36-44f0-96f5-2f87071676b6"
+  ],
+  "mapping": "work",
+  "key": "boccherini-a0e0ca68",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9994,
+  "title": "Symphony in A major, op. 21 no. 6, G. 498",
+  "mbids": [
+   "a1559318-a5be-4461-beb2-7fbb3c3dc9a8"
+  ],
+  "mapping": "work",
+  "key": "boccherini-a1559318",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10002,
+  "title": "String Quintet in D major, G. 353, op. 43 no. 2",
+  "mbids": [
+   "a1e18144-e6f0-4ca0-90a6-d60798dbceac"
+  ],
+  "mapping": "work",
+  "key": "boccherini-a1e18144",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10008,
+  "title": "Quintet no. 15 for Flute (or Oboe) and Strings in D major, op. 55 no. 3, G. 433",
+  "mbids": [
+   "a2219312-816f-4c34-9d31-1f845c08267b"
+  ],
+  "mapping": "work",
+  "key": "boccherini-a2219312",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10045,
+  "title": "Sonata No. 9 in F Major, G. 9 : II. Adagio assai",
+  "mbids": [
+   "a43b0837-93f8-4bce-ab61-d6324bd0b659"
+  ],
+  "mapping": "part",
+  "key": "boccherini-74398a76",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 10062,
+  "title": "String Quartet in E-flat major, op. 8 no. 3, G. 167",
+  "mbids": [
+   "a5d25021-a476-446e-8135-df9f2cdd6af1"
+  ],
+  "mapping": "work",
+  "key": "boccherini-a5d25021",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10065,
+  "title": "String Quartet in D major, G. 165, op. 8 no. 1",
+  "mbids": [
+   "a5ffad5c-6ee7-42fe-a114-dcc7345bbdff"
+  ],
+  "mapping": "work",
+  "key": "boccherini-a5ffad5c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10094,
+  "title": "Cello Concerto no. 4 in C major, G. 477",
+  "mbids": [
+   "a78ecadc-fd50-4576-9812-661b17b3884b"
+  ],
+  "mapping": "work",
+  "key": "boccherini-a78ecadc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10125,
+  "title": "Symphony no. 15 in D minor, op. 37 no. 3, G. 517",
+  "mbids": [
+   "aa21bcfa-a9d2-43b4-84dd-ea124ef5ef2a"
+  ],
+  "mapping": "work",
+  "key": "boccherini-aa21bcfa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10127,
+  "title": "Sonata No. 18 in C Minor, G. 18 : II. Largo",
+  "mbids": [
+   "aa35109d-970e-4b16-b82e-a98d7bc012d8"
+  ],
+  "mapping": "part",
+  "key": "boccherini-8aae83a2",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 10129,
+  "title": "Sonata No. 13 in A Major, G. 13 : III. Allegro",
+  "mbids": [
+   "aa5d6ce0-8046-4896-b62b-20ac2f60fd20"
+  ],
+  "mapping": "part",
+  "key": "boccherini-ab19e75b",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 10135,
+  "title": "Quintet no. 51, in F major, for 2 violins, viola and 2 cellos G.315, op. 29/3",
+  "mbids": [
+   "aad3dd60-e475-4b05-ab2e-6d3505463107"
+  ],
+  "mapping": "work",
+  "key": "boccherini-aad3dd60",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10139,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 13 in A major, G. 13",
+  "mbids": [
+   "ab19e75b-22e9-4800-86a5-45b6566c323a"
+  ],
+  "mapping": "work",
+  "key": "boccherini-ab19e75b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10159,
+  "title": "Quartett für Flöte, Violine, Viola und Violoncello in D-Dur: Larghetto (Pro-Arte-Quartett)",
+  "mbids": [
+   "acfd1466-def3-3c35-966d-0f5a89d5b6a0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 10165,
+  "title": "Quintet no. 4 for Piano and Strings in E-flat major, G. 410, op. 56 no. 4",
+  "mbids": [
+   "ad6bf493-8f42-491d-a9bf-8605f05f6b11"
+  ],
+  "mapping": "work",
+  "key": "boccherini-ad6bf493",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10182,
+  "title": "Sonata No. 14 in E-Flat Major, G. 14 : III. Minuetto con variazioni",
+  "mbids": [
+   "ae2b81e7-b263-422d-a558-af42c6047578"
+  ],
+  "mapping": "part",
+  "key": "boccherini-fddc30aa",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 10184,
+  "title": "Symphony in E-flat major, op. 35 no. 5, G. 513",
+  "mbids": [
+   "ae53c778-e862-4b61-b1d0-4aca40bf8900"
+  ],
+  "mapping": "work",
+  "key": "boccherini-ae53c778",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10195,
+  "title": "Trio Sonata for Harpsichord, Violin and Cello no. 2 in E minor, G. 144",
+  "mbids": [
+   "aee384e2-fcc7-4a7b-a10b-d0d56cc1c175"
+  ],
+  "mapping": "work",
+  "key": "boccherini-aee384e2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10205,
+  "title": "Symphony in B major, op. 12 no. 5 G. 507",
+  "mbids": [
+   "afa62e92-fa50-4ebe-b140-3649c649ab4a"
+  ],
+  "mapping": "work",
+  "key": "boccherini-afa62e92",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10228,
+  "title": "Sonata No. 8 in B-Flat Major, G. 8 : II. Andante affetuoso",
+  "mbids": [
+   "b19a9b66-0bfb-470c-a853-35b9e1069987"
+  ],
+  "mapping": "part",
+  "key": "boccherini-7dc30749",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 10241,
+  "title": "6 String Quintets, op. 25, G. 295-300",
+  "mbids": [
+   "b2e69617-d2d4-4794-a73b-39219ce77ec6"
+  ],
+  "mapping": "work",
+  "key": "boccherini-b2e69617",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10248,
+  "title": "Quintet no. 2 for Piano and Strings in F major, G. 408",
+  "mbids": [
+   "b353c2f2-4338-48d3-9210-ea4d88b95af5"
+  ],
+  "mapping": "work",
+  "key": "boccherini-b353c2f2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10273,
+  "title": "Sonata No. 15 in G Major, G. 15 : III. Allegro",
+  "mbids": [
+   "b51561a2-a417-4317-9211-da480e45d8d8"
+  ],
+  "mapping": "part",
+  "key": "boccherini-902b41c9",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 10300,
+  "title": "Cello Concerto no. 5 in D major, G. 478",
+  "mbids": [
+   "b7113e94-144b-4d85-938e-d39c6906e34d"
+  ],
+  "mapping": "work",
+  "key": "boccherini-b7113e94",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10367,
+  "title": "Symphony op. 21 No. 4 (G 496) in D",
+  "mbids": [
+   "bc4ae0d6-5d2a-4625-b6cd-eaa81f600a88"
+  ],
+  "mapping": "work",
+  "key": "boccherini-bc4ae0d6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10400,
+  "title": "Sonata No. 13 in A Major, G. 13 : I. Allegro",
+  "mbids": [
+   "bf18d16b-11f9-4b88-96ca-e86958a3cff6"
+  ],
+  "mapping": "part",
+  "key": "boccherini-ab19e75b",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 10409,
+  "title": "String Quartet no. 55 in A major, op. 39, G. 213",
+  "mbids": [
+   "bf9cb89c-df19-41f2-b0c9-8ed07cb9aece"
+  ],
+  "mapping": "work",
+  "key": "boccherini-bf9cb89c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10434,
+  "title": "Quartet op. 41(G 215) No. 2 in C major",
+  "mbids": [
+   "c17fc1c9-d550-4be1-a21c-709b42ed56b7"
+  ],
+  "mapping": "work",
+  "key": "boccherini-c17fc1c9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10443,
+  "title": "Sonata No. 18 in C Minor, G. 18 : III. Minuetto (e Trio)",
+  "mbids": [
+   "c2431d93-3538-4fcd-b2c3-004397651614"
+  ],
+  "mapping": "part",
+  "key": "boccherini-8aae83a2",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 10470,
+  "title": "Symphony in C major, op. 7 G. 491",
+  "mbids": [
+   "c4214e76-5d4e-405e-8b09-7c007e173725"
+  ],
+  "mapping": "work",
+  "key": "boccherini-c4214e76",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10474,
+  "title": "6 String Quintets, op. 10 (G. 265-270)",
+  "mbids": [
+   "c483beef-5d92-489d-b4ab-8992cf8ccebd"
+  ],
+  "mapping": "work",
+  "key": "boccherini-c483beef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10487,
+  "title": "Quintet for flute and strings in E flat major, G 425: II. Minuè",
+  "mbids": [
+   "c548256f-fc0f-4a06-8177-fd382fa50e05"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 10523,
+  "title": "String Quartet no. 19 in D major, op. 15, no. 1, G. 177",
+  "mbids": [
+   "c7e98688-20a7-41c1-8ace-6662ae8e17ac"
+  ],
+  "mapping": "work",
+  "key": "boccherini-c7e98688",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10533,
+  "title": "Quintet for 2 Violins, Viola, and 2 Cellos No. 73 in B-flat major, Op. 39 No. 1 G. 337: IV. Grave",
+  "mbids": [
+   "c8d8bf4d-4077-4fba-8636-29c06ffe1399"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 10558,
+  "title": "Sonata No. 17 in C Major, G. 17 : I. Allegro",
+  "mbids": [
+   "ca898837-2eab-4de9-a8f7-f262276eb804"
+  ],
+  "mapping": "part",
+  "key": "boccherini-cc348219",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 10607,
+  "title": "Symphony op. 21 No. 3 (G 495) in C",
+  "mbids": [
+   "ce49039e-5913-46cf-8195-4383596b2695"
+  ],
+  "mapping": "work",
+  "key": "boccherini-ce49039e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10645,
+  "title": "Quintet for 2 Violins, Viola, and 2 Cellos No. 73 in B-flat major, Op. 39 No. 1 G. 337: I. Andante lento",
+  "mbids": [
+   "d1360597-cfcc-442a-9f34-bc5a7c2c1279"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 10662,
+  "title": "Sonata No. 18 in C Minor, G. 18 : I. Moderato",
+  "mbids": [
+   "d2083b57-d7d9-42dc-b276-f5e0d9f4c319"
+  ],
+  "mapping": "part",
+  "key": "boccherini-8aae83a2",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 10708,
+  "title": "Sonata for Harpsichord and Violin no. 2 in C major, op. 5 no. 2, G. 26",
+  "mbids": [
+   "d6846951-b249-495e-bf3d-434dda51d32a"
+  ],
+  "mapping": "work",
+  "key": "boccherini-d6846951",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10716,
+  "title": "3 String Quintets, op. 39 (G. 337-339)",
+  "mbids": [
+   "d73aaee5-cc61-4ebc-a149-68551c2ef40b"
+  ],
+  "mapping": "work",
+  "key": "boccherini-d73aaee5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10788,
+  "title": "Quintet for Piano and Strings no. 11 in E major, op. 57 no. 5, G. 417",
+  "mbids": [
+   "db66a3a8-95ca-433f-ba72-edf7af7ebbfc"
+  ],
+  "mapping": "work",
+  "key": "boccherini-db66a3a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10828,
+  "title": "Quintet no. 1 for Piano and Strings in E minor, G. 407",
+  "mbids": [
+   "deac290a-f2c0-4cc0-9776-be08aef955de"
+  ],
+  "mapping": "work",
+  "key": "boccherini-deac290a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10835,
+  "title": "Sonata for 2 Cellos in E-flat major, G. 75",
+  "mbids": [
+   "df035aff-47eb-4d94-a7e7-872006732ade"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 10840,
+  "title": "String Trio in G major, op. 34 no. 2",
+  "mbids": [
+   "df5ade77-f3ad-41bc-b7cf-f08ac5b217e1"
+  ],
+  "mapping": "work",
+  "key": "boccherini-df5ade77",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10841,
+  "title": "Symphony no. 19 in D major, op. 43, G. 521",
+  "mbids": [
+   "df728ee7-00f7-422c-ab37-c64e38f14f28"
+  ],
+  "mapping": "work",
+  "key": "boccherini-df728ee7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10845,
+  "title": "Quintet for flute and strings in G minor, G 426: II. Minuetto con moto",
+  "mbids": [
+   "e0064ba0-65cb-4a39-a414-1474e39bea8d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 10889,
+  "title": "Sonata for Cello Solo and Basso Continuo in G major, Gdeest",
+  "mbids": [
+   "e3f6439e-144b-44ec-9260-38ba503551bd"
+  ],
+  "mapping": "work",
+  "key": "boccherini-e3f6439e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10907,
+  "title": "Trio Sonata for Harpsichord, Violin and Cello no. 1 in C major, G. 143",
+  "mbids": [
+   "e5641a81-63a8-45da-b317-9b1125e34814"
+  ],
+  "mapping": "work",
+  "key": "boccherini-e5641a81",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10920,
+  "title": "Quintet for 2 Violins, Viola, and 2 Cellos No. 74 in F major, Op. 39 No. 2 G. 338: IV. Finale. Allegro vivo ma non presto",
+  "mbids": [
+   "e60976be-db8b-4826-97a2-30bf34fcc9ad"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 10930,
+  "title": "Sonata No. 14 in E-Flat Major, G. 14 : II. Andante non tanto, legato sempre",
+  "mbids": [
+   "e6ba9411-a176-4aa4-8cd0-c6f81959b2fd"
+  ],
+  "mapping": "part",
+  "key": "boccherini-fddc30aa",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 10946,
+  "title": "Sonata for Cello Solo and Basso Continuo in A major, Gdeest",
+  "mbids": [
+   "e807cfca-dc9f-4ac4-889a-3d3e67381901"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 10948,
+  "title": "Sonata No. 16 in E-Flat Major, G. 16 : I. Allegro",
+  "mbids": [
+   "e827ea3c-c79f-4c0e-a28d-73a3f994710a"
+  ],
+  "mapping": "part",
+  "key": "boccherini-24f9fde6",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "제목의 작품번호·악장 번호로 맞춤(MB 관계 없음)"
+ },
+ {
+  "pieceId": 10987,
+  "title": "Quintet no. 5 for Guitar and Strings in D major, G. 449",
+  "mbids": [
+   "ea126420-1d75-4407-bc27-4c8ea5a015c9"
+  ],
+  "mapping": "work",
+  "key": "boccherini-ea126420",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10995,
+  "title": "String Quintet in G minor, op. 27 no. 5, G. 305",
+  "mbids": [
+   "eae041be-ffad-4c0e-993c-04f9a78279f6"
+  ],
+  "mapping": "work",
+  "key": "boccherini-eae041be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11002,
+  "title": "Symphony op. 21 No. 1 (G 493) in B-flat",
+  "mbids": [
+   "eb945004-b3d5-4863-9651-f31a763187f3"
+  ],
+  "mapping": "work",
+  "key": "boccherini-eb945004",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11016,
+  "title": "Quintet no. 53 in E-flat major for 2 violins, viola and 2 cellos, G.317, op. 29 no. 5",
+  "mbids": [
+   "ec4dda18-458f-4a3f-8e4f-be6be598a82f"
+  ],
+  "mapping": "work",
+  "key": "boccherini-ec4dda18",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11029,
+  "title": "String Quartet in C Major, G. 240, op. 53 no. 5",
+  "mbids": [
+   "ed681b87-cc09-47d0-b167-195da6961b00"
+  ],
+  "mapping": "work",
+  "key": "boccherini-ed681b87",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11040,
+  "title": "String Quintet in B minor, op. 27 no. 6, G. 306",
+  "mbids": [
+   "ee9aafa4-2006-4bcb-9bc3-518b8cb114b4"
+  ],
+  "mapping": "work",
+  "key": "boccherini-ee9aafa4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11043,
+  "title": "Quintet for flute and strings in G minor, G 426: I. Allegro e con un poco di moto",
+  "mbids": [
+   "eeb4568b-c876-4220-96dc-db7289ae3225"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 11107,
+  "title": "Concerto In Si Bemolle Maggiore Per Violoncello E Orchestra: III. Rondò (Allegro)",
+  "mbids": [
+   "f3ce12d5-51e1-4248-9b85-172aa0ebe1a9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 11126,
+  "title": "String Quintet in G major, op. 27 no. 2, G. 302",
+  "mbids": [
+   "f54556b1-1f54-46ad-8707-68c27ffdb788"
+  ],
+  "mapping": "work",
+  "key": "boccherini-f54556b1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11127,
+  "title": "Sonata for Harpsichord and Violin no. 6 in E-flat major, op. 5 no. 6, G. 30",
+  "mbids": [
+   "f55973d2-112c-4c92-8082-78725bcdc49c"
+  ],
+  "mapping": "work",
+  "key": "boccherini-f55973d2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11147,
+  "title": "6 String Quintets, op. 18 (G. 283-288)",
+  "mbids": [
+   "f6f93c9e-ab54-4be1-8a01-f0bbb5c4cc78"
+  ],
+  "mapping": "work",
+  "key": "boccherini-f6f93c9e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11166,
+  "title": "Quintet for 2 Violins, Viola, and 2 Cellos No. 73 in B-flat major, Op. 39 No. 1 G. 337: VI. Minuetto",
+  "mbids": [
+   "f820abe4-8d93-44e3-893e-8f9e2538142e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 11183,
+  "title": "String Quintet in D major, op.13 no.5",
+  "mbids": [
+   "f91dba61-8f9a-4b1a-8657-dbdfa6d3b15c"
+  ],
+  "mapping": "work",
+  "key": "boccherini-f91dba61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11212,
+  "title": "Quintet for Piano and Strings no. 10 in D minor, op. 57 no. 4, G. 416",
+  "mbids": [
+   "fae74fbb-dc87-4f14-a360-6f1a17826eaf"
+  ],
+  "mapping": "work",
+  "key": "boccherini-fae74fbb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11223,
+  "title": "6 String Quintets, op. 13 (G. 277-282)",
+  "mbids": [
+   "fbe28be4-d790-40e2-bcb6-40accc8f9499"
+  ],
+  "mapping": "work",
+  "key": "boccherini-fbe28be4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11225,
+  "title": "Overture (Sinfonia) In D major, op. 43, G. 521: Allegro con spirito molto - Andantino - Tempo I",
+  "mbids": [
+   "fc07fd76-dce3-32d8-93aa-6c18a842ca5f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 11241,
+  "title": "Sonata No. 16 in E-Flat Major, G. 16 : III. Minuetto con variazioni",
+  "mbids": [
+   "fd238a81-4012-4ce1-bc42-026e218f06c5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 11251,
+  "title": "Quartett für Flöte, Violine, Viola und Violoncello in D-Dur: Allegro vivace (Pro-Arte-Quartett)",
+  "mbids": [
+   "fd7e60ee-f8c0-36a5-bf7b-8257ab619766"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 11261,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 14 in E-flat major, G. 14",
+  "mbids": [
+   "fddc30aa-1218-4799-adea-928be5d228b5"
+  ],
+  "mapping": "work",
+  "key": "boccherini-fddc30aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11267,
+  "title": "Sonata for Cello Solo and Basso Continuo no. 11 in E-flat major, G 11",
+  "mbids": [
+   "fe16e098-61a0-43e7-9089-65a3270f3377"
+  ],
+  "mapping": "work",
+  "key": "boccherini-fe16e098",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

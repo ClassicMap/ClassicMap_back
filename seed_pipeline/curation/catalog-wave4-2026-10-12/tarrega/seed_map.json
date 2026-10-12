@@ -1,0 +1,914 @@
+[
+ {
+  "pieceId": 7539,
+  "title": "Capricho árabe",
+  "mbids": [
+   "8a690c97-4e1b-3dd5-a676-7bd78142804a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 7551,
+  "title": "Prelude for guitar no. 8 in A- \"Lágrima\"",
+  "mbids": [
+   "98c48061-0d70-3098-b57a-5bf22796b811"
+  ],
+  "mapping": "work",
+  "key": "tarrega-98c48061",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7570,
+  "title": "Prelude for guitar no. 5 in E major",
+  "mbids": [
+   "abd5af88-358d-4d99-8a16-da64e3828707"
+  ],
+  "mapping": "work",
+  "key": "tarrega-abd5af88",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7596,
+  "title": "Prelude for guitar no. 2 in A minor",
+  "mbids": [
+   "cdaecdc0-f8e4-4213-aab7-7cac9fc242b0"
+  ],
+  "mapping": "work",
+  "key": "tarrega-cdaecdc0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7630,
+  "title": "Gran vals",
+  "mbids": [
+   "f9d6c43f-c544-3eb4-8b33-e21ef6e2445e"
+  ],
+  "mapping": "work",
+  "key": "tarrega-f9d6c43f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7703,
+  "title": "Étude",
+  "mbids": [
+   "45148915-ee17-3894-b4a1-6af4f6958588"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7824,
+  "title": "Prelude for guitar no. 12 in D",
+  "mbids": [
+   "0649e561-c77e-4a80-948b-67e52fd2cb68"
+  ],
+  "mapping": "work",
+  "key": "tarrega-0649e561",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7857,
+  "title": "Prelude for guitar no. 14 in A minor",
+  "mbids": [
+   "084cb894-f949-446c-8743-f9ed9f0828a2"
+  ],
+  "mapping": "work",
+  "key": "tarrega-084cb894",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7867,
+  "title": "Vals (en re)",
+  "mbids": [
+   "0943fa36-d811-3ced-9715-dd67d6b4dd18"
+  ],
+  "mapping": "work",
+  "key": "tarrega-0943fa36",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7962,
+  "title": "Etude for guitar no. 19 in E minor",
+  "mbids": [
+   "0fa2ba92-3f34-453e-83ab-a738df26d382"
+  ],
+  "mapping": "work",
+  "key": "tarrega-0fa2ba92",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8033,
+  "title": "Prelude for guitar no. 1 in D minor",
+  "mbids": [
+   "13e39396-b5d3-4ee1-8e1e-f69703459758"
+  ],
+  "mapping": "work",
+  "key": "tarrega-13e39396",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8081,
+  "title": "Etude for guitar no. 8 in A minor",
+  "mbids": [
+   "178023af-3123-4bf4-ac6e-b64aa655bbef"
+  ],
+  "mapping": "work",
+  "key": "tarrega-178023af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8281,
+  "title": "Etude for guitar no. 20 \"Estudio brillante de Alard\"",
+  "mbids": [
+   "27c09b3a-2fbe-344b-aec6-2022e1274cf3"
+  ],
+  "mapping": "work",
+  "key": "tarrega-27c09b3a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8527,
+  "title": "Prelude for guitar no. 16 in E",
+  "mbids": [
+   "38b34ee7-a2ae-4502-be7f-00e9a3a05d60"
+  ],
+  "mapping": "work",
+  "key": "tarrega-38b34ee7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8692,
+  "title": "Prelude for guitar no. 3 in A minor",
+  "mbids": [
+   "4566e52e-4899-40f8-b853-126913f34f49"
+  ],
+  "mapping": "work",
+  "key": "tarrega-4566e52e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8831,
+  "title": "Prelude for guitar no. 15 in A minor",
+  "mbids": [
+   "4f90d460-c0c8-4b0c-8f5c-6a1ab918c76f"
+  ],
+  "mapping": "work",
+  "key": "tarrega-4f90d460",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8992,
+  "title": "Etude for guitar no. 4 in B minor",
+  "mbids": [
+   "598c5cd6-6ad3-4bd0-bc78-0aed008bee15"
+  ],
+  "mapping": "work",
+  "key": "tarrega-598c5cd6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9154,
+  "title": "Sueño (trémolo)",
+  "mbids": [
+   "64c428b2-f42a-389d-9d97-607fd63947e5"
+  ],
+  "mapping": "work",
+  "key": "tarrega-64c428b2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9276,
+  "title": "Etude for guitar no. 7 in A major",
+  "mbids": [
+   "6e2f78f7-d42f-4eef-95b3-72674db4295e"
+  ],
+  "mapping": "work",
+  "key": "tarrega-6e2f78f7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9341,
+  "title": "Etude for guitar no. 5 in A major",
+  "mbids": [
+   "7201c5b2-bbe2-472e-94f2-5b77a614bd24"
+  ],
+  "mapping": "work",
+  "key": "tarrega-7201c5b2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9462,
+  "title": "Pavana",
+  "mbids": [
+   "7ab7d3e9-03c4-3843-9bd8-7b3090588508"
+  ],
+  "mapping": "work",
+  "key": "tarrega-7ab7d3e9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9562,
+  "title": "Etude for guitar no. 18 in A major",
+  "mbids": [
+   "819609a2-fb98-4036-966e-ceb9aa1fa4df"
+  ],
+  "mapping": "work",
+  "key": "tarrega-819609a2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9666,
+  "title": "Prelude for guitar no. 5 in G",
+  "mbids": [
+   "891acfec-229c-40aa-be63-57dc9289af0f"
+  ],
+  "mapping": "work",
+  "key": "tarrega-891acfec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9827,
+  "title": "Etude for guitar no. 13 in A major",
+  "mbids": [
+   "953d42c7-b62c-45a4-b2fd-0d19801f5b90"
+  ],
+  "mapping": "work",
+  "key": "tarrega-953d42c7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9872,
+  "title": "Prelude for guitar no. 1 in E major",
+  "mbids": [
+   "98dece34-d628-4f29-8ea3-033a68dda3f5"
+  ],
+  "mapping": "work",
+  "key": "tarrega-98dece34",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9948,
+  "title": "Etude for guitar no. 6 in A major",
+  "mbids": [
+   "9d6ea95c-fa1f-4c7f-a5ef-b8a62834b0b8"
+  ],
+  "mapping": "work",
+  "key": "tarrega-9d6ea95c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10101,
+  "title": "Etude for guitar no. 11 in D major",
+  "mbids": [
+   "a8745a35-5f2c-4d27-a21c-71fb75c3f5ce"
+  ],
+  "mapping": "work",
+  "key": "tarrega-a8745a35",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10109,
+  "title": "Minueto",
+  "mbids": [
+   "a901790c-3bb6-399a-a3f0-898b07ac4b24"
+  ],
+  "mapping": "work",
+  "key": "tarrega-a901790c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10358,
+  "title": "Prelude for Guitar no. 18 in D minor",
+  "mbids": [
+   "bb5f8b98-d4a3-4b33-8407-e253a2b0c62e"
+  ],
+  "mapping": "work",
+  "key": "tarrega-bb5f8b98",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10435,
+  "title": "Prelude for guitar no. 7 in G",
+  "mbids": [
+   "c1955526-b4d4-4c25-a008-a3545399dee0"
+  ],
+  "mapping": "work",
+  "key": "tarrega-c1955526",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10568,
+  "title": "Prelude for guitar no. 6 in D minor",
+  "mbids": [
+   "cb5231af-065b-46b5-a2de-d8a56c6184a7"
+  ],
+  "mapping": "work",
+  "key": "tarrega-cb5231af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10571,
+  "title": "Prelude for guitar no. 13 in E",
+  "mbids": [
+   "cb998b7b-3251-40cb-990d-60a046be58ce"
+  ],
+  "mapping": "work",
+  "key": "tarrega-cb998b7b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10578,
+  "title": "Prelude for guitar no. 4 in B minor",
+  "mbids": [
+   "cbef066d-f3ce-4002-9381-be75e03e7c1c"
+  ],
+  "mapping": "work",
+  "key": "tarrega-cbef066d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10606,
+  "title": "Prelude for guitar no. 11 in D",
+  "mbids": [
+   "ce43df16-853c-42e8-bae0-91f5df7249c6"
+  ],
+  "mapping": "work",
+  "key": "tarrega-ce43df16",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10720,
+  "title": "Prelude for guitar no. 10 in D- \"Oremus\"",
+  "mbids": [
+   "d766dce7-2e61-467e-8955-c12d397faf87"
+  ],
+  "mapping": "work",
+  "key": "tarrega-d766dce7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10975,
+  "title": "Prelude for guitar no. 11 in D major",
+  "mbids": [
+   "e9c67091-9be8-44c8-9fd8-a35fb9e40e56"
+  ],
+  "mapping": "work",
+  "key": "tarrega-e9c67091",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10988,
+  "title": "Etude for guitar no. 9 in E major",
+  "mbids": [
+   "ea36fbbe-f7f4-45d6-a951-a5f5512a7079"
+  ],
+  "mapping": "work",
+  "key": "tarrega-ea36fbbe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11106,
+  "title": "Prelude for guitar no. 9 in D- \"Endecha\"",
+  "mbids": [
+   "f3c7ea13-fe85-437d-bbc0-9bc157e7d5f1"
+  ],
+  "mapping": "work",
+  "key": "tarrega-f3c7ea13",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11128,
+  "title": "Malagueña",
+  "mbids": [
+   "f55b5086-5cc0-4f46-8d7c-edbcb06dd236"
+  ],
+  "mapping": "work",
+  "key": "tarrega-f55b5086",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11182,
+  "title": "Danza mora",
+  "mbids": [
+   "f91592b9-f5f7-38a4-b43d-ef420717a62b"
+  ],
+  "mapping": "work",
+  "key": "tarrega-f91592b9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11199,
+  "title": "Sueño (mazurka)",
+  "mbids": [
+   "fa33e89e-ecfc-393c-94a4-83415ca4a571"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 7467,
+  "title": "Fantasía sobre motivos de “La traviata” (Verdi)",
+  "mbids": [
+   "25dedfaf-236b-3727-bd47-445ca5779c1c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7468,
+  "title": "Adelita (mazurka)",
+  "mbids": [
+   "270dab51-f02d-3856-8e5a-d0301a4c12ab"
+  ],
+  "mapping": "work",
+  "key": "tarrega-270dab51",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7476,
+  "title": "Marieta (mazurka)",
+  "mbids": [
+   "354eb79f-709f-3a10-a447-7c56125ea3c1"
+  ],
+  "mapping": "work",
+  "key": "tarrega-354eb79f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7564,
+  "title": "Variaciones sobre \"El carnaval de Venecia\"",
+  "mbids": [
+   "a7dabec5-39de-3c26-8aed-2a0256a6359f"
+  ],
+  "mapping": "work",
+  "key": "tarrega-a7dabec5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7572,
+  "title": "Mazurka en Sol",
+  "mbids": [
+   "ae3925c9-0892-35bb-a46d-1676474c990d"
+  ],
+  "mapping": "work",
+  "key": "tarrega-ae3925c9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7789,
+  "title": "Fantasía de \"Marina\" (Arrieta)",
+  "mbids": [
+   "041ae6c8-62e4-3166-8186-69322eab017f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7823,
+  "title": "Pepita (polka)",
+  "mbids": [
+   "06300268-1be6-32a6-b917-edae790c533f"
+  ],
+  "mapping": "work",
+  "key": "tarrega-06300268",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7968,
+  "title": "Etude for guitar no. 12 in C major",
+  "mbids": [
+   "10159f53-a470-450e-8b1c-507bd1333f30"
+  ],
+  "mapping": "work",
+  "key": "tarrega-10159f53",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8117,
+  "title": "Rosita (polka)",
+  "mbids": [
+   "19ece4b3-694e-397e-8f19-cab51e993741"
+  ],
+  "mapping": "work",
+  "key": "tarrega-19ece4b3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8569,
+  "title": "Etude for guitar no. 15, sobre un tema de Wagner",
+  "mbids": [
+   "3bccb0ae-9c3b-4cd6-ad68-980fe8fc91ed"
+  ],
+  "mapping": "work",
+  "key": "tarrega-3bccb0ae",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8895,
+  "title": "Las dos hermanitas (vals)",
+  "mbids": [
+   "531db838-8ae4-3fd2-b622-ef2ff4cb7fe8"
+  ],
+  "mapping": "work",
+  "key": "tarrega-531db838",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9107,
+  "title": "Paquito (vals en do)",
+  "mbids": [
+   "6150d90b-1ef6-31da-a077-65bd01eb3d30"
+  ],
+  "mapping": "work",
+  "key": "tarrega-6150d90b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9343,
+  "title": "Isabel (vals)",
+  "mbids": [
+   "722dc4ad-07e3-3bd4-8871-1a99b18d2497"
+  ],
+  "mapping": "work",
+  "key": "tarrega-722dc4ad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9488,
+  "title": "Etude for guitar no. 10 \"Petit Menuet\"",
+  "mbids": [
+   "7c110afc-581b-4aef-ae93-9cd873424dd3"
+  ],
+  "mapping": "work",
+  "key": "tarrega-7c110afc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9799,
+  "title": "Waltzing Memories",
+  "mbids": [
+   "92c68107-719c-47af-aa4b-0ee0ded448b6"
+  ],
+  "mapping": "work",
+  "key": "tarrega-92c68107",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9842,
+  "title": "Etude for guitar no. 14 \"La mariposa\"",
+  "mbids": [
+   "9674ed90-75f1-4283-9626-071965992388"
+  ],
+  "mapping": "work",
+  "key": "tarrega-9674ed90",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9954,
+  "title": "Eine ganze Menge Leben",
+  "mbids": [
+   "9df87850-f3c1-4042-b5d5-994f319546e7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10189,
+  "title": "María (gavota)",
+  "mbids": [
+   "ae927e4c-2417-341c-a5d4-6f9cf94bf802"
+  ],
+  "mapping": "work",
+  "key": "tarrega-ae927e4c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10203,
+  "title": "El columpio",
+  "mbids": [
+   "af8d88a5-8246-399a-b8a6-9de47b37549f"
+  ],
+  "mapping": "work",
+  "key": "tarrega-af8d88a5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10272,
+  "title": "Tango",
+  "mbids": [
+   "b4de9a44-af2a-3ff4-b878-c03795f7fe45"
+  ],
+  "mapping": "work",
+  "key": "tarrega-b4de9a44",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10288,
+  "title": "Etude for guitar no. 17, sobre un tema de Mendelssohn",
+  "mbids": [
+   "b64b0565-7f01-4294-9ce0-3e44c49578cc"
+  ],
+  "mapping": "work",
+  "key": "tarrega-b64b0565",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10295,
+  "title": "Alborada",
+  "mbids": [
+   "b6dbb334-8e3d-49b5-bd10-ee2ff477ee3d"
+  ],
+  "mapping": "work",
+  "key": "tarrega-b6dbb334",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10302,
+  "title": "Etude in A",
+  "mbids": [
+   "b72ac5be-d2db-4a4d-aaeb-24aa292ee7a3"
+  ],
+  "mapping": "work",
+  "key": "tarrega-b72ac5be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10338,
+  "title": "Etude for guitar no. 1 en forma de minuetto",
+  "mbids": [
+   "b9ff7f5b-6805-4c79-a724-448530d5fcd6"
+  ],
+  "mapping": "work",
+  "key": "tarrega-b9ff7f5b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10592,
+  "title": "Etude for guitar no. 16, inspirado en J. B. Cramer",
+  "mbids": [
+   "ccf2ddb3-4023-4acd-852a-eb2d257339b0"
+  ],
+  "mapping": "work",
+  "key": "tarrega-ccf2ddb3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10727,
+  "title": "Nokia tune",
+  "mbids": [
+   "d7c78030-757b-4cc3-954a-b558f3e76791"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10757,
+  "title": "Preludio in F-sharp minor",
+  "mbids": [
+   "d941413b-2ad0-4be8-8676-1bde721197f9"
+  ],
+  "mapping": "work",
+  "key": "tarrega-d941413b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10797,
+  "title": "Prelude in A minor",
+  "mbids": [
+   "dc886ffd-5a3c-4d75-a6a6-05ba132fe445"
+  ],
+  "mapping": "work",
+  "key": "tarrega-dc886ffd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11041,
+  "title": "Etude for guitar no. 3 in G major",
+  "mbids": [
+   "eeadf082-3bdd-4ad7-82ee-7f23b14bb89a"
+  ],
+  "mapping": "work",
+  "key": "tarrega-eeadf082",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11053,
+  "title": "La cartagenera",
+  "mbids": [
+   "ef60f8a9-eec5-4f50-a4ae-71d8d477cf79"
+  ],
+  "mapping": "work",
+  "key": "tarrega-ef60f8a9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11162,
+  "title": "Etude for guitar no. 2 de velocidad",
+  "mbids": [
+   "f800fa69-07e5-401e-9aca-f95cafbb205e"
+  ],
+  "mapping": "work",
+  "key": "tarrega-f800fa69",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11163,
+  "title": "Marzurka para dos guitarras",
+  "mbids": [
+   "f8042ba1-f8cc-4290-9b87-153629bbcf87"
+  ],
+  "mapping": "work",
+  "key": "tarrega-f8042ba1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11173,
+  "title": "Danza Odalisca",
+  "mbids": [
+   "f86f7a6d-b821-3f4b-864f-d413520f5573"
+  ],
+  "mapping": "work",
+  "key": "tarrega-f86f7a6d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11253,
+  "title": "Vals para dos guitarras",
+  "mbids": [
+   "fd8d0ad7-494e-4e66-93ab-d3d2498b6e22"
+  ],
+  "mapping": "work",
+  "key": "tarrega-fd8d0ad7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11282,
+  "title": "Habanera en sol menor",
+  "mbids": [
+   "ff53c6fc-80f7-4475-8a49-9b66307b662d"
+  ],
+  "mapping": "work",
+  "key": "tarrega-ff53c6fc",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

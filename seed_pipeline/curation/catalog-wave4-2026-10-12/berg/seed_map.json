@@ -1,0 +1,924 @@
+[
+ {
+  "pieceId": 12285,
+  "title": "Ferne Lieder",
+  "mbids": [
+   "1848843a-e934-4419-b6c4-c865905927b0"
+  ],
+  "mapping": "work",
+  "key": "berg-1848843a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12549,
+  "title": "Wozzeck",
+  "mbids": [
+   "43e57227-d159-4391-bb6d-69978a7c1fa8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 12560,
+  "title": "Chamber Concerto",
+  "mbids": [
+   "45fc944a-2fd5-4de4-a5f0-21ec6663b3c1"
+  ],
+  "mapping": "work",
+  "key": "berg-45fc944a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13717,
+  "title": "Lulu Suite",
+  "mbids": [
+   "ffe6c207-1787-4d66-9a66-890e391c44f7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13840,
+  "title": "Drei Orchesterstücke, op. 6",
+  "mbids": [
+   "63184cd8-6245-407b-8519-b4b5e2b44844"
+  ],
+  "mapping": "work",
+  "key": "berg-63184cd8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7581,
+  "title": "Violinkonzert „Dem Andenken eines Engels“",
+  "mbids": [],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 12023,
+  "title": "5 Orchesterlieder nach Ansichtskartentexten von Peter Altenberg, op. 4",
+  "mbids": [
+   "19bce1d3-e612-4b7e-8438-79c62243b8e9"
+  ],
+  "mapping": "work",
+  "key": "berg-19bce1d3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12025,
+  "title": "Three Fragments from \"Wozzeck\"",
+  "mbids": [
+   "1fbdc4e0-b918-4c03-9677-556cf9fc3ceb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12044,
+  "title": "Kanon (an das Frankfurter Opernhaus)",
+  "mbids": [
+   "64002866-2c5f-342e-9322-0cf16d5ba862"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12073,
+  "title": "Er klagt, daß der Frühling so kortz blüht",
+  "mbids": [
+   "b8fd69e2-ef0d-4fc9-8c14-a7631d0364ef"
+  ],
+  "mapping": "work",
+  "key": "berg-b8fd69e2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12138,
+  "title": "Augenblicke",
+  "mbids": [
+   "03197ea9-8fbd-4dd8-afe2-6a60919288db"
+  ],
+  "mapping": "work",
+  "key": "berg-03197ea9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12141,
+  "title": "Sonate g-Moll (Fragment)",
+  "mbids": [
+   "039bf4c0-9179-4e9b-85de-6a2868971031"
+  ],
+  "mapping": "work",
+  "key": "berg-039bf4c0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12202,
+  "title": "Menuett F-Dur",
+  "mbids": [
+   "0dabcb51-ebef-4e61-aa90-cb16bf31a7e2"
+  ],
+  "mapping": "work",
+  "key": "berg-0dabcb51",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12205,
+  "title": "Spielleute",
+  "mbids": [
+   "0e7e506e-0673-4394-8778-02393be9c2a2"
+  ],
+  "mapping": "work",
+  "key": "berg-0e7e506e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12258,
+  "title": "Regen",
+  "mbids": [
+   "1498c923-a567-48ba-91a8-b30fe604dc28"
+  ],
+  "mapping": "work",
+  "key": "berg-1498c923",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12276,
+  "title": "Impromptu c-Moll - Sehr aufgeregt",
+  "mbids": [
+   "1783489d-2773-49fb-8174-029f954b342a"
+  ],
+  "mapping": "work",
+  "key": "berg-1783489d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12310,
+  "title": "Über den Bergen",
+  "mbids": [
+   "1c2eba88-b038-4506-aa80-12a56df18090"
+  ],
+  "mapping": "work",
+  "key": "berg-1c2eba88",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12335,
+  "title": "Tiefe Sehnsucht",
+  "mbids": [
+   "211a6233-0d2c-485c-ae95-e6d735aec713"
+  ],
+  "mapping": "work",
+  "key": "berg-211a6233",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12382,
+  "title": "Wozzek: Act III. Interlude",
+  "mbids": [
+   "280aa6ce-0dab-4386-ab68-0490e5cd0baf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 12401,
+  "title": "Vier Stücke für Klarinette und Klavier, op. 5",
+  "mbids": [
+   "2b85b169-83ea-4ce6-8ed1-0c6a86bc69fc"
+  ],
+  "mapping": "work",
+  "key": "berg-2b85b169",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12407,
+  "title": "Eure Weisheit",
+  "mbids": [
+   "2c2bca68-7ad7-42f1-a3cb-46328a803dea"
+  ],
+  "mapping": "work",
+  "key": "berg-2c2bca68",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12469,
+  "title": "Vielgeliebte schöne Frau",
+  "mbids": [
+   "37d8a216-23a8-4d81-b2f1-90f1b9926111"
+  ],
+  "mapping": "work",
+  "key": "berg-37d8a216",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12513,
+  "title": "Menuett c-Moll",
+  "mbids": [
+   "3e48a22e-a74c-4d6d-9d4d-e99179ccfefe"
+  ],
+  "mapping": "work",
+  "key": "berg-3e48a22e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12527,
+  "title": "Traurigkeit",
+  "mbids": [
+   "40300897-d582-4e9a-a01f-1c192cfd5683"
+  ],
+  "mapping": "work",
+  "key": "berg-40300897",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12557,
+  "title": "4 Gesänge, op. 2",
+  "mbids": [
+   "4594f476-9015-4811-82ff-bb43dde0b02e"
+  ],
+  "mapping": "work",
+  "key": "berg-4594f476",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12562,
+  "title": "14 Variationen über ein eigenes Thema f-Moll",
+  "mbids": [
+   "461adbfc-1638-4a1c-b160-03761e038495"
+  ],
+  "mapping": "work",
+  "key": "berg-461adbfc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12652,
+  "title": "Die Näherin",
+  "mbids": [
+   "54929800-9b1c-4f77-abd0-5607a12aead5"
+  ],
+  "mapping": "work",
+  "key": "berg-54929800",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12656,
+  "title": "Sonate Es-Dur (fragment)",
+  "mbids": [
+   "55c13785-86e9-4edd-8cc3-e3078e90b0f3"
+  ],
+  "mapping": "work",
+  "key": "berg-55c13785",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12662,
+  "title": "Ich will die Fluren meiden",
+  "mbids": [
+   "57ccebfa-5165-4194-a29d-109327715257"
+  ],
+  "mapping": "work",
+  "key": "berg-57ccebfa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12672,
+  "title": "Es wandelt, was wir schauen",
+  "mbids": [
+   "5957775d-95cb-4d71-a6f2-aa1279461c67"
+  ],
+  "mapping": "work",
+  "key": "berg-5957775d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12712,
+  "title": "Die Sorglichen",
+  "mbids": [
+   "617d8dcd-7bce-40ee-b785-a2898b12a7b6"
+  ],
+  "mapping": "work",
+  "key": "berg-617d8dcd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12718,
+  "title": "Erster Verlust",
+  "mbids": [
+   "625fd3a8-750f-4818-a543-f2ab35f86e06"
+  ],
+  "mapping": "work",
+  "key": "berg-625fd3a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12762,
+  "title": "Am Strande",
+  "mbids": [
+   "68234aec-9e3b-4b26-a0f5-d924b8ae269b"
+  ],
+  "mapping": "work",
+  "key": "berg-68234aec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12780,
+  "title": "Passacaglia, Symphonic Fragment of theme and eleven variations",
+  "mbids": [
+   "6a5127b6-64c9-4cfd-bf09-9bf9b89c85d4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12794,
+  "title": "Klavierstück h-Moll",
+  "mbids": [
+   "6c04b6ab-2ee0-47c5-be46-f0b081521c85"
+  ],
+  "mapping": "work",
+  "key": "berg-6c04b6ab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12810,
+  "title": "Lyrische Suite: I. Allegretto gioviale",
+  "mbids": [
+   "6f4db9ef-7b98-462b-8501-b3ea62d5bbc0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 12831,
+  "title": "Winter",
+  "mbids": [
+   "726970c6-e52c-478d-964d-3e1cdc2ca9d7"
+  ],
+  "mapping": "work",
+  "key": "berg-726970c6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12843,
+  "title": "Lied der Schiffermädels",
+  "mbids": [
+   "745b2c14-1db4-4eac-9326-30e52dfd38ac"
+  ],
+  "mapping": "work",
+  "key": "berg-745b2c14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12849,
+  "title": "Klavierstück F-Dur",
+  "mbids": [
+   "74e1a96b-566d-49c5-8d2b-dac297e44680"
+  ],
+  "mapping": "work",
+  "key": "berg-74e1a96b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12857,
+  "title": "Zwölf Variationen über ein eigenes Thema C-Dur",
+  "mbids": [
+   "76212dd7-2a1f-4a36-b2c1-95b48acc0d84"
+  ],
+  "mapping": "work",
+  "key": "berg-76212dd7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12899,
+  "title": "Hoffnung",
+  "mbids": [
+   "7f86441b-be3d-4e86-a5ac-6c9ee55a66a7"
+  ],
+  "mapping": "work",
+  "key": "berg-7f86441b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12917,
+  "title": "Sonatentwurf (Klavierstück) f-Moll (fragment)",
+  "mbids": [
+   "81ff5de6-24d5-4520-9394-55aa13204363"
+  ],
+  "mapping": "work",
+  "key": "berg-81ff5de6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12923,
+  "title": "Geliebte Schöne",
+  "mbids": [
+   "82722bde-17d6-4226-b392-1a671f2bacaf"
+  ],
+  "mapping": "work",
+  "key": "berg-82722bde",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12959,
+  "title": "Traum",
+  "mbids": [
+   "86d9f946-1d52-45b0-ac01-4c069f59def7"
+  ],
+  "mapping": "work",
+  "key": "berg-86d9f946",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12972,
+  "title": "Mignon",
+  "mbids": [
+   "88c7da55-4fc5-4f16-85ac-f98d57c43f4e"
+  ],
+  "mapping": "work",
+  "key": "berg-88c7da55",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 12988,
+  "title": "Abschied",
+  "mbids": [
+   "8ba01bba-d8f0-45a8-b279-07dc49a6fa2d"
+  ],
+  "mapping": "work",
+  "key": "berg-8ba01bba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13012,
+  "title": "Grabschrift",
+  "mbids": [
+   "8f998050-cd09-4b6b-90d3-bf24090b9cf1"
+  ],
+  "mapping": "work",
+  "key": "berg-8f998050",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13026,
+  "title": "Herbstgefühl",
+  "mbids": [
+   "91d5d796-f3d6-49b3-b239-74b3802aaca5"
+  ],
+  "mapping": "work",
+  "key": "berg-91d5d796",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13040,
+  "title": "Scherzo c-Moll",
+  "mbids": [
+   "93f6ea0f-f95a-46fc-9eb4-0dd579041d49"
+  ],
+  "mapping": "work",
+  "key": "berg-93f6ea0f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13043,
+  "title": "Die Nachtigall",
+  "mbids": [
+   "946a1b7c-af88-457e-a217-96c9a34c2b86"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13081,
+  "title": "Sehnsucht II",
+  "mbids": [
+   "9a6d12f1-d119-43bc-9162-fe9a12ae91b3"
+  ],
+  "mapping": "work",
+  "key": "berg-9a6d12f1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13109,
+  "title": "So regnet es sich langsam ein",
+  "mbids": [
+   "9eabdba3-fa94-49bf-81f0-364b799bfc34"
+  ],
+  "mapping": "work",
+  "key": "berg-9eabdba3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13118,
+  "title": "Klavierstück c-Moll",
+  "mbids": [
+   "9fb3efa2-2717-4d2c-ac29-fddcb2c95b05"
+  ],
+  "mapping": "work",
+  "key": "berg-9fb3efa2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13123,
+  "title": "Sternenfall",
+  "mbids": [
+   "a0276e2f-a4b7-41c4-b44c-fd5e68c9747d"
+  ],
+  "mapping": "work",
+  "key": "berg-a0276e2f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13185,
+  "title": "Spaziergang",
+  "mbids": [
+   "a9c58ad3-4699-4458-8f89-e3672d29dfcd"
+  ],
+  "mapping": "work",
+  "key": "berg-a9c58ad3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13199,
+  "title": "Verlassen",
+  "mbids": [
+   "ab295461-ca1d-4b9c-897e-a29a5c4924ee"
+  ],
+  "mapping": "work",
+  "key": "berg-ab295461",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13240,
+  "title": "Walzer G-Dur",
+  "mbids": [
+   "b07e49c3-79e6-43a6-9792-9aa7e8c2980a"
+  ],
+  "mapping": "work",
+  "key": "berg-b07e49c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13288,
+  "title": "Fraue, du Süße",
+  "mbids": [
+   "b8eb780f-d939-4699-8281-8fbe852774fc"
+  ],
+  "mapping": "work",
+  "key": "berg-b8eb780f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13295,
+  "title": "Flötenspielerin",
+  "mbids": [
+   "baae5157-8e18-489d-8314-34d5c5d1ae43"
+  ],
+  "mapping": "work",
+  "key": "berg-baae5157",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13318,
+  "title": "Klavierstück in B Minor",
+  "mbids": [
+   "bcd582c1-2009-44c0-b076-1edd663b2ea3"
+  ],
+  "mapping": "work",
+  "key": "berg-bcd582c1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13388,
+  "title": "Hier ist Friede",
+  "mbids": [
+   "c872ae6d-d0f0-4786-9892-03553423a6a9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13441,
+  "title": "Sonate d-Moll (fragment)",
+  "mbids": [
+   "d0bd839b-8156-4d46-9390-76d26fa5589c"
+  ],
+  "mapping": "work",
+  "key": "berg-d0bd839b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13442,
+  "title": "Adagio (from the Chamber Concerto)",
+  "mbids": [
+   "d0d03eec-41c2-4588-bdac-69cbd619fd74"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 13475,
+  "title": "Grenzen der Menschheit",
+  "mbids": [
+   "d7024f36-fe26-48b6-8d3a-4402dbf95109"
+  ],
+  "mapping": "work",
+  "key": "berg-d7024f36",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13490,
+  "title": "Wo der Goldregen steht",
+  "mbids": [
+   "da31f6f4-31d3-4b3e-90a7-74bd0efd0912"
+  ],
+  "mapping": "work",
+  "key": "berg-da31f6f4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13513,
+  "title": "Vorüber!",
+  "mbids": [
+   "ddfa007a-f380-4628-bf67-b21dd666ca0b"
+  ],
+  "mapping": "work",
+  "key": "berg-ddfa007a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13542,
+  "title": "Klavierstück f-Moll",
+  "mbids": [
+   "e348949c-db1d-4b59-a02a-2fe3b06e564c"
+  ],
+  "mapping": "work",
+  "key": "berg-e348949c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13547,
+  "title": "Sehnsucht I",
+  "mbids": [
+   "e4036d2e-318f-408e-98e6-4c5757e8b228"
+  ],
+  "mapping": "work",
+  "key": "berg-e4036d2e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13562,
+  "title": "Schattenleben",
+  "mbids": [
+   "e5fd42ee-d4d6-41f8-a59e-6fc523f7d820"
+  ],
+  "mapping": "work",
+  "key": "berg-e5fd42ee",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13593,
+  "title": "Im Morgengrauen",
+  "mbids": [
+   "ec10cc0f-c3d6-4877-b81a-91e5a3634660"
+  ],
+  "mapping": "work",
+  "key": "berg-ec10cc0f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13594,
+  "title": "Am Abend",
+  "mbids": [
+   "ec1da760-9199-4717-a10c-be2c69e08d04"
+  ],
+  "mapping": "work",
+  "key": "berg-ec1da760",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13624,
+  "title": "Das stille Königreich",
+  "mbids": [
+   "f1ef7af6-6a03-4341-86b1-b920480f02d3"
+  ],
+  "mapping": "work",
+  "key": "berg-f1ef7af6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13654,
+  "title": "Alban Berg an das Frankfurter Opernhaus",
+  "mbids": [
+   "f6b1cb50-6656-4494-be3e-9cc5ee0aaec1"
+  ],
+  "mapping": "work",
+  "key": "berg-f6b1cb50",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13666,
+  "title": "Zwei Variationen über ein eigenes Thema F-Dur",
+  "mbids": [
+   "f841f8db-690b-4a0f-8faa-38c1e9df7408"
+  ],
+  "mapping": "work",
+  "key": "berg-f841f8db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13692,
+  "title": "Leukon",
+  "mbids": [
+   "fb97a907-61e8-40bd-bd95-9ab2394e09c9"
+  ],
+  "mapping": "work",
+  "key": "berg-fb97a907",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13715,
+  "title": "Liebe",
+  "mbids": [
+   "ff9e0ccf-9fbb-443c-a1ef-fc04390bed09"
+  ],
+  "mapping": "work",
+  "key": "berg-ff9e0ccf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 13718,
+  "title": "Drei Stücke",
+  "mbids": [
+   "ffee8b35-6983-4ee2-98e6-91e14936ed91"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ }
+]
