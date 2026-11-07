@@ -38,9 +38,15 @@ impl ComposerService {
         pool: &DbPool,
         id: i32,
     ) -> Result<Option<ComposerWithMajorPieces>, String> {
-        ComposerRepository::find_by_id(pool, id)
+        let mut composer = ComposerRepository::find_by_id(pool, id)
             .await
-            .map_err(|e| e.to_string())
+            .map_err(|e| e.to_string())?;
+        if let Some(found) = composer.as_mut() {
+            found.banner = ComposerRepository::find_banner(pool, id)
+                .await
+                .map_err(|e| e.to_string())?;
+        }
+        Ok(composer)
     }
 
     pub async fn create_composer(pool: &DbPool, composer: CreateComposer) -> Result<i32, String> {
