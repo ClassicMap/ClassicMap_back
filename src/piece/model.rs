@@ -25,6 +25,13 @@ pub struct Piece {
     /// part 종류. "movement"(전부 악장 번호가 있음, 예: 4악장) | "work"(예: 12곡) | part 가 없으면 None
     #[serde(default)]
     pub part_kind: Option<String>,
+    /// 작품 목록 체계와 번호(예: "Op." "10", "K." "331"). 없으면 opus_number 를 쓴다
+    #[sqlx(default)]
+    #[serde(default)]
+    pub catalogue_system: Option<String>,
+    #[sqlx(default)]
+    #[serde(default)]
+    pub catalogue_number: Option<String>,
     /// 장르 7종(symphony·concerto·piano·chamber·orchestral·stage·vocal). 못 정한 작품은 None 이고
     /// 작곡가 화면은 '기타'로 묶는다.
     #[sqlx(default)]
