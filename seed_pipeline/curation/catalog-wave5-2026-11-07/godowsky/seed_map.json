@@ -1,0 +1,626 @@
+[
+ {
+  "pieceId": 15810,
+  "title": "Passacaglia for Piano",
+  "mbids": [
+   "b29ed86b-99ec-4b7b-a506-a715206fba0b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 15922,
+  "title": "Piano Sonata in E minor",
+  "mbids": [
+   "a3474010-ec57-4327-b8d2-78f6f0756de7"
+  ],
+  "mapping": "work",
+  "key": "godowsky-a3474010",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16237,
+  "title": "Elegy for the left hand alone",
+  "mbids": [
+   "0e82884e-f82e-4ff5-8d93-53a46727a980"
+  ],
+  "mapping": "work",
+  "key": "godowsky-0e82884e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16384,
+  "title": "Triakontameron, Thirty Moods and Scenes in Triple Measure",
+  "mbids": [
+   "16907b57-d09b-49bc-9ee1-d240ea75a08d"
+  ],
+  "mapping": "work",
+  "key": "godowsky-16907b57",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16650,
+  "title": "Suite for the Left Hand Alone",
+  "mbids": [
+   "2770026f-c914-4974-857a-02cbba8751a2"
+  ],
+  "mapping": "work",
+  "key": "godowsky-2770026f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17496,
+  "title": "Studies on Chopin’s Études",
+  "mbids": [
+   "5a28a8e6-2087-4c6e-b7ff-f00838cb83f0"
+  ],
+  "mapping": "work",
+  "key": "godowsky-5a28a8e6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17963,
+  "title": "Triakontameron: No. 11. Alt-Wien",
+  "mbids": [
+   "76cae315-708f-4e4c-84f5-ea3859f55739"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18064,
+  "title": "Four Poems",
+  "mbids": [
+   "7c8b740d-9f66-4b71-aaf1-ee85b992a928"
+  ],
+  "mapping": "work",
+  "key": "godowsky-7c8b740d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18273,
+  "title": "Java Suite",
+  "mbids": [
+   "8b7c2ebb-d904-4b93-af7b-64423c3e8558"
+  ],
+  "mapping": "work",
+  "key": "godowsky-8b7c2ebb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19026,
+  "title": "Walzermasken",
+  "mbids": [
+   "baf6514f-65ad-4afe-bcb4-f397532efdc9"
+  ],
+  "mapping": "work",
+  "key": "godowsky-baf6514f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19406,
+  "title": "Triakontameron: No. 11. Alt Wien",
+  "mbids": [
+   "d2e6bcbc-f27b-44ae-9970-c1f504f8db57"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16011,
+  "title": "Airs of the Eighteenth Century: Exaudet’s Minuet",
+  "mbids": [
+   "01a24869-ce5a-49cc-a66c-a592e25f830a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16024,
+  "title": "Twilight Thoughts",
+  "mbids": [
+   "022011b3-2767-483c-8af4-427a43a9ce40"
+  ],
+  "mapping": "work",
+  "key": "godowsky-022011b3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16033,
+  "title": "Two Waltz Poems",
+  "mbids": [
+   "02a08a8c-181c-48b7-8cf1-f34c11a4a4cc"
+  ],
+  "mapping": "work",
+  "key": "godowsky-f0aacace",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16169,
+  "title": "Three Concert Studies, op. 11",
+  "mbids": [
+   "0a9d80e0-e374-4ed4-aaf9-b08aacec8735"
+  ],
+  "mapping": "work",
+  "key": "godowsky-0a9d80e0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16184,
+  "title": "Symphonische Metamorphosen über den «Schatz-Walzer» aus «Der Zigeunerbaron» von Johann Strauß für Klavier (linke Hand)",
+  "mbids": [
+   "0b7aa3fa-ecdc-4513-86f1-354f1d2e8a3a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16324,
+  "title": "Airs of the Eighteenth Century: Capricious Shepherd Maid",
+  "mbids": [
+   "131ba48c-d358-4a02-92f0-ce637ed7da79"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16709,
+  "title": "12 Impressions for Violin and Piano",
+  "mbids": [
+   "2b30d8e8-f521-4e78-afca-192cb04a3cf2"
+  ],
+  "mapping": "work",
+  "key": "godowsky-2b30d8e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16723,
+  "title": "Moto perpetuo",
+  "mbids": [
+   "2bbcadf8-2c99-4da6-9d2b-9e3749db143c"
+  ],
+  "mapping": "work",
+  "key": "godowsky-2bbcadf8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16752,
+  "title": "Viennese (Impression no. 12)",
+  "mbids": [
+   "2df4c530-2b65-42a0-949e-bd41425d307e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16807,
+  "title": "Four Pieces, op. 14",
+  "mbids": [
+   "315060f2-58a8-4ac6-8280-7f574de18195"
+  ],
+  "mapping": "work",
+  "key": "godowsky-315060f2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16830,
+  "title": "3 Pieces, op. 15",
+  "mbids": [
+   "326e01d0-58e2-4077-93cc-4f764378f9a7"
+  ],
+  "mapping": "work",
+  "key": "godowsky-326e01d0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16938,
+  "title": "Polonaise in C major",
+  "mbids": [
+   "38588397-aaed-4db4-a632-7c7747011431"
+  ],
+  "mapping": "work",
+  "key": "godowsky-38588397",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17036,
+  "title": "Airs of the Eighteenth Century: Oh, come again, beautiful Spring",
+  "mbids": [
+   "3e32f618-e5b1-4a83-9dff-9fe73b7ca2a1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17068,
+  "title": "Airs of the Eighteenth Century: Would that I were the lowly fern",
+  "mbids": [
+   "40561a2a-febc-4288-afe6-fa78ed91ded1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17392,
+  "title": "Six Pieces for Both Hands: V. Elegy",
+  "mbids": [
+   "543af6e6-afe1-4638-b068-0cccea65ed2a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17558,
+  "title": "Airs of the Eighteenth Century: Lisette",
+  "mbids": [
+   "5e6ea795-4fbc-427f-8347-8250a6f00a15"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17708,
+  "title": "Contrapuntal Paraphrase on “Invitation to the Dance”",
+  "mbids": [
+   "67573025-deb4-4e38-9e5d-bc4ba4491e2a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17717,
+  "title": "Six Pieces for Both Hands: II. Impromptu",
+  "mbids": [
+   "67ee6288-bdc4-4372-bbe2-e52a6a4c6300"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17720,
+  "title": "Airs of the Eighteenth Century: Mother, Please explain",
+  "mbids": [
+   "681c0892-2d37-4a0f-a1b8-14deeb7d16e2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17750,
+  "title": "Menuet no. 1 in E major",
+  "mbids": [
+   "6995c370-dcca-4e47-a2c4-36637524e852"
+  ],
+  "mapping": "work",
+  "key": "godowsky-6995c370",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18176,
+  "title": "Symphonische Metamorphosen Johann Strauss’scher Themen",
+  "mbids": [
+   "84bde7cf-4fc8-40c2-b6b7-fd209a46a6cd"
+  ],
+  "mapping": "work",
+  "key": "godowsky-84bde7cf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18264,
+  "title": "Six Pieces for Both Hands: III. Capriccio",
+  "mbids": [
+   "8af0fe1b-9fba-4948-bd25-2a9977d0091d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18383,
+  "title": "Sarabande, op. 12 no. 1",
+  "mbids": [
+   "919e7f78-25a2-4495-b6e2-cb2575b15129"
+  ],
+  "mapping": "work",
+  "key": "godowsky-919e7f78",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18575,
+  "title": "Airs of the Eighteenth Century: Good Old Granny",
+  "mbids": [
+   "9d593169-eb90-4e2f-a903-1e5166cdf9cd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18668,
+  "title": "Six Pieces for Both Hands: VI. Etude macabre",
+  "mbids": [
+   "a412dacd-e1fa-4b3e-b012-9fcc292b676b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18826,
+  "title": "Courante, op. 12 no. 3",
+  "mbids": [
+   "ad696bbc-9dce-43fd-8051-c7835e0c8457"
+  ],
+  "mapping": "work",
+  "key": "godowsky-ad696bbc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18844,
+  "title": "Prelude and Fugue for the Left Hand",
+  "mbids": [
+   "ae2589ec-8646-4e12-8517-8d2a6c2965d5"
+  ],
+  "mapping": "work",
+  "key": "godowsky-ae2589ec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19047,
+  "title": "4 Pieces, op.16",
+  "mbids": [
+   "bbda70cf-6df9-4ad9-b7c8-6b8176194d01"
+  ],
+  "mapping": "work",
+  "key": "godowsky-bbda70cf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19273,
+  "title": "Märchen",
+  "mbids": [
+   "ca18965a-591f-474a-9e46-2ac7a5559193"
+  ],
+  "mapping": "work",
+  "key": "godowsky-ca18965a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19516,
+  "title": "Six Pieces for Both Hands: IV. Intermezzo",
+  "mbids": [
+   "da78f4f1-6d6e-42e0-b755-236667f8c1e4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19566,
+  "title": "The Gardens of Buitenzorg",
+  "mbids": [
+   "ddfa8e2d-9674-47bf-be82-7df75fc2a64a"
+  ],
+  "mapping": "work",
+  "key": "godowsky-ddfa8e2d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19588,
+  "title": "Menuet, op. 12 no. 2",
+  "mbids": [
+   "df6a3651-6f34-4f7c-bbb4-7b9dc62a3411"
+  ],
+  "mapping": "work",
+  "key": "godowsky-df6a3651",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19590,
+  "title": "Six Pieces for Both Hands: I. Meditation",
+  "mbids": [
+   "df91ae7a-44b6-4ff3-a76b-6d344f37d5ae"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19709,
+  "title": "Waltz-Poem no. 1",
+  "mbids": [
+   "e80e4a07-19f1-4934-b09d-9342aa7e8658"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19734,
+  "title": "Waltz-Poem no. 2",
+  "mbids": [
+   "ea3014c6-d152-4c34-9d86-e062e9ecc79a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19798,
+  "title": "Valse-Scherzo",
+  "mbids": [
+   "ee50cc10-e551-480a-868a-45d8fd1ac22a"
+  ],
+  "mapping": "work",
+  "key": "godowsky-ee50cc10",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19821,
+  "title": "Waltz in D (Impression no. 8)",
+  "mbids": [
+   "f0175790-d4a2-4ef9-a7ba-0c80722ddf49"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19834,
+  "title": "6 Waltz-Poems",
+  "mbids": [
+   "f0aacace-b031-4790-93d8-dd222c4b77db"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 19876,
+  "title": "Toccata in G-flat major, op. 13",
+  "mbids": [
+   "f31eda00-8069-4db9-96a6-4a48407d9536"
+  ],
+  "mapping": "work",
+  "key": "godowsky-f31eda00",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20063,
+  "title": "Nocturnal Tangier",
+  "mbids": [
+   "fdaf823c-4917-4f69-9208-8f7516c0f9fc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 20078,
+  "title": "Grande Valse romantique",
+  "mbids": [
+   "febd9ed4-c7a4-4b0e-a829-ac4b82b314f4"
+  ],
+  "mapping": "work",
+  "key": "godowsky-febd9ed4",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

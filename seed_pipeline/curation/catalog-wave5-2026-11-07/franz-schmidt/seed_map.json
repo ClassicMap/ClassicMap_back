@@ -1,0 +1,410 @@
+[
+ {
+  "pieceId": 16245,
+  "title": "String Quartet no. 1 in A major",
+  "mbids": [
+   "0f01508a-b7b2-4231-9247-f873396b4776"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-0f01508a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16537,
+  "title": "Fredigundis",
+  "mbids": [
+   "1fd440b8-b759-419e-8c6a-423aaa3df5b0"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-1fd440b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18368,
+  "title": "String Quartet no. 2 in G major",
+  "mbids": [
+   "90706c52-d444-440c-9760-b55ccd4fcbe6"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-90706c52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18866,
+  "title": "Das Buch mit sieben Siegeln",
+  "mbids": [
+   "afebf532-5ea3-431a-83b5-9f96dd9609e5"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-afebf532",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18899,
+  "title": "Variations on a Hussar Song",
+  "mbids": [
+   "b25c9487-8dad-4497-908d-d7b90838edc1"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-b25c9487",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19135,
+  "title": "Clarinet Quintet in A major",
+  "mbids": [
+   "c1538ece-b540-4334-9e1f-52a99358474e"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-c1538ece",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19805,
+  "title": "Clarinet Quintet in B-flat major",
+  "mbids": [
+   "ee944a63-0a77-4c0f-9e13-8369c618193b"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-ee944a63",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15758,
+  "title": "Chaconne in C sharp minor (1925)",
+  "mbids": [
+   "4d063430-c937-4adf-9670-d682bc219658"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-4d063430",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16228,
+  "title": "Drei kleine Phantasiestücke nach ungarischen Nationalmelodien für Violoncello und Klavierbegleitung",
+  "mbids": [
+   "0e1325bb-3f77-45c8-abe2-8e1e3ec1b174"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-0e1325bb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16560,
+  "title": "Symphonie Nr. 2 Es-Dur",
+  "mbids": [
+   "21962587-aa3b-439e-b296-c1514f540096"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-21962587",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16714,
+  "title": "Toccata und Fuge As-Dur",
+  "mbids": [
+   "2b5fb773-7f14-430e-b4db-1d52f8e40322"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-2b5fb773",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16864,
+  "title": "Quintet in G major for 2 Violins, Viola, Cello and Piano Left Hand",
+  "mbids": [
+   "342f31c8-e8b1-484a-a3d5-1d995c55f77a"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-342f31c8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17049,
+  "title": "Fuge F-Dur",
+  "mbids": [
+   "3f1401d3-e3a0-4405-94de-e35526d4a7b6"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-3f1401d3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17331,
+  "title": "Präludium und Fuge C-Dur",
+  "mbids": [
+   "509ed580-dc87-456f-a84e-47d83941a73a"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-509ed580",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17440,
+  "title": "Symphonie Nr. 1 E-Dur",
+  "mbids": [
+   "56f6376f-f7b4-4e1f-83b9-e91300b51da6"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-56f6376f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17486,
+  "title": "Konzertante Variationen über ein Thema von Beethoven (für Klavier für die linke Hand und Orchester)",
+  "mbids": [
+   "598bc169-f642-4b58-9103-a7dd823ad21a"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-598bc169",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17573,
+  "title": "Romance for Piano",
+  "mbids": [
+   "5f181b7e-9b2d-4466-a476-16026a23f250"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-5f181b7e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17585,
+  "title": "Präludium und Fuge Es-Dur",
+  "mbids": [
+   "6021c16e-d3f0-425f-997b-80f83ad0d60a"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-6021c16e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17828,
+  "title": "Fantasie und Fuge D-Dur",
+  "mbids": [
+   "6e7c9e09-7ae5-457c-adae-41d16ceb2219"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-6e7c9e09",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17920,
+  "title": "Notre Dame, op. 2",
+  "mbids": [
+   "736bc459-0df6-4a96-ad8a-be4f8fbda091"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-736bc459",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18238,
+  "title": "Variationen und Fuge über ein eigenes Thema (Königsfanfaren aus \"Fredigundis\")",
+  "mbids": [
+   "89769c89-821b-4bd2-90d3-f76c6e4e61a4"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-89769c89",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18250,
+  "title": "Vier kleine Präludien und Fugen",
+  "mbids": [
+   "8a395876-b0d4-443a-98f6-1fc318640940"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-8a395876",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18493,
+  "title": "Konzert für Klavier für die linke Hand und Orchester Es-Dur",
+  "mbids": [
+   "9827157e-1dca-4bd6-b684-b342079a59f6"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-9827157e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18602,
+  "title": "Präludium und Fuge A-Dur",
+  "mbids": [
+   "9f73cc44-6a0a-4f0b-b188-3b3bf2ef55aa"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-9f73cc44",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18704,
+  "title": "Piano Concerto in E-flat Major",
+  "mbids": [
+   "a5807a5d-3008-46ed-8e8f-abd8e00fbcb6"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-a5807a5d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18789,
+  "title": "Symphonie Nr. 3 A-Dur",
+  "mbids": [
+   "aac71a67-2204-4a06-9ed3-a1e4e0e6340a"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-aac71a67",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18842,
+  "title": "Toccata in C major",
+  "mbids": [
+   "ae11af08-0b2c-4748-ae91-36c3ffcf1d56"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-ae11af08",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19056,
+  "title": "Vier kleine Choralvorspiele",
+  "mbids": [
+   "bc9c86a3-1f63-4a20-9966-221cc388fa52"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-bc9c86a3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19283,
+  "title": "Symphonie Nr. 4 C-Dur",
+  "mbids": [
+   "ca87f3bb-54ab-40c2-99c6-64ee58823818"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-ca87f3bb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19315,
+  "title": "Variations and fugue on a theme from \"Fredigundis\"",
+  "mbids": [
+   "ccfe869e-ebb6-48a4-a327-08a7e4230466"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-ccfe869e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19435,
+  "title": "Choralvorspiel zu Joseph Haydns \"Gott erhalte\"",
+  "mbids": [
+   "d47853d6-1546-424b-a839-9d87cb736a1e"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-d47853d6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19495,
+  "title": "Fantasia for piano & orchestra in B-flat major",
+  "mbids": [
+   "d8b6f4dc-ce63-44e3-afb9-c31e8bfb0ff1"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-d8b6f4dc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19618,
+  "title": "Chaconne cis-moll",
+  "mbids": [
+   "e1416a91-e61d-400f-ba9f-4a56aeece57c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19939,
+  "title": "Der Heiland ist erstanden",
+  "mbids": [
+   "f653cab4-1182-48c2-8358-ac0d28cc10a4"
+  ],
+  "mapping": "work",
+  "key": "franz-schmidt-f653cab4",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

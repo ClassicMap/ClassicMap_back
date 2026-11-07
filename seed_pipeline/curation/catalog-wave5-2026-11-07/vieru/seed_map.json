@@ -1,0 +1,266 @@
+[
+ {
+  "pieceId": 23063,
+  "title": "Simfonia nr. 2",
+  "mbids": [
+   "29dd45a0-a5d5-47a9-84b4-d0ef84706dfb"
+  ],
+  "mapping": "work",
+  "key": "vieru-29dd45a0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23070,
+  "title": "Concerto for Violin, Cello and Orchestra",
+  "mbids": [
+   "51de123b-919d-410a-bdc6-30f976df0474"
+  ],
+  "mapping": "work",
+  "key": "vieru-51de123b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23324,
+  "title": "Clepsidra I",
+  "mbids": [
+   "0c4ea565-3b59-4bfc-9c92-527a4932fe06"
+  ],
+  "mapping": "work",
+  "key": "vieru-0c4ea565",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23628,
+  "title": "Cantata anilor lumină",
+  "mbids": [
+   "26d83f05-ad20-4459-abe1-da600af9b23a"
+  ],
+  "mapping": "work",
+  "key": "vieru-26d83f05",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23656,
+  "title": "Narration",
+  "mbids": [
+   "28961412-0787-4d58-990e-895341a02430"
+  ],
+  "mapping": "work",
+  "key": "vieru-28961412",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23658,
+  "title": "Dyathlon",
+  "mbids": [
+   "28a01e61-0de4-440d-a3f6-4fbf06b2c1a6"
+  ],
+  "mapping": "work",
+  "key": "vieru-28a01e61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23705,
+  "title": "Piano Trio",
+  "mbids": [
+   "2f067599-9389-44b7-9a30-1319821cd246"
+  ],
+  "mapping": "work",
+  "key": "vieru-2f067599",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24425,
+  "title": "Siehe, du bist schön",
+  "mbids": [
+   "73121c78-526b-4fe6-8af0-e55c3eefb589"
+  ],
+  "mapping": "work",
+  "key": "vieru-73121c78",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24838,
+  "title": "Symphony no. 5 for Chorus and Orchestra",
+  "mbids": [
+   "9686ddf8-6a5d-47e4-9a13-1d67a9593e6c"
+  ],
+  "mapping": "work",
+  "key": "vieru-9686ddf8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24888,
+  "title": "Doux Polyson",
+  "mbids": [
+   "9b440dac-1d3a-4924-a6db-60cd518322f8"
+  ],
+  "mapping": "work",
+  "key": "vieru-9b440dac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25029,
+  "title": "Piesă în mozaic",
+  "mbids": [
+   "a59d5e05-74c8-4ac8-88b0-6a65ed8bfd2f"
+  ],
+  "mapping": "work",
+  "key": "vieru-a59d5e05",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25071,
+  "title": "Nuit",
+  "mbids": [
+   "a9ee1c30-9db0-4857-9fc2-099c6d075ca9"
+  ],
+  "mapping": "work",
+  "key": "vieru-a9ee1c30",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25152,
+  "title": "Metaksax",
+  "mbids": [
+   "b169ee11-5bd7-4dad-98ca-d3e647f359c9"
+  ],
+  "mapping": "work",
+  "key": "vieru-b169ee11",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25302,
+  "title": "Piano Sonata no. 2, op. 140",
+  "mbids": [
+   "c0c19b24-e279-48d8-bdd6-de93ad2dd183"
+  ],
+  "mapping": "work",
+  "key": "vieru-c0c19b24",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25658,
+  "title": "„Ecran” pentru orchestră",
+  "mbids": [
+   "e1dd137d-78d9-484a-ac76-9342ba45a7bf"
+  ],
+  "mapping": "work",
+  "key": "vieru-e1dd137d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25667,
+  "title": "Psalm",
+  "mbids": [
+   "e2b5a8ab-f9e6-4452-bd71-4695e77c5e08"
+  ],
+  "mapping": "work",
+  "key": "vieru-e2b5a8ab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25674,
+  "title": "Clepsidra II",
+  "mbids": [
+   "e3252b39-db7c-4382-9b26-0d2e03f62e9b"
+  ],
+  "mapping": "work",
+  "key": "vieru-e3252b39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25739,
+  "title": "Versete for Piano and Violin, op. 116",
+  "mbids": [
+   "e883ed58-3ff2-4ef6-925a-7254b6f43fba"
+  ],
+  "mapping": "work",
+  "key": "vieru-e883ed58",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25752,
+  "title": "„Narațiune” pentru orgă",
+  "mbids": [
+   "ea020ac0-d442-46e7-84c3-c8110d54e848"
+  ],
+  "mapping": "work",
+  "key": "vieru-ea020ac0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25770,
+  "title": "Giusto",
+  "mbids": [
+   "eb49e349-e166-4e7f-8afc-ba6aa2b06a90"
+  ],
+  "mapping": "work",
+  "key": "vieru-eb49e349",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25904,
+  "title": "Pulsions en souffle countinu",
+  "mbids": [
+   "f6fc767a-4cfb-4d40-b729-50c22299e3dd"
+  ],
+  "mapping": "work",
+  "key": "vieru-f6fc767a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25915,
+  "title": "SHQIP For Violin Solo",
+  "mbids": [
+   "f7f41cda-cbf8-4a46-b416-2125fd93fa9a"
+  ],
+  "mapping": "work",
+  "key": "vieru-f7f41cda",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

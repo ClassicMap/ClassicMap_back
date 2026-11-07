@@ -1,0 +1,506 @@
+[
+ {
+  "pieceId": 16017,
+  "title": "All Set",
+  "mbids": [
+   "01cc78c3-95ef-4ba3-bc31-74c0c4a75e8d"
+  ],
+  "mapping": "work",
+  "key": "babbitt-01cc78c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16292,
+  "title": "Soli e duettini",
+  "mbids": [
+   "1173c8e8-d387-4abf-935f-e70ce3b7db56"
+  ],
+  "mapping": "work",
+  "key": "babbitt-1173c8e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19206,
+  "title": "Philomel",
+  "mbids": [
+   "c5b25b55-7020-4c72-ba31-1d359b920e88"
+  ],
+  "mapping": "work",
+  "key": "babbitt-c5b25b55",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19751,
+  "title": "Quintet for Clarinet and String Quartet",
+  "mbids": [
+   "eb2891aa-9dde-4bbd-b97d-aaf4686e3919"
+  ],
+  "mapping": "work",
+  "key": "babbitt-eb2891aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16006,
+  "title": "Arie da Capo",
+  "mbids": [
+   "016ddeba-8e60-4674-a0ac-83c7e6b6b15b"
+  ],
+  "mapping": "work",
+  "key": "babbitt-016ddeba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16306,
+  "title": "The Widow's Lament in Springtime",
+  "mbids": [
+   "121fd185-fb69-4979-ae6b-238146747b1c"
+  ],
+  "mapping": "work",
+  "key": "babbitt-121fd185",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16605,
+  "title": "Playing for Time",
+  "mbids": [
+   "24be63fa-0d65-4f41-ac57-b636ddff6d55"
+  ],
+  "mapping": "work",
+  "key": "babbitt-24be63fa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16692,
+  "title": "Quatrains",
+  "mbids": [
+   "2a0850e6-8e7f-48b3-9cc8-f5c814c8b9bd"
+  ],
+  "mapping": "work",
+  "key": "babbitt-2a0850e6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16750,
+  "title": "Canonical Form",
+  "mbids": [
+   "2dc5ae93-100e-4f71-b705-f429455b2b30"
+  ],
+  "mapping": "work",
+  "key": "babbitt-2dc5ae93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16757,
+  "title": "Tableaux",
+  "mbids": [
+   "2e47dec8-38c0-42f6-a274-f5e9cab9efa5"
+  ],
+  "mapping": "work",
+  "key": "babbitt-2e47dec8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16792,
+  "title": "Groupwise",
+  "mbids": [
+   "306819d9-423d-4166-95e4-0d4b3b216a9e"
+  ],
+  "mapping": "work",
+  "key": "babbitt-306819d9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16984,
+  "title": "Semi-Simple Variations",
+  "mbids": [
+   "3bcdbcf2-5009-4837-8976-72c5778cb7b0"
+  ],
+  "mapping": "work",
+  "key": "babbitt-3bcdbcf2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17334,
+  "title": "Correspondences",
+  "mbids": [
+   "50ae5fd3-2cae-4616-a1a8-26359452c930"
+  ],
+  "mapping": "work",
+  "key": "babbitt-50ae5fd3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17606,
+  "title": "Swan Song no. 1",
+  "mbids": [
+   "610532ca-9887-490f-9988-3605da176580"
+  ],
+  "mapping": "work",
+  "key": "babbitt-610532ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17636,
+  "title": "None but the Lonely Flute",
+  "mbids": [
+   "63049ce9-935b-4bae-9dde-82771bb21bec"
+  ],
+  "mapping": "work",
+  "key": "babbitt-63049ce9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17761,
+  "title": "It Takes Twelve to Tango",
+  "mbids": [
+   "6a4096b1-83e0-42e9-b1c9-04e476367d72"
+  ],
+  "mapping": "work",
+  "key": "babbitt-6a4096b1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17775,
+  "title": "Danci",
+  "mbids": [
+   "6b632ef5-adc2-4385-a186-bda882b3bc1e"
+  ],
+  "mapping": "work",
+  "key": "babbitt-6b632ef5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17891,
+  "title": "Overtime",
+  "mbids": [
+   "71a285ae-ca2b-467e-82f7-0b8502bc4326"
+  ],
+  "mapping": "work",
+  "key": "babbitt-71a285ae",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17968,
+  "title": "Partitions",
+  "mbids": [
+   "771af5ca-1f79-455a-89a8-2ecdbf6979df"
+  ],
+  "mapping": "work",
+  "key": "babbitt-771af5ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18033,
+  "title": "Post-Partitions",
+  "mbids": [
+   "7ae399c3-3697-435d-8de9-7ac2f6382be9"
+  ],
+  "mapping": "work",
+  "key": "babbitt-7ae399c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18083,
+  "title": "Whirled Series",
+  "mbids": [
+   "7ddce1f0-f238-43a9-a48a-bb4c76d84fa6"
+  ],
+  "mapping": "work",
+  "key": "babbitt-7ddce1f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18101,
+  "title": "Vision and Prayer",
+  "mbids": [
+   "7effaa7b-a31f-4228-b43e-5ba9eaca51ad"
+  ],
+  "mapping": "work",
+  "key": "babbitt-7effaa7b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18189,
+  "title": "Duet for piano",
+  "mbids": [
+   "85a4b0b8-7854-487e-b78b-e14bf3b5e9b5"
+  ],
+  "mapping": "work",
+  "key": "babbitt-85a4b0b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18285,
+  "title": "Lagniappe",
+  "mbids": [
+   "8c3e89ea-6515-44c2-b28e-6675104c4135"
+  ],
+  "mapping": "work",
+  "key": "babbitt-8c3e89ea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18446,
+  "title": "Around the Horn",
+  "mbids": [
+   "9544342b-aaab-4003-8c7c-dfe624f61d27"
+  ],
+  "mapping": "work",
+  "key": "babbitt-9544342b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18467,
+  "title": "Composition for Guitar \"Sheer Pluck\"",
+  "mbids": [
+   "96a4837c-b39f-4362-b392-8f7140f8da2a"
+  ],
+  "mapping": "work",
+  "key": "babbitt-96a4837c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18650,
+  "title": "String Quartet No.2",
+  "mbids": [
+   "a2b8987d-2dd3-42bf-b158-eb71308fc1b5"
+  ],
+  "mapping": "work",
+  "key": "babbitt-a2b8987d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18676,
+  "title": "Paraphrases",
+  "mbids": [
+   "a43651b8-064c-4027-be72-8a2894f9a460"
+  ],
+  "mapping": "work",
+  "key": "babbitt-a43651b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18725,
+  "title": "Relata I",
+  "mbids": [
+   "a6af9154-6557-4841-9c2b-0f1fae130493"
+  ],
+  "mapping": "work",
+  "key": "babbitt-a6af9154",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18898,
+  "title": "Melismata",
+  "mbids": [
+   "b258ac7d-ce2b-4f97-9f07-410714e58839"
+  ],
+  "mapping": "work",
+  "key": "babbitt-b258ac7d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18917,
+  "title": "Homily",
+  "mbids": [
+   "b3503d1b-f3aa-4c96-bbfa-5f4e6ef99997"
+  ],
+  "mapping": "work",
+  "key": "babbitt-b3503d1b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18934,
+  "title": "Beaten Paths",
+  "mbids": [
+   "b4608d3b-9a75-4141-965a-a38cd03eec5e"
+  ],
+  "mapping": "work",
+  "key": "babbitt-b4608d3b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19121,
+  "title": "Play it Again, Sam",
+  "mbids": [
+   "c076f7a8-b3ce-4768-9d45-d86c73a0202b"
+  ],
+  "mapping": "work",
+  "key": "babbitt-c076f7a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19183,
+  "title": "Three Compositions for Piano",
+  "mbids": [
+   "c47287b6-8806-41db-9b16-7868425dd5eb"
+  ],
+  "mapping": "work",
+  "key": "babbitt-c47287b6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19391,
+  "title": "Manifold Music",
+  "mbids": [
+   "d2351a61-8a3b-45ce-aeb4-1021b55d3fa2"
+  ],
+  "mapping": "work",
+  "key": "babbitt-d2351a61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19442,
+  "title": "An Elizabethan Sextette",
+  "mbids": [
+   "d515493a-494c-4d76-95e4-f71fc8396dd3"
+  ],
+  "mapping": "work",
+  "key": "babbitt-d515493a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19478,
+  "title": "Composition for Synthesizer",
+  "mbids": [
+   "d7a3a251-d6db-4658-9e9c-a9cddfcdf94f"
+  ],
+  "mapping": "work",
+  "key": "babbitt-d7a3a251",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19608,
+  "title": "Reflections",
+  "mbids": [
+   "e0c13787-6f0e-4877-901b-9f55e5f7f387"
+  ],
+  "mapping": "work",
+  "key": "babbitt-e0c13787",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19842,
+  "title": "Ensembles for Synthesizer",
+  "mbids": [
+   "f1287083-c715-4467-b687-c9a4245becab"
+  ],
+  "mapping": "work",
+  "key": "babbitt-f1287083",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19885,
+  "title": "Minute Waltz (or) ¾ ± ⅛",
+  "mbids": [
+   "f37634ed-570e-4909-a9fe-5288ea308eab"
+  ],
+  "mapping": "work",
+  "key": "babbitt-f37634ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19893,
+  "title": "My Ends Are My Beginnings",
+  "mbids": [
+   "f403785a-f546-4f86-86d2-d7c32f5a879a"
+  ],
+  "mapping": "work",
+  "key": "babbitt-f403785a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19999,
+  "title": "About Time",
+  "mbids": [
+   "f95fa600-1220-4711-afb3-5edfd4f0a40f"
+  ],
+  "mapping": "work",
+  "key": "babbitt-f95fa600",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

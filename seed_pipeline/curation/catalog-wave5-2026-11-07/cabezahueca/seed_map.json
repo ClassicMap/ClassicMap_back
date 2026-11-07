@@ -1,0 +1,662 @@
+[
+ {
+  "pieceId": 15757,
+  "title": "Diferencias sobre El Canto del Caballero",
+  "mbids": [
+   "4906e80f-92de-412f-b3ae-758d1b27cacd"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-4906e80f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15834,
+  "title": "Tres \"Sobre el canto Ilano de la alta\"",
+  "mbids": [
+   "e202a930-b381-4d61-b611-a32182ed2c1e"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-e202a930",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16029,
+  "title": "Benedicta es regina caelorum: Duo",
+  "mbids": [
+   "02537762-d0d7-407a-b7c1-ebdb23f81117"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16052,
+  "title": "Psalmus II: Confitebor tibi / Alternatim fabordones tono II",
+  "mbids": [
+   "03f4897d-1f12-34e7-ad59-53c0fd4b6085"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16118,
+  "title": "Hosanna (Intabulation of Josquin de Prez)",
+  "mbids": [
+   "07750820-7b69-464a-a64c-24238ebfc2d8"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-07750820",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16156,
+  "title": "Fabordón y glosas del sexto tono",
+  "mbids": [
+   "09c55dc7-3ad4-4246-80cd-0287f1fe9ab4"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-09c55dc7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16164,
+  "title": "Pavana con su glosa",
+  "mbids": [
+   "0a5dc39c-ff7d-4795-b32a-abfb5c3fa187"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-0a5dc39c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16166,
+  "title": "Tiento Cuarto tono",
+  "mbids": [
+   "0a6245b1-4472-46d1-b52f-8cc636da7298"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-0a6245b1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16188,
+  "title": "Susana",
+  "mbids": [
+   "0bd823c4-5a33-4647-8787-3ac159f64074"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-0bd823c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16290,
+  "title": "Himno: Ave, maris stella VI",
+  "mbids": [
+   "11622cf5-7146-443b-a5a6-4cdde89ab0b9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16304,
+  "title": "Fantasia I",
+  "mbids": [
+   "11ff829f-fe23-4294-97c5-b3978cd411dc"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-11ff829f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16392,
+  "title": "Himno: Pange lingua V",
+  "mbids": [
+   "16d00963-cd07-4e03-8e25-398ef677f0ab"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16595,
+  "title": "Fabordon y glosas del Primer Tono Ilano",
+  "mbids": [
+   "24071439-353d-41c4-9348-053654c9cca7"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-24071439",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16671,
+  "title": "Cançion francesa",
+  "mbids": [
+   "28981af0-ab15-463f-be22-7fd67a1213c4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16824,
+  "title": "Pavana Italiana",
+  "mbids": [
+   "3236e0c3-0c86-4c24-a34e-ea429be24cd7"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-3236e0c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16860,
+  "title": "Du vien sela",
+  "mbids": [
+   "340db6e0-f2cb-4540-bdf0-2f83397ed3d2"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-340db6e0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16876,
+  "title": "Himno “Christe Redemptor omnium”",
+  "mbids": [
+   "34b65d71-1c91-4af7-9ee4-6211885b62ab"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-34b65d71",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16905,
+  "title": "Au joli bois",
+  "mbids": [
+   "36491283-dd2f-450b-956f-06ec0ac6d0e4"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-36491283",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16987,
+  "title": "Diferencias sobre, \"Guadarme las vacas\"",
+  "mbids": [
+   "3beac6df-9849-4319-a6f2-379c61e9e6aa"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-3beac6df",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17456,
+  "title": "Rugier, glosado de Antonio",
+  "mbids": [
+   "57e96325-9f67-4b5c-ac3a-abda352055fe"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-57e96325",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17533,
+  "title": "Quien llamó al partir partir",
+  "mbids": [
+   "5c6a235b-53b5-4e39-906f-4f2164168c9d"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-5c6a235b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17570,
+  "title": "Prelude in the Dorian Mode",
+  "mbids": [
+   "5f02d181-7077-44c1-b56b-49b4e5d05e63"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17582,
+  "title": "Prenez pitie, Cancion glosada",
+  "mbids": [
+   "5fe506e8-4226-4cb9-a7c8-90c1a90f0d9e"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-5fe506e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17589,
+  "title": "Psalmus IV: Beati omnes / Alternatim fabordones, tono IV",
+  "mbids": [
+   "6070d455-2196-395f-8f2a-3e1418949935"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17617,
+  "title": "Canción glosada “Triste départ”",
+  "mbids": [
+   "61c08e93-c394-453e-850c-61b06769d17c"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-61c08e93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17683,
+  "title": "Tiento I",
+  "mbids": [
+   "65f30227-404c-46e9-aa4e-ba43aecbdd04"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-65f30227",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17862,
+  "title": "Salmodia para el Magnificat",
+  "mbids": [
+   "7028c131-ec5f-4135-a354-141323a7fc22"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-7028c131",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18167,
+  "title": "Tiento del primer tono",
+  "mbids": [
+   "841c8acb-7535-4e18-aad3-05ff14617024"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-841c8acb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18362,
+  "title": "Tiento para arpa. Fabordón, glosado en el tiple, tono I",
+  "mbids": [
+   "8ffb1ce8-2f72-37d9-9c62-610d708f3613"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-8ffb1ce8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18406,
+  "title": "Diferencias sobre \"Belle qui tiens ma vie\"",
+  "mbids": [
+   "92f563c4-455f-40b2-9d2f-21aa5767f37b"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-92f563c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18516,
+  "title": "Pour un plaisir",
+  "mbids": [
+   "9987d759-831e-4a2b-be25-841473d954bd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18596,
+  "title": "Tiento del quarto tono sobre Maheur me bat",
+  "mbids": [
+   "9eeadcda-e603-452b-871e-35177f52a408"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-9eeadcda",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18673,
+  "title": "Epistola: Lectio Epistolae beati Pauli Apostoli ad Timotheum",
+  "mbids": [
+   "a42a8cc6-ffae-4f8f-8d3c-ebad7606c023"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18749,
+  "title": "Obras de musica para tecla, arpa y vihuela",
+  "mbids": [
+   "a828235f-19de-4971-9b08-77359594b9be"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-a828235f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18761,
+  "title": "Pange lingua (glosado)",
+  "mbids": [
+   "a9465673-0e4d-4ad9-b064-d3bad002395c"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-a9465673",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18793,
+  "title": "Benedictus (Intabulation of Josquin de Prez)",
+  "mbids": [
+   "ab15ca2b-fabc-4be6-b554-626c4d433c13"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-ab15ca2b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18854,
+  "title": "Dic nobis, Maria",
+  "mbids": [
+   "af1e2040-9d7d-4d02-b121-4b618289908d"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-af1e2040",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18875,
+  "title": "Romance \"Para quien crie yo cabellos\"",
+  "mbids": [
+   "b0dc1913-2ab3-44aa-9f65-b0c829bdf92f"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-b0dc1913",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18975,
+  "title": "Tiento del octavo tono",
+  "mbids": [
+   "b6d19d83-16dd-4eb8-81a9-5aeea8d496d8"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-b6d19d83",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19046,
+  "title": "Fabordon y Glosas del octavo tono",
+  "mbids": [
+   "bbcfe43d-48b1-4bb0-970e-2f292cc6251c"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-bbcfe43d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19081,
+  "title": "Duuiensela",
+  "mbids": [
+   "be23aa10-0d7f-415d-8361-cafb65d68c16"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-be23aa10",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19122,
+  "title": "D'où vient cela",
+  "mbids": [
+   "c07aea35-c372-4510-82e1-372d91430137"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-c07aea35",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19194,
+  "title": "Tiento para órgano: Verso II, glosade en el tiple, tono V",
+  "mbids": [
+   "c4f937fa-ba1e-3b2e-bb36-8c2ed8a25e09"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19305,
+  "title": "Fabordones del premier tono Ilano",
+  "mbids": [
+   "cc10ba69-8ea1-4d10-806d-1ff534880f3d"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-cc10ba69",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19319,
+  "title": "Himno: Te lucis ante terminum",
+  "mbids": [
+   "cd30a1c8-61aa-4e43-84aa-74e6236491d3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19549,
+  "title": "Tiento del quinto tono",
+  "mbids": [
+   "dc552b16-dd48-4376-9655-84abbac4f43c"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-dc552b16",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19560,
+  "title": "Tiento XVIII",
+  "mbids": [
+   "dd1de193-915a-480d-922c-d5ca7c405969"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-dd1de193",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19602,
+  "title": "Himno XVI",
+  "mbids": [
+   "e07eca3e-e94b-41bb-92aa-3f0ce9823eeb"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-e07eca3e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19645,
+  "title": "Versos para órganos 1, 2, 4, 6, 7: tono VI",
+  "mbids": [
+   "e28bef2a-e4ae-4f78-8bc6-ebc4f59bde5f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19653,
+  "title": "Je prens en gre, Cancion glosada",
+  "mbids": [
+   "e323c91a-0358-42b3-80c6-f48ab8876b34"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-e323c91a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19691,
+  "title": "Tiento Primo tono",
+  "mbids": [
+   "e6d08b44-b426-4895-b7b4-96de399c9c34"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-e6d08b44",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19850,
+  "title": "Ancol que col partire",
+  "mbids": [
+   "f1d82df4-74b2-4586-804e-9377249c234a"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-f1d82df4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19922,
+  "title": "Obras de música: Diferencias sobre El canto de la dama le demanda",
+  "mbids": [
+   "f57e537e-dcb7-471a-b81e-2922623aa8c5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19998,
+  "title": "Tiento del quarto tono (extract)",
+  "mbids": [
+   "f91f5c5d-75e0-4d26-a569-9c6561f5e4bc"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-f91f5c5d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20067,
+  "title": "Salmodia para principantes",
+  "mbids": [
+   "fe36117e-636d-46ec-8989-edbc7ed976ac"
+  ],
+  "mapping": "work",
+  "key": "cabezahueca-fe36117e",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

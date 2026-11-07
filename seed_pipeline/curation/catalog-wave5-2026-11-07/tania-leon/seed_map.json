@@ -1,0 +1,326 @@
+[
+ {
+  "pieceId": 16337,
+  "title": "Stride",
+  "mbids": [
+   "1425c629-c11f-42f2-806b-eae32d84b0c4"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-1425c629",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17677,
+  "title": "Indígena",
+  "mbids": [
+   "65bc277e-6358-4389-bddc-3e20baa271b4"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-65bc277e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18746,
+  "title": "Horizons",
+  "mbids": [
+   "a7f45f7b-23a8-4c51-a303-00f2d08d04af"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-a7f45f7b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18942,
+  "title": "Pasajes",
+  "mbids": [
+   "b49361db-9fa2-47d9-8362-16329e453ba8"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-b49361db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18952,
+  "title": "Raices",
+  "mbids": [
+   "b5020bdf-eee1-4fa5-a4cf-1c31f103c75c"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-b5020bdf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15974,
+  "title": "Ciego reto",
+  "mbids": [
+   "bf756faf-22e4-41c2-99eb-654c620f7b59"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-bf756faf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17034,
+  "title": "Variación",
+  "mbids": [
+   "3e01eba8-1057-4513-a4a1-d312d6bac6e3"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-3e01eba8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17145,
+  "title": "Momentum",
+  "mbids": [
+   "451b723c-799f-4fbc-9054-06b959cc3fae"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-451b723c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17174,
+  "title": "Maggie Magalita",
+  "mbids": [
+   "46444441-4ae4-4515-849e-10f715e3cec3"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-46444441",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17237,
+  "title": "A la Par",
+  "mbids": [
+   "49ef6b4c-846d-4d4f-9dff-dfc193e1c821"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-49ef6b4c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17272,
+  "title": "Rituál",
+  "mbids": [
+   "4bedf9e4-7da7-49d1-8e89-1de621e06f6d"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-4bedf9e4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17321,
+  "title": "Prelude no. 2 \"Pecera\"",
+  "mbids": [
+   "501c77e9-c0f6-4ea7-9b84-43362cb03f37"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-501c77e9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17473,
+  "title": "Inura",
+  "mbids": [
+   "58b36429-cbb5-48a0-be41-65e696a04bbe"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-58b36429",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17474,
+  "title": "Anima",
+  "mbids": [
+   "58d66de5-7b0b-4d7e-9874-a4b5fd80c6ec"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-58d66de5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17519,
+  "title": "Rondo a la criolla",
+  "mbids": [
+   "5b9a1166-2a23-43a2-a3ee-19daa22b51a5"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-5b9a1166",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17611,
+  "title": "del Caribe, soy!",
+  "mbids": [
+   "614e6f43-eb56-4287-8892-3f3b6aa3022b"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-614e6f43",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17680,
+  "title": "Homenaje a Prokofiew",
+  "mbids": [
+   "65e4e90e-b43f-49e3-803a-db194db01aa5"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-65e4e90e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17859,
+  "title": "Homenatge",
+  "mbids": [
+   "6fff2f17-bb88-4ff0-a8eb-376c52c5dc0c"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-6fff2f17",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17898,
+  "title": "going...gone",
+  "mbids": [
+   "7269459a-8810-4d0b-9d4a-16bbb68ef216"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18002,
+  "title": "Tumbao",
+  "mbids": [
+   "791ad6c2-0978-4004-8025-9552d954e912"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-791ad6c2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18578,
+  "title": "Mística",
+  "mbids": [
+   "9d841948-2bd6-47f7-92f7-1bd4ba26a33d"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-9d841948",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18855,
+  "title": "Kabiosile",
+  "mbids": [
+   "af4ba1a3-730e-4029-8190-b64401f81822"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-af4ba1a3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19635,
+  "title": "Prelude no. 1 \"Sorpresa\"",
+  "mbids": [
+   "e1ee7062-4b5f-4e92-bbf1-ce45d8d15b3c"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-e1ee7062",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19669,
+  "title": "Axon",
+  "mbids": [
+   "e4cf082b-ca97-4c19-b92f-18aff9d59c8b"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-e4cf082b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19867,
+  "title": "Saoko",
+  "mbids": [
+   "f2a5efc0-7faf-4834-9938-da25c54b40bf"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-f2a5efc0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20003,
+  "title": "Abanico",
+  "mbids": [
+   "f97c8616-b95b-456b-a7b6-6dc99a3a78b7"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-f97c8616",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20019,
+  "title": "Parajota Delaté",
+  "mbids": [
+   "fa9c3a94-7f0c-4a00-b6ab-437c365ea78f"
+  ],
+  "mapping": "work",
+  "key": "tania-leon-fa9c3a94",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

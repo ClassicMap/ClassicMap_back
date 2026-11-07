@@ -1,0 +1,266 @@
+[
+ {
+  "pieceId": 16436,
+  "title": "Musique pour Ming",
+  "mbids": [
+   "19901fde-7765-4f45-bb5b-b8ff8062d9ed"
+  ],
+  "mapping": "work",
+  "key": "tanguy-19901fde",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17618,
+  "title": "Éclipse",
+  "mbids": [
+   "61c5539b-79bf-47c6-846f-69c258b62ddc"
+  ],
+  "mapping": "work",
+  "key": "tanguy-61c5539b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16025,
+  "title": "Lacrymosa, pour clarinette et piano",
+  "mbids": [
+   "0221613c-3ea0-4e58-9e21-e06e689fd7a2"
+  ],
+  "mapping": "work",
+  "key": "tanguy-0221613c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16143,
+  "title": "Quintette pour piano et quatuor à cordes",
+  "mbids": [
+   "08f32b8c-90bd-4585-8f89-c2575e5c6ec0"
+  ],
+  "mapping": "work",
+  "key": "tanguy-08f32b8c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16147,
+  "title": "Further",
+  "mbids": [
+   "092cc7c4-7667-43b9-940d-f7f765c8657c"
+  ],
+  "mapping": "work",
+  "key": "tanguy-092cc7c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16432,
+  "title": "Spirales, pour violoncelle et piano",
+  "mbids": [
+   "195a6080-6c78-4061-9a87-cdd53b05ec01"
+  ],
+  "mapping": "work",
+  "key": "tanguy-195a6080",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16791,
+  "title": "Quatuor à cordes n° 2",
+  "mbids": [
+   "30474a0e-8cca-4b4c-a538-edb402595994"
+  ],
+  "mapping": "work",
+  "key": "tanguy-30474a0e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16919,
+  "title": "Sonata breve",
+  "mbids": [
+   "37798e09-b626-4bd5-9629-d1b68ba2b27c"
+  ],
+  "mapping": "work",
+  "key": "tanguy-37798e09",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17231,
+  "title": "Sonate pour violon & violoncelle",
+  "mbids": [
+   "497c2ee2-54da-42e9-8ac0-8fcad9e0bde0"
+  ],
+  "mapping": "work",
+  "key": "tanguy-497c2ee2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17395,
+  "title": "Trio pour piano, violon et violoncelle",
+  "mbids": [
+   "545491e2-0da0-4608-b11c-cabe8ba3408e"
+  ],
+  "mapping": "work",
+  "key": "tanguy-545491e2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17846,
+  "title": "Towards",
+  "mbids": [
+   "6f462fcb-0c25-418d-891b-d9cb85a00739"
+  ],
+  "mapping": "work",
+  "key": "tanguy-6f462fcb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18244,
+  "title": "Prélude et Rondo",
+  "mbids": [
+   "89c279e8-3d41-4667-a4f0-7526dfeecabf"
+  ],
+  "mapping": "work",
+  "key": "tanguy-89c279e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18329,
+  "title": "Capriccio",
+  "mbids": [
+   "8e7aa1ab-ae13-4f3f-8728-61e663ddc537"
+  ],
+  "mapping": "work",
+  "key": "tanguy-8e7aa1ab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18431,
+  "title": "Deux Études",
+  "mbids": [
+   "94744375-8319-450b-a70f-18add0bf9657"
+  ],
+  "mapping": "work",
+  "key": "tanguy-94744375",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18797,
+  "title": "Wadi",
+  "mbids": [
+   "ab2a50cc-d277-4b89-a449-4431273ca089"
+  ],
+  "mapping": "work",
+  "key": "tanguy-ab2a50cc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18813,
+  "title": "Rhapsodie pour alto et piano",
+  "mbids": [
+   "ac7a621d-d6c5-48b9-a5bd-8e8c77db505a"
+  ],
+  "mapping": "work",
+  "key": "tanguy-ac7a621d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19059,
+  "title": "In a Dream, pour violon et piano",
+  "mbids": [
+   "bcb3497f-0b29-47b7-a1e3-a90f47c71e25"
+  ],
+  "mapping": "work",
+  "key": "tanguy-bcb3497f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19293,
+  "title": "Élégie pour violon",
+  "mbids": [
+   "cb397f6e-875b-44ee-91e8-60270ac63f1c"
+  ],
+  "mapping": "work",
+  "key": "tanguy-cb397f6e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19302,
+  "title": "Trois esquisses",
+  "mbids": [
+   "cbceab7e-58bc-4643-af2d-5641af35582e"
+  ],
+  "mapping": "work",
+  "key": "tanguy-cbceab7e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19535,
+  "title": "Descendues des étoiles",
+  "mbids": [
+   "dbc4ac4e-25ce-4a5c-a824-a1426a454bf2"
+  ],
+  "mapping": "work",
+  "key": "tanguy-dbc4ac4e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19689,
+  "title": "Mélancolie",
+  "mbids": [
+   "e6874c47-2345-42ee-a174-027c0f019f08"
+  ],
+  "mapping": "work",
+  "key": "tanguy-e6874c47",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19898,
+  "title": "Nachtmusik, pour piano seul",
+  "mbids": [
+   "f438c0fb-a144-4a09-8dd1-2bcb645b858f"
+  ],
+  "mapping": "work",
+  "key": "tanguy-f438c0fb",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

@@ -1,0 +1,338 @@
+[
+ {
+  "pieceId": 7514,
+  "title": "Le Toréador",
+  "mbids": [
+   "6b2280f9-c89a-4d8d-98c0-845cbe5b765d"
+  ],
+  "mapping": "work",
+  "key": "adam-6b2280f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7528,
+  "title": "Le postillon de Lonjumeau",
+  "mbids": [
+   "7c18fd9c-0cf0-4ba6-ab28-0170f2374359"
+  ],
+  "mapping": "work",
+  "key": "adam-7c18fd9c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8078,
+  "title": "Le Corsaire: Act III. Action",
+  "mbids": [
+   "1736a95c-c961-4bf3-90d3-02791aba4aea"
+  ],
+  "mapping": "work",
+  "key": "adam-1736a95c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9239,
+  "title": "La Poupée de Nuremberg",
+  "mbids": [
+   "6b763df6-de07-48d4-aeb9-62c7702e7a73"
+  ],
+  "mapping": "work",
+  "key": "adam-6b763df6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9411,
+  "title": "La Filleule des fées",
+  "mbids": [
+   "7731b2db-9cb0-4477-b89f-762b7a4ac8ec"
+  ],
+  "mapping": "work",
+  "key": "adam-7731b2db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10024,
+  "title": "Le Corsaire",
+  "mbids": [
+   "a3185adb-dee5-4286-9e5e-c38ab48fb1db"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10076,
+  "title": "Le Châlet",
+  "mbids": [
+   "a675bb23-63da-46dc-a84c-9bd50a29851a"
+  ],
+  "mapping": "work",
+  "key": "adam-a675bb23",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10506,
+  "title": "Si j'étais roi",
+  "mbids": [
+   "c687d003-3fe5-4920-9380-e8deff3ae95f"
+  ],
+  "mapping": "work",
+  "key": "adam-c687d003",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11009,
+  "title": "La Jolie Fille de Gand",
+  "mbids": [
+   "ec181a01-d23d-4894-85d3-b21f0110a9bc"
+  ],
+  "mapping": "work",
+  "key": "adam-ec181a01",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11279,
+  "title": "Orfa",
+  "mbids": [
+   "fefff7f9-df21-4798-a417-b1a43cc43f64"
+  ],
+  "mapping": "work",
+  "key": "adam-fefff7f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7442,
+  "title": "Cantique de Noël “Minuit chrétiens”",
+  "mbids": [
+   "0e587c69-8ec2-3c66-ae73-c7ed79956af7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7530,
+  "title": "Giselle, ou les Wilis",
+  "mbids": [
+   "7e1b218f-a23b-4150-b7ff-7d842aad5a86"
+  ],
+  "mapping": "work",
+  "key": "adam-7e1b218f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7632,
+  "title": "O helga natt",
+  "mbids": [
+   "681428fa-9095-388d-9500-ad88c7837f0c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7685,
+  "title": "Hellige Natt",
+  "mbids": [
+   "7271988e-7007-43c1-852f-f0c323145dac"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7913,
+  "title": "Ak, svētā nakts",
+  "mbids": [
+   "0beed39e-66d2-4ff1-b9d3-019c2ca6da1f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7934,
+  "title": "Comrades in Arms",
+  "mbids": [
+   "0d895c52-019a-4028-9091-e736a96f15ef"
+  ],
+  "mapping": "work",
+  "key": "adam-0d895c52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8070,
+  "title": "Oh Holy Night",
+  "mbids": [
+   "16ae3183-c97b-4b8c-a78e-ddf682eb9116"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8331,
+  "title": "O Holy Night (Hear the Gospel Story)",
+  "mbids": [
+   "2b7f4864-6cd9-49ec-a2c0-b28a7ca5a076"
+  ],
+  "mapping": "work",
+  "key": "adam-2b7f4864",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8757,
+  "title": "Les Pantins de Violette",
+  "mbids": [
+   "49ff6c9b-150f-4620-acb9-746d455e2cf8"
+  ],
+  "mapping": "work",
+  "key": "adam-49ff6c9b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9070,
+  "title": "Danilowa",
+  "mbids": [
+   "5f146c56-b72a-4002-b169-0b702a4708dc"
+  ],
+  "mapping": "work",
+  "key": "adam-5f146c56",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9150,
+  "title": "Oi, jouluyö",
+  "mbids": [
+   "64400562-dcc1-41e3-8f2e-985c58850e79"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9273,
+  "title": "Fendigaid Nos",
+  "mbids": [
+   "6dcdb748-377d-47e1-b63e-f2cbf9a6d542"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9818,
+  "title": "Giralda ou La Nouvelle Psyché",
+  "mbids": [
+   "9413bc3b-c2f5-4105-b6f3-ac8de177f505"
+  ],
+  "mapping": "work",
+  "key": "adam-9413bc3b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9883,
+  "title": "Comrades’ Song of Hope",
+  "mbids": [
+   "9984a0b0-6915-47e3-acf8-5ce73cb5b949"
+  ],
+  "mapping": "work",
+  "key": "adam-9984a0b0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10049,
+  "title": "Le Farfadet",
+  "mbids": [
+   "a471fe5f-0edd-469f-ae49-e0a667ecb3a4"
+  ],
+  "mapping": "work",
+  "key": "adam-a471fe5f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10217,
+  "title": "Le Bijou perdu",
+  "mbids": [
+   "b05dd161-379d-4001-8b6b-96ac3972eb73"
+  ],
+  "mapping": "work",
+  "key": "adam-b05dd161",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10498,
+  "title": "Le Retour à la montagne",
+  "mbids": [
+   "c5fbe8c0-9362-4cdb-9261-704f54f4dbdc"
+  ],
+  "mapping": "work",
+  "key": "adam-c5fbe8c0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10737,
+  "title": "Giselle, Act II: Apparitions de Myrthe et évocation magique",
+  "mbids": [
+   "d81bc649-17af-49dd-a91f-9cf7bfdeda9b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ }
+]

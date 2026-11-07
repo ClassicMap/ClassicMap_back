@@ -1,0 +1,614 @@
+[
+ {
+  "pieceId": 23121,
+  "title": "Grand Pianola Music",
+  "mbids": [
+   "c7fe1919-35d8-4113-8635-e1885d0ca988"
+  ],
+  "mapping": "work",
+  "key": "john-adams-c7fe1919",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23123,
+  "title": "Hallelujah Junction",
+  "mbids": [
+   "4aa23835-fb54-4ca9-95ef-869a5af7dd51"
+  ],
+  "mapping": "work",
+  "key": "john-adams-4aa23835",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23276,
+  "title": "Lola Montez Does the Spider Dance",
+  "mbids": [
+   "08befc91-7ad9-4ee5-af66-a1d15a814a47"
+  ],
+  "mapping": "work",
+  "key": "john-adams-08befc91",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23287,
+  "title": "Harmonielehre",
+  "mbids": [
+   "09f7a2eb-39e3-4544-ab7f-18fe7ee8c066"
+  ],
+  "mapping": "work",
+  "key": "john-adams-09f7a2eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23385,
+  "title": "Hoodoo Zephyr",
+  "mbids": [
+   "10f39c46-fc12-4fb6-b683-23fca006fb93"
+  ],
+  "mapping": "work",
+  "key": "john-adams-10f39c46",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23702,
+  "title": "My Father Knew Charles Ives",
+  "mbids": [
+   "2ea255e8-8d03-41a4-8604-e02b1e7b8919"
+  ],
+  "mapping": "work",
+  "key": "john-adams-2ea255e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23761,
+  "title": "Phrygian Gates and China Gates",
+  "mbids": [
+   "3488bdde-9047-44e1-bb8f-850fffd1d8c7"
+  ],
+  "mapping": "work",
+  "key": "john-adams-3488bdde",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23778,
+  "title": "Doctor Atomic Symphony",
+  "mbids": [
+   "35f786d0-6799-413a-95a1-b70eabc1da73"
+  ],
+  "mapping": "work",
+  "key": "john-adams-35f786d0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23970,
+  "title": "Slonimsky's Earbox",
+  "mbids": [
+   "47df034d-3242-470d-8524-f620c29da684"
+  ],
+  "mapping": "work",
+  "key": "john-adams-47df034d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24060,
+  "title": "Tromba lontana",
+  "mbids": [
+   "515039f5-3d6e-328b-9cd8-ae88814bc5b9"
+  ],
+  "mapping": "work",
+  "key": "john-adams-515039f5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24118,
+  "title": "Fellow Traveller",
+  "mbids": [
+   "56ac67bb-8ac0-4665-b609-6b822c8aef48"
+  ],
+  "mapping": "work",
+  "key": "john-adams-56ac67bb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24271,
+  "title": "Road Movies",
+  "mbids": [
+   "65269603-ddda-4459-b103-707bdaa4705c"
+  ],
+  "mapping": "work",
+  "key": "john-adams-65269603",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24332,
+  "title": "Absolute Jest",
+  "mbids": [
+   "6ab33246-7134-438f-81f7-44af44c8e21b"
+  ],
+  "mapping": "work",
+  "key": "john-adams-6ab33246",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24346,
+  "title": "John’s Book of Alleged Dances",
+  "mbids": [
+   "6c489925-4ce7-41ec-8014-7058e65f52a1"
+  ],
+  "mapping": "work",
+  "key": "john-adams-6c489925",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24385,
+  "title": "The Dharma at Big Sur",
+  "mbids": [
+   "6f05bdff-7f9e-4a13-abbe-207ffb13286f"
+  ],
+  "mapping": "work",
+  "key": "john-adams-6f05bdff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24503,
+  "title": "The Gospel According to the Other Mary",
+  "mbids": [
+   "78ed7588-8a1d-4c91-9009-1bcfdb3ca5ac"
+  ],
+  "mapping": "work",
+  "key": "john-adams-78ed7588",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24533,
+  "title": "El Niño",
+  "mbids": [
+   "7bbd050b-ef8f-467a-8069-2fe0b5c62b8e"
+  ],
+  "mapping": "work",
+  "key": "john-adams-7bbd050b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24537,
+  "title": "I Was Looking at the Ceiling and Then I Saw the Sky",
+  "mbids": [
+   "7bd901de-9d86-4abe-9518-96a64c97baca"
+  ],
+  "mapping": "work",
+  "key": "john-adams-7bd901de",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24577,
+  "title": "The Death of Klinghoffer",
+  "mbids": [
+   "7f18b122-8b34-4d1a-ba95-951f6607b9d3"
+  ],
+  "mapping": "work",
+  "key": "john-adams-7f18b122",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24602,
+  "title": "Nixon in China",
+  "mbids": [
+   "815168ca-d455-4268-ac04-daba34c8cd95"
+  ],
+  "mapping": "work",
+  "key": "john-adams-815168ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24663,
+  "title": "Guide to Strange Places",
+  "mbids": [
+   "86779a66-ae55-474d-affe-afbea2bb09e1"
+  ],
+  "mapping": "work",
+  "key": "john-adams-86779a66",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24683,
+  "title": "Chamber Symphony",
+  "mbids": [
+   "88f739f5-2155-4644-ae8b-8a1bac09d8ab"
+  ],
+  "mapping": "work",
+  "key": "john-adams-88f739f5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24708,
+  "title": "Scheherazade.2",
+  "mbids": [
+   "8b6fb9af-de28-4c4c-9ab8-746fc645653b"
+  ],
+  "mapping": "work",
+  "key": "john-adams-8b6fb9af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24712,
+  "title": "Lollapalooza",
+  "mbids": [
+   "8bb9fc06-8504-4c0e-8353-f1be276db890"
+  ],
+  "mapping": "work",
+  "key": "john-adams-8bb9fc06",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24875,
+  "title": "Harmonium",
+  "mbids": [
+   "99bb8262-e9dc-4f53-84a1-adce5983993c"
+  ],
+  "mapping": "work",
+  "key": "john-adams-99bb8262",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24953,
+  "title": "Gnarly Buttons",
+  "mbids": [
+   "9fd46c70-4449-43db-bc0a-45744e87c7c9"
+  ],
+  "mapping": "work",
+  "key": "john-adams-9fd46c70",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24958,
+  "title": "Girls of the Golden West",
+  "mbids": [
+   "a00a53ac-4f7e-485a-8176-631e02573145"
+  ],
+  "mapping": "work",
+  "key": "john-adams-a00a53ac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25091,
+  "title": "Must the Devil Have All the Good Tunes?",
+  "mbids": [
+   "ab5d8f75-a7c6-4cca-a1c5-5059c0385bfb"
+  ],
+  "mapping": "work",
+  "key": "john-adams-ab5d8f75",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25236,
+  "title": "Son of Chamber Symphony",
+  "mbids": [
+   "ba08e788-c1e3-4a1f-b971-9f33c2583abd"
+  ],
+  "mapping": "work",
+  "key": "john-adams-ba08e788",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25269,
+  "title": "Naive and Sentimental Music",
+  "mbids": [
+   "bdbd0789-373e-4c0b-a3a5-a88110215aef"
+  ],
+  "mapping": "work",
+  "key": "john-adams-bdbd0789",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25372,
+  "title": "Century Rolls",
+  "mbids": [
+   "c7c44de7-1263-43d5-8135-281befe50291"
+  ],
+  "mapping": "work",
+  "key": "john-adams-c7c44de7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25419,
+  "title": "Saxophone Concerto",
+  "mbids": [
+   "cc9e0245-26b4-470b-8b8d-ae76e2e8aa79"
+  ],
+  "mapping": "work",
+  "key": "john-adams-cc9e0245",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25607,
+  "title": "El Dorado",
+  "mbids": [
+   "dc8d9dba-3cc0-4d82-9ef1-5170ac84992c"
+  ],
+  "mapping": "work",
+  "key": "john-adams-dc8d9dba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25699,
+  "title": "Fearful Symmetries",
+  "mbids": [
+   "e57707cb-78d2-493c-857d-df5c49e35c97"
+  ],
+  "mapping": "work",
+  "key": "john-adams-e57707cb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25732,
+  "title": "Doctor Atomic",
+  "mbids": [
+   "e7d55bc3-a25b-480b-a6b1-079d1c7b1c0a"
+  ],
+  "mapping": "work",
+  "key": "john-adams-e7d55bc3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25737,
+  "title": "The Wound-Dresser",
+  "mbids": [
+   "e85ceede-1a4d-41d9-96bc-ec648eb225f3"
+  ],
+  "mapping": "work",
+  "key": "john-adams-e85ceede",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25766,
+  "title": "City Noir",
+  "mbids": [
+   "eb09ad0b-6035-475b-97b6-9d92ee6f0cd0"
+  ],
+  "mapping": "work",
+  "key": "john-adams-eb09ad0b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25939,
+  "title": "A Flowering Tree",
+  "mbids": [
+   "fa7eaee5-c29d-4abf-bb14-ebe47f10b056"
+  ],
+  "mapping": "work",
+  "key": "john-adams-fa7eaee5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 26023,
+  "title": "Short Ride in a Fast Machine",
+  "mbids": [
+   "e82fee2a-3d58-3f52-b681-3853cdb8b629"
+  ],
+  "mapping": "work",
+  "key": "john-adams-e82fee2a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23069,
+  "title": "On the Transmigration of Souls",
+  "mbids": [
+   "50a09527-f8d5-4b54-bdbf-9289b115eb68"
+  ],
+  "mapping": "work",
+  "key": "john-adams-50a09527",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23084,
+  "title": "The Chairman Dances: Foxtrot for Orchestra",
+  "mbids": [
+   "8c683c07-1798-354a-9a4e-26a7c0482e9f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23285,
+  "title": "Scratchband",
+  "mbids": [
+   "09b1e5b7-6881-4348-9ee0-ac151925fe76"
+  ],
+  "mapping": "work",
+  "key": "john-adams-09b1e5b7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23417,
+  "title": "I Still Play",
+  "mbids": [
+   "13d293aa-8752-4d59-8d6f-c5a6e1715373"
+  ],
+  "mapping": "work",
+  "key": "john-adams-13d293aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23433,
+  "title": "Light Over Water: The Genesis of a Music",
+  "mbids": [
+   "15798b8f-0f2a-4b88-be60-bbacd76668c2"
+  ],
+  "mapping": "work",
+  "key": "john-adams-15798b8f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23520,
+  "title": "Common Tones in Simple Time",
+  "mbids": [
+   "1c47ea47-c645-4e01-8300-a894ac5088ee"
+  ],
+  "mapping": "work",
+  "key": "john-adams-1c47ea47",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23853,
+  "title": "City Noir: Boulevard Night",
+  "mbids": [
+   "3c9f7d23-9f77-4715-84e5-d03a33bd06f4"
+  ],
+  "mapping": "work",
+  "key": "john-adams-3c9f7d23",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24088,
+  "title": "American Standard",
+  "mbids": [
+   "53ff80c6-8921-4917-9895-9258e6fc5464"
+  ],
+  "mapping": "work",
+  "key": "john-adams-53ff80c6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24497,
+  "title": "American Berserk",
+  "mbids": [
+   "786b6ad8-bf64-42d6-b09d-5a35f2d301a7"
+  ],
+  "mapping": "work",
+  "key": "john-adams-786b6ad8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25769,
+  "title": "City Noir: The City and Its Double",
+  "mbids": [
+   "eb3322ce-fecd-4358-9518-8e3b76a276fa"
+  ],
+  "mapping": "work",
+  "key": "john-adams-eb3322ce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25830,
+  "title": "City Noir: The Song Is for You",
+  "mbids": [
+   "f132a119-d878-4021-b347-334108404ccd"
+  ],
+  "mapping": "work",
+  "key": "john-adams-f132a119",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25926,
+  "title": "Eros Piano",
+  "mbids": [
+   "f90fc543-5e2a-4628-9593-5474c28d5996"
+  ],
+  "mapping": "work",
+  "key": "john-adams-f90fc543",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

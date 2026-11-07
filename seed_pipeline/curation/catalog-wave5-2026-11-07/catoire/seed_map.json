@@ -1,0 +1,434 @@
+[
+ {
+  "pieceId": 16059,
+  "title": "Opus 256A",
+  "mbids": [
+   "0459fe36-409e-43a5-8926-01ecf377777d"
+  ],
+  "mapping": "work",
+  "key": "catoire-0459fe36",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16219,
+  "title": "Opus 207",
+  "mbids": [
+   "0d622105-cf4d-4226-83bd-9de225effd03"
+  ],
+  "mapping": "work",
+  "key": "catoire-0d622105",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16287,
+  "title": "Requiem, op. 573",
+  "mbids": [
+   "1136b7d9-b0b0-40bd-bcae-1f35641036ce"
+  ],
+  "mapping": "work",
+  "key": "catoire-1136b7d9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16476,
+  "title": "Opus 303 ter",
+  "mbids": [
+   "1bb07c71-83c0-44f4-8337-708ab6c1d9aa"
+  ],
+  "mapping": "work",
+  "key": "catoire-1bb07c71",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16541,
+  "title": "Requiem Antiphons, op. 195",
+  "mbids": [
+   "20207c3a-672c-4ec7-bfe3-fe900bd10474"
+  ],
+  "mapping": "work",
+  "key": "catoire-20207c3a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16592,
+  "title": "Opus 162",
+  "mbids": [
+   "23bedc1e-256d-456e-b28f-cb536f394d01"
+  ],
+  "mapping": "work",
+  "key": "catoire-23bedc1e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16725,
+  "title": "Opus 410",
+  "mbids": [
+   "2bed5add-2ac9-4f0b-8d42-8d2cea6ae298"
+  ],
+  "mapping": "work",
+  "key": "catoire-2bed5add",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17269,
+  "title": "Sonata for Clarinet and Piano no. 3, op. 445",
+  "mbids": [
+   "4bc2f30e-bfb8-43fe-bb1d-4de75718a6cb"
+  ],
+  "mapping": "work",
+  "key": "catoire-4bc2f30e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17364,
+  "title": "Opus 283",
+  "mbids": [
+   "53052b9d-ab8b-49cb-921c-c09d761e1c09"
+  ],
+  "mapping": "work",
+  "key": "catoire-53052b9d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17408,
+  "title": "Piano Sonata 9, op. 204",
+  "mbids": [
+   "54fff4b0-d085-42fd-a41f-6a3e6a774e71"
+  ],
+  "mapping": "work",
+  "key": "catoire-54fff4b0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17487,
+  "title": "Opus 164",
+  "mbids": [
+   "59a2c789-f626-4d35-864d-0e301f603c57"
+  ],
+  "mapping": "work",
+  "key": "catoire-59a2c789",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17657,
+  "title": "Opus 296A",
+  "mbids": [
+   "645c7289-fa33-4c39-947c-8178c76608fb"
+  ],
+  "mapping": "work",
+  "key": "catoire-645c7289",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17676,
+  "title": "Opus 321",
+  "mbids": [
+   "65a4fc8c-fdc7-490b-9249-75e4ee526cce"
+  ],
+  "mapping": "work",
+  "key": "catoire-65a4fc8c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17704,
+  "title": "Sonata for Flute and Piano no. 7, op. 301",
+  "mbids": [
+   "6726ac1e-ae89-4c9e-921a-a5bea1b0b3cc"
+  ],
+  "mapping": "work",
+  "key": "catoire-6726ac1e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17737,
+  "title": "Opus 157",
+  "mbids": [
+   "68fb0625-ab74-489b-943c-aa36611cea9a"
+  ],
+  "mapping": "work",
+  "key": "catoire-68fb0625",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17973,
+  "title": "Organ Sonata 10, op. 277",
+  "mbids": [
+   "777cdbfd-a995-4a85-93d6-aea4c18eef7e"
+  ],
+  "mapping": "work",
+  "key": "catoire-777cdbfd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18196,
+  "title": "Opus 322",
+  "mbids": [
+   "864f6134-28be-4d32-a433-122a28eff2e4"
+  ],
+  "mapping": "work",
+  "key": "catoire-864f6134",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18296,
+  "title": "Opus 320",
+  "mbids": [
+   "8ca762b0-2cea-491c-8400-225f6f9520cf"
+  ],
+  "mapping": "work",
+  "key": "catoire-8ca762b0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18538,
+  "title": "Interludes for Organ, op. 84",
+  "mbids": [
+   "9b1a82aa-cd04-4935-9fb5-c79c1cee4471"
+  ],
+  "mapping": "work",
+  "key": "catoire-9b1a82aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18568,
+  "title": "Opus 318",
+  "mbids": [
+   "9cfa23b5-2dde-46cd-9b6e-855843c8bf54"
+  ],
+  "mapping": "work",
+  "key": "catoire-9cfa23b5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18753,
+  "title": "Opus 504 ter",
+  "mbids": [
+   "a886c44d-3b1e-4811-b99d-6664acebf89c"
+  ],
+  "mapping": "work",
+  "key": "catoire-a886c44d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18945,
+  "title": "Opus 210",
+  "mbids": [
+   "b4add294-dfa7-4937-9987-207e42c8d3f1"
+  ],
+  "mapping": "work",
+  "key": "catoire-b4add294",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18999,
+  "title": "Opus 546",
+  "mbids": [
+   "b89e560d-3709-49fe-85b3-d03e2fc9014f"
+  ],
+  "mapping": "work",
+  "key": "catoire-b89e560d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19076,
+  "title": "Opus 137",
+  "mbids": [
+   "bdf7492c-fe8a-425a-8683-42543b2c00bd"
+  ],
+  "mapping": "work",
+  "key": "catoire-bdf7492c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19085,
+  "title": "Opus 427",
+  "mbids": [
+   "be50a383-991c-4b71-a446-df5538648a6d"
+  ],
+  "mapping": "work",
+  "key": "catoire-be50a383",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19190,
+  "title": "Opus 134A",
+  "mbids": [
+   "c4d3688d-14b9-46ec-9ddc-61b0ee693c97"
+  ],
+  "mapping": "work",
+  "key": "catoire-c4d3688d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19337,
+  "title": "Opus 211",
+  "mbids": [
+   "ce67a85f-7b56-4ec5-9f04-cab024491e31"
+  ],
+  "mapping": "work",
+  "key": "catoire-ce67a85f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19420,
+  "title": "Opus 319",
+  "mbids": [
+   "d3a03c9d-6440-4cc2-ae2c-f2b67b26242c"
+  ],
+  "mapping": "work",
+  "key": "catoire-d3a03c9d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19429,
+  "title": "Opus 520",
+  "mbids": [
+   "d4258589-5a7c-41b7-a9a0-d71a15272af5"
+  ],
+  "mapping": "work",
+  "key": "catoire-d4258589",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19487,
+  "title": "Opus 312",
+  "mbids": [
+   "d83364b0-c2ad-40c1-a4db-17a0363e51bf"
+  ],
+  "mapping": "work",
+  "key": "catoire-d83364b0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19531,
+  "title": "Opus 154",
+  "mbids": [
+   "db876a4b-9a40-4e3c-a32a-c539533d2886"
+  ],
+  "mapping": "work",
+  "key": "catoire-db876a4b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19726,
+  "title": "Piano Sonata 15, op. 224",
+  "mbids": [
+   "e9e35387-4b39-473e-84d6-7321ddc55167"
+  ],
+  "mapping": "work",
+  "key": "catoire-e9e35387",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19731,
+  "title": "Opus 206",
+  "mbids": [
+   "ea1f6514-a0ce-458d-bbdb-3404bec9a8b5"
+  ],
+  "mapping": "work",
+  "key": "catoire-ea1f6514",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19787,
+  "title": "Opus 278",
+  "mbids": [
+   "ee01553a-9b5a-426f-9837-1a79e6da3f7a"
+  ],
+  "mapping": "work",
+  "key": "catoire-ee01553a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19797,
+  "title": "Opus 163",
+  "mbids": [
+   "ee47a32e-7fbb-4b47-9806-09a3853e9683"
+  ],
+  "mapping": "work",
+  "key": "catoire-ee47a32e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19852,
+  "title": "Piano Sonata 10, op. 205",
+  "mbids": [
+   "f1df2e91-6428-428e-85d5-e6097262a71f"
+  ],
+  "mapping": "work",
+  "key": "catoire-f1df2e91",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

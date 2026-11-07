@@ -1,0 +1,350 @@
+[
+ {
+  "pieceId": 16129,
+  "title": "City Scape",
+  "mbids": [
+   "0812b4f0-702e-42d0-bba7-ed2e125f6727"
+  ],
+  "mapping": "work",
+  "key": "higdon-0812b4f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17952,
+  "title": "Low Brass Concerto",
+  "mbids": [
+   "75c6c1cf-b727-45de-ac3e-1c63f8b0d413"
+  ],
+  "mapping": "work",
+  "key": "higdon-75c6c1cf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18103,
+  "title": "On a Wire",
+  "mbids": [
+   "7f553dfc-3849-4084-bb65-cc3f876b0df4"
+  ],
+  "mapping": "work",
+  "key": "higdon-7f553dfc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18154,
+  "title": "Cold Mountain",
+  "mbids": [
+   "830be10e-d0ba-4563-9e3c-a5c71bf51119"
+  ],
+  "mapping": "work",
+  "key": "higdon-830be10e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18379,
+  "title": "Percussion Concerto",
+  "mbids": [
+   "916516a8-3d3d-47f7-811f-a508e886a02b"
+  ],
+  "mapping": "work",
+  "key": "higdon-916516a8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18829,
+  "title": "All Things Majestic",
+  "mbids": [
+   "ad987673-f219-4205-8802-35b74d5ce8db"
+  ],
+  "mapping": "work",
+  "key": "higdon-ad987673",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19373,
+  "title": "Piano Trio",
+  "mbids": [
+   "d0d9726a-9852-4594-b753-228b181e2979"
+  ],
+  "mapping": "work",
+  "key": "higdon-d0d9726a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19462,
+  "title": "Duo Duel",
+  "mbids": [
+   "d6b1bf26-b475-4763-8414-81151bfa3200"
+  ],
+  "mapping": "work",
+  "key": "higdon-d6b1bf26",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19900,
+  "title": "Impressions",
+  "mbids": [
+   "f466b0f3-109f-43f7-81d1-7308e5fe40bd"
+  ],
+  "mapping": "work",
+  "key": "higdon-f466b0f3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16092,
+  "title": "Concerto 4-3",
+  "mbids": [
+   "05eed92e-bcbd-4ba3-b409-d218b12a783d"
+  ],
+  "mapping": "work",
+  "key": "higdon-05eed92e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16319,
+  "title": "Echo Dash",
+  "mbids": [
+   "13008ab6-4cfe-4762-84a7-37e7d69e5b07"
+  ],
+  "mapping": "work",
+  "key": "higdon-13008ab6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16626,
+  "title": "Harp Concerto",
+  "mbids": [
+   "25e2a900-27da-4c3e-84f9-15ae689d64ad"
+  ],
+  "mapping": "work",
+  "key": "higdon-25e2a900",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17340,
+  "title": "String Trio",
+  "mbids": [
+   "51107b4d-f3f6-46bc-aa91-321a2315b550"
+  ],
+  "mapping": "work",
+  "key": "higdon-51107b4d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17579,
+  "title": "running the edgE",
+  "mbids": [
+   "5f93e3a6-7a7e-44c9-b72e-355f5f3a90ee"
+  ],
+  "mapping": "work",
+  "key": "higdon-5f93e3a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17792,
+  "title": "Dark Wood",
+  "mbids": [
+   "6c5a2403-e714-4986-8d35-69beb947deed"
+  ],
+  "mapping": "work",
+  "key": "higdon-6c5a2403",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18014,
+  "title": "String Poetic",
+  "mbids": [
+   "79fec2eb-9fc5-4b31-8e11-9fe50bbfb203"
+  ],
+  "mapping": "work",
+  "key": "higdon-79fec2eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18088,
+  "title": "Legacy",
+  "mbids": [
+   "7e0ff6b4-26c1-407d-9c15-30047ec3bbef"
+  ],
+  "mapping": "work",
+  "key": "higdon-7e0ff6b4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18393,
+  "title": "Splendid Wood",
+  "mbids": [
+   "92092f42-5c76-4c56-a10b-d40523088673"
+  ],
+  "mapping": "work",
+  "key": "higdon-92092f42",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18636,
+  "title": "Fanfare ritmico",
+  "mbids": [
+   "a1813f8b-1130-4708-9565-b7200292e689"
+  ],
+  "mapping": "work",
+  "key": "higdon-a1813f8b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18803,
+  "title": "rapid*fire",
+  "mbids": [
+   "ab90e9e8-007b-42e8-9568-3db835983255"
+  ],
+  "mapping": "work",
+  "key": "higdon-ab90e9e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18828,
+  "title": "Loco",
+  "mbids": [
+   "ad742d3a-dbc7-4125-9114-cb4b9afd8676"
+  ],
+  "mapping": "work",
+  "key": "higdon-ad742d3a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18868,
+  "title": "Sky Quartet",
+  "mbids": [
+   "b00a8a35-085b-4326-9bcd-d48361d7c462"
+  ],
+  "mapping": "work",
+  "key": "higdon-b00a8a35",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18916,
+  "title": "Dance Card",
+  "mbids": [
+   "b32e3264-3835-43e6-b4b6-bee0cc489d56"
+  ],
+  "mapping": "work",
+  "key": "higdon-b32e3264",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19148,
+  "title": "blue cathedral",
+  "mbids": [
+   "c240e4fd-8c02-4371-9c23-5fbfda129985"
+  ],
+  "mapping": "work",
+  "key": "higdon-c240e4fd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19250,
+  "title": "Sonata for Viola and Piano",
+  "mbids": [
+   "c8cffeb9-7fc0-4916-88ff-11f2616cd47a"
+  ],
+  "mapping": "work",
+  "key": "higdon-c8cffeb9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19517,
+  "title": "Amazing Grace",
+  "mbids": [
+   "da7a03d9-5ce5-4be7-a9e1-34152f867a0e"
+  ],
+  "mapping": "work",
+  "key": "higdon-da7a03d9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19604,
+  "title": "On the Death of the Righteous",
+  "mbids": [
+   "e0914f4a-2b90-4cb5-970e-d49a0d4d3948"
+  ],
+  "mapping": "work",
+  "key": "higdon-e0914f4a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19612,
+  "title": "Zaka",
+  "mbids": [
+   "e0e2f3a1-c797-4a6b-923f-614d9ba3b327"
+  ],
+  "mapping": "work",
+  "key": "higdon-e0e2f3a1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19712,
+  "title": "Dooryard Bloom",
+  "mbids": [
+   "e89bd268-980c-44db-8717-c4dee7498a1e"
+  ],
+  "mapping": "work",
+  "key": "higdon-e89bd268",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

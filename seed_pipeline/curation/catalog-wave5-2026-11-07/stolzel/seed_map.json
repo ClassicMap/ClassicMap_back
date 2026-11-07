@@ -1,0 +1,518 @@
+[
+ {
+  "pieceId": 15791,
+  "title": "Aria, BWV 508 “Bist du bei mir”",
+  "mbids": [
+   "89fb55bf-8822-3f4c-8cd3-4f8a7ce020a1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "excluded_scope",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 24463,
+  "title": "Serenata \"Alles, was sonst lieblich heißet\"",
+  "mbids": [
+   "7564f8d7-31ea-46e4-80a0-76b4b4435d59"
+  ],
+  "mapping": "work",
+  "key": "stolzel-7564f8d7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24641,
+  "title": "Bist du bei mir, BWV 508 from the Notebook of Anna Magdalena Bach",
+  "mbids": [
+   "84c16f63-5352-4e87-b591-169cfe9172ed"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 25189,
+  "title": "Concerto grosso a quattro Chori",
+  "mbids": [
+   "b5924885-d23e-4eaa-8e68-fd37f4f45998"
+  ],
+  "mapping": "work",
+  "key": "stolzel-b5924885",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23094,
+  "title": "Kantate (Aria), BWV 200 \"Bekennen will ich seinen Namen\"",
+  "mbids": [
+   "c985d8fc-f98a-407d-b65c-557598b0fde1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23380,
+  "title": "Er heisset Friedefürst, H. 103",
+  "mbids": [
+   "10bd195d-88fd-4449-aa42-a43d020e492b"
+  ],
+  "mapping": "work",
+  "key": "stolzel-10bd195d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23450,
+  "title": "Kann die Liebe auch erfreuen, H. WK A 18",
+  "mbids": [
+   "16676fb0-3c24-4f61-9c7e-e458bff31df4"
+  ],
+  "mapping": "work",
+  "key": "stolzel-16676fb0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23688,
+  "title": "Ihr stillen Seufzer, gehet, H. WK A 20",
+  "mbids": [
+   "2c8da15d-1205-4d12-af2b-226cb599a6ae"
+  ],
+  "mapping": "work",
+  "key": "stolzel-2c8da15d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23716,
+  "title": "Wir haben ein festes prophetisches Wort",
+  "mbids": [
+   "3016a637-840c-41c7-8ddb-f46e1af7bf27"
+  ],
+  "mapping": "work",
+  "key": "stolzel-3016a637",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23782,
+  "title": "Das Ende eines Dinges ist besser denn sein Anfang, H. 45",
+  "mbids": [
+   "369b157f-e990-4820-8686-355e8c399197"
+  ],
+  "mapping": "work",
+  "key": "stolzel-369b157f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23796,
+  "title": "Flieht, ihr Schaffe, flieht von hinnen, H. WK A 22",
+  "mbids": [
+   "3756042e-4a75-4ce1-b5d6-4b885f6273f6"
+  ],
+  "mapping": "work",
+  "key": "stolzel-3756042e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23921,
+  "title": "So denn ihr, die ihr arg seid, H. 157",
+  "mbids": [
+   "43767632-afd8-47fc-b392-4a07ca97618b"
+  ],
+  "mapping": "work",
+  "key": "stolzel-43767632",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23941,
+  "title": "Die Grausame, doch schone Sylvia, H. WK A 13",
+  "mbids": [
+   "44d16513-a618-470a-afbf-1e9294a602cf"
+  ],
+  "mapping": "work",
+  "key": "stolzel-44d16513",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23992,
+  "title": "Partita di Signore Steltzeln",
+  "mbids": [
+   "4a5c598f-dd76-4f70-b281-17ca381cd999"
+  ],
+  "mapping": "work",
+  "key": "stolzel-4a5c598f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24015,
+  "title": "Daran ist erschienen die Liebe Gottes gegen uns, H. 150",
+  "mbids": [
+   "4cf79fd8-f92a-47de-9733-b3045135d12c"
+  ],
+  "mapping": "work",
+  "key": "stolzel-4cf79fd8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24129,
+  "title": "Ihr sollt nicht wähnen, H. 34",
+  "mbids": [
+   "57b5fc6b-dfaf-4a04-a7da-8f71fed10560"
+  ],
+  "mapping": "work",
+  "key": "stolzel-57b5fc6b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24304,
+  "title": "Ach, daß die Hülfe aus Zion über Israel käme, H. 27",
+  "mbids": [
+   "683c11d4-56c2-4d39-bf81-734eb536ace4"
+  ],
+  "mapping": "work",
+  "key": "stolzel-683c11d4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24564,
+  "title": "Ich bin es schon gewohnt, H. WK A 21",
+  "mbids": [
+   "7e038961-887d-4e59-9079-b5750b223f19"
+  ],
+  "mapping": "work",
+  "key": "stolzel-7e038961",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24657,
+  "title": "Serenata, \"Seid willkommen, schöne Stunden\"",
+  "mbids": [
+   "85c21678-a5af-4ba3-a772-a637dd7bca2c"
+  ],
+  "mapping": "work",
+  "key": "stolzel-85c21678",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24728,
+  "title": "Ehre sei Gott in der Höhe, H. 28",
+  "mbids": [
+   "8d2d05e5-e02a-4ebe-8b80-7be5ab55d0f4"
+  ],
+  "mapping": "work",
+  "key": "stolzel-8d2d05e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24745,
+  "title": "Der arme Sylvio, H. WK A 19",
+  "mbids": [
+   "8e3fa7d0-4549-48e1-8243-0fa6ee8fab2d"
+  ],
+  "mapping": "work",
+  "key": "stolzel-8e3fa7d0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24779,
+  "title": "Die Rose bleibt der Blumen Konigin, H. WK A 15",
+  "mbids": [
+   "9201b67a-5dcc-44e4-b3ae-6bed6965a3c5"
+  ],
+  "mapping": "work",
+  "key": "stolzel-9201b67a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24840,
+  "title": "Wollte Gott, dass alle das Volk, H. 151",
+  "mbids": [
+   "96c090d6-2d1c-460e-9833-55eb67f1b045"
+  ],
+  "mapping": "work",
+  "key": "stolzel-96c090d6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24900,
+  "title": "Nur vor euch, ihr schonsten Augen, H. WK A 16",
+  "mbids": [
+   "9c21f89f-acfa-4144-838e-2946598ea52d"
+  ],
+  "mapping": "work",
+  "key": "stolzel-9c21f89f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24954,
+  "title": "Siehe da, eine Hütte Gottes, H. 144",
+  "mbids": [
+   "9fe0bfbd-6aa0-4917-a264-39ba29ea05e9"
+  ],
+  "mapping": "work",
+  "key": "stolzel-9fe0bfbd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25003,
+  "title": "Zorn'ge Sterne, laßt mich sterben, H. 26",
+  "mbids": [
+   "a377663d-452e-4fcd-80c4-b258b86dceb0"
+  ],
+  "mapping": "work",
+  "key": "stolzel-a377663d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25006,
+  "title": "Alles, was ihr tut mit Worten oder Werken, H. 48",
+  "mbids": [
+   "a3b26160-9fa9-427d-933f-b88ccd160386"
+  ],
+  "mapping": "work",
+  "key": "stolzel-a3b26160",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25026,
+  "title": "Ja, mein Engel, dieses Herze, H. WK A 24",
+  "mbids": [
+   "a55c3e6c-67ff-4893-8a2b-46ad2fd36c56"
+  ],
+  "mapping": "work",
+  "key": "stolzel-a55c3e6c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25058,
+  "title": "Dies ist der Tag, dies ist dir Stunde, H. WK A 17",
+  "mbids": [
+   "a8be5efe-76ae-4bb5-bce1-2ee91a3b376a"
+  ],
+  "mapping": "work",
+  "key": "stolzel-a8be5efe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25077,
+  "title": "Danksaget dem Vater, der uns tüchtig gemacht hat",
+  "mbids": [
+   "aa5afb10-5a47-49ac-a742-6fa005f0025a"
+  ],
+  "mapping": "work",
+  "key": "stolzel-aa5afb10",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25101,
+  "title": "Von dem Einfluß zweier Sternen, H. WK A 27",
+  "mbids": [
+   "ac67f8d3-9ffa-4757-8acd-3228de6c6883"
+  ],
+  "mapping": "work",
+  "key": "stolzel-ac67f8d3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25137,
+  "title": "Brockes Passion",
+  "mbids": [
+   "af816b62-d593-43fc-9321-2461c3ee6988"
+  ],
+  "mapping": "work",
+  "key": "stolzel-af816b62",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25301,
+  "title": "Arie, BWV 508 „Bist Du bei mir“",
+  "mbids": [
+   "c0af0f80-3661-35d4-9477-6264ac0ebefc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 25364,
+  "title": "Lehre mich tun nach deinem Wohlgefallen, H. 156",
+  "mbids": [
+   "c6e53b8f-804b-4cfe-af3e-62c871a5427a"
+  ],
+  "mapping": "work",
+  "key": "stolzel-c6e53b8f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25411,
+  "title": "Aurora Weinete, H. WK A 12",
+  "mbids": [
+   "cb51c5a9-3964-41a2-91d0-7ce6c201445c"
+  ],
+  "mapping": "work",
+  "key": "stolzel-cb51c5a9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25457,
+  "title": "Ich sehe den Himmel offen, H. 33",
+  "mbids": [
+   "d06f65ce-1cd3-4059-af96-ccdcace998dc"
+  ],
+  "mapping": "work",
+  "key": "stolzel-d06f65ce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25680,
+  "title": "Trumpet Concerto in D major",
+  "mbids": [
+   "e3cd23fa-886f-4e7d-99a0-3f02aa196f5a"
+  ],
+  "mapping": "work",
+  "key": "stolzel-e3cd23fa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25759,
+  "title": "Das Alte ist vergangen, H. 44",
+  "mbids": [
+   "ea6c1e48-f158-49a5-a3b1-b075f075cb0c"
+  ],
+  "mapping": "work",
+  "key": "stolzel-ea6c1e48",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25780,
+  "title": "Zu guter Nacht, ihr stolzen Türme und Paläste, H. WK A 23",
+  "mbids": [
+   "ec485a10-a2cf-4f7f-8d61-69b838a5e36f"
+  ],
+  "mapping": "work",
+  "key": "stolzel-ec485a10",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25791,
+  "title": "Ein Augenblick ist eine kurze Zeit, H. WK A 14",
+  "mbids": [
+   "eda0483e-3fa8-417a-9a76-7a4130fc7db5"
+  ],
+  "mapping": "work",
+  "key": "stolzel-eda0483e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25921,
+  "title": "Werdet voll Geistes, H. 147",
+  "mbids": [
+   "f861fe41-c039-4dac-9461-724d3163116c"
+  ],
+  "mapping": "work",
+  "key": "stolzel-f861fe41",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25964,
+  "title": "Kündlich groß ist das gottselige Geheimnis, H. 41",
+  "mbids": [
+   "fc9ce255-4905-4729-903b-69c4bd791d4d"
+  ],
+  "mapping": "work",
+  "key": "stolzel-fc9ce255",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25991,
+  "title": "Ihr Augen, laßt den Tränenbächen, H. WK A 25",
+  "mbids": [
+   "fe57cfe9-514c-4adf-a258-8215a1334216"
+  ],
+  "mapping": "work",
+  "key": "stolzel-fe57cfe9",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]
