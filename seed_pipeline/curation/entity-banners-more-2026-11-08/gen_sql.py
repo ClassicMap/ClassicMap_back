@@ -1,4 +1,5 @@
-"""banners.jsonl 로 migrations/202611082001_fill_more_entity_banners.sql 을 만든다.
+"""banners.jsonl → migrations/202611082001_fill_more_entity_banners.sql,
+banners-sa.jsonl → migrations/202611082002_fill_sa_composer_banners.sql 을 만든다.
 
 스포티파이 머리 그림이 없는 작곡가·연주자에게 다른 곳의 배너를 넣는다. 한 줄 = 한 사람.
   kind: 'artist' | 'composer', id: 그 표의 id, name: 확인용 이름,
@@ -13,7 +14,7 @@ import os
 import re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, '..', '..', '..', 'migrations', '202611082001_fill_more_entity_banners.sql')
+MIGRATIONS = os.path.join(HERE, '..', '..', '..', 'migrations')
 TABLES = {'artist': 'artists', 'composer': 'composers'}
 FOCAL = re.compile(r'^\d{1,3}% \d{1,3}%$')
 SOURCES = {
@@ -42,40 +43,53 @@ def sql(value):
     return "'" + str(value).replace("\\", "\\\\").replace("'", "''") + "'"
 
 
-rows = [json.loads(line) for line in open(os.path.join(HERE, 'banners.jsonl'), encoding='utf-8') if line.strip()]
+HEADERS = {
+    'banners.jsonl': (
+        '202611082001_fill_more_entity_banners.sql',
+        '-- 스포티파이 머리 그림이 없는 작곡가·연주자의 화면 머리 배너(애플 뮤직·유튜브 뮤직 아티스트 머리 그림, 위키미디어 공용).',
+    ),
+    'banners-sa.jsonl': (
+        '202611082002_fill_sa_composer_banners.sql',
+        '-- 어느 음원 서비스에도 머리 그림이 없던 S·A 작곡가 6명의 화면 머리 배너(위키미디어 공용).',
+    ),
+}
 seen = set()
-out = [
-    '-- 스포티파이 머리 그림이 없는 작곡가·연주자의 화면 머리 배너(애플 뮤직·유튜브 뮤직 아티스트 머리 그림, 위키미디어 공용).',
-    '-- 원본: seed_pipeline/curation/entity-banners-more-2026-11-08/ (gen_sql.py 로 만든다).',
-    '-- 출처 페이지를 함께 밝히고, 권리자가 요청하면 그 줄을 RETIRED 로 내린다.',
-]
-for row in rows:
-    kind, entity_id = row['kind'], int(row['id'])
-    table = TABLES[kind]
-    assert (kind, entity_id) not in seen, row
-    seen.add((kind, entity_id))
-    image_re, source_re, credit = SOURCES[row['source']]
-    assert image_re.match(row['url']), row
-    assert source_re.match(row['sourceUrl']), row
-    assert FOCAL.match(row['focal']), row
-    author = license_name = license_url = None
-    if row['source'] == 'wikimedia':
-        assert FREE_LICENSE.match(row['license']), row
-        author = (row.get('author') or '').strip()[:250] or None
-        license_name = row['license']
-        license_url = row.get('licenseUrl') or None
-        # 지은이를 모르는 공유 저작물은 출처 이름이라도 보이게 한다
-        credit = None if author else 'Wikimedia Commons'
-    out.append(f"-- {kind} {entity_id} {row['name']} ({row['source']})")
-    out.append(
-        f"UPDATE entity_images image JOIN {table} entity ON image.authority_entity_id = entity.authority_entity_id "
-        f"SET image.is_primary = FALSE WHERE entity.id = {entity_id} AND image.image_kind = 'banner' AND image.file_url <> {sql(row['url'])};"
-    )
-    out.append(
-        "INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, author, license, license_url, focal_point, is_primary, editorial_status)\n"
-        f"SELECT entity.authority_entity_id, 'banner', {sql(row['sourceUrl'])}, {sql(row['url'])}, {sql(credit)}, {sql(author)}, {sql(license_name)}, {sql(license_url)}, {sql(row['focal'])}, TRUE, 'PUBLISHED'\n"
-        f"FROM {table} entity WHERE entity.id = {entity_id} AND entity.authority_entity_id IS NOT NULL\n"
-        f"  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = entity.authority_entity_id AND existing.file_url = {sql(row['url'])});"
-    )
-open(OUT, 'w', encoding='utf-8').write('\n'.join(out) + '\n')
-print('rows', len(rows), '->', os.path.relpath(OUT))
+for source_file, (migration, title) in HEADERS.items():
+    with open(os.path.join(HERE, source_file), encoding='utf-8') as handle:
+        rows = [json.loads(line) for line in handle if line.strip()]
+    out = [
+        title,
+        '-- 원본: seed_pipeline/curation/entity-banners-more-2026-11-08/ (gen_sql.py 로 만든다).',
+        '-- 출처 페이지를 함께 밝히고, 권리자가 요청하면 그 줄을 RETIRED 로 내린다.',
+    ]
+    for row in rows:
+        kind, entity_id = row['kind'], int(row['id'])
+        table = TABLES[kind]
+        assert (kind, entity_id) not in seen, row
+        seen.add((kind, entity_id))
+        image_re, source_re, credit = SOURCES[row['source']]
+        assert image_re.match(row['url']), row
+        assert source_re.match(row['sourceUrl']), row
+        assert FOCAL.match(row['focal']), row
+        author = license_name = license_url = None
+        if row['source'] == 'wikimedia':
+            assert FREE_LICENSE.match(row['license']), row
+            author = (row.get('author') or '').strip()[:250] or None
+            license_name = row['license']
+            license_url = row.get('licenseUrl') or None
+            # 지은이를 모르는 공유 저작물은 출처 이름이라도 보이게 한다
+            credit = None if author else 'Wikimedia Commons'
+        out.append(f"-- {kind} {entity_id} {row['name']} ({row['source']})")
+        out.append(
+            f"UPDATE entity_images image JOIN {table} entity ON image.authority_entity_id = entity.authority_entity_id "
+            f"SET image.is_primary = FALSE WHERE entity.id = {entity_id} AND image.image_kind = 'banner' AND image.file_url <> {sql(row['url'])};"
+        )
+        out.append(
+            "INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, author, license, license_url, focal_point, is_primary, editorial_status)\n"
+            f"SELECT entity.authority_entity_id, 'banner', {sql(row['sourceUrl'])}, {sql(row['url'])}, {sql(credit)}, {sql(author)}, {sql(license_name)}, {sql(license_url)}, {sql(row['focal'])}, TRUE, 'PUBLISHED'\n"
+            f"FROM {table} entity WHERE entity.id = {entity_id} AND entity.authority_entity_id IS NOT NULL\n"
+            f"  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = entity.authority_entity_id AND existing.file_url = {sql(row['url'])});"
+        )
+    with open(os.path.join(MIGRATIONS, migration), 'w', encoding='utf-8') as handle:
+        handle.write('\n'.join(out) + '\n')
+    print('rows', len(rows), '->', migration)
