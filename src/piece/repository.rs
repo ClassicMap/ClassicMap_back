@@ -484,7 +484,8 @@ impl PieceRepository {
                     ) AS linked_comparable,
                     linked.spotify_url AS linked_spotify_url,
                     linked.apple_music_url AS linked_apple_music_url,
-                    part.notable AS notable
+                    part.notable AS notable,
+                    part.apple_music_url AS apple_music_url
              FROM piece_parts part
              LEFT JOIN pieces linked ON linked.id = part.linked_piece_id
              WHERE part.piece_id = ?
