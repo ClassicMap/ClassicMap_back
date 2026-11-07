@@ -1,0 +1,662 @@
+[
+ {
+  "pieceId": 16043,
+  "title": "Storie di altre storie",
+  "mbids": [
+   "033e62fe-c99b-490f-a8e5-8e6b54b632bf"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-033e62fe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18199,
+  "title": "Sei capricci per violino solo",
+  "mbids": [
+   "86a22790-495f-4537-8d1c-61d3305c9a22"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-86a22790",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18729,
+  "title": "Infinito nero",
+  "mbids": [
+   "a6e34236-9784-4607-8624-c1daae6c94d3"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-a6e34236",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20043,
+  "title": "Let me die before I wake",
+  "mbids": [
+   "fc3985f9-a0ec-4b36-a605-42003187b1f8"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-fc3985f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20055,
+  "title": "Libro notturno delle voci",
+  "mbids": [
+   "fd33772f-ddbd-4c97-968b-ff307facb57c"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-fd33772f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16013,
+  "title": "Autoritratto nella notte",
+  "mbids": [
+   "01ac4183-63cc-4786-9878-95a0612ec5ff"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-01ac4183",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16625,
+  "title": "Sei quartetti brevi",
+  "mbids": [
+   "25c9277d-b7ba-40e4-afec-f2cb01b85012"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-25c9277d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16705,
+  "title": "Introduzione all'oscuro",
+  "mbids": [
+   "2aea5240-385a-3704-9ca6-898cb22ab2c4"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-2aea5240",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16715,
+  "title": "I fuochi oltre la ragione",
+  "mbids": [
+   "2b709d43-cf0b-4777-8c73-020cf73b6d4e"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-2b709d43",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16727,
+  "title": "Omaggio a Burri",
+  "mbids": [
+   "2c178e52-0dc2-4d78-9ed0-ada979660bad"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-2c178e52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16821,
+  "title": "Recitativo oscuro",
+  "mbids": [
+   "320c1626-f142-47d8-a13c-07f477d3225f"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-320c1626",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17196,
+  "title": "Quartetto no. 8",
+  "mbids": [
+   "4784e31a-0a58-47cf-a870-94a8925acd00"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-4784e31a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17261,
+  "title": "Prima Sonata",
+  "mbids": [
+   "4b95aa20-0a69-4d6f-9a2f-a99a0ddc51aa"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-4b95aa20",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17483,
+  "title": "Vagabonde blu",
+  "mbids": [
+   "5970f633-6087-404b-ade4-7c1f1a5bd7d9"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-5970f633",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17515,
+  "title": "Polveri laterali",
+  "mbids": [
+   "5b6f32c7-0c34-4dda-a220-ecf67d497c47"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-5b6f32c7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17520,
+  "title": "La voce dell'inferno",
+  "mbids": [
+   "5ba08787-0891-4ac6-8b90-f52522e7152d"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-5ba08787",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17567,
+  "title": "Quintetto n°2",
+  "mbids": [
+   "5ee56b93-2e8d-43a7-81c3-68e408582bd3"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-5ee56b93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17667,
+  "title": "Variazione su uno spazio ricurvo",
+  "mbids": [
+   "64d8330f-3dc6-4db5-baf5-4946d9d59a60"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-64d8330f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17736,
+  "title": "Allegoria della notte",
+  "mbids": [
+   "68c5ae97-3dc3-41b3-a04e-dc9c76f091de"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-68c5ae97",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17843,
+  "title": "L'alibi della parola",
+  "mbids": [
+   "6efc2f0f-2c6e-4f6d-9ad4-010d3a6449c1"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-6efc2f0f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17876,
+  "title": "Perduto in una città d'acque",
+  "mbids": [
+   "70a39246-f74b-418c-87a6-e62950401417"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-70a39246",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17878,
+  "title": "Responsorio delle tenebre",
+  "mbids": [
+   "70c5fb51-53b7-4ce2-8042-8a2148c8a0cb"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-70c5fb51",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17988,
+  "title": "Morte di Borromini",
+  "mbids": [
+   "78466cb1-bca2-41c5-b22a-62d7488f7b97"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-78466cb1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18059,
+  "title": "Etude de concert",
+  "mbids": [
+   "7c6f8b7d-0d05-4105-b955-879ac1bdee18"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-7c6f8b7d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18105,
+  "title": "Il tempo con l'obelisco",
+  "mbids": [
+   "7f5d707d-481d-41fe-ab8e-51827f9af4eb"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-7f5d707d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18156,
+  "title": "Come vengono prodotti gli incantesimi?",
+  "mbids": [
+   "835e705a-42f5-4c9b-a446-5f955963f6da"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-835e705a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18219,
+  "title": "Le ragioni delle conchiglie",
+  "mbids": [
+   "88165c8d-2e3d-4c0b-bdee-cdfe5f963ea1"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-88165c8d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18224,
+  "title": "IV Sonata",
+  "mbids": [
+   "88868a96-2650-470f-820d-b52af1a5379b"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-88868a96",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18343,
+  "title": "De la nuit",
+  "mbids": [
+   "8f54435f-05fe-4241-b014-c27325e018fd"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-8f54435f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18390,
+  "title": "Anamorfosi",
+  "mbids": [
+   "91d1bcda-3dde-4ebb-8e89-19896a3e7e64"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-91d1bcda",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18437,
+  "title": "Tre notturni brillanti",
+  "mbids": [
+   "94deb535-5c5f-4806-99b3-978be2495a77"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-94deb535",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18453,
+  "title": "Le voci sottovetro",
+  "mbids": [
+   "95a7808b-a155-4ac1-9992-d881b53962cf"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-95a7808b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18473,
+  "title": "Centauro marino",
+  "mbids": [
+   "972aa4c0-90d5-4c8d-8cdc-7d27a25fa707"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-972aa4c0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18606,
+  "title": "Immagine fenicia",
+  "mbids": [
+   "9fd50d04-8038-4d7f-a3bc-e9898e2c9c6e"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-9fd50d04",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18627,
+  "title": "Il silenzio degli oracoli",
+  "mbids": [
+   "a106d7fe-48d7-4242-ab12-b347d6695847"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-a106d7fe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18664,
+  "title": "Sonata II",
+  "mbids": [
+   "a4094412-a278-46bd-92eb-5b31556b1698"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-a4094412",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18748,
+  "title": "Arioso a 5",
+  "mbids": [
+   "a8184f3b-88bd-4fc1-bc20-abc6357fb450"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-a8184f3b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18883,
+  "title": "Due notturni crudeli",
+  "mbids": [
+   "b14f0582-9192-4652-922a-48fcc56455a5"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-b14f0582",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18889,
+  "title": "Muro d'orizzonte",
+  "mbids": [
+   "b1a36106-8974-4fa0-9ebc-37f526140fe8"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-b1a36106",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18953,
+  "title": "La malinconia",
+  "mbids": [
+   "b51016bd-684a-482f-9217-a462e8c5b2ef"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-b51016bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19083,
+  "title": "Esercizio",
+  "mbids": [
+   "be4c651d-3887-438e-a503-c16f11106719"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-be4c651d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19169,
+  "title": "III Sonata",
+  "mbids": [
+   "c353a99b-e798-4844-9daf-becf9d3c07c4"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-c353a99b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19274,
+  "title": "Codex purpureus",
+  "mbids": [
+   "ca2e7ca0-0fc4-4996-ab3f-d78cdae37018"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-ca2e7ca0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19361,
+  "title": "Lo spazio inverso",
+  "mbids": [
+   "cffd0b51-84ac-4418-b46b-0a503512a689"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-cffd0b51",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19395,
+  "title": "Frammento e Adagio",
+  "mbids": [
+   "d25d3f6f-21c6-4c39-8c30-90cb8722400c"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-d25d3f6f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19425,
+  "title": "De o de do",
+  "mbids": [
+   "d3fc28ff-da40-4027-969e-b69ae20e5bc8"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-d3fc28ff",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19522,
+  "title": "In nomine nominis",
+  "mbids": [
+   "db0111f0-b04f-4dd7-9f6d-56797a8b4427"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-db0111f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19524,
+  "title": "Shadow of Sound",
+  "mbids": [
+   "db1a7d39-448f-4cfb-b1a4-4c74ca2e6c9e"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-db1a7d39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19565,
+  "title": "Venere che le grazie la fioriscono",
+  "mbids": [
+   "ddb87b09-e5d6-41dc-ace3-180857363e4f"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-ddb87b09",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19715,
+  "title": "Pagine",
+  "mbids": [
+   "e91fd4e8-1b24-4c3d-90a7-f297699cff4f"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-e91fd4e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19793,
+  "title": "Canti senza pietre",
+  "mbids": [
+   "ee301122-be89-4ae9-a41f-70b9212a23a8"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-ee301122",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19835,
+  "title": "Quartetto no. 7",
+  "mbids": [
+   "f0b1f6d1-0578-45be-9480-8794dd1fd8ab"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-f0b1f6d1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19942,
+  "title": "Appendice alla perfezione",
+  "mbids": [
+   "f68526b0-1245-4b29-898a-108b1ed86125"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-f68526b0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20084,
+  "title": "Il suono e il tacere",
+  "mbids": [
+   "ff07904e-c4e1-46c8-b04f-a2f0a57f7426"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-ff07904e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20090,
+  "title": "Quintetto n°1",
+  "mbids": [
+   "ff8c6a7d-ab40-4472-b4ac-39f3078eeffa"
+  ],
+  "mapping": "work",
+  "key": "sciarrino-ff8c6a7d",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

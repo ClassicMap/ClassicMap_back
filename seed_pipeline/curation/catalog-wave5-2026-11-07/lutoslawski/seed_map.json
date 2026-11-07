@@ -1,0 +1,662 @@
+[
+ {
+  "pieceId": 515,
+  "title": "Jeux vénitiens",
+  "mbids": [
+   "38ef2763-3d0f-463b-93ed-6afd7a2aa043"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 594,
+  "title": "Musique funèbre",
+  "mbids": [
+   "93b06d3c-cdba-3f15-9af6-7497c0a40f60"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-93b06d3c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 906,
+  "title": "Dance Preludes",
+  "mbids": [
+   "07cc6bc6-e52f-4def-a9cb-0e51d6bd8349"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-07cc6bc6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1090,
+  "title": "Chain 3",
+  "mbids": [
+   "1c53c20a-6fb7-4485-96bf-dd0c87f7c6fc"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-1c53c20a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1112,
+  "title": "Livre pour orchestre",
+  "mbids": [
+   "1e8d2b9d-8c75-31d2-b067-85221a72394b"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-1e8d2b9d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1199,
+  "title": "Symphony no. 1",
+  "mbids": [
+   "28dca37b-48a3-45b2-a024-41b746915390"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-28dca37b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1307,
+  "title": "Chantefleurs et Chantefables for soprano and orchestre",
+  "mbids": [
+   "3786ddbc-c293-4fad-a37e-92d3b9f06c97"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-3786ddbc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1440,
+  "title": "Chain 1",
+  "mbids": [
+   "481decb5-34b8-43a2-bf56-deb960718a8a"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-481decb5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1637,
+  "title": "Concerto for Piano and Orchestra",
+  "mbids": [
+   "61f14ae9-d8d5-456d-96a4-365d84184919"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-61f14ae9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1796,
+  "title": "Symphonic Variations",
+  "mbids": [
+   "75d112be-f579-3269-bd18-8f9e7848764d"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-75d112be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2411,
+  "title": "Novelette pour orchestre",
+  "mbids": [
+   "bc1793ca-1011-4264-b5ab-bbf8c3da282a"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-bc1793ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2456,
+  "title": "Mi-parti",
+  "mbids": [
+   "c0980bfb-22ca-3738-8198-590b262e19f7"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-c0980bfb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2778,
+  "title": "String Quartet",
+  "mbids": [
+   "e547fd2a-1ce4-446c-ab7e-8bfd0068d42a"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-e547fd2a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2836,
+  "title": "Concerto for Cello and Orchestra",
+  "mbids": [
+   "eaf6de73-17c5-4689-b9b0-859d9407c81a"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-eaf6de73",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2986,
+  "title": "Sacher Variation",
+  "mbids": [
+   "fc0ea099-42b9-4ef9-9969-d332ee55b191"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-fc0ea099",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 481,
+  "title": "6개의 어린이 노래",
+  "mbids": [
+   "1263c5d2-80fc-463d-8fbe-8f42b0f075b3"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-1263c5d2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 522,
+  "title": "Les Espaces du sommeil",
+  "mbids": [
+   "430edd00-ebde-4d48-87b1-bfc070f895bb"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-430edd00",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 525,
+  "title": "Trzy utwory dla młodzieży",
+  "mbids": [
+   "481bb9f6-614b-4e21-8e6e-a5c52a60ac12"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-481bb9f6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 612,
+  "title": "Spóźniony słowik",
+  "mbids": [
+   "aa961a73-5384-409c-b297-c5d45f86e5aa"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-aa961a73",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 659,
+  "title": "Inwencja",
+  "mbids": [
+   "f046a529-b7bd-4974-a4b6-005cf1546bbf"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-f046a529",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 668,
+  "title": "O Panu Tralalińskim",
+  "mbids": [
+   "f93035de-efb5-4fdb-a46d-1a4121cea489"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-f93035de",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 670,
+  "title": "Śpijże, Śpij",
+  "mbids": [
+   "fa090de0-6b8c-4d09-acde-d6d9b8f4a16e"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-fa090de0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 678,
+  "title": "Melodie Ludowe",
+  "mbids": [
+   "ff3662b1-3484-40ad-94c5-957c5ee1ec59"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-ff3662b1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 916,
+  "title": "III",
+  "mbids": [
+   "08650c90-c740-4e10-b078-abc225484387"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 937,
+  "title": "Three Fragments for Flute and Harp",
+  "mbids": [
+   "0b66360d-f3ae-4adf-9d02-0e7cc1a593f0"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-0b66360d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 962,
+  "title": "Fanfare for CUBE",
+  "mbids": [
+   "0e48f689-26c7-4eaf-96a3-573a7e8b1199"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-0e48f689",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 973,
+  "title": "Prelude for G.S.M.D.",
+  "mbids": [
+   "0f3856d4-6cf8-4262-a97a-0d425d9c08a8"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-0f3856d4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 980,
+  "title": "Double Concerto for Oboe, Harp and Chamber Orchestra",
+  "mbids": [
+   "0fc2263f-21c9-4e6a-8bd9-ce600458b1ad"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-0fc2263f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1267,
+  "title": "Three Postludes",
+  "mbids": [
+   "319f165f-d437-4755-9ae7-1d95c33ee8d8"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-319f165f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1270,
+  "title": "Epitaph",
+  "mbids": [
+   "328c678a-5bfd-41a8-aeca-614cc8f1b50a"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-328c678a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1388,
+  "title": "Lacrimosa",
+  "mbids": [
+   "40e7d25a-0804-49dc-8766-d208e40bc63a"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-40e7d25a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1486,
+  "title": "Silesian Triptych",
+  "mbids": [
+   "4d8315bc-f6af-4cea-ac88-04c7d71aa414"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-4d8315bc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1490,
+  "title": "Cztery Melodie sląskie (Four Silesian Melodies)",
+  "mbids": [
+   "4e473f1a-fbf5-4ae6-944d-ff66ffb61b78"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-4e473f1a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1572,
+  "title": "Overture for Strings",
+  "mbids": [
+   "595de2c5-0322-495a-b1ea-838eac212ea1"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-595de2c5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1627,
+  "title": "Fanfare for Los Angeles Philharmonic",
+  "mbids": [
+   "60baa8d5-a6d2-4aed-8d5f-3af364879ca3"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-60baa8d5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1695,
+  "title": "Trois poèmes d'Henri Michaux",
+  "mbids": [
+   "6a4e0791-f9de-4c12-9c08-31854a4f58d0"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-6a4e0791",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1742,
+  "title": "Paroles tissées",
+  "mbids": [
+   "6fe6ee93-bb74-3bdb-9222-04e5e91a8466"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-6fe6ee93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1750,
+  "title": "I",
+  "mbids": [
+   "70a94142-139b-4773-9803-47e59398e0ac"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 1924,
+  "title": "Fanfare for the University of Lancaster",
+  "mbids": [
+   "83e5b4dd-9c56-4ffb-bda9-baaab1aad2b6"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-83e5b4dd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1935,
+  "title": "Sonata for Piano",
+  "mbids": [
+   "84c79519-df56-4f19-bc8c-58e085d905c6"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-84c79519",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1940,
+  "title": "Preludes and Fugue for 13 Solo Strings",
+  "mbids": [
+   "858a691f-b168-4046-aff0-cde63f9e61df"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-858a691f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1959,
+  "title": "II",
+  "mbids": [
+   "87df042a-59bc-4301-ad6d-0d553e201874"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2031,
+  "title": "Subito",
+  "mbids": [
+   "905d31fb-d89c-4434-96ef-19081d1b865c"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-905d31fb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2118,
+  "title": "Chain 2, Dialogue for Violin and Orchestra",
+  "mbids": [
+   "98d7ada2-aad5-44fd-a3c5-68d5a3dab4ee"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-98d7ada2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2171,
+  "title": "Interlude",
+  "mbids": [
+   "a0cd8685-0626-49e2-8722-aa8c726287db"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-a0cd8685",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2187,
+  "title": "Fanfare for Louisville",
+  "mbids": [
+   "a2fc70ad-c059-4d85-884f-e194d2c91d4e"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-a2fc70ad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2293,
+  "title": "Three Children's Songs",
+  "mbids": [
+   "afd739bd-caa4-4e20-bcd0-2310122db0e6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2340,
+  "title": "IV",
+  "mbids": [
+   "b40ab731-2b5e-49af-bca2-3c4bcb987884"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 2676,
+  "title": "Bucoliques",
+  "mbids": [
+   "da459bdc-d187-403b-8a6b-128a12ea76d5"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-da459bdc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2684,
+  "title": "Two Études",
+  "mbids": [
+   "dbcb5c5e-8b67-44f5-af6b-98795eeb23db"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-dbcb5c5e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2713,
+  "title": "Five Songs for Soprano and Orchestra",
+  "mbids": [
+   "def61f08-cd1e-4fe3-b0df-5e6763d45051"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-def61f08",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2775,
+  "title": "Dziesięć polskich pieśni ludowych na tematy żołnierskie",
+  "mbids": [
+   "e504cf3d-0ca0-4c4d-90e3-9e7cdb744812"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-e504cf3d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2783,
+  "title": "Tune",
+  "mbids": [
+   "e59682dd-e3e8-49e2-ab69-c56d6c49166f"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-e59682dd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2851,
+  "title": "5 Folk Melodies",
+  "mbids": [
+   "eced09b7-4517-4bb7-9e20-54af210e1c71"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-eced09b7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2991,
+  "title": "Mini Overture",
+  "mbids": [
+   "fcedfaf3-63ad-4ea2-949a-b16cdc2cd019"
+  ],
+  "mapping": "work",
+  "key": "lutoslawski-fcedfaf3",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

@@ -1,0 +1,410 @@
+[
+ {
+  "pieceId": 23210,
+  "title": "Chant corse",
+  "mbids": [
+   "0136efa3-a9d6-4de9-a5c8-fa635ab940a7"
+  ],
+  "mapping": "work",
+  "key": "tomasi-0136efa3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23284,
+  "title": "Requiem pour la paix",
+  "mbids": [
+   "09910711-698b-4ab6-bfbb-f62f07c7f78c"
+  ],
+  "mapping": "work",
+  "key": "tomasi-09910711",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24296,
+  "title": "Trumpet Concerto",
+  "mbids": [
+   "67a0807b-b9e8-4d7d-ba92-1b28befcbc28"
+  ],
+  "mapping": "work",
+  "key": "tomasi-67a0807b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24607,
+  "title": "Fanfares liturgiques",
+  "mbids": [
+   "81a3b02d-13c8-4769-a32a-40a1631c46a4"
+  ],
+  "mapping": "work",
+  "key": "tomasi-81a3b02d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25085,
+  "title": "Concerto pour trombone et orchestre",
+  "mbids": [
+   "ab126333-2264-43c7-b8d2-d716d72b8e35"
+  ],
+  "mapping": "work",
+  "key": "tomasi-ab126333",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25795,
+  "title": "Variations sur un thème corse",
+  "mbids": [
+   "ede4f2ab-8386-47cd-86cc-a8c54b559000"
+  ],
+  "mapping": "work",
+  "key": "tomasi-ede4f2ab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25898,
+  "title": "Triptyque",
+  "mbids": [
+   "f67e25a3-c2ad-472c-af31-07b56a3ad652"
+  ],
+  "mapping": "work",
+  "key": "tomasi-f67e25a3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25990,
+  "title": "Noces de cendres",
+  "mbids": [
+   "fe1dc739-411a-40ee-82ee-2a41c6b29be4"
+  ],
+  "mapping": "work",
+  "key": "tomasi-fe1dc739",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23297,
+  "title": "Le tombeau de Mireille: I. Introduction et variations",
+  "mbids": [
+   "0ad0183f-9086-4fa0-8657-1098cf77aa29"
+  ],
+  "mapping": "work",
+  "key": "tomasi-0ad0183f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23469,
+  "title": "Trio à cordes en forme de divertissement",
+  "mbids": [
+   "17d6f7c3-9c75-441c-96c3-01e0a7e2c678"
+  ],
+  "mapping": "work",
+  "key": "tomasi-17d6f7c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23620,
+  "title": "Noces de cendres, suite symphonique",
+  "mbids": [
+   "261d1fb7-36ff-4b63-b451-d3efba9f6591"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23659,
+  "title": "Divertimento Corsica",
+  "mbids": [
+   "28a92d8f-9ee6-4aa6-a9a4-6d11f9fa3f42"
+  ],
+  "mapping": "work",
+  "key": "tomasi-28a92d8f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23828,
+  "title": "Concerto pour basson et orchestre de chambre",
+  "mbids": [
+   "3a480c95-7f45-42e6-9b7e-123418399502"
+  ],
+  "mapping": "work",
+  "key": "tomasi-3a480c95",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24148,
+  "title": "Tristesse d’Antar",
+  "mbids": [
+   "594fb5c5-fad8-4cff-8f20-ffcd2952392e"
+  ],
+  "mapping": "work",
+  "key": "tomasi-594fb5c5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24226,
+  "title": "Trois Divertissements",
+  "mbids": [
+   "600bdf5e-d53d-4ffa-9a65-540957ec0bc5"
+  ],
+  "mapping": "work",
+  "key": "tomasi-600bdf5e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24231,
+  "title": "Être ou ne pas être",
+  "mbids": [
+   "60694f9c-f6dc-4f9c-9a37-c95b2165b5ab"
+  ],
+  "mapping": "work",
+  "key": "tomasi-60694f9c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24275,
+  "title": "Cinq danses profanes et sacrées pour quintette á vent",
+  "mbids": [
+   "65a46bb2-9dfd-468e-b39c-fdc2c39fc228"
+  ],
+  "mapping": "work",
+  "key": "tomasi-65a46bb2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24281,
+  "title": "Concerto pour hautbois et orchestre de chambre",
+  "mbids": [
+   "65fa6506-3c40-4226-9015-cac38ea7bf07"
+  ],
+  "mapping": "work",
+  "key": "tomasi-65fa6506",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24307,
+  "title": "Douze Noëls de Saboly",
+  "mbids": [
+   "688c6726-bfa1-42a1-9160-64e039ba9141"
+  ],
+  "mapping": "work",
+  "key": "tomasi-688c6726",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24432,
+  "title": "Le tombeau de Mireille: III. Farandole",
+  "mbids": [
+   "7356cbfc-1792-4441-86f3-66731cacdff0"
+  ],
+  "mapping": "work",
+  "key": "tomasi-7356cbfc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24586,
+  "title": "Suite pour 3 trompettes",
+  "mbids": [
+   "7fbb497b-5bf7-42be-9e9f-3cf385a79ff1"
+  ],
+  "mapping": "work",
+  "key": "tomasi-7fbb497b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24599,
+  "title": "Poème for Violin and Piano",
+  "mbids": [
+   "80c9ad9d-d591-480a-88b4-dff53a752db2"
+  ],
+  "mapping": "work",
+  "key": "tomasi-80c9ad9d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24678,
+  "title": "Concerto pour clarinette et orchestre à cordes",
+  "mbids": [
+   "8868b3b1-5b11-4a1f-a2cf-7bb89690f783"
+  ],
+  "mapping": "work",
+  "key": "tomasi-8868b3b1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24730,
+  "title": "Concert champêtre",
+  "mbids": [
+   "8d46865f-f040-4ccf-accb-2ecdb14f5cff"
+  ],
+  "mapping": "work",
+  "key": "tomasi-8d46865f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24734,
+  "title": "Paghiella, Sérénade cyrnéenne",
+  "mbids": [
+   "8d76c08d-668b-4e0f-9483-dbb71b6117df"
+  ],
+  "mapping": "work",
+  "key": "tomasi-8d76c08d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24794,
+  "title": "Variations grégoriennes sur un Salve Regina",
+  "mbids": [
+   "92ccd6e5-07ab-411d-a8e0-e2a3308611e9"
+  ],
+  "mapping": "work",
+  "key": "tomasi-92ccd6e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25061,
+  "title": "Thème et variations",
+  "mbids": [
+   "a8ec9c69-e90c-490f-8630-a9f9e3ab5d43"
+  ],
+  "mapping": "work",
+  "key": "tomasi-a8ec9c69",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25118,
+  "title": "Chants corses",
+  "mbids": [
+   "ae839841-4b66-4e5c-b4c6-ac65e16f8db6"
+  ],
+  "mapping": "work",
+  "key": "tomasi-ae839841",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25438,
+  "title": "Le tombeau de Mireille: II. Romance",
+  "mbids": [
+   "ce48d68b-e24d-4ac8-a5c5-d95ef9dbc7d2"
+  ],
+  "mapping": "work",
+  "key": "tomasi-ce48d68b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25441,
+  "title": "Concerto for Alto Saxophone and Orchestra",
+  "mbids": [
+   "ced69a99-66c6-47ae-9c6b-4035c406f168"
+  ],
+  "mapping": "work",
+  "key": "tomasi-ced69a99",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25563,
+  "title": "Ballade",
+  "mbids": [
+   "d9201800-5db1-4a0f-a447-2fd5bdbd1f74"
+  ],
+  "mapping": "work",
+  "key": "tomasi-d9201800",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25635,
+  "title": "Chant hébraïque",
+  "mbids": [
+   "df99d962-4fae-42a4-9d27-fce674bb6038"
+  ],
+  "mapping": "work",
+  "key": "tomasi-df99d962",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25854,
+  "title": "Violin Concerto “Périple d’Ulysse”",
+  "mbids": [
+   "f2f86aad-ed16-4187-bc38-d4a6cbea8e93"
+  ],
+  "mapping": "work",
+  "key": "tomasi-f2f86aad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25870,
+  "title": "Divertissement Pastoral",
+  "mbids": [
+   "f3d78664-803a-4b12-b98c-f5306bcdfd0c"
+  ],
+  "mapping": "work",
+  "key": "tomasi-f3d78664",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

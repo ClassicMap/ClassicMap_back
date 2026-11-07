@@ -1,0 +1,266 @@
+[
+ {
+  "pieceId": 15851,
+  "title": "Rusalka",
+  "mbids": [
+   "fad3765e-5e41-46bf-9200-b6bb4884c2d6"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-fad3765e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15795,
+  "title": "Чухонская фантазия",
+  "mbids": [
+   "8cda3d82-e584-40f1-8470-b287ab47e8d0"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-7ae121c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15797,
+  "title": "Я все еще его люблю",
+  "mbids": [
+   "9694ba56-ba85-4da1-8dfe-f97d270a759f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 15800,
+  "title": "Elegy \"Она придёт\"",
+  "mbids": [
+   "9bba69ea-ccb5-4c7c-969c-91caab2cc658"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-9bba69ea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15807,
+  "title": "Старый капрал",
+  "mbids": [
+   "a2ff48eb-01ba-4026-8eca-80c2c632b9ca"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 15831,
+  "title": "Оделась туманами Сиерра-Невада",
+  "mbids": [
+   "de7fc0b1-c936-4b95-8bd9-fcf1ff774c2f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16496,
+  "title": "« Jaloux du bel objet »",
+  "mbids": [
+   "1cea56ee-625f-4093-b6f4-e9f6567c5acc"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-1cea56ee",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16508,
+  "title": "Rusalka: Act 3: \"Nevol’no k etim grustnyim beregam\"",
+  "mbids": [
+   "1da0f2df-03cb-494d-9354-a9bfbae043ca"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-1da0f2df",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17228,
+  "title": "I Am Sad",
+  "mbids": [
+   "495c2ecc-7ddf-419b-82a8-33c06c86378a"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-495c2ecc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17412,
+  "title": "Tarantella slave",
+  "mbids": [
+   "552ab88c-0fff-4b57-9cc5-b55d4566a428"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-552ab88c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17445,
+  "title": "Kazachok",
+  "mbids": [
+   "577373f6-a733-4631-98bb-04e154db0795"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-577373f6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17604,
+  "title": "Au bal",
+  "mbids": [
+   "60f87252-cc1a-4bec-9374-0f86e84da4f6"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-60f87252",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18032,
+  "title": "Петербургские серенады",
+  "mbids": [
+   "7ae121c4-3f7e-4443-a664-f4d4028c5845"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 18058,
+  "title": "Dieu qui sourit",
+  "mbids": [
+   "7c61eb25-2c47-4eff-b2ff-19d4427524d4"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-7c61eb25",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18061,
+  "title": "Baba Yaga",
+  "mbids": [
+   "7c82ea17-9d5e-483f-b85f-e176b3af81d1"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-7c82ea17",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18344,
+  "title": "Little-Russian Kazachok",
+  "mbids": [
+   "8f606191-8f7a-4ddf-a28c-e4a2319cdf1e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18405,
+  "title": "Bolero",
+  "mbids": [
+   "92f00463-2009-4f62-ac2b-e7c37f840bd0"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-92f00463",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18566,
+  "title": "Tarantella de Dargomijski, S. 483",
+  "mbids": [
+   "9cb967d5-e1d8-4420-8ff8-3d3a3bdda2f3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18582,
+  "title": "Rusalka: Act 3: \"Chto eto znachit?\"",
+  "mbids": [
+   "9dfd1a99-95f5-464b-847b-453397395326"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-9dfd1a99",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19024,
+  "title": "The Night Zephyr",
+  "mbids": [
+   "baed5fc6-800e-456a-98f1-120253917562"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-baed5fc6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19757,
+  "title": "The Miller",
+  "mbids": [
+   "ebbff730-c3d8-4d90-881c-5aa6836b1a73"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-ebbff730",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19825,
+  "title": "K druz'yam",
+  "mbids": [
+   "f03eab56-ddee-49f1-ab7e-47cc5dc3b163"
+  ],
+  "mapping": "work",
+  "key": "dargomyzhsky-f03eab56",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

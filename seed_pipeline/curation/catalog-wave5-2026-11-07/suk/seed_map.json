@@ -1,0 +1,518 @@
+[
+ {
+  "pieceId": 15721,
+  "title": "Pohádka léta, op. 29",
+  "mbids": [
+   "080dd10d-d6d4-4294-9b4f-68c2a4db6bca"
+  ],
+  "mapping": "work",
+  "key": "suk-080dd10d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15732,
+  "title": "Tempo di minuetto for String Quartet",
+  "mbids": [
+   "1783c4bd-e1e5-4e61-953e-6defda843c84"
+  ],
+  "mapping": "work",
+  "key": "suk-1783c4bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15750,
+  "title": "Pohádka zimního večera, op. 9",
+  "mbids": [
+   "40a27d46-0e24-461d-97b7-c5b1475c8c96"
+  ],
+  "mapping": "work",
+  "key": "suk-40a27d46",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15852,
+  "title": "Pohádka, op. 16",
+  "mbids": [
+   "fd527064-fef8-4ed1-a47f-cab1091e037f"
+  ],
+  "mapping": "work",
+  "key": "suk-fd527064",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16001,
+  "title": "Piano Quartet in A minor, op. 1",
+  "mbids": [
+   "0104ab08-b6a4-4605-b082-2890d84e8457"
+  ],
+  "mapping": "work",
+  "key": "suk-0104ab08",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16198,
+  "title": "Fantasy in G minor for Violin & Orchestra, op. 24",
+  "mbids": [
+   "0c7acb93-ed2a-4de3-8837-1f9f629ddaae"
+  ],
+  "mapping": "work",
+  "key": "suk-0c7acb93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16229,
+  "title": "Fantastickè scherzo, op. 25",
+  "mbids": [
+   "0e2cc4f1-8153-4e65-a0dc-4cad8b9a2652"
+  ],
+  "mapping": "work",
+  "key": "suk-0e2cc4f1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16285,
+  "title": "Klavírní skladby, op. 7",
+  "mbids": [
+   "111d78ef-7b72-4737-b2a2-7c8522f9ee97"
+  ],
+  "mapping": "work",
+  "key": "suk-111d78ef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16527,
+  "title": "Piano Quintet in G minor, op. 8",
+  "mbids": [
+   "1f604c98-af09-4323-9c6f-c0c9e8f1d31d"
+  ],
+  "mapping": "work",
+  "key": "suk-1f604c98",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16633,
+  "title": "Serenade for Strings, op. 6",
+  "mbids": [
+   "26710cc3-4429-42d8-adb0-5fdc1d5fbd0b"
+  ],
+  "mapping": "work",
+  "key": "suk-26710cc3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16728,
+  "title": "Melody for 2 Violins",
+  "mbids": [
+   "2c2157e2-4468-4175-ab93-d3dc1f1b8bd6"
+  ],
+  "mapping": "work",
+  "key": "suk-2c2157e2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17555,
+  "title": "Životem a snem, op. 30",
+  "mbids": [
+   "5e62a2d2-bcbc-465f-bd99-7f955b84d294"
+  ],
+  "mapping": "work",
+  "key": "suk-5e62a2d2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17768,
+  "title": "Symphony no. 2, op. 27 \"Asrael\"",
+  "mbids": [
+   "6aa8873f-f525-46fc-86f6-becc5f0fc5a1"
+  ],
+  "mapping": "work",
+  "key": "suk-6aa8873f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15755,
+  "title": "Noc byla krásná",
+  "mbids": [
+   "4644f81d-7be9-4be0-84d0-479cfb5c9948"
+  ],
+  "mapping": "work",
+  "key": "suk-4644f81d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15769,
+  "title": "Legenda o mrtvých vítězích, op. 35b",
+  "mbids": [
+   "62882d84-1a3e-40db-ab97-96b06b5ba16e"
+  ],
+  "mapping": "work",
+  "key": "suk-62882d84",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15777,
+  "title": "V nový život, op. 35c",
+  "mbids": [
+   "73a12e4b-dd03-4248-9191-5b8bd8fce595"
+  ],
+  "mapping": "work",
+  "key": "suk-73a12e4b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15780,
+  "title": "Píseň lásky",
+  "mbids": [
+   "78b56781-3c0f-464b-a078-672cb0334032"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 15809,
+  "title": "Barcarolle (String Quartet in D minor: II. Andante con moto)",
+  "mbids": [
+   "ad0fd6a7-aa3c-4abc-8583-538d9b3048c7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 15812,
+  "title": "O Matince, op. 28",
+  "mbids": [
+   "b67f7d5b-82e0-4463-851f-e55750ebfa23"
+  ],
+  "mapping": "work",
+  "key": "suk-b67f7d5b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16136,
+  "title": "Sousedská for 5 Violins, Double Bass, Cymbals, Triangle, Side and Bass Drum",
+  "mbids": [
+   "0867c36a-e8b6-4b02-afd2-6f9b4fc3fb3e"
+  ],
+  "mapping": "work",
+  "key": "suk-0867c36a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16350,
+  "title": "Ukolébavky, op. 33",
+  "mbids": [
+   "14c961ac-c87e-448d-9315-00f83c32972d"
+  ],
+  "mapping": "work",
+  "key": "suk-14c961ac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16410,
+  "title": "Ripening, op. 34, JSkat 70",
+  "mbids": [
+   "17d8e716-69a0-448a-92bc-4e9a594a04d3"
+  ],
+  "mapping": "work",
+  "key": "suk-17d8e716",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16512,
+  "title": "Epilogue, op. 37",
+  "mbids": [
+   "1ded4407-e2b9-49d7-ae23-072006ac0c15"
+  ],
+  "mapping": "work",
+  "key": "suk-1ded4407",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16682,
+  "title": "2 Skladby, op. 3",
+  "mbids": [
+   "29831111-d686-41d3-a319-b702bef0f09a"
+  ],
+  "mapping": "work",
+  "key": "suk-29831111",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16948,
+  "title": "10 Songs for Female voices and Piano Four Hands, op. 15",
+  "mbids": [
+   "38e88b84-7119-42ba-908b-012dc0b7f0e4"
+  ],
+  "mapping": "work",
+  "key": "suk-38e88b84",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17134,
+  "title": "Bagatelle for Flute, Violin and Piano “With Nosegay in Hand”",
+  "mbids": [
+   "44ba40ec-eba6-4823-8ae7-636a2d24fff6"
+  ],
+  "mapping": "work",
+  "key": "suk-44ba40ec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17175,
+  "title": "String Quartet no. 2, op. 31",
+  "mbids": [
+   "46666e9a-0778-4517-957a-c8fcced9b8c3"
+  ],
+  "mapping": "work",
+  "key": "suk-46666e9a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17328,
+  "title": "Jaro, op. 22a",
+  "mbids": [
+   "5074f0d8-1568-4723-840c-6ce350145a36"
+  ],
+  "mapping": "work",
+  "key": "suk-5074f0d8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17361,
+  "title": "Tři zpěvy pro smíšený sbor, op. 19",
+  "mbids": [
+   "52f575eb-f917-445f-a89b-ac321136e97c"
+  ],
+  "mapping": "work",
+  "key": "suk-52f575eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17619,
+  "title": "Minuet for Violin and Piano",
+  "mbids": [
+   "61cf7d5a-347a-4460-8f69-87b2b7032158"
+  ],
+  "mapping": "work",
+  "key": "suk-61cf7d5a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17780,
+  "title": "Humoreske in C major",
+  "mbids": [
+   "6b8e569d-f990-40e1-b9e9-5caf48e1e228"
+  ],
+  "mapping": "work",
+  "key": "suk-6b8e569d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17917,
+  "title": "String Quartet no. 1 in B-flat major, op. 11",
+  "mbids": [
+   "7319fab9-4a83-4904-befc-ca640893320c"
+  ],
+  "mapping": "work",
+  "key": "suk-7319fab9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17950,
+  "title": "Nálady, op. 10",
+  "mbids": [
+   "759f363d-527b-44fc-8233-d5c98d257878"
+  ],
+  "mapping": "work",
+  "key": "suk-759f363d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18253,
+  "title": "Symphony no. 1, op. 14, JSkat 40",
+  "mbids": [
+   "8a578beb-9ecc-42f5-8ff3-85c32e5198e4"
+  ],
+  "mapping": "work",
+  "key": "suk-8a578beb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18402,
+  "title": "Ballade and Serenade, op. 3",
+  "mbids": [
+   "92bc2edd-faaf-499e-a476-da2380b815e5"
+  ],
+  "mapping": "work",
+  "key": "suk-92bc2edd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18469,
+  "title": "Praga, op. 26",
+  "mbids": [
+   "96f30423-d6df-4bfb-a57e-6f9e388b6786"
+  ],
+  "mapping": "work",
+  "key": "suk-96f30423",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18832,
+  "title": "Piano Trio in C minor, op. 2",
+  "mbids": [
+   "adbf651b-1b59-419e-b716-36277717cb47"
+  ],
+  "mapping": "work",
+  "key": "suk-adbf651b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19028,
+  "title": "Ballad for Violin and Piano in D minor",
+  "mbids": [
+   "bb0ece89-687f-42a5-a262-349083fc132b"
+  ],
+  "mapping": "work",
+  "key": "suk-bb0ece89",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19034,
+  "title": "Ballad for String Quartet in D minor",
+  "mbids": [
+   "bb5cccde-ad16-4b1f-aae7-44c766473a61"
+  ],
+  "mapping": "work",
+  "key": "suk-bb5cccde",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19271,
+  "title": "Four Pieces for Violin and Piano, op. 17",
+  "mbids": [
+   "c9dd8d48-b680-4a6f-b8f8-ff3deee118c3"
+  ],
+  "mapping": "work",
+  "key": "suk-c9dd8d48",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19403,
+  "title": "Letní dojmy, op. 22b",
+  "mbids": [
+   "d2a40627-ba6b-4e8b-9118-11841708e49f"
+  ],
+  "mapping": "work",
+  "key": "suk-d2a40627",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19853,
+  "title": "Quartet Movement in B-flat major",
+  "mbids": [
+   "f201e9cd-364a-4426-b2f5-ab9ec8ddd853"
+  ],
+  "mapping": "work",
+  "key": "suk-f201e9cd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19931,
+  "title": "Meditation on the Old Czech Chorale “St. Wenceslas”, op. 35a",
+  "mbids": [
+   "f6027294-7f03-441c-bb1b-705151fbe18f"
+  ],
+  "mapping": "work",
+  "key": "suk-f6027294",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

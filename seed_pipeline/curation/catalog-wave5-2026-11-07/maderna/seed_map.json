@@ -1,0 +1,542 @@
+[
+ {
+  "pieceId": 16362,
+  "title": "Aura",
+  "mbids": [
+   "156d5ab4-6431-4888-950d-ddaa02930fbc"
+  ],
+  "mapping": "work",
+  "key": "maderna-156d5ab4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16852,
+  "title": "Quadrivium",
+  "mbids": [
+   "3376f2e2-14eb-4f66-b2f5-132a320cf5dd"
+  ],
+  "mapping": "work",
+  "key": "maderna-3376f2e2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17600,
+  "title": "Composizione no. 1",
+  "mbids": [
+   "60d716b1-3542-4024-a874-0f25c810e528"
+  ],
+  "mapping": "work",
+  "key": "maderna-60d716b1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17777,
+  "title": "Widmung",
+  "mbids": [
+   "6b75afa6-7df9-4f74-b8ff-966c5760d10b"
+  ],
+  "mapping": "work",
+  "key": "maderna-6b75afa6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17855,
+  "title": "Serenata no. 2",
+  "mbids": [
+   "6fb70862-6af5-443f-8b94-599bf6804543"
+  ],
+  "mapping": "work",
+  "key": "maderna-6fb70862",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18499,
+  "title": "Concerto per flauto e orchestra",
+  "mbids": [
+   "98886d1a-2125-4de3-ae94-9aa8bc2e3e13"
+  ],
+  "mapping": "work",
+  "key": "maderna-98886d1a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18632,
+  "title": "Y después",
+  "mbids": [
+   "a146a173-427c-4cc4-9762-f1adf9602b08"
+  ],
+  "mapping": "work",
+  "key": "maderna-a146a173",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18849,
+  "title": "Biogramma",
+  "mbids": [
+   "aedb265d-89cc-44b9-bbdd-17aa64bcdeb4"
+  ],
+  "mapping": "work",
+  "key": "maderna-aedb265d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18911,
+  "title": "Grande aulodia",
+  "mbids": [
+   "b2b6d254-edb8-46b9-880b-b68d78038f1f"
+  ],
+  "mapping": "work",
+  "key": "maderna-b2b6d254",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19210,
+  "title": "Don Perlimplin",
+  "mbids": [
+   "c5eaefb2-1fbe-4675-a6f4-a916471c1b5e"
+  ],
+  "mapping": "work",
+  "key": "maderna-c5eaefb2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19394,
+  "title": "La morte ha fatto l'uovo",
+  "mbids": [
+   "d25294a1-e1d0-480e-82ee-91716babfcf7"
+  ],
+  "mapping": "work",
+  "key": "maderna-d25294a1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19412,
+  "title": "Serenata III",
+  "mbids": [
+   "d321943b-f9ac-40f4-ba5f-c4991ac76d1e"
+  ],
+  "mapping": "work",
+  "key": "maderna-d321943b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19674,
+  "title": "Venetian Journal",
+  "mbids": [
+   "e55c8d7b-db92-4002-a8b4-12ba5cb2739a"
+  ],
+  "mapping": "work",
+  "key": "maderna-e55c8d7b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20093,
+  "title": "Composizione no. 2",
+  "mbids": [
+   "ffc48808-5249-4c0b-aae3-206e03f375e6"
+  ],
+  "mapping": "work",
+  "key": "maderna-ffc48808",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16109,
+  "title": "Divertimento in due tempi",
+  "mbids": [
+   "06df7e98-4fb3-48be-951c-ef725fbf7694"
+  ],
+  "mapping": "work",
+  "key": "maderna-06df7e98",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16351,
+  "title": "Syntaxis",
+  "mbids": [
+   "14cd15bf-41e1-402e-b5e7-4c3672369a86"
+  ],
+  "mapping": "work",
+  "key": "maderna-14cd15bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16464,
+  "title": "Ages",
+  "mbids": [
+   "1ace0d97-98c5-421e-80f2-3bc27a198028"
+  ],
+  "mapping": "work",
+  "key": "maderna-1ace0d97",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16495,
+  "title": "Stele per Diotima",
+  "mbids": [
+   "1cd8b4ed-a721-46d4-a3c4-de127d022455"
+  ],
+  "mapping": "work",
+  "key": "maderna-1cd8b4ed",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16591,
+  "title": "Continuo",
+  "mbids": [
+   "23b46e97-f044-4e3a-8130-1d3abc70f91d"
+  ],
+  "mapping": "work",
+  "key": "maderna-23b46e97",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16867,
+  "title": "Pièce pour Ivry",
+  "mbids": [
+   "344f8d26-309d-42ed-bb6e-4b7c1549cadd"
+  ],
+  "mapping": "work",
+  "key": "maderna-344f8d26",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16889,
+  "title": "Aulodia per Lothar",
+  "mbids": [
+   "35a422db-bd8a-4082-8e7c-c2ca8ddd2206"
+  ],
+  "mapping": "work",
+  "key": "maderna-35a422db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16971,
+  "title": "Improvvisazione no. 2",
+  "mbids": [
+   "3a9cdc60-f05a-4cf6-ab7f-0abab603ffb3"
+  ],
+  "mapping": "work",
+  "key": "maderna-3a9cdc60",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16989,
+  "title": "Studi per \"Il processo\" di Franz Kafka",
+  "mbids": [
+   "3bf408d9-f95f-4370-a948-c2aadfa381f7"
+  ],
+  "mapping": "work",
+  "key": "maderna-3bf408d9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17309,
+  "title": "Quartetto per archi in due tempi",
+  "mbids": [
+   "4f7f4041-ebf0-499e-8e80-4217acc38e89"
+  ],
+  "mapping": "work",
+  "key": "maderna-4f7f4041",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17457,
+  "title": "Ausstrahlung",
+  "mbids": [
+   "57fce9d5-35b8-4e94-a714-7c9f4fcec6fb"
+  ],
+  "mapping": "work",
+  "key": "maderna-57fce9d5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17540,
+  "title": "Concerto per oboe e orchestra no. 3",
+  "mbids": [
+   "5cdf8dd1-556c-4fbe-9609-5c51fd634a9a"
+  ],
+  "mapping": "work",
+  "key": "maderna-5cdf8dd1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17632,
+  "title": "Composizione in tre tempi",
+  "mbids": [
+   "62cc1943-8734-4cb5-a734-995e52c5108a"
+  ],
+  "mapping": "work",
+  "key": "maderna-62cc1943",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17653,
+  "title": "Amanda",
+  "mbids": [
+   "642c8411-a04c-4d54-ad3c-982302e3edc5"
+  ],
+  "mapping": "work",
+  "key": "maderna-642c8411",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17779,
+  "title": "Dimensioni IV",
+  "mbids": [
+   "6b8723aa-6964-413b-bddf-ee10edf20ee8"
+  ],
+  "mapping": "work",
+  "key": "maderna-6b8723aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18435,
+  "title": "Giardino religioso",
+  "mbids": [
+   "94a086f5-91d7-4a38-94cf-8b225624a173"
+  ],
+  "mapping": "work",
+  "key": "maderna-94a086f5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18483,
+  "title": "Concerto per oboe e orchestra no. 2",
+  "mbids": [
+   "977d2a76-d981-443a-9f63-b491b304d055"
+  ],
+  "mapping": "work",
+  "key": "maderna-977d2a76",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18613,
+  "title": "Ständchen für Tini",
+  "mbids": [
+   "a0493a39-fb5e-46ee-bd60-638f2cdd8259"
+  ],
+  "mapping": "work",
+  "key": "maderna-a0493a39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18667,
+  "title": "Dialodia",
+  "mbids": [
+   "a412d39d-2a71-4357-890b-e0664c68afa3"
+  ],
+  "mapping": "work",
+  "key": "maderna-a412d39d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18692,
+  "title": "Dimensioni III",
+  "mbids": [
+   "a4eceb73-4dd9-43d5-bccf-26e3414d0a98"
+  ],
+  "mapping": "work",
+  "key": "maderna-a4eceb73",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18963,
+  "title": "Honeyrêves",
+  "mbids": [
+   "b634762e-897d-474a-90f1-acd1ae7e5e7d"
+  ],
+  "mapping": "work",
+  "key": "maderna-b634762e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18992,
+  "title": "Viola",
+  "mbids": [
+   "b7fb9148-9a55-4a69-8bb3-cb355bb1c2a8"
+  ],
+  "mapping": "work",
+  "key": "maderna-b7fb9148",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19045,
+  "title": "Musica su due dimensioni",
+  "mbids": [
+   "bbc5971d-9047-4ef9-9cfe-93cf29a60e50"
+  ],
+  "mapping": "work",
+  "key": "maderna-bbc5971d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19089,
+  "title": "Le Rire",
+  "mbids": [
+   "be74c768-f93f-4bbe-b355-b12cd93bd5e1"
+  ],
+  "mapping": "work",
+  "key": "maderna-be74c768",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19402,
+  "title": "Dimensioni II - Invenzione su una voce",
+  "mbids": [
+   "d2a19f07-ba98-4d36-bfd2-5761e85e414c"
+  ],
+  "mapping": "work",
+  "key": "maderna-d2a19f07",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19408,
+  "title": "Concerto per due pianoforti, percussioni e due arpe",
+  "mbids": [
+   "d2fb9301-0c07-49d6-9ba2-fb4aaaaa8aa6"
+  ],
+  "mapping": "work",
+  "key": "maderna-d2fb9301",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19427,
+  "title": "Improvvisazione no. 1",
+  "mbids": [
+   "d417da27-6cca-4fc7-87dd-a178179cb06d"
+  ],
+  "mapping": "work",
+  "key": "maderna-d417da27",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19484,
+  "title": "Tre liriche greche",
+  "mbids": [
+   "d7f32f80-f18d-4c76-8aa8-d66b4444b364"
+  ],
+  "mapping": "work",
+  "key": "maderna-d7f32f80",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19548,
+  "title": "Satyricon",
+  "mbids": [
+   "dc50a315-44b4-47bb-84bc-e167141f30df"
+  ],
+  "mapping": "work",
+  "key": "maderna-dc50a315",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19741,
+  "title": "Concerto per oboe e orchestra no. 1",
+  "mbids": [
+   "eac1f5ce-3be6-4f0f-a191-bec8c87fefea"
+  ],
+  "mapping": "work",
+  "key": "maderna-eac1f5ce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19833,
+  "title": "Ritratto di Erasmo",
+  "mbids": [
+   "f0a74a44-c3e6-4c0c-9abb-ac9b26b873dd"
+  ],
+  "mapping": "work",
+  "key": "maderna-f0a74a44",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

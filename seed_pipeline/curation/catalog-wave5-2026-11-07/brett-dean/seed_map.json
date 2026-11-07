@@ -1,0 +1,494 @@
+[
+ {
+  "pieceId": 16014,
+  "title": "Electric Preludes",
+  "mbids": [
+   "01aece43-1248-421f-8283-3eb3b1e7f5c6"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-01aece43",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16171,
+  "title": "Carlo",
+  "mbids": [
+   "0ab2690e-b6f5-41e1-b83d-6eb38dbf56e5"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-0ab2690e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16469,
+  "title": "Winter Songs",
+  "mbids": [
+   "1b29d198-4e29-4c3e-a9fe-fdadd0c08b86"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-1b29d198",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16882,
+  "title": "Dramatis personae",
+  "mbids": [
+   "35258a11-9a90-42d4-a699-74a86fa430ec"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-35258a11",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16974,
+  "title": "Pastoral Symphony",
+  "mbids": [
+   "3af1c1c6-5753-4cc8-8dfc-1b17300704a3"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-3af1c1c6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16999,
+  "title": "Eclipse (String Quartet no. 1)",
+  "mbids": [
+   "3c75ef41-8c39-4a0a-8101-bcdff38f28e1"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-3c75ef41",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17578,
+  "title": "Epitaphs",
+  "mbids": [
+   "5f8ced12-e372-4232-8e5b-fb7590558d2f"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-5f8ced12",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17823,
+  "title": "The Lost Art of Letter Writing",
+  "mbids": [
+   "6e2aafb0-8d5b-404b-b377-2b2275dafa0f"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-6e2aafb0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18026,
+  "title": "Amphitheatre",
+  "mbids": [
+   "7ab41540-4b34-433c-b420-61ae6e7cea2f"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-7ab41540",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18193,
+  "title": "Rooms of Elsinore",
+  "mbids": [
+   "85b91995-34f2-441a-9d42-a68c75943bc4"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-85b91995",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18234,
+  "title": "Twelve Angry Men",
+  "mbids": [
+   "8961ea2a-546f-4527-9486-be88ed7e144c"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-8961ea2a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18573,
+  "title": "The Siduri Dances",
+  "mbids": [
+   "9d399ce7-70fd-4830-953e-3765d4113e80"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-9d399ce7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18990,
+  "title": "One of a Kind",
+  "mbids": [
+   "b7eeccac-fdbe-497c-8f4c-c72995836700"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-b7eeccac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19068,
+  "title": "Voices of Angels",
+  "mbids": [
+   "bd401505-9ecf-4c83-9db4-b14fdf586e93"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-bd401505",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19419,
+  "title": "Intimate Decisions",
+  "mbids": [
+   "d3985d5b-fc00-4fe9-883f-563ce53e3052"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-d3985d5b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20018,
+  "title": "In spe contra spem",
+  "mbids": [
+   "fa8e2530-ae36-4bb2-8eb8-cdfa310acca5"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-fa8e2530",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20098,
+  "title": "Water Music",
+  "mbids": [
+   "fff3c0f8-7c48-4071-b925-045bab434dcf"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-fff3c0f8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15826,
+  "title": "Piano Concerto \"Gneixendorf Music - A Winter's Journey\"",
+  "mbids": [
+   "d6c426fb-157a-47f9-b9ef-4e2c93100954"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-d6c426fb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16255,
+  "title": "To Look Yet Not Find",
+  "mbids": [
+   "0f5f805d-30e9-43a6-a3e5-01a4c7ec6745"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-0f5f805d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16288,
+  "title": "String Quartet no. 2 \"And once I played Ophelia\"",
+  "mbids": [
+   "11389c60-4ac3-4f38-bf27-eee868aada88"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-11389c60",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16456,
+  "title": "Gertrude Fragments",
+  "mbids": [
+   "1a3871a5-21b5-4b0a-831b-2ee4737159b7"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-1a3871a5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16570,
+  "title": "Ariel's Music",
+  "mbids": [
+   "223cf58b-46bf-4467-83ea-b31d57c6d944"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-223cf58b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16649,
+  "title": "3 Memorials",
+  "mbids": [
+   "276f8a54-5ed6-4db6-970f-80f09b762f51"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-276f8a54",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16896,
+  "title": "Hommage à Lutosławski",
+  "mbids": [
+   "35edfe46-0b7f-447e-86c0-01ae5c793740"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-35edfe46",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17037,
+  "title": "Hamlet Diffraction",
+  "mbids": [
+   "3e356f2e-6e1b-4007-901a-ac50385f1d09"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-3e356f2e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17366,
+  "title": "The World’s Wife",
+  "mbids": [
+   "532b7460-4380-4ade-b8d6-30b4e90be437"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-532b7460",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17749,
+  "title": "Approach (Prelude to a Canon)",
+  "mbids": [
+   "698f6e6e-3bba-4d14-8e5e-a4cbb4418892"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17967,
+  "title": "…the scene of the crime…",
+  "mbids": [
+   "770c4aa9-23c4-4fcc-8422-95f894c9efe5"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-770c4aa9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17991,
+  "title": "Notturno inquieto",
+  "mbids": [
+   "7894eb2d-7130-4884-a5d4-d8db520b5644"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-7894eb2d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18041,
+  "title": "The Annunciation",
+  "mbids": [
+   "7b80fd97-ae5b-45a8-b9e9-d291b4ed92bd"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-7b80fd97",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18289,
+  "title": "Three Caprichos After Goya",
+  "mbids": [
+   "8c6a0e61-6bf3-4485-b94c-c2335a194d78"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-8c6a0e61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18846,
+  "title": "Vexations and Devotions",
+  "mbids": [
+   "ae4a8d9e-5d98-47fa-8ca1-4690bbc49e53"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-ae4a8d9e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18938,
+  "title": "The Players",
+  "mbids": [
+   "b4744dd9-9670-40a4-bb83-0b5184e4b48e"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-b4744dd9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19239,
+  "title": "Confessio",
+  "mbids": [
+   "c79b71b6-5f57-4e9e-bc05-847fbb17bdf7"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-c79b71b6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19296,
+  "title": "Engelsflügel",
+  "mbids": [
+   "cb7104d7-e51d-44fd-863d-44cc47d79060"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-cb7104d7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19317,
+  "title": "The Last Days of Socrates",
+  "mbids": [
+   "cd2d7f31-4dd4-4246-8ca2-d518767406d9"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-cd2d7f31",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19399,
+  "title": "Now Comes the Dawn",
+  "mbids": [
+   "d28a6f10-c4ab-4af0-881d-886f03315f07"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19494,
+  "title": "From Melodious Lay (A Hamlet Diffraction)",
+  "mbids": [
+   "d8b321b2-b9d9-4da3-9dbb-17b98c26490c"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-d8b321b2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19509,
+  "title": "Bliss",
+  "mbids": [
+   "da242de8-3edc-432f-904f-0595bcae426d"
+  ],
+  "mapping": "work",
+  "key": "brett-dean-da242de8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19574,
+  "title": "And once I played Ophelia",
+  "mbids": [
+   "de8170d4-7069-4ad9-b6de-675ce7216697"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 20031,
+  "title": "Knocking at the Hellgate",
+  "mbids": [
+   "fb77b44a-981e-464f-8ad1-5b8dcb26faef"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ }
+]

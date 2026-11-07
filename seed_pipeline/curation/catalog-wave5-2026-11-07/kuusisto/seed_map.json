@@ -1,0 +1,326 @@
+[
+ {
+  "pieceId": 15733,
+  "title": "Sota valosta",
+  "mbids": [
+   "19ac13e5-dbc7-449a-b03c-5c2d3b8e8f53"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-19ac13e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15734,
+  "title": "Nainen kuin jäätynyt samppanja",
+  "mbids": [
+   "1c16e9b2-bf07-4ae1-9a5c-bbd7dc2da071"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-1c16e9b2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15736,
+  "title": "Kuninkaan sormus",
+  "mbids": [
+   "25e6eb40-0300-4661-9cdd-a9f15879f7fe"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-25e6eb40",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15739,
+  "title": "Postineiti",
+  "mbids": [
+   "2a28e8b2-7c47-4dc5-91dd-5b84e27d42a9"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-2a28e8b2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15784,
+  "title": "Kun talo alkaa soida",
+  "mbids": [
+   "7c56b683-2eed-4792-b663-5624b00156c1"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-7c56b683",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15788,
+  "title": "Isänmaan tyttäret",
+  "mbids": [
+   "84b586f3-b5ab-4477-b4bb-693d3cd93635"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-84b586f3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15819,
+  "title": "Fröken Julie",
+  "mbids": [
+   "bf07663b-d67c-43be-9052-6d69dfeac7f6"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-bf07663b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15827,
+  "title": "Gabriel, tule takaisin!",
+  "mbids": [
+   "da1afa24-66f4-4e73-b556-32c26b9b07d3"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-da1afa24",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15840,
+  "title": "Pierrot ja yön salaisuudet",
+  "mbids": [
+   "eb8639fe-e50f-4758-a681-c3e418b4845a"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-eb8639fe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16521,
+  "title": "Kotia kohti",
+  "mbids": [
+   "1ee60d10-0890-4db5-b12f-717293af4b25"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-1ee60d10",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17225,
+  "title": "Miehen kylkiluu",
+  "mbids": [
+   "493a276f-5f48-4f3e-aa70-79bf12973a06"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-493a276f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17512,
+  "title": "Muumiooppera",
+  "mbids": [
+   "5b259c06-9705-448c-b5a9-e2df67d7e910"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-5b259c06",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18020,
+  "title": "Kaukainen aamu",
+  "mbids": [
+   "7a57a373-2bfd-4046-8ca7-dcfdddca7a2d"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-7a57a373",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18113,
+  "title": "Hiljainen ilta",
+  "mbids": [
+   "7fc513e0-fcdf-4836-a83a-c3003b0344a7"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-7fc513e0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18218,
+  "title": "Kuukaudet",
+  "mbids": [
+   "88137746-5e5f-4b4f-9997-ffac5b60015a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18297,
+  "title": "Vapauden vanki",
+  "mbids": [
+   "8cc21b40-0d78-4e33-b695-dc514773326b"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-8cc21b40",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18377,
+  "title": "Concertino Improvvisando",
+  "mbids": [
+   "915aa729-6832-412e-a508-d33ddb233f8c"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-915aa729",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18879,
+  "title": "Unessa tumma torni",
+  "mbids": [
+   "b110c971-05da-410c-9537-6df8a910a914"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-b110c971",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18884,
+  "title": "Jääkäri Ståhl",
+  "mbids": [
+   "b15a3670-fd75-4d95-b5a9-f779f935b98c"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-b15a3670",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19189,
+  "title": "Suomalainen",
+  "mbids": [
+   "c4cccd27-9de5-41e8-87f5-fa00ba8ae79f"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-c4cccd27",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19275,
+  "title": "Matilda ja Nikolai",
+  "mbids": [
+   "ca35bc86-9f0a-404a-bb23-98b80e68b47d"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-ca35bc86",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19619,
+  "title": "Kuutamo-simmi",
+  "mbids": [
+   "e147d5c2-053b-4a6a-ae5e-cc83b65158fb"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-e147d5c2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19727,
+  "title": "Pula! Ooppera Konikapinasta",
+  "mbids": [
+   "e9f41953-87f7-4b61-b4c7-4b0c456f4f32"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-e9f41953",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19801,
+  "title": "Taipaleenjoki",
+  "mbids": [
+   "ee76ee9a-ddd0-47d6-bff0-8f0f016011b0"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-ee76ee9a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19836,
+  "title": "Ritmo Acustico 2",
+  "mbids": [
+   "f0b4c765-bf10-47cc-ad9a-990be818d38f"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-f0b4c765",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19985,
+  "title": "Lumikuningatar",
+  "mbids": [
+   "f85167fb-0968-4265-a368-192ff9850690"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-f85167fb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20005,
+  "title": "Robin Hood",
+  "mbids": [
+   "f9c94138-fc86-4731-b82b-6a38bdc10212"
+  ],
+  "mapping": "work",
+  "key": "kuusisto-f9c94138",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]
