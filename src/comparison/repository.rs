@@ -9,6 +9,12 @@ use crate::{db::DbPool, logger::Logger};
 use sqlx::{FromRow, MySql, QueryBuilder, Transaction};
 use std::{collections::HashMap, error::Error, fmt};
 
+#[derive(Debug, FromRow)]
+struct PieceCoverRow {
+    piece_id: i32,
+    video_id: String,
+}
+
 /// 이보다 덜 맞는 정렬 지도는 내보내지 않는다. 판이 다른 편곡(조옮김·편성)이 여기서 걸린다.
 /// 시드 검증의 교차 정렬 임계(align.py COST_THRESHOLD)와 같다
 const MAX_ALIGNMENT_COST: f64 = 0.11;
@@ -282,6 +288,40 @@ impl ComparisonRepository {
         }
         for piece in &mut pieces {
             piece.performers = by_piece.remove(&piece.piece_id).unwrap_or_default();
+        }
+
+        // 대표 연주 영상: 표시 순서가 앞선 공개 구간의 첫 연주
+        let mut cover_builder = QueryBuilder::<MySql>::new(format!(
+            "{PUBLIC_COMPARISON_CTE}
+             SELECT piece_id, video_id FROM (
+                 SELECT ready.piece_id,
+                        CAST(source.provider_video_id AS CHAR CHARACTER SET utf8mb4) AS video_id,
+                        ROW_NUMBER() OVER (
+                            PARTITION BY ready.piece_id
+                            ORDER BY sector.display_order IS NULL, sector.display_order, sector.id, ready.id
+                        ) AS cover_rank
+                 FROM ready_performance ready
+                 JOIN public_sector ON public_sector.sector_id = ready.sector_id
+                 JOIN performance_sectors sector ON sector.id = ready.sector_id
+                 JOIN performance_sources source
+                   ON source.id = ready.performance_source_id
+                  AND source.provider = 'youtube'
+                 WHERE ready.piece_id IN ("
+        ));
+        let mut cover_ids = cover_builder.separated(", ");
+        for piece in &pieces {
+            cover_ids.push_bind(piece.piece_id);
+        }
+        cover_builder.push(")) ranked WHERE cover_rank = 1");
+        let covers: HashMap<i32, String> = cover_builder
+            .build_query_as::<PieceCoverRow>()
+            .fetch_all(pool)
+            .await?
+            .into_iter()
+            .map(|row| (row.piece_id, row.video_id))
+            .collect();
+        for piece in &mut pieces {
+            piece.cover_video_id = covers.get(&piece.piece_id).cloned();
         }
         Ok(pieces)
     }

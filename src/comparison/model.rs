@@ -433,6 +433,10 @@ pub struct ComparisonPiece {
     pub sector_count: i64,
     /// 공개 섹터들에 등장하는 서로 다른 primary artist 수
     pub performer_count: i64,
+    /// 카드 그림으로 쓸 대표 연주 영상(YouTube id). 대부분 음반 표지를 띄운 공식 음원 영상이라
+    /// 썸네일 가운데를 자르면 앨범 아트가 된다. 첫 공개 구간의 첫 연주를 쓴다
+    #[sqlx(skip)]
+    pub cover_video_id: Option<String>,
     #[sqlx(skip)]
     pub performers: Vec<ComparisonPiecePerformer>,
 }

@@ -584,6 +584,7 @@ mod tests {
                 composer_name: composer.1.to_string(),
                 composer_avatar_url: None,
                 genre: None,
+                cover_video_id: None,
                 sector_count: 1,
                 performer_count: 3,
                 performers: Vec::new(),

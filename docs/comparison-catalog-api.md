@@ -19,6 +19,7 @@
 | `pieceId`, `pieceTitle`, `opusNumber` | 작품 |
 | `composerId`, `composerName`, `composerAvatarUrl` | 작곡가 |
 | `genre` | 장르 키 또는 `null`(아직 분류하지 않음) |
+| `coverVideoId` | 카드 그림으로 쓸 대표 연주 영상 YouTube id(표시 순서가 앞선 공개 구간의 첫 연주) 또는 `null`. 썸네일 가운데를 정사각으로 자르면 대개 음반 표지다 |
 | `sectorCount` | 공개 구간 수 |
 | `performerCount` | 공개 구간에 나오는 서로 다른 주 연주자 수 |
 | `performers` | 카드에 얼굴로 쓸 주 연주자, 최대 4명 |
