@@ -146,6 +146,8 @@ pub struct OnboardingPiece {
     pub composer_name: String,
     pub composer_avatar_url: Option<String>,
     pub lead_sound: String,
+    /// 작품 장르 키. 아직 분류하지 않은 작품은 null
+    pub genre: Option<String>,
 }
 
 #[derive(Debug, Clone, Deserialize, PartialEq, Eq)]

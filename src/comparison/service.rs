@@ -34,9 +34,10 @@ impl ComparisonService {
     pub async fn get_public_pieces(
         pool: &DbPool,
         composer_id: Option<i32>,
+        genre: Option<&str>,
         offset: i64,
         limit: i64,
     ) -> Result<Vec<ComparisonPiece>, ComparisonContractError> {
-        ComparisonRepository::find_public_pieces(pool, composer_id, offset, limit).await
+        ComparisonRepository::find_public_pieces_by(pool, composer_id, genre, offset, limit).await
     }
 }

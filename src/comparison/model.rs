@@ -328,6 +328,21 @@ pub struct ComparisonSector {
     pub featured_pair: Option<FeaturedPair>,
 }
 
+/// 작품 장르 키. `pieces.genre` 의 CHECK 제약과 같은 목록이다
+pub const PIECE_GENRES: [&str; 7] = [
+    "symphony",
+    "concerto",
+    "piano",
+    "chamber",
+    "orchestral",
+    "stage",
+    "vocal",
+];
+
+pub fn is_piece_genre(value: &str) -> bool {
+    PIECE_GENRES.contains(&value)
+}
+
 /// 비교 카탈로그의 작품 한 줄. 공개 섹터가 하나 이상 있는 작품만 나온다.
 #[derive(Debug, Clone, Serialize, FromRow)]
 #[serde(rename_all = "camelCase")]
@@ -338,6 +353,8 @@ pub struct ComparisonPiece {
     pub composer_id: i32,
     pub composer_name: String,
     pub composer_avatar_url: Option<String>,
+    /// 장르 키(`PIECE_GENRES` 중 하나). 아직 분류하지 않은 작품은 null
+    pub genre: Option<String>,
     /// 공개 섹터 수
     pub sector_count: i64,
     /// 공개 섹터들에 등장하는 서로 다른 primary artist 수
@@ -450,9 +467,9 @@ impl From<ComparisonCreditRow> for ComparisonCredit {
 #[cfg(test)]
 mod tests {
     use super::{
-        clip_offset, note_moments, pair_moments, parse_json_list, ClipStatus, ComparisonSector,
-        EditorialStatus, FeaturedPairMoment, ListeningMoment, PerformancePublishStatus,
-        StoredMoment,
+        clip_offset, is_piece_genre, note_moments, pair_moments, parse_json_list, ClipStatus,
+        ComparisonSector, EditorialStatus, FeaturedPairMoment, ListeningMoment,
+        PerformancePublishStatus, StoredMoment, PIECE_GENRES,
     };
     use std::str::FromStr;
 
@@ -570,5 +587,23 @@ mod tests {
         assert!(ClipStatus::from_str("DONE").is_err());
         assert!(EditorialStatus::from_str("VERIFIED").is_err());
         assert!(PerformancePublishStatus::from_str("QUEUED").is_err());
+    }
+
+    #[test]
+    fn piece_genres_match_migration_check() {
+        let migration = include_str!("../../migrations/202611070001_add_piece_genre.sql");
+        let check = migration
+            .split("genre IN (")
+            .nth(1)
+            .and_then(|rest| rest.split(')').next())
+            .expect("장르 CHECK 목록");
+        let keys: Vec<&str> = check
+            .split(',')
+            .map(|key| key.trim().trim_matches('\''))
+            .collect();
+        assert_eq!(keys, PIECE_GENRES);
+        assert!(is_piece_genre("piano"));
+        assert!(!is_piece_genre("jazz"));
+        assert!(!is_piece_genre("Piano"));
     }
 }

@@ -173,6 +173,17 @@ impl ComparisonRepository {
         offset: i64,
         limit: i64,
     ) -> Result<Vec<ComparisonPiece>, ComparisonContractError> {
+        ComparisonRepository::find_public_pieces_by(pool, composer_id, None, offset, limit).await
+    }
+
+    /// 비교 카탈로그를 작곡가·장르로 거른다. 둘 다 없으면 `find_public_pieces` 와 같다
+    pub async fn find_public_pieces_by(
+        pool: &DbPool,
+        composer_id: Option<i32>,
+        genre: Option<&str>,
+        offset: i64,
+        limit: i64,
+    ) -> Result<Vec<ComparisonPiece>, ComparisonContractError> {
         let sql = format!(
             "{PUBLIC_COMPARISON_CTE}
              SELECT piece.id AS piece_id,
@@ -181,6 +192,7 @@ impl ComparisonRepository {
                     composer.id AS composer_id,
                     composer.name AS composer_name,
                     composer.avatar_url AS composer_avatar_url,
+                    piece.genre,
                     COUNT(DISTINCT public_sector.sector_id) AS sector_count,
                     COUNT(DISTINCT credit.artist_id) AS performer_count
              FROM public_sector
@@ -192,7 +204,8 @@ impl ComparisonRepository {
                ON credit.performance_source_id = ready.performance_source_id
               AND credit.is_primary = TRUE
              WHERE (? IS NULL OR composer.id = ?)
-             GROUP BY piece.id, piece.title, piece.opus_number,
+               AND (? IS NULL OR piece.genre = ?)
+             GROUP BY piece.id, piece.title, piece.opus_number, piece.genre,
                       composer.id, composer.name, composer.avatar_url
              ORDER BY performer_count DESC, sector_count DESC, piece.id ASC
              LIMIT ? OFFSET ?"
@@ -200,6 +213,8 @@ impl ComparisonRepository {
         let mut pieces = sqlx::query_as::<_, ComparisonPiece>(&sql)
             .bind(composer_id)
             .bind(composer_id)
+            .bind(genre)
+            .bind(genre)
             .bind(limit)
             .bind(offset)
             .fetch_all(pool)
