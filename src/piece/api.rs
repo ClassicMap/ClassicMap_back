@@ -1,4 +1,7 @@
-use super::model::{CreatePiece, Piece, PiecePart, PieceSearchResult, UpdatePiece};
+use super::model::{
+    ComposerCatalog, ComposerPiece, ComposerPieceQuery, CreatePiece, Piece, PiecePart,
+    PieceSearchResult, UpdatePiece,
+};
 use super::service::{PieceListRange, PieceService};
 use crate::auth::ModeratorUser;
 use crate::db::DbPool;
@@ -71,21 +74,49 @@ pub async fn get_piece_parts(
 
 /// 다른 작품의 part 로 이어진 작품은 묶음 안에서 보이므로 빼고 준다.
 /// offset·limit이 없으면 전체를 준다(기존 호출 호환). 하나라도 있으면 페이지로 준다.
-#[get("/composers/<composer_id>/pieces?<offset>&<limit>")]
+/// genre(장르 7종, other 는 장르 없음)·form(형식 키)·notable=1 로 거르고, sort 는
+/// listening(기본)·catalogue·year·notable 이다. q 는 제목·작품번호·별칭·세트 안 곡 이름을 찾는다.
+#[allow(clippy::too_many_arguments)]
+#[get("/composers/<composer_id>/pieces?<offset>&<limit>&<genre>&<form>&<sort>&<q>&<notable>")]
 pub async fn get_pieces_by_composer(
     pool: &State<DbPool>,
     composer_id: i32,
     offset: Option<i64>,
     limit: Option<i64>,
-) -> Result<Json<Vec<Piece>>, Status> {
+    genre: Option<&str>,
+    form: Option<&str>,
+    sort: Option<&str>,
+    q: Option<&str>,
+    notable: Option<&str>,
+) -> Result<Json<Vec<ComposerPiece>>, Status> {
     let range = PieceListRange::parse(offset, limit).map_err(|_| Status::BadRequest)?;
+    let query =
+        ComposerPieceQuery::parse(genre, form, sort, q, notable).map_err(|_| Status::BadRequest)?;
 
-    match PieceService::get_pieces_by_composer(pool, composer_id, range).await {
+    match PieceService::get_pieces_by_composer(pool, composer_id, range, &query).await {
         Ok(pieces) => Ok(Json(pieces)),
         Err(e) => {
             Logger::error(
                 "API",
                 &format!("Failed to get pieces for composer {}: {}", composer_id, e),
+            );
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+/// 작곡가 작품의 갈래·형식별 개수. 작곡가 화면의 갈래 칩과 형식 머리를 그린다.
+#[get("/composers/<composer_id>/catalog")]
+pub async fn get_composer_catalog(
+    pool: &State<DbPool>,
+    composer_id: i32,
+) -> Result<Json<ComposerCatalog>, Status> {
+    match PieceService::get_composer_catalog(pool, composer_id).await {
+        Ok(catalog) => Ok(Json(catalog)),
+        Err(e) => {
+            Logger::error(
+                "API",
+                &format!("Failed to get catalog for composer {}: {}", composer_id, e),
             );
             Err(Status::InternalServerError)
         }

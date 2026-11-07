@@ -1,5 +1,6 @@
 use super::model::{
-    order_part_tree, CreatePiece, Piece, PiecePart, PiecePartRow, PieceSearchResult, UpdatePiece,
+    order_part_tree, CatalogRow, ComposerPieceQuery, ComposerPieceRow, ComposerPieceSort,
+    CreatePiece, GenreFilter, Piece, PiecePart, PiecePartRow, PieceSearchResult, UpdatePiece,
 };
 use crate::db::DbPool;
 use crate::search::SearchText;
@@ -115,45 +116,157 @@ pub fn top_level_piece_condition(alias: &str) -> String {
 /// 3. 같은 접두어 안에서는 첫 숫자(작품 번호), 둘째 숫자(No.)를 숫자로 비교한다.
 ///    둘째 숫자가 없는 묶음(Op. 10)이 그 안의 곡(Op. 10, No. 1)보다 앞선다.
 /// 4. 그래도 같으면 작품번호 문자열("M. 57" < "M. 57b"), 마지막 id 로 페이지 경계를 고정한다.
-fn composer_pieces_order() -> String {
-    let label = "(CASE
+/// 작품번호 칸: catalogue_number 가 있으면 `catalogue_system catalogue_number`, 없으면 opus_number.
+const CATALOGUE_LABEL: &str = "(CASE
             WHEN piece.catalogue_number IS NOT NULL AND TRIM(piece.catalogue_number) <> ''
                 THEN TRIM(CONCAT_WS(' ', piece.catalogue_system, piece.catalogue_number))
             ELSE NULLIF(TRIM(piece.opus_number), '')
         END)";
+
+/// 작품번호순 정렬 항목(위 1~4).
+fn catalogue_order_terms() -> String {
+    let label = CATALOGUE_LABEL;
     format!(
-        "ORDER BY
-            CASE
-                WHEN {piece_curation} OR EXISTS (
-                    SELECT 1
-                    FROM piece_parts part
-                    JOIN pieces linked ON linked.id = part.linked_piece_id
-                    WHERE part.piece_id = piece.id
-                      AND {VISIBLE_PART}
-                      AND {linked_curation}
-                ) THEN 0
-                WHEN {piece_listening} OR EXISTS (
-                    SELECT 1
-                    FROM piece_parts part
-                    JOIN pieces linked ON linked.id = part.linked_piece_id
-                    WHERE part.piece_id = piece.id
-                      AND {VISIBLE_PART}
-                      AND {linked_listening}
-                ) THEN 1
-                ELSE 2
-            END ASC,
-            {label} IS NULL ASC,
+        "{label} IS NULL ASC,
             REGEXP_LIKE({label}, '^op', 'i') DESC,
             REGEXP_REPLACE(LOWER(REGEXP_SUBSTR({label}, '^[^0-9]*')), '[^a-z]', '') ASC,
             REGEXP_SUBSTR({label}, '[0-9]+') IS NULL ASC,
             CAST(REGEXP_SUBSTR({label}, '[0-9]+') AS UNSIGNED) ASC,
             CAST(REGEXP_SUBSTR({label}, '[0-9]+', 1, 2) AS UNSIGNED) ASC,
             {label} ASC,
-            piece.id ASC",
+            piece.id ASC"
+    )
+}
+
+/// 손본 작품 0 → 들을 거리 있는 작품 1 → 나머지 2.
+fn listening_tier() -> String {
+    format!(
+        "CASE
+            WHEN {piece_curation} OR EXISTS (
+                SELECT 1
+                FROM piece_parts part
+                JOIN pieces linked ON linked.id = part.linked_piece_id
+                WHERE part.piece_id = piece.id
+                  AND {VISIBLE_PART}
+                  AND {linked_curation}
+            ) THEN 0
+            WHEN {piece_listening} OR EXISTS (
+                SELECT 1
+                FROM piece_parts part
+                JOIN pieces linked ON linked.id = part.linked_piece_id
+                WHERE part.piece_id = piece.id
+                  AND {VISIBLE_PART}
+                  AND {linked_listening}
+            ) THEN 1
+            ELSE 2
+        END",
         piece_curation = has_curation("piece"),
         linked_curation = has_curation("linked"),
         piece_listening = has_listening("piece"),
         linked_listening = has_listening("linked"),
+    )
+}
+
+/// 대표곡이거나 세트 안에 대표 곡이 있다. 작품 행을 `piece` 로 부르는 쿼리에서만 쓴다.
+fn notable_condition() -> String {
+    format!(
+        "(piece.notable = 1 OR EXISTS (
+            SELECT 1 FROM piece_parts part
+            WHERE part.piece_id = piece.id
+              AND part.parent_part_id IS NULL
+              AND part.notable = 1
+              AND {VISIBLE_PART}
+        ))"
+    )
+}
+
+fn composer_pieces_order(sort: ComposerPieceSort) -> String {
+    let catalogue = catalogue_order_terms();
+    match sort {
+        ComposerPieceSort::Listening => {
+            format!("ORDER BY {tier} ASC, {catalogue}", tier = listening_tier())
+        }
+        ComposerPieceSort::Catalogue => format!("ORDER BY {catalogue}"),
+        ComposerPieceSort::Year => format!(
+            "ORDER BY piece.composition_year IS NULL ASC, piece.composition_year ASC, {catalogue}"
+        ),
+        ComposerPieceSort::Notable => format!(
+            "ORDER BY {notable} DESC, {tier} ASC, COALESCE(piece.fame_score, 0) DESC, {catalogue}",
+            notable = notable_condition(),
+            tier = listening_tier()
+        ),
+    }
+}
+
+/// 작곡가 작품 목록의 거르기·검색 조건과 그 바인드 값(순서대로).
+fn composer_piece_filters(query: &ComposerPieceQuery) -> (String, Vec<String>) {
+    let mut sql = String::new();
+    let mut binds = Vec::new();
+    match &query.genre {
+        GenreFilter::Any => {}
+        GenreFilter::Unclassified => sql.push_str(" AND piece.genre IS NULL"),
+        GenreFilter::Genre(genre) => {
+            sql.push_str(" AND piece.genre = ?");
+            binds.push(genre.clone());
+        }
+    }
+    if let Some(form) = &query.form {
+        sql.push_str(" AND piece.form_key = ?");
+        binds.push(form.clone());
+    }
+    if query.notable_only {
+        sql.push_str(&format!(" AND {}", notable_condition()));
+    }
+    if !query.search_patterns.is_empty() {
+        let mut groups = Vec::new();
+        for pattern in &query.search_patterns {
+            groups.push(format!(
+                "piece.title LIKE ? OR piece.title_en LIKE ? OR piece.opus_number LIKE ?
+                 OR {CATALOGUE_LABEL} LIKE ?
+                 OR EXISTS (SELECT 1 FROM piece_aliases alias
+                            WHERE alias.piece_id = piece.id AND alias.alias_value LIKE ?)
+                 OR EXISTS (SELECT 1 FROM piece_parts part
+                            WHERE part.piece_id = piece.id AND {VISIBLE_PART}
+                              AND (part.name_ko LIKE ? OR part.name_en LIKE ?))"
+            ));
+            binds.extend(std::iter::repeat_n(pattern.clone(), 7));
+        }
+        sql.push_str(&format!(" AND ({})", groups.join(" OR ")));
+    }
+    (sql, binds)
+}
+
+/// 검색어가 걸린 첫 세트 안 곡(번호·이름) 칼럼과 그 바인드 값. 검색하지 않으면 빈 칼럼이다.
+fn matched_part_columns(query: &ComposerPieceQuery) -> (String, Vec<String>) {
+    if query.search_patterns.is_empty() {
+        return (String::new(), Vec::new());
+    }
+    let condition = query
+        .search_patterns
+        .iter()
+        .map(|_| "part.name_ko LIKE ? OR part.name_en LIKE ?")
+        .collect::<Vec<_>>()
+        .join(" OR ");
+    let from = format!(
+        "FROM piece_parts part
+         WHERE part.piece_id = piece.id AND part.parent_part_id IS NULL AND {VISIBLE_PART}
+           AND ({condition})
+         ORDER BY part.sequence_number, part.id
+         LIMIT 1"
+    );
+    let mut binds = Vec::new();
+    for _ in 0..2 {
+        for pattern in &query.search_patterns {
+            binds.push(pattern.clone());
+            binds.push(pattern.clone());
+        }
+    }
+    (
+        format!(
+            ", (SELECT part.sequence_number {from}) AS matched_part_sequence,
+               (SELECT COALESCE(NULLIF(TRIM(part.name_ko), ''), part.name_en) {from}) AS matched_part_name"
+        ),
+        binds,
     )
 }
 
@@ -181,41 +294,101 @@ impl PieceRepository {
         .await
     }
 
-    fn composer_pieces_sql(paged: bool) -> String {
-        format!(
-            "SELECT piece.*, {part_summary}
+    /// 작곡가 작품 목록. 다른 작품의 part 로 이어진 작품은 묶음 안에서 보이므로 뺀다.
+    pub async fn find_composer_pieces(
+        pool: &DbPool,
+        composer_id: i32,
+        query: &ComposerPieceQuery,
+        page: Option<(i64, i64)>,
+    ) -> Result<Vec<ComposerPieceRow>, Error> {
+        let (matched, matched_binds) = matched_part_columns(query);
+        let (filters, filter_binds) = composer_piece_filters(query);
+        let sql = format!(
+            "SELECT piece.*, {part_summary},
+                    (SELECT GROUP_CONCAT(part.sequence_number ORDER BY part.sequence_number)
+                     FROM piece_parts part
+                     WHERE part.piece_id = piece.id AND part.parent_part_id IS NULL
+                       AND part.notable = 1 AND {VISIBLE_PART}) AS notable_part_numbers
+                    {matched}
              FROM pieces piece
              WHERE piece.composer_id = ?
                AND {listed}
                AND {top_level}
+               {filters}
              {order}{page}",
             part_summary = part_summary_columns(),
             listed = listed_condition("piece"),
             top_level = top_level_piece_condition("piece"),
-            order = composer_pieces_order(),
-            page = if paged { " LIMIT ? OFFSET ?" } else { "" },
-        )
+            order = composer_pieces_order(query.sort),
+            page = if page.is_some() {
+                " LIMIT ? OFFSET ?"
+            } else {
+                ""
+            },
+        );
+        let mut statement = sqlx::query_as::<_, ComposerPieceRow>(&sql);
+        for value in &matched_binds {
+            statement = statement.bind(value);
+        }
+        statement = statement.bind(composer_id);
+        for value in &filter_binds {
+            statement = statement.bind(value);
+        }
+        if let Some((offset, limit)) = page {
+            statement = statement.bind(limit).bind(offset);
+        }
+        statement.fetch_all(pool).await
     }
 
+    /// 기본 목록(손본 작품 먼저) 전체. `find_composer_pieces` 를 거르기 없이 부른다.
     pub async fn find_by_composer_id(pool: &DbPool, composer_id: i32) -> Result<Vec<Piece>, Error> {
-        sqlx::query_as::<_, Piece>(&Self::composer_pieces_sql(false))
-            .bind(composer_id)
-            .fetch_all(pool)
+        Self::find_composer_pieces(pool, composer_id, &ComposerPieceQuery::listing(), None)
             .await
+            .map(|rows| rows.into_iter().map(|row| row.piece).collect())
     }
 
+    /// 기본 목록(손본 작품 먼저)의 한 페이지.
     pub async fn find_page_by_composer_id(
         pool: &DbPool,
         composer_id: i32,
         offset: i64,
         limit: i64,
     ) -> Result<Vec<Piece>, Error> {
-        sqlx::query_as::<_, Piece>(&Self::composer_pieces_sql(true))
-            .bind(composer_id)
-            .bind(limit)
-            .bind(offset)
-            .fetch_all(pool)
-            .await
+        Self::find_composer_pieces(
+            pool,
+            composer_id,
+            &ComposerPieceQuery::listing(),
+            Some((offset, limit)),
+        )
+        .await
+        .map(|rows| rows.into_iter().map(|row| row.piece).collect())
+    }
+
+    /// 작곡가 작품의 갈래·형식별 개수와 대표곡 수. 작품 목록과 같은 최상위·숨김 조건을 쓴다.
+    pub async fn composer_catalog(
+        pool: &DbPool,
+        composer_id: i32,
+    ) -> Result<Vec<CatalogRow>, Error> {
+        sqlx::query_as::<_, CatalogRow>(&format!(
+            "SELECT piece.genre AS genre,
+                    piece.form_key AS form_key,
+                    form.name_ko AS form_name,
+                    form.sort_order AS form_order,
+                    COUNT(*) AS piece_count,
+                    CAST(SUM(CASE WHEN {notable} THEN 1 ELSE 0 END) AS SIGNED) AS notable_count
+             FROM pieces piece
+             LEFT JOIN piece_forms form ON form.form_key = piece.form_key
+             WHERE piece.composer_id = ?
+               AND {listed}
+               AND {top_level}
+             GROUP BY piece.genre, piece.form_key, form.name_ko, form.sort_order",
+            notable = notable_condition(),
+            listed = listed_condition("piece"),
+            top_level = top_level_piece_condition("piece"),
+        ))
+        .bind(composer_id)
+        .fetch_all(pool)
+        .await
     }
 
     /// 작품의 보이는 part 를 화면 순서로 준다. 없는 작품이면 다른 `/pieces/<id>/…` 목록처럼 빈 목록이다.
@@ -238,7 +411,8 @@ impl PieceRepository {
                         WHERE sector.piece_id = linked.id
                     ) AS linked_comparable,
                     linked.spotify_url AS linked_spotify_url,
-                    linked.apple_music_url AS linked_apple_music_url
+                    linked.apple_music_url AS linked_apple_music_url,
+                    part.notable AS notable
              FROM piece_parts part
              LEFT JOIN pieces linked ON linked.id = part.linked_piece_id
              WHERE part.piece_id = ?
