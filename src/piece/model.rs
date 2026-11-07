@@ -291,6 +291,8 @@ pub struct PiecePart {
     pub notable: bool,
     /// 이 곡의 Apple Music 트랙 링크. 이어진 작품이 있으면 그 작품 링크(`linked_piece`)를 쓴다
     pub apple_music_url: Option<String>,
+    /// 이 곡의 Spotify 트랙 링크. 쓰는 법은 `apple_music_url` 과 같다
+    pub spotify_url: Option<String>,
 }
 
 #[derive(Debug, Serialize, PartialEq, Eq)]
@@ -319,6 +321,7 @@ pub struct PiecePartRow {
     pub linked_apple_music_url: Option<String>,
     pub notable: bool,
     pub apple_music_url: Option<String>,
+    pub spotify_url: Option<String>,
 }
 
 impl From<PiecePartRow> for PiecePart {
@@ -353,6 +356,7 @@ impl From<PiecePartRow> for PiecePart {
             linked_piece,
             notable: row.notable,
             apple_music_url: row.apple_music_url,
+            spotify_url: row.spotify_url,
         }
     }
 }
@@ -439,6 +443,7 @@ mod tests {
             linked_apple_music_url: None,
             notable: false,
             apple_music_url: None,
+            spotify_url: None,
         }
     }
 
@@ -519,6 +524,7 @@ mod tests {
         linked.linked_title = Some("혁명".to_string());
         linked.linked_spotify_url = Some("https://open.spotify.com/track/x".to_string());
         linked.apple_music_url = Some("https://music.apple.com/us/album/x/1?i=2".to_string());
+        linked.spotify_url = Some("https://open.spotify.com/track/y".to_string());
 
         let json = serde_json::to_value(PiecePart::from(linked)).expect("직렬화");
         assert_eq!(
@@ -539,7 +545,8 @@ mod tests {
                     "appleMusicUrl": null
                 },
                 "notable": false,
-                "appleMusicUrl": "https://music.apple.com/us/album/x/1?i=2"
+                "appleMusicUrl": "https://music.apple.com/us/album/x/1?i=2",
+                "spotifyUrl": "https://open.spotify.com/track/y"
             })
         );
         assert_eq!(

@@ -69,6 +69,7 @@ offset·limit 이 없으면 전체, 하나라도 있으면 페이지로 주는 �
 | `parentPartId` | 악장 안의 하위 곡이면 부모 part id. 최상위면 `null` |
 | `linkedPiece` | 이 곡이 따로 작품 행으로 있으면 그 작품. 없으면 `null` |
 | `appleMusicUrl` | 이 곡의 Apple Music 트랙 링크(`…/album/<slug>/<앨범 ID>?i=<트랙 ID>`). 없으면 `null`. `linkedPiece`가 있으면 화면은 그 작품의 링크를 씁니다. 세트 작품의 앨범 트랙에서 번호·악장·이름이 맞는 것만 붙입니다(`seed_pipeline/curation/part-apple-links-2026-11-08/`). |
+| `spotifyUrl` | 이 곡의 Spotify 트랙 링크(`https://open.spotify.com/track/<트랙 ID>`). 없으면 `null`. 쓰는 법은 `appleMusicUrl`과 같습니다. 세트 작품을 Spotify에서 찾은 앨범의 트랙에서 같은 규칙으로 붙입니다(`seed_pipeline/curation/part-spotify-links-2026-11-08/`). |
 | `notable` | 세트 안 대표 곡 표시 |
 | `linkedPiece.comparable` | 그 작품에 비교 화면 공개 구간이 하나라도 있는지. `/pieces/<id>/comparison-sectors`·`/comparison-pieces`와 같은 공개 기준(발행된 연주, 현재 클립 READY·PUBLISHED, 구간 EDITOR_REVIEWED 이상, 주연주자 3명 이상)입니다. |
 
