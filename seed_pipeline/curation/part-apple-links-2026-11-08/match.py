@@ -304,6 +304,28 @@ def match_set(
                 if mine_key and theirs and mine_key != theirs:
                     continue
                 picked[part_id] = (index, "order")
+    # 트랙 이름이 악장 이름뿐인 앨범("I. Allegretto"): 앨범 이름에 작품번호가 있고
+    # 트랙 수가 곡 수와 같을 때만 순서대로 붙인다
+    album = norm(str(tracks[0].get("collectionName", ""))) if tracks else ""
+    if (
+        cat
+        and not picked
+        and len(tracks) == len(rows)
+        and re.search(cat, album)
+        and not any(re.search(cat, t) for t in names)
+    ):
+        ordered = sorted(rows, key=lambda r: int(r["seq"]))
+        indexes = [index_of(str(t.get("trackName", ""))) for t in tracks]
+        if all(
+            found is None or found == int(r["seq"])
+            for r, found in zip(ordered, indexes, strict=True)
+        ):
+            for index, row in enumerate(ordered):
+                mine_key = key_of(row["name_ko"]) or key_of(row["name_en"])
+                theirs = key_of(str(tracks[index].get("trackName", "")))
+                if mine_key and theirs and mine_key != theirs:
+                    continue
+                picked[int(row["part_id"])] = (index, "album")
     # 한 트랙이 두 곡에 걸리면 어느 쪽인지 모르므로 둘 다 버린다
     used = Counter(index for index, _ in picked.values())
     return {
