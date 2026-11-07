@@ -180,9 +180,10 @@ fn notable_condition() -> String {
     )
 }
 
-fn composer_pieces_order(sort: ComposerPieceSort) -> String {
+/// 정렬 절과 그 바인드 값(관련도 정렬만 검색어를 바인드한다).
+fn composer_pieces_order(query: &ComposerPieceQuery) -> (String, Vec<String>) {
     let catalogue = catalogue_order_terms();
-    match sort {
+    let order = match query.sort {
         ComposerPieceSort::Listening => {
             format!("ORDER BY {tier} ASC, {catalogue}", tier = listening_tier())
         }
@@ -195,7 +196,67 @@ fn composer_pieces_order(sort: ComposerPieceSort) -> String {
             notable = notable_condition(),
             tier = listening_tier()
         ),
-    }
+        ComposerPieceSort::Relevance => {
+            let Some(contains) = query.search_patterns.first() else {
+                return (format!("ORDER BY {catalogue}"), Vec::new());
+            };
+            // contains 는 이미 LIKE 이스케이프한 「%검색어%」다. 앞뒤 % 를 떼어 일치·접두사 패턴을 만든다
+            let exact = contains
+                .trim_start_matches('%')
+                .trim_end_matches('%')
+                .to_string();
+            let prefix = format!("{exact}%");
+            let any = query
+                .search_patterns
+                .iter()
+                .map(|_| "piece.title LIKE ? OR piece.title_en LIKE ?")
+                .collect::<Vec<_>>()
+                .join(" OR ");
+            let catalogue_any = query
+                .search_patterns
+                .iter()
+                .map(|_| format!("piece.opus_number LIKE ? OR {CATALOGUE_LABEL} LIKE ?"))
+                .collect::<Vec<_>>()
+                .join(" OR ");
+            let alias_any = query
+                .search_patterns
+                .iter()
+                .map(|_| "alias.alias_value LIKE ?")
+                .collect::<Vec<_>>()
+                .join(" OR ");
+            let mut binds = vec![exact, prefix];
+            for pattern in &query.search_patterns {
+                binds.push(pattern.clone());
+                binds.push(pattern.clone());
+            }
+            for pattern in &query.search_patterns {
+                binds.push(pattern.clone());
+                binds.push(pattern.clone());
+            }
+            for pattern in &query.search_patterns {
+                binds.push(pattern.clone());
+            }
+            return (
+                format!(
+                    "ORDER BY CASE
+                        WHEN piece.title LIKE ? THEN 0
+                        WHEN piece.title LIKE ? THEN 1
+                        WHEN {any} THEN 2
+                        WHEN {catalogue_any} THEN 3
+                        WHEN EXISTS (SELECT 1 FROM piece_aliases alias
+                                     WHERE alias.piece_id = piece.id AND ({alias_any})) THEN 4
+                        ELSE 5
+                    END ASC,
+                    {notable} DESC,
+                    COALESCE(piece.fame_score, 0) DESC,
+                    {catalogue}",
+                    notable = notable_condition(),
+                ),
+                binds,
+            );
+        }
+    };
+    (order, Vec::new())
 }
 
 /// 작곡가 작품 목록의 거르기·검색 조건과 그 바인드 값(순서대로).
@@ -217,9 +278,10 @@ fn composer_piece_filters(query: &ComposerPieceQuery) -> (String, Vec<String>) {
     if query.notable_only {
         sql.push_str(&format!(" AND {}", notable_condition()));
     }
-    if !query.search_patterns.is_empty() {
+    // 낱말마다(AND) 그 낱말의 변형 중 하나(OR)가 어느 칸에든 맞아야 한다
+    for variants in &query.search_tokens {
         let mut groups = Vec::new();
-        for pattern in &query.search_patterns {
+        for pattern in variants {
             groups.push(format!(
                 "piece.title LIKE ? OR piece.title_en LIKE ? OR piece.opus_number LIKE ?
                  OR {CATALOGUE_LABEL} LIKE ?
@@ -238,11 +300,12 @@ fn composer_piece_filters(query: &ComposerPieceQuery) -> (String, Vec<String>) {
 
 /// 검색어가 걸린 첫 세트 안 곡(번호·이름) 칼럼과 그 바인드 값. 검색하지 않으면 빈 칼럼이다.
 fn matched_part_columns(query: &ComposerPieceQuery) -> (String, Vec<String>) {
-    if query.search_patterns.is_empty() {
+    // 낱말 하나라도 맞는 첫 곡을 보인다(「Op. 27 월광」이면 「월광」이 맞는 14번)
+    let patterns: Vec<&String> = query.search_tokens.iter().flatten().collect();
+    if patterns.is_empty() {
         return (String::new(), Vec::new());
     }
-    let condition = query
-        .search_patterns
+    let condition = patterns
         .iter()
         .map(|_| "part.name_ko LIKE ? OR part.name_en LIKE ?")
         .collect::<Vec<_>>()
@@ -256,9 +319,9 @@ fn matched_part_columns(query: &ComposerPieceQuery) -> (String, Vec<String>) {
     );
     let mut binds = Vec::new();
     for _ in 0..2 {
-        for pattern in &query.search_patterns {
-            binds.push(pattern.clone());
-            binds.push(pattern.clone());
+        for pattern in &patterns {
+            binds.push((*pattern).clone());
+            binds.push((*pattern).clone());
         }
     }
     (
@@ -303,6 +366,7 @@ impl PieceRepository {
     ) -> Result<Vec<ComposerPieceRow>, Error> {
         let (matched, matched_binds) = matched_part_columns(query);
         let (filters, filter_binds) = composer_piece_filters(query);
+        let (order, order_binds) = composer_pieces_order(query);
         let sql = format!(
             "SELECT piece.*, {part_summary},
                     (SELECT GROUP_CONCAT(part.sequence_number ORDER BY part.sequence_number)
@@ -319,7 +383,6 @@ impl PieceRepository {
             part_summary = part_summary_columns(),
             listed = listed_condition("piece"),
             top_level = top_level_piece_condition("piece"),
-            order = composer_pieces_order(query.sort),
             page = if page.is_some() {
                 " LIMIT ? OFFSET ?"
             } else {
@@ -332,6 +395,9 @@ impl PieceRepository {
         }
         statement = statement.bind(composer_id);
         for value in &filter_binds {
+            statement = statement.bind(value);
+        }
+        for value in &order_binds {
             statement = statement.bind(value);
         }
         if let Some((offset, limit)) = page {

@@ -60,6 +60,45 @@ fn normalize_opus(text: &str) -> String {
     }
 }
 
+/// 검색어의 LIKE 패턴: 그대로, 그리고 별칭·작품번호 표기를 고친 것(다르면).
+fn contains_variants(text: &str) -> Vec<String> {
+    let Some(original) = SearchText::parse(Some(text)) else {
+        return Vec::new();
+    };
+    let mut variants = vec![original.contains().to_string()];
+    let mut normalized = normalize_opus(original.exact());
+    for (alias, canonical) in SEARCH_ALIASES {
+        normalized = normalized.replace(alias, canonical);
+    }
+    if let Some(other) = SearchText::parse(Some(&normalized)) {
+        if other.contains() != original.contains() {
+            variants.push(other.contains().to_string());
+        }
+    }
+    variants
+}
+
+/// 「Op.」·「op」·「K.」·「BWV」 같은 작품번호 머리 낱말은 뒤 숫자와 붙여 한 낱말로 본다.
+fn join_opus(words: Vec<&str>) -> Vec<String> {
+    const HEADS: [&str; 8] = ["op", "op.", "k", "k.", "kv", "bwv", "hob.", "rv"];
+    let mut joined: Vec<String> = Vec::new();
+    let mut index = 0;
+    while index < words.len() {
+        let word = words[index];
+        let next_is_number = words
+            .get(index + 1)
+            .is_some_and(|next| next.chars().next().is_some_and(|c| c.is_ascii_digit()));
+        if HEADS.contains(&word.to_lowercase().as_str()) && next_is_number {
+            joined.push(format!("{word} {}", words[index + 1]));
+            index += 2;
+        } else {
+            joined.push(word.to_string());
+            index += 1;
+        }
+    }
+    joined
+}
+
 impl ComposerPieceQuery {
     /// `/composers/<id>/pieces` 의 쿼리 값. 모르는 갈래·정렬·형식 이름은 거절한다.
     pub fn parse(
@@ -90,29 +129,28 @@ impl ComposerPieceQuery {
             Some("catalogue") => ComposerPieceSort::Catalogue,
             Some("year") => ComposerPieceSort::Year,
             Some("notable") => ComposerPieceSort::Notable,
+            Some("relevance") => ComposerPieceSort::Relevance,
             Some(value) => return Err(format!("모르는 정렬이에요: {value}")),
         };
         let notable_only = matches!(notable.map(str::trim), Some("1" | "true"));
 
-        let mut search_patterns = Vec::new();
-        if let Some(text) = SearchText::parse(q) {
-            search_patterns.push(text.contains().to_string());
-            let mut normalized = normalize_opus(text.exact());
-            for (alias, canonical) in SEARCH_ALIASES {
-                normalized = normalized.replace(alias, canonical);
-            }
-            if let Some(other) = SearchText::parse(Some(&normalized)) {
-                if other.contains() != text.contains() {
-                    search_patterns.push(other.contains().to_string());
-                }
-            }
-        }
+        let search_patterns = q.map(contains_variants).unwrap_or_default();
+        // 낱말은 최대 다섯 개까지 본다. 작품번호(「Op. 10」)는 띄어 써도 한 낱말로 붙여 본다
+        let search_tokens: Vec<Vec<String>> = q
+            .map(|text| join_opus(text.split_whitespace().collect()))
+            .unwrap_or_default()
+            .into_iter()
+            .take(5)
+            .map(|word| contains_variants(&word))
+            .filter(|variants| !variants.is_empty())
+            .collect();
 
         Ok(Self {
             genre,
             form,
             sort,
             search_patterns,
+            search_tokens,
             notable_only,
         })
     }
@@ -221,6 +259,7 @@ mod tests {
         assert_eq!(query.form.as_deref(), Some("nocturne"));
         assert_eq!(query.sort, ComposerPieceSort::Catalogue);
         assert_eq!(query.search_patterns, vec!["%야상곡%", "%녹턴%"]);
+        assert_eq!(query.search_tokens, vec![vec!["%야상곡%", "%녹턴%"]]);
         assert!(query.notable_only);
 
         let other =
@@ -234,6 +273,16 @@ mod tests {
         assert!(ComposerPieceQuery::parse(Some("jazz"), None, None, None, None).is_err());
         assert!(ComposerPieceQuery::parse(None, Some("No'te"), None, None, None).is_err());
         assert!(ComposerPieceQuery::parse(None, None, Some("random"), None, None).is_err());
+    }
+
+    #[test]
+    fn each_word_must_match_and_opus_stays_one_word() {
+        let query =
+            ComposerPieceQuery::parse(None, None, None, Some("소나타  열정"), None).expect("낱말");
+        assert_eq!(query.search_tokens, vec![vec!["%소나타%"], vec!["%열정%"]]);
+        let opus = ComposerPieceQuery::parse(None, None, None, Some("녹턴 Op. 9"), None)
+            .expect("작품번호");
+        assert_eq!(opus.search_tokens, vec![vec!["%녹턴%"], vec!["%Op. 9%"]]);
     }
 
     #[test]

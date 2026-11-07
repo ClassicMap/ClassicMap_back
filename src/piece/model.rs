@@ -58,6 +58,9 @@ pub enum ComposerPieceSort {
     Year,
     /// 대표곡(세트 안 대표 곡 포함) → 손본 작품 → 유명도(위키데이터 언어판 수) → 작품번호순
     Notable,
+    /// 검색 관련도: 제목 일치 → 제목 접두사 → 제목·영어 제목 포함 → 작품번호 → 별칭 → 세트 안 곡 이름,
+    /// 같으면 대표곡·유명도·작품번호순. 검색어가 없으면 작품번호순과 같다
+    Relevance,
 }
 
 /// 작곡가 작품 목록의 갈래 거르기.
@@ -75,7 +78,10 @@ pub struct ComposerPieceQuery {
     pub genre: GenreFilter,
     pub form: Option<String>,
     pub sort: ComposerPieceSort,
+    /// 검색어 전체의 LIKE 패턴(별칭을 고친 것 포함). 관련도와 걸린 세트 안 곡에 쓴다
     pub search_patterns: Vec<String>,
+    /// 띄어 쓴 낱말마다의 LIKE 패턴들. 모든 낱말이 맞아야 걸린다(「소나타 열정」)
+    pub search_tokens: Vec<Vec<String>>,
     pub notable_only: bool,
 }
 
@@ -87,6 +93,7 @@ impl ComposerPieceQuery {
             form: None,
             sort: ComposerPieceSort::Listening,
             search_patterns: Vec::new(),
+            search_tokens: Vec::new(),
             notable_only: false,
         }
     }
