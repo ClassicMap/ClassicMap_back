@@ -12,6 +12,12 @@
    빠르기·조성 말이 아니고 트랙 이름에 들어 있으며, 그런 트랙이 하나뿐이다
    (「5 Lieder, Op. 47: No. 1, Botschaft」,
    「Johannes-Passion, BWV 245, Pt. 1: No. 1, Chor. "Herr, unser Herrscher"」).
+5. 곡 부분 이름: 트랙 이름의 마지막 「:」 뒤(곡 부분)와 곡 이름(빠르기말을 뗀 것도)이
+   서로 들어 있고, 그런 트랙이 하나뿐이다(「…, Op. 22: Andante spianato」, 「…: Grande Polonaise」).
+6. 순서: 작품번호가 든 트랙 수가 곡 수와 같고, 트랙에 적힌 번호가 순서와 어긋나지 않고,
+   곡 이름이 순서상 짝이 아닌 다른 트랙에서 보이지 않으면 앨범 순서대로 붙인다
+   (「K. 550: 1. Molto Allegro」). 앨범이 세트 일부만 담았거나 순서가 다르면 이렇게 걸러진다.
+   앞 규칙으로 붙은 곡이 그 순서와 어긋나면 이 세트에는 쓰지 않는다.
 같은 곡에 맞는 트랙이 여럿이면(다악장 곡, 같은 곡 두 번) 앨범 순서로 첫 트랙을 붙인다.
 번호가 우리와 앨범에서 다르게 매겨진 경우를 거르려고, 곡과 트랙에 조성이 둘 다 있으면 같아야 하고
 악장(또는 원어 이름이 있는 곡)은 곡 이름과 트랙 이름의 첫 낱말 중 하나가 다른 쪽에 있어야 한다.
@@ -131,6 +137,44 @@ def distinctive(name: str) -> str | None:
     return text if len("".join(rest.split())) >= 5 else None
 
 
+def tail_of(track_name: str) -> str:
+    """트랙 이름의 곡 부분: 마지막 「:」 뒤에서 앞 번호(「1.」「No. 2」「II.」)를 뗀 것."""
+    tail = norm(track_name).rsplit(":", 1)[-1]
+    return re.sub(r"^\s*(?:(?:no|nr)\.?\s*)?(?:\d+[a-z]?|[ivxl]+)[.,]?\s+", "", tail).strip()
+
+
+ROMAN_VALUE = {"i": 1, "v": 5, "x": 10, "l": 50}
+
+
+def index_of(track_name: str) -> int | None:
+    """트랙 곡 부분 앞의 번호(「No. 19, …」「II. …」「3. …」). 없으면 None."""
+    text = norm(track_name)
+    tail = text.rsplit(":", 1)[-1].strip()
+    m = re.match(r"(?:(?:no|nr)\.?\s*(\d+)|(\d+)[.,)]\s|([ivxl]+)\.\s)", tail)
+    if not m:
+        # 「Op. 35 No. 9: Andante」처럼 번호가 곡 부분 앞에 있는 트랙
+        numbers = re.findall(r"\b(?:no|nr)\.?\s*(\d+)\b", text)
+        return int(numbers[-1]) if numbers else None
+    if m.group(1) or m.group(2):
+        return int(m.group(1) or m.group(2))
+    total = 0
+    values = [ROMAN_VALUE[c] for c in m.group(3)]
+    for i, value in enumerate(values):
+        total += -value if i + 1 < len(values) and value < values[i + 1] else value
+    return total
+
+
+def short_candidates(part: dict[str, str]) -> list[str]:
+    """곡 이름들과, 첫 「. 」 앞에서 자른 것(뒤 빠르기말을 뗀다)."""
+    found = []
+    for name in name_candidates(part):
+        found.append(name)
+        cut = re.split(r"\.\s", name, maxsplit=1)[0]
+        if cut != name:
+            found.append(cut)
+    return list(dict.fromkeys(found))
+
+
 def tracks_of(raw: str, album: str) -> list[dict[str, Any]]:
     path = f"{raw}/{album}.json"
     if not os.path.exists(path):
@@ -177,6 +221,22 @@ def match_set(
             if len(hits) == 1:
                 found, rule = hits, "name"
                 break
+        if not found:
+            tails = [tail_of(str(t.get("trackName", ""))) for t in tracks]
+            for candidate in short_candidates(row):
+                name = distinctive(candidate)
+                if not name:
+                    continue
+                hits = [
+                    i
+                    for i, tail in enumerate(tails)
+                    if distinctive(tail)
+                    and (name in tail or tail in name)
+                    and (not cat or re.search(cat, names[i]))
+                ]
+                if len(hits) == 1:
+                    found, rule = hits, "tail"
+                    break
         mine_key = key_of(row["name_ko"]) or key_of(row["name_en"])
         name = original_name(row)
         # 번호로 찾았는데 따옴표 가사가 다른 트랙 하나에만 있으면 번호가 어긋난 것이다
@@ -201,6 +261,49 @@ def match_set(
             checked.append(index)
         if checked:
             picked[int(row["part_id"])] = (checked[0], rule)
+    if cat and len(picked) < len(rows):
+        work = [i for i, t in enumerate(names) if re.search(cat, t)]
+        ordered = sorted(rows, key=lambda r: int(r["seq"]))
+        # 트랙에 적힌 번호가 우리 순서와 하나라도 다르면 앨범이 세트 일부만 담은 것이다
+        numbered = [
+            (int(r["seq"]), index_of(str(tracks[index].get("trackName", ""))))
+            for r, index in zip(ordered, work, strict=False)
+        ]
+        # 곡 이름이 순서상 짝이 아닌 다른 트랙의 곡 부분에 있으면 앨범과 순서가 다른 것이다
+        work_tails = {index: tail_of(str(tracks[index].get("trackName", ""))) for index in work}
+
+        def elsewhere_hit(row: dict[str, str], index: int) -> bool:
+            for candidate in short_candidates(row):
+                name = distinctive(candidate)
+                if not name:
+                    continue
+                hits = {
+                    i
+                    for i, tail in work_tails.items()
+                    if distinctive(tail) and (name in tail or tail in name)
+                }
+                if hits and index not in hits:
+                    return True
+            return False
+
+        if (
+            len(work) == len(rows)
+            and not any(elsewhere_hit(r, index) for r, index in zip(ordered, work, strict=True))
+            and all(found is None or found == seq for seq, found in numbered)
+            and all(
+                picked.get(int(r["part_id"]), (index, ""))[0] == index
+                for r, index in zip(ordered, work, strict=True)
+            )
+        ):
+            for row, index in zip(ordered, work, strict=True):
+                part_id = int(row["part_id"])
+                if part_id in picked:
+                    continue
+                mine_key = key_of(row["name_ko"]) or key_of(row["name_en"])
+                theirs = key_of(str(tracks[index].get("trackName", "")))
+                if mine_key and theirs and mine_key != theirs:
+                    continue
+                picked[part_id] = (index, "order")
     # 한 트랙이 두 곡에 걸리면 어느 쪽인지 모르므로 둘 다 버린다
     used = Counter(index for index, _ in picked.values())
     return {
@@ -216,7 +319,15 @@ def main() -> None:
     parser.add_argument("--raw", required=True)
     parser.add_argument("--out", required=True)
     parser.add_argument("--migration", required=True)
+    parser.add_argument("--name", default="matches.jsonl", help="결과 jsonl 파일 이름")
+    parser.add_argument(
+        "--skip", action="append", default=[], help="이미 넣은 matches jsonl. 그 곡은 뺀다"
+    )
     args = parser.parse_args()
+    skip: set[int] = set()
+    for path in args.skip:
+        with open(path, encoding="utf-8") as handle:
+            skip |= {int(json.loads(line)["partId"]) for line in handle if line.strip()}
 
     sets: dict[int, list[dict[str, str]]] = defaultdict(list)
     with open(args.parts, encoding="utf-8") as handle:
@@ -233,6 +344,8 @@ def main() -> None:
             continue
         fetched += 1
         for part_id, (url, name, rule) in sorted(match_set(rows, tracks).items()):
+            if part_id in skip:
+                continue
             row = next(r for r in rows if int(r["part_id"]) == part_id)
             rules[rule] += 1
             matches.append(
@@ -247,7 +360,7 @@ def main() -> None:
                 }
             )
 
-    with open(f"{args.out}/matches.jsonl", "w", encoding="utf-8") as handle:
+    with open(f"{args.out}/{args.name}", "w", encoding="utf-8") as handle:
         for item in matches:
             handle.write(json.dumps(item, ensure_ascii=False) + "\n")
 
@@ -260,8 +373,13 @@ def main() -> None:
     total_parts = sum(len(rows) for rows in sets.values())
     sql = [
         "-- 세트 안 곡(최상위 part)에 Apple Music 트랙 링크를 채운다. 자료와 규칙은",
-        "-- seed_pipeline/curation/part-apple-links-2026-11-08/(match.py, matches.jsonl).",
-        f"-- 앨범 링크가 있는 세트의 곡 {total_parts}곡 중 {len(matches)}곡.",
+        f"-- seed_pipeline/curation/part-apple-links-2026-11-08/(match.py, {args.name}).",
+        (
+            f"-- 앨범 링크가 있는 세트의 곡 {total_parts}곡 중, "
+            f"앞서 넣은 {len(skip)}곡을 빼고 {len(matches)}곡 더."
+            if skip
+            else f"-- 앨범 링크가 있는 세트의 곡 {total_parts}곡 중 {len(matches)}곡."
+        ),
         "-- 이미 링크가 있는 곡은 그대로 두고, id 와 함께 작품·순서가 같은 최상위 곡에만 넣는다.",
         "-- 두 번 넣어도 같다.",
         "",
