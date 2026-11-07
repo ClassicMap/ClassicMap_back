@@ -3,8 +3,8 @@ use crate::{db::DbPool, logger::Logger};
 use rocket::{http::Status, serde::json::Json, State};
 
 use super::model::{
-    is_piece_genre, ComparisonPerformance, ComparisonPerformancePage, ComparisonPiece,
-    ComparisonSector,
+    is_piece_genre, ComparisonGenreSummary, ComparisonPerformance, ComparisonPerformancePage,
+    ComparisonPiece, ComparisonSector,
 };
 
 #[get("/artists/<artist_id>/comparison-performances?<cursor>&<limit>")]
@@ -66,6 +66,24 @@ pub async fn get_sector_comparison_performances(
                     "Failed to get comparison performances for sector {}: {}",
                     sector_id, error
                 ),
+            );
+            Err(Status::InternalServerError)
+        }
+    }
+}
+
+/// 장르 요약: 장르마다 공개 비교 작품 수와 대표 작곡가 초상. 작품이 없는 장르는 빠진다.
+/// 홈·둘러보기 장르 타일이 카탈로그 전체를 받지 않고 이것만 받는다.
+#[get("/comparison-genres")]
+pub async fn get_comparison_genres(
+    pool: &State<DbPool>,
+) -> Result<Json<Vec<ComparisonGenreSummary>>, Status> {
+    match ComparisonService::get_genre_summaries(pool).await {
+        Ok(summaries) => Ok(Json(summaries)),
+        Err(error) => {
+            Logger::error(
+                "API",
+                &format!("Failed to get comparison genres: {}", error),
             );
             Err(Status::InternalServerError)
         }

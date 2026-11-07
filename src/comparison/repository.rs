@@ -1,6 +1,6 @@
 use super::model::{
     note_moments, pair_moments, parse_json_list, ClipAlignment, ClipAlignmentRow, ComparisonCredit,
-    ComparisonCreditRow, ComparisonPerformance, ComparisonPerformancePage,
+    ComparisonCreditRow, ComparisonGenrePieceRow, ComparisonPerformance, ComparisonPerformancePage,
     ComparisonPerformanceRow, ComparisonPiece, ComparisonPiecePerformer, ComparisonSector,
     FeaturedPair, FeaturedPairRow, ListeningNoteRow, LoudnessProfile, LoudnessProfileRow,
     PerformanceListeningNote, StoredMoment,
@@ -177,6 +177,34 @@ impl ComparisonRepository {
     }
 
     /// 비교 카탈로그를 작곡가·장르로 거른다. 둘 다 없으면 `find_public_pieces` 와 같다
+    /// 장르가 있는 공개 비교 작품을 연주자 많은 순으로. 장르 요약(`summarize_genres`)의 재료다
+    pub async fn find_public_genre_pieces(
+        pool: &DbPool,
+    ) -> Result<Vec<ComparisonGenrePieceRow>, ComparisonContractError> {
+        let sql = format!(
+            "{PUBLIC_COMPARISON_CTE}
+             SELECT piece.genre AS genre,
+                    piece.id AS piece_id,
+                    composer.id AS composer_id,
+                    composer.avatar_url AS composer_avatar_url,
+                    COUNT(DISTINCT credit.artist_id) AS performer_count
+             FROM public_sector
+             JOIN performance_sectors sector ON sector.id = public_sector.sector_id
+             JOIN pieces piece ON piece.id = sector.piece_id
+             JOIN composers composer ON composer.id = piece.composer_id
+             JOIN ready_performance ready ON ready.sector_id = public_sector.sector_id
+             LEFT JOIN performance_credits credit
+               ON credit.performance_source_id = ready.performance_source_id
+              AND credit.is_primary = TRUE
+             WHERE piece.genre IS NOT NULL
+             GROUP BY piece.genre, piece.id, composer.id, composer.avatar_url
+             ORDER BY performer_count DESC, piece.id ASC"
+        );
+        Ok(sqlx::query_as::<_, ComparisonGenrePieceRow>(&sql)
+            .fetch_all(pool)
+            .await?)
+    }
+
     pub async fn find_public_pieces_by(
         pool: &DbPool,
         composer_id: Option<i32>,

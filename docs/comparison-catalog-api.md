@@ -27,6 +27,19 @@
 이 꼴에 `sectorId`·`sectorName`·`reasons` 를 더한 것이라 `genre` 도 같이 실린다.
 온보딩 '아는 곡'(`/taste/onboarding-pieces`)에도 `genre` 가 있다.
 
+## 장르 요약 `GET /comparison-genres`
+
+홈·둘러보기의 장르 타일용. 카탈로그 전체를 받지 않고 장르마다 개수와 대표 초상만 준다.
+장르 순서는 아래 키 표 순서이고, 공개 작품이 없는 장르는 빠진다.
+
+```json
+[{ "genre": "symphony", "pieceCount": 40,
+   "portraits": [{ "composerId": 15, "avatarUrl": "https://…" }] }]
+```
+
+`portraits` 는 연주자 많은 작품의 작곡가부터, 작곡가가 겹치지 않게 최대 3명이다. 초상 없는 작곡가는 건너뛴다.
+장르 화면의 작품 목록은 `/comparison-pieces?genre=…` 를 쪽 단위로 받는다.
+
 ## 장르 키
 
 `pieces.genre` 의 CHECK 제약, `comparison::model::PIECE_GENRES` 와 같다.
