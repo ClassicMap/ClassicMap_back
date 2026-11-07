@@ -432,11 +432,14 @@ impl PieceRepository {
     }
 
     /// 작곡가 작품의 갈래·형식별 개수와 대표곡 수. 작품 목록과 같은 최상위·숨김 조건을 쓴다.
+    /// 검색어가 있으면 그 검색에 걸린 작품만 센다(검색 중 갈래 칩의 결과 수).
     pub async fn composer_catalog(
         pool: &DbPool,
         composer_id: i32,
+        query: &ComposerPieceQuery,
     ) -> Result<Vec<CatalogRow>, Error> {
-        sqlx::query_as::<_, CatalogRow>(&format!(
+        let (filters, filter_binds) = composer_piece_filters(query);
+        let sql = format!(
             "SELECT piece.genre AS genre,
                     piece.form_key AS form_key,
                     form.name_ko AS form_name,
@@ -447,15 +450,17 @@ impl PieceRepository {
              LEFT JOIN piece_forms form ON form.form_key = piece.form_key
              WHERE piece.composer_id = ?
                AND {listed}
-               AND {top_level}
+               AND {top_level}{filters}
              GROUP BY piece.genre, piece.form_key, form.name_ko, form.sort_order",
             notable = notable_condition(),
             listed = listed_condition("piece"),
             top_level = top_level_piece_condition("piece"),
-        ))
-        .bind(composer_id)
-        .fetch_all(pool)
-        .await
+        );
+        let mut statement = sqlx::query_as::<_, CatalogRow>(&sql).bind(composer_id);
+        for value in filter_binds {
+            statement = statement.bind(value);
+        }
+        statement.fetch_all(pool).await
     }
 
     /// 작품의 보이는 part 를 화면 순서로 준다. 없는 작품이면 다른 `/pieces/<id>/…` 목록처럼 빈 목록이다.

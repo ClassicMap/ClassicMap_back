@@ -188,8 +188,9 @@ impl PieceService {
     pub async fn get_composer_catalog(
         pool: &DbPool,
         composer_id: i32,
+        query: &ComposerPieceQuery,
     ) -> Result<ComposerCatalog, String> {
-        PieceRepository::composer_catalog(pool, composer_id)
+        PieceRepository::composer_catalog(pool, composer_id, query)
             .await
             .map(ComposerCatalog::from_rows)
             .map_err(|e| e.to_string())

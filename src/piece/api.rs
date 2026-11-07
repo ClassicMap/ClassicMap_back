@@ -106,12 +106,16 @@ pub async fn get_pieces_by_composer(
 }
 
 /// 작곡가 작품의 갈래·형식별 개수. 작곡가 화면의 갈래 칩과 형식 머리를 그린다.
-#[get("/composers/<composer_id>/catalog")]
+/// q 가 있으면 `/composers/<id>/pieces?q=` 와 같은 검색에 걸린 작품만 센다(갈래와 상관없이).
+#[get("/composers/<composer_id>/catalog?<q>")]
 pub async fn get_composer_catalog(
     pool: &State<DbPool>,
     composer_id: i32,
+    q: Option<&str>,
 ) -> Result<Json<ComposerCatalog>, Status> {
-    match PieceService::get_composer_catalog(pool, composer_id).await {
+    let query =
+        ComposerPieceQuery::parse(None, None, None, q, None).map_err(|_| Status::BadRequest)?;
+    match PieceService::get_composer_catalog(pool, composer_id, &query).await {
         Ok(catalog) => Ok(Json(catalog)),
         Err(e) => {
             Logger::error(
