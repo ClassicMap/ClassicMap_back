@@ -8,8 +8,10 @@
   형식마다 최대 3곡이다.
 - 비교 구간이 있는 작품은 늘 대표곡이다.
 대표 곡(세트 안 곡, 최상위 part):
-- MusicBrainz 녹음 수가 세트 가운데값의 1.8배 이상(녹음 수를 잰 곡이 3곡 이상인 세트)이거나
-  위키데이터 언어판 15 이상. 세트마다 최대 2곡이다.
+- MusicBrainz 녹음 수가 세트 가운데값의 1.8배 이상이면서 15건 이상(녹음 수를 잰 곡이 3곡 이상인
+  세트. 녹음이 몇 건뿐인 세트에서 한두 건 많은 곡이 뽑히지 않게 한다)이거나, 위키데이터 언어판이
+  15 이상이면서 세트의 다른 곡 가운데값의 1.5배 이상(베토벤 소나타 Op. 2 처럼 곡마다 문서가 있는
+  세트에서 다 뽑히지 않게 한다). 세트마다 최대 2곡이다.
 - 비교할 수 있는 작품을 가리키는 곡은 늘 대표 곡이다.
 사람이 고친 값(notable_locked = 1)은 바꾸지 않는다. 두 번 넣어도 같다.
 
@@ -28,7 +30,9 @@ csv.field_size_limit(10_000_000)
 PIECE_SITELINKS_MIN = 10
 PIECE_GROUP_LIMIT = 3
 PART_SITELINKS_MIN = 15
+PART_SITELINKS_RATIO = 1.5
 PART_RECORDING_RATIO = 1.8
+PART_RECORDING_MIN = 15
 PART_LIMIT = 2
 
 
@@ -122,13 +126,17 @@ def main() -> None:
         for part in parts:
             rec = recordings.get(mbid(part))
             sl = sitelinks.get(mbid(part), 0)
+            others = [sitelinks.get(mbid(p), 0) for p in parts if p is not part]
+            others_median = statistics.median(others) if others else 0
+            by_sitelinks = sl >= PART_SITELINKS_MIN and sl >= PART_SITELINKS_RATIO * others_median
             by_recordings = (
                 set_median is not None
                 and set_median > 0
                 and rec is not None
                 and rec >= PART_RECORDING_RATIO * set_median
+                and rec >= PART_RECORDING_MIN
             )
-            if by_recordings or sl >= PART_SITELINKS_MIN:
+            if by_recordings or by_sitelinks:
                 scored.append(((rec or 0) / (set_median or 1) + sl / 10, int(part["id"])))
         for _, part_id in sorted(scored, reverse=True)[:PART_LIMIT]:
             notable_parts.add(part_id)
