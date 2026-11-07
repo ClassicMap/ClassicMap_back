@@ -1,4 +1,4 @@
-"""세트 안 곡(최상위 part)에 Apple Music 트랙 링크를 붙인다.
+"""세트 안 곡(최상위 part)에 Apple Music(또는 Spotify, --column spotify_url) 트랙 링크를 붙인다.
 
 작품에 이미 붙은 Apple Music 앨범 링크의 트랙 목록(iTunes Lookup, 공개)을 받아, 세트 안 곡마다
 그 곡을 가리키는 트랙을 찾는다. 이름만 비슷한 트랙을 붙이지 않도록 아래 규칙 중 하나에 맞을 때만
@@ -321,6 +321,15 @@ def main() -> None:
     parser.add_argument("--migration", required=True)
     parser.add_argument("--name", default="matches.jsonl", help="결과 jsonl 파일 이름")
     parser.add_argument(
+        "--column",
+        default="apple_music_url",
+        choices=["apple_music_url", "spotify_url"],
+        help="parts.tsv 의 앨범 링크 칸이자 piece_parts 에 채울 칸",
+    )
+    parser.add_argument(
+        "--source-dir", default="part-apple-links-2026-11-08", help="SQL 주석의 자료 폴더"
+    )
+    parser.add_argument(
         "--skip", action="append", default=[], help="이미 넣은 matches jsonl. 그 곡은 뺀다"
     )
     args = parser.parse_args()
@@ -338,7 +347,7 @@ def main() -> None:
     rules: Counter[str] = Counter()
     fetched = 0
     for piece_id, rows in sorted(sets.items()):
-        m = re.search(r"/(\d+)$", rows[0]["apple_music_url"].strip())
+        m = re.search(r"/([A-Za-z0-9]+)$", rows[0][args.column].strip())
         tracks = tracks_of(args.raw, m.group(1)) if m else []
         if not tracks:
             continue
@@ -371,9 +380,11 @@ def main() -> None:
         for item in matches
     )
     total_parts = sum(len(rows) for rows in sets.values())
+    service = "Apple Music" if args.column == "apple_music_url" else "Spotify"
+    temp = "tmp_part_apple" if args.column == "apple_music_url" else "tmp_part_spotify"
     sql = [
-        "-- 세트 안 곡(최상위 part)에 Apple Music 트랙 링크를 채운다. 자료와 규칙은",
-        f"-- seed_pipeline/curation/part-apple-links-2026-11-08/(match.py, {args.name}).",
+        f"-- 세트 안 곡(최상위 part)에 {service} 트랙 링크를 채운다. 자료와 규칙은",
+        f"-- seed_pipeline/curation/{args.source_dir}/(match.py, {args.name}).",
         (
             f"-- 앨범 링크가 있는 세트의 곡 {total_parts}곡 중, "
             f"앞서 넣은 {len(skip)}곡을 빼고 {len(matches)}곡 더."
@@ -383,7 +394,7 @@ def main() -> None:
         "-- 이미 링크가 있는 곡은 그대로 두고, id 와 함께 작품·순서가 같은 최상위 곡에만 넣는다.",
         "-- 두 번 넣어도 같다.",
         "",
-        "CREATE TEMPORARY TABLE tmp_part_apple (",
+        f"CREATE TEMPORARY TABLE {temp} (",
         "    part_id BIGINT UNSIGNED NOT NULL PRIMARY KEY,",
         "    piece_id INT NOT NULL,",
         "    sequence_number INT NOT NULL,",
@@ -392,21 +403,20 @@ def main() -> None:
     ]
     if matches:
         sql.append(
-            "INSERT INTO tmp_part_apple (part_id, piece_id, sequence_number, url) VALUES\n"
-            f"{values};"
+            f"INSERT INTO {temp} (part_id, piece_id, sequence_number, url) VALUES\n{values};"
         )
     sql += [
         "",
         "UPDATE piece_parts part",
-        "JOIN tmp_part_apple link",
+        f"JOIN {temp} link",
         "    ON link.part_id = part.id",
         "    AND link.piece_id = part.piece_id",
         "    AND link.sequence_number = part.sequence_number",
-        "SET part.apple_music_url = link.url",
-        "WHERE part.apple_music_url IS NULL",
+        f"SET part.{args.column} = link.url",
+        f"WHERE part.{args.column} IS NULL",
         "    AND part.parent_part_id IS NULL;",
         "",
-        "DROP TEMPORARY TABLE tmp_part_apple;",
+        f"DROP TEMPORARY TABLE {temp};",
         "",
     ]
     with open(args.migration, "w", encoding="utf-8") as handle:
