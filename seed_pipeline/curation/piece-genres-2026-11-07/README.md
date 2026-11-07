@@ -1,7 +1,7 @@
 # 비교 작품 장르 2026-11-07
 
 비교 구간이 있는 작품 257곡의 장르다. 결과는 `genres.jsonl` 이고, `gen_sql.py` 가
-`migrations/202611070002_fill_comparison_piece_genres.sql` 로 바꾼다. 화면은 작품 카드의
+`migrations/202611072002_fill_comparison_piece_genres.sql` 로 바꾼다. 화면은 작품 카드의
 색·커버와 장르 필터에 쓴다(`/comparison-pieces?genre=`).
 
 ## 값

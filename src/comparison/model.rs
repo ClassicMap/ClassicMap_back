@@ -591,7 +591,7 @@ mod tests {
 
     #[test]
     fn piece_genres_match_migration_check() {
-        let migration = include_str!("../../migrations/202611070001_add_piece_genre.sql");
+        let migration = include_str!("../../migrations/202611072001_add_piece_genre.sql");
         let check = migration
             .split("genre IN (")
             .nth(1)

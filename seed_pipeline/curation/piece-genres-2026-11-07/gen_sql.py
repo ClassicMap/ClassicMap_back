@@ -1,6 +1,6 @@
 """genres.jsonl 을 장르 채움 마이그레이션 본문으로 바꾼다.
 
-    python3 gen_sql.py > ../../../migrations/202611070002_fill_comparison_piece_genres.sql
+    python3 gen_sql.py > ../../../migrations/202611072002_fill_comparison_piece_genres.sql
 """
 
 import json
