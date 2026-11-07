@@ -1,0 +1,22 @@
+{
+ "exclude": {
+  "artist:295": "앨범 광고 글자(The Fiddle and the Drum)",
+  "artist:372": "음반 광고 글자(Goldberg Variations)",
+  "artist:209": "얼굴이 흔들려 흐림, 위키미디어 배너가 더 또렷함",
+  "artist:826": "반도네온만 나오고 사람이 없음",
+  "composer:168": "동명이인(다른 음악가의 그래픽 그림)",
+  "artist:805": "이름 로고 글자만 있음",
+  "composer:188": "동명이인(아기 곰 그림)"
+ },
+ "focal": {
+  "composer:30": "36% 50%",
+  "composer:85": "5% 50%",
+  "composer:34": "50% 50%",
+  "artist:256": "36% 50%",
+  "artist:583": "34% 22%",
+  "artist:820": "55% 27%",
+  "composer:154": "0% 30%",
+  "composer:341": "100% 50%",
+  "artist:297": "80% 60%"
+ }
+}

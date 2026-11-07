@@ -78,6 +78,33 @@ impl ComposerRepository {
         .await
     }
 
+    /// 화면 머리 배너: 공개된 'banner' 종류 그림 중 대표 (아티스트와 같은 entity_images)
+    pub async fn find_banner(
+        pool: &DbPool,
+        composer_id: i32,
+    ) -> Result<Option<crate::artist::model::ArtistBanner>, Error> {
+        sqlx::query_as::<_, crate::artist::model::ArtistBanner>(
+            "SELECT image.file_url AS url,
+                    NULLIF(image.focal_point, '') AS focal_point,
+                    NULLIF(image.credit_line, '') AS credit_line,
+                    NULLIF(image.author, '') AS author,
+                    NULLIF(image.license, '') AS license,
+                    NULLIF(image.license_url, '') AS license_url,
+                    image.source_url
+             FROM composers composer
+             JOIN entity_images image
+               ON image.authority_entity_id = composer.authority_entity_id
+              AND image.image_kind = 'banner'
+             WHERE composer.id = ?
+               AND image.editorial_status = 'PUBLISHED'
+             ORDER BY image.is_primary DESC, image.id DESC
+             LIMIT 1",
+        )
+        .bind(composer_id)
+        .fetch_optional(pool)
+        .await
+    }
+
     pub async fn find_by_id(
         pool: &DbPool,
         id: i32,

@@ -43,6 +43,9 @@ pub struct ComposerWithMajorPieces {
     /// 목록(`Composer.piece_count`)과 같은 기준: 이 작곡가의 최상위 작품 수.
     /// 다른 작품(묶음)의 part 로 이어진 작품은 묶음 안에서 보이므로 세지 않는다.
     pub piece_count: Option<i64>,
+    /// 화면 머리 배너용 가로 그림. 공개된 배너 기록이 있을 때만 낸다
+    #[sqlx(skip)]
+    pub banner: Option<crate::artist::model::ArtistBanner>,
 }
 
 #[derive(Debug, Serialize, Deserialize, FromRow)]
