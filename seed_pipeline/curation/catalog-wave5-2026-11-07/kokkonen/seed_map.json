@@ -1,0 +1,398 @@
+[
+ {
+  "pieceId": 23868,
+  "title": "Opus sonorum",
+  "mbids": [
+   "3e2b3bc9-42be-3f5a-9dca-d612d9a7e135"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-3e2b3bc9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24655,
+  "title": "...durch einen Spiegel",
+  "mbids": [
+   "85b99219-895c-40e7-aba1-34a225d514df"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-85b99219",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23062,
+  "title": "Musiikkia jousiorkesterille",
+  "mbids": [
+   "269b8421-d7c6-46bb-815a-245e5b2c1dc4"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-269b8421",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23357,
+  "title": "String Quartet no. 1 \"Quartetto\"",
+  "mbids": [
+   "0ec45dcc-4572-4d04-a166-03b0e202d4bc"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-0ec45dcc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23384,
+  "title": "Il paesaggio",
+  "mbids": [
+   "10dafb74-2069-41a7-9f18-0d7986cccd9a"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-10dafb74",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23451,
+  "title": "Sinfonia da camera",
+  "mbids": [
+   "16865fcf-9f21-4a47-a13e-c54b12a56c0e"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-16865fcf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23473,
+  "title": "Inauguratio",
+  "mbids": [
+   "1805871a-a009-4bfe-86a9-6341a7cc3807"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-1805871a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23672,
+  "title": "Häämarssi",
+  "mbids": [
+   "2a3fb276-e28c-4a52-ad6b-5d549ae6a75f"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-2a3fb276",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23764,
+  "title": "Iuxta crucem",
+  "mbids": [
+   "34e6ce62-67a1-4f92-9d99-a6f7d7a0240d"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-34e6ce62",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23896,
+  "title": "Ikivihreä",
+  "mbids": [
+   "418577fc-f0be-4add-b8fc-55b1cffc5b54"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-418577fc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23898,
+  "title": "Sinfonisia luonnoksia",
+  "mbids": [
+   "41eee119-fcee-48a7-9820-cefa02814c11"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-41eee119",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23960,
+  "title": "Laudatio Domini",
+  "mbids": [
+   "4677fb88-af43-4eaf-904d-d6826ba7d103"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-4677fb88",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24029,
+  "title": "Trio for Violin, Cello and Piano",
+  "mbids": [
+   "4ec73941-7666-432d-90be-afd2915b7120"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-4ec73941",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24177,
+  "title": "Amy",
+  "mbids": [
+   "5be3c104-9f00-40c2-98e6-c760d970a9c3"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-5be3c104",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24199,
+  "title": "Piano Quintet",
+  "mbids": [
+   "5e687f65-6664-4be7-969e-3c96d20c6bed"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-5e687f65",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24436,
+  "title": "Duo",
+  "mbids": [
+   "736e029c-cf65-40e9-867a-cc630eb6beb0"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-736e029c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24513,
+  "title": "The Hades of the Birds",
+  "mbids": [
+   "7974a173-3e33-4751-9ad1-a36ed0f6f9e8"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-7974a173",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24558,
+  "title": "Sormin soitti Väinämöinen",
+  "mbids": [
+   "7db1fc61-404b-4902-bd74-b862a8f03a3d"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-7db1fc61",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24578,
+  "title": "Pielavesi",
+  "mbids": [
+   "7f1990fd-e548-4fd0-ad48-9c98a22ea6ac"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-7f1990fd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24626,
+  "title": "Symphony no. 2: III. Allegretto moderato",
+  "mbids": [
+   "8375fadf-38ec-32d3-a98c-726afdd962ab"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-95ba668d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24704,
+  "title": "Crescat in G",
+  "mbids": [
+   "8b411ab3-a2a2-428e-8050-d9481debf4bd"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-8b411ab3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24830,
+  "title": "Concertino",
+  "mbids": [
+   "9604735d-06dc-4c18-acf8-fa1da29cb808"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-9604735d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25022,
+  "title": "Surusoitto",
+  "mbids": [
+   "a507c4af-8a93-4dde-b9a6-a61c91210433"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-a507c4af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25050,
+  "title": "Erekhtheion",
+  "mbids": [
+   "a81976cf-8225-426f-b728-db5299f61a3f"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-a81976cf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25065,
+  "title": "Interludeja oopperasta Viimeiset kiusaukset",
+  "mbids": [
+   "a9252bfb-2042-41d1-adca-a38b1babae65"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 25165,
+  "title": "Illat",
+  "mbids": [
+   "b30658f7-7183-4460-a7db-53556f3e77cb"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-b30658f7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25602,
+  "title": "Järvenpään kirkon kellosävelmät",
+  "mbids": [
+   "dc2493ba-fb9e-48b2-9a97-6c167bc51656"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-dc2493ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25605,
+  "title": "Ukko-Paavon virsi",
+  "mbids": [
+   "dc5c2149-6f65-4d51-8ea1-0003e2332bfc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 25816,
+  "title": "Etude",
+  "mbids": [
+   "f0325537-8bf9-4314-a8ad-626a9db2e347"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-f0325537",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25917,
+  "title": "Impromptu",
+  "mbids": [
+   "f80cf6c9-bd83-4542-859f-2f7bbd81fd10"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-f80cf6c9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25997,
+  "title": "Lux aeterna",
+  "mbids": [
+   "fe8699b9-0b7b-4995-9490-fc759ba63ce8"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-fe8699b9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 26004,
+  "title": "Joululauluja lapsille",
+  "mbids": [
+   "ff1a9932-4efd-4990-96e5-54fd3411f731"
+  ],
+  "mapping": "work",
+  "key": "kokkonen-ff1a9932",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 26021,
+  "title": "Jouluna",
+  "mbids": [
+   "ac1bee98-015a-4340-9b4a-b1d2e9ebc1c9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ }
+]

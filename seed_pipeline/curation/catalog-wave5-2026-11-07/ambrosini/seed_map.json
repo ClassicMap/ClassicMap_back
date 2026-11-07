@@ -1,0 +1,434 @@
+[
+ {
+  "pieceId": 16134,
+  "title": "A guisa di un arcier presto soriano",
+  "mbids": [
+   "085a3a7a-d162-42c3-92c0-667b2952a87e"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-085a3a7a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16170,
+  "title": "Song of Innocence, Song of Experience",
+  "mbids": [
+   "0aa2c277-1891-4254-8bb3-9dbaa4d125bf"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-0aa2c277",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16374,
+  "title": "Rondò di forza",
+  "mbids": [
+   "16366070-3bee-499e-ae92-190a8d56a306"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-16366070",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16487,
+  "title": "Tastata riflessa",
+  "mbids": [
+   "1c5686dc-e0dc-409d-8be3-87f138a810c1"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-1c5686dc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16531,
+  "title": "Canzone in eco",
+  "mbids": [
+   "1fa6fc6a-d85c-4dcf-8ed0-0ababf17de95"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-1fa6fc6a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16803,
+  "title": "Arie e danze",
+  "mbids": [
+   "31196a89-017e-4b70-aa0e-bacabb0b166f"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-31196a89",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16835,
+  "title": "Notturno (Tombeau per Jimi H.)",
+  "mbids": [
+   "32bb09c0-fa49-424a-b31c-d63c5eac8b02"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-32bb09c0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17152,
+  "title": "Canzone",
+  "mbids": [
+   "454b65e6-d267-4c43-9c12-51f2d0d44f8a"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-454b65e6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17236,
+  "title": "Tre Studi “en plein air”: III. Bus Stop",
+  "mbids": [
+   "49bdffe1-25fd-4c79-a665-96fbcaaa28d5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17315,
+  "title": "De vulgari eloquentia",
+  "mbids": [
+   "4fd1470f-fe4d-4267-828b-18820447045e"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-4fd1470f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17391,
+  "title": "Three Holograms: III. Arcimboldo docet",
+  "mbids": [
+   "541e3e48-b650-4e4b-95cd-fc2fdde04882"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17418,
+  "title": "Prélude a l’après-midi d’un fauve",
+  "mbids": [
+   "5561d84a-abfe-42b2-8176-e32640cc1f15"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-5561d84a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17550,
+  "title": "Arpeggiata",
+  "mbids": [
+   "5e2f4ef5-e3b1-4967-a974-3099a654b8cf"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-5e2f4ef5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17995,
+  "title": "Sarabanda",
+  "mbids": [
+   "78b700be-e4b1-4811-910a-02c2efc0d4fa"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-78b700be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18110,
+  "title": "Three Holograms: II. Rabdomante (Mosè?)",
+  "mbids": [
+   "7f9e18ea-e0b8-4b30-854e-a7d696135deb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18184,
+  "title": "Priapo assiderato",
+  "mbids": [
+   "851e2176-30f7-40dd-8680-7916082fd1e2"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-851e2176",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18398,
+  "title": "Canzone molle",
+  "mbids": [
+   "92437274-a743-4ba2-82c4-172471d480fb"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-92437274",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18541,
+  "title": "Nulla nox sine linea – Notturno I",
+  "mbids": [
+   "9b55a490-4c94-4092-b6a0-434e7a2d6107"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-9b55a490",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18662,
+  "title": "Tantalo sorridente",
+  "mbids": [
+   "a3ad33bb-db16-434f-b9f3-f2c80c98f308"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-a3ad33bb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18682,
+  "title": "Canzone d’ombre",
+  "mbids": [
+   "a4776b79-d4e5-4b92-8786-0d2270530a1c"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-a4776b79",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18703,
+  "title": "Capriccio, detto l'ermafrodita",
+  "mbids": [
+   "a5804e9f-b391-469c-b635-5b5cae6f696c"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-a5804e9f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18728,
+  "title": "Rousseau, le Douanier: \"Follia d’Orlando\"",
+  "mbids": [
+   "a6c99abc-0666-4767-ab79-f533ec5128de"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18973,
+  "title": "Tutti parlano",
+  "mbids": [
+   "b6ac5e6e-563c-4e19-a4d3-dc967bcda6c4"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-b6ac5e6e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18985,
+  "title": "Canzone a perdere",
+  "mbids": [
+   "b78bf67b-831f-4902-872d-63afa7602baf"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-b78bf67b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19049,
+  "title": "Three Holograms: I. Janus ipse, dixit",
+  "mbids": [
+   "bc3ed89d-2adc-407c-a600-8dd06c2de530"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19131,
+  "title": "Notturno con sogno",
+  "mbids": [
+   "c0e5aa6c-932e-43c4-b26c-b88771ab75a5"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-c0e5aa6c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19188,
+  "title": "Rap",
+  "mbids": [
+   "c4cc2483-44a9-4e45-bc36-d781d1f472f7"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-c4cc2483",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19303,
+  "title": "Tre studi sulla prospettiva : Nr. 2 Canzone curva, detta “dell’occhiolino”",
+  "mbids": [
+   "cbf750f9-db7c-4b67-b2ab-0fa6cb8b742e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19330,
+  "title": "Nulla nox sine linea – Notturno II",
+  "mbids": [
+   "cdf33e5c-8670-4bb4-82a1-8173ddc6cc14"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-cdf33e5c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19374,
+  "title": "Icaros",
+  "mbids": [
+   "d0de14c2-245b-4b5f-bd99-fddc63709772"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-d0de14c2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19409,
+  "title": "Ciaccona in labirinto (called Ciaccona del giglio)",
+  "mbids": [
+   "d304ff4f-9b01-4d6c-9e6e-c44686680577"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-d304ff4f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19454,
+  "title": "Tre Studi “en plein air”: II. Aube",
+  "mbids": [
+   "d5e96d0b-3d55-4935-a54e-d6aab86bd981"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19581,
+  "title": "\"Oh, mia Euridice…\" a fragment",
+  "mbids": [
+   "deeb44e5-f9c1-4ead-90fe-471aeef5eb6e"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-deeb44e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19700,
+  "title": "Tastata",
+  "mbids": [
+   "e7520056-e130-4e09-9973-71d5ac22c0e2"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-e7520056",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19710,
+  "title": "I’mbrazilian",
+  "mbids": [
+   "e84f9c70-fa75-47ec-8db7-890876aec3be"
+  ],
+  "mapping": "work",
+  "key": "ambrosini-e84f9c70",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19845,
+  "title": "Tre Studi “en plein air”: I. Notturno",
+  "mbids": [
+   "f167d1ae-fded-484c-bdf2-9a873fc78344"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ }
+]

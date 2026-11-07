@@ -1,0 +1,314 @@
+[
+ {
+  "pieceId": 23101,
+  "title": "Литургия св. Иоанна Златоуста, op. 42",
+  "mbids": [
+   "f0353e48-9c25-4c4a-8158-5cac66ecc8e5"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-f0353e48",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24228,
+  "title": "Salvation Is Created",
+  "mbids": [
+   "60271e31-be30-4fbb-b1dc-29b25f3ca31b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23083,
+  "title": "\"Gospodi, spasi\" i Trisvyatoye, op. 38 no. 1",
+  "mbids": [
+   "8c3639db-426f-4e76-ae65-4aa52f9ae126"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-8c3639db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23089,
+  "title": "Воскресни, Боже, ор. 48 №2",
+  "mbids": [
+   "a41084e8-fe02-4223-b7d7-3fc74a4821c3"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-a41084e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23095,
+  "title": "Svete tihiy",
+  "mbids": [
+   "c98f1f81-f605-4791-a3ab-e93c7bfd6a41"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-c98f1f81",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23097,
+  "title": "Во дни брани, op. 45",
+  "mbids": [
+   "d90e819d-6f7c-4874-8302-c306de9a5ff5"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-d90e819d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23119,
+  "title": "Tebe poem \"We praise thee\"",
+  "mbids": [
+   "dcea2cde-26cb-46c3-822a-829bfcb43d53"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-dcea2cde",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23254,
+  "title": "Angel vopiyashe, op. 22 no. 18",
+  "mbids": [
+   "0680dab8-d53d-419b-91de-98a231582c04"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-0680dab8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23402,
+  "title": "Come, Let Us Worship, op. 8, no. 2",
+  "mbids": [
+   "128b3a85-e905-4ec0-9acf-a7d0f8419065"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-128b3a85",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23494,
+  "title": "Veriu, op. 16",
+  "mbids": [
+   "1a0f5f5c-c9d4-33ad-a5a8-20b85e5b4a30"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-1a0f5f5c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23522,
+  "title": "10 Choral Pieces, Op. 27: No. 5. Cherubic Hymn",
+  "mbids": [
+   "1c726c38-4776-495d-abbd-dae435ced2f8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23928,
+  "title": "Отче Наш",
+  "mbids": [
+   "43dcbe2f-1ade-4641-968b-a6fc28db3fa2"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-43dcbe2f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24009,
+  "title": "Six Choruses for Mixed Voices, op. 40",
+  "mbids": [
+   "4c755b08-aa95-4bce-bb3e-a1f013d22908"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-4c755b08",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24116,
+  "title": "We Hymn Thee",
+  "mbids": [
+   "5676a278-8160-49e0-a629-f8c300ed7cfd"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-5676a278",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24125,
+  "title": "Praise ye the name of the Lord",
+  "mbids": [
+   "574d281c-f32e-377c-810c-909acc8a9576"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-574d281c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24154,
+  "title": "O Lord God",
+  "mbids": [
+   "59af3068-2883-49e1-aa73-eec1c46ba3df"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-59af3068",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24164,
+  "title": "O Tebe raduyetsia, op. 15 no. 11",
+  "mbids": [
+   "5aacb58c-9602-48a1-a16c-104f6dcd9452"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-5aacb58c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24354,
+  "title": "Matija bozija",
+  "mbids": [
+   "6cabd111-695b-31e0-a93b-2fc4f2782941"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-6cabd111",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24536,
+  "title": "In That We Have Beheld the Resurrection of Christ (Kiev Chant)",
+  "mbids": [
+   "7bc86109-5fd8-34ac-b93f-e046de838a9d"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-7bc86109",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24585,
+  "title": "Cherubic Hymn",
+  "mbids": [
+   "7fb880a2-360a-4164-a950-39455576f737"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-7fb880a2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24752,
+  "title": "The Assembly of the Angels (Znamenny Chant)",
+  "mbids": [
+   "8f037160-50b2-39e9-8181-aa0b2eb2b9fd"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-8f037160",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24814,
+  "title": "All-night Vigil, op. 44",
+  "mbids": [
+   "94c2887a-cf9e-4ac0-8948-f4c105ed6c71"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-94c2887a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25001,
+  "title": "To the Most Holy Sovereign Lady, op. 43",
+  "mbids": [
+   "a34dcbaa-7971-4816-9e75-8119bac8e324"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-a34dcbaa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25109,
+  "title": "Cherubic Hymn, op. 7, no. 1",
+  "mbids": [
+   "ad38c67d-d72b-4840-b0eb-6ffa191fd7f0"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-ad38c67d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25151,
+  "title": "Da ispravitsa molitva noja",
+  "mbids": [
+   "b154998e-1852-3353-a7a0-5d0bd3163e1c"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-b154998e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25485,
+  "title": "From My Youth, op. 48 no. 1",
+  "mbids": [
+   "d2e6984e-d696-4128-8bf8-f3f10777be5e"
+  ],
+  "mapping": "work",
+  "key": "chesnokov-d2e6984e",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

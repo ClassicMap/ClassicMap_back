@@ -1,0 +1,650 @@
+[
+ {
+  "pieceId": 15775,
+  "title": "Vox Balaenae",
+  "mbids": [
+   "6f823027-8ff5-4be2-bebd-cddd3fcc4f7e"
+  ],
+  "mapping": "work",
+  "key": "crumb-6f823027",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16031,
+  "title": "Apparition",
+  "mbids": [
+   "026c9f63-c910-41b7-adb0-b0c0fbffe62b"
+  ],
+  "mapping": "work",
+  "key": "crumb-026c9f63",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16157,
+  "title": "Music for a Summer Evening (Makrokosmos III)",
+  "mbids": [
+   "09daf263-7c0d-409d-9c81-473dce931a64"
+  ],
+  "mapping": "work",
+  "key": "crumb-09daf263",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16203,
+  "title": "Three Early Songs",
+  "mbids": [
+   "0cbef801-93b2-45d8-8a81-0a7c1cc7a939"
+  ],
+  "mapping": "work",
+  "key": "crumb-0cbef801",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16547,
+  "title": "Makrokosmos II",
+  "mbids": [
+   "209373fe-9118-464a-b4a9-bea3555b3028"
+  ],
+  "mapping": "work",
+  "key": "crumb-209373fe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16697,
+  "title": "Ancient Voices of Children",
+  "mbids": [
+   "2a43d1ef-7304-4a36-934e-16bd5cb71ac4"
+  ],
+  "mapping": "work",
+  "key": "crumb-2a43d1ef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16717,
+  "title": "Gnomic Variations",
+  "mbids": [
+   "2b8b3640-a7a7-4bef-9c21-ded1a3c216fa"
+  ],
+  "mapping": "work",
+  "key": "crumb-2b8b3640",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16718,
+  "title": "Celestial Mechanics (Makrokosmos IV)",
+  "mbids": [
+   "2b9322d6-67e0-41f4-a753-1999e09aa3d3"
+  ],
+  "mapping": "work",
+  "key": "crumb-2b9322d6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16758,
+  "title": "Sonata for Solo Cello",
+  "mbids": [
+   "2e497cf6-59d2-4217-88c5-1c440a70f1b4"
+  ],
+  "mapping": "work",
+  "key": "crumb-2e497cf6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16839,
+  "title": "Songs, Drones and Refrains of Death",
+  "mbids": [
+   "32e25ca8-456e-44ed-9950-7360ac95b138"
+  ],
+  "mapping": "work",
+  "key": "crumb-32e25ca8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17056,
+  "title": "Federico's Little Songs for Children",
+  "mbids": [
+   "3f820434-3073-4f79-92ad-f942e01df439"
+  ],
+  "mapping": "work",
+  "key": "crumb-3f820434",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17337,
+  "title": "Processional",
+  "mbids": [
+   "50f55d7e-eaa8-4e8b-b875-9ce39029ca19"
+  ],
+  "mapping": "work",
+  "key": "crumb-50f55d7e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17538,
+  "title": "Makrokosmos I",
+  "mbids": [
+   "5caf5576-49f4-454c-b70c-f39166d63cf6"
+  ],
+  "mapping": "work",
+  "key": "crumb-5caf5576",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17905,
+  "title": "Metamorphoses, Book II",
+  "mbids": [
+   "72a2f885-a7e8-4846-8538-ba2b2636cea0"
+  ],
+  "mapping": "work",
+  "key": "crumb-72a2f885",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17925,
+  "title": "Night Music I",
+  "mbids": [
+   "738e591d-9659-476e-a3e7-1c04d7ad346f"
+  ],
+  "mapping": "work",
+  "key": "crumb-738e591d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18287,
+  "title": "Madrigals, Books I-IV",
+  "mbids": [
+   "8c5459f4-0548-4633-8b70-e1c152318c02"
+  ],
+  "mapping": "work",
+  "key": "crumb-8c5459f4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18326,
+  "title": "Star-Child",
+  "mbids": [
+   "8e5ebaab-6977-4281-b52c-b0f4ab1e8a93"
+  ],
+  "mapping": "work",
+  "key": "crumb-8e5ebaab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18378,
+  "title": "Dream Sequence (Images II)",
+  "mbids": [
+   "915eede5-6300-414b-a8e4-c9ae8497a8be"
+  ],
+  "mapping": "work",
+  "key": "crumb-915eede5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18475,
+  "title": "Night of the Four Moons",
+  "mbids": [
+   "97397cd9-90e6-4516-8424-3ecd96ff1c7b"
+  ],
+  "mapping": "work",
+  "key": "crumb-97397cd9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18509,
+  "title": "Metamorphoses, Book I",
+  "mbids": [
+   "98e1daaa-c2ad-40fc-a1c1-0ac248d14ef9"
+  ],
+  "mapping": "work",
+  "key": "crumb-98e1daaa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18651,
+  "title": "A Haunted Landscape",
+  "mbids": [
+   "a2bafcab-5db1-4cc4-b170-48afeeea5786"
+  ],
+  "mapping": "work",
+  "key": "crumb-a2bafcab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18671,
+  "title": "An Idyll for the Misbegotten (Images III)",
+  "mbids": [
+   "a4220de3-2348-4829-a7f4-3f6927aaf63a"
+  ],
+  "mapping": "work",
+  "key": "crumb-a4220de3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18939,
+  "title": "Eleven Echoes of Autumn (Echoes I)",
+  "mbids": [
+   "b4807173-cd41-40b0-aeb7-5594c213da36"
+  ],
+  "mapping": "work",
+  "key": "crumb-b4807173",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19892,
+  "title": "Five Pieces for Piano",
+  "mbids": [
+   "f401bbe2-2060-460b-abc7-a9ce75c572df"
+  ],
+  "mapping": "work",
+  "key": "crumb-f401bbe2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15752,
+  "title": "Mundus Canis: II. Fritzi",
+  "mbids": [
+   "42ead07e-d7c7-4340-8ec6-52d79b2fb4b4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 15802,
+  "title": "Mundus Canis: IV. Emma-Jean",
+  "mbids": [
+   "9e604251-258f-4de0-b406-229161b7ba43"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 15813,
+  "title": "Mundus Canis: V. Yoda",
+  "mbids": [
+   "b6b4fcb9-01ac-44f1-aa69-bc07ff9f9b74"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 15825,
+  "title": "Mundus Canis: III. Heidel",
+  "mbids": [
+   "d5e7ee88-5a32-4837-b2dd-978768b6beac"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 15844,
+  "title": "Mundus Canis: I. Tammy",
+  "mbids": [
+   "f1551d82-47e0-457d-8b2f-12bdf6ce9cca"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 15994,
+  "title": "Voices from the Heartland (American Songbook VII): I. Softly and Tenderly",
+  "mbids": [
+   "00616b8d-7317-495d-8a58-1c01bd18de2d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16128,
+  "title": "Sun and Shadow (Spanish Songbook II): I. Lazy River",
+  "mbids": [
+   "080602ec-964c-4ce1-bd2f-fdb2d0415b75"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16131,
+  "title": "Sun and Shadow (Spanish Songbook II): II. The Fly",
+  "mbids": [
+   "08218018-f0e1-4fb1-9f79-ddd750588a55"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16207,
+  "title": "The Sleeper",
+  "mbids": [
+   "0ce29d9e-c627-4ee7-9569-b4f5ed4ff556"
+  ],
+  "mapping": "work",
+  "key": "crumb-0ce29d9e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16450,
+  "title": "Pastoral Drone",
+  "mbids": [
+   "1a1a19c6-f530-419b-bdb7-952b6177c459"
+  ],
+  "mapping": "work",
+  "key": "crumb-1a1a19c6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16499,
+  "title": "Sun and Shadow (Spanish Songbook II): V. Farewell",
+  "mbids": [
+   "1d0cd5f2-b5bc-4c43-8686-7a5c0e5afcff"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16532,
+  "title": "Voices from the Heartland (American Songbook VII): VI. The War of the Sexes",
+  "mbids": [
+   "1fb42ca2-5ef4-4b74-80a1-4e0227c09680"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16840,
+  "title": "Voices from the Heartland (American Songbook VII): III. Lord, Let Me Fly!",
+  "mbids": [
+   "33013dba-bb15-48c5-8e37-eafbf65e4040"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16871,
+  "title": "Otherworldly Resonances",
+  "mbids": [
+   "348b0899-5ff2-47c3-94bc-c6151e2622b0"
+  ],
+  "mapping": "work",
+  "key": "crumb-348b0899",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16940,
+  "title": "Unto the Hills",
+  "mbids": [
+   "3881213d-cf2a-4a1b-9125-7eb67d1e01e1"
+  ],
+  "mapping": "work",
+  "key": "crumb-3881213d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17147,
+  "title": "Zeitgeist, tableaux vivants for two amplified pianos",
+  "mbids": [
+   "451cb9c4-be97-446f-9dfe-cfc5adbf5ba4"
+  ],
+  "mapping": "work",
+  "key": "crumb-451cb9c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17491,
+  "title": "Echoes of Time and the River (Echoes II)",
+  "mbids": [
+   "59f5da3d-a64f-48a4-8761-a797ad9d4443"
+  ],
+  "mapping": "work",
+  "key": "crumb-59f5da3d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18077,
+  "title": "A Little Suite for Christmas, A.D. 1979",
+  "mbids": [
+   "7d771f75-32c6-4c60-bf97-5c4fc40c7437"
+  ],
+  "mapping": "work",
+  "key": "crumb-7d771f75",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18120,
+  "title": "The River of Life",
+  "mbids": [
+   "8085988b-1688-4772-b0ce-b5c7a6ad3922"
+  ],
+  "mapping": "work",
+  "key": "crumb-8085988b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18394,
+  "title": "Voices from the Heartland (American Songbook VII): VIII. Old Blue",
+  "mbids": [
+   "920db0bc-28b3-469d-a2ed-69f033d88c71"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18436,
+  "title": "Eine kleine Mitternachtmusik",
+  "mbids": [
+   "94a277ec-491c-496f-a673-6f2d6004c037"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18486,
+  "title": "Sun and Shadow (Spanish Songbook II): III. The Interrupted Concert",
+  "mbids": [
+   "97c58119-9db7-4cfd-b3d0-958f3728878c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18924,
+  "title": "Sun and Shadow (Spanish Songbook II): IV. Dance of the Moon in Santiago",
+  "mbids": [
+   "b3c6e297-8c89-478d-9281-bf03903aec15"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19086,
+  "title": "Voices from the Heartland (American Songbook VII): II. Ghost Dance",
+  "mbids": [
+   "be57ec9a-dc0b-470e-b25f-bf6500659eb6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19213,
+  "title": "Voices from the Heartland (American Songbook VII): IV. The Kanawha River at Dusk",
+  "mbids": [
+   "c6043ef7-f723-48d3-a16a-e9726388a5b2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19368,
+  "title": "Voices from the Heartland (American Songbook VII): IX. Song of the Earth",
+  "mbids": [
+   "d0a06822-a66d-43fc-9a21-01e9e4c9f4ca"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19707,
+  "title": "Black Angels (Thirteen Images from the Dark Land)",
+  "mbids": [
+   "e7e3375e-2e1a-4ae3-9698-910775bd4839"
+  ],
+  "mapping": "work",
+  "key": "crumb-e7e3375e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19781,
+  "title": "Voices from the Heartland (American Songbook VII): V. Glory Be to the New-Born King",
+  "mbids": [
+   "edcd6db5-0c5f-42ee-91d6-0e1753a7280c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 20036,
+  "title": "Lux Aeterna",
+  "mbids": [
+   "fbb496f0-0b2d-430d-9b8f-bfd0ce80fc46"
+  ],
+  "mapping": "work",
+  "key": "crumb-fbb496f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20096,
+  "title": "Four Nocturnes (Night Music II)",
+  "mbids": [
+   "ffdf0c22-5bb2-4611-97fa-a7ab34d4d7ef"
+  ],
+  "mapping": "work",
+  "key": "crumb-ffdf0c22",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]
