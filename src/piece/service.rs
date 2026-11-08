@@ -4,7 +4,7 @@ use super::model::{
 };
 use super::repository::PieceRepository;
 use crate::db::DbPool;
-use crate::search::SearchText;
+use crate::search_terms::{contains_variants, search_tokens};
 
 pub struct PieceService;
 
@@ -34,69 +34,6 @@ impl PieceListRange {
 
         Ok(Self::Page { offset, limit })
     }
-}
-
-/// 작곡가 안 검색에서 같은 뜻으로 찾는 말. 데이터의 표기(오른쪽)로 바꿔 한 번 더 찾는다.
-const SEARCH_ALIASES: [(&str, &str); 6] = [
-    ("야상곡", "녹턴"),
-    ("에튀드", "연습곡"),
-    ("폴로네이즈", "폴로네즈"),
-    ("프렐류드", "전주곡"),
-    ("판타지", "환상곡"),
-    ("랩소디", "광시곡"),
-];
-
-/// 「op10」「op 10」「op.10」을 데이터 표기 「Op. 10」으로 바꾼다. 아니면 그대로 둔다.
-fn normalize_opus(text: &str) -> String {
-    let lower = text.to_lowercase();
-    let Some(rest) = lower.strip_prefix("op") else {
-        return text.to_string();
-    };
-    let digits = rest.trim_start_matches(['.', ' ']);
-    if digits.chars().next().is_some_and(|c| c.is_ascii_digit()) {
-        format!("Op. {digits}")
-    } else {
-        text.to_string()
-    }
-}
-
-/// 검색어의 LIKE 패턴: 그대로, 그리고 별칭·작품번호 표기를 고친 것(다르면).
-fn contains_variants(text: &str) -> Vec<String> {
-    let Some(original) = SearchText::parse(Some(text)) else {
-        return Vec::new();
-    };
-    let mut variants = vec![original.contains().to_string()];
-    let mut normalized = normalize_opus(original.exact());
-    for (alias, canonical) in SEARCH_ALIASES {
-        normalized = normalized.replace(alias, canonical);
-    }
-    if let Some(other) = SearchText::parse(Some(&normalized)) {
-        if other.contains() != original.contains() {
-            variants.push(other.contains().to_string());
-        }
-    }
-    variants
-}
-
-/// 「Op.」·「op」·「K.」·「BWV」 같은 작품번호 머리 낱말은 뒤 숫자와 붙여 한 낱말로 본다.
-fn join_opus(words: Vec<&str>) -> Vec<String> {
-    const HEADS: [&str; 8] = ["op", "op.", "k", "k.", "kv", "bwv", "hob.", "rv"];
-    let mut joined: Vec<String> = Vec::new();
-    let mut index = 0;
-    while index < words.len() {
-        let word = words[index];
-        let next_is_number = words
-            .get(index + 1)
-            .is_some_and(|next| next.chars().next().is_some_and(|c| c.is_ascii_digit()));
-        if HEADS.contains(&word.to_lowercase().as_str()) && next_is_number {
-            joined.push(format!("{word} {}", words[index + 1]));
-            index += 2;
-        } else {
-            joined.push(word.to_string());
-            index += 1;
-        }
-    }
-    joined
 }
 
 impl ComposerPieceQuery {
@@ -135,15 +72,7 @@ impl ComposerPieceQuery {
         let notable_only = matches!(notable.map(str::trim), Some("1" | "true"));
 
         let search_patterns = q.map(contains_variants).unwrap_or_default();
-        // 낱말은 최대 다섯 개까지 본다. 작품번호(「Op. 10」)는 띄어 써도 한 낱말로 붙여 본다
-        let search_tokens: Vec<Vec<String>> = q
-            .map(|text| join_opus(text.split_whitespace().collect()))
-            .unwrap_or_default()
-            .into_iter()
-            .take(5)
-            .map(|word| contains_variants(&word))
-            .filter(|variants| !variants.is_empty())
-            .collect();
+        let search_tokens = q.map(search_tokens).unwrap_or_default();
 
         Ok(Self {
             genre,
@@ -234,8 +163,9 @@ impl PieceService {
 
 #[cfg(test)]
 mod tests {
-    use super::{normalize_opus, PieceListRange};
+    use super::PieceListRange;
     use crate::piece::model::{ComposerPieceQuery, ComposerPieceSort, GenreFilter};
+    use crate::search_terms::normalize_opus;
 
     #[test]
     fn composer_piece_query_defaults_keep_listening_order() {
@@ -259,8 +189,15 @@ mod tests {
         assert_eq!(query.genre, GenreFilter::Genre("piano".to_string()));
         assert_eq!(query.form.as_deref(), Some("nocturne"));
         assert_eq!(query.sort, ComposerPieceSort::Catalogue);
-        assert_eq!(query.search_patterns, vec!["%야상곡%", "%녹턴%"]);
-        assert_eq!(query.search_tokens, vec![vec!["%야상곡%", "%녹턴%"]]);
+        let nocturne = vec![
+            "%야상곡%",
+            "%녹턴%",
+            "%nocturne%",
+            "%nocturnes%",
+            "%notturno%",
+        ];
+        assert_eq!(query.search_patterns, nocturne);
+        assert_eq!(query.search_tokens, vec![nocturne]);
         assert!(query.notable_only);
 
         let other =
@@ -280,10 +217,18 @@ mod tests {
     fn each_word_must_match_and_opus_stays_one_word() {
         let query =
             ComposerPieceQuery::parse(None, None, None, Some("소나타  열정"), None).expect("낱말");
-        assert_eq!(query.search_tokens, vec![vec!["%소나타%"], vec!["%열정%"]]);
-        let opus = ComposerPieceQuery::parse(None, None, None, Some("녹턴 Op. 9"), None)
+        assert_eq!(
+            query.search_tokens,
+            vec![
+                vec!["%소나타%", "%sonata%", "%sonatas%", "%sonate%", "%sonaten%"],
+                vec!["%열정%"]
+            ]
+        );
+        let opus = ComposerPieceQuery::parse(None, None, None, Some("Etude Op. 10 No. 3"), None)
             .expect("작품번호");
-        assert_eq!(opus.search_tokens, vec![vec!["%녹턴%"], vec!["%Op. 9%"]]);
+        assert_eq!(opus.search_tokens[1], vec!["%Op. 10%"]);
+        assert_eq!(opus.search_tokens[2], vec!["%No. 3%", "%3번%", "%Nr. 3%"]);
+        assert!(opus.search_tokens[0].contains(&"%연습곡%".to_string()));
     }
 
     #[test]
