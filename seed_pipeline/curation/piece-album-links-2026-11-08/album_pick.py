@@ -35,6 +35,9 @@ def _load_match() -> ModuleType:
 _match = _load_match()
 GENERIC: re.Pattern[str] = _match.GENERIC
 KEY_EN: re.Pattern[str] = _match.KEY_EN
+EXCERPT: re.Pattern[str] = _match.EXCERPT
+bare_tracks: Callable[[list[str], str, str], bool] = _match.bare_tracks
+CATALOGUE_TOKEN: re.Pattern[str] = _match.CATALOGUE_TOKEN
 catalogue_regex: Callable[[str], str | None] = _match.catalogue_regex
 norm: Callable[[str], str] = _match.norm
 
@@ -59,6 +62,27 @@ TITLE_SKIP = {
     "book",
     "version",
 }
+
+# 원곡 연주가 아닌 음반(재즈 편곡, 다시 지은 곡, 태교·수면용 모음). 앨범 이름에서 찾는다
+NOT_ORIGINAL = re.compile(
+    r"jazz version|[\[(]jazz|recomposed|for babies|prenatal|pregnan|newborn|baby sleep|"
+    r"sleep music|soothing|relaxing|lullaby vol|lo-?fi|remix"
+)
+# 작곡가가 정해진 작품번호 체계(WoO 는 여럿이 써서 뺀다). 트랙에 다른 작곡가의 번호가 있으면
+# 다른 작품이다
+# (비발디 「Op. 5」를 찾다 헨델 「Op. 5, HWV 399」 트랙을 세었다)
+SYSTEM_OWNER = {
+    "bwv": "bach",
+    "hwv": "handel",
+    "rv": "vivaldi",
+    "hob": "haydn",
+    "wab": "bruckner",
+    "sz": "bartok",
+    "bb": "bartok",
+    "fwv": "franck",
+    "trv": "strauss",
+}
+SYSTEM_TOKEN = re.compile(r"\b(" + "|".join(SYSTEM_OWNER) + r")\.?\s*\d")
 
 
 def plain(text: str) -> str:
@@ -144,6 +168,11 @@ def pick(row: dict[str, str], results: list[dict[str, Any]]) -> dict[str, Any] |
 
     def is_work(track: dict[str, Any]) -> bool:
         name = norm(str(track.get("trackName", "")))
+        # 앨범 이름만 본다(크럼 「Apparition」 가사에 「soothing death」가 있다)
+        if NOT_ORIGINAL.search(norm(str(track.get("collectionName", "")))):
+            return False
+        if any(SYSTEM_OWNER[m.group(1)] != surname for m in SYSTEM_TOKEN.finditer(name)):
+            return False
         if cat:
             if not re.search(cat, name):
                 return False
@@ -157,14 +186,40 @@ def pick(row: dict[str, str], results: list[dict[str, Any]]) -> dict[str, Any] |
         track_key = key_of(name)
         return key is None or track_key is None or track_key == key
 
+    # 아티스트 이름에서는 이름과 성을 다 본다. 성만 보면 연주자 이름에 걸린다
+    # (아서 벤저민 ← 「Benjamin Schmid」, 프란츠 슈미트 ← 연주자 「… Schmidt」)
+    given = re.sub(r"[^a-z ]", " ", plain(row["composer_en"])).split()[:1]
+
     def by_composer(track: dict[str, Any]) -> bool:
-        who = plain(f"{track.get('collectionName', '')} {track.get('artistName', '')}")
-        return surname in who
+        if surname in plain(str(track.get("collectionName", ""))):
+            return True
+        artist = re.sub(r"[^a-z ]", " ", plain(str(track.get("artistName", "")))).split()
+        return surname in artist and all(word in artist for word in given)
+
+    def other_composer(track: dict[str, Any]) -> bool:
+        """여러 작곡가 모음 음반에서, 제목 구절로 찾은 트랙에 작품번호가 있는데
+        앨범 이름의 이 작곡가 몫(「성: …」)에 그 구절이 없다.
+
+        「Rózsa: Violin Concerto, Op. 24 … - Benjamin: Romantic Fantasy」의 로자 협주곡을
+        벤저민 「Violin Concerto」로 세지 않는다.
+        """
+        if cat or phrase is None:
+            return False
+        if not CATALOGUE_TOKEN.search(norm(str(track.get("trackName", "")))):
+            return False
+        segments = re.split(r"\s+[-\u2013/]\s+|;", norm(str(track.get("collectionName", ""))))
+        composers = [segment for segment in segments if re.match(r"\s*[^:]{2,40}:", segment)]
+        mine = [segment for segment in composers if surname in plain(segment.split(":", 1)[0])]
+        return (
+            len(composers) >= 2
+            and bool(mine)
+            and not any(re.search(re.escape(phrase), segment) for segment in mine)
+        )
 
     want = int(row["nparts"])
     albums: dict[str, list[int]] = defaultdict(list)
     for index, track in enumerate(tracks):
-        if is_work(track) and by_composer(track):
+        if is_work(track) and by_composer(track) and not other_composer(track):
             albums[str(track["collectionId"])].append(index)
     if cat:
         # 트랙 이름이 악장 이름뿐인 앨범: 앨범 이름에 작품번호가 있고,
@@ -172,15 +227,32 @@ def pick(row: dict[str, str], results: list[dict[str, Any]]) -> dict[str, Any] |
         # (match.py 의 'album' 규칙과 같은 조건)
         bare: dict[str, list[int]] = defaultdict(list)
         for index, track in enumerate(tracks):
-            if by_composer(track) and re.search(cat, norm(str(track.get("collectionName", "")))):
+            album_name = norm(str(track.get("collectionName", "")))
+            if (
+                by_composer(track)
+                and re.search(cat, album_name)
+                and not NOT_ORIGINAL.search(album_name)
+            ):
                 bare[str(track["collectionId"])].append(index)
         for album, indexes in bare.items():
             if album in albums or len(indexes) != want:
                 continue
-            if not any(re.search(cat, norm(str(tracks[i].get("trackName", "")))) for i in indexes):
+            names = [norm(str(tracks[i].get("trackName", ""))) for i in indexes]
+            if not any(re.search(cat, name) for name in names) and bare_tracks(
+                names, row["title_en"], row["catalogue"]
+            ):
                 albums[album] = indexes
     if not albums:
         return None
+
+    def excerpted(indexes: list[int]) -> bool:
+        # 발췌·하이라이트 음반은 트랙이 곡 수보다 많아도 작품이 다 든 것이 아니다
+        # (막으로 나눈 오페라의 발췌 음반이 '곡 수 이상'으로 잡혔다).
+        # 트랙은 작품 이름 쪽(첫 「:」 앞)만 본다.
+        # 베리오 「Recital I」에는 「Excerpts: …」라는 대목이 있다
+        names = [str(tracks[i].get("trackName", "")).split(":", 1)[0] for i in indexes]
+        names.append(str(tracks[indexes[0]].get("collectionName", "")))
+        return any(EXCERPT.search(plain(name)) for name in names)
 
     def score(item: tuple[str, list[int]]) -> tuple[int, int, int, int]:
         _, indexes = item
@@ -191,7 +263,7 @@ def pick(row: dict[str, str], results: list[dict[str, Any]]) -> dict[str, Any] |
             or (phrase and re.search(re.escape(phrase) + r"(?![0-9a-z])", names))
         )
         exact = len(indexes) == want
-        enough = len(indexes) >= want
+        enough = exact or (len(indexes) > want and not excerpted(indexes))
         return (int(exact), int(enough), int(dedicated), -indexes[0])
 
     album_id, indexes = max(albums.items(), key=score)
@@ -205,7 +277,7 @@ def pick(row: dict[str, str], results: list[dict[str, Any]]) -> dict[str, Any] |
         "parts": want,
         "status": "exact"
         if len(indexes) == want
-        else ("more" if len(indexes) > want else "partial"),
+        else ("more" if len(indexes) > want and not excerpted(indexes) else "partial"),
         "current": row.get("current_url", ""),
         "tracks": [tracks[i]["trackName"] for i in indexes[:4]],
     }

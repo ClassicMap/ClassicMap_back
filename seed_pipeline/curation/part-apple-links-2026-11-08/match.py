@@ -47,6 +47,14 @@ GENERIC = re.compile(
     r"major|minor|flat|sharp|in|no|op|and|the|of|a|b|c|d|e|f|g|ma|non|troppo|molto|con|assai|"
     r"sostenuto|cantabile|espressivo|poco|piu|tempo|di|e)\b"
 )
+# 트랙 이름의 작품번호(「Op. 18」「BWV 1052」「D. 944」)
+CATALOGUE_TOKEN = re.compile(r"\b(op|opus|bwv|kv?|hob|hwv|rv|wab|sz|bb|fwv|woo|trv|d)\.?\s*(\d+)")
+# 발췌 음반 표시(norm 한 이름에서). 단수 「extrait de」는 「…에서」라 뺀다
+EXCERPT = re.compile(r"\b(?:excerpts?|highlights?|auszug|auszuge|ausschnitte|extraits)\b")
+# 막·부 전체인 곡 이름(「3막」「Act III」「Part 2」)
+WHOLE_SECTION = re.compile(
+    r"^\s*(?:\d+\s*막|\d+\s*부|(?:act|acte|akt|part)\s+[ivx\d]+)\s*$", re.IGNORECASE
+)
 
 
 def norm(text: str) -> str:
@@ -104,6 +112,27 @@ def catalogue_regex(label: str) -> str | None:
         return None
     body = r"[\s,.:]*".join(rf"{re.escape(word)}\.?\s*{re.escape(num)}" for word, num in pieces)
     return rf"\b{body}(?![\d])"
+
+
+def bare_tracks(track_names: list[str], title_en: str, catalogue: str) -> bool:
+    """트랙 이름(norm)에 다른 작품번호도, 작품과 다른 번호(「Piano Concerto No. 2: …」)도 없다.
+
+    악장 이름뿐인 앨범을 작품 트랙으로 볼 때 쓴다. 두 작품이 든 앨범에서 다른 작품 트랙만
+    받아 둔 경우(협주곡 1번 앨범에 2번 트랙만)를 거른다. 작품 자신의 번호 일부
+    (「Op. 104, B. 191」의 「Op. 104」)는 괜찮다.
+    """
+    own = {(word, num) for word, num in re.findall(r"([a-z]+)\.?\s*(\d+)", norm(catalogue))}
+    # 번호 매기는 법이 여럿이라(「Quintet no. 52 … op. 29/4」 ↔ 트랙 「String Quintet No. 4」)
+    # 제목·작품번호의 어느 숫자와도 다를 때만 다른 작품으로 본다
+    numbers = set(re.findall(r"\d+", norm(f"{title_en} {catalogue}")))
+    for name in track_names:
+        if any((m.group(1), m.group(2)) not in own for m in CATALOGUE_TOKEN.finditer(name)):
+            return False
+        lead = name.split(":", 1)[0] if ":" in name else ""
+        number = re.search(r"\bno\.?\s*(\d+)", lead)
+        if number and number.group(1) not in numbers:
+            return False
+    return True
 
 
 def catalogue_range(label: str) -> tuple[str, int, int] | None:
@@ -313,6 +342,7 @@ def match_set(
         and len(tracks) == len(rows)
         and re.search(cat, album)
         and not any(re.search(cat, t) for t in names)
+        and bare_tracks(names, head["title_en"], head["catalogue"])
     ):
         ordered = sorted(rows, key=lambda r: int(r["seq"]))
         indexes = [index_of(str(t.get("trackName", ""))) for t in tracks]
@@ -326,6 +356,16 @@ def match_set(
                 if mine_key and theirs and mine_key != theirs:
                     continue
                 picked[int(row["part_id"])] = (index, "album")
+    # 막·부 전체인 곡에 발췌 트랙 한 곡을 붙이지 않는다
+    # (「3막」 ← 「Henry VIII, R. 291, Act III (Excerpts): Marche du Synode」)
+    whole = {
+        int(r["part_id"])
+        for r in rows
+        if WHOLE_SECTION.match(r["name_ko"]) or WHOLE_SECTION.match(r["name_en"])
+    }
+    for part_id, (index, _) in list(picked.items()):
+        if part_id in whole and EXCERPT.search(names[index]):
+            del picked[part_id]
     # 한 트랙이 두 곡에 걸리면 어느 쪽인지 모르므로 둘 다 버린다
     used = Counter(index for index, _ in picked.values())
     return {
