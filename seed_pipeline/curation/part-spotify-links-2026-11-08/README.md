@@ -5,7 +5,9 @@
 - 앨범: 세트마다 고른 Spotify 앨범(`../piece-album-links-2026-11-08/spotify-picks.jsonl`)입니다. 앨범을 고르는 방법은 그 폴더 README에 있습니다.
 - 앨범 트랙 목록: 임베드 페이지(`open.spotify.com/embed/album/<id>`)의 `__NEXT_DATA__` → `entity.trackList`(앨범 순서)입니다.
 - 매칭: Apple Music과 같은 `../part-apple-links-2026-11-08/match.py`를 `--column spotify_url`로 씁니다. 규칙은 number·range·movement·name·tail·order·album입니다.
-- 결과: `matches.jsonl`(곡마다 트랙·규칙). 세트 5,036개, 곡 25,074개 중 17,750곡입니다.
+- 결과: `matches.jsonl`(곡마다 트랙·규칙). 세트 5,031개, 곡 25,061개 중 17,749곡입니다.
+  - 처음 넣은 것(`202611082204`, 17,750곡)은 이 파일의 이전 커밋 판입니다. 앨범 고르기·매칭 규칙을 고친 뒤 다시 만든 것이 지금 판입니다. 차이(112곡)는 `202611082207_fix_piece_spotify_links.sql`이 바로잡습니다(`../piece-album-links-2026-11-08/README.md`의 「Spotify 바로잡기」).
+  - 매칭 규칙에 둘을 더했습니다. 「3막」처럼 막·부 전체인 곡에는 발췌 트랙 한 곡을 붙이지 않습니다. 악장 이름뿐인 앨범(`album` 규칙)은 트랙에 다른 작품번호나 다른 「No.」가 없을 때만 씁니다.
 
 다시 만들 때(작업 폴더는 repo 밖에 둡니다):
 
