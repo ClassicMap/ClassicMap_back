@@ -515,7 +515,8 @@ impl PieceRepository {
         let Some(text) = SearchText::parse(query) else {
             return sqlx::query_as::<_, PieceSearchResult>(&format!(
                 "SELECT piece.*, {part_summary},
-                        composer.name AS composer_name, composer.avatar_url AS composer_avatar_url
+                        composer.name AS composer_name, composer.english_name AS composer_name_en,
+                        composer.avatar_url AS composer_avatar_url
                  FROM pieces piece
                  JOIN composers composer ON composer.id = piece.composer_id
                  WHERE {listed}
@@ -562,6 +563,7 @@ impl PieceRepository {
             "SELECT piece.*,
                     {part_summary},
                     composer.name AS composer_name,
+                    composer.english_name AS composer_name_en,
                     composer.avatar_url AS composer_avatar_url,
                     CASE
                         WHEN piece.title = ? OR piece.title_en = ? THEN 0

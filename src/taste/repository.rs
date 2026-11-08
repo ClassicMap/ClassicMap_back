@@ -42,6 +42,7 @@ struct SectorRow {
     piece_id: i32,
     sector_id: i32,
     sector_name: String,
+    sector_name_en: Option<String>,
 }
 
 #[derive(Debug, FromRow)]
@@ -49,6 +50,7 @@ struct ArtistRow {
     piece_id: i32,
     artist_id: i32,
     artist_name: String,
+    artist_name_en: Option<String>,
 }
 
 #[derive(Debug, FromRow)]
@@ -188,8 +190,10 @@ impl TasteRepository {
             "{PUBLIC_COMPARISON_CTE}
              SELECT piece.id AS piece_id,
                     piece.title AS piece_title,
+                    piece.title_en AS piece_title_en,
                     composer.id AS composer_id,
                     composer.name AS composer_name,
+                    composer.english_name AS composer_name_en,
                     composer.avatar_url AS composer_avatar_url,
                     feature.lead_sound,
                     piece.genre
@@ -246,12 +250,17 @@ impl TasteRepository {
             "{PUBLIC_COMPARISON_CTE}
              SELECT sector.piece_id,
                     sector.id AS sector_id,
-                    COALESCE(sector.name_ko, sector.sector_name) AS sector_name
+                    COALESCE(sector.name_ko, sector.sector_name) AS sector_name,
+                    sector.name_en AS sector_name_en
              FROM public_sector
              JOIN performance_sectors sector ON sector.id = public_sector.sector_id"
         ))
         .fetch_all(pool)
         .await?;
+        let sector_names_en: HashMap<i32, String> = sectors
+            .iter()
+            .filter_map(|row| Some((row.sector_id, row.sector_name_en.clone()?)))
+            .collect();
         let public_sectors: HashMap<i32, (i32, String)> = sectors
             .into_iter()
             .map(|row| (row.sector_id, (row.piece_id, row.sector_name)))
@@ -259,7 +268,8 @@ impl TasteRepository {
 
         let artists = sqlx::query_as::<_, ArtistRow>(&format!(
             "{PUBLIC_COMPARISON_CTE}
-             SELECT DISTINCT ready.piece_id, artist.id AS artist_id, artist.name AS artist_name
+             SELECT DISTINCT ready.piece_id, artist.id AS artist_id, artist.name AS artist_name,
+                    artist.english_name AS artist_name_en
              FROM ready_performance ready
              JOIN public_sector ON public_sector.sector_id = ready.sector_id
              JOIN performance_credits credit
@@ -271,7 +281,11 @@ impl TasteRepository {
         .fetch_all(pool)
         .await?;
         let mut artists_by_piece: HashMap<i32, Vec<(i32, String)>> = HashMap::new();
+        let mut artist_names_en: HashMap<i32, String> = HashMap::new();
         for row in artists {
+            if let Some(name_en) = row.artist_name_en {
+                artist_names_en.insert(row.artist_id, name_en);
+            }
             artists_by_piece
                 .entry(row.piece_id)
                 .or_default()
@@ -297,7 +311,16 @@ impl TasteRepository {
                     lead_sound: feature.and_then(|feature| feature.lead_sound.clone()),
                     scale: feature.and_then(|feature| feature.ensemble_scale.clone()),
                     familiarity: feature.and_then(|feature| feature.familiarity.clone()),
+                    start_sector_en: start_sector
+                        .as_ref()
+                        .and_then(|(sector_id, _)| sector_names_en.get(sector_id).cloned()),
                     start_sector,
+                    artist_names_en: artists_by_piece
+                        .get(&piece.piece_id)
+                        .into_iter()
+                        .flatten()
+                        .filter_map(|(id, _)| Some((*id, artist_names_en.get(id)?.clone())))
+                        .collect(),
                     artists: artists_by_piece.remove(&piece.piece_id).unwrap_or_default(),
                     piece,
                 }

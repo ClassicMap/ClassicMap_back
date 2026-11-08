@@ -272,6 +272,9 @@ pub struct PieceSearchResult {
     #[sqlx(flatten)]
     pub piece: Piece,
     pub composer_name: String,
+    /// 영어판 작곡가 이름
+    #[sqlx(default)]
+    pub composer_name_en: Option<String>,
     /// 검색 결과 작품 행에 작곡가 초상을 얼굴로 쓴다
     pub composer_avatar_url: Option<String>,
 }

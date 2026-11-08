@@ -142,8 +142,12 @@ impl TasteInput {
 pub struct OnboardingPiece {
     pub piece_id: i32,
     pub piece_title: String,
+    #[sqlx(default)]
+    pub piece_title_en: Option<String>,
     pub composer_id: i32,
     pub composer_name: String,
+    #[sqlx(default)]
+    pub composer_name_en: Option<String>,
     pub composer_avatar_url: Option<String>,
     pub lead_sound: String,
     /// 작품 장르 키. 아직 분류하지 않은 작품은 null
@@ -235,8 +239,11 @@ pub struct RecommendedPiece {
     /// 처음 열 구간. 비어 있으면 화면의 기본 구간을 쓴다
     pub sector_id: Option<i32>,
     pub sector_name: Option<String>,
+    pub sector_name_en: Option<String>,
     /// 화면에 보이는 추천 이유. 두 개까지
     pub reasons: Vec<String>,
+    /// 같은 이유의 영어(영어판)
+    pub reasons_en: Vec<String>,
 }
 
 #[derive(Debug, Clone, Serialize)]
