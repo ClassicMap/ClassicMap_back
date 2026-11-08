@@ -223,6 +223,9 @@ pub struct ListeningMoment {
 pub struct PerformanceListeningNote {
     pub headline: String,
     pub body: String,
+    /// 영어판 제목·본문(없으면 null)
+    pub headline_en: Option<String>,
+    pub body_en: Option<String>,
     pub moments: Vec<ListeningMoment>,
     pub facts: Vec<String>,
 }
@@ -242,6 +245,9 @@ pub struct FeaturedPair {
     pub performance_ids: [i32; 2],
     pub title: String,
     pub note: String,
+    /// 영어판 제목·설명(없으면 null)
+    pub title_en: Option<String>,
+    pub note_en: Option<String>,
     pub moments: Vec<FeaturedPairMoment>,
 }
 
@@ -322,6 +328,8 @@ pub struct ComparisonSector {
     /// 뒤엣것은 정렬 비용 임계를 적용하지 않으므로 화면이 갈래를 표시해야 한다.
     pub sector_type: Option<String>,
     pub description: Option<String>,
+    #[sqlx(default)]
+    pub description_en: Option<String>,
     pub display_order: Option<i32>,
     pub measure_start: Option<String>,
     pub measure_end: Option<String>,
@@ -495,6 +503,10 @@ pub(crate) struct ListeningNoteRow {
     pub performance_id: i32,
     pub headline: String,
     pub note: String,
+    #[sqlx(default)]
+    pub headline_en: Option<String>,
+    #[sqlx(default)]
+    pub note_en: Option<String>,
     pub moments: Option<String>,
     pub facts: Option<String>,
 }
@@ -525,6 +537,10 @@ pub(crate) struct FeaturedPairRow {
     pub performance_b_id: i32,
     pub title: String,
     pub note: String,
+    #[sqlx(default)]
+    pub title_en: Option<String>,
+    #[sqlx(default)]
+    pub note_en: Option<String>,
     pub moments: Option<String>,
     pub a_start_ms: u32,
     pub a_end_ms: u32,
@@ -588,6 +604,7 @@ mod tests {
             sector_name_en: None,
             sector_type: Some("EXCERPT".to_string()),
             description: None,
+            description_en: None,
             display_order: Some(1),
             measure_start: None,
             measure_end: None,

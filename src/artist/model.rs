@@ -21,6 +21,11 @@ pub struct Artist {
     pub nationality: String,
     pub bio: Option<String>,
     pub style: Option<String>,
+    /// 영어판 글(없으면 null, 화면은 한국어를 쓴다)
+    #[sqlx(default)]
+    pub bio_en: Option<String>,
+    #[sqlx(default)]
+    pub style_en: Option<String>,
     pub concert_count: i32,
     pub album_count: i32,
     pub top_award_id: Option<i32>,
@@ -33,6 +38,8 @@ pub struct ArtistAward {
     pub artist_id: i32,
     pub year: String,
     pub award_name: String,
+    #[sqlx(default)]
+    pub award_name_en: Option<String>,
     pub award_type: Option<String>,
     pub organization: Option<String>,
     pub category: Option<String>,
@@ -151,6 +158,8 @@ mod tests {
             nationality: "대한민국".to_string(),
             bio: None,
             style: None,
+            bio_en: None,
+            style_en: None,
             concert_count: 0,
             album_count: 0,
             top_award_id: None,

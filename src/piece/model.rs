@@ -12,6 +12,9 @@ pub struct Piece {
     #[serde(rename = "type")]
     pub r#type: String,
     pub description: Option<String>,
+    /// 영어판 설명(없으면 null)
+    #[sqlx(default)]
+    pub description_en: Option<String>,
     pub opus_number: Option<String>,
     pub composition_year: Option<i32>,
     pub difficulty_level: Option<i32>,

@@ -391,6 +391,7 @@ impl ComparisonRepository {
                     sector.name_en AS sector_name_en,
                     sector.sector_type,
                     sector.description,
+                    sector.description_en,
                     sector.display_order,
                     sector.measure_start,
                     sector.measure_end,
@@ -429,6 +430,8 @@ impl ComparisonRepository {
                     pair.performance_b_id,
                     pair.title,
                     pair.note,
+                    pair.title_en,
+                    pair.note_en,
                     CAST(pair.moments AS CHAR CHARACTER SET utf8mb4) AS moments,
                     ready_a.start_ms AS a_start_ms,
                     ready_a.end_ms AS a_end_ms,
@@ -478,6 +481,8 @@ impl ComparisonRepository {
                         performance_ids: [row.performance_a_id, row.performance_b_id],
                         title: row.title,
                         note: row.note,
+                        title_en: row.title_en,
+                        note_en: row.note_en,
                         moments,
                     },
                 )
@@ -575,6 +580,8 @@ impl ComparisonRepository {
             "SELECT note.performance_id,
                     note.headline,
                     note.note,
+                    note.headline_en,
+                    note.note_en,
                     CAST(note.moments AS CHAR CHARACTER SET utf8mb4) AS moments,
                     CAST(note.facts AS CHAR CHARACTER SET utf8mb4) AS facts
              FROM performance_listening_notes note
@@ -753,6 +760,8 @@ impl ComparisonRepository {
         PerformanceListeningNote {
             headline: row.headline,
             body: row.note,
+            headline_en: row.headline_en,
+            body_en: row.note_en,
             moments: note_moments(moments, start_ms, end_ms),
             facts,
         }
