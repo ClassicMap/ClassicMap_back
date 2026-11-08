@@ -168,6 +168,7 @@ pub struct ComparisonPerformance {
     pub composer_name: String,
     pub composer_name_en: Option<String>,
     pub sector_name: String,
+    pub sector_name_en: Option<String>,
     pub start_ms: u32,
     pub end_ms: u32,
     pub clip_status: String,
@@ -492,6 +493,8 @@ pub(crate) struct ComparisonPerformanceRow {
     #[sqlx(default)]
     pub composer_name_en: Option<String>,
     pub sector_name: String,
+    #[sqlx(default)]
+    pub sector_name_en: Option<String>,
     pub start_ms: u32,
     pub end_ms: u32,
     pub clip_status: String,
