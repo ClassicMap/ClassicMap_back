@@ -18,6 +18,7 @@ import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
+from typing import Any
 
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import ec
@@ -60,7 +61,7 @@ def search_term(composer: str, title: str) -> str:
     """
     text = title or ""
     text = re.sub(r"[<>«»\[\]{}]", " ", text)
-    text = text.replace("♭", "b").replace("♯", "#").replace("’", "'")
+    text = text.replace("♭", "b").replace("♯", "#").replace("\u2019", "'")
     text = re.sub(r"\((?:spurious|doubtful|attrib[^)]*|lost)[^)]*\)", " ", text, flags=re.I)
     text = re.sub(r"^\s*(Opera|Oper|Ballet|Cantata|Motet|Symphony No\.)\s+", "", text, flags=re.I)
     text = " ".join(text.split())
@@ -89,7 +90,10 @@ def title_tokens(title: str) -> set[str]:
 class Apple:
     def __init__(self) -> None:
         pem = os.environ["APPLE_MUSIC_PRIVATE_KEY"].replace("\\n", "\n")
-        self._key = serialization.load_pem_private_key(pem.encode(), password=None)
+        key = serialization.load_pem_private_key(pem.encode(), password=None)
+        if not isinstance(key, ec.EllipticCurvePrivateKey):
+            raise ValueError("APPLE_MUSIC_PRIVATE_KEY 는 EC(P-256) 개인 키여야 한다")
+        self._key: ec.EllipticCurvePrivateKey = key
         self._kid = os.environ["APPLE_MUSIC_KEY_ID"]
         self._team = os.environ["APPLE_MUSIC_TEAM_KEY"]
         self._token = ""
@@ -117,7 +121,7 @@ class Apple:
         self._exp = issued + 3600
         return self._token
 
-    def search_albums(self, term: str, limit: int = 8) -> list[dict]:
+    def search_albums(self, term: str, limit: int = 8) -> list[dict[str, Any]]:
         query = urllib.parse.urlencode({"term": term, "types": "albums", "limit": limit})
         url = f"https://api.music.apple.com/v1/catalog/{STOREFRONT}/search?{query}"
         for attempt in range(5):
@@ -126,8 +130,11 @@ class Apple:
             )
             try:
                 with urllib.request.urlopen(req, timeout=30) as response:
-                    payload = json.load(response)
-                return payload.get("results", {}).get("albums", {}).get("data", [])
+                    payload: dict[str, Any] = json.load(response)
+                albums: list[dict[str, Any]] = (
+                    payload.get("results", {}).get("albums", {}).get("data", [])
+                )
+                return albums
             except urllib.error.HTTPError as error:
                 if error.code in (429, 500, 502, 503):
                     time.sleep(2 * (attempt + 1))
@@ -140,13 +147,19 @@ class Apple:
         return []
 
 
-def decide(piece: dict, albums: list[dict]) -> dict:
+def verdict(
+    kind: str, reason: str, pick: dict[str, Any] | None, scored: list[dict[str, Any]]
+) -> dict[str, Any]:
+    return {"verdict": kind, "reason": reason, "pick": pick, "candidates": scored[:4]}
+
+
+def decide(piece: dict[str, Any], albums: list[dict[str, Any]]) -> dict[str, Any]:
     """작품번호가 겹치면 채택, 제목만 겹치면 보류로 분류한다."""
     want_cat = catalogue_keys(piece["title_en"])
     want_tok = title_tokens(piece["title_en"])
     composer_tok = title_tokens(piece["composer_en"])
 
-    scored = []
+    scored: list[dict[str, Any]] = []
     for album in albums:
         attrs = album.get("attributes", {})
         name = attrs.get("name", "")
@@ -172,13 +185,13 @@ def decide(piece: dict, albums: list[dict]) -> dict:
     exact = [c for c in scored if c["cat_hit"] and c["composer_hit"]]
     if exact:
         exact.sort(key=lambda c: -c["overlap"])
-        return {"verdict": "auto", "reason": "catalogue+composer", "pick": exact[0], "candidates": scored[:4]}
+        return verdict("auto", "catalogue+composer", exact[0], scored)
     if want_cat:
         cat_only = [c for c in scored if c["cat_hit"]]
         if cat_only:
             cat_only.sort(key=lambda c: -c["overlap"])
-            return {"verdict": "review", "reason": "catalogue_only", "pick": cat_only[0], "candidates": scored[:4]}
-        return {"verdict": "none", "reason": "catalogue_not_found", "pick": None, "candidates": scored[:4]}
+            return verdict("review", "catalogue_only", cat_only[0], scored)
+        return verdict("none", "catalogue_not_found", None, scored)
 
     # 작품번호가 아예 없는 제목은 식별력 있는 고유어가 겹치는지로 본다.
     want_core = core_tokens(piece["title_en"])
@@ -188,13 +201,13 @@ def decide(piece: dict, albums: list[dict]) -> dict:
         core_strong = [c for c in scored if c["composer_hit"] and c.get("core_hit", 0) >= 0.5]
         if core_strong:
             core_strong.sort(key=lambda c: (-c["core_hit"], -c["overlap"]))
-            return {"verdict": "review", "reason": "core_title_match", "pick": core_strong[0], "candidates": scored[:4]}
+            return verdict("review", "core_title_match", core_strong[0], scored)
 
     strong = [c for c in scored if c["composer_hit"] and c["overlap"] >= 0.8]
     if strong:
         strong.sort(key=lambda c: -c["overlap"])
-        return {"verdict": "review", "reason": "title_only_strong", "pick": strong[0], "candidates": scored[:4]}
-    return {"verdict": "none", "reason": "no_catalogue_weak_title", "pick": None, "candidates": scored[:4]}
+        return verdict("review", "title_only_strong", strong[0], scored)
+    return verdict("none", "no_catalogue_weak_title", None, scored)
 
 
 def main() -> None:
@@ -202,7 +215,8 @@ def main() -> None:
     start = int(sys.argv[3]) if len(sys.argv) > 3 else 0
     count = int(sys.argv[4]) if len(sys.argv) > 4 else 10**9
 
-    pieces = [json.loads(line) for line in open(src) if line.strip()][start : start + count]
+    with open(src, encoding="utf-8") as handle:
+        pieces = [json.loads(line) for line in handle if line.strip()][start : start + count]
     apple = Apple()
     stats = {"auto": 0, "review": 0, "none": 0}
     with open(dst, "a") as out:
@@ -218,7 +232,11 @@ def main() -> None:
             out.write(json.dumps({**piece, **result}, ensure_ascii=False) + "\n")
             if index % 200 == 0:
                 out.flush()
-                print(f"  {index}/{len(pieces)}  auto {stats['auto']} review {stats['review']} none {stats['none']}", flush=True)
+                print(
+                    f"  {index}/{len(pieces)}  auto {stats['auto']}"
+                    f" review {stats['review']} none {stats['none']}",
+                    flush=True,
+                )
     print(f"완료: auto {stats['auto']} / review {stats['review']} / none {stats['none']}")
 
 
