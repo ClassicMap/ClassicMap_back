@@ -1,5 +1,8 @@
 use super::{
-    model::{ComparisonPerformance, ComparisonPerformancePage, ComparisonPiece, ComparisonSector},
+    model::{
+        summarize_genres, ComparisonGenreSummary, ComparisonPerformance, ComparisonPerformancePage,
+        ComparisonPiece, ComparisonSector,
+    },
     repository::{ComparisonContractError, ComparisonPageRequest, ComparisonRepository},
 };
 use crate::db::DbPool;
@@ -31,12 +34,21 @@ impl ComparisonService {
         ComparisonRepository::find_public_performances_by_sector(pool, sector_id).await
     }
 
+    /// 장르마다 공개 비교 작품 수와 대표 초상
+    pub async fn get_genre_summaries(
+        pool: &DbPool,
+    ) -> Result<Vec<ComparisonGenreSummary>, ComparisonContractError> {
+        let rows = ComparisonRepository::find_public_genre_pieces(pool).await?;
+        Ok(summarize_genres(&rows))
+    }
+
     pub async fn get_public_pieces(
         pool: &DbPool,
         composer_id: Option<i32>,
+        genre: Option<&str>,
         offset: i64,
         limit: i64,
     ) -> Result<Vec<ComparisonPiece>, ComparisonContractError> {
-        ComparisonRepository::find_public_pieces(pool, composer_id, offset, limit).await
+        ComparisonRepository::find_public_pieces_by(pool, composer_id, genre, offset, limit).await
     }
 }

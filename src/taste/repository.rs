@@ -191,7 +191,8 @@ impl TasteRepository {
                     composer.id AS composer_id,
                     composer.name AS composer_name,
                     composer.avatar_url AS composer_avatar_url,
-                    feature.lead_sound
+                    feature.lead_sound,
+                    piece.genre
              FROM piece_reco_features feature
              JOIN pieces piece ON piece.id = feature.piece_id
              JOIN composers composer ON composer.id = piece.composer_id

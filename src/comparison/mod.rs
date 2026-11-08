@@ -4,6 +4,6 @@ pub mod repository;
 mod service;
 
 pub use api::{
-    get_artist_comparison_performances, get_comparison_pieces, get_piece_comparison_sectors,
-    get_sector_comparison_performances,
+    get_artist_comparison_performances, get_comparison_genres, get_comparison_pieces,
+    get_piece_comparison_sectors, get_sector_comparison_performances,
 };

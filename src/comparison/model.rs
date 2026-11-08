@@ -328,6 +328,95 @@ pub struct ComparisonSector {
     pub featured_pair: Option<FeaturedPair>,
 }
 
+/// 작품 장르 키. `pieces.genre` 의 CHECK 제약과 같은 목록이다
+pub const PIECE_GENRES: [&str; 7] = [
+    "symphony",
+    "concerto",
+    "piano",
+    "chamber",
+    "orchestral",
+    "stage",
+    "vocal",
+];
+
+pub fn is_piece_genre(value: &str) -> bool {
+    PIECE_GENRES.contains(&value)
+}
+
+/// 장르 타일에 얹을 대표 초상 수. 화면은 앞 장르가 쓴 작곡가를 건너뛰고 고른다
+pub const GENRE_SUMMARY_PORTRAITS: usize = 3;
+
+/// `/comparison-genres` 한 줄: 장르마다 공개 비교 작품 수와 대표 작곡가 초상.
+/// 홈·둘러보기 장르 타일이 비교 카탈로그 전체를 받지 않고 이것만 받는다.
+#[derive(Debug, Clone, Serialize, PartialEq)]
+#[serde(rename_all = "camelCase")]
+pub struct ComparisonGenreSummary {
+    pub genre: String,
+    pub piece_count: i64,
+    /// 연주자 많은 작품의 작곡가부터, 작곡가는 겹치지 않게 최대 `GENRE_SUMMARY_PORTRAITS`명
+    pub portraits: Vec<ComparisonGenrePortrait>,
+}
+
+#[derive(Debug, Clone, Serialize, PartialEq)]
+#[serde(rename_all = "camelCase")]
+pub struct ComparisonGenrePortrait {
+    pub composer_id: i32,
+    pub avatar_url: String,
+}
+
+/// 장르가 있는 공개 비교 작품 한 줄 (요약 계산용). 연주자 많은 순으로 온다
+#[derive(Debug, Clone, FromRow)]
+pub struct ComparisonGenrePieceRow {
+    pub genre: String,
+    pub piece_id: i32,
+    pub composer_id: i32,
+    pub composer_avatar_url: Option<String>,
+    pub performer_count: i64,
+}
+
+/// 작품 줄을 장르 순서(`PIECE_GENRES`)대로 묶는다. 작품이 없는 장르는 빠진다.
+/// 줄은 연주자 많은 순으로 들어온다고 보고, 그 순서대로 초상을 고른다.
+pub fn summarize_genres(rows: &[ComparisonGenrePieceRow]) -> Vec<ComparisonGenreSummary> {
+    PIECE_GENRES
+        .iter()
+        .filter_map(|genre| {
+            let in_genre: Vec<&ComparisonGenrePieceRow> =
+                rows.iter().filter(|row| row.genre == *genre).collect();
+            if in_genre.is_empty() {
+                return None;
+            }
+            let mut portraits: Vec<ComparisonGenrePortrait> = Vec::new();
+            for row in &in_genre {
+                if portraits.len() >= GENRE_SUMMARY_PORTRAITS {
+                    break;
+                }
+                let Some(url) = row
+                    .composer_avatar_url
+                    .as_deref()
+                    .filter(|url| !url.is_empty())
+                else {
+                    continue;
+                };
+                if portraits
+                    .iter()
+                    .any(|portrait| portrait.composer_id == row.composer_id)
+                {
+                    continue;
+                }
+                portraits.push(ComparisonGenrePortrait {
+                    composer_id: row.composer_id,
+                    avatar_url: url.to_string(),
+                });
+            }
+            Some(ComparisonGenreSummary {
+                genre: (*genre).to_string(),
+                piece_count: in_genre.len() as i64,
+                portraits,
+            })
+        })
+        .collect()
+}
+
 /// 비교 카탈로그의 작품 한 줄. 공개 섹터가 하나 이상 있는 작품만 나온다.
 #[derive(Debug, Clone, Serialize, FromRow)]
 #[serde(rename_all = "camelCase")]
@@ -338,10 +427,16 @@ pub struct ComparisonPiece {
     pub composer_id: i32,
     pub composer_name: String,
     pub composer_avatar_url: Option<String>,
+    /// 장르 키(`PIECE_GENRES` 중 하나). 아직 분류하지 않은 작품은 null
+    pub genre: Option<String>,
     /// 공개 섹터 수
     pub sector_count: i64,
     /// 공개 섹터들에 등장하는 서로 다른 primary artist 수
     pub performer_count: i64,
+    /// 카드 그림으로 쓸 대표 연주 영상(YouTube id). 대부분 음반 표지를 띄운 공식 음원 영상이라
+    /// 썸네일 가운데를 자르면 앨범 아트가 된다. 첫 공개 구간의 첫 연주를 쓴다
+    #[sqlx(skip)]
+    pub cover_video_id: Option<String>,
     #[sqlx(skip)]
     pub performers: Vec<ComparisonPiecePerformer>,
 }
@@ -450,10 +545,11 @@ impl From<ComparisonCreditRow> for ComparisonCredit {
 #[cfg(test)]
 mod tests {
     use super::{
-        clip_offset, note_moments, pair_moments, parse_json_list, ClipStatus, ComparisonSector,
-        EditorialStatus, FeaturedPairMoment, ListeningMoment, PerformancePublishStatus,
-        StoredMoment,
+        clip_offset, is_piece_genre, note_moments, pair_moments, parse_json_list, ClipStatus,
+        ComparisonSector, EditorialStatus, FeaturedPairMoment, ListeningMoment,
+        PerformancePublishStatus, StoredMoment, PIECE_GENRES,
     };
+    use super::{summarize_genres, ComparisonGenrePieceRow};
     use std::str::FromStr;
 
     #[test]
@@ -570,5 +666,69 @@ mod tests {
         assert!(ClipStatus::from_str("DONE").is_err());
         assert!(EditorialStatus::from_str("VERIFIED").is_err());
         assert!(PerformancePublishStatus::from_str("QUEUED").is_err());
+    }
+
+    #[test]
+    fn piece_genres_match_migration_check() {
+        let migration = include_str!("../../migrations/202611072001_add_piece_genre.sql");
+        let check = migration
+            .split("genre IN (")
+            .nth(1)
+            .and_then(|rest| rest.split(')').next())
+            .expect("장르 CHECK 목록");
+        let keys: Vec<&str> = check
+            .split(',')
+            .map(|key| key.trim().trim_matches('\''))
+            .collect();
+        assert_eq!(keys, PIECE_GENRES);
+        assert!(is_piece_genre("piano"));
+        assert!(!is_piece_genre("jazz"));
+        assert!(!is_piece_genre("Piano"));
+    }
+
+    fn genre_row(
+        genre: &str,
+        piece_id: i32,
+        composer_id: i32,
+        avatar: Option<&str>,
+    ) -> ComparisonGenrePieceRow {
+        ComparisonGenrePieceRow {
+            genre: genre.to_string(),
+            piece_id,
+            composer_id,
+            composer_avatar_url: avatar.map(str::to_string),
+            performer_count: 0,
+        }
+    }
+
+    #[test]
+    fn genre_summary_counts_in_genre_order_and_skips_repeated_composers() {
+        let rows = vec![
+            genre_row("piano", 1, 10, Some("a.jpg")),
+            genre_row("symphony", 2, 20, Some("b.jpg")),
+            genre_row("piano", 3, 10, Some("a2.jpg")),
+            genre_row("piano", 4, 11, None),
+            genre_row("piano", 5, 12, Some("c.jpg")),
+        ];
+        let summary = summarize_genres(&rows);
+        assert_eq!(
+            summary
+                .iter()
+                .map(|item| item.genre.as_str())
+                .collect::<Vec<_>>(),
+            vec!["symphony", "piano"],
+            "장르 순서를 따르고 작품 없는 장르는 뺀다"
+        );
+        let piano = &summary[1];
+        assert_eq!(piano.piece_count, 4);
+        assert_eq!(
+            piano
+                .portraits
+                .iter()
+                .map(|portrait| portrait.composer_id)
+                .collect::<Vec<_>>(),
+            vec![10, 12],
+            "같은 작곡가는 한 번, 초상 없는 작곡가는 건너뛴다"
+        );
     }
 }

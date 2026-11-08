@@ -64,6 +64,22 @@ Content-Range 를 받은 뒤에만** 적는다.
 ffmpeg 8 의 `ebur128` 은 100ms 프레임 기록을 `-loglevel verbose` 에서만 찍는다. 단기
 음량은 처음 3초가 −120.7 이다(창이 차지 않았다). 측정 스크립트가 둘 다 처리한다.
 
+### 새 비교 작품은 장르를 채운다 (2026-11-07)
+
+처음으로 비교 구간이 생긴 작품은 `pieces.genre` 를 채운다. 비어 있으면 화면이 작품 카드를
+중립 색으로 그리고 장르 필터(`/comparison-pieces?genre=`)에서 빠진다.
+
+1. `seed_pipeline/curation/piece-genres-2026-11-07/genres.jsonl` 에 `{pieceId,title,genre,note?}`
+   줄을 더한다. 키와 기준(원곡 편성, 오페라 발췌는 stage, 부수음악은 orchestral)은 같은 폴더 README
+2. `python3 gen_sql.py` 출력을 새 날짜의 마이그레이션으로 둔다. 이미 적용된 파일은 고치지 않으니
+   새 줄만 담은 `UPDATE` 로 줄여도 된다
+3. 배포하면 서버 시작 때 마이그레이션이 돈다. 확인: 구간이 있는데 장르가 빈 작품이 없어야 한다
+
+```sql
+SELECT p.id, p.title FROM pieces p
+WHERE p.genre IS NULL AND EXISTS (SELECT 1 FROM performance_sectors s WHERE s.piece_id = p.id);
+```
+
 ### 클립 저장 키의 둘째 숫자는 길이다 (2026-09-30)
 
 ```

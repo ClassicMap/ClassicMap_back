@@ -50,6 +50,22 @@ pub struct ArtistWithAwards {
     pub awards: Vec<ArtistAward>,
     /// 지금 사진(`image_url`)의 출처. 공개된 출처 기록이 있을 때만 낸다
     pub image_credit: Option<ImageCredit>,
+    /// 화면 머리 배너용 가로 사진. 공개된 배너 기록이 있을 때만 낸다
+    pub banner: Option<ArtistBanner>,
+}
+
+/// 아티스트 화면 머리 배너. 가로로 넓은 사진과 얼굴 초점, 출처
+#[derive(Debug, Serialize, Deserialize, FromRow)]
+#[serde(rename_all = "camelCase")]
+pub struct ArtistBanner {
+    pub url: String,
+    /// CSS object-position 값. 비면 가운데
+    pub focal_point: Option<String>,
+    pub credit_line: Option<String>,
+    pub author: Option<String>,
+    pub license: Option<String>,
+    pub license_url: Option<String>,
+    pub source_url: String,
 }
 
 /// 사진 출처. 위키미디어 사진은 작가와 라이선스를, 보도용 사진은 출처 이름을 밝힌다
