@@ -48,7 +48,7 @@ strict = true
 plugins = ["pydantic.mypy"]
 # curation/ 은 폴더마다 쓰고 버리는 스크립트라 gen_sql.py·gen_catalog.py 같은 같은 이름이 많아
 # 한 번에 검사하면 「Duplicate module」로 멈춘다. 큐레이션 폴더는 폴더 단위로 검사한다:
-#   uv run mypy curation/<폴더>
+#   uv run mypy curation/<폴더>/*.py  (폴더를 넘기면 exclude 에 걸린다)
 exclude = ["^curation/"]
 
 [tool.pytest.ini_options]
