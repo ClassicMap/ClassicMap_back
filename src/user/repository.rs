@@ -106,7 +106,7 @@ impl UserRepository {
         let result = sqlx::query(
             "UPDATE users SET is_first_visit = COALESCE(?, is_first_visit), favorite_era = COALESCE(?, favorite_era) WHERE id = ?",
         )
-        .bind(&user.is_first_visit)
+        .bind(user.is_first_visit)
         .bind(&user.favorite_era)
         .bind(id)
         .execute(pool)

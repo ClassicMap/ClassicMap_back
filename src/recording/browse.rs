@@ -54,6 +54,7 @@ pub enum BrowseSort {
 }
 
 impl BrowseSort {
+    #[allow(clippy::result_unit_err)] // 모르는 정렬 이름이면 Err(()) — 호출하는 쪽이 422 로 바꾼다
     pub fn parse(value: Option<&str>) -> Result<Self, ()> {
         match value.map(str::trim).filter(|v| !v.is_empty()) {
             None | Some("release") => Ok(Self::Release),
@@ -217,6 +218,7 @@ pub async fn find_new_for_user(
 }
 
 #[get("/recordings/browse?<artist>&<label>&<year>&<q>&<sort>&<offset>&<limit>")]
+#[allow(clippy::too_many_arguments)] // Rocket 쿼리 인자
 pub async fn browse_recordings(
     pool: &State<DbPool>,
     artist: Option<i32>,

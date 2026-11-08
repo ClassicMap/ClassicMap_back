@@ -1,19 +1,30 @@
 #[macro_use]
 extern crate rocket;
 
+// 아래 모듈 다수는 lib.rs 에도 있어 실행 파일과 라이브러리가 따로 컴파일한다. 라이브러리·적재기·테스트만
+// 쓰는 함수가 실행 파일 쪽에서 dead code 로 잡히므로 그 경고는 끈다(실행 파일 전용 kopis 의 예전 동기화 경로 포함).
+#[allow(dead_code)]
 mod artist;
 mod auth;
+#[allow(dead_code)]
 mod boxoffice;
+#[allow(dead_code)]
 mod composer;
+#[allow(dead_code)]
 mod concert;
 mod config;
 mod db;
+#[allow(dead_code)]
 mod hall;
 mod image_proxy;
+#[allow(dead_code)]
 mod kopis;
+#[allow(dead_code)]
 mod logger;
 mod performance;
+#[allow(dead_code)]
 mod performance_sector;
+#[allow(dead_code)]
 mod piece;
 mod recording;
 mod search;

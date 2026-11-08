@@ -544,7 +544,7 @@ mod tests {
             .unwrap_or_default();
         println!(
             "album artists: {:?}",
-            artists.iter().map(|a| artist_name(a)).collect::<Vec<_>>()
+            artists.iter().map(artist_name).collect::<Vec<_>>()
         );
         let picked = pick_album_artist("Yeol Eum Son", "손열음", &artists).expect("picked artist");
         println!("resolved artist id: {}", picked.id);

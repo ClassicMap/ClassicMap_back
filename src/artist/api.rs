@@ -161,7 +161,7 @@ pub async fn search_artists(
         .map_err(|_| Status::BadRequest)?;
 
     // If search query is provided, use text search
-    if q.is_some() && q.as_ref().unwrap().trim().len() > 0 {
+    if q.as_deref().is_some_and(|text| !text.trim().is_empty()) {
         match ArtistService::search_artists(pool, q, tier, category, offset, limit).await {
             Ok(artists) => Ok(Json(artists)),
             Err(e) => {

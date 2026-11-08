@@ -1,7 +1,7 @@
 use super::enrichment::is_instrument_code;
 use super::model::{
-    ConcertArtistSummary, ConcertListItem, ConcertTicketVendor, ConcertWithArtists,
-    ConcertWithDetails, CreateConcert, SubmitRating, UpdateConcert,
+    ConcertArtistSummary, ConcertListItem, ConcertTicketVendor, ConcertWithDetails, CreateConcert,
+    SubmitRating, UpdateConcert,
 };
 use super::repository::ConcertSearchFilter;
 use super::service::ConcertService;

@@ -307,8 +307,6 @@ impl KopisService {
 
         // 조회 기간 설정 (오늘부터 1년 후까지)
         let today = Utc::now().date_naive();
-        let start_date = today.format("%Y%m%d").to_string();
-        let end_date = (today + Duration::days(365)).format("%Y%m%d").to_string();
 
         for genre_code in &genre_codes {
             Logger::info("KOPIS", &format!("Syncing genre: {}", genre_code));
