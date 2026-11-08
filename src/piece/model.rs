@@ -25,6 +25,240 @@ pub struct Piece {
     /// part 종류. "movement"(전부 악장 번호가 있음, 예: 4악장) | "work"(예: 12곡) | part 가 없으면 None
     #[serde(default)]
     pub part_kind: Option<String>,
+    /// 작품 목록 체계와 번호(예: "Op." "10", "K." "331"). 없으면 opus_number 를 쓴다
+    #[sqlx(default)]
+    #[serde(default)]
+    pub catalogue_system: Option<String>,
+    #[sqlx(default)]
+    #[serde(default)]
+    pub catalogue_number: Option<String>,
+    /// 장르 7종(symphony·concerto·piano·chamber·orchestral·stage·vocal). 못 정한 작품은 None 이고
+    /// 작곡가 화면은 '기타'로 묶는다.
+    #[sqlx(default)]
+    #[serde(default)]
+    pub genre: Option<String>,
+    /// 갈래 안 형식(`piece_forms.form_key`, 예: nocturne·string_quartet). 장르가 없으면 None
+    #[sqlx(default)]
+    #[serde(default)]
+    pub form_key: Option<String>,
+    /// 대표곡 표시. 목록 순서는 바꾸지 않고 표시만 한다
+    #[sqlx(default)]
+    #[serde(default)]
+    pub notable: bool,
+}
+
+/// 작곡가 작품 목록 정렬.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum ComposerPieceSort {
+    /// 손본 작품 → 들을 거리 있는 작품 → 나머지, 그 안은 작품번호순(기존 기본값)
+    Listening,
+    /// 작품번호순
+    Catalogue,
+    /// 작곡 연도순(연도 없는 작품은 뒤), 같으면 작품번호순
+    Year,
+    /// 대표곡(세트 안 대표 곡 포함) → 손본 작품 → 유명도(위키데이터 언어판 수) → 작품번호순
+    Notable,
+    /// 검색 관련도: 제목 일치 → 제목 접두사 → 제목·영어 제목 포함 → 작품번호 → 별칭 → 세트 안 곡 이름,
+    /// 같으면 대표곡·유명도·작품번호순. 검색어가 없으면 작품번호순과 같다
+    Relevance,
+}
+
+/// 작곡가 작품 목록의 갈래 거르기.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum GenreFilter {
+    Any,
+    /// 장르를 못 정한 작품(화면의 '기타')
+    Unclassified,
+    Genre(String),
+}
+
+/// `/composers/<id>/pieces` 의 거르기·정렬·검색. 검색은 LIKE 패턴(별칭을 고친 것 포함)이다.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct ComposerPieceQuery {
+    pub genre: GenreFilter,
+    pub form: Option<String>,
+    pub sort: ComposerPieceSort,
+    /// 검색어 전체의 LIKE 패턴(별칭을 고친 것 포함). 관련도와 걸린 세트 안 곡에 쓴다
+    pub search_patterns: Vec<String>,
+    /// 띄어 쓴 낱말마다의 LIKE 패턴들. 모든 낱말이 맞아야 걸린다(「소나타 열정」)
+    pub search_tokens: Vec<Vec<String>>,
+    pub notable_only: bool,
+}
+
+impl ComposerPieceQuery {
+    /// 거르기·검색 없는 기본 목록(손본 작품 먼저). 기존 호출과 같다.
+    pub fn listing() -> Self {
+        Self {
+            genre: GenreFilter::Any,
+            form: None,
+            sort: ComposerPieceSort::Listening,
+            search_patterns: Vec::new(),
+            search_tokens: Vec::new(),
+            notable_only: false,
+        }
+    }
+}
+
+/// 작곡가 작품 목록 한 줄. 작품에 세트 안 대표 곡 번호와, 검색어가 걸린 세트 안 곡을 더한다.
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ComposerPiece {
+    #[serde(flatten)]
+    pub piece: Piece,
+    /// 대표 곡으로 표시한 세트 안 곡(최상위 part)의 sequence_number. 없으면 빈 목록
+    pub notable_parts: Vec<i32>,
+    /// 검색어가 세트 안 곡 이름에 걸렸으면 그 곡. 검색하지 않으면 None
+    pub matched_part: Option<MatchedPart>,
+}
+
+#[derive(Debug, Serialize, PartialEq, Eq)]
+#[serde(rename_all = "camelCase")]
+pub struct MatchedPart {
+    pub sequence_number: i32,
+    pub name: String,
+}
+
+#[derive(Debug, FromRow)]
+pub struct ComposerPieceRow {
+    #[sqlx(flatten)]
+    pub piece: Piece,
+    pub notable_part_numbers: Option<String>,
+    #[sqlx(default)]
+    pub matched_part_sequence: Option<i32>,
+    #[sqlx(default)]
+    pub matched_part_name: Option<String>,
+}
+
+impl From<ComposerPieceRow> for ComposerPiece {
+    fn from(row: ComposerPieceRow) -> Self {
+        let notable_parts = row
+            .notable_part_numbers
+            .as_deref()
+            .unwrap_or("")
+            .split(',')
+            .filter_map(|value| value.trim().parse::<i32>().ok())
+            .collect();
+        let matched_part =
+            row.matched_part_sequence
+                .zip(row.matched_part_name)
+                .map(|(sequence_number, name)| MatchedPart {
+                    sequence_number,
+                    name,
+                });
+        Self {
+            piece: row.piece,
+            notable_parts,
+            matched_part,
+        }
+    }
+}
+
+/// 장르 7종의 화면 순서. 작곡가 화면은 대표곡이 많은 갈래부터, 같으면 작품 수가 많은 갈래부터,
+/// 그것도 같으면 이 순서로 보인다.
+pub const GENRE_ORDER: [&str; 7] = [
+    "symphony",
+    "concerto",
+    "piano",
+    "chamber",
+    "orchestral",
+    "stage",
+    "vocal",
+];
+
+#[derive(Debug, FromRow)]
+pub struct CatalogRow {
+    pub genre: Option<String>,
+    pub form_key: Option<String>,
+    pub form_name: Option<String>,
+    pub form_order: Option<i32>,
+    pub piece_count: i64,
+    pub notable_count: i64,
+}
+
+/// `/composers/<id>/catalog`: 작곡가 작품의 갈래·형식별 개수. 작품 목록 없이 개수만 준다.
+#[derive(Debug, Serialize, PartialEq, Eq)]
+#[serde(rename_all = "camelCase")]
+pub struct ComposerCatalog {
+    pub total: i64,
+    pub notable_total: i64,
+    pub genres: Vec<CatalogGenre>,
+}
+
+#[derive(Debug, Serialize, PartialEq, Eq)]
+#[serde(rename_all = "camelCase")]
+pub struct CatalogGenre {
+    /// 장르 키. None 은 장르를 못 정한 작품('기타')이다
+    pub genre: Option<String>,
+    pub count: i64,
+    pub notable_count: i64,
+    /// 형식별 개수(piece_forms.sort_order 순). '기타'는 빈 목록
+    pub forms: Vec<CatalogForm>,
+}
+
+#[derive(Debug, Serialize, PartialEq, Eq)]
+#[serde(rename_all = "camelCase")]
+pub struct CatalogForm {
+    pub form_key: String,
+    pub name: String,
+    pub count: i64,
+    pub notable_count: i64,
+}
+
+impl ComposerCatalog {
+    /// 갈래는 대표곡 수 → 작품 수가 많은 순(같으면 `GENRE_ORDER`), '기타'는 맨 뒤다. 형식은 사전 순서다.
+    pub fn from_rows(mut rows: Vec<CatalogRow>) -> Self {
+        rows.sort_by(|a, b| {
+            a.form_order
+                .unwrap_or(i32::MAX)
+                .cmp(&b.form_order.unwrap_or(i32::MAX))
+                .then_with(|| a.form_key.cmp(&b.form_key))
+        });
+        let mut genres: Vec<CatalogGenre> = Vec::new();
+        for row in rows {
+            let index = match genres.iter().position(|genre| genre.genre == row.genre) {
+                Some(index) => index,
+                None => {
+                    genres.push(CatalogGenre {
+                        genre: row.genre.clone(),
+                        count: 0,
+                        notable_count: 0,
+                        forms: Vec::new(),
+                    });
+                    genres.len() - 1
+                }
+            };
+            let genre = &mut genres[index];
+            genre.count += row.piece_count;
+            genre.notable_count += row.notable_count;
+            if row.genre.is_some() {
+                genre.forms.push(CatalogForm {
+                    form_key: row.form_key.unwrap_or_else(|| "other".to_string()),
+                    name: row.form_name.unwrap_or_else(|| "그 밖의 곡".to_string()),
+                    count: row.piece_count,
+                    notable_count: row.notable_count,
+                });
+            }
+        }
+        let rank = |genre: &Option<String>| -> usize {
+            genre
+                .as_deref()
+                .and_then(|key| GENRE_ORDER.iter().position(|known| *known == key))
+                .unwrap_or(GENRE_ORDER.len())
+        };
+        genres.sort_by(|a, b| {
+            a.genre
+                .is_none()
+                .cmp(&b.genre.is_none())
+                .then_with(|| b.notable_count.cmp(&a.notable_count))
+                .then_with(|| b.count.cmp(&a.count))
+                .then_with(|| rank(&a.genre).cmp(&rank(&b.genre)))
+        });
+        Self {
+            total: genres.iter().map(|genre| genre.count).sum(),
+            notable_total: genres.iter().map(|genre| genre.notable_count).sum(),
+            genres,
+        }
+    }
 }
 
 /// 작품 검색 결과. 목록에 작곡가를 함께 보여줄 수 있게 이름을 싣는다.
@@ -53,6 +287,12 @@ pub struct PiecePart {
     pub name_en: Option<String>,
     /// 이 곡이 따로 작품 행으로 있으면 그 작품. 눌러서 그 작품 화면으로 간다
     pub linked_piece: Option<LinkedPiece>,
+    /// 세트 안 대표 곡 표시
+    pub notable: bool,
+    /// 이 곡의 Apple Music 트랙 링크. 이어진 작품이 있으면 그 작품 링크(`linked_piece`)를 쓴다
+    pub apple_music_url: Option<String>,
+    /// 이 곡의 Spotify 트랙 링크. 쓰는 법은 `apple_music_url` 과 같다
+    pub spotify_url: Option<String>,
 }
 
 #[derive(Debug, Serialize, PartialEq, Eq)]
@@ -79,6 +319,9 @@ pub struct PiecePartRow {
     pub linked_comparable: i64,
     pub linked_spotify_url: Option<String>,
     pub linked_apple_music_url: Option<String>,
+    pub notable: bool,
+    pub apple_music_url: Option<String>,
+    pub spotify_url: Option<String>,
 }
 
 impl From<PiecePartRow> for PiecePart {
@@ -111,6 +354,9 @@ impl From<PiecePartRow> for PiecePart {
             name_ko: row.name_ko,
             name_en: row.name_en,
             linked_piece,
+            notable: row.notable,
+            apple_music_url: row.apple_music_url,
+            spotify_url: row.spotify_url,
         }
     }
 }
@@ -195,6 +441,9 @@ mod tests {
             linked_comparable: 0,
             linked_spotify_url: None,
             linked_apple_music_url: None,
+            notable: false,
+            apple_music_url: None,
+            spotify_url: None,
         }
     }
 
@@ -274,6 +523,8 @@ mod tests {
         linked.linked_piece_id = Some(127);
         linked.linked_title = Some("혁명".to_string());
         linked.linked_spotify_url = Some("https://open.spotify.com/track/x".to_string());
+        linked.apple_music_url = Some("https://music.apple.com/us/album/x/1?i=2".to_string());
+        linked.spotify_url = Some("https://open.spotify.com/track/y".to_string());
 
         let json = serde_json::to_value(PiecePart::from(linked)).expect("직렬화");
         assert_eq!(
@@ -292,7 +543,10 @@ mod tests {
                     "comparable": false,
                     "spotifyUrl": "https://open.spotify.com/track/x",
                     "appleMusicUrl": null
-                }
+                },
+                "notable": false,
+                "appleMusicUrl": "https://music.apple.com/us/album/x/1?i=2",
+                "spotifyUrl": "https://open.spotify.com/track/y"
             })
         );
         assert_eq!(

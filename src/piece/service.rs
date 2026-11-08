@@ -1,6 +1,10 @@
-use super::model::{CreatePiece, Piece, PiecePart, PieceSearchResult, UpdatePiece};
+use super::model::{
+    ComposerCatalog, ComposerPiece, ComposerPieceQuery, ComposerPieceSort, CreatePiece,
+    GenreFilter, Piece, PiecePart, PieceSearchResult, UpdatePiece, GENRE_ORDER,
+};
 use super::repository::PieceRepository;
 use crate::db::DbPool;
+use crate::search::SearchText;
 
 pub struct PieceService;
 
@@ -32,6 +36,126 @@ impl PieceListRange {
     }
 }
 
+/// 작곡가 안 검색에서 같은 뜻으로 찾는 말. 데이터의 표기(오른쪽)로 바꿔 한 번 더 찾는다.
+const SEARCH_ALIASES: [(&str, &str); 6] = [
+    ("야상곡", "녹턴"),
+    ("에튀드", "연습곡"),
+    ("폴로네이즈", "폴로네즈"),
+    ("프렐류드", "전주곡"),
+    ("판타지", "환상곡"),
+    ("랩소디", "광시곡"),
+];
+
+/// 「op10」「op 10」「op.10」을 데이터 표기 「Op. 10」으로 바꾼다. 아니면 그대로 둔다.
+fn normalize_opus(text: &str) -> String {
+    let lower = text.to_lowercase();
+    let Some(rest) = lower.strip_prefix("op") else {
+        return text.to_string();
+    };
+    let digits = rest.trim_start_matches(['.', ' ']);
+    if digits.chars().next().is_some_and(|c| c.is_ascii_digit()) {
+        format!("Op. {digits}")
+    } else {
+        text.to_string()
+    }
+}
+
+/// 검색어의 LIKE 패턴: 그대로, 그리고 별칭·작품번호 표기를 고친 것(다르면).
+fn contains_variants(text: &str) -> Vec<String> {
+    let Some(original) = SearchText::parse(Some(text)) else {
+        return Vec::new();
+    };
+    let mut variants = vec![original.contains().to_string()];
+    let mut normalized = normalize_opus(original.exact());
+    for (alias, canonical) in SEARCH_ALIASES {
+        normalized = normalized.replace(alias, canonical);
+    }
+    if let Some(other) = SearchText::parse(Some(&normalized)) {
+        if other.contains() != original.contains() {
+            variants.push(other.contains().to_string());
+        }
+    }
+    variants
+}
+
+/// 「Op.」·「op」·「K.」·「BWV」 같은 작품번호 머리 낱말은 뒤 숫자와 붙여 한 낱말로 본다.
+fn join_opus(words: Vec<&str>) -> Vec<String> {
+    const HEADS: [&str; 8] = ["op", "op.", "k", "k.", "kv", "bwv", "hob.", "rv"];
+    let mut joined: Vec<String> = Vec::new();
+    let mut index = 0;
+    while index < words.len() {
+        let word = words[index];
+        let next_is_number = words
+            .get(index + 1)
+            .is_some_and(|next| next.chars().next().is_some_and(|c| c.is_ascii_digit()));
+        if HEADS.contains(&word.to_lowercase().as_str()) && next_is_number {
+            joined.push(format!("{word} {}", words[index + 1]));
+            index += 2;
+        } else {
+            joined.push(word.to_string());
+            index += 1;
+        }
+    }
+    joined
+}
+
+impl ComposerPieceQuery {
+    /// `/composers/<id>/pieces` 의 쿼리 값. 모르는 갈래·정렬·형식 이름은 거절한다.
+    pub fn parse(
+        genre: Option<&str>,
+        form: Option<&str>,
+        sort: Option<&str>,
+        q: Option<&str>,
+        notable: Option<&str>,
+    ) -> Result<Self, String> {
+        let genre = match genre.map(str::trim).filter(|value| !value.is_empty()) {
+            None => GenreFilter::Any,
+            Some("other") => GenreFilter::Unclassified,
+            Some(value) if GENRE_ORDER.contains(&value) => GenreFilter::Genre(value.to_string()),
+            Some(value) => return Err(format!("모르는 갈래예요: {value}")),
+        };
+        let form = match form.map(str::trim).filter(|value| !value.is_empty()) {
+            None => None,
+            Some(value)
+                if value.len() <= 32
+                    && value.chars().all(|c| c.is_ascii_lowercase() || c == '_') =>
+            {
+                Some(value.to_string())
+            }
+            Some(value) => return Err(format!("모르는 형식이에요: {value}")),
+        };
+        let sort = match sort.map(str::trim).filter(|value| !value.is_empty()) {
+            None | Some("listening") => ComposerPieceSort::Listening,
+            Some("catalogue") => ComposerPieceSort::Catalogue,
+            Some("year") => ComposerPieceSort::Year,
+            Some("notable") => ComposerPieceSort::Notable,
+            Some("relevance") => ComposerPieceSort::Relevance,
+            Some(value) => return Err(format!("모르는 정렬이에요: {value}")),
+        };
+        let notable_only = matches!(notable.map(str::trim), Some("1" | "true"));
+
+        let search_patterns = q.map(contains_variants).unwrap_or_default();
+        // 낱말은 최대 다섯 개까지 본다. 작품번호(「Op. 10」)는 띄어 써도 한 낱말로 붙여 본다
+        let search_tokens: Vec<Vec<String>> = q
+            .map(|text| join_opus(text.split_whitespace().collect()))
+            .unwrap_or_default()
+            .into_iter()
+            .take(5)
+            .map(|word| contains_variants(&word))
+            .filter(|variants| !variants.is_empty())
+            .collect();
+
+        Ok(Self {
+            genre,
+            form,
+            sort,
+            search_patterns,
+            search_tokens,
+            notable_only,
+        })
+    }
+}
+
 impl PieceService {
     pub async fn get_all_pieces(pool: &DbPool) -> Result<Vec<Piece>, String> {
         PieceRepository::find_all(pool)
@@ -49,15 +173,27 @@ impl PieceService {
         pool: &DbPool,
         composer_id: i32,
         range: PieceListRange,
-    ) -> Result<Vec<Piece>, String> {
-        let pieces = match range {
-            PieceListRange::All => PieceRepository::find_by_composer_id(pool, composer_id).await,
-            PieceListRange::Page { offset, limit } => {
-                PieceRepository::find_page_by_composer_id(pool, composer_id, offset, limit).await
-            }
+        query: &ComposerPieceQuery,
+    ) -> Result<Vec<ComposerPiece>, String> {
+        let page = match range {
+            PieceListRange::All => None,
+            PieceListRange::Page { offset, limit } => Some((offset, limit)),
         };
+        PieceRepository::find_composer_pieces(pool, composer_id, query, page)
+            .await
+            .map(|rows| rows.into_iter().map(ComposerPiece::from).collect())
+            .map_err(|e| e.to_string())
+    }
 
-        pieces.map_err(|e| e.to_string())
+    pub async fn get_composer_catalog(
+        pool: &DbPool,
+        composer_id: i32,
+        query: &ComposerPieceQuery,
+    ) -> Result<ComposerCatalog, String> {
+        PieceRepository::composer_catalog(pool, composer_id, query)
+            .await
+            .map(ComposerCatalog::from_rows)
+            .map_err(|e| e.to_string())
     }
 
     pub async fn get_piece_parts(pool: &DbPool, piece_id: i32) -> Result<Vec<PiecePart>, String> {
@@ -98,7 +234,64 @@ impl PieceService {
 
 #[cfg(test)]
 mod tests {
-    use super::PieceListRange;
+    use super::{normalize_opus, PieceListRange};
+    use crate::piece::model::{ComposerPieceQuery, ComposerPieceSort, GenreFilter};
+
+    #[test]
+    fn composer_piece_query_defaults_keep_listening_order() {
+        let query = ComposerPieceQuery::parse(None, None, None, None, None).expect("기본값");
+        assert_eq!(query.genre, GenreFilter::Any);
+        assert_eq!(query.sort, ComposerPieceSort::Listening);
+        assert!(query.search_patterns.is_empty());
+        assert!(!query.notable_only);
+    }
+
+    #[test]
+    fn composer_piece_query_reads_genre_form_sort_and_aliases() {
+        let query = ComposerPieceQuery::parse(
+            Some("piano"),
+            Some("nocturne"),
+            Some("catalogue"),
+            Some("야상곡"),
+            Some("1"),
+        )
+        .expect("값");
+        assert_eq!(query.genre, GenreFilter::Genre("piano".to_string()));
+        assert_eq!(query.form.as_deref(), Some("nocturne"));
+        assert_eq!(query.sort, ComposerPieceSort::Catalogue);
+        assert_eq!(query.search_patterns, vec!["%야상곡%", "%녹턴%"]);
+        assert_eq!(query.search_tokens, vec![vec!["%야상곡%", "%녹턴%"]]);
+        assert!(query.notable_only);
+
+        let other =
+            ComposerPieceQuery::parse(Some("other"), None, None, Some("op10"), None).expect("기타");
+        assert_eq!(other.genre, GenreFilter::Unclassified);
+        assert_eq!(other.search_patterns, vec!["%op10%", "%Op. 10%"]);
+    }
+
+    #[test]
+    fn composer_piece_query_rejects_unknown_values() {
+        assert!(ComposerPieceQuery::parse(Some("jazz"), None, None, None, None).is_err());
+        assert!(ComposerPieceQuery::parse(None, Some("No'te"), None, None, None).is_err());
+        assert!(ComposerPieceQuery::parse(None, None, Some("random"), None, None).is_err());
+    }
+
+    #[test]
+    fn each_word_must_match_and_opus_stays_one_word() {
+        let query =
+            ComposerPieceQuery::parse(None, None, None, Some("소나타  열정"), None).expect("낱말");
+        assert_eq!(query.search_tokens, vec![vec!["%소나타%"], vec!["%열정%"]]);
+        let opus = ComposerPieceQuery::parse(None, None, None, Some("녹턴 Op. 9"), None)
+            .expect("작품번호");
+        assert_eq!(opus.search_tokens, vec![vec!["%녹턴%"], vec!["%Op. 9%"]]);
+    }
+
+    #[test]
+    fn opus_shorthand_becomes_data_spelling() {
+        assert_eq!(normalize_opus("op 28"), "Op. 28");
+        assert_eq!(normalize_opus("Op.9"), "Op. 9");
+        assert_eq!(normalize_opus("오페라"), "오페라");
+    }
 
     #[test]
     fn no_page_params_keep_full_list() {

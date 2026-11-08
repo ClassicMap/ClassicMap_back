@@ -1,0 +1,7 @@
+# 작업 폴더(검색·앨범 트랙 원본, 토큰이 든 captured.json)는 여기 두지 않는다
+search_raw/
+search_raw_b/
+lookup_raw/
+albums/
+raw/
+captured.json
