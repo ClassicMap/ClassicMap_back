@@ -1535,9 +1535,6 @@ impl GlobalSeedLoader {
                     })?;
                 let exact =
                     managed_values_equal(item.record.table, &resolved_values, &state.values)?;
-                let fingerprint_exact = registry
-                    .as_ref()
-                    .is_some_and(|value| value.record_fingerprint == item.fingerprint);
                 let explicit_legacy_link = if !exact
                     && matches!(item.record.table, LoadTable::Composers | LoadTable::Artists)
                     && (state.origin.as_deref() == Some("manual") || state.editor_locked)
@@ -1569,9 +1566,8 @@ impl GlobalSeedLoader {
                         ));
                     }
                     (PlannedAction::ProtectedReuse, target_id, Some(state.values))
-                } else if exact && fingerprint_exact {
-                    (PlannedAction::Reuse, target_id, Some(state.values))
                 } else if exact {
+                    // 지문이 같든 다르든 값이 같으면 그대로 쓴다
                     (PlannedAction::Reuse, target_id, Some(state.values))
                 } else if table_spec(item.record.table).immutable {
                     return Err(GlobalSeedLoadError::input(

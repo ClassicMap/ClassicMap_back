@@ -298,6 +298,7 @@ impl ConcertRepository {
     }
 
     /// KOPIS 공연 데이터 upsert (있으면 업데이트, 없으면 삽입)
+    #[allow(clippy::too_many_arguments)] // KOPIS 공연 칸을 그대로 받는다
     pub async fn upsert_kopis_concert(
         pool: &DbPool,
         kopis_id: &str,
@@ -614,7 +615,8 @@ impl ConcertRepository {
     ) -> Result<Vec<ConcertListItem>, Error> {
         let order_clause = match sort_by {
             "rating" => "ORDER BY c.rating DESC, c.start_date ASC",
-            "date" | _ => "ORDER BY c.start_date ASC",
+            // "date" 와 모르는 값은 날짜순
+            _ => "ORDER BY c.start_date ASC",
         };
 
         let query = format!(

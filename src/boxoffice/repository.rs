@@ -36,6 +36,7 @@ impl BoxofficeRepository {
     }
 
     /// 순위 데이터 UPSERT (장르/지역별 1, 2, 3등 슬롯 업데이트)
+    #[allow(clippy::too_many_arguments)] // KOPIS 순위 칸을 그대로 받는다
     pub async fn upsert_ranking(
         pool: &DbPool,
         concert_id: i32,

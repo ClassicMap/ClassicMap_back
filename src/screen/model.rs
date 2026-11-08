@@ -10,6 +10,9 @@ pub struct ScreenTitleSummary {
     pub kind: String,
     pub title_ko: String,
     pub title_original: Option<String>,
+    /// 영어판 제목: 번역한 영어 제목, 없으면 라틴 문자 원제
+    #[sqlx(default)]
+    pub title_en: Option<String>,
     pub release_year: Option<u16>,
     pub country_code: Option<String>,
     pub credit_line: Option<String>,
@@ -94,13 +97,17 @@ pub struct ScreenCue {
     pub episode_label: Option<String>,
     pub composer_id: Option<i32>,
     pub composer_name: String,
+    pub composer_name_en: Option<String>,
     pub piece_id: Option<i32>,
     pub work_title: String,
+    pub work_title_en: Option<String>,
     pub part_label: Option<String>,
+    pub part_label_en: Option<String>,
     pub usage: String,
     pub arranged: bool,
     pub approx_at_sec: Option<u32>,
     pub scene_note: String,
+    pub scene_note_en: Option<String>,
     pub spoiler: bool,
     pub official_clip: Option<OfficialClip>,
     pub evidence: Vec<CueEvidence>,
@@ -123,12 +130,16 @@ pub struct PieceScreenCue {
     pub cue_id: u64,
     pub title_id: i32,
     pub title_ko: String,
+    #[sqlx(default)]
+    pub title_en: Option<String>,
     pub kind: String,
     pub release_year: Option<u16>,
     pub poster_path: Option<String>,
     pub poster_url: Option<String>,
     pub poster_credit: Option<String>,
     pub part_label: Option<String>,
+    #[sqlx(default)]
+    pub part_label_en: Option<String>,
     pub episode_label: Option<String>,
     /// 영화에 나온 대목과 같은 비교 구간. 다른 대목이면 null
     pub sector_id: Option<i32>,
@@ -146,15 +157,23 @@ pub struct FeaturedScreenCue {
     pub cue_id: u64,
     pub title_id: i32,
     pub title_ko: String,
+    #[sqlx(default)]
+    pub title_en: Option<String>,
     pub kind: String,
     pub poster_path: Option<String>,
     pub poster_url: Option<String>,
     pub poster_credit: Option<String>,
     pub composer_id: i32,
     pub composer_name: String,
+    #[sqlx(default)]
+    pub composer_name_en: Option<String>,
     pub piece_id: i32,
     pub work_title: String,
+    #[sqlx(default)]
+    pub work_title_en: Option<String>,
     pub part_label: Option<String>,
+    #[sqlx(default)]
+    pub part_label_en: Option<String>,
     pub sector_id: i32,
     /// 작품의 대표 장면 클립 id
     pub cover_video_id: Option<String>,
@@ -168,9 +187,11 @@ pub struct FeaturedScreenCue {
 pub struct ScreenWork {
     pub composer_id: Option<i32>,
     pub composer_name: String,
+    pub composer_name_en: Option<String>,
     /// 카탈로그 작품이면 비교로 바로 갈 수 있다. 카탈로그 밖 곡이면 null
     pub piece_id: Option<i32>,
     pub work_title: String,
+    pub work_title_en: Option<String>,
     /// 이 곡이 나온 작품. 모아 보는 화면 순서대로, 작품마다 한 번
     pub titles: Vec<ScreenWorkTitle>,
 }
@@ -180,6 +201,7 @@ pub struct ScreenWork {
 pub struct ScreenWorkTitle {
     pub title_id: i32,
     pub title_ko: String,
+    pub title_en: Option<String>,
     pub kind: String,
     pub release_year: Option<u16>,
 }

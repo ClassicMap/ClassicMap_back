@@ -4,6 +4,7 @@ use super::model::{
 };
 use crate::db::DbPool;
 use crate::search::SearchText;
+use crate::search_terms::search_tokens;
 use sqlx::Error;
 use ClassicMap_back::comparison::repository::PUBLIC_COMPARISON_CTE;
 
@@ -503,7 +504,8 @@ impl PieceRepository {
     }
 
     /// 제목·영문 제목·별칭·작품번호·작곡가 이름으로 찾는다.
-    /// 제목 완전 일치, 접두사, 포함(별칭 포함), 작품번호, 작곡가 이름 순으로 앞에 둔다.
+    /// 낱말마다(AND) 그 낱말의 다른 말(「에튀드」→「연습곡」「Etude」) 중 하나(OR)가 어느 칸에든 맞아야 한다.
+    /// 검색어 전체가 제목과 완전 일치, 접두사, 포함(별칭 포함), 작품번호 순으로 앞에 둔다.
     pub async fn search(
         pool: &DbPool,
         query: Option<&str>,
@@ -513,7 +515,8 @@ impl PieceRepository {
         let Some(text) = SearchText::parse(query) else {
             return sqlx::query_as::<_, PieceSearchResult>(&format!(
                 "SELECT piece.*, {part_summary},
-                        composer.name AS composer_name, composer.avatar_url AS composer_avatar_url
+                        composer.name AS composer_name, composer.english_name AS composer_name_en,
+                        composer.avatar_url AS composer_avatar_url
                  FROM pieces piece
                  JOIN composers composer ON composer.id = piece.composer_id
                  WHERE {listed}
@@ -533,10 +536,34 @@ impl PieceRepository {
         let prefix = text.prefix();
         let contains = text.contains();
 
-        sqlx::query_as::<_, PieceSearchResult>(&format!(
+        let tokens = search_tokens(text.exact());
+        let mut conditions = Vec::new();
+        let mut token_binds: Vec<&str> = Vec::new();
+        for variants in &tokens {
+            let any = variants
+                .iter()
+                .map(|_| {
+                    "piece.title LIKE ? OR piece.title_en LIKE ? OR piece.opus_number LIKE ?
+                     OR composer.name LIKE ? OR composer.full_name LIKE ? OR composer.english_name LIKE ?
+                     OR EXISTS (SELECT 1 FROM piece_aliases alias
+                                WHERE alias.piece_id = piece.id AND alias.alias_value LIKE ?)"
+                })
+                .collect::<Vec<_>>()
+                .join(" OR ");
+            conditions.push(format!("({any})"));
+            for pattern in variants {
+                token_binds.extend(std::iter::repeat_n(pattern.as_str(), 7));
+            }
+        }
+        if conditions.is_empty() {
+            return Ok(Vec::new());
+        }
+
+        let sql = format!(
             "SELECT piece.*,
                     {part_summary},
                     composer.name AS composer_name,
+                    composer.english_name AS composer_name_en,
                     composer.avatar_url AS composer_avatar_url,
                     CASE
                         WHEN piece.title = ? OR piece.title_en = ? THEN 0
@@ -551,41 +578,27 @@ impl PieceRepository {
              FROM pieces piece
              JOIN composers composer ON composer.id = piece.composer_id
              WHERE {listed}
-               AND (piece.title LIKE ?
-                    OR piece.title_en LIKE ?
-                    OR piece.opus_number LIKE ?
-                    OR composer.name LIKE ?
-                    OR composer.full_name LIKE ?
-                    OR composer.english_name LIKE ?
-                    OR EXISTS (
-                        SELECT 1 FROM piece_aliases alias
-                        WHERE alias.piece_id = piece.id AND alias.alias_value LIKE ?
-                    ))
+               AND {conditions}
              ORDER BY relevance ASC, {tiebreak}
              LIMIT ? OFFSET ?",
             part_summary = part_summary_columns(),
             listed = Self::listed_across_composers(),
+            conditions = conditions.join(" AND "),
             tiebreak = Self::SEARCH_TIEBREAK_COLUMNS
-        ))
-        .bind(exact)
-        .bind(exact)
-        .bind(prefix)
-        .bind(prefix)
-        .bind(contains)
-        .bind(contains)
-        .bind(contains)
-        .bind(contains)
-        .bind(contains)
-        .bind(contains)
-        .bind(contains)
-        .bind(contains)
-        .bind(contains)
-        .bind(contains)
-        .bind(contains)
-        .bind(limit)
-        .bind(offset)
-        .fetch_all(pool)
-        .await
+        );
+        let mut statement = sqlx::query_as::<_, PieceSearchResult>(&sql)
+            .bind(exact)
+            .bind(exact)
+            .bind(prefix)
+            .bind(prefix)
+            .bind(contains)
+            .bind(contains)
+            .bind(contains)
+            .bind(contains);
+        for value in token_binds {
+            statement = statement.bind(value);
+        }
+        statement.bind(limit).bind(offset).fetch_all(pool).await
     }
 
     /// 작곡가를 가로지르는 작품 목록(`/pieces`, `/pieces/search`): 작품도 작곡가도 숨기지 않았다.

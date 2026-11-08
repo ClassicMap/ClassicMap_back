@@ -29,6 +29,7 @@ pub mod screen;
 pub mod screen_image_refresher;
 pub mod screen_music_loader;
 pub mod search;
+pub mod search_terms;
 pub mod seed_approval;
 pub mod taste;
 pub mod user;

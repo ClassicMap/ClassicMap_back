@@ -146,6 +146,8 @@ impl FromStr for PerformancePublishStatus {
 pub struct ComparisonCredit {
     pub artist_id: i32,
     pub artist_name: String,
+    /// 영어판에서 쓸 이름(영어 이름이 없으면 null)
+    pub artist_name_en: Option<String>,
     /// 연주자 사진. 카탈로그 미리보기(작품당 4명)에 없는 연주자도 얼굴을 보여 주려고 싣는다
     pub image_url: Option<String>,
     pub role: String,
@@ -161,9 +163,12 @@ pub struct ComparisonPerformance {
     pub sector_id: i32,
     pub piece_id: i32,
     pub piece_title: String,
+    pub piece_title_en: Option<String>,
     pub composer_id: i32,
     pub composer_name: String,
+    pub composer_name_en: Option<String>,
     pub sector_name: String,
+    pub sector_name_en: Option<String>,
     pub start_ms: u32,
     pub end_ms: u32,
     pub clip_status: String,
@@ -219,6 +224,10 @@ pub struct ListeningMoment {
 pub struct PerformanceListeningNote {
     pub headline: String,
     pub body: String,
+    /// 영어판 제목·본문·사실 태그(없으면 null)
+    pub headline_en: Option<String>,
+    pub body_en: Option<String>,
+    pub facts_en: Option<Vec<String>>,
     pub moments: Vec<ListeningMoment>,
     pub facts: Vec<String>,
 }
@@ -238,6 +247,9 @@ pub struct FeaturedPair {
     pub performance_ids: [i32; 2],
     pub title: String,
     pub note: String,
+    /// 영어판 제목·설명(없으면 null)
+    pub title_en: Option<String>,
+    pub note_en: Option<String>,
     pub moments: Vec<FeaturedPairMoment>,
 }
 
@@ -318,6 +330,8 @@ pub struct ComparisonSector {
     /// 뒤엣것은 정렬 비용 임계를 적용하지 않으므로 화면이 갈래를 표시해야 한다.
     pub sector_type: Option<String>,
     pub description: Option<String>,
+    #[sqlx(default)]
+    pub description_en: Option<String>,
     pub display_order: Option<i32>,
     pub measure_start: Option<String>,
     pub measure_end: Option<String>,
@@ -423,9 +437,13 @@ pub fn summarize_genres(rows: &[ComparisonGenrePieceRow]) -> Vec<ComparisonGenre
 pub struct ComparisonPiece {
     pub piece_id: i32,
     pub piece_title: String,
+    #[sqlx(default)]
+    pub piece_title_en: Option<String>,
     pub opus_number: Option<String>,
     pub composer_id: i32,
     pub composer_name: String,
+    #[sqlx(default)]
+    pub composer_name_en: Option<String>,
     pub composer_avatar_url: Option<String>,
     /// 장르 키(`PIECE_GENRES` 중 하나). 아직 분류하지 않은 작품은 null
     pub genre: Option<String>,
@@ -449,6 +467,8 @@ pub struct ComparisonPiecePerformer {
     pub piece_id: i32,
     pub artist_id: i32,
     pub artist_name: String,
+    #[sqlx(default)]
+    pub artist_name_en: Option<String>,
     pub image_url: Option<String>,
 }
 
@@ -466,9 +486,15 @@ pub(crate) struct ComparisonPerformanceRow {
     pub sector_id: i32,
     pub piece_id: i32,
     pub piece_title: String,
+    #[sqlx(default)]
+    pub piece_title_en: Option<String>,
     pub composer_id: i32,
     pub composer_name: String,
+    #[sqlx(default)]
+    pub composer_name_en: Option<String>,
     pub sector_name: String,
+    #[sqlx(default)]
+    pub sector_name_en: Option<String>,
     pub start_ms: u32,
     pub end_ms: u32,
     pub clip_status: String,
@@ -481,8 +507,14 @@ pub(crate) struct ListeningNoteRow {
     pub performance_id: i32,
     pub headline: String,
     pub note: String,
+    #[sqlx(default)]
+    pub headline_en: Option<String>,
+    #[sqlx(default)]
+    pub note_en: Option<String>,
     pub moments: Option<String>,
     pub facts: Option<String>,
+    #[sqlx(default)]
+    pub facts_en: Option<String>,
 }
 
 #[derive(Debug, FromRow)]
@@ -511,6 +543,10 @@ pub(crate) struct FeaturedPairRow {
     pub performance_b_id: i32,
     pub title: String,
     pub note: String,
+    #[sqlx(default)]
+    pub title_en: Option<String>,
+    #[sqlx(default)]
+    pub note_en: Option<String>,
     pub moments: Option<String>,
     pub a_start_ms: u32,
     pub a_end_ms: u32,
@@ -523,6 +559,8 @@ pub(crate) struct ComparisonCreditRow {
     pub source_id: u64,
     pub artist_id: i32,
     pub artist_name: String,
+    #[sqlx(default)]
+    pub artist_name_en: Option<String>,
     pub image_url: Option<String>,
     pub role: String,
     pub is_primary: bool,
@@ -534,6 +572,7 @@ impl From<ComparisonCreditRow> for ComparisonCredit {
         Self {
             artist_id: row.artist_id,
             artist_name: row.artist_name,
+            artist_name_en: row.artist_name_en,
             image_url: row.image_url,
             role: row.role,
             is_primary: row.is_primary,
@@ -571,6 +610,7 @@ mod tests {
             sector_name_en: None,
             sector_type: Some("EXCERPT".to_string()),
             description: None,
+            description_en: None,
             display_order: Some(1),
             measure_start: None,
             measure_end: None,

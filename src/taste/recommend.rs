@@ -21,6 +21,8 @@ const SHELF_SIZE: usize = 6;
 const MAX_REASONS: usize = 2;
 const EXPLORE_REASON: &str = "평소와 다른 소리";
 const STARTER_REASON: &str = "처음 듣기 좋은 곡";
+const EXPLORE_REASON_EN: &str = "Something different";
+const STARTER_REASON_EN: &str = "A good first listen";
 
 /// 점수를 매길 작품 한 곡
 #[derive(Debug, Clone)]
@@ -34,6 +36,10 @@ pub struct Candidate {
     pub start_sector: Option<(i32, String)>,
     /// 공개 연주의 주 연주자
     pub artists: Vec<(i32, String)>,
+    /// 영어판 이유 문구에 쓸 연주자 영어 이름
+    pub artist_names_en: HashMap<i32, String>,
+    /// 첫 구간의 영어 이름
+    pub start_sector_en: Option<String>,
 }
 
 /// 들은 기록을 작품별로 모은 것
@@ -91,20 +97,40 @@ impl Signals {
 }
 
 /// 고른 소리가 맞는 곡의 이유. 다른 이유("월광과 같은 베토벤", "처음 듣기 좋은 곡")처럼 명사로 끝낸다
-fn sound_reason(sound: &str, played: bool) -> Option<String> {
+/// 한국어·영어 이유 한 쌍
+type Reason = (String, String);
+
+fn reason(ko: impl Into<String>, en: impl Into<String>) -> Reason {
+    (ko.into(), en.into())
+}
+
+fn sound_reason(sound: &str, played: bool) -> Option<Reason> {
     if played {
         return matches!(sound, "piano" | "strings" | "winds" | "voice")
-            .then(|| "연주하는 악기의 곡".to_string());
+            .then(|| reason("연주하는 악기의 곡", "For the instrument you play"));
     }
-    let text = match sound {
-        "piano" => "피아노 곡",
-        "orchestra" => "관현악곡",
-        "strings" => "바이올린·첼로 곡",
-        "voice" => "성악곡",
-        "ensemble" => "실내악곡",
+    let (ko, en) = match sound {
+        "piano" => ("피아노 곡", "Piano music"),
+        "orchestra" => ("관현악곡", "Orchestral music"),
+        "strings" => ("바이올린·첼로 곡", "Violin & cello music"),
+        "voice" => ("성악곡", "Vocal music"),
+        "ensemble" => ("실내악곡", "Chamber music"),
         _ => return None,
     };
-    Some(text.to_string())
+    Some(reason(ko, en))
+}
+
+/// 시대 이름(composers.period)의 영어
+fn period_en(period: &str) -> &str {
+    match period {
+        "중세" => "medieval",
+        "르네상스" => "Renaissance",
+        "바로크" => "Baroque",
+        "고전주의" => "Classical-era",
+        "낭만주의" => "Romantic",
+        "근현대" => "modern",
+        other => other,
+    }
 }
 
 /// 마지막 글자에 받침이 있는지. 한글과 숫자만 가리고 나머지는 받침 없음으로 본다
@@ -150,7 +176,7 @@ pub fn short_title(title: &str) -> String {
     }
 }
 
-fn same_as(reference: &str, composer: &str) -> String {
+fn same_as_ko(reference: &str, composer: &str) -> String {
     let short = short_title(reference);
     let particle = if has_final_consonant(&short) {
         "과"
@@ -158,6 +184,23 @@ fn same_as(reference: &str, composer: &str) -> String {
         "와"
     };
     format!("{short}{particle} 같은 {composer}")
+}
+
+fn same_as(reference: &Candidate, candidate: &Candidate) -> Reason {
+    let ko = same_as_ko(&reference.piece.piece_title, &candidate.piece.composer_name);
+    let short_en = short_title(
+        reference
+            .piece
+            .piece_title_en
+            .as_deref()
+            .unwrap_or(&reference.piece.piece_title),
+    );
+    let composer_en = candidate
+        .piece
+        .composer_name_en
+        .as_deref()
+        .unwrap_or(&candidate.piece.composer_name);
+    (ko, format!("{composer_en}, like {short_en}"))
 }
 
 fn familiarity_score(level: Option<&str>, familiarity: Option<&str>) -> f64 {
@@ -191,6 +234,7 @@ struct Scored<'a> {
     candidate: &'a Candidate,
     score: f64,
     reasons: Vec<String>,
+    reasons_en: Vec<String>,
     sound_match: bool,
 }
 
@@ -250,8 +294,7 @@ fn score<'a>(
             };
         if value > similar {
             similar = value;
-            similar_text = same_composer
-                .then(|| same_as(&reference.piece.piece_title, &candidate.piece.composer_name));
+            similar_text = same_composer.then(|| same_as(reference, candidate));
         }
     }
     if signals
@@ -260,24 +303,38 @@ fn score<'a>(
         && similar < 0.6
     {
         similar = 0.6;
-        similar_text = Some(format!("담아 둔 {}", candidate.piece.composer_name));
+        let composer_en = candidate
+            .piece
+            .composer_name_en
+            .as_deref()
+            .unwrap_or(&candidate.piece.composer_name);
+        similar_text = Some(reason(
+            format!("담아 둔 {}", candidate.piece.composer_name),
+            format!("Because you saved {composer_en}"),
+        ));
     }
     let mut artist_text = None;
-    if let Some((_, name)) = candidate
+    if let Some((id, name)) = candidate
         .artists
         .iter()
         .find(|(id, _)| signals.favorite_artist_ids.contains(id))
     {
         similar = similar.max(0.7);
-        artist_text = Some(format!("{name}의 연주"));
+        let name_en = candidate.artist_names_en.get(id).unwrap_or(name);
+        artist_text = Some(reason(
+            format!("{name}의 연주"),
+            format!("Played by {name_en}"),
+        ));
     }
 
     // 친숙도 맞춤
     let familiarity = candidate.familiarity.as_deref();
     let familiar = familiarity_score(level, familiarity);
     let familiar_text = match (level, familiarity) {
-        (Some("new"), Some("everyone")) => Some(STARTER_REASON.to_string()),
-        (Some("often" | "player"), Some("deep")) => Some("덜 알려진 곡".to_string()),
+        (Some("new"), Some("everyone")) => Some(reason(STARTER_REASON, STARTER_REASON_EN)),
+        (Some("often" | "player"), Some("deep")) => {
+            Some(reason("덜 알려진 곡", "A lesser-known work"))
+        }
         _ => None,
     };
 
@@ -302,22 +359,28 @@ fn score<'a>(
         + if period_match { PERIOD_BONUS } else { 0.0 }
         - SKIP_PENALTY * f64::from(skips.min(2));
 
-    let reasons: Vec<String> = [
+    let (reasons, reasons_en): (Vec<String>, Vec<String>) = [
         artist_text,
         similar_text,
         sound_text,
         familiar_text,
-        period_match.then(|| format!("좋아하는 {}", candidate.period)),
+        period_match.then(|| {
+            reason(
+                format!("좋아하는 {}", candidate.period),
+                format!("Because you like {} music", period_en(&candidate.period)),
+            )
+        }),
     ]
     .into_iter()
     .flatten()
     .take(MAX_REASONS)
-    .collect();
+    .unzip();
 
     Scored {
         candidate,
         score: total,
         reasons,
+        reasons_en,
         sound_match,
     }
 }
@@ -331,7 +394,9 @@ fn to_item(scored: &Scored<'_>) -> RecommendedPiece {
             .start_sector
             .as_ref()
             .map(|(_, name)| name.clone()),
+        sector_name_en: candidate.start_sector_en.clone(),
         reasons: scored.reasons.clone(),
+        reasons_en: scored.reasons_en.clone(),
     }
 }
 
@@ -404,6 +469,7 @@ fn taste_shelf<'a>(
         }) {
             let mut explore = (*explore).clone();
             explore.reasons = vec![EXPLORE_REASON.to_string()];
+            explore.reasons_en = vec![EXPLORE_REASON_EN.to_string()];
             composers.insert(explore.candidate.piece.composer_id);
             explore_item = Some(explore);
         }
@@ -462,6 +528,7 @@ pub fn recommend_home(
         let today = (!pool.is_empty()).then(|| {
             let mut item = to_item(pool[day.rem_euclid(pool.len() as i64) as usize]);
             item.reasons.clear();
+            item.reasons_en.clear();
             item
         });
         return HomeRecommendations {
@@ -518,7 +585,9 @@ pub fn recommend_home(
                 .start_sector
                 .as_ref()
                 .map(|(_, name)| name.clone()),
+            sector_name_en: candidate.start_sector_en.clone(),
             reasons: Vec::new(),
+            reasons_en: Vec::new(),
         })
         .collect();
     if !known.is_empty() {
@@ -543,6 +612,8 @@ pub fn recommend_home(
                 if !item.reasons.iter().any(|reason| reason == STARTER_REASON) {
                     item.reasons.truncate(MAX_REASONS - 1);
                     item.reasons.push(STARTER_REASON.to_string());
+                    item.reasons_en.truncate(MAX_REASONS - 1);
+                    item.reasons_en.push(STARTER_REASON_EN.to_string());
                 }
                 item
             })
@@ -579,9 +650,11 @@ mod tests {
             piece: ComparisonPiece {
                 piece_id: id,
                 piece_title: title.to_string(),
+                piece_title_en: None,
                 opus_number: None,
                 composer_id: composer.0,
                 composer_name: composer.1.to_string(),
+                composer_name_en: None,
                 composer_avatar_url: None,
                 genre: None,
                 cover_video_id: None,
@@ -595,6 +668,8 @@ mod tests {
             familiarity: Some(familiarity.to_string()),
             start_sector: None,
             artists: vec![(id * 10, format!("연주자{id}"))],
+            artist_names_en: HashMap::new(),
+            start_sector_en: None,
         }
     }
 
@@ -792,20 +867,20 @@ mod tests {
         assert_eq!(short_title("교향곡 5번 C#단조"), "교향곡 5번");
         assert_eq!(short_title("피아노 협주곡 1번 E♭장조"), "피아노 협주곡 1번");
         assert_eq!(
-            same_as("피아노 소나타 14번 C#단조 \"월광\"", "베토벤"),
+            same_as_ko("피아노 소나타 14번 C#단조 \"월광\"", "베토벤"),
             "월광과 같은 베토벤"
         );
         assert_eq!(
-            same_as("교향곡 94번 G장조 \"놀람\"", "하이든"),
+            same_as_ko("교향곡 94번 G장조 \"놀람\"", "하이든"),
             "놀람과 같은 하이든"
         );
-        assert_eq!(same_as("교향곡 2번", "말러"), "교향곡 2번과 같은 말러");
+        assert_eq!(same_as_ko("교향곡 2번", "말러"), "교향곡 2번과 같은 말러");
         assert_eq!(
-            same_as("교향곡 5번 C#단조", "말러"),
+            same_as_ko("교향곡 5번 C#단조", "말러"),
             "교향곡 5번과 같은 말러"
         );
         assert_eq!(
-            same_as("아이네 클라이네 나흐트무지크", "모차르트"),
+            same_as_ko("아이네 클라이네 나흐트무지크", "모차르트"),
             "아이네 클라이네 나흐트무지크와 같은 모차르트"
         );
     }

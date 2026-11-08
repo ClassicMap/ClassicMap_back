@@ -12,6 +12,9 @@ pub struct Piece {
     #[serde(rename = "type")]
     pub r#type: String,
     pub description: Option<String>,
+    /// 영어판 설명(없으면 null)
+    #[sqlx(default)]
+    pub description_en: Option<String>,
     pub opus_number: Option<String>,
     pub composition_year: Option<i32>,
     pub difficulty_level: Option<i32>,
@@ -269,6 +272,9 @@ pub struct PieceSearchResult {
     #[sqlx(flatten)]
     pub piece: Piece,
     pub composer_name: String,
+    /// 영어판 작곡가 이름
+    #[sqlx(default)]
+    pub composer_name_en: Option<String>,
     /// 검색 결과 작품 행에 작곡가 초상을 얼굴로 쓴다
     pub composer_avatar_url: Option<String>,
 }

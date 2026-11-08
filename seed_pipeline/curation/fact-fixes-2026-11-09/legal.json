@@ -1,0 +1,30 @@
+[
+  {
+    "korean_law": "개인정보 보호법",
+    "official_english": "PERSONAL INFORMATION PROTECTION ACT",
+    "file_english": "Personal Information Protection Act",
+    "matches": true,
+    "source": "https://elaw.klri.re.kr/eng_service/lawViewContent.do?hseq=71740 (Act No. 20897, 2025-04-01). legal.ts:6, :9"
+  },
+  {
+    "korean_law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+    "official_english": "ACT ON PROMOTION OF INFORMATION AND COMMUNICATIONS NETWORK UTILIZATION AND INFORMATION PROTECTION",
+    "file_english": "Act on Promotion of Information and Communications Network Utilization and Information Protection",
+    "matches": true,
+    "source": "https://elaw.klri.re.kr/eng_service/lawViewContent.do?hseq=71563 (Act No. 21066, 2025-10-01). legal.ts:6"
+  },
+  {
+    "korean_law": "전자상거래 등에서의 소비자보호에 관한 법률",
+    "official_english": "ACT ON THE CONSUMER PROTECTION IN ELECTRONIC COMMERCE",
+    "file_english": "Act on the Consumer Protection in Electronic Commerce, etc.",
+    "matches": false,
+    "source": "https://elaw.klri.re.kr/eng_service/lawViewContent.do?hseq=69592 (Act No. 20302, 2024-02-13). The current KLRI title has no ', Etc.'; older KLRI versions (e.g. Act No. 11461, 2012) were titled '..., Etc.'. Only the trailing ', etc.' differs. legal.ts:50, :52, :54"
+  },
+  {
+    "korean_law": "통신비밀보호법",
+    "official_english": "PROTECTION OF COMMUNICATIONS SECRETS ACT",
+    "file_english": "Protection of Communications Secrets Act",
+    "matches": true,
+    "source": "https://elaw.klri.re.kr/eng_mobile/partList.do?seq=43. legal.ts:56"
+  }
+]

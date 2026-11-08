@@ -1,6 +1,6 @@
 use super::service::KopisService;
 use crate::logger::Logger;
-use chrono::{Local, Timelike};
+use chrono::Local;
 use sqlx::MySqlPool;
 use tokio::time::{sleep, Duration};
 

@@ -106,7 +106,7 @@ impl UserRepository {
         let result = sqlx::query(
             "UPDATE users SET is_first_visit = COALESCE(?, is_first_visit), favorite_era = COALESCE(?, favorite_era) WHERE id = ?",
         )
-        .bind(&user.is_first_visit)
+        .bind(user.is_first_visit)
         .bind(&user.favorite_era)
         .bind(id)
         .execute(pool)
@@ -325,6 +325,7 @@ impl UserRepository {
                 p.title_en,
                 p.composer_id,
                 c.name AS composer_name,
+                c.english_name AS composer_name_en,
                 c.avatar_url AS composer_avatar_url,
                 DATE_FORMAT(f.created_at, '%Y-%m-%d %H:%i:%s') AS created_at
              FROM user_favorite_pieces f

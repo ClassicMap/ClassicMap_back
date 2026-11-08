@@ -77,7 +77,7 @@ impl KopisClient {
                 eprintln!("XML parsing error: {}", e);
                 eprintln!(
                     "Raw XML (first 500 chars): {}",
-                    &xml_text.chars().take(500).collect::<String>()
+                    xml_text.chars().take(500).collect::<String>()
                 );
                 Err(format!("Failed to parse XML response: {}", e))
             }
@@ -120,7 +120,7 @@ impl KopisClient {
                 eprintln!("XML parsing error: {}", e);
                 eprintln!(
                     "Raw XML (first 500 chars): {}",
-                    &xml_text.chars().take(500).collect::<String>()
+                    xml_text.chars().take(500).collect::<String>()
                 );
                 Err(format!("Failed to parse XML response: {}", e))
             }
@@ -229,7 +229,7 @@ impl KopisClient {
                 eprintln!("XML parsing error: {}", e);
                 eprintln!(
                     "Raw XML (first 500 chars): {}",
-                    &xml_text.chars().take(500).collect::<String>()
+                    xml_text.chars().take(500).collect::<String>()
                 );
                 Err(format!("Failed to parse XML response: {}", e))
             }
@@ -271,7 +271,7 @@ impl KopisClient {
                 eprintln!("XML parsing error: {}", e);
                 eprintln!(
                     "Raw XML (first 500 chars): {}",
-                    &xml_text.chars().take(500).collect::<String>()
+                    xml_text.chars().take(500).collect::<String>()
                 );
                 Err(format!("Failed to parse XML response: {}", e))
             }
@@ -383,7 +383,7 @@ impl KopisClient {
                 eprintln!("XML parsing error: {}", e);
                 eprintln!(
                     "Raw XML (first 500 chars): {}",
-                    &xml_text.chars().take(500).collect::<String>()
+                    xml_text.chars().take(500).collect::<String>()
                 );
                 Err(format!("Failed to parse XML response: {}", e))
             }

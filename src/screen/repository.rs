@@ -40,10 +40,12 @@ fn cover_columns_sql() -> String {
 
 /// 공개된 작품이면서 공개된 큐가 하나 이상 있는 작품만 보인다
 fn summary_select() -> String {
+    let title_en = TITLE_EN_SQL;
     let cover_columns = cover_columns_sql();
     let cover_channel = cover_field_sql("channel");
     format!(
         "SELECT t.id, CAST(t.slug AS CHAR CHARACTER SET utf8mb4) AS slug, t.kind, t.title_ko, t.title_original,
+            {title_en} AS title_en,
             t.release_year, t.country_code, t.credit_line, t.poster_path, t.backdrop_path,
             t.poster_url, t.poster_credit,
             (SELECT COUNT(*) FROM screen_music_cues cue
@@ -58,24 +60,35 @@ fn summary_select() -> String {
 }
 
 const CUE_SELECT: &str = "SELECT c.id, c.display_order, c.episode_label, c.composer_id,
-            c.composer_name, c.piece_id, c.work_title, c.part_label, c.sector_id, c.usage_kind,
-            c.arranged, c.approx_at_sec, c.scene_note, c.spoiler,
+            c.composer_name, cue_composer.english_name AS composer_name_en, c.piece_id, c.work_title,
+            piece.title_en AS work_title_en, c.part_label, c.part_label_en, c.sector_id, c.usage_kind,
+            c.arranged, c.approx_at_sec, c.scene_note, c.scene_note_en, c.spoiler,
             CAST(c.official_clip AS CHAR CHARACTER SET utf8mb4) AS official_clip,
             CAST(c.evidence AS CHAR CHARACTER SET utf8mb4) AS evidence,
             c.still_path, piece.apple_music_url, piece.spotify_url, piece.youtube_music_url
      FROM screen_music_cues c
-     LEFT JOIN pieces piece ON piece.id = c.piece_id";
+     LEFT JOIN pieces piece ON piece.id = c.piece_id
+     LEFT JOIN composers cue_composer ON cue_composer.id = c.composer_id";
 
 pub const KINDS: [&str; 3] = ["MOVIE", "SERIES", "ANIME"];
+
+/// 영어판 작품 제목(`t` = screen_titles): 번역한 영어 제목, 없으면 라틴 문자로 된 원제
+const TITLE_EN_SQL: &str = "COALESCE(t.title_en, IF(t.title_original REGEXP '^[\\\\p{Latin}\\\\p{Common}\\\\p{Inherited}]+$', t.title_original, NULL))";
 
 #[derive(Debug, FromRow)]
 struct WorkCueRow {
     composer_id: Option<i32>,
     composer_name: String,
+    #[sqlx(default)]
+    composer_name_en: Option<String>,
     piece_id: Option<i32>,
     work_title: String,
+    #[sqlx(default)]
+    work_title_en: Option<String>,
     title_id: i32,
     title_ko: String,
+    #[sqlx(default)]
+    title_en: Option<String>,
     kind: String,
     release_year: Option<u16>,
 }
@@ -94,8 +107,10 @@ fn group_works(rows: Vec<WorkCueRow>) -> Vec<ScreenWork> {
             works.push(ScreenWork {
                 composer_id: row.composer_id,
                 composer_name: row.composer_name.clone(),
+                composer_name_en: row.composer_name_en.clone(),
                 piece_id: row.piece_id,
                 work_title: row.work_title.clone(),
+                work_title_en: row.work_title_en.clone(),
                 titles: Vec::new(),
             });
             works.len() - 1
@@ -109,6 +124,7 @@ fn group_works(rows: Vec<WorkCueRow>) -> Vec<ScreenWork> {
             work.titles.push(ScreenWorkTitle {
                 title_id: row.title_id,
                 title_ko: row.title_ko,
+                title_en: row.title_en,
                 kind: row.kind,
                 release_year: row.release_year,
             });
@@ -146,14 +162,22 @@ struct CueRow {
     episode_label: Option<String>,
     composer_id: Option<i32>,
     composer_name: String,
+    #[sqlx(default)]
+    composer_name_en: Option<String>,
     piece_id: Option<i32>,
     work_title: String,
+    #[sqlx(default)]
+    work_title_en: Option<String>,
     part_label: Option<String>,
+    #[sqlx(default)]
+    part_label_en: Option<String>,
     sector_id: Option<i32>,
     usage_kind: String,
     arranged: bool,
     approx_at_sec: Option<u32>,
     scene_note: String,
+    #[sqlx(default)]
+    scene_note_en: Option<String>,
     spoiler: bool,
     official_clip: Option<String>,
     evidence: String,
@@ -252,14 +276,17 @@ impl ScreenRepository {
         limit: Option<u32>,
     ) -> Result<ScreenWorkPage, sqlx::Error> {
         let (offset, limit) = page_bounds(offset, limit);
-        let rows = sqlx::query_as::<_, WorkCueRow>(
-            "SELECT c.composer_id, c.composer_name, c.piece_id, c.work_title,
-                    t.id AS title_id, t.title_ko, t.kind, t.release_year
+        let rows = sqlx::query_as::<_, WorkCueRow>(&format!(
+            "SELECT c.composer_id, c.composer_name, cue_composer.english_name AS composer_name_en,
+                    c.piece_id, c.work_title, cue_piece.title_en AS work_title_en,
+                    t.id AS title_id, t.title_ko, {TITLE_EN_SQL} AS title_en, t.kind, t.release_year
              FROM screen_music_cues c
              JOIN screen_titles t ON t.id = c.screen_title_id AND t.editorial_status = 'PUBLISHED'
+             LEFT JOIN composers cue_composer ON cue_composer.id = c.composer_id
+             LEFT JOIN pieces cue_piece ON cue_piece.id = c.piece_id
              WHERE c.editorial_status = 'PUBLISHED'
-             ORDER BY t.display_order ASC, t.id ASC, c.display_order ASC, c.id ASC",
-        )
+             ORDER BY t.display_order ASC, t.id ASC, c.display_order ASC, c.id ASC"
+        ))
         .fetch_all(pool)
         .await?;
         let works = group_works(rows);
@@ -385,13 +412,17 @@ impl ScreenRepository {
                     episode_label: row.episode_label,
                     composer_id: row.composer_id,
                     composer_name: row.composer_name,
+                    composer_name_en: row.composer_name_en,
                     piece_id: row.piece_id,
                     work_title: row.work_title,
+                    work_title_en: row.work_title_en,
                     part_label: row.part_label,
+                    part_label_en: row.part_label_en,
                     usage: row.usage_kind,
                     arranged: row.arranged,
                     approx_at_sec: row.approx_at_sec,
                     scene_note: row.scene_note,
+                    scene_note_en: row.scene_note_en,
                     spoiler: row.spoiler,
                     official_clip: parse_clip(row.official_clip.as_deref()),
                     evidence: parse_evidence(&row.evidence),
@@ -441,8 +472,10 @@ impl ScreenRepository {
     ) -> Result<Vec<PieceScreenCue>, sqlx::Error> {
         let cover_columns = cover_columns_sql();
         let sql = format!(
-            "SELECT c.id AS cue_id, t.id AS title_id, t.title_ko, t.kind, t.release_year,
-                    t.poster_path, t.poster_url, t.poster_credit, c.part_label, c.episode_label,
+            "SELECT c.id AS cue_id, t.id AS title_id, t.title_ko, {TITLE_EN_SQL} AS title_en,
+                    t.kind, t.release_year,
+                    t.poster_path, t.poster_url, t.poster_credit, c.part_label, c.part_label_en,
+                    c.episode_label,
                     c.sector_id,
                     c.usage_kind AS `usage`,
                     {cover_columns}
@@ -467,9 +500,11 @@ impl ScreenRepository {
         let sql = format!(
             "{PUBLIC_COMPARISON_CTE}
              , ranked_cue AS (
-                 SELECT c.id AS cue_id, t.id AS title_id, t.title_ko, t.kind, t.poster_path,
-                        t.poster_url, t.poster_credit,
-                        c.composer_id, c.composer_name, c.piece_id, c.work_title, c.part_label,
+                 SELECT c.id AS cue_id, t.id AS title_id, t.title_ko, {TITLE_EN_SQL} AS title_en,
+                        t.kind, t.poster_path, t.poster_url, t.poster_credit,
+                        c.composer_id, c.composer_name, cue_composer.english_name AS composer_name_en,
+                        c.piece_id, c.work_title, cue_piece.title_en AS work_title_en,
+                        c.part_label, c.part_label_en,
                         c.sector_id, t.display_order AS title_order, c.display_order AS cue_order,
                         {cover_columns},
                         ROW_NUMBER() OVER (
@@ -481,11 +516,14 @@ impl ScreenRepository {
                  JOIN public_sector ON public_sector.sector_id = c.sector_id
                  JOIN performance_sectors sector
                    ON sector.id = c.sector_id AND sector.piece_id = c.piece_id
+                 LEFT JOIN composers cue_composer ON cue_composer.id = c.composer_id
+                 LEFT JOIN pieces cue_piece ON cue_piece.id = c.piece_id
                  WHERE c.editorial_status = 'PUBLISHED' AND c.composer_id IS NOT NULL
              )
-             SELECT cue_id, title_id, title_ko, kind, poster_path, poster_url, poster_credit,
-                    composer_id, composer_name,
-                    piece_id, work_title, part_label, sector_id, cover_video_id,
+             SELECT cue_id, title_id, title_ko, title_en, kind, poster_path, poster_url, poster_credit,
+                    composer_id, composer_name, composer_name_en,
+                    piece_id, work_title, work_title_en, part_label, part_label_en, sector_id,
+                    cover_video_id,
                     cover_thumb_jpg, cover_thumb_webp
              FROM ranked_cue
              WHERE title_rank = 1
@@ -585,14 +623,18 @@ mod tests {
             episode_label: None,
             composer_id: piece_id.map(|_| 16),
             composer_name: "하이든".to_string(),
+            composer_name_en: None,
             piece_id,
             work_title: "트럼펫 협주곡".to_string(),
+            work_title_en: None,
             part_label: None,
+            part_label_en: None,
             sector_id,
             usage_kind: "SOURCE".to_string(),
             arranged: false,
             approx_at_sec: None,
             scene_note: "장면".to_string(),
+            scene_note_en: None,
             spoiler: false,
             official_clip: None,
             evidence: "[]".to_string(),
@@ -654,10 +696,13 @@ mod tests {
         WorkCueRow {
             composer_id: composer.0,
             composer_name: composer.1.to_string(),
+            composer_name_en: None,
             piece_id: piece,
             work_title: work.to_string(),
+            work_title_en: None,
             title_id: title,
             title_ko: format!("작품{title}"),
+            title_en: None,
             kind: "MOVIE".to_string(),
             release_year: Some(2000),
         }

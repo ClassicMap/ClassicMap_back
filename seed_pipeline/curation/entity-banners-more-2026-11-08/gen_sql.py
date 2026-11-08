@@ -34,7 +34,9 @@ SOURCES = {
         None,
     ),
 }
-FREE_LICENSE = re.compile(r'^(Public domain|CC0|CC BY(-SA)? \d\.\d( [a-z]{2})?|CC BY(-SA)?|Attribution)$')
+FREE_LICENSE = re.compile(
+    r'^(Public domain|CC0|CC BY(-SA)? \d\.\d( [a-z]{2})?|CC BY(-SA)?|Attribution)$'
+)
 
 
 def sql(value):
@@ -46,11 +48,13 @@ def sql(value):
 HEADERS = {
     'banners.jsonl': (
         '202611082001_fill_more_entity_banners.sql',
-        '-- 스포티파이 머리 그림이 없는 작곡가·연주자의 화면 머리 배너(애플 뮤직·유튜브 뮤직 아티스트 머리 그림, 위키미디어 공용).',
+        '-- 스포티파이 머리 그림이 없는 작곡가·연주자의 화면 머리 배너'
+        '(애플 뮤직·유튜브 뮤직 아티스트 머리 그림, 위키미디어 공용).',
     ),
     'banners-sa.jsonl': (
         '202611082002_fill_sa_composer_banners.sql',
-        '-- 어느 음원 서비스에도 머리 그림이 없던 S·A 작곡가 6명의 화면 머리 배너(위키미디어 공용).',
+        '-- 어느 음원 서비스에도 머리 그림이 없던 S·A 작곡가 6명의 화면 머리 배너'
+        '(위키미디어 공용).',
     ),
 }
 seen = set()
@@ -81,14 +85,23 @@ for source_file, (migration, title) in HEADERS.items():
             credit = None if author else 'Wikimedia Commons'
         out.append(f"-- {kind} {entity_id} {row['name']} ({row['source']})")
         out.append(
-            f"UPDATE entity_images image JOIN {table} entity ON image.authority_entity_id = entity.authority_entity_id "
-            f"SET image.is_primary = FALSE WHERE entity.id = {entity_id} AND image.image_kind = 'banner' AND image.file_url <> {sql(row['url'])};"
+            f"UPDATE entity_images image JOIN {table} entity "
+            "ON image.authority_entity_id = entity.authority_entity_id "
+            f"SET image.is_primary = FALSE WHERE entity.id = {entity_id} "
+            f"AND image.image_kind = 'banner' AND image.file_url <> {sql(row['url'])};"
         )
         out.append(
-            "INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, author, license, license_url, focal_point, is_primary, editorial_status)\n"
-            f"SELECT entity.authority_entity_id, 'banner', {sql(row['sourceUrl'])}, {sql(row['url'])}, {sql(credit)}, {sql(author)}, {sql(license_name)}, {sql(license_url)}, {sql(row['focal'])}, TRUE, 'PUBLISHED'\n"
-            f"FROM {table} entity WHERE entity.id = {entity_id} AND entity.authority_entity_id IS NOT NULL\n"
-            f"  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = entity.authority_entity_id AND existing.file_url = {sql(row['url'])});"
+            "INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, "
+            "credit_line, author, license, license_url, focal_point, is_primary, "
+            "editorial_status)\n"
+            f"SELECT entity.authority_entity_id, 'banner', {sql(row['sourceUrl'])}, "
+            f"{sql(row['url'])}, {sql(credit)}, {sql(author)}, {sql(license_name)}, "
+            f"{sql(license_url)}, {sql(row['focal'])}, TRUE, 'PUBLISHED'\n"
+            f"FROM {table} entity WHERE entity.id = {entity_id} "
+            "AND entity.authority_entity_id IS NOT NULL\n"
+            "  AND NOT EXISTS (SELECT 1 FROM entity_images existing "
+            "WHERE existing.authority_entity_id = entity.authority_entity_id "
+            f"AND existing.file_url = {sql(row['url'])});"
         )
     with open(os.path.join(MIGRATIONS, migration), 'w', encoding='utf-8') as handle:
         handle.write('\n'.join(out) + '\n')

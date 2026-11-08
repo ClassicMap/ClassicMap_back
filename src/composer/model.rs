@@ -19,6 +19,13 @@ pub struct Composer {
     pub bio: Option<String>,
     pub style: Option<String>,
     pub influence: Option<String>,
+    /// 영어판 글(없으면 null, 화면은 한국어를 쓴다)
+    #[sqlx(default)]
+    pub bio_en: Option<String>,
+    #[sqlx(default)]
+    pub style_en: Option<String>,
+    #[sqlx(default)]
+    pub influence_en: Option<String>,
     pub piece_count: Option<i64>,
 }
 
@@ -39,6 +46,13 @@ pub struct ComposerWithMajorPieces {
     pub bio: Option<String>,
     pub style: Option<String>,
     pub influence: Option<String>,
+    /// 영어판 글(없으면 null, 화면은 한국어를 쓴다)
+    #[sqlx(default)]
+    pub bio_en: Option<String>,
+    #[sqlx(default)]
+    pub style_en: Option<String>,
+    #[sqlx(default)]
+    pub influence_en: Option<String>,
     pub major_pieces: Option<String>,
     /// 목록(`Composer.piece_count`)과 같은 기준: 이 작곡가의 최상위 작품 수.
     /// 다른 작품(묶음)의 part 로 이어진 작품은 묶음 안에서 보이므로 세지 않는다.

@@ -155,9 +155,12 @@ const PUBLIC_PERFORMANCE_SELECT: &str = "SELECT ready.id,
             ready.sector_id,
             ready.piece_id,
             piece.title AS piece_title,
+            piece.title_en AS piece_title_en,
             composer.id AS composer_id,
             composer.name AS composer_name,
+            composer.english_name AS composer_name_en,
             COALESCE(sector.name_ko, sector.sector_name) AS sector_name,
+            sector.name_en AS sector_name_en,
             ready.start_ms,
             ready.end_ms,
             'ready' AS clip_status,
@@ -222,9 +225,11 @@ impl ComparisonRepository {
             "{PUBLIC_COMPARISON_CTE}
              SELECT piece.id AS piece_id,
                     piece.title AS piece_title,
+                    piece.title_en AS piece_title_en,
                     piece.opus_number,
                     composer.id AS composer_id,
                     composer.name AS composer_name,
+                    composer.english_name AS composer_name_en,
                     composer.avatar_url AS composer_avatar_url,
                     piece.genre,
                     COUNT(DISTINCT public_sector.sector_id) AS sector_count,
@@ -239,8 +244,8 @@ impl ComparisonRepository {
               AND credit.is_primary = TRUE
              WHERE (? IS NULL OR composer.id = ?)
                AND (? IS NULL OR piece.genre = ?)
-             GROUP BY piece.id, piece.title, piece.opus_number, piece.genre,
-                      composer.id, composer.name, composer.avatar_url
+             GROUP BY piece.id, piece.title, piece.title_en, piece.opus_number, piece.genre,
+                      composer.id, composer.name, composer.english_name, composer.avatar_url
              ORDER BY performer_count DESC, sector_count DESC, piece.id ASC
              LIMIT ? OFFSET ?"
         );
@@ -260,7 +265,7 @@ impl ComparisonRepository {
         let mut builder = QueryBuilder::<MySql>::new(format!(
             "{PUBLIC_COMPARISON_CTE}
              SELECT DISTINCT ready.piece_id, artist.id AS artist_id,
-                    artist.name AS artist_name, artist.image_url
+                    artist.name AS artist_name, artist.english_name AS artist_name_en, artist.image_url
              FROM ready_performance ready
              JOIN public_sector ON public_sector.sector_id = ready.sector_id
              JOIN performance_credits credit
@@ -387,6 +392,7 @@ impl ComparisonRepository {
                     sector.name_en AS sector_name_en,
                     sector.sector_type,
                     sector.description,
+                    sector.description_en,
                     sector.display_order,
                     sector.measure_start,
                     sector.measure_end,
@@ -425,6 +431,8 @@ impl ComparisonRepository {
                     pair.performance_b_id,
                     pair.title,
                     pair.note,
+                    pair.title_en,
+                    pair.note_en,
                     CAST(pair.moments AS CHAR CHARACTER SET utf8mb4) AS moments,
                     ready_a.start_ms AS a_start_ms,
                     ready_a.end_ms AS a_end_ms,
@@ -474,6 +482,8 @@ impl ComparisonRepository {
                         performance_ids: [row.performance_a_id, row.performance_b_id],
                         title: row.title,
                         note: row.note,
+                        title_en: row.title_en,
+                        note_en: row.note_en,
                         moments,
                     },
                 )
@@ -539,9 +549,12 @@ impl ComparisonRepository {
                     sector_id: row.sector_id,
                     piece_id: row.piece_id,
                     piece_title: row.piece_title,
+                    piece_title_en: row.piece_title_en,
                     composer_id: row.composer_id,
                     composer_name: row.composer_name,
+                    composer_name_en: row.composer_name_en,
                     sector_name: row.sector_name,
+                    sector_name_en: row.sector_name_en,
                     start_ms: row.start_ms,
                     end_ms: row.end_ms,
                     clip_status: row.clip_status,
@@ -569,8 +582,11 @@ impl ComparisonRepository {
             "SELECT note.performance_id,
                     note.headline,
                     note.note,
+                    note.headline_en,
+                    note.note_en,
                     CAST(note.moments AS CHAR CHARACTER SET utf8mb4) AS moments,
-                    CAST(note.facts AS CHAR CHARACTER SET utf8mb4) AS facts
+                    CAST(note.facts AS CHAR CHARACTER SET utf8mb4) AS facts,
+                    CAST(note.facts_en AS CHAR CHARACTER SET utf8mb4) AS facts_en
              FROM performance_listening_notes note
              WHERE note.editorial_status = 'PUBLISHED'
                AND note.performance_id IN (",
@@ -747,6 +763,12 @@ impl ComparisonRepository {
         PerformanceListeningNote {
             headline: row.headline,
             body: row.note,
+            headline_en: row.headline_en,
+            body_en: row.note_en,
+            facts_en: row
+                .facts_en
+                .as_deref()
+                .and_then(|text| parse_json_list::<String>(Some(text)).ok()),
             moments: note_moments(moments, start_ms, end_ms),
             facts,
         }
@@ -764,6 +786,7 @@ impl ComparisonRepository {
             "SELECT credit.performance_source_id AS source_id,
                     credit.artist_id,
                     artist.name AS artist_name,
+                    artist.english_name AS artist_name_en,
                     artist.image_url,
                     CASE
                         WHEN credit.role_code IN (
