@@ -579,9 +579,11 @@ mod tests {
             piece: ComparisonPiece {
                 piece_id: id,
                 piece_title: title.to_string(),
+                piece_title_en: None,
                 opus_number: None,
                 composer_id: composer.0,
                 composer_name: composer.1.to_string(),
+                composer_name_en: None,
                 composer_avatar_url: None,
                 genre: None,
                 cover_video_id: None,

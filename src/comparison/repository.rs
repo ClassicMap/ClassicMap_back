@@ -155,8 +155,10 @@ const PUBLIC_PERFORMANCE_SELECT: &str = "SELECT ready.id,
             ready.sector_id,
             ready.piece_id,
             piece.title AS piece_title,
+            piece.title_en AS piece_title_en,
             composer.id AS composer_id,
             composer.name AS composer_name,
+            composer.english_name AS composer_name_en,
             COALESCE(sector.name_ko, sector.sector_name) AS sector_name,
             ready.start_ms,
             ready.end_ms,
@@ -222,9 +224,11 @@ impl ComparisonRepository {
             "{PUBLIC_COMPARISON_CTE}
              SELECT piece.id AS piece_id,
                     piece.title AS piece_title,
+                    piece.title_en AS piece_title_en,
                     piece.opus_number,
                     composer.id AS composer_id,
                     composer.name AS composer_name,
+                    composer.english_name AS composer_name_en,
                     composer.avatar_url AS composer_avatar_url,
                     piece.genre,
                     COUNT(DISTINCT public_sector.sector_id) AS sector_count,
@@ -239,8 +243,8 @@ impl ComparisonRepository {
               AND credit.is_primary = TRUE
              WHERE (? IS NULL OR composer.id = ?)
                AND (? IS NULL OR piece.genre = ?)
-             GROUP BY piece.id, piece.title, piece.opus_number, piece.genre,
-                      composer.id, composer.name, composer.avatar_url
+             GROUP BY piece.id, piece.title, piece.title_en, piece.opus_number, piece.genre,
+                      composer.id, composer.name, composer.english_name, composer.avatar_url
              ORDER BY performer_count DESC, sector_count DESC, piece.id ASC
              LIMIT ? OFFSET ?"
         );
@@ -260,7 +264,7 @@ impl ComparisonRepository {
         let mut builder = QueryBuilder::<MySql>::new(format!(
             "{PUBLIC_COMPARISON_CTE}
              SELECT DISTINCT ready.piece_id, artist.id AS artist_id,
-                    artist.name AS artist_name, artist.image_url
+                    artist.name AS artist_name, artist.english_name AS artist_name_en, artist.image_url
              FROM ready_performance ready
              JOIN public_sector ON public_sector.sector_id = ready.sector_id
              JOIN performance_credits credit
@@ -539,8 +543,10 @@ impl ComparisonRepository {
                     sector_id: row.sector_id,
                     piece_id: row.piece_id,
                     piece_title: row.piece_title,
+                    piece_title_en: row.piece_title_en,
                     composer_id: row.composer_id,
                     composer_name: row.composer_name,
+                    composer_name_en: row.composer_name_en,
                     sector_name: row.sector_name,
                     start_ms: row.start_ms,
                     end_ms: row.end_ms,
@@ -764,6 +770,7 @@ impl ComparisonRepository {
             "SELECT credit.performance_source_id AS source_id,
                     credit.artist_id,
                     artist.name AS artist_name,
+                    artist.english_name AS artist_name_en,
                     artist.image_url,
                     CASE
                         WHEN credit.role_code IN (
