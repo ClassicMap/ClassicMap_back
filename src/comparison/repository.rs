@@ -583,7 +583,8 @@ impl ComparisonRepository {
                     note.headline_en,
                     note.note_en,
                     CAST(note.moments AS CHAR CHARACTER SET utf8mb4) AS moments,
-                    CAST(note.facts AS CHAR CHARACTER SET utf8mb4) AS facts
+                    CAST(note.facts AS CHAR CHARACTER SET utf8mb4) AS facts,
+                    CAST(note.facts_en AS CHAR CHARACTER SET utf8mb4) AS facts_en
              FROM performance_listening_notes note
              WHERE note.editorial_status = 'PUBLISHED'
                AND note.performance_id IN (",
@@ -762,6 +763,10 @@ impl ComparisonRepository {
             body: row.note,
             headline_en: row.headline_en,
             body_en: row.note_en,
+            facts_en: row
+                .facts_en
+                .as_deref()
+                .and_then(|text| parse_json_list::<String>(Some(text)).ok()),
             moments: note_moments(moments, start_ms, end_ms),
             facts,
         }

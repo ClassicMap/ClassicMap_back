@@ -223,9 +223,10 @@ pub struct ListeningMoment {
 pub struct PerformanceListeningNote {
     pub headline: String,
     pub body: String,
-    /// 영어판 제목·본문(없으면 null)
+    /// 영어판 제목·본문·사실 태그(없으면 null)
     pub headline_en: Option<String>,
     pub body_en: Option<String>,
+    pub facts_en: Option<Vec<String>>,
     pub moments: Vec<ListeningMoment>,
     pub facts: Vec<String>,
 }
@@ -509,6 +510,8 @@ pub(crate) struct ListeningNoteRow {
     pub note_en: Option<String>,
     pub moments: Option<String>,
     pub facts: Option<String>,
+    #[sqlx(default)]
+    pub facts_en: Option<String>,
 }
 
 #[derive(Debug, FromRow)]
