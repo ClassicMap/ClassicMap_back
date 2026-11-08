@@ -1,0 +1,489 @@
+{"id": 10, "composer": "Johann Sebastian Bach", "title_en": "The Well-Tempered Clavier (Books 1 & 2)", "description": "'음악의 구약성서'로 불린다. 모든 24개의 장/단조로 작곡된 프렐류드와 푸가 모음곡이다. 모든 조를 사용할 수 있게 조율된 '평균율'의 가능성을 탐구한 기념비적인 작품이다."}
+{"id": 12, "composer": "Johann Sebastian Bach", "title_en": "Cello Suites", "description": "첼로 독주곡의 '성서'로 불린다. 첼로라는 악기 하나만으로 풍부한 화성과 대위법적 선율을 표현해낸 작품이다. 각 모음곡은 프렐류드와 여러 춤곡(알르망드, 쿠랑트, 사라방드, 지그 등)으로 구성된다."}
+{"id": 13, "composer": "Johann Sebastian Bach", "title_en": "Sonatas and Partitas for Solo Violin", "description": "바이올린 독주곡의 정점이다. 특히 파르티타 2번의 마지막 곡 '샤콘(Chaconne)'은 단일 악장으로서는 가장 위대한 바이올린 곡 중 하나로 꼽힌다. 4개의 현으로 복잡한 화음과 대위법을 연주해야 한다."}
+{"id": 14, "composer": "Johann Sebastian Bach", "title_en": "Brandenburg Concertos", "description": "브란덴부르크 변경백에게 헌정된 6개의 협주곡 모음이다. 다양한 악기 조합(독주 악기군)과 오케스트라가 대비를 이루는 '합주 협주곡(콘체르토 그로소)' 양식의 최고 걸작이다."}
+{"id": 15, "composer": "Johann Sebastian Bach", "title_en": "St. Matthew Passion", "description": "신약성서의 마태복음을 바탕으로 예수의 수난과 죽음을 다룬 거대한 규모의 오라토리오(종교 극음악)이다. 서양 음악사상 가장 위대한 종교 음악 작품으로 꼽힌다."}
+{"id": 16, "composer": "Johann Sebastian Bach", "title_en": "Toccata and Fugue in D minor", "description": "\"빰~ 빠바바밤~\" 하는 압도적인 도입부로 유명한, 바흐의 오르간 곡 중 가장 대중적인 작품이다. 극적인 토카타(즉흥 연주풍) 부분과 치밀한 푸가 부분이 결합되어 있다."}
+{"id": 17, "composer": "Claudio Monteverdi", "title_en": "L'Orfeo", "description": "몬테베르디의 첫 오페라이자, 음악사상 최초의 위대한 오페라로 꼽히는 작품이다. 그리스 신화의 오르페우스 이야기를 다루며, 사랑하는 아내 에우리디체를 되찾기 위해 지옥으로 향하는 여정을 그린다."}
+{"id": 18, "composer": "Claudio Monteverdi", "title_en": "Vespro della Beata Vergine", "description": "몬테베르디가 베네치아 산 마르코 대성당 악장직에 지원하기 위해 작곡한 기념비적인 종교 음악이다. 독창, 합창, 오케스트라가 결합된 웅장한 규모와 극적인 표현력이 돋보인다."}
+{"id": 19, "composer": "Claudio Monteverdi", "title_en": "Lamento della Ninfa", "description": "마드리갈 8권 <전쟁과 사랑의 마드리갈>에 수록된 곡 중 가장 유명한 곡이다. 버림받은 님프의 슬픔을 독창(소프라노)과 남성 3중창의 대조를 통해 극적으로 그렸다. 반복되는 베이스라인(그라운드 베이스) 위에서 탄식하는 멜로디가 인상적이다."}
+{"id": 20, "composer": "Claudio Monteverdi", "title_en": "L'incoronazione di Poppea", "description": "몬테베르디의 마지막 오페라이자 그의 오페라 작곡법이 정점에 달한 걸작. 로마 황제 네로네(네로)와 그의 연인 포페아가 권력을 위해 온갖 악행을 저지르고 결국 황후가 된다는, 당시로서는 파격적인 역사적 사실을 다뤘다. 'Pur ti miro, pur ti godo(그대를 보네, 그대를 즐기네)' 이중창이 유명하다."}
+{"id": 21, "composer": "Georg Friedrich Händel", "title_en": "Oratorio <Messiah>", "description": "헨델의 가장 위대한 종교 음악이자 인류 역사상 가장 유명한 오라토리오이다. 예수의 생애(탄생, 수난, 부활)를 다루며, 특히 2부의 '할렐루야(Hallelujah)' 합창이 가장 유명하다."}
+{"id": 22, "composer": "Georg Friedrich Händel", "title_en": "Water Music", "description": "영국 템스강 위에서 열린 왕실 뱃놀이 연회를 위해 작곡된 관현악 모음곡이다. '알라 혼파이프(Alla Hornpipe)' 악장이 특히 유명하며, 화려하고 활기찬 분위기가 특징이다."}
+{"id": 23, "composer": "Georg Friedrich Händel", "title_en": "Music for the Royal Fireworks", "description": "오스트리아 왕위 계승 전쟁 종결을 축하하는 대규모 불꽃놀이를 위해 작곡된 곡이다. 웅장한 서곡(Overture)이 유명하며, 본래 수많은 관악기와 타악기로만 연주되도록 설계되었다."}
+{"id": 24, "composer": "Georg Friedrich Händel", "title_en": "\"Lascia ch'io pianga\" (from Opera <Rinaldo>)", "description": "헨델이 런던에서 큰 성공을 거둔 첫 오페라 <리날도>에 나오는 아리아이다. 여주인공 알미레나가 포로로 잡혀 자신의 신세를 한탄하며 부르는 비탄에 잠긴 멜로디가 매우 아름답다."}
+{"id": 25, "composer": "Georg Friedrich Händel", "title_en": "\"Ombra mai fù\" (from Opera <Serse>)", "description": "페르시아의 왕 세르세(크세르크세스)가 플라타너스 나무 그늘에 감탄하며 부르는 아리아이다. 평화롭고 장엄한 멜로디 덕분에 '헨델의 라르고'라는 이름으로 더 널리 알려졌다."}
+{"id": 26, "composer": "Georg Friedrich Händel", "title_en": "\"The Arrival of the Queen of Sheba\" (from Oratorio <Solomon>)", "description": "오라토리오 3막의 시작을 알리는 화려하고 장엄한 기악곡이다. 시바 여왕이 솔로몬 왕을 알현하러 오는 행렬을 묘사하며, 축전적인 분위기 덕분에 결혼식 등에서 자주 연주된다."}
+{"id": 27, "composer": "Georg Friedrich Händel", "title_en": "Coronation Anthem <Zadok the Priest>", "description": "영국 국왕 조지 2세의 대관식을 위해 작곡된 4개의 찬가 중 첫 번째 곡이다. 오케스트라의 장엄한 서주에 이어 터져 나오는 합창이 압도적인 분위기를 연출한다. 이후 모든 영국 국왕의 대관식에서 연주되는 전통이 생겼다. (UEFA 챔피언스리그 주제가의 원곡이기도 하다.)"}
+{"id": 28, "composer": "Antonio Lucio Vivaldi", "title_en": "The Four Seasons", "description": "비발디의 바이올린 협주곡 작품집 <화성과 창의의 시도>(Op. 8) 중 첫 4곡이다. 각 계절의 풍경과 느낌을 소네트(시)를 바탕으로 묘사한 표제음악의 걸작이다."}
+{"id": 29, "composer": "Antonio Lucio Vivaldi", "title_en": "L'estro armonico", "description": "12개의 협주곡으로 구성된 작품집. 1, 2, 4대의 바이올린을 위한 다양한 협주곡이 포함되어 있으며, 유럽 전역에 비발디의 명성을 떨치게 한 출세작이다. 바흐가 이 중 6곡을 편곡했다."}
+{"id": 30, "composer": "Antonio Lucio Vivaldi", "title_en": "Gloria in D major", "description": "비발디의 종교 성악곡 중 가장 유명하고 널리 연주되는 작품이다. 피에타 여학교의 합창단과 오케스트라를 위해 작곡되었으며, 12개의 악장으로 구성된 화려하고 축전적인 곡이다."}
+{"id": 31, "composer": "Antonio Lucio Vivaldi", "title_en": "Mandolin Concerto in C major", "description": "비발디가 작곡한 2개의 만돌린 협주곡 중 하나. 만돌린 특유의 청아하고 반짝이는 트레몰로 주법이 돋보이는 사랑스러운 곡이다. 1악장이 특히 유명하다."}
+{"id": 32, "composer": "Antonio Lucio Vivaldi", "title_en": "Concerto for Two Trumpets in C major", "description": "두 대의 트럼펫이 화려하게 기량을 겨루는 곡으로, 바로크 트럼펫(내추럴 트럼펫)의 밝고 웅장한 음색이 매력적이다."}
+{"id": 33, "composer": "Antonio Lucio Vivaldi", "title_en": "Violin Concerto in A minor", "description": "<조화의 영감>(Op. 3)에 수록된 6번째 곡으로, 바이올린 학습자들이 가장 많이 연주하는 비발디의 표준적인 협주곡 중 하나이다. 1악장과 3악장의 힘찬 리듬이 인상적이다."}
+{"id": 34, "composer": "Henry Purcell", "title_en": "Opera <Dido and Aeneas>", "description": "퍼셀의 유일한 통작(through-composed) 오페라이자 영국 오페라의 최고 걸작. 트로이의 영웅 아이네이아스와 카르타고의 여왕 디도의 비극적인 사랑을 그린다."}
+{"id": 35, "composer": "Henry Purcell", "title_en": "\"When I am laid in earth (Dido's Lament)\" (from Dido and Aeneas)", "description": "디다와 아이네이아스 오페라의 마지막에 여왕 디도가 아이네이아스에게 버림받고 죽음을 앞두고 부르는 비탄의 아리아. 반음계적으로 하행하는 '그라운드 베이스' 위에서 펼쳐지는 처절하고 아름다운 멜로디가 압권이다."}
+{"id": 36, "composer": "Henry Purcell", "title_en": "Semi-Opera <The Fairy-Queen>", "description": "셰익스피어의 <한여름 밤의 꿈>을 각색한 '세미 오페라(대사와 연극이 포함된 극음악)'. 원작의 줄거리와 직접적인 관련은 없으나, 각 막의 끝에 화려한 음악과 춤, 무대장치가 어우러진 '마스크(Masque)'가 삽입된다."}
+{"id": 37, "composer": "Henry Purcell", "title_en": "Music for the Funeral of Queen Mary", "description": "자신을 아껴주었던 메리 2세 여왕의 장례식을 위해 작곡한 웅장하고 비통한 음악이다. 트럼펫과 트롬본의 장엄한 팡파르와 합창이 인상적이며, 아이러니하게도 몇 달 뒤 퍼셀 자신의 장례식에서도 연주되었다."}
+{"id": 38, "composer": "Henry Purcell", "title_en": "Abdelazer Suite", "description": "동명 연극을 위한 부수 음악. 이 중 '론도(Rondeau)' 악장은 20세기 작곡가 벤저민 브리튼이 <청소년을 위한 관현악 입문>의 주제 선율로 사용하여 더욱 유명해졌다."}
+{"id": 39, "composer": "Giuseppe Domenico Scarlatti", "title_en": "Sonata in E major \"Cortège\"", "description": "\"행렬(Cortège)\" 또는 \"산책\"이라는 별명으로 알려져 있다. 팡파르를 연상시키는 장엄하고 밝은 주제가 특징이며, 스페인 궁정의 화려한 행진을 묘사하는 듯하다."}
+{"id": 40, "composer": "Giuseppe Domenico Scarlatti", "title_en": "Sonata in C major \"La Caccia\"", "description": "\"사냥(La Caccia)\"이라는 별명으로 유명하며, 사냥 나팔 소리를 모방한 듯한 쾌활하고 리드미컬한 주제가 특징이다. 스카를라티의 소나타 중 가장 대중적으로 사랑받는 곡 중 하나이다."}
+{"id": 41, "composer": "Giuseppe Domenico Scarlatti", "title_en": "Sonata in B minor", "description": "스카를라티의 가장 유명한 소나타 중 하나로, 몽환적이고 명상적인 분위기를 자아낸다. 두 손이 서로 교차하며(cross-hand) 연주하는 기법이 두드러지며, 스페인 기타의 울림을 연상시킨다."}
+{"id": 42, "composer": "Giuseppe Domenico Scarlatti", "title_en": "Sonata in D minor", "description": "스페인 기타의 '라스게아도(rasgueado)' 주법을 모방한 듯한 격렬한 트레몰로(빠른 반복음)와 아르페지오가 특징인 곡이다. 극도의 비르투오시티를 요구하며, 피아니스트들에게 도전적인 레퍼토리로 인기가 높다."}
+{"id": 43, "composer": "Giuseppe Domenico Scarlatti", "title_en": "Sonata in F minor", "description": "Kk. 27과 함께 스카를라티의 가장 서정적이고 내성적인 소나타 중 하나로 꼽힌다. 애상적이고 아름다운 선율이 특징이며, 낭만주의적인 감수성마저 엿보인다."}
+{"id": 44, "composer": "Giuseppe Domenico Scarlatti", "title_en": "Sonata in D minor \"Pastorale\"", "description": "\"파스토랄레(목가풍)\"라는 별명으로 자주 불리는 소나타이다. 서정적이고 평화로운 멜로디가 특징이며, 스카를라티의 소나타 중 비교적 접근하기 쉬우면서도 아름다운 곡으로 인기가 높다."}
+{"id": 45, "composer": "Giuseppe Domenico Scarlatti", "title_en": "Sonata in D minor", "description": "커크패트릭 카탈로그의 1번 곡이자, 스카를라티가 1738년에 출판한 첫 소나타 연습곡집(Essercizi per Gravicembalo)의 첫 곡이다. 그의 초기 스타일을 보여주는 우아하고 정돈된 곡이다."}
+{"id": 46, "composer": "Jean-Philippe Rameau", "title_en": "Opéra-Ballet <Les Indes galantes>", "description": "라모의 가장 유명한 오페라-발레. '이국적인' 네 개의 다른 이야기(터키, 페루, 페르시아, 아메리카)를 옴니버스 식으로 묶었다. 특히 4막의 '야만인들의 춤(Danse des Sauvages)'이 매우 유명하다."}
+{"id": 47, "composer": "Jean-Philippe Rameau", "title_en": "\"Tambourin\" (from Pièces de clavecin)", "description": "그의 두 번째 클라브생 곡집(1724)에 수록된 곡. '탕부랭'이라는 프로방스 지방의 작은 북 리듬을 모방한 활기차고 경쾌한 춤곡이다. 라모의 건반 작품 중 가장 유명한 곡 중 하나이다."}
+{"id": 48, "composer": "Jean-Philippe Rameau", "title_en": "\"Gavotte et six doubles\" (from Nouvelles suites de pièces de clavecin)", "description": "1728년경 출판된 <새 클라브생 모음곡> A단조 모음곡의 마지막을 장식하는 곡이다. 우아한 가보트 주제와 이어지는 6개의 화려하고 기교적인 변주(Double)로 구성된다."}
+{"id": 49, "composer": "Jean-Philippe Rameau", "title_en": "\"La Poule\" (from Nouvelles suites de pièces de clavecin)", "description": "<새 클라브생 모음곡> G장조 모음곡에 포함된 곡. '꼬꼬댁'거리는 암탉의 울음소리와 몸짓을 건반악기로 유쾌하고 정교하게 묘사한 '캐릭터 피스(묘사적 소품)'의 걸작이다."}
+{"id": 50, "composer": "Jean-Philippe Rameau", "title_en": "Opera <Castor et Pollux>", "description": "라모의 대표적인 '서정 비극(Tragédie en musique)'으로, 그의 오페라 중 최고 걸작 중 하나로 꼽힌다. 쌍둥이 형제인 카스토르(필멸자)와 폴뤽스(불멸자)의 우애와 사랑을 다룬다."}
+{"id": 51, "composer": "Jean-Philippe Rameau", "title_en": "Opera <Hippolyte et Aricie>", "description": "라모가 50세에 발표한 충격적인 첫 번째 오페라. 라신느의 비극 <페드르>를 기반으로 한다. 당시 륄리의 음악에 익숙했던 청중들에게 라모의 대담한 화성과 관현악법이 충격을 주며 '륄리파 vs 라모파' 논쟁을 일으킨 문제작이자 걸작이다."}
+{"id": 52, "composer": "Georg Philipp Telemann", "title_en": "Tafelmusik (Musique de Table)", "description": "\"식탁 음악\"이라는 뜻으로, 텔레만이 출판한 대규모 기악 모음집이다. 총 3개의 '프로덕션(Production)'으로 구성되며, 각 프로덕션은 서곡, 협주곡, 4중주, 3중주, 독주 소나타 등을 포함하는 '종합선물세트' 같은 작품이다."}
+{"id": 53, "composer": "Georg Philipp Telemann", "title_en": "Viola Concerto in G major", "description": "역사상 최초의 본격적인 솔로 비올라 협주곡 중 하나로 간주되는 매우 중요한 작품이다. 비올라 특유의 따뜻하고 우아한 음색을 잘 살렸으며, 오늘날 모든 비올라 전공자의 핵심 레퍼토리이다."}
+{"id": 54, "composer": "Georg Philipp Telemann", "title_en": "Suite in A minor for Recorder and Strings", "description": "알토 리코더(또는 플루트)를 위한 협주곡풍의 모음곡(Suite)이다. 프랑스풍 서곡과 다양한 춤곡으로 구성되며, 특히 마지막 '레르(Air à l'Italien)' 악장과 '폴로네즈(Polonoise)'가 유명하다."}
+{"id": 55, "composer": "Georg Philipp Telemann", "title_en": "Burlesque de Quixotte", "description": "세르반테스의 소설 <돈키호테>의 여러 장면을 현악 합주로 묘사한 표제음악적 모음곡이다. '풍차와의 싸움', '산초의 당나귀' 등 재치 있는 묘사가 돋보인다."}
+{"id": 56, "composer": "Georg Philipp Telemann", "title_en": "Paris Quartets", "description": "텔레만이 1730년대 파리 방문을 전후하여 작곡한 12개의 4중주곡집이다. 플루트, 바이올린, 비올라 다 감바(또는 첼로), 하프시코드로 구성되며, 프랑스와 이탈리아 양식이 절묘하게 조화된 실내악의 걸작으로 꼽힌다."}
+{"id": 57, "composer": "Arcangelo Corelli", "title_en": "Concerto Grosso in G minor \"Christmas Concerto\"", "description": "코렐리의 작품 중 가장 유명한 곡. 그의 합주 협주곡 12곡 모음(Op. 6) 중 8번째 곡이다. 성탄절 밤을 위해 작곡되었다는 표시가 있으며, 특히 마지막 악장인 '파스토랄레(Pastorale, 목가풍)'의 평화롭고 아름다운 선율이 매우 유명하다."}
+{"id": 58, "composer": "Arcangelo Corelli", "title_en": "Violin Sonata in D minor \"La Folia\"", "description": "코렐리의 바이올린 소나타 12곡 모음(Op. 5) 중 마지막 곡. 당시 유행하던 '폴리아'라는 춤곡 선율을 주제로 한 23개의 화려한 변주곡이다. 코렐리의 바이올린 기교가 정점에 달한 작품이자, '라 폴리아' 변주곡의 가장 대표적인 사례로 꼽힌다."}
+{"id": 59, "composer": "Arcangelo Corelli", "title_en": "12 Concerti Grossi", "description": "코렐리의 작품 활동을 집대성하는 그의 마지막 작품집이다. 2대의 바이올린과 첼로로 구성된 소규모 그룹(콘체르티노)과 전체 오케스트라(리피에노 또는 투티)가 대비를 이루는 '콘체르토 그로소' 양식의 정점을 보여준다. \"크리스마스 협주곡\"이 여기에 포함된다."}
+{"id": 60, "composer": "Arcangelo Corelli", "title_en": "12 Trio Sonatas (Sonate da chiesa)", "description": "코렐리의 트리오 소나타 중 가장 유명한 작품집. 2대의 바이올린과 첼로, 오르간(바소 콘티누오) 편성이다. '교회 소나타(Sonata da chiesa)'의 전형으로, 4악장(느림-빠름-느림-빠름) 구성을 확립했으며, 진지하고 장엄한 분위기가 특징이다."}
+{"id": 61, "composer": "Christoph Willibald Gluck", "title_en": "Opera <Orfeo ed Euridice>", "description": "글루크의 '오페라 개혁'이 최초로 적용된 가장 중요하고 유명한 작품이다. 기존 오페라 세리아의 불필요한 기교 과시(다 카포 아리아)를 없애고, 음악이 극의 내용에 충실하도록 작곡했다. 그리스 신화 속 오르페우스의 이야기를 다룬다."}
+{"id": 62, "composer": "Christoph Willibald Gluck", "title_en": "\"Dance of the Blessed Spirits\" (from Orfeo ed Euridice)", "description": "위 오페라 2막에 나오는 유명한 발레 음악. 오르페오가 천국 엘리시움에 도달했을 때 정령들이 추는 춤을 묘사한다. 플루트의 청아하고 아름다운 멜로디가 매우 유명하여 독립적으로도 자주 연주된다."}
+{"id": 63, "composer": "Christoph Willibald Gluck", "title_en": "\"Che farò senza Euridice?\" (from Orfeo ed Euridice)", "description": "위 오페라 3막에서, 금기를 어기고 뒤를 돌아보는 바람에 아내 에우리디체를 두 번째로 잃은 오르페오가 부르는 절망적인 아리아이다. 글루크의 '고귀한 단순함'이 집약된 비극적이고 아름다운 선율로 유명하다."}
+{"id": 64, "composer": "Christoph Willibald Gluck", "title_en": "Opera <Alceste>", "description": "<오르페오>의 뒤를 잇는 글루크의 두 번째 개혁 오페라. 남편 아드메토스 왕을 대신해 죽기로 결심한 알체스테 여왕의 고귀한 희생을 다룬다. 이 오페라의 서문은 글루크의 '오페라 개혁' 이념을 밝힌 선언문으로 매우 유명하다."}
+{"id": 65, "composer": "Christoph Willibald Gluck", "title_en": "Opera <Iphigénie en Tauride>", "description": "글루크의 개혁 오페라 중 최고 걸작으로 꼽히는 작품. 파리에서 작곡되었으며, 그리스 비극을 바탕으로 극적인 긴장감과 음악적 통일성이 완벽에 가깝게 구현되었다."}
+{"id": 66, "composer": "Wolfgang Amadeus Mozart", "title_en": "Eine kleine Nachtmusik", "description": "모차르트의 가장 유명한 기악곡 중 하나. '소야곡(Serenade)'이라는 뜻으로, 경쾌하고 우아한 멜로디가 특징이다. 1악장이 특히 유명하다."}
+{"id": 67, "composer": "Wolfgang Amadeus Mozart", "title_en": "Symphony No. 40 in G minor", "description": "모차르트의 3대 교향곡 중 하나로, 비극적이면서도 열정적인 1악장 주제가 매우 유명하다. 낭만주의적 감수성이 엿보이는 걸작이다."}
+{"id": 68, "composer": "Wolfgang Amadeus Mozart", "title_en": "Symphony No. 41 in C major \"Jupiter\"", "description": "모차르트가 작곡한 마지막 교향곡. 고전주의 교향곡의 정점으로, 특히 마지막 4악장의 화려하고 장엄한 푸가 기법이 압권이다."}
+{"id": 69, "composer": "Wolfgang Amadeus Mozart", "title_en": "Opera <Le nozze di Figaro>", "description": "시대를 앞서간 천재적인 희극 오페라(오페라 부파). 귀족의 특권(초야권)에 맞서는 하인 피가로의 기지를 유쾌하게 그렸다. 유명한 서곡부터 모든 아리아가 걸작으로 꼽힌다."}
+{"id": 70, "composer": "Wolfgang Amadeus Mozart", "title_en": "Opera <Die Zauberflöte>", "description": "모차르트가 죽기 직전에 완성한 마지막 오페라. 독일어로 된 '징슈필(Singspiel)'이며, 프리메이슨의 사상을 담은 동화적이고 철학적인 작품이다. '밤의 여왕 아리아'가 유명하다."}
+{"id": 71, "composer": "Wolfgang Amadeus Mozart", "title_en": "Requiem in D minor", "description": "모차르트의 미완성 유작. 정체불명의 의뢰인이 주문한 진혼 미사곡으로, 자신의 죽음을 예감하며 작곡했다는 전설이 있다. 제자 쥐스마이어가 완성했다."}
+{"id": 72, "composer": "Wolfgang Amadeus Mozart", "title_en": "Piano Concerto No. 20 in D minor", "description": "모차르트의 피아노 협주곡 중 가장 극적이고 낭만적인 작품 중 하나. 베토벤이 특히 좋아하여 직접 카덴차를 작곡하기도 했다."}
+{"id": 73, "composer": "Wolfgang Amadeus Mozart", "title_en": "Piano Sonata No. 11 in A major", "description": "3악장 '터키풍 론도(Alla Turca)'가 매우 유명하여 '터키 행진곡'이라는 별명으로 불린다. 피아노 학습자들에게도 인기가 높은 곡이다."}
+{"id": 74, "composer": "Wolfgang Amadeus Mozart", "title_en": "Clarinet Concerto in A major", "description": "모차르트가 마지막으로 완성한 협주곡. 클라리넷이라는 악기의 아름다움을 극한까지 표현한 걸작으로, 2악장 아다지오가 유명하다."}
+{"id": 75, "composer": "Ludwig van Beethoven", "title_en": "Symphony No. 5 in C minor \"Destiny\"", "description": "'빠바바밤~'하는 유명한 동기로 시작하는, 서양 음악사상 가장 유명한 교향곡. '고뇌를 넘어 환희로'라는 베토벤의 음악 세계를 압축적으로 보여준다."}
+{"id": 76, "composer": "Ludwig van Beethoven", "title_en": "Symphony No. 9 in D minor \"Choral\"", "description": "베토벤의 마지막 교향곡. 4악장에 최초로 성악 합창(실러의 '환희의 송가')을 도입한 혁명적인 작품이다. 인류애와 화합의 메시지를 담고 있다."}
+{"id": 77, "composer": "Ludwig van Beethoven", "title_en": "Symphony No. 3 in E♭ major \"Eroica\"", "description": "본래 나폴레옹에게 헌정하려 했으나, 그가 황제에 즉위하자 분노하여 헌사를 찢어버렸다는 일화로 유명하다. 고전주의 교향곡의 틀을 깨뜨린 거대한 규모의 작품이다."}
+{"id": 78, "composer": "Ludwig van Beethoven", "title_en": "Piano Sonata No. 14 in C# minor \"Moonlight\"", "description": "베토벤의 피아노 소나타 중 가장 유명한 곡. 특히 몽환적인 1악장이 유명하며, '월광'이라는 별명은 베토벤 사후에 시인 렐슈타프가 붙였다."}
+{"id": 79, "composer": "Ludwig van Beethoven", "title_en": "Piano Sonata No. 8 in C minor \"Pathétique\"", "description": "베토벤 초기 소나타의 걸작. 비극적이면서도 장엄한 1악장 서주와 정열적인 멜로디로 큰 인기를 얻었다."}
+{"id": 80, "composer": "Ludwig van Beethoven", "title_en": "Piano Concerto No. 5 in E♭ major \"Emperor\"", "description": "베토벤의 마지막 피아노 협주곡. 교향곡과 맞먹는 웅장한 규모와 화려한 피아노 기교가 특징이며, '황제'라는 별명에 걸맞은 위풍당당함을 보여준다."}
+{"id": 81, "composer": "Ludwig van Beethoven", "title_en": "Violin Concerto in D major", "description": "베토벤의 유일한 바이올린 협주곡. 멘델스존, 브람스의 협주곡과 함께 3대 바이올린 협주곡으로 꼽히며, 장대하고 고귀한 아름다움을 지녔다."}
+{"id": 82, "composer": "Ludwig van Beethoven", "title_en": "Für Elise", "description": "베토벤이 남긴 바가텔(Bagatelle, 소품) 중 전 세계적으로 가장 유명한 피아노곡. '엘리제'가 누구인지는 여전히 논쟁거리로 남아있다."}
+{"id": 83, "composer": "Franz Joseph Haydn", "title_en": "Symphony No. 94 in G major \"Surprise\"", "description": "하이든의 '런던 교향곡' 중 하나. 조용하게 연주되던 2악장 도중 갑자기 큰 소리(팀파니와 모든 악기)가 터져 나와 청중을 놀라게 한 일화로 유명하다."}
+{"id": 84, "composer": "Franz Joseph Haydn", "title_en": "Symphony No. 101 in D major \"The Clock\"", "description": "2악장에서 바순과 현악기들이 '똑딱'거리는 시계추 소리를 리드미컬하게 묘사하여 '시계'라는 별명이 붙었다."}
+{"id": 85, "composer": "Franz Joseph Haydn", "title_en": "Symphony No. 45 in F# minor \"Farewell\"", "description": "휴가를 받지 못한 단원들을 위해 하이든이 작곡한 재치 있는 곡. 마지막 4악장에서 연주자들이 하나둘씩 촛불을 끄고 퇴장하는 퍼포먼스로 유명하다."}
+{"id": 86, "composer": "Franz Joseph Haydn", "title_en": "String Quartet in C major \"Emperor\"", "description": "2악장에서 하이든이 오스트리아 국가로 작곡한 선율('황제 찬가')을 주제로 한 변주곡이 사용된다. 이 선율은 훗날 독일 국가의 선율이 되었다."}
+{"id": 87, "composer": "Franz Joseph Haydn", "title_en": "Oratorio <The Creation>", "description": "하이든의 최고 걸작 중 하나. 헨델의 <메시아>에 감명을 받아 작곡했으며, 구약성서의 천지창조 7일간의 과정을 웅장하고 생생하게 묘사했다."}
+{"id": 88, "composer": "Franz Joseph Haydn", "title_en": "Trumpet Concerto in E♭ major", "description": "새롭게 발명된 '키 트럼펫'을 위해 작곡된 최초의 위대한 협주곡. 트럼펫의 화려한 기교와 서정성을 모두 보여주는, 트럼펫 연주자들의 표준 레퍼토리이다."}
+{"id": 89, "composer": "Antonio Salieri", "title_en": "Opera <Les Danaïdes>", "description": "본래 글루크와 공동 작업으로 시작했으나, 글루크의 건강 악화로 살리에리가 완성했다. 파리에서 큰 성공을 거두며 글루크의 '오페라 개혁' 후계자로 인정받게 한 작품이다."}
+{"id": 90, "composer": "Antonio Salieri", "title_en": "Opera <Tarare>", "description": "보마르셰(피가로의 결혼 원작자)의 대본으로 작곡한, 살리에리의 가장 야심 찬 오페라 중 하나. 프랑스 혁명 직전의 파리에서 큰 성공을 거두었다."}
+{"id": 91, "composer": "Antonio Salieri", "title_en": "Opera <Falstaff>", "description": "셰익스피어의 <윈저의 명랑한 아낙네들>을 원작으로 한 희극 오페라. (훗날 베르디가 작곡한 동명의 오페라와는 다른 작품이다.)"}
+{"id": 92, "composer": "Antonio Salieri", "title_en": "Sinfonia in D major \"Il giorno onomastico\"", "description": "살리에리의 교향곡 중 가장 유명하고 활기찬 작품. 그의 기악 작곡가로서의 면모를 보여준다."}
+{"id": 93, "composer": "Carl Czerny", "title_en": "30 New Studies in Technics", "description": "한국에서 '체르니 30번'으로 알려진 연습곡집. 피아노의 기초적인 테크닉을 완성하기 위한 필수적인 연습곡들로 구성되어 있다."}
+{"id": 94, "composer": "Carl Czerny", "title_en": "The School of Velocity", "description": "한국에서 '체르니 40번'으로 불린다. 30번보다 높은 수준의 속도(Velocity)와 기교를 훈련하기 위한 40개의 연습곡 모음이다."}
+{"id": 95, "composer": "Carl Czerny", "title_en": "The Art of Finger Dexterity", "description": "한국에서 '체르니 50번'으로 불린다. 피아니스트가 갖추어야 할 거의 모든 종류의 화려한 기교를 집대성한 상급 연습곡집이다."}
+{"id": 96, "composer": "Carl Czerny", "title_en": "100 Progressive Studies", "description": "한국에서 '체르니 100번'으로 불리며, 피아노 초급자들이 처음 접하는 연습곡집 중 하나이다."}
+{"id": 97, "composer": "Johann Georg Leopold Mozart", "title_en": "Toy Symphony", "description": "뻐꾸기, 트럼펫, 북 등 장난감 악기들이 오케스트라와 함께 연주되는 재치 있는 교향곡이다. (오랫동안 하이든의 작품으로 오인되기도 했다.)"}
+{"id": 98, "composer": "Johann Georg Leopold Mozart", "title_en": "Trumpet Concerto in D major", "description": "바로크에서 고전주의로 넘어가는 과도기적 스타일을 보여주는 트럼펫 협주곡. 2악장의 느린 선율이 유명하다."}
+{"id": 99, "composer": "Johann Georg Leopold Mozart", "title_en": "Concerto for Alto Trombone in D major", "description": "당시 흔치 않았던 알토 트롬본을 독주 악기로 내세운 협주곡이다. 오늘날 트롬본 연주자들에게 중요한 레퍼토리이다."}
+{"id": 100, "composer": "Luigi Boccherini", "title_en": "\"Minuet\" from String Quintet in E major", "description": "보케리니의 모든 작품 중 가장 유명한 곡. 우아하고 서정적인 선율로 인해 영화나 광고에서 널리 사용되었다."}
+{"id": 101, "composer": "Luigi Boccherini", "title_en": "Cello Concerto No. 9 in B♭ major", "description": "보케리니의 첼로 협주곡 중 가장 유명한 작품. (단, 오늘날 연주되는 것은 19세기 첼리스트 그뤼츠마허가 편곡한 버전인 경우가 많다.)"}
+{"id": 102, "composer": "Luigi Boccherini", "title_en": "Guitar Quintet No. 4 in D major \"Fandango\"", "description": "스페인 궁정에서 활동했던 보케리니가 스페인의 춤곡 '판당고' 리듬을 사용하여 작곡한 활기 넘치는 실내악곡이다."}
+{"id": 103, "composer": "Carl Philipp Emanuel Bach", "title_en": "Solfeggietto in C minor", "description": "C.P.E. 바흐의 가장 유명한 피아노(클라비어) 소품. 양손이 빠르게 교차하며 아르페지오를 연주하는 기교적인 연습곡이다."}
+{"id": 104, "composer": "Carl Philipp Emanuel Bach", "title_en": "Cello Concerto in A minor", "description": "'감정과다 양식'의 특징인 격렬한 감정의 대비가 잘 드러나는 협주곡. 바로크의 리듬감과 고전주의의 드라마가 공존한다."}
+{"id": 105, "composer": "Carl Philipp Emanuel Bach", "title_en": "Flute Concerto in D minor", "description": "그의 아버지 J.S. 바흐의 영향이 느껴지면서도, 질풍노도와 같은 격렬함이 돋보이는 C.P.E. 바흐의 대표적인 플루트 협주곡이다."}
+{"id": 106, "composer": "Carl Philipp Emanuel Bach", "title_en": "Magnificat in D major", "description": "J.S. 바흐의 장엄한 종교 음악을 계승하면서도, 고전주의적인 명료함과 극적인 표현을 더한 그의 대표적인 성악곡이다."}
+{"id": 107, "composer": "Johann Christian Bach", "title_en": "Sinfonia in B♭ major \"Lucio Silla\"", "description": "'런던의 바흐'다운 우아하고 경쾌한 갈랑 양식의 교향곡. 모차르트의 오페라 <루치오 실라>의 서곡으로도 알려져 있다."}
+{"id": 108, "composer": "Johann Christian Bach", "title_en": "Sinfonia Concertante in C major", "description": "두 대의 바이올린과 첼로가 오케스트라와 어우러지는 협주 교향곡. 어린 모차르트가 이 장르에 영향을 받았다."}
+{"id": 109, "composer": "Johann Christian Bach", "title_en": "Viola Concerto in C minor (spurious, by Casadesus)", "description": "J.C. 바흐의 작품으로 알려져 널리 연주되었으나, 실제로는 20세기 프랑스 첼리스트 앙리 카자드쉬의 위작(僞作)으로 밝혀졌다. 그럼에도 불구, 여전히 인기 있는 비올라 레퍼토리이다."}
+{"id": 110, "composer": "Johann Wenzel Anton Stamitz", "title_en": "Clarinet Concerto in B♭ major", "description": "클라리넷을 위한 최초의 위대한 협주곡 중 하나. 클라리넷의 기교와 서정성을 훌륭하게 보여주며, 만하임 악파의 스타일이 잘 드러난다."}
+{"id": 111, "composer": "Johann Wenzel Anton Stamitz", "title_en": "Symphony in D major", "description": "슈타미츠와 만하임 악파의 특징인 '만하임 크레센도'(점점 커지는 소리)와 '만하임 로켓'(상승하는 아르페지오)이 잘 나타나는 초기 교향곡의 걸작이다."}
+{"id": 112, "composer": "Johann Wenzel Anton Stamitz", "title_en": "Trumpet Concerto in D major", "description": "하이든 이전에 작곡된 트럼펫 협주곡. 바로크의 영향이 남아있지만, 고전주의적인 활기찬 에너지가 돋보이는 작품이다."}
+{"id": 113, "composer": "Muzio Clementi", "title_en": "Sonatinas", "description": "전 세계 피아노 학습자들이 체르니 이전에 반드시 거쳐 가는 교재. 고전주의 형식미와 피아노의 기초 테크닉을 익히는 데 가장 널리 쓰이는 곡이다."}
+{"id": 114, "composer": "Muzio Clementi", "title_en": "Gradus ad Parnassum", "description": "'파르나수스(음악의 천국)로 가는 계단'이라는 뜻의 100개의 연습곡집. 근대 피아노 테크닉의 교과서로, 드뷔시가 이 곡을 패러디하기도 했다."}
+{"id": 115, "composer": "Muzio Clementi", "title_en": "Piano Sonata in G minor \"Didone abbandonata\"", "description": "클레멘티의 가장 극적이고 낭만적인 소나타. 베르길리우스의 서사시 속, 버림받은 디도의 비극을 묘사한 표제음악적 작품이다."}
+{"id": 116, "composer": "Franz Peter Schubert", "title_en": "Song Cycle <Winterreise>", "description": "슈베르트가 죽기 직전에 작곡한 24곡의 연가곡집. 사랑에 실패하고 눈보라 속을 방황하는 청년의 절망을 그린, 독일 가곡의 최고봉이다."}
+{"id": 117, "composer": "Franz Peter Schubert", "title_en": "Erlkönig", "description": "슈베르트가 18세에 작곡한 천재적인 가곡. 괴테의 시를 바탕으로, 해설자, 아버지, 아들, 마왕 4명의 목소리를 한 명의 가수가 연기하며, 피아노는 말발굽 소리를 묘사한다."}
+{"id": 118, "composer": "Franz Peter Schubert", "title_en": "Piano Quintet in A major \"Trout\"", "description": "자신의 가곡 <송어>(Die Forelle)의 선율을 4악장 변주곡의 주제로 사용한 실내악곡. 피아노와 현악 4중주의 편성이 독특하고(더블베이스 포함), 밝고 유쾌한 분위기가 특징이다."}
+{"id": 119, "composer": "Franz Peter Schubert", "title_en": "Symphony No. 8 in B minor \"Unfinished\"", "description": "슈베르트의 교향곡 중 가장 유명한 작품. 2악장까지만 완성되었음에도 불구하고 그 자체로 완벽한 걸작으로 평가받는다. 낭만주의 교향곡의 시작을 알린 작품이다."}
+{"id": 120, "composer": "Franz Peter Schubert", "title_en": "String Quartet No. 14 in D minor \"Death and the Maiden\"", "description": "자신의 가곡 <죽음과 소녀>의 선율을 2악장 변주곡의 주제로 사용했다. 슈베르트의 실내악 중 가장 극적이고 강렬한 비극미를 보여주는 걸작이다."}
+{"id": 121, "composer": "Franz Peter Schubert", "title_en": "Impromptus", "description": "슈베르트의 피아노 소품 중 가장 유명한 곡집. 4개의 곡으로 이루어져 있으며, 특히 3번 G♭장조의 서정적인 선율이 유명하다."}
+{"id": 122, "composer": "Felix Mendelssohn", "title_en": "Violin Concerto in E minor", "description": "베토벤, 브람스의 협주곡과 함께 낭만주의 3대 바이올린 협주곡으로 꼽힌다. 1악장 시작과 동시에 독주 바이올린이 주제를 연주하는 혁신적인 구성을 가졌다."}
+{"id": 123, "composer": "Felix Mendelssohn", "title_en": "A Midsummer Night's Dream", "description": "셰익스피어의 희극을 위한 음악. 17세에 작곡한 서곡(Op. 21)과 훗날 추가한 부수음악(Op. 61)으로 구성된다. 특히 '결혼 행진곡(Wedding March)'이 전 세계적으로 유명하다."}
+{"id": 124, "composer": "Felix Mendelssohn", "title_en": "Symphony No. 4 in A major \"Italian\"", "description": "멘델스존이 이탈리아를 여행하며 받은 영감으로 작곡한 교향곡. 눈부신 햇살과 푸른 하늘을 연상시키는 1악장과, 격렬한 4악장 '살타렐로'(이탈리아 춤곡)가 유명하다."}
+{"id": 125, "composer": "Felix Mendelssohn", "title_en": "Songs Without Words (Lieder ohne Worte)", "description": "'가사 없는 노래'라는 뜻의 피아노 소품집. 총 8권(Opp. 19b, 30, 38, 53, 62, 67, 85, 102)으로 구성되어 있으며, '봄의 노래', '베네치아의 뱃노래' 등이 유명하다."}
+{"id": 126, "composer": "Felix Mendelssohn", "title_en": "The Hebrides Overture \"Fingal's Cave\"", "description": "스코틀랜드 헤브리디스 제도를 여행하며, 파도가 몰아치는 핑갈의 동굴에서 영감을 받아 작곡한 연주회용 서곡. 풍경 묘사가 뛰어난 표제 음악의 걸작이다."}
+{"id": 127, "composer": "Frédéric François Chopin", "title_en": "Étude \"Revolutionary\"", "description": "쇼팽이 조국 폴란드가 러시아에 점령당했다는 소식을 듣고 격분하여 작곡했다는 일화로 유명하다. 왼손의 격렬한 아르페지오가 특징이다."}
+{"id": 128, "composer": "Frédéric François Chopin", "title_en": "Fantaisie-Impromptu", "description": "쇼팽의 피아노곡 중 가장 대중적인 인기를 누리는 곡 중 하나. 격렬한 도입부/종결부와 감미로운 서정성이 돋보이는 중간 부분이 극적인 대비를 이룬다."}
+{"id": 129, "composer": "Frédéric François Chopin", "title_en": "Ballade No. 1 in G minor", "description": "쇼팽이 '발라드'라는 장르를 피아노 독주곡으로 승화시킨 첫 번째 작품. 서사적이고 극적인 전개로 쇼팽의 작품 중 최고 걸작 중 하나로 꼽힌다."}
+{"id": 130, "composer": "Frédéric François Chopin", "title_en": "Polonaise No. 6 in A♭ major \"Heroic\"", "description": "폴란드의 민속 춤곡인 폴로네즈를 장엄하고 영웅적인 교향악적 규모로 확장시킨 작품. 쇼팽의 애국심과 기상을 보여준다."}
+{"id": 131, "composer": "Frédéric François Chopin", "title_en": "Nocturne in E♭ major", "description": "쇼팽의 녹턴(야상곡) 중 가장 유명한 곡. 감미롭고 서정적인 멜로디가 특징이며, 수많은 영화와 드라마에 삽입되었다."}
+{"id": 132, "composer": "Frédéric François Chopin", "title_en": "Piano Concerto No. 1 in E minor", "description": "쇼팽이 조국 폴란드를 떠나기 직전에 작곡한 곡. 오케스트라는 다소 빈약하다는 평을 받지만, 피아노 파트의 시적인 아름다움과 화려함은 압도적이다."}
+{"id": 133, "composer": "Frédéric François Chopin", "title_en": "Waltz in D♭ major \"Minute Waltz\"", "description": "쇼팽이 자신의 꼬리를 무는 강아지를 보고 작곡했다는 일화가 전해진다. 'Minute(미닛, 1분)' 왈츠로도 불리나, 1분 안에 연주하기는 매우 어렵다."}
+{"id": 134, "composer": "Robert Schumann", "title_en": "Song Cycle <Dichterliebe>", "description": "슈만이 클라라와 결혼한 '가곡의 해(1840)'에 작곡한 대표적인 연가곡집. 하이네의 시를 바탕으로, 사랑의 기쁨과 고뇌, 실연의 아픔을 그렸다."}
+{"id": 135, "composer": "Robert Schumann", "title_en": "Kinderszenen", "description": "어린 시절을 회상하며 쓴 13개의 피아노 소품 모음곡. 어른을 위한 작품이다. 이 중 7번 '트로이메라이(Träumerei, 꿈)'가 매우 유명하다."}
+{"id": 136, "composer": "Robert Schumann", "title_en": "Piano Concerto in A minor", "description": "낭만주의 피아노 협주곡의 걸작. 오케스트라와 피아노가 교향악처럼 긴밀하게 융합되며, 슈만의 열정적인 면모와 서정성이 조화를 이룬다."}
+{"id": 137, "composer": "Robert Schumann", "title_en": "Symphony No. 3 in E♭ major \"Rhenish\"", "description": "슈만이 라인강의 풍경과 쾰른 대성당의 장엄함에서 영감을 받아 작곡한 교향곡. 5악장 구성이 독특하며, 낭만주의적 활기로 가득 차 있다."}
+{"id": 138, "composer": "Robert Schumann", "title_en": "Carnaval", "description": "가면무도회(카니발)에 등장하는 인물들(피에로, 할리퀸)과 자신의 내면(플로레스탄, 오이제비우스), 쇼팽, 파가니니 등을 음악으로 묘사한 21개의 캐릭터 피스 모음곡이다."}
+{"id": 139, "composer": "Franz Liszt", "title_en": "Liebestraum No. 3 in A♭ major", "description": "리스트의 피아노 소품 중 쇼팽의 녹턴과 함께 가장 사랑받는 곡. 본래 가곡으로 작곡했던 것을 피아노 독주곡으로 편곡한 것으로, 감미로운 멜로디가 특징이다."}
+{"id": 140, "composer": "Franz Liszt", "title_en": "Grandes études de Paganini \"La Campanella\"", "description": "파가니니의 바이올린 협주곡 2번 3악장 '종(La Campanella)'의 주제를 바탕으로 작곡한 피아노 연습곡. 종소리를 모방한 화려한 고음부 기교가 특징이다."}
+{"id": 141, "composer": "Franz Liszt", "title_en": "Hungarian Rhapsody No. 2 in C# minor", "description": "리스트의 19개의 헝가리 광시곡 중 가장 유명한 곡. 집시(롬족) 음악의 즉흥적인 도입부(라산)와 격렬하게 빨라지는 후반부(프리스카)의 대비가 인상적이다."}
+{"id": 142, "composer": "Franz Liszt", "title_en": "Symphonic Poem <Les Préludes>", "description": "리스트가 창시한 '교향시' 장르의 대표작. '인생은 죽음을 향한 전주곡'이라는 라마르틴의 시를 바탕으로, 삶의 여러 단면(사랑, 투쟁, 승리 등)을 묘사했다."}
+{"id": 143, "composer": "Franz Liszt", "title_en": "Transcendental Étude No. 4 in D minor \"Mazeppa\"", "description": "리스트의 초인적인 기교를 보여주는 12개의 연습곡 중 하나. 말에 묶여 황야를 달리는 영웅 마제파의 모습을 묘사한 격렬하고 영웅적인 곡이다."}
+{"id": 144, "composer": "Richard Wagner", "title_en": "\"Ride of the Valkyries\" (from Opera <Die Walküre>)", "description": "4부작 오페라 <니벨룽의 반지>의 두 번째 작품 <발퀴레> 3막의 도입부. 영화 <지옥의 묵시록>에 사용되어 압도적인 인지도를 얻었다."}
+{"id": 145, "composer": "Richard Wagner", "title_en": "Opera <Tristan und Isolde>", "description": "서양 음악사의 흐름을 바꾼 혁명적인 오페라. '트리스탄 화음'이라 불리는 모호한 화성을 통해, 해소되지 않는 사랑의 갈망을 표현하며 조성 붕괴의 시작을 알렸다."}
+{"id": 146, "composer": "Richard Wagner", "title_en": "\"Bridal Chorus\" (from Opera <Lohengrin>)", "description": "3막에 나오는 '결혼 행진곡'으로, 멘델스존의 결혼 행진곡과 함께 오늘날 전 세계 결혼식장에서 가장 많이 사용되는 곡이다."}
+{"id": 147, "composer": "Richard Wagner", "title_en": "Opera <Tannhäuser> Overture", "description": "바그너의 초기 낭만주의 오페라의 걸작. '순례자의 합창'으로 대표되는 경건한 주제와 '베누스베르크'의 관능적인 주제가 대비를 이루는 화려한 서곡이다."}
+{"id": 148, "composer": "Giuseppe Verdi", "title_en": "Opera <La traviata>", "description": "베르디의 가장 유명하고 사랑받는 오페라. 파리 사교계의 여성 비올레타와 순진한 청년 알프레도의 비극적인 사랑을 그린다. '축배의 노래' 등이 유명하다."}
+{"id": 149, "composer": "Giuseppe Verdi", "title_en": "Opera <Rigoletto>", "description": "베르디 중기 3대 걸작의 하나. 꼽추 광대 리골레토의 비극을 그렸다. 아리아 '여자의 마음(La donna è mobile)'이 전 세계적으로 유명하다."}
+{"id": 150, "composer": "Giuseppe Verdi", "title_en": "Opera <Aida>", "description": "수에즈 운하 개통을 기념하여 작곡된 스펙터클 오페라. 고대 이집트를 배경으로, 적국 에티오피아의 공주 아이다와 이집트 장군 라다메스의 비극적 사랑을 그렸다. '개선 행진곡'이 유명하다."}
+{"id": 151, "composer": "Giuseppe Verdi", "title_en": "\"Chorus of the Hebrew Slaves\" (Va, pensiero) from <Nabucco>", "description": "바빌론에 포로로 잡혀온 히브리 노예들이 고향을 그리워하며 부르는 합창곡. 당시 오스트리아의 지배를 받던 이탈리아인들에게 '제2의 국가'처럼 불리며 베르디를 국민 영웅으로 만들었다."}
+{"id": 152, "composer": "Giuseppe Verdi", "title_en": "Messa da Requiem", "description": "베르디가 존경했던 문호 만초니를 추모하기 위해 작곡한 진혼 미사곡. 종교 음악임에도 불구하고 '오페라적인' 격렬한 드라마와 감정 표현이 특징이며, 특히 '진노의 날(Dies Irae)' 부분이 압도적이다."}
+{"id": 153, "composer": "Johannes Brahms", "title_en": "Symphony No. 1 in C minor", "description": "브람스가 20년 이상 공들여 완성한 첫 교향곡. 베토벤의 9번 교향곡과 유사한 C단조에서 C장조로의 '투쟁과 승리' 구도를 계승하여 '베토벤의 10번 교향곡'이라는 찬사를 받았다."}
+{"id": 154, "composer": "Johannes Brahms", "title_en": "Symphony No. 3 in F major", "description": "브람스의 교향곡 중 가장 서정적이고 낭만적인 작품. 3악장 '포코 알레그레토'의 애수 어린 멜로디가 매우 유명하며, 영화, 드라마에 자주 사용된다."}
+{"id": 155, "composer": "Johannes Brahms", "title_en": "Hungarian Dance No. 5 in G minor", "description": "브람스의 21개의 헝가리 무곡(본래 피아노 연탄곡) 중 가장 유명한 곡. 집시 풍의 격렬한 리듬과 애수 어린 멜로디가 특징이다."}
+{"id": 156, "composer": "Johannes Brahms", "title_en": "Violin Concerto in D major", "description": "베토벤의 협주곡과 함께 낭만주의 바이올린 협주곡의 양대 산맥으로 꼽힌다. 교향악적이고 장대한 규모와 남성적인 스케일이 특징이다."}
+{"id": 157, "composer": "Johannes Brahms", "title_en": "A German Requiem", "description": "전통적인 라틴어 레퀴엠(죽은 자를 위한 미사)이 아닌, 브람스가 직접 루터 성서에서 발췌한 독일어 가사로 작곡한 '살아있는 자들을 위로하기 위한' 레퀴엠이다."}
+{"id": 158, "composer": "Pyotr Ilyich Tchaikovsky", "title_en": "Symphony No. 6 in B minor \"Pathétique\"", "description": "차이콥스키의 마지막 교향곡이자 최고 걸작. 전통적인 '환희의' 종결이 아닌, 극도로 절망적이고 비통한 아다지오(느린 악장)로 끝나는 파격적인 구성이 특징이다."}
+{"id": 159, "composer": "Pyotr Ilyich Tchaikovsky", "title_en": "Piano Concerto No. 1 in B♭ minor", "description": "낭만주의 피아노 협주곡 중 가장 유명한 곡. 장엄하고 화려한 도입부의 멜로디는 누구나 한 번쯤 들어봤을 정도로 압도적인 인지도를 자랑한다."}
+{"id": 160, "composer": "Pyotr Ilyich Tchaikovsky", "title_en": "Violin Concerto in D major", "description": "베토벤, 멘델스존, 브람스의 협주곡과 함께 낭만주의 4대 바이올린 협주곡으로 꼽힌다. 러시아 특유의 애수 어린 멜로디와 화려한 기교가 특징이다."}
+{"id": 161, "composer": "Pyotr Ilyich Tchaikovsky", "title_en": "Ballet <The Nutcracker>", "description": "차이콥스키의 3대 발레 중 하나로, 크리스마스를 배경으로 한 동화적인 작품이다. '꽃의 왈츠', '사탕 요정의 춤' 등 모음곡(Suite)이 특히 유명하다."}
+{"id": 162, "composer": "Pyotr Ilyich Tchaikovsky", "title_en": "Ballet <Swan Lake>", "description": "차이콥스키의 3대 발레 중 첫 작품이자, 고전 발레의 대명사. 저주에 걸려 백조가 된 공주 오데트의 이야기를 그린다. '정경(Scene)'의 주제 선율이 유명하다."}
+{"id": 163, "composer": "Pyotr Ilyich Tchaikovsky", "title_en": "1812 Overture", "description": "나폴레옹의 러시아 원정 실패를 기념하기 위해 작곡된 표제 음악. 실제 대포(Cannon) 소리와 종소리가 사용되는 웅장한 피날레로 유명하다."}
+{"id": 164, "composer": "Niccolò Paganini", "title_en": "24 Caprices for Solo Violin", "description": "바이올린 독주를 위한 연습곡집으로, '바이올린의 신약성서'라 불린다. 바이올린이 표현할 수 있는 모든 기교가 집약되어 있다. 마지막 24번 A단조가 가장 유명하다."}
+{"id": 165, "composer": "Niccolò Paganini", "title_en": "Violin Concerto No. 2 in B minor \"La Campanella\"", "description": "3악장 론도 '라 캄파넬라(종)'가 특히 유명하다. 종소리를 모방하는 바이올린의 화려한 플래절렛(하모닉스) 기교가 특징이며, 리스트가 피아노곡으로 편곡했다."}
+{"id": 166, "composer": "Niccolò Paganini", "title_en": "Violin Concerto No. 1 in D major", "description": "파가니니의 협주곡 중 가장 널리 연주되는 곡. 바이올린의 화려한 기교와 이탈리아 오페라풍의 아리아 선율이 결합되어 있다."}
+{"id": 167, "composer": "Gioachino Antonio Rossini", "title_en": "Opera <The Barber of Seville>", "description": "로시니의 최고 걸작 희극 오페라(오페라 부파). 재치 넘치는 이발사 피가로의 활약을 그린다. '나는 이 거리의 만능 재주꾼(Largo al factotum)' 아리아가 유명하다."}
+{"id": 168, "composer": "Gioachino Antonio Rossini", "title_en": "William Tell Overture", "description": "로시니의 마지막 오페라 <윌리엄 텔>의 서곡. 4개의 부분으로 나뉘며, 특히 마지막 '스위스 군대의 행진'(경쾌한 말발굽 소리) 부분이 매우 유명하다."}
+{"id": 169, "composer": "Gioachino Antonio Rossini", "title_en": "La gazza ladra Overture", "description": "작은 북(스네어 드럼)의 독특한 리듬으로 시작하는 로시니의 유명한 오페라 서곡 중 하나이다."}
+{"id": 170, "composer": "Hector Berlioz", "title_en": "Symphonie fantastique", "description": "베를리오즈의 출세작이자 표제 음악의 걸작. 실연당한 예술가가 아편에 취해 꾸는 5개의 환상을 묘사했다. 사랑하는 여인을 상징하는 '고정 악상(Idée fixe)'이 전 악장에 등장한다."}
+{"id": 171, "composer": "Hector Berlioz", "title_en": "\"Hungarian March\" (Rákóczi March) from <La damnation de Faust>", "description": "괴테의 <파우스트>를 바탕으로 한 오페라적 전설(극적 칸타타). 그 중 '헝가리 행진곡(라코치 행진곡)'이 화려한 관현악법으로 유명해져 단독으로 자주 연주된다."}
+{"id": 172, "composer": "Hector Berlioz", "title_en": "Roman Carnival Overture", "description": "자신의 오페라 <벤베누토 첼리니>의 선율을 바탕으로 작곡한 화려한 연주회용 서곡. 로마의 사육제(카니발)의 열광적인 분위기를 묘사했다."}
+{"id": 173, "composer": "Mikhail Ivanovich Glinka", "title_en": "Opera <Ruslan and Lyudmila> Overture", "description": "글린카의 두 번째 오페라의 서곡. 러시아 음악 특유의 질주하는 듯한 리듬과 활기찬 에너지로 가득 차 있으며, 오케스트라의 단골 레퍼토리이다."}
+{"id": 174, "composer": "Mikhail Ivanovich Glinka", "title_en": "Opera <A Life for the Tsar>", "description": "러시아 최초의 국민 오페라. 러시아 농부 이반 수사닌이 폴란드 군대로부터 황제를 구하기 위해 자신을 희생한다는 애국적인 내용을 담고 있다."}
+{"id": 175, "composer": "Mikhail Ivanovich Glinka", "title_en": "The Lark (L'Alouette)", "description": "글린카의 가곡 중 가장 유명한 곡. 종달새의 지저귐을 묘사한 아름다운 선율로, 발라키레프가 피아노 독주곡으로 편곡하여 더욱 유명해졌다."}
+{"id": 176, "composer": "Clara Schumann", "title_en": "Piano Trio in G minor", "description": "클라라 슈만의 실내악 작품 중 최고 걸작으로 꼽힌다. 남편 로베르트 슈만의 영향이 보이면서도 그녀 고유의 서정성과 탄탄한 구성미가 돋보인다."}
+{"id": 177, "composer": "Clara Schumann", "title_en": "Piano Concerto in A minor", "description": "16세의 나이에 완성한 야심 찬 작품. 쇼팽과 동시대 낭만주의 비르투오소의 면모와 깊은 서정성을 동시에 보여준다."}
+{"id": 178, "composer": "Clara Schumann", "title_en": "Three Romances for Violin and Piano", "description": "그녀의 후기 작품으로, 절친한 친구였던 바이올리니스트 요아힘을 위해 작곡했다. 깊고 내밀한 낭만적 감수성이 돋보인다."}
+{"id": 179, "composer": "César Franck", "title_en": "Violin Sonata in A major", "description": "프랑크의 가장 유명하고 사랑받는 실내악곡. 바이올리니스트 외젠 이자이의 결혼 선물로 작곡되었다. 4개의 악장이 하나의 주제(순환 형식)로 유기적으로 연결되어 있다."}
+{"id": 180, "composer": "César Franck", "title_en": "Symphony in D minor", "description": "19세기 후반 프랑스를 대표하는 교향곡. 바그너의 반음계적 화성과 오르간적인 웅장함, 그리고 '순환 형식'이 특징인 걸작이다."}
+{"id": 181, "composer": "César Franck", "title_en": "Panis angelicus (Messe à trois voix)", "description": "본래 3성부 미사(Op. 12)에 포함된 곡이었으나, '생명의 양식'이라는 제목의 독창곡으로 편곡되어 널리 알려졌다. 경건하고 아름다운 선율이 특징이다."}
+{"id": 182, "composer": "Anton Bruckner", "title_en": "Symphony No. 4 in E♭ major \"Romantic\"", "description": "브루크너의 교향곡 중 가장 인기가 많은 작품. 중세의 숲, 성, 기사의 모습을 그린 표제음악적 성격을 띠고 있으며, 1악장의 호른 독주가 유명하다."}
+{"id": 183, "composer": "Anton Bruckner", "title_en": "Symphony No. 7 in E major", "description": "브루크너에게 처음으로 큰 성공을 안겨준 교향곡. 2악장 아다지오는 그가 존경했던 바그너의 죽음을 추모하며 쓴 장엄하고 비통한 음악이다."}
+{"id": 184, "composer": "Anton Bruckner", "title_en": "Motet <Locus iste>", "description": "브루크너의 아카펠라(무반주 합창) 모테트 중 가장 유명한 곡. 린츠 대성당 헌당식을 위해 작곡되었으며, 신비롭고 경건한 화성이 돋보인다."}
+{"id": 185, "composer": "Johann Strauss II", "title_en": "Waltz <The Blue Danube>", "description": "오스트리아 빈을 상징하는 '제2의 국가'와도 같은 왈츠. 빈 신년 음악회의 단골 앙코르 곡이며, 전 세계적으로 가장 유명한 왈츠이다."}
+{"id": 186, "composer": "Johann Strauss II", "title_en": "Operetta <Die Fledermaus> Overture", "description": "'왈츠의 왕' 슈트라우스의 가장 성공한 오페레타(희극 오페라) <박쥐>의 서곡. 오페레타에 등장하는 유쾌하고 활기찬 선율들이 집약되어 있다."}
+{"id": 187, "composer": "Johann Strauss II", "title_en": "Polka <Thunder and Lightning>", "description": "천둥(팀파니)과 번개(심벌즈)를 묘사한 빠르고 격렬한 폴카. 빈 신년 음악회의 단골 레퍼토리이다."}
+{"id": 188, "composer": "Johann Strauss II", "title_en": "Waltz <Tales from the Vienna Woods>", "description": "아름답고 푸른 도나우와 함께 빈 왈츠의 정수로 꼽히는 작품. 빈 숲의 정경과 민속악기 치터(Zither)의 독주가 인상적이다."}
+{"id": 189, "composer": "Modest Mussorgsky", "title_en": "Pictures at an Exhibition", "description": "요절한 친구 화가 하르트만의 유작 전시회를 보고, 10개의 그림을 음악으로 묘사한 피아노 모음곡. '프롬나드(Promenade)'라는 주제가 그림 사이를 연결한다."}
+{"id": 190, "composer": "Modest Mussorgsky", "title_en": "Pictures at an Exhibition (Orch. by Ravel)", "description": "무소르크스키의 원곡 피아노 모음곡을 '관현악의 마술사' 라벨이 천재적인 감각으로 편곡한 버전. 오늘날에는 원곡보다 더 자주 연주되며, 특히 마지막 '키예프의 대문'이 압도적이다."}
+{"id": 191, "composer": "Modest Mussorgsky", "title_en": "Symphonic Poem <Night on Bald Mountain>", "description": "성 요한 축일 전야에 민둥산에 마녀와 악마들이 모여 광란의 축제를 벌이는 모습을 묘사한 곡. 림스키코르사코프의 편곡 버전이 유명하다."}
+{"id": 192, "composer": "Modest Mussorgsky", "title_en": "Opera <Boris Godunov>", "description": "러시아 국민 오페라의 최고 걸작. 황제를 살해하고 왕위에 오른 보리스 고두노프의 죄의식과 몰락, 그리고 러시아 민중의 고통을 사실적으로 그렸다."}
+{"id": 193, "composer": "Georges Bizet", "title_en": "Opera <Carmen>", "description": "서양 오페라 역사상 가장 인기 있는 작품 중 하나. 집시 여인 카르멘의 자유분방한 사랑과 비극적 죽음을 그린다. '하바네라', '투우사의 노래' 등 모든 아리아가 유명하다."}
+{"id": 194, "composer": "Georges Bizet", "title_en": "L'Arlésienne Suites No. 1 & 2", "description": "알퐁스 도데의 희곡 <아를의 여인>을 위해 작곡한 부수 음악. 연극은 실패했으나 음악이 큰 인기를 얻어 2개의 관현악 모음곡으로 편곡되었다. '파랑돌', '미뉴에트' 등이 유명하다."}
+{"id": 195, "composer": "Georges Bizet", "title_en": "Au fond du temple saint (from <Les pêcheurs de perles>)", "description": "비제의 초기 오페라 <진주조개잡이>(WD 13)에 나오는 테너와 바리톤의 2중창. 한 여자를 사랑한 두 남자의 우정을 노래하는 아름다운 선율로 유명하다."}
+{"id": 196, "composer": "Georges Bizet", "title_en": "Symphony in C major", "description": "비제가 17세 학생 시절에 작곡한 교향곡. 하이든과 모차르트의 영향을 받은 고전주의 스타일의 작품으로, 밝고 재치 넘치는 에너지가 특징이다."}
+{"id": 197, "composer": "Antonín Dvořák", "title_en": "Symphony No. 9 in E minor \"From the New World\"", "description": "드보르자크가 미국 뉴욕에서 작곡한 그의 최고 걸작. 흑인 영가와 아메리카 원주민 음악에서 영감을 받았으며, 2악장의 라르고(Goin' Home) 선율이 유명하다."}
+{"id": 198, "composer": "Antonín Dvořák", "title_en": "Cello Concerto in B minor", "description": "낭만주의 시대 첼로 협주곡 중 최고 걸작으로 꼽히는 작품. 첼로의 기교와 깊은 서정성, 교향악적인 웅장함이 결합되어 있다."}
+{"id": 199, "composer": "Antonín Dvořák", "title_en": "Slavonic Dances (Op. 46 & Op. 72)", "description": "드보르자크에게 국제적인 명성을 안겨준 작품. 체코 보헤미아의 민속 춤곡을 바탕으로 한 활기차고 다채로운 관현악곡 모음이다."}
+{"id": 200, "composer": "Antonín Dvořák", "title_en": "String Quartet No. 12 in F major \"American\"", "description": "미국에서 <신세계 교향곡>과 함께 작곡된 실내악곡. 흑인 영가풍의 5음계 선율과 이국적인 리듬이 특징이다."}
+{"id": 201, "composer": "Antonín Dvořák", "title_en": "Humoresque No. 7 in G♭ major", "description": "8개의 유모레스크 모음(Op. 101) 중 7번째 곡으로, 드보르자크의 모든 소품 중 가장 유명하고 대중적으로 사랑받는 멜로디이다."}
+{"id": 202, "composer": "Nikolai Rimsky-Korsakov", "title_en": "Symphonic Suite <Scheherazade>", "description": "<천일야화>를 바탕으로 술탄에게 이야기를 들려주는 셰헤라자데(솔로 바이올린)의 모습을 그린 교향악 모음곡. 화려한 관현악법의 극치를 보여준다."}
+{"id": 203, "composer": "Nikolai Rimsky-Korsakov", "title_en": "Flight of the Bumblebee (from <The Tale of Tsar Saltan>)", "description": "오페라 3막에 나오는 간주곡. 왕자가 왕벌로 변신해 날아가는 모습을 묘사한, 숨 쉴 틈 없이 빠른 패시지로 유명한 곡이다."}
+{"id": 204, "composer": "Nikolai Rimsky-Korsakov", "title_en": "Capriccio Espagnol", "description": "스페인 민속 선율과 리듬을 바탕으로 작곡한 5악장의 관현악곡. 현란한 오케스트레이션과 독주 악기들의 화려한 기교가 돋보인다."}
+{"id": 205, "composer": "Nikolai Rimsky-Korsakov", "title_en": "Russian Easter Festival Overture", "description": "러시아 정교회의 부활절 축제의 분위기와 성가를 바탕으로 작곡한 장엄하고 화려한 연주회용 서곡이다."}
+{"id": 206, "composer": "Gabriel Fauré", "title_en": "Requiem", "description": "전통적인 레퀴엠과 달리 '진노의 날(Dies Irae)'을 생략하고, 죽음을 평화로운 안식으로 그린 작품. 특히 4악장 '피에 예수(Pie Jesu)'가 유명하다."}
+{"id": 207, "composer": "Gabriel Fauré", "title_en": "Pavane", "description": "느리고 우아한 옛 스페인 궁정 춤곡인 파반느를 바탕으로 작곡한 관현악곡. 몽환적이고 감미로운 선율로 큰 사랑을 받고 있다."}
+{"id": 208, "composer": "Gabriel Fauré", "title_en": "Sicilienne", "description": "본래 <펠레아스와 멜리장드> 모음곡에 삽입된 곡으로, 시칠리아의 목가적인 춤곡풍 멜로디가 특징이다. 플루트나 첼로 독주로 자주 연주된다."}
+{"id": 209, "composer": "Gabriel Fauré", "title_en": "Après un rêve", "description": "포레의 수많은 가곡(멜로디) 중 가장 유명한 곡. 꿈에서 연인과 재회한 기쁨과, 꿈에서 깬 뒤의 슬픔을 노래한 서정적인 작품이다."}
+{"id": 210, "composer": "Giacomo Puccini", "title_en": "Opera <La Bohème>", "description": "푸치니의 가장 큰 성공작 중 하나. 파리 뒷골목 가난한 예술가들(미미와 로돌포)의 가슴 아픈 사랑 이야기를 그린다. '그대의 찬 손', '내 이름은 미미' 등이 유명하다."}
+{"id": 211, "composer": "Giacomo Puccini", "title_en": "\"Nessun Dorma\" (from Opera <Turandot>)", "description": "푸치니의 미완성 유작 <투란도트>에 나오는 아리아. 칼라프 왕자가 공주의 수수께끼를 풀고 부르는 승리의 노래로, '빈체로(Vincerò, 승리하리라)' 부분이 압권이다."}
+{"id": 212, "composer": "Giacomo Puccini", "title_en": "Opera <Tosca>", "description": "가수 토스카와 그녀의 연인 카바라도시, 그리고 이들을 파멸로 이끄는 경시총감 스카르피아의 비극을 그린 오페라. '별은 빛나건만', '노래에 살고 사랑에 살고'가 유명하다."}
+{"id": 213, "composer": "Giacomo Puccini", "title_en": "Opera <Madama Butterfly>", "description": "일본 나가사키를 배경으로, 미국 해군 장교 핑커톤에게 버림받은 게이샤 초초상의 비극적인 사랑을 그린다. '어떤 개인 날'이 유명하다."}
+{"id": 214, "composer": "Giacomo Puccini", "title_en": "\"O mio babbino caro\" (from Opera <Gianni Schicchi>)", "description": "푸치니의 유일한 희극 오페라 <잔니 스키키>에 나오는 아리아. 아버지를 설득해 사랑하는 사람과 결혼하게 해달라고 조르는 딸 라우레타의 노래이다."}
+{"id": 215, "composer": "Gustav Mahler", "title_en": "Symphony No. 2 in C minor \"Resurrection\"", "description": "말러의 교향곡 중 가장 인기가 높은 곡 중 하나. 거대한 규모와 '죽음과 부활'이라는 철학적 주제를 다루며, 5악장에서 합창이 등장한다."}
+{"id": 216, "composer": "Gustav Mahler", "title_en": "Symphony No. 5 in C# minor", "description": "장례 행진곡풍의 1악장으로 시작하여 환희의 피날레로 끝나는 교향곡. 특히 현악기와 하프만으로 연주되는 4악장 '아다지에토(Adagietto)'가 매우 유명하다."}
+{"id": 217, "composer": "Gustav Mahler", "title_en": "Symphony No. 1 in D major \"Titan\"", "description": "말러가 20대에 작곡한 첫 교향곡. 자연의 소리와 민요풍의 선율, 장례 행진곡 등이 혼합된 청년 말러의 야심작이다."}
+{"id": 218, "composer": "Gustav Mahler", "title_en": "Symphony No. 8 in E♭ major \"Symphony of a Thousand\"", "description": "연주에 1000명에 가까운 인원(대규모 오케스트라, 8명의 독창, 3개의 합창단)이 필요하여 '천인 교향곡'이라 불린다. 말러의 작품 중 가장 긍정적인 메시지를 담고 있다."}
+{"id": 219, "composer": "Gustav Mahler", "title_en": "Das Lied von der Erde", "description": "이태백(이백) 등의 중국 시를 바탕으로 한 6악장의 '가곡 교향곡'. 교향곡 9번에 대한 징크스로 '교향곡 9번'이라 부르지 않았다. 말러의 가장 염세적이고 심오한 걸작 중 하나이다."}
+{"id": 220, "composer": "Claude Debussy", "title_en": "Clair de lune (from Suite bergamasque)", "description": "<베르가마스크 모음곡> 4곡 중 3번째 곡. 드뷔시의 모든 피아노곡 중 가장 유명하며, '인상주의' 음악의 대명사처럼 쓰이는 몽환적이고 아름다운 곡이다."}
+{"id": 221, "composer": "Claude Debussy", "title_en": "Prélude à l'après-midi d'un faune", "description": "말라르메의 상징주의 시를 바탕으로, 나른한 오후 목신의 꿈을 그린 교향시. '인상주의 음악'의 시작을 알린 기념비적인 작품이다."}
+{"id": 222, "composer": "Claude Debussy", "title_en": "La mer, trois esquisses symphoniques", "description": "바다의 시시각각 변하는 풍경과 색채를 3악장('바다 위의 새벽에서 정오까지' 등)에 걸쳐 묘사한, 드뷔시 관현악곡의 최고 걸작이다."}
+{"id": 223, "composer": "Claude Debussy", "title_en": "Children's Corner", "description": "자신의 딸 엠마를 위해 작곡한 6개의 피아노 소품 모음곡. '골리워그의 케이크워크' 악장이 유명하며, 바그너의 '트리스탄 화음'을 장난스럽게 인용했다."}
+{"id": 224, "composer": "Claude Debussy", "title_en": "Arabesque No. 1", "description": "2개의 아라베스크(L. 66) 중 첫 번째 곡. 드뷔시 초기 스타일의 우아하고 서정적인 선율이 특징인 피아노 소품이다."}
+{"id": 225, "composer": "Sergei Rachmaninoff", "title_en": "Piano Concerto No. 2 in C minor", "description": "라흐마니노프의 최고 걸작이자 낭만주의 피아노 협주곡의 대명사. 깊은 우수와 폭발적인 열정, 감미로운 멜로디로 전 세계적인 사랑을 받고 있다."}
+{"id": 226, "composer": "Sergei Rachmaninoff", "title_en": "Piano Concerto No. 3 in D minor", "description": "피아니스트에게 극한의 기교와 지구력을 요구하는, 가장 어렵기로 소문난 협주곡 중 하나. 영화 <샤인>을 통해 대중적으로도 유명해졌다."}
+{"id": 227, "composer": "Sergei Rachmaninoff", "title_en": "Rhapsody on a Theme of Paganini", "description": "파가니니의 카프리스 24번 주제를 바탕으로 작곡한 피아노와 오케스트라를 위한 변주곡. 특히 18번 변주(주제를 뒤집은 멜로디)가 매우 유명하다."}
+{"id": 228, "composer": "Sergei Rachmaninoff", "title_en": "Vocalise", "description": "14개의 가곡집(Op. 34) 중 마지막 곡. 가사 없이 모음(아)으로만 부르는 슬프고 아름다운 선율로, 다양한 악기로 편곡되어 연주된다."}
+{"id": 229, "composer": "Sergei Rachmaninoff", "title_en": "Prelude in C# minor \"The Bells of Moscow\"", "description": "23세에 작곡하여 세계적인 명성을 안겨준 피아노 소품. 크렘린의 종소리를 연상시키는 장엄하고 어두운 화음이 특징이다."}
+{"id": 230, "composer": "Maurice Ravel", "title_en": "Boléro", "description": "단 하나의 리듬과 두 개의 멜로디가 악기 편성을 바꿔가며 15분간 반복되다가 장엄한 피날레로 끝나는, 라벨의 가장 유명한 실험적 관현악곡이다."}
+{"id": 231, "composer": "Maurice Ravel", "title_en": "Pavane pour une infante défunte", "description": "옛 스페인 궁정에서 어린 왕녀가 추었을 법한 춤곡을 상상하며 쓴 피아노곡(이후 관현악 편곡). 고풍스럽고 우아한 멜로디로 큰 사랑을 받고 있다."}
+{"id": 232, "composer": "Maurice Ravel", "title_en": "Jeux d'eau", "description": "물이 뿜어져 나오고 반짝이는 모습을 묘사한 피아노곡. 드뷔시보다 앞서 '물'을 소재로 인상주의 피아노 기법의 시작을 알린 혁신적인 작품이다."}
+{"id": 233, "composer": "Maurice Ravel", "title_en": "Piano Concerto in G major", "description": "라벨이 미국 여행에서 접한 재즈의 영향을 받아 작곡한 경쾌하고 재치 넘치는 협주곡. 2악장 아다지오의 아름다운 피아노 솔로가 유명하다."}
+{"id": 234, "composer": "Maurice Ravel", "title_en": "Ballet <Daphnis et Chloé> Suite No. 2", "description": "라벨의 가장 거대하고 화려한 발레 음악. 그 중 2번 모음곡('새벽', '판토마임', '전체 춤')은 그의 관현악법의 정수를 보여준다."}
+{"id": 235, "composer": "Carl Maria von Weber", "title_en": "Opera <Der Freischütz> Overture", "description": "독일 낭만 오페라의 시대를 연 <마탄의 사수>의 서곡. 숲의 신비로움, 악마의 음산함, 승리의 환희 등 오페라의 핵심 주제가 압축되어 있다."}
+{"id": 236, "composer": "Carl Maria von Weber", "title_en": "Invitation to the Dance", "description": "무도회에서 신사가 숙녀에게 춤을 권하고 함께 왈츠를 추는 장면을 묘사한 피아노곡. 낭만주의 '왈츠'의 시초가 된 작품이다."}
+{"id": 237, "composer": "Carl Maria von Weber", "title_en": "Clarinet Concerto No. 1 in F minor", "description": "클라리넷의 어두운 음색과 화려한 기교를 극대화한 협주곡. 모차르트 협주곡과 함께 클라리넷 연주자들의 중요 레퍼토리이다."}
+{"id": 238, "composer": "Johann Strauss I", "title_en": "Radetzky March", "description": "요한 슈트라우스 1세의 가장 유명한 작품. 빈 신년 음악회의 마지막을 장식하며, 관객들이 박자에 맞춰 박수를 치는 전통으로 유명하다."}
+{"id": 239, "composer": "Johann Strauss I", "title_en": "Loreley-Rhein-Klänge (Waltz)", "description": "아들(2세)의 <아름답고 푸른 도나우>와 함께, 아버지 슈트라우스의 왈츠 중 가장 서정적이고 아름다운 작품으로 꼽힌다."}
+{"id": 240, "composer": "Adolphe Adam", "title_en": "Ballet <Giselle>", "description": "낭만 발레(백색 발레)의 최고 걸작 중 하나. 순박한 시골 처녀 지젤이 귀족의 배신으로 죽어 유령(윌리)이 되는 비극을 그린다."}
+{"id": 241, "composer": "Adolphe Adam", "title_en": "Cantique de Noël (\"O Holy Night\")", "description": "전 세계에서 가장 널리 불리는 크리스마스 캐럴 중 하나. '오 홀리 나잇'이라는 제목으로 더 유명하다."}
+{"id": 242, "composer": "Charles Gounod", "title_en": "Ave Maria (Bach-Gounod)", "description": "구노가 바흐의 <평균율 클라비어곡집> 1권 1번 전주곡(C장조)의 화성 위에 라틴어 기도문 멜로디를 붙인 편곡 작품이다."}
+{"id": 243, "composer": "Charles Gounod", "title_en": "Opera <Faust>", "description": "구노의 대표작. 괴테의 <파우스트>를 원작으로, 악마 메피스토펠레스와 영혼을 건 계약을 한 파우스트의 이야기를 다룬다."}
+{"id": 244, "composer": "Charles Gounod", "title_en": "Opera <Roméo et Juliette>", "description": "셰익스피어의 동명 비극을 원작으로 한 5막 오페라. 4개의 사랑의 2중창과 '줄리엣의 왈츠' 아리아가 유명하다."}
+{"id": 245, "composer": "Jacques Offenbach", "title_en": "<Orpheus in the Underworld> Overture (Can-can)", "description": "오펜바흐의 가장 유명한 오페레타(희극 오페라). 그리스 신화를 풍자했으며, 서곡의 마지막에 나오는 '캉캉(Can-can)' 춤곡으로 불멸의 명성을 얻었다."}
+{"id": 246, "composer": "Jacques Offenbach", "title_en": "Barcarolle (from <The Tales of Hoffmann>)", "description": "오펜바흐의 유일한 그랜드 오페라이자 유작. 3막에 나오는 이중창 '뱃노래(Barcarolle)'는 환상적이고 아름다운 선율로 유명하다."}
+{"id": 247, "composer": "Bedřich Smetana", "title_en": "Má Vlast (\"Vltava\")", "description": "체코의 역사와 자연을 그린 6곡의 교향시 모음곡 <나의 조국> 중 2번째 곡. 체코의 젖줄인 몰다우(블타바)강의 흐름을 묘사한, 스메타나의 가장 유명한 곡이다."}
+{"id": 248, "composer": "Bedřich Smetana", "title_en": "Opera <The Bartered Bride> Overture", "description": "체코 국민 오페라의 대표작. 시골 남녀의 사랑 이야기를 유쾌한 춤곡과 함께 그렸다. 특히 서곡은 현악기들이 질주하는 듯한 빠른 패시지로 유명하다."}
+{"id": 249, "composer": "Alexander Borodin", "title_en": "Polovtsian Dances (from <Prince Igor>)", "description": "보로딘의 미완성 오페라 <이고르 공> 2막에 나오는 발레 음악. 이국적이고 격렬한 리듬과 매혹적인 선율로 단독으로 자주 연주된다."}
+{"id": 250, "composer": "Alexander Borodin", "title_en": "Symphonic Poem <In the Steppes of Central Asia>", "description": "광활한 중앙아시아의 초원을 배경으로, 러시아의 선율과 동양의 선율이 만나는 모습을 그린 이국적인 교향시이다."}
+{"id": 251, "composer": "Alexander Borodin", "title_en": "Symphony No. 2 in B minor", "description": "러시아의 영웅적인 서사시를 연상시키는 힘찬 에너지로 가득 찬, 보로딘의 대표적인 교향곡이다."}
+{"id": 252, "composer": "Camille Saint-Saëns", "title_en": "The Carnival of the Animals", "description": "14개의 악장으로 사자, 백조, 수족관, 캥거루 등 다양한 동물을 유쾌하게 묘사한 관현악 모음곡. '백조' 악장이 특히 유명하다."}
+{"id": 253, "composer": "Camille Saint-Saëns", "title_en": "Danse Macabre", "description": "해골들이 무덤에서 나와 바이올린(죽음의 신)의 연주에 맞춰 춤을 춘다는 전설을 묘사한 교향시. 실로폰으로 뼈 부딪히는 소리를 묘사했다."}
+{"id": 254, "composer": "Camille Saint-Saëns", "title_en": "Symphony No. 3 in C minor \"Organ\"", "description": "생상스의 마지막 교향곡. 오케스트라에 오르간과 피아노(2대)를 결합하여 장엄하고 화려한 음향을 만들어낸 걸작이다."}
+{"id": 255, "composer": "Camille Saint-Saëns", "title_en": "\"Mon cœur s'ouvre à ta voix\" (from <Samson et Dalila>)", "description": "성서의 이야기를 다룬 오페라 <삼손과 데릴라> 2막에서, 데릴라가 삼손을 유혹하며 부르는 매혹적이고 관능적인 아리아이다."}
+{"id": 256, "composer": "Camille Saint-Saëns", "title_en": "Cello Concerto No. 1 in A minor", "description": "단악장 형식으로, 3개의 부분이 중단 없이 연주되는 독특한 구성의 첼로 협주곡. 첼로의 기교와 서정성을 잘 보여준다."}
+{"id": 257, "composer": "Max Bruch", "title_en": "Violin Concerto No. 1 in G minor", "description": "브루흐의 모든 작품 중 압도적으로 유명한 곡. 낭만주의 바이올린 협주곡의 최고 걸작 중 하나로, 멘델스존, 브람스의 협주곡과 함께 꼽힌다."}
+{"id": 258, "composer": "Max Bruch", "title_en": "Scottish Fantasy", "description": "스코틀랜드 민요 선율을 주제로 한 4악장의 바이올린과 오케스트라를 위한 환상곡. 바이올린 협주곡 못지않게 사랑받는 작품이다."}
+{"id": 259, "composer": "Max Bruch", "title_en": "Kol Nidrei", "description": "유대교의 속죄일(욤 키푸르)에 불리는 성가 '콜 니드라이'의 선율을 바탕으로 작곡한 첼로와 오케스트라를 위한 명상적인 소품이다."}
+{"id": 260, "composer": "Jules Massenet", "title_en": "Méditation (from <Thaïs>)", "description": "오페라 <타이스> 2막에 나오는 간주곡. 수도사 아타나엘에 의해 개심한 무희 타이스의 명상을 그리는, 바이올린 독주의 경건하고 아름다운 곡이다."}
+{"id": 261, "composer": "Jules Massenet", "title_en": "Opera <Werther>", "description": "괴테의 <젊은 베르테르의 슬픔>을 원작으로 한 프랑스 서정 오페라. 주인공 베르테르의 비극적 사랑을 섬세하게 그렸다."}
+{"id": 262, "composer": "Pablo de Sarasate", "title_en": "Zigeunerweisen", "description": "사라사테의 대표작. 헝가리 집시(롬족) 음악의 애수 어린 선율(라산)과 점차 격렬해지는 춤곡(프리스카)으로 구성된 바이올린 기교의 극치이다."}
+{"id": 263, "composer": "Pablo de Sarasate", "title_en": "Carmen Fantasy", "description": "비제의 오페라 <카르멘>에 나오는 유명한 멜로디(하바네라, 세기디야 등)를 바탕으로, 바이올린의 화려한 기교를 더해 만든 환상곡이다."}
+{"id": 264, "composer": "Pablo de Sarasate", "title_en": "Introduction and Tarantella", "description": "느린 서주에 이어 이탈리아의 격렬한 춤곡인 타란텔라가 이어지는, 바이올린의 빠른 기교를 과시하는 화려한 소품이다."}
+{"id": 265, "composer": "Sir Edward Elgar", "title_en": "Pomp and Circumstance March No. 1", "description": "엘가의 5개의 <위풍당당 행진곡> 중 1번. 중간 부분의 장엄한 선율(Land of Hope and Glory)은 영국의 '제2 국가'로 불릴 만큼 유명하다."}
+{"id": 266, "composer": "Sir Edward Elgar", "title_en": "Cello Concerto in E minor", "description": "엘가의 마지막 대작. 1차 세계대전 이후의 상실감과 비애가 담긴 내성적이고 처연한 작품. 첼리스트 자클린 뒤 프레의 연주로 20세기에 재조명되었다."}
+{"id": 267, "composer": "Sir Edward Elgar", "title_en": "Enigma Variations", "description": "14개의 변주곡이 각각 엘가 주변의 친구와 지인들을 묘사하고 있는 독특한 작품. '수수께끼'의 주제는 아직 풀리지 않았다. 9번 변주 '님로드(Nimrod)'가 매우 유명하다."}
+{"id": 268, "composer": "Sir Edward Elgar", "title_en": "Salut d'Amour", "description": "엘가가 아내 캐롤라인 앨리스 로버츠와의 약혼을 기념하며 작곡한 감미로운 바이올린(또는 첼로) 소품. 대중적으로 매우 유명하다."}
+{"id": 269, "composer": "Ruggero Leoncavallo", "title_en": "Opera <Pagliacci>", "description": "레온카발로의 유일한 성공작이자 '베리스모(사실주의)' 오페라의 대표작. 아내의 불륜을 알게 된 광대가 연극 무대 위에서 아내를 살해한다는 충격적인 내용이다."}
+{"id": 270, "composer": "Ruggero Leoncavallo", "title_en": "\"Vesti la giubba\" (from <Pagliacci>)", "description": "오페라 <팔리아치> 1막의 마지막, 아내의 배신을 알고도 무대에 올라야 하는 광대 카니오가 절규하며 부르는 아리아. 테너의 가장 유명한 아리아 중 하나이다."}
+{"id": 271, "composer": "Ruggero Leoncavallo", "title_en": "Mattinata", "description": "레온카발로가 작곡한 이탈리아 가곡(칸초네). 아침의 찬란함을 노래하는 밝고 화려한 선율로 테너들이 즐겨 부른다."}
+{"id": 272, "composer": "Isaac Albéniz", "title_en": "\"Asturias (Leyenda)\" (from Suite Española No. 1)", "description": "원래 피아노곡이지만, 스페인 기타의 플라멩코 주법을 완벽하게 묘사하여 오늘날 기타 독주곡으로 더 유명해졌다."}
+{"id": 273, "composer": "Isaac Albéniz", "title_en": "Iberia (Suite for piano)", "description": "알베니스의 최고 걸작이자, 피아노 음악 역사상 가장 난해한 작품 중 하나. 스페인 각 지방의 인상과 정서를 12곡에 담아냈다."}
+{"id": 274, "composer": "Isaac Albéniz", "title_en": "Tango in D major", "description": "<스페인(España)> 모음곡 6곡 중 2번째 곡. 이국적이고 매혹적인 선율로 인해 다양한 악기로 편곡되어 사랑받는 소품이다."}
+{"id": 275, "composer": "Pietro Mascagni", "title_en": "Opera <Cavalleria Rusticana>", "description": "단막 오페라 공모전에서 1위를 차지하며 '베리스모(사실주의)' 오페라의 시대를 연 작품. 시칠리아를 배경으로 한 평범한 사람들의 치정과 복수극을 그린다."}
+{"id": 276, "composer": "Pietro Mascagni", "title_en": "Intermezzo (from <Cavalleria Rusticana>)", "description": "오페라 중간에 연주되는 비극적이고 아름다운 간주곡. 오페라 자체보다 더 유명해져, 영화 <대부 3> 등 수많은 매체에 삽입되었다."}
+{"id": 277, "composer": "Jean Sibelius", "title_en": "Symphonic Poem <Finlandia>", "description": "러시아의 압제에 저항하는 핀란드 국민들의 애국심을 고취시킨 교향시. 중간 부분의 비장하고 아름다운 찬가는 핀란드의 실질적인 국가로 불린다."}
+{"id": 278, "composer": "Jean Sibelius", "title_en": "Violin Concerto in D minor", "description": "20세기에 작곡된 바이올린 협주곡 중 최고 걸작 중 하나. 북유럽의 차갑고 장엄한 자연과 바이올린의 극한의 기교가 결합되어 있다."}
+{"id": 279, "composer": "Jean Sibelius", "title_en": "Valse Triste", "description": "희곡 <쿠올레마>의 부수 음악 중 하나. 죽음을 앞둔 어머니가 유령들과 춤을 춘다는 환영을 묘사한, 으스스하면서도 아름다운 왈츠이다."}
+{"id": 280, "composer": "Jean Sibelius", "title_en": "Symphony No. 2 in D major", "description": "시벨리우스의 교향곡 중 가장 인기가 많고 낭만적인 작품. 북유럽의 자연을 묘사하는 듯한 선율로 시작해, 장엄하고 영웅적인 피날레로 끝난다."}
+{"id": 281, "composer": "Ralph Vaughan Williams", "title_en": "Fantasia on a Theme by Thomas Tallis", "description": "16세기 작곡가 토마스 탈리스의 성가 선율을 바탕으로, 두 개의 현악 오케스트라와 현악 4중주가 신비로운 음향을 만들어내는 걸작이다."}
+{"id": 282, "composer": "Ralph Vaughan Williams", "title_en": "Fantasia on Greensleeves", "description": "영국의 유명한 민요 '푸른 옷소매(Greensleeves)' 선율을 바탕으로 한 관현악 환상곡. 서정적이고 목가적인 분위기가 특징이다."}
+{"id": 283, "composer": "Ralph Vaughan Williams", "title_en": "The Lark Ascending", "description": "조지 메러디스의 시에서 영감을 받아 작곡한, 바이올린 독주와 오케스트라를 위한 로망스. 하늘로 날아오르는 종달새의 모습을 서정적으로 묘사했다."}
+{"id": 284, "composer": "Gustav Holst", "title_en": "Suite <The Planets>", "description": "7개의 행성(화성, 금성, 수성, 목성, 토성, 천왕성, 해왕성)의 점성술적 성격을 묘사한 7악장의 관현악 모음곡. '화성(Mars)'과 '목성(Jupiter)'이 특히 유명하다."}
+{"id": 285, "composer": "Gustav Holst", "title_en": "St. Paul's Suite", "description": "홀스트가 교사로 재직하던 세인트 폴 여학교의 학생 오케스트라를 위해 작곡한 현악 합주곡. 영국 민요 '그린슬리브스' 선율이 4악장에 등장한다."}
+{"id": 289, "composer": "Friedrich Burgmüller", "title_en": "25 Progressive Studies", "description": "피아노 초급자를 위한 필수 연습곡집. '아라베스크', '목가', '발라드' 등 낭만주의적 감수성이 담긴 표제가 붙어 있어 인기가 높다."}
+{"id": 290, "composer": "Friedrich Burgmüller", "title_en": "18 Characteristic Studies", "description": "Op. 100의 상위 단계로, '진주', '폭풍' 등 보다 화려한 기교와 표현력을 요구하는 연습곡집이다."}
+{"id": 291, "composer": "Anton Rubinstein", "title_en": "Melody in F", "description": "루빈스타인의 작품 중 오늘날 유일하게 알려진 피아노 소품. 감미로운 멜로디로 인해 19세기 살롱 음악으로 큰 인기를 끌었다."}
+{"id": 292, "composer": "Anton Rubinstein", "title_en": "Piano Concerto No. 4 in D minor", "description": "당대에는 라흐마니노프 이전, 러시아 피아노 협주곡의 대표작으로 꼽혔으나, 오늘날에는 거의 연주되지 않는 비운의 걸작이다."}
+{"id": 293, "composer": "Henryk Wieniawski", "title_en": "Violin Concerto No. 2 in D minor", "description": "비에니아프스키의 대표작. 바이올린의 화려한 기교와 쇼팽을 연상시키는 폴란드풍의 낭만적인 선율(2악장 로망스)이 조화를 이룬다."}
+{"id": 294, "composer": "Henryk Wieniawski", "title_en": "Polonaise Brillante No. 1 in D major", "description": "폴란드의 춤곡 폴로네즈를 바이올린의 화려한 기교로 표현한 작품. 바이올리니스트의 기량을 뽐내기 위한 앙코르 곡으로 자주 연주된다."}
+{"id": 295, "composer": "Henryk Wieniawski", "title_en": "Légende", "description": "신비롭고 애수 어린 선율이 인상적인 바이올린과 오케스트라를 위한 소품. 비에니아프스키의 서정성을 대표하는 곡이다."}
+{"id": 296, "composer": "Francisco Tárrega", "title_en": "Recuerdos de la Alhambra", "description": "기타의 '트레몰로' 주법(하나의 현을 빠르게 연속으로 탄현)의 정수를 보여주는 작품. 알함브라 궁전의 분수 소리를 묘사한 듯한 몽환적인 곡이다."}
+{"id": 297, "composer": "Francisco Tárrega", "title_en": "Capricho Árabe", "description": "타레가가 스페인 남부 안달루시아 지방(아랍 문화의 영향을 받은)을 여행하고 작곡한 곡. 이국적이고 애상적인 멜로디가 특징이다."}
+{"id": 298, "composer": "Hugo Wolf", "title_en": "Mörike-Lieder", "description": "시인 에두아르트 뫼리케의 시 53편에 곡을 붙인 볼프의 첫 대작 가곡집. '봄날에', '숨어있는 이' 등이 유명하다."}
+{"id": 299, "composer": "Hugo Wolf", "title_en": "Italienisches Liederbuch", "description": "파울 하이제의 시집(이탈리아 민요 번역)을 바탕으로 한 46곡의 가곡집. 짧고 압축적인 형식 속에 재치와 깊이가 담긴 볼프 후기의 걸작이다."}
+{"id": 300, "composer": "Carl Nielsen", "title_en": "Symphony No. 4 \"The Inextinguishable\"", "description": "닐센의 교향곡 중 가장 유명한 작품. 1차 세계대전의 혼란 속에서 '꺼지지 않는 생명의 의지'를 표현했다. 두 대의 팀파니가 격렬하게 전투를 벌이는 듯한 부분이 인상적이다."}
+{"id": 301, "composer": "Carl Nielsen", "title_en": "Clarinet Concerto", "description": "20세기 클라리넷 협주곡의 최고 걸작 중 하나. 클라리넷의 기교와 표현력을 극한까지 탐구하며, 스네어 드럼(작은 북)과의 날카로운 대립이 특징이다."}
+{"id": 302, "composer": "Alexander Glazunov", "title_en": "Violin Concerto in A minor", "description": "글라주노프의 가장 유명한 작품. 낭만주의 협주곡의 전통을 따르면서도, 중단 없이 연주되는 단악장 구성이 특징이다. 서정적이고 화려한 선율로 사랑받는다."}
+{"id": 303, "composer": "Alexander Glazunov", "title_en": "Ballet <Raymonda>", "description": "중세 십자군 시대를 배경으로 한 3막 발레. 헝가리풍의 춤곡 등 화려하고 이국적인 멜로디가 가득하며, 고전 발레의 중요 레퍼토리이다."}
+{"id": 304, "composer": "Max Reger", "title_en": "Variations and Fugue on a Theme of Mozart", "description": "레거의 관현악곡 중 가장 유명한 작품. 모차르트 피아노 소나타 11번(K. 331) 1악장 주제를 바탕으로, 후기 낭만주의의 풍부한 화성과 대위법으로 변주했다."}
+{"id": 305, "composer": "Max Reger", "title_en": "Fantasy and Fugue on B-A-C-H", "description": "'B-A-C-H'(시♭-라-도-시♮) 음형을 주제로 작곡한 장엄하고 복잡한 오르간 대곡. 바흐에 대한 레거의 존경심과 대위법적 기교가 집약되어 있다."}
+{"id": 306, "composer": "Manuel de Falla", "title_en": "El amor brujo", "description": "스페인 안달루시아 집시의 전설을 바탕으로 한 발레. '불의 춤(Danza ritual del fuego)'이 격렬한 리듬으로 매우 유명하다."}
+{"id": 307, "composer": "Manuel de Falla", "title_en": "The Three-Cornered Hat", "description": "발레 뤼스(Ballets Russes)를 위해 작곡했으며, 피카소가 무대와 의상을 담당했다. 스페인 민속 춤곡(호타, 판당고 등)을 현대적으로 사용한 걸작이다."}
+{"id": 308, "composer": "Manuel de Falla", "title_en": "Nights in the Gardens of Spain", "description": "스페인(안달루시아) 정원의 밤 풍경과 인상을 묘사한, 피아노와 오케스트라를 위한 '교향적 인상'. 드뷔시의 인상주의 영향이 짙게 드러난다."}
+{"id": 309, "composer": "Igor Stravinsky", "title_en": "The Rite of Spring", "description": "20세기 음악의 시작을 알린 혁명적인 작품. 이교도 러시아의 원시적인 제전을 그렸으며, 파격적인 불협화음과 원시적이고 폭발적인 리듬으로 1913년 파리 초연 당시 스캔들을 일으켰다."}
+{"id": 310, "composer": "Igor Stravinsky", "title_en": "The Firebird (L'Oiseau de feu)", "description": "스트라빈스키가 발레 뤼스와 함께한 첫 성공작. 스승 림스키코르사코프의 영향이 보이는 화려하고 이국적인 관현악법이 특징이다. '불새의 춤', '지옥의 춤'이 유명하다."}
+{"id": 311, "composer": "Igor Stravinsky", "title_en": "Petrushka", "description": "세 명의 인형(페트루슈카, 발레리나, 무어인)의 비극적인 사랑 이야기를 그린 발레. 서로 다른 조성이 동시에 울리는 '복조(Polytonality)' 기법이 혁신적이었다."}
+{"id": 312, "composer": "Igor Stravinsky", "title_en": "Symphony of Psalms", "description": "스트라빈스키의 '신고전주의' 시대를 대표하는 종교 합창곡. 시편의 라틴어 가사를 바탕으로, 중세의 장엄함과 현대적 리듬감을 결합시켰다."}
+{"id": 313, "composer": "Arnold Schoenberg", "title_en": "Verklärte Nacht", "description": "쇤베르크의 초기 후기 낭만주의 걸작. 현악 6중주(이후 현악 오케스트라 편곡)를 위한 교향시로, 바그너풍의 격렬한 반음계와 감정 표현이 특징이다."}
+{"id": 314, "composer": "Arnold Schoenberg", "title_en": "Pierrot Lunaire", "description": "쇤베르크의 '무조음악' 시대를 대표하는 작품. '슈프레히슈티메(말하는 듯한 노래)'라는 독특한 창법과 기괴한 표현주의적 분위기가 특징이다."}
+{"id": 315, "composer": "Arnold Schoenberg", "title_en": "A Survivor from Warsaw", "description": "나치 게토에서 살아남은 생존자의 증언을 바탕으로 한 낭독, 합창, 오케스트라를 위한 칸타타. 12음 기법으로 작곡되었으며, 충격적이고 극적인 작품이다."}
+{"id": 316, "composer": "Arnold Schoenberg", "title_en": "Five Piano Pieces", "description": "쇤베르크가 12음 기법을 확립하기 직전의 작품들로, 5번째 곡 '왈츠'에서 최초로 12음 기법이 부분적으로 사용되었다."}
+{"id": 317, "composer": "Dmitri Shostakovich", "title_en": "Symphony No. 5 in D minor", "description": "스탈린 체제의 비판(<므첸스크의 레이디 맥베스>)으로 숙청 위기에 몰렸던 쇼스타코비치가 '비판에 대한 예술가의 응답'으로 작곡한 작품. 표면적으로는 체제 순응적이나, 그 이면에는 강압에 의한 환희(비극)가 담겨있다."}
+{"id": 318, "composer": "Dmitri Shostakovich", "title_en": "Symphony No. 7 in C major \"Leningrad\"", "description": "나치 독일의 레닌그라드 포위 속에서 작곡된 교향곡. 1악장의 집요하게 반복되는 '침략의 주제'가 유명하며, 소련의 저항 정신을 상징하는 작품이 되었다."}
+{"id": 319, "composer": "Dmitri Shostakovich", "title_en": "Waltz No. 2 (from Jazz Suite No. 2)", "description": "쇼스타코비치의 작품 중 가장 대중적인 멜로디. 본래 잃어버린 <재즈 모음곡 2번>의 일부로 알려졌으나, 현재는 <다양한 무대를 위한 모음곡 1번>으로 분류된다. 영화 <번지 점프를 하다>에 삽입되었다."}
+{"id": 320, "composer": "Dmitri Shostakovich", "title_en": "String Quartet No. 8 in C minor", "description": "작곡가의 이니셜인 D-S-C-H(레-미♭-도-시) 음형을 주제로 사용한 자전적인 작품. 파시즘의 희생자들에게 헌정되었으며, 그의 작품 중 가장 격렬하고 비통한 실내악곡이다."}
+{"id": 321, "composer": "Dmitri Shostakovich", "title_en": "Cello Concerto No. 1 in E♭ major", "description": "로스트로포비치를 위해 작곡된 20세기 첼로 협주곡의 걸작. 첼로의 극한의 기교와 D-S-C-H 음형, 격렬한 리듬이 특징이다."}
+{"id": 322, "composer": "Sergei Prokofiev", "title_en": "Ballet <Romeo and Juliet>", "description": "셰익스피어의 비극을 바탕으로 한 20세기 최고의 발레 음악. '기사들의 춤(몬태규가와 캐퓰릿가)'의 위협적인 멜로디가 특히 유명하다."}
+{"id": 323, "composer": "Sergei Prokofiev", "title_en": "Symphony No. 1 in D major \"Classical\"", "description": "프로코피예프가 하이든의 스타일을 20세기적으로 재해석하여 작곡한 '신고전주의'의 대표작. 재치 있고 경쾌하며, 4악장의 속도감이 압권이다."}
+{"id": 324, "composer": "Sergei Prokofiev", "title_en": "Peter and the Wolf", "description": "어린이들에게 오케스트라의 악기를 소개하기 위해 작곡한 음악 동화. 피터(현악기), 새(플루트), 늑대(호른) 등 각 등장인물이 특정 악기로 묘사된다."}
+{"id": 325, "composer": "Sergei Prokofiev", "title_en": "Piano Concerto No. 3 in C major", "description": "20세기 피아노 협주곡 중 가장 화려하고 인기 있는 작품. 날카로운 리듬과 타악기적인 피아노, 서정적인 멜로디가 결합되어 있다."}
+{"id": 326, "composer": "Sergei Prokofiev", "title_en": "Piano Sonata No. 7 in B♭ major \"Stalingrad\"", "description": "2차 세계대전 중에 작곡된 3개의 '전쟁 소나타' 중 하나. 기계적이고 폭력적인 7/8박자의 3악장 피날레가 압도적이다."}
+{"id": 327, "composer": "Béla Bartók", "title_en": "Concerto for Orchestra", "description": "버르토크가 미국 망명 시절 작곡한 최고 걸작. 오케스트라의 모든 악기들이 협주곡의 독주자처럼 화려한 기량을 뽐낸다."}
+{"id": 328, "composer": "Béla Bartók", "title_en": "Music for Strings, Percussion and Celesta", "description": "버르토크의 독창성이 집약된 20세기 관현악의 걸작. 대칭적인 악장 구조(황금분할), 독특한 악기 편성, 민속 리듬이 특징이다. 영화 <샤이닝>에 사용되었다."}
+{"id": 329, "composer": "Béla Bartók", "title_en": "Ballet <The Miraculous Mandarin>", "description": "폭력적이고 선정적인 내용으로 인해 초연 당시 스캔들을 일으킨 1막 발레. 원시주의적이고 격렬한 리듬이 특징이다."}
+{"id": 330, "composer": "Béla Bartók", "title_en": "Mikrokosmos", "description": "버르토크가 아들 페터를 위해 작곡한 153곡의 피아노 연습곡집. 단순한 곡에서 시작해 20세기 현대 음악의 복잡한 기법까지 단계별로 배울 수 있다."}
+{"id": 331, "composer": "Béla Bartók", "title_en": "Six String Quartets", "description": "베토벤 이후 가장 위대한 현악 4중주 연작으로 꼽힌다. 버르토크의 작곡 기법과 민속 음악 연구가 집약된 20세기 실내악의 금자탑이다."}
+{"id": 332, "composer": "George Gershwin", "title_en": "Rhapsody in Blue", "description": "클래식과 재즈를 결합시킨 미국 음악의 상징적인 작품. 클라리넷의 유명한 글리산도(미끄러지는 음)로 시작하며, 피아노의 화려한 기교가 돋보인다."}
+{"id": 333, "composer": "George Gershwin", "title_en": "Opera <Porgy and Bess>", "description": "흑인 빈민가를 배경으로 한 최초의 위대한 미국 오페라. 'Summertime'을 비롯한 모든 아리아가 재즈/블루스 스탠더드가 되었다."}
+{"id": 334, "composer": "George Gershwin", "title_en": "An American in Paris", "description": "거슈윈이 파리를 여행하며 느낀 인상을 묘사한 교향시. 재즈풍의 블루스 멜로디와 파리의 자동차 경적 소리(택시 경적)가 유쾌하게 어우러진다."}
+{"id": 335, "composer": "George Gershwin", "title_en": "Piano Concerto in F", "description": "<랩소디 인 블루>의 성공 이후 작곡한 본격적인 3악장 협주곡. 낭만주의 협주곡의 형식과 재즈의 어법을 결합시켰다."}
+{"id": 336, "composer": "Leonard Bernstein", "title_en": "Musical <West Side Story>", "description": "로미오와 줄리엣을 현대 뉴욕의 푸에르토리코 이민자 집단(샤크파)과 백인 집단(제트파)의 갈등으로 옮겨온 뮤지컬. 'Mambo', 'Tonight' 등이 유명하다."}
+{"id": 337, "composer": "Leonard Bernstein", "title_en": "Symphonic Dances from West Side Story", "description": "위 뮤지컬의 주요 춤곡들을 교향악 모음곡으로 편곡한 작품. 재즈, 라틴 리듬과 격렬한 오케스트레이션이 돋보인다."}
+{"id": 338, "composer": "Leonard Bernstein", "title_en": "Overture to <Candide>", "description": "볼테르의 풍자 소설 <캔디드>를 바탕으로 한 오페레타의 서곡. 재치 있고 화려하며, 미국 오케스트라의 단골 연주 레퍼토리이다."}
+{"id": 339, "composer": "Leonard Bernstein", "title_en": "Symphony No. 2 \"The Age of Anxiety\"", "description": "W. H. 오든의 시에서 영감을 받은 2부 6악장의 교향곡. 피아노가 협주곡처럼 중요한 역할을 하며, 2차 대전 이후의 현대인의 고독과 믿음을 그렸다."}
+{"id": 340, "composer": "Ahn Eak-tai", "title_en": "Aegukga (South Korean National Anthem)", "description": "대한민국의 국가(國歌). 1935년경 작곡되었으며, 1948년 대한민국 정부 수립과 함께 공식 국가로 채택되었다."}
+{"id": 341, "composer": "Ahn Eak-tai", "title_en": "Symphonic Fantasia <Korea>", "description": "안익태가 리하르트 슈트라우스에게 사사한 후 작곡한 교향시. 후기 낭만주의 관현악법을 바탕으로 '애국가'의 선율을 주주제로 사용하여 발전시킨 작품이다."}
+{"id": 342, "composer": "Hong Nan-pa", "title_en": "Gagok <Balsam Flower (Bongseonhwa)>", "description": "1920년 작곡된 한국 최초의 예술 가곡. 일제 강점기 민족의 설움을 봉선화에 빗대어 노래한, 애수 어린 멜로디가 특징이다."}
+{"id": 343, "composer": "Hong Nan-pa", "title_en": "Children's Song <Spring in My Hometown>", "description": "'나의 살던 고향은...'으로 시작하는, 전 국민의 애창 동요. 이원수의 시에 곡을 붙였으며, 한국적 서정의 원형으로 평가받는다."}
+{"id": 344, "composer": "Hong Nan-pa", "title_en": "Violin Piece <Sorrow (Aesu-ui Gok)>", "description": "1921년 작곡된, 현존하는 한국 최초의 바이올린 창작곡. 홍난파 자신의 비극적 사랑 이야기를 담았다는 일화가 있다."}
+{"id": 345, "composer": "Isang Yun", "title_en": "Opera <Sim Tjong>", "description": "한국의 고전소설 <심청전>을 바탕으로 한 오페라. 1972년 뮌헨 올림픽 문화 축전 개막작으로 초연되어 세계적인 명성을 얻었다."}
+{"id": 346, "composer": "Isang Yun", "title_en": "Cello Concerto", "description": "윤이상의 첼로에 대한 깊은 이해가 드러나는 걸작. 동백림 사건으로 옥중에 있을 때 구상했으며, 첼로의 흐느끼는 듯한 '농현' 기법이 압권이다."}
+{"id": 347, "composer": "Isang Yun", "title_en": "Réak for Orchestra", "description": "'예악(禮樂)' 사상을 바탕으로, 궁중 음악의 장엄하고 느린 호흡을 서양 오케스트라로 구현한 윤이상의 대표적인 관현악곡이다."}
+{"id": 348, "composer": "Isang Yun", "title_en": "5 Etüden für Klavier", "description": "12음 기법과 국악의 시김새, 꾸밈음 등을 결합하여 독창적인 음향을 만들어낸 피아노 연습곡이다."}
+{"id": 349, "composer": "Carl Orff", "title_en": "Carmina Burana", "description": "중세 수도원에서 발견된 세속적인 시가(詩歌)를 바탕으로 작곡한 3부작 무대 칸타타 중 첫 번째 작품. 원시적이고 강렬한 리듬이 특징이다."}
+{"id": 350, "composer": "Carl Orff", "title_en": "O Fortuna (from <Carmina Burana>)", "description": "<카르미나 부라나>의 시작과 끝을 장식하는 합창곡. 운명의 여신의 변덕을 노래하는 장엄하고 압도적인 멜로디로, 20세기 클래식 곡 중 가장 유명하다."}
+{"id": 351, "composer": "John Cage", "title_en": "4'33\"", "description": "존 케이지의 가장 유명하고 논쟁적인 작품. 연주자가 4분 33초 동안 악기(주로 피아노) 앞에서 아무것도 연주하지 않는다. '침묵 속의 소리(객석의 소음 등)'를 음악으로 제시한 작품이다."}
+{"id": 352, "composer": "John Cage", "title_en": "Sonatas and Interludes for Prepared Piano", "description": "피아노 현에 나사, 고무, 볼트 등을 끼워 넣어 '조작된 피아노'를 만들고, 이를 통해 타악기적이고 동양적인 음색을 추구한 작품이다."}
+{"id": 353, "composer": "Philip Glass", "title_en": "Opera <Einstein on the Beach>", "description": "'미니멀리즘 오페라'의 시대를 연 4막 5시간의 대작. 줄거리 없이 반복되는 음형과 이미지들로 구성된 혁신적인 작품이다."}
+{"id": 354, "composer": "Philip Glass", "title_en": "Piano Etude No. 6", "description": "필립 글래스의 피아노 연습곡 중 가장 유명한 곡 중 하나. 끊임없이 반복되는 오른손 아르페지오와 변화하는 왼손 화성이 특징이다."}
+{"id": 355, "composer": "Philip Glass", "title_en": "The Hours (Soundtrack)", "description": "영화 <디 아워스>를 위해 작곡한 음악. 글래스 특유의 반복적인 피아노 음형이 영화의 우울하고 내성적인 분위기를 효과적으로 그려냈다."}
+{"id": 356, "composer": "Benjamin Britten", "title_en": "The Young Person's Guide to the Orchestra", "description": "퍼셀의 주제를 바탕으로 한 변주곡과 푸가를 통해, 오케스트라의 모든 악기(목관, 금관, 현악, 타악기)를 소개하는 교육용 걸작이다."}
+{"id": 357, "composer": "Benjamin Britten", "title_en": "Opera <Peter Grimes>", "description": "20세기 영국 오페라의 최고 걸작. 마을에서 고립된 어부 피터 그라임스의 비극을 그렸다. 특히 4개의 '바다 간주곡'이 유명하다."}
+{"id": 358, "composer": "Benjamin Britten", "title_en": "War Requiem", "description": "2차 세계대전으로 파괴된 코벤트리 대성당 재건을 위해 작곡된 20세기 최고의 레퀴엠. 전통 라틴어 미사곡 가사와 1차 대전 시인 윌프레드 오웬의 반전(反戰) 시를 교차시켰다."}
+{"id": 359, "composer": "Benjamin Britten", "title_en": "Cello Suite No. 1", "description": "바흐의 무반주 첼로 모음곡에 영감을 받아 첼리스트 로스트로포비치를 위해 작곡한 3개의 첼로 모음곡 중 첫 번째 작품이다."}
+{"id": 360, "composer": "Olivier Messiaen", "title_en": "Quatuor pour la fin du Temps", "description": "2차 대전 당시 독일군 포로수용소에서 작곡, 초연된 실내악곡. 바이올린, 첼로, 클라리넷, 피아노라는 독특한 편성으로, 요한계시록의 '시간의 종말'을 신비주의적으로 그렸다."}
+{"id": 361, "composer": "Olivier Messiaen", "title_en": "Vingt regards sur l'Enfant-Jésus", "description": "아기 예수의 탄생을 20개의 다른 시선(성모 마리아, 천사, 별 등)으로 바라본 20개의 피아노 모음곡. 메시앙의 피아노 음악의 정수이다."}
+{"id": 362, "composer": "Olivier Messiaen", "title_en": "Turangalîla-Symphonie", "description": "산스크리트어로 '사랑, 시간, 생명' 등을 뜻하는 10악장의 거대한 교향곡. 피아노와 '옹드 마르트노'(초기 전자악기)가 독주악기로 사용된다."}
+{"id": 363, "composer": "Olivier Messiaen", "title_en": "Catalogue d'oiseaux", "description": "메시앙이 채보한 프랑스 전역의 새소리를 바탕으로 작곡한 13개의 피아노 모음곡. 새소리를 피아노로 재현한 독창적인 작품이다."}
+{"id": 364, "composer": "Alban Berg", "title_en": "Opera <Wozzeck>", "description": "20세기 표현주의 오페라의 최고 걸작. 가난한 병사 보체크가 사회의 억압 속에 점차 미쳐가다 살인을 저지르고 파멸하는 과정을 무조음악으로 그렸다."}
+{"id": 365, "composer": "Alban Berg", "title_en": "Violin Concerto \"To the Memory of an Angel\"", "description": "베르크의 마지막 작품이자 유작. 12음 기법을 사용했음에도 불구하고, 바흐의 코랄과 낭만적인 서정성을 결합시켜 깊은 슬픔과 아름다움을 표현했다."}
+{"id": 366, "composer": "Alban Berg", "title_en": "Lyric Suite", "description": "현악 4중주를 위한 6악장의 모음곡. 12음 기법으로 작곡되었으나, 베르크의 비밀스러운 사랑의 고백이 담긴 격정적이고 서정적인 작품이다."}
+{"id": 367, "composer": "Anton Webern", "title_en": "Symphony", "description": "베베른의 12음 기법이 정점에 달한 작품. 9개의 악기만으로 연주되며, 극도로 절제된 '점묘주의' 음향과 대칭 구조가 특징이다. 연주 시간은 약 10분이다."}
+{"id": 368, "composer": "Anton Webern", "title_en": "Five Movements for String Quartet", "description": "베베른의 초기 '무조음악' 시대 작품. 5개의 극도로 짧은(Aphoristic) 악장으로 구성되며, 전통적인 화성과 형식을 파괴한 급진적인 소품이다."}
+{"id": 369, "composer": "Anton Webern", "title_en": "Six Pieces for Orchestra", "description": "무조음악 시대의 관현악곡. 각 악장이 매우 짧으며, 음색(Klangfarbenmelodie) 그 자체를 음악의 중요 요소로 다루었다."}
+{"id": 370, "composer": "Charles Ives", "title_en": "The Unanswered Question", "description": "아이브스의 가장 유명하고 철학적인 작품. 조용한 현악기(침묵) 위에서 트럼펫이 '존재에 대한 질문'을 던지고, 목관악기들이 혼란스럽게 대답(조롱)하는 모습을 그렸다."}
+{"id": 371, "composer": "Charles Ives", "title_en": "Symphony No. 4", "description": "복잡한 리듬, 복조, 콜라주 기법이 총동원된 아이브스의 가장 실험적인 대작. 너무 복잡하여 작곡 후 50년이 지난 1965년에야 전곡 초연되었다."}
+{"id": 372, "composer": "Charles Ives", "title_en": "Piano Sonata No. 2 \"Concord, Mass.\"", "description": "미국 초월주의 사상가(에머슨, 호손, 올컷, 소로)들을 묘사한 4악장의 피아노 소나타. 극도로 난해하고 실험적인 기법(불협화음, 무조)으로 가득 차 있다."}
+{"id": 373, "composer": "Charles Ives", "title_en": "Three Places in New England", "description": "미국 뉴잉글랜드 지방의 세 장소(독립전쟁 기념비, 퍼트넘 캠프, 허사토닉 강)를 그린 관현악 모음곡. 여러 멜로디가 동시에 울리는 '콜라주' 기법이 유명하다."}
+{"id": 374, "composer": "Astor Piazzolla", "title_en": "Libertango", "description": "피아졸라의 '누에보 탱고'를 전 세계에 알린 대표작. '자유(Libertad)'와 '탱고'의 합성어로, 전통 탱고에서 벗어난 새로운 스타일을 선언한 곡이다."}
+{"id": 375, "composer": "Astor Piazzolla", "title_en": "Oblivion", "description": "피아졸라의 작품 중 가장 서정적이고 애상적인 멜로디로 사랑받는 곡. 영화 <엔리코 4세>의 사운드트랙으로 사용되었다."}
+{"id": 376, "composer": "Astor Piazzolla", "title_en": "Adiós Nonino", "description": "아버지의 죽음을 추모하며 작곡한 곡으로, 피아졸라 자신도 '최고의 작품'으로 꼽았다. 격렬한 리듬과 비통한 멜로디가 교차한다."}
+{"id": 377, "composer": "Astor Piazzolla", "title_en": "The Four Seasons of Buenos Aires (Estaciones Porteñas)", "description": "비발디의 <사계>에 대한 탱고 버전의 응답. 부에노스 아이레스의 사계절을 4개의 탱고 작품으로 그렸다. ('겨울', '봄', '여름', '가을')"}
+{"id": 378, "composer": "Erik Satie", "title_en": "Gymnopédie No. 1", "description": "사티의 가장 유명한 피아노곡. 고대 그리스의 축제(짐노페디)를 상상하며 쓴 3개의 소품 중 첫 곡. 단순하고 몽환적이며, 미니멀리즘의 시초로 평가받는다."}
+{"id": 379, "composer": "Erik Satie", "title_en": "Gnossienne No. 1", "description": "고대 크레타의 궁전(크노소스)에서 영감을 받은 6개의 피아노 소품 중 하나. 짐노페디와 유사하게, 신비롭고 이국적인 분위기를 자아낸다."}
+{"id": 380, "composer": "Erik Satie", "title_en": "Je te veux (I Want You)", "description": "사티가 카바레 가수를 위해 작곡한 대중적인 샹송(왈츠). 사티의 유쾌하고 감상적인 면모를 보여준다."}
+{"id": 381, "composer": "Aram Khachaturian", "title_en": "Sabre Dance (from <Gayane>)", "description": "발레 <가야네>의 마지막 막에 나오는 아르메니아 전사들의 격렬한 춤곡. 20세기 클래식 곡 중 '볼레로', '오 포르투나'와 함께 가장 유명한 히트곡 중 하나이다."}
+{"id": 382, "composer": "Aram Khachaturian", "title_en": "Ballet <Spartacus>", "description": "로마의 검투사 스파르타쿠스의 반란을 그린 3막 발레. '스파르타쿠스와 프리기아의 아다지오'는 관능적이고 장대한 멜로디로 유명하다."}
+{"id": 383, "composer": "Aram Khachaturian", "title_en": "Violin Concerto in D minor", "description": "아르메니아 민속 음악의 이국적인 선율과 리듬이 넘치는 화려한 바이올린 협주곡. 20세기 주요 협주곡 레퍼토리 중 하나이다."}
+{"id": 384, "composer": "Aram Khachaturian", "title_en": "Masquerade Suite", "description": "레르몬토프의 희곡 <가면무도회>를 위한 부수 음악을 모음곡으로 편곡한 것. '왈츠' 악장이 특히 유명하다."}
+{"id": 385, "composer": "Nam June Paik", "title_en": "Symphony for John Cage", "description": "백남준의 초기 전위 음악. 악보 대신 여러 지시문으로 이루어져 있으며, 피아노를 부수거나 소리를 지르는 등의 행위로 구성된다."}
+{"id": 386, "composer": "Nam June Paik", "title_en": "Action Music \"One for Violin Solo\"", "description": "플럭서스(Fluxus) 시절의 대표적인 행위 예술. 연주자가 바이올린을 천천히 들어 올려 연주하는 대신, 탁자에 내리쳐 부수는 퍼포먼스이다."}
+{"id": 387, "composer": "Nam June Paik", "title_en": "Etude for Prepared Piano", "description": "존 케이지의 '조작된 피아노'에서 영향을 받아 작곡한 초기 피아노 작품."}
+{"id": 388, "composer": "Kim Dong-jin", "title_en": "Gagok <Gagopa>", "description": "이은상의 시에 곡을 붙인, 한국인이 가장 사랑하는 가곡 중 하나. 고향(마산)을 그리워하는 마음을 낭만주의적이고 웅장한 선율로 그렸다."}
+{"id": 389, "composer": "Kim Dong-jin", "title_en": "Gagok <Magnolia (Mongnyeonhwa)>", "description": "조영출의 시에 곡을 붙인 가곡. '오 내 사랑 목련화야'로 시작하는, 봄의 정취와 사랑을 노래한 화려하고 열정적인 곡이다."}
+{"id": 390, "composer": "Kim Dong-jin", "title_en": "Gagok <My Heart is (Nae Maeumeun)>", "description": "김동환의 시에 곡을 붙인 가곡. '내 마음은 호수요'라는 가사로 시작하며, 잔잔한 호수와 같은 사랑을 노래한 서정적인 곡이다."}
+{"id": 391, "composer": "Kim Dong-jin", "title_en": "Sinfonietta (Symphony No. 1)", "description": "김동진의 대표적인 관현악 작품. 1968년 작곡되었으며, 한국적 선율과 낭만주의 관현악법이 결합되어 있다."}
+{"id": 392, "composer": "Leoš Janáček", "title_en": "Sinfonietta", "description": "야나체크의 가장 유명한 관현악곡. 9대의 트럼펫이 팡파르를 울리는 화려한 1악장이 특징이며, 체코 군대의 위용과 브르노의 자유를 상징한다."}
+{"id": 393, "composer": "Leoš Janáček", "title_en": "Opera <Jenůfa>", "description": "야나체크를 세계적인 작곡가 반열에 오르게 한 오페라. 모라비아 지방의 '말의 억양'을 선율에 접목시킨 '리얼리즘' 오페라의 걸작이다."}
+{"id": 394, "composer": "Leoš Janáček", "title_en": "Opera <The Cunning Little Vixen>", "description": "숲 속 동물들과 인간의 세계가 교차하는, 동화적이고 철학적인 오페라. 야나체크의 자연에 대한 사랑과 생명의 순환 사상이 담겨있다."}
+{"id": 395, "composer": "Leoš Janáček", "title_en": "Glagolitic Mass", "description": "전통 라틴어 미사 대신, 고대 슬라브어(글라골) 가사를 사용한 독창적인 미사곡. 야나체크의 범슬라브주의와 강렬한 표현력이 돋보인다."}
+{"id": 396, "composer": "Heitor Villa-Lobos", "title_en": "Bachianas Brasileiras No. 5", "description": "9개의 <브라질풍의 바흐> 연작 중 가장 유명한 곡. 8대의 첼로 앙상블과 소프라노 독창이라는 독특한 편성으로, 1악장 '아리아(칸틸레나)'가 유명하다."}
+{"id": 397, "composer": "Heitor Villa-Lobos", "title_en": "Guitar Etude No. 1", "description": "12개의 기타 연습곡(W 235) 중 첫 번째 곡. 기타리스트 안드레스 세고비아에게 헌정되었으며, 기타 전공자의 필수 레퍼토리이다."}
+{"id": 398, "composer": "Heitor Villa-Lobos", "title_en": "Chôros No. 1 (for Guitar)", "description": "14개의 쇼로스(Chôros) 연작 중 첫 곡. 브라질 토착 민속 음악의 특징을 담은 기타 독주곡이다."}
+{"id": 399, "composer": "Heitor Villa-Lobos", "title_en": "\"O Trenzinho do Caipira\" (from Bachianas Brasileiras No. 2)", "description": "관현악을 위한 4악장 모음곡 <브라질풍의 바흐 2번>의 마지막 4악장. 시골의 작은 증기 기관차 소리를 유쾌하게 묘사했다."}
+{"id": 400, "composer": "Paul Hindemith", "title_en": "Symphony: Mathis der Maler", "description": "힌데미트의 동명 오페라 <화가 마티스>의 음악을 바탕으로 재구성한 3악장 교향곡. 르네상스 화가 마티아스 그뤼네발트의 작품에서 영감을 받았다."}
+{"id": 401, "composer": "Paul Hindemith", "title_en": "Symphonic Metamorphosis of Themes by Carl Maria von Weber", "description": "카를 마리아 폰 베버의 잊혔던 피아노 듀엣곡 주제들을 바탕으로, 힌데미트 특유의 신고전주의적 기법으로 화려하게 변주한 관현악곡이다."}
+{"id": 402, "composer": "Paul Hindemith", "title_en": "Viola Sonata", "description": "비올리스트이기도 했던 힌데미트가 남긴 3개의 비올라 소나타 중 가장 유명한 작품. 20세기 비올라 레퍼토리의 핵심이다."}
+{"id": 403, "composer": "Francis Poulenc", "title_en": "Opera <Dialogues des Carmélites>", "description": "풀랑크의 가장 위대한 걸작 오페라. 프랑스 혁명 당시 순교를 택한 카르멜회 수녀들의 실화를 다룬다. 마지막 단두대 장면의 합창이 충격적이다."}
+{"id": 404, "composer": "Francis Poulenc", "title_en": "Gloria", "description": "소프라노 독창, 합창, 오케스트라를 위한 종교 음악. 20세기 합창 음악의 걸작 중 하나로, 경건함과 프랑스 특유의 재치가 공존한다."}
+{"id": 405, "composer": "Francis Poulenc", "title_en": "Trois Mouvements Perpétuels", "description": "사티의 영향을 받은 풀랑크 초기의 피아노 소품. 단순하고 재치 있는 멜로디가 끝없이 반복되는(무궁동) 매력적인 곡이다."}
+{"id": 406, "composer": "Francis Poulenc", "title_en": "Flute Sonata", "description": "20세기 플루트 소나타 중 가장 중요하고 많이 연주되는 작품. 플루트의 서정성과 풀랑크 특유의 경쾌함, 우수가 완벽하게 조화를 이룬다."}
+{"id": 407, "composer": "Karlheinz Stockhausen", "title_en": "Gesang der Jünglinge", "description": "전자 음악의 역사에서 가장 중요한 작품. 소년의 변조된 목소리(구체 음악)와 순수 전자음(신시사이저)을 5개의 스피커로 결합시킨 최초의 '공간 음악'이다."}
+{"id": 408, "composer": "Karlheinz Stockhausen", "title_en": "Stimmung", "description": "6명의 보컬 앙상블을 위한 '명상 음악'. 가수들은 낮은 '시b'음을 배음(Overtone) 기법으로 노래하며 신비로운 음향을 만들어낸다."}
+{"id": 409, "composer": "Karlheinz Stockhausen", "title_en": "Helikopter-Streichquartett (aus Mittwoch aus Licht)", "description": "오페라 <빛에서 온 수요일>의 3장. 4명의 현악 4중주단원이 각각 4대의 헬리콥터를 타고 상공에서 연주하며, 이 소리가 지상으로 전송되는 전위적인 작품이다."}
+{"id": 410, "composer": "Luciano Berio", "title_en": "Sinfonia", "description": "20세기 후반 '포스트모더니즘' 음악의 대표작. 8명의 목소리와 오케스트라를 위한 5악장 교향곡. 특히 3악장은 말러 교향곡 2번 위에 수많은 음악(바흐, 베토벤, 드뷔시 등)과 텍스트를 콜라주(Collage) 기법으로 덧붙였다."}
+{"id": 411, "composer": "Luciano Berio", "title_en": "Sequenza III (for female voice)", "description": "독주 악기의 기교를 탐구한 14개의 <세쿠엔차> 연작 중 3번. 여성의 목소리가 낼 수 있는 모든 소리(웃음, 속삭임, 기침, 비명 등)를 극적으로 표현한 행위 예술적 작품이다."}
+{"id": 412, "composer": "Luciano Berio", "title_en": "Folk Songs", "description": "미국, 아르메니아, 프랑스, 이탈리아 등 전 세계의 민요 11곡을 메조소프라노와 실내악 앙상블을 위해 편곡한, 베리오의 가장 대중적인 작품집이다."}
+{"id": 413, "composer": "Witold Lutosławski", "title_en": "Concerto for Orchestra", "description": "루토스와프스키의 초기 걸작이자 가장 유명한 작품. 버르토크의 동명 작품처럼, 폴란드 민요를 바탕으로 오케스트라의 모든 악기들이 화려한 기교를 뽐낸다."}
+{"id": 414, "composer": "Witold Lutosławski", "title_en": "Variations on a Theme by Paganini", "description": "파가니니 카프리스 24번을 주제로 한 두 대의 피아노를 위한 변주곡. 2차 대전 중 카페에서 연주하기 위해 작곡되었으며, 20세기 편곡의 걸작으로 꼽힌다."}
+{"id": 415, "composer": "Witold Lutosławski", "title_en": "Symphony No. 3", "description": "작곡가 후기 '제한된 우연성' 기법이 집약된 걸작. 지휘자가 큰 틀만 제시하고 연주자가 세부 리듬을 즉흥적으로 연주하는 부분이 특징이다."}
+{"id": 416, "composer": "Nino Rota", "title_en": "The Godfather Soundtrack (Love Theme)", "description": "프랜시스 포드 코폴라 감독의 <대부> 3부작의 메인 테마. 시칠리아의 애수와 마피아의 비정함을 동시에 담아낸 불멸의 영화 음악이다."}
+{"id": 417, "composer": "Nino Rota", "title_en": "Romeo and Juliet (1968) Soundtrack (A Time for Us)", "description": "프랑코 제피렐리 감독의 영화 <로미오와 줄리엣>의 메인 테마. 'A Time for Us'라는 제목의 노래로도 유명하며, 낭만적인 멜로디의 극치를 보여준다."}
+{"id": 418, "composer": "Nino Rota", "title_en": "La Strada Soundtrack", "description": "페데리코 펠리니 감독의 영화 <라 스트라다>의 주제곡. 트럼펫으로 연주되는 서글픈 멜로디가 영화의 페이소스를 완벽하게 대변한다."}
+{"id": 419, "composer": "Bernard Herrmann", "title_en": "Psycho Soundtrack", "description": "앨프리드 히치콕 감독의 <사이코>를 위해 현악 앙상블만으로 작곡한 혁신적인 음악. 샤워 장면의 '칼 찌르는 소리(바이올린 글리산도)'는 영화 음악의 전설이 되었다."}
+{"id": 420, "composer": "Bernard Herrmann", "title_en": "Vertigo Soundtrack", "description": "히치콕의 <현기증>을 위한 음악. 끊임없이 맴도는 듯한 아르페지오와 불안정한 화성을 통해 주인공의 현기증과 집착을 완벽하게 묘사했다."}
+{"id": 421, "composer": "Bernard Herrmann", "title_en": "Taxi Driver Soundtrack", "description": "마틴 스콜세지 감독의 <택시 드라이버>를 위한 허먼의 유작. 재즈풍의 색소폰 솔로가 도시의 밤거리와 주인공의 고독, 광기를 표현한다."}
+{"id": 422, "composer": "Kang Suk-hi", "title_en": "Feast of Primary Colors (Wonssaegui Hyangyeon)", "description": "1966년 발표된 한국 최초의 전자 음악(Musique Concrète). 일상적인 소리(물방울, 기계음 등)를 녹음, 변조하여 작곡한 실험적인 작품이다."}
+{"id": 423, "composer": "Kang Suk-hi", "title_en": "Buru", "description": "플루트, 피아노, 타악기를 위한 실내악곡. 윤이상, 슈토크하우젠 등의 영향을 받은 한국 아방가르드 음악의 초기 대표작 중 하나이다."}
+{"id": 424, "composer": "Na Un-young", "title_en": "Gagok <Moonlit Night (Dalbam)>", "description": "나운영의 대표적인 예술 가곡. 김태오의 시에 곡을 붙였으며, 달밤의 서정을 한국적인 5음계 선율로 그려냈다."}
+{"id": 425, "composer": "Na Un-young", "title_en": "Psalm 23 (Yeohowaneun Naui Mokjasini)", "description": "한국 교회 음악의 대표적인 성가곡. 시편 23편의 가사를 바탕으로 작곡되었으며, 4부 합창으로 널리 불린다."}
+{"id": 426, "composer": "Lee Heung-ryeol", "title_en": "Children's Song <Island Home Baby (Seomjip Agi)>", "description": "한인현의 시에 곡을 붙인 동요. '엄마가 섬 그늘에~'로 시작하는 서정적이고 애상적인 멜로디는 동요를 넘어 전 국민의 애창곡이 되었다."}
+{"id": 427, "composer": "Lee Heung-ryeol", "title_en": "Gagok <Rocky Hill Pass (Bawigogae)>", "description": "이흥렬의 대표적인 예술 가곡. 힘겨운 바위고개를 넘는 모습을 통해 민족의 한(恨)을 표현한 비장한 멜로디가 특징이다."}
+{"id": 428, "composer": "Lee Heung-ryeol", "title_en": "Gagok <A Mother's Heart (Eomeoni-ui Maeum)>", "description": "'낳실제 괴로움 다 잊으시고'로 시작하는, 어버이날을 상징하는 노래. 어머니의 희생적인 사랑을 그린 경건한 가곡이다."}
+{"id": 429, "composer": "Jo Doo-nam", "title_en": "Gagok <The Pioneer (Seonguja)>", "description": "'일송정 푸른 솔은~'으로 시작하는, 조두남의 가장 유명한 가곡. 만주 벌판의 독립군을 그렸다고 알려졌으나, 작사/작곡 배경(친일)에 대한 논란이 있다."}
+{"id": 430, "composer": "Jo Doo-nam", "title_en": "Gagok <Longing (Geurium)>", "description": "'어느 때고 너를 보면~'으로 시작하는 서정 가곡. 고향과 첫사랑을 그리워하는 애틋한 멜로디가 특징이다."}
+{"id": 431, "composer": "Johann Sebastian Bach", "title_en": "Air on the G String (from Orchestral Suite No. 3)", "description": "바흐의 관현악 모음곡 3번의 2악장 '에어(Air)'를 바이올린의 가장 낮은 G현으로만 연주하도록 편곡한 버전이다. 고요하고 숭고한 선율이 특징이다."}
+{"id": 432, "composer": "Johann Sebastian Bach", "title_en": "Jesu, Joy of Man's Desiring (from Cantata BWV 147)", "description": "바흐의 교회 칸타타 중 가장 유명한 합창곡이다. 흐르는 듯한 셋잇단음표의 반주와 평온한 합창 선율이 어우러져 결혼식 축가로도 많이 쓰인다."}
+{"id": 433, "composer": "Georg Friedrich Händel", "title_en": "Sarabande (from Keyboard Suite in D minor)", "description": "영화와 드라마의 비장한 장면에 자주 등장하는 곡이다. 장중하고 엄숙한 바로크 춤곡 리듬과 강렬한 화음 진행이 인상적이다."}
+{"id": 434, "composer": "Wolfgang Amadeus Mozart", "title_en": "Horn Concerto No. 4", "description": "모차르트의 호른 협주곡 중 가장 규모가 크고 유명하다. 사냥 나팔을 연상시키는 경쾌한 3악장 론도 주제가 널리 알려져 있다."}
+{"id": 435, "composer": "Wolfgang Amadeus Mozart", "title_en": "Piano Sonata No. 16 \"Sonata Facile\"", "description": "모차르트가 초심자를 위해 작곡한 소나타로, '쉬운 소나타'라는 부제가 붙었다. 맑고 순수한 1악장 도입부는 누구나 한 번쯤 들어본 멜로디다."}
+{"id": 436, "composer": "Wolfgang Amadeus Mozart", "title_en": "Variations on \"Ah! vous dirai-je, maman\"", "description": "일명 '반짝반짝 작은 별 변주곡'이다. 프랑스 민요 주제를 바탕으로 12가지의 다양한 기교적 변주가 펼쳐지는 사랑스러운 곡이다."}
+{"id": 437, "composer": "Ludwig van Beethoven", "title_en": "Symphony No. 6 \"Pastoral\"", "description": "베토벤이 자연에서 느낀 감정을 묘사한 표제 음악이다. 시냇물 소리, 새소리, 폭풍우 등이 오케스트라로 생생하게 표현된다."}
+{"id": 438, "composer": "Ludwig van Beethoven", "title_en": "Symphony No. 7", "description": "바그너가 '춤의 성역'이라 극찬했을 만큼 리듬감이 돋보이는 곡이다. 장엄하고 신비로운 분위기의 2악장이 특히 대중적으로 유명하다."}
+{"id": 439, "composer": "Ludwig van Beethoven", "title_en": "Violin Sonata No. 5 \"Spring\"", "description": "베토벤의 바이올린 소나타 중 가장 화사하고 따뜻한 곡이다. 봄의 생동감 넘치는 기운이 느껴지는 아름다운 선율이 특징이다."}
+{"id": 440, "composer": "Ludwig van Beethoven", "title_en": "Piano Sonata No. 23 \"Appassionata\"", "description": "베토벤 중기 소나타의 걸작으로, 격정적이고 폭풍 같은 감정이 휘몰아친다. 고도의 테크닉과 강인한 타건이 요구된다."}
+{"id": 441, "composer": "Ludwig van Beethoven", "title_en": "Piano Trio No. 7 \"Archduke\"", "description": "베토벤이 후원자인 루돌프 대공에게 헌정한 곡이다. 피아노 3중주 역사상 가장 웅장하고 기품 있는 명작으로 꼽힌다."}
+{"id": 442, "composer": "Luigi Boccherini", "title_en": "Minuet (from String Quintet in E major)", "description": "보케리니의 작품 중 가장 유명한 곡이다. 우아하고 귀족적인 로코코 양식의 전형을 보여주며, 섬세한 현악기의 떨림이 아름답다."}
+{"id": 443, "composer": "Franz Peter Schubert", "title_en": "Ave Maria (Ellens dritter Gesang)", "description": "슈베르트가 발터 스콧의 서사시를 바탕으로 작곡한 가곡이다. 경건하고 아름다운 선율 덕분에 종교적인 맥락에서도 자주 연주된다."}
+{"id": 444, "composer": "Franz Peter Schubert", "title_en": "Moments Musicaux No. 3", "description": "슈베르트의 짧은 피아노 소품 중 가장 사랑받는 곡이다. 경쾌한 반주 위에 얹힌 소박하고 민요적인 멜로디가 매력적이다."}
+{"id": 445, "composer": "Frédéric François Chopin", "title_en": "Nocturne No. 20 in C-sharp minor", "description": "쇼팽 사후에 출판된 곡으로, 영화 '피아니스트'의 주제곡으로 유명하다. 애절하고 슬픈 멜로디가 심금을 울린다."}
+{"id": 446, "composer": "Frédéric François Chopin", "title_en": "Prelude Op. 28 No. 15 \"Raindrop\"", "description": "쇼팽의 전주곡 중 가장 긴 곡이다. 곡 전반에 걸쳐 반복되는 A♭음이 마치 처마 끝에 떨어지는 빗방울 소리를 연상시킨다."}
+{"id": 447, "composer": "Frédéric François Chopin", "title_en": "Etude Op. 10 No. 3 \"Tristesse\"", "description": "쇼팽 스스로 '이보다 아름다운 선율을 써본 적이 없다'고 말한 곡이다. 서정적인 멜로디와 대조적인 격정적 중반부가 특징이다."}
+{"id": 448, "composer": "Robert Schumann", "title_en": "Piano Quintet in E-flat major", "description": "슈만의 실내악 중 최고 걸작으로 꼽힌다. 피아노와 현악 4중주의 조화가 완벽하며, 낭만적인 열정과 에너지가 넘친다."}
+{"id": 449, "composer": "Felix Mendelssohn", "title_en": "Piano Trio No. 1 in D minor", "description": "멘델스존 특유의 유려한 선율과 균형 잡힌 형식이 돋보이는 곡이다. 특히 첼로가 연주하는 1악장의 서정적인 주제가 유명하다."}
+{"id": 450, "composer": "Franz Liszt", "title_en": "Piano Concerto No. 1", "description": "리스트의 화려한 기교가 집약된 협주곡이다. 오케스트라에 트라이앵글을 적극적으로 사용하여 '트라이앵글 협주곡'이라는 별명도 있다."}
+{"id": 451, "composer": "Johannes Brahms", "title_en": "Lullaby (Wiegenlied)", "description": "전 세계에서 가장 유명한 자장가 선율이다. 브람스가 친구의 아이를 위해 작곡했으며, 소박하고 따뜻한 감성이 묻어난다."}
+{"id": 452, "composer": "Johannes Brahms", "title_en": "Symphony No. 4", "description": "브람스의 마지막 교향곡으로, 고전적인 형식미와 낭만적인 비극성이 결합된 걸작이다. 바로크 양식인 파사칼리아를 도입한 4악장이 압권이다."}
+{"id": 453, "composer": "Pyotr Ilyich Tchaikovsky", "title_en": "Symphony No. 5", "description": "차이콥스키의 교향곡 중 대중적으로 가장 인기 있는 곡이다. 운명에 대한 투쟁과 승리를 묘사하며, 2악장의 호른 솔로가 매우 아름답다."}
+{"id": 454, "composer": "Pyotr Ilyich Tchaikovsky", "title_en": "Serenade for Strings", "description": "차이콥스키가 모차르트를 동경하며 작곡한 곡이다. 우아한 왈츠 악장과 현악기들의 풍성한 울림이 돋보이는 명곡이다."}
+{"id": 455, "composer": "Sergei Rachmaninoff", "title_en": "Prelude in G minor", "description": "라흐마니노프의 피아노 곡 중 가장 널리 알려진 곡 중 하나다. 행진곡 풍의 강렬한 리듬과 서정적인 중간부의 대비가 훌륭하다."}
+{"id": 456, "composer": "Claude Debussy", "title_en": "Rêverie", "description": "드뷔시 초기의 피아노 소품으로, 제목처럼 꿈을 꾸는 듯한 몽환적이고 부드러운 분위기의 곡이다."}
+{"id": 457, "composer": "Maurice Ravel", "title_en": "Tzigane", "description": "라벨이 헝가리 집시 음악(치건) 스타일을 차용해 만든 바이올린 곡이다. 바이올리니스트에게 최고의 기교를 요구하는 화려한 난곡이다."}
+{"id": 458, "composer": "Dmitri Shostakovich", "title_en": "Piano Concerto No. 2", "description": "쇼스타코비치가 아들의 생일 선물로 작곡한 밝고 경쾌한 곡이다. 디즈니 영화 '환타지아 2000'에 사용되어 더욱 유명해졌다."}
+{"id": 459, "composer": "Sir Edward Elgar", "title_en": "Serenade for Strings", "description": "엘가의 초기 대표작으로, 영국적인 기품과 서정성이 가득하다. 부드럽고 따뜻한 현악기의 조화가 마음을 편안하게 해준다."}
+{"id": 460, "composer": "Kim Dong-jin", "title_en": "Sin-Arirang (New Arirang)", "description": "한국의 대표 민요 아리랑을 현대적인 가곡 형식으로 재해석한 곡이다. 피아노 반주와 어우러진 한국적인 정서와 웅장함이 특징이다."}
+{"id": 2799, "composer": "Aram Khachaturian", "title_en": "First Suite from the ballet “Gayaneh” for orchestra, op. 53", "description": "하차투리안이 아르메니아의 집단 농장을 배경으로 한 발레 <가야네>의 음악을 추려 1943년에 엮은 관현악 모음곡 가운데 첫 번째. 아르메니아 민속 선율과 리듬을 살린 춤곡들 사이에 서정적인 '가야네의 아다지오'가 들어 있으며, 이 아다지오는 영화 <2001: 스페이스 오디세이>에 쓰였다."}
+{"id": 11293, "composer": "Gustav Mahler", "title_en": "Symphony no. 9 in D major", "description": "말러가 완성한 마지막 교향곡. 머뭇거리는 리듬으로 시작하는 1악장에서 삶과 죽음이 맞부딪치고, 끝 악장 아다지오는 현악기의 선율이 점점 잦아들어 침묵 속으로 사라진다. 말러는 초연을 보지 못하고 1911년 세상을 떠났고, 이듬해 브루노 발터가 빈에서 초연했다."}
+{"id": 11933, "composer": "Gustav Mahler", "title_en": "Symphony no. 3 in D minor", "description": "여섯 악장에 연주 시간이 1시간 30분을 넘는 말러의 가장 긴 교향곡. 자연의 여러 단계를 차례로 그려 나간다는 구상 아래 거대한 1악장에서 시작해, 4악장에서는 알토가 니체의 <차라투스트라는 이렇게 말했다> 중 '한밤의 노래'를 부르고, 장엄한 현악 아다지오로 끝난다."}
+{"id": 14198, "composer": "Edvard Grieg", "title_en": "Peer Gynt, op. 23", "description": "입센의 희곡 <페르 귄트> 공연을 위해 그리그가 쓴 극음악. 1876년 크리스티아니아(지금의 오슬로)에서 초연되었다. '아침 기분', '오제의 죽음', '산왕의 궁전에서', '솔베이그의 노래' 등은 뒤에 두 개의 관현악 모음곡으로 엮여 더욱 널리 알려졌다."}
+{"id": 14951, "composer": "Johann Sebastian Bach", "title_en": "Kantate, BWV 106 \"Gottes Zeit ist die allerbeste Zeit\"", "description": "'악투스 트라기쿠스(Actus tragicus)'라고도 불리는 바흐 초기의 장례 칸타타. 20대 초반 뮐하우젠 시절인 1707년 무렵 쓴 것으로 보인다. 리코더 두 대와 비올라 다 감바 두 대가 어우러지는 고요한 소나티나로 시작해, 죽음을 받아들이는 믿음을 노래한다."}
+{"id": 15339, "composer": "Johann Sebastian Bach", "title_en": "Kantate, BWV 82 “Ich habe genung”", "description": "베이스 독창을 위한 바흐의 교회 칸타타. 1727년 라이프치히에서 성모 마리아 정결례 축일을 위해 썼으며, 아기 예수를 품에 안은 노인 시므온처럼 이제 평안히 세상을 떠날 수 있다는 마음을 노래한다. 잠을 청하듯 흔들리는 3곡 아리아 '잠들라, 지친 눈이여'가 특히 유명하다."}
+{"id": 26024, "composer": "Georg Friedrich Händel", "title_en": "Opera <Rodelinda>", "description": "헨델이 런던의 왕립 음악 아카데미를 위해 쓴 3막 오페라 세리아. 남편 베르타리도가 죽은 줄 알고 슬퍼하면서도, 왕위를 빼앗은 그리무알도의 청혼을 끝내 거절하는 롬바르드 왕비 로델린다의 정절을 그렸다. 1725년 런던 킹스 극장에서 초연되었다."}
+{"id": 26025, "composer": "Richard Strauss", "title_en": "Symphonic Poem <Also sprach Zarathustra>", "description": "니체의 같은 제목 철학서에서 영감을 받은 교향시. 오르간과 저음의 지속음 위로 트럼펫이 C-G-C 를 울리는 '일출' 서주가 특히 유명하며, 큐브릭의 영화 <2001: 스페이스 오디세이>에 쓰이며 널리 알려졌다. 니체의 장 제목을 딴 아홉 부분이 거의 쉬지 않고 이어진다."}
+{"id": 26026, "composer": "György Ligeti", "title_en": "Requiem", "description": "소프라노와 메조소프라노 독창, 두 혼성 합창과 관현악을 위한 레퀴엠. 입당송, 키리에, 심판의 날, 라크리모사 네 부분으로 되어 있다. 스무 성부가 미크로폴리포니로 얽히는 2악장 키리에는 영화 <2001: 스페이스 오디세이>에 쓰였다. 1965년 스톡홀름에서 초연되었다."}
+{"id": 26027, "composer": "György Ligeti", "title_en": "Lux aeterna", "description": "16성부 무반주 혼성 합창곡. 진혼 미사의 영성체송 '영원한 빛을 그들에게 비추소서'를 가사로, 성부들이 같은 음들을 조금씩 어긋나게 불러 화음이 번지듯 겹쳐지고 풀린다. 리게티의 미크로폴리포니를 대표하는 곡으로 영화 <2001: 스페이스 오디세이>에 쓰였다."}
+{"id": 26028, "composer": "György Ligeti", "title_en": "Atmosphères", "description": "뚜렷한 선율과 박자 대신 거대한 음향 덩어리로 짜인 관현악곡. 악기마다 다른 음을 맡아 촘촘한 음괴를 이루고, 그 색과 밀도가 천천히 바뀌어 간다. 1961년 도나우에싱엔 음악제에서 초연되어 리게티의 이름을 알렸고, 영화 <2001: 스페이스 오디세이>에 쓰였다."}
+{"id": 26029, "composer": "Ludwig van Beethoven", "title_en": "Violin Sonata No. 9 in A major \"Kreutzer\"", "description": "베토벤의 바이올린 소나타 가운데 규모가 가장 크고 격렬한 작품. 바이올린과 피아노가 협주곡처럼 대등하게 맞선다. 처음에는 바이올리니스트 브리지타워를 위해 썼지만, 프랑스의 바이올리니스트 로돌프 크로이처에게 헌정되면서 지금의 이름이 붙었다."}
+{"id": 26030, "composer": "Camille Saint-Saëns", "title_en": "Introduction and Rondo Capriccioso in A minor", "description": "생상스가 스페인의 바이올리니스트 사라사테를 위해 쓴 바이올린과 관현악을 위한 곡. 우수에 찬 서주에 이어 스페인풍 리듬의 론도가 화려한 기교를 펼친다. 비제가 편곡한 바이올린과 피아노판으로도 자주 연주된다."}
+{"id": 26031, "composer": "Fritz Kreisler", "title_en": "Liebesleid (Arr. by Rachmaninoff)", "description": "크라이슬러의 바이올린 소품 <사랑의 슬픔>을 라흐마니노프가 1921년 피아노 독주곡으로 편곡한 곡. 빈 왈츠풍의 애잔한 원곡 선율에 라흐마니노프 특유의 짙은 화성과 대선율을 더해, 원곡보다 한층 깊고 화려한 피아노 소품이 되었다."}
+{"id": 26032, "composer": "Robert Schumann", "title_en": "Widmung (Arr. by Liszt)", "description": "슈만이 클라라와의 결혼을 앞두고 바친 가곡집 <미르테의 꽃>의 첫 곡 '헌정'을 리스트가 피아노 독주곡으로 편곡한 곡. 노래 선율을 그대로 살리면서 넓은 아르페지오와 옥타브로 점점 고조시켜, 사랑의 고백을 웅장한 피아노 음악으로 바꿔 놓았다."}
+{"id": 26033, "composer": "Franz Peter Schubert", "title_en": "Fantasia in F minor for Piano Four Hands", "description": "슈베르트가 세상을 떠난 해인 1828년에 쓴 피아노 연탄곡. 애틋한 F단조 주제로 시작해 라르고, 스케르초, 푸가풍의 피날레를 쉬지 않고 거쳐 다시 첫 주제로 돌아온다. 사후 출판 때 그가 마음에 두었던 제자 카롤리네 에스테르하지에게 헌정되었다."}
+{"id": 26034, "composer": "Pyotr Ilyich Tchaikovsky", "title_en": "The Seasons", "description": "음악 잡지 <누벨리스트>의 의뢰로 1876년 한 해 동안 매달 한 곡씩 실은 12곡의 피아노 소품집. 1월 '난롯가에서'부터 12월 '크리스마스'까지 러시아의 열두 달 풍경을 그린다. 6월 '뱃노래'와 11월 '트로이카'가 특히 사랑받는다."}
+{"id": 26035, "composer": "Wolfgang Amadeus Mozart", "title_en": "Sonata for Piano Four Hands in C major", "description": "모차르트가 1787년 빈에서 완성한 피아노 연탄 소나타. 두 연주자가 주제를 활기차게 주고받는 1악장, 노래하듯 흐르는 2악장, 우아한 론도 3악장으로 되어 있다. 두 파트가 협주곡처럼 대등하게 맞서는 그의 원숙한 연탄곡이다."}
+{"id": 26036, "composer": "Frédéric François Chopin", "title_en": "Andante spianato et Grande polonaise brillante", "description": "쇼팽이 먼저 피아노와 관현악을 위해 쓴 폴로네즈 앞에, 1834년 피아노 독주로 쓴 잔잔한 안단테 스피아나토를 붙여 한 곡으로 만들었다. 호수처럼 고요한 G장조 서두에서 팡파르를 거쳐 화려하고 당당한 E♭장조 폴로네즈로 넘어간다."}
+{"id": 26037, "composer": "Maurice Ravel", "title_en": "Ma mère l'Oye Suite", "description": "라벨이 친구의 어린 남매를 위해 쓴 피아노 연탄곡을 1911년 관현악으로 옮긴 모음곡. 페로의 동화 등을 바탕으로 '잠자는 숲속 미녀의 파반', '엄지 동자', '파고다의 여왕 레드로네트', '미녀와 야수의 대화', '요정의 정원' 다섯 곡이 섬세한 색채로 동화 속 장면을 그린다."}
+{"id": 26038, "composer": "Antonio Lucio Vivaldi", "title_en": "Cantata <Cessate, omai cessate>", "description": "알토 독창과 현악, 통주저음을 위한 비발디의 실내 칸타타. 무정한 연인 때문에 괴로워하는 이의 탄식과 분노를 두 레치타티보와 두 아리아에 담았다. 피치카토와 활로 켜는 현이 겹쳐 흐느끼듯 이어지는 첫 아리아 'Ah ch'infelice sempre'가 특히 유명하다."}
+{"id": 26039, "composer": "Antonio Lucio Vivaldi", "title_en": "Concerto for Strings in A major", "description": "독주 악기 없이 현악 합주와 통주저음만으로 연주하는 비발디의 '리피에노 협주곡'. 빠름–느림–빠름 세 악장으로 된 짧은 곡으로, 힘찬 리듬과 선명한 강약 대비 같은 비발디 협주곡의 특징이 압축되어 있다."}
+{"id": 26040, "composer": "Antonio Lucio Vivaldi", "title_en": "Bassoon Concerto in E minor", "description": "비발디는 바순을 위한 협주곡을 서른 곡 넘게 남겼는데, 이 곡은 그 가운데 자주 연주되는 작품의 하나다. 어두운 E단조 속에서 바순이 낮은 음역의 무게와 민첩한 도약을 함께 보여 주며, 빠름–느림–빠름 세 악장으로 되어 있다."}
+{"id": 26041, "composer": "Wolfgang Amadeus Mozart", "title_en": "Symphony No. 25 in G minor", "description": "모차르트가 17세에 쓴 교향곡. 그의 교향곡 가운데 단조는 이 곡과 40번 둘뿐이어서 '작은 G단조 교향곡'이라 불린다. 당김음으로 몰아치는 격정적인 1악장은 영화 <아마데우스>의 첫 장면에 쓰여 널리 알려졌다."}
+{"id": 26042, "composer": "Wolfgang Amadeus Mozart", "title_en": "Serenade No. 10 in B♭ major \"Gran Partita\"", "description": "12대의 관악기와 콘트라베이스를 위한 일곱 악장의 대규모 세레나데. 오보에, 클라리넷, 바셋호른, 호른, 바순이 어우러지며, 3악장 아다지오는 영화 <아마데우스>에서 살리에리가 악보를 보며 '신의 목소리'를 들은 것 같다고 털어놓는 장면에 쓰였다."}
+{"id": 26043, "composer": "Wolfgang Amadeus Mozart", "title_en": "Opera <Don Giovanni>", "description": "다 폰테의 대본에 의한 모차르트의 2막 오페라. 바람둥이 귀족 돈 조반니의 방탕과 몰락을 희극과 비극을 넘나들며 그렸다. 1787년 프라하에서 초연되었으며, 석상이 된 기사장이 나타나 회개를 거부하는 돈 조반니를 지옥으로 끌고 가는 2막 피날레가 압권이다."}
+{"id": 26044, "composer": "Samuel Barber", "title_en": "Adagio for Strings", "description": "바버가 1936년에 쓴 현악 4중주 Op. 11 의 2악장을 현악 합주용으로 옮긴 곡으로, 1938년 토스카니니와 NBC 교향악단이 초연했다. 느린 선율이 한 걸음씩 쌓여 절정에 이른 뒤 침묵으로 끊기는 구성으로, 추모의 자리에서 자주 연주된다."}
+{"id": 26045, "composer": "Modest Mussorgsky", "title_en": "Cradle Song (words by Ostrovsky)", "description": "극작가 오스트롭스키의 희곡 <보예보다>에 나오는 노래 '잠들어라, 농부의 아들아'에 무소르크스키가 1865년 곡을 붙인 가곡. 농민의 아기를 재우는 러시아 민요풍의 노래로, 그가 남긴 초기 가곡 가운데 하나이며 두 가지 판이 전한다."}
+{"id": 26046, "composer": "Wolfgang Amadeus Mozart", "title_en": "Sonata for Two Pianos in D major", "description": "모차르트가 1781년 빈에서 제자 요제파 아우에른하머와 함께 연주하려고 쓴 소나타. 두 피아노가 주제를 나누어 주고받으며 경쟁하듯 빛나는 밝은 곡이다. 모차르트가 남긴 몇 안 되는 두 대의 피아노 작품 가운데 하나다."}
+{"id": 26047, "composer": "Frédéric François Chopin", "title_en": "Barcarolle in F# major", "description": "베네치아 곤돌라 사공의 노래에서 이름을 딴 쇼팽 말년의 작품. 왼손이 8분의 12박자로 물결처럼 흔들리는 반주를 이어 가고, 오른손은 3도와 6도로 겹친 선율을 노래한다. 1845~46년에 쓴 그의 유일한 뱃노래다."}
+{"id": 26048, "composer": "Frédéric François Chopin", "title_en": "Étude Op. 10 No. 1 in C major", "description": "쇼팽이 리스트에게 헌정한 연습곡집 Op. 10 의 첫 곡. 오른손이 건반 위아래로 넓게 펼쳐진 아르페지오를 쉬지 않고 오르내리고, 왼손은 옥타브로 묵직한 저음 선율을 받친다. 손을 크게 벌려야 해서 가장 어려운 연습곡의 하나로 꼽힌다."}
+{"id": 26049, "composer": "Frédéric François Chopin", "title_en": "Piano Sonata No. 2 in B♭ minor \"Funeral March\"", "description": "3악장 '장송 행진곡'으로 널리 알려진 쇼팽의 피아노 소나타. 행진곡은 1837년에 먼저 쓰였고, 1839년 노앙에서 나머지 악장을 더해 완성했다. 격정적인 1악장과 스케르초, 장송 행진곡에 이어 두 손이 유니즌으로 휘몰아치는 짧은 피날레가 파격적이다."}
+{"id": 26050, "composer": "Frédéric François Chopin", "title_en": "Piano Sonata No. 3 in B minor", "description": "쇼팽이 1844년 노앙에서 완성한 마지막 피아노 소나타. 2번보다 고전적인 균형을 갖추었으며, 당당한 1악장과 가벼운 스케르초, 녹턴처럼 노래하는 라르고를 지나 격렬한 론도 피날레로 끝난다. 그의 피아노 독주곡 가운데 규모가 가장 큰 작품에 속한다."}
+{"id": 26051, "composer": "Paul Dukas", "title_en": "Symphonic Scherzo <The Sorcerer's Apprentice>", "description": "괴테의 시 <마법사의 제자>를 바탕으로 한 관현악곡. 스승이 없는 사이 주문으로 빗자루에게 물을 길어 오게 한 제자가 멈추는 법을 몰라 집이 물바다가 되는 이야기를, 바순이 이끄는 익살스러운 주제로 생생하게 그린다. 1897년 파리에서 뒤카의 지휘로 초연되었다."}
+{"id": 26052, "composer": "Ottorino Respighi", "title_en": "Symphonic Poem <Pines of Rome>", "description": "<로마의 분수>, <로마의 축제>와 함께 '로마 3부작'을 이루는 교향시. 보르게세 별장, 카타콤, 자니콜로 언덕, 아피아 가도의 소나무 네 장면을 쉬지 않고 이어 그린다. 3부 끝에는 녹음한 나이팅게일 소리를 틀고, 4부에서는 로마 군단의 행진이 거대한 크레셴도로 다가온다."}
+{"id": 26053, "composer": "Richard Wagner", "title_en": "Opera <Der fliegende Holländer>", "description": "영원히 바다를 떠도는 저주를 받은 네덜란드인 선장이 끝까지 신실한 여인 젠타의 사랑으로 구원받는다는 전설을 그린 3막 오페라. 1843년 드레스덴에서 바그너의 지휘로 초연되었다. 폭풍우 치는 바다를 그린 서곡과 '젠타의 발라드'가 유명하다."}
+{"id": 26054, "composer": "Richard Wagner", "title_en": "Opera <Rienzi>", "description": "14세기 로마에서 귀족에 맞서 민중의 지도자가 되었다가 몰락하는 호민관 리엔치의 이야기를 그린 5막 그랜드 오페라. 불워리턴의 소설을 바탕으로 바그너가 직접 대본을 썼고, 1842년 드레스덴 초연으로 그에게 첫 큰 성공을 안겼다. 트럼펫 신호로 시작하는 서곡이 따로 자주 연주된다."}
+{"id": 26055, "composer": "Richard Wagner", "title_en": "Opera <Tannhäuser>", "description": "여신 베누스의 동굴에서 쾌락에 빠졌던 기사 탄호이저가 바르트부르크 노래 경연에서 그 사실을 드러내 순례를 떠나고, 엘리자베트의 희생으로 구원받는 3막 오페라. 1845년 드레스덴에서 초연했고, 1861년 파리 공연을 위해 1막 베누스베르크 장면에 관능적인 발레 음악을 새로 썼다."}
+{"id": 26056, "composer": "Anton Bruckner", "title_en": "Symphony No. 9 in D minor", "description": "브루크너가 생애 마지막 몇 해를 바쳤으나 4악장을 끝내지 못하고 세상을 떠나 세 악장으로 남은 교향곡. '사랑하는 하느님께' 바쳤다고 전한다. 신비로운 1악장, 거칠게 내리찍는 스케르초, 장엄한 아다지오로 이어지며 1903년 빈에서 초연되었다."}
+{"id": 26057, "composer": "Georg Friedrich Händel", "title_en": "Passacaglia in G minor (Arr. by Halvorsen)", "description": "헨델의 하프시코드 모음곡 G단조 HWV 432 의 마지막 곡 파사칼리아를 노르웨이의 작곡가 할보르센이 바이올린과 비올라 이중주로 편곡한 곡. 원곡의 짧은 주제 위에 화려한 변주를 더해 두 현악기가 숨 가쁘게 주고받는 연주회용 곡이 되었다. 바이올린과 첼로로도 자주 연주된다."}
+{"id": 26058, "composer": "Wolfgang Amadeus Mozart", "title_en": "Piano Concerto No. 21 in C major", "description": "1785년 3월, 20번 D단조 협주곡을 완성하고 한 달 만에 내놓은 협주곡. 행진곡풍의 당당한 1악장과 경쾌한 피날레 사이에, 약음기를 낀 현악기 위로 피아노가 꿈결처럼 노래하는 2악장 안단테가 있다. 2악장이 1967년 스웨덴 영화 <엘비라 마디간>에 쓰여 그 이름이 별명처럼 붙었다."}
+{"id": 26059, "composer": "Pietro Mascagni", "title_en": "Opera <Silvano>", "description": "마스카니가 <카발레리아 루스티카나>의 성공 뒤에 쓴 2막짜리 '뱃사람 드라마'. 알퐁스 카르의 소설을 바탕으로 타르조니토체티가 대본을 썼고, 1895년 밀라노 스칼라 극장에서 초연되었다. 지금은 드물게 공연되지만 테너 아리아에 이어지는 뱃노래(Barcarola)는 따로 자주 녹음된다."}
