@@ -32,8 +32,14 @@ def main() -> int:
         by_genre[genre].append(piece_id)
 
     out = sys.stdout
-    out.write("-- 비교 작품 장르 채우기. seed_pipeline/curation/piece-genres-2026-11-07/gen_sql.py 가 만든다.\n")
-    out.write(f"-- 원본: genres.jsonl ({len(seen)}곡). 손으로 고치지 말고 원본을 고쳐 새 마이그레이션을 만든다.\n")
+    out.write(
+        "-- 비교 작품 장르 채우기. "
+        "seed_pipeline/curation/piece-genres-2026-11-07/gen_sql.py 가 만든다.\n"
+    )
+    out.write(
+        f"-- 원본: genres.jsonl ({len(seen)}곡). "
+        "손으로 고치지 말고 원본을 고쳐 새 마이그레이션을 만든다.\n"
+    )
     for genre in GENRES:
         ids = sorted(by_genre.get(genre, []))
         if not ids:

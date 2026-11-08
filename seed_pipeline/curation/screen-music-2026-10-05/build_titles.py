@@ -6,18 +6,19 @@ sectorKey 는 영화에 나온 대목이 그 비교 구간과 분명히 같을 �
 """
 import json
 import re
-import unicodedata
 import sys
+import unicodedata
 from pathlib import Path
 
 HERE = Path(__file__).parent
 RESEARCH = HERE / "research"
 
-COMPOSERS = {c["id"]: c for c in json.load(open(HERE / "composers.json"))}
-PIECES = {p["id"]: p for p in json.load(open(HERE / "pieces.json"))}
-COMPOSER_IDS = json.load(open(HERE / "composer-map.json"))
+COMPOSERS = {c["id"]: c for c in json.loads((HERE / "composers.json").read_text())}
+PIECES = {p["id"]: p for p in json.loads((HERE / "pieces.json").read_text())}
+COMPOSER_IDS = json.loads((HERE / "composer-map.json").read_text())
 COMPOSER_IDS["Sergei Prokofiev"] = 84
-# 카탈로그에 없는 작곡가의 한국어 이름(2026-10-07 에 여섯 다 migration 202610070004 로 들어와 비었다)
+# 카탈로그에 없는 작곡가의 한국어 이름
+# (2026-10-07 에 여섯 다 migration 202610070004 로 들어와 비었다)
 MISSING_COMPOSERS: dict[str, str] = {}
 
 MAP = {
@@ -204,13 +205,14 @@ ORDER = [
     "squid-game", "parasite", "decision-to-leave", "oldboy", "the-shawshank-redemption",
     "the-kings-speech", "2001-a-space-odyssey", "your-lie-in-april", "do-you-like-brahms",
     "secret-affair", "beethoven-virus", "the-pianist", "apocalypse-now", "neon-genesis-evangelion",
-    "wednesday", "sky-castle", "the-penthouse", "tomorrow-cantabile", "the-glory", "keys-to-the-heart",
-    "sympathy-for-lady-vengeance", "the-handmaiden", "thirst", "amadeus", "the-silence-of-the-lambs",
-    "tar", "platoon", "mission-impossible-rogue-nation", "pretty-woman", "oceans-eleven", "black-swan",
-    "a-clockwork-orange", "melancholia", "death-in-venice", "detective-conan", "nodame-cantabile-anime",
-    "forest-of-piano", "fantasia", "fantasia-2000", "the-cat-concerto", "whats-opera-doc",
-    "legend-of-the-galactic-heroes", "my-paparotti", "for-horowitz", "harmony", "four-hands",
-    "maestra-strings-of-truth", "brief-encounter", "elvira-madigan", "raging-bull",
+    "wednesday", "sky-castle", "the-penthouse", "tomorrow-cantabile", "the-glory",
+    "keys-to-the-heart", "sympathy-for-lady-vengeance", "the-handmaiden", "thirst", "amadeus",
+    "the-silence-of-the-lambs", "tar", "platoon", "mission-impossible-rogue-nation", "pretty-woman",
+    "oceans-eleven", "black-swan", "a-clockwork-orange", "melancholia", "death-in-venice",
+    "detective-conan", "nodame-cantabile-anime", "forest-of-piano", "fantasia", "fantasia-2000",
+    "the-cat-concerto", "whats-opera-doc", "legend-of-the-galactic-heroes", "my-paparotti",
+    "for-horowitz", "harmony", "four-hands", "maestra-strings-of-truth", "brief-encounter",
+    "elvira-madigan", "raging-bull",
 ]
 
 # 확인 때 열리지 않은 근거(2026-10-05). 남은 근거로도 공개 기준을 넘는다
@@ -221,16 +223,18 @@ DEAD_URLS = {
 # 2026-10-05 사용자가 확인 표의 149개를 모두 승인했다
 STATUS = "PUBLISHED"
 
-COVERS = json.load(open(HERE / "covers.json")) if (HERE / "covers.json").exists() else {}
+COVERS = json.loads((HERE / "covers.json").read_text()) if (HERE / "covers.json").exists() else {}
 # 영상마다 있는 가장 높은 썸네일 화질(probe_thumbs.py 가 잰다)
-THUMBS = json.load(open(HERE / "thumbs.json")) if (HERE / "thumbs.json").exists() else {}
+THUMBS = json.loads((HERE / "thumbs.json").read_text()) if (HERE / "thumbs.json").exists() else {}
 # 그 곡이 나오는 장면 그림과 곡이 들리기 시작하는 시점. 사람이 확인 표에서 고른 것과 추천
 # ("<slug>/<cue key>" → {"frame": default·1·2·3 또는 null, "startSec": 초 또는 null,
 #  "clip": 조사 때 없던 공식 장면 클립을 새로 찾았으면 그 클립, "source": 확인 표·추천})
 SCENES_PATH = HERE / "scene-frames.json"
 SCENE_FRAMES = json.loads(SCENES_PATH.read_text()) if SCENES_PATH.exists() else {}
 # KMDb 포스터(probe_posters.py 가 찾고 사람이 확인한다). status 가 ok 인 것만 싣는다
-POSTERS = json.load(open(HERE / "posters.json")) if (HERE / "posters.json").exists() else {}
+POSTERS = (
+    json.loads((HERE / "posters.json").read_text()) if (HERE / "posters.json").exists() else {}
+)
 
 
 def with_thumbs(clip: dict) -> dict:
@@ -261,7 +265,7 @@ def episode_label(raw):
     raw = raw.strip()
     if re.fullmatch(r"S\d+E\d+|E\d+", raw) or raw == "여러 회":
         return raw
-    m = re.fullmatch(r"E(\d+)\s*[–-]\s*E(\d+)", raw)
+    m = re.fullmatch(r"E(\d+)\s*[\u2013-]\s*E(\d+)", raw)
     if m:
         return f"{int(m.group(1))}~{int(m.group(2))}화"
     return raw
@@ -277,8 +281,8 @@ def main() -> int:
     titles = []
     files = {p.stem: p for p in RESEARCH.glob("*.json")}
     order = [s for s in ORDER if s in files] + sorted(s for s in files if s not in ORDER)
-    for index, slug in enumerate(order, start=1):
-        data = json.load(open(files[slug]))
+    for _index, slug in enumerate(order, start=1):
+        data = json.loads(files[slug].read_text())
         cues = []
         used_keys = set()
         for cue in data["cues"]:
@@ -319,7 +323,11 @@ def main() -> int:
                     "channel": clip["channel"],
                     "title": clip["title"],
                 })
-            base = slugify(composer.split()[-1], 1) + "-" + slugify(cue.get("work") or work_title, 4)
+            base = (
+                slugify(composer.split()[-1], 1)
+                + "-"
+                + slugify(cue.get("work") or work_title, 4)
+            )
             if cue.get("part"):
                 base += "-" + slugify(cue["part"], 3)
             key = base[:90].strip("-")
@@ -345,7 +353,9 @@ def main() -> int:
                 "sectorKey": sector_key,
                 "usage": cue["usage"],
                 "arranged": bool(cue.get("arranged")),
-                "approxAtSec": cue.get("approxAtSec") if cue.get("approxAtSec") not in (0,) else None,
+                "approxAtSec": (
+                    cue.get("approxAtSec") if cue.get("approxAtSec") not in (0,) else None
+                ),
                 "sceneNote": cue["sceneNote"].strip(),
                 "spoiler": bool(cue.get("spoiler")),
                 "officialClip": clip,
