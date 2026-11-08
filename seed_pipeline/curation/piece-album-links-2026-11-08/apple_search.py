@@ -69,7 +69,8 @@ def fetch(term: str) -> dict[str, Any]:
     url = "https://itunes.apple.com/search?" + urllib.parse.urlencode(
         {"term": term, "entity": "song", "limit": 200, "country": "us"}
     )
-    for attempt in range(6):
+    # iTunes 가 몇십 분씩 막을 때가 있어 오래 기다린다
+    for attempt in range(10):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA})
             with urllib.request.urlopen(req, timeout=40) as res:
@@ -80,11 +81,11 @@ def fetch(term: str) -> dict[str, Any]:
                 # 검색어에 따라 iTunes 가 404 를 준다(결과 없음과 같다)
                 return {"resultCount": 0, "results": []}
             if err.code in (403, 429) or err.code >= 500:
-                time.sleep(30 * (attempt + 1))
+                time.sleep(min(60 * (attempt + 1), 300))
                 continue
             raise
         except (urllib.error.URLError, OSError):
-            time.sleep(15 * (attempt + 1))
+            time.sleep(min(30 * (attempt + 1), 300))
     raise RuntimeError(f"failed: {term}")
 
 
