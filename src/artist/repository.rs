@@ -9,9 +9,36 @@ use sqlx::Error;
 
 pub struct ArtistRepository;
 
+/// 목록 등급 순서: S → A → B → Rising → 그 밖.
+const FEATURED_TIER: &str =
+    "CASE tier WHEN 'S' THEN 0 WHEN 'A' THEN 1 WHEN 'B' THEN 2 WHEN 'Rising' THEN 3 ELSE 4 END";
+/// 한국 연주자. 국적 칸에 영어·한국어가 섞여 있어 둘 다 본다.
+const KOREAN: &str =
+    "(COALESCE(nationality, '') LIKE '%Korea%' OR COALESCE(nationality, '') LIKE '%한국%')";
+
+/// 기본 목록 순서에 쓰는 칸: 같은 등급·같은 쪽(한국/세계) 안에서 등록 순 번호(0부터).
+fn featured_seq_column() -> String {
+    format!("ROW_NUMBER() OVER (PARTITION BY {FEATURED_TIER}, {KOREAN} ORDER BY id) - 1 AS featured_seq")
+}
+
+/// 기본 목록 순서: 등급 → 등급 안에서 세계 연주자 둘 다음 한국 연주자 하나.
+/// 등록 순서대로 두면 먼저 넣은 한국 연주자가 앞에 몰려서 섞는다(2026-11-08 사용자 결정).
+/// 평점(rating)은 몇 명만 임의로 채워져 있고 NULL 이 섞여 있어 순서에 쓰지 않는다.
+fn featured_order() -> String {
+    format!(
+        "{FEATURED_TIER}, \
+         CASE WHEN {KOREAN} THEN featured_seq * 3 + 2 ELSE featured_seq + FLOOR(featured_seq / 2) END, id"
+    )
+}
+
 impl ArtistRepository {
     pub async fn find_all(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<Artist>, Error> {
-        sqlx::query_as::<_, Artist>("SELECT * FROM v_artists_full LIMIT ? OFFSET ?")
+        let query = format!(
+            "SELECT *, {} FROM v_artists_full ORDER BY {} LIMIT ? OFFSET ?",
+            featured_seq_column(),
+            featured_order()
+        );
+        sqlx::query_as::<_, Artist>(&query)
             .bind(limit)
             .bind(offset)
             .fetch_all(pool)
@@ -235,7 +262,10 @@ impl ArtistRepository {
             .map(stored_values_matching_label)
             .unwrap_or_default();
 
-        let mut query = String::from("SELECT * FROM v_artists_full WHERE 1=1");
+        let mut query = format!(
+            "SELECT *, {} FROM v_artists_full WHERE 1=1",
+            featured_seq_column()
+        );
 
         // Text search across multiple fields
         if search_text.is_some() {
@@ -270,7 +300,8 @@ impl ArtistRepository {
             query.push_str(relevance_sql);
             query.push_str(", ");
         }
-        query.push_str("rating DESC, tier ASC, id ASC LIMIT ? OFFSET ?");
+        query.push_str(&featured_order());
+        query.push_str(" LIMIT ? OFFSET ?");
 
         let mut sql_query = sqlx::query_as::<_, Artist>(&query);
 
