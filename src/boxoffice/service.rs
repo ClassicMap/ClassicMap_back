@@ -36,8 +36,8 @@ impl BoxofficeService {
              FROM concert_boxoffice_rankings cbr
              JOIN concerts c ON cbr.concert_id = c.id
              WHERE cbr.is_featured = TRUE
-               AND c.status IN ('upcoming', 'ongoing')
-               AND c.start_date >= CURDATE()",
+               AND c.status <> 'cancelled'
+               AND COALESCE(c.end_date, c.start_date) >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00'))",
         );
 
         let mut bindings: Vec<String> = Vec::new();
@@ -54,7 +54,7 @@ impl BoxofficeService {
             bindings.push(area);
         } else {
             // area_code가 없으면 전국 순위만 (area_code가 NULL인 레코드)
-            query.push_str(" AND cbr.kopis_area_code = 00");
+            query.push_str(" AND cbr.kopis_area_code = '00'");
         }
 
         query.push_str(" ORDER BY cbr.ranking ASC LIMIT 3");

@@ -1,5 +1,7 @@
 use super::client::KopisClient;
+use crate::boxoffice::repository::RankingSlot;
 use crate::boxoffice::BoxofficeRepository;
+use crate::concert::model::Concert;
 use crate::concert::repository::{ArtistNameIndex, ConcertRepository};
 use crate::concert::service::ConcertService;
 use crate::hall::{CreateHall, HallRepository};
@@ -304,6 +306,9 @@ impl KopisService {
         let mut added_count = 0;
         let mut updated_count = 0;
         let mut error_count = 0;
+        // 호출·DB 실패가 있었으면 다음 동기화가 같은 날짜부터 다시 받게 마지막 동기화 날짜를 올리지 않는다.
+        // (공연장이 없어 건너뛴 공연처럼 다시 해도 같은 결과인 것은 여기 넣지 않는다)
+        let mut retry_needed = false;
 
         // 조회 기간 설정 (오늘부터 1년 후까지)
         let today = Utc::now().date_naive();
@@ -533,6 +538,10 @@ impl KopisService {
                                                         ),
                                                     );
                                                     error_count += 1;
+                                                    // 값이 칸에 안 맞는 오류는 다시 해도 같다. 연결 오류만 다시 받는다
+                                                    if !is_data_error(&e) {
+                                                        retry_needed = true;
+                                                    }
                                                 }
                                             }
                                         }
@@ -552,6 +561,7 @@ impl KopisService {
                                                 ),
                                             );
                                             error_count += 1;
+                                            retry_needed = true;
                                         }
                                     }
                                 }
@@ -564,6 +574,7 @@ impl KopisService {
                                         ),
                                     );
                                     error_count += 1;
+                                    retry_needed = true;
                                 }
                             }
                         }
@@ -577,6 +588,7 @@ impl KopisService {
                             ),
                         );
                         error_count += 1;
+                        retry_needed = true;
                     }
                 }
 
@@ -590,13 +602,22 @@ impl KopisService {
             errors: error_count,
         };
 
-        // 동기화 완료 기록
+        // 동기화 완료 기록. 다시 받아야 할 실패가 있으면 날짜를 그대로 둬 다음 동기화가 이어 받는다
         let today = Utc::now().date_naive();
+        let (status, next_after_date) = if retry_needed {
+            Logger::warn(
+                "KOPIS",
+                "Concert sync had fetch or save failures; keeping the last sync date so the next run retries",
+            );
+            ("failed", None)
+        } else {
+            ("success", Some(today))
+        };
         Self::update_sync_status(
             pool,
             "concerts",
-            "success",
-            Some(today),
+            status,
+            next_after_date,
             Some(added_count),
             Some(updated_count),
         )
@@ -628,6 +649,7 @@ impl KopisService {
 
         // 조회 기간: 최근 30일
         let today = Utc::now().date_naive();
+        let today_kst = kst_today();
         let start_date = (today - Duration::days(30)).format("%Y%m%d").to_string();
         let end_date = today.format("%Y%m%d").to_string();
 
@@ -671,66 +693,47 @@ impl KopisService {
                     ),
                 );
 
+                let area_key = area_code.unwrap_or("00");
                 match client
                     .fetch_boxoffice_rankings(&start_date, &end_date, Some(genre_code), *area_code)
                     .await
                 {
                     Ok(response) => {
-                        // TOP 3만 UPSERT (1, 2, 3등 슬롯 업데이트)
-                        for item in response.boxof.iter().take(3) {
-                            // performance_id로 concert_id 찾기
+                        // 순위 위에서부터, 우리 DB 에 있고 아직 끝나지 않은 공연 3개를 고른다.
+                        // 앞 순위 공연이 없거나 끝났으면 다음 순위로 채운다
+                        let mut slots: Vec<RankingSlot> = Vec::new();
+                        let mut lookup_failed = false;
+                        for item in response.boxof.iter() {
+                            if slots.len() >= 3 {
+                                break;
+                            }
                             match ConcertRepository::get_by_kopis_id(pool, &item.performance_id)
                                 .await
                             {
                                 Ok(Some(concert)) => {
-                                    match BoxofficeRepository::upsert_ranking(
-                                        pool,
-                                        concert.id,
-                                        Some(genre_code),
-                                        Some(&item.category),
-                                        *area_code,
-                                        Some(&item.area),
-                                        item.ranking,
-                                        None,
-                                        item.performance_count.unwrap_or(0),
-                                        Some(&item.venue_name),
-                                        item.seat_count,
-                                        &start_date,
-                                        &end_date,
-                                    )
-                                    .await
-                                    {
-                                        Ok(_) => {
-                                            added_count += 1;
-                                            Logger::success(
-                                                "KOPIS",
-                                                &format!(
-                                                    "Updated ranking #{} for concert: {}",
-                                                    item.ranking, item.performance_name
-                                                ),
-                                            );
-                                        }
-                                        Err(e) => {
-                                            Logger::error(
-                                                "KOPIS",
-                                                &format!(
-                                                    "Failed to upsert ranking for {}: {}",
-                                                    item.performance_name, e
-                                                ),
-                                            );
-                                            error_count += 1;
-                                        }
+                                    if concert_has_ended(&concert, today_kst) {
+                                        continue;
                                     }
+                                    slots.push(RankingSlot {
+                                        concert_id: concert.id,
+                                        ranking: item.ranking,
+                                        genre_name: item.category.clone(),
+                                        area_name: item.area.clone(),
+                                        performance_count: item.performance_count.unwrap_or(0),
+                                        venue_name: item.venue_name.clone(),
+                                        seat_count: item.seat_count,
+                                    });
                                 }
                                 Ok(None) => {
                                     Logger::warn(
                                         "KOPIS",
                                         &format!(
-                                            "Concert not found for ranking: {} (kopis_id: {})",
-                                            item.performance_name, item.performance_id
+                                            "Concert not found for ranking #{}: {} (kopis_id: {})",
+                                            item.ranking,
+                                            item.performance_name,
+                                            item.performance_id
                                         ),
                                     );
-                                    error_count += 1;
                                 }
                                 Err(e) => {
                                     Logger::error(
@@ -740,12 +743,52 @@ impl KopisService {
                                             item.performance_id, e
                                         ),
                                     );
-                                    error_count += 1;
+                                    lookup_failed = true;
+                                    break;
                                 }
+                            }
+                        }
+                        if lookup_failed {
+                            // 조회가 깨졌을 때는 있던 순위를 그대로 둔다
+                            error_count += 1;
+                            continue;
+                        }
+                        match BoxofficeRepository::replace_area_rankings(
+                            pool,
+                            genre_code,
+                            area_key,
+                            &slots,
+                            &start_date,
+                            &end_date,
+                        )
+                        .await
+                        {
+                            Ok(()) => {
+                                added_count += slots.len() as i32;
+                                Logger::success(
+                                    "KOPIS",
+                                    &format!(
+                                        "Boxoffice {} {}: {} rankings saved",
+                                        genre_code,
+                                        area_display,
+                                        slots.len()
+                                    ),
+                                );
+                            }
+                            Err(e) => {
+                                Logger::error(
+                                    "KOPIS",
+                                    &format!(
+                                        "Failed to save boxoffice rankings for {}, {}: {}",
+                                        genre_code, area_display, e
+                                    ),
+                                );
+                                error_count += 1;
                             }
                         }
                     }
                     Err(e) => {
+                        // 받지 못한 지역은 있던 순위를 그대로 둔다
                         Logger::error(
                             "KOPIS",
                             &format!(
@@ -787,6 +830,28 @@ impl KopisService {
 
         Ok(result)
     }
+}
+
+/// 값 자체가 잘못돼 다시 해도 같은 결과인 DB 오류(SQLSTATE 22: 데이터 오류, 23: 제약 위반)
+fn is_data_error(error: &sqlx::Error) -> bool {
+    error
+        .as_database_error()
+        .and_then(|db| db.code())
+        .map(|code| code.starts_with("22") || code.starts_with("23"))
+        .unwrap_or(false)
+}
+
+/// KOPIS 공연 날짜는 한국 날짜다
+fn kst_today() -> NaiveDate {
+    (Utc::now() + Duration::hours(9)).date_naive()
+}
+
+/// 끝난 공연인지. 끝 날짜가 없으면 시작 날짜로 본다
+fn concert_has_ended(concert: &Concert, today: NaiveDate) -> bool {
+    let last_day = concert.end_date.as_deref().unwrap_or(&concert.start_date);
+    NaiveDate::parse_from_str(last_day, "%Y-%m-%d")
+        .map(|day| day < today)
+        .unwrap_or(false)
 }
 
 #[derive(Debug)]

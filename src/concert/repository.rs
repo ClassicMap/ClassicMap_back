@@ -285,6 +285,29 @@ impl ConcertRepository {
     }
 
     /// venue의 kopis_id로 venue_id 조회
+    /// 날짜로 공연 상태를 맞춘다(예정·진행·완료). KOPIS 는 상태가 바뀌어도 다시 보내 주지 않아
+    /// 끝난 공연이 '예정'으로 남는다. 취소된 공연은 건드리지 않는다. 바뀐 행 수를 돌려준다
+    pub async fn refresh_statuses_by_date(pool: &DbPool) -> Result<u64, Error> {
+        let result = sqlx::query(
+            "UPDATE concerts c
+             JOIN (SELECT DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00')) AS today) t
+             SET c.status = CASE
+                 WHEN COALESCE(c.end_date, c.start_date) < t.today THEN 'completed'
+                 WHEN c.start_date <= t.today THEN 'ongoing'
+                 ELSE 'upcoming'
+               END
+             WHERE c.status IN ('upcoming', 'ongoing', 'completed', '공연예정', '공연중', '공연완료')
+               AND c.status <> CASE
+                 WHEN COALESCE(c.end_date, c.start_date) < t.today THEN 'completed'
+                 WHEN c.start_date <= t.today THEN 'ongoing'
+                 ELSE 'upcoming'
+               END",
+        )
+        .execute(pool)
+        .await?;
+        Ok(result.rows_affected())
+    }
+
     pub async fn get_venue_id_by_kopis_id(
         pool: &DbPool,
         venue_kopis_id: &str,
@@ -569,7 +592,7 @@ impl ConcertRepository {
              INNER JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
              WHERE cbr.is_featured = true
              AND cbr.kopis_area_code = ?
-             AND c.start_date >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00'))
+             AND COALESCE(c.end_date, c.start_date) >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00'))
              GROUP BY c.id
              ORDER BY MIN(cbr.ranking) ASC, c.id ASC
              LIMIT ?"
@@ -578,7 +601,7 @@ impl ConcertRepository {
              FROM concerts c
              INNER JOIN concert_boxoffice_rankings cbr ON c.id = cbr.concert_id
              WHERE cbr.is_featured = true
-             AND c.start_date >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00'))
+             AND COALESCE(c.end_date, c.start_date) >= DATE(CONVERT_TZ(NOW(), '+00:00', '+09:00'))
              GROUP BY c.id
              ORDER BY MIN(cbr.ranking) ASC, c.id ASC
              LIMIT ?"

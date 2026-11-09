@@ -4,6 +4,18 @@ use sqlx::Error;
 
 pub struct BoxofficeRepository;
 
+/// 한 지역 순위 칸 하나. ranking 은 KOPIS 순위를 그대로 둔다(앞 순위가 빠지면 4위 이상일 수 있다)
+#[derive(Debug, Clone)]
+pub struct RankingSlot {
+    pub concert_id: i32,
+    pub ranking: i32,
+    pub genre_name: String,
+    pub area_name: String,
+    pub performance_count: i32,
+    pub venue_name: String,
+    pub seat_count: Option<i32>,
+}
+
 impl BoxofficeRepository {
     /// 특정 기간의 순위 데이터 삭제 (새 데이터로 교체하기 전)
     pub async fn delete_rankings_for_period(
@@ -33,6 +45,50 @@ impl BoxofficeRepository {
 
         let result = q.execute(pool).await?;
         Ok(result.rows_affected())
+    }
+
+    /// 한 장르·지역의 순위 칸을 통째로 바꾼다. 새 순위에 없는 옛 공연이 남지 않게 지우고 넣는다.
+    /// slots 가 비어 있으면 그 지역 순위는 비운다
+    pub async fn replace_area_rankings(
+        pool: &DbPool,
+        kopis_genre_code: &str,
+        kopis_area_code: &str,
+        slots: &[RankingSlot],
+        sync_start_date: &str,
+        sync_end_date: &str,
+    ) -> Result<(), Error> {
+        let mut tx = pool.begin().await?;
+        sqlx::query(
+            "DELETE FROM concert_boxoffice_rankings WHERE kopis_genre_code = ? AND kopis_area_code = ?",
+        )
+        .bind(kopis_genre_code)
+        .bind(kopis_area_code)
+        .execute(&mut *tx)
+        .await?;
+        for slot in slots {
+            sqlx::query(
+                "INSERT INTO concert_boxoffice_rankings (
+                    concert_id, kopis_genre_code, genre_name,
+                    kopis_area_code, area_name, ranking,
+                    performance_count, venue_name, seat_count,
+                    sync_start_date, sync_end_date, is_featured
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, TRUE)",
+            )
+            .bind(slot.concert_id)
+            .bind(kopis_genre_code)
+            .bind(&slot.genre_name)
+            .bind(kopis_area_code)
+            .bind(&slot.area_name)
+            .bind(slot.ranking)
+            .bind(slot.performance_count)
+            .bind(&slot.venue_name)
+            .bind(slot.seat_count)
+            .bind(sync_start_date)
+            .bind(sync_end_date)
+            .execute(&mut *tx)
+            .await?;
+        }
+        tx.commit().await
     }
 
     /// 순위 데이터 UPSERT (장르/지역별 1, 2, 3등 슬롯 업데이트)
