@@ -160,7 +160,7 @@
 - **브람스 「2개의 가보트」 WoO 3(`0023`)**: 1·2번 조성이 뒤바뀌어 있었습니다. 1번이 A단조, 2번이 A장조입니다([IMSLP](https://imslp.org/wiki/2_Gavottes,_WoO_3_(Brahms,_Johannes)), [Piano Library](https://www.pianolibrary.org/composers/brahms/gavottes-woo3/)). 조성이 어긋나 곡 링크 매칭이 막혀 있었습니다. 이름을 고친 뒤 `match.py`가 두 서비스 모두 번호로 짝지은 트랙 링크를 채웠습니다.
 - **나이먼 「Michael Nyman 1」~「6」(`0024`)**: 영화 「Le Mari de la coiffeuse」(파트리스 르콩트, 1990) 사운드트랙의 큐 트랙 이름이었습니다.
   - 근거: MusicBrainz에서 작품 → 녹음 → 음반을 따라가면 「Le mari de la coiffeuse」가 나옵니다.
-  - 제목: 「영화 <Le Mari de la coiffeuse> 사운드트랙: Michael Nyman 1」 꼴로 영화를 밝혔습니다. 한국 개봉 제목은 확인하지 못해 원제를 썼습니다.
+  - 제목: 「영화 <Le Mari de la coiffeuse> 사운드트랙: Michael Nyman 1」 꼴로 영화를 밝혔습니다. 한국 제목은 나중에 왓챠피디아에서 「사랑한다면 이들처럼」으로 확인해 한국어 제목에 넣었습니다(`0025`). 영어 제목은 원제를 씁니다.
   - 링크: Apple Music 링크가 현악 사중주 음반 등 다른 작품을 가리켜 지웠습니다. 사운드트랙은 Apple Music·Spotify에 없습니다.
 
 ## 다시 만들기
