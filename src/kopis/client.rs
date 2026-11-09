@@ -2,21 +2,109 @@ use super::models::{
     BoxofficeResponse, ConcertDetailResponse, ConcertListResponse, VenueDetailResponse,
     VenueListResponse,
 };
-use reqwest;
+use reqwest::StatusCode;
 use serde_xml_rs::from_str;
+use std::time::{Duration, Instant};
+use tokio::sync::Mutex;
+
+/// KOPIS 는 짧은 시간에 몰아 부르면(1.7초에 7번째쯤부터) 400 "Request Blocked" 로 막는다.
+/// 요청 사이를 이만큼 띄운다
+const MIN_REQUEST_INTERVAL: Duration = Duration::from_millis(500);
+/// 막히거나 일시 오류일 때 다시 부르기 전에 기다리는 시간
+const RETRY_DELAYS: [Duration; 3] = [
+    Duration::from_secs(5),
+    Duration::from_secs(15),
+    Duration::from_secs(45),
+];
+const REQUEST_TIMEOUT: Duration = Duration::from_secs(30);
 
 pub struct KopisClient {
     api_key: String,
     base_url: String,
     client: reqwest::Client,
+    last_request: Mutex<Option<Instant>>,
 }
 
 impl KopisClient {
     pub fn new(api_key: String, base_url: String) -> Self {
+        let client = reqwest::Client::builder()
+            .timeout(REQUEST_TIMEOUT)
+            .build()
+            .unwrap_or_else(|_| reqwest::Client::new());
         Self {
             api_key,
             base_url,
-            client: reqwest::Client::new(),
+            client,
+            last_request: Mutex::new(None),
+        }
+    }
+
+    /// 앞 요청과 MIN_REQUEST_INTERVAL 만큼 떨어질 때까지 기다린다
+    async fn wait_turn(&self) {
+        let mut last = self.last_request.lock().await;
+        if let Some(previous) = *last {
+            let elapsed = previous.elapsed();
+            if elapsed < MIN_REQUEST_INTERVAL {
+                tokio::time::sleep(MIN_REQUEST_INTERVAL - elapsed).await;
+            }
+        }
+        *last = Some(Instant::now());
+    }
+
+    /// 400(Request Blocked)·429·5xx 와 연결 오류는 잠시 뒤 다시 부른다
+    fn is_retryable(status: StatusCode) -> bool {
+        status == StatusCode::BAD_REQUEST
+            || status == StatusCode::TOO_MANY_REQUESTS
+            || status.is_server_error()
+    }
+
+    /// KOPIS 오류 응답이면 "코드 메시지" 를 돌려준다
+    fn error_envelope(body: &str) -> Option<String> {
+        let code = Self::tag_text(body, "returncode")?;
+        let message = Self::tag_text(body, "errmsg").unwrap_or_default();
+        Some(format!("{} {}", code, message).trim().to_string())
+    }
+
+    fn tag_text(body: &str, tag: &str) -> Option<String> {
+        let open = format!("<{}>", tag);
+        let close = format!("</{}>", tag);
+        let start = body.find(&open)? + open.len();
+        let end = body[start..].find(&close)? + start;
+        Some(body[start..end].trim().to_string())
+    }
+
+    /// GET 해서 본문을 돌려준다. 오류 문구에는 URL 을 넣지 않는다(서비스 키가 들어 있다)
+    async fn get_text(&self, url: &str, what: &str) -> Result<String, String> {
+        let mut attempt = 0;
+        loop {
+            self.wait_turn().await;
+            let failure = match self.client.get(url).send().await {
+                Ok(response) => {
+                    let status = response.status();
+                    if status.is_success() {
+                        let body = response.text().await.map_err(|e| {
+                            format!("Failed to read {} response: {}", what, e.without_url())
+                        })?;
+                        // 오류도 200 으로 <returncode>/<errmsg> 를 담아 온다. 빈 목록으로 읽히지 않게 막는다
+                        if let Some(message) = Self::error_envelope(&body) {
+                            return Err(format!("KOPIS API error for {}: {}", what, message));
+                        }
+                        return Ok(body);
+                    }
+                    if !Self::is_retryable(status) {
+                        return Err(format!("KOPIS API returned error for {}: {}", what, status));
+                    }
+                    format!("KOPIS API returned error for {}: {}", what, status)
+                }
+                Err(e) => format!("Failed to fetch {}: {}", what, e.without_url()),
+            };
+            match RETRY_DELAYS.get(attempt) {
+                Some(delay) => {
+                    tokio::time::sleep(*delay).await;
+                    attempt += 1;
+                }
+                None => return Err(failure),
+            }
         }
     }
 
@@ -53,21 +141,7 @@ impl KopisClient {
             url.push_str(&format!("&afterdate={}", date));
         }
 
-        let response = self
-            .client
-            .get(&url)
-            .send()
-            .await
-            .map_err(|e| format!("Failed to fetch venue list: {}", e))?;
-
-        if !response.status().is_success() {
-            return Err(format!("KOPIS API returned error: {}", response.status()));
-        }
-
-        let xml_text = response
-            .text()
-            .await
-            .map_err(|e| format!("Failed to read response body: {}", e))?;
+        let xml_text = self.get_text(&url, "venue list").await?;
 
         // XML 파싱
         match from_str::<VenueListResponse>(&xml_text) {
@@ -97,21 +171,7 @@ impl KopisClient {
             self.base_url, facility_id, self.api_key
         );
 
-        let response = self
-            .client
-            .get(&url)
-            .send()
-            .await
-            .map_err(|e| format!("Failed to fetch venue detail: {}", e))?;
-
-        if !response.status().is_success() {
-            return Err(format!("KOPIS API returned error: {}", response.status()));
-        }
-
-        let xml_text = response
-            .text()
-            .await
-            .map_err(|e| format!("Failed to read response body: {}", e))?;
+        let xml_text = self.get_text(&url, "venue detail").await?;
 
         // XML 파싱
         match from_str::<VenueDetailResponse>(&xml_text) {
@@ -207,21 +267,7 @@ impl KopisClient {
             url.push_str(&format!("&afterdate={}", date));
         }
 
-        let response = self
-            .client
-            .get(&url)
-            .send()
-            .await
-            .map_err(|e| format!("Failed to fetch concert list: {}", e))?;
-
-        if !response.status().is_success() {
-            return Err(format!("KOPIS API returned error: {}", response.status()));
-        }
-
-        let xml_text = response
-            .text()
-            .await
-            .map_err(|e| format!("Failed to read response body: {}", e))?;
+        let xml_text = self.get_text(&url, "concert list").await?;
 
         match from_str::<ConcertListResponse>(&xml_text) {
             Ok(parsed) => Ok(parsed),
@@ -249,21 +295,7 @@ impl KopisClient {
             self.base_url, performance_id, self.api_key
         );
 
-        let response = self
-            .client
-            .get(&url)
-            .send()
-            .await
-            .map_err(|e| format!("Failed to fetch concert detail: {}", e))?;
-
-        if !response.status().is_success() {
-            return Err(format!("KOPIS API returned error: {}", response.status()));
-        }
-
-        let xml_text = response
-            .text()
-            .await
-            .map_err(|e| format!("Failed to read response body: {}", e))?;
+        let xml_text = self.get_text(&url, "concert detail").await?;
 
         match from_str::<ConcertDetailResponse>(&xml_text) {
             Ok(parsed) => Ok(parsed),
@@ -361,21 +393,7 @@ impl KopisClient {
             url.push_str(&format!("&area={}", area));
         }
 
-        let response = self
-            .client
-            .get(&url)
-            .send()
-            .await
-            .map_err(|e| format!("Failed to fetch boxoffice rankings: {}", e))?;
-
-        if !response.status().is_success() {
-            return Err(format!("KOPIS API returned error: {}", response.status()));
-        }
-
-        let xml_text = response
-            .text()
-            .await
-            .map_err(|e| format!("Failed to read response body: {}", e))?;
+        let xml_text = self.get_text(&url, "boxoffice rankings").await?;
 
         match from_str::<BoxofficeResponse>(&xml_text) {
             Ok(parsed) => Ok(parsed),
@@ -388,5 +406,41 @@ impl KopisClient {
                 Err(format!("Failed to parse XML response: {}", e))
             }
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn retries_blocked_throttled_and_server_errors_only() {
+        assert!(KopisClient::is_retryable(StatusCode::BAD_REQUEST));
+        assert!(KopisClient::is_retryable(StatusCode::TOO_MANY_REQUESTS));
+        assert!(KopisClient::is_retryable(StatusCode::BAD_GATEWAY));
+        assert!(!KopisClient::is_retryable(StatusCode::NOT_FOUND));
+        assert!(!KopisClient::is_retryable(StatusCode::FORBIDDEN));
+    }
+
+    #[test]
+    fn reads_error_envelope_but_not_normal_lists() {
+        let error = "<dbs><db><returncode>06</returncode><errmsg>최대 조회수는 100건까지 가능합니다.</errmsg></db></dbs>";
+        assert_eq!(
+            KopisClient::error_envelope(error).as_deref(),
+            Some("06 최대 조회수는 100건까지 가능합니다.")
+        );
+        let list = "<dbs><db><mt20id>PF1</mt20id><prfnm>공연</prfnm></db></dbs>";
+        assert_eq!(KopisClient::error_envelope(list), None);
+        assert_eq!(KopisClient::error_envelope("<boxofs></boxofs>"), None);
+    }
+
+    #[tokio::test]
+    async fn spaces_requests_apart() {
+        let client = KopisClient::new("key".to_string(), "http://localhost".to_string());
+        let started = Instant::now();
+        client.wait_turn().await;
+        client.wait_turn().await;
+        client.wait_turn().await;
+        assert!(started.elapsed() >= MIN_REQUEST_INTERVAL * 2);
     }
 }
