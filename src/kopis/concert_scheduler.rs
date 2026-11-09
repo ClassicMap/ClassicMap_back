@@ -1,4 +1,5 @@
 use super::service::KopisService;
+use crate::concert::repository::ConcertRepository;
 use crate::logger::Logger;
 use chrono::Local;
 use sqlx::MySqlPool;
@@ -57,7 +58,19 @@ impl ConcertSyncScheduler {
             }
         }
 
-        // 2. 예매상황판 순위 동기화
+        // 2. 날짜로 공연 상태 맞추기(순위가 끝난 공연을 거를 때도 쓴다)
+        match ConcertRepository::refresh_statuses_by_date(pool).await {
+            Ok(changed) => Logger::info(
+                "SCHEDULER",
+                &format!("Concert statuses refreshed by date: {} changed", changed),
+            ),
+            Err(e) => Logger::error(
+                "SCHEDULER",
+                &format!("Concert status refresh failed: {}", e),
+            ),
+        }
+
+        // 3. 예매상황판 순위 동기화
         match KopisService::sync_boxoffice_rankings(pool).await {
             Ok(result) => {
                 Logger::success(
@@ -108,6 +121,9 @@ impl ConcertSyncScheduler {
         Logger::info("SCHEDULER", "Manual concert sync triggered");
 
         let concert_result = KopisService::sync_concerts(pool).await?;
+        ConcertRepository::refresh_statuses_by_date(pool)
+            .await
+            .map_err(|e| format!("Concert status refresh failed: {}", e))?;
         let boxoffice_result = KopisService::sync_boxoffice_rankings(pool).await?;
 
         Ok((concert_result, boxoffice_result))
