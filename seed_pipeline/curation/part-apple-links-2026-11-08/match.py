@@ -23,6 +23,11 @@
 악장(또는 원어 이름이 있는 곡)은 곡 이름과 트랙 이름의 첫 낱말 중 하나가 다른 쪽에 있어야 한다.
 곡 이름의 따옴표 가사가 다른 트랙 하나에만 있으면 번호·악장으로 찾은 트랙은 버린다.
 
+--nested 를 주면 곡 안 곡(「소나타 1번 → 1~4악장」)만 붙인다(match_children). 안에 곡이 있는 곡마다
+그 곡의 트랙을 먼저 가려낸다(이 곡만 가진 작품번호 「RV 27」, 세트 작품번호 + 번호 「Op. 2, No. 1」,
+이름의 「Wq. 183 no. 1」 순). 가려낸 트랙이 형제 곡과 겹치거나 조성이 다르면 그 곡은 건너뛴다.
+그 트랙 안에서 위 규칙으로 곡 안 곡을 붙이고, 안에 곡이 있는 곡의 링크가 비었으면 첫 곡 트랙을 준다.
+
 운영 DB 에 직접 쓰지 않는다. 결과는 matches.jsonl 과 마이그레이션 SQL 로만 낸다.
 사용: python3 match.py --parts <parts.tsv> --raw <트랙 JSON 폴더> --out <폴더> --migration <SQL>
 """
@@ -219,13 +224,16 @@ def track_url(track: dict[str, Any]) -> str:
 
 
 def match_set(
-    rows: list[dict[str, str]], tracks: list[dict[str, Any]]
+    rows: list[dict[str, str]], tracks: list[dict[str, Any]], cat_pattern: str | None = None
 ) -> dict[int, tuple[str, str, str]]:
-    """세트 하나의 곡마다 (트랙 링크, 트랙 이름, 규칙)."""
+    """세트 하나의 곡마다 (트랙 링크, 트랙 이름, 규칙).
+
+    cat_pattern 을 주면 세트 작품번호 대신 그 정규식을 작품번호로 본다(곡 안 곡: 「Op. 2, No. 1」).
+    """
     head = rows[0]
     names = [norm(str(t.get("trackName", ""))) for t in tracks]
-    cat = catalogue_regex(head["catalogue"])
-    span = catalogue_range(head["catalogue"])
+    cat = cat_pattern or catalogue_regex(head["catalogue"])
+    span = None if cat_pattern else catalogue_range(head["catalogue"])
     movement = all(r["movement"].strip() for r in rows)
     picked: dict[int, tuple[int, str]] = {}
     for row in rows:
@@ -375,6 +383,288 @@ def match_set(
     }
 
 
+# 곡 이름에 적힌 자기 작품번호(「RV 27」「G. 283」「Hob. III:75」).
+# 체계 이름 바로 뒤에 숫자가 와야 한다
+OWN_TOKEN = re.compile(
+    r"\b(op|opus|bwv|kv?|hob|hwv|rv|wab|sz|bb|fwv|woo|trv|wq|twv|lwv|zwv|ms|fp|kk|[dhgblms])"
+    r"\.?\s*((?:[ivx]+\s*:\s*)?\d+[a-z]?)(?![\d])"
+)
+# 곡 이름의 「Wq. 183 no. 1」「op. 18 no. 1」「op. 59 n 2」(norm 한 것)
+OWN_NUMBERED = re.compile(
+    r"\b(op|opus|wq|hob|bwv|hwv|rv|kv?)\.?\s*(\d+)[\s,.:;]*(?:no|nr|n|#)\.?\s*(\d+)\b"
+)
+LEAD_NUMBER = re.compile(r"^\s*(?:no|nr)\.?\s*(\d+)\b")
+# 막·부·권·장면(「Act I」「Première partie」「Volume II」「Tableau I」).
+# 트랙에서는 같은 갈래의 다른 말로도 찾는다
+SECTION_WORDS = {
+    "act": r"act|acte|akt|atto|aufzug",
+    "part": r"part|partie|teil|pt|parte",
+    "book": r"book|bk|volume|vol|livre|heft|band",
+    "tableau": r"tableau|bild",
+}
+ORDINALS = {
+    "1": r"first|premiere|erster|erste|prima|primo",
+    "2": r"second|seconde|deuxieme|zweiter|zweite|seconda|secondo",
+    "3": r"third|troisieme|dritter|dritte|terza|terzo",
+}
+ROMAN_NUMBER = {roman: str(i) for i, roman in enumerate(ROMAN) if roman}
+# 곡 이름 앞 「a. 」「b. 」(한 부 안의 곡 순서)
+LETTER_LEAD = re.compile(r"^\s*[a-z]\.\s+")
+# 이름 끝 괄호(출연자 목록)
+CAST = re.compile(r"\s*\([^()]*\)\s*$")
+# 곡 이름의 자기 번호: 맨 앞이나 마지막 「:」 뒤의 「No. 3」(「No. 2e」처럼 글자가 붙으면 뺀다)
+NAME_NUMBER = re.compile(r"(?:^|:\s*)(?:no|nr)\.?\s*(\d+)\b(?![^:]*:)")
+ROMAN_LEAD = re.compile(r"(?:^|:\s*)([IVXL]+)\.\s")
+
+
+def token_regex(system: str, number: str) -> str:
+    system = "kv?" if system in {"k", "kv"} else "op(?:us)?" if system in {"op", "opus"} else system
+    number = re.sub(r"\s*:\s*", r"\\s*:\\s*", re.escape(number).replace("\\ ", " "))
+    return rf"\b{system}\.?\s*{number}(?![\d])"
+
+
+def own_tokens(name: str) -> set[tuple[str, str]]:
+    found = set()
+    for m in OWN_TOKEN.finditer(norm(name)):
+        system = {"kv": "k", "opus": "op"}.get(m.group(1), m.group(1))
+        found.add((system, re.sub(r"\s+", "", m.group(2))))
+    return found
+
+
+def work_patterns(
+    part: dict[str, str], siblings: list[dict[str, str]], set_catalogue: str
+) -> list[str]:
+    """곡 안 곡을 가진 곡(「No. 1: Violin Sonata in G minor, RV 27」)의 트랙을 가려낼 정규식들.
+
+    앞이 먼저다.
+
+    1. 이 곡만 가진 작품번호(형제 곡에 없는 「RV 27」「H. 663」)
+    2. 세트 작품번호 + 순서 또는 이름의 번호(「Op. 2, No. 1」)
+    3. 이름의 「Wq. 183 no. 1」
+    """
+    names = (part["name_en"], part["name_ko"])
+    mine = own_tokens(" ".join(names))
+    others: set[tuple[str, str]] = set()
+    for sibling in siblings:
+        if sibling["part_id"] != part["part_id"]:
+            others |= own_tokens(f"{sibling['name_en']} {sibling['name_ko']}")
+    # 세트 작품번호(「Op. 59」)는 어느 곡 이름에 있어도 그 곡만의 번호가 아니다
+    others |= own_tokens(set_catalogue)
+    patterns = [token_regex(system, number) for system, number in sorted(mine - others)]
+    cat = catalogue_regex(set_catalogue) if set_catalogue else None
+    if cat:
+        numbers = [part["seq"]]
+        lead = LEAD_NUMBER.match(norm(part["name_en"]))
+        if lead and lead.group(1) not in numbers:
+            numbers.append(lead.group(1))
+        patterns += [
+            rf"{cat}[\s,.:;]*(?:(?:no|nr|n|#)\.?\s*|/\s*){number}(?![\d])" for number in numbers
+        ]
+    for m in OWN_NUMBERED.finditer(norm(part["name_en"])):
+        system = {"kv": "k", "opus": "op"}.get(m.group(1), m.group(1))
+        token = token_regex(system, m.group(2))
+        patterns.append(rf"{token}[\s,.:;]*(?:no|nr|n|#)\.?\s*{m.group(3)}(?![\d])")
+        # 「Sonatina No. 1 for oboe d'amore…, Op. 194:」처럼 번호가 작품번호 앞에 온 트랙
+        patterns.append(rf"^[^:]*\b(?:no|nr)\.?\s*{m.group(3)}(?![\d])[^:]*{token}")
+    # 작품번호 범위의 N번째(「BWV 1007-1012」의 1번째 = BWV 1007). 맨 위 곡 수와 범위가 같을 때만
+    span = catalogue_range(set_catalogue) if set_catalogue else None
+    if span and span[2] - span[1] + 1 == len(siblings):
+        patterns.append(token_regex(span[0], str(span[1] + int(part["seq"]) - 1)))
+    # 이름의 「Brandenburg Concerto No. 1」(조성·콜론 앞)
+    phrase = re.split(
+        r"\s+in\s+[a-g](?:[\s-]*(?:flat|sharp))?\s+(?:major|minor)|[:,(]", norm(part["name_en"])
+    )[0]
+    if re.search(r"[a-z]{4}.*\bno\.?\s*\d+\s*$", phrase.strip()):
+        body = re.escape(phrase.strip()).replace(r"no\.", r"no\.?").replace("\\ ", r"\s*")
+        patterns.append(rf"{body}(?![\d])")
+    # 「No. 4 "Da versammelten…"」: 세트 작품번호 뒤 콜론·쉼표 다음의 No. 4
+    lead = LEAD_NUMBER.match(norm(part["name_en"]))
+    if cat and lead:
+        patterns.append(rf"{cat}.*?[:,/]\s*(?:no|nr)\.?\s*{lead.group(1)}(?![\d])")
+        # 「Sonate di Lucca, Op. 3, MS 133, Sonata No. 2:」
+        patterns.append(rf"{cat}[^:]*?\b(?:no|nr)\.?\s*{lead.group(1)}(?![\d])")
+        # 「Duetto No. 6 for Violin and Guitar, MS 110:」
+        patterns.append(rf"^[^:]*\b(?:no|nr)\.?\s*{lead.group(1)}(?![\d])[^:]*{cat}")
+    # 막·부·권·장면
+    for kind, words in SECTION_WORDS.items():
+        found = re.search(rf"\b(?:{words})\.?\s*([ivx]+|\d+)(?![\w])", norm(part["name_en"]))
+        number = ROMAN_NUMBER.get(found.group(1), found.group(1)) if found else None
+        if kind == "part" and not number:
+            ordinal = re.search(
+                rf"\b({'|'.join(ORDINALS.values())})\s+(?:{words})\b", norm(part["name_en"])
+            )
+            number = next(
+                (n for n, w in ORDINALS.items() if ordinal and re.fullmatch(w, ordinal.group(1))),
+                None,
+            )
+        if not number:
+            continue
+        options = [number] + ([ROMAN[int(number)]] if int(number) < len(ROMAN) else [])
+        alternatives = [rf"\b(?:{words})\.?\s*(?:{'|'.join(options)})(?![\w])"]
+        if number in ORDINALS:
+            alternatives.append(rf"\b(?:{ORDINALS[number]})\s+(?:{words})\b")
+        patterns.append("(?:" + "|".join(f"(?:{a})" for a in alternatives) + ")")
+    return list(dict.fromkeys(patterns))
+
+
+def with_movement(row: dict[str, str]) -> dict[str, str]:
+    """곡 안 곡을 맞추기 좋게 고친 행(match_set 에만 쓰고 결과에는 원래 행을 쓴다).
+
+    앞 「a. 」와 끝 출연자 괄호를 떼고, 이름의 번호를 순서로 쓴다. 악장 번호 칸이 비었어도
+    이름이 「I. Allegro」「…: I. Allegro」꼴이고 순서와 같으면 악장으로 본다.
+    """
+    if LETTER_LEAD.match(row["name_en"]):
+        row = {
+            **row,
+            "name_en": LETTER_LEAD.sub("", row["name_en"]),
+            "name_ko": LETTER_LEAD.sub("", row["name_ko"]),
+        }
+    # 따옴표 가사가 있으면 끝 괄호는 출연자(「(Hérode, Phanuel, Chœur)」)라 이름으로 쓰지 않는다
+    if QUOTED.search(row["name_en"]) or re.search(r"[«“]", row["name_en"]):
+        row = {
+            **row,
+            "name_en": CAST.sub("", row["name_en"]),
+            "name_ko": CAST.sub("", row["name_ko"]),
+        }
+    # 이름에 번호가 있으면(「…Book 1: No. 3. Come With Us!」) 순서 대신 그 번호로 찾는다
+    number = NAME_NUMBER.search(norm(row["name_en"]))
+    if number and number.group(1) != row["seq"]:
+        row = {**row, "seq": number.group(1)}
+    if row["movement"].strip():
+        return row
+    m = ROMAN_LEAD.search(row["name_en"])
+    seq = int(row["seq"])
+    if m and seq < len(ROMAN) and m.group(1).lower() == ROMAN[seq]:
+        return {**row, "movement": m.group(1)}
+    return row
+
+
+def match_children(
+    parents: list[dict[str, str]],
+    children_of: dict[str, list[dict[str, str]]],
+    tracks: list[dict[str, Any]],
+    set_catalogue: str,
+    existing: str,
+    flat: bool = True,
+) -> dict[int, tuple[str, str, str]]:
+    """곡 안 곡(악장 등)마다 (트랙 링크, 트랙 이름, 규칙).
+
+    안에 곡이 있는 곡도 링크가 비었으면 첫 곡 트랙을 준다. 곡마다 그 곡 트랙만 가려내
+    (work_patterns) 그 안에서 match_set 을 돌린다. 가려낸 트랙이 형제 곡과 겹치거나 조성이
+    다르면 그 곡은 건너뛴다. 곡 안 곡이 또 곡을 가지면 같은 식으로 한 번 더 들어간다.
+    flat 이면, 어느 곡도 가려내지 못한 앨범(「Requiem: III. Dies irae」처럼 트랙이 곡 안 곡을
+    바로 담은 앨범)에서는 이름이 길고 세트 안에서 하나뿐인 곡만 이름·곡 부분 이름 규칙으로 붙인다.
+    """
+    names = [norm(str(t.get("trackName", ""))) for t in tracks]
+    owned: dict[str, tuple[list[int], str]] = {}
+    for part in parents:
+        if part["part_id"] not in children_of:
+            continue
+        key = key_of(part["name_ko"]) or key_of(part["name_en"])
+        for pattern in work_patterns(part, parents, set_catalogue):
+            hits = [i for i, name in enumerate(names) if re.search(pattern, name)]
+            if not hits:
+                continue
+            keys = {key_of(str(tracks[i].get("trackName", ""))) for i in hits} - {None}
+            if key and keys and keys != {key}:
+                break
+            owned[part["part_id"]] = (hits, pattern)
+            break
+    claimed = Counter(i for hits, _ in owned.values() for i in hits)
+    picked: dict[int, tuple[str, str, str]] = {}
+    for part in parents:
+        if part["part_id"] not in owned:
+            continue
+        hits, pattern = owned[part["part_id"]]
+        if any(claimed[i] > 1 for i in hits):
+            continue
+        sub = [tracks[i] for i in hits]
+        children = sorted(
+            (with_movement(row) for row in children_of[part["part_id"]]),
+            key=lambda r: int(r["seq"]),
+        )
+        found = match_set(children, sub, pattern)
+        picked.update(
+            (part_id, hit)
+            for part_id, hit in found.items()
+            if not next(r for r in children if int(r["part_id"]) == part_id)[existing].strip()
+        )
+        grand = [row for row in children if row["part_id"] in children_of]
+        if grand:
+            picked.update(match_children(grand, children_of, sub, "", existing, flat=False))
+        if part[existing].strip():
+            continue
+        first = int(children[0]["part_id"])
+        if first in found:
+            url, name, _ = found[first]
+            picked[int(part["part_id"])] = (url, name, "first")
+        elif index_of(str(sub[0].get("trackName", ""))) == 1:
+            picked[int(part["part_id"])] = (
+                track_url(sub[0]),
+                str(sub[0].get("trackName", "")),
+                "first",
+            )
+    if flat and not owned:
+        picked.update(match_flat(parents, children_of, tracks, existing))
+    return picked
+
+
+def strong_name(row: dict[str, str]) -> bool:
+    """흔한 빠르기·형식 말과 로마 숫자를 빼고도 세 글자 넘는 낱말이 둘 넘게 남고 여덟 글자가
+    넘는 이름(「Tuba mirum」「Dies irae」). 「Allemande」처럼 한 낱말이면 다른 곡의 것일 수 있다."""
+    for name in name_candidates(row):
+        rest = [
+            w
+            for w in re.sub(r"[^a-z ]", " ", GENERIC.sub(" ", norm(name))).split()
+            if len(w) >= 3 and w not in ROMAN_NUMBER
+        ]
+        if len(rest) >= 2 and len("".join(rest)) >= 8:
+            return True
+    return False
+
+
+def match_flat(
+    parents: list[dict[str, str]],
+    children_of: dict[str, list[dict[str, str]]],
+    tracks: list[dict[str, Any]],
+    existing: str,
+) -> dict[int, tuple[str, str, str]]:
+    """곡 안 곡을 앨범 전체에서 이름으로만 찾는다. 첫 곡이 붙으면 그 곡을 가진 곡에도 준다.
+
+    막·부(「Act I」「II. Gloria」)로 나눈 곡만 본다. 조성·번호·작품번호가 있는 곡(「Partita No. 2
+    in D minor」)은 작품 묶음이라 다른 작품과 악장 이름이 겹치고, 세트 앨범이 다른 작품인 일도 있다.
+    """
+    parents = [
+        part
+        for part in parents
+        if not (key_of(part["name_ko"]) or key_of(part["name_en"]))
+        and not LEAD_NUMBER.match(norm(part["name_en"]))
+        and not re.search(r"\bno\.?\s*\d", norm(part["name_en"]))
+        and not own_tokens(part["name_en"])
+    ]
+    children = [
+        {**with_movement(row), "catalogue": "", "movement": ""}
+        for part in parents
+        for row in children_of.get(part["part_id"], [])
+        if not row[existing].strip()
+    ]
+    seen = Counter(norm(row["name_en"]) for row in children)
+    rows = [row for row in children if seen[norm(row["name_en"])] == 1 and strong_name(row)]
+    if not rows:
+        return {}
+    found = {
+        part_id: (url, name, f"flat-{rule}")
+        for part_id, (url, name, rule) in match_set(rows, tracks).items()
+        if rule in {"name", "tail"}
+    }
+    for part in parents:
+        kids = sorted(children_of.get(part["part_id"], []), key=lambda r: int(r["seq"]))
+        if kids and not part[existing].strip() and int(kids[0]["part_id"]) in found:
+            url, name, _ = found[int(kids[0]["part_id"])]
+            found[int(part["part_id"])] = (url, name, "first")
+    return found
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--parts", required=True)
@@ -393,6 +683,14 @@ def main() -> None:
     )
     parser.add_argument(
         "--skip", action="append", default=[], help="이미 넣은 matches jsonl. 그 곡은 뺀다"
+    )
+    parser.add_argument(
+        "--nested",
+        action="store_true",
+        help=(
+            "곡 안 곡(악장 등)과 그 곡을 가진 곡만 붙인다."
+            " parts.tsv 에 parent_part_id 칸이 있어야 한다"
+        ),
     )
     args = parser.parse_args()
     skip: set[int] = set()
@@ -414,7 +712,17 @@ def main() -> None:
         if not tracks:
             continue
         fetched += 1
-        for part_id, (url, name, rule) in sorted(match_set(rows, tracks).items()):
+        if args.nested:
+            existing = "part_apple" if args.column == "apple_music_url" else "part_spotify"
+            top = [r for r in rows if not r["parent_part_id"]]
+            children_of: dict[str, list[dict[str, str]]] = defaultdict(list)
+            for row in rows:
+                if row["parent_part_id"]:
+                    children_of[row["parent_part_id"]].append(row)
+            found = match_children(top, children_of, tracks, rows[0]["catalogue"], existing)
+        else:
+            found = match_set(rows, tracks)
+        for part_id, (url, name, rule) in sorted(found.items()):
             if part_id in skip:
                 continue
             row = next(r for r in rows if int(r["part_id"]) == part_id)
@@ -424,6 +732,15 @@ def main() -> None:
                     "partId": part_id,
                     "pieceId": piece_id,
                     "seq": int(row["seq"]),
+                    **(
+                        {
+                            "parentPartId": int(row["parent_part_id"])
+                            if row["parent_part_id"]
+                            else None
+                        }
+                        if args.nested
+                        else {}
+                    ),
                     "part": row["name_ko"] or row["name_en"],
                     "track": name,
                     "rule": rule,
@@ -436,16 +753,21 @@ def main() -> None:
             handle.write(json.dumps(item, ensure_ascii=False) + "\n")
 
     values = ",\n".join(
-        "({}, {}, {}, '{}')".format(
-            item["partId"], item["pieceId"], item["seq"], str(item["url"]).replace("'", "''")
+        "({}, {}, {}, {}'{}')".format(
+            item["partId"],
+            item["pieceId"],
+            item["seq"],
+            (f"{item['parentPartId'] or 'NULL'}, " if args.nested else ""),
+            str(item["url"]).replace("'", "''"),
         )
         for item in matches
     )
     total_parts = sum(len(rows) for rows in sets.values())
     service = "Apple Music" if args.column == "apple_music_url" else "Spotify"
     temp = "tmp_part_apple" if args.column == "apple_music_url" else "tmp_part_spotify"
+    scope = "곡 안 곡(악장 등)과 그 곡을 가진 곡" if args.nested else "세트 안 곡(최상위 part)"
     sql = [
-        f"-- 세트 안 곡(최상위 part)에 {service} 트랙 링크를 채운다. 자료와 규칙은",
+        f"-- {scope}에 {service} 트랙 링크를 채운다. 자료와 규칙은",
         f"-- seed_pipeline/curation/{args.source_dir}/(match.py, {args.name}).",
         (
             f"-- 앨범 링크가 있는 세트의 곡 {total_parts}곡 중, "
@@ -453,20 +775,26 @@ def main() -> None:
             if skip
             else f"-- 앨범 링크가 있는 세트의 곡 {total_parts}곡 중 {len(matches)}곡."
         ),
-        "-- 이미 링크가 있는 곡은 그대로 두고, id 와 함께 작품·순서가 같은 최상위 곡에만 넣는다.",
+        (
+            "-- 이미 링크가 있는 곡은 그대로 두고, id 와 함께 작품·부모 곡·순서가 같은 곡에만"
+            " 넣는다."
+            if args.nested
+            else "-- 이미 링크가 있는 곡은 그대로 두고, id 와 함께 작품·순서가 같은 최상위 곡에만"
+            " 넣는다."
+        ),
         "-- 두 번 넣어도 같다.",
         "",
         f"CREATE TEMPORARY TABLE {temp} (",
         "    part_id BIGINT UNSIGNED NOT NULL PRIMARY KEY,",
         "    piece_id INT NOT NULL,",
         "    sequence_number INT NOT NULL,",
+        *(["    parent_part_id BIGINT UNSIGNED NULL,"] if args.nested else []),
         "    url VARCHAR(500) NOT NULL",
         ");",
     ]
+    columns = "part_id, piece_id, sequence_number, " + ("parent_part_id, " if args.nested else "")
     if matches:
-        sql.append(
-            f"INSERT INTO {temp} (part_id, piece_id, sequence_number, url) VALUES\n{values};"
-        )
+        sql.append(f"INSERT INTO {temp} ({columns}url) VALUES\n{values};")
     sql += [
         "",
         "UPDATE piece_parts part",
@@ -474,9 +802,13 @@ def main() -> None:
         "    ON link.part_id = part.id",
         "    AND link.piece_id = part.piece_id",
         "    AND link.sequence_number = part.sequence_number",
+        *(["    AND part.parent_part_id <=> link.parent_part_id"] if args.nested else []),
         f"SET part.{args.column} = link.url",
         f"WHERE part.{args.column} IS NULL",
-        "    AND part.parent_part_id IS NULL;",
+        *([] if args.nested else ["    AND part.parent_part_id IS NULL"]),
+    ]
+    sql[-1] += ";"
+    sql += [
         "",
         f"DROP TEMPORARY TABLE {temp};",
         "",
