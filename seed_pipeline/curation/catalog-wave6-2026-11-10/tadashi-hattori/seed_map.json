@@ -5,11 +5,11 @@
   "mbids": [
    "27ed3416-7d72-45d8-8ff6-61cfb5d2499a"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "tadashi-hattori-27ed3416",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  },
  {
   "pieceId": 16754,

@@ -1,5 +1,5 @@
 -- 작곡가 20명의 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동, 5/9).
--- 작품 70개(새 1개), seed 82개 중 잇기 69·숨김 10·그대로 3.
+-- 작품 75개(새 1개), seed 80개 중 잇기 74·숨김 3·그대로 3.
 --
 -- 6차는 4차 규칙(사람·에이전트 판단 없음)을 그대로 썼다. 규칙은
 -- seed_pipeline/curation/catalog-wave4-2026-10-12/auto/auto_catalog.py, 작곡가별 자료는
@@ -16,47 +16,6 @@
 --     (제목이 전혀 다름) 잇지 않고, MBID 가 없으면 영어 제목이 같은 작품에 잇는다
 --     (식별자는 더하지 않음).
 --   비교 구간이 있거나 part 가 가리키는 작품은 숨기지 않는다. 두 번 돌려도 같다.
-
--- ===== 오나카 메구미 (composer_id 289) =====
--- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 0개(묶음 0, 다악장 0, 낱곡 0),
--- 새 작품 0개, part 0개, 그 아래 0개.
--- seed 6개 중 0개를 작품·part 에 잇고, 6개를 숨기고, 0개는 그대로 둔다.
-
--- 카탈로그에 대응이 없는 seed 작품 6개를 목록에서 숨긴다(지우지 않음).
-UPDATE pieces piece
-SET piece.hidden_reason = 'catalog_unmatched'
-WHERE piece.composer_id = 289 AND piece.origin = 'seed' AND piece.hidden_reason IS NULL
-  AND piece.id IN (
-    15723, 15742, 15830, 15925, 15927, 15929
-  )
-  AND NOT EXISTS (SELECT 1 FROM performance_sectors sector WHERE sector.piece_id = piece.id)
-  AND NOT EXISTS (SELECT 1 FROM piece_parts linking WHERE linking.linked_piece_id = piece.id);
-
--- ===== 핫토리 다다시 (composer_id 292) =====
--- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 1개(묶음 0, 다악장 0, 낱곡 1),
--- 새 작품 0개, part 0개, 그 아래 0개.
--- seed 2개 중 1개를 작품·part 에 잇고, 1개를 숨기고, 0개는 그대로 둔다.
-
--- None Sheep in the fields
-
-UPDATE pieces piece
-SET piece.title = 'Sheep in the fields', piece.title_en = 'Sheep in the fields',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 16754 AND piece.composer_id = 292
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
--- 카탈로그에 대응이 없는 seed 작품 1개를 목록에서 숨긴다(지우지 않음).
-UPDATE pieces piece
-SET piece.hidden_reason = 'catalog_unmatched'
-WHERE piece.composer_id = 292 AND piece.origin = 'seed' AND piece.hidden_reason IS NULL
-  AND piece.id IN (
-    15944
-  )
-  AND NOT EXISTS (SELECT 1 FROM performance_sectors sector WHERE sector.piece_id = piece.id)
-  AND NOT EXISTS (SELECT 1 FROM piece_parts linking WHERE linking.linked_piece_id = piece.id);
 
 -- ===== Henry Brant (composer_id 295) =====
 -- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 19개(묶음 3, 다악장 2, 낱곡 14),
@@ -2673,5 +2632,489 @@ SET piece.title = 'Valse élégiaque', piece.title_en = 'Valse élégiaque',
     piece.editor_locked = 1
 WHERE piece.id = 17314 AND piece.composer_id = 334
   AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+-- 숨길 seed 작품 없음
+
+-- ===== Vasco Mendonça (composer_id 337) =====
+-- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 3개(묶음 0, 다악장 3, 낱곡 0),
+-- 새 작품 0개, part 8개, 그 아래 0개.
+-- seed 3개 중 3개를 작품·part 에 잇고, 0개를 숨기고, 0개는 그대로 둔다.
+
+-- None Group Together, Avoid Speech
+
+UPDATE pieces piece
+SET piece.title = 'Group Together, Avoid Speech', piece.title_en = 'Group Together, Avoid Speech',
+    piece.type = 'album', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 16922 AND piece.composer_id = 337
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 1, part.movement_number = 'I',
+    part.name_ko = 'Solemn, Assertive', part.name_en = 'Group Together, Avoid Speech: I. Solemn, Assertive',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 16922 AND p.composer_id = 337 AND part.part_key = 'musicbrainz:1f7a808f-e3be-4eab-b313-7b838c768c04' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1f7a808f-e3be-4eab-b313-7b838c768c04', 1, 'I', 'Solemn, Assertive', 'Group Together, Avoid Speech: I. Solemn, Assertive', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 16922 AND p.composer_id = 337
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1f7a808f-e3be-4eab-b313-7b838c768c04'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 2, part.movement_number = 'II',
+    part.name_ko = 'Nocturnal', part.name_en = 'Group Together, Avoid Speech: II. Nocturnal',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 16922 AND p.composer_id = 337 AND part.part_key = 'musicbrainz:33c7f607-2c6b-43de-8c7c-212501659f48' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:33c7f607-2c6b-43de-8c7c-212501659f48', 2, 'II', 'Nocturnal', 'Group Together, Avoid Speech: II. Nocturnal', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 16922 AND p.composer_id = 337
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:33c7f607-2c6b-43de-8c7c-212501659f48'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 3, part.movement_number = 'III',
+    part.name_ko = 'Agitated', part.name_en = 'Group Together, Avoid Speech: III. Agitated',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 16922 AND p.composer_id = 337 AND part.part_key = 'musicbrainz:bc2d8074-628d-4f88-9a62-f38b443ba367' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:bc2d8074-628d-4f88-9a62-f38b443ba367', 3, 'III', 'Agitated', 'Group Together, Avoid Speech: III. Agitated', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 16922 AND p.composer_id = 337
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bc2d8074-628d-4f88-9a62-f38b443ba367'
+);
+
+
+-- None Step Right Up
+
+UPDATE pieces piece
+SET piece.title = 'Step Right Up', piece.title_en = 'Step Right Up',
+    piece.type = 'album', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 19459 AND piece.composer_id = 337
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 1, part.movement_number = 'I',
+    part.name_ko = 'Joyful, Celebratory', part.name_en = 'Step Right Up: I. Joyful, Celebratory',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 19459 AND p.composer_id = 337 AND part.part_key = 'musicbrainz:52dac7c3-d9c4-429b-a305-a351c843dfe6' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:52dac7c3-d9c4-429b-a305-a351c843dfe6', 1, 'I', 'Joyful, Celebratory', 'Step Right Up: I. Joyful, Celebratory', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 19459 AND p.composer_id = 337
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:52dac7c3-d9c4-429b-a305-a351c843dfe6'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 2, part.movement_number = 'II',
+    part.name_ko = 'Nostalgic, Somewhat Desperate', part.name_en = 'Step Right Up: II. Nostalgic, Somewhat Desperate',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 19459 AND p.composer_id = 337 AND part.part_key = 'musicbrainz:ddae432b-0d85-4b45-bdb9-e47da390e08c' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ddae432b-0d85-4b45-bdb9-e47da390e08c', 2, 'II', 'Nostalgic, Somewhat Desperate', 'Step Right Up: II. Nostalgic, Somewhat Desperate', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 19459 AND p.composer_id = 337
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ddae432b-0d85-4b45-bdb9-e47da390e08c'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 3, part.movement_number = 'III',
+    part.name_ko = 'Triumphant', part.name_en = 'Step Right Up: III. Triumphant',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 19459 AND p.composer_id = 337 AND part.part_key = 'musicbrainz:4ee40e2f-ec32-45aa-8686-e3a0a659ab26' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4ee40e2f-ec32-45aa-8686-e3a0a659ab26', 3, 'III', 'Triumphant', 'Step Right Up: III. Triumphant', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 19459 AND p.composer_id = 337
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4ee40e2f-ec32-45aa-8686-e3a0a659ab26'
+);
+
+
+-- None Unanswerable Light
+
+UPDATE pieces piece
+SET piece.title = 'Unanswerable Light', piece.title_en = 'Unanswerable Light',
+    piece.type = 'album', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 18550 AND piece.composer_id = 337
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 1, part.movement_number = 'I',
+    part.name_ko = 'Distant', part.name_en = 'Unanswerable Light: I. Distant',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 18550 AND p.composer_id = 337 AND part.part_key = 'musicbrainz:b429d283-f925-4e04-8701-cda68d0676a9' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b429d283-f925-4e04-8701-cda68d0676a9', 1, 'I', 'Distant', 'Unanswerable Light: I. Distant', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 18550 AND p.composer_id = 337
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b429d283-f925-4e04-8701-cda68d0676a9'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 2, part.movement_number = 'II',
+    part.name_ko = 'Grave, Restrained', part.name_en = 'Unanswerable Light: II. Grave, Restrained',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 18550 AND p.composer_id = 337 AND part.part_key = 'musicbrainz:59f55165-0280-4833-b153-c225fa6279c0' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:59f55165-0280-4833-b153-c225fa6279c0', 2, 'II', 'Grave, Restrained', 'Unanswerable Light: II. Grave, Restrained', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 18550 AND p.composer_id = 337
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:59f55165-0280-4833-b153-c225fa6279c0'
+);
+
+-- 숨길 seed 작품 없음
+
+-- ===== Hermann Zilcher (composer_id 338) =====
+-- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 3개(묶음 1, 다악장 1, 낱곡 1),
+-- 새 작품 0개, part 12개, 그 아래 0개.
+-- seed 3개 중 3개를 작품·part 에 잇고, 0개를 숨기고, 0개는 그대로 둔다.
+
+-- Op. 9 협주곡 D단조
+
+UPDATE pieces piece
+SET piece.title = '협주곡 D단조', piece.title_en = 'Concerto for Two Violins in D minor, op. 9',
+    piece.type = 'song', piece.opus_number = 'Op. 9',
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 19802 AND piece.composer_id = 338
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- Op. 109 Fünf Duette für zwei Singstimmen und zwei Mundharmonikas in C Op. 109
+
+UPDATE pieces piece
+SET piece.title = 'Fünf Duette für zwei Singstimmen und zwei Mundharmonikas in C Op. 109', piece.title_en = 'Fünf Duette für zwei Singstimmen und zwei Mundharmonikas in C, op. 109',
+    piece.type = 'album', piece.opus_number = NULL,
+    piece.catalogue_system = 'Op.', piece.catalogue_number = '109',
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 19913 AND piece.composer_id = 338
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 1, part.movement_number = NULL,
+    part.name_ko = 'I', part.name_en = 'Fünf Duette für zwei Singstimmen und zwei Mundharmonikas in C, op. 109: I',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 19913 AND p.composer_id = 338 AND part.part_key = 'musicbrainz:ddde5e5c-561b-4d92-8046-f5b8db676323' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ddde5e5c-561b-4d92-8046-f5b8db676323', 1, NULL, 'I', 'Fünf Duette für zwei Singstimmen und zwei Mundharmonikas in C, op. 109: I', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 19913 AND p.composer_id = 338
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ddde5e5c-561b-4d92-8046-f5b8db676323'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 2, part.movement_number = NULL,
+    part.name_ko = 'II', part.name_en = 'Fünf Duette für zwei Singstimmen und zwei Mundharmonikas in C, op. 109: II',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 19913 AND p.composer_id = 338 AND part.part_key = 'musicbrainz:3ecccb5d-be54-4b62-9c43-f393313bea46' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:3ecccb5d-be54-4b62-9c43-f393313bea46', 2, NULL, 'II', 'Fünf Duette für zwei Singstimmen und zwei Mundharmonikas in C, op. 109: II', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 19913 AND p.composer_id = 338
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3ecccb5d-be54-4b62-9c43-f393313bea46'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 3, part.movement_number = NULL,
+    part.name_ko = 'III', part.name_en = 'Fünf Duette für zwei Singstimmen und zwei Mundharmonikas in C, op. 109: III',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 19913 AND p.composer_id = 338 AND part.part_key = 'musicbrainz:fc20d230-72bb-464a-aea1-1fa525cc8ec4' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:fc20d230-72bb-464a-aea1-1fa525cc8ec4', 3, NULL, 'III', 'Fünf Duette für zwei Singstimmen und zwei Mundharmonikas in C, op. 109: III', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 19913 AND p.composer_id = 338
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fc20d230-72bb-464a-aea1-1fa525cc8ec4'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 4, part.movement_number = NULL,
+    part.name_ko = 'IV', part.name_en = 'Fünf Duette für zwei Singstimmen und zwei Mundharmonikas in C, op. 109: IV',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 19913 AND p.composer_id = 338 AND part.part_key = 'musicbrainz:86b02d5d-1ed3-430e-8958-d4528c29da9c' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:86b02d5d-1ed3-430e-8958-d4528c29da9c', 4, NULL, 'IV', 'Fünf Duette für zwei Singstimmen und zwei Mundharmonikas in C, op. 109: IV', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 19913 AND p.composer_id = 338
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:86b02d5d-1ed3-430e-8958-d4528c29da9c'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 5, part.movement_number = NULL,
+    part.name_ko = 'V', part.name_en = 'Fünf Duette für zwei Singstimmen und zwei Mundharmonikas in C, op. 109: V',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 19913 AND p.composer_id = 338 AND part.part_key = 'musicbrainz:50567123-235f-47b0-8812-3164e3ca477c' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:50567123-235f-47b0-8812-3164e3ca477c', 5, NULL, 'V', 'Fünf Duette für zwei Singstimmen und zwei Mundharmonikas in C, op. 109: V', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 19913 AND p.composer_id = 338
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:50567123-235f-47b0-8812-3164e3ca477c'
+);
+
+
+-- None Rokoko-Suite
+
+UPDATE pieces piece
+SET piece.title = 'Rokoko-Suite', piece.title_en = 'Rokoko-Suite',
+    piece.type = 'album', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 16739 AND piece.composer_id = 338
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 1, part.movement_number = 'I',
+    part.name_ko = 'Ouvertüre an den Menschen: Freue dich!', part.name_en = 'Rokoko-Suite: I. Ouvertüre an den Menschen: Freue dich!',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 16739 AND p.composer_id = 338 AND part.part_key = 'musicbrainz:467febd8-47f5-3760-8e4c-e35773f30bfd' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:467febd8-47f5-3760-8e4c-e35773f30bfd', 1, 'I', 'Ouvertüre an den Menschen: Freue dich!', 'Rokoko-Suite: I. Ouvertüre an den Menschen: Freue dich!', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 16739 AND p.composer_id = 338
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:467febd8-47f5-3760-8e4c-e35773f30bfd'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 2, part.movement_number = 'II',
+    part.name_ko = 'Musette: Der Frühling: Erhebt die Häupter froh, ihr Brüder', part.name_en = 'Rokoko-Suite: II. Musette: Der Frühling: Erhebt die Häupter froh, ihr Brüder',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 16739 AND p.composer_id = 338 AND part.part_key = 'musicbrainz:64a150c7-3c80-3067-a7f6-7ec3b0e48999' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:64a150c7-3c80-3067-a7f6-7ec3b0e48999', 2, 'II', 'Musette: Der Frühling: Erhebt die Häupter froh, ihr Brüder', 'Rokoko-Suite: II. Musette: Der Frühling: Erhebt die Häupter froh, ihr Brüder', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 16739 AND p.composer_id = 338
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:64a150c7-3c80-3067-a7f6-7ec3b0e48999'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 3, part.movement_number = 'III',
+    part.name_ko = 'Sarabande: Abendständchen: Hör, es klagt die Flöte wieder', part.name_en = 'Rokoko-Suite: III. Sarabande: Abendständchen: Hör, es klagt die Flöte wieder',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 16739 AND p.composer_id = 338 AND part.part_key = 'musicbrainz:4df300c4-9a4f-3c37-9523-383a08e896fc' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4df300c4-9a4f-3c37-9523-383a08e896fc', 3, 'III', 'Sarabande: Abendständchen: Hör, es klagt die Flöte wieder', 'Rokoko-Suite: III. Sarabande: Abendständchen: Hör, es klagt die Flöte wieder', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 16739 AND p.composer_id = 338
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4df300c4-9a4f-3c37-9523-383a08e896fc'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 4, part.movement_number = 'IV',
+    part.name_ko = 'Air: Die Nacht: Willkommen, angenehme Nacht', part.name_en = 'Rokoko-Suite: IV. Air: Die Nacht: Willkommen, angenehme Nacht',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 16739 AND p.composer_id = 338 AND part.part_key = 'musicbrainz:71e42e90-e623-32d8-8848-48fb1b13f827' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:71e42e90-e623-32d8-8848-48fb1b13f827', 4, 'IV', 'Air: Die Nacht: Willkommen, angenehme Nacht', 'Rokoko-Suite: IV. Air: Die Nacht: Willkommen, angenehme Nacht', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 16739 AND p.composer_id = 338
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:71e42e90-e623-32d8-8848-48fb1b13f827'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 5, part.movement_number = 'V',
+    part.name_ko = 'Fuga burlesca: Die Alte: Zu meiner Zeit bestand noch Recht', part.name_en = 'Rokoko-Suite: V. Fuga burlesca: Die Alte: Zu meiner Zeit bestand noch Recht',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 16739 AND p.composer_id = 338 AND part.part_key = 'musicbrainz:c0cabd61-665e-3c79-87e6-5357745a4b8b' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c0cabd61-665e-3c79-87e6-5357745a4b8b', 5, 'V', 'Fuga burlesca: Die Alte: Zu meiner Zeit bestand noch Recht', 'Rokoko-Suite: V. Fuga burlesca: Die Alte: Zu meiner Zeit bestand noch Recht', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 16739 AND p.composer_id = 338
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c0cabd61-665e-3c79-87e6-5357745a4b8b'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 6, part.movement_number = 'VI',
+    part.name_ko = 'Gigue: Mailied: Wie herrlich leuchtet mir die Natur', part.name_en = 'Rokoko-Suite: VI. Gigue: Mailied: Wie herrlich leuchtet mir die Natur',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 16739 AND p.composer_id = 338 AND part.part_key = 'musicbrainz:5c513ffe-179a-3097-b80c-204cd646a8c2' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5c513ffe-179a-3097-b80c-204cd646a8c2', 6, 'VI', 'Gigue: Mailied: Wie herrlich leuchtet mir die Natur', 'Rokoko-Suite: VI. Gigue: Mailied: Wie herrlich leuchtet mir die Natur', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 16739 AND p.composer_id = 338
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5c513ffe-179a-3097-b80c-204cd646a8c2'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 7, part.movement_number = 'VII',
+    part.name_ko = 'An den Menschen: Freu dich! Denn dich zu freu''n', part.name_en = 'Rokoko-Suite: VII. An den Menschen: Freu dich! Denn dich zu freu''n',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 16739 AND p.composer_id = 338 AND part.part_key = 'musicbrainz:970c0674-0588-390d-9809-44f6c6e87019' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:970c0674-0588-390d-9809-44f6c6e87019', 7, 'VII', 'An den Menschen: Freu dich! Denn dich zu freu''n', 'Rokoko-Suite: VII. An den Menschen: Freu dich! Denn dich zu freu''n', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 16739 AND p.composer_id = 338
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:970c0674-0588-390d-9809-44f6c6e87019'
+);
 
 -- 숨길 seed 작품 없음

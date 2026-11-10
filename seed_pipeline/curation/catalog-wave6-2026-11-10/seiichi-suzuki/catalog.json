@@ -1,1 +1,18 @@
-[]
+[
+ {
+  "key": "seiichi-suzuki-23240432",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "가곡 <タバコやの娘>",
+  "titleEn": "タバコやの娘",
+  "year": null,
+  "yearText": null,
+  "genre": "song",
+  "authenticity": "authentic",
+  "mbid": "23240432-511f-4596-b55d-61acc878cc9a",
+  "mbTitle": "タバコやの娘",
+  "existingPieceId": 16585,
+  "parts": []
+ }
+]

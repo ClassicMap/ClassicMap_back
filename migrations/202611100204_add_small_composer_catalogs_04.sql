@@ -1,5 +1,5 @@
 -- 작곡가 20명의 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동, 4/9).
--- 작품 117개(새 11개), seed 142개 중 잇기 106·숨김 32·그대로 4.
+-- 작품 116개(새 9개), seed 130개 중 잇기 107·숨김 20·그대로 3.
 --
 -- 6차는 4차 규칙(사람·에이전트 판단 없음)을 그대로 썼다. 규칙은
 -- seed_pipeline/curation/catalog-wave4-2026-10-12/auto/auto_catalog.py, 작곡가별 자료는
@@ -16,228 +16,6 @@
 --     (제목이 전혀 다름) 잇지 않고, MBID 가 없으면 영어 제목이 같은 작품에 잇는다
 --     (식별자는 더하지 않음).
 --   비교 구간이 있거나 part 가 가리키는 작품은 숨기지 않는다. 두 번 돌려도 같다.
-
--- ===== Manuel Rosenthal (composer_id 243) =====
--- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 9개(묶음 1, 다악장 0, 낱곡 8),
--- 새 작품 2개, part 4개, 그 아래 0개.
--- seed 8개 중 7개를 작품·part 에 잇고, 0개를 숨기고, 1개는 그대로 둔다.
-
--- None 연가곡집 <Chansons du Monsieur Bleu>
-
-UPDATE pieces piece
-SET piece.title = '연가곡집 <Chansons du Monsieur Bleu>', piece.title_en = 'Chansons du Monsieur Bleu',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 17808 AND piece.composer_id = 243
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None 가곡 <Fido, Fido>
-
-UPDATE pieces piece
-SET piece.title = '가곡 <Fido, Fido>', piece.title_en = 'Fido, Fido',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 18890 AND piece.composer_id = 243
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None 가곡 <L'éléphant du Jardin des Plantes>
-
-UPDATE pieces piece
-SET piece.title = '가곡 <L''éléphant du Jardin des Plantes>', piece.title_en = 'L''éléphant du Jardin des Plantes',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 16027 AND piece.composer_id = 243
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None 가곡 <La Souris d'Angleterre>
-
-UPDATE pieces piece
-SET piece.title = '가곡 <La Souris d''Angleterre>', piece.title_en = 'La Souris d''Angleterre',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 16300 AND piece.composer_id = 243
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None 가곡 <Le vieux chameau du zoo>
-
-UPDATE pieces piece
-SET piece.title = '가곡 <Le vieux chameau du zoo>', piece.title_en = 'Le vieux chameau du zoo',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 19168 AND piece.composer_id = 243
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None Offenbachiana
-
-UPDATE pieces piece
-SET piece.title = 'Offenbachiana', piece.title_en = 'Offenbachiana',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 18245 AND piece.composer_id = 243
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 1, part.movement_number = NULL,
-    part.name_ko = 'Ouverture – Barbe-Bleue', part.name_en = 'Offenbachiana : Ouverture – Barbe-Bleue',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 18245 AND p.composer_id = 243 AND part.part_key = 'musicbrainz:3c82ad56-d1a7-4f22-a598-dc8850cfb71f' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:3c82ad56-d1a7-4f22-a598-dc8850cfb71f', 1, NULL, 'Ouverture – Barbe-Bleue', 'Offenbachiana : Ouverture – Barbe-Bleue', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 18245 AND p.composer_id = 243
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3c82ad56-d1a7-4f22-a598-dc8850cfb71f'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = NULL,
-    part.name_ko = 'Barbe-Bleue – La Fille du Tambour-Majeur', part.name_en = 'Offenbachiana : II. Barbe-Bleue – La Fille du Tambour-Majeur',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 18245 AND p.composer_id = 243 AND part.part_key = 'musicbrainz:d02c0478-0a86-42e1-ad7b-d406f846a3c1' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:d02c0478-0a86-42e1-ad7b-d406f846a3c1', 2, NULL, 'Barbe-Bleue – La Fille du Tambour-Majeur', 'Offenbachiana : II. Barbe-Bleue – La Fille du Tambour-Majeur', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 18245 AND p.composer_id = 243
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d02c0478-0a86-42e1-ad7b-d406f846a3c1'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 3, part.movement_number = NULL,
-    part.name_ko = 'La Grande-Duchesse de Gerolstein', part.name_en = 'Offenbachiana : I. La Grande-Duchesse de Gerolstein',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 18245 AND p.composer_id = 243 AND part.part_key = 'musicbrainz:de73a3bb-338e-4417-a5d4-72adf004ceb8' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:de73a3bb-338e-4417-a5d4-72adf004ceb8', 3, NULL, 'La Grande-Duchesse de Gerolstein', 'Offenbachiana : I. La Grande-Duchesse de Gerolstein', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 18245 AND p.composer_id = 243
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:de73a3bb-338e-4417-a5d4-72adf004ceb8'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 4, part.movement_number = NULL,
-    part.name_ko = 'La Vie Parisienne – La Grande-Duchesse de Gerolstein – Barbe-Bleue', part.name_en = 'Offenbachiana : III. La Vie Parisienne – La Grande-Duchesse de Gerolstein – Barbe-Bleue',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 18245 AND p.composer_id = 243 AND part.part_key = 'musicbrainz:f0d34d30-4390-437b-bc36-a15106f4f38e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:f0d34d30-4390-437b-bc36-a15106f4f38e', 4, NULL, 'La Vie Parisienne – La Grande-Duchesse de Gerolstein – Barbe-Bleue', 'Offenbachiana : III. La Vie Parisienne – La Grande-Duchesse de Gerolstein – Barbe-Bleue', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 18245 AND p.composer_id = 243
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f0d34d30-4390-437b-bc36-a15106f4f38e'
-);
-
-
--- None 가곡 <Pêcheur de lune>
-
-UPDATE pieces piece
-SET piece.title = '가곡 <Pêcheur de lune>', piece.title_en = 'Pêcheur de lune',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 16781 AND piece.composer_id = 243
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None 가곡 <Rêverie>
-
-INSERT INTO pieces
-    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '가곡 <Rêverie>', 'Rêverie', 'song', NULL, NULL, NULL, NULL, 'manual', 1
-FROM composers c
-WHERE c.id = 243
-AND NOT EXISTS (
-    SELECT 1 FROM pieces existing
-    WHERE existing.composer_id = c.id AND existing.title = '가곡 <Rêverie>'
-)
-AND NOT EXISTS (
-    SELECT 1 FROM piece_identifiers taken
-    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'efd72314-70df-42bd-b840-bd0681cf25ac'
-);
-
-INSERT INTO piece_identifiers (piece_id, namespace, external_id)
-SELECT p.id, 'musicbrainz_work', 'efd72314-70df-42bd-b840-bd0681cf25ac'
-FROM pieces p
-WHERE p.composer_id = 243 AND p.title = '가곡 <Rêverie>' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_identifiers taken
-    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = 'efd72314-70df-42bd-b840-bd0681cf25ac'
-);
-
-
--- None 가곡 <Rêverie: Pour calmer ma détresse>
-
-INSERT INTO pieces
-    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '가곡 <Rêverie: Pour calmer ma détresse>', 'Rêverie: Pour calmer ma détresse', 'song', NULL, NULL, NULL, NULL, 'manual', 1
-FROM composers c
-WHERE c.id = 243
-AND NOT EXISTS (
-    SELECT 1 FROM pieces existing
-    WHERE existing.composer_id = c.id AND existing.title = '가곡 <Rêverie: Pour calmer ma détresse>'
-)
-AND NOT EXISTS (
-    SELECT 1 FROM piece_identifiers taken
-    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '58999613-4525-4955-9531-95ed83a4080b'
-);
-
-INSERT INTO piece_identifiers (piece_id, namespace, external_id)
-SELECT p.id, 'musicbrainz_work', '58999613-4525-4955-9531-95ed83a4080b'
-FROM pieces p
-WHERE p.composer_id = 243 AND p.title = '가곡 <Rêverie: Pour calmer ma détresse>' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_identifiers taken
-    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '58999613-4525-4955-9531-95ed83a4080b'
-);
-
--- 숨길 seed 작품 없음
 
 -- ===== Vano Muradeli (composer_id 244) =====
 -- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 1개(묶음 0, 다악장 0, 낱곡 1),
@@ -2220,21 +1998,6 @@ WHERE piece.id = 19469 AND piece.composer_id = 253
   AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 -- 숨길 seed 작품 없음
-
--- ===== Martin O'Donnell (composer_id 255) =====
--- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 0개(묶음 0, 다악장 0, 낱곡 0),
--- 새 작품 0개, part 0개, 그 아래 0개.
--- seed 12개 중 0개를 작품·part 에 잇고, 12개를 숨기고, 0개는 그대로 둔다.
-
--- 카탈로그에 대응이 없는 seed 작품 12개를 목록에서 숨긴다(지우지 않음).
-UPDATE pieces piece
-SET piece.hidden_reason = 'catalog_unmatched'
-WHERE piece.composer_id = 255 AND piece.origin = 'seed' AND piece.hidden_reason IS NULL
-  AND piece.id IN (
-    16004, 16954, 17063, 17374, 17614, 17629, 17844, 18261, 19304, 19362, 19424, 19593
-  )
-  AND NOT EXISTS (SELECT 1 FROM performance_sectors sector WHERE sector.piece_id = piece.id)
-  AND NOT EXISTS (SELECT 1 FROM piece_parts linking WHERE linking.linked_piece_id = piece.id);
 
 -- ===== Ruth Watson Henderson (composer_id 256) =====
 -- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 18개(묶음 4, 다악장 1, 낱곡 13),
@@ -4762,6 +4525,114 @@ SET piece.title = 'Zion', piece.title_en = 'Zion',
     piece.composition_year = COALESCE(NULL, piece.composition_year),
     piece.editor_locked = 1
 WHERE piece.id = 17202 AND piece.composer_id = 288
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+-- 숨길 seed 작품 없음
+
+-- ===== 오나카 메구미 (composer_id 289) =====
+-- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 6개(묶음 0, 다악장 0, 낱곡 6),
+-- 새 작품 0개, part 0개, 그 아래 0개.
+-- seed 6개 중 6개를 작품·part 에 잇고, 0개를 숨기고, 0개는 그대로 둔다.
+
+-- None 가곡 <あさおきたん>
+
+UPDATE pieces piece
+SET piece.title = '가곡 <あさおきたん>', piece.title_en = 'あさおきたん',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 15925 AND piece.composer_id = 289
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None 가곡 <おなかのへるうた>
+
+UPDATE pieces piece
+SET piece.title = '가곡 <おなかのへるうた>', piece.title_en = 'おなかのへるうた',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 15927 AND piece.composer_id = 289
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None 가곡 <サッちゃん>
+
+UPDATE pieces piece
+SET piece.title = '가곡 <サッちゃん>', piece.title_en = 'サッちゃん',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 15929 AND piece.composer_id = 289
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None 가곡 <トマト>
+
+UPDATE pieces piece
+SET piece.title = '가곡 <トマト>', piece.title_en = 'トマト',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 15742 AND piece.composer_id = 289
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None 가곡 <ドロップスのうた>
+
+UPDATE pieces piece
+SET piece.title = '가곡 <ドロップスのうた>', piece.title_en = 'ドロップスのうた',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 15830 AND piece.composer_id = 289
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None 가곡 <犬のおまわりさん>
+
+UPDATE pieces piece
+SET piece.title = '가곡 <犬のおまわりさん>', piece.title_en = '犬のおまわりさん',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 15723 AND piece.composer_id = 289
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+-- 숨길 seed 작품 없음
+
+-- ===== 핫토리 다다시 (composer_id 292) =====
+-- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 2개(묶음 0, 다악장 0, 낱곡 2),
+-- 새 작품 0개, part 0개, 그 아래 0개.
+-- seed 2개 중 2개를 작품·part 에 잇고, 0개를 숨기고, 0개는 그대로 둔다.
+
+-- None Sheep in the fields
+
+UPDATE pieces piece
+SET piece.title = 'Sheep in the fields', piece.title_en = 'Sheep in the fields',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 16754 AND piece.composer_id = 292
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None ラジオ体操第一
+
+UPDATE pieces piece
+SET piece.title = 'ラジオ体操第一', piece.title_en = 'ラジオ体操第一',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 15944 AND piece.composer_id = 292
   AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 -- 숨길 seed 작품 없음

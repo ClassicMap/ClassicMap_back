@@ -5,11 +5,11 @@
   "mbids": [
    "14eda229-5ba7-3680-9f58-e357e2bbc19c"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "joji-yuasa-14eda229",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  },
  {
   "pieceId": 15744,
@@ -29,11 +29,11 @@
   "mbids": [
    "5bebd6db-b5c6-4924-bc36-f2626e8b4de0"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "joji-yuasa-5bebd6db",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  },
  {
   "pieceId": 15776,
@@ -113,11 +113,11 @@
   "mbids": [
    "56ca103d-1a2b-4f67-9114-0bcf1973c704"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "joji-yuasa-56ca103d",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  },
  {
   "pieceId": 17678,
@@ -161,11 +161,11 @@
   "mbids": [
    "75ed4501-238d-4daa-9983-3b5e1f91f5fa"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "joji-yuasa-75ed4501",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  },
  {
   "pieceId": 18008,
@@ -185,11 +185,11 @@
   "mbids": [
    "a94e4680-b5b1-43a5-a6b7-e21dbf0b7b1c"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "joji-yuasa-a94e4680",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  },
  {
   "pieceId": 18777,
