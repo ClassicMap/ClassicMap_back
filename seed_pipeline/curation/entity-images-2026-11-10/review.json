@@ -1,0 +1,628 @@
+{
+ "note": "확인 격자를 한 장씩 눈으로 보고 정한 것. 적지 않은 작곡가는 위키데이터 대표 그림(P18) 첫 장을 쓴다.",
+ "portraitChoice": {
+  "263": {
+   "p18": 1,
+   "why": "첫 장은 1926년 거리에서 찍은 전신 사진이라 얼굴이 작다. 둘째 장(초상 사진)을 쓴다"
+  },
+  "471": {
+   "p18": 1,
+   "why": "첫 장 파일 이름이 'Louis Duprez' 라 같은 사람인지 확신이 없다. 'Gilbert Duprez' 가 분명한 둘째 장을 쓴다"
+  },
+  "150": {
+   "file": "File:Cesare Sodero.jpg",
+   "via": "commons-category",
+   "why": "P18 은 제목이 'Sesame' 인 사진이라 본인인지 확인할 수 없다. 1916년 지휘자 소데로 초상 사진을 쓴다"
+  },
+  "172": {
+   "file": "File:Владимир Кобекин Фотограф Дмитрий Дубинский 2014 (cropped).jpg",
+   "via": "commons-category",
+   "why": "P18 은 무대 전신 사진이라 원형 칸에서 얼굴이 잘린다. 같은 사진을 얼굴로 자른 파일을 쓴다"
+  },
+  "241": {
+   "file": "File:KevinVolans.jpg",
+   "via": "commons-category",
+   "why": "P18 은 사람들 틈에서 찍힌 옆얼굴이다"
+  },
+  "266": {
+   "file": "File:Isaac Strauss by Antoine Maurin.jpg",
+   "via": "commons-category",
+   "why": "P18 은 전신 사진이라 원형 칸에서 얼굴이 잘린다"
+  },
+  "282": {
+   "file": "File:Rektor Hofrat Prof. Franz Schmidt (cropped).jpg",
+   "via": "commons-category",
+   "why": "P18 이 없다. 공용 분류의 초상 사진"
+  },
+  "332": {
+   "file": "File:Michel Corboz (2011) by Erling Mandelmann.jpg",
+   "via": "commons-category",
+   "why": "P18 은 리허설 사진이라 여러 사람이 나오고 얼굴이 작다"
+  },
+  "336": {
+   "file": "File:Olav Kielland, composer (cropped).jpg",
+   "via": "commons-category",
+   "why": "P18 은 전신 사진이라 원형 칸에서 얼굴이 잘린다"
+  },
+  "346": {
+   "file": "File:Philip Alexius de László (1869–1937) - Sir Donald Francis Tovey (1875–1940) - EU0517 - University of Edinburgh Art Collection.jpg",
+   "via": "commons-category",
+   "why": "P18 은 정원에 선 전신 사진이라 얼굴이 작다. 라슬로가 그린 초상"
+  },
+  "400": {
+   "file": "File:François Bazin.jpg",
+   "via": "commons-category",
+   "why": "P18 은 전신 사진이라 원형 칸에서 얼굴이 잘린다"
+  },
+  "402": {
+   "file": "File:Елена Фабиановна Гнесина.jpg",
+   "via": "commons-category",
+   "why": "P18 은 2024년 러시아 우표라 글자가 크게 들어 있다"
+  },
+  "255": {
+   "file": "File:Marty O'Donnell by Gage Skidmore.jpg",
+   "via": "wikipedia-pageimage",
+   "why": "P18 은 세로 사진이라 원형 칸에서 이마·눈이 잘린다. 영어 위키백과 문서 그림(2018 PAX West)을 쓴다"
+  },
+  "458": {
+   "file": "File:GuillermoUribeHolguin.png",
+   "via": "wikipedia-pageimage",
+   "why": "P18 은 바이올린을 든 전신 그림이라 얼굴이 잘린다. 스페인어 위키백과 문서의 초상 사진을 쓴다"
+  },
+  "435": {
+   "file": "File:Erling Brene.gif",
+   "via": "wikipedia-pageimage",
+   "why": "P18 이 없다. 위키백과 문서의 초상 사진"
+  },
+  "292": {
+   "file": "File:Tadashi Hattori.jpg",
+   "via": "wikipedia-pageimage",
+   "why": "P18 은 의자에 앉은 전신 사진이라 얼굴이 잘린다. 위키백과 문서의 초상 사진을 쓴다"
+  },
+  "347": {
+   "file": "File:音乐家李焕之.png",
+   "via": "wikipedia-pageimage",
+   "why": "P18 이 없다. 중국어 위키백과 문서의 옌안 시절 사진"
+  }
+ },
+ "portraitReject": {
+  "103": "위키데이터에 그림이 없고 공개 자료에 본인 사진이 없다(11/8 배너 때도 같은 결론)",
+  "141": "P18 이 세로로 긴 사진이라 원형 칸(가운데 정사각)에서 얼굴이 절반 넘게 잘린다. 다른 사진이 없다",
+  "199": "P18 이 '추정' 초상이고 두 사람(부부)이 함께 그려져 있다",
+  "232": "P18 이 앉은 전신 사진이라 원형 칸에서 얼굴이 잘린다. 다른 후보는 두 사람 사진",
+  "248": "P18 이 무대에 선 전신 사진이라 원형 칸에 얼굴이 안 들어온다",
+  "341": "P18 이 흉상(동상) 사진이고 공용 분류의 나머지는 로드리고 곡을 연주하는 다른 기타리스트다. 애플 뮤직 그림을 쓴다",
+  "385": "P18 이 무대 연주 사진이라 원형 칸에서 얼굴이 잘리고 조명이 붉다",
+  "395": "P18 이 16세기 작곡가의 '사진'이라 출처를 믿을 수 없다",
+  "405": "P18 이 여러 사람이 함께 나온 무대 사진이다",
+  "409": "P18 이 형 마틴 쇼와 함께 찍은 사진이라 누가 누군지 알 수 없다",
+  "144": "P18 이 무대 사진이라 원형 칸 가운데에 다른 사람(무용수)이 오고 본인은 오른쪽 끝에 있다",
+  "326": "P18 이 오르간 앞 옆모습이라 원형 칸 왼쪽 끝에 얼굴이 반쯤 걸린다",
+  "369": "P18 이 지휘 장면이라 얼굴이 오른쪽 위 구석에 있어 원형 칸 밖으로 나간다"
+ },
+ "serviceAccept": {
+  "c139": {
+   "source": "apple_music",
+   "url": "https://is1-ssl.mzstatic.com/image/thumb/Features126/v4/fa/78/28/fa782882-0db5-8c1c-5ecb-ed7d7cb79874/mza_5532827681103775034.png/600x600bb.jpg",
+   "sourceUrl": "https://music.apple.com/us/artist/109817485",
+   "why": "애플 뮤직 클래식 작곡가 그림(검색 이름·장르 일치). 스포티파이(위키데이터 P1902) 사진과 같은 사람"
+  },
+  "c154": {
+   "source": "apple_music",
+   "url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/7b/34/ae/7b34ae13-e73e-dcac-0897-6b8d163a0f25/pr_source.png/600x600bb.jpg",
+   "sourceUrl": "https://music.apple.com/us/artist/276212591",
+   "why": "위키데이터 P2850 의 애플 뮤직 아티스트. 스포티파이(P1902) 사진과 같은 사람"
+  },
+  "c203": {
+   "source": "apple_music",
+   "url": "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/cd/77/ef/cd77ef55-838e-a994-fdf1-9f9d4195e059/ami-identity-5d8f02531bd6d8b9054b4409abc37db9-2026-07-24T15-20-38.040Z_cropped.png/600x600bb.jpg",
+   "sourceUrl": "https://music.apple.com/us/artist/494605",
+   "why": "애플 뮤직 아티스트 그림(그린 초상). 검색 이름이 같고 장르가 사운드트랙(영화·TV 작곡가)"
+  },
+  "c341": {
+   "source": "apple_music",
+   "url": "https://is1-ssl.mzstatic.com/image/thumb/Features116/v4/ff/fd/4a/fffd4aa7-bc0b-3ac9-d335-3edfc02c0f20/mza_8323668349852141167.png/600x600bb.jpg",
+   "sourceUrl": "https://music.apple.com/us/artist/293516",
+   "why": "애플 뮤직 클래식 작곡가 그림. 검은 안경을 쓴 로드리고 사진"
+  },
+  "c162": {
+   "source": "spotify",
+   "url": "https://i.scdn.co/image/ab6772690000c46c49fa80c57e7e76d926c9bf45",
+   "sourceUrl": "https://open.spotify.com/artist/3AcoRiEByWyGqrwM43nW4U",
+   "why": "위키데이터 P1902 의 스포티파이 아티스트 사진(비올라를 든 브렛 딘)"
+  },
+  "c261": {
+   "source": "spotify",
+   "url": "https://i.scdn.co/image/ab6761610000e5eb05e394ef3224d6dac7b29913",
+   "sourceUrl": "https://open.spotify.com/artist/2W1GQ7L5sCyUjewbnEr7ov",
+   "why": "위키데이터 P1902 의 스포티파이 아티스트 사진"
+  }
+ },
+ "serviceReject": {
+  "c145": "스포티파이 그림이 음반 표지",
+  "c236": "스포티파이 그림이 음반 표지",
+  "c255": "스포티파이 그림이 헤일로 3 음반 표지",
+  "c278": "스포티파이 그림이 음반 표지",
+  "c314": "스포티파이 그림이 글자 큰 음반 표지",
+  "c389": "스포티파이 그림이 성화 음반 표지",
+  "c467": "스포티파이 그림이 음반 표지, 애플 뮤직은 글자 로고(G)",
+  "c298": "애플 뮤직 그림이 글자 로고(C)",
+  "c271": "애플 뮤직 같은 이름 아티스트가 기타 연주자 사진이라 동명이인일 수 있음",
+  "c236_pageimage": "위키백과 문서 그림이 후원자 오를레앙 공 초상",
+  "c171_pageimage": "위키백과 문서 그림이 캐리 그랜트 영화 스틸",
+  "c278_pageimage": "위키백과 문서 그림이 빈 실루엣"
+ },
+ "bannerChoice": {
+  "a196": {
+   "source": "spotify",
+   "focal": "100% 58%"
+  },
+  "a213": {
+   "source": "spotify",
+   "focal": "34% 15%"
+  },
+  "a224": {
+   "source": "apple_music",
+   "focal": "74% 33%"
+  },
+  "a226": {
+   "source": "spotify",
+   "focal": "48% 16%"
+  },
+  "a251": {
+   "source": "spotify",
+   "focal": "84% 59%"
+  },
+  "a254": {
+   "source": "spotify",
+   "focal": "50% 0%"
+  },
+  "a258": {
+   "source": "spotify",
+   "focal": "44% 63%"
+  },
+  "a259": {
+   "source": "spotify",
+   "focal": "8% 63%"
+  },
+  "a269": {
+   "source": "spotify",
+   "focal": "23% 50%"
+  },
+  "a270": {
+   "source": "apple_music",
+   "focal": "52% 10%"
+  },
+  "a271": {
+   "source": "spotify",
+   "focal": "4% 72%"
+  },
+  "a273": {
+   "source": "spotify",
+   "focal": "88% 70%"
+  },
+  "a274": {
+   "source": "apple_music",
+   "focal": "57% 20%"
+  },
+  "a280": {
+   "source": "apple_music",
+   "focal": "74% 0%"
+  },
+  "a292": {
+   "source": "spotify",
+   "focal": "58% 53%"
+  },
+  "a306": {
+   "source": "apple_music",
+   "focal": "72% 0%"
+  },
+  "a310": {
+   "source": "apple_music",
+   "focal": "49% 0%"
+  },
+  "a314": {
+   "source": "spotify",
+   "focal": "47% 69%"
+  },
+  "a317": {
+   "source": "apple_music",
+   "focal": "60% 0%"
+  },
+  "a320": {
+   "source": "spotify",
+   "focal": "50% 100%"
+  },
+  "a322": {
+   "source": "apple_music",
+   "focal": "50% 30%"
+  },
+  "a323": {
+   "source": "apple_music",
+   "focal": "50% 30%"
+  },
+  "a324": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a325": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a326": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a327": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a328": {
+   "source": "apple_music",
+   "focal": "50% 100%"
+  },
+  "a330": {
+   "source": "apple_music",
+   "focal": "50% 30%"
+  },
+  "a337": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a338": {
+   "source": "apple_music",
+   "focal": "34% 52%"
+  },
+  "a340": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a352": {
+   "source": "apple_music",
+   "focal": "50% 30%"
+  },
+  "a357": {
+   "source": "spotify",
+   "focal": "19% 0%"
+  },
+  "a358": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a360": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a362": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a578": {
+   "source": "spotify",
+   "focal": "50% 10%"
+  },
+  "a585": {
+   "source": "spotify",
+   "focal": "55% 50%"
+  },
+  "a604": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a615": {
+   "source": "spotify",
+   "focal": "37% 13%"
+  },
+  "a617": {
+   "source": "spotify",
+   "focal": "52% 36%"
+  },
+  "a619": {
+   "source": "spotify",
+   "focal": "58% 50%"
+  },
+  "a621": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a641": {
+   "source": "apple_music",
+   "focal": "62% 0%"
+  },
+  "a643": {
+   "source": "apple_music",
+   "focal": "35% 3%"
+  },
+  "a644": {
+   "source": "spotify",
+   "focal": "38% 50%"
+  },
+  "a645": {
+   "source": "apple_music",
+   "focal": "44% 0%"
+  },
+  "a672": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a697": {
+   "source": "apple_music",
+   "focal": "50% 60%"
+  },
+  "a701": {
+   "source": "spotify",
+   "focal": "50% 80%"
+  },
+  "a704": {
+   "source": "spotify",
+   "focal": "68% 43%"
+  },
+  "a705": {
+   "source": "spotify",
+   "focal": "50% 40%"
+  },
+  "a747": {
+   "source": "spotify",
+   "focal": "53% 100%"
+  },
+  "a748": {
+   "source": "spotify",
+   "focal": "54% 44%"
+  },
+  "a755": {
+   "source": "apple_music",
+   "focal": "50% 0%"
+  },
+  "a757": {
+   "source": "spotify",
+   "focal": "59% 50%"
+  },
+  "a762": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a764": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a769": {
+   "source": "spotify",
+   "focal": "21% 17%"
+  },
+  "a776": {
+   "source": "spotify",
+   "focal": "52% 50%"
+  },
+  "a777": {
+   "source": "spotify",
+   "focal": "51% 50%"
+  },
+  "a778": {
+   "source": "spotify",
+   "focal": "50% 60%"
+  },
+  "a779": {
+   "source": "spotify",
+   "focal": "50% 55%"
+  },
+  "a780": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a788": {
+   "source": "spotify",
+   "focal": "50% 40%"
+  },
+  "a792": {
+   "source": "apple_music",
+   "focal": "50% 100%"
+  },
+  "a794": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a795": {
+   "source": "spotify",
+   "focal": "50% 50%"
+  },
+  "a796": {
+   "source": "spotify",
+   "focal": "50% 54%"
+  },
+  "a802": {
+   "source": "apple_music",
+   "focal": "42% 0%"
+  },
+  "a814": {
+   "source": "spotify",
+   "focal": "50% 65%"
+  },
+  "a829": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a830": {
+   "source": "spotify",
+   "focal": "0% 60%"
+  },
+  "a831": {
+   "source": "spotify",
+   "focal": "74% 50%"
+  },
+  "a838": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a860": {
+   "source": "apple_music",
+   "focal": "51% 52%"
+  },
+  "a214": {
+   "source": "spotify",
+   "focal": "48% 50%"
+  },
+  "a294": {
+   "source": "spotify",
+   "focal": "47% 50%"
+  },
+  "a318": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a319": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a321": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a260": {
+   "source": "spotify",
+   "focal": "31% 46%"
+  },
+  "a268": {
+   "source": "spotify",
+   "focal": "89% 58%"
+  },
+  "a275": {
+   "source": "spotify",
+   "focal": "79% 69%"
+  },
+  "a276": {
+   "source": "spotify",
+   "focal": "50% 13%"
+  },
+  "a281": {
+   "source": "spotify",
+   "focal": "68% 8%"
+  },
+  "a296": {
+   "source": "spotify",
+   "focal": "11% 19%"
+  },
+  "a307": {
+   "source": "spotify",
+   "focal": "52% 45%"
+  },
+  "a341": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a342": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a343": {
+   "source": "spotify",
+   "focal": "35% 52%"
+  },
+  "a344": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a348": {
+   "source": "spotify",
+   "focal": "52% 95%"
+  },
+  "a349": {
+   "source": "spotify",
+   "focal": "50% 40%"
+  },
+  "a353": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a356": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a359": {
+   "source": "spotify",
+   "focal": "71% 0%"
+  },
+  "a363": {
+   "source": "spotify",
+   "focal": "50% 4%"
+  },
+  "a364": {
+   "source": "spotify",
+   "focal": "50% 30%"
+  },
+  "a633": {
+   "source": "spotify",
+   "focal": "50% 50%"
+  },
+  "a637": {
+   "source": "spotify",
+   "focal": "36% 100%"
+  },
+  "a654": {
+   "source": "spotify",
+   "focal": "73% 50%"
+  },
+  "a706": {
+   "source": "spotify",
+   "focal": "50% 50%"
+  },
+  "a713": {
+   "source": "spotify",
+   "focal": "50% 40%"
+  },
+  "a714": {
+   "source": "spotify",
+   "focal": "75% 26%"
+  },
+  "a722": {
+   "source": "spotify",
+   "focal": "50% 50%"
+  },
+  "a730": {
+   "source": "spotify",
+   "focal": "50% 50%"
+  },
+  "a835": {
+   "source": "spotify",
+   "focal": "50% 40%"
+  },
+  "a849": {
+   "source": "spotify",
+   "focal": "52% 50%"
+  },
+  "a858": {
+   "source": "apple_music",
+   "focal": "50% 30%"
+  },
+  "a871": {
+   "source": "spotify",
+   "focal": "40% 81%"
+  }
+ },
+ "bannerReject": {
+  "a264": "스포티파이 그림이 어두워 얼굴이 보이지 않음. 애플 뮤직 가로 그림 없음",
+  "a613": "애플 뮤직 그림이 얼굴 위가 잘려 턱만 보임",
+  "a813": "스포티파이 그림이 광고 글자(WE-ARE-ON-AIR)",
+  "a263": "스포티파이 그림에 사람이 없음(여행 가방)",
+  "a303": "스포티파이 그림이 얼굴 반이 그림자에 가려 눈이 안 보임",
+  "a669": "스포티파이 그림에 70주년 글자 로고가 크게 있음",
+  "a671": "스포티파이 그림이 악단 로고",
+  "a710": "스포티파이 그림에 얼굴이 없음(손과 하프시코드 건반)",
+  "a878": "스포티파이 그림이 구름 풍경이라 사람이 없음"
+ },
+ "bannerSourceNote": {
+  "a226": "애플 뮤직 그림은 머리가 잘려 스포티파이를 씀",
+  "a269": "애플 뮤직 그림은 얼굴이 없음(드레스만)",
+  "a270": "스포티파이 그림은 풀밭 위 바이올린뿐이라 애플 뮤직을 씀",
+  "a273": "애플 뮤직 그림은 눈이 잘림",
+  "a280": "스포티파이 그림은 실루엣이라 애플 뮤직을 씀",
+  "a310": "스포티파이 그림은 얼굴이 가장자리에 잘려 애플 뮤직을 씀",
+  "a322": "스포티파이 그림은 객석 위주라 악단이 작아 애플 뮤직을 씀",
+  "a323": "스포티파이 그림에 CHICAGO SYMPHONY 글자가 있어 애플 뮤직을 씀",
+  "a697": "스포티파이 그림은 날아다니는 악기뿐이라 애플 뮤직을 씀",
+  "a757": "애플 뮤직 그림은 눈이 잘림",
+  "a762": "애플 뮤직 그림은 지휘자 한 사람이고 머리가 잘림",
+  "a792": "스포티파이 그림은 불꽃 그림이라 애플 뮤직을 씀",
+  "a802": "스포티파이 그림은 모바일에서 글자(JUILLIARD STRING QUARTET)가 보여 애플 뮤직을 씀",
+  "a858": "스포티파이 그림은 지휘자(바렌보임) 중심이라 악단 전체가 나온 애플 뮤직을 씀"
+ }
+}
