@@ -9,6 +9,8 @@
  "mbid_taken_elsewhere": 2,
  "film_dropped_new_cue": 4,
  "film_dropped_new_song": 1,
+ "film_merged_films": 0,
+ "film_merged_rows": 0,
  "film_part": 130,
  "film_work": 6,
  "film_film_cue": 3,

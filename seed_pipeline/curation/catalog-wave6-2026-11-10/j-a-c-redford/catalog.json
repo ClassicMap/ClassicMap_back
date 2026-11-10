@@ -1,1 +1,66 @@
-[]
+[
+ {
+  "key": "j-a-c-redford-solo-16038",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "The Rescue",
+  "titleEn": "The Rescue",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "The Rescue",
+  "existingPieceId": 16038,
+  "parts": []
+ },
+ {
+  "key": "j-a-c-redford-solo-17733",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Sykes",
+  "titleEn": "Sykes",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Sykes",
+  "existingPieceId": 17733,
+  "parts": []
+ },
+ {
+  "key": "j-a-c-redford-solo-18752",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Pursuit Through the Subway",
+  "titleEn": "Pursuit Through the Subway",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Pursuit Through the Subway",
+  "existingPieceId": 18752,
+  "parts": []
+ },
+ {
+  "key": "j-a-c-redford-solo-19264",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Bedtime Story",
+  "titleEn": "Bedtime Story",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Bedtime Story",
+  "existingPieceId": 19264,
+  "parts": []
+ }
+]

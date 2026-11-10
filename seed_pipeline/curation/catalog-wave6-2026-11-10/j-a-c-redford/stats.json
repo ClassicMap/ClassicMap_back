@@ -1,3 +1,10 @@
 {
- "seed_arrangement": 4
+ "seed_arrangement": 4,
+ "film_merged_films": 0,
+ "film_merged_rows": 0,
+ "film_kept_for_composer": 4,
+ "film_work": 4,
+ "film_groups": 0,
+ "film_solo": 0,
+ "film_concert_kept": 0
 }
