@@ -5,11 +5,11 @@
   "mbids": [
    "02d90f61-5a68-3082-8811-9048d67d9edf"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "j-a-c-redford-solo-16038",
   "path": null,
-  "reason": "arrangement",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": "보이는 작품이 없어 원제로 둠"
  },
  {
   "pieceId": 17733,
@@ -17,11 +17,11 @@
   "mbids": [
    "68bcd27c-c22f-32b9-9f51-57271c8333ae"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "j-a-c-redford-solo-17733",
   "path": null,
-  "reason": "arrangement",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": "보이는 작품이 없어 원제로 둠"
  },
  {
   "pieceId": 18752,
@@ -29,11 +29,11 @@
   "mbids": [
    "a870316c-e4a1-3a17-b38f-40a2ba0293d9"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "j-a-c-redford-solo-18752",
   "path": null,
-  "reason": "arrangement",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": "보이는 작품이 없어 원제로 둠"
  },
  {
   "pieceId": 19264,
@@ -41,10 +41,10 @@
   "mbids": [
    "c97ba3d2-bc45-39a1-88e5-f9f41830c2b8"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "j-a-c-redford-solo-19264",
   "path": null,
-  "reason": "arrangement",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": "보이는 작품이 없어 원제로 둠"
  }
 ]

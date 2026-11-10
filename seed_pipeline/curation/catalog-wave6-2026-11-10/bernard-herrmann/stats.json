@@ -11,11 +11,13 @@
  "mbid_taken_elsewhere": 3,
  "film_dropped_new_film_work": 2,
  "film_dropped_new_cue": 44,
+ "film_merged_films": 4,
+ "film_merged_rows": 6,
  "film_part": 243,
  "film_film_cue": 35,
- "film_work": 22,
- "film_duplicate": 15,
+ "film_work": 20,
+ "film_duplicate": 17,
  "film_groups": 16,
  "film_solo": 4,
- "film_concert_kept": 21
+ "film_concert_kept": 20
 }

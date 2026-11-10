@@ -12,7 +12,6 @@
   "screenKind": null,
   "kowiki": null,
   "koTitle": null,
-  "existingPieceId": null,
   "title": "The Twilight Zone",
   "tracks": 93,
   "linked": 76
@@ -30,7 +29,6 @@
   "screenKind": "film",
   "kowiki": "신밧드의 7번째 모험",
   "koTitle": "신밧드의 7번째 모험",
-  "existingPieceId": null,
   "title": "영화 <신밧드의 7번째 모험> 사운드트랙",
   "tracks": 37,
   "linked": 31
@@ -48,7 +46,6 @@
   "screenKind": "film",
   "kowiki": "",
   "koTitle": null,
-  "existingPieceId": null,
   "title": "영화 <The 3 Worlds of Gulliver> 사운드트랙",
   "tracks": 37,
   "linked": 22
@@ -66,7 +63,6 @@
   "screenKind": null,
   "kowiki": null,
   "koTitle": null,
-  "existingPieceId": null,
   "title": "Torn Curtain (The Unused Score)",
   "tracks": 31,
   "linked": 20
@@ -84,7 +80,6 @@
   "screenKind": "film",
   "kowiki": "화씨 451 (1966년 영화)",
   "koTitle": "화씨 451",
-  "existingPieceId": null,
   "title": "영화 <화씨 451> 사운드트랙",
   "tracks": 17,
   "linked": 17
@@ -102,7 +97,6 @@
   "screenKind": null,
   "kowiki": null,
   "koTitle": null,
-  "existingPieceId": null,
   "title": "The Film Scores",
   "tracks": 37,
   "linked": 17
@@ -121,10 +115,10 @@
   "screenKind": "film",
   "kowiki": "케이프 피어 (1962년 영화)",
   "koTitle": "케이프 피어",
-  "existingPieceId": null,
   "title": "영화 <케이프 피어> 사운드트랙",
   "tracks": 15,
-  "linked": 14
+  "linked": 14,
+  "mergedInto": "영화 <케이프 피어> 사운드트랙"
  },
  {
   "releaseGroup": "4ec7b30d-eb48-3cd1-acee-2763ee111c16",
@@ -140,10 +134,10 @@
   "screenKind": "film",
   "kowiki": "시민 케인",
   "koTitle": "시민 케인",
-  "existingPieceId": null,
   "title": "영화 <시민 케인> 사운드트랙",
   "tracks": 21,
-  "linked": 13
+  "linked": 13,
+  "mergedInto": "영화 <시민 케인> 사운드트랙"
  },
  {
   "releaseGroup": "6639f6f5-214d-391c-b564-d7d457d97b23",
@@ -159,7 +153,6 @@
   "screenKind": "film",
   "kowiki": "유령과 뮤어 부인",
   "koTitle": "유령과 뮤어 부인",
-  "existingPieceId": null,
   "title": "영화 <유령과 뮤어 부인> 사운드트랙",
   "tracks": 12,
   "linked": 11
@@ -178,10 +171,10 @@
   "screenKind": "film",
   "kowiki": "싸이코",
   "koTitle": "싸이코",
-  "existingPieceId": 419,
-  "title": "영화 <사이코> 사운드트랙",
+  "title": "영화 <싸이코> 사운드트랙",
   "tracks": 22,
-  "linked": 7
+  "linked": 7,
+  "mergedInto": "영화 <사이코> 사운드트랙"
  },
  {
   "releaseGroup": "9df3ff8f-7e72-4a62-9487-b83a5622599a",
@@ -197,7 +190,6 @@
   "screenKind": null,
   "kowiki": null,
   "koTitle": null,
-  "existingPieceId": null,
   "title": "A Child Is Born (음반)",
   "tracks": 2,
   "linked": 2
@@ -215,7 +207,6 @@
   "screenKind": null,
   "kowiki": null,
   "koTitle": null,
-  "existingPieceId": null,
   "title": "Psycho Suite for String Quartet / Souvenirs de voyage / Echoes",
   "tracks": 5,
   "linked": 2
@@ -234,7 +225,6 @@
   "screenKind": null,
   "kowiki": null,
   "koTitle": null,
-  "existingPieceId": null,
   "title": "Citizen Kane: The Essential Bernard Herrmann Film Music Collection",
   "tracks": 28,
   "linked": 2
@@ -253,7 +243,6 @@
   "screenKind": null,
   "kowiki": null,
   "koTitle": null,
-  "existingPieceId": null,
   "title": "Bernard Herrmann Film Scores: From Citizen Kane to Taxi Driver",
   "tracks": 12,
   "linked": 4
@@ -272,7 +261,6 @@
   "screenKind": null,
   "kowiki": null,
   "koTitle": null,
-  "existingPieceId": null,
   "title": "Music From Hitchcock Films",
   "tracks": 7,
   "linked": 2
@@ -291,9 +279,9 @@
   "screenKind": "film",
   "kowiki": "시민 케인",
   "koTitle": null,
-  "existingPieceId": null,
   "title": "Citizen Kane (음반)",
   "tracks": 9,
-  "linked": 3
+  "linked": 3,
+  "mergedInto": "영화 <시민 케인> 사운드트랙"
  }
 ]

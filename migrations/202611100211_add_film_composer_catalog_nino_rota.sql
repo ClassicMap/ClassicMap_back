@@ -1,5 +1,5 @@
--- 작곡가 1명의 큐를 MusicBrainz 음반 단위로 묶는다(6차 자동, 2/9).
--- 작품 89개(새 38개), seed 402개 중 잇기 322·숨김 80·그대로 0.
+-- 작곡가 1명의 큐를 MusicBrainz 음반 단위로 묶는다(6차 자동, 2/11).
+-- 작품 83개(새 32개), seed 402개 중 잇기 321·숨김 81·그대로 0.
 --
 -- 영화·TV·게임·애니 작곡가는 4차 규칙 위에 음반 묶음을 얹었다(사람·에이전트 판단 없음).
 -- 규칙은 seed_pipeline/curation/catalog-wave6-2026-11-10/tools/film_catalog.py, 작곡가별 자료는
@@ -19,9 +19,9 @@
 --     숨기지 않는다. 두 번 돌려도 같다.
 
 -- ===== 니노 로타 (composer_id 111) =====
--- 큐를 음반 단위로 묶는다(6차). 작품 89개 중 음반 묶음 32개, 그 밖(연주회용·영화 단위 MB 작품·노래·낱곡) 57개,
--- 새 작품 38개, part 531개, 그 아래 0개.
--- seed 402개 중 271개를 음반 묶음 안 곡으로 잇고, 51개는 낱개 작품으로 두고, 80개를 숨긴다.
+-- 큐를 음반 단위로 묶는다(6차). 작품 83개 중 음반 묶음 31개, 그 밖(연주회용·영화 단위 MB 작품·노래·낱곡) 52개,
+-- 새 작품 32개, part 514개, 그 아래 0개.
+-- seed 402개 중 271개를 음반 묶음 안 곡으로 잇고, 50개는 낱개 작품으로 두고, 81개를 숨긴다.
 
 -- 숨길 seed 가 쥔 카탈로그 제목을 비운다
 UPDATE pieces piece
@@ -876,10 +876,10 @@ AND NOT EXISTS (
 );
 
 
--- None Death on the Nile
+-- None 영화 <나일 강의 죽음> 사운드트랙
 
 UPDATE pieces piece
-SET piece.title = 'Death on the Nile', piece.title_en = 'Death on the Nile',
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙', piece.title_en = 'Death on the Nile',
     piece.type = 'album', piece.opus_number = NULL,
     piece.catalogue_system = NULL, piece.catalogue_number = NULL,
     piece.composition_year = COALESCE(NULL, piece.composition_year),
@@ -893,18 +893,413 @@ JOIN pieces p ON p.id = part.piece_id
 SET part.parent_part_id = NULL,
     part.linked_piece_id = NULL,
     part.sequence_number = 1, part.movement_number = NULL,
-    part.name_ko = 'Journey on the Nile', part.name_en = 'Death on the Nile: Journey on the Nile',
+    part.name_ko = 'Main Titles', part.name_en = 'Main Titles',
     part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:71cf0734-5c84-443d-ae80-596d10581552' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:cedfddd9-a230-469a-b4a5-427bfec892a9' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
 
 INSERT INTO piece_parts
     (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:71cf0734-5c84-443d-ae80-596d10581552', 1, NULL, 'Journey on the Nile', 'Death on the Nile: Journey on the Nile', 'EDITOR_REVIEWED', 'manual', 1
+SELECT p.id, NULL, NULL, 'musicbrainz:cedfddd9-a230-469a-b4a5-427bfec892a9', 1, NULL, 'Main Titles', 'Main Titles', 'EDITOR_REVIEWED', 'manual', 1
 FROM pieces p
 WHERE p.id = 11289 AND p.composer_id = 111
 AND NOT EXISTS (
     SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:71cf0734-5c84-443d-ae80-596d10581552'
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cedfddd9-a230-469a-b4a5-427bfec892a9'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 11131 AND linked.composer_id = 111),
+    part.sequence_number = 2, part.movement_number = NULL,
+    part.name_ko = 'Arrival at Wode Hall', part.name_en = 'Arrival at Wode Hall',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:f57a6fec-0263-4efd-ae45-085494397f7b' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11131 AND linked.composer_id = 111), 'musicbrainz:f57a6fec-0263-4efd-ae45-085494397f7b', 2, NULL, 'Arrival at Wode Hall', 'Arrival at Wode Hall', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f57a6fec-0263-4efd-ae45-085494397f7b'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Arrival at Wode Hall"', piece.title_en = 'Death on the Nile: Arrival at Wode Hall', piece.editor_locked = 1
+WHERE piece.id = 11131 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 11035 AND linked.composer_id = 111),
+    part.sequence_number = 3, part.movement_number = NULL,
+    part.name_ko = 'The Steambot Departs', part.name_en = 'The Steambot Departs',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:edef5719-e773-41c7-9c22-4c8e98882398' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11035 AND linked.composer_id = 111), 'musicbrainz:edef5719-e773-41c7-9c22-4c8e98882398', 3, NULL, 'The Steambot Departs', 'The Steambot Departs', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:edef5719-e773-41c7-9c22-4c8e98882398'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "The Steambot Departs"', piece.title_en = 'Death on the Nile: The Steambot Departs', piece.editor_locked = 1
+WHERE piece.id = 11035 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 9039 AND linked.composer_id = 111),
+    part.sequence_number = 4, part.movement_number = NULL,
+    part.name_ko = 'Camels and Donkeys', part.name_en = 'Camels and Donkeys',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:5c7d0284-677e-45bc-ba0e-2040dfff0a58' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9039 AND linked.composer_id = 111), 'musicbrainz:5c7d0284-677e-45bc-ba0e-2040dfff0a58', 4, NULL, 'Camels and Donkeys', 'Camels and Donkeys', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5c7d0284-677e-45bc-ba0e-2040dfff0a58'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Camels and Donkeys"', piece.title_en = 'Death on the Nile: Camels and Donkeys', piece.editor_locked = 1
+WHERE piece.id = 9039 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 11056 AND linked.composer_id = 111),
+    part.sequence_number = 5, part.movement_number = NULL,
+    part.name_ko = 'Duet (main Love Theme)', part.name_en = 'Duet (main Love Theme)',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:ef79a51a-db9b-491e-9cb0-5008ef5c9166' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11056 AND linked.composer_id = 111), 'musicbrainz:ef79a51a-db9b-491e-9cb0-5008ef5c9166', 5, NULL, 'Duet (main Love Theme)', 'Duet (main Love Theme)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ef79a51a-db9b-491e-9cb0-5008ef5c9166'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Duet (main Love Theme)"', piece.title_en = 'Death on the Nile: Duet (main Love Theme)', piece.editor_locked = 1
+WHERE piece.id = 11056 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 9596 AND linked.composer_id = 111),
+    part.sequence_number = 6, part.movement_number = NULL,
+    part.name_ko = 'The Great Pyramids', part.name_en = 'The Great Pyramids',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:83f2a7eb-3679-4fd1-b986-34586f71b59f' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9596 AND linked.composer_id = 111), 'musicbrainz:83f2a7eb-3679-4fd1-b986-34586f71b59f', 6, NULL, 'The Great Pyramids', 'The Great Pyramids', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:83f2a7eb-3679-4fd1-b986-34586f71b59f'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "The Great Pyramids"', piece.title_en = 'Death on the Nile: The Great Pyramids', piece.editor_locked = 1
+WHERE piece.id = 9596 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 11258 AND linked.composer_id = 111),
+    part.sequence_number = 7, part.movement_number = NULL,
+    part.name_ko = 'I Love My Baby', part.name_en = 'I Love My Baby',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:fdc152a1-4870-4ea8-804a-63d2070cb48d' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11258 AND linked.composer_id = 111), 'musicbrainz:fdc152a1-4870-4ea8-804a-63d2070cb48d', 7, NULL, 'I Love My Baby', 'I Love My Baby', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fdc152a1-4870-4ea8-804a-63d2070cb48d'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "I Love My Baby"', piece.title_en = 'Death on the Nile: I Love My Baby', piece.editor_locked = 1
+WHERE piece.id = 11258 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 9682 AND linked.composer_id = 111),
+    part.sequence_number = 8, part.movement_number = NULL,
+    part.name_ko = 'The Statues of Rameses', part.name_en = 'The Statues of Rameses',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:8a77e70b-26e8-4b16-abe3-39776b9149b4' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9682 AND linked.composer_id = 111), 'musicbrainz:8a77e70b-26e8-4b16-abe3-39776b9149b4', 8, NULL, 'The Statues of Rameses', 'The Statues of Rameses', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8a77e70b-26e8-4b16-abe3-39776b9149b4'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "The Statues of Rameses"', piece.title_en = 'Death on the Nile: The Statues of Rameses', piece.editor_locked = 1
+WHERE piece.id = 9682 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 11037 AND linked.composer_id = 111),
+    part.sequence_number = 9, part.movement_number = NULL,
+    part.name_ko = 'Journey on the Nile', part.name_en = 'Journey on the Nile',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:ee46578c-8305-4b23-a1eb-3208d7d365cd' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11037 AND linked.composer_id = 111), 'musicbrainz:ee46578c-8305-4b23-a1eb-3208d7d365cd', 9, NULL, 'Journey on the Nile', 'Journey on the Nile', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ee46578c-8305-4b23-a1eb-3208d7d365cd'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Journey on the Nile"', piece.title_en = 'Death on the Nile: Journey on the Nile', piece.editor_locked = 1
+WHERE piece.id = 11037 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 8178 AND linked.composer_id = 111),
+    part.sequence_number = 10, part.movement_number = NULL,
+    part.name_ko = 'The Temple of Karnak', part.name_en = 'The Temple of Karnak',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:1ebb1bd0-4d06-49ce-800a-afd1b62eee5e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8178 AND linked.composer_id = 111), 'musicbrainz:1ebb1bd0-4d06-49ce-800a-afd1b62eee5e', 10, NULL, 'The Temple of Karnak', 'The Temple of Karnak', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1ebb1bd0-4d06-49ce-800a-afd1b62eee5e'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "The Temple of Karnak"', piece.title_en = 'Death on the Nile: The Temple of Karnak', piece.editor_locked = 1
+WHERE piece.id = 8178 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 8904 AND linked.composer_id = 111),
+    part.sequence_number = 11, part.movement_number = NULL,
+    part.name_ko = 'The Carriage Ride', part.name_en = 'The Carriage Ride',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:53ec12a3-3bc9-428c-aeb1-4a818cbf143a' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8904 AND linked.composer_id = 111), 'musicbrainz:53ec12a3-3bc9-428c-aeb1-4a818cbf143a', 11, NULL, 'The Carriage Ride', 'The Carriage Ride', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:53ec12a3-3bc9-428c-aeb1-4a818cbf143a'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "The Carriage Ride"', piece.title_en = 'Death on the Nile: The Carriage Ride', piece.editor_locked = 1
+WHERE piece.id = 8904 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 10643 AND linked.composer_id = 111),
+    part.sequence_number = 12, part.movement_number = NULL,
+    part.name_ko = 'Jackie''s Theme', part.name_en = 'Jackie''s Theme',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:d10cdb7f-e4fd-4e38-8d7c-a92161b2bd6f' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10643 AND linked.composer_id = 111), 'musicbrainz:d10cdb7f-e4fd-4e38-8d7c-a92161b2bd6f', 12, NULL, 'Jackie''s Theme', 'Jackie''s Theme', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d10cdb7f-e4fd-4e38-8d7c-a92161b2bd6f'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Jackie''s Theme"', piece.title_en = 'Death on the Nile: Jackie''s Theme', piece.editor_locked = 1
+WHERE piece.id = 10643 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 10557 AND linked.composer_id = 111),
+    part.sequence_number = 13, part.movement_number = NULL,
+    part.name_ko = 'Fox-Trot - Don''t Say No to Rain', part.name_en = 'Fox-Trot - Don''t Say No to Rain',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:ca6ab590-37a6-49d4-9c43-5e987eebbd6a' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10557 AND linked.composer_id = 111), 'musicbrainz:ca6ab590-37a6-49d4-9c43-5e987eebbd6a', 13, NULL, 'Fox-Trot - Don''t Say No to Rain', 'Fox-Trot - Don''t Say No to Rain', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ca6ab590-37a6-49d4-9c43-5e987eebbd6a'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Fox-Trot - Don''t Say No to Rain"', piece.title_en = 'Death on the Nile: Fox-Trot - Don''t Say No to Rain', piece.editor_locked = 1
+WHERE piece.id = 10557 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 11209 AND linked.composer_id = 111),
+    part.sequence_number = 14, part.movement_number = NULL,
+    part.name_ko = 'Linnet''s Pearls', part.name_en = 'Linnet''s Pearls',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:fad3479d-1b8f-42da-bae3-2eac4527c38a' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11209 AND linked.composer_id = 111), 'musicbrainz:fad3479d-1b8f-42da-bae3-2eac4527c38a', 14, NULL, 'Linnet''s Pearls', 'Linnet''s Pearls', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fad3479d-1b8f-42da-bae3-2eac4527c38a'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Linnet''s Pearls"', piece.title_en = 'Death on the Nile: Linnet''s Pearls', piece.editor_locked = 1
+WHERE piece.id = 11209 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 10961 AND linked.composer_id = 111),
+    part.sequence_number = 15, part.movement_number = NULL,
+    part.name_ko = 'Waltz - The White Nile', part.name_en = 'Waltz - The White Nile',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:e8af0b1e-6d90-4715-a6f2-e630baa418ae' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10961 AND linked.composer_id = 111), 'musicbrainz:e8af0b1e-6d90-4715-a6f2-e630baa418ae', 15, NULL, 'Waltz - The White Nile', 'Waltz - The White Nile', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e8af0b1e-6d90-4715-a6f2-e630baa418ae'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Waltz - The White Nile"', piece.title_en = 'Death on the Nile: Waltz - The White Nile', piece.editor_locked = 1
+WHERE piece.id = 10961 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 9332 AND linked.composer_id = 111),
+    part.sequence_number = 16, part.movement_number = NULL,
+    part.name_ko = 'The Conclusive Evidence', part.name_en = 'The Conclusive Evidence',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:717c6cc8-1da3-4184-82a9-685ca71159b1' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9332 AND linked.composer_id = 111), 'musicbrainz:717c6cc8-1da3-4184-82a9-685ca71159b1', 16, NULL, 'The Conclusive Evidence', 'The Conclusive Evidence', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:717c6cc8-1da3-4184-82a9-685ca71159b1'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "The Conclusive Evidence"', piece.title_en = 'Death on the Nile: The Conclusive Evidence', piece.editor_locked = 1
+WHERE piece.id = 9332 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 17, part.movement_number = NULL,
+    part.name_ko = 'End Titles', part.name_en = 'End Titles',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 11289 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:b4a77f21-0935-428e-bf20-53cdaf60be00' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b4a77f21-0935-428e-bf20-53cdaf60be00', 17, NULL, 'End Titles', 'End Titles', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 11289 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b4a77f21-0935-428e-bf20-53cdaf60be00'
 );
 
 
@@ -1168,10 +1563,10 @@ AND NOT EXISTS (
 );
 
 
--- None 영화음악 <Il Gattopardo>
+-- None 영화 <표범> 사운드트랙
 
 UPDATE pieces piece
-SET piece.title = '영화음악 <Il Gattopardo>', piece.title_en = 'Il Gattopardo',
+SET piece.title = '영화 <표범> 사운드트랙', piece.title_en = 'Il gattopardo',
     piece.type = 'album', piece.opus_number = NULL,
     piece.catalogue_system = NULL, piece.catalogue_number = NULL,
     piece.composition_year = COALESCE(NULL, piece.composition_year),
@@ -1183,121 +1578,286 @@ UPDATE piece_parts part
 JOIN pieces p ON p.id = part.piece_id
 
 SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 10410 AND linked.composer_id = 111),
     part.sequence_number = 1, part.movement_number = NULL,
-    part.name_ko = 'Mazurka', part.name_en = 'Il Gattopardo: Mazurka',
+    part.name_ko = 'Partenza di Tancredi', part.name_en = 'Partenza di Tancredi',
     part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:0a807e03-f5bb-4728-8a3f-5f4b7b803d7e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:bf9d45a2-f472-488e-8b43-136a15c3b745' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
 
 INSERT INTO piece_parts
     (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:0a807e03-f5bb-4728-8a3f-5f4b7b803d7e', 1, NULL, 'Mazurka', 'Il Gattopardo: Mazurka', 'EDITOR_REVIEWED', 'manual', 1
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10410 AND linked.composer_id = 111), 'musicbrainz:bf9d45a2-f472-488e-8b43-136a15c3b745', 1, NULL, 'Partenza di Tancredi', 'Partenza di Tancredi', 'EDITOR_REVIEWED', 'manual', 1
 FROM pieces p
 WHERE p.id = 9047 AND p.composer_id = 111
 AND NOT EXISTS (
     SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0a807e03-f5bb-4728-8a3f-5f4b7b803d7e'
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bf9d45a2-f472-488e-8b43-136a15c3b745'
 );
+
+UPDATE pieces piece
+SET piece.title = '영화 <표범> 사운드트랙 중 "Partenza di Tancredi"', piece.title_en = 'Il gattopardo: Partenza di Tancredi', piece.editor_locked = 1
+WHERE piece.id = 10410 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 UPDATE piece_parts part
 JOIN pieces p ON p.id = part.piece_id
 
 SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 9432 AND linked.composer_id = 111),
     part.sequence_number = 2, part.movement_number = NULL,
-    part.name_ko = 'Polka', part.name_en = 'Il Gattopardo: Polka',
+    part.name_ko = 'Tancredi garibaldino', part.name_en = 'Tancredi garibaldino',
     part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:42ca8738-842f-477c-8471-4e2350b69274' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:78d63db7-d2d1-476e-9a32-a0bd87b4af34' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
 
 INSERT INTO piece_parts
     (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:42ca8738-842f-477c-8471-4e2350b69274', 2, NULL, 'Polka', 'Il Gattopardo: Polka', 'EDITOR_REVIEWED', 'manual', 1
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9432 AND linked.composer_id = 111), 'musicbrainz:78d63db7-d2d1-476e-9a32-a0bd87b4af34', 2, NULL, 'Tancredi garibaldino', 'Tancredi garibaldino', 'EDITOR_REVIEWED', 'manual', 1
 FROM pieces p
 WHERE p.id = 9047 AND p.composer_id = 111
 AND NOT EXISTS (
     SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:42ca8738-842f-477c-8471-4e2350b69274'
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:78d63db7-d2d1-476e-9a32-a0bd87b4af34'
 );
+
+UPDATE pieces piece
+SET piece.title = '영화 <표범> 사운드트랙 중 "Tancredi garibaldino"', piece.title_en = 'Il gattopardo: Tancredi garibaldino', piece.editor_locked = 1
+WHERE piece.id = 9432 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 UPDATE piece_parts part
 JOIN pieces p ON p.id = part.piece_id
 
 SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 8938 AND linked.composer_id = 111),
     part.sequence_number = 3, part.movement_number = NULL,
-    part.name_ko = 'Valzer del commiato', part.name_en = 'Il Gattopardo: Valzer del commiato',
+    part.name_ko = 'Viaggio a Donnafugata', part.name_en = 'Viaggio a Donnafugata',
     part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:6b5d66fa-da56-48f4-a677-0f3805588927' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:5601fc9b-837d-40a1-a112-1e5743dafde9' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
 
 INSERT INTO piece_parts
     (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:6b5d66fa-da56-48f4-a677-0f3805588927', 3, NULL, 'Valzer del commiato', 'Il Gattopardo: Valzer del commiato', 'EDITOR_REVIEWED', 'manual', 1
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8938 AND linked.composer_id = 111), 'musicbrainz:5601fc9b-837d-40a1-a112-1e5743dafde9', 3, NULL, 'Viaggio a Donnafugata', 'Viaggio a Donnafugata', 'EDITOR_REVIEWED', 'manual', 1
 FROM pieces p
 WHERE p.id = 9047 AND p.composer_id = 111
 AND NOT EXISTS (
     SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6b5d66fa-da56-48f4-a677-0f3805588927'
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5601fc9b-837d-40a1-a112-1e5743dafde9'
 );
+
+UPDATE pieces piece
+SET piece.title = '영화 <표범> 사운드트랙 중 "Viaggio a Donnafugata"', piece.title_en = 'Il gattopardo: Viaggio a Donnafugata', piece.editor_locked = 1
+WHERE piece.id = 8938 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 UPDATE piece_parts part
 JOIN pieces p ON p.id = part.piece_id
 
 SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 8706 AND linked.composer_id = 111),
     part.sequence_number = 4, part.movement_number = NULL,
-    part.name_ko = 'Galop', part.name_en = 'Il Gattopardo: Galop',
+    part.name_ko = 'Giovani eroi (marchetta)', part.name_en = 'Giovani eroi (marchetta)',
     part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:7f086480-57a3-419d-be9f-c9a24b448d49' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:4603e99c-a10d-4c71-9f71-54fab9d711f7' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
 
 INSERT INTO piece_parts
     (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:7f086480-57a3-419d-be9f-c9a24b448d49', 4, NULL, 'Galop', 'Il Gattopardo: Galop', 'EDITOR_REVIEWED', 'manual', 1
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8706 AND linked.composer_id = 111), 'musicbrainz:4603e99c-a10d-4c71-9f71-54fab9d711f7', 4, NULL, 'Giovani eroi (marchetta)', 'Giovani eroi (marchetta)', 'EDITOR_REVIEWED', 'manual', 1
 FROM pieces p
 WHERE p.id = 9047 AND p.composer_id = 111
 AND NOT EXISTS (
     SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7f086480-57a3-419d-be9f-c9a24b448d49'
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4603e99c-a10d-4c71-9f71-54fab9d711f7'
 );
+
+UPDATE pieces piece
+SET piece.title = '영화 <표범> 사운드트랙 중 "Giovani eroi (marchetta)"', piece.title_en = 'Il gattopardo: Giovani eroi (marchetta)', piece.editor_locked = 1
+WHERE piece.id = 8706 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 UPDATE piece_parts part
 JOIN pieces p ON p.id = part.piece_id
 
 SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 9775 AND linked.composer_id = 111),
     part.sequence_number = 5, part.movement_number = NULL,
-    part.name_ko = 'Balletto', part.name_en = 'Il Gattopardo: Balletto',
+    part.name_ko = 'La Locanda (il pic-nic)', part.name_en = 'La Locanda (il pic-nic)',
     part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:81c470da-8f72-4d24-aecd-9670843c3faa' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:911d1fe0-8831-4295-b395-33e8ddedfbe9' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
 
 INSERT INTO piece_parts
     (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:81c470da-8f72-4d24-aecd-9670843c3faa', 5, NULL, 'Balletto', 'Il Gattopardo: Balletto', 'EDITOR_REVIEWED', 'manual', 1
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9775 AND linked.composer_id = 111), 'musicbrainz:911d1fe0-8831-4295-b395-33e8ddedfbe9', 5, NULL, 'La Locanda (il pic-nic)', 'La Locanda (il pic-nic)', 'EDITOR_REVIEWED', 'manual', 1
 FROM pieces p
 WHERE p.id = 9047 AND p.composer_id = 111
 AND NOT EXISTS (
     SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:81c470da-8f72-4d24-aecd-9670843c3faa'
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:911d1fe0-8831-4295-b395-33e8ddedfbe9'
 );
+
+UPDATE pieces piece
+SET piece.title = '영화 <표범> 사운드트랙 중 "La Locanda (il pic-nic)"', piece.title_en = 'Il gattopardo: La Locanda (il pic-nic)', piece.editor_locked = 1
+WHERE piece.id = 9775 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 9197 AND linked.composer_id = 111),
+    part.sequence_number = 6, part.movement_number = NULL,
+    part.name_ko = 'Entrata di Angelica, L''amore di Tancredi e Angelica, Finale', part.name_en = 'Entrata di Angelica, L''amore di Tancredi e Angelica, Finale',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:688cfb69-8601-4724-91ad-54238d4b85bd' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9197 AND linked.composer_id = 111), 'musicbrainz:688cfb69-8601-4724-91ad-54238d4b85bd', 6, NULL, 'Entrata di Angelica, L''amore di Tancredi e Angelica, Finale', 'Entrata di Angelica, L''amore di Tancredi e Angelica, Finale', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 9047 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:688cfb69-8601-4724-91ad-54238d4b85bd'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <표범> 사운드트랙 중 "Entrata di Angelica, L''amore di Tancredi e Angelica, Finale"', piece.title_en = 'Il gattopardo: Entrata di Angelica, L''amore di Tancredi e Angelica, Finale', piece.editor_locked = 1
+WHERE piece.id = 9197 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 UPDATE piece_parts part
 JOIN pieces p ON p.id = part.piece_id
 
 SET part.parent_part_id = NULL,
     part.linked_piece_id = NULL,
-    part.sequence_number = 6, part.movement_number = NULL,
-    part.name_ko = 'Quadriglia', part.name_en = 'Il Gattopardo: Quadriglia',
+    part.sequence_number = 7, part.movement_number = NULL,
+    part.name_ko = 'Mazurka', part.name_en = 'Mazurka',
     part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:bbade6f2-6c4d-4246-bd08-452a23bdee12' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:3170f81a-880b-41c1-ad01-2897ce657f44' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
 
 INSERT INTO piece_parts
     (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:bbade6f2-6c4d-4246-bd08-452a23bdee12', 6, NULL, 'Quadriglia', 'Il Gattopardo: Quadriglia', 'EDITOR_REVIEWED', 'manual', 1
+SELECT p.id, NULL, NULL, 'musicbrainz:3170f81a-880b-41c1-ad01-2897ce657f44', 7, NULL, 'Mazurka', 'Mazurka', 'EDITOR_REVIEWED', 'manual', 1
 FROM pieces p
 WHERE p.id = 9047 AND p.composer_id = 111
 AND NOT EXISTS (
     SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bbade6f2-6c4d-4246-bd08-452a23bdee12'
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3170f81a-880b-41c1-ad01-2897ce657f44'
 );
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 11061 AND linked.composer_id = 111),
+    part.sequence_number = 8, part.movement_number = NULL,
+    part.name_ko = 'Controdanza', part.name_en = 'Controdanza',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:efb3c4a0-2afc-4859-8c59-ec36d34e542e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11061 AND linked.composer_id = 111), 'musicbrainz:efb3c4a0-2afc-4859-8c59-ec36d34e542e', 8, NULL, 'Controdanza', 'Controdanza', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 9047 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:efb3c4a0-2afc-4859-8c59-ec36d34e542e'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <표범> 사운드트랙 중 "Controdanza"', piece.title_en = 'Il gattopardo: Controdanza', piece.editor_locked = 1
+WHERE piece.id = 11061 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 9, part.movement_number = NULL,
+    part.name_ko = 'Polka', part.name_en = 'Polka',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:c02b1b41-4fb2-4292-941c-f81d7f45ce64' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c02b1b41-4fb2-4292-941c-f81d7f45ce64', 9, NULL, 'Polka', 'Polka', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 9047 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c02b1b41-4fb2-4292-941c-f81d7f45ce64'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 10223 AND linked.composer_id = 111),
+    part.sequence_number = 10, part.movement_number = NULL,
+    part.name_ko = 'Quadriglia', part.name_en = 'Quadriglia',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:b0f84b6f-d602-437c-b6bb-d39dc9d1964e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10223 AND linked.composer_id = 111), 'musicbrainz:b0f84b6f-d602-437c-b6bb-d39dc9d1964e', 10, NULL, 'Quadriglia', 'Quadriglia', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 9047 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b0f84b6f-d602-437c-b6bb-d39dc9d1964e'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <표범> 사운드트랙 중 "Quadriglia"', piece.title_en = 'Il gattopardo: Quadriglia', piece.editor_locked = 1
+WHERE piece.id = 10223 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 11, part.movement_number = NULL,
+    part.name_ko = 'Galop', part.name_en = 'Galop',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:48007459-77db-49a4-a460-9f8d8734f2fa' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:48007459-77db-49a4-a460-9f8d8734f2fa', 11, NULL, 'Galop', 'Galop', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 9047 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:48007459-77db-49a4-a460-9f8d8734f2fa'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 8936 AND linked.composer_id = 111),
+    part.sequence_number = 12, part.movement_number = NULL,
+    part.name_ko = 'Valzer del commiato', part.name_en = 'Valzer del commiato',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 9047 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:55dd9253-2422-42a5-b15b-fb4dfa399663' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8936 AND linked.composer_id = 111), 'musicbrainz:55dd9253-2422-42a5-b15b-fb4dfa399663', 12, NULL, 'Valzer del commiato', 'Valzer del commiato', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 9047 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:55dd9253-2422-42a5-b15b-fb4dfa399663'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <표범> 사운드트랙 중 "Valzer del commiato"', piece.title_en = 'Il gattopardo: Valzer del commiato', piece.editor_locked = 1
+WHERE piece.id = 8936 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 
 -- None Il furto della Gioconda (Seq. 15 - polka)
@@ -2324,10 +2884,10 @@ AND NOT EXISTS (
 );
 
 
--- None 영화음악 <Rocco e i suoi fratelli>
+-- None 영화 <로코와 그 형제들> 사운드트랙
 
 UPDATE pieces piece
-SET piece.title = '영화음악 <Rocco e i suoi fratelli>', piece.title_en = 'Rocco e i suoi fratelli',
+SET piece.title = '영화 <로코와 그 형제들> 사운드트랙', piece.title_en = 'Rocco e i suoi fratelli',
     piece.type = 'album', piece.opus_number = NULL,
     piece.catalogue_system = NULL, piece.catalogue_number = NULL,
     piece.composition_year = COALESCE(NULL, piece.composition_year),
@@ -2339,21 +2899,26 @@ UPDATE piece_parts part
 JOIN pieces p ON p.id = part.piece_id
 
 SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 10021 AND linked.composer_id = 111),
     part.sequence_number = 1, part.movement_number = NULL,
-    part.name_ko = 'L''amore di Rocco (From "Rocco e i suoi fratelli")', part.name_en = 'L''amore di Rocco (From "Rocco e i suoi fratelli")',
+    part.name_ko = 'Introduzione e canzone', part.name_en = 'Introduzione e canzone',
     part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 8843 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:55005501-ac6f-428a-98fd-1211149e4e30' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+WHERE p.id = 8843 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:a2fda7b6-bd80-4c6e-94f1-f0b12779c812' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
 
 INSERT INTO piece_parts
     (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:55005501-ac6f-428a-98fd-1211149e4e30', 1, NULL, 'L''amore di Rocco (From "Rocco e i suoi fratelli")', 'L''amore di Rocco (From "Rocco e i suoi fratelli")', 'EDITOR_REVIEWED', 'manual', 1
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10021 AND linked.composer_id = 111), 'musicbrainz:a2fda7b6-bd80-4c6e-94f1-f0b12779c812', 1, NULL, 'Introduzione e canzone', 'Introduzione e canzone', 'EDITOR_REVIEWED', 'manual', 1
 FROM pieces p
 WHERE p.id = 8843 AND p.composer_id = 111
 AND NOT EXISTS (
     SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:55005501-ac6f-428a-98fd-1211149e4e30'
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a2fda7b6-bd80-4c6e-94f1-f0b12779c812'
 );
+
+UPDATE pieces piece
+SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "Introduzione e canzone"', piece.title_en = 'Rocco e i suoi fratelli: Introduzione e canzone', piece.editor_locked = 1
+WHERE piece.id = 10021 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 UPDATE piece_parts part
 JOIN pieces p ON p.id = part.piece_id
@@ -2361,31 +2926,242 @@ JOIN pieces p ON p.id = part.piece_id
 SET part.parent_part_id = NULL,
     part.linked_piece_id = NULL,
     part.sequence_number = 2, part.movement_number = NULL,
-    part.name_ko = 'Rocco’s Theme', part.name_en = 'Rocco’s Theme',
+    part.name_ko = 'Terra lontana', part.name_en = 'Terra lontana',
     part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 8843 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:7acfb3b5-a944-4885-ad15-64a94085a3a8' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+WHERE p.id = 8843 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:13fa33d8-18c3-4e89-a5a0-944d40dbb7ab' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
 
 INSERT INTO piece_parts
     (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:7acfb3b5-a944-4885-ad15-64a94085a3a8', 2, NULL, 'Rocco’s Theme', 'Rocco’s Theme', 'EDITOR_REVIEWED', 'manual', 1
+SELECT p.id, NULL, NULL, 'musicbrainz:13fa33d8-18c3-4e89-a5a0-944d40dbb7ab', 2, NULL, 'Terra lontana', 'Terra lontana', 'EDITOR_REVIEWED', 'manual', 1
 FROM pieces p
 WHERE p.id = 8843 AND p.composer_id = 111
 AND NOT EXISTS (
     SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7acfb3b5-a944-4885-ad15-64a94085a3a8'
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:13fa33d8-18c3-4e89-a5a0-944d40dbb7ab'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 9051 AND linked.composer_id = 111),
+    part.sequence_number = 3, part.movement_number = NULL,
+    part.name_ko = 'Milano e Nadia', part.name_en = 'Milano e Nadia',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 8843 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:5d4899eb-7469-4738-ad4c-0270aba846f9' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9051 AND linked.composer_id = 111), 'musicbrainz:5d4899eb-7469-4738-ad4c-0270aba846f9', 3, NULL, 'Milano e Nadia', 'Milano e Nadia', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 8843 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5d4899eb-7469-4738-ad4c-0270aba846f9'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "Milano e Nadia"', piece.title_en = 'Rocco e i suoi fratelli: Milano e Nadia', piece.editor_locked = 1
+WHERE piece.id = 9051 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 9571 AND linked.composer_id = 111),
+    part.sequence_number = 4, part.movement_number = NULL,
+    part.name_ko = 'Valzer ai laghi', part.name_en = 'Valzer ai laghi',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 8843 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:82670571-5ea1-4108-8125-fa76e328c1b8' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9571 AND linked.composer_id = 111), 'musicbrainz:82670571-5ea1-4108-8125-fa76e328c1b8', 4, NULL, 'Valzer ai laghi', 'Valzer ai laghi', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 8843 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:82670571-5ea1-4108-8125-fa76e328c1b8'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "Valzer ai laghi"', piece.title_en = 'Rocco e i suoi fratelli: Valzer ai laghi', piece.editor_locked = 1
+WHERE piece.id = 9571 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 11137 AND linked.composer_id = 111),
+    part.sequence_number = 5, part.movement_number = NULL,
+    part.name_ko = 'L’amore di Rocco', part.name_en = 'L’amore di Rocco',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 8843 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:f5c92c76-cbae-48d8-bfeb-aa2a7d3b97a4' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11137 AND linked.composer_id = 111), 'musicbrainz:f5c92c76-cbae-48d8-bfeb-aa2a7d3b97a4', 5, NULL, 'L’amore di Rocco', 'L’amore di Rocco', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 8843 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f5c92c76-cbae-48d8-bfeb-aa2a7d3b97a4'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "L’amore di Rocco"', piece.title_en = 'Rocco e i suoi fratelli: L’amore di Rocco', piece.editor_locked = 1
+WHERE piece.id = 11137 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 11115 AND linked.composer_id = 111),
+    part.sequence_number = 6, part.movement_number = NULL,
+    part.name_ko = 'La gelosia di Simone', part.name_en = 'La gelosia di Simone',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 8843 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:f49e1cb6-2542-478e-a82d-b203ea4fa030' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11115 AND linked.composer_id = 111), 'musicbrainz:f49e1cb6-2542-478e-a82d-b203ea4fa030', 6, NULL, 'La gelosia di Simone', 'La gelosia di Simone', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 8843 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f49e1cb6-2542-478e-a82d-b203ea4fa030'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "La gelosia di Simone"', piece.title_en = 'Rocco e i suoi fratelli: La gelosia di Simone', piece.editor_locked = 1
+WHERE piece.id = 11115 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 10795 AND linked.composer_id = 111),
+    part.sequence_number = 7, part.movement_number = NULL,
+    part.name_ko = 'Come tu vuoi', part.name_en = 'Come tu vuoi',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 8843 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:dc51d6ef-1812-4dcb-9c56-ffdd9f342e30' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10795 AND linked.composer_id = 111), 'musicbrainz:dc51d6ef-1812-4dcb-9c56-ffdd9f342e30', 7, NULL, 'Come tu vuoi', 'Come tu vuoi', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 8843 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:dc51d6ef-1812-4dcb-9c56-ffdd9f342e30'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "Come tu vuoi"', piece.title_en = 'Rocco e i suoi fratelli: Come tu vuoi', piece.editor_locked = 1
+WHERE piece.id = 10795 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 11064 AND linked.composer_id = 111),
+    part.sequence_number = 8, part.movement_number = NULL,
+    part.name_ko = 'L’amore dei due fratelli', part.name_en = 'L’amore dei due fratelli',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 8843 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:effbd668-066a-468c-8aa3-ebaa62bb40d1' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11064 AND linked.composer_id = 111), 'musicbrainz:effbd668-066a-468c-8aa3-ebaa62bb40d1', 8, NULL, 'L’amore dei due fratelli', 'L’amore dei due fratelli', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 8843 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:effbd668-066a-468c-8aa3-ebaa62bb40d1'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "L’amore dei due fratelli"', piece.title_en = 'Rocco e i suoi fratelli: L’amore dei due fratelli', piece.editor_locked = 1
+WHERE piece.id = 11064 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 8316 AND linked.composer_id = 111),
+    part.sequence_number = 9, part.movement_number = NULL,
+    part.name_ko = 'Il delitto di Simone', part.name_en = 'Il delitto di Simone',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 8843 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:2a740a0f-7a58-40e4-a636-c9b55e3f0477' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8316 AND linked.composer_id = 111), 'musicbrainz:2a740a0f-7a58-40e4-a636-c9b55e3f0477', 9, NULL, 'Il delitto di Simone', 'Il delitto di Simone', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 8843 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2a740a0f-7a58-40e4-a636-c9b55e3f0477'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "Il delitto di Simone"', piece.title_en = 'Rocco e i suoi fratelli: Il delitto di Simone', piece.editor_locked = 1
+WHERE piece.id = 8316 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 10790 AND linked.composer_id = 111),
+    part.sequence_number = 10, part.movement_number = NULL,
+    part.name_ko = 'Paese mio', part.name_en = 'Paese mio',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 8843 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:db81e9c6-28c8-4b5e-9660-a6d35db12afd' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10790 AND linked.composer_id = 111), 'musicbrainz:db81e9c6-28c8-4b5e-9660-a6d35db12afd', 10, NULL, 'Paese mio', 'Paese mio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 8843 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:db81e9c6-28c8-4b5e-9660-a6d35db12afd'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "Paese mio"', piece.title_en = 'Rocco e i suoi fratelli: Paese mio', piece.editor_locked = 1
+WHERE piece.id = 10790 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 11, part.movement_number = NULL,
+    part.name_ko = 'Terra lontana', part.name_en = 'Terra lontana',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 8843 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:101c1497-4435-4627-92b4-fae73db5ce0f' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:101c1497-4435-4627-92b4-fae73db5ce0f', 11, NULL, 'Terra lontana', 'Terra lontana', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 8843 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:101c1497-4435-4627-92b4-fae73db5ce0f'
 );
 
 
--- None Romeo and Juliet, film score
-
-UPDATE pieces piece
-SET piece.title = 'Romeo and Juliet, film score', piece.title_en = 'Romeo and Juliet, film score',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 9716 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+-- None 영화 <로미오와 줄리엣 (1968)> 사운드트랙
 
 UPDATE piece_parts part
 JOIN pieces p ON p.id = part.piece_id
@@ -2395,13 +3171,13 @@ SET part.parent_part_id = NULL,
     part.sequence_number = 1, part.movement_number = NULL,
     part.name_ko = 'A Renaissance Timepiece', part.name_en = 'Romeo and Juliet: A Renaissance Timepiece',
     part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 9716 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:b416d7b8-71a4-4a93-ad5d-832fb25f8a64' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+WHERE p.id = 417 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:b416d7b8-71a4-4a93-ad5d-832fb25f8a64' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
 
 INSERT INTO piece_parts
     (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
 SELECT p.id, NULL, NULL, 'musicbrainz:b416d7b8-71a4-4a93-ad5d-832fb25f8a64', 1, NULL, 'A Renaissance Timepiece', 'Romeo and Juliet: A Renaissance Timepiece', 'EDITOR_REVIEWED', 'manual', 1
 FROM pieces p
-WHERE p.id = 9716 AND p.composer_id = 111
+WHERE p.id = 417 AND p.composer_id = 111
 AND NOT EXISTS (
     SELECT 1 FROM piece_parts existing
     WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b416d7b8-71a4-4a93-ad5d-832fb25f8a64'
@@ -3292,10 +4068,10 @@ AND NOT EXISTS (
 );
 
 
--- None 영화음악 <The Godfather>
+-- None 영화 <대부> 사운드트랙
 
 UPDATE pieces piece
-SET piece.title = '영화음악 <The Godfather>', piece.title_en = 'The Godfather',
+SET piece.title = '영화 <대부> 사운드트랙', piece.title_en = 'The Godfather: Music From the Original Motion Picture Soundtrack',
     piece.type = 'album', piece.opus_number = NULL,
     piece.catalogue_system = NULL, piece.catalogue_number = NULL,
     piece.composition_year = COALESCE(NULL, piece.composition_year),
@@ -3309,38 +4085,208 @@ JOIN pieces p ON p.id = part.piece_id
 SET part.parent_part_id = NULL,
     part.linked_piece_id = NULL,
     part.sequence_number = 1, part.movement_number = NULL,
-    part.name_ko = 'The Godfather Finale', part.name_en = 'The Godfather Finale',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 10553 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:06cd0194-bf50-3698-81e3-7d4e6d03c4c6' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:06cd0194-bf50-3698-81e3-7d4e6d03c4c6', 1, NULL, 'The Godfather Finale', 'The Godfather Finale', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 10553 AND p.composer_id = 111
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:06cd0194-bf50-3698-81e3-7d4e6d03c4c6'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = NULL,
     part.name_ko = 'The Godfather Waltz', part.name_en = 'The Godfather Waltz',
     part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
 WHERE p.id = 10553 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:a91b7fc7-959d-3808-b866-7d8cf1388130' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
 
 INSERT INTO piece_parts
     (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:a91b7fc7-959d-3808-b866-7d8cf1388130', 2, NULL, 'The Godfather Waltz', 'The Godfather Waltz', 'EDITOR_REVIEWED', 'manual', 1
+SELECT p.id, NULL, NULL, 'musicbrainz:a91b7fc7-959d-3808-b866-7d8cf1388130', 1, NULL, 'The Godfather Waltz', 'The Godfather Waltz', 'EDITOR_REVIEWED', 'manual', 1
 FROM pieces p
 WHERE p.id = 10553 AND p.composer_id = 111
 AND NOT EXISTS (
     SELECT 1 FROM piece_parts existing
     WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a91b7fc7-959d-3808-b866-7d8cf1388130'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 9189 AND linked.composer_id = 111),
+    part.sequence_number = 2, part.movement_number = NULL,
+    part.name_ko = 'The Pickup', part.name_en = 'The Pickup',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 10553 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:67d896ef-0bda-3d02-833a-bc7634330751' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9189 AND linked.composer_id = 111), 'musicbrainz:67d896ef-0bda-3d02-833a-bc7634330751', 2, NULL, 'The Pickup', 'The Pickup', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 10553 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:67d896ef-0bda-3d02-833a-bc7634330751'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <대부> 사운드트랙 중 "The Pickup"', piece.title_en = 'The Godfather: Music From the Original Motion Picture Soundtrack: The Pickup', piece.editor_locked = 1
+WHERE piece.id = 9189 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 7830 AND linked.composer_id = 111),
+    part.sequence_number = 3, part.movement_number = NULL,
+    part.name_ko = 'The Halls of Fear', part.name_en = 'The Halls of Fear',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 10553 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:0699e848-9509-3885-bed6-a5d0e4d9de6c' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 7830 AND linked.composer_id = 111), 'musicbrainz:0699e848-9509-3885-bed6-a5d0e4d9de6c', 3, NULL, 'The Halls of Fear', 'The Halls of Fear', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 10553 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0699e848-9509-3885-bed6-a5d0e4d9de6c'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <대부> 사운드트랙 중 "The Halls of Fear"', piece.title_en = 'The Godfather: Music From the Original Motion Picture Soundtrack: The Halls of Fear', piece.editor_locked = 1
+WHERE piece.id = 7830 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 10933 AND linked.composer_id = 111),
+    part.sequence_number = 4, part.movement_number = NULL,
+    part.name_ko = 'Sicilian Pastorale', part.name_en = 'Sicilian Pastorale',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 10553 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:e6f95136-82bc-387f-9a94-26d65ee7d7c9' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10933 AND linked.composer_id = 111), 'musicbrainz:e6f95136-82bc-387f-9a94-26d65ee7d7c9', 4, NULL, 'Sicilian Pastorale', 'Sicilian Pastorale', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 10553 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e6f95136-82bc-387f-9a94-26d65ee7d7c9'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <대부> 사운드트랙 중 "Sicilian Pastorale"', piece.title_en = 'The Godfather: Music From the Original Motion Picture Soundtrack: Sicilian Pastorale', piece.editor_locked = 1
+WHERE piece.id = 10933 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 416 AND linked.composer_id = 111),
+    part.sequence_number = 5, part.movement_number = NULL,
+    part.name_ko = 'Love Theme from The Godfather', part.name_en = 'Love Theme from The Godfather',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 10553 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:4b89cae1-775a-3fae-b74c-564b87a3681f' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 416 AND linked.composer_id = 111), 'musicbrainz:4b89cae1-775a-3fae-b74c-564b87a3681f', 5, NULL, 'Love Theme from The Godfather', 'Love Theme from The Godfather', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 10553 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4b89cae1-775a-3fae-b74c-564b87a3681f'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 9117 AND linked.composer_id = 111),
+    part.sequence_number = 6, part.movement_number = NULL,
+    part.name_ko = 'Apollonia', part.name_en = 'Apollonia',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 10553 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:61f96976-6733-3b17-8407-9c3f38ab9e14' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9117 AND linked.composer_id = 111), 'musicbrainz:61f96976-6733-3b17-8407-9c3f38ab9e14', 6, NULL, 'Apollonia', 'Apollonia', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 10553 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:61f96976-6733-3b17-8407-9c3f38ab9e14'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <대부> 사운드트랙 중 "Apollonia"', piece.title_en = 'The Godfather: Music From the Original Motion Picture Soundtrack: Apollonia', piece.editor_locked = 1
+WHERE piece.id = 9117 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 7911 AND linked.composer_id = 111),
+    part.sequence_number = 7, part.movement_number = NULL,
+    part.name_ko = 'The New Godfather', part.name_en = 'The New Godfather',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 10553 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:0bd835d2-d9cd-3689-8b1d-5765c6259989' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 7911 AND linked.composer_id = 111), 'musicbrainz:0bd835d2-d9cd-3689-8b1d-5765c6259989', 7, NULL, 'The New Godfather', 'The New Godfather', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 10553 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0bd835d2-d9cd-3689-8b1d-5765c6259989'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <대부> 사운드트랙 중 "The New Godfather"', piece.title_en = 'The Godfather: Music From the Original Motion Picture Soundtrack: The New Godfather', piece.editor_locked = 1
+WHERE piece.id = 7911 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = (SELECT linked.id FROM pieces linked WHERE linked.id = 9843 AND linked.composer_id = 111),
+    part.sequence_number = 8, part.movement_number = NULL,
+    part.name_ko = 'The Baptism', part.name_en = 'The Baptism',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 10553 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:967c53f2-5346-38cf-90c0-1b5efa1b058f' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9843 AND linked.composer_id = 111), 'musicbrainz:967c53f2-5346-38cf-90c0-1b5efa1b058f', 8, NULL, 'The Baptism', 'The Baptism', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 10553 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:967c53f2-5346-38cf-90c0-1b5efa1b058f'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <대부> 사운드트랙 중 "The Baptism"', piece.title_en = 'The Godfather: Music From the Original Motion Picture Soundtrack: The Baptism', piece.editor_locked = 1
+WHERE piece.id = 9843 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 9, part.movement_number = NULL,
+    part.name_ko = 'The Godfather Finale', part.name_en = 'The Godfather Finale',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 10553 AND p.composer_id = 111 AND part.part_key = 'musicbrainz:06cd0194-bf50-3698-81e3-7d4e6d03c4c6' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:06cd0194-bf50-3698-81e3-7d4e6d03c4c6', 9, NULL, 'The Godfather Finale', 'The Godfather Finale', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 10553 AND p.composer_id = 111
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:06cd0194-bf50-3698-81e3-7d4e6d03c4c6'
 );
 
 
@@ -4476,264 +5422,6 @@ WHERE piece.id = 8544 AND piece.composer_id = 111
   AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 
--- None 영화 <나일 강의 죽음> 사운드트랙
-
-INSERT INTO pieces
-    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '영화 <나일 강의 죽음> 사운드트랙', 'Death on the Nile', 'album', NULL, NULL, NULL, NULL, 'manual', 1
-FROM composers c
-WHERE c.id = 111
-AND NOT EXISTS (
-    SELECT 1 FROM pieces existing
-    WHERE existing.composer_id = c.id AND existing.title = '영화 <나일 강의 죽음> 사운드트랙'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:cedfddd9-a230-469a-b4a5-427bfec892a9', 1, NULL, 'Main Titles', 'Main Titles', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cedfddd9-a230-469a-b4a5-427bfec892a9'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11131 AND linked.composer_id = 111), 'musicbrainz:f57a6fec-0263-4efd-ae45-085494397f7b', 2, NULL, 'Arrival at Wode Hall', 'Arrival at Wode Hall', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f57a6fec-0263-4efd-ae45-085494397f7b'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Arrival at Wode Hall"', piece.title_en = 'Death on the Nile: Arrival at Wode Hall', piece.editor_locked = 1
-WHERE piece.id = 11131 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11035 AND linked.composer_id = 111), 'musicbrainz:edef5719-e773-41c7-9c22-4c8e98882398', 3, NULL, 'The Steambot Departs', 'The Steambot Departs', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:edef5719-e773-41c7-9c22-4c8e98882398'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "The Steambot Departs"', piece.title_en = 'Death on the Nile: The Steambot Departs', piece.editor_locked = 1
-WHERE piece.id = 11035 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9039 AND linked.composer_id = 111), 'musicbrainz:5c7d0284-677e-45bc-ba0e-2040dfff0a58', 4, NULL, 'Camels and Donkeys', 'Camels and Donkeys', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5c7d0284-677e-45bc-ba0e-2040dfff0a58'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Camels and Donkeys"', piece.title_en = 'Death on the Nile: Camels and Donkeys', piece.editor_locked = 1
-WHERE piece.id = 9039 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11056 AND linked.composer_id = 111), 'musicbrainz:ef79a51a-db9b-491e-9cb0-5008ef5c9166', 5, NULL, 'Duet (main Love Theme)', 'Duet (main Love Theme)', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ef79a51a-db9b-491e-9cb0-5008ef5c9166'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Duet (main Love Theme)"', piece.title_en = 'Death on the Nile: Duet (main Love Theme)', piece.editor_locked = 1
-WHERE piece.id = 11056 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9596 AND linked.composer_id = 111), 'musicbrainz:83f2a7eb-3679-4fd1-b986-34586f71b59f', 6, NULL, 'The Great Pyramids', 'The Great Pyramids', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:83f2a7eb-3679-4fd1-b986-34586f71b59f'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "The Great Pyramids"', piece.title_en = 'Death on the Nile: The Great Pyramids', piece.editor_locked = 1
-WHERE piece.id = 9596 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11258 AND linked.composer_id = 111), 'musicbrainz:fdc152a1-4870-4ea8-804a-63d2070cb48d', 7, NULL, 'I Love My Baby', 'I Love My Baby', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fdc152a1-4870-4ea8-804a-63d2070cb48d'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "I Love My Baby"', piece.title_en = 'Death on the Nile: I Love My Baby', piece.editor_locked = 1
-WHERE piece.id = 11258 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9682 AND linked.composer_id = 111), 'musicbrainz:8a77e70b-26e8-4b16-abe3-39776b9149b4', 8, NULL, 'The Statues of Rameses', 'The Statues of Rameses', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8a77e70b-26e8-4b16-abe3-39776b9149b4'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "The Statues of Rameses"', piece.title_en = 'Death on the Nile: The Statues of Rameses', piece.editor_locked = 1
-WHERE piece.id = 9682 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11037 AND linked.composer_id = 111), 'musicbrainz:ee46578c-8305-4b23-a1eb-3208d7d365cd', 9, NULL, 'Journey on the Nile', 'Journey on the Nile', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ee46578c-8305-4b23-a1eb-3208d7d365cd'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Journey on the Nile"', piece.title_en = 'Death on the Nile: Journey on the Nile', piece.editor_locked = 1
-WHERE piece.id = 11037 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8178 AND linked.composer_id = 111), 'musicbrainz:1ebb1bd0-4d06-49ce-800a-afd1b62eee5e', 10, NULL, 'The Temple of Karnak', 'The Temple of Karnak', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1ebb1bd0-4d06-49ce-800a-afd1b62eee5e'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "The Temple of Karnak"', piece.title_en = 'Death on the Nile: The Temple of Karnak', piece.editor_locked = 1
-WHERE piece.id = 8178 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8904 AND linked.composer_id = 111), 'musicbrainz:53ec12a3-3bc9-428c-aeb1-4a818cbf143a', 11, NULL, 'The Carriage Ride', 'The Carriage Ride', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:53ec12a3-3bc9-428c-aeb1-4a818cbf143a'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "The Carriage Ride"', piece.title_en = 'Death on the Nile: The Carriage Ride', piece.editor_locked = 1
-WHERE piece.id = 8904 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10643 AND linked.composer_id = 111), 'musicbrainz:d10cdb7f-e4fd-4e38-8d7c-a92161b2bd6f', 12, NULL, 'Jackie''s Theme', 'Jackie''s Theme', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d10cdb7f-e4fd-4e38-8d7c-a92161b2bd6f'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Jackie''s Theme"', piece.title_en = 'Death on the Nile: Jackie''s Theme', piece.editor_locked = 1
-WHERE piece.id = 10643 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10557 AND linked.composer_id = 111), 'musicbrainz:ca6ab590-37a6-49d4-9c43-5e987eebbd6a', 13, NULL, 'Fox-Trot - Don''t Say No to Rain', 'Fox-Trot - Don''t Say No to Rain', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ca6ab590-37a6-49d4-9c43-5e987eebbd6a'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Fox-Trot - Don''t Say No to Rain"', piece.title_en = 'Death on the Nile: Fox-Trot - Don''t Say No to Rain', piece.editor_locked = 1
-WHERE piece.id = 10557 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11209 AND linked.composer_id = 111), 'musicbrainz:fad3479d-1b8f-42da-bae3-2eac4527c38a', 14, NULL, 'Linnet''s Pearls', 'Linnet''s Pearls', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fad3479d-1b8f-42da-bae3-2eac4527c38a'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Linnet''s Pearls"', piece.title_en = 'Death on the Nile: Linnet''s Pearls', piece.editor_locked = 1
-WHERE piece.id = 11209 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10961 AND linked.composer_id = 111), 'musicbrainz:e8af0b1e-6d90-4715-a6f2-e630baa418ae', 15, NULL, 'Waltz - The White Nile', 'Waltz - The White Nile', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e8af0b1e-6d90-4715-a6f2-e630baa418ae'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "Waltz - The White Nile"', piece.title_en = 'Death on the Nile: Waltz - The White Nile', piece.editor_locked = 1
-WHERE piece.id = 10961 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9332 AND linked.composer_id = 111), 'musicbrainz:717c6cc8-1da3-4184-82a9-685ca71159b1', 16, NULL, 'The Conclusive Evidence', 'The Conclusive Evidence', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:717c6cc8-1da3-4184-82a9-685ca71159b1'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <나일 강의 죽음> 사운드트랙 중 "The Conclusive Evidence"', piece.title_en = 'Death on the Nile: The Conclusive Evidence', piece.editor_locked = 1
-WHERE piece.id = 9332 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:b4a77f21-0935-428e-bf20-53cdaf60be00', 17, NULL, 'End Titles', 'End Titles', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <나일 강의 죽음> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b4a77f21-0935-428e-bf20-53cdaf60be00'
-);
-
-
 -- None 영화 <허리케인> 사운드트랙
 
 INSERT INTO pieces
@@ -5420,6 +6108,71 @@ AND NOT EXISTS (
 UPDATE pieces piece
 SET piece.title = 'Plein soleil 중 "영화음악 모음곡 <태양은 가득히>"', piece.title_en = 'Plein soleil: Plein soleil (Suite)', piece.editor_locked = 1
 WHERE piece.id = 9021 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8356 AND linked.composer_id = 111), 'musicbrainz:2d94792e-b051-4d4a-bf7c-d25b14834e7c', 17, NULL, 'Générique', 'Générique', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = 'Plein soleil' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2d94792e-b051-4d4a-bf7c-d25b14834e7c'
+);
+
+UPDATE pieces piece
+SET piece.title = 'Plein soleil 중 "Générique"', piece.title_en = 'Plein soleil: Générique', piece.editor_locked = 1
+WHERE piece.id = 8356 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:55c8685f-b761-4507-b049-3bd4b48000da', 18, NULL, 'Via Veneto', 'Via Veneto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = 'Plein soleil' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:55c8685f-b761-4507-b049-3bd4b48000da'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:be184000-261c-457f-8c00-7e0b2306a9a8', 19, NULL, 'Le Baiser', 'Le Baiser', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = 'Plein soleil' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:be184000-261c-457f-8c00-7e0b2306a9a8'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 7851 AND linked.composer_id = 111), 'musicbrainz:07f3e4b6-9900-4ae8-ab97-b1cd25e16449', 20, NULL, 'Thème de marge', 'Thème de marge', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = 'Plein soleil' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:07f3e4b6-9900-4ae8-ab97-b1cd25e16449'
+);
+
+UPDATE pieces piece
+SET piece.title = 'Plein soleil 중 "Thème de marge"', piece.title_en = 'Plein soleil: Thème de marge', piece.editor_locked = 1
+WHERE piece.id = 7851 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8230 AND linked.composer_id = 111), 'musicbrainz:234a036c-13ce-49b6-8a9d-02aecee18621', 21, NULL, 'Final', 'Final', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = 'Plein soleil' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:234a036c-13ce-49b6-8a9d-02aecee18621'
+);
+
+UPDATE pieces piece
+SET piece.title = 'Plein soleil 중 "Final"', piece.title_en = 'Plein soleil: Final', piece.editor_locked = 1
+WHERE piece.id = 8230 AND piece.composer_id = 111
   AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 
@@ -6616,352 +7369,6 @@ WHERE piece.id = 8329 AND piece.composer_id = 111
   AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 
--- None 영화 <로코와 그 형제들> 사운드트랙
-
-INSERT INTO pieces
-    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '영화 <로코와 그 형제들> 사운드트랙', 'Rocco e i suoi fratelli', 'album', NULL, NULL, NULL, NULL, 'manual', 1
-FROM composers c
-WHERE c.id = 111
-AND NOT EXISTS (
-    SELECT 1 FROM pieces existing
-    WHERE existing.composer_id = c.id AND existing.title = '영화 <로코와 그 형제들> 사운드트랙'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10021 AND linked.composer_id = 111), 'musicbrainz:a2fda7b6-bd80-4c6e-94f1-f0b12779c812', 1, NULL, 'Introduzione e canzone', 'Introduzione e canzone', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <로코와 그 형제들> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a2fda7b6-bd80-4c6e-94f1-f0b12779c812'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "Introduzione e canzone"', piece.title_en = 'Rocco e i suoi fratelli: Introduzione e canzone', piece.editor_locked = 1
-WHERE piece.id = 10021 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:13fa33d8-18c3-4e89-a5a0-944d40dbb7ab', 2, NULL, 'Terra lontana', 'Terra lontana', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <로코와 그 형제들> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:13fa33d8-18c3-4e89-a5a0-944d40dbb7ab'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9051 AND linked.composer_id = 111), 'musicbrainz:5d4899eb-7469-4738-ad4c-0270aba846f9', 3, NULL, 'Milano e Nadia', 'Milano e Nadia', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <로코와 그 형제들> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5d4899eb-7469-4738-ad4c-0270aba846f9'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "Milano e Nadia"', piece.title_en = 'Rocco e i suoi fratelli: Milano e Nadia', piece.editor_locked = 1
-WHERE piece.id = 9051 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9571 AND linked.composer_id = 111), 'musicbrainz:82670571-5ea1-4108-8125-fa76e328c1b8', 4, NULL, 'Valzer ai laghi', 'Valzer ai laghi', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <로코와 그 형제들> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:82670571-5ea1-4108-8125-fa76e328c1b8'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "Valzer ai laghi"', piece.title_en = 'Rocco e i suoi fratelli: Valzer ai laghi', piece.editor_locked = 1
-WHERE piece.id = 9571 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11137 AND linked.composer_id = 111), 'musicbrainz:f5c92c76-cbae-48d8-bfeb-aa2a7d3b97a4', 5, NULL, 'L’amore di Rocco', 'L’amore di Rocco', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <로코와 그 형제들> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f5c92c76-cbae-48d8-bfeb-aa2a7d3b97a4'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "L’amore di Rocco"', piece.title_en = 'Rocco e i suoi fratelli: L’amore di Rocco', piece.editor_locked = 1
-WHERE piece.id = 11137 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11115 AND linked.composer_id = 111), 'musicbrainz:f49e1cb6-2542-478e-a82d-b203ea4fa030', 6, NULL, 'La gelosia di Simone', 'La gelosia di Simone', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <로코와 그 형제들> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f49e1cb6-2542-478e-a82d-b203ea4fa030'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "La gelosia di Simone"', piece.title_en = 'Rocco e i suoi fratelli: La gelosia di Simone', piece.editor_locked = 1
-WHERE piece.id = 11115 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10795 AND linked.composer_id = 111), 'musicbrainz:dc51d6ef-1812-4dcb-9c56-ffdd9f342e30', 7, NULL, 'Come tu vuoi', 'Come tu vuoi', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <로코와 그 형제들> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:dc51d6ef-1812-4dcb-9c56-ffdd9f342e30'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "Come tu vuoi"', piece.title_en = 'Rocco e i suoi fratelli: Come tu vuoi', piece.editor_locked = 1
-WHERE piece.id = 10795 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11064 AND linked.composer_id = 111), 'musicbrainz:effbd668-066a-468c-8aa3-ebaa62bb40d1', 8, NULL, 'L’amore dei due fratelli', 'L’amore dei due fratelli', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <로코와 그 형제들> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:effbd668-066a-468c-8aa3-ebaa62bb40d1'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "L’amore dei due fratelli"', piece.title_en = 'Rocco e i suoi fratelli: L’amore dei due fratelli', piece.editor_locked = 1
-WHERE piece.id = 11064 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8316 AND linked.composer_id = 111), 'musicbrainz:2a740a0f-7a58-40e4-a636-c9b55e3f0477', 9, NULL, 'Il delitto di Simone', 'Il delitto di Simone', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <로코와 그 형제들> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2a740a0f-7a58-40e4-a636-c9b55e3f0477'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "Il delitto di Simone"', piece.title_en = 'Rocco e i suoi fratelli: Il delitto di Simone', piece.editor_locked = 1
-WHERE piece.id = 8316 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10790 AND linked.composer_id = 111), 'musicbrainz:db81e9c6-28c8-4b5e-9660-a6d35db12afd', 10, NULL, 'Paese mio', 'Paese mio', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <로코와 그 형제들> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:db81e9c6-28c8-4b5e-9660-a6d35db12afd'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <로코와 그 형제들> 사운드트랙 중 "Paese mio"', piece.title_en = 'Rocco e i suoi fratelli: Paese mio', piece.editor_locked = 1
-WHERE piece.id = 10790 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:101c1497-4435-4627-92b4-fae73db5ce0f', 11, NULL, 'Terra lontana', 'Terra lontana', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <로코와 그 형제들> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:101c1497-4435-4627-92b4-fae73db5ce0f'
-);
-
-
--- None 영화 <표범> 사운드트랙
-
-INSERT INTO pieces
-    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '영화 <표범> 사운드트랙', 'Il gattopardo', 'album', NULL, NULL, NULL, NULL, 'manual', 1
-FROM composers c
-WHERE c.id = 111
-AND NOT EXISTS (
-    SELECT 1 FROM pieces existing
-    WHERE existing.composer_id = c.id AND existing.title = '영화 <표범> 사운드트랙'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10410 AND linked.composer_id = 111), 'musicbrainz:bf9d45a2-f472-488e-8b43-136a15c3b745', 1, NULL, 'Partenza di Tancredi', 'Partenza di Tancredi', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <표범> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bf9d45a2-f472-488e-8b43-136a15c3b745'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <표범> 사운드트랙 중 "Partenza di Tancredi"', piece.title_en = 'Il gattopardo: Partenza di Tancredi', piece.editor_locked = 1
-WHERE piece.id = 10410 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9432 AND linked.composer_id = 111), 'musicbrainz:78d63db7-d2d1-476e-9a32-a0bd87b4af34', 2, NULL, 'Tancredi garibaldino', 'Tancredi garibaldino', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <표범> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:78d63db7-d2d1-476e-9a32-a0bd87b4af34'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <표범> 사운드트랙 중 "Tancredi garibaldino"', piece.title_en = 'Il gattopardo: Tancredi garibaldino', piece.editor_locked = 1
-WHERE piece.id = 9432 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8938 AND linked.composer_id = 111), 'musicbrainz:5601fc9b-837d-40a1-a112-1e5743dafde9', 3, NULL, 'Viaggio a Donnafugata', 'Viaggio a Donnafugata', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <표범> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5601fc9b-837d-40a1-a112-1e5743dafde9'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <표범> 사운드트랙 중 "Viaggio a Donnafugata"', piece.title_en = 'Il gattopardo: Viaggio a Donnafugata', piece.editor_locked = 1
-WHERE piece.id = 8938 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8706 AND linked.composer_id = 111), 'musicbrainz:4603e99c-a10d-4c71-9f71-54fab9d711f7', 4, NULL, 'Giovani eroi (marchetta)', 'Giovani eroi (marchetta)', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <표범> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4603e99c-a10d-4c71-9f71-54fab9d711f7'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <표범> 사운드트랙 중 "Giovani eroi (marchetta)"', piece.title_en = 'Il gattopardo: Giovani eroi (marchetta)', piece.editor_locked = 1
-WHERE piece.id = 8706 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9775 AND linked.composer_id = 111), 'musicbrainz:911d1fe0-8831-4295-b395-33e8ddedfbe9', 5, NULL, 'La Locanda (il pic-nic)', 'La Locanda (il pic-nic)', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <표범> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:911d1fe0-8831-4295-b395-33e8ddedfbe9'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <표범> 사운드트랙 중 "La Locanda (il pic-nic)"', piece.title_en = 'Il gattopardo: La Locanda (il pic-nic)', piece.editor_locked = 1
-WHERE piece.id = 9775 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9197 AND linked.composer_id = 111), 'musicbrainz:688cfb69-8601-4724-91ad-54238d4b85bd', 6, NULL, 'Entrata di Angelica, L''amore di Tancredi e Angelica, Finale', 'Entrata di Angelica, L''amore di Tancredi e Angelica, Finale', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <표범> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:688cfb69-8601-4724-91ad-54238d4b85bd'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <표범> 사운드트랙 중 "Entrata di Angelica, L''amore di Tancredi e Angelica, Finale"', piece.title_en = 'Il gattopardo: Entrata di Angelica, L''amore di Tancredi e Angelica, Finale', piece.editor_locked = 1
-WHERE piece.id = 9197 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:3170f81a-880b-41c1-ad01-2897ce657f44', 7, NULL, 'Mazurka', 'Mazurka', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <표범> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3170f81a-880b-41c1-ad01-2897ce657f44'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11061 AND linked.composer_id = 111), 'musicbrainz:efb3c4a0-2afc-4859-8c59-ec36d34e542e', 8, NULL, 'Controdanza', 'Controdanza', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <표범> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:efb3c4a0-2afc-4859-8c59-ec36d34e542e'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <표범> 사운드트랙 중 "Controdanza"', piece.title_en = 'Il gattopardo: Controdanza', piece.editor_locked = 1
-WHERE piece.id = 11061 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:c02b1b41-4fb2-4292-941c-f81d7f45ce64', 9, NULL, 'Polka', 'Polka', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <표범> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c02b1b41-4fb2-4292-941c-f81d7f45ce64'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10223 AND linked.composer_id = 111), 'musicbrainz:b0f84b6f-d602-437c-b6bb-d39dc9d1964e', 10, NULL, 'Quadriglia', 'Quadriglia', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <표범> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b0f84b6f-d602-437c-b6bb-d39dc9d1964e'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <표범> 사운드트랙 중 "Quadriglia"', piece.title_en = 'Il gattopardo: Quadriglia', piece.editor_locked = 1
-WHERE piece.id = 10223 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:48007459-77db-49a4-a460-9f8d8734f2fa', 11, NULL, 'Galop', 'Galop', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <표범> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:48007459-77db-49a4-a460-9f8d8734f2fa'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8936 AND linked.composer_id = 111), 'musicbrainz:55dd9253-2422-42a5-b15b-fb4dfa399663', 12, NULL, 'Valzer del commiato', 'Valzer del commiato', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <표범> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:55dd9253-2422-42a5-b15b-fb4dfa399663'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <표범> 사운드트랙 중 "Valzer del commiato"', piece.title_en = 'Il gattopardo: Valzer del commiato', piece.editor_locked = 1
-WHERE piece.id = 8936 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
 -- None 영화 <나폴레옹> 사운드트랙
 
 INSERT INTO pieces
@@ -7770,139 +8177,6 @@ WHERE piece.id = 10175 AND piece.composer_id = 111
   AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 
--- None 영화 <대부> 사운드트랙
-
-INSERT INTO pieces
-    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '영화 <대부> 사운드트랙', 'The Godfather: Music From the Original Motion Picture Soundtrack', 'album', NULL, NULL, NULL, NULL, 'manual', 1
-FROM composers c
-WHERE c.id = 111
-AND NOT EXISTS (
-    SELECT 1 FROM pieces existing
-    WHERE existing.composer_id = c.id AND existing.title = '영화 <대부> 사운드트랙'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:a91b7fc7-959d-3808-b866-7d8cf1388130', 1, NULL, 'The Godfather Waltz', 'The Godfather Waltz', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <대부> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a91b7fc7-959d-3808-b866-7d8cf1388130'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9189 AND linked.composer_id = 111), 'musicbrainz:67d896ef-0bda-3d02-833a-bc7634330751', 2, NULL, 'The Pickup', 'The Pickup', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <대부> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:67d896ef-0bda-3d02-833a-bc7634330751'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <대부> 사운드트랙 중 "The Pickup"', piece.title_en = 'The Godfather: Music From the Original Motion Picture Soundtrack: The Pickup', piece.editor_locked = 1
-WHERE piece.id = 9189 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 7830 AND linked.composer_id = 111), 'musicbrainz:0699e848-9509-3885-bed6-a5d0e4d9de6c', 3, NULL, 'The Halls of Fear', 'The Halls of Fear', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <대부> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0699e848-9509-3885-bed6-a5d0e4d9de6c'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <대부> 사운드트랙 중 "The Halls of Fear"', piece.title_en = 'The Godfather: Music From the Original Motion Picture Soundtrack: The Halls of Fear', piece.editor_locked = 1
-WHERE piece.id = 7830 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 10933 AND linked.composer_id = 111), 'musicbrainz:e6f95136-82bc-387f-9a94-26d65ee7d7c9', 4, NULL, 'Sicilian Pastorale', 'Sicilian Pastorale', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <대부> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e6f95136-82bc-387f-9a94-26d65ee7d7c9'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <대부> 사운드트랙 중 "Sicilian Pastorale"', piece.title_en = 'The Godfather: Music From the Original Motion Picture Soundtrack: Sicilian Pastorale', piece.editor_locked = 1
-WHERE piece.id = 10933 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:4b89cae1-775a-3fae-b74c-564b87a3681f', 5, NULL, 'Love Theme from The Godfather', 'Love Theme from The Godfather', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <대부> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4b89cae1-775a-3fae-b74c-564b87a3681f'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9117 AND linked.composer_id = 111), 'musicbrainz:61f96976-6733-3b17-8407-9c3f38ab9e14', 6, NULL, 'Apollonia', 'Apollonia', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <대부> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:61f96976-6733-3b17-8407-9c3f38ab9e14'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <대부> 사운드트랙 중 "Apollonia"', piece.title_en = 'The Godfather: Music From the Original Motion Picture Soundtrack: Apollonia', piece.editor_locked = 1
-WHERE piece.id = 9117 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 7911 AND linked.composer_id = 111), 'musicbrainz:0bd835d2-d9cd-3689-8b1d-5765c6259989', 7, NULL, 'The New Godfather', 'The New Godfather', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <대부> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0bd835d2-d9cd-3689-8b1d-5765c6259989'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <대부> 사운드트랙 중 "The New Godfather"', piece.title_en = 'The Godfather: Music From the Original Motion Picture Soundtrack: The New Godfather', piece.editor_locked = 1
-WHERE piece.id = 7911 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9843 AND linked.composer_id = 111), 'musicbrainz:967c53f2-5346-38cf-90c0-1b5efa1b058f', 8, NULL, 'The Baptism', 'The Baptism', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <대부> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:967c53f2-5346-38cf-90c0-1b5efa1b058f'
-);
-
-UPDATE pieces piece
-SET piece.title = '영화 <대부> 사운드트랙 중 "The Baptism"', piece.title_en = 'The Godfather: Music From the Original Motion Picture Soundtrack: The Baptism', piece.editor_locked = 1
-WHERE piece.id = 9843 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:06cd0194-bf50-3698-81e3-7d4e6d03c4c6', 9, NULL, 'The Godfather Finale', 'The Godfather Finale', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = '영화 <대부> 사운드트랙' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:06cd0194-bf50-3698-81e3-7d4e6d03c4c6'
-);
-
-
 -- None 영화 <달콤한 인생> 사운드트랙
 
 INSERT INTO pieces
@@ -7999,6 +8273,136 @@ UPDATE pieces piece
 SET piece.title = '영화 <달콤한 인생> 사운드트랙 중 "finale"', piece.title_en = 'La dolce vita: La dolce vita: finale', piece.editor_locked = 1
 WHERE piece.id = 10239 AND piece.composer_id = 111
   AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9956 AND linked.composer_id = 111), 'musicbrainz:9e09ac78-ce22-40a2-868f-a2465723bea8', 7, NULL, 'Titoli di testa – Canzonetta – Notturno – Cadillac', 'Titoli di testa – Canzonetta – Notturno – Cadillac', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = '영화 <달콤한 인생> 사운드트랙' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9e09ac78-ce22-40a2-868f-a2465723bea8'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <달콤한 인생> 사운드트랙 중 "Titoli di testa – Canzonetta – Notturno – Cadillac"', piece.title_en = 'La dolce vita: Titoli di testa – Canzonetta – Notturno – Cadillac', piece.editor_locked = 1
+WHERE piece.id = 9956 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11020 AND linked.composer_id = 111), 'musicbrainz:ecb81c54-404a-4bdd-bb34-f7a65adbf94f', 8, NULL, 'Notturno o mattutino', 'Notturno o mattutino', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = '영화 <달콤한 인생> 사운드트랙' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ecb81c54-404a-4bdd-bb34-f7a65adbf94f'
+);
+
+UPDATE pieces piece
+SET piece.title = '영화 <달콤한 인생> 사운드트랙 중 "Notturno o mattutino"', piece.title_en = 'La dolce vita: Notturno o mattutino', piece.editor_locked = 1
+WHERE piece.id = 11020 AND piece.composer_id = 111
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8d43dd5f-6ccd-4bcf-b993-31f642b21029', 9, NULL, 'La dolce vita', 'La dolce vita', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = '영화 <달콤한 인생> 사운드트랙' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8d43dd5f-6ccd-4bcf-b993-31f642b21029'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b508619a-973a-4dd3-98b5-7cffb4abd6a2', 10, NULL, 'Il bidone', 'Il bidone', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = '영화 <달콤한 인생> 사운드트랙' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b508619a-973a-4dd3-98b5-7cffb4abd6a2'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:94719ba6-ab71-4446-940b-7da72abe37a3', 11, NULL, 'La moglie del bidonista', 'La moglie del bidonista', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = '영화 <달콤한 인생> 사운드트랙' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:94719ba6-ab71-4446-940b-7da72abe37a3'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ba402bef-7837-4d06-9f38-ccf0ba49c936', 12, NULL, 'Il tesoro nascosto', 'Il tesoro nascosto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = '영화 <달콤한 인생> 사운드트랙' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ba402bef-7837-4d06-9f38-ccf0ba49c936'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f12a3784-4db3-4523-a0a7-87d2306ac9d4', 13, NULL, 'Coimbra / La festa dei bidonisti', 'Coimbra / La festa dei bidonisti', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = '영화 <달콤한 인생> 사운드트랙' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f12a3784-4db3-4523-a0a7-87d2306ac9d4'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5c664c9d-aac3-4bdd-9ef0-5df3b5c9a03d', 14, NULL, 'In viaggio per un bidone', 'In viaggio per un bidone', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = '영화 <달콤한 인생> 사운드트랙' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5c664c9d-aac3-4bdd-9ef0-5df3b5c9a03d'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5fa0f0fd-3e7e-4980-a0a1-410b8582bba2', 15, NULL, 'Al cinema', 'Al cinema', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = '영화 <달콤한 인생> 사운드트랙' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5fa0f0fd-3e7e-4980-a0a1-410b8582bba2'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e8d99616-f40e-4b3c-9c2e-c6d1f324c70c', 16, NULL, 'Cara bambina', 'Cara bambina', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = '영화 <달콤한 인생> 사운드트랙' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e8d99616-f40e-4b3c-9c2e-c6d1f324c70c'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7b0fc23a-8ba6-4343-af22-c5882e7c7746', 17, NULL, 'Ballerina night', 'Ballerina night', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = '영화 <달콤한 인생> 사운드트랙' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7b0fc23a-8ba6-4343-af22-c5882e7c7746'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:97dc5136-2602-431b-a084-2b4663ea489a', 18, NULL, 'L''ultimo bidone', 'L''ultimo bidone', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 111 AND p.title = '영화 <달콤한 인생> 사운드트랙' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:97dc5136-2602-431b-a084-2b4663ea489a'
+);
 
 
 -- None 영화 <오케스트라 리허설> 사운드트랙
@@ -8280,84 +8684,6 @@ AND NOT EXISTS (
     SELECT 1 FROM piece_parts existing
     WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f878cdde-2ecf-4eb2-a9c5-c70a2c000853'
 );
-
-
--- None Plein soleil (음반)
-
-INSERT INTO pieces
-    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, 'Plein soleil (음반)', 'Plein soleil', 'album', NULL, NULL, NULL, NULL, 'manual', 1
-FROM composers c
-WHERE c.id = 111
-AND NOT EXISTS (
-    SELECT 1 FROM pieces existing
-    WHERE existing.composer_id = c.id AND existing.title = 'Plein soleil (음반)'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8356 AND linked.composer_id = 111), 'musicbrainz:2d94792e-b051-4d4a-bf7c-d25b14834e7c', 1, NULL, 'Générique', 'Générique', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'Plein soleil (음반)' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2d94792e-b051-4d4a-bf7c-d25b14834e7c'
-);
-
-UPDATE pieces piece
-SET piece.title = 'Plein soleil (음반) 중 "Générique"', piece.title_en = 'Plein soleil: Générique', piece.editor_locked = 1
-WHERE piece.id = 8356 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:55c8685f-b761-4507-b049-3bd4b48000da', 2, NULL, 'Via Veneto', 'Via Veneto', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'Plein soleil (음반)' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:55c8685f-b761-4507-b049-3bd4b48000da'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:be184000-261c-457f-8c00-7e0b2306a9a8', 3, NULL, 'Le Baiser', 'Le Baiser', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'Plein soleil (음반)' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:be184000-261c-457f-8c00-7e0b2306a9a8'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 7851 AND linked.composer_id = 111), 'musicbrainz:07f3e4b6-9900-4ae8-ab97-b1cd25e16449', 4, NULL, 'Thème de marge', 'Thème de marge', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'Plein soleil (음반)' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:07f3e4b6-9900-4ae8-ab97-b1cd25e16449'
-);
-
-UPDATE pieces piece
-SET piece.title = 'Plein soleil (음반) 중 "Thème de marge"', piece.title_en = 'Plein soleil: Thème de marge', piece.editor_locked = 1
-WHERE piece.id = 7851 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 8230 AND linked.composer_id = 111), 'musicbrainz:234a036c-13ce-49b6-8a9d-02aecee18621', 5, NULL, 'Final', 'Final', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'Plein soleil (음반)' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:234a036c-13ce-49b6-8a9d-02aecee18621'
-);
-
-UPDATE pieces piece
-SET piece.title = 'Plein soleil (음반) 중 "Final"', piece.title_en = 'Plein soleil: Final', piece.editor_locked = 1
-WHERE piece.id = 8230 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 
 -- None 영화 <말괄량이 길들이기> 사운드트랙
@@ -8857,209 +9183,6 @@ AND NOT EXISTS (
 );
 
 
--- None La dolce vita
-
-INSERT INTO pieces
-    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, 'La dolce vita', 'La dolce vita', 'album', NULL, NULL, NULL, NULL, 'manual', 1
-FROM composers c
-WHERE c.id = 111
-AND NOT EXISTS (
-    SELECT 1 FROM pieces existing
-    WHERE existing.composer_id = c.id AND existing.title = 'La dolce vita'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 9956 AND linked.composer_id = 111), 'musicbrainz:9e09ac78-ce22-40a2-868f-a2465723bea8', 1, NULL, 'Titoli di testa – Canzonetta – Notturno – Cadillac', 'Titoli di testa – Canzonetta – Notturno – Cadillac', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9e09ac78-ce22-40a2-868f-a2465723bea8'
-);
-
-UPDATE pieces piece
-SET piece.title = 'La dolce vita 중 "Titoli di testa – Canzonetta – Notturno – Cadillac"', piece.title_en = 'La dolce vita: Titoli di testa – Canzonetta – Notturno – Cadillac', piece.editor_locked = 1
-WHERE piece.id = 9956 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:d3efd514-9ce6-4a91-b8ea-9ca3f6e26434', 2, NULL, 'Via Veneto', 'La dolce vita – Via Veneto', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d3efd514-9ce6-4a91-b8ea-9ca3f6e26434'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:6e55f3ae-db68-49ee-9457-184fa0c4f1d7', 3, NULL, 'Valzer (Parlami di me)', 'Valzer (Parlami di me)', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6e55f3ae-db68-49ee-9457-184fa0c4f1d7'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:111b2574-2397-4129-ac0b-de9c8b0556cf', 4, NULL, 'Via Veneto e i nobili', 'Via Veneto e i nobili', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:111b2574-2397-4129-ac0b-de9c8b0556cf'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:56f9c831-a3df-4789-8139-0e314e5c8d37', 5, NULL, 'Blues – La dolce vita dei nobili', 'Blues – La dolce vita dei nobili', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:56f9c831-a3df-4789-8139-0e314e5c8d37'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, (SELECT linked.id FROM pieces linked WHERE linked.id = 11020 AND linked.composer_id = 111), 'musicbrainz:ecb81c54-404a-4bdd-bb34-f7a65adbf94f', 6, NULL, 'Notturno o mattutino', 'Notturno o mattutino', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ecb81c54-404a-4bdd-bb34-f7a65adbf94f'
-);
-
-UPDATE pieces piece
-SET piece.title = 'La dolce vita 중 "Notturno o mattutino"', piece.title_en = 'La dolce vita: Notturno o mattutino', piece.editor_locked = 1
-WHERE piece.id = 11020 AND piece.composer_id = 111
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:8d43dd5f-6ccd-4bcf-b993-31f642b21029', 7, NULL, 'La dolce vita', 'La dolce vita', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8d43dd5f-6ccd-4bcf-b993-31f642b21029'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:07bae02c-ebd1-43fe-a575-6db60dd7cd5a', 8, NULL, 'Suite: 9. La dolce vita', 'La dolce vita - Suite: 9. La dolce vita', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:07bae02c-ebd1-43fe-a575-6db60dd7cd5a'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:b29c0b8e-7f06-46c0-9649-cfc283ae557f', 9, NULL, 'finale', 'La dolce vita: finale', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b29c0b8e-7f06-46c0-9649-cfc283ae557f'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:b508619a-973a-4dd3-98b5-7cffb4abd6a2', 10, NULL, 'Il bidone', 'Il bidone', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b508619a-973a-4dd3-98b5-7cffb4abd6a2'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:94719ba6-ab71-4446-940b-7da72abe37a3', 11, NULL, 'La moglie del bidonista', 'La moglie del bidonista', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:94719ba6-ab71-4446-940b-7da72abe37a3'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:ba402bef-7837-4d06-9f38-ccf0ba49c936', 12, NULL, 'Il tesoro nascosto', 'Il tesoro nascosto', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ba402bef-7837-4d06-9f38-ccf0ba49c936'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:f12a3784-4db3-4523-a0a7-87d2306ac9d4', 13, NULL, 'Coimbra / La festa dei bidonisti', 'Coimbra / La festa dei bidonisti', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f12a3784-4db3-4523-a0a7-87d2306ac9d4'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:5c664c9d-aac3-4bdd-9ef0-5df3b5c9a03d', 14, NULL, 'In viaggio per un bidone', 'In viaggio per un bidone', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5c664c9d-aac3-4bdd-9ef0-5df3b5c9a03d'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:5fa0f0fd-3e7e-4980-a0a1-410b8582bba2', 15, NULL, 'Al cinema', 'Al cinema', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5fa0f0fd-3e7e-4980-a0a1-410b8582bba2'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:e8d99616-f40e-4b3c-9c2e-c6d1f324c70c', 16, NULL, 'Cara bambina', 'Cara bambina', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e8d99616-f40e-4b3c-9c2e-c6d1f324c70c'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:7b0fc23a-8ba6-4343-af22-c5882e7c7746', 17, NULL, 'Ballerina night', 'Ballerina night', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7b0fc23a-8ba6-4343-af22-c5882e7c7746'
-);
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:97dc5136-2602-431b-a084-2b4663ea489a', 18, NULL, 'L''ultimo bidone', 'L''ultimo bidone', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.composer_id = 111 AND p.title = 'La dolce vita' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:97dc5136-2602-431b-a084-2b4663ea489a'
-);
-
-
 -- None Chansons pour Fellini
 
 INSERT INTO pieces
@@ -9340,15 +9463,16 @@ AND NOT EXISTS (
     WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:13170843-c018-4adc-a067-2489e43c3ee4'
 );
 
--- 카탈로그에 대응이 없는 seed 작품 80개를 목록에서 숨긴다(지우지 않음).
+-- 카탈로그에 대응이 없는 seed 작품 81개를 목록에서 숨긴다(지우지 않음).
 UPDATE pieces piece
 SET piece.hidden_reason = 'catalog_unmatched'
 WHERE piece.composer_id = 111 AND piece.origin = 'seed' AND piece.hidden_reason IS NULL
   AND piece.id IN (
     7454, 7594, 7675, 7683, 7710, 7711, 7718, 7719, 7749, 7758, 7808, 7831, 7930, 7933, 8006, 8044, 8085, 8130, 8188, 8276,
     8322, 8361, 8382, 8384, 8661, 8668, 8689, 8786, 8791, 8793, 8893, 8913, 8954, 8971, 9037, 9054, 9077, 9094, 9097, 9108,
-    9116, 9133, 9134, 9136, 9163, 9320, 9408, 9472, 9474, 9690, 9788, 9809, 9904, 9951, 9955, 9992, 9999, 10090, 10092, 10120,
-    10179, 10220, 10269, 10351, 10412, 10466, 10481, 10511, 10573, 10575, 10611, 10667, 10731, 10805, 10846, 10861, 11054, 11059, 11134, 11286
+    9116, 9133, 9134, 9136, 9163, 9320, 9408, 9472, 9474, 9690, 9716, 9788, 9809, 9904, 9951, 9955, 9992, 9999, 10090, 10092,
+    10120, 10179, 10220, 10269, 10351, 10412, 10466, 10481, 10511, 10573, 10575, 10611, 10667, 10731, 10805, 10846, 10861, 11054, 11059, 11134,
+    11286
   )
   AND NOT EXISTS (SELECT 1 FROM performance_sectors sector WHERE sector.piece_id = piece.id)
   AND NOT EXISTS (SELECT 1 FROM piece_parts linking WHERE linking.linked_piece_id = piece.id);

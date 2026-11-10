@@ -54,7 +54,7 @@
    "0bd835d2-d9cd-3689-8b1d-5765c6259989"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-c7a5ab5e",
+  "key": "nino-rota-ca447c4e",
   "path": [
    7
   ],
@@ -281,11 +281,11 @@
   "mbids": [
    "8c9de1b3-96c9-4a3b-a5a7-1aa467957e79"
   ],
-  "mapping": "work",
-  "key": "nino-rota-8c9de1b3",
+  "mapping": "unmatched",
+  "key": null,
   "path": null,
-  "reason": null,
-  "note": null
+  "reason": "duplicate",
+  "note": "같은 영화 묶음에 합침"
  },
  {
   "pieceId": 9730,
@@ -510,7 +510,7 @@
    "effbd668-066a-468c-8aa3-ebaa62bb40d1"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-f7b1a864",
+  "key": "nino-rota-505c1d42",
   "path": [
    8
   ],
@@ -536,7 +536,7 @@
    "f5c92c76-cbae-48d8-bfeb-aa2a7d3b97a4"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-f7b1a864",
+  "key": "nino-rota-505c1d42",
   "path": [
    5
   ],
@@ -896,7 +896,7 @@
    "0699e848-9509-3885-bed6-a5d0e4d9de6c"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-c7a5ab5e",
+  "key": "nino-rota-ca447c4e",
   "path": [
    3
   ],
@@ -936,9 +936,9 @@
    "07f3e4b6-9900-4ae8-ab97-b1cd25e16449"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-7c226df6",
+  "key": "nino-rota-rg-852df889",
   "path": [
-   4
+   20
   ],
   "reason": null,
   "note": "음반 <Plein soleil> 트랙"
@@ -1260,7 +1260,7 @@
    "1ebb1bd0-4d06-49ce-800a-afd1b62eee5e"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    10
   ],
@@ -1288,9 +1288,9 @@
    "234a036c-13ce-49b6-8a9d-02aecee18621"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-7c226df6",
+  "key": "nino-rota-rg-852df889",
   "path": [
-   5
+   21
   ],
   "reason": null,
   "note": "음반 <Plein soleil> 트랙"
@@ -1340,7 +1340,7 @@
    "2a740a0f-7a58-40e4-a636-c9b55e3f0477"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-f7b1a864",
+  "key": "nino-rota-505c1d42",
   "path": [
    9
   ],
@@ -1422,9 +1422,9 @@
    "2d94792e-b051-4d4a-bf7c-d25b14834e7c"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-7c226df6",
+  "key": "nino-rota-rg-852df889",
   "path": [
-   1
+   17
   ],
   "reason": null,
   "note": "음반 <Plein soleil> 트랙"
@@ -1798,7 +1798,7 @@
    "4603e99c-a10d-4c71-9f71-54fab9d711f7"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-a15b539e",
+  "key": "nino-rota-5d20c81e",
   "path": [
    4
   ],
@@ -2084,7 +2084,7 @@
    "53ec12a3-3bc9-428c-aeb1-4a818cbf143a"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    11
   ],
@@ -2124,7 +2124,7 @@
    "55dd9253-2422-42a5-b15b-fb4dfa399663"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-a15b539e",
+  "key": "nino-rota-5d20c81e",
   "path": [
    12
   ],
@@ -2138,7 +2138,7 @@
    "5601fc9b-837d-40a1-a112-1e5743dafde9"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-a15b539e",
+  "key": "nino-rota-5d20c81e",
   "path": [
    3
   ],
@@ -2340,7 +2340,7 @@
    "5c7d0284-677e-45bc-ba0e-2040dfff0a58"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    4
   ],
@@ -2354,7 +2354,7 @@
    "5d4899eb-7469-4738-ad4c-0270aba846f9"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-f7b1a864",
+  "key": "nino-rota-505c1d42",
   "path": [
    3
   ],
@@ -2498,7 +2498,7 @@
    "61f96976-6733-3b17-8407-9c3f38ab9e14"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-c7a5ab5e",
+  "key": "nino-rota-ca447c4e",
   "path": [
    6
   ],
@@ -2602,7 +2602,7 @@
    "67d896ef-0bda-3d02-833a-bc7634330751"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-c7a5ab5e",
+  "key": "nino-rota-ca447c4e",
   "path": [
    2
   ],
@@ -2616,7 +2616,7 @@
    "688cfb69-8601-4724-91ad-54238d4b85bd"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-a15b539e",
+  "key": "nino-rota-5d20c81e",
   "path": [
    6
   ],
@@ -2864,7 +2864,7 @@
    "717c6cc8-1da3-4184-82a9-685ca71159b1"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    16
   ],
@@ -2972,7 +2972,7 @@
    "78d63db7-d2d1-476e-9a32-a0bd87b4af34"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-a15b539e",
+  "key": "nino-rota-5d20c81e",
   "path": [
    2
   ],
@@ -3108,7 +3108,7 @@
    "82670571-5ea1-4108-8125-fa76e328c1b8"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-f7b1a864",
+  "key": "nino-rota-505c1d42",
   "path": [
    4
   ],
@@ -3136,7 +3136,7 @@
    "83f2a7eb-3679-4fd1-b986-34586f71b59f"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    6
   ],
@@ -3220,7 +3220,7 @@
    "8a77e70b-26e8-4b16-abe3-39776b9149b4"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    8
   ],
@@ -3356,7 +3356,7 @@
    "911d1fe0-8831-4295-b395-33e8ddedfbe9"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-a15b539e",
+  "key": "nino-rota-5d20c81e",
   "path": [
    5
   ],
@@ -3436,7 +3436,7 @@
    "967c53f2-5346-38cf-90c0-1b5efa1b058f"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-c7a5ab5e",
+  "key": "nino-rota-ca447c4e",
   "path": [
    8
   ],
@@ -3662,9 +3662,9 @@
    "9e09ac78-ce22-40a2-868f-a2465723bea8"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-06972e92",
+  "key": "nino-rota-rg-65920030",
   "path": [
-   1
+   7
   ],
   "reason": null,
   "note": "음반 <La dolce vita> 트랙"
@@ -3768,7 +3768,7 @@
    "a2fda7b6-bd80-4c6e-94f1-f0b12779c812"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-f7b1a864",
+  "key": "nino-rota-505c1d42",
   "path": [
    1
   ],
@@ -4052,7 +4052,7 @@
    "b0f84b6f-d602-437c-b6bb-d39dc9d1964e"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-a15b539e",
+  "key": "nino-rota-5d20c81e",
   "path": [
    10
   ],
@@ -4256,7 +4256,7 @@
    "bf9d45a2-f472-488e-8b43-136a15c3b745"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-a15b539e",
+  "key": "nino-rota-5d20c81e",
   "path": [
    1
   ],
@@ -4462,7 +4462,7 @@
    "ca6ab590-37a6-49d4-9c43-5e987eebbd6a"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    13
   ],
@@ -4540,7 +4540,7 @@
    "d10cdb7f-e4fd-4e38-8d7c-a92161b2bd6f"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    12
   ],
@@ -4692,7 +4692,7 @@
    "db81e9c6-28c8-4b5e-9660-a6d35db12afd"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-f7b1a864",
+  "key": "nino-rota-505c1d42",
   "path": [
    10
   ],
@@ -4720,7 +4720,7 @@
    "dc51d6ef-1812-4dcb-9c56-ffdd9f342e30"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-f7b1a864",
+  "key": "nino-rota-505c1d42",
   "path": [
    7
   ],
@@ -4868,7 +4868,7 @@
    "e6f95136-82bc-387f-9a94-26d65ee7d7c9"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-c7a5ab5e",
+  "key": "nino-rota-ca447c4e",
   "path": [
    4
   ],
@@ -4896,7 +4896,7 @@
    "e8af0b1e-6d90-4715-a6f2-e630baa418ae"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    15
   ],
@@ -4938,9 +4938,9 @@
    "ecb81c54-404a-4bdd-bb34-f7a65adbf94f"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-06972e92",
+  "key": "nino-rota-rg-65920030",
   "path": [
-   6
+   8
   ],
   "reason": null,
   "note": "음반 <La dolce vita> 트랙"
@@ -4966,7 +4966,7 @@
    "edef5719-e773-41c7-9c22-4c8e98882398"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    3
   ],
@@ -4980,7 +4980,7 @@
    "ee46578c-8305-4b23-a1eb-3208d7d365cd"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    9
   ],
@@ -5020,7 +5020,7 @@
    "ef79a51a-db9b-491e-9cb0-5008ef5c9166"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    5
   ],
@@ -5060,7 +5060,7 @@
    "efb3c4a0-2afc-4859-8c59-ec36d34e542e"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-a15b539e",
+  "key": "nino-rota-5d20c81e",
   "path": [
    8
   ],
@@ -5142,7 +5142,7 @@
    "f49e1cb6-2542-478e-a82d-b203ea4fa030"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-f7b1a864",
+  "key": "nino-rota-505c1d42",
   "path": [
    6
   ],
@@ -5156,7 +5156,7 @@
    "f57a6fec-0263-4efd-ae45-085494397f7b"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    2
   ],
@@ -5236,7 +5236,7 @@
    "fad3479d-1b8f-42da-bae3-2eac4527c38a"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    14
   ],
@@ -5320,7 +5320,7 @@
    "fdc152a1-4870-4ea8-804a-63d2070cb48d"
   ],
   "mapping": "part",
-  "key": "nino-rota-rg-2bcc5806",
+  "key": "nino-rota-ffe73b71",
   "path": [
    7
   ],
