@@ -1,3 +1,9 @@
 {
- "seed_arrangement": 12
+ "seed_arrangement": 12,
+ "film_merged_films": 0,
+ "film_merged_rows": 0,
+ "film_part": 12,
+ "film_groups": 1,
+ "film_solo": 0,
+ "film_concert_kept": 0
 }

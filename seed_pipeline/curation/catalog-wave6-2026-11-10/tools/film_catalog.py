@@ -107,7 +107,10 @@ _TRACK_WORDS = (
 SOUNDTRACK_TAIL = re.compile(
     rf"\s*[(\[][^()\[\]]*\b(?:{_TRACK_WORDS})\b[^()\[\]]*[)\]]\s*$"
     rf"|\s*[:\u2013\u2014]\s*[^:\u2013\u2014]*\b(?:{_TRACK_WORDS})\b[^:\u2013\u2014]*$"
-    rf"|\s+-\s+[^-]*\b(?:{_TRACK_WORDS})\b[^-]*$",
+    rf"|\s+-\s+[^-]*\b(?:{_TRACK_WORDS})\b[^-]*$"
+    # 「Romeo and Juliet, film score」. 쉼표 뒤에 콜론이 있으면
+    # (「…, Part III: Music From …」) 콜론 쪽이 뗀다
+    rf"|\s*,\s*[^,:()]*\b(?:{_TRACK_WORDS})\b[^,:()]*$",
     re.IGNORECASE,
 )
 
@@ -268,25 +271,293 @@ def track_name(name: str, rg_title: str) -> str:
     return name.strip() or rg_title
 
 
-def manual_soundtracks(rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
-    """손으로 넣은 「영화 <X> 사운드트랙」 음반(곡 목록 없음)을 영화 이름으로 찾게 한다.
+def norm_keys(*names: str) -> set[str]:
+    return {auto.normal_title(n) for n in names if n} - {""}
 
-    이름은 원제(영어 제목에서 Soundtrack 앞)와 한국 제목 둘 다.
+
+def film_keys(
+    rg_title: str, rg: dict[str, Any], screen: dict[str, Any] | None, is_film: bool
+) -> set[str]:
+    """같은 영화인지 볼 키. 시즌·에피소드·권 음반과 라이브 음반은 합치지 않는다(빈 집합).
+
+    위키데이터 이름들은 쓰지 않는다. 다른 언어 이름의 괄호를 떼면 「대부」 1·2·3편이
+    같은 이름(Il padrino)이 되기 때문이다. 영화로 확인되면 위키데이터 항목 자체를 키로 쓴다.
     """
-    out: dict[str, dict[str, str]] = {}
+    if SERIES.search(rg_title) or "Live" in (rg.get("secondary-types") or []):
+        return set()
+    if screen is not None and screen["film"]:
+        return norm_keys(rg_title, film_title(rg_title)) | {"wikidata:" + screen["qid"]}
+    if is_film:
+        return norm_keys(rg_title, film_title(rg_title))
+    # 영화로 확인되지 않은 음반(TV·게임·일반 음반)은 음반 제목이 똑같을 때만 합친다
+    return norm_keys(rg_title)
+
+
+def manual_soundtracks(rows: list[dict[str, str]]) -> list[dict[str, Any]]:
+    """손으로 넣은 「영화 <X> 사운드트랙」 작품과 그 영화 이름 키.
+
+    음반(album)은 곡 목록을 담을 그릇이 되고, 「영화 <X> 사운드트랙 (사랑의 테마)」 같은
+    한 곡(song)은 그 영화 묶음 안 곡으로 들어간다. 키는 영어 제목에서 Soundtrack 앞부분이다.
+    """
+    out: list[dict[str, Any]] = []
     for row in rows:
-        if row["origin"] != "manual" or row["type"] != "album" or row["hidden_reason"] != "NULL":
+        if row["origin"] != "manual" or row["hidden_reason"] != "NULL":
             continue
-        match = re.match(r"^영화 <(.+?)> 사운드트랙$", row["title"])
-        if not match:
+        match = re.match(r"^영화 <(.+?)> 사운드트랙(?: \((.+)\))?$", row["title"])
+        if not match or row["type"] not in ("album", "song"):
             continue
         english = row["title_en"] if row["title_en"] != "NULL" else ""
-        english = re.sub(r"\s*\bsoundtrack\b.*$", "", english, flags=re.IGNORECASE)
-        for name in (match.group(1), english):
-            key = auto.normal_title(name)
-            if key:
-                out.setdefault(key, row)
+        track_en = re.search(r"\(([^()]+)\)\s*$", english)
+        name_en = re.sub(r"\s*\bsoundtrack\b.*$", "", english, flags=re.IGNORECASE)
+        out.append(
+            {
+                "row": row,
+                "id": int(row["id"]),
+                "album": row["type"] == "album" and not match.group(2),
+                "keys": norm_keys(name_en),
+                "trackKo": match.group(2) or row["title"],
+                "trackEn": track_en.group(1) if track_en else english or row["title"],
+            }
+        )
     return out
+
+
+def merge_same_films(
+    rows: list[dict[str, str]],
+    kept: list[dict[str, Any]],
+    groups: list[dict[str, Any]],
+    meta: dict[str, dict[str, Any]],
+    seeds: dict[int, dict[str, Any]],
+    report: list[dict[str, Any]],
+    works: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    """같은 영화가 여러 줄(손 작품·영화 단위 MB 작품·음반 묶음)이면 한 줄로 합친다.
+
+    그릇은 손 음반 > 영화 단위 MB 작품(seed) > 첫 음반 묶음 순으로 고른다. 곡은 음반 묶음들의
+    트랙을 순서대로 잇고(같은 작품은 한 번), 음반이 없으면 MB 작품의 part 를 쓴다. 손 한 곡은
+    이름이 맞는 트랙에 잇거나 끝에 붙인다. 그릇이 아닌 MB 작품 seed 는 중복으로 숨긴다.
+    """
+    rowmap = {int(r["id"]): r for r in rows}
+    claimed = {int(w["existingPieceId"]) for w in kept if w.get("existingPieceId")}
+    items: list[dict[str, Any]] = []
+    for group in groups:
+        keys = meta.get(group["key"], {}).get("keys")
+        if group["kind"] == "collection" and keys:
+            items.append({"kind": "group", "entry": group, "keys": keys})
+    for entry in kept:
+        pid = entry.get("existingPieceId")
+        row = rowmap.get(int(pid)) if pid else None
+        if row is None or row["origin"] != "seed" or entry["kind"] == "single":
+            continue
+        if (entry.get("genre") or "") in CONCERT_TYPES:
+            continue
+        keys = norm_keys(str(entry["mbTitle"]), film_title(str(entry["mbTitle"])))
+        items.append({"kind": "work", "entry": entry, "keys": keys})
+    for manual in manual_soundtracks(rows):
+        if manual["id"] not in claimed and manual["keys"]:
+            items.append({"kind": "manual", "manual": manual, "keys": manual["keys"]})
+
+    # 이름 키를 나눠 갖는 것끼리 묶는다(union-find)
+    parent = list(range(len(items)))
+
+    def find(i: int) -> int:
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    owner: dict[str, int] = {}
+    for index, item in enumerate(items):
+        for key in sorted(item["keys"]):
+            if key in owner:
+                parent[find(index)] = find(owner[key])
+            else:
+                owner[key] = index
+    clusters: dict[int, list[dict[str, Any]]] = defaultdict(list)
+    for index, item in enumerate(items):
+        clusters[find(index)].append(item)
+
+    drop: set[str] = set()
+    hidden: set[int] = set()
+    containers: set[str] = set()
+    films = rows_removed = 0
+    for members in clusters.values():
+        group_items = sorted(
+            (m for m in members if m["kind"] == "group"),
+            key=lambda m: meta[m["entry"]["key"]]["rank"],
+        )
+        work_items = sorted(
+            (m for m in members if m["kind"] == "work"),
+            key=lambda m: int(m["entry"]["existingPieceId"]),
+        )
+        albums = sorted(
+            (m["manual"] for m in members if m["kind"] == "manual" and m["manual"]["album"]),
+            key=lambda m: int(m["id"]),
+        )
+        songs = [m["manual"] for m in members if m["kind"] == "manual" and not m["manual"]["album"]]
+        if len(members) < 2 or not (group_items or work_items):
+            continue
+        films += 1
+        # 곡 목록
+        parts: list[dict[str, Any]] = []
+        if group_items:
+            seen: dict[str, dict[str, Any]] = {}
+            for item in group_items:
+                for part in item["entry"]["parts"]:
+                    same = seen.get(str(part["mbid"]))
+                    if same is not None:
+                        if same["existingPieceId"] is None and part["existingPieceId"]:
+                            same["existingPieceId"] = part["existingPieceId"]
+                            same["nameKo"] = part["nameKo"]
+                        elif part["existingPieceId"]:
+                            # 같은 작품에 이어진 seed 가 둘이면 뒤엣것은 중복으로 숨긴다
+                            hidden.add(int(part["existingPieceId"]))
+                        continue
+                    copy = dict(part)
+                    seen[str(part["mbid"])] = copy
+                    parts.append(copy)
+        else:
+            parts = [dict(p) for p in work_items[0]["entry"]["parts"]]
+        for song in songs:
+            wanted = auto.normal_title(song["trackEn"])
+            spot = next(
+                (
+                    p
+                    for p in parts
+                    if not p["existingPieceId"]
+                    and wanted
+                    and wanted in auto.normal_title(str(p.get("nameEn") or ""))
+                ),
+                None,
+            )
+            if spot is not None:
+                spot["existingPieceId"] = song["id"]
+            else:
+                parts.append(
+                    {
+                        "seq": 0,
+                        "mbid": None,
+                        "mbTitle": song["trackEn"],
+                        "nameKo": str(song["trackKo"])[:500],
+                        "nameEn": str(song["trackEn"])[:500],
+                        "movementNumber": None,
+                        "catalogueAlt": None,
+                        "existingPieceId": song["id"],
+                        "existingPartId": None,
+                        "children": [],
+                    }
+                )
+        for seq, part in enumerate(parts, start=1):
+            part["seq"] = seq
+        # 그릇
+        first_group = group_items[0]["entry"] if group_items else None
+        if albums:
+            album = albums[0]["row"]
+            base = first_group or work_items[0]["entry"]
+            container = dict(base)
+            container.update(
+                existingPieceId=int(album["id"]),
+                titleKo=album["title"],
+                titleEn=album["title_en"] if album["title_en"] != "NULL" else album["title"],
+                kind="collection",
+                mbid=None,
+                catalogue=None,
+            )
+            others = [m["entry"] for m in group_items + work_items]
+        elif work_items:
+            container = dict(work_items[0]["entry"])
+            if first_group is not None:
+                container.update(titleKo=first_group["titleKo"], titleEn=first_group["titleEn"])
+            container.update(kind="collection", catalogue=None)
+            others = [m["entry"] for m in group_items + work_items[1:]]
+        else:
+            assert first_group is not None
+            container = dict(first_group)
+            others = [m["entry"] for m in group_items[1:]]
+        container["parts"] = parts
+        # 원래 자리(kept 또는 groups)에서 그릇을 바꿔 끼운다
+        for collection in (kept, groups):
+            for index, entry in enumerate(collection):
+                if entry["key"] == container["key"]:
+                    collection[index] = container
+        removed = [e for e in others if e["key"] != container["key"]]
+        drop.update(e["key"] for e in removed)
+        containers.add(container["key"])
+        rows_removed += len(group_items) + len(work_items) + min(len(albums), 1) + len(songs) - 1
+        # 숨길 MB 작품 seed, 그릇과 곡 seed 다시 잇기
+        for entry in removed:
+            pid = entry.get("existingPieceId")
+            if pid and rowmap[int(pid)]["origin"] == "seed":
+                hidden.add(int(pid))
+        container_pid = container.get("existingPieceId")
+        if container_pid and rowmap[int(container_pid)]["origin"] == "seed":
+            hidden.discard(int(container_pid))
+            seeds[int(container_pid)].update(
+                mapping="work", key=container["key"], path=None, reason=None
+            )
+        for part in parts:
+            nodes = [([part["seq"]], part)] + [
+                ([part["seq"], child["seq"]], child) for child in part.get("children") or []
+            ]
+            for path, node in nodes:
+                pid = node.get("existingPieceId")
+                if pid and rowmap[int(pid)]["origin"] == "seed":
+                    hidden.discard(int(pid))
+                    seeds[int(pid)].update(
+                        mapping="part", key=container["key"], path=path, reason=None
+                    )
+        # 그릇에 다시 이어지지 않은 seed(버린 MB part 에 이어졌던 것 등)는 중복으로 숨긴다
+        held = {int(container_pid)} if container_pid else set()
+        for part in parts:
+            for node in [part, *(part.get("children") or [])]:
+                if node.get("existingPieceId"):
+                    held.add(int(node["existingPieceId"]))
+        stale = {e["key"] for e in removed} | {container["key"]}
+        for pid, entry in seeds.items():
+            if entry["mapping"] in ("work", "part") and entry["key"] in stale and pid not in held:
+                hidden.add(pid)
+        for item in group_items:
+            info = report[meta[item["entry"]["key"]]["report"]]
+            info["mergedInto"] = container["titleKo"]
+    for pid in hidden:
+        if pid in seeds:
+            seeds[pid].update(
+                mapping="unmatched",
+                key=None,
+                path=None,
+                reason="duplicate",
+                note="같은 영화 묶음에 합침",
+            )
+    return {
+        "drop": drop,
+        "hidden": hidden,
+        "containers": containers,
+        "films": films,
+        "rows": rows_removed,
+    }
+
+
+def standalone(slug: str, row: dict[str, str], entry: dict[str, Any], note: str) -> dict[str, Any]:
+    """seed 하나를 원제 그대로 낱곡 작품으로 둔다(seed_map 항목도 고친다)."""
+    pid = int(row["id"])
+    key = f"{slug}-solo-{pid}"
+    entry.update(mapping="work", key=key, path=None, reason=None, note=note)
+    return {
+        "key": key,
+        "kind": "single",
+        "catalogue": None,
+        "catalogueAlt": None,
+        "titleKo": row["title"],
+        "titleEn": row["title_en"] if row["title_en"] not in ("", "NULL") else row["title"],
+        "year": None,
+        "yearText": None,
+        "genre": None,
+        "authenticity": "authentic",
+        "mbid": None,
+        "mbTitle": row["title"],
+        "existingPieceId": pid,
+        "parts": [],
+    }
 
 
 def work_class(entry: dict[str, Any], works: dict[str, dict[str, Any]]) -> str:
@@ -420,28 +691,15 @@ def build(
         kept.append(entry)
 
     reserved = {r["title"] for r in rows} | {str(w["titleKo"]) for w in kept}
-    manual_films = manual_soundtracks(rows)
-    # 4차 규칙이 이미 MB 작품에 이은 손 작품은 건드리지 않는다
-    used_manual: set[int] = {int(w["existingPieceId"]) for w in kept if w.get("existingPieceId")}
     report: list[dict[str, Any]] = []
     new_entries: list[dict[str, Any]] = []
+    meta: dict[str, dict[str, Any]] = {}
     for rgid in sorted({*assigned.values()}, key=rank):
         info = groups[rgid]
         rg = info["rg"]
         rg_title = str(rg["title"])
         members = {pid for pid, g in assigned.items() if g == rgid}
         screen = match_screen(rg_title, screens)
-        # 손으로 넣어 둔 「영화 <X> 사운드트랙」 음반이 같은 영화면
-        # 새로 만들지 않고 그 작품 안에 곡을 넣는다
-        names = {rg_title, film_title(rg_title), *(screen["names"] if screen else [])}
-        manual = next(
-            (
-                manual_films[n]
-                for n in sorted({auto.normal_title(x) for x in names} - {""})
-                if n in manual_films and int(manual_films[n]["id"]) not in used_manual
-            ),
-            None,
-        )
         compilation = "Compilation" in (rg.get("secondary-types") or [])
         if rgid in films:
             is_film = True
@@ -459,20 +717,19 @@ def build(
             title = f"영화 <{ko or name}> 사운드트랙"
         else:
             title = rg_title
-        title_en = rg_title[:250]
-        if manual is not None:
-            used_manual.add(int(manual["id"]))
-            title = manual["title"]
-            title_en = manual["title_en"] if manual["title_en"] != "NULL" else title_en
+        for candidate in (title, f"{title} (음반)", f"{title} (음반 {rgid[:8]})"):
+            if candidate[:250] not in reserved:
+                title = candidate[:250]
+                break
         else:
-            for candidate in (title, f"{title} (음반)", f"{title} (음반 {rgid[:8]})"):
-                if candidate[:250] not in reserved:
-                    title = candidate[:250]
-                    break
-            else:
-                raise SystemExit(f"묶음 제목을 정하지 못함: {rg_title}")
-            reserved.add(title)
+            raise SystemExit(f"묶음 제목을 정하지 못함: {rg_title}")
+        reserved.add(title)
         key = f"{slug}-rg-{rgid[:8]}"
+        meta[key] = {
+            "rank": len(meta),
+            "keys": film_keys(rg_title, rg, screen, is_film),
+            "report": len(report),
+        }
         parts: list[dict[str, Any]] = []
         for seq, (wid, wtitle) in enumerate(info["tracks"], start=1):
             linked = next(
@@ -515,7 +772,7 @@ def build(
                 "catalogue": None,
                 "catalogueAlt": None,
                 "titleKo": title,
-                "titleEn": title_en,
+                "titleEn": rg_title[:250],
                 "year": None,
                 "yearText": None,
                 "genre": "soundtrack"
@@ -524,7 +781,7 @@ def build(
                 "authenticity": "authentic",
                 "mbid": None,
                 "mbTitle": rg_title,
-                "existingPieceId": int(manual["id"]) if manual is not None else None,
+                "existingPieceId": None,
                 "parts": parts,
             }
         )
@@ -550,44 +807,27 @@ def build(
                 ),
                 "kowiki": screen["kowiki"] if screen else None,
                 "koTitle": ko,
-                "existingPieceId": int(manual["id"]) if manual is not None else None,
                 "title": title,
                 "tracks": len(parts),
                 "linked": sum(1 for p in parts if p["existingPieceId"]),
             }
         )
 
-    # 5. 한 곡짜리 음반의 곡은 낱곡으로 둔다. 4차가 숨기려던 seed 면 원제 그대로 낱곡 작품을 만든다
-    for pid in sorted(solo):
-        entry = seeds[pid]
-        if entry["mapping"] == "work":
-            continue
-        row = rowmap[pid]
-        key = f"{slug}-solo-{pid}"
-        title_en = row["title_en"] if row["title_en"] not in ("", "NULL") else row["title"]
-        new_entries.append(
-            {
-                "key": key,
-                "kind": "single",
-                "catalogue": None,
-                "catalogueAlt": None,
-                "titleKo": row["title"],
-                "titleEn": title_en,
-                "year": None,
-                "yearText": None,
-                "genre": None,
-                "authenticity": "authentic",
-                "mbid": None,
-                "mbTitle": row["title"],
-                "existingPieceId": pid,
-                "parts": [],
-            }
-        )
-        entry.update(mapping="work", key=key, path=None, reason=None, note="한 곡짜리 음반의 곡")
+    # 5. 같은 영화가 여러 줄이면 한 줄로 합친다
+    merged = merge_same_films(rows, kept, new_entries, meta, seeds, report, works)
+    kept = [w for w in kept if w["key"] not in merged["drop"]]
+    new_entries = [w for w in new_entries if w["key"] not in merged["drop"]]
+    stats["film_merged_films"] = merged["films"]
+    stats["film_merged_rows"] = merged["rows"]
 
-    # 6. 음반에 없는 큐는 숨긴다. 노래는 음반에 없으면 4차 규칙대로 둔다
+    # 6. 한 곡짜리 음반의 곡은 낱곡으로 둔다. 4차가 숨기려던 seed 면 원제 그대로 낱곡 작품을 만든다
+    for pid in sorted(solo):
+        if seeds[pid]["mapping"] != "work":
+            new_entries.append(standalone(slug, rowmap[pid], seeds[pid], "한 곡짜리 음반의 곡"))
+
+    # 7. 음반에 없는 큐는 숨긴다. 노래는 음반에 없으면 4차 규칙대로 둔다
     for pid, entry in seeds.items():
-        if pid in assigned or pid in solo:
+        if pid in assigned or pid in solo or pid in merged["hidden"]:
             continue
         cls = seed_class[pid]
         if cls == "cue" or (cls == "duplicate" and entry["mapping"] in ("work", "part")):
@@ -600,6 +840,19 @@ def build(
                 if cls == "cue"
                 else "같은 작품 seed 가 이미 묶임",
             )
+    # 8. 그래도 보이는 작품이 하나도 없으면(작곡가가 목록에서 빠지면)
+    #    음반에 없는 큐를 원제 그대로 둔다
+    visible_manual = any(
+        r["origin"] == "manual" and r["hidden_reason"] == "NULL" and r.get("linked_by") == "0"
+        for r in rows
+    )
+    if not kept and not new_entries and not visible_manual:
+        for pid in sorted(seeds):
+            if seeds[pid].get("reason") == "film_cue":
+                new_entries.append(
+                    standalone(slug, rowmap[pid], seeds[pid], "보이는 작품이 없어 원제로 둠")
+                )
+                stats["film_kept_for_composer"] += 1
     final = kept + new_entries
     # 묶음에서 빠진 작품을 가리키던 seed 는 위에서 이미 다시 정했다
     live_keys = {w["key"] for w in final}
@@ -611,7 +864,9 @@ def build(
         for e in seeds.values()
     )
     stats.update(counts)
-    stats["film_groups"] = sum(1 for w in new_entries if w["kind"] == "collection")
+    stats["film_groups"] = sum(1 for w in new_entries if w["kind"] == "collection") + sum(
+        1 for w in kept if w["key"] in merged["containers"]
+    )
     stats["film_solo"] = len(solo)
     stats["film_concert_kept"] = sum(1 for w in kept if w.get("existingPieceId"))
     return final, list(seeds.values()), dict(stats), report
