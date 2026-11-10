@@ -65,6 +65,9 @@ async fn rocket() -> _ {
     // Apple Music 새 앨범 동기화 (키가 없으면 꺼진다)
     recording::album_sync::AlbumSyncScheduler::start(pool.clone());
 
+    // Clerk 대시보드에서 지워진 계정의 DB 행 정리 (CLERK_SECRET_KEY 가 없으면 꺼진다)
+    user::clerk_reconcile::ClerkReconcileScheduler::start(pool.clone());
+
     Logger::info("SERVER", "Mounting routes...");
 
     // CORS 설정
