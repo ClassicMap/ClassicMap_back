@@ -1,0 +1,293 @@
+id	tier	name	english_name	birth_year	death_year	nationality	period	authority_entity_id	qid	has_banner	pieces	is_artist
+103	A	김동진	Kim Dong-jin	1913	2009	한국	근현대	816aa56d-c609-5434-8b2f-ab0f72d8535d	Q4991776	1	5	0
+133	B	Ilse Fromm-Michaels	Ilse Fromm-Michaels	1888	1986	독일	근현대	d6f9d769-9dd9-5d68-b803-97d2bbf68308	Q273046	0	8	0
+134	B	Eugeniusz Knapik	Eugeniusz Knapik	1951	NULL	폴란드	근현대	c3952286-9c9c-548e-a3c4-ad2144e10cfb	Q2655222	0	3	0
+136	B	Albert Huybrechts	Albert Huybrechts	1899	1938	벨기에	근현대	f0f516e9-557f-5761-a243-125e1550e6be	Q2831257	0	1	0
+138	B	Joji Yuasa	Joji Yuasa	1929	2024	일본	근현대	6bd2bb43-b5a9-52fd-afd9-92b7b7891bb0	Q1369375	0	18	0
+139	B	Jonathan Dove	Jonathan Dove	1959	NULL	영국	근현대	b1c332f8-8fc0-55da-b4e9-9327c33f0a72	Q1333954	1	57	0
+140	B	루이 에마뉘엘 자댕	Louis Emmanuel Jadin	1768	1853	프랑스	고전주의	d28c3861-e7fd-5bee-9e22-8f3bb92cae4a	Q1348195	0	2	0
+141	B	카타리누스 엘링	Catharinus Elling	1858	1942	노르웨이	낭만주의	ff819f54-7a91-56bf-9093-bd65d103e38c	Q1771189	0	1	0
+142	B	Hubert Klyne Headley	Hubert Klyne Headley	1906	1996	미국	근현대	fd68b346-a80b-5fbc-9377-16f236381dfb	Q2014857	0	0	0
+143	B	Vsevolod Zaderatsky	Vsevolod Zaderatsky	1891	1953	소련	근현대	753c9867-5965-5a05-98f7-b6bec657132f	Q1639391	0	2	0
+144	B	Anjelika Akbar	Anjelika Akbar	1969	NULL	튀르키예	근현대	b31383b2-4ba1-5df0-a948-a896d19a5836	Q2901474	1	0	0
+145	B	José de Nebra	José de Nebra	1702	1768	스페인	바로크	c2c08c6f-1a68-58ac-8f2c-f41fbc312532	Q1246203	0	15	0
+146	B	Clara Maïda	Clara Maïda	1963	NULL	프랑스	근현대	06b12fc0-5ddb-5860-885e-5a53d1cc0785	Q2975496	0	0	0
+147	B	Eugeniusz Morawski-Da̜browa	Eugeniusz Morawski-Da̜browa	1876	1948	폴란드	근현대	486cf94a-013d-5804-95bd-360f40380c03	Q1373383	0	4	0
+149	B	알렉산드르 다르고미시스키	Alexander Dargomyzhsky	1813	1869	러시아	낭만주의	df67a7c6-3e71-571c-9bbf-78d9c05391b7	Q311384	0	16	0
+150	B	체사레 소데로	Cesare Sodero	1886	1947	이탈리아	근현대	507ee72e-3256-56a6-b0f6-8bfd8a970463	Q4426737	1	1	0
+153	B	Teizo Matsumura	Teizo Matsumura	1929	2007	일본	근현대	2c0b5708-8da1-536b-9e5c-617f595d8e1d	Q2401031	0	3	0
+154	B	Mina Kubota	Mina Kubota	1972	NULL	일본	근현대	f386b10b-60e0-5d26-9a5c-6d39f491fdaf	Q2782253	1	45	0
+155	B	Guillaume Connesson	Guillaume Connesson	1970	NULL	프랑스	근현대	50202649-2808-55c1-9743-0852089fc66a	Q3119761	0	13	0
+158	B	Nancy Van de Vate	Nancy Van de Vate	1930	2023	미국	근현대	725f9c70-2a47-56f0-8887-5bbdfe3ee62b	Q1964533	0	10	0
+159	B	Kazimierz Serocki	Kazimierz Serocki	1922	1981	폴란드	근현대	3c9d198e-a3ff-5770-b415-f9599added19	Q1720016	0	14	0
+160	B	André Souris	André Souris	1899	1970	벨기에	근현대	528d9a64-6b36-5554-bb03-1cb9ce0cdcb4	Q2194486	0	3	0
+161	B	Friedrich Christian Hermann Uber	Friedrich Christian Hermann Uber	1781	1822	독일	고전주의	059915b3-a997-5bd2-8607-25e6984c29b7	Q1458712	0	0	0
+162	B	브렛 딘	Brett Dean	1961	NULL	오스트레일리아	근현대	718d8a9b-c092-5670-b58f-47b4f5515551	Q382700	0	40	0
+163	B	William Henry Fry	William Henry Fry	1813	1864	미국	낭만주의	175cb877-7372-5bbb-bb9f-cd7a9832385f	Q438837	0	4	0
+166	B	Pierre Wissmer	Pierre Wissmer	1915	1992	프랑스	근현대	19af41a5-01f6-58a6-8db0-3ac66d6d3a29	Q3387356	0	8	0
+167	B	Yannis Papaioannou	Yannis Papaioannou	1910	1989	그리스	근현대	51e5affd-981f-54b6-a37d-2adb182a70d5	Q1522683	0	1	0
+168	B	에밀 뒤랑	Émile Durand	1830	1903	프랑스	낭만주의	32422fca-6912-5f50-be16-9d4522a7517d	Q275060	0	0	0
+169	B	Hans von Koessler	Hans von Koessler	1853	1926	독일	낭만주의	fa90a619-4173-5b72-b089-80e7516be0bf	Q371740	0	1	0
+170	B	Charlemagne Palestine	Charlemagne Palestine	1945	NULL	미국	근현대	33bf942a-c11c-58d7-b8b3-d5a2b58c542c	Q369916	0	7	0
+171	B	W. Franke Harling	W. Franke Harling	1887	1958	미국	근현대	30e522d4-281a-51ce-8fc3-89b97869cd56	Q331123	0	3	0
+172	B	블라디미르 코베킨	Vladimir Kobekin	1947	NULL	러시아	근현대	d81fd112-0099-53b5-9845-c151d39b475c	Q4225071	0	4	0
+174	B	파블로 카살스	Pau Casals	1876	1973	스페인	근현대	b0399a9a-b66f-5d94-9a50-cf2b272afa48	Q208537	0	14	0
+175	B	Heinrich Kaspar Schmid	Heinrich Kaspar Schmid	1874	1953	독일	근현대	1db72398-0b82-5b29-87af-ec72ee90c183	Q278402	0	1	0
+176	B	Frank Van der Stucken	Frank Van der Stucken	1858	1929	미국	낭만주의	5f246a28-7fc7-542d-a364-26ba1eb2bd7d	Q1444369	0	1	0
+177	B	William Sweeney	William Sweeney	1950	NULL	영국	근현대	0db57ea8-b87b-5576-bb0e-f6206932116c	Q3930934	0	3	0
+178	B	Violet Archer	Violet Archer	1913	2000	캐나다	근현대	e6421894-935e-5050-8d20-8942946c37b6	Q292581	1	1	0
+179	B	도야마유조	Yūzō Toyama	1931	2023	일본	근현대	d8937c52-a231-534d-846e-6a7dd7047edd	Q323475	0	4	0
+181	B	Ilkka Kuusisto	Ilkka Kuusisto	1933	2025	핀란드	근현대	87a03eca-bc78-5668-a2ff-c7952aabb02f	Q3148689	0	28	0
+182	B	Gian Paolo Chiti	Gian Paolo Chiti	1939	2026	이탈리아	근현대	c677111f-90db-5c0c-a9ec-9b0a9665d65e	Q1358088	0	0	0
+183	B	Michael Gotthard Fischer	Michael Gotthard Fischer	1773	1829	독일	고전주의	48ecb8d7-a957-5c67-b037-fa52733572d4	Q1927572	0	0	0
+186	B	브루노 마데르나	Bruno Maderna	1920	1973	이탈리아	근현대	9b2e6261-3627-5533-9b63-901edb7136bb	Q351383	0	50	0
+187	B	마르크앙드레 달바비	Marc-André Dalbavie	1961	NULL	프랑스	근현대	d2f7d9c9-1d06-5866-aebd-64f1e9cd296a	Q328560	0	13	0
+188	B	James Wilson	James Wilson	1922	2005	영국	근현대	af4ee9bd-39ed-5ed9-9c48-f34c07b76001	Q1681314	0	1	0
+189	B	Eduard Khagagortyan	Eduard Khagagortyan	1930	1983	소련	근현대	0eb5beec-989f-59aa-b9d0-13f98cf50949	Q4494470	0	0	0
+190	B	Jean Catoire	Jean Catoire	1923	2005	프랑스	근현대	f04e9acd-dab9-59ac-8df6-77fd525710c4	Q3171175	0	37	0
+191	B	조지 헨리 크럼	George Crumb	1929	2022	미국	근현대	dbed4bce-eaf2-50a2-a103-520448bde9c5	Q356804	0	55	0
+192	B	Paul Ladmirault	Paul Ladmirault	1877	1944	프랑스	근현대	19950ad0-3535-5f93-9ef8-e50b7e1e325b	Q1398314	0	8	0
+193	B	Gardner Read	Gardner Read	1913	2005	미국	근현대	d2cf197c-5dd3-5086-ad60-85a569afa49b	Q462151	0	4	0
+195	B	Joseph Quesnel	Joseph Quesnel	1746	1809	캐나다	바로크	22b487f4-7601-5eea-9ae8-eb60ab30953f	Q1707853	0	0	0
+196	B	알랭 방카르	Alain Bancquart	1934	2022	프랑스	근현대	561d39b8-2b71-5629-8630-5752e3f5cbce	Q2829529	0	5	0
+197	B	Gerard Victory	Gerard Victory	1921	1995	아일랜드	근현대	98e46cb1-4a20-5e97-b610-d70d8e4e6cea	Q2281244	0	2	0
+198	B	Émile Pierre Ratez	Émile Pierre Ratez	1851	1934	프랑스	낭만주의	d632a11a-f8fe-52f2-834a-9b43e49b085a	Q3724232	0	0	0
+199	B	프랑수아 프랑쾨르	François Francoeur	1698	1787	프랑스	바로크	1be67ac1-1f3c-5764-ae8a-c939f84e4c35	Q1396905	0	18	0
+200	B	Éric Tanguy	Éric Tanguy	1968	NULL	프랑스	근현대	dfee8ee9-f310-5450-be1b-2c8330ac2a20	Q3591374	0	24	0
+201	B	Édouard Batiste	Édouard Batiste	1820	1876	프랑스	낭만주의	d7b09d15-c141-598c-b3c9-1dbb43bd5b31	Q274231	0	8	0
+202	B	Thomas Pasatieri	Thomas Pasatieri	1945	NULL	미국	근현대	eb9d340f-79e4-5ae5-87c2-f7ea951faf0a	Q2426455	0	1	0
+203	B	J. A. C. Redford	J. A. C. Redford	1953	NULL	미국	근현대	3e999051-9247-59e5-9113-47c10479b239	Q3156775	0	4	0
+204	B	Leo Brouwer	Leo Brouwer	1939	NULL	쿠바	근현대	ca0f0ed8-c0e1-5088-8357-54e3c078d828	Q454933	1	97	0
+205	B	Lodewijk Mortelmans	Lodewijk Mortelmans	1868	1952	벨기에	근현대	9908320a-f1da-51a8-aa79-a7320174d2bb	Q358623	0	15	0
+206	B	요한 요한손	Jóhann Jóhannsson	1969	2018	아이슬란드	근현대	0e3d7323-5be8-516b-a099-6aa777838b3e	Q428347	1	165	0
+207	B	요제프 수크	Josef Suk	1874	1935	체코슬로바키아	근현대	8c732a07-7942-5d63-a917-0217163ae4f8	Q312700	0	43	0
+208	B	Marcial del Adalid y Gurréa	Marcial del Adalid y Gurréa	1826	1881	스페인	낭만주의	0ed4b8eb-4f85-5b51-8306-d9c6cd8eb8ba	Q3098932	0	3	0
+210	B	Henry Février	Henry Février	1875	1957	프랑스	근현대	6ac1e523-8cd5-53eb-bd25-4f70fbe35ffc	Q3100982	0	4	0
+211	B	Micha Hamel	Micha Hamel	1970	NULL	네덜란드 왕국	근현대	d7652611-a31e-50bf-bf18-c46791e8b4ae	Q2293490	0	2	0
+212	B	Amélie-Julie Candeille	Amélie-Julie Candeille	1767	1834	프랑스	고전주의	45bd865f-3a95-56dc-b4a3-d044df0b02aa	Q3189181	1	0	0
+214	B	Jerzy Fitelberg	Jerzy Fitelberg	1903	1951	폴란드	근현대	c68b103a-902d-5c62-b3cd-fec2ed44efa8	Q437940	0	4	0
+216	B	프랑코 페레라	Franco Ferrara	1911	1985	이탈리아	근현대	57d30ec4-c029-5ddc-9be5-ee1f0014aae0	Q1371884	0	3	0
+217	B	Heikki Suolahti	Heikki Suolahti	1920	1936	핀란드	근현대	89c4e53d-dbdf-51bd-8a47-788225aed449	Q2593262	0	1	0
+220	B	David Chesky	David Chesky	1956	NULL	미국	근현대	e6c6599a-7f05-5dc6-9df8-3b57a15c7a5d	Q1173975	0	145	0
+221	B	빅토르 코센코	Viktor Kosenko	1896	1938	소련	근현대	943bc289-70a6-5a3a-88ad-1ba2051644ba	Q4234841	0	9	0
+222	B	Henri Miro	Henri Miro	1879	1950	캐나다	근현대	47814783-fdae-5889-b424-91dc90dde872	Q2913215	0	0	0
+223	B	Ernest Pingoud	Ernest Pingoud	1887	1942	핀란드	근현대	7be4245f-7400-53c5-85b9-6f358492cfaf	Q3057147	0	6	0
+224	B	Felipe Boero	Felipe Boero	1884	1958	아르헨티나	근현대	0ccfb78c-d3f9-5a40-a0d1-c23da410b2b0	Q1403183	0	0	0
+225	B	Salvatore Sciarrino	Salvatore Sciarrino	1947	NULL	이탈리아	근현대	0846bd77-2878-5325-b659-8cfacda81ca3	Q439786	0	58	0
+226	B	Claudio Ambrosini	Claudio Ambrosini	1948	NULL	이탈리아	근현대	48a5e197-fd9e-5891-b547-8b0c98d5c9d3	Q1097977	0	40	0
+227	B	반브리	Johannes Bernardus van Bree	1801	1857	네덜란드 왕국	고전주의	ea463f9a-e9dd-5fc5-8454-e472d1d68254	Q1697249	1	3	0
+228	B	Ernest van der Eyken	Ernest van der Eyken	1913	2010	벨기에	근현대	a5833f6d-09f5-5dec-b055-321d35a4b61c	Q322862	0	0	0
+229	B	헨리 카웰	Henry Cowell	1897	1965	미국	근현대	3e185f8b-378d-55bd-9bb0-dcb9f8136782	Q434610	0	100	0
+230	B	Cemal Reşit Rey	Cemal Reşit Rey	1904	1985	튀르키예	근현대	9f33902d-e226-517e-ba6d-92b54a175539	Q1053284	0	3	0
+231	B	Brice Pauset	Brice Pauset	1965	NULL	프랑스	근현대	b0b675a8-1452-5c4b-8eaf-8d92075b665d	Q4368843	0	7	0
+232	B	Ulvi Cemal Erkin	Ulvi Cemal Erkin	1906	1972	튀르키예	근현대	8acc9597-e947-5a3c-a1f5-e25b21459fd9	Q345949	0	11	0
+233	B	Florêncio José Ferreira Coutinho	Florêncio José Ferreira Coutinho	1750	1819	브라질	고전주의	6873e0cc-9f60-5183-9958-2b4a51f56028	Q2738133	0	0	0
+234	B	Ludwig Daser	Ludwig Daser	1520	1589	독일	르네상스	1d858641-2342-5be5-b49b-ac09db9f953d	Q1626515	0	9	0
+235	B	Tania León	Tania León	1943	1996	쿠바	근현대	287d1dc4-1d1b-5ed8-92e4-b5e174deb978	Q463308	0	27	0
+236	B	Charles-Hubert Gervais	Charles-Hubert Gervais	1671	1744	프랑스	바로크	f57301e4-4d50-528d-963e-59e008aa3473	Q327875	0	5	0
+237	B	Leon Stein	Leon Stein	1910	2002	미국	근현대	bd4e137b-67b4-5b71-b9e1-adaca51c7cc7	Q457759	0	3	0
+238	B	Gustave Charpentier	Gustave Charpentier	1860	1956	프랑스	근현대	6cc1b782-4163-5983-a5c9-29ece1080afa	Q311663	0	3	0
+239	B	페르난도 소르	Fernando Sor	1778	1839	스페인	고전주의	0105f408-0e4f-55b5-aebe-7e9fb27a1000	Q254110	0	100	0
+240	B	Klimenty Korchmaryov	Klimenty Korchmaryov	1899	1958	소련	근현대	050faa14-895a-5cb2-b33f-b164a8bfd219	Q4234511	0	1	0
+241	B	Kevin Volans	Kevin Volans	1949	NULL	남아프리카 공화국	근현대	f3e88d94-2527-569c-9fe9-41d98f2aef49	Q2379963	0	27	0
+242	B	Richard Meale	Richard Meale	1932	2009	오스트레일리아	근현대	3f4d393e-12c0-5a60-882b-0124b987ebf2	Q2723728	0	12	0
+243	B	Manuel Rosenthal	Manuel Rosenthal	1904	2003	프랑스	근현대	f00acef7-53fd-5e40-993d-21141dea2b58	Q1344113	0	8	0
+244	B	Vano Muradeli	Vano Muradeli	1908	1970	소련	근현대	29906e6f-d678-56d4-aa62-f69e9beaadd3	Q2194365	0	18	0
+245	B	펠릭스 블루멘펠트	Felix Mikhailovich Blumenfeld	1863	1931	소련	근현대	a3d90004-ee05-52ed-a055-6a017d9139d0	Q1349550	0	16	0
+246	B	Tyondai Braxton	Tyondai Braxton	1978	NULL	미국	근현대	90275652-d44f-51b8-85fb-2a4559bfeeaf	Q2083831	0	6	0
+247	B	Paule Maurice	Paule Maurice	1910	1967	프랑스	근현대	4341f61a-00d2-54af-9d9e-6c4dc8808fd1	Q456524	0	1	0
+248	B	Denis Gougeon	Denis Gougeon	1951	NULL	캐나다	근현대	1d8ab427-30ec-5ec2-8c7c-2a87575ad09c	Q1187398	0	6	0
+249	B	Jan Blockx	Jan Blockx	1851	1912	벨기에	낭만주의	d7c16284-b290-5a94-bc55-d9eff4784b29	Q1681637	1	5	0
+250	B	Alois Piňos	Alois Piňos	1925	2008	체코	근현대	1fc8e54c-100a-5560-8e24-6c6ca1e0d7e2	Q10780540	0	0	0
+251	B	Albert Guinovart i Mingacho	Albert Guinovart i Mingacho	1962	NULL	스페인	근현대	c1fdb4ea-bf3c-5ca3-9880-753bc7f97667	Q2831227	0	4	0
+252	B	밀턴 배빗	Milton Babbitt	1916	2011	미국	근현대	a8262dab-9a86-52a8-8e26-876a5009b6e5	Q318518	0	46	0
+253	B	Marcel Delannoy	Marcel Delannoy	1898	1962	프랑스	근현대	ce4340ca-4ae7-5186-83d6-c27759e13561	Q2600898	0	3	0
+255	B	Martin O'Donnell	Martin O'Donnell	1955	NULL	미국	근현대	c7e418d1-5e08-5635-ba8d-997bb763e7ba	Q2484073	0	12	0
+256	B	Ruth Watson Henderson	Ruth Watson Henderson	1932	2026	캐나다	근현대	95a913e8-ceed-57c8-835e-51e6f6bb3bdf	Q2177798	0	17	0
+257	B	John Alden Carpenter	John Alden Carpenter	1876	1951	미국	근현대	787c4e66-2448-5629-a26e-b525862e524b	Q1699111	0	11	0
+259	B	Juan Crisóstomo de Arriaga	Juan Crisóstomo de Arriaga	1806	1826	스페인	고전주의	d97dc417-4504-59fa-903d-b3238b9967f7	Q313669	0	12	0
+260	B	잔 프란체스코 말리피에로	Gian Francesco Malipiero	1882	1973	이탈리아	근현대	99ff9387-4f5f-5fc2-ab34-e1ea83e660ca	Q318968	0	107	0
+261	B	핏 스베르츠	Piet Swerts	1960	NULL	벨기에	근현대	ca62a1af-34fd-55df-8ad6-18e55b8d27b2	Q2207944	0	4	0
+262	B	Edmond Missa	Edmond Missa	1861	1910	프랑스	근현대	04cd5073-03c2-527d-9e71-70ceb0402947	Q1285703	0	0	0
+263	B	찰스 마리 비도르	Charles-Marie Widor	1844	1937	프랑스	낭만주의	cbf6d218-604a-5c82-a2a4-fb9e38252dda	Q215161	1	64	0
+264	B	Juventino Rosas	Juventino Rosas	1868	1894	멕시코	근현대	86d592d4-f176-5a16-b95e-af9b4ee0c0a6	Q461403	0	4	0
+266	B	Issac Strauss	Issac Strauss	1806	1888	프랑스	고전주의	91e1872e-5054-5167-93de-fd3dd4fbd0eb	Q3154775	1	2	0
+267	B	Roberto Sierra	Roberto Sierra	1953	NULL	미국	근현대	e998a9b3-1562-53c9-b16d-27c2a37cf0bf	Q1369108	0	29	0
+269	B	Alice Shields	Alice Shields	1943	NULL	미국	근현대	092c70d0-a6f4-57a9-89ad-17e8281c99e3	Q4523778	0	4	0
+270	B	Pia Sebastiani	Pia Sebastiani	1925	2015	아르헨티나	근현대	7b52b92f-6df4-5f61-8e5f-ee68a3586853	Q1497732	0	0	0
+271	B	Hiroyuki Itō	Hiroyuki Itō	1963	NULL	일본	근현대	c21a776f-6ca9-5613-94b1-01941558a079	Q11380082	0	0	0
+274	B	Diana Arismendi	Diana Arismendi	1962	NULL	베네수엘라	근현대	e9f00b98-855a-5666-af4e-544145fd6d33	Q1167638	0	0	0
+275	B	Antonio Bibalo	Antonio Bibalo	1922	2008	노르웨이	근현대	3ec6924f-b2e4-56d6-8d38-fa483616b4ea	Q1773750	0	0	0
+276	B	루이즈 베르탱	Louise Bertin	1805	1877	프랑스	고전주의	3c51c9fa-1d6b-52b7-a2be-41c2585a4d9a	Q445123	0	0	0
+278	B	이시이 마키	Maki Ishii	1936	2003	일본	근현대	ad3410ef-785b-50f7-bad7-7fa911345c08	Q343940	0	19	0
+279	B	Ernesto Elorduy	Ernesto Elorduy	1853	1913	멕시코	낭만주의	84566f33-0015-5719-9426-d45b827b8849	Q1356732	0	1	0
+280	B	마이클 나이먼	Michael Nyman	1944	NULL	영국	근현대	82507846-d7e8-588a-9a74-457f77e93636	Q313639	1	335	0
+281	B	Louise Lincoln Kerr	Louise Lincoln Kerr	1892	1977	미국	근현대	921a149a-4d4d-595d-b077-5aa273ae0776	Q4262248	0	0	0
+282	B	프란츠 슈미트	Franz Schmidt	1874	1939	오스트리아	근현대	6164e4eb-8a9f-552e-938b-1c7ce18834f3	Q434601	0	34	0
+283	B	크리스티안 신딩	Christian Sinding	1856	1941	노르웨이	낭만주의	f0c6095e-e05b-5ed6-9411-564e5c62fdaa	Q364854	0	139	0
+284	B	Heinrich Esser	Heinrich Esser	1818	1872	독일	낭만주의	2ba15534-d412-5359-bd63-71176e4930e0	Q1597167	0	1	0
+286	B	Aram Van Ballaert	Aram Van Ballaert	1971	NULL	벨기에	근현대	f352ab64-0563-588e-8893-df58c47bac0a	Q2572677	0	0	0
+287	B	니콜라 렌스	Nicholas Lens	1957	NULL	벨기에	근현대	7c7704dc-ff76-5ec3-99ca-700b975f65cb	Q321031	1	81	0
+288	B	Dan Welcher	Dan Welcher	1948	NULL	미국	근현대	9cee9d91-5023-5b11-9253-f68e42bb8e4d	Q3424329	0	7	0
+289	B	오나카 메구미	Megumi Ōnaka	1924	2018	일본	근현대	b52c175d-ada2-55bd-bc92-b455b5d96288	Q11431847	0	6	0
+290	B	보이치에흐 킬라르	Wojciech Kilar	1932	2013	폴란드	근현대	bfa18bcf-95e1-5550-af48-873e0ee6b423	Q319777	0	156	0
+291	B	William Grant Still	William Grant Still	1895	1978	미국	근현대	673f801b-61f1-5add-a49c-c84a8f4e0331	Q1397729	1	74	0
+292	B	핫토리 다다시	Tadashi Hattori	1908	2008	일본	근현대	0caeefca-a55e-5fdf-bf0f-517388a02d93	Q3513692	0	2	0
+293	B	니코 멀리	Nico Muhly	1981	NULL	미국	근현대	2e56410e-eeb9-5af7-9426-ce9a64874252	Q3339870	1	238	0
+295	B	Henry Brant	Henry Brant	1913	2008	미국	근현대	061c9470-cfe9-5503-92c3-fc48b142945e	Q1606553	0	19	0
+296	B	나지 하킴	Naji Hakim	1955	NULL	프랑스	근현대	9d5dd705-27ae-5d33-96da-314d71b61b6d	Q1183745	0	75	0
+297	B	Jennifer Higdon	Jennifer Higdon	1962	NULL	미국	근현대	e92006df-68a4-5d76-9911-febf44270d97	Q289468	1	37	0
+298	B	Antonio de Cabezahueca	Antonio de Cabezahueca	1510	1566	스페인	르네상스	729558f8-8258-51f6-8d25-7026541b12b7	Q356953	0	53	0
+299	B	Franck Bedrossian	Franck Bedrossian	1971	NULL	프랑스	근현대	c4878dd7-0935-590b-ac70-b1ce28aff1ba	Q3082063	0	12	0
+300	B	Adrien Talexy	Adrien Talexy	1820	1881	프랑스	낭만주의	9cdd44a8-8dc9-5895-8be4-68505f4f2381	Q2536250	0	1	0
+301	B	피터 맥스웰 데이비스	Peter Maxwell Davies	1934	2016	영국	근현대	571ebb96-b5de-500e-a52b-639cdeb1f4b1	Q139223	1	140	0
+302	B	브뤼노 뒤콜	Bruno Ducol	1949	2024	프랑스	근현대	eaed4455-15ec-50bb-86d2-6ff5f0286fc6	Q2926750	0	1	0
+303	B	Albert Siklós	Albert Siklós	1878	1942	헝가리	근현대	209e9adc-6a53-5773-bb45-be04cf749995	Q2638845	0	0	0
+304	B	Vieri Tosatti	Vieri Tosatti	1920	1999	이탈리아	근현대	3cf07c41-c681-501d-bbe0-f39e81301438	Q4011489	0	0	0
+307	B	에르네스토 레쿠오나	Ernesto Lecuona	1896	1963	스페인	근현대	a5440262-b8b9-5270-ac36-c11bd08e096d	Q345446	0	107	0
+310	B	사에구사 시게아키	Shigeaki Saegusa	1942	NULL	일본	근현대	dc646f56-9c23-55bc-bab9-1e667c5eb494	Q3482048	1	31	0
+312	B	Zygmunt Konieczny	Zygmunt Konieczny	1937	NULL	폴란드	근현대	f8f3c269-bc85-5a55-8cbf-5f4ff542e5c6	Q245344	0	1	0
+313	B	Meinrad Schütter	Meinrad Schütter	1910	2006	스위스	근현대	9618ae8d-c0db-5bba-a2b2-2aa03cb581b0	Q320427	0	2	0
+314	B	Makoto Shinohara	Makoto Shinohara	1931	2024	일본	근현대	62cf37b1-3294-58b5-aa4d-5dd5122c9b30	Q323609	0	5	0
+315	B	Nikolai Golovanov	Nikolai Golovanov	1891	1953	소련	근현대	5f6cac5d-61f6-5eb6-991a-6e3fe6dd167a	Q2651977	0	4	0
+316	B	Zdeněk Šesták	Zdeněk Šesták	1925	2026	체코	근현대	7f5d525c-da96-5175-9d26-3efbb0ecf1da	Q10857777	0	0	0
+318	B	Robert Turner	Robert Turner	1920	2012	캐나다	근현대	538b9727-ff69-53f3-b711-f292f961b4e1	Q1348822	0	2	0
+319	B	Zdeněk Zahradník	Zdeněk Zahradník	1936	NULL	체코	근현대	bd2a312b-a498-5d7d-bcc6-7d119ea27d6d	Q10857757	0	0	0
+321	B	카츠오 후쿠시마	Kazuo Fukushima	1930	2023	일본	근현대	6a35168f-8654-5aa7-a177-1959afacaf04	Q1374696	0	1	0
+322	B	에벤시오 카스테야노스	Evencio Castellanos	1915	1984	베네수엘라	근현대	125715d3-3800-5b3a-bde3-2442dffbf0fc	Q362411	0	4	0
+323	B	아서 벤저민	Arthur Benjamin	1893	1960	오스트레일리아	근현대	eef157b4-66a3-5c5c-b4a9-b872f18abb95	Q177229	0	45	0
+324	B	Edgar Tinel	Edgar Tinel	1854	1912	벨기에	낭만주의	14263c7b-5c27-577b-bea8-aee0fb30a4d1	Q377071	0	9	0
+325	B	Carles Baguer	Carles Baguer	1768	1808	스페인	고전주의	73d678e6-7d61-5b3b-a2bb-102a0eea7a89	Q2603332	0	5	0
+326	B	Samuel Jerónimo	Samuel Jerónimo	1979	NULL	포르투갈	근현대	347be7f3-1ca2-5fec-b3a4-31b417627f39	Q10367332	0	0	0
+327	B	José García Román	José García Román	1945	NULL	스페인	근현대	7eb96e00-3fe1-5893-8973-5d9887f47a69	Q4133924	0	1	0
+328	B	Julius Weismann	Julius Weismann	1879	1950	독일	근현대	0a4e350d-ebe4-5149-b6de-0435bb8e90f1	Q463105	0	2	0
+329	B	Auguste Mermet	Auguste Mermet	1810	1889	프랑스	낭만주의	7a94114d-835c-54aa-a775-2575e372d861	Q2871316	0	1	0
+330	B	Georges Mathias	Georges Mathias	1826	1910	프랑스	낭만주의	0fc65833-8254-5cf9-8fbd-01e118546cfc	Q1995898	0	0	0
+331	B	레오폴드 고도프스키	Leopold Godowsky	1870	1938	미국	근현대	167d8f39-7b5e-5bd8-bc52-73843597c191	Q434328	1	41	0
+332	B	Michel Corboz	Michel Corboz	1934	2021	스위스	근현대	accbed34-3253-5bf3-936e-00947b605e74	Q116221	0	1	0
+334	B	발보리 아울린	Valborg Aulin	1860	1928	스웨덴	근현대	cd042694-cfb8-5b0b-ae94-2fe866875e73	Q451402	0	3	0
+335	B	Gustave Dugazon	Gustave Dugazon	1782	1826	프랑스	고전주의	15a09e76-2383-5bf4-ad10-e937331c79b7	Q1556701	0	0	0
+336	B	올라브 셸란	Olav Kielland	1901	1985	노르웨이	근현대	25b25d88-0400-59e4-ba6a-c74ed8afd9bf	Q1779864	0	0	0
+337	B	Vasco Mendonça	Vasco Mendonça	1977	NULL	포르투갈	근현대	84a67827-863a-57f0-9b72-1513970514af	Q3554890	1	3	0
+338	B	Hermann Zilcher	Hermann Zilcher	1881	1948	독일	근현대	95a9ec0e-f082-52cc-aa32-b6ca4765d99c	Q214359	0	3	0
+339	B	스즈키 세이이치	Seiichi Suzuki	1901	1980	일본	근현대	20f20df6-bb34-531b-b7cd-2741de0275f8	Q3477894	0	2	0
+341	B	호아킨 로드리고	Joaquín Rodrigo	1901	1999	스페인	근현대	cfa38ba1-90cc-540d-a418-82f8570f3fe3	Q151084	1	98	0
+343	B	Michael Berkeley	Michael Berkeley	1948	NULL	영국	근현대	c2b91753-82d1-54ac-a9a4-fc508ea0de0a	Q2348468	0	33	0
+344	B	José Pablo Moncayo García	José Pablo Moncayo García	1912	1958	멕시코	근현대	1425bdde-ba86-5759-a152-fb8a9b7fdf74	Q732490	0	9	0
+345	B	Bruno Mantovani	Bruno Mantovani	1974	NULL	프랑스	근현대	59467ca5-5e9e-59d6-bce3-d3fa33123b45	Q993534	1	22	0
+346	B	도널드 토비	Donald Tovey	1875	1940	영국	근현대	53146574-ffec-5047-bab5-69ac6d9e8630	Q724969	0	17	0
+347	B	리환즈	Li Huanzhi	1919	2000	중화인민공화국	근현대	26b36be7-1f5e-57c8-9e17-a5def6472f36	Q704755	0	2	0
+348	B	프랑수아 조제프 페티스	François-Joseph Fétis	1784	1871	벨기에	고전주의	ca4e8e8d-bac2-53f8-a43a-f3868140b332	Q523581	1	2	0
+349	B	Thomas Dunhill	Thomas Dunhill	1877	1946	영국	근현대	8d0b4109-0da0-52f9-8ee5-32387192b174	Q706498	0	9	0
+350	B	Fikret Amirov	Fikret Amirov	1922	1984	소련	근현대	88e161b2-aa47-5d98-aa3a-2832dcef8a87	Q936001	0	12	0
+351	B	Ton de Leeuw	Ton de Leeuw	1926	1996	네덜란드 왕국	근현대	b64c4bfd-9d18-5b95-b263-20ef18f3f325	Q923335	0	14	0
+352	B	Andreas Hakenberger	Andreas Hakenberger	1574	1627	독일	르네상스	c65c77be-f520-5f56-80c1-a8100936bfda	Q96862	0	0	0
+353	B	Peter Wishart	Peter Wishart	1921	1984	영국	근현대	252306d0-3cf0-5b74-8497-1e45f5f69916	Q7177755	0	3	0
+354	B	Robert Wykes	Robert Wykes	1926	2021	미국	근현대	ea6c9d52-c568-5f3a-9abd-cded26ff8926	Q7351284	0	0	0
+355	B	Thomas Byström	Thomas Byström	1772	1839	스웨덴	고전주의	d5eb00f6-6e41-5200-acea-91660439823b	Q5591523	0	1	0
+356	B	Jaroslav Doubrava	Jaroslav Doubrava	1909	1960	체코슬로바키아	근현대	2604fa9a-405b-553a-8a26-7fc88ed5cf5e	Q6160568	0	0	0
+358	B	Berthe di Vito-Delvaux	Berthe di Vito-Delvaux	1915	2005	벨기에	근현대	ed403e70-07d6-560d-9d18-40d2a9c7b089	Q4895538	0	0	0
+359	B	Kalevi Aho	Kalevi Aho	1949	NULL	핀란드	근현대	fe49eff6-0717-5d3d-8443-45468cda6990	Q521079	1	109	0
+360	B	Sergio Rendine	Sergio Rendine	1954	2023	이탈리아	근현대	5230defd-3433-5732-81c8-471e150774e0	Q961167	0	0	0
+362	B	루 해리슨	Lou Harrison	1917	2003	미국	근현대	4ed3c42a-b6fc-5edd-b474-acc9cbf70cc2	Q590911	0	91	0
+365	B	파울 린케	Paul Lincke	1866	1946	독일	근현대	80b7deee-0836-52a8-b383-2a3e6b73c745	Q712729	0	15	0
+366	B	Marco Frisina	Marco Frisina	1954	NULL	이탈리아	근현대	2df15541-5b65-5bf2-9526-d0a60f4cea2e	Q730556	1	19	0
+367	B	Emil Sjögren	Emil Sjögren	1853	1918	스웨덴	낭만주의	e55662d6-c5d4-5f19-8e80-f804820b70ec	Q527705	0	14	0
+368	B	얼 와일드	Earl Wild	1915	2010	미국	근현대	758b8a4b-d00f-5cde-acd3-10e7b48b5a7a	Q963059	1	5	0
+369	B	Dieter Lehnhoff	Dieter Lehnhoff	1955	NULL	과테말라	근현대	511d2f0b-63ec-5996-b263-ed79280dbd65	Q669869	1	0	0
+371	B	Hans Georg Nägeli	Hans Georg Nägeli	1773	1836	스위스	고전주의	abff1d31-8993-5900-a287-267709bc9b6a	Q672548	0	2	0
+372	B	Arthur Coquard	Arthur Coquard	1846	1910	프랑스	낭만주의	e38ca58a-67f1-5142-bdb7-c47a454621e6	Q4798335	0	0	0
+373	B	Gottfried Heinrich Stölzel	Gottfried Heinrich Stölzel	1690	1749	독일	바로크	e66f420d-4439-5f90-870a-485cf63c5426	Q544385	0	40	0
+374	B	Olaus Andreas Grøndahl	Olaus Andreas Grøndahl	1847	1923	노르웨이	낭만주의	04d0bceb-625e-5969-b695-d276795cfddc	Q6548567	0	0	0
+375	B	한스 첸더	Hans Zender	1936	2019	독일	근현대	d6085151-3d75-5cae-9a34-ab104ced30cc	Q64789	0	10	0
+381	B	Julius Eichberg	Julius Eichberg	1824	1893	독일	낭만주의	9d22d376-3051-5099-8c51-bd15e031e875	Q6309774	0	1	0
+383	B	허레이쇼 파커	Horatio Parker	1863	1919	미국	근현대	17520263-15b1-548a-ad05-6587faa4932c	Q957738	0	11	0
+384	B	Jean-Joseph Rodolphe	Jean-Joseph Rodolphe	1730	1812	프랑스	바로크	0e99eb6f-ac4f-565a-b389-a038a649dc8d	Q972453	0	0	0
+385	B	Mark O'Connor	Mark O'Connor	1961	NULL	미국	근현대	75d77a22-4714-5e79-94f4-af6998acff6a	Q6769064	1	19	0
+386	B	Bruno Bettinelli	Bruno Bettinelli	1913	2004	이탈리아	근현대	eb701efd-ab87-599e-8eac-56a3e9a0342f	Q993053	0	6	0
+387	B	Geoffrey Bush	Geoffrey Bush	1920	1998	영국	근현대	a76c6a60-5682-5a8c-af55-ec2021e38107	Q5534496	0	14	0
+388	B	Charles Sanford Skilton	Charles Sanford Skilton	1868	1941	미국	근현대	f9f922b3-36c5-5f38-b628-b2634cf8bacf	Q931581	0	4	0
+389	B	Pavel Chesnokov	Pavel Chesnokov	1877	1944	소련	근현대	69ac2b29-627f-5aab-822c-1a7c0366a069	Q584391	0	27	0
+391	B	Henri Mulet	Henri Mulet	1878	1967	프랑스	근현대	4d346eb6-2862-5add-affd-3465e190ee2f	Q716503	0	2	0
+392	B	Geoffrey Toye	Geoffrey Toye	1889	1942	영국	근현대	6000f6ac-15e0-5209-a29e-03e6017851ef	Q5534939	0	1	0
+393	B	Viktor Ullmann	Viktor Ullmann	1898	1944	오스트리아	근현대	8ef28853-eb7c-57d3-9722-b88e74961bae	Q78530	0	42	0
+395	B	Pierre Certon	Pierre Certon	1515	1572	프랑스	르네상스	b17bd119-1093-520c-bdbd-7ae0d6e414a3	Q484817	0	13	0
+397	B	샤를 쾨클랭	Charles Koechlin	1867	1950	프랑스	근현대	09baa29a-53d3-5faf-8c2c-557bbd883ef4	Q72543	1	110	0
+398	B	Gustave Doret	Gustave Doret	1866	1943	스위스	근현대	dd87530f-7f4d-50ba-936e-5cca8b40dba5	Q667254	0	1	0
+399	B	해럴드 버드	Harold Budd	1936	2020	미국	근현대	6b660d3f-04d4-5080-83d5-8076c4717e4a	Q728029	1	77	0
+400	B	프랑수아 바쟁	François Bazin	1816	1878	프랑스	낭만주의	0fdd81d7-3344-57e7-9fe1-de46558c7a2a	Q633817	1	3	0
+401	B	Hisato Ohzawa	Hisato Ohzawa	1907	1953	일본	근현대	82536e15-b4ae-5d28-a8c5-3042ebe4c781	Q5772450	0	1	0
+402	B	Elena Gnesina	Elena Gnesina	1874	1967	소련	근현대	fdcdd803-0232-57f1-8ec6-257cd303bcc3	Q535155	0	0	0
+404	B	아서 버거	Arthur Berger	1912	2003	미국	근현대	ab4f24a0-0924-5c8a-9dd8-2b3145f9f3d1	Q553493	0	5	0
+405	B	Zoltán Jeney	Zoltán Jeney	1943	2019	헝가리	근현대	b5d255f1-b263-5997-bc1c-c1c922c36581	Q897065	0	0	0
+406	B	Murray Boren	Murray Boren	1950	NULL	미국	근현대	feb96c9e-d5a6-5b2f-b404-53ce635c771d	Q6939132	0	1	0
+407	B	게오르크 프리드리히 하스	Georg Friedrich Haas	1953	NULL	오스트리아	근현대	b99d6cf0-3405-5791-a199-9c30b8023244	Q49388	1	26	0
+408	B	Waldemar Kazanecki	Waldemar Kazanecki	1929	1991	폴란드	근현대	6e36f28e-28e8-58ce-9330-bd9b69eb83cf	Q7961419	0	2	0
+409	B	Geoffrey Shaw	Geoffrey Shaw	1879	1943	영국	근현대	907f0c75-9227-507e-a545-60d528ed28fe	Q5534894	0	3	0
+411	B	Alix Fournier	Alix Fournier	1864	1897	프랑스	근현대	793fd64c-a2d7-5449-bbb4-8886dc06f2ff	Q991242	0	0	0
+413	B	Humphrey John Stewart	Humphrey John Stewart	1856	1932	미국	낭만주의	a043045f-7417-583f-a6e7-8259658e7d3b	Q5941471	0	0	0
+414	B	Nicholas O'Neill	Nicholas O'Neill	1970	NULL	영국	근현대	7a241d81-b923-5540-a21b-f54a4d28e2cc	Q7025992	0	1	0
+415	B	Francisco Mignone	Francisco Mignone	1897	1986	브라질	근현대	4de90356-b8e6-5fef-90dc-0cb31d903a78	Q716174	0	69	0
+416	B	Bernardo Adam Ferrero	Bernardo Adam Ferrero	1942	2022	스페인	근현대	7cf8e017-898b-5880-811d-34c7695bdc3e	Q822945	0	4	0
+418	B	Joonas Kokkonen	Joonas Kokkonen	1921	1996	핀란드	근현대	fb255339-cee0-58c9-a774-faa96b1d3e80	Q651112	0	39	0
+419	B	Terry Plumeri	Terry Plumeri	1944	2016	미국	근현대	e8af6923-fc58-5727-93d5-fd40410e6e3b	Q7704919	0	186	0
+420	B	쿠르트 슈베르치크	Kurt Schwertsik	1935	NULL	오스트리아	근현대	04e13c55-52e8-5ea7-9bff-ad41f8b27c2d	Q86557	0	7	0
+421	B	베어 매크리리	Bear McCreary	1979	NULL	미국	근현대	5c97da96-d936-5130-8055-5ec5c61b120a	Q621437	1	1183	0
+422	B	José Luis Turina	José Luis Turina	1952	NULL	스페인	근현대	931b4a36-ce0a-59b3-adbb-fe8139c443ad	Q6292866	0	2	0
+423	B	장프랑수아 르쉬외르	Jean-François Le Sueur	1760	1837	프랑스	고전주의	0a2c7017-f9a5-515c-83a4-8d64a67cb9c7	Q559659	1	6	0
+424	B	Avraham Eilam-Amzallag	Avraham Eilam-Amzallag	1941	NULL	이스라엘	근현대	7543ab6b-d731-56c6-b974-4ccead0467fd	Q4829401	0	0	0
+425	B	Jaroslav Krček	Jaroslav Krček	1939	NULL	체코	근현대	ffec06e9-8221-5228-b51f-97f66af93f9a	Q6160622	0	1	1
+428	B	Mieko Shiomi	Mieko Shiomi	1938	NULL	일본	근현대	18071862-e4c6-5370-895d-aff46b8a3681	Q6843723	0	3	0
+429	B	Michael Waller	Michael Waller	1985	NULL	미국	근현대	f7717138-d4b7-50a3-91bd-93fba1cbbae9	Q6835192	0	10	0
+430	B	Henri Tomasi	Henri Tomasi	1901	1971	프랑스	근현대	52c998db-ea0b-5926-9857-14cfa8aa5fdf	Q948879	0	37	0
+431	B	프랑수아 쿠프랭	François Couperin	1668	1733	프랑스	바로크	2e19be7c-c86c-54ec-92ac-fc400e39f5e2	Q50186	1	100	0
+433	B	Thea Musgrave	Thea Musgrave	1928	NULL	미국	근현대	ec27b5dd-e361-5ad7-80e9-cd8311fd07f3	Q539794	0	44	0
+434	B	베른하르드 크루셀	Bernhard Crusell	1775	1838	스웨덴	고전주의	78966aa7-93f0-5bd7-af8b-fcde94b3d4d2	Q708911	0	17	0
+435	B	Erling Brene	Erling Brene	1896	1980	덴마크 왕국	근현대	fdcbb7c2-1ecb-5039-a836-10f064d7e6d3	Q5389792	0	1	0
+439	B	Pierre Gaviniès	Pierre Gaviniès	1728	1800	프랑스	바로크	b4874077-6116-5ca5-9947-27e907dd38d9	Q490205	0	1	0
+440	B	Joaquín Valverde Sanjuán	Joaquín Valverde Sanjuán	1875	1918	스페인	근현대	4100ed95-9292-559b-9863-f2eda24b3f98	Q6206552	0	1	0
+441	B	존 애덤스	John Adams	1947	NULL	미국	근현대	73d98702-9fbf-54b8-8bb8-0326b1025b01	Q84114	1	54	0
+442	B	Friedrich Wilhelm Marpurg	Friedrich Wilhelm Marpurg	1718	1795	독일	바로크	42196798-f7c6-58cf-943f-cc6d1abc6367	Q548897	0	3	0
+443	B	Anatol Vieru	Anatol Vieru	1926	1998	루마니아	근현대	f6206c1c-a3b5-596f-9c17-2fb86130c379	Q487472	0	24	0
+444	B	Joseph Touchemoulin	Joseph Touchemoulin	1727	1801	프랑스	바로크	67166edb-8b26-5a9a-997b-7f5ad66c61fb	Q609544	0	1	0
+445	B	Julia Wolfe	Julia Wolfe	1958	NULL	미국	근현대	4a752166-9eb5-59a8-83d2-6fd03b779872	Q6306853	0	28	0
+446	B	나리타 다메조	Tamezō Narita	1893	1945	일본	근현대	38b6e29f-bae5-51fb-8506-5b767112293e	Q7681184	0	4	0
+447	B	Arthur Bruhns	Arthur Bruhns	1874	1928	미국	근현대	ab9cf29d-fbf4-59eb-ba7b-dd7dbdca9157	Q4798116	0	2	0
+448	B	지크문트 폰 하우제거	Siegmund von Hausegger	1872	1948	독일	근현대	f9688113-7be5-5433-b28a-529a36e3c2c9	Q647871	1	6	0
+449	B	Miguel Llobet	Miguel Llobet	1878	1938	스페인	근현대	0fa42996-5b53-53b9-8eba-6a5f553c545a	Q635449	0	13	0
+454	B	David del Puerto	David del Puerto	1964	NULL	스페인	근현대	6584711e-745d-5528-b868-2b67a7d33f18	Q5241484	0	2	0
+456	B	필리파 스카일러	Philippa Schuyler	1931	1967	미국	근현대	4354de27-4db3-5b71-8dd5-df339caf224e	Q529582	1	13	0
+457	B	Matthew King	Matthew King	1967	NULL	영국	근현대	54909b0d-24c0-55e7-b0ff-07793c8928c3	Q6790808	0	0	0
+458	B	기예르모 우리베 올긴	Guillermo Uribe Holguín	1880	1971	콜롬비아	근현대	331b0c9f-c4ff-5b37-ab82-b12926f689e5	Q488305	0	0	0
+459	B	Jaume Pahissa	Jaume Pahissa	1880	1969	스페인	근현대	770c0509-f36a-5947-b0cc-7682338fd45c	Q4892960	0	1	0
+460	B	J. Rosamond Johnson	J. Rosamond Johnson	1873	1954	미국	근현대	8de8fef1-4cf5-5c69-a744-35271e3f49c0	Q6106988	0	0	0
+461	B	Erwin Dressel	Erwin Dressel	1909	1972	독일	근현대	116f1b82-7937-5015-9a29-a521a73363ce	Q5396119	0	1	0
+463	B	Kirke Mechem	Kirke Mechem	1925	NULL	미국	근현대	829c4a12-4f4b-5522-ac44-bf4bf5503702	Q6415644	0	3	0
+464	B	Heinz Tiessen	Heinz Tiessen	1887	1971	독일	근현대	79903649-f078-55de-9c5f-98c249885587	Q67573	0	5	0
+465	B	Philipp Maintz	Philipp Maintz	1977	NULL	독일	근현대	c41c33b7-0ded-5fb2-9f59-c7aa9f9c6703	Q875179	0	1	0
+467	B	Nicolas Gombert	Nicolas Gombert	1495	1560	네덜란드 왕국	르네상스	9da91065-9944-59ec-9b8a-b0786487c329	Q549689	0	89	0
+468	B	고프레도 페트라시	Goffredo Petrassi	1904	2003	이탈리아	근현대	c5498612-f52c-5d5b-9770-5b20e12d1346	Q505806	0	23	0
+469	B	Georg Schumann	Georg Schumann	1866	1952	독일	근현대	b8b5b582-f328-5cfb-a2b3-7cb87fdd0e25	Q534268	0	6	0
+470	B	Kentaro Sato	Kentaro Sato	1981	NULL	일본	근현대	2afd42ca-b7d8-55ea-b7db-315649556bbc	Q5476688	0	0	0
+471	B	Gilbert Duprez	Gilbert Duprez	1806	1896	프랑스	고전주의	537f5000-a836-5ab9-bce2-eceb9532d9a6	Q583649	0	1	0
+473	B	Isaac Nathan	Isaac Nathan	1790	1864	오스트레일리아	고전주의	cf8b7551-1795-542e-a36e-eed9858c67be	Q6076851	0	1	0
+474	B	Eduard Holst	Eduard Holst	1843	1899	덴마크 왕국	낭만주의	392ec7d0-8ec8-5a39-b2df-e28ef04d53da	Q5340412	0	0	0
+475	B	Jan Málek	Jan Málek	1938	2026	체코	근현대	95735a90-c01a-5b3e-bfa1-ff129aab8f5b	Q7505828	0	0	0
+478	B	Carin Bartosch Edström	Carin Bartosch Edström	1965	NULL	스웨덴	근현대	23651a41-584d-5deb-90b9-1c9c6b707835	Q4937641	0	0	0
+479	B	José María Valle Riestra	José María Valle Riestra	1858	1925	페루	낭만주의	058150e0-eb7a-512b-b7c3-88f2b3e82c4e	Q5693109	0	0	0
+480	B	Jean Gilbert	Jean Gilbert	1879	1942	아르헨티나	근현대	a8a45705-20ef-5907-9874-972e8c7a215d	Q68038	1	6	0
+481	B	Mark Bucci	Mark Bucci	1924	2002	미국	근현대	b8cebd56-ee71-5a0d-9ee0-29fe34fe9130	Q6766900	0	2	0
+482	B	Robert Fuchs	Robert Fuchs	1847	1927	오스트리아	낭만주의	c2039f95-8516-53d2-9e78-ce4d825d7ebb	Q78606	0	13	0
+483	B	Eric Gross	Eric Gross	1926	2011	오스트레일리아	근현대	7156ba05-e1a1-562d-994b-785cc18b7f16	Q5386622	0	2	0
+485	B	Roy Douglas	Roy Douglas	1907	2015	영국	근현대	6aa28062-e509-5c1c-bb4c-2f1650958bd2	Q7372754	0	0	0
+486	B	Yoshiaki Onishi	Yoshiaki Onishi	1981	NULL	일본	근현대	468de414-e4b6-5201-b791-8851c1780bf9	Q8055982	0	0	0
+487	B	José Ángel Montero	José Ángel Montero	1832	1881	베네수엘라	낭만주의	b8c4eaa6-82ed-5137-b868-5ba12f761b01	Q974138	0	0	0
+488	B	후카이 시로	Shirō Fukai	1907	1959	일본	근현대	d70fcaa1-384c-547a-80f1-89f4deeff8be	Q7499045	0	1	0
+489	B	Fran Lhotka	Fran Lhotka	1883	1962	크로아티아	근현대	338321ee-db70-5eed-a2d9-44b3cd2b7980	Q983940	0	2	0
+490	B	Kurt Schröder	Kurt Schröder	1888	1962	독일	근현대	98666c68-cde3-538a-985e-199d75c1fa8b	Q96175	0	0	0
+491	B	Cornel Trăilescu	Cornel Trăilescu	1926	2019	루마니아	근현대	47dd68f2-3e4d-554b-9fe7-fbc197210a03	Q5171141	0	0	0
+492	B	Rolf Riehm	Rolf Riehm	1937	2026	독일	근현대	32960f94-1d37-5355-b3ff-9c07fa4a04e3	Q896948	0	6	0
+493	B	헤르베르트 빈트	Herbert Windt	1894	1965	독일	근현대	33e20f3e-3643-5934-b70f-c296937d6f74	Q70862	0	1	0
+494	B	얀 마클라키에비치	Jan Maklakiewicz	1899	1954	폴란드	근현대	66e448c4-3d29-576f-afbb-d302b4288468	Q947968	0	8	0
+495	B	Eugen Lindner	Eugen Lindner	1858	1915	독일	낭만주의	0cb0d615-7f21-53b1-9515-a3d117285732	Q5406935	0	0	0
+497	B	Bartosz Kowalski-Banasewicz	Bartosz Kowalski-Banasewicz	1977	NULL	폴란드	근현대	915f7f46-bffe-5780-9494-9f5336f733d6	Q9166137	0	1	0
