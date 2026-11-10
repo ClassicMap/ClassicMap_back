@@ -13,7 +13,7 @@ pub struct Venue {
     pub country: Option<String>,
     pub seats: Option<i32>,
     pub hall_count: Option<i32>,
-    pub opening_year: Option<i16>,
+    pub opening_year: Option<i64>,
     pub is_active: Option<bool>,
     pub data_source: Option<String>,
     pub created_at: Option<NaiveDateTime>,
