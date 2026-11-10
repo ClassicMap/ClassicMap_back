@@ -1,0 +1,26 @@
+[
+ {
+  "pieceId": 17452,
+  "title": "Quadrille sur \"Orphée aux Enfers\" d'Offenbach",
+  "mbids": [
+   "57e23e72-d5ef-47fa-a71d-e8cf044a9d7e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19241,
+  "title": "Hébé-Polka",
+  "mbids": [
+   "c7b35a4b-219f-4d29-a085-a185e29d6350"
+  ],
+  "mapping": "work",
+  "key": "issac-strauss-c7b35a4b",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

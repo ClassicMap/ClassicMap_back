@@ -1,0 +1,38 @@
+[
+ {
+  "pieceId": 17498,
+  "title": "El último adiós, op. 10",
+  "mbids": [
+   "5a67ff97-e02a-4c1d-965b-a76d0131c894"
+  ],
+  "mapping": "work",
+  "key": "marcial-del-adalid-y-gurrea-5a67ff97",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18684,
+  "title": "<Petits riens> (6개의 독일풍 왈츠)",
+  "mbids": [
+   "a487c336-bfb8-49e7-b0b3-43166443f36e"
+  ],
+  "mapping": "work",
+  "key": "marcial-del-adalid-y-gurrea-a487c336",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19897,
+  "title": "El lamento, op. 9",
+  "mbids": [
+   "f42edc41-1d0d-4814-a79e-b1a8eb4108d9"
+  ],
+  "mapping": "work",
+  "key": "marcial-del-adalid-y-gurrea-f42edc41",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

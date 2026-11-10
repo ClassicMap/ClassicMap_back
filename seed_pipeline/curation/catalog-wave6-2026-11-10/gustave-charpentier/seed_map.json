@@ -1,0 +1,38 @@
+[
+ {
+  "pieceId": 19318,
+  "title": "오페라 <루이즈>",
+  "mbids": [
+   "cd2de458-cb42-4259-9e97-af73bbb3c7c4"
+  ],
+  "mapping": "work",
+  "key": "gustave-charpentier-cd2de458",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16414,
+  "title": "모음곡 <이탈리아의 인상>",
+  "mbids": [
+   "181828dd-68ef-45e8-81df-a9d4a7910a0d"
+  ],
+  "mapping": "work",
+  "key": "gustave-charpentier-181828dd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17930,
+  "title": "La vie du poete",
+  "mbids": [
+   "73f086d7-e470-4421-8c98-1eccff87cd00"
+  ],
+  "mapping": "work",
+  "key": "gustave-charpentier-73f086d7",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

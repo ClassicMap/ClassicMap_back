@@ -1,0 +1,86 @@
+[
+ {
+  "pieceId": 23571,
+  "title": "Unterwegs nach Heiligenstadt",
+  "mbids": [
+   "213217ba-0fba-47f5-bf0f-018d02f3414a"
+  ],
+  "mapping": "work",
+  "key": "kurt-schwertsik-213217ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24258,
+  "title": "Adieu Satie, op. 86",
+  "mbids": [
+   "63c7164f-eb5e-46d7-997e-901c5ef8eaf5"
+  ],
+  "mapping": "work",
+  "key": "kurt-schwertsik-63c7164f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24324,
+  "title": "Locken-House/Un-Locked",
+  "mbids": [
+   "6a037815-873d-4771-9cba-8853e9655d6f"
+  ],
+  "mapping": "work",
+  "key": "kurt-schwertsik-6a037815",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24342,
+  "title": "Nachtmusiken, op. 104",
+  "mbids": [
+   "6bb1ab5e-8017-4765-a4a7-d09ed431f5da"
+  ],
+  "mapping": "work",
+  "key": "kurt-schwertsik-6bb1ab5e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24990,
+  "title": "Epilog zu Rosamunde, op. 33",
+  "mbids": [
+   "a27cc62a-e6ea-4889-9564-d85594850c59"
+  ],
+  "mapping": "work",
+  "key": "kurt-schwertsik-a27cc62a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25257,
+  "title": "Baumgesänge, op. 65",
+  "mbids": [
+   "bcd2c72b-d60b-44b8-9db3-6306fdcea9a2"
+  ],
+  "mapping": "work",
+  "key": "kurt-schwertsik-bcd2c72b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25715,
+  "title": "Herr K entdeckt Amerika, op. 101",
+  "mbids": [
+   "e673320c-f07a-4dda-bd5c-d134cb6483dc"
+  ],
+  "mapping": "work",
+  "key": "kurt-schwertsik-e673320c",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

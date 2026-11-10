@@ -1,0 +1,110 @@
+[
+ {
+  "pieceId": 25523,
+  "title": "오페라 <La mulata de Córdoba>",
+  "mbids": [
+   "d60bd157-86a1-4fd8-8fc8-588e0e7259cc"
+  ],
+  "mapping": "work",
+  "key": "jose-pablo-moncayo-garcia-d60bd157",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23879,
+  "title": "교향곡",
+  "mbids": [
+   "3fc9b1b0-b8ae-4482-b6e7-d91896fcdeb8"
+  ],
+  "mapping": "work",
+  "key": "jose-pablo-moncayo-garcia-3fc9b1b0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24212,
+  "title": "소나타",
+  "mbids": [
+   "5f487863-7007-412e-bfc4-3e62e5ebd083"
+  ],
+  "mapping": "work",
+  "key": "jose-pablo-moncayo-garcia-5f487863",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24473,
+  "title": "교향시 <Bosques>",
+  "mbids": [
+   "765568f5-323c-48a4-8b0e-d4fa84b2fca4"
+  ],
+  "mapping": "work",
+  "key": "jose-pablo-moncayo-garcia-765568f5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24584,
+  "title": "Muros verdes",
+  "mbids": [
+   "7f9d987a-dcb5-47f5-b49b-df1c9ce8c50f"
+  ],
+  "mapping": "work",
+  "key": "jose-pablo-moncayo-garcia-7f9d987a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24866,
+  "title": "3개의 피아노 소품",
+  "mbids": [
+   "98c2f01d-4752-43e1-b5c8-fc51e3bb12dd"
+  ],
+  "mapping": "work",
+  "key": "jose-pablo-moncayo-garcia-98c2f01d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25172,
+  "title": "Amatzinac",
+  "mbids": [
+   "b3d33be5-413d-4225-a56a-da51bdde005a"
+  ],
+  "mapping": "work",
+  "key": "jose-pablo-moncayo-garcia-b3d33be5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25576,
+  "title": "Tierra de temporal",
+  "mbids": [
+   "da84b102-4848-49c4-a3e4-4201cc91a9f5"
+  ],
+  "mapping": "work",
+  "key": "jose-pablo-moncayo-garcia-da84b102",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25889,
+  "title": "Huapango",
+  "mbids": [
+   "f5b8ab8c-3a8d-4d54-81ba-34a68bd88bfe"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ }
+]

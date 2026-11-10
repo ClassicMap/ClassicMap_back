@@ -1,0 +1,120 @@
+[
+ {
+  "key": "hisato-ohzawa-974bf017",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "피아노 협주곡 3번 \"Kamikaze\"",
+  "titleEn": "Piano Concerto No. 3 \"Kamikaze\"",
+  "year": null,
+  "yearText": null,
+  "genre": "concerto",
+  "authenticity": "authentic",
+  "mbid": "974bf017-c5e6-4621-b082-73735e5811e5",
+  "mbTitle": "Piano Concerto No. 3 \"Kamikaze\"",
+  "existingPieceId": 24848,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "f24be643-ee96-4fcf-a8ae-be98d6143c85",
+    "mbTitle": "Piano Concerto No. 3 \"Kamikaze\": I. Larghetto maestoso - Allegro assai",
+    "nameKo": "Larghetto maestoso - Allegro assai",
+    "nameEn": "Piano Concerto No. 3 \"Kamikaze\": I. Larghetto maestoso - Allegro assai",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "0f849cad-0d99-4cd4-9c6d-7c0d9079353a",
+    "mbTitle": "Piano Concerto No. 3 \"Kamikaze\": II. Andante cantabile",
+    "nameKo": "Andante cantabile",
+    "nameEn": "Piano Concerto No. 3 \"Kamikaze\": II. Andante cantabile",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "9090e161-ba71-4da8-a6fa-96458df89fe4",
+    "mbTitle": "Piano Concerto No. 3 \"Kamikaze\": III. Allegro moderato - Allegro - Vivace",
+    "nameKo": "Allegro moderato - Allegro - Vivace",
+    "nameEn": "Piano Concerto No. 3 \"Kamikaze\": III. Allegro moderato - Allegro - Vivace",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "hisato-ohzawa-c17918cd",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "교향곡 3번",
+  "titleEn": "Symphony No. 3",
+  "year": null,
+  "yearText": null,
+  "genre": "symphony",
+  "authenticity": "authentic",
+  "mbid": "c17918cd-ae99-447f-a0f1-2e03b951f90e",
+  "mbTitle": "Symphony No. 3",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "8d5601e6-1d5a-4029-a529-0140db708d12",
+    "mbTitle": "Symphony No. 3 \"Symphony of the Founding of Japan\": I. Allegretto risoluto - Allegro",
+    "nameKo": "Allegretto risoluto - Allegro",
+    "nameEn": "Symphony No. 3 \"Symphony of the Founding of Japan\": I. Allegretto risoluto - Allegro",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "0fcddfe3-00e1-43f6-a503-4690e7085fc7",
+    "mbTitle": "Symphony No. 3 \"Symphony of the Founding of Japan\": II. Adagio grazioso",
+    "nameKo": "Adagio grazioso",
+    "nameEn": "Symphony No. 3 \"Symphony of the Founding of Japan\": II. Adagio grazioso",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "19625ca9-bf11-43fc-8cdb-3eb2a64126d3",
+    "mbTitle": "Symphony No. 3 \"Symphony of the Founding of Japan\": III. Moderato (Menuet con fantasia)",
+    "nameKo": "Moderato (Menuet con fantasia)",
+    "nameEn": "Symphony No. 3 \"Symphony of the Founding of Japan\": III. Moderato (Menuet con fantasia)",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "575b5fa9-2bc0-414c-be83-acb75cb97cac",
+    "mbTitle": "Symphony No. 3 \"Symphony of the Founding of Japan\": IV. Allegro non troppo con fuoco",
+    "nameKo": "Allegro non troppo con fuoco",
+    "nameEn": "Symphony No. 3 \"Symphony of the Founding of Japan\": IV. Allegro non troppo con fuoco",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

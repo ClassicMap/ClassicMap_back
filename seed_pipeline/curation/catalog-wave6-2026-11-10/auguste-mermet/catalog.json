@@ -1,0 +1,31 @@
+[
+ {
+  "key": "auguste-mermet-45a28926",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "오페라 <Roland à Roncevaux>",
+  "titleEn": "Roland à Roncevaux",
+  "year": null,
+  "yearText": null,
+  "genre": "opera",
+  "authenticity": "authentic",
+  "mbid": "45a28926-bc2d-4e33-ab61-6f1ffb3b6686",
+  "mbTitle": "Roland à Roncevaux",
+  "existingPieceId": 17161,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "e29f3577-78a4-4045-bcd3-aff03c8efda9",
+    "mbTitle": "Roland à Roncevaux : « Prête à te fuir … Le soir pensive » (Alde)",
+    "nameKo": "« Prête à te fuir … Le soir pensive » (Alde)",
+    "nameEn": "Roland à Roncevaux : « Prête à te fuir … Le soir pensive » (Alde)",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

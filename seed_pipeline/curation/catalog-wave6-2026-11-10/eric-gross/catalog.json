@@ -1,0 +1,34 @@
+[
+ {
+  "key": "eric-gross-71de0ffb",
+  "kind": "single",
+  "catalogue": "Op. 153 No. 2",
+  "catalogueAlt": null,
+  "titleKo": "Cadenza II",
+  "titleEn": "Cadenza II, op. 153 no. 2",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "71de0ffb-dd9c-4c00-ab43-7e0bc31ca971",
+  "mbTitle": "Cadenza II, op. 153 no. 2",
+  "existingPieceId": 24418,
+  "parts": []
+ },
+ {
+  "key": "eric-gross-017adb31",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Rondino Tranquillo",
+  "titleEn": "Rondino Tranquillo",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "017adb31-0cd2-4382-b639-af370efe2e91",
+  "mbTitle": "Rondino Tranquillo",
+  "existingPieceId": 23214,
+  "parts": []
+ }
+]

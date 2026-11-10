@@ -1,0 +1,218 @@
+[
+ {
+  "pieceId": 15731,
+  "title": "가곡 <耳をすましてごらん>",
+  "mbids": [
+   "14eda229-5ba7-3680-9f58-e357e2bbc19c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 15744,
+  "title": "Projection Esemplastic",
+  "mbids": [
+   "3010fc3f-7941-4bf0-95ee-e1d6a4d1ce75"
+  ],
+  "mapping": "work",
+  "key": "joji-yuasa-3010fc3f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15767,
+  "title": "オン・ザ・キーボード",
+  "mbids": [
+   "5bebd6db-b5c6-4924-bc36-f2626e8b4de0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 15776,
+  "title": "Music for the Main Pavilion of the Okinawa Ocean",
+  "mbids": [
+   "729e3fd9-be80-4dde-a8fd-6ab18be3e151"
+  ],
+  "mapping": "work",
+  "key": "joji-yuasa-729e3fd9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15786,
+  "title": "Voices Coming",
+  "mbids": [
+   "823a6b5b-c820-47cb-b8ad-0bc92c1784cf"
+  ],
+  "mapping": "work",
+  "key": "joji-yuasa-823a6b5b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15818,
+  "title": "Opening Bell at NHK Hall",
+  "mbids": [
+   "bd70944f-a81f-4766-b5d8-104c18b99251"
+  ],
+  "mapping": "work",
+  "key": "joji-yuasa-bd70944f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15843,
+  "title": "<ICON> on the Source of White Noise",
+  "mbids": [
+   "f067451f-9894-45aa-81a4-31867d060501"
+  ],
+  "mapping": "work",
+  "key": "joji-yuasa-f067451f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15846,
+  "title": "My Blue Sky",
+  "mbids": [
+   "f32f7fe4-bcdb-48ef-b0e3-3168977556c7"
+  ],
+  "mapping": "work",
+  "key": "joji-yuasa-f32f7fe4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15848,
+  "title": "内触覚的宇宙",
+  "mbids": [
+   "f64bf35c-bd27-4cbd-b468-3bdac1de8fbd"
+  ],
+  "mapping": "work",
+  "key": "joji-yuasa-f64bf35c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17436,
+  "title": "インター・ポジ・プレイ・ション",
+  "mbids": [
+   "56ca103d-1a2b-4f67-9114-0bcf1973c704"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17678,
+  "title": "My Blue Sky in Southern California",
+  "mbids": [
+   "65bd7c12-f583-4a8f-83e8-3c021281bd88"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17721,
+  "title": "A Study in White",
+  "mbids": [
+   "681c8f4d-a16d-4361-8827-41d577d035fb"
+  ],
+  "mapping": "work",
+  "key": "joji-yuasa-681c8f4d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17812,
+  "title": "Territory",
+  "mbids": [
+   "6d8cf7ae-6820-4699-b9c4-372fd8b10ea8"
+  ],
+  "mapping": "work",
+  "key": "joji-yuasa-6d8cf7ae",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17954,
+  "title": "演奏詩呼びかわし",
+  "mbids": [
+   "75ed4501-238d-4daa-9983-3b5e1f91f5fa"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18008,
+  "title": "The Midnight Sun",
+  "mbids": [
+   "79bda15e-aeab-4590-b70b-817975fa3c65"
+  ],
+  "mapping": "work",
+  "key": "joji-yuasa-79bda15e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18763,
+  "title": "プロジェクション・エセンプラスティック フォー・ピアノス",
+  "mbids": [
+   "a94e4680-b5b1-43a5-a6b7-e21dbf0b7b1c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18777,
+  "title": "Towards “The Midnight Sun“ - Homage to Ze-Ami",
+  "mbids": [
+   "aa12bc9d-a837-4ca0-b401-129006925977"
+  ],
+  "mapping": "work",
+  "key": "joji-yuasa-aa12bc9d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19882,
+  "title": "Clarinet Solitude",
+  "mbids": [
+   "f3627e5f-e584-48c4-9a13-27307a7e1f7c"
+  ],
+  "mapping": "work",
+  "key": "joji-yuasa-f3627e5f",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

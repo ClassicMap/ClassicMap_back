@@ -1,0 +1,74 @@
+[
+ {
+  "pieceId": 19629,
+  "title": "교향시 <Le Chant de l'espace>",
+  "mbids": [
+   "e1d099e0-cf71-4490-8608-639c7d371e84"
+  ],
+  "mapping": "work",
+  "key": "ernest-pingoud-e1d099e0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15854,
+  "title": "Chantecler, op. 15",
+  "mbids": [
+   "169e2b85-d4e5-407c-b135-2b3b1c2ff1c8"
+  ],
+  "mapping": "work",
+  "key": "ernest-pingoud-169e2b85",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16472,
+  "title": "교향시 <예언자> Op. 21",
+  "mbids": [
+   "1b35bb6d-248b-426c-87a8-5381c25636f6"
+  ],
+  "mapping": "work",
+  "key": "ernest-pingoud-1b35bb6d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16648,
+  "title": "Flambeaux éteints, op. 14",
+  "mbids": [
+   "2755d2be-e3af-4854-9f52-eed56f31c2ce"
+  ],
+  "mapping": "work",
+  "key": "ernest-pingoud-2755d2be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17355,
+  "title": "교향시 <Le Fétich> Op. 7 (Diableries galantes)",
+  "mbids": [
+   "52894663-ef78-4d33-81ff-a0e0e3a9324a"
+  ],
+  "mapping": "work",
+  "key": "ernest-pingoud-52894663",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18451,
+  "title": "Tango oriental",
+  "mbids": [
+   "9576f9e4-537a-47b9-b2d4-e6b2c2d1b7f0"
+  ],
+  "mapping": "work",
+  "key": "ernest-pingoud-9576f9e4",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

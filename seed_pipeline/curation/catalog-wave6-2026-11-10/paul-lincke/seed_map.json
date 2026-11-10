@@ -1,0 +1,182 @@
+[
+ {
+  "pieceId": 24744,
+  "title": "오페레타 <Frau Luna>",
+  "mbids": [
+   "8e28f59f-539f-4830-8419-9cb84f7ca4cd"
+  ],
+  "mapping": "work",
+  "key": "paul-lincke-8e28f59f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24873,
+  "title": "Es war einmal",
+  "mbids": [
+   "999aca6e-770f-4963-9d15-21c9edeb8f11"
+  ],
+  "mapping": "work",
+  "key": "paul-lincke-999aca6e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23218,
+  "title": "Halloh! Die große Revue!!",
+  "mbids": [
+   "02651230-402e-4a97-8a21-8661074cae09"
+  ],
+  "mapping": "work",
+  "key": "paul-lincke-02651230",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23466,
+  "title": "오페레타 <Grigri>",
+  "mbids": [
+   "17b3ea91-4e08-43c9-8163-1dde7954f064"
+  ],
+  "mapping": "work",
+  "key": "paul-lincke-17b3ea91",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23480,
+  "title": "오페레타 <카사노바>",
+  "mbids": [
+   "1892cdce-756b-474d-aed9-867f86410c8c"
+  ],
+  "mapping": "work",
+  "key": "paul-lincke-1892cdce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23514,
+  "title": "Sympathique",
+  "mbids": [
+   "1bbd79ca-bb83-4077-977b-17d9cc988dfd"
+  ],
+  "mapping": "work",
+  "key": "paul-lincke-1bbd79ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23923,
+  "title": "Wedding Dance",
+  "mbids": [
+   "43b4a6e1-7dd3-4a7f-a15e-5da49e322c83"
+  ],
+  "mapping": "work",
+  "key": "paul-lincke-43b4a6e1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24205,
+  "title": "Im Walzerrausch",
+  "mbids": [
+   "5ef9cdce-6e9b-44bc-af4a-a5847501c39f"
+  ],
+  "mapping": "work",
+  "key": "paul-lincke-5ef9cdce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24317,
+  "title": "O Frühling, wie bist du schön !",
+  "mbids": [
+   "69b3093e-f11f-4fee-90ce-77f329cca4d6"
+  ],
+  "mapping": "work",
+  "key": "paul-lincke-69b3093e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24362,
+  "title": "Sekelskiftets luft",
+  "mbids": [
+   "6d46ec56-2010-4cb1-a664-14cae3b4b1ba"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 24462,
+  "title": "Sie hören Paul Lincke: Potpourri",
+  "mbids": [
+   "755dfb5d-c789-4f2d-86a5-d65ba8d5dfd9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24797,
+  "title": "오페레타 <Nakiris Hochzeit>",
+  "mbids": [
+   "92f996bf-3a3c-4a94-8851-fa22bd57d9f4"
+  ],
+  "mapping": "work",
+  "key": "paul-lincke-92f996bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24819,
+  "title": "The Glow Worm",
+  "mbids": [
+   "94fd4d53-5b25-3b8c-bc7c-fb26274d2022"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 25238,
+  "title": "오페레타 <리시스트라타>",
+  "mbids": [
+   "ba32c201-3236-450e-9ab6-4129a1577949"
+  ],
+  "mapping": "work",
+  "key": "paul-lincke-ba32c201",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25972,
+  "title": "왈츠 <Mondwalzer>",
+  "mbids": [
+   "fd2591ce-24e8-411f-a2b1-23156786e4d9"
+  ],
+  "mapping": "work",
+  "key": "paul-lincke-fd2591ce",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

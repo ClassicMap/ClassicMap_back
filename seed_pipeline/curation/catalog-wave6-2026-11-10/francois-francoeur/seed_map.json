@@ -1,0 +1,218 @@
+[
+ {
+  "pieceId": 18950,
+  "title": "첼로 소나타 E장조",
+  "mbids": [
+   "b4ebed98-54a0-4bc6-9ca8-3b61e171d285"
+  ],
+  "mapping": "work",
+  "key": "francois-francoeur-b4ebed98",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19375,
+  "title": "아르투아 백작의 왕실 연회를 위한 교향곡집",
+  "mbids": [
+   "d0eca6ef-d9ba-4eda-9358-c84c36a143a2"
+  ],
+  "mapping": "work",
+  "key": "francois-francoeur-d0eca6ef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16062,
+  "title": "소나타 12번 E장조",
+  "mbids": [
+   "04623262-4ea2-4376-90f9-352d602c3f89"
+  ],
+  "mapping": "work",
+  "key": "francois-francoeur-04623262",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16132,
+  "title": "소나타 12번 E장조 2권 중 \"Rondeau\"",
+  "mbids": [
+   "083eb30a-7fcc-4800-a090-03be730be538"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16180,
+  "title": "트리오 소나타 E장조 Op. 2 No. 6 중 \"Sicilienne\"",
+  "mbids": [
+   "0b1833c9-7bd5-4106-aa39-641fcfea9f24"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16263,
+  "title": "트리오 소나타 E장조 Op. 2 No. 6 중 \"Courante\"",
+  "mbids": [
+   "0ff9d668-c318-46a1-8841-8b6ad0d5e5b7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16662,
+  "title": "소나타 D단조",
+  "mbids": [
+   "27dfee6e-ca2d-4d20-89d4-1cfec0998733"
+  ],
+  "mapping": "work",
+  "key": "francois-francoeur-27dfee6e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16865,
+  "title": "Ouverture. Air Grave et gai",
+  "mbids": [
+   "343448bc-764b-4854-9cf1-b7f356d26051"
+  ],
+  "mapping": "work",
+  "key": "francois-francoeur-343448bc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16928,
+  "title": "소나타 E단조",
+  "mbids": [
+   "37df763d-3a42-49fc-81e8-b2f30e070b06"
+  ],
+  "mapping": "work",
+  "key": "francois-francoeur-37df763d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16980,
+  "title": "소나타 6번 G단조",
+  "mbids": [
+   "3b718569-1b6d-4cfe-95e1-65129d061b51"
+  ],
+  "mapping": "work",
+  "key": "francois-francoeur-3b718569",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17031,
+  "title": "소나타 7번 D단조",
+  "mbids": [
+   "3df0938d-24c2-4490-b2ee-f5b6bd912a74"
+  ],
+  "mapping": "work",
+  "key": "francois-francoeur-3df0938d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17123,
+  "title": "소나타 12번 E장조 2권 중 \"Sicilienne\"",
+  "mbids": [
+   "43fd7ee4-05d1-4e2d-81c3-096df04c558e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 17877,
+  "title": "소나타 12번 E장조 2권 중 \"Courente\"",
+  "mbids": [
+   "70c30fba-cd2a-42de-b32a-a5cfab7d5e55"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18038,
+  "title": "트리오 소나타 E장조 Op. 2 No. 6 중 \"Adagio\"",
+  "mbids": [
+   "7b560f56-7d2d-404e-8a5b-8a8ec3971a24"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18183,
+  "title": "소나타 A장조",
+  "mbids": [
+   "850cc27b-e42c-4fa6-b5d8-06e0a830537f"
+  ],
+  "mapping": "work",
+  "key": "francois-francoeur-850cc27b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19439,
+  "title": "소나타 10번 D장조",
+  "mbids": [
+   "d4feb150-31a8-47d2-ae68-df813d0ecc45"
+  ],
+  "mapping": "work",
+  "key": "francois-francoeur-d4feb150",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19514,
+  "title": "소나타 12번 E장조 2권 중 \"Adagio\"",
+  "mbids": [
+   "da6de5e0-573f-4df7-a2d8-888c3bf691d5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19984,
+  "title": "트리오 소나타 E장조 Op. 2 No. 6 중 \"Rondeau\"",
+  "mbids": [
+   "f84d8dd3-59d6-4cc7-a405-af934052890e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ }
+]

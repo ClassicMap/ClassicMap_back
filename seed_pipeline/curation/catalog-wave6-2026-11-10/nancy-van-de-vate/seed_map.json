@@ -1,0 +1,122 @@
+[
+ {
+  "pieceId": 17919,
+  "title": "조용한 소품",
+  "mbids": [
+   "73487b9a-704d-4163-aa6a-e0089c5bf5ec"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16378,
+  "title": "밤의 네 부분을 위한 가곡집",
+  "mbids": [
+   "1662a072-6cd6-4c90-8a03-98e42475a068"
+  ],
+  "mapping": "work",
+  "key": "nancy-van-de-vate-1662a072",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16478,
+  "title": "비올라 독주를 위한 6개의 연습곡",
+  "mbids": [
+   "1bb3b6e4-13d7-402b-969d-d3254f566862"
+  ],
+  "mapping": "work",
+  "key": "nancy-van-de-vate-1bb3b6e4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16801,
+  "title": "바이올린과 피아노를 위한 7개의 환상 소품",
+  "mbids": [
+   "30dfa2f6-1037-4b77-a8f7-9f2c2592fda0"
+  ],
+  "mapping": "work",
+  "key": "nancy-van-de-vate-30dfa2f6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16955,
+  "title": "현악 4중주 2a번",
+  "mbids": [
+   "396d76e4-7ba4-459b-8f99-b204897faf38"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18302,
+  "title": "Two for Two",
+  "mbids": [
+   "8cf7eaa6-a811-47e9-a336-0db5d2dc2fdb"
+  ],
+  "mapping": "work",
+  "key": "nancy-van-de-vate-8cf7eaa6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18536,
+  "title": "Music in Five, Three and Seven",
+  "mbids": [
+   "9ade4bd6-1ee6-4592-9b66-00bf95711019"
+  ],
+  "mapping": "work",
+  "key": "nancy-van-de-vate-9ade4bd6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19205,
+  "title": "첼로 독주를 위한 6개의 연습곡",
+  "mbids": [
+   "c57b8c6c-8129-4d78-8898-35bff0c8abdf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19388,
+  "title": "마림바를 위한 모음곡",
+  "mbids": [
+   "d207b6a7-5a04-4c46-bcdc-dba392db1de7"
+  ],
+  "mapping": "work",
+  "key": "nancy-van-de-vate-d207b6a7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19745,
+  "title": "Chernobyl",
+  "mbids": [
+   "eae0260f-d921-42b5-bc6c-b265485680c9"
+  ],
+  "mapping": "work",
+  "key": "nancy-van-de-vate-eae0260f",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

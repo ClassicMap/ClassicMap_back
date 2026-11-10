@@ -1,0 +1,98 @@
+[
+ {
+  "pieceId": 18245,
+  "title": "Offenbachiana",
+  "mbids": [
+   "89c4c532-570e-4aae-b077-4fc09d9fa8e9"
+  ],
+  "mapping": "work",
+  "key": "manuel-rosenthal-89c4c532",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16027,
+  "title": "가곡 <L'éléphant du Jardin des Plantes>",
+  "mbids": [
+   "0229bed3-3fff-4004-9b02-4a8018b3c6d9"
+  ],
+  "mapping": "work",
+  "key": "manuel-rosenthal-0229bed3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16300,
+  "title": "가곡 <La Souris d'Angleterre>",
+  "mbids": [
+   "11cc6d4f-d095-37f9-bf82-8ea4c1f1d9ec"
+  ],
+  "mapping": "work",
+  "key": "manuel-rosenthal-11cc6d4f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16683,
+  "title": "연가곡집 <Les Chansons de monsieur Bleu> 중 \"Le Naufrage / Arithmétique / Grammaire / Le Chien Fido / Le petit chat est mort\"",
+  "mbids": [
+   "299679e7-90c2-432e-a13e-906b85a8e0fe"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16781,
+  "title": "가곡 <Pêcheur de lune>",
+  "mbids": [
+   "2fcb7035-2024-458e-865e-5a8445a824d1"
+  ],
+  "mapping": "work",
+  "key": "manuel-rosenthal-2fcb7035",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17808,
+  "title": "연가곡집 <Chansons du Monsieur Bleu>",
+  "mbids": [
+   "6d67816e-6840-404e-b9f9-483612828f02"
+  ],
+  "mapping": "work",
+  "key": "manuel-rosenthal-6d67816e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18890,
+  "title": "가곡 <Fido, Fido>",
+  "mbids": [
+   "b1b6238e-9c9c-4111-a206-0f9cbdccd098"
+  ],
+  "mapping": "work",
+  "key": "manuel-rosenthal-b1b6238e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19168,
+  "title": "가곡 <Le vieux chameau du zoo>",
+  "mbids": [
+   "c34dfda0-889f-407b-a06a-a91c68f50d8d"
+  ],
+  "mapping": "work",
+  "key": "manuel-rosenthal-c34dfda0",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

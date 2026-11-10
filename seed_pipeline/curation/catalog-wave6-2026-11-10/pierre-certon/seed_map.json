@@ -1,0 +1,158 @@
+[
+ {
+  "pieceId": 19775,
+  "title": "J'ay le rebours: Chanson à quatre (1562)",
+  "mbids": [
+   "ed1671cf-3a9d-42db-b508-24b22b20a0b6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23088,
+  "title": "가곡 <La, la, la, la je ne l'ose dire>",
+  "mbids": [
+   "92ce8f0a-f720-3bb7-b8d0-2f9679215fdb"
+  ],
+  "mapping": "work",
+  "key": "pierre-certon-92ce8f0a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24063,
+  "title": "De profundis",
+  "mbids": [
+   "51ace6e5-ce7f-42fc-be2a-544dc38d83a0"
+  ],
+  "mapping": "work",
+  "key": "pierre-certon-51ace6e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24303,
+  "title": "가곡 <Je suis un demidieu>",
+  "mbids": [
+   "682ef243-d33d-4557-b385-473772d5c90f"
+  ],
+  "mapping": "work",
+  "key": "pierre-certon-682ef243",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24502,
+  "title": "가곡 <Que n'est elle auprès de moy>",
+  "mbids": [
+   "78bd7974-e1bc-3508-9385-62f0cc366d87"
+  ],
+  "mapping": "work",
+  "key": "pierre-certon-78bd7974",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24618,
+  "title": "Exultate Justi in Domino",
+  "mbids": [
+   "82d8f24f-7205-46b4-a4ae-4541a4e73e77"
+  ],
+  "mapping": "work",
+  "key": "pierre-certon-82d8f24f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24825,
+  "title": "가곡 <Je l'ay aimé>",
+  "mbids": [
+   "95c24a73-1dcc-441b-9ee6-f498e95491e9"
+  ],
+  "mapping": "work",
+  "key": "pierre-certon-95c24a73",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24971,
+  "title": "En languissant avoir secours j'attens",
+  "mbids": [
+   "a14a16aa-0af3-314a-839a-d925118530bd"
+  ],
+  "mapping": "work",
+  "key": "pierre-certon-a14a16aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25338,
+  "title": "가곡 <C'est grand pitié quant argent fault>",
+  "mbids": [
+   "c4303496-9d48-48ce-9aca-c4b8ec3a1ab2"
+  ],
+  "mapping": "work",
+  "key": "pierre-certon-c4303496",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25354,
+  "title": "가곡 <Ung Verd Galland>",
+  "mbids": [
+   "c57cc8a4-1af7-453e-908e-bba9c373af61"
+  ],
+  "mapping": "work",
+  "key": "pierre-certon-c57cc8a4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25385,
+  "title": "C'Est Trop Parlé de Bacchus",
+  "mbids": [
+   "c91ed282-8ed3-4ca6-b851-7567bd6ec711"
+  ],
+  "mapping": "work",
+  "key": "pierre-certon-c91ed282",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25666,
+  "title": "Mi ne povas diri",
+  "mbids": [
+   "e2b0fb58-c303-4999-825a-8d900d6f3f83"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 25743,
+  "title": "O Adonai",
+  "mbids": [
+   "e8bef533-2717-4a01-a115-97780655e3d8"
+  ],
+  "mapping": "work",
+  "key": "pierre-certon-e8bef533",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

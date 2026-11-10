@@ -1,0 +1,98 @@
+[
+ {
+  "pieceId": 16197,
+  "title": "바이올린과 관현악을 위한 협주곡 2번",
+  "mbids": [
+   "0c5ea350-0740-48eb-bec1-da09e6fbdb3d"
+  ],
+  "mapping": "work",
+  "key": "pierre-wissmer-0c5ea350",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16738,
+  "title": "연가곡집 <Chants de mars>",
+  "mbids": [
+   "2ceaaf55-0827-4791-bfe2-978464d7c92b"
+  ],
+  "mapping": "work",
+  "key": "pierre-wissmer-2ceaaf55",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17379,
+  "title": "교향곡 6번",
+  "mbids": [
+   "53b97d14-efdd-4d97-8ed5-a106a494582e"
+  ],
+  "mapping": "work",
+  "key": "pierre-wissmer-53b97d14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17437,
+  "title": "현악 4중주 2번",
+  "mbids": [
+   "56e8119f-8574-49a6-b028-49174529aeab"
+  ],
+  "mapping": "work",
+  "key": "pierre-wissmer-56e8119f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17577,
+  "title": "바이올린과 관현악을 위한 협주곡 1번",
+  "mbids": [
+   "5f844191-9270-4f91-9aa7-2a3381c04aee"
+  ],
+  "mapping": "work",
+  "key": "pierre-wissmer-5f844191",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17689,
+  "title": "플루트, 하프, 관현악을 위한 협주 신포니에타",
+  "mbids": [
+   "669234be-dcbf-43d3-8c82-6026369a7bc7"
+  ],
+  "mapping": "work",
+  "key": "pierre-wissmer-669234be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19379,
+  "title": "교향곡 5번",
+  "mbids": [
+   "d14de5e8-862c-4aaa-99ab-d3dd43897fda"
+  ],
+  "mapping": "work",
+  "key": "pierre-wissmer-d14de5e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19744,
+  "title": "바이올린과 관현악을 위한 협주곡 3번",
+  "mbids": [
+   "eadd6fbf-1b39-4cbe-9818-82e58de9836c"
+  ],
+  "mapping": "work",
+  "key": "pierre-wissmer-eadd6fbf",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

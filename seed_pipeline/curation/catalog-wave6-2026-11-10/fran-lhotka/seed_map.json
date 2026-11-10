@@ -1,0 +1,26 @@
+[
+ {
+  "pieceId": 25574,
+  "title": "발레 모음곡 <마을의 악마>",
+  "mbids": [
+   "da286207-e9a8-4539-b555-1d3390b9577c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23082,
+  "title": "발레 <마을의 악마>",
+  "mbids": [
+   "88a08839-e7f7-4a81-a1dc-28cecef40cb9"
+  ],
+  "mapping": "work",
+  "key": "fran-lhotka-88a08839",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

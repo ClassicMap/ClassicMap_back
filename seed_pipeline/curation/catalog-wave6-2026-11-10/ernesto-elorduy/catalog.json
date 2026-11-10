@@ -1,0 +1,55 @@
+[
+ {
+  "key": "ernesto-elorduy-2b9c757f",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Tres danzas tropicales",
+  "titleEn": "Tres danzas tropicales",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "2b9c757f-20ae-43a1-b76b-caa976b9dac2",
+  "mbTitle": "Tres danzas tropicales",
+  "existingPieceId": 16720,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "0081d377-4eb5-4835-ae05-bcbe474e4cd8",
+    "mbTitle": "Tres danzas tropicales: N.º 1",
+    "nameKo": "N.º 1",
+    "nameEn": "Tres danzas tropicales: N.º 1",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "4eabff2f-7865-498d-8dc8-d971e9af0099",
+    "mbTitle": "Tres danzas tropicales: N.º 2",
+    "nameKo": "N.º 2",
+    "nameEn": "Tres danzas tropicales: N.º 2",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "63976722-f465-4554-a2f8-d78174d9fc33",
+    "mbTitle": "Tres danzas tropicales: N.º 3",
+    "nameKo": "N.º 3",
+    "nameEn": "Tres danzas tropicales: N.º 3",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

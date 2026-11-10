@@ -1,0 +1,34 @@
+[
+ {
+  "key": "robert-turner-aa2c7fdb",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Symphony for Strings",
+  "titleEn": "Symphony for Strings",
+  "year": null,
+  "yearText": null,
+  "genre": "symphony",
+  "authenticity": "authentic",
+  "mbid": "aa2c7fdb-77ef-46a5-8a32-916179d2512f",
+  "mbTitle": "Symphony for Strings",
+  "existingPieceId": 18781,
+  "parts": []
+ },
+ {
+  "key": "robert-turner-f06263a6",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Third Symphony",
+  "titleEn": "Third Symphony",
+  "year": null,
+  "yearText": null,
+  "genre": "symphony",
+  "authenticity": "authentic",
+  "mbid": "f06263a6-be23-419e-863a-6e5850f28c08",
+  "mbTitle": "Third Symphony",
+  "existingPieceId": 19826,
+  "parts": []
+ }
+]

@@ -1,0 +1,26 @@
+[
+ {
+  "pieceId": 25552,
+  "title": "Esquisses byzantines",
+  "mbids": [
+   "d7fa6dd8-db50-439d-b430-2b2c971f8fd9"
+  ],
+  "mapping": "work",
+  "key": "henri-mulet-d7fa6dd8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24869,
+  "title": "Carillon-sortie en ré majeur",
+  "mbids": [
+   "9917394a-d940-4987-86a9-2b4fdd3170da"
+  ],
+  "mapping": "work",
+  "key": "henri-mulet-9917394a",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

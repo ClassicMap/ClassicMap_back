@@ -1,0 +1,74 @@
+[
+ {
+  "pieceId": 23219,
+  "title": "교향시 <바르바로사>",
+  "mbids": [
+   "027704b5-f63b-4e4d-a2f8-3c12c2499231"
+  ],
+  "mapping": "work",
+  "key": "siegmund-von-hausegger-027704b5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23407,
+  "title": "교향시 <Wieland der Schmied>",
+  "mbids": [
+   "12ed7f94-6dd8-4fb8-9300-b17595e001e1"
+  ],
+  "mapping": "work",
+  "key": "siegmund-von-hausegger-12ed7f94",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23408,
+  "title": "자연 교향곡",
+  "mbids": [
+   "12f6267b-39ee-428f-b3bc-d0ba9928e946"
+  ],
+  "mapping": "work",
+  "key": "siegmund-von-hausegger-12f6267b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25167,
+  "title": "Drei Hymnen an die Nacht",
+  "mbids": [
+   "b321a6f9-18d5-469f-973d-b9903309d2d3"
+  ],
+  "mapping": "work",
+  "key": "siegmund-von-hausegger-b321a6f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24806,
+  "title": "교향시 <Dionysische Phantasie>",
+  "mbids": [
+   "9425e20a-bcad-480d-b7be-008838ea593a"
+  ],
+  "mapping": "work",
+  "key": "siegmund-von-hausegger-9425e20a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25048,
+  "title": "교향시 <Aufklänge>",
+  "mbids": [
+   "a7cdbeae-da4e-4f62-a7ad-5790a3a4ae0a"
+  ],
+  "mapping": "work",
+  "key": "siegmund-von-hausegger-a7cdbeae",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

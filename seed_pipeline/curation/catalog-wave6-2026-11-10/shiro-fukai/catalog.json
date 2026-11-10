@@ -1,0 +1,55 @@
+[
+ {
+  "key": "shiro-fukai-a63d54da",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "연가곡집 <Japanese Flute>",
+  "titleEn": "Japanese Flute",
+  "year": null,
+  "yearText": null,
+  "genre": "song-cycle",
+  "authenticity": "authentic",
+  "mbid": "a63d54da-8757-48c4-8a22-b27cbb037350",
+  "mbTitle": "Japanese Flute",
+  "existingPieceId": 25037,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "2004ed6e-5e18-4004-b4f4-58132558dc3d",
+    "mbTitle": "Japanese Flute: Sailing Out",
+    "nameKo": "Sailing Out",
+    "nameEn": "Japanese Flute: Sailing Out",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "641fbb71-7fe9-4b82-8dc4-f535594b0536",
+    "mbTitle": "Japanese Flute: Ina",
+    "nameKo": "Ina",
+    "nameEn": "Japanese Flute: Ina",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "ce044a0f-ee2d-4ad9-b922-e5b8464b1716",
+    "mbTitle": "Japanese Flute: Yanshichi of Yabe",
+    "nameKo": "Yanshichi of Yabe",
+    "nameEn": "Japanese Flute: Yanshichi of Yabe",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

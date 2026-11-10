@@ -1,0 +1,50 @@
+[
+ {
+  "key": "johannes-bernardus-van-bree-9a9e73fc",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Allegro voor vier strijkkwartetten",
+  "titleEn": "Allegro voor vier strijkkwartetten",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "9a9e73fc-2f69-4ded-b0c1-87114c662da0",
+  "mbTitle": "Allegro voor vier strijkkwartetten",
+  "existingPieceId": 15799,
+  "parts": []
+ },
+ {
+  "key": "johannes-bernardus-van-bree-6fc7bee8",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Concert Overture in B minor",
+  "titleEn": "Concert Overture in B minor",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "6fc7bee8-358b-47cb-a3ed-49b46e077e5d",
+  "mbTitle": "Concert Overture in B minor",
+  "existingPieceId": 17857,
+  "parts": []
+ },
+ {
+  "key": "johannes-bernardus-van-bree-199c9329",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Overture ‘Le Bandit’",
+  "titleEn": "Overture ‘Le Bandit’",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "199c9329-fbc0-4004-a2a5-f8aff382a9b1",
+  "mbTitle": "Overture ‘Le Bandit’",
+  "existingPieceId": 16437,
+  "parts": []
+ }
+]

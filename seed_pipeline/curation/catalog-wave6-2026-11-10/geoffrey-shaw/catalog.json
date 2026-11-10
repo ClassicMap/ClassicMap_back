@@ -1,0 +1,50 @@
+[
+ {
+  "key": "geoffrey-shaw-7327286d",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "가곡 <For the beauty of the earth>",
+  "titleEn": "For the beauty of the earth",
+  "year": null,
+  "yearText": null,
+  "genre": "song",
+  "authenticity": "authentic",
+  "mbid": "7327286d-d22e-42ef-bd48-75a8ae42d569",
+  "mbTitle": "For the beauty of the earth",
+  "existingPieceId": 24429,
+  "parts": []
+ },
+ {
+  "key": "geoffrey-shaw-f00dd5d5",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "가곡 <Glad That I Live Am I>",
+  "titleEn": "Glad That I Live Am I",
+  "year": null,
+  "yearText": null,
+  "genre": "song",
+  "authenticity": "authentic",
+  "mbid": "f00dd5d5-1a33-43a1-ac2a-4150d56c768d",
+  "mbTitle": "Glad That I Live Am I",
+  "existingPieceId": 25814,
+  "parts": []
+ },
+ {
+  "key": "geoffrey-shaw-82e0a455",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Variations on an Old Carol Tune",
+  "titleEn": "Variations on an Old Carol Tune",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "82e0a455-f7a8-4d3f-b984-14e629d3087a",
+  "mbTitle": "Variations on an Old Carol Tune",
+  "existingPieceId": 24620,
+  "parts": []
+ }
+]

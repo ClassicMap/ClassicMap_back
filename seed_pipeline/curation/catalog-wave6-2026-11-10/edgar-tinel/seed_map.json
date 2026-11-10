@@ -1,0 +1,110 @@
+[
+ {
+  "pieceId": 16431,
+  "title": "오페라 <Godelieve> Op. 43",
+  "mbids": [
+   "1959be4d-ab53-4f5d-bc66-aa55c73a2c7c"
+  ],
+  "mapping": "work",
+  "key": "edgar-tinel-1959be4d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16526,
+  "title": "Missa in honorem Beatae Mariae Virginis de Lourdes, op. 41",
+  "mbids": [
+   "1f4bb0ac-d8eb-42fd-a99d-2e0fa255afa5"
+  ],
+  "mapping": "work",
+  "key": "edgar-tinel-1f4bb0ac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17218,
+  "title": "성모를 위한 3개의 모테트 Op. 31",
+  "mbids": [
+   "48e02423-fec6-43ea-92e6-472674004890"
+  ],
+  "mapping": "work",
+  "key": "edgar-tinel-48e02423",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17560,
+  "title": "오라토리오 <Franciscus> Op. 36",
+  "mbids": [
+   "5e7afc53-3666-47bb-bd70-55a18665c7a2"
+  ],
+  "mapping": "work",
+  "key": "edgar-tinel-5e7afc53",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17895,
+  "title": "Prelude de l'Oratorio \"Saint Francois\" d'Edgar Tinel",
+  "mbids": [
+   "72081460-4cb6-4308-83b6-c1884e8842e9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18258,
+  "title": "Funeral March from Franciscus",
+  "mbids": [
+   "8ab56357-d6c0-409e-9bbc-053132222a06"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18392,
+  "title": "<Catharina> 서곡",
+  "mbids": [
+   "91ed6dca-8fc8-424d-b5e1-f3576431c652"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18452,
+  "title": "Te Deum laudamus, op. 26",
+  "mbids": [
+   "958e4194-467d-4406-a842-2ba758f5d17c"
+  ],
+  "mapping": "work",
+  "key": "edgar-tinel-958e4194",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18583,
+  "title": "오페라 <Catharina> Op. 44",
+  "mbids": [
+   "9dff20e8-9e81-4673-9b4a-8dd75e973cd5"
+  ],
+  "mapping": "work",
+  "key": "edgar-tinel-9dff20e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

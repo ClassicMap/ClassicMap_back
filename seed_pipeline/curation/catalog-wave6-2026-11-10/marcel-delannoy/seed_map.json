@@ -1,0 +1,38 @@
+[
+ {
+  "pieceId": 16564,
+  "title": "Dîner sur l'eau",
+  "mbids": [
+   "21f3e053-82d2-4fa3-b38e-4ad52bfcf3cb"
+  ],
+  "mapping": "work",
+  "key": "marcel-delannoy-21f3e053",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18047,
+  "title": "오페레타 <Philippine>",
+  "mbids": [
+   "7bb1e3f7-e4ba-4c30-b63d-d9b57d96ba7f"
+  ],
+  "mapping": "work",
+  "key": "marcel-delannoy-7bb1e3f7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19469,
+  "title": "콘체르탄테 세레나데",
+  "mbids": [
+   "d76287e0-d8f3-46ea-93e6-247638eb98c2"
+  ],
+  "mapping": "work",
+  "key": "marcel-delannoy-d76287e0",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

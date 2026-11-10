@@ -1,0 +1,124 @@
+[
+ {
+  "key": "leon-stein-fcfd701b",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Introduction and Rondo for Flute and Percussion",
+  "titleEn": "Introduction and Rondo for Flute and Percussion",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "fcfd701b-e2b3-4c09-9144-ebeeed0af54b",
+  "mbTitle": "Introduction and Rondo for Flute and Percussion",
+  "existingPieceId": 20054,
+  "parts": []
+ },
+ {
+  "key": "leon-stein-fdb95ff0",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Three Hassidic Dances",
+  "titleEn": "Three Hassidic Dances",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "fdb95ff0-2a5d-42ce-9c3f-caa02859fe79",
+  "mbTitle": "Three Hassidic Dances",
+  "existingPieceId": 20064,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "04f90a99-d69a-425e-ad15-bfd054ca2566",
+    "mbTitle": "Three Hassidic Dances: No. 1. Dance of the Joyous. Allegro",
+    "nameKo": "Dance of the Joyous. Allegro",
+    "nameEn": "Three Hassidic Dances: No. 1. Dance of the Joyous. Allegro",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "97540a51-9007-47af-894d-67ec3ddcfe9a",
+    "mbTitle": "Three Hassidic Dances: No. 2. Dance of the Enraptured. Adagio - Andantino",
+    "nameKo": "Dance of the Enraptured. Adagio - Andantino",
+    "nameEn": "Three Hassidic Dances: No. 2. Dance of the Enraptured. Adagio - Andantino",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "b8b2a910-508e-43d8-a630-2c0791cd51cc",
+    "mbTitle": "Three Hassidic Dances: No. 3. Dance of the Exultant. Moderato - Allegro",
+    "nameKo": "Dance of the Exultant. Moderato - Allegro",
+    "nameEn": "Three Hassidic Dances: No. 3. Dance of the Exultant. Moderato - Allegro",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "leon-stein-b6d3a9f0",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Trio Concertante for Alto Saxophone, Violin and Piano",
+  "titleEn": "Trio Concertante for Alto Saxophone, Violin and Piano",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "b6d3a9f0-baca-4d7f-b4c5-9c58bf3cc379",
+  "mbTitle": "Trio Concertante for Alto Saxophone, Violin and Piano",
+  "existingPieceId": 18977,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "ab3bc665-adca-485a-8396-21d95ca17ce7",
+    "mbTitle": "Trio Concertante for Alto Saxophone, Violin and Piano: I. Spiritoso. Allegro con brio",
+    "nameKo": "Spiritoso. Allegro con brio",
+    "nameEn": "Trio Concertante for Alto Saxophone, Violin and Piano: I. Spiritoso. Allegro con brio",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "f069d450-3b65-4f4e-9586-bf2fef91e88f",
+    "mbTitle": "Trio Concertante for Alto Saxophone, Violin and Piano: II. Siciliano: Andante moderato",
+    "nameKo": "Siciliano: Andante moderato",
+    "nameEn": "Trio Concertante for Alto Saxophone, Violin and Piano: II. Siciliano: Andante moderato",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "5d458e13-63aa-4661-a607-bd94cd117ee6",
+    "mbTitle": "Trio Concertante for Alto Saxophone, Violin and Piano: III. Scherzoso. Allegro vivace",
+    "nameKo": "Scherzoso. Allegro vivace",
+    "nameEn": "Trio Concertante for Alto Saxophone, Violin and Piano: III. Scherzoso. Allegro vivace",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

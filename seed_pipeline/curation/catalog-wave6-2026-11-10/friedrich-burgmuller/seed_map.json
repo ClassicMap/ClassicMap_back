@@ -1,0 +1,98 @@
+[
+ {
+  "pieceId": 11658,
+  "title": "25개의 쉽고 점진적인 연습곡 Op. 100",
+  "mbids": [
+   "741265b9-5916-41a0-b2bf-ccca205379fd"
+  ],
+  "mapping": "work",
+  "key": "friedrich-burgmuller-741265b9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11725,
+  "title": "첼로와 기타를 위한 3개의 녹턴",
+  "mbids": [
+   "90f752f4-3b49-4a2c-968a-a64179cbd9f8"
+  ],
+  "mapping": "work",
+  "key": "friedrich-burgmuller-90f752f4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11781,
+  "title": "18개의 연습곡 Op. 109",
+  "mbids": [
+   "a333ac8e-4062-4397-8eca-cd5b2cba3464"
+  ],
+  "mapping": "work",
+  "key": "friedrich-burgmuller-a333ac8e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11806,
+  "title": "12개의 연습곡 Op. 105",
+  "mbids": [
+   "aca646d0-d633-4bfa-b520-0eb345450259"
+  ],
+  "mapping": "work",
+  "key": "friedrich-burgmuller-aca646d0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11388,
+  "title": "word word word",
+  "mbids": [
+   "90cc31d3-5a2d-4459-bb47-9c75526f0c22"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11538,
+  "title": "연습곡 E장조 Op. 105 No. 9",
+  "mbids": [
+   "40364986-7fa5-4ec5-9bf4-0a064639aa7e"
+  ],
+  "mapping": "work",
+  "key": "friedrich-burgmuller-40364986",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11843,
+  "title": "Souvenirs de Ratisbonne",
+  "mbids": [
+   "b8bfb027-1903-4d3b-aab4-1f4b8c04a0c9"
+  ],
+  "mapping": "work",
+  "key": "friedrich-burgmuller-b8bfb027",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11940,
+  "title": "麥兜·菠蘿油王子",
+  "mbids": [
+   "e0da66c7-00d0-39d3-993f-958d315be2af"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ }
+]

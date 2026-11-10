@@ -1,0 +1,181 @@
+[
+ {
+  "key": "heinz-tiessen-6b956543",
+  "kind": "collection",
+  "catalogue": "Op. 31",
+  "catalogueAlt": null,
+  "titleKo": "3개의 피아노 소품 Op. 31",
+  "titleEn": "3 Pieces for Piano, op. 31",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "6b956543-0f12-4fcd-8d1b-304b4f8b0f6d",
+  "mbTitle": "3 Pieces for Piano, op. 31",
+  "existingPieceId": 24340,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "19a66bf7-55cf-4dda-bbac-53bb4b5acb07",
+    "mbTitle": "Blackbird, op. 31 no. 2",
+    "nameKo": "Blackbird, op. 31 no. 2",
+    "nameEn": "Blackbird, op. 31 no. 2",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "26aa8411-230b-4d5a-b54c-56163ba8bf92",
+    "mbTitle": "A Sparrow in Eduard Erdmann's Hand, op. 31 no. 3",
+    "nameKo": "A Sparrow in Eduard Erdmann's Hand, op. 31 no. 3",
+    "nameEn": "A Sparrow in Eduard Erdmann's Hand, op. 31 no. 3",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "heinz-tiessen-f3324a5c",
+  "kind": "multi_movement",
+  "catalogue": "Op. 35",
+  "catalogueAlt": null,
+  "titleKo": "Duo-Sonata",
+  "titleEn": "Duo-Sonata, op. 35",
+  "year": null,
+  "yearText": null,
+  "genre": "sonata",
+  "authenticity": "authentic",
+  "mbid": "f3324a5c-cdb6-4ba1-a4f8-6f35fbb81075",
+  "mbTitle": "Duo-Sonata, op. 35",
+  "existingPieceId": 25857,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "ba4621d8-3379-4fda-a66e-8e2c662a14b3",
+    "mbTitle": "Duo-Sonata, op. 35: I. Präludium. Allegro ma non troppo",
+    "nameKo": "Präludium. Allegro ma non troppo",
+    "nameEn": "Duo-Sonata, op. 35: I. Präludium. Allegro ma non troppo",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "a72dd96d-28dc-409a-8da2-3ae5c91a0bf3",
+    "mbTitle": "Duo-Sonata, op. 35: II. Andante quasi adagio",
+    "nameKo": "Andante quasi adagio",
+    "nameEn": "Duo-Sonata, op. 35: II. Andante quasi adagio",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "b850e700-513b-4c1d-933a-724b784fffaa",
+    "mbTitle": "Duo-Sonata, op. 35: III. Finale. Allegro molto vivace",
+    "nameKo": "Finale. Allegro molto vivace",
+    "nameEn": "Duo-Sonata, op. 35: III. Finale. Allegro molto vivace",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "heinz-tiessen-7dd6ae58",
+  "kind": "multi_movement",
+  "catalogue": "Op. 30",
+  "catalogueAlt": null,
+  "titleKo": "Hamlet-Suite",
+  "titleEn": "Hamlet-Suite, op. 30",
+  "year": null,
+  "yearText": null,
+  "genre": "suite",
+  "authenticity": "authentic",
+  "mbid": "7dd6ae58-f842-47d3-9a3c-a5a702d2a2e6",
+  "mbTitle": "Hamlet-Suite, op. 30",
+  "existingPieceId": 24561,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "d9337a95-590c-4839-8c57-e1a6e9e531fe",
+    "mbTitle": "Hamlet-Suite, op. 30: I. Vorspiel",
+    "nameKo": "Vorspiel",
+    "nameEn": "Hamlet-Suite, op. 30: I. Vorspiel",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "411b1616-07db-4b84-be7c-f4b4a967fe18",
+    "mbTitle": "Hamlet-Suite, op. 30: II. Ophelias Tod",
+    "nameKo": "Ophelias Tod",
+    "nameEn": "Hamlet-Suite, op. 30: II. Ophelias Tod",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "99120a3e-becd-4d97-90f1-a141554400d6",
+    "mbTitle": "Hamlet-Suite, op. 30: III. Totenmarsch",
+    "nameKo": "Totenmarsch",
+    "nameEn": "Hamlet-Suite, op. 30: III. Totenmarsch",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "heinz-tiessen-dab34878",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "교향곡 2번 \"Stirb und Werde\"",
+  "titleEn": "Symphony no. 2, op. 17 \"Stirb und Werde\"",
+  "year": null,
+  "yearText": null,
+  "genre": "symphony",
+  "authenticity": "authentic",
+  "mbid": "dab34878-d43d-443d-95dc-ab46bc6ae4e6",
+  "mbTitle": "Symphony no. 2, op. 17 \"Stirb und Werde\"",
+  "existingPieceId": 25578,
+  "parts": []
+ },
+ {
+  "key": "heinz-tiessen-b6a9b3bf",
+  "kind": "single",
+  "catalogue": "Op. 33",
+  "catalogueAlt": null,
+  "titleKo": "Vorspiel zu einem Revolutionsdrama",
+  "titleEn": "Vorspiel zu einem Revolutionsdrama, op. 33",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "b6a9b3bf-c1d1-4d36-a4da-38436b145daf",
+  "mbTitle": "Vorspiel zu einem Revolutionsdrama, op. 33",
+  "existingPieceId": 25201,
+  "parts": []
+ }
+]

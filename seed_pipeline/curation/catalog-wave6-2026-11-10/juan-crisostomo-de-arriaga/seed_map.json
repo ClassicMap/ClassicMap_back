@@ -1,0 +1,146 @@
+[
+ {
+  "pieceId": 17139,
+  "title": "현악 4중주 2번 A장조",
+  "mbids": [
+   "44e1f1c3-b206-4ef7-b79c-a13c51064a66"
+  ],
+  "mapping": "work",
+  "key": "juan-crisostomo-de-arriaga-44e1f1c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18382,
+  "title": "현악 4중주 3번 E♭장조",
+  "mbids": [
+   "9187ec2c-74b2-465e-bf94-fe22e85e2d0c"
+  ],
+  "mapping": "work",
+  "key": "juan-crisostomo-de-arriaga-9187ec2c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18961,
+  "title": "오페라 <Los esclavos felices>",
+  "mbids": [
+   "b614713f-d370-4db7-a0dc-5c1661f34d14"
+  ],
+  "mapping": "work",
+  "key": "juan-crisostomo-de-arriaga-b614713f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19279,
+  "title": "현악 4중주 1번 D단조",
+  "mbids": [
+   "ca4d08d5-e5ea-4f28-9964-6281f82b7317"
+  ],
+  "mapping": "work",
+  "key": "juan-crisostomo-de-arriaga-ca4d08d5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19578,
+  "title": "칸타타 <Herminie>",
+  "mbids": [
+   "deceefb4-1ab3-48f1-8fee-221a8b2e5894"
+  ],
+  "mapping": "work",
+  "key": "juan-crisostomo-de-arriaga-deceefb4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15740,
+  "title": "대관현악을 위한 교향곡 D장조",
+  "mbids": [
+   "2ad237cc-e543-41b8-9b9e-9435fa6b8108"
+  ],
+  "mapping": "work",
+  "key": "juan-crisostomo-de-arriaga-2ad237cc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15789,
+  "title": "서곡 D장조 Op. 20",
+  "mbids": [
+   "85e0196b-91fd-4312-9775-faa456c350b0"
+  ],
+  "mapping": "work",
+  "key": "juan-crisostomo-de-arriaga-85e0196b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16284,
+  "title": "서곡 \"Nonetto\" Op. 1",
+  "mbids": [
+   "1104755a-bfb4-4196-b202-e7dc92b38cad"
+  ],
+  "mapping": "work",
+  "key": "juan-crisostomo-de-arriaga-1104755a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16568,
+  "title": "Tema variado en cuarteto, op. 17",
+  "mbids": [
+   "22245a4a-776b-499b-951d-a80d824dc61d"
+  ],
+  "mapping": "work",
+  "key": "juan-crisostomo-de-arriaga-22245a4a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16829,
+  "title": "Agar dans le désert",
+  "mbids": [
+   "32696dd5-0811-40a0-bd0e-873a370553a7"
+  ],
+  "mapping": "work",
+  "key": "juan-crisostomo-de-arriaga-32696dd5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18274,
+  "title": "Marcha militar",
+  "mbids": [
+   "8baaf16b-6220-4750-a183-dd6205505871"
+  ],
+  "mapping": "work",
+  "key": "juan-crisostomo-de-arriaga-8baaf16b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19970,
+  "title": "Air de \"Médée\"",
+  "mbids": [
+   "f7c717ac-e243-4934-b269-89cbed56bfd5"
+  ],
+  "mapping": "work",
+  "key": "juan-crisostomo-de-arriaga-f7c717ac",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

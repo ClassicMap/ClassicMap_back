@@ -1,0 +1,158 @@
+[
+ {
+  "pieceId": 18341,
+  "title": "La Source d'un regard",
+  "mbids": [
+   "8f319a48-8cc3-4a5d-a974-d2ce86150a50"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19225,
+  "title": "플루트 협주곡",
+  "mbids": [
+   "c6b7501d-cb3d-3566-9d8a-0937ef35c679"
+  ],
+  "mapping": "work",
+  "key": "marc-andre-dalbavie-c6b7501d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16057,
+  "title": "In Advance of the Broken Time",
+  "mbids": [
+   "04299df6-68bb-44b7-9e86-f0cd25e164a7"
+  ],
+  "mapping": "work",
+  "key": "marc-andre-dalbavie-04299df6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16593,
+  "title": "바이올린과 관현악을 위한 협주곡",
+  "mbids": [
+   "23cae205-2629-4a1d-b4b3-a03698321012"
+  ],
+  "mapping": "work",
+  "key": "marc-andre-dalbavie-23cae205",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16701,
+  "title": "Diadèmes",
+  "mbids": [
+   "2ac2672a-20a2-4244-bbbf-67372062fb67"
+  ],
+  "mapping": "work",
+  "key": "marc-andre-dalbavie-2ac2672a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16731,
+  "title": "바이올린, 호른, 피아노를 위한 3중주",
+  "mbids": [
+   "2c394e40-7dec-4a92-a49b-c0ca21eb72ad"
+  ],
+  "mapping": "work",
+  "key": "marc-andre-dalbavie-2c394e40",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17830,
+  "title": "Seuils",
+  "mbids": [
+   "6e8fc47d-774a-4de1-ac9f-0ab8b1a2334f"
+  ],
+  "mapping": "work",
+  "key": "marc-andre-dalbavie-6e8fc47d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18623,
+  "title": "Axiom",
+  "mbids": [
+   "a0e46dd8-85a2-4d89-bc8c-33fa8d6a4c97"
+  ],
+  "mapping": "work",
+  "key": "marc-andre-dalbavie-a0e46dd8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18798,
+  "title": "Tactus",
+  "mbids": [
+   "ab3596f3-34a2-4a78-90af-aa492d4b41c2"
+  ],
+  "mapping": "work",
+  "key": "marc-andre-dalbavie-ab3596f3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18823,
+  "title": "Palimpeste",
+  "mbids": [
+   "ad17b2f9-742d-4a20-bb3b-75bf9c80626e"
+  ],
+  "mapping": "work",
+  "key": "marc-andre-dalbavie-ad17b2f9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19035,
+  "title": "Ligne de fuite",
+  "mbids": [
+   "bb70aac0-daed-4d0d-af1e-fe175ea4f317"
+  ],
+  "mapping": "work",
+  "key": "marc-andre-dalbavie-bb70aac0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19527,
+  "title": "3중주",
+  "mbids": [
+   "db2a8e7b-0908-47e0-b43a-77139ce39998"
+  ],
+  "mapping": "work",
+  "key": "marc-andre-dalbavie-db2a8e7b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19649,
+  "title": "Color",
+  "mbids": [
+   "e2e12c3e-5840-45df-a0c2-0da4de0b4e08"
+  ],
+  "mapping": "work",
+  "key": "marc-andre-dalbavie-e2e12c3e",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

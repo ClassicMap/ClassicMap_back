@@ -1,0 +1,158 @@
+[
+ {
+  "pieceId": 23201,
+  "title": "Romanza",
+  "mbids": [
+   "005f02bf-808f-47cd-aa6b-35bd98a62b68"
+  ],
+  "mapping": "work",
+  "key": "miguel-llobet-005f02bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23295,
+  "title": "Leonesa",
+  "mbids": [
+   "0ac41de7-8b00-4fdb-91a2-5e9455934da5"
+  ],
+  "mapping": "work",
+  "key": "miguel-llobet-0ac41de7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23420,
+  "title": "페르난도 소르의 주제에 의한 변주곡 Op. 15",
+  "mbids": [
+   "13f698b6-806e-4891-8bd4-2fe58c6539fd"
+  ],
+  "mapping": "work",
+  "key": "miguel-llobet-13f698b6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23700,
+  "title": "기타를 위한 스케르초 왈츠",
+  "mbids": [
+   "2e1826d1-4835-44df-957d-0d82a8f27a3a"
+  ],
+  "mapping": "work",
+  "key": "miguel-llobet-2e1826d1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23845,
+  "title": "La filla del marxant",
+  "mbids": [
+   "3bfce7f3-a598-438b-8532-7d66c26099a3"
+  ],
+  "mapping": "work",
+  "key": "miguel-llobet-3bfce7f3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24197,
+  "title": "El mestre",
+  "mbids": [
+   "5e3a069c-207a-4736-8c30-0e9049816564"
+  ],
+  "mapping": "work",
+  "key": "miguel-llobet-5e3a069c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24609,
+  "title": "La filadora",
+  "mbids": [
+   "81c7c401-444a-48c0-81c9-cb11c0a4ba88"
+  ],
+  "mapping": "work",
+  "key": "miguel-llobet-81c7c401",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24625,
+  "title": "L'hereu Riera",
+  "mbids": [
+   "836fc7da-57ce-4296-8f22-d7a137cde5a8"
+  ],
+  "mapping": "work",
+  "key": "miguel-llobet-836fc7da",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24684,
+  "title": "Lo rossinyol",
+  "mbids": [
+   "88f83776-1767-4b0b-b333-21977687f456"
+  ],
+  "mapping": "work",
+  "key": "miguel-llobet-88f83776",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24947,
+  "title": "La preço de Lleida",
+  "mbids": [
+   "9f3da4ea-f1de-4827-a525-3aaa8d2c5b0c"
+  ],
+  "mapping": "work",
+  "key": "miguel-llobet-9f3da4ea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25296,
+  "title": "Plany",
+  "mbids": [
+   "bfd614d7-09ef-4aad-a714-99b8985d4e72"
+  ],
+  "mapping": "work",
+  "key": "miguel-llobet-bfd614d7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25341,
+  "title": "La pastoreta",
+  "mbids": [
+   "c4a50f04-be7e-379e-b314-a486a6a721aa"
+  ],
+  "mapping": "work",
+  "key": "miguel-llobet-c4a50f04",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25557,
+  "title": "마주르카",
+  "mbids": [
+   "d826d791-1976-45fa-a800-32a5c2db353a"
+  ],
+  "mapping": "work",
+  "key": "miguel-llobet-d826d791",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

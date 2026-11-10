@@ -1,0 +1,320 @@
+[
+ {
+  "key": "gustave-charpentier-181828dd",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Impressions d'Italie",
+  "titleEn": "Impressions d'Italie",
+  "year": null,
+  "yearText": null,
+  "genre": "suite",
+  "authenticity": "authentic",
+  "mbid": "181828dd-68ef-45e8-81df-a9d4a7910a0d",
+  "mbTitle": "Impressions d'Italie",
+  "existingPieceId": 16414,
+  "parts": []
+ },
+ {
+  "key": "gustave-charpentier-73f086d7",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "La vie du poete",
+  "titleEn": "La vie du poete",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "73f086d7-e470-4421-8c98-1eccff87cd00",
+  "mbTitle": "La vie du poete",
+  "existingPieceId": 17930,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "a7700e48-5c86-42ce-abf5-bbc32c6fa03c",
+    "mbTitle": "La vie du poete, Act I:\"Enthusiasm\": Douce Lumiere",
+    "nameKo": "Act I:\"Enthusiasm\": Douce Lumiere",
+    "nameEn": "La vie du poete, Act I:\"Enthusiasm\": Douce Lumiere",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "gustave-charpentier-cd2de458",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "오페라 <Louise>",
+  "titleEn": "Louise",
+  "year": null,
+  "yearText": null,
+  "genre": "opera",
+  "authenticity": "authentic",
+  "mbid": "cd2de458-cb42-4259-9e97-af73bbb3c7c4",
+  "mbTitle": "Louise",
+  "existingPieceId": 19318,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "bf02c339-5fa8-44bc-bc1b-3025dce463f7",
+    "mbTitle": "Louise: Acte I",
+    "nameKo": "Acte I",
+    "nameEn": "Louise: Acte I",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "1c6fbda0-efc7-4273-b4ce-00a8c54c1227",
+      "mbTitle": "Louise: Acte I, Scène I.",
+      "nameKo": "Scène I",
+      "nameEn": "Louise: Acte I, Scène I.",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 2,
+      "mbid": "2eb1c876-6400-4a0f-96ea-e9f3e1fe9ca9",
+      "mbTitle": "Louise: Acte I. Prelude",
+      "nameKo": "Acte I. Prelude",
+      "nameEn": "Louise: Acte I. Prelude",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 3,
+      "mbid": "56b4093e-7ec4-4908-9bd4-be6043db3a0d",
+      "mbTitle": "Louise: Acte I, Scène II.",
+      "nameKo": "Scène II",
+      "nameEn": "Louise: Acte I, Scène II.",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 4,
+      "mbid": "94773708-39ff-4c52-a579-7d1786b69ea4",
+      "mbTitle": "Louise: Acte I, Scène III. “C’était mon adorée !” (La Mère, Louise)",
+      "nameKo": "Scène III. “C’était mon adorée !” (La Mère, Louise)",
+      "nameEn": "Louise: Acte I, Scène III. “C’était mon adorée !” (La Mère, Louise)",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 5,
+      "mbid": "da870af8-97c0-4bca-ab1f-ff7f6c72c2b7",
+      "mbTitle": "Louise: Acte I, Scène IV.",
+      "nameKo": "Scène IV",
+      "nameEn": "Louise: Acte I, Scène IV.",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     }
+    ]
+   },
+   {
+    "seq": 2,
+    "mbid": "6ab7f406-ab87-401c-8f73-44c2c9d64f12",
+    "mbTitle": "Louise: Acte II",
+    "nameKo": "Acte II",
+    "nameEn": "Louise: Acte II",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "78f37c61-04d0-4dd7-a509-c4c7a68d13bb",
+      "mbTitle": "Louise: Acte II. Prelude",
+      "nameKo": "Acte II. Prelude",
+      "nameEn": "Louise: Acte II. Prelude",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 2,
+      "mbid": "9328484c-adbc-40e8-9e91-01d08557a9e9",
+      "mbTitle": "Louise: Acte II, Tableau I.",
+      "nameKo": "Tableau I",
+      "nameEn": "Louise: Acte II, Tableau I.",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 3,
+      "mbid": "aa5c5f0d-42d5-4839-86b6-31601a91d353",
+      "mbTitle": "Louise: Acte II, Tableau II.",
+      "nameKo": "Tableau II",
+      "nameEn": "Louise: Acte II, Tableau II.",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     }
+    ]
+   },
+   {
+    "seq": 3,
+    "mbid": "14df0a5c-9090-4034-84ec-ef221d4d794f",
+    "mbTitle": "Louise: Acte III",
+    "nameKo": "Acte III",
+    "nameEn": "Louise: Acte III",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "7c1e4ecb-b2e6-4225-baf0-cc3a18e55921",
+      "mbTitle": "Louise: Acte III. Prelude (“Vers la cité lointaine”)",
+      "nameKo": "Acte III. Prelude (“Vers la cité lointaine”)",
+      "nameEn": "Louise: Acte III. Prelude (“Vers la cité lointaine”)",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 2,
+      "mbid": "a4402560-1523-486c-b4d3-fddc7758441e",
+      "mbTitle": "Louise: Acte III, Scène I.",
+      "nameKo": "Scène I",
+      "nameEn": "Louise: Acte III, Scène I.",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 3,
+      "mbid": "4729cbab-f95b-483a-9af4-3a8e53242915",
+      "mbTitle": "Louise: Acte III, Scène II. “Regalez-vous, mesdames, voilà le plaisir” (Chœur)",
+      "nameKo": "Scène II. “Regalez-vous, mesdames, voilà le plaisir” (Chœur)",
+      "nameEn": "Louise: Acte III, Scène II. “Regalez-vous, mesdames, voilà le plaisir” (Chœur)",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 4,
+      "mbid": "5abf28ed-e87a-431a-a740-6872fc609b9f",
+      "mbTitle": "Louise: Acte III, Scène IV. “Je ne viens pas en ennemie” (La Mère)",
+      "nameKo": "Scène IV. “Je ne viens pas en ennemie” (La Mère)",
+      "nameEn": "Louise: Acte III, Scène IV. “Je ne viens pas en ennemie” (La Mère)",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 5,
+      "mbid": "cbc2325f-d04e-49d4-b368-ad02f2952d5b",
+      "mbTitle": "Louise: Acte III, Scène III. “Par mercure aux pieds légers”…“Oh ! Jolie ! Cette danseuse” (Le Pape des Fous)",
+      "nameKo": "Scène III. “Par mercure aux pieds légers”…“Oh ! Jolie ! Cette danseuse” (Le Pape des Fous)",
+      "nameEn": "Louise: Acte III, Scène III. “Par mercure aux pieds légers”…“Oh ! Jolie ! Cette danseuse” (Le Pape des Fous)",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     }
+    ]
+   },
+   {
+    "seq": 4,
+    "mbid": "76a7bcce-2e5a-4855-8a25-a4f64c804219",
+    "mbTitle": "Louise: Acte IV",
+    "nameKo": "Acte IV",
+    "nameEn": "Louise: Acte IV",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "7d1ab13b-c4ea-4b55-9ec5-6398b5b6734c",
+      "mbTitle": "Louise: Acte IV. Prelude",
+      "nameKo": "Acte IV. Prelude",
+      "nameEn": "Louise: Acte IV. Prelude",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 2,
+      "mbid": "615375b9-a908-436d-82e1-3431774c8718",
+      "mbTitle": "Louise: Acte IV, Scène I.",
+      "nameKo": "Scène I",
+      "nameEn": "Louise: Acte IV, Scène I.",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 3,
+      "mbid": "0227b887-539e-4dd2-88c2-d056d97c4b7e",
+      "mbTitle": "Louise: Acte IV, Scène II.",
+      "nameKo": "Scène II",
+      "nameEn": "Louise: Acte IV, Scène II.",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 4,
+      "mbid": "1eba9e51-a197-4062-a1b3-52a9496a3f1e",
+      "mbTitle": "Louise: Acte IV, Scène III. “Louise ! … Louise ! - O Paris !” (Le Père)",
+      "nameKo": "Scène III. “Louise ! … Louise ! - O Paris !” (Le Père)",
+      "nameEn": "Louise: Acte IV, Scène III. “Louise ! … Louise ! - O Paris !” (Le Père)",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     }
+    ]
+   }
+  ]
+ }
+]

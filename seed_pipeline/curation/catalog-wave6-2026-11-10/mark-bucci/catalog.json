@@ -1,0 +1,55 @@
+[
+ {
+  "key": "mark-bucci-1927c11d",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Concerto for a Singing Instrument",
+  "titleEn": "Concerto for a Singing Instrument",
+  "year": null,
+  "yearText": null,
+  "genre": "concerto",
+  "authenticity": "authentic",
+  "mbid": "1927c11d-48b5-4469-9856-b5fd52a0e573",
+  "mbTitle": "Concerto for a Singing Instrument",
+  "existingPieceId": 23487,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "30b5f5c6-24f4-4b94-a45a-6fbbf09e4a6a",
+    "mbTitle": "Concerto for a Singing Instrument: III.",
+    "nameKo": "III",
+    "nameEn": "Concerto for a Singing Instrument: III.",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "b2af27e8-3126-485b-901f-baa5340a833f",
+    "mbTitle": "Tug of War from ”Concerto for a Singing Instrument”",
+    "nameKo": "Tug of War from ”Concerto for a Singing Instrument”",
+    "nameEn": "Tug of War from ”Concerto for a Singing Instrument”",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "b5784546-332c-4bb1-ab96-06d466c6d5f0",
+    "mbTitle": "Vocalise from ”Concerto for a Singing Instrument”",
+    "nameKo": "Vocalise from ”Concerto for a Singing Instrument”",
+    "nameEn": "Vocalise from ”Concerto for a Singing Instrument”",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

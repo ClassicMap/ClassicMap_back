@@ -1,0 +1,74 @@
+[
+ {
+  "pieceId": 23922,
+  "title": "Sintesi",
+  "mbids": [
+   "43906cc9-6424-461d-ba4e-03bd37ee8d07"
+  ],
+  "mapping": "work",
+  "key": "bruno-bettinelli-43906cc9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23971,
+  "title": "피아노를 위한 환상곡",
+  "mbids": [
+   "4858dff0-d003-442a-bd56-c38557a31778"
+  ],
+  "mapping": "work",
+  "key": "bruno-bettinelli-4858dff0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24285,
+  "title": "Piccoli pezzi per pianoforte",
+  "mbids": [
+   "669ba17f-c7ef-49e0-a2e9-3cdb2568eb35"
+  ],
+  "mapping": "work",
+  "key": "bruno-bettinelli-669ba17f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24844,
+  "title": "5개의 전주곡",
+  "mbids": [
+   "96ff4e52-8a10-48f6-9a4a-82c58cfc2626"
+  ],
+  "mapping": "work",
+  "key": "bruno-bettinelli-96ff4e52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25183,
+  "title": "전원 모음곡",
+  "mbids": [
+   "b53da7f8-60b2-4dc4-957e-cbba6bec71ba"
+  ],
+  "mapping": "work",
+  "key": "bruno-bettinelli-b53da7f8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25891,
+  "title": "전주곡",
+  "mbids": [
+   "f5f82a37-b4bb-4c11-b384-6c4d9a51d423"
+  ],
+  "mapping": "work",
+  "key": "bruno-bettinelli-f5f82a37",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]
