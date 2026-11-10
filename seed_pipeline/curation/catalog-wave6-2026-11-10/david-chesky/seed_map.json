@@ -1,0 +1,2002 @@
+[
+ {
+  "pieceId": 15907,
+  "title": "Club de sol",
+  "mbids": [
+   "53f099bb-123c-46f2-a9c6-75d45fa114e0"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0c4c56ed",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Club de sol> 트랙"
+ },
+ {
+  "pieceId": 16213,
+  "title": "Primal Scream",
+  "mbids": [
+   "0d05badb-8618-4a7e-b772-1ab77a75570c"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d7fb75f8",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Primal Scream> 트랙"
+ },
+ {
+  "pieceId": 16975,
+  "title": "발레 <The Zephyrtine: A Ballet Story>",
+  "mbids": [
+   "3b01aa03-53ef-41c1-9d0f-1cb99ee3b4a8"
+  ],
+  "mapping": "work",
+  "key": "david-chesky-3b01aa03",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17335,
+  "title": "Chorinho No. 1 \"New York\"",
+  "mbids": [
+   "50d19a28-8c71-4ce8-8f84-821d95c5b5d4"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 17959,
+  "title": "Sleepless in New York",
+  "mbids": [
+   "762a6445-63af-4cde-a736-c3b0306292e8"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d7fb75f8",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Primal Scream> 트랙"
+ },
+ {
+  "pieceId": 15906,
+  "title": "Come Close",
+  "mbids": [
+   "b7aa084f-c47f-491c-9d2a-4c1b3f126fa4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15923,
+  "title": "Africa Morning",
+  "mbids": [
+   "c9d9b14d-98a5-4a50-8779-150d1cdeba88"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 15924,
+  "title": "Club descarga",
+  "mbids": [
+   "748a898b-9305-4da9-b383-593db3389046"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 16002,
+  "title": "Grandeur",
+  "mbids": [
+   "011fd227-b45b-4c99-b27d-4d717517dac0"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 16041,
+  "title": "Final Movement",
+  "mbids": [
+   "0315fecd-7505-401b-9135-d63c46f669ac"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0a36d6b2",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <The Olympian> 트랙"
+ },
+ {
+  "pieceId": 16098,
+  "title": "Lazer Pulse",
+  "mbids": [
+   "063a3288-2d81-46cf-b22e-f6ce07fe9a27"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 16101,
+  "title": "Desert Island",
+  "mbids": [
+   "067dc69b-32ca-46f4-95c8-479fdd6bf35a"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0c4c56ed",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Club de sol> 트랙"
+ },
+ {
+  "pieceId": 16201,
+  "title": "Chorinho No.18",
+  "mbids": [
+   "0c9ca90d-4d00-4349-af1c-ee4873eb2106"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0aea5f3f",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <The Tangos and Dances> 트랙"
+ },
+ {
+  "pieceId": 16211,
+  "title": "Arabian Nights",
+  "mbids": [
+   "0d02a613-38d2-457d-ae8b-55614049cf5e"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 16251,
+  "title": "Majesty",
+  "mbids": [
+   "0f321b22-7d52-4844-bea4-5d2d6035d536"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0a36d6b2",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <The Olympian> 트랙"
+ },
+ {
+  "pieceId": 16270,
+  "title": "Acceleration",
+  "mbids": [
+   "103d91de-e6b3-4540-b1b1-bccd1c892691"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 16276,
+  "title": "Morning Mist",
+  "mbids": [
+   "10a02e44-186f-4158-b726-a25beceb0286"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0c4c56ed",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Club de sol> 트랙"
+ },
+ {
+  "pieceId": 16320,
+  "title": "시편 II",
+  "mbids": [
+   "1300d332-3185-488c-ba0c-b893ea1a8313"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-50c7404d",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Three Psalms For String Orchestra> 트랙"
+ },
+ {
+  "pieceId": 16334,
+  "title": "Intensity",
+  "mbids": [
+   "13f5b8bd-b4ca-402f-8293-58da2ae10b7c"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0a36d6b2",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <The Olympian> 트랙"
+ },
+ {
+  "pieceId": 16367,
+  "title": "Deconstruction",
+  "mbids": [
+   "15b90393-4a3a-43cc-9ed3-4cdb94478fc9"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-038b26bd",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Jazz in the New Harmonic> 트랙"
+ },
+ {
+  "pieceId": 16390,
+  "title": "Caribbean Drum Song",
+  "mbids": [
+   "16be7c64-f464-4bd6-bd90-365b4f691e35"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   26
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 16409,
+  "title": "시편 III",
+  "mbids": [
+   "17d5b8d2-c111-442a-850f-25b7b88d2482"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-50c7404d",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Three Psalms For String Orchestra> 트랙"
+ },
+ {
+  "pieceId": 16412,
+  "title": "Basketball Court",
+  "mbids": [
+   "17fe30e9-d52b-4b9d-948d-974d20e9aa30"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 16430,
+  "title": "Rag No. 10 \"Seventh Avenue\"",
+  "mbids": [
+   "1950da7d-9a7d-4103-9d3e-b845b620f960"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 16452,
+  "title": "Compression",
+  "mbids": [
+   "1a1eb3c4-ffa4-4a7f-92eb-0415d9db1ca4"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 16463,
+  "title": "Chimes of Serenity",
+  "mbids": [
+   "1aad0200-fe61-44c2-9d36-edf8294e7ea7"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 16470,
+  "title": "Power",
+  "mbids": [
+   "1b2ce64a-5b24-4108-9633-700cda22ffa2"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0a36d6b2",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <The Olympian> 트랙"
+ },
+ {
+  "pieceId": 16471,
+  "title": "Music for Cello, Helicopter and Cars",
+  "mbids": [
+   "1b317906-b849-4cf1-8711-3a4cf0161229"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 16475,
+  "title": "White Water",
+  "mbids": [
+   "1bae6baa-6a1a-4cee-aad6-541b1ea4729b"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0c4c56ed",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Club de sol> 트랙"
+ },
+ {
+  "pieceId": 16488,
+  "title": "Kill the Philharmonic",
+  "mbids": [
+   "1c62351f-1f0a-4568-a4ae-6ff4c4c36e1d"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d7fb75f8",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Primal Scream> 트랙"
+ },
+ {
+  "pieceId": 16569,
+  "title": "Heartbeat Announcement - 20 Hz",
+  "mbids": [
+   "22285b50-33bb-478b-83ba-6443d3c42606"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   33
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 16655,
+  "title": "Marina",
+  "mbids": [
+   "27ae5c89-bd24-4859-8e1c-02b066f52db4"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0c4c56ed",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Club de sol> 트랙"
+ },
+ {
+  "pieceId": 16664,
+  "title": "시편 IV \"Sorrow\"",
+  "mbids": [
+   "2800d04a-fab4-47d7-9898-e16322631815"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-8fc58726",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Psalms 4, 5 & 6: Remembrance for the Victims of the Modern Holocausts> 트랙"
+ },
+ {
+  "pieceId": 16684,
+  "title": "Heartbeat Announcement - 50 Hz",
+  "mbids": [
+   "299bacbb-2547-49a4-9306-04b9a866c99a"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   27
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 16689,
+  "title": "춤곡 4번",
+  "mbids": [
+   "29ece50d-5e56-4e69-b959-6e5673075b2d"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0aea5f3f",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <The Tangos and Dances> 트랙"
+ },
+ {
+  "pieceId": 16710,
+  "title": "Rag No. 12 \"The Park Avenue Rag\"",
+  "mbids": [
+   "2b40e989-6b06-4f2a-b1b5-feea5c815d78"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 16759,
+  "title": "Rag No. 17 \"The J Walker Rag\"",
+  "mbids": [
+   "2e53d801-a30f-45c7-aa7a-6ecdb64c4556"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 16790,
+  "title": "Isolation",
+  "mbids": [
+   "30458b5f-75bd-4a43-8026-b6762f91625b"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d7fb75f8",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Primal Scream> 트랙"
+ },
+ {
+  "pieceId": 16812,
+  "title": "Olympian Fanfare (No Guitar)",
+  "mbids": [
+   "31a1702a-c6dd-40a8-9168-448fbd444390"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0a36d6b2",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <The Olympian> 트랙"
+ },
+ {
+  "pieceId": 16843,
+  "title": "American Culture X",
+  "mbids": [
+   "3332951a-8f38-4a95-b7f2-c1f1d2381a83"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-038b26bd",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Jazz in the New Harmonic> 트랙"
+ },
+ {
+  "pieceId": 16927,
+  "title": "Music for Western Percussion",
+  "mbids": [
+   "37c3b323-ace1-4802-bd14-b062f4614274"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 16943,
+  "title": "Rag No. 14 \"Kids You're Late for School Rag\"",
+  "mbids": [
+   "38c0323f-49b2-4154-b10d-f18c18ed960a"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 16960,
+  "title": "춤곡 2번",
+  "mbids": [
+   "3a17b3bc-44d8-41ec-aa32-38b8839b052c"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0aea5f3f",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <The Tangos and Dances> 트랙"
+ },
+ {
+  "pieceId": 16977,
+  "title": "Lazer Pulse II",
+  "mbids": [
+   "3b428db9-9820-49a9-a86a-b7f27c7940ce"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 16992,
+  "title": "Chorinho No. 2 \"Brooklyn Bridge\"",
+  "mbids": [
+   "3c161b77-a0d5-4b80-b299-be1d3cadfd29"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 16993,
+  "title": "바순과 관현악을 위한 협주곡",
+  "mbids": [
+   "3c2387a2-3a2c-4113-9d88-81f77404bdb1"
+  ],
+  "mapping": "work",
+  "key": "david-chesky-3c2387a2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17092,
+  "title": "Chorinho No. 15 \"Summer Days\"",
+  "mbids": [
+   "41f5dc3e-d8b0-49a0-aedf-463c679ca90d"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 17106,
+  "title": "Stretch Run",
+  "mbids": [
+   "42eade67-4d85-4c91-a79d-ad2b9a05e73f"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 17144,
+  "title": "Sugar Loaf",
+  "mbids": [
+   "4518a6d8-3889-4bf0-ab70-fcb73c5c1935"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0c4c56ed",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Club de sol> 트랙"
+ },
+ {
+  "pieceId": 17242,
+  "title": "Grooves From the Underground",
+  "mbids": [
+   "4a2e07c0-b3ac-4744-9be2-0f33b95305ef"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-038b26bd",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Jazz in the New Harmonic> 트랙"
+ },
+ {
+  "pieceId": 17317,
+  "title": "Quiet Desperation",
+  "mbids": [
+   "4fdc7e31-88da-4b82-acb3-39061a12699a"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d7fb75f8",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Primal Scream> 트랙"
+ },
+ {
+  "pieceId": 17333,
+  "title": "Track Time",
+  "mbids": [
+   "50a506e5-ce71-4337-a829-75f47b148bdd"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0a36d6b2",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <The Olympian> 트랙"
+ },
+ {
+  "pieceId": 17338,
+  "title": "시편 VI \"Rage and Despair\"",
+  "mbids": [
+   "5104aebb-fa73-47ed-92b3-8f9811e9aa31"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-8fc58726",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Psalms 4, 5 & 6: Remembrance for the Victims of the Modern Holocausts> 트랙"
+ },
+ {
+  "pieceId": 17345,
+  "title": "Chorinho No. 6 \"Broadway\"",
+  "mbids": [
+   "51a16ace-0e34-4e6a-97da-86e6f609f22c"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 17381,
+  "title": "The Forest Song",
+  "mbids": [
+   "53cef85f-06a3-472c-aead-e57de4446b2d"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 17402,
+  "title": "Sunrise",
+  "mbids": [
+   "54b9ebec-890e-4a62-93b4-ab4c2cbafdc1"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0c4c56ed",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Club de sol> 트랙"
+ },
+ {
+  "pieceId": 17444,
+  "title": "탱고 1번",
+  "mbids": [
+   "574d9bd7-3dd8-4671-a46e-9462d07f7a01"
+  ],
+  "mapping": "work",
+  "key": "david-chesky-574d9bd7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17451,
+  "title": "Circle of Voices",
+  "mbids": [
+   "57e0f4b7-564a-4fec-975c-9e3a17d715b4"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 17593,
+  "title": "Back Again",
+  "mbids": [
+   "60a4fafc-950b-46df-ae15-45b8dd2f8ec4"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0c4c56ed",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Club de sol> 트랙"
+ },
+ {
+  "pieceId": 17631,
+  "title": "Duke's Groove",
+  "mbids": [
+   "62a46867-3db6-442b-9ba4-953e7985062b"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-038b26bd",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Jazz in the New Harmonic> 트랙"
+ },
+ {
+  "pieceId": 17658,
+  "title": "Rag No. 9 \"Grand Central Morning\"",
+  "mbids": [
+   "645cb00e-180d-4b0b-b3c5-b3df2f204f9e"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 17670,
+  "title": "Stretch Run II",
+  "mbids": [
+   "65218f97-80d7-4dc0-a0f9-9d55c3b8507c"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 17674,
+  "title": "40 Hz Heartbeat",
+  "mbids": [
+   "65879080-3311-4c17-bf2c-bc973e2ac690"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   30
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 17698,
+  "title": "The Carousel Ride",
+  "mbids": [
+   "66d084f7-3cf7-4744-9bda-67553d60df4b"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   25
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 17726,
+  "title": "Tibet",
+  "mbids": [
+   "6864610f-51ce-41ed-beb6-036d5c5cece1"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 17885,
+  "title": "50 Hz Heartbeat",
+  "mbids": [
+   "716432e7-1d47-4548-ac36-7eda1db81a18"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 17927,
+  "title": "Broadway",
+  "mbids": [
+   "73c2fcc2-1db9-4915-9941-2363a82a3637"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-038b26bd",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Jazz in the New Harmonic> 트랙"
+ },
+ {
+  "pieceId": 17929,
+  "title": "Rio After Dark",
+  "mbids": [
+   "73eccf95-41ff-4bfc-a8bb-523f64b2103c"
+  ],
+  "mapping": "work",
+  "key": "david-chesky-73eccf95",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17932,
+  "title": "Thank You for Coming to Our Show",
+  "mbids": [
+   "741dab12-c0ec-4a67-8188-d9dfa4c69754"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   36
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 17936,
+  "title": "Burnout",
+  "mbids": [
+   "746a1ed0-2d64-4d16-8eff-bbfacc4f23e8"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-038b26bd",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Jazz in the New Harmonic> 트랙"
+ },
+ {
+  "pieceId": 17951,
+  "title": "Chorinho No. 11 \"Columbus Avenue\"",
+  "mbids": [
+   "75ad660b-15db-482f-8c74-83c4ecb6a62a"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 17975,
+  "title": "Chorinho No. 13 \"Latin Fugue\"",
+  "mbids": [
+   "77923eb4-7ae5-4308-a584-70cc2d721a32"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 18015,
+  "title": "Blast Off",
+  "mbids": [
+   "79ff7e95-1ccb-47a3-b383-459b284a1688"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 18016,
+  "title": "Chorinho No.19",
+  "mbids": [
+   "7a0fc798-ac9d-4a08-ab7e-ef6a3ea04062"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0aea5f3f",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <The Tangos and Dances> 트랙"
+ },
+ {
+  "pieceId": 18034,
+  "title": "30 Hz Heartbeat",
+  "mbids": [
+   "7af217ba-ac52-4143-b329-16a2ebe24127"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 18092,
+  "title": "Wild Nights",
+  "mbids": [
+   "7e64d9c7-2383-45fe-8348-eb975f788c1e"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 18108,
+  "title": "Heartbeat Announcement - 30 Hz",
+  "mbids": [
+   "7f691c48-5dd2-4689-adcb-a43ca33f3fe9"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   31
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 18141,
+  "title": "Check Point Charlie",
+  "mbids": [
+   "821e317e-3f4c-4f23-b1b0-d1349895b17d"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d7fb75f8",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Primal Scream> 트랙"
+ },
+ {
+  "pieceId": 18162,
+  "title": "Rag No. 3 \"The Duke\"",
+  "mbids": [
+   "83e6213f-a5e2-47aa-88e4-9121f1a8ec6a"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 18201,
+  "title": "Burning Up",
+  "mbids": [
+   "86c09592-d360-4b7e-adbb-2043d6a88c10"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 18228,
+  "title": "Fire Drums",
+  "mbids": [
+   "88aa6227-ac19-4c63-a857-b093e3646efc"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 18254,
+  "title": "Jazz in the New Harmonic",
+  "mbids": [
+   "8a7ce4bb-5958-4d41-9e9b-a8180da2c205"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-038b26bd",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Jazz in the New Harmonic> 트랙"
+ },
+ {
+  "pieceId": 18337,
+  "title": "Welcome to the Show",
+  "mbids": [
+   "8f02cb9e-b301-4caf-977e-914666f7a5ac"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 18372,
+  "title": "The Torch",
+  "mbids": [
+   "90eb43b7-6db0-4f21-8d68-23f849846b51"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0a36d6b2",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <The Olympian> 트랙"
+ },
+ {
+  "pieceId": 18447,
+  "title": "리비를 위한 왈츠",
+  "mbids": [
+   "954c55f3-25ea-43f7-99c2-4f3504888822"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0c4c56ed",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Club de sol> 트랙"
+ },
+ {
+  "pieceId": 18462,
+  "title": "Burning Up II",
+  "mbids": [
+   "965fcce1-6356-4b1d-8945-adb8af9fb9ad"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 18464,
+  "title": "피아노 독주를 위한 환상곡집 중 \"Choro no. 1\"",
+  "mbids": [
+   "9684c510-3d3f-37b0-9d9f-5993cdef1b6b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 18563,
+  "title": "Rag No. 18 \"The Coney Island Rag\"",
+  "mbids": [
+   "9c7f69c0-e4c3-4c8b-bd65-f0628362e8d8"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 18569,
+  "title": "Intensity (short version)",
+  "mbids": [
+   "9d18d7c7-fac8-4034-862a-3bbac934b631"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 18593,
+  "title": "시편 V \"Aftermath\"",
+  "mbids": [
+   "9ed07efe-af5c-4b9b-99d5-1e06370e17dc"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-8fc58726",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Psalms 4, 5 & 6: Remembrance for the Victims of the Modern Holocausts> 트랙"
+ },
+ {
+  "pieceId": 18599,
+  "title": "춤곡 1번",
+  "mbids": [
+   "9f2206a1-3385-4955-bf99-b648549c1576"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0aea5f3f",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <The Tangos and Dances> 트랙"
+ },
+ {
+  "pieceId": 18649,
+  "title": "Rag No. 5 \"Fourth Street\"",
+  "mbids": [
+   "a2a39bd9-659b-4c5d-85b1-a03b78c9552d"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 18657,
+  "title": "Born to Be Champ (instrumental)",
+  "mbids": [
+   "a313d686-d133-4fc8-94ba-1c891cd815b2"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0a36d6b2",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <The Olympian> 트랙"
+ },
+ {
+  "pieceId": 18691,
+  "title": "Rising II",
+  "mbids": [
+   "a4ea5035-003a-4ab9-b33c-95923ffe3f00"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 18774,
+  "title": "Chorinho No. 8 \"Manhattan\"",
+  "mbids": [
+   "a9f881b5-1bc7-4e8b-8e55-8d0073196f70"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 18805,
+  "title": "Victory II",
+  "mbids": [
+   "ab950ce0-e30a-4101-b1df-f4fd095cb7b6"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 18864,
+  "title": "Forever",
+  "mbids": [
+   "afca6261-080f-47e4-babe-9c16a1b6f5ab"
+  ],
+  "mapping": "work",
+  "key": "david-chesky-afca6261",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18885,
+  "title": "Kenya",
+  "mbids": [
+   "b17145cb-9cdd-438b-ae94-d41ccf866dc6"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   21
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 18895,
+  "title": "Rag No. 7 \"Broadway Boogie Woogie\"",
+  "mbids": [
+   "b200c177-5997-49c7-bb96-089dd287ec51"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 18896,
+  "title": "Chorinho No. 10 \"Soho Waltz\"",
+  "mbids": [
+   "b24fed74-a8e4-4433-9012-cc88defb2b42"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 18918,
+  "title": "Rag No. 4 \"Times Square\"",
+  "mbids": [
+   "b37862c6-1c6e-4461-b160-6d4aabff0e8a"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 18926,
+  "title": "Church Mice",
+  "mbids": [
+   "b3df8e9b-f0f2-490c-9087-e6704d8cb79a"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   35
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 18948,
+  "title": "Victory",
+  "mbids": [
+   "b4deb077-580e-49e2-8588-cd9659be9e62"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 18968,
+  "title": "Chorinho No. 14 \"Hudson Street\"",
+  "mbids": [
+   "b67d4cd6-d94a-4dd5-955c-aa495e3f2372"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 18978,
+  "title": "Chorinho No. 5 \"Sutton Place\"",
+  "mbids": [
+   "b70dce2b-1c8d-46a6-b2b4-11bc57a37e37"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 19021,
+  "title": "시편 I",
+  "mbids": [
+   "ba9ab702-f04b-4656-8d02-043314986140"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-50c7404d",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Three Psalms For String Orchestra> 트랙"
+ },
+ {
+  "pieceId": 19070,
+  "title": "Acceleration II",
+  "mbids": [
+   "bd7ae8e4-5dd3-4e2a-8e43-05fdf8d56816"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 19092,
+  "title": "Rag No. 2 \"The Bernstein\"",
+  "mbids": [
+   "beb8eb66-6944-4868-a08a-17006145cfe4"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 19102,
+  "title": "Swan’s Point",
+  "mbids": [
+   "bf46e1a8-dfc7-4638-88de-744c95b59a24"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0c4c56ed",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Club de sol> 트랙"
+ },
+ {
+  "pieceId": 19115,
+  "title": "The New York Subway Ride",
+  "mbids": [
+   "bfdc6dcc-ce84-40b1-aef7-170a0b9a210b"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 19128,
+  "title": "Cars & Horses",
+  "mbids": [
+   "c0b364f6-dbbe-4839-8079-40af3c3f9275"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   22
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 19129,
+  "title": "Chorinho No. 9 \"Madison Avenue\"",
+  "mbids": [
+   "c0bcc8dc-dd2c-4334-b9b4-5b681acdb0d0"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 19137,
+  "title": "Rag No. 15 \"The Manhattan Blues Variations Rag\"",
+  "mbids": [
+   "c194c636-57cb-47f7-bde2-648cfdab33ff"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 19158,
+  "title": "Born to Be Champ",
+  "mbids": [
+   "c2e1dfc4-c452-4609-a5e2-9d88b7c24569"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 19181,
+  "title": "Organ & Chimes",
+  "mbids": [
+   "c4051f87-b0d4-44fd-a55d-f4a61175ee18"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   24
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 19285,
+  "title": "Rag No. 11 \"The Circle at Fifth\"",
+  "mbids": [
+   "ca8dcbc7-f87c-419e-9d39-cb61bf7bd523"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 19289,
+  "title": "Rag No. 1 \"The New Yorker\"",
+  "mbids": [
+   "caf49260-d661-4ee3-b2ae-ae1f1b6600b4"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 19328,
+  "title": "Chorinho no. 12 \"Park Avenue\"",
+  "mbids": [
+   "cddb0e83-e4ce-4f6f-9a53-5876ca18a358"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 19359,
+  "title": "Rag No. 6 \"Third Avenue\"",
+  "mbids": [
+   "cfd7a13e-0bd8-4b0c-8d2c-6ed374b23e73"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 19367,
+  "title": "Chorinho No. 16 \"The Boat Pond\"",
+  "mbids": [
+   "d097f440-baf1-4c30-9571-1f8bfa7ffb1f"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 19370,
+  "title": "Cultural Treason",
+  "mbids": [
+   "d0bd0a54-f05d-496a-a9e9-e1dba6a922c1"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d7fb75f8",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Primal Scream> 트랙"
+ },
+ {
+  "pieceId": 19372,
+  "title": "Chorinho No. 4 \"Washington Heights\"",
+  "mbids": [
+   "d0d59131-3059-4e15-86e4-79cf88212bbf"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 19380,
+  "title": "Compression II",
+  "mbids": [
+   "d1503ffc-41fa-44ee-adb1-a95c074ac76d"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 19381,
+  "title": "Chorinho no. 3 \"Sheep Meadow\"",
+  "mbids": [
+   "d170017a-30af-4e37-b347-896b00e22338"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 19397,
+  "title": "20 Hz Heartbeat",
+  "mbids": [
+   "d26b96df-6f39-402f-b730-1e860574d469"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 19410,
+  "title": "Rag No. 8 \"Fifth Avenue\"",
+  "mbids": [
+   "d30afca3-35cd-4959-8ec4-780de740f76f"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 19415,
+  "title": "Personal Pride",
+  "mbids": [
+   "d3790231-16cf-4443-b662-4cd0bba965c0"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0a36d6b2",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <The Olympian> 트랙"
+ },
+ {
+  "pieceId": 19446,
+  "title": "The Minimalist",
+  "mbids": [
+   "d55fe181-cdcb-47f3-a75c-138fa724f03c"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 19470,
+  "title": "Chorinho No. 17 \"Times Square\"",
+  "mbids": [
+   "d76324b1-aacf-46c5-ad06-b166eb4c91eb"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-a6310496",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <The New York Chorinhos> 트랙"
+ },
+ {
+  "pieceId": 19473,
+  "title": "Olympian Fanfare",
+  "mbids": [
+   "d778d96e-61bf-4f05-8be4-f13031ba2c92"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 19476,
+  "title": "춤곡 3번",
+  "mbids": [
+   "d7927abf-552d-4aad-87a9-c1c3ae72ac65"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0aea5f3f",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <The Tangos and Dances> 트랙"
+ },
+ {
+  "pieceId": 19477,
+  "title": "Bass Drum March",
+  "mbids": [
+   "d7a1844a-f8b6-48dc-b70e-805910b2cb00"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 19488,
+  "title": "Central Park Morning",
+  "mbids": [
+   "d8405a04-68c5-4cea-9fee-bb32e3287301"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0c4c56ed",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Club de sol> 트랙"
+ },
+ {
+  "pieceId": 19589,
+  "title": "춤곡 5번",
+  "mbids": [
+   "df894239-ed09-46af-bd9b-57b8f96bdb5c"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0aea5f3f",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <The Tangos and Dances> 트랙"
+ },
+ {
+  "pieceId": 19607,
+  "title": "탱고 2번",
+  "mbids": [
+   "e0b8e392-c801-400c-b37f-6faa886e63d8"
+  ],
+  "mapping": "work",
+  "key": "david-chesky-e0b8e392",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19694,
+  "title": "Transcendental Tripping",
+  "mbids": [
+   "e6f3f51b-651d-46ae-9d71-53f50d412fd2"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-038b26bd",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Jazz in the New Harmonic> 트랙"
+ },
+ {
+  "pieceId": 19708,
+  "title": "Chorinho No.7",
+  "mbids": [
+   "e7e813bc-7db1-4c0a-b28f-758ab046c8fc"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0aea5f3f",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <The Tangos and Dances> 트랙"
+ },
+ {
+  "pieceId": 19735,
+  "title": "Heartbeat Announcement - 40 Hz",
+  "mbids": [
+   "ea303cae-51b8-4b22-b6cf-631d59aab65a"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   29
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 19748,
+  "title": "Rag No. 13 \"The Thanksgiving Day Parade Rag in 7/4\"",
+  "mbids": [
+   "eb0a698a-6481-4b3f-95c7-66d7b1111c39"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 19799,
+  "title": "Grandeur II",
+  "mbids": [
+   "ee577e9a-35e2-41bc-b6e0-396af61dcba2"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-d10c517d",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Victory> 트랙"
+ },
+ {
+  "pieceId": 19884,
+  "title": "Circle of Drums",
+  "mbids": [
+   "f367f6cf-73b8-4c93-986b-068b00b97706"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   23
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 19904,
+  "title": "Ping Pong",
+  "mbids": [
+   "f4b8e467-a879-4a9d-bcd4-039c88dc78fd"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ },
+ {
+  "pieceId": 19905,
+  "title": "Rag No. 16 \"Penn Station\"",
+  "mbids": [
+   "f4d65419-3329-410d-8746-4238a9e34ed6"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-b23c744a",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <The New York Rags> 트랙"
+ },
+ {
+  "pieceId": 19907,
+  "title": "Olympic Fever",
+  "mbids": [
+   "f4f71f59-0e01-4ef1-aa21-8d5472fa0700"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-0a36d6b2",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <The Olympian> 트랙"
+ },
+ {
+  "pieceId": 20010,
+  "title": "Dancing Tympani",
+  "mbids": [
+   "fa1e388d-bd0d-4aa4-9e1c-2b6bc0ab51ee"
+  ],
+  "mapping": "part",
+  "key": "david-chesky-rg-ff33dd94",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Dr. Chesky's Magnificent, Fabulous, Absurd & Insane Musical 5.1 Surround Show> 트랙"
+ }
+]

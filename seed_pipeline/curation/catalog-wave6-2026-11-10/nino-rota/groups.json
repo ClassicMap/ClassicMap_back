@@ -1,0 +1,576 @@
+[
+ {
+  "releaseGroup": "c17ea49a-369c-3b49-a2bc-7de834bd1dfe",
+  "release": "adf0f402-81db-407d-9a42-bda947e701f0",
+  "rgTitle": "The Abdication",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1974",
+  "film": true,
+  "wikidata": "Q3519695",
+  "screenKind": "film",
+  "kowiki": "",
+  "koTitle": null,
+  "title": "영화 <The Abdication> 사운드트랙",
+  "tracks": 22,
+  "linked": 22
+ },
+ {
+  "releaseGroup": "d988ff08-5d75-4870-9f50-5f53cd897dfd",
+  "release": "81634e98-f134-3e74-a140-cec2cde03ec9",
+  "rgTitle": "Fellini Satyricon",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1970",
+  "film": true,
+  "wikidata": "Q18416",
+  "screenKind": "film",
+  "kowiki": "사티리콘 (영화)",
+  "koTitle": "사티리콘",
+  "title": "영화 <사티리콘> 사운드트랙",
+  "tracks": 20,
+  "linked": 18
+ },
+ {
+  "releaseGroup": "2bcc5806-3679-39da-bddc-8c4387720eb0",
+  "release": "30440e9c-7be9-48e9-a81a-a792da88fc75",
+  "rgTitle": "Death on the Nile",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1978",
+  "film": true,
+  "wikidata": "Q1059914",
+  "screenKind": "film",
+  "kowiki": "나일 강의 죽음 (1978년 영화)",
+  "koTitle": "나일 강의 죽음",
+  "title": "영화 <나일 강의 죽음> 사운드트랙",
+  "tracks": 17,
+  "linked": 15
+ },
+ {
+  "releaseGroup": "c11a3d05-dde5-41d0-a9cb-f5c636343f5b",
+  "release": "62b3321d-b14c-466b-ba82-87d89d1fa1e2",
+  "rgTitle": "Hurricane",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1979",
+  "film": true,
+  "wikidata": "Q1191113",
+  "screenKind": "film",
+  "kowiki": "허리케인 (1979년 영화)",
+  "koTitle": "허리케인",
+  "title": "영화 <허리케인> 사운드트랙",
+  "tracks": 16,
+  "linked": 14
+ },
+ {
+  "releaseGroup": "c81885c5-114a-3070-b5d9-1f90fd301320",
+  "release": "02486e06-7944-4cee-9537-eae49d3ed79a",
+  "rgTitle": "Il Casanova di Federico Fellini",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1977",
+  "film": true,
+  "wikidata": "Q18429",
+  "screenKind": "film",
+  "kowiki": "카사노바 (1976년 영화)",
+  "koTitle": "카사노바",
+  "title": "영화 <카사노바> 사운드트랙",
+  "tracks": 13,
+  "linked": 13
+ },
+ {
+  "releaseGroup": "852df889-926a-4b5a-87fa-4f849e304e48",
+  "release": "ee019cb4-9f42-4211-9148-1bb1513283fa",
+  "rgTitle": "Plein soleil",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2005",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Plein soleil",
+  "tracks": 16,
+  "linked": 13
+ },
+ {
+  "releaseGroup": "033d90ce-4a58-441c-a761-590e769a8233",
+  "release": "20895f53-dec0-4189-8c31-554c7ef75f76",
+  "rgTitle": "War and Peace",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1956",
+  "film": true,
+  "wikidata": "Q643811",
+  "screenKind": "film",
+  "kowiki": "전쟁과 평화 (1956년 영화)",
+  "koTitle": "전쟁과 평화",
+  "title": "영화 <전쟁과 평화> 사운드트랙",
+  "tracks": 12,
+  "linked": 11
+ },
+ {
+  "releaseGroup": "448dfeb4-2abe-408d-9ddf-ef91436cfaa2",
+  "release": "4525b472-6fd0-47e1-ba28-2c3e1225a205",
+  "rgTitle": "Il brigante",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1961",
+  "film": true,
+  "wikidata": "Q3793165",
+  "screenKind": "film",
+  "kowiki": "",
+  "koTitle": null,
+  "title": "영화 <Il brigante> 사운드트랙",
+  "tracks": 11,
+  "linked": 11
+ },
+ {
+  "releaseGroup": "c04afbce-1d0f-31a6-9c11-36c5f90e7d4a",
+  "release": "03bb2e75-3eca-4f16-b7b3-42a7badf644e",
+  "rgTitle": "Amarcord",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1974",
+  "film": true,
+  "wikidata": "Q18428",
+  "screenKind": "film",
+  "kowiki": "아마코드",
+  "koTitle": "아마코드",
+  "title": "영화 <아마코드> 사운드트랙",
+  "tracks": 12,
+  "linked": 11
+ },
+ {
+  "releaseGroup": "dfac961a-ad99-4865-b8e2-0ff483d33a03",
+  "release": "652b0744-1996-4133-ba15-4f9e3b68fa8f",
+  "rgTitle": "Fortunella",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1980",
+  "film": true,
+  "wikidata": "Q3748858",
+  "screenKind": "film",
+  "kowiki": "",
+  "koTitle": null,
+  "title": "영화 <Fortunella> 사운드트랙",
+  "tracks": 11,
+  "linked": 11
+ },
+ {
+  "releaseGroup": "725b919f-9877-3609-a1e0-e42e49a0d6de",
+  "release": "22a88f94-e46f-4ca4-affa-63d0955908c3",
+  "rgTitle": "Shoot Loud, Louder. . . I Don't Understand",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1994",
+  "film": true,
+  "wikidata": "Q3965942",
+  "screenKind": "film",
+  "kowiki": "",
+  "koTitle": null,
+  "title": "영화 <Shoot Loud, Louder. . . I Don't Understand> 사운드트랙",
+  "tracks": 21,
+  "linked": 11
+ },
+ {
+  "releaseGroup": "dad3cf3c-bc40-34cc-8490-ebe135992736",
+  "release": "f4088b86-f6a2-4dfb-98da-f63bb469e4c4",
+  "rgTitle": "Giulietta degli spiriti",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1965",
+  "film": true,
+  "wikidata": "Q18411",
+  "screenKind": "film",
+  "kowiki": "영혼의 줄리에타",
+  "koTitle": "영혼의 줄리에타",
+  "title": "영화 <영혼의 줄리에타> 사운드트랙",
+  "tracks": 12,
+  "linked": 10
+ },
+ {
+  "releaseGroup": "f7b1a864-96fc-37c1-8ee5-fb5c3c855047",
+  "release": "b991be76-501c-4fe9-a378-081bef991617",
+  "rgTitle": "Rocco e i suoi fratelli",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1961",
+  "film": true,
+  "wikidata": "Q427186",
+  "screenKind": "film",
+  "kowiki": "로코와 그 형제들",
+  "koTitle": "로코와 그 형제들",
+  "title": "영화 <로코와 그 형제들> 사운드트랙",
+  "tracks": 11,
+  "linked": 9
+ },
+ {
+  "releaseGroup": "a15b539e-ad40-3721-b707-21b5432c7292",
+  "release": "18ee7e26-8c13-4f1d-abe7-91d12b2d4abe",
+  "rgTitle": "Il gattopardo",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1963-06-20",
+  "film": true,
+  "wikidata": "Q596623",
+  "screenKind": "film",
+  "kowiki": "표범 (1963년 영화)",
+  "koTitle": "표범",
+  "title": "영화 <표범> 사운드트랙",
+  "tracks": 12,
+  "linked": 9
+ },
+ {
+  "releaseGroup": "8b476e5e-412f-46b1-8590-ade82cca42b4",
+  "release": "8d5e4cc8-74bb-4fe6-8846-0ed58edc457d",
+  "rgTitle": "Waterloo",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1970",
+  "film": true,
+  "wikidata": "Q1604818",
+  "screenKind": "film",
+  "kowiki": "나폴레옹 (1970년 영화)",
+  "koTitle": "나폴레옹",
+  "title": "영화 <나폴레옹> 사운드트랙",
+  "tracks": 9,
+  "linked": 9
+ },
+ {
+  "releaseGroup": "6d7d5e18-d160-3739-a19f-19409e2da93b",
+  "release": "9571a765-134c-488e-ac37-064bec4a249a",
+  "rgTitle": "The Godfather, Part II",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1974",
+  "film": true,
+  "wikidata": "Q184768",
+  "screenKind": "film",
+  "kowiki": "대부 2",
+  "koTitle": "대부 2",
+  "title": "영화 <대부 2> 사운드트랙",
+  "tracks": 11,
+  "linked": 8
+ },
+ {
+  "releaseGroup": "7e1ac57a-20a0-492b-ae2d-c834f3b62925",
+  "release": "59dbf329-5e2c-48a6-92b2-019c844f3b15",
+  "rgTitle": "Il bidone",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1991",
+  "film": true,
+  "wikidata": "Q18403",
+  "screenKind": "film",
+  "kowiki": "사기꾼들 (1955년 영화)",
+  "koTitle": "사기꾼들",
+  "title": "영화 <사기꾼들> 사운드트랙",
+  "tracks": 9,
+  "linked": 8
+ },
+ {
+  "releaseGroup": "a1d35e6a-654a-4ebd-a029-0a602b12c91f",
+  "release": "79770350-5fee-4e97-a4e7-01a458be5c10",
+  "rgTitle": "Film D'Amore e D'Anarchia",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "",
+  "film": true,
+  "wikidata": "Q475925",
+  "screenKind": "film",
+  "kowiki": "",
+  "koTitle": null,
+  "title": "영화 <Film D'Amore e D'Anarchia> 사운드트랙",
+  "tracks": 8,
+  "linked": 8
+ },
+ {
+  "releaseGroup": "2964cc16-5d50-34ef-88ab-51180e07abae",
+  "release": "af349723-ecb9-4e09-b1de-f7fffc2532fe",
+  "rgTitle": "Roma",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1973",
+  "film": true,
+  "wikidata": "Q18423",
+  "screenKind": "film",
+  "kowiki": "로마 (1972년 영화)",
+  "koTitle": "로마",
+  "title": "영화 <로마> 사운드트랙",
+  "tracks": 7,
+  "linked": 7
+ },
+ {
+  "releaseGroup": "19e4b4c2-33cd-4599-a56a-e972e899f1bc",
+  "release": "0fae7736-77a2-4105-a460-d97499ce3468",
+  "rgTitle": "Mysterium Catholicum",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "1963",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Mysterium Catholicum",
+  "tracks": 6,
+  "linked": 6
+ },
+ {
+  "releaseGroup": "c7a5ab5e-be98-3e85-849d-3862d45cdab2",
+  "release": "f7d97b6d-c164-3f3a-909d-aa38a9d4a504",
+  "rgTitle": "The Godfather: Music From the Original Motion Picture Soundtrack",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1972",
+  "film": true,
+  "wikidata": "Q47703",
+  "screenKind": "film",
+  "kowiki": "대부 (영화)",
+  "koTitle": "대부",
+  "title": "영화 <대부> 사운드트랙",
+  "tracks": 9,
+  "linked": 6
+ },
+ {
+  "releaseGroup": "65920030-f167-31a3-83af-27011b113f5f",
+  "release": "7883cdef-de4e-40f0-b8b7-e02fea49949d",
+  "rgTitle": "La dolce vita",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1960",
+  "film": true,
+  "wikidata": "Q18407",
+  "screenKind": "film",
+  "kowiki": "달콤한 인생 (1960년 영화)",
+  "koTitle": "달콤한 인생",
+  "title": "영화 <달콤한 인생> 사운드트랙",
+  "tracks": 6,
+  "linked": 5
+ },
+ {
+  "releaseGroup": "48d51413-c74b-40ca-8586-1178ea3a00aa",
+  "release": "1b5a3041-c0a7-4975-b576-c248d086d4b1",
+  "rgTitle": "Prova d'orchestra",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1991",
+  "film": true,
+  "wikidata": "Q18431",
+  "screenKind": "film",
+  "kowiki": "오케스트라 리허설",
+  "koTitle": "오케스트라 리허설",
+  "title": "영화 <오케스트라 리허설> 사운드트랙",
+  "tracks": 5,
+  "linked": 5
+ },
+ {
+  "releaseGroup": "d3969ed1-abfb-49a1-a00a-326d6c8a2f32",
+  "release": "8438ea95-9d43-4723-9e39-fcd03b3f2b8e",
+  "rgTitle": "Chamber Music",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "1997-06",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Chamber Music",
+  "tracks": 16,
+  "linked": 4
+ },
+ {
+  "releaseGroup": "7c226df6-7dd6-495f-acf8-5e8d02f658ed",
+  "release": "7a78601d-01cf-41f8-894c-0d466fb6145d",
+  "rgTitle": "Plein soleil",
+  "types": [
+   "EP",
+   "Soundtrack"
+  ],
+  "firstRelease": "1960",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Plein soleil (음반)",
+  "tracks": 5,
+  "linked": 3
+ },
+ {
+  "releaseGroup": "9d3ca5c4-e44f-3c0d-adc3-35906f35ff2e",
+  "release": "79dbc68e-7a56-4b01-89fb-b08c1737f715",
+  "rgTitle": "The Taming of the Shrew",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1967",
+  "film": true,
+  "wikidata": "Q1198059",
+  "screenKind": "film",
+  "kowiki": "말괄량이 길들이기 (1967년 영화)",
+  "koTitle": "말괄량이 길들이기",
+  "title": "영화 <말괄량이 길들이기> 사운드트랙",
+  "tracks": 5,
+  "linked": 3
+ },
+ {
+  "releaseGroup": "81fca5c1-c0fb-3f22-969e-313d60a00ad3",
+  "release": "007187d7-6690-4a1f-95e5-24a1b4ab7e38",
+  "rgTitle": "The Godfather, Part III: Music From the Original Motion Picture Soundtrack",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1990-12-13",
+  "film": true,
+  "wikidata": "Q202326",
+  "screenKind": "film",
+  "kowiki": "대부 3",
+  "koTitle": "대부 3",
+  "title": "영화 <대부 3> 사운드트랙",
+  "tracks": 7,
+  "linked": 3
+ },
+ {
+  "releaseGroup": "06cf4aca-cfc3-4a1b-9093-0d64c5b8b146",
+  "release": "3b09bb00-b85c-4084-9ec9-35c26cbd08cf",
+  "rgTitle": "Works for Harp",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "2019-03-29",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Works for Harp",
+  "tracks": 15,
+  "linked": 3
+ },
+ {
+  "releaseGroup": "41729ced-bcaa-4933-a1bd-ff09a7b88def",
+  "release": "acbc49de-0231-4b0e-845a-f69ade7350fa",
+  "rgTitle": "Chamber Works",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "2020-02-28",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Chamber Works",
+  "tracks": 12,
+  "linked": 2
+ },
+ {
+  "releaseGroup": "06972e92-9447-4928-9c86-329bfbbf28ef",
+  "release": "442af290-183a-4837-8a0f-de7a90e8a8ec",
+  "rgTitle": "La dolce vita",
+  "types": [
+   "Album",
+   "Compilation",
+   "Soundtrack"
+  ],
+  "firstRelease": "2020-01-24",
+  "film": false,
+  "wikidata": "Q18407",
+  "screenKind": "film",
+  "kowiki": "달콤한 인생 (1960년 영화)",
+  "koTitle": null,
+  "title": "La dolce vita",
+  "tracks": 18,
+  "linked": 2
+ },
+ {
+  "releaseGroup": "ec71ac94-9d75-3b3d-b769-8b3b19e21466",
+  "release": "487ec4b4-b2cf-46e7-b3ef-8e3b21d5919a",
+  "rgTitle": "Chansons pour Fellini",
+  "types": [
+   "Album",
+   "Compilation",
+   "Soundtrack"
+  ],
+  "firstRelease": "1994-03-06",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Chansons pour Fellini",
+  "tracks": 16,
+  "linked": 9
+ },
+ {
+  "releaseGroup": "1b9c3744-317a-3e99-90e6-3c7eba213d1c",
+  "release": "9ecef348-66ad-4ddb-864b-1fb77ec9f745",
+  "rgTitle": "Musiques de films de Federico Fellini",
+  "types": [
+   "Album",
+   "Live"
+  ],
+  "firstRelease": "2000",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Musiques de films de Federico Fellini",
+  "tracks": 4,
+  "linked": 2
+ }
+]

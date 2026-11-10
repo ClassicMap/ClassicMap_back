@@ -1,0 +1,5368 @@
+[
+ {
+  "pieceId": 7607,
+  "title": "현악 협주곡",
+  "mbids": [
+   "df99a396-64b2-4e47-8e8e-7430f88ec3cf"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-df99a396",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7683,
+  "title": "Sunset, Sunrise",
+  "mbids": [
+   "c711385e-13ac-46e9-a6ac-31214bbd2fd2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 7710,
+  "title": "Romeo and Juliet",
+  "mbids": [
+   "24fb8c8e-fd6d-42b9-86b3-1063da3987d0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 7753,
+  "title": "협주곡 <Concerto soirée>",
+  "mbids": [
+   "01b6f329-6b37-4d62-bfb7-cdfb8c3020e5"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-01b6f329",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7911,
+  "title": "The New Godfather",
+  "mbids": [
+   "0bd835d2-d9cd-3689-8b1d-5765c6259989"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c7a5ab5e",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather: Music From the Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 7930,
+  "title": "영화음악 모음곡 <Amarcord>",
+  "mbids": [
+   "0d7ad4d1-3853-4a82-954a-2574f73a56c0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 8139,
+  "title": "Il Presepio",
+  "mbids": [
+   "1bd8b349-bc88-406c-a99d-d04a5b065afc"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d3969ed1",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Chamber Music> 트랙"
+ },
+ {
+  "pieceId": 8188,
+  "title": "Satyricon",
+  "mbids": [
+   "1f335e2f-6e7c-4dd2-9ce1-4607a2bdf470"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 8345,
+  "title": "현악 4중주",
+  "mbids": [
+   "2cbd9bd7-57a4-4c0c-b7aa-c6bb10183262"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-2cbd9bd7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8445,
+  "title": "Otto e mezzo",
+  "mbids": [
+   "32c2b79a-3260-4145-b360-f836ba80ae97"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-ec71ac94",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Chansons pour Fellini> 트랙"
+ },
+ {
+  "pieceId": 8477,
+  "title": "영화음악 모음곡 <La dolce vita>",
+  "mbids": [
+   "3506ffca-5d8d-4608-ab06-333956b18f75"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-3506ffca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8770,
+  "title": "사랑의 노래에 의한 교향곡",
+  "mbids": [
+   "4a8a2b47-5abc-4854-acfc-2a4ce49b4afc"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-4a8a2b47",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8816,
+  "title": "비올라와 피아노를 위한 소나타",
+  "mbids": [
+   "4e13e0d1-0f6a-4c47-b092-26a0efed685d"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-4e13e0d1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8843,
+  "title": "Rocco e i suoi fratelli",
+  "mbids": [
+   "505c1d42-73a5-45f9-adb5-82415327807a"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-505c1d42",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8893,
+  "title": "Romeo",
+  "mbids": [
+   "52f96207-f734-4e63-8c86-685a789f9daf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9021,
+  "title": "영화음악 모음곡 <태양은 가득히>",
+  "mbids": [
+   "5b3caa42-d9a8-42cf-b173-e75b90a99f11"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-852df889",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 9023,
+  "title": "첼로 협주곡 2번",
+  "mbids": [
+   "5b6b927f-ad85-45b3-9333-e0fb842b2ddc"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-5b6b927f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9047,
+  "title": "Il Gattopardo",
+  "mbids": [
+   "5d20c81e-18d3-4653-b17e-6194e9f08170"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-5d20c81e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9077,
+  "title": "Theme from La Dolce Vita",
+  "mbids": [
+   "5f7b7657-e851-4b2a-951c-4547a28d9bda"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9081,
+  "title": "Al cinema",
+  "mbids": [
+   "5fa0f0fd-3e7e-4980-a0a1-410b8582bba2"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-7e1ac57a",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Il bidone> 트랙"
+ },
+ {
+  "pieceId": 9543,
+  "title": "하프와 관현악을 위한 협주곡",
+  "mbids": [
+   "8002faea-99c1-44ba-ac1d-fddec60c41eb"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-8002faea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9607,
+  "title": "The Taming",
+  "mbids": [
+   "84d64f14-ba5e-469f-95e2-ac8abb8f1e7d"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-9d3ca5c4",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <The Taming of the Shrew> 트랙"
+ },
+ {
+  "pieceId": 9716,
+  "title": "Romeo and Juliet, film score",
+  "mbids": [
+   "8c9de1b3-96c9-4a3b-a5a7-1aa467957e79"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-8c9de1b3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9730,
+  "title": "Cabiria",
+  "mbids": [
+   "8de7e29a-525b-4a2a-af7e-ef0f4c87baa1"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-ec71ac94",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Chansons pour Fellini> 트랙"
+ },
+ {
+  "pieceId": 9859,
+  "title": "L'ultimo bidone",
+  "mbids": [
+   "97dc5136-2602-431b-a084-2b4663ea489a"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-7e1ac57a",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Il bidone> 트랙"
+ },
+ {
+  "pieceId": 10001,
+  "title": "트롬본과 관현악을 위한 협주곡",
+  "mbids": [
+   "a1d492b5-0b8f-43e7-9a52-9e007c8b9232"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-a1d492b5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10054,
+  "title": "Giulietta degli spiriti",
+  "mbids": [
+   "a4bd21a7-4433-45ad-b68e-423681ff3ad9"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-ec71ac94",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Chansons pour Fellini> 트랙"
+ },
+ {
+  "pieceId": 10090,
+  "title": "Parla più piano",
+  "mbids": [
+   "a75362c0-c2a7-4622-87c8-f7e49c80f888"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10239,
+  "title": "La dolce vita: finale",
+  "mbids": [
+   "b29c0b8e-7f06-46c0-9649-cfc283ae557f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-65920030",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <La dolce vita> 트랙"
+ },
+ {
+  "pieceId": 10269,
+  "title": "Juliet",
+  "mbids": [
+   "b4788286-52dc-4067-904d-dff813e87129"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 10289,
+  "title": "클라리넷, 첼로, 피아노를 위한 3중주",
+  "mbids": [
+   "b6673892-d477-4e35-b9ac-8e5bff2c8b75"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-b6673892",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10310,
+  "title": "영화음악 모음곡 <La Dolce Vita>",
+  "mbids": [
+   "b7e7f9da-bbaf-47cd-a5a0-3ec4c975ec0a"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-06cf4aca",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Works for Harp> 트랙"
+ },
+ {
+  "pieceId": 10553,
+  "title": "The Godfather",
+  "mbids": [
+   "ca447c4e-4d68-44d3-a080-18dd9975cdc8"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-ca447c4e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10580,
+  "title": "Il furto della Gioconda (Seq. 12 - il sorriso della Giconda)",
+  "mbids": [
+   "cc002f5e-b3c0-48dd-b8af-fdd220bbc43e"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-bfb3c959",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10676,
+  "title": "I clowns",
+  "mbids": [
+   "d35c0d18-1777-4a07-9fb1-4f31bb657177"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-d35c0d18",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10681,
+  "title": "Casanova",
+  "mbids": [
+   "d3adbc24-62e4-4360-8748-c55623b7caad"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-ec71ac94",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Chansons pour Fellini> 트랙"
+ },
+ {
+  "pieceId": 10731,
+  "title": "A Time for Us",
+  "mbids": [
+   "d7f769b6-6a0f-4324-92cc-cb6cf69e6b9e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10777,
+  "title": "바순과 관현악을 위한 협주곡",
+  "mbids": [
+   "da887a36-3ada-43bd-88ae-74884ef93e57"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-da887a36",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10818,
+  "title": "협주적 디베르티멘토",
+  "mbids": [
+   "ddf718b8-5e59-4639-ae3d-1631141166c4"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-ddf718b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10825,
+  "title": "5 pezzi facili",
+  "mbids": [
+   "de62d971-fc01-431f-900a-e0c82727b8c9"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-de62d971",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11064,
+  "title": "L’amore dei due fratelli",
+  "mbids": [
+   "effbd668-066a-468c-8aa3-ebaa62bb40d1"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-f7b1a864",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Rocco e i suoi fratelli> 트랙"
+ },
+ {
+  "pieceId": 11113,
+  "title": "영화음악 모음곡 <Otto e mezzo>",
+  "mbids": [
+   "f4655419-482e-491a-9413-4d0e07eab6d9"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-f4655419",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11137,
+  "title": "L’amore di Rocco",
+  "mbids": [
+   "f5c92c76-cbae-48d8-bfeb-aa2a7d3b97a4"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-f7b1a864",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Rocco e i suoi fratelli> 트랙"
+ },
+ {
+  "pieceId": 11149,
+  "title": "플루트와 하프를 위한 소나타",
+  "mbids": [
+   "f71a8216-11a3-47f1-9737-912fea61050c"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-f71a8216",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11246,
+  "title": "오페라 <La notte di un nevrastenico>",
+  "mbids": [
+   "fd43af0a-2c93-445f-8026-e0f4195ef43b"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-fd43af0a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7447,
+  "title": "8½",
+  "mbids": [
+   "13170843-c018-4adc-a067-2489e43c3ee4"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-13170843",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7454,
+  "title": "C'est mieux comme ça",
+  "mbids": [
+   "163c9165-2b99-4444-8329-aea0dae85297"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7503,
+  "title": "The Glass Mountain",
+  "mbids": [
+   "5abfaca6-9d03-4205-9113-cae460466653"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-5abfaca6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7532,
+  "title": "What Is a Youth",
+  "mbids": [
+   "7fba664e-a1ee-3073-9021-3b033ff3e688"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-06cf4aca",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Works for Harp> 트랙"
+ },
+ {
+  "pieceId": 7568,
+  "title": "피아노를 위한 전주곡",
+  "mbids": [
+   "aa697168-1a3e-404c-94c1-f9bdb967506a"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-aa697168",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7594,
+  "title": "Le notti bianche",
+  "mbids": [
+   "cbf12d10-15ef-4f9f-8f05-c4286d099401"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 7617,
+  "title": "환상곡 G장조",
+  "mbids": [
+   "eb10432f-5841-46b9-9b03-e91168444156"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-eb10432f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7626,
+  "title": "플루트, 바이올린, 피아노를 위한 3중주",
+  "mbids": [
+   "f712653c-b10a-40d6-a9dc-dc2de4ad24d7"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-f712653c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7656,
+  "title": "Galopp",
+  "mbids": [
+   "f6f0f1f5-d94f-4f33-83cf-56c1e8c50a73"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-48d51413",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Prova d'orchestra> 트랙"
+ },
+ {
+  "pieceId": 7657,
+  "title": "I gemelli allo specchio",
+  "mbids": [
+   "76a82803-032b-463e-b0ca-4a504c47aa56"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-48d51413",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Prova d'orchestra> 트랙"
+ },
+ {
+  "pieceId": 7658,
+  "title": "Valzerino n. 72",
+  "mbids": [
+   "a1095989-ac8c-44e6-bddf-e12253ad6aeb"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-48d51413",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Prova d'orchestra> 트랙"
+ },
+ {
+  "pieceId": 7675,
+  "title": "Speak Softly Love",
+  "mbids": [
+   "490cdde8-2be5-4546-9e36-fcd752008004"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7684,
+  "title": "Orchestra in attesa",
+  "mbids": [
+   "4f04ea56-f4af-4950-b327-3b2b7c97d7d5"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-48d51413",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Prova d'orchestra> 트랙"
+ },
+ {
+  "pieceId": 7711,
+  "title": "The Sweet Life",
+  "mbids": [
+   "a31ee329-dadb-40c2-9295-438b41b2ac9c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 7718,
+  "title": "Ta min drøm",
+  "mbids": [
+   "054cb7dd-d0fa-41e6-af90-977d6e66c785"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 7719,
+  "title": "ゴッド・ファーザー（愛のテーマ）",
+  "mbids": [
+   "da643008-9a79-4ee5-9004-448a197c57a3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 7749,
+  "title": "Il furto della Gioconda (Seq. 6 - furto notturno)",
+  "mbids": [
+   "0175ea28-3e69-4cb3-8c23-76db8295c407"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 7755,
+  "title": "Christina, the Queen",
+  "mbids": [
+   "01e5e3ab-d0d5-4816-a834-9881e5c5e060"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 7758,
+  "title": "교향곡 2번 F장조",
+  "mbids": [
+   "021aa855-0138-446e-a2c1-0d62e55c5b72"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 7788,
+  "title": "Fortunella scappa da casa",
+  "mbids": [
+   "04016e88-9a47-4a4b-9934-967ae6d396ba"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dfac961a",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Fortunella> 트랙"
+ },
+ {
+  "pieceId": 7797,
+  "title": "Pago-Pago Jazz",
+  "mbids": [
+   "0477e907-6e92-405e-82ab-29bb1b881297"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 7806,
+  "title": "Feast of the Snails",
+  "mbids": [
+   "04cd7708-d389-4080-abc8-9712e7415217"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2964cc16",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Roma> 트랙"
+ },
+ {
+  "pieceId": 7808,
+  "title": "Il furto della Gioconda (Seq. 1 - titoli di testa)",
+  "mbids": [
+   "04fec5d8-3127-47f6-a534-c575f52abb02"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 7809,
+  "title": "Nightmare",
+  "mbids": [
+   "0501a630-a3ab-4f26-8ca8-9e1676cb6b9d"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 7822,
+  "title": "The Immigrant",
+  "mbids": [
+   "062e70ae-c257-375e-8d65-18d93743afb0"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-81fca5c1",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather, Part III: Music From the Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 7830,
+  "title": "The Halls of Fear",
+  "mbids": [
+   "0699e848-9509-3885-bed6-a5d0e4d9de6c"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c7a5ab5e",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather: Music From the Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 7831,
+  "title": "8.5",
+  "mbids": [
+   "069c2d6e-6a19-45a6-b674-7d7f9cf2963b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 7850,
+  "title": "L'Oiseau magique à Paris",
+  "mbids": [
+   "07d6bf6a-ce81-491e-a801-521a31ebbaa8"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c81885c5",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Il Casanova di Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 7851,
+  "title": "Thème de marge",
+  "mbids": [
+   "07f3e4b6-9900-4ae8-ab97-b1cd25e16449"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-7c226df6",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 7881,
+  "title": "The Charge of the Cavalry and the Wounded",
+  "mbids": [
+   "09f47a0a-d1a6-4867-9879-56aec45d2fc7"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-033d90ce",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <War and Peace> 트랙"
+ },
+ {
+  "pieceId": 7888,
+  "title": "Les Touristes",
+  "mbids": [
+   "0a357132-5915-4f4e-ab52-a2ffe9efd908"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-0a357132",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 7890,
+  "title": "Medley: La voce della guerra / I tredici quadrati / How Can It Be?",
+  "mbids": [
+   "0a84be82-c1a0-4718-926b-e9bf93b630b0"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-8b476e5e",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Waterloo> 트랙"
+ },
+ {
+  "pieceId": 7927,
+  "title": "Il trionfo del nuovo cesare",
+  "mbids": [
+   "0d212f27-c692-437c-a6e3-8ad8dce857b4"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 7933,
+  "title": "Il furto della Gioconda (Seq. 17 - titoli di coda)",
+  "mbids": [
+   "0d860838-a6a0-408f-b5d7-4755f19df7f7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 7945,
+  "title": "Piccola offerta musicale",
+  "mbids": [
+   "0e6449b0-ff01-4806-ab07-1e12a74c809d"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d3969ed1",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Chamber Music> 트랙"
+ },
+ {
+  "pieceId": 7954,
+  "title": "Fortunella all'ospedale",
+  "mbids": [
+   "0f0b8052-1fd0-4959-893a-df94bbb04b49"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dfac961a",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Fortunella> 트랙"
+ },
+ {
+  "pieceId": 7955,
+  "title": "Canzone appassionata",
+  "mbids": [
+   "0f0cacc1-7b0b-3153-9e4d-8ebaa2edabdc"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a1d35e6a",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Film D'Amore e D'Anarchia> 트랙"
+ },
+ {
+  "pieceId": 7966,
+  "title": "La corona della pricipessa",
+  "mbids": [
+   "0ff0011b-da41-4cd7-b113-714f72dc2d92"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dfac961a",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Fortunella> 트랙"
+ },
+ {
+  "pieceId": 7978,
+  "title": "Jazz in Dockland",
+  "mbids": [
+   "10db1f4e-3a45-42ea-a3fa-428a36f8efec"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 7983,
+  "title": "Via Veneto e i nobili",
+  "mbids": [
+   "111b2574-2397-4129-ac0b-de9c8b0556cf"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-65920030",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <La dolce vita> 트랙"
+ },
+ {
+  "pieceId": 7997,
+  "title": "Le Yacht",
+  "mbids": [
+   "11b26ba9-f3b1-4f30-94ed-4af735e2fd80"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-852df889",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 8006,
+  "title": "The Death of Mercutio and Tybalt",
+  "mbids": [
+   "124d612d-5406-4a81-85c0-9d69156b55ad"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 8026,
+  "title": "Canzone arrabbiata",
+  "mbids": [
+   "138322d3-4fe0-3bf4-9f00-eaa00850aeb6"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a1d35e6a",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Film D'Amore e D'Anarchia> 트랙"
+ },
+ {
+  "pieceId": 8028,
+  "title": "Roma (1972)",
+  "mbids": [
+   "1391ef21-f555-4bc9-81ba-b9ca7200b2c7"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-1b9c3744",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Musiques de films de Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 8041,
+  "title": "Il canto della buranella",
+  "mbids": [
+   "14578fc6-cde6-4157-8996-a220c40c990d"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-ec71ac94",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Chansons pour Fellini> 트랙"
+ },
+ {
+  "pieceId": 8044,
+  "title": "녹턴",
+  "mbids": [
+   "1495b700-8abb-45ea-9d55-492f57b1067c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 8082,
+  "title": "Katopua",
+  "mbids": [
+   "179bc7a3-44de-46e4-96cd-fbea295c019c"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 8085,
+  "title": "Il furto della Gioconda (Seq. 7 - fisarmonica bar)",
+  "mbids": [
+   "17aedf5c-1658-41f8-b75e-87fe3417f349"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 8111,
+  "title": "Risveglio notturno e attesa nei campi",
+  "mbids": [
+   "19a64821-7b90-4362-8445-c1afaac0bf07"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-448dfeb4",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Il brigante> 트랙"
+ },
+ {
+  "pieceId": 8122,
+  "title": "Chant de la Buranella",
+  "mbids": [
+   "1a22d77a-735a-4a84-8b10-b67841ff33b5"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c81885c5",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Il Casanova di Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 8130,
+  "title": "Il furto della Gioconda (Seq. 4 - pianino francese)",
+  "mbids": [
+   "1acaf307-dbb3-4b8b-984b-86cf24ba471f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 8159,
+  "title": "Al mercato",
+  "mbids": [
+   "1d5b8348-be95-4aec-a56d-e53b4cb15d46"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dfac961a",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Fortunella> 트랙"
+ },
+ {
+  "pieceId": 8178,
+  "title": "The Temple of Karnak",
+  "mbids": [
+   "1ebb1bd0-4d06-49ce-800a-afd1b62eee5e"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 8222,
+  "title": "The Doll Queen",
+  "mbids": [
+   "224fc7cb-8adf-48a5-b11a-87853062c505"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 8230,
+  "title": "Final",
+  "mbids": [
+   "234a036c-13ce-49b6-8a9d-02aecee18621"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-7c226df6",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 8263,
+  "title": "발레 모음곡 <Le Molière imaginaire>",
+  "mbids": [
+   "26c6214d-95d0-495a-bdd3-775e9776d3c1"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-26c6214d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8274,
+  "title": "Fortunella e professore",
+  "mbids": [
+   "274a6f92-6412-4cb4-ad6e-a2999ee5ab02"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dfac961a",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Fortunella> 트랙"
+ },
+ {
+  "pieceId": 8276,
+  "title": "Ai giochi addio",
+  "mbids": [
+   "277926a8-6756-4410-a5db-b90a42d232e9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8316,
+  "title": "Il delitto di Simone",
+  "mbids": [
+   "2a740a0f-7a58-40e4-a636-c9b55e3f0477"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-f7b1a864",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Rocco e i suoi fratelli> 트랙"
+ },
+ {
+  "pieceId": 8317,
+  "title": "Aria di Roma",
+  "mbids": [
+   "2ab4d3d1-c8dd-4666-8b33-f2adcb7200c9"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2964cc16",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Roma> 트랙"
+ },
+ {
+  "pieceId": 8322,
+  "title": "Il furto della Gioconda (Seq. 5 - esercizi di tromba)",
+  "mbids": [
+   "2af9787f-d00c-4a3b-98b9-937ffc14bed0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 8325,
+  "title": "Ecclesiastical Fashion Show",
+  "mbids": [
+   "2b4765a4-7f17-455d-be2e-738d4707f034"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2964cc16",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Roma> 트랙"
+ },
+ {
+  "pieceId": 8329,
+  "title": "L'arcobaleno per Giulietta",
+  "mbids": [
+   "2b74c206-01c8-4385-a2fd-fab9d1c1ac16"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dad3cf3c",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Giulietta degli spiriti> 트랙"
+ },
+ {
+  "pieceId": 8350,
+  "title": "Quanto mi piace la Gradisca",
+  "mbids": [
+   "2d20f52a-975b-4b5f-9bf7-1114f06e69fa"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c04afbce",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Amarcord> 트랙"
+ },
+ {
+  "pieceId": 8356,
+  "title": "Générique",
+  "mbids": [
+   "2d94792e-b051-4d4a-bf7c-d25b14834e7c"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-7c226df6",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 8361,
+  "title": "Il furto della Gioconda (Seq. 16 - finale)",
+  "mbids": [
+   "2de79d8a-12a7-4e2d-bce0-febd50b2378a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 8362,
+  "title": "Waterloo-Waltz",
+  "mbids": [
+   "2dedfecf-472d-4da6-bb95-bd7abc4c14af"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-8b476e5e",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Waterloo> 트랙"
+ },
+ {
+  "pieceId": 8366,
+  "title": "Night Delirium",
+  "mbids": [
+   "2e1f9b2a-fd0e-4a34-888d-9cf74b84a856"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   20
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 8379,
+  "title": "Le Duc de Wurttemberg",
+  "mbids": [
+   "2eeb8610-1058-4521-84ae-7a59ebcfb868"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c81885c5",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Il Casanova di Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 8382,
+  "title": "Il furto della Gioconda (Seq. 9 - tema principale)",
+  "mbids": [
+   "2f33d809-79bf-4af5-b68f-ae19b150bcc0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 8384,
+  "title": "O Venezia, Venaga, Venusia",
+  "mbids": [
+   "2f4cbad8-64ec-41a0-aecf-15b2bf0906d6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 8401,
+  "title": "Mio amato gitone",
+  "mbids": [
+   "309ce76a-c308-4a27-8409-19d5d8ac5127"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 8418,
+  "title": "Скажи, что любишь",
+  "mbids": [
+   "3195130b-e0dc-4914-ac61-a85f376f1f39"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-3195130b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8444,
+  "title": "오르간 소나타",
+  "mbids": [
+   "32bfbd71-3688-4d65-b13f-0cdf0b8a422b"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-32bfbd71",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8460,
+  "title": "Michael's Letter",
+  "mbids": [
+   "33d260fc-fc85-3e21-9ffd-2d40014b3e40"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-81fca5c1",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather, Part III: Music From the Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 8490,
+  "title": "Falsification",
+  "mbids": [
+   "364f41f4-19b9-487f-b04a-4578793c8e0f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-852df889",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 8544,
+  "title": "La nuova isola",
+  "mbids": [
+   "39d51b1b-172d-4506-8b0a-80463bd61355"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   20
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 8547,
+  "title": "아라베스크",
+  "mbids": [
+   "39f14412-1c09-4987-b792-f5505d4a8676"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-725b919f",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Shoot Loud, Louder. . . I Don't Understand> 트랙"
+ },
+ {
+  "pieceId": 8551,
+  "title": "Pataro",
+  "mbids": [
+   "3a5032ac-9f75-479a-8396-15ccaa65321d"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-448dfeb4",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Il brigante> 트랙"
+ },
+ {
+  "pieceId": 8555,
+  "title": "Christina and the Drawn Up Troops",
+  "mbids": [
+   "3a918db2-7817-4ed4-830b-cb8eec865196"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 8556,
+  "title": "Miliella",
+  "mbids": [
+   "3a9eeb71-df5e-48f4-be28-d4a5ee40231e"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-448dfeb4",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Il brigante> 트랙"
+ },
+ {
+  "pieceId": 8564,
+  "title": "Remember Vito Andolini",
+  "mbids": [
+   "3af1df47-44e1-34bb-9354-8d88dedc8a81"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-6d7d5e18",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather, Part II> 트랙"
+ },
+ {
+  "pieceId": 8576,
+  "title": "Birgitto, the Dwarf",
+  "mbids": [
+   "3c9ca757-2083-4cac-91a9-f6c1d87cbb41"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 8583,
+  "title": "Christina's Decision",
+  "mbids": [
+   "3d5ce329-3f9b-4013-9d0e-119d3e436fb0"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 8591,
+  "title": "The Renouncement",
+  "mbids": [
+   "3e8371db-9bdc-4e31-b2bc-ddadfb098e88"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   22
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 8600,
+  "title": "Evviva la principessa!",
+  "mbids": [
+   "3f4dfcfe-43dc-4dd0-ac7a-4169c25da62b"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dfac961a",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Fortunella> 트랙"
+ },
+ {
+  "pieceId": 8618,
+  "title": "The Orgy",
+  "mbids": [
+   "4099af85-8479-453e-851f-61c8fb7299bb"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-033d90ce",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <War and Peace> 트랙"
+ },
+ {
+  "pieceId": 8621,
+  "title": "Il teatrino delle suore",
+  "mbids": [
+   "40ab6262-5d8e-45c9-92c5-92ad1d1c74a7"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dad3cf3c",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Giulietta degli spiriti> 트랙"
+ },
+ {
+  "pieceId": 8661,
+  "title": "イントロダクション",
+  "mbids": [
+   "432acaf6-529e-4ff6-bed9-8e149b65310d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 8668,
+  "title": "灰色玉樓",
+  "mbids": [
+   "438c4347-d568-4e56-b6ff-e11380144a79"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8686,
+  "title": "L'Oiseau magique",
+  "mbids": [
+   "450d0d3c-722c-4a3a-8d85-48c2e915a2ae"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c81885c5",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Il Casanova di Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 8689,
+  "title": "Boccaccio '70 (La grande seduzione)",
+  "mbids": [
+   "453922ff-46ae-49de-a7ab-419b74672dd2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 8706,
+  "title": "Giovani eroi (marchetta)",
+  "mbids": [
+   "4603e99c-a10d-4c71-9f71-54fab9d711f7"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a15b539e",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Il gattopardo> 트랙"
+ },
+ {
+  "pieceId": 8733,
+  "title": "Improvviso in re minore",
+  "mbids": [
+   "47ec663e-a92b-4bdf-922a-06180348810f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-41729ced",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Chamber Works> 트랙"
+ },
+ {
+  "pieceId": 8743,
+  "title": "Raquel (End Credits)",
+  "mbids": [
+   "48efe7d1-d1e8-4e58-bd55-22104fa8fa3b"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-725b919f",
+  "path": [
+   21
+  ],
+  "reason": null,
+  "note": "음반 <Shoot Loud, Louder. . . I Don't Understand> 트랙"
+ },
+ {
+  "pieceId": 8746,
+  "title": "E la guerra continua (titoli finali)",
+  "mbids": [
+   "4917fde2-f572-4490-bd2f-b15016e2f32c"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-8b476e5e",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Waterloo> 트랙"
+ },
+ {
+  "pieceId": 8759,
+  "title": "Cardinals",
+  "mbids": [
+   "4a11a88b-658d-4eaa-bbc8-ad530975acd0"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 8774,
+  "title": "Amara me",
+  "mbids": [
+   "4ac8bd93-68cf-39f5-935d-a380fde12759"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a1d35e6a",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Film D'Amore e D'Anarchia> 트랙"
+ },
+ {
+  "pieceId": 8786,
+  "title": "Love Theme from \"La Strada\" (Traveling Down a Lonely Road)",
+  "mbids": [
+   "4bedc3cf-38dd-4e23-af72-b663267a4bda"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 8791,
+  "title": "Il furto della Gioconda (Seq. 2 - cortile di Picasso)",
+  "mbids": [
+   "4c2f51c7-9912-448a-9386-c45fd6fbb020"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 8793,
+  "title": "Prologue and Fanfare for the Prince",
+  "mbids": [
+   "4c7b0dcf-46dc-4866-8994-f64f8b1a621e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 8811,
+  "title": "Face au miroir",
+  "mbids": [
+   "4dd11068-375f-4895-9904-7fe638e17cb8"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-852df889",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 8814,
+  "title": "Titoli",
+  "mbids": [
+   "4e06edb6-6e68-4d05-9214-8ddefc9e1216"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dfac961a",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Fortunella> 트랙"
+ },
+ {
+  "pieceId": 8823,
+  "title": "Winter and the Remembrance of Andrei",
+  "mbids": [
+   "4ece51cd-1885-4814-b59e-c9a79bde4cc2"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-033d90ce",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <War and Peace> 트랙"
+ },
+ {
+  "pieceId": 8830,
+  "title": "Tarentelle meurtrière",
+  "mbids": [
+   "4f879e5f-832d-4dd1-9659-71f44a5e752e"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-852df889",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 8836,
+  "title": "Vitelloni's Bar",
+  "mbids": [
+   "4fcb85aa-fa9c-4b1c-a01c-2fd4ed09b2c8"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2964cc16",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Roma> 트랙"
+ },
+ {
+  "pieceId": 8856,
+  "title": "Pin Penin",
+  "mbids": [
+   "50f35df3-acb1-4c75-b1d1-6f2bf511e1fc"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c81885c5",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Il Casanova di Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 8857,
+  "title": "Love in Blossom",
+  "mbids": [
+   "50f8f44f-2b39-4129-b8f5-fcb0086a6c85"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 8862,
+  "title": "Coronation Percussion",
+  "mbids": [
+   "51293d27-8165-44fa-97b8-8623f785fc90"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 8863,
+  "title": "Il campo dei morti",
+  "mbids": [
+   "51521c55-6d97-4f22-87fa-1e7098a9da1e"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-8b476e5e",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Waterloo> 트랙"
+ },
+ {
+  "pieceId": 8865,
+  "title": "피아노 협주곡 E단조 \"Piccolo mondo antico\"",
+  "mbids": [
+   "515fb660-079f-4eed-9b20-9bd5d542a636"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-515fb660",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 8891,
+  "title": "Il minotauro",
+  "mbids": [
+   "52ebc84d-fcb9-4293-b869-39a3928f62db"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 8898,
+  "title": "The Vatican",
+  "mbids": [
+   "536aac8a-75cb-4189-87ae-0b2cecb49e50"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 8904,
+  "title": "The Carriage Ride",
+  "mbids": [
+   "53ec12a3-3bc9-428c-aeb1-4a818cbf143a"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 8913,
+  "title": "Interlude from Juliet of the Spirits",
+  "mbids": [
+   "54aefab3-9674-452a-bf50-dc2e61743f83"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 8915,
+  "title": "Matangi and Charlotte's Escape",
+  "mbids": [
+   "54dd9a10-79f3-4008-be51-4385fc37de13"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 8936,
+  "title": "Valzer del commiato",
+  "mbids": [
+   "55dd9253-2422-42a5-b15b-fb4dfa399663"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a15b539e",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Il gattopardo> 트랙"
+ },
+ {
+  "pieceId": 8938,
+  "title": "Viaggio a Donnafugata",
+  "mbids": [
+   "5601fc9b-837d-40a1-a112-1e5743dafde9"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a15b539e",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Il gattopardo> 트랙"
+ },
+ {
+  "pieceId": 8950,
+  "title": "Déjeuner chez la Marquise Durfé",
+  "mbids": [
+   "56dfed55-702c-4836-b25f-2d6a14fa8733"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c81885c5",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Il Casanova di Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 8952,
+  "title": "Blues – La dolce vita dei nobili",
+  "mbids": [
+   "56f9c831-a3df-4789-8139-0e314e5c8d37"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-65920030",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <La dolce vita> 트랙"
+ },
+ {
+  "pieceId": 8954,
+  "title": "Parting Is Such Sweet Sorrow",
+  "mbids": [
+   "570e2d21-0f2b-4ba0-8ca5-d11ccaa122ea"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 8971,
+  "title": "What Light Through Yonder Window Breaks?",
+  "mbids": [
+   "581bd8ff-df1d-49ea-a7bc-07a31d738ab9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 8983,
+  "title": "Gli Scots Greys",
+  "mbids": [
+   "58e8b489-718d-4028-a465-50230647a0d8"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-8b476e5e",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Waterloo> 트랙"
+ },
+ {
+  "pieceId": 8988,
+  "title": "La vigilia della rivolta",
+  "mbids": [
+   "5922f1de-477a-45e7-b3d8-0b3f691b0512"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-448dfeb4",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Il brigante> 트랙"
+ },
+ {
+  "pieceId": 8991,
+  "title": "V - venit hora ut clarificetur",
+  "mbids": [
+   "5949dc2e-c4a9-495c-9527-7ddfde0c53ef"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-19e4b4c2",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Mysterium Catholicum> 트랙"
+ },
+ {
+  "pieceId": 8999,
+  "title": "교향곡 3번 C장조",
+  "mbids": [
+   "59e87b58-1684-433d-90a8-c95e3bc16074"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-59e87b58",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9004,
+  "title": "Medley: La Vieille Garde / I prussiani / Wellington (Now It's Your Time!)",
+  "mbids": [
+   "5a1ff0d0-adf0-43de-853a-e2c7d5ebe62e"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-8b476e5e",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Waterloo> 트랙"
+ },
+ {
+  "pieceId": 9020,
+  "title": "Valzerino del nonno",
+  "mbids": [
+   "5b25783c-45c1-4c93-82fd-1b6f7cf0f469"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dad3cf3c",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Giulietta degli spiriti> 트랙"
+ },
+ {
+  "pieceId": 9024,
+  "title": "Medley: Marcia scozzese / Saluto a Wellington e Promenade-Music",
+  "mbids": [
+   "5b6bd5e8-1942-4e17-9f9b-067d8c69e969"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-8b476e5e",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Waterloo> 트랙"
+ },
+ {
+  "pieceId": 9027,
+  "title": "Mi ascolti, gitone?",
+  "mbids": [
+   "5bad19c8-57e6-4eae-a350-92e638e24143"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 9037,
+  "title": "太陽がいっぱい",
+  "mbids": [
+   "5c565a1a-5a64-4351-85de-720c2c871be9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9038,
+  "title": "In viaggio per un bidone",
+  "mbids": [
+   "5c664c9d-aac3-4bdd-9ef0-5df3b5c9a03d"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-7e1ac57a",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Il bidone> 트랙"
+ },
+ {
+  "pieceId": 9039,
+  "title": "Camels and Donkeys",
+  "mbids": [
+   "5c7d0284-677e-45bc-ba0e-2040dfff0a58"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 9051,
+  "title": "Milano e Nadia",
+  "mbids": [
+   "5d4899eb-7469-4738-ad4c-0270aba846f9"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-f7b1a864",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Rocco e i suoi fratelli> 트랙"
+ },
+ {
+  "pieceId": 9054,
+  "title": "Il furto della Gioconda (Seq. 10 - fisarmonica carabinieri)",
+  "mbids": [
+   "5d83775a-2ba2-42b2-8ae9-1db4d6315808"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 9055,
+  "title": "Mi basta chiudere gli occhi - ecco i diavoli",
+  "mbids": [
+   "5d8b8cd4-472b-4608-a94e-b16855cbe926"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dad3cf3c",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Giulietta degli spiriti> 트랙"
+ },
+ {
+  "pieceId": 9063,
+  "title": "비올라와 피아노를 위한 간주곡",
+  "mbids": [
+   "5e221754-2453-4dbe-88a2-a4a6c23dcb0d"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d3969ed1",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Chamber Music> 트랙"
+ },
+ {
+  "pieceId": 9072,
+  "title": "Maggie",
+  "mbids": [
+   "5f2320ee-a390-4fed-a58c-51a7437ee753"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-ec71ac94",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Chansons pour Fellini> 트랙"
+ },
+ {
+  "pieceId": 9075,
+  "title": "L'Oiseau magique à Dresde",
+  "mbids": [
+   "5f4c1688-154e-4d09-9d63-dcd5e0fcc5d4"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c81885c5",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Il Casanova di Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 9082,
+  "title": "Lla ri llira",
+  "mbids": [
+   "5fa9f830-351c-4e70-a05c-83eeb5c25d90"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-ec71ac94",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Chansons pour Fellini> 트랙"
+ },
+ {
+  "pieceId": 9094,
+  "title": "Un giorno per noi",
+  "mbids": [
+   "606b2019-c97f-4f0e-bc41-ce4781948d53"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9097,
+  "title": "El milagro de tu amor",
+  "mbids": [
+   "609a5f0a-8ae2-42fd-b8b5-2a8edcb7ccde"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9108,
+  "title": "Rosen från Nowgorod",
+  "mbids": [
+   "6158bb0e-9ec9-4de7-a03c-e5b3703c57da"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9116,
+  "title": "Que não se vê",
+  "mbids": [
+   "61dccdd7-e3a8-46a0-b0e2-3c03afbc00d8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 9117,
+  "title": "Apollonia",
+  "mbids": [
+   "61f96976-6733-3b17-8407-9c3f38ab9e14"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c7a5ab5e",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather: Music From the Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 9124,
+  "title": "Matangi's Escape",
+  "mbids": [
+   "62716d8c-bb95-4502-bf5a-8095e8b59df0"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 9125,
+  "title": "Improvviso for Violin and Piano “Un diavolo sentimentale”",
+  "mbids": [
+   "62ba506d-7828-41dd-936a-cd32e7291f25"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-41729ced",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Chamber Works> 트랙"
+ },
+ {
+  "pieceId": 9128,
+  "title": "I - in principio erat verbum",
+  "mbids": [
+   "63012b96-14e4-401b-9b7e-b6b428a2b36a"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-19e4b4c2",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Mysterium Catholicum> 트랙"
+ },
+ {
+  "pieceId": 9133,
+  "title": "The White Sheik",
+  "mbids": [
+   "633df258-82a5-4094-b370-39eb491e6508"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9134,
+  "title": "O Happy Dagger",
+  "mbids": [
+   "63440a32-92fd-4a37-95a6-da5f4e0ebd56"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9136,
+  "title": "Canto della Buranella",
+  "mbids": [
+   "6358235f-a496-4c6f-8dd9-f2b68e4b2787"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9163,
+  "title": "Boccaccio '70 (Slow di pupe)",
+  "mbids": [
+   "6556bd04-612d-4ec5-a570-42c7ddec75ba"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 9189,
+  "title": "The Pickup",
+  "mbids": [
+   "67d896ef-0bda-3d02-833a-bc7634330751"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c7a5ab5e",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather: Music From the Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 9197,
+  "title": "Entrata di Angelica, L'amore di Tancredi e Angelica, Finale",
+  "mbids": [
+   "688cfb69-8601-4724-91ad-54238d4b85bd"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a15b539e",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Il gattopardo> 트랙"
+ },
+ {
+  "pieceId": 9204,
+  "title": "Bruckner's Death",
+  "mbids": [
+   "69612ffd-ab60-4309-ba7b-600fea773cbd"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 9229,
+  "title": "Il giardino delle fate",
+  "mbids": [
+   "6b2000b6-0e97-4d73-a9fc-4b24b6ecd16a"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dad3cf3c",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Giulietta degli spiriti> 트랙"
+ },
+ {
+  "pieceId": 9234,
+  "title": "Madejà-periamdejà",
+  "mbids": [
+   "6b3f13c2-3a47-4d0c-b878-c661b83a5062"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 9240,
+  "title": "Lo \"struscio\" / Quel motivetto che mi piace tanto / Stormy Weather / La cucaracha / Stormy Weather",
+  "mbids": [
+   "6b95d49c-e75a-445a-83c9-f6d382e389a1"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c04afbce",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Amarcord> 트랙"
+ },
+ {
+  "pieceId": 9268,
+  "title": "L'emiro e le sue odalische",
+  "mbids": [
+   "6d7d0e63-cab0-497a-9e97-97b9a83a9d90"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c04afbce",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Amarcord> 트랙"
+ },
+ {
+  "pieceId": 9274,
+  "title": "Gloria in Excelsis Deo - Oath",
+  "mbids": [
+   "6de67b5a-e7e4-45f4-963d-ede4976c3471"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 9279,
+  "title": "Valzer (Parlami di me)",
+  "mbids": [
+   "6e55f3ae-db68-49ee-9457-184fa0c4f1d7"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-65920030",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <La dolce vita> 트랙"
+ },
+ {
+  "pieceId": 9284,
+  "title": "Trasteverina (Reprise)",
+  "mbids": [
+   "6e943e75-7598-433d-82b3-0a48f9bac9e9"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2964cc16",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Roma> 트랙"
+ },
+ {
+  "pieceId": 9295,
+  "title": "Vascello di Susi",
+  "mbids": [
+   "6f2b2c19-6da6-4cd0-b80e-de21caf8375d"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dad3cf3c",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Giulietta degli spiriti> 트랙"
+ },
+ {
+  "pieceId": 9302,
+  "title": "Pierre and Natasha",
+  "mbids": [
+   "6fa3a533-ff56-4d29-b491-316f7f6c83e1"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-033d90ce",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <War and Peace> 트랙"
+ },
+ {
+  "pieceId": 9307,
+  "title": "Teatrino di vernacchio",
+  "mbids": [
+   "7031227b-3d74-49e6-a99f-a0429082d68d"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 9319,
+  "title": "Andrei and Natasha - The Hunt",
+  "mbids": [
+   "70f3aef1-f28b-4697-aa78-e5231a7b99a8"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-033d90ce",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <War and Peace> 트랙"
+ },
+ {
+  "pieceId": 9320,
+  "title": "Ninna-Nanna a Michele",
+  "mbids": [
+   "7103ae9e-f816-4b9d-b663-f089e03240a0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9322,
+  "title": "The Godfathers at Home",
+  "mbids": [
+   "7123afda-6663-3484-b1cc-df59e7c281d9"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-6d7d5e18",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather, Part II> 트랙"
+ },
+ {
+  "pieceId": 9325,
+  "title": "플루트, 오보에, 비올라, 첼로, 하프를 위한 5중주",
+  "mbids": [
+   "714306d8-c9cd-4057-b959-fef71f7b4332"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-714306d8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9329,
+  "title": "I tre a letto",
+  "mbids": [
+   "7166b1e3-4fe7-440b-bf57-5dcc63885e7b"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dfac961a",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Fortunella> 트랙"
+ },
+ {
+  "pieceId": 9330,
+  "title": "De La Garde: Love Remembered",
+  "mbids": [
+   "7167fe1a-d959-4a52-a0a2-cadcfcdd40e1"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 9332,
+  "title": "The Conclusive Evidence",
+  "mbids": [
+   "717c6cc8-1da3-4184-82a9-685ca71159b1"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 9364,
+  "title": "Mistero (Mystery)",
+  "mbids": [
+   "740437cc-b99c-49eb-a478-c557a0e9cbd7"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-725b919f",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Shoot Loud, Louder. . . I Don't Understand> 트랙"
+ },
+ {
+  "pieceId": 9407,
+  "title": "Le notti di Cabiria",
+  "mbids": [
+   "76dd7e78-6562-4296-96c2-8e17ccde74e5"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-76dd7e78",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9408,
+  "title": "Il furto della Gioconda (Seq. 13 - fisarmonica fiume di notte)",
+  "mbids": [
+   "76ecedeb-cbef-4ac9-ae97-aeeec6f1e6b5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 9413,
+  "title": "Haute-mer",
+  "mbids": [
+   "774c252b-d271-42d6-986e-ba1ca0baf570"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-852df889",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 9415,
+  "title": "War and Peace (Natasha's Waltz)",
+  "mbids": [
+   "77792509-fda9-42fb-b01e-c1aa8869b5b2"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-033d90ce",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <War and Peace> 트랙"
+ },
+ {
+  "pieceId": 9425,
+  "title": "Michele soldato americano",
+  "mbids": [
+   "78238091-7533-46cf-bb61-ba4a64a468a0"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-448dfeb4",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Il brigante> 트랙"
+ },
+ {
+  "pieceId": 9428,
+  "title": "Il charleston di Giulietta",
+  "mbids": [
+   "7844021a-4cc9-4893-affc-3b75c8d6f0db"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dad3cf3c",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Giulietta degli spiriti> 트랙"
+ },
+ {
+  "pieceId": 9432,
+  "title": "Tancredi garibaldino",
+  "mbids": [
+   "78d63db7-d2d1-476e-9a32-a0bd87b4af34"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a15b539e",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Il gattopardo> 트랙"
+ },
+ {
+  "pieceId": 9437,
+  "title": "La Gémissante",
+  "mbids": [
+   "7932195b-721d-4da6-ad7c-54d6111fb75f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-852df889",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 9464,
+  "title": "La Plage",
+  "mbids": [
+   "7ace58f2-97da-4ac1-9780-345e08c5ccc9"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-852df889",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 9469,
+  "title": "Ballerina night",
+  "mbids": [
+   "7b0fc23a-8ba6-4343-af22-c5882e7c7746"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-7e1ac57a",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Il bidone> 트랙"
+ },
+ {
+  "pieceId": 9472,
+  "title": "Death... Hath Sucked the Honey of Thy Breath",
+  "mbids": [
+   "7b26b6ac-4955-4649-bc48-30e582b2c3df"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9473,
+  "title": "Storia della matrona de efeso",
+  "mbids": [
+   "7b442840-e869-4a3c-9e3b-1d4e6b42c98c"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 9474,
+  "title": "Romeo and Juliet - Their Song",
+  "mbids": [
+   "7b4af4c7-d2aa-4df2-8ff3-c8c97c516673"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9475,
+  "title": "Notturni nelle suburra",
+  "mbids": [
+   "7b50b43b-9bea-4e3e-8709-a6535ac144f4"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 9530,
+  "title": "Risatine maliziose",
+  "mbids": [
+   "7ec17729-fb8e-459b-bd92-1e13a5a96cfc"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-48d51413",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Prova d'orchestra> 트랙"
+ },
+ {
+  "pieceId": 9549,
+  "title": "Spara Fore! (Shoot Loud)",
+  "mbids": [
+   "8087ad98-d032-4fe7-a94a-077a255fba7b"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-725b919f",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Shoot Loud, Louder. . . I Don't Understand> 트랙"
+ },
+ {
+  "pieceId": 9571,
+  "title": "Valzer ai laghi",
+  "mbids": [
+   "82670571-5ea1-4108-8125-fa76e328c1b8"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-f7b1a864",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Rocco e i suoi fratelli> 트랙"
+ },
+ {
+  "pieceId": 9591,
+  "title": "Ippolito gioca per Pianoforte",
+  "mbids": [
+   "83b49d27-8b1d-4cee-be05-38497d9f9abe"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d3969ed1",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Chamber Music> 트랙"
+ },
+ {
+  "pieceId": 9596,
+  "title": "The Great Pyramids",
+  "mbids": [
+   "83f2a7eb-3679-4fd1-b986-34586f71b59f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 9609,
+  "title": "Kay",
+  "mbids": [
+   "84ed0ec6-81cd-3fc0-8543-b783e0d20470"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-6d7d5e18",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather, Part II> 트랙"
+ },
+ {
+  "pieceId": 9611,
+  "title": "Thoughts",
+  "mbids": [
+   "851cb6e0-21e5-4838-8910-495c1551af21"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 9652,
+  "title": "Exodus From Moscow",
+  "mbids": [
+   "87add3b9-98af-412f-9f64-78282e0ee75c"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-033d90ce",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <War and Peace> 트랙"
+ },
+ {
+  "pieceId": 9654,
+  "title": "Moana's Dance",
+  "mbids": [
+   "88058b14-7fff-4650-a58a-8518009b6cfb"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 9673,
+  "title": "Procession",
+  "mbids": [
+   "89c7d7b7-b081-4f84-874a-225ed347b813"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   21
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 9682,
+  "title": "The Statues of Rameses",
+  "mbids": [
+   "8a77e70b-26e8-4b16-abe3-39776b9149b4"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 9690,
+  "title": "Il lavoro (Valzer di pupe)",
+  "mbids": [
+   "8abfac44-2442-4c65-a88a-8c031ef4cf58"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9695,
+  "title": "Tutti a vedere il Rex",
+  "mbids": [
+   "8aec0680-a34d-471d-a2b7-eb2c2614d299"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c04afbce",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Amarcord> 트랙"
+ },
+ {
+  "pieceId": 9698,
+  "title": "Souvenir d'Henriette",
+  "mbids": [
+   "8b067bc9-d3ed-4b09-b10d-dd6695f4e2d1"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c81885c5",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Il Casanova di Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 9705,
+  "title": "Meurtre de Philippe",
+  "mbids": [
+   "8b6778f1-30b3-4df1-861a-27f9ecd975cc"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-852df889",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 9712,
+  "title": "Buongiorno Fortunella",
+  "mbids": [
+   "8c27302a-49a9-4d2e-b354-659b1b109ccf"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-8c27302a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9723,
+  "title": "Contrefaçon",
+  "mbids": [
+   "8d510b40-2c23-433c-ac8d-6830b78fea0a"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-852df889",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 9727,
+  "title": "발레 모음곡 <La Strada>",
+  "mbids": [
+   "8dc2d3a9-eb2f-4725-a19c-dcb6252da8c5"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-1b9c3744",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Musiques de films de Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 9729,
+  "title": "Ti ricordi di \"Siboney\"? / Siboney",
+  "mbids": [
+   "8dd7da97-3010-41ab-9ffd-aa26c6862e2e"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c04afbce",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Amarcord> 트랙"
+ },
+ {
+  "pieceId": 9763,
+  "title": "Le nozze sul mare",
+  "mbids": [
+   "900a8fb7-d1b9-4a76-bbd7-29bdbe6f5a2f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 9775,
+  "title": "La Locanda (il pic-nic)",
+  "mbids": [
+   "911d1fe0-8831-4295-b395-33e8ddedfbe9"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a15b539e",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Il gattopardo> 트랙"
+ },
+ {
+  "pieceId": 9788,
+  "title": "Romeo and Juliet Are Wed",
+  "mbids": [
+   "924c0a97-fb39-4a39-a75c-a157e06f563d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9795,
+  "title": "Delusion",
+  "mbids": [
+   "929ed49f-f4f6-4cc5-93c3-36d6100c951e"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 9809,
+  "title": "Il furto della Gioconda (Seq. 11 - pianino hotel Tripoli)",
+  "mbids": [
+   "936c968f-820e-423a-b573-c302a5e16d7c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 9821,
+  "title": "La \"fogaraccia\"",
+  "mbids": [
+   "9468e9ad-c2fb-4e0a-92c8-d97eb183fec6"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c04afbce",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Amarcord> 트랙"
+ },
+ {
+  "pieceId": 9822,
+  "title": "La moglie del bidonista",
+  "mbids": [
+   "94719ba6-ab71-4446-940b-7da72abe37a3"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-7e1ac57a",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Il bidone> 트랙"
+ },
+ {
+  "pieceId": 9843,
+  "title": "The Baptism",
+  "mbids": [
+   "967c53f2-5346-38cf-90c0-1b5efa1b058f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c7a5ab5e",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather: Music From the Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 9854,
+  "title": "Il fuoco delle vestali",
+  "mbids": [
+   "9792cc2d-ccaa-4c98-8a6f-363c7ba90d99"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 9855,
+  "title": "Tarantella Grottesca (Grotesque Tarantella)",
+  "mbids": [
+   "9792df68-7812-4ded-921c-96303aa7dabb"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-725b919f",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Shoot Loud, Louder. . . I Don't Understand> 트랙"
+ },
+ {
+  "pieceId": 9888,
+  "title": "Holy Mother Church",
+  "mbids": [
+   "999befae-2007-4698-ba75-2bd3d3bb63c4"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 9889,
+  "title": "La Gradisca si sposa e se ne va",
+  "mbids": [
+   "99a06059-73b4-4c8e-8f6f-d08f05bbf356"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c04afbce",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Amarcord> 트랙"
+ },
+ {
+  "pieceId": 9891,
+  "title": "Ninna nanna",
+  "mbids": [
+   "99c44b3c-4d46-37b2-85ee-957f7bef6a49"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a1d35e6a",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Film D'Amore e D'Anarchia> 트랙"
+ },
+ {
+  "pieceId": 9898,
+  "title": "Despair",
+  "mbids": [
+   "9a17d66a-680d-4e48-a4ef-71ada4f22b62"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 9900,
+  "title": "Michael Comes Home",
+  "mbids": [
+   "9a4d3bf9-8756-37d7-a42b-86e182174a52"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-6d7d5e18",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather, Part II> 트랙"
+ },
+ {
+  "pieceId": 9904,
+  "title": "Ma la vita continua",
+  "mbids": [
+   "9a66fa8c-8706-4629-b8a4-80edd5a1a025"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9920,
+  "title": "Mistero III (Mystery #3)",
+  "mbids": [
+   "9b8142d7-6f25-42a5-b318-9ca306c9aa47"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-725b919f",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <Shoot Loud, Louder. . . I Don't Understand> 트랙"
+ },
+ {
+  "pieceId": 9928,
+  "title": "축제 협주곡",
+  "mbids": [
+   "9bb44dd7-4d08-444b-af31-5e771263103f"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-9bb44dd7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9930,
+  "title": "Romeo e Giulietta",
+  "mbids": [
+   "9bc77699-6316-4d8f-99e8-604f85dd1cf9"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-9bc77699",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9936,
+  "title": "Lo Spiritismo nella vecchia casa",
+  "mbids": [
+   "9c2f601c-d873-43e9-8da8-5ecd96bf8a1b"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-9c2f601c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9940,
+  "title": "VI - quemadmodum fuit hoc molitum far",
+  "mbids": [
+   "9c6ec0a0-f62e-40e1-a84e-8ae85f3941c7"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-19e4b4c2",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Mysterium Catholicum> 트랙"
+ },
+ {
+  "pieceId": 9947,
+  "title": "Sulla nave di lica",
+  "mbids": [
+   "9cfe4434-7d0c-422a-bc63-bd47ee69aa5b"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 9951,
+  "title": "The Likeness of Death",
+  "mbids": [
+   "9da6eca2-37ac-4236-8451-6747f8ffc7c0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9955,
+  "title": "Love Theme From Romeo & Juliet",
+  "mbids": [
+   "9e0566f0-7021-4ca3-8c33-6d3ea0eeb7d0"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 9956,
+  "title": "Titoli di testa – Canzonetta – Notturno – Cadillac",
+  "mbids": [
+   "9e09ac78-ce22-40a2-868f-a2465723bea8"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-06972e92",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <La dolce vita> 트랙"
+ },
+ {
+  "pieceId": 9976,
+  "title": "L'Absence",
+  "mbids": [
+   "a003676c-8fe8-4f23-91cf-628b7ae9b1c5"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-852df889",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 9980,
+  "title": "Die Rose von Nowgorod",
+  "mbids": [
+   "a02a1562-e33f-43d8-b1c2-f5c26684b20f"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-a02a1562",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 9992,
+  "title": "Il furto della Gioconda (Seq. 3 - furto diurno)",
+  "mbids": [
+   "a1336bd2-8ce0-479e-b3e2-4ac199cfcd7b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 9998,
+  "title": "Coda: The Godfather Finale",
+  "mbids": [
+   "a1b99245-f163-3c0d-8159-0ca21228f4d3"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-81fca5c1",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather, Part III: Music From the Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 9999,
+  "title": "Il furto della Gioconda (Seq. 14 - ritrovamento della Gioconda)",
+  "mbids": [
+   "a1bdbacb-b1a8-4cdd-8a7e-51c73c98dc01"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 10016,
+  "title": "Mistero II (Mystery #2)",
+  "mbids": [
+   "a29aefbe-abb9-430d-8978-441bc7a74687"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-725b919f",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Shoot Loud, Louder. . . I Don't Understand> 트랙"
+ },
+ {
+  "pieceId": 10017,
+  "title": "The Homecoming at Moscow",
+  "mbids": [
+   "a29d0cd4-140c-4d02-9eea-591cb8ca321f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-033d90ce",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <War and Peace> 트랙"
+ },
+ {
+  "pieceId": 10021,
+  "title": "Introduzione e canzone",
+  "mbids": [
+   "a2fda7b6-bd80-4c6e-94f1-f0b12779c812"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-f7b1a864",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Rocco e i suoi fratelli> 트랙"
+ },
+ {
+  "pieceId": 10030,
+  "title": "L' oracolo salmodiante",
+  "mbids": [
+   "a37e8d3c-6e2d-4100-83b2-2f3b6de8fca1"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 10047,
+  "title": "Vito and Abbandando",
+  "mbids": [
+   "a45e93d9-e461-314c-9424-4509dcd132eb"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-6d7d5e18",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather, Part II> 트랙"
+ },
+ {
+  "pieceId": 10055,
+  "title": "The Abdication",
+  "mbids": [
+   "a4d64a86-a538-41ae-8e01-392c0b4a9aa2"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 10067,
+  "title": "Sospettoso Alberto (Suspicious Alberto)",
+  "mbids": [
+   "a613202e-eac4-4a7b-8673-a6961923ef01"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-725b919f",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Shoot Loud, Louder. . . I Don't Understand> 트랙"
+ },
+ {
+  "pieceId": 10092,
+  "title": "The Ride From Mantua",
+  "mbids": [
+   "a764afab-6939-4b85-9150-95dd4b048d8a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 10102,
+  "title": "O Venise, Venaga, Venus",
+  "mbids": [
+   "a87b0a7d-9876-42c2-8993-46922cab46cb"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c81885c5",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Il Casanova di Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 10111,
+  "title": "Titoli: Ritorno dall'Elba",
+  "mbids": [
+   "a90d7000-3c43-4c9b-841a-5e80074a77ed"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-8b476e5e",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Waterloo> 트랙"
+ },
+ {
+  "pieceId": 10116,
+  "title": "Passeggiata",
+  "mbids": [
+   "a98aa5c9-649f-3600-928d-f6a75f2682df"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a1d35e6a",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Film D'Amore e D'Anarchia> 트랙"
+ },
+ {
+  "pieceId": 10120,
+  "title": "클라리넷 소나타 D장조 중 \"Andante quasi adagio\"",
+  "mbids": [
+   "a9c16199-5877-4981-b732-b436dc6f5574"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 10143,
+  "title": "The Wooing",
+  "mbids": [
+   "ab5b85f8-f26e-494a-8e84-7cbe71465c5e"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-9d3ca5c4",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <The Taming of the Shrew> 트랙"
+ },
+ {
+  "pieceId": 10145,
+  "title": "La Poupée automate",
+  "mbids": [
+   "abe6930c-9109-4e61-aed4-80d0a974479f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c81885c5",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Il Casanova di Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 10157,
+  "title": "Ingresso nel palazzo del principe",
+  "mbids": [
+   "acda4491-3a9a-424a-93b1-b8da03a7003f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dfac961a",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Fortunella> 트랙"
+ },
+ {
+  "pieceId": 10158,
+  "title": "Cardinal Azzolino",
+  "mbids": [
+   "acf7e0bf-d23b-4c13-b85a-2a41db066f60"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 10167,
+  "title": "Canzone arrabbiata finale",
+  "mbids": [
+   "ad77f73e-7c91-3184-98f3-b5370f047fee"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a1d35e6a",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Film D'Amore e D'Anarchia> 트랙"
+ },
+ {
+  "pieceId": 10175,
+  "title": "VII - quotquot autem receperunt eum",
+  "mbids": [
+   "adc5a01e-f663-42fc-98e2-6ede23cc66eb"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-19e4b4c2",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Mysterium Catholicum> 트랙"
+ },
+ {
+  "pieceId": 10179,
+  "title": "Parle plus bas",
+  "mbids": [
+   "ade30ddc-988a-4217-aaee-d7898311ccbf"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10185,
+  "title": "Joy of Love in Alava",
+  "mbids": [
+   "ae5a7554-997a-4f59-bd56-468652adda57"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 10206,
+  "title": "영화음악 모음곡 <Il Casanova di Federico Fellini>",
+  "mbids": [
+   "afb77048-e47a-49dd-9b3d-b595755701c8"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-afb77048",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10211,
+  "title": "Encolpio e ascilto prigioneri",
+  "mbids": [
+   "b02054a0-a6d9-48e6-9835-9f6b5c47f08a"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 10220,
+  "title": "Fellini Classics Orchestral Suite",
+  "mbids": [
+   "b0965097-77a5-4bd5-ad26-38343249df32"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 10223,
+  "title": "Quadriglia",
+  "mbids": [
+   "b0f84b6f-d602-437c-b6bb-d39dc9d1964e"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a15b539e",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Il gattopardo> 트랙"
+ },
+ {
+  "pieceId": 10225,
+  "title": "Il tempo passa",
+  "mbids": [
+   "b1549c0d-0b3b-49ec-8431-7d1be4015807"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-ec71ac94",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Chansons pour Fellini> 트랙"
+ },
+ {
+  "pieceId": 10232,
+  "title": "Rosa aurata - la ballerina del circo snap",
+  "mbids": [
+   "b1aeb4cc-fbfc-4906-ad7a-09133b1400f7"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dad3cf3c",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Giulietta degli spiriti> 트랙"
+ },
+ {
+  "pieceId": 10284,
+  "title": "Dialogo fortunella",
+  "mbids": [
+   "b62b3bf4-3c49-42bc-9b91-0a37e98ca359"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dfac961a",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Fortunella> 트랙"
+ },
+ {
+  "pieceId": 10287,
+  "title": "Antonio Soffiantini detto \"Tunin\"",
+  "mbids": [
+   "b643e787-980b-3b64-aec7-a4028127e042"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a1d35e6a",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Film D'Amore e D'Anarchia> 트랙"
+ },
+ {
+  "pieceId": 10291,
+  "title": "Intermezzo de la mante religieuse",
+  "mbids": [
+   "b68fa3d9-c792-42fa-8bdb-e188e975330e"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c81885c5",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Il Casanova di Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 10298,
+  "title": "Napoleon's Retreat",
+  "mbids": [
+   "b707f06d-1ffc-44f7-90bd-f0ab52924a6f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-033d90ce",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <War and Peace> 트랙"
+ },
+ {
+  "pieceId": 10318,
+  "title": "Alberto Investiga (Alberto Investigates)",
+  "mbids": [
+   "b86e0f74-b7df-4a12-9f9a-821a3f804e6c"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-725b919f",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Shoot Loud, Louder. . . I Don't Understand> 트랙"
+ },
+ {
+  "pieceId": 10320,
+  "title": "The Taming of the Shrew: Overture",
+  "mbids": [
+   "b8ab2cb1-75e0-42db-8963-31f228f7557a"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-06cf4aca",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Works for Harp> 트랙"
+ },
+ {
+  "pieceId": 10332,
+  "title": "Roman Festival",
+  "mbids": [
+   "b9af5f58-08ad-4abe-905e-047cfb079279"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2964cc16",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Roma> 트랙"
+ },
+ {
+  "pieceId": 10333,
+  "title": "Le \"manine\" di primavera",
+  "mbids": [
+   "b9b524d1-14ec-41d1-8fff-98931086c42a"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c04afbce",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Amarcord> 트랙"
+ },
+ {
+  "pieceId": 10343,
+  "title": "Il tesoro nascosto",
+  "mbids": [
+   "ba402bef-7837-4d06-9f38-ccf0ba49c936"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-7e1ac57a",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Il bidone> 트랙"
+ },
+ {
+  "pieceId": 10351,
+  "title": "Il furto della Gioconda (Seq. 8 - Esercizi di piano)",
+  "mbids": [
+   "badf94e8-d64d-46fe-9455-2b69dbfe2138"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 10359,
+  "title": "Sette Pezzi Difficili per Bambini",
+  "mbids": [
+   "bb88de52-59cb-4d19-b2a3-e783422c2a83"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-bb88de52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10384,
+  "title": "클라리넷과 피아노를 위한 소나타 D장조",
+  "mbids": [
+   "bd6bdec7-543a-4f81-bf85-ec273889bd11"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-bd6bdec7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10410,
+  "title": "Partenza di Tancredi",
+  "mbids": [
+   "bf9d45a2-f472-488e-8b43-136a15c3b745"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a15b539e",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Il gattopardo> 트랙"
+ },
+ {
+  "pieceId": 10412,
+  "title": "Il furto della Gioconda (Seq. 15 - polka)",
+  "mbids": [
+   "bfb3c959-f21b-487d-9798-778deea2e8ff"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 10415,
+  "title": "The Brothers Mourn",
+  "mbids": [
+   "bfda9317-638a-35a1-a440-8049427f1e0a"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-6d7d5e18",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather, Part II> 트랙"
+ },
+ {
+  "pieceId": 10418,
+  "title": "Come Live Your Life With Me",
+  "mbids": [
+   "bfffbd3b-91a4-452d-be2c-4000f99080f5"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-bfffbd3b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10420,
+  "title": "Polka",
+  "mbids": [
+   "c02b1b41-4fb2-4292-941c-f81d7f45ce64"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-c02b1b41",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10428,
+  "title": "하프를 위한 사라방드와 토카타",
+  "mbids": [
+   "c0be82b3-e83a-43b2-b6a3-b2d9a04c3add"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-c0be82b3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10440,
+  "title": "Arrivée à Taormine",
+  "mbids": [
+   "c215a6c0-7fb1-42cf-b19b-97b4b7c294cf"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-852df889",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 10446,
+  "title": "Valzer sul nome Bach",
+  "mbids": [
+   "c27325db-c594-43b9-9b1d-7e71f099d27e"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-c27325db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10450,
+  "title": "Mongibello",
+  "mbids": [
+   "c2ff0268-8a63-4e97-9f41-e5097edaf41d"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-852df889",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Plein soleil> 트랙"
+ },
+ {
+  "pieceId": 10466,
+  "title": "כשהיינו ילדים",
+  "mbids": [
+   "c3fa5d0c-3d16-49a5-8e99-6c8f4b993425"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10481,
+  "title": "Boccaccio '70 (A spasso per Roma)",
+  "mbids": [
+   "c4e59c73-3eb6-40de-ba10-29ce80e58315"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 10495,
+  "title": "Ballando Con Raquel (Dancing With Raquel)",
+  "mbids": [
+   "c5dbba2d-96cd-47b0-a93f-d9d67d760e8c"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-725b919f",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Shoot Loud, Louder. . . I Don't Understand> 트랙"
+ },
+ {
+  "pieceId": 10511,
+  "title": "Theme from Juliet of the Spirits",
+  "mbids": [
+   "c7052609-1b41-43fb-975f-64bb8f238242"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 10539,
+  "title": "The Battle of Austerlitz",
+  "mbids": [
+   "c909b903-4189-4083-a61f-9fead694956c"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-033d90ce",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <War and Peace> 트랙"
+ },
+ {
+  "pieceId": 10540,
+  "title": "Barafonda Theatre",
+  "mbids": [
+   "c941c4a1-c927-453c-b986-66700c7bc1a5"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2964cc16",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Roma> 트랙"
+ },
+ {
+  "pieceId": 10543,
+  "title": "Castel del Monte",
+  "mbids": [
+   "c9946791-0bf9-4805-931c-7f9f670ec0ed"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-c9946791",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 10557,
+  "title": "Fox-Trot - Don't Say No to Rain",
+  "mbids": [
+   "ca6ab590-37a6-49d4-9c43-5e987eebbd6a"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 10559,
+  "title": "Guitar From the Quayside",
+  "mbids": [
+   "ca935e1e-8c3f-4557-be50-a9ce25690d96"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 10573,
+  "title": "Puhu hiljaa rakkaudesta",
+  "mbids": [
+   "cbc3f421-56f2-43c0-81c2-77acd88a8de2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 10575,
+  "title": "Sacra Romana Rota",
+  "mbids": [
+   "cbda1886-8572-3005-a02d-e5f386aac194"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 10611,
+  "title": "Night's Candles Are Burnt Out",
+  "mbids": [
+   "ceb0347a-e0f3-4549-a9ed-169736005260"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 10633,
+  "title": "La Gradisca e il principe",
+  "mbids": [
+   "d02ffdd4-deea-404b-8abd-9050e1e539f9"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c04afbce",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Amarcord> 트랙"
+ },
+ {
+  "pieceId": 10643,
+  "title": "Jackie's Theme",
+  "mbids": [
+   "d10cdb7f-e4fd-4e38-8d7c-a92161b2bd6f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 10648,
+  "title": "Cupido ha sonno - la maestra d'amore",
+  "mbids": [
+   "d17b1401-8c36-4316-99c9-35029dcec7a9"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dad3cf3c",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Giulietta degli spiriti> 트랙"
+ },
+ {
+  "pieceId": 10667,
+  "title": "But This I Pray... Consent to Marry Us Today",
+  "mbids": [
+   "d2764c1a-748d-43b2-b893-dede59a0f35a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 10674,
+  "title": "Il giardino delle delizie",
+  "mbids": [
+   "d34a0ba9-a968-434a-b13a-902dec30a765"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 10679,
+  "title": "Children's Plays",
+  "mbids": [
+   "d39f9f1d-ccef-4725-a613-4d867235f16b"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 10685,
+  "title": "La dolce vita – Via Veneto",
+  "mbids": [
+   "d3efd514-9ce6-4a91-b8ea-9ca3f6e26434"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-65920030",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <La dolce vita> 트랙"
+ },
+ {
+  "pieceId": 10694,
+  "title": "L'Oiseau magique à Rome",
+  "mbids": [
+   "d4973003-5b85-480e-a541-03d7dfcae66b"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c81885c5",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Il Casanova di Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 10697,
+  "title": "Gary Cooper",
+  "mbids": [
+   "d4cd8bc3-c50e-454f-bbc3-d52c653c5d61"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c04afbce",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Amarcord> 트랙"
+ },
+ {
+  "pieceId": 10710,
+  "title": "Anatole and Natasha",
+  "mbids": [
+   "d6db8f56-6a53-4fb6-ba8f-77082b4f9dd3"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-033d90ce",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <War and Peace> 트랙"
+ },
+ {
+  "pieceId": 10755,
+  "title": "After the Party",
+  "mbids": [
+   "d914c298-ccf1-473c-9668-7ec7fd19ca48"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-6d7d5e18",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather, Part II> 트랙"
+ },
+ {
+  "pieceId": 10780,
+  "title": "Main Title / The Immigrant",
+  "mbids": [
+   "daf41deb-125b-3817-b2ba-e6fea4e48619"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-6d7d5e18",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather, Part II> 트랙"
+ },
+ {
+  "pieceId": 10790,
+  "title": "Paese mio",
+  "mbids": [
+   "db81e9c6-28c8-4b5e-9660-a6d35db12afd"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-f7b1a864",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Rocco e i suoi fratelli> 트랙"
+ },
+ {
+  "pieceId": 10794,
+  "title": "'mmazzato a tradimento",
+  "mbids": [
+   "dc504424-d0d0-4ac9-a327-015b2b71b060"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-448dfeb4",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Il brigante> 트랙"
+ },
+ {
+  "pieceId": 10795,
+  "title": "Come tu vuoi",
+  "mbids": [
+   "dc51d6ef-1812-4dcb-9c56-ffdd9f342e30"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-f7b1a864",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Rocco e i suoi fratelli> 트랙"
+ },
+ {
+  "pieceId": 10805,
+  "title": "Senza mama / Ciuri-Ciuri / Napule ve salute",
+  "mbids": [
+   "dd2908dd-5f0d-3051-b8f0-cc0d0b7a8fa1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 10813,
+  "title": "Moana's Death",
+  "mbids": [
+   "dda7bee7-1aee-4250-bf2f-250b3edc6d5f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 10829,
+  "title": "Solitude",
+  "mbids": [
+   "deb7a9d7-5887-419b-92e8-78b60906a799"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 10836,
+  "title": "IV - duae viae sunt",
+  "mbids": [
+   "df314ebb-8b69-4526-9c11-35fa9851e570"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-19e4b4c2",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Mysterium Catholicum> 트랙"
+ },
+ {
+  "pieceId": 10846,
+  "title": "Their First Meeting",
+  "mbids": [
+   "e0149f86-3eac-4ef8-beaa-ce00f169c2f2"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 10861,
+  "title": "The Feast at the House of Capulet",
+  "mbids": [
+   "e10b5b79-cdcc-48c0-ac8d-5ef9af86bd10"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 10874,
+  "title": "La lunga strada - in casa della nonna",
+  "mbids": [
+   "e29eb620-60e2-44f1-a79a-99d8f6d9e5da"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-448dfeb4",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Il brigante> 트랙"
+ },
+ {
+  "pieceId": 10888,
+  "title": "I Guai Di Alberto (The Troubles Of Alberto)",
+  "mbids": [
+   "e3cb75aa-6795-447c-8dd5-a6e85097e65f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-725b919f",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Shoot Loud, Louder. . . I Don't Understand> 트랙"
+ },
+ {
+  "pieceId": 10893,
+  "title": "Encolpio ha perduto la sua spada",
+  "mbids": [
+   "e4557dc6-732a-476b-95a4-13e61958df0e"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 10929,
+  "title": "Voci casa tolleranza",
+  "mbids": [
+   "e6b1ebed-4cbd-3b6f-9c69-b31f72038534"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a1d35e6a",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Film D'Amore e D'Anarchia> 트랙"
+ },
+ {
+  "pieceId": 10933,
+  "title": "Sicilian Pastorale",
+  "mbids": [
+   "e6f95136-82bc-387f-9a94-26d65ee7d7c9"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c7a5ab5e",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <The Godfather: Music From the Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 10941,
+  "title": "Tema di gitone",
+  "mbids": [
+   "e7aafcfe-4159-4a8f-a5c5-22caa33b4ce9"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 10961,
+  "title": "Waltz - The White Nile",
+  "mbids": [
+   "e8af0b1e-6d90-4715-a6f2-e630baa418ae"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 10964,
+  "title": "Cara bambina",
+  "mbids": [
+   "e8d99616-f40e-4b3c-9c2e-c6d1f324c70c"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-7e1ac57a",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Il bidone> 트랙"
+ },
+ {
+  "pieceId": 10996,
+  "title": "Matangi's Love Theme",
+  "mbids": [
+   "eaec8b31-372b-47c7-a1b8-e2315fcc942b"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c11a3d05",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Hurricane> 트랙"
+ },
+ {
+  "pieceId": 11020,
+  "title": "Notturno o mattutino",
+  "mbids": [
+   "ecb81c54-404a-4bdd-bb34-f7a65adbf94f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-06972e92",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <La dolce vita> 트랙"
+ },
+ {
+  "pieceId": 11027,
+  "title": "Danzando nella nebbia",
+  "mbids": [
+   "ed518789-c011-470e-8d72-764b1656a6d2"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c04afbce",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Amarcord> 트랙"
+ },
+ {
+  "pieceId": 11035,
+  "title": "The Steambot Departs",
+  "mbids": [
+   "edef5719-e773-41c7-9c22-4c8e98882398"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 11037,
+  "title": "Journey on the Nile",
+  "mbids": [
+   "ee46578c-8305-4b23-a1eb-3208d7d365cd"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 11050,
+  "title": "The Banquet",
+  "mbids": [
+   "eefd3167-0432-4af4-b88e-6901f565ff6f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-9d3ca5c4",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <The Taming of the Shrew> 트랙"
+ },
+ {
+  "pieceId": 11054,
+  "title": "Juliet of the Spirits",
+  "mbids": [
+   "ef66000f-8d26-4dbe-9cad-f2db1babbaba"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 11056,
+  "title": "Duet (main Love Theme)",
+  "mbids": [
+   "ef79a51a-db9b-491e-9cb0-5008ef5c9166"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 11057,
+  "title": "Deer Hunting",
+  "mbids": [
+   "ef7f0706-73f9-4d82-8175-e85b97c511b3"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 11059,
+  "title": "La Strada - Le Grand Chemin",
+  "mbids": [
+   "efa8b938-de37-4a3a-8d63-e119585809a3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 11061,
+  "title": "Controdanza",
+  "mbids": [
+   "efb3c4a0-2afc-4859-8c59-ec36d34e542e"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-a15b539e",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Il gattopardo> 트랙"
+ },
+ {
+  "pieceId": 11071,
+  "title": "Yol Ver",
+  "mbids": [
+   "f106ab96-d2c9-4f8e-b91d-3e61207b57a6"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-f106ab96",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11073,
+  "title": "Coimbra / La festa dei bidonisti",
+  "mbids": [
+   "f12a3784-4db3-4523-a0a7-87d2306ac9d4"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-7e1ac57a",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Il bidone> 트랙"
+ },
+ {
+  "pieceId": 11099,
+  "title": "Rugiada sui ranocchi",
+  "mbids": [
+   "f33d3acd-7193-4fc8-b713-94c96afc7947"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dad3cf3c",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Giulietta degli spiriti> 트랙"
+ },
+ {
+  "pieceId": 11101,
+  "title": "Echi dei canti di Calabria",
+  "mbids": [
+   "f36740f2-dc57-4fba-a69a-5b909aed9f5f"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-448dfeb4",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Il brigante> 트랙"
+ },
+ {
+  "pieceId": 11110,
+  "title": "La processione nel paese",
+  "mbids": [
+   "f41f7fc2-0ea9-4e31-ba95-6cf561d90544"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-448dfeb4",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Il brigante> 트랙"
+ },
+ {
+  "pieceId": 11115,
+  "title": "La gelosia di Simone",
+  "mbids": [
+   "f49e1cb6-2542-478e-a82d-b203ea4fa030"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-f7b1a864",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Rocco e i suoi fratelli> 트랙"
+ },
+ {
+  "pieceId": 11131,
+  "title": "Arrival at Wode Hall",
+  "mbids": [
+   "f57a6fec-0263-4efd-ae45-085494397f7b"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 11134,
+  "title": "Stärker als die Zeit",
+  "mbids": [
+   "f5abfa68-fd71-416a-b7d8-0986bf713e11"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 11140,
+  "title": "교향곡 1번 G장조",
+  "mbids": [
+   "f5f795bc-e44b-4f20-b614-5594f76e8383"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-f5f795bc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 11153,
+  "title": "Impossible Love",
+  "mbids": [
+   "f77be64e-71c5-4086-ab65-e9fe697dcfd7"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c17ea49a",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <The Abdication> 트랙"
+ },
+ {
+  "pieceId": 11179,
+  "title": "Lo sceicco bianco",
+  "mbids": [
+   "f8e93b61-552f-4728-ae1c-fb89a08ba7cf"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-ec71ac94",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Chansons pour Fellini> 트랙"
+ },
+ {
+  "pieceId": 11206,
+  "title": "Medley: Notte di vigilia / Parata delle truppe napoleoniche",
+  "mbids": [
+   "fa5cf797-2d24-4adf-a19f-ea4bbc2b8825"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-8b476e5e",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Waterloo> 트랙"
+ },
+ {
+  "pieceId": 11209,
+  "title": "Linnet's Pearls",
+  "mbids": [
+   "fad3479d-1b8f-42da-bae3-2eac4527c38a"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 11215,
+  "title": "II e III - quoniam unus est panis",
+  "mbids": [
+   "fb11856d-4ac5-49f9-a71c-ab32dd68f669"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-19e4b4c2",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Mysterium Catholicum> 트랙"
+ },
+ {
+  "pieceId": 11218,
+  "title": "La Grande Moune",
+  "mbids": [
+   "fb850e73-d900-4c1e-a957-13a813e352ec"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-c81885c5",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Il Casanova di Federico Fellini> 트랙"
+ },
+ {
+  "pieceId": 11220,
+  "title": "Michele cacciatore",
+  "mbids": [
+   "fb9a274b-4721-4aec-b5d1-cc776bce1eda"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-448dfeb4",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Il brigante> 트랙"
+ },
+ {
+  "pieceId": 11221,
+  "title": "La schiavetta innamorata",
+  "mbids": [
+   "fba984da-22a0-45e3-88d0-94ee0443a419"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-d988ff08",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Fellini Satyricon> 트랙"
+ },
+ {
+  "pieceId": 11238,
+  "title": "Il ritratto della principessa",
+  "mbids": [
+   "fce231ca-72f1-4dcf-952d-740d55b332a4"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-dfac961a",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Fortunella> 트랙"
+ },
+ {
+  "pieceId": 11258,
+  "title": "I Love My Baby",
+  "mbids": [
+   "fdc152a1-4870-4ea8-804a-63d2070cb48d"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-2bcc5806",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Death on the Nile> 트랙"
+ },
+ {
+  "pieceId": 11286,
+  "title": "Petite Offrande musicale",
+  "mbids": [
+   "ffa80845-26dc-480e-92e1-e7e68b16c40e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 11287,
+  "title": "La fuga disperata - finale",
+  "mbids": [
+   "ffc9ff02-0951-4f27-b498-9c58926c9f1d"
+  ],
+  "mapping": "part",
+  "key": "nino-rota-rg-448dfeb4",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Il brigante> 트랙"
+ },
+ {
+  "pieceId": 11289,
+  "title": "Death on the Nile",
+  "mbids": [
+   "ffe73b71-3162-48fd-bd15-c02f50a3f587"
+  ],
+  "mapping": "work",
+  "key": "nino-rota-ffe73b71",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]
