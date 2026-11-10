@@ -268,6 +268,27 @@ def track_name(name: str, rg_title: str) -> str:
     return name.strip() or rg_title
 
 
+def manual_soundtracks(rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
+    """손으로 넣은 「영화 <X> 사운드트랙」 음반(곡 목록 없음)을 영화 이름으로 찾게 한다.
+
+    이름은 원제(영어 제목에서 Soundtrack 앞)와 한국 제목 둘 다.
+    """
+    out: dict[str, dict[str, str]] = {}
+    for row in rows:
+        if row["origin"] != "manual" or row["type"] != "album" or row["hidden_reason"] != "NULL":
+            continue
+        match = re.match(r"^영화 <(.+?)> 사운드트랙$", row["title"])
+        if not match:
+            continue
+        english = row["title_en"] if row["title_en"] != "NULL" else ""
+        english = re.sub(r"\s*\bsoundtrack\b.*$", "", english, flags=re.IGNORECASE)
+        for name in (match.group(1), english):
+            key = auto.normal_title(name)
+            if key:
+                out.setdefault(key, row)
+    return out
+
+
 def work_class(entry: dict[str, Any], works: dict[str, dict[str, Any]]) -> str:
     genre = entry.get("genre") or ""
     title = str(entry["mbTitle"])
@@ -399,6 +420,9 @@ def build(
         kept.append(entry)
 
     reserved = {r["title"] for r in rows} | {str(w["titleKo"]) for w in kept}
+    manual_films = manual_soundtracks(rows)
+    # 4차 규칙이 이미 MB 작품에 이은 손 작품은 건드리지 않는다
+    used_manual: set[int] = {int(w["existingPieceId"]) for w in kept if w.get("existingPieceId")}
     report: list[dict[str, Any]] = []
     new_entries: list[dict[str, Any]] = []
     for rgid in sorted({*assigned.values()}, key=rank):
@@ -407,6 +431,17 @@ def build(
         rg_title = str(rg["title"])
         members = {pid for pid, g in assigned.items() if g == rgid}
         screen = match_screen(rg_title, screens)
+        # 손으로 넣어 둔 「영화 <X> 사운드트랙」 음반이 같은 영화면
+        # 새로 만들지 않고 그 작품 안에 곡을 넣는다
+        names = {rg_title, film_title(rg_title), *(screen["names"] if screen else [])}
+        manual = next(
+            (
+                manual_films[n]
+                for n in sorted({auto.normal_title(x) for x in names} - {""})
+                if n in manual_films and int(manual_films[n]["id"]) not in used_manual
+            ),
+            None,
+        )
         compilation = "Compilation" in (rg.get("secondary-types") or [])
         if rgid in films:
             is_film = True
@@ -424,13 +459,19 @@ def build(
             title = f"영화 <{ko or name}> 사운드트랙"
         else:
             title = rg_title
-        for candidate in (title, f"{title} (음반)", f"{title} (음반 {rgid[:8]})"):
-            if candidate[:250] not in reserved:
-                title = candidate[:250]
-                break
+        title_en = rg_title[:250]
+        if manual is not None:
+            used_manual.add(int(manual["id"]))
+            title = manual["title"]
+            title_en = manual["title_en"] if manual["title_en"] != "NULL" else title_en
         else:
-            raise SystemExit(f"묶음 제목을 정하지 못함: {rg_title}")
-        reserved.add(title)
+            for candidate in (title, f"{title} (음반)", f"{title} (음반 {rgid[:8]})"):
+                if candidate[:250] not in reserved:
+                    title = candidate[:250]
+                    break
+            else:
+                raise SystemExit(f"묶음 제목을 정하지 못함: {rg_title}")
+            reserved.add(title)
         key = f"{slug}-rg-{rgid[:8]}"
         parts: list[dict[str, Any]] = []
         for seq, (wid, wtitle) in enumerate(info["tracks"], start=1):
@@ -474,7 +515,7 @@ def build(
                 "catalogue": None,
                 "catalogueAlt": None,
                 "titleKo": title,
-                "titleEn": rg_title[:250],
+                "titleEn": title_en,
                 "year": None,
                 "yearText": None,
                 "genre": "soundtrack"
@@ -483,7 +524,7 @@ def build(
                 "authenticity": "authentic",
                 "mbid": None,
                 "mbTitle": rg_title,
-                "existingPieceId": None,
+                "existingPieceId": int(manual["id"]) if manual is not None else None,
                 "parts": parts,
             }
         )
@@ -509,6 +550,7 @@ def build(
                 ),
                 "kowiki": screen["kowiki"] if screen else None,
                 "koTitle": ko,
+                "existingPieceId": int(manual["id"]) if manual is not None else None,
                 "title": title,
                 "tracks": len(parts),
                 "linked": sum(1 for p in parts if p["existingPieceId"]),

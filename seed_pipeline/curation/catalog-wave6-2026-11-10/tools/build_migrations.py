@@ -144,9 +144,13 @@ def main() -> None:
             block, numbers = composer_block(args.work, cid, slug, names[cid], args.wave, args.film)
             blocks.append(block)
             totals.update(numbers)
+        what = (
+            "큐를 MusicBrainz 음반 단위로 묶는다"
+            if args.film
+            else "작품을 MusicBrainz 작품 구조로 다시 짠다"
+        )
         intro = (
-            f"-- 작곡가 {len(chunk)}명의 작품을 MusicBrainz 작품 구조로 다시 짠다({args.wave} 자동,"
-            f" {index + 1}/{len(chunks)}).\n"
+            f"-- 작곡가 {len(chunk)}명의 {what}({args.wave} 자동, {index + 1}/{len(chunks)}).\n"
             f"-- 작품 {totals['works']}개(새 {totals['new']}개), seed {totals['seeds']}개 중"
             f" 잇기 {totals['mapped']}·숨김 {totals['hidden']}·그대로 {totals['kept']}.\n"
         )
