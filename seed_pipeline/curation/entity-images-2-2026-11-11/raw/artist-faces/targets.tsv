@@ -1,0 +1,303 @@
+id	tier	name	english_name	category	nationality	birth_year	authority_entity_id	qid	apple_music_artist_id	is_composer	cover_image_url	has_banner
+635	A	베르트랑 드 비이	Bertrand de Billy	conductor	France	1965	0cd9ab54-4e09-5320-a0fe-b13ad6476428	Q697105	18949574	0	NULL	0
+656	A	암브로시안 싱어스	Ambrosian Singers	choir	United Kingdom	1951	4b51faa6-e7fc-5bdd-b4d4-6b851a4db613	Q2588958	NULL	0	NULL	0
+659	A	라 페니체 극장 관현악단	Orchestra del Teatro La Fenice	orchestra	Italy	1792	e595b40d-262c-521c-a303-52b8011b9b11	Q102281356	271433175	0	NULL	0
+668	A	이온 마린	Ion Marin	conductor	Romania	1960	ff51ef2d-6f4e-58cd-8228-cd045cc6bd9e	Q4281466	692002	0	NULL	0
+679	A	프랭크 로파르도	Frank Lopardo	tenor	United States	1957	cdbd16e5-1eca-5ee8-9085-9137a5f00c13	Q5488007	4563142	0	NULL	0
+687	A	실비아 맥네어	Sylvia McNair	soprano	United States	1956	2b41e705-3bb7-517c-9ce8-83f44991157e	Q469990	4349160	0	NULL	0
+698	A	쾰른 아카데미	Kölner Akademie	orchestra	Germany	1996	1dcb6281-6d1c-555f-9eb1-27df5843466d	Q6453858	1720925602	0	NULL	0
+699	A	라 스타조네 프랑크푸르트	La Stagione Frankfurt	orchestra	Germany	NULL	691a05dc-0f41-558c-96a4-84a190493c78	Q48772265	263675969	0	NULL	0
+702	A	콜레기움 아우레움	Collegium Aureum	orchestra	Germany	1962	bfc93cd5-f803-5511-9f81-c02c3c1d5246	Q834039	NULL	0	NULL	0
+703	A	하노버 밴드	Hanover Band	orchestra	United Kingdom	1980	86194744-3209-5068-8aae-22a5ba289e72	Q2901816	34584069	0	NULL	0
+706	A	드레스덴 실내합창단	Dresdner Kammerchor	choir	Germany	1985	66110941-225e-58dc-bb29-479c93f216c2	Q1258533	397173659	0	NULL	1
+711	A	외르크 페르버	Jörg Faerber	conductor	Germany	1929	7ed6d01b-1f09-5be9-b71d-1f110e20a0c4	Q111014	293815	0	NULL	0
+712	A	케빈 맬런	Kevin Mallon	conductor	Ireland	NULL	1a37b846-c92b-5e0f-8512-4421d05c7f09	Q6396843	3051443	0	NULL	0
+714	A	뷔르템베르크 실내관현악단 하일브론	Württembergisches Kammerorchester Heilbronn	orchestra	Germany	1960	aac9af7b-241e-59f3-98ac-c143f097ee3b	Q679341	NULL	0	NULL	1
+715	A	토론토 체임버 오케스트라	Toronto Chamber Orchestra	orchestra	Canada	NULL	41bbfd61-64fe-53ea-965b-40b4f6466ad0	Q7826306	65171152	0	NULL	0
+727	A	헬무트 뮐러브륄	Helmut Müller-Brühl	conductor	Germany	1933	617b7a3a-4428-53a1-b87c-8e8aec0f659c	Q77898	2679968	0	NULL	0
+728	A	아이오나 브라운	Iona Brown	conductor	United Kingdom	1941	cd69f7d8-4a84-5617-bd30-3043b479d93b	Q434489	4319078	0	NULL	0
+729	A	쾰른 실내관현악단	Cologne Chamber Orchestra	orchestra	Germany	1923	69123e2b-9896-59ae-96c6-766eacd4eccc	Q111795682	2679952	0	NULL	0
+730	A	프라하 실내관현악단	Prague Chamber Orchestra	orchestra	Czechia	NULL	567a15fd-9540-5f4f-91c2-3ce848507691	Q11335518	5294366	0	NULL	1
+743	A	라트비아 방송합창단	Latvian Radio Choir	choir	Latvia	1940	647e90cd-a38a-5381-85dd-e79a891e0dd0	Q16361547	64975101	0	NULL	1
+750	A	실라 암스트롱	Sheila Armstrong	soprano	United Kingdom	1942	411b2eae-c1de-58c6-9032-f25106095090	Q1394650	509246	0	NULL	0
+756	A	파스칼 드부아용	Pascal Devoyon	pianist	France	1953	666a7ce7-5640-5c70-b341-63afcca13902	Q1671133	280859	0	NULL	0
+765	A	이시도어 코언	Isidore Cohen	violinist	United States	1922	107734ba-7e47-571d-986c-5fa6b7949608	Q6080913	4320348	0	NULL	0
+768	A	베네딕트 클뢰크너	Benedict Klöckner	cellist	Germany	1989	157a02be-bf20-513f-b521-1183c6032ddf	Q33519710	491143160	0	NULL	0
+774	A	헤리베르트 에서	Heribert Esser	conductor	Germany	1929	3362ab7d-825f-54e3-9053-34a0411ee6f4	Q16264579	92003975	0	NULL	0
+776	A	오우에 에이지	Eiji Oue	conductor	Japan	1957	cb8a4aea-7436-5e8c-a59e-88b8456ad1b9	Q650184	160012748	0	NULL	1
+781	A	티모시 허친스	Timothy Hutchins	flutist	Canada	NULL	1e280e8d-1003-5ea6-86a8-91fedab84471	Q7807265	4410926	0	NULL	0
+783	A	시카고 심포니 합창단	Chicago Symphony Chorus	choir	United States	1957	ffc75369-fe25-5a94-8890-514d5552fe64	Q5095798	4339309	0	NULL	0
+784	A	필하모니아 합창단	Philharmonia Chorus	choir	United Kingdom	1957	a063cdf4-5d68-53e0-b307-f8c73b4af827	Q7183042	NULL	0	NULL	0
+790	A	샌프란시스코 심포니 합창단	San Francisco Symphony Chorus	choir	United States	1972	bf70d692-c34a-5d97-a07b-ff24cbb3ab2f	Q7414119	4360634	0	NULL	0
+791	A	탱글우드 페스티벌 합창단	Tanglewood Festival Chorus	choir	United States	1970	f96fed61-c5b6-5cbc-8cac-7a4f72459fba	Q7683038	4356831	0	NULL	0
+793	A	버밍엄 시립교향악단 합창단	City of Birmingham Symphony Chorus	choir	United Kingdom	1973	867041b6-dee5-59a8-acee-a58a5869a9df	Q5009213	6770214	0	NULL	0
+794	A	바이에른 방송합창단	Bavarian Radio Chorus	choir	Germany	1946	39a6d278-eae5-5f88-9583-374dcbd461ee	Q881144	NULL	0	NULL	1
+800	A	한스 로스바우트	Hans Rosbaud	conductor	Austria	1895	61a968a2-f3a7-58e1-9507-4e8dd791c590	Q89527	4636001	0	NULL	1
+802	A	줄리아드 현악 4중주단	Juilliard String Quartet	ensemble	United States	1946	b7712e9b-8fb2-5bec-a95e-c6a6bf7f341e	Q1413537	15409749	0	NULL	1
+813	A	보루산 이스탄불 필하모닉 오케스트라	Borusan Istanbul Philharmonic Orchestra	orchestra	Turkey	1993	d343a249-a841-58a3-8f4d-484060570f8c	Q894268	351742412	0	NULL	0
+815	A	아나톨 피스툴라리	Anatole Fistoulari	conductor	United Kingdom	1907	27cffba8-9c1f-55b6-a3ce-a191aee1a84f	Q487710	341065	0	NULL	0
+829	A	콘세르트헤바우 실내관현악단	Concertgebouw Chamber Orchestra	orchestra	Netherlands	1988	67b49451-7db2-5077-a668-5266236785d7	Q2519414	31314743	0	NULL	1
+832	A	알렉산드르 데듀힌	Alexander Dedyukhin	pianist	Russia	1907	a47bed8c-fdfb-5b56-aafd-076355dce2c5	Q112479872	NULL	0	NULL	0
+834	A	빈 악우협회 합창단	Wiener Singverein	choir	Austria	1858	90ac7161-919e-5290-a7a3-644b0e6f9373	Q313692	4332660	0	NULL	1
+835	A	잉글리시 바로크 솔로이스츠	English Baroque Soloists	orchestra	United Kingdom	1978	12faddfd-00bb-5918-8718-ee75a93f18f2	Q1342808	4318047	0	NULL	1
+837	A	필리프 헤레베허	Philippe Herreweghe	conductor	Belgium	1947	ac7f3b46-c314-5403-bb70-9f8c5b90cbc1	Q168039	4799358	0	NULL	1
+838	A	콜레기움 보칼레 겐트	Collegium Vocale Gent	choir	Belgium	1970	37251d7c-ce1e-56a1-9f7c-9e4f9ea0d7e9	Q1109305	4799340	0	NULL	1
+839	A	카를 리히터	Karl Richter	conductor	Germany	1926	7e7acd33-ddde-55d5-9bfe-e927773d6024	Q76735	4343468	0	NULL	0
+841	A	로저 노링턴	Roger Norrington	conductor	United Kingdom	1934	14328287-223b-5081-b7c4-711944f9e3ca	Q537083	NULL	0	NULL	0
+844	A	구스타프 레온하르트	Gustav Leonhardt	conductor	Netherlands	1928	6a49d18e-6661-5806-9f10-87a2ad7f6921	Q51584	1382635	1	NULL	1
+849	A	에사페카 살로넨	Esa-Pekka Salonen	conductor	Finland	1958	38c09bbd-2e7d-5f7a-9e34-cb8616ae1265	Q314587	5192302	0	NULL	1
+855	A	새뮤얼 레이미	Samuel Ramey	목소리	United States	1942	17ae5f62-0561-506b-99f2-e1c984e447b1	Q951556	285792	0	NULL	0
+858	A	베를린 슈타츠카펠레	Berlin Staatskapelle	orchestra	Germany	1570	02cf1018-945c-5a42-ae24-9d3fe822ab61	Q708538	NULL	0	NULL	1
+860	A	크리스타 루트비히	Christa Ludwig	mezzo_soprano	Germany	1928	59bb82e9-5275-53b5-8f3d-2083ee08a4f3	Q241005	340824	0	NULL	1
+861	A	안네 소피 폰 오터	Anne Sofie von Otter	mezzo_soprano	Sweden	1955	b1fc4d37-eb84-5c08-a64a-ac55f39ccf5f	Q234973	4348896	0	NULL	0
+862	A	레오폴드 스토코프스키	Leopold Stokowski	conductor	United States	1882	b823edfe-71a3-595e-90b1-5b5830c16381	Q297562	317026	0	NULL	0
+863	A	체칠리아 바르톨리	Cecilia Bartoli	mezzo_soprano	Italy	1966	c5a42b09-9734-5ffd-8fc5-73dfd3d1e6cb	Q18828	5633841	0	NULL	1
+865	A	아그네스 발차	Agnes Baltsa	mezzo_soprano	Greece	1944	98672ef0-ba26-594f-8826-0364873c96b7	Q235679	4321402	0	NULL	0
+871	A	카를로 마리아 줄리니	Carlo Maria Giulini	conductor	Italy	1914	bf1b7652-4193-5151-b841-53c3f1f88835	Q430829	616642	0	NULL	1
+878	A	이 무지치	I Musici	orchestra	Italy	1952	31d3c4da-24b3-5304-bd6a-c71f0740abda	Q1655249	4564760	0	NULL	0
+890	A	조너선 노트	Jonathan Nott	conductor	United Kingdom	1962	585864dc-cf5c-5ada-a3a6-5e15d8791220	Q657928	44614067	0	NULL	1
+895	A	페테르 외트뵈시	Péter Eötvös	conductor	Hungary	1944	5591d335-525a-5e93-93ac-f3dc18c09411	Q389851	75487347	0	NULL	1
+374	B	Bulbul	Bulbul	목소리	소련	1897	bff945ad-986d-52f0-b740-47ea5d7bb88a	Q1131312	NULL	0	NULL	0
+375	B	Tugomir Franc	Tugomir Franc	목소리	유고슬라비아	1932	6aeeb84b-5cb6-5e96-98ab-16ecdac1226f	Q2459336	76544497	0	NULL	0
+376	B	레나타 테발디	Renata Tebaldi	목소리	이탈리아	1922	ac13cf59-c91b-5849-b4e3-f41dc008d687	Q229179	285420	0	NULL	0
+377	B	제리 해들리	Jerry Hadley	목소리	미국	1952	65d81ca1-121b-56c1-9dd1-b48ded137be3	Q1237689	285379	0	NULL	0
+378	B	Peter Donohoe	Peter Donohoe	피아노	영국	1953	8c8afe36-0a4e-56ec-b606-2df85e4a8827	Q2093540	NULL	0	NULL	0
+379	B	Josef Sivó	Josef Sivó	바이올린	헝가리	1931	bf2da05a-a7a5-5182-819b-5e6c0fdc6c78	Q11346211	4796009	0	NULL	0
+380	B	Oliver Schnyder	Oliver Schnyder	피아노	스위스	1973	555a84ff-660c-5519-ad15-d5974f3db05b	Q2020560	297449009	0	NULL	0
+381	B	Yara Bernette	Yara Bernette	피아노	브라질	1920	32a2ab0c-59da-5a53-aea3-622641e70737	Q10394563	1172063759	0	NULL	0
+382	B	도쿠나가 쓰기오	Tsugio Tokunaga	바이올린	일본	1946	cf649936-4a3e-527a-8035-80c0df3ec660	Q11490339	NULL	0	NULL	0
+383	B	Anne Evans	Anne Evans	목소리	영국	1941	219c39be-9001-56cf-989d-9ea701736a91	Q1154942	44375986	0	NULL	0
+384	B	Sakari Oramo	Sakari Oramo	conductor	핀란드	1965	def45fc2-9854-53da-bb67-09bc48170cb5	Q278650	40618232	0	NULL	0
+385	B	Ricardo Kanji	Ricardo Kanji	리코더	브라질	1948	1d64f4e6-6cfa-5e10-90e9-af21e014c763	Q10361166	316356400	0	NULL	0
+386	B	Rolando Panerai	Rolando Panerai	목소리	이탈리아	1924	f191cc60-3f01-5fc5-83c7-69aa3599dfe7	Q1332423	340868	0	NULL	0
+387	B	Amel Brahim-Djelloul	Amel Brahim-Djelloul	목소리	프랑스	1975	f5744c10-ede2-57f3-868f-227b87c6ee63	Q2721621	719977808	0	NULL	0
+388	B	Randi Stene	Randi Stene	목소리	노르웨이	1963	8a897e8e-4406-53de-b4ba-9b72bee0edef	Q1779882	71174143	0	NULL	0
+389	B	라비니아 메이여르	Lavinia Meijer	하프	네덜란드 왕국	1983	58888a34-0312-50ce-a02d-3fafa2fd6bdc	Q2328528	306552363	0	NULL	0
+390	B	Adriana Maliponte	Adriana Maliponte	목소리	이탈리아	1938	271b01f0-6e56-5b24-b84c-fa3585a623ae	Q2579580	80141981	0	NULL	0
+391	B	Rafael Orozco	Rafael Orozco	피아노	스페인	1946	1289af02-fc10-5a94-83d9-529c17c30a55	Q2664073	28425798	0	NULL	0
+392	B	즈비그니에프 제비에츠키	Zbigniew Drzewiecki	피아노	폴란드	1890	4e9261e6-5759-54bb-9082-c1d746157279	Q2031673	537556977	0	NULL	0
+393	B	Masashi Ueda	Masashi Ueda	바순	일본	1904	b9cac5ab-0aa6-51cb-aa78-7c03f3897fa4	Q11359696	NULL	0	NULL	0
+394	B	Ion Voicu	Ion Voicu	바이올린	루마니아	1923	6bf6c7ae-c447-5414-8621-ddbd1ae26aad	Q2396242	215367015	0	NULL	0
+395	B	Jane Berbié	Jane Berbié	목소리	프랑스	1931	53e0f5e5-e8fb-5528-88eb-8e25a4032f1a	Q1645137	NULL	0	NULL	0
+396	B	David Shallon	David Shallon	conductor	이스라엘	1950	f855fe43-5114-5c71-9e75-1bf9fdae898d	Q1176612	215648166	0	NULL	0
+397	B	Maria Tănase	Maria Tănase	목소리	루마니아	1913	4f36959d-3c10-5a14-b720-3c4ba70c617b	Q255725	NULL	0	NULL	0
+398	B	Turibio Santos	Turibio Santos	기타	브라질	1943	c96dc027-f881-512d-b9e0-d320d5a5be7b	Q2460689	258999354	0	NULL	0
+400	B	마에하시 데이코	Teiko Maehashi	바이올린	일본	1943	a98e24a4-32e3-5138-92b6-37bcf79ced72	Q11397321	250237807	0	NULL	0
+401	B	Tytus Wojnowicz	Tytus Wojnowicz	오보에	폴란드	1965	d5844591-9aad-5957-8d11-9c8a3e5ad585	Q2463484	653450990	0	NULL	0
+403	B	Masao Kawasaki	Masao Kawasaki	비올라	일본	1951	fc5a4930-3daa-585b-897f-0900bcafd1f3	Q11478606	129927658	0	NULL	0
+405	B	Hiro Kurosaki	Hiro Kurosaki	바이올린	오스트리아	1959	dc37d5b0-207b-53a9-b7b7-f61ae80940b4	Q1620215	NULL	0	NULL	0
+406	B	Stanisław Drzewiecki	Stanisław Drzewiecki	피아노	폴란드	1987	eb58f7f5-5453-5850-ae27-14884b1dc8df	Q2745197	NULL	0	NULL	0
+407	B	데이비드 가렛	David Garrett	바이올린	독일	1980	b46723e0-3e0d-5329-b72f-a6c19edcecd9	Q160430	NULL	0	NULL	0
+409	B	Agata Szymczewska	Agata Szymczewska	바이올린	폴란드	1985	4f6942c0-2def-53d7-8ee9-adba11471980	Q2826456	417239965	0	NULL	0
+410	B	오카모토 도모타카	Tomotaka Okamoto	목소리	일본	1976	625bd976-b97d-59d3-b520-0857523b3f05	Q2426103	NULL	0	NULL	0
+411	B	사토 시노부	Shinobu Satō	목소리	일본	1958	b4ad9a3f-b4ef-5854-9f38-025ed0e2a47f	Q11383521	NULL	0	NULL	0
+412	B	Karin Branzell	Karin Branzell	목소리	스웨덴	1891	8e2057e1-9f3e-53ed-abca-7d0a94eba649	Q1325598	151337488	0	NULL	0
+413	B	나카조노 리사	Lisa Nakazono	피아노	일본	1984	fbad28f8-70be-5822-9cf7-c508dd0a49ec	Q11363468	NULL	0	NULL	0
+414	B	Christian Ihle Hadland	Christian Ihle Hadland	피아노	노르웨이	1983	d84e7478-effc-5508-8a35-c45c486f4fb9	Q1080432	163326446	0	NULL	0
+415	B	Casper Reardon	Casper Reardon	하프	미국	1907	4b5cd1c3-0d95-5bac-99cb-6b1f60bcd0a3	Q1048150	NULL	0	NULL	0
+416	B	Jerzy Katlewicz	Jerzy Katlewicz	conductor	폴란드	1927	06e00ebf-6e51-5c64-bbe2-bdb17dcefc56	Q1965062	151240006	0	NULL	0
+417	B	Yasuko Ōtani	Yasuko Ōtani	바이올린	일본	1955	f35d6e40-5051-5df1-834c-7d81d83d5a33	Q11439076	NULL	0	NULL	0
+418	B	멜리시 죄르지	György Melis	목소리	헝가리	1923	c5f02b20-66c8-58a3-8ed6-bfad34bcc4d7	Q279920	323339647	0	NULL	0
+419	B	Daniel Pezzotti	Daniel Pezzotti	첼로	스위스	1962	88990b13-4a1a-5fbe-9be8-c68e231ead5a	Q1162085	NULL	0	NULL	0
+420	B	Nazzareno De Angelis	Nazzareno De Angelis	목소리	이탈리아	1881	fa34f628-3f96-507b-8bf7-0200cd79970d	Q2536286	191865529	0	NULL	0
+421	B	Franck Ferrari	Franck Ferrari	목소리	프랑스	1963	74437712-efc0-5013-bde5-e7be6ea59f1e	Q2387348	273066790	0	NULL	0
+423	B	Wilbert Hazelzet	Wilbert Hazelzet	플루트	네덜란드 왕국	1948	96b58e3d-5556-594c-84c6-52dc85ad4d47	Q2570131	4345221	0	NULL	0
+424	B	Michele Marelli	Michele Marelli	클라리넷	이탈리아	1978	f51476a5-d71a-5bfb-abca-30c83388b53b	Q1931082	399132353	0	NULL	0
+425	B	Mark Reizen	Mark Reizen	목소리	소련	1895	503914b9-8c14-5969-947d-bcb98665a1b3	Q1387918	182722071	0	NULL	0
+426	B	유렉 뒤발	Jurek Dybal	콘트라베이스	폴란드	1977	dd440e09-1d39-5bc5-bd17-21a1f95bd284	Q1713844	1149101748	0	NULL	0
+428	B	야샤 하이페츠	Jascha Heifetz	바이올린	미국	1901	35ec0a29-2f24-50a2-8a89-055b5b1c9add	Q243472	262892	0	NULL	0
+429	B	토마시 코니에츠니	Tomasz Konieczny	목소리	폴란드	1972	017edbc1-c0f7-59e4-acf7-03fe397303d4	Q2440466	553036070	0	NULL	0
+430	B	Shinnosuke Ishihara	Shinnosuke Ishihara	마림바	일본	1975	49fc5c5f-005b-5432-81a6-49e499a651c1	Q11243472	NULL	0	NULL	0
+431	B	Lynne Dawson	Lynne Dawson	목소리	영국	1953	d521c465-673e-5272-8f10-b7ff000472b4	Q275727	1381399	0	NULL	0
+432	B	나카미치 이쿠요	Ikuyo Nakamichi	피아노	일본	1963	a1a5660e-8b65-594a-9a9e-2bb07e1dcd06	Q11378606	299984455	0	NULL	0
+433	B	시몬 영	Simone Young	conductor	오스트레일리아	1961	7418a4d8-bcd2-585f-9452-2db0979d7622	Q273672	252085560	0	NULL	0
+434	B	Witold Rowicki	Witold Rowicki	conductor	폴란드	1914	2562385e-82d3-5160-a4a4-1f67360b9ad8	Q1358456	4635828	0	NULL	0
+435	B	Kenneth Tarver	Kenneth Tarver	목소리	미국	1965	6e900399-4b3e-5b31-8a74-e804925bdea3	Q3814607	4796661	0	NULL	0
+436	B	서정학	Seo Jung-Hack	목소리	대한민국	2000	70120106-702c-5af4-a6f3-f3c429d08a6a	Q3548192	NULL	0	NULL	0
+437	B	피에타리 잉키넨	Pietari Inkinen	conductor	핀란드	1980	7bbbc86e-6cb5-591c-a765-81c05f7d75ab	Q976671	261680225	0	NULL	0
+438	B	Arve Tellefsen	Arve Tellefsen	바이올린	노르웨이	1936	3b64d6d8-730e-5e39-8cb8-dc7854a7522c	Q2866057	43579315	0	NULL	0
+439	B	Victoria Kamhi	Victoria Kamhi	피아노	튀르키예	1902	ebf83e00-1292-50e0-a20f-1e786ae95912	Q3267754	325361539	0	NULL	0
+440	B	프란스 헬메르손	Frans Helmerson	첼로	스웨덴	1945	24464aa3-85e1-5507-b5da-9af58161fe70	Q370286	43579310	0	NULL	0
+441	B	Vladimir Feltsman	Vladimir Feltsman	피아노	러시아	1952	bc1bfc4b-a176-5763-81b0-9fe537e23ce7	Q4482551	250675927	0	NULL	0
+442	B	Caroline Campbell	Caroline Campbell	바이올린	미국	1980	b67a883a-2604-5e69-a04c-69450e4392c2	Q5045002	1617073525	0	NULL	0
+443	B	Aloys and Alfons Kontarsky	Aloys and Alfons Kontarsky	피아노	독일	NULL	5af10959-478c-5ac8-94ab-e1f76e3f361c	Q49907	NULL	0	NULL	0
+444	B	Sharon Isbin	Sharon Isbin	기타	미국	1956	17f2a837-4d85-5814-9282-1750a62b4ffc	Q435982	762747	0	NULL	0
+445	B	Alexandre Da Costa	Alexandre Da Costa	바이올린	캐나다	1979	69a6fa59-ca48-5d5c-9ad7-5feb51f25d66	Q4720819	131250885	0	NULL	0
+446	B	Josef Greindl	Josef Greindl	목소리	독일	1912	7367b35a-d668-5044-83fc-d1020ce6392d	Q63857	752297	0	NULL	0
+447	B	Carlos Barbosa-Lima	Carlos Barbosa-Lima	기타	브라질	1944	d809e1a5-21d6-55a3-ab44-d6ded3241bed	Q5041816	NULL	0	NULL	0
+448	B	월터 바릴리	Walter Barylli	바이올린	오스트리아	1921	986b73b9-d2a3-5fbc-8670-ec3f42fb450f	Q7964271	265890967	0	NULL	0
+449	B	Josetxu Obregón	Josetxu Obregón	첼로	스페인	1979	5c3d9cb6-0768-5a57-b7c0-ab4721fe98db	Q6288553	316461376	0	NULL	0
+450	B	Gloria Campaner	Gloria Campaner	피아노	이탈리아	1986	3cc33153-fa20-5f18-ae62-49ccf3d7e2cc	Q5571335	590447838	0	NULL	0
+451	B	Jakob Gimpel	Jakob Gimpel	피아노	폴란드	1906	60914fbf-ecdd-5cd2-b1dd-3ef3fedb31ea	Q2896463	270159945	0	NULL	0
+452	B	Sten Wahlund	Sten Wahlund	목소리	스웨덴	1940	2e2b5155-2223-5d5c-b540-65ec4062242d	Q6229120	320628521	0	NULL	0
+453	B	Jhalak Man Gandarbha	Jhalak Man Gandarbha	목소리	네팔	1935	0fe04e90-2d72-5f09-b32d-53261ed5d96a	Q6190791	NULL	0	NULL	0
+454	B	Åse Wentzel	Åse Wentzel	목소리	노르웨이	1924	b9239288-2dc0-58cc-b86e-faeca2b4c266	Q4990311	NULL	0	NULL	0
+455	B	Regina Resnik	Regina Resnik	목소리	미국	1922	39bff6e1-eb66-5c78-8da9-c656999f2d89	Q435523	19573012	0	NULL	0
+456	B	Bronwen Mills	Bronwen Mills	목소리	영국	2000	a0bfac1b-a7ec-587e-9951-5f087953e0cc	Q2926096	335603994	0	NULL	0
+457	B	Eugene Linden	Eugene Linden	플루트	미국	1912	7a091889-314c-58a4-882d-39b795cf4593	Q5407449	NULL	0	NULL	0
+458	B	Gavriel Lipkind	Gavriel Lipkind	첼로	이스라엘	1977	d98b265d-323a-5947-86e0-19069f45dbd2	Q949580	215356378	0	NULL	0
+459	B	Blanche Thebom	Blanche Thebom	목소리	미국	1915	82d66206-ce78-51be-9ed8-2571ee11589d	Q439570	752148	0	NULL	0
+460	B	Simon Over	Simon Over	피아노	영국	1964	9e26d4e9-2520-581b-8570-dea33f720f64	Q7519471	355413549	0	NULL	0
+461	B	Verónica Villarroel	Verónica Villarroel	목소리	칠레	1962	1c62c1fc-d1eb-5744-870e-f28cdabed786	Q3780209	15126772	0	NULL	0
+462	B	Tōru Yasunaga	Tōru Yasunaga	바이올린	독일	1951	76aa3d83-4e25-5c69-86f8-f311075391a9	Q7862720	NULL	0	NULL	0
+463	B	프랑크 붕가르텐	Frank Bungarten	기타	독일	1958	ea9107bf-83c4-55cf-be09-2cef6a80a73e	Q90854	NULL	0	NULL	0
+464	B	Antonio José	Antonio José	목소리	스페인	1995	fe8b8ae5-3825-5e02-8d7d-4a0128c0fa74	Q4809698	1694739435	0	NULL	0
+465	B	Jadwiga Rappé	Jadwiga Rappé	목소리	폴란드	1952	e1d3b38b-a59d-5b11-8a08-49a1197ba045	Q3160434	NULL	0	NULL	0
+466	B	Sirena Huang	Sirena Huang	바이올린	미국	1994	f06983da-2e9b-5da4-abc5-62d0b30a9472	Q7530129	NULL	0	NULL	0
+467	B	기욤 레미	Guillaume Rémy	바이올린	벨기에	1856	58137348-7e40-5bfe-9e1b-7d541e57f441	Q4393132	NULL	0	NULL	0
+468	B	Ragnar Ulfung	Ragnar Ulfung	목소리	스웨덴	1927	28f5a297-5a81-5633-9907-7fd2b706df57	Q3444670	214349338	0	NULL	0
+469	B	Ganna Walska	Ganna Walska	목소리	미국	1887	6984aa4c-b8b7-5f22-adff-3f99323f3c9f	Q5521415	NULL	0	NULL	0
+470	B	Cesare Siepi	Cesare Siepi	목소리	이탈리아	1923	7ee4c78b-821f-566b-a767-f2b1bcaa3f5c	Q362132	4414522	0	NULL	0
+471	B	얀도 예노	Jenő Jandó	피아노	헝가리	1952	f57c7cf8-e8ac-5005-8dc9-3a14c2e8ebb1	Q712013	3323344	0	NULL	0
+472	B	Julian Sitkovetsky	Julian Sitkovetsky	바이올린	소련	1925	4c50d31e-498b-5b90-b290-7d26fa4f51fb	Q4421099	167578451	0	NULL	0
+474	B	미야모토 후미아키	Fumiaki Miyamoto	오보에	일본	1949	4b821409-7667-58e0-ae3d-588861e50109	Q5508558	282821479	0	NULL	0
+475	B	Elena Gerhardt	Elena Gerhardt	목소리	독일	1883	8f53e4d5-96c4-5e6d-8ff9-9efad54a6af6	Q70380	305141823	0	NULL	0
+476	B	Delfina Ambroziak	Delfina Ambroziak	목소리	폴란드	1935	1164b88d-90c9-5b99-a49a-82654bc22298	Q9205689	456555497	0	NULL	0
+477	B	Krzysztof Urbański	Krzysztof Urbański	conductor	폴란드	1982	e5be3e76-6ea8-59fd-8853-cefef445dfbd	Q975667	481997319	0	NULL	0
+478	B	알레산드로 사피나	Alessandro Safina	목소리	이탈리아	1963	09a1ffc8-8756-51d3-9016-00f014a92ebf	Q621389	NULL	0	NULL	0
+479	B	Hansheinz Schneeberger	Hansheinz Schneeberger	바이올린	스위스	1926	d464ff26-fd6e-5621-9bd4-d51f4b5cb4ab	Q3127066	79900826	0	NULL	0
+480	B	요엘 레비	Yoel Levi	conductor	이스라엘	1950	d0a0a58e-3ff0-5437-9ca6-abdeefa5ffd5	Q964896	61221832	0	NULL	0
+481	B	Leo Slezak	Leo Slezak	목소리	오스트리아	1873	4a06323e-5798-5d0b-b72b-c3a2abb4464f	Q78586	154599665	0	NULL	0
+482	B	Roberto Urbay	Roberto Urbay	피아노	쿠바	1953	6d3ff609-d7ca-5893-b23d-5143a3877683	Q5652570	153568825	0	NULL	0
+483	B	Valery Agafonov	Valery Agafonov	목소리	소련	1941	5018586f-7870-558d-a86c-68c9acbcf641	Q4056734	NULL	0	NULL	0
+484	B	Hu Nai-yuan	Hu Nai-yuan	바이올린	중화민국	1961	d9640152-e15c-543b-9290-520e32e3c063	Q4501979	NULL	0	NULL	0
+485	B	Jadwiga Kotnowska	Jadwiga Kotnowska	플루트	폴란드	1957	46bf2b33-e7e9-58b3-b3b7-1792497451c3	Q6121561	272179108	0	NULL	0
+486	B	Natasha Marsh	Natasha Marsh	목소리	영국	1975	fd734502-ba9b-5ca3-98fb-3fe332151b02	Q6968475	206096343	0	NULL	0
+487	B	사이먼 킨리사이드	Simon Keenlyside	목소리	영국	1959	6e70b62c-aa9c-5e6a-874e-ad10adf054db	Q549726	14810939	0	NULL	0
+488	B	Camilla Wicks	Camilla Wicks	바이올린	미국	1928	71fb0e38-5aa1-5e79-b68f-f566a52dd83b	Q5026605	267316715	0	NULL	0
+489	B	레오 누치	Leo Nucci	목소리	이탈리아	1942	a9bf7655-902f-540c-94df-304f4fa4a6fa	Q533103	NULL	0	NULL	0
+490	B	Michael Frischenschlager	Michael Frischenschlager	바이올린	오스트리아	1935	5cfdb5f5-484e-598a-b382-4777da9671d3	Q701733	NULL	0	NULL	0
+491	B	Trouvère Quartet	Trouvère Quartet	색소폰	일본	NULL	6f43f73e-7313-53f6-b9e6-fe9f88e3fa95	Q7846650	204094139	0	NULL	0
+492	B	The 5 Browns	The 5 Browns	피아노	미국	NULL	1cc6b81e-f4c6-5f95-86bb-67790b3f4562	Q7711948	42262889	0	NULL	0
+493	B	Augustin Dumay	Augustin Dumay	바이올린	프랑스	1949	4eb19609-bc34-5a05-b3b3-ed1bd506c865	Q767725	4563029	0	NULL	0
+494	B	Donald Whitton	Donald Whitton	첼로	캐나다	1923	b3ebf2bb-77b1-5384-ab06-ef97b1246c24	Q5295308	NULL	0	NULL	0
+495	B	다비드 오이스트라흐	David Oistrakh	바이올린	소련	1908	6da2581c-6f8a-52e0-8587-c5f7b7fd704b	Q47120	4346005	0	NULL	0
+496	B	Stuart Burrows	Stuart Burrows	목소리	영국	1933	9f676903-74e9-587e-b32a-b6381c0f47b9	Q847735	4790657	0	NULL	0
+497	B	William Joseph	William Joseph	피아노	미국	1980	e4e3e0aa-d95e-56e9-8de9-dd7d4c903d0c	Q8013764	NULL	0	NULL	0
+498	B	Frøydis Ree Wekre	Frøydis Ree Wekre	호른	노르웨이	1941	7f0d04cf-8f3a-53d8-8267-5f69b9248935	Q543831	78150355	0	NULL	0
+499	B	Ferruccio Furlanetto	Ferruccio Furlanetto	목소리	이탈리아	1949	7d7e9e0c-0cf4-52e3-8de3-6cbda2efa710	Q695741	4345637	0	NULL	0
+500	B	Raya Garbousova	Raya Garbousova	첼로	미국	1906	138a317c-c44c-5b32-9428-6646e5f83235	Q4133604	433413555	0	NULL	0
+501	B	Karine Deshayes	Karine Deshayes	목소리	프랑스	1972	612d15b8-6794-518a-91d7-86f78391a06d	Q3193279	NULL	0	NULL	0
+502	B	Amit Dolberg	Amit Dolberg	피아노	이스라엘	1979	22adbab0-ee5c-50c1-a014-6edba1f21d35	Q6637940	547342861	0	NULL	0
+503	B	Tim Mead	Tim Mead	목소리	영국	1981	f22d9bd2-4b20-5fc9-8e26-85a8bb5f1546	Q7803965	162994323	0	NULL	1
+504	B	Nicolae Herlea	Nicolae Herlea	목소리	루마니아	1927	2e853837-62af-5809-8142-1201ee222c0e	Q464758	NULL	0	NULL	0
+505	B	Burak Bilgili	Burak Bilgili	목소리	튀르키예	1974	9a3baa90-51d6-581c-82df-0b967e9d33e9	Q4998089	1621771550	0	NULL	0
+506	B	Jarmila Novotná	Jarmila Novotná	목소리	체코	1907	9671f5e1-8825-5fa7-8ef3-b3828dcf474e	Q433709	NULL	0	NULL	0
+507	B	Danjūrō Ishizaka	Danjūrō Ishizaka	첼로	독일	1979	efe687ba-5378-5d53-93c9-b976e3b2ec88	Q4203779	NULL	0	NULL	0
+508	B	Florence Cole Talbert	Florence Cole Talbert	목소리	미국	1890	d962e7b8-59e7-5f43-902f-087705f6983d	Q5460586	NULL	0	NULL	0
+509	B	Kyoko Takezawa	Kyoko Takezawa	바이올린	일본	1966	e64c03e9-dc02-5be6-a8b2-b0eda5cdd210	Q6452003	271604	0	NULL	0
+510	B	Domenico Nordio	Domenico Nordio	바이올린	이탈리아	1971	4274f2c2-d27f-5259-adef-cfb46011aa42	Q3713166	119211539	0	NULL	0
+511	B	Alfred Boskovsky	Alfred Boskovsky	클라리넷	오스트리아	1913	f0babb2a-2d3b-538b-a6e8-d77173deaaa1	Q4095006	4666840	0	NULL	0
+512	B	줄리앤 베어드	Julianne Baird	목소리	미국	1952	64a3e80c-23c1-542d-9a39-46989fd72a48	Q778949	48600436	0	NULL	0
+513	B	Konstantin Soukhovetski	Konstantin Soukhovetski	피아노	러시아	1981	54142669-4e79-5461-8227-68291956f839	Q6430063	1315104114	0	NULL	0
+514	B	이레네 아벤드로트	Irene Abendroth	목소리	오스트리아	1872	d8ef4416-5475-5285-a211-351831634244	Q79002	NULL	0	NULL	0
+515	B	Marie-Françoise Bucquet	Marie-Françoise Bucquet	피아노	프랑스	1937	3aad90f8-d084-57fd-b505-ec6f9e64ce3d	Q3291816	NULL	0	NULL	0
+516	B	Farid Farjad	Farid Farjad	바이올린	이란	1938	268b6228-7f79-5f0a-8493-29520e5cf8c6	Q3666586	NULL	0	NULL	0
+517	B	Michael Weinius	Michael Weinius	목소리	스웨덴	1971	73eb4fc2-eae3-58cd-bbea-72ecf2b9cf03	Q6234694	282257710	0	NULL	0
+518	B	Rashid Vatandoust	Rashid Vatandoust	목소리	이란	1946	f5dd5ea2-4480-5402-b571-c0d77a26daaf	Q5939301	NULL	0	NULL	0
+519	B	피에로 카푸칠리	Piero Cappuccilli	목소리	이탈리아	1926	08c43225-8f95-5e6e-b955-2d0956ff6804	Q543158	NULL	0	NULL	0
+520	B	Einar Beyron	Einar Beyron	목소리	스웨덴	1901	4cc0cbfa-66a0-5f02-9f82-522c35adcce8	Q5575191	320727619	0	NULL	0
+521	B	David Campbell	David Campbell	클라리넷	영국	1953	c7278cbf-c4c8-506f-9b42-ff265b1c40ea	Q5232116	1639199018	0	NULL	0
+522	B	Ruslan Maynov	Ruslan Maynov	목소리	불가리아	1976	e50dad3b-d96b-515b-8fa9-fc560fce8f50	Q7381027	NULL	0	NULL	0
+523	B	Cláudio Cruz	Cláudio Cruz	바이올린	브라질	1967	8750362e-38d0-5b3b-b096-19cc8e3318da	Q9785991	NULL	0	NULL	0
+524	B	Matthew Odell	Matthew Odell	피아노	미국	1979	b998ac31-8503-5b37-9318-76550efacb93	Q6791042	1463091025	0	NULL	0
+525	B	수산네 뤼덴	Susanne Rydén	목소리	스웨덴	1962	40352d67-8508-5282-82ed-ff16b334019d	Q4976111	NULL	0	NULL	0
+526	B	Thibault Cauvin	Thibault Cauvin	기타	프랑스	1984	c22c5ff7-e67a-5f67-84c6-d71975a2486a	Q3524016	533914821	0	NULL	0
+527	B	Ginette Neveu	Ginette Neveu	바이올린	프랑스	1919	51000135-0837-53b3-aa56-97a1a38cb57a	Q284702	111616985	0	NULL	0
+528	B	David Lloyd	David Lloyd	목소리	영국	1912	1f259f16-c0af-5dc0-8d0b-c87f46a35ec9	Q5236710	NULL	0	NULL	0
+529	B	Cécile Ousset	Cécile Ousset	피아노	프랑스	1936	68a18ccb-9e47-509b-a0f7-ebdcc6d3c2f0	Q3009784	821077	0	NULL	0
+530	B	Gilad Karni	Gilad Karni	비올라	이스라엘	1968	cc051379-7d59-51e1-8f35-ba9fb860d1ed	Q5560695	298068196	0	NULL	0
+531	B	Alison Crum	Alison Crum	비올족	영국	1949	30604e95-12a8-56c9-a80e-43623b3c4439	Q4727054	76167719	0	NULL	0
+532	B	João Carlos Martins	João Carlos Martins	피아노	브라질	1940	6fc0ba2f-9045-50c9-91c8-30308361a27c	Q3113057	NULL	0	NULL	0
+533	B	고바야시 아이미	Aimi Kobayashi	피아노	일본	1995	b3d78e1a-2e0c-5ee8-a32a-90a7e8792af5	Q405607	352202155	0	NULL	0
+534	B	Anders Näslund	Anders Näslund	목소리	스웨덴	1920	62a7d082-6228-55d8-a945-d2106572143f	Q6020922	NULL	0	NULL	0
+535	B	Gervase de Peyer	Gervase de Peyer	클라리넷	영국	1926	cf8ec066-e79a-5b49-ac40-346cab2caac5	Q926558	711157	0	NULL	0
+536	B	호바르 임세	Håvard Gimse	피아노	노르웨이	1966	10c7f4ef-e846-5c0f-856c-3d860a329568	Q5963606	2679704	0	NULL	0
+537	B	Yann Beuron	Yann Beuron	목소리	프랑스	1969	b9725869-71f8-5cc1-8f4f-0affec05027b	Q3571609	1119682	0	NULL	0
+538	B	누르 제한	Noor Jehan	목소리	파키스탄	1926	bd8a8c85-3416-5644-b4d6-4bbb61a606b1	Q466955	NULL	0	NULL	0
+539	B	Lina Bruna Rasa	Lina Bruna Rasa	목소리	이탈리아	1907	7f43dd67-141b-5f5c-a2ed-f27d541a6a59	Q9022671	191698675	0	NULL	0
+540	B	에르네스티네 슈만하잉크	Ernestine Schumann-Heink	목소리	미국	1861	2b43d03c-0652-5229-aad7-4de213f5c01d	Q79035	61733292	0	NULL	0
+541	B	안젤라 휴이트	Angela Hewitt	피아노	캐나다	1958	43d7b218-2af3-557c-8ec4-27e5f3de7d4b	Q437307	57249855	0	NULL	1
+542	B	Theodore Kerkezos	Theodore Kerkezos	색소폰	그리스	1961	7bc5e9a4-e190-5406-b549-01c83410d8dc	Q7781871	29751773	0	NULL	0
+543	B	Bernhard Kontarsky	Bernhard Kontarsky	피아노	독일	1937	e7b0697c-9f94-5197-8c0e-75a71e4e23b1	Q99859	41257824	0	NULL	0
+544	B	Dolora Zajick	Dolora Zajick	목소리	미국	1952	899a5265-1742-5eb5-99f6-e4c4b6cac169	Q3494651	15465038	0	NULL	0
+545	B	Balázs Máté	Balázs Máté	첼로	헝가리	1965	b93b7fe0-489d-5330-96a8-e9b5e35e0284	Q805900	267943586	0	NULL	0
+547	B	Eleonore Schoenfeld	Eleonore Schoenfeld	첼로	미국	1925	d2f236b9-e681-5df8-a513-91ca6d3f6242	Q5359261	1675158856	0	NULL	0
+548	B	Carlo Zecchi	Carlo Zecchi	피아노	이탈리아	1903	f84cf708-bbe0-5d4e-97a1-33cb55e3945e	Q572782	270159992	0	NULL	0
+551	B	Anna Larsson	Anna Larsson	목소리	스웨덴	1966	b6c40933-55cb-5397-9804-23a7e19c43ce	Q4767211	27888535	0	NULL	0
+552	B	Rinat Ibragimov	Rinat Ibragimov	콘트라베이스	러시아	1960	240e5290-1869-5087-af02-48316a6fded3	Q5846421	NULL	0	NULL	0
+553	B	스즈키 신이치	Shin'ichi Suzuki	바이올린	일본	1898	6fa0bd0d-d7c2-5d8c-8021-248899e25916	Q512093	208596512	0	NULL	0
+554	B	Paul Makanowitzky	Paul Makanowitzky	바이올린	미국	1920	9d313f25-266a-5afb-9b47-a7cc2ea09592	Q7152169	183062518	0	NULL	0
+555	B	Otmar Suitner	Otmar Suitner	conductor	오스트리아	1922	4d6c4b78-5d8c-5935-bc1e-8af559c89d05	Q78540	57409901	0	NULL	0
+556	B	Robert Cohen	Robert Cohen	첼로	영국	1959	5e210409-3408-5508-8c87-16df107c7c90	Q4237199	42281630	0	NULL	0
+558	B	잉바르 빅셀	Ingvar Wixell	목소리	스웨덴	1931	b45d70c6-24de-5dae-8112-eee91ac3fbf2	Q510973	340910	0	NULL	0
+559	B	Anja Thauer	Anja Thauer	첼로	독일	1945	5342d5ab-0e59-5f50-84e4-d79b8695a7e1	Q551298	1041541257	0	NULL	0
+560	B	Kaori Uemura	Kaori Uemura	비올족	일본	NULL	ded237ec-a74e-5d82-af46-c1328b10e920	Q3192817	123060584	0	NULL	0
+579	B	볼프강 조보트카	Wolfgang Sobotka	conductor	Austria	1956	f6da024e-d235-5929-b7da-1281edfb26a8	Q2591433	19650079	0	NULL	0
+582	B	베르비에 페스티벌 오케스트라	Verbier Festival Orchestra	orchestra	Switzerland	NULL	b6942e7f-9961-5829-8a0e-d3bafb027bd2	Q11352165	539970836	0	NULL	0
+589	B	마르틴 판텔레예프	Martin Panteleev	conductor	Bulgaria	1976	b1fabcb3-caf5-54b8-b639-a694c9314c08	Q21474595	391966237	0	NULL	0
+593	B	레이먼드 레파드	Raymond Leppard	conductor	United Kingdom	1927	1d7d5b44-a69a-5cf6-9e4f-a453bc481362	Q720702	NULL	0	NULL	0
+595	B	한스 슈타틀마이어	Hans Stadlmair	conductor	Austria	1929	d8623b32-a3d3-5a3f-9526-79d5dc6fff8c	Q1582611	3918521	0	NULL	0
+596	B	내셔널 필하모닉 오케스트라	National Philharmonic Orchestra	orchestra	United Kingdom	1964	5e60b883-4be5-5b84-8e86-2b3e04ab68b3	Q2394269	15795989	0	NULL	0
+608	B	세인트로렌스 현악 4중주단	St. Lawrence String Quartet	ensemble	Canada	1989	558e9926-1b07-5d9d-bd25-22cb0222d401	Q7589494	30355590	0	NULL	1
+616	B	휴 울프	Hugh Wolff	conductor	United States	1953	b2c3e92c-b3e0-5abe-bad3-d91a320865d8	Q320019	1129536	0	NULL	0
+624	B	컬럼비아 심포니 오케스트라	Columbia Symphony Orchestra	orchestra	United States	1954	4b72cb78-6f9d-5a07-ab09-492d48c30464	Q1112596	3904792	0	NULL	0
+667	B	피에르 조르조 모란디	Pier Giorgio Morandi	conductor	Italy	1958	465c7a8e-30b9-54da-9261-b65f9eff1e98	Q106688028	NULL	0	NULL	0
+675	B	티치아나 파브리치니	Tiziana Fabbricini	soprano	Italy	1959	205f773a-dcdf-53e9-9b46-572cf2bd5e11	Q3991977	363938972	0	NULL	0
+836	B	퇼츠 소년합창단	Tölzer Knabenchor	choir	Germany	1956	130ab3a4-23b5-52fe-afd7-b92dccb2b137	Q565939	15769331	0	NULL	0
+840	B	뮌헨 바흐 오케스트라	Münchener Bach-Orchester	orchestra	Germany	1954	6cdb7f9a-06ce-5ae5-b3bf-0b53f787fc42	Q106764138	NULL	0	NULL	0
+842	B	카메라타 잘츠부르크	Camerata Salzburg	orchestra	Austria	1952	537d880d-3535-514c-b51e-f477b3e911fe	Q392430	41743327	0	NULL	0
+843	B	하노 뮐러브라흐만	Hanno Müller-Brachmann	bass-baritone	Germany	1970	40c6b47a-81f0-57fc-979d-e5a863c4d866	Q119296	29799132	0	NULL	0
+845	B	레온하르트 콘소트	Leonhardt-Consort	ensemble	Netherlands	1955	56db4f7f-3e0f-5e92-963d-b44e20035cf0	Q340088	NULL	0	NULL	0
+846	B	콘라트 융해넬	Konrad Junghänel	conductor	Germany	1953	85eb3103-cc25-5323-9ca7-4f5af6e65fdb	Q1782141	NULL	0	NULL	0
+847	B	칸투스 쾰른	Cantus Cölln	ensemble	Germany	1987	b5e3f215-2c0e-5e39-9850-c9c9deffb331	Q877640	NULL	0	NULL	0
+848	B	예테보리 심포니 오케스트라	Gothenburg Symphony Orchestra	orchestra	Sweden	1905	d63ab678-9742-5137-84fe-9d630a30a4d5	Q1526031	1373709184	0	NULL	0
+850	B	카밀라 틸링	Camilla Tilling	soprano	Sweden	1971	2942c5a6-8341-5eb2-9c77-2d9bcd9e4ab9	Q4457269	88239124	0	NULL	0
+851	B	에스토니아 국립 교향악단	Estonian National Symphony Orchestra	orchestra	Estonia	1926	f44c00c9-a2c4-545b-8bed-a2c74bafe684	Q1295657	46927126	0	NULL	0
+852	B	로테르담 필하모닉 오케스트라	Rotterdam Philharmonic Orchestra	orchestra	Netherlands	1918	09541000-aace-5e86-ba60-9f19af16772c	Q2270779	4721724	0	NULL	0
+853	B	토머스 앨런	Thomas Allen	baritone	United Kingdom	1944	5ea88f42-ffd0-5bc3-92c1-f32d5eeefef0	Q953628	NULL	0	NULL	0
+854	B	로버트 로이드	Robert Lloyd	목소리	United Kingdom	1940	89ae0172-2fa8-5684-9c25-bf9429bba62a	Q326331	NULL	0	NULL	0
+856	B	파아타 부르출라제	Paata Burchuladze	목소리	Georgia	1955	bd54ceca-82ae-5ce8-9eca-36064439f338	Q747956	4345771	0	NULL	0
+857	B	마티 살미넨	Matti Salminen	목소리	Finland	1945	d8333fcc-fb96-5676-bcb5-cbda64885d2c	Q712805	4560834	0	NULL	0
+859	B	프란츠 콘비츠니	Franz Konwitschny	conductor	Germany	1901	876a80d9-9a52-589c-8a4d-13a663cdbf28	Q63454	4720767	0	NULL	0
+864	B	주세페 파타네	Giuseppe Patanè	conductor	Italy	1932	cf8f9740-2e98-56b2-9d2b-65f783c878ea	Q284248	NULL	0	NULL	0
+866	B	세바스티앵 도세	Sébastien Daucé	conductor	France	1980	23840b81-f3cf-5df9-a28c-aa4b0f37ae31	Q16841392	373860639	0	NULL	1
+867	B	앙상블 코레스퐁당스	Ensemble Correspondances	ensemble	France	2009	5335d91d-87f9-5b71-95d7-02273a0b3dd4	Q17154333	466286037	0	NULL	0
+868	B	모린 포레스터	Maureen Forrester	목소리	Canada	1930	f064c8e3-91f4-5eb2-a902-4b0c2016d0fa	Q263172	5157335	0	NULL	0
+869	B	프란티셰크 헤르만	František Herman	바순	Czech Republic	1942	b70d9146-35a5-5709-8891-0a6d410ceda8	Q12017059	280469514	0	NULL	0
+870	B	야로슬라프 크르체크	Jaroslav Krček	conductor	Czech Republic	1939	ffec06e9-8221-5228-b51f-97f66af93f9a	Q6160622	2684109	1	NULL	0
+872	B	유스투스 프란츠	Justus Frantz	pianist	Germany	1944	e203ab35-bf7c-5e5e-86fe-1658bff54419	Q87878	4332524	0	NULL	0
+873	B	마티아스 라츠	Matthias Racz	바순	Germany	1980	13ada712-d2e3-5e22-87b9-397aa3ccdf79	Q1910264	359476346	0	NULL	0
+874	B	요하네스 슐레플리	Johannes Schlaefli	conductor	Switzerland	1957	101ffe32-f1c1-56cd-b772-efd9bde9a678	Q22919356	700057121	0	NULL	0
+875	B	쿠어팔츠 실내관현악단	Kurpfälzisches Kammerorchester	orchestra	Germany	1952	6407b869-b746-55c6-a64d-a52c2c4c8fbf	Q1793184	NULL	0	NULL	0
+876	B	앨런 와이스	Alan Weiss	pianist	United States	1950	c3fb0e0f-75bd-5cbc-80bb-25a3761b4655	Q2233138	1362885127	0	NULL	0
+877	B	클라우스 투네만	Klaus Thunemann	바순	Germany	1937	f329a55a-9236-59be-9069-5bd7f1ef0846	Q62660	4356595	0	NULL	0
+879	B	앨프리드 월렌스타인	Alfred Wallenstein	conductor	United States	1898	e4ddcc18-eb2b-5ddf-bd17-2b52e4282e21	Q1284004	321333	0	NULL	0
+880	B	심포니 오브 디 에어	Symphony of the Air	orchestra	United States	1954	0296d567-75ce-5f98-b572-803e18a3bb04	Q3507910	6609490	0	NULL	0
+881	B	SWR 보컬앙상블	SWR Vokalensemble	choir	Germany	1946	194876e5-abad-541f-9126-dab3e2915c04	Q1167446	261662841	0	NULL	0
+882	B	슈투트가르트 방송 교향악단	Stuttgart Radio Symphony Orchestra	orchestra	Germany	1945	0fe06d48-f9c8-569e-880f-eba25077f190	Q262477	17879672	0	NULL	0
+883	B	조너선 코언	Jonathan Cohen	conductor	United Kingdom	1977	42c43d41-634a-527e-8cdc-dc1c5e894b6a	Q15431044	203512903	0	NULL	0
+884	B	아르칸젤로	Arcangelo	orchestra	United Kingdom	2010	52ed4817-d79c-5c5a-98e0-adbcfb89f475	Q28119855	296397034	0	NULL	0
+885	B	리사 새퍼	Lisa Saffer	soprano	United States	NULL	0b851d96-92e1-5625-a84b-9d82479ae5d6	Q52617558	101673142	0	NULL	0
+886	B	니컬러스 맥기건	Nicholas McGegan	conductor	United Kingdom	1950	2fcdfa41-c4e7-516d-93c0-f16346ca745d	Q3136187	13703228	0	NULL	0
+887	B	필하모니아 바로크 오케스트라	Philharmonia Baroque Orchestra	orchestra	United States	1981	bdff2612-51c6-5baf-8635-f7b545f86709	Q7183039	13703224	0	NULL	0
+888	B	제라르 레스네	Gérard Lesne	목소리	France	1956	cbfce428-e5a4-573f-86c3-b9ffa3847c37	Q176713	14940151	0	NULL	0
+889	B	일 세미나리오 무지칼레	Il Seminario Musicale	ensemble	France	1985	6d5f65b5-377e-5681-98da-ac99e5ead481	Q3148472	111339289	0	NULL	0
+891	B	런던 보이시스	London Voices	choir	United Kingdom	1973	03aed333-9c82-59ce-8cb0-bd06221da410	Q9023617	NULL	0	NULL	0
+892	B	델핀 갈루	Delphine Galou	목소리	France	1977	8f1f5714-7f5b-53bf-9585-0a4f4633d5a8	Q5254425	384344098	0	NULL	0
+893	B	오타비오 단토네	Ottavio Dantone	conductor	Italy	1960	40d17fdb-9fbb-5808-b88b-499f83de9cdf	Q963831	NULL	0	NULL	0
+894	B	아카데미아 비잔티나	Accademia Bizantina	orchestra	Italy	1983	10412343-251e-548b-82f5-ace144787346	Q3603929	5313779	0	NULL	0
+896	B	WDR 방송 합창단	WDR Rundfunkchor	choir	Germany	1947	bb3939cc-5d5f-5189-af7f-2324839c4e2f	Q2537040	NULL	0	NULL	0
+897	B	시모네 케르메스	Simone Kermes	soprano	Germany	1965	25598f0a-d934-5574-9fd1-9720ace787da	Q454282	20880843	0	NULL	1
+898	B	앨런 커티스	Alan Curtis	conductor	United States	1934	792bd257-d239-5176-be25-e8237ae0d1f3	Q965256	1119126	0	NULL	0
+899	B	일 콤플레소 바로코	Il Complesso Barocco	orchestra	Italy	1977	3971319f-1363-5973-af23-54d78069e03a	Q16215310	1119122	0	NULL	0
+900	B	루시 크로	Lucy Crowe	soprano	United Kingdom	1979	dec8b853-5db5-5e0a-9c14-434afc7ad804	Q15428992	252128127	0	NULL	0
+901	B	해리 비켓	Harry Bicket	conductor	United Kingdom	1961	c998b493-3dc1-5ed8-bf30-83f3cd960a33	Q1165541	1103612	0	NULL	0
+902	B	잉글리시 콘서트	The English Concert	orchestra	United Kingdom	1972	d2a10394-1526-5ffc-aa96-d8191e28c230	Q926326	4310952	0	NULL	0
+903	B	다니엘 로이스	Daniël Reuss	conductor	Netherlands	1961	397d9c15-475f-5425-867b-a814e0601454	Q592648	27888958	0	NULL	1
+904	B	카펠라 암스테르담	Cappella Amsterdam	choir	Netherlands	1970	78560004-29d7-51f7-a581-387e170572ae	Q579493	277778126	0	NULL	0
+905	B	유발 바인베르크	Yuval Weinberg	conductor	Israel	1990	a5233752-6593-5c81-acf3-b708dc1ee339	Q42404859	1457104591	0	NULL	1
+906	B	이네사 갈란테	Inese Galante	soprano	Latvia	1954	a0c86bc5-e36b-5e76-b82b-d97668bd73e5	Q540714	NULL	0	NULL	0
+907	B	런던 무지치	London Musici	orchestra	United Kingdom	1988	3653e837-cd95-5278-ac91-6d4e023a63a7	Q27817675	216798282	0	NULL	0
+908	B	패트릭 서머스	Patrick Summers	conductor	United States	1960	8a0a5e4a-85d2-5c4a-9aeb-11d2ccefb95e	Q16195351	15519566	0	NULL	0
+909	B	문태국	Taeguk Mun	cellist	South Korea	1994	1963d09f-2971-5c3a-92c6-36d01bb50b92	Q114869541	1358762564	0	NULL	0
