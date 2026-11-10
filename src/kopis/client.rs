@@ -11,10 +11,11 @@ use tokio::sync::Mutex;
 /// 요청 사이를 이만큼 띄운다
 const MIN_REQUEST_INTERVAL: Duration = Duration::from_millis(500);
 /// 막히거나 일시 오류일 때 다시 부르기 전에 기다리는 시간
-const RETRY_DELAYS: [Duration; 3] = [
+const RETRY_DELAYS: [Duration; 4] = [
     Duration::from_secs(5),
     Duration::from_secs(15),
     Duration::from_secs(45),
+    Duration::from_secs(120),
 ];
 const REQUEST_TIMEOUT: Duration = Duration::from_secs(30);
 

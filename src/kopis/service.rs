@@ -198,6 +198,36 @@ impl KopisService {
         }))
     }
 
+    /// 지난 공연 동기화가 상세를 받지 못해 남겨 둔 공연 ID
+    async fn get_retry_ids(pool: &MySqlPool) -> Result<Vec<String>, String> {
+        let row: Option<(Option<String>,)> =
+            sqlx::query_as("SELECT error_message FROM sync_metadata WHERE sync_type = 'concerts'")
+                .fetch_optional(pool)
+                .await
+                .map_err(|e| format!("Failed to read the retry list: {}", e))?;
+
+        Ok(row
+            .and_then(|(message,)| message)
+            .map(|message| parse_retry_ids(&message))
+            .unwrap_or_default())
+    }
+
+    /// 다음 공연 동기화가 먼저 다시 받을 공연 ID 를 남긴다(없으면 비운다)
+    async fn set_retry_ids(pool: &MySqlPool, ids: &[String]) -> Result<(), String> {
+        let message = if ids.is_empty() {
+            None
+        } else {
+            Some(format!("{}{}", RETRY_PREFIX, ids.join(",")))
+        };
+        sqlx::query("UPDATE sync_metadata SET error_message = ? WHERE sync_type = 'concerts'")
+            .bind(message)
+            .execute(pool)
+            .await
+            .map_err(|e| format!("Failed to save the retry list: {}", e))?;
+
+        Ok(())
+    }
+
     /// 동기화 상태 업데이트
     async fn update_sync_status(
         pool: &MySqlPool,
@@ -306,9 +336,30 @@ impl KopisService {
         let mut added_count = 0;
         let mut updated_count = 0;
         let mut error_count = 0;
-        // 호출·DB 실패가 있었으면 다음 동기화가 같은 날짜부터 다시 받게 마지막 동기화 날짜를 올리지 않는다.
-        // (공연장이 없어 건너뛴 공연처럼 다시 해도 같은 결과인 것은 여기 넣지 않는다)
+        // 목록을 못 받은 구간이 있으면 다음 동기화가 같은 날짜부터 다시 받게 마지막 동기화 날짜를 올리지 않는다
         let mut retry_needed = false;
+        // 상세를 받다 막힌 공연은 날짜를 붙잡지 않고 이름만 남겨 다음 동기화가 먼저 다시 받는다
+        let mut failed_ids: Vec<String> = Vec::new();
+
+        let carried = Self::get_retry_ids(pool).await?;
+        if !carried.is_empty() {
+            Logger::info(
+                "KOPIS",
+                &format!(
+                    "Retrying {} concerts the last sync could not fetch",
+                    carried.len()
+                ),
+            );
+        }
+        for performance_id in &carried {
+            let outcome = import_concert(pool, &client, &artist_index, performance_id).await;
+            added_count += outcome.added;
+            updated_count += outcome.updated;
+            error_count += outcome.errors;
+            if outcome.retry {
+                failed_ids.push(performance_id.clone());
+            }
+        }
 
         // 조회 기간 설정 (오늘부터 1년 후까지)
         let today = Utc::now().date_naive();
@@ -348,234 +399,18 @@ impl KopisService {
                         );
 
                         for concert_item in concerts {
-                            // 공연 상세 정보 조회
-                            match client
-                                .fetch_concert_detail(&concert_item.performance_id)
-                                .await
-                            {
-                                Ok(detail_response) => {
-                                    let detail = detail_response.db;
-
-                                    // venue_kopis_id로 venue_id 매칭
-                                    match ConcertRepository::get_venue_id_by_kopis_id(
-                                        pool,
-                                        &detail.facility_id,
-                                    )
-                                    .await
-                                    {
-                                        Ok(Some(venue_id)) => {
-                                            // 공연 데이터 upsert
-                                            let start_date_str = detail
-                                                .parse_start_date()
-                                                .map(|d| d.format("%Y-%m-%d").to_string())
-                                                .unwrap_or(detail.start_date.clone());
-
-                                            let end_date_str = detail
-                                                .parse_end_date()
-                                                .map(|d| d.format("%Y-%m-%d").to_string());
-
-                                            match ConcertRepository::upsert_kopis_concert(
-                                                pool,
-                                                &detail.performance_id,
-                                                &detail.performance_name,
-                                                // KOPIS 상세에는 작곡가·곡목 필드가 없다. 예전엔 출연진을 여기 넣어 복사본이 쌓였다
-                                                None,
-                                                venue_id,
-                                                &start_date_str,
-                                                end_date_str.as_deref(),
-                                                detail.performance_schedule.as_deref(), // concert_time (KOPIS dtguidance)
-                                                detail.poster.as_deref(),
-                                                detail.synopsis.as_deref(),
-                                                detail.price_info.as_deref(),
-                                                &detail.parse_status(),
-                                                // KOPIS 추가 필드들
-                                                &detail.facility_id,
-                                                detail.update_date.as_deref(),
-                                                Some(&detail.genre_name),
-                                                detail.area.as_deref(),
-                                                Some(&detail.facility_name),
-                                                detail.is_open_run(),
-                                                detail.cast.as_deref(),
-                                                detail.crew.as_deref(),
-                                                detail.runtime.as_deref(),
-                                                detail.age_restriction.as_deref(),
-                                                detail.synopsis.as_deref(),
-                                                detail.performance_schedule.as_deref(),
-                                                detail.production_company.as_deref(),
-                                                detail.production_company_plan.as_deref(),
-                                                detail.production_company_agency.as_deref(),
-                                                detail.production_company_host.as_deref(),
-                                                detail.production_company_sponsor.as_deref(),
-                                                detail.is_visit(),
-                                                detail.is_child(),
-                                                detail.is_daehakro(),
-                                                detail.is_festival(),
-                                            )
-                                            .await
-                                            {
-                                                Ok(concert_id) => {
-                                                    // Ticket Vendors 저장
-                                                    if let Some(vendor_list) =
-                                                        &detail.ticket_vendors
-                                                    {
-                                                        let vendors: Vec<(Option<String>, String)> =
-                                                            vendor_list
-                                                                .vendors
-                                                                .iter()
-                                                                .map(|v| {
-                                                                    (
-                                                                        v.vendor_name.clone(),
-                                                                        v.vendor_url.clone(),
-                                                                    )
-                                                                })
-                                                                .collect();
-
-                                                        if !vendors.is_empty() {
-                                                            if let Err(e) = ConcertRepository::upsert_ticket_vendors(
-                                                                pool,
-                                                                concert_id,
-                                                                vendors,
-                                                            )
-                                                            .await
-                                                            {
-                                                                Logger::warn(
-                                                                    "KOPIS",
-                                                                    &format!(
-                                                                        "Failed to save ticket vendors for concert {}: {}",
-                                                                        detail.performance_name, e
-                                                                    ),
-                                                                );
-                                                            }
-                                                        }
-                                                    }
-
-                                                    // Concert Images 저장 (소개 이미지)
-                                                    if let Some(intro_images) = &detail.intro_images
-                                                    {
-                                                        if !intro_images.images.is_empty() {
-                                                            if let Err(e) = ConcertRepository::upsert_concert_images(
-                                                                pool,
-                                                                concert_id,
-                                                                intro_images.images.clone(),
-                                                                "introduction",
-                                                            )
-                                                            .await
-                                                            {
-                                                                Logger::warn(
-                                                                    "KOPIS",
-                                                                    &format!(
-                                                                        "Failed to save intro images for concert {}: {}",
-                                                                        detail.performance_name, e
-                                                                    ),
-                                                                );
-                                                            }
-                                                        }
-                                                    }
-
-                                                    // 출연진 → 아티스트 연결, 편성 분류
-                                                    match ConcertService::enrich_concert(
-                                                        pool,
-                                                        &artist_index,
-                                                        concert_id,
-                                                        &detail.performance_name,
-                                                        detail.cast.as_deref(),
-                                                        true,
-                                                    )
-                                                    .await
-                                                    {
-                                                        Ok(0) => {}
-                                                        Ok(added) => Logger::success(
-                                                            "KOPIS",
-                                                            &format!(
-                                                                "Matched {} artists for concert: {}",
-                                                                added, detail.performance_name
-                                                            ),
-                                                        ),
-                                                        Err(e) => Logger::warn(
-                                                            "KOPIS",
-                                                            &format!(
-                                                                "Failed to enrich concert {}: {}",
-                                                                detail.performance_name, e
-                                                            ),
-                                                        ),
-                                                    }
-
-                                                    // 기존 공연 여부 확인
-                                                    if ConcertRepository::get_by_kopis_id(
-                                                        pool,
-                                                        &detail.performance_id,
-                                                    )
-                                                    .await
-                                                    .ok()
-                                                    .flatten()
-                                                    .is_some()
-                                                    {
-                                                        updated_count += 1;
-                                                        Logger::debug(
-                                                            "KOPIS",
-                                                            &format!(
-                                                                "Updated concert: {} (ID: {})",
-                                                                detail.performance_name, concert_id
-                                                            ),
-                                                        );
-                                                    } else {
-                                                        added_count += 1;
-                                                        Logger::success(
-                                                            "KOPIS",
-                                                            &format!(
-                                                                "Added new concert: {} (ID: {})",
-                                                                detail.performance_name, concert_id
-                                                            ),
-                                                        );
-                                                    }
-                                                }
-                                                Err(e) => {
-                                                    Logger::error(
-                                                        "KOPIS",
-                                                        &format!(
-                                                            "Failed to upsert concert {}: {}",
-                                                            detail.performance_name, e
-                                                        ),
-                                                    );
-                                                    error_count += 1;
-                                                    // 값이 칸에 안 맞는 오류는 다시 해도 같다. 연결 오류만 다시 받는다
-                                                    if !is_data_error(&e) {
-                                                        retry_needed = true;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        Ok(None) => {
-                                            Logger::warn("KOPIS", &format!(
-                                                "Venue not found for concert {} (facility_id: {}), skipping",
-                                                detail.performance_name, detail.facility_id
-                                            ));
-                                            error_count += 1;
-                                        }
-                                        Err(e) => {
-                                            Logger::error(
-                                                "KOPIS",
-                                                &format!(
-                                                    "Failed to get venue_id for {}: {}",
-                                                    detail.facility_id, e
-                                                ),
-                                            );
-                                            error_count += 1;
-                                            retry_needed = true;
-                                        }
-                                    }
-                                }
-                                Err(e) => {
-                                    Logger::warn(
-                                        "KOPIS",
-                                        &format!(
-                                            "Failed to fetch detail for concert {}: {}",
-                                            concert_item.performance_id, e
-                                        ),
-                                    );
-                                    error_count += 1;
-                                    retry_needed = true;
-                                }
+                            let outcome = import_concert(
+                                pool,
+                                &client,
+                                &artist_index,
+                                &concert_item.performance_id,
+                            )
+                            .await;
+                            added_count += outcome.added;
+                            updated_count += outcome.updated;
+                            error_count += outcome.errors;
+                            if outcome.retry {
+                                failed_ids.push(concert_item.performance_id.clone());
                             }
                         }
                     }
@@ -602,7 +437,23 @@ impl KopisService {
             errors: error_count,
         };
 
-        // 동기화 완료 기록. 다시 받아야 할 실패가 있으면 날짜를 그대로 둬 다음 동기화가 이어 받는다
+        // 동기화 완료 기록. 목록을 못 받은 구간이 있거나 실패한 공연이 너무 많으면 날짜를 그대로 둬
+        // 다음 동기화가 이어 받고, 몇 개뿐이면 그 공연만 남겨 둔다
+        failed_ids.sort();
+        failed_ids.dedup();
+        if failed_ids.len() > RETRY_LIST_LIMIT {
+            retry_needed = true;
+        }
+        Self::set_retry_ids(pool, &failed_ids).await?;
+        if !failed_ids.is_empty() {
+            Logger::warn(
+                "KOPIS",
+                &format!(
+                    "{} concerts will be fetched again on the next sync",
+                    failed_ids.len()
+                ),
+            );
+        }
         let today = Utc::now().date_naive();
         let (status, next_after_date) = if retry_needed {
             Logger::warn(
@@ -832,6 +683,263 @@ impl KopisService {
     }
 }
 
+/// sync_metadata.error_message 에 다시 받을 공연 ID 를 적을 때의 머리말
+const RETRY_PREFIX: &str = "retry:";
+/// 실패한 공연이 이보다 많으면 목록 대신 날짜를 붙잡는다(KOPIS 가 오래 막힌 날)
+const RETRY_LIST_LIMIT: usize = 200;
+
+/// "retry:PF1,PF2" 에서 공연 ID 만 꺼낸다. 다른 오류 문구면 비어 있다
+fn parse_retry_ids(message: &str) -> Vec<String> {
+    message
+        .strip_prefix(RETRY_PREFIX)
+        .map(|list| {
+            list.split(',')
+                .map(str::trim)
+                .filter(|id| !id.is_empty() && id.chars().all(|c| c.is_ascii_alphanumeric()))
+                .map(str::to_string)
+                .collect()
+        })
+        .unwrap_or_default()
+}
+
+/// 한 공연 상세를 받아 저장한 결과. 바깥 동기화가 셈을 더한다
+#[derive(Debug, Default)]
+struct ImportOutcome {
+    added: i32,
+    updated: i32,
+    errors: i32,
+    /// 호출·연결 실패라 다음 동기화가 이 공연만 다시 받아야 한다
+    retry: bool,
+}
+
+/// KOPIS 공연 하나의 상세를 받아 공연장에 맞춰 저장한다(예매처·소개 그림·출연진 연결 포함)
+async fn import_concert(
+    pool: &MySqlPool,
+    client: &KopisClient,
+    artist_index: &ArtistNameIndex,
+    performance_id: &str,
+) -> ImportOutcome {
+    let mut added_count = 0;
+    let mut updated_count = 0;
+    let mut error_count = 0;
+    let mut retry_needed = false;
+
+    // 공연 상세 정보 조회
+    match client.fetch_concert_detail(performance_id).await {
+        Ok(detail_response) => {
+            let detail = detail_response.db;
+
+            // venue_kopis_id로 venue_id 매칭
+            match ConcertRepository::get_venue_id_by_kopis_id(pool, &detail.facility_id).await {
+                Ok(Some(venue_id)) => {
+                    // 공연 데이터 upsert
+                    let start_date_str = detail
+                        .parse_start_date()
+                        .map(|d| d.format("%Y-%m-%d").to_string())
+                        .unwrap_or(detail.start_date.clone());
+
+                    let end_date_str = detail
+                        .parse_end_date()
+                        .map(|d| d.format("%Y-%m-%d").to_string());
+
+                    match ConcertRepository::upsert_kopis_concert(
+                        pool,
+                        &detail.performance_id,
+                        &detail.performance_name,
+                        // KOPIS 상세에는 작곡가·곡목 필드가 없다. 예전엔 출연진을 여기 넣어 복사본이 쌓였다
+                        None,
+                        venue_id,
+                        &start_date_str,
+                        end_date_str.as_deref(),
+                        detail.performance_schedule.as_deref(), // concert_time (KOPIS dtguidance)
+                        detail.poster.as_deref(),
+                        detail.synopsis.as_deref(),
+                        detail.price_info.as_deref(),
+                        &detail.parse_status(),
+                        // KOPIS 추가 필드들
+                        &detail.facility_id,
+                        detail.update_date.as_deref(),
+                        Some(&detail.genre_name),
+                        detail.area.as_deref(),
+                        Some(&detail.facility_name),
+                        detail.is_open_run(),
+                        detail.cast.as_deref(),
+                        detail.crew.as_deref(),
+                        detail.runtime.as_deref(),
+                        detail.age_restriction.as_deref(),
+                        detail.synopsis.as_deref(),
+                        detail.performance_schedule.as_deref(),
+                        detail.production_company.as_deref(),
+                        detail.production_company_plan.as_deref(),
+                        detail.production_company_agency.as_deref(),
+                        detail.production_company_host.as_deref(),
+                        detail.production_company_sponsor.as_deref(),
+                        detail.is_visit(),
+                        detail.is_child(),
+                        detail.is_daehakro(),
+                        detail.is_festival(),
+                    )
+                    .await
+                    {
+                        Ok(concert_id) => {
+                            // Ticket Vendors 저장
+                            if let Some(vendor_list) = &detail.ticket_vendors {
+                                let vendors: Vec<(Option<String>, String)> = vendor_list
+                                    .vendors
+                                    .iter()
+                                    .map(|v| (v.vendor_name.clone(), v.vendor_url.clone()))
+                                    .collect();
+
+                                if !vendors.is_empty() {
+                                    if let Err(e) = ConcertRepository::upsert_ticket_vendors(
+                                        pool, concert_id, vendors,
+                                    )
+                                    .await
+                                    {
+                                        Logger::warn(
+                                            "KOPIS",
+                                            &format!(
+                                                "Failed to save ticket vendors for concert {}: {}",
+                                                detail.performance_name, e
+                                            ),
+                                        );
+                                    }
+                                }
+                            }
+
+                            // Concert Images 저장 (소개 이미지)
+                            if let Some(intro_images) = &detail.intro_images {
+                                if !intro_images.images.is_empty() {
+                                    if let Err(e) = ConcertRepository::upsert_concert_images(
+                                        pool,
+                                        concert_id,
+                                        intro_images.images.clone(),
+                                        "introduction",
+                                    )
+                                    .await
+                                    {
+                                        Logger::warn(
+                                            "KOPIS",
+                                            &format!(
+                                                "Failed to save intro images for concert {}: {}",
+                                                detail.performance_name, e
+                                            ),
+                                        );
+                                    }
+                                }
+                            }
+
+                            // 출연진 → 아티스트 연결, 편성 분류
+                            match ConcertService::enrich_concert(
+                                pool,
+                                artist_index,
+                                concert_id,
+                                &detail.performance_name,
+                                detail.cast.as_deref(),
+                                true,
+                            )
+                            .await
+                            {
+                                Ok(0) => {}
+                                Ok(added) => Logger::success(
+                                    "KOPIS",
+                                    &format!(
+                                        "Matched {} artists for concert: {}",
+                                        added, detail.performance_name
+                                    ),
+                                ),
+                                Err(e) => Logger::warn(
+                                    "KOPIS",
+                                    &format!(
+                                        "Failed to enrich concert {}: {}",
+                                        detail.performance_name, e
+                                    ),
+                                ),
+                            }
+
+                            // 기존 공연 여부 확인
+                            if ConcertRepository::get_by_kopis_id(pool, &detail.performance_id)
+                                .await
+                                .ok()
+                                .flatten()
+                                .is_some()
+                            {
+                                updated_count += 1;
+                                Logger::debug(
+                                    "KOPIS",
+                                    &format!(
+                                        "Updated concert: {} (ID: {})",
+                                        detail.performance_name, concert_id
+                                    ),
+                                );
+                            } else {
+                                added_count += 1;
+                                Logger::success(
+                                    "KOPIS",
+                                    &format!(
+                                        "Added new concert: {} (ID: {})",
+                                        detail.performance_name, concert_id
+                                    ),
+                                );
+                            }
+                        }
+                        Err(e) => {
+                            Logger::error(
+                                "KOPIS",
+                                &format!(
+                                    "Failed to upsert concert {}: {}",
+                                    detail.performance_name, e
+                                ),
+                            );
+                            error_count += 1;
+                            // 값이 칸에 안 맞는 오류는 다시 해도 같다. 연결 오류만 다시 받는다
+                            if !is_data_error(&e) {
+                                retry_needed = true;
+                            }
+                        }
+                    }
+                }
+                Ok(None) => {
+                    Logger::warn(
+                        "KOPIS",
+                        &format!(
+                            "Venue not found for concert {} (facility_id: {}), skipping",
+                            detail.performance_name, detail.facility_id
+                        ),
+                    );
+                    error_count += 1;
+                }
+                Err(e) => {
+                    Logger::error(
+                        "KOPIS",
+                        &format!("Failed to get venue_id for {}: {}", detail.facility_id, e),
+                    );
+                    error_count += 1;
+                    retry_needed = true;
+                }
+            }
+        }
+        Err(e) => {
+            Logger::warn(
+                "KOPIS",
+                &format!(
+                    "Failed to fetch detail for concert {}: {}",
+                    performance_id, e
+                ),
+            );
+            error_count += 1;
+            retry_needed = true;
+        }
+    }
+
+    ImportOutcome {
+        added: added_count,
+        updated: updated_count,
+        errors: error_count,
+        retry: retry_needed,
+    }
+}
+
 /// 값 자체가 잘못돼 다시 해도 같은 결과인 DB 오류(SQLSTATE 22: 데이터 오류, 23: 제약 위반)
 fn is_data_error(error: &sqlx::Error) -> bool {
     error
@@ -859,4 +967,19 @@ pub struct SyncResult {
     pub added: i32,
     pub updated: i32,
     pub errors: i32,
+}
+
+#[cfg(test)]
+mod retry_list_tests {
+    use super::*;
+
+    #[test]
+    fn reads_only_ids_from_a_retry_list() {
+        assert_eq!(
+            parse_retry_ids("retry:PF303587, PF302999,,PF30 1"),
+            vec!["PF303587".to_string(), "PF302999".to_string()]
+        );
+        assert!(parse_retry_ids("KOPIS API returned error: 500").is_empty());
+        assert!(parse_retry_ids("retry:").is_empty());
+    }
 }
