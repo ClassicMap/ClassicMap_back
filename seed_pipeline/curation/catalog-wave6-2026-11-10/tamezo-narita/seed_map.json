@@ -5,11 +5,11 @@
   "mbids": [
    "5651579e-1d39-4eba-94b6-ebe69f918b46"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "tamezo-narita-5651579e",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  },
  {
   "pieceId": 23075,
@@ -17,11 +17,11 @@
   "mbids": [
    "5aa91540-963f-45a7-932b-dca309174514"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "tamezo-narita-5aa91540",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  },
  {
   "pieceId": 23597,
@@ -44,7 +44,7 @@
   "mapping": "unmatched",
   "key": null,
   "path": null,
-  "reason": "popular",
+  "reason": "arrangement",
   "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
  }
 ]

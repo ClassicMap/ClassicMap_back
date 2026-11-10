@@ -1,5 +1,6 @@
 #!/bin/bash
-# 작곡가 목록(composers.txt: "<composer_id> <slug>" 한 줄씩)마다 자동 카탈로그 → SQL → 숨김 SQL.
+# 작곡가 목록(composers.txt: "<composer_id> <slug> [ja]" 한 줄씩)마다 자동 카탈로그 → SQL → 숨김 SQL.
+# 셋째 칸 ja 는 일본 작곡가: 가나 제목 → 대중음악 규칙을 끈다(run_auto.py --keep-kana).
 # 사용: tools/run_all.sh <작업 폴더> <composers.txt>
 #   <작업 폴더>/db/          tools/dump.sh 로 받은 운영 읽기 덤프
 #   <작업 폴더>/<slug>/      catalog.json·seed_map.json·stats.json
@@ -16,11 +17,13 @@ DB="$WORK/db"
 mkdir -p "$WORK/out" "$WORK/logs"
 : > "$WORK/logs/failed.txt"
 cd "$SEED"
-while read -r id slug; do
+while read -r id slug flag; do
   [ -z "${id:-}" ] && continue
   case "$id" in \#*) continue;; esac
+  KANA=()
+  [ "${flag:-}" = ja ] && KANA=(--keep-kana)
   if ! uv run python "$HERE/run_auto.py" --composer-id "$id" --slug "$slug" --db "$DB" \
-      --out "$WORK/$slug" > "$WORK/logs/$slug.auto.log" 2>&1; then
+      --out "$WORK/$slug" ${KANA[@]+"${KANA[@]}"} > "$WORK/logs/$slug.auto.log" 2>&1; then
     echo "$slug auto" >> "$WORK/logs/failed.txt"; continue
   fi
   if ! uv run python "$WAVE4/gen_catalog.py" --composer-id "$id" --slug "$slug" \

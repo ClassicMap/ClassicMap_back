@@ -5,11 +5,11 @@
   "mbids": [
    "08efcb7e-a6b9-4aae-b4c1-c781e9777082"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "megumi-onaka-08efcb7e",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  },
  {
   "pieceId": 15742,
@@ -17,11 +17,11 @@
   "mbids": [
    "2c9a286a-938a-4749-9f63-f3ce2c79e57c"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "megumi-onaka-2c9a286a",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  },
  {
   "pieceId": 15830,
@@ -29,11 +29,11 @@
   "mbids": [
    "dce8eef2-b8c4-4232-8644-99560dbd8fc1"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "megumi-onaka-dce8eef2",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  },
  {
   "pieceId": 15925,
@@ -41,11 +41,11 @@
   "mbids": [
    "4bbc3e1c-cd66-4687-97cd-dd2af11778c6"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "megumi-onaka-4bbc3e1c",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  },
  {
   "pieceId": 15927,
@@ -53,11 +53,11 @@
   "mbids": [
    "aea040d5-cee5-4121-9e51-608fad978759"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "megumi-onaka-aea040d5",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  },
  {
   "pieceId": 15929,
@@ -65,10 +65,10 @@
   "mbids": [
    "6abc2e0d-28fb-4b63-b2e1-8aed3ab572d6"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "megumi-onaka-6abc2e0d",
   "path": null,
-  "reason": "popular",
-  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+  "reason": null,
+  "note": null
  }
 ]
