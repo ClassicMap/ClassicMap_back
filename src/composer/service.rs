@@ -45,6 +45,9 @@ impl ComposerService {
             found.banner = ComposerRepository::find_banner(pool, id)
                 .await
                 .map_err(|e| e.to_string())?;
+            found.avatar_credit = ComposerRepository::find_avatar_credit(pool, id)
+                .await
+                .map_err(|e| e.to_string())?;
         }
         Ok(composer)
     }
