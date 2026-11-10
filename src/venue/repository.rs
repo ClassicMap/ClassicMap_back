@@ -1,17 +1,24 @@
 use super::model::{CreateVenue, UpdateVenue, Venue};
 use sqlx::MySqlPool;
 
+/// venues 의 created_at·updated_at 은 TIMESTAMP, opening_year 는 YEAR 라 모델 타입에 맞게 바꿔 읽는다.
+/// `SELECT *` 로 읽으면 디코딩이 실패해 공연장 조회와 공연장 동기화가 모두 막혔다
+const VENUE_COLUMNS: &str =
+    "id, kopis_id, name, address, city, province, country, seats, hall_count, \
+     CAST(opening_year AS SIGNED) AS opening_year, is_active, data_source, \
+     CAST(created_at AS DATETIME) AS created_at, CAST(updated_at AS DATETIME) AS updated_at";
+
 pub struct VenueRepository;
 
 impl VenueRepository {
     pub async fn get_all(pool: &MySqlPool) -> Result<Vec<Venue>, sqlx::Error> {
-        sqlx::query_as::<_, Venue>("SELECT * FROM venues ORDER BY name")
+        sqlx::query_as::<_, Venue>(&format!("SELECT {VENUE_COLUMNS} FROM venues ORDER BY name"))
             .fetch_all(pool)
             .await
     }
 
     pub async fn get_by_id(pool: &MySqlPool, id: i32) -> Result<Option<Venue>, sqlx::Error> {
-        sqlx::query_as::<_, Venue>("SELECT * FROM venues WHERE id = ?")
+        sqlx::query_as::<_, Venue>(&format!("SELECT {VENUE_COLUMNS} FROM venues WHERE id = ?"))
             .bind(id)
             .fetch_optional(pool)
             .await
@@ -21,10 +28,12 @@ impl VenueRepository {
         pool: &MySqlPool,
         kopis_id: &str,
     ) -> Result<Option<Venue>, sqlx::Error> {
-        sqlx::query_as::<_, Venue>("SELECT * FROM venues WHERE kopis_id = ?")
-            .bind(kopis_id)
-            .fetch_optional(pool)
-            .await
+        sqlx::query_as::<_, Venue>(&format!(
+            "SELECT {VENUE_COLUMNS} FROM venues WHERE kopis_id = ?"
+        ))
+        .bind(kopis_id)
+        .fetch_optional(pool)
+        .await
     }
 
     pub async fn create(pool: &MySqlPool, venue: CreateVenue) -> Result<i32, sqlx::Error> {
@@ -193,7 +202,7 @@ impl VenueRepository {
             .filter(|q| !q.trim().is_empty())
             .map(|q| format!("%{}%", q));
 
-        let mut query = String::from("SELECT * FROM venues WHERE 1=1");
+        let mut query = format!("SELECT {VENUE_COLUMNS} FROM venues WHERE 1=1");
 
         // Text search across multiple fields
         if search_pattern.is_some() {
