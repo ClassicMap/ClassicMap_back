@@ -295,13 +295,6 @@ INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url
 SELECT entity.authority_entity_id, 'profile', 'https://commons.wikimedia.org/wiki/File:Gloria_Campaner_ph_Bill_Knight.jpg', 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Gloria_Campaner_ph_Bill_Knight.jpg', 'Bill Knight', 'CC0', 'http://creativecommons.org/publicdomain/zero/1.0/deed.en', NULL, TRUE, 'PUBLISHED'
 FROM artists entity WHERE entity.id = 450 AND entity.authority_entity_id IS NOT NULL AND entity.image_url = 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Gloria_Campaner_ph_Bill_Knight.jpg'
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = entity.authority_entity_id AND existing.file_url = 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Gloria_Campaner_ph_Bill_Knight.jpg');
--- artist 455 Regina Resnik (Spotify)
-UPDATE artists SET image_url = 'https://i.scdn.co/image/a079b9bf8a11c481f55cbb47f8495d8c508fd745'
-WHERE id = 455 AND english_name = 'Regina Resnik' AND (image_url IS NULL OR image_url = '');
-INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, author, license, license_url, credit_line, is_primary, editorial_status)
-SELECT entity.authority_entity_id, 'profile', 'https://open.spotify.com/artist/4EXCZdjgyKeOrYLVqO7Log', 'https://i.scdn.co/image/a079b9bf8a11c481f55cbb47f8495d8c508fd745', NULL, NULL, NULL, 'Spotify', TRUE, 'PUBLISHED'
-FROM artists entity WHERE entity.id = 455 AND entity.authority_entity_id IS NOT NULL AND entity.image_url = 'https://i.scdn.co/image/a079b9bf8a11c481f55cbb47f8495d8c508fd745'
-  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = entity.authority_entity_id AND existing.file_url = 'https://i.scdn.co/image/a079b9bf8a11c481f55cbb47f8495d8c508fd745');
 -- artist 458 Gavriel Lipkind (wikimedia)
 UPDATE artists SET image_url = 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Gavriel_Lipkind_by_Lipkind_Productions.jpg'
 WHERE id = 458 AND english_name = 'Gavriel Lipkind' AND (image_url IS NULL OR image_url = '');
@@ -813,13 +806,6 @@ INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url
 SELECT entity.authority_entity_id, 'profile', 'https://open.spotify.com/artist/1EzsQ4hVU2PIIIYow0QuRF', 'https://i.scdn.co/image/887a7225d6165c23d4f00fbd47f474618b13a102', NULL, NULL, NULL, 'Spotify', TRUE, 'PUBLISHED'
 FROM artists entity WHERE entity.id = 698 AND entity.authority_entity_id IS NOT NULL AND entity.image_url = 'https://i.scdn.co/image/887a7225d6165c23d4f00fbd47f474618b13a102'
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = entity.authority_entity_id AND existing.file_url = 'https://i.scdn.co/image/887a7225d6165c23d4f00fbd47f474618b13a102');
--- artist 702 콜레기움 아우레움 (Spotify)
-UPDATE artists SET image_url = 'https://i.scdn.co/image/ebb469f980fa4b267c11bb04fbb9e9ae9cb14e0f'
-WHERE id = 702 AND english_name = 'Collegium Aureum' AND (image_url IS NULL OR image_url = '');
-INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, author, license, license_url, credit_line, is_primary, editorial_status)
-SELECT entity.authority_entity_id, 'profile', 'https://open.spotify.com/artist/3zIDEmXI9EVBCKFo4M99Re', 'https://i.scdn.co/image/ebb469f980fa4b267c11bb04fbb9e9ae9cb14e0f', NULL, NULL, NULL, 'Spotify', TRUE, 'PUBLISHED'
-FROM artists entity WHERE entity.id = 702 AND entity.authority_entity_id IS NOT NULL AND entity.image_url = 'https://i.scdn.co/image/ebb469f980fa4b267c11bb04fbb9e9ae9cb14e0f'
-  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = entity.authority_entity_id AND existing.file_url = 'https://i.scdn.co/image/ebb469f980fa4b267c11bb04fbb9e9ae9cb14e0f');
 -- artist 703 하노버 밴드 (Spotify)
 UPDATE artists SET image_url = 'https://i.scdn.co/image/42360dc4d9fd2870e5d06e01f77747a4887b7dd8'
 WHERE id = 703 AND english_name = 'Hanover Band' AND (image_url IS NULL OR image_url = '');
@@ -953,13 +939,6 @@ INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url
 SELECT entity.authority_entity_id, 'profile', 'https://commons.wikimedia.org/wiki/File:Karl_Richter,_1959_-_collezione_Tino_Barindelli.tif', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Karl_Richter%2C_1959_-_collezione_Tino_Barindelli.tif/lossy-page1-960px-Karl_Richter%2C_1959_-_collezione_Tino_Barindelli.tif.jpg', NULL, 'Public domain', NULL, 'Wikimedia Commons', TRUE, 'PUBLISHED'
 FROM artists entity WHERE entity.id = 839 AND entity.authority_entity_id IS NOT NULL AND entity.image_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Karl_Richter%2C_1959_-_collezione_Tino_Barindelli.tif/lossy-page1-960px-Karl_Richter%2C_1959_-_collezione_Tino_Barindelli.tif.jpg'
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = entity.authority_entity_id AND existing.file_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Karl_Richter%2C_1959_-_collezione_Tino_Barindelli.tif/lossy-page1-960px-Karl_Richter%2C_1959_-_collezione_Tino_Barindelli.tif.jpg');
--- artist 841 로저 노링턴 (Spotify)
-UPDATE artists SET image_url = 'https://i.scdn.co/image/d3d17e60cd49541f153727b466dcc83f5cfe67c6'
-WHERE id = 841 AND english_name = 'Roger Norrington' AND (image_url IS NULL OR image_url = '');
-INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, author, license, license_url, credit_line, is_primary, editorial_status)
-SELECT entity.authority_entity_id, 'profile', 'https://open.spotify.com/artist/2nXNvTKpp7LSEXNUMFOd1t', 'https://i.scdn.co/image/d3d17e60cd49541f153727b466dcc83f5cfe67c6', NULL, NULL, NULL, 'Spotify', TRUE, 'PUBLISHED'
-FROM artists entity WHERE entity.id = 841 AND entity.authority_entity_id IS NOT NULL AND entity.image_url = 'https://i.scdn.co/image/d3d17e60cd49541f153727b466dcc83f5cfe67c6'
-  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = entity.authority_entity_id AND existing.file_url = 'https://i.scdn.co/image/d3d17e60cd49541f153727b466dcc83f5cfe67c6');
 -- artist 842 카메라타 잘츠부르크 (wikimedia)
 UPDATE artists SET image_url = 'https://upload.wikimedia.org/wikipedia/commons/6/68/Camerata_am_Marko-Feingold-Steg.jpg'
 WHERE id = 842 AND english_name = 'Camerata Salzburg' AND (image_url IS NULL OR image_url = '');
