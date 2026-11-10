@@ -305,7 +305,7 @@ pub struct BoxofficeResponse {
     pub boxof: Vec<BoxofficeItem>,
 }
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct BoxofficeItem {
     #[serde(rename = "prfplcnm")]
     pub venue_name: String, // 공연장

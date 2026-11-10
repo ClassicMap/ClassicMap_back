@@ -1,4 +1,5 @@
 use super::client::KopisClient;
+use super::models::BoxofficeItem;
 use crate::boxoffice::repository::RankingSlot;
 use crate::boxoffice::BoxofficeRepository;
 use crate::concert::model::Concert;
@@ -533,6 +534,12 @@ impl KopisService {
         ];
 
         for genre_code in &genre_codes {
+            // 행정구역이 합쳐져 KOPIS 가 지역 순위를 비워 주는 지역은 전국 순위에서 골라 쓴다
+            let national = client
+                .fetch_boxoffice_rankings(&start_date, &end_date, Some(genre_code), None)
+                .await
+                .map(|response| response.boxof)
+                .unwrap_or_default();
             for area_code in &area_codes {
                 let area_display = area_code.unwrap_or("전체");
 
@@ -550,11 +557,16 @@ impl KopisService {
                     .await
                 {
                     Ok(response) => {
+                        let items = if response.boxof.is_empty() {
+                            merged_area_rankings(area_key, &national)
+                        } else {
+                            response.boxof
+                        };
                         // 순위 위에서부터, 우리 DB 에 있고 아직 끝나지 않은 공연 3개를 고른다.
                         // 앞 순위 공연이 없거나 끝났으면 다음 순위로 채운다
                         let mut slots: Vec<RankingSlot> = Vec::new();
                         let mut lookup_failed = false;
-                        for item in response.boxof.iter() {
+                        for item in items.iter() {
                             if slots.len() >= 3 {
                                 break;
                             }
@@ -683,6 +695,97 @@ impl KopisService {
     }
 }
 
+/// 공연장 ID. 우리 DB 에 없으면 KOPIS 에서 공연장(과 홀)을 받아 넣는다.
+/// 공연장 동기화는 바뀐 공연장만 받아, 예전에 빠진 공연장의 공연이 계속 건너뛰어졌다
+async fn resolve_venue_id(
+    pool: &MySqlPool,
+    client: &KopisClient,
+    facility_id: &str,
+) -> Result<Option<i32>, String> {
+    if let Some(venue_id) = ConcertRepository::get_venue_id_by_kopis_id(pool, facility_id)
+        .await
+        .map_err(|e| format!("Failed to look up venue {}: {}", facility_id, e))?
+    {
+        return Ok(Some(venue_id));
+    }
+    let detail = client.fetch_venue_detail(facility_id).await?.db;
+    let (province, city) = province_and_city(detail.address.as_deref());
+    let venue_id = VenueRepository::upsert(
+        pool,
+        CreateVenue {
+            kopis_id: Some(detail.facility_id.clone()),
+            name: detail.facility_name.clone(),
+            address: detail.address.clone(),
+            city,
+            province,
+            country: Some("대한민국".to_string()),
+            seats: detail.parse_seats(),
+            hall_count: detail.hall_count,
+            opening_year: detail.parse_opening_year(),
+            is_active: Some(true),
+            data_source: Some("KOPIS".to_string()),
+        },
+    )
+    .await
+    .map_err(|e| format!("Failed to save venue {}: {}", facility_id, e))?;
+    if let Some(halls) = detail.halls {
+        for hall in halls.halls {
+            let hall_data = CreateHall {
+                venue_id,
+                kopis_id: Some(hall.hall_id.clone()),
+                name: hall.hall_name.clone(),
+                seats: hall.parse_seats(),
+                is_active: Some(true),
+            };
+            if let Err(e) = HallRepository::upsert(pool, hall_data).await {
+                Logger::warn(
+                    "KOPIS",
+                    &format!("Failed to upsert hall {}: {}", hall.hall_name, e),
+                );
+            }
+        }
+    }
+    Logger::success(
+        "KOPIS",
+        &format!(
+            "Added missing venue: {} ({})",
+            detail.facility_name, facility_id
+        ),
+    );
+
+    Ok(Some(venue_id))
+}
+
+/// 주소 "서울특별시 양천구 목동동로 …" 에서 시도와 구군
+fn province_and_city(address: Option<&str>) -> (Option<String>, Option<String>) {
+    let mut parts = address.unwrap_or_default().split_whitespace();
+    let province = parts.next().map(str::to_string);
+    let city = parts.next().map(str::to_string);
+
+    (province, city)
+}
+
+/// 광주·전남은 KOPIS 에서 '전남광주(통합특별시)' 로 합쳐져 지역 코드 29·46 의 예매 순위가 비어 온다.
+/// 그 지역 코드에 넣을 전국 순위의 지역 이름
+const MERGED_AREAS: [(&str, &[&str]); 2] =
+    [("29", &["광주", "전남광주"]), ("46", &["전남", "전남광주"])];
+
+/// 전국 순위에서 합쳐진 지역의 공연만 골라 그 지역 안에서 1위부터 다시 매긴다
+fn merged_area_rankings(area_code: &str, national: &[BoxofficeItem]) -> Vec<BoxofficeItem> {
+    let Some((_, names)) = MERGED_AREAS.iter().find(|(code, _)| *code == area_code) else {
+        return Vec::new();
+    };
+    national
+        .iter()
+        .filter(|item| names.contains(&item.area.trim()))
+        .enumerate()
+        .map(|(index, item)| BoxofficeItem {
+            ranking: index as i32 + 1,
+            ..item.clone()
+        })
+        .collect()
+}
+
 /// sync_metadata.error_message 에 다시 받을 공연 ID 를 적을 때의 머리말
 const RETRY_PREFIX: &str = "retry:";
 /// 실패한 공연이 이보다 많으면 목록 대신 날짜를 붙잡는다(KOPIS 가 오래 막힌 날)
@@ -730,7 +833,7 @@ async fn import_concert(
             let detail = detail_response.db;
 
             // venue_kopis_id로 venue_id 매칭
-            match ConcertRepository::get_venue_id_by_kopis_id(pool, &detail.facility_id).await {
+            match resolve_venue_id(pool, client, &detail.facility_id).await {
                 Ok(Some(venue_id)) => {
                     // 공연 데이터 upsert
                     let start_date_str = detail
@@ -981,5 +1084,45 @@ mod retry_list_tests {
         );
         assert!(parse_retry_ids("KOPIS API returned error: 500").is_empty());
         assert!(parse_retry_ids("retry:").is_empty());
+    }
+}
+
+#[cfg(test)]
+mod merged_area_tests {
+    use super::*;
+
+    fn item(ranking: i32, area: &str, id: &str) -> BoxofficeItem {
+        BoxofficeItem {
+            venue_name: String::new(),
+            seat_count: None,
+            ranking,
+            poster: None,
+            performance_period: String::new(),
+            performance_id: id.to_string(),
+            performance_name: id.to_string(),
+            category: "서양음악(클래식)".to_string(),
+            performance_count: None,
+            area: area.to_string(),
+        }
+    }
+
+    #[test]
+    fn gwangju_and_jeonnam_take_the_merged_region_from_the_national_list() {
+        let national = vec![
+            item(1, "서울", "PF1"),
+            item(6, "전남광주", "PF6"),
+            item(9, "부산", "PF9"),
+            item(12, "전남광주", "PF12"),
+        ];
+        let gwangju = merged_area_rankings("29", &national);
+        assert_eq!(
+            gwangju
+                .iter()
+                .map(|i| (i.ranking, i.performance_id.as_str()))
+                .collect::<Vec<_>>(),
+            vec![(1, "PF6"), (2, "PF12")]
+        );
+        assert_eq!(merged_area_rankings("46", &national).len(), 2);
+        assert!(merged_area_rankings("11", &national).is_empty());
     }
 }
