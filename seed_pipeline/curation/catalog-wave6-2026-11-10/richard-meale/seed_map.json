@@ -1,0 +1,146 @@
+[
+ {
+  "pieceId": 17077,
+  "title": "<Mer de glace>의 장면들",
+  "mbids": [
+   "40d0a3b1-3069-4b9b-b708-30b497072f4d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 17416,
+  "title": "Cantilena Pacifica",
+  "mbids": [
+   "55576f94-8274-4f16-9f32-4851a7b45f4f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19872,
+  "title": "오페라 <Mer de glace>",
+  "mbids": [
+   "f2d5b3e0-0fd0-47a8-ab89-f22f7ec3533d"
+  ],
+  "mapping": "work",
+  "key": "richard-meale-f2d5b3e0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16183,
+  "title": "변주곡",
+  "mbids": [
+   "0b6eb68e-a1bf-4669-9e8a-072fa23a0f02"
+  ],
+  "mapping": "work",
+  "key": "richard-meale-0b6eb68e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16267,
+  "title": "Incredible floridas",
+  "mbids": [
+   "102928bc-a36a-4a3a-9c75-c405166098bc"
+  ],
+  "mapping": "work",
+  "key": "richard-meale-102928bc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16962,
+  "title": "오페라 <Voss>",
+  "mbids": [
+   "3a1db2b0-9e63-4ce3-ab96-64e1214388c4"
+  ],
+  "mapping": "work",
+  "key": "richard-meale-3a1db2b0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17245,
+  "title": "Lumen",
+  "mbids": [
+   "4a466764-4834-41c4-8dc9-8230417eb8aa"
+  ],
+  "mapping": "work",
+  "key": "richard-meale-4a466764",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17403,
+  "title": "Coruscations",
+  "mbids": [
+   "54bbbe37-20e3-4a4f-b7b6-f51b6c6dadc7"
+  ],
+  "mapping": "work",
+  "key": "richard-meale-54bbbe37",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17802,
+  "title": "Very High Kings",
+  "mbids": [
+   "6d030e68-d2db-4735-8079-db3f3ce5f037"
+  ],
+  "mapping": "work",
+  "key": "richard-meale-6d030e68",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18194,
+  "title": "<Mer de Glace>의 연주회용 독백",
+  "mbids": [
+   "8622802e-fbc7-4056-b1ff-0f568320c97c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18540,
+  "title": "Clouds Now and Then",
+  "mbids": [
+   "9b54e647-9421-449b-a21b-e47f8ebc6b9a"
+  ],
+  "mapping": "work",
+  "key": "richard-meale-9b54e647",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19247,
+  "title": "Homage to Garcia Lorca",
+  "mbids": [
+   "c886a19d-6218-48df-8ea8-721e3da055ba"
+  ],
+  "mapping": "work",
+  "key": "richard-meale-c886a19d",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

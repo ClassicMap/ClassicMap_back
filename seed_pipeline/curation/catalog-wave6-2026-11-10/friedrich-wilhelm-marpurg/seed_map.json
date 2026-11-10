@@ -1,0 +1,38 @@
+[
+ {
+  "pieceId": 23225,
+  "title": "Allein Gott in der Höh' sei Ehr",
+  "mbids": [
+   "033df5e9-8f78-420f-aa64-da843b3896a4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 24433,
+  "title": "Les Principes du clavecin",
+  "mbids": [
+   "73591aac-55d7-4005-a04a-9181e220d2b5"
+  ],
+  "mapping": "work",
+  "key": "friedrich-wilhelm-marpurg-73591aac",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25720,
+  "title": "푸가와 카프리치오 Op. 1 중 \"Preludio\"",
+  "mbids": [
+   "e6e6ca1f-2a59-452d-9c44-bc88778c334a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ }
+]

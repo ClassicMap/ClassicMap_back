@@ -1,0 +1,26 @@
+[
+ {
+  "pieceId": 18589,
+  "title": "오보에와 피아노를 위한 변주곡 Op. 39 No. 4",
+  "mbids": [
+   "9eb482e8-36b0-4d40-b705-22c727ef304f"
+  ],
+  "mapping": "work",
+  "key": "julius-weismann-9eb482e8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19651,
+  "title": "오보에와 피아노를 위한 변주곡 Op. 39",
+  "mbids": [
+   "e30e0288-e081-41e8-b7c7-3a34f52663dd"
+  ],
+  "mapping": "work",
+  "key": "julius-weismann-e30e0288",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

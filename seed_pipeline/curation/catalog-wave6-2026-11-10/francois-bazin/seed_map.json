@@ -1,0 +1,38 @@
+[
+ {
+  "pieceId": 24055,
+  "title": "Le Voyage en Chine: Acte II",
+  "mbids": [
+   "50c3778a-333e-4699-90a1-52904ca0d13e"
+  ],
+  "mapping": "work",
+  "key": "francois-bazin-50c3778a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24897,
+  "title": "오페레타 <Maître Pathelin>",
+  "mbids": [
+   "9bce5099-4e06-41ce-9584-baf1219fb09f"
+  ],
+  "mapping": "work",
+  "key": "francois-bazin-9bce5099",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25497,
+  "title": "오페라 <중국 여행>",
+  "mbids": [
+   "d421dd44-0574-4d42-80ac-83583d39d65e"
+  ],
+  "mapping": "work",
+  "key": "francois-bazin-d421dd44",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "pieceId": 18693,
+  "title": "비극적 환상곡",
+  "mbids": [
+   "a50542c1-0ca7-46c0-8ef6-ffe0ed51694e"
+  ],
+  "mapping": "work",
+  "key": "franco-ferrara-a50542c1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19652,
+  "title": "Notte di Tempesta",
+  "mbids": [
+   "e3113a3c-284a-4d8d-be3c-fb4d567f99ad"
+  ],
+  "mapping": "work",
+  "key": "franco-ferrara-e3113a3c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20075,
+  "title": "Burlesca",
+  "mbids": [
+   "fe9822fd-2c3b-4b97-9e56-9eabfd55f8ed"
+  ],
+  "mapping": "work",
+  "key": "franco-ferrara-fe9822fd",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

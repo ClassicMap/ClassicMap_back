@@ -1,0 +1,353 @@
+[
+ {
+  "key": "friedrich-wilhelm-marpurg-73591aac",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Les Principes du clavecin",
+  "titleEn": "Les Principes du clavecin",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "73591aac-55d7-4005-a04a-9181e220d2b5",
+  "mbTitle": "Les Principes du clavecin",
+  "existingPieceId": 24433,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "1dc5052e-35c0-462b-bb48-68fe6a97c4ec",
+    "mbTitle": "Les Principes du clavecin: Allegro en sol majeur",
+    "nameKo": "Allegro en sol majeur",
+    "nameEn": "Les Principes du clavecin: Allegro en sol majeur",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "b44f7017-a7df-4d76-b896-69adfc9c9dd7",
+    "mbTitle": "Les Principes du clavecin: Allegro en la majeur",
+    "nameKo": "Allegro en la majeur",
+    "nameEn": "Les Principes du clavecin: Allegro en la majeur",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "friedrich-wilhelm-marpurg-526dd1cf",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Pièces de clavecin",
+  "titleEn": "Pièces de clavecin",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "526dd1cf-056b-4349-94b4-f3e48fc6adba",
+  "mbTitle": "Pièces de clavecin",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "8c09dd22-40d1-465d-b4d8-b2b814a2403a",
+    "mbTitle": "Première Suite",
+    "nameKo": "Première Suite",
+    "nameEn": "Première Suite",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "e4a9b6ba-17d7-494a-bae4-3d6014fb2a52",
+      "mbTitle": "Première Suite: I. Les Avanturiers",
+      "nameKo": "Les Avanturiers",
+      "nameEn": "Première Suite: I. Les Avanturiers",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 2,
+      "mbid": "70391529-8ade-4934-afce-c7c2c74c5bc8",
+      "mbTitle": "Première Suite: II. Le Petit Badinage",
+      "nameKo": "Le Petit Badinage",
+      "nameEn": "Première Suite: II. Le Petit Badinage",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 3,
+      "mbid": "ecbe8b91-0b04-42d0-8604-38694f686255",
+      "mbTitle": "Première Suite: III. Menuet (et Altro)",
+      "nameKo": "Menuet (et Altro)",
+      "nameEn": "Première Suite: III. Menuet (et Altro)",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     }
+    ]
+   },
+   {
+    "seq": 2,
+    "mbid": "b1f1ded7-4339-4ef3-9549-93c43d8c6013",
+    "mbTitle": "Deuxième Suite",
+    "nameKo": "Deuxième Suite",
+    "nameEn": "Deuxième Suite",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "2e25cbaf-d9d5-4b2d-9a22-8fbbf10d9162",
+      "mbTitle": "Deuxième Suite: I. Le Songe des Muses",
+      "nameKo": "Le Songe des Muses",
+      "nameEn": "Deuxième Suite: I. Le Songe des Muses",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 2,
+      "mbid": "0739d91a-b8db-4c80-95f0-db74e5a9b173",
+      "mbTitle": "Deuxième Suite: II. La Voltigeuse",
+      "nameKo": "La Voltigeuse",
+      "nameEn": "Deuxième Suite: II. La Voltigeuse",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     }
+    ]
+   },
+   {
+    "seq": 3,
+    "mbid": "bc5b4dfe-b2af-43fe-a97d-1e96b0a78e52",
+    "mbTitle": "Troisième Suite",
+    "nameKo": "Troisième Suite",
+    "nameEn": "Troisième Suite",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "0b82695d-36d8-493d-aa06-2ef2020ef56b",
+      "mbTitle": "Troisième Suite: I. Tambourins I, II et III",
+      "nameKo": "Tambourins I, II et III",
+      "nameEn": "Troisième Suite: I. Tambourins I, II et III",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 2,
+      "mbid": "8f56328b-5dd3-4e79-993b-80c3157b7f7d",
+      "mbTitle": "Troisième Suite: II. Le Coucou",
+      "nameKo": "Le Coucou",
+      "nameEn": "Troisième Suite: II. Le Coucou",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 3,
+      "mbid": "f01d813d-8864-47d3-b167-82f1e44273b7",
+      "mbTitle": "Troisième Suite: III. La Plaintive Philis",
+      "nameKo": "La Plaintive Philis",
+      "nameEn": "Troisième Suite: III. La Plaintive Philis",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     }
+    ]
+   },
+   {
+    "seq": 4,
+    "mbid": "adfdc6d0-5a3e-4d79-9dba-3769271fbc53",
+    "mbTitle": "Quatrième Suite",
+    "nameKo": "Quatrième Suite",
+    "nameEn": "Quatrième Suite",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "ad3c3b55-6b23-492c-bbdb-c4fc17a048bc",
+      "mbTitle": "Quatrième Suite: I. Première Gavotte et Double",
+      "nameKo": "Première Gavotte et Double",
+      "nameEn": "Quatrième Suite: I. Première Gavotte et Double",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 2,
+      "mbid": "bf52fb75-f53d-4e1e-b49d-53ca33a9f721",
+      "mbTitle": "Quatrième Suite: II. Seconde Gavotte et Double",
+      "nameKo": "Seconde Gavotte et Double",
+      "nameEn": "Quatrième Suite: II. Seconde Gavotte et Double",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 3,
+      "mbid": "48ff95d6-f311-4f0d-b783-4a53b337df2c",
+      "mbTitle": "Quatrième Suite: III. Les Petits Trots",
+      "nameKo": "Les Petits Trots",
+      "nameEn": "Quatrième Suite: III. Les Petits Trots",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 4,
+      "mbid": "2141cdc1-1af5-4796-ac70-a3d294a66eb0",
+      "mbTitle": "Quatrième Suite: IV. Les Remouleurs I et II",
+      "nameKo": "Les Remouleurs I et II",
+      "nameEn": "Quatrième Suite: IV. Les Remouleurs I et II",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 5,
+      "mbid": "f07e2897-bc8f-4e4f-8e93-c6e399a39d95",
+      "mbTitle": "Quatrième Suite: V. La Frivole",
+      "nameKo": "La Frivole",
+      "nameEn": "Quatrième Suite: V. La Frivole",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     }
+    ]
+   },
+   {
+    "seq": 5,
+    "mbid": "e7a04ebe-5522-4d46-8f46-08638e5525a8",
+    "mbTitle": "Cinquième Suite",
+    "nameKo": "Cinquième Suite",
+    "nameEn": "Cinquième Suite",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": [
+     {
+      "seq": 1,
+      "mbid": "b151e1d6-3b51-4462-831a-cdbcb21fb87e",
+      "mbTitle": "Cinquième Suite: I. La Nymphe Marine",
+      "nameKo": "La Nymphe Marine",
+      "nameEn": "Cinquième Suite: I. La Nymphe Marine",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 2,
+      "mbid": "137e401e-cc16-4de7-86d5-c42556b723e6",
+      "mbTitle": "Cinquième Suite: II. Feste provençale / Tambourins I et II / Musettes I et II",
+      "nameKo": "Feste provençale / Tambourins I et II / Musettes I et II",
+      "nameEn": "Cinquième Suite: II. Feste provençale / Tambourins I et II / Musettes I et II",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 3,
+      "mbid": "0ff5f52b-d2ef-4c98-a21f-fbdfb0091b1d",
+      "mbTitle": "Cinquième Suite: III. Le Diable à quatre",
+      "nameKo": "Le Diable à quatre",
+      "nameEn": "Cinquième Suite: III. Le Diable à quatre",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 4,
+      "mbid": "47a4203f-df27-4dcc-af4e-1ff24592cdec",
+      "mbTitle": "Cinquième Suite: IV. Menuet I et Double",
+      "nameKo": "Menuet I et Double",
+      "nameEn": "Cinquième Suite: IV. Menuet I et Double",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 5,
+      "mbid": "e255be42-6310-47a8-96c5-173a88aea35d",
+      "mbTitle": "Cinquième Suite: V. Menuet II et Double",
+      "nameKo": "Menuet II et Double",
+      "nameEn": "Cinquième Suite: V. Menuet II et Double",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     },
+     {
+      "seq": 6,
+      "mbid": "51b55dfe-8c9a-4121-8fad-7300b8814612",
+      "mbTitle": "Cinquième Suite: VI. Les Drÿades",
+      "nameKo": "Les Drÿades",
+      "nameEn": "Cinquième Suite: VI. Les Drÿades",
+      "movementNumber": null,
+      "catalogueAlt": null,
+      "existingPieceId": null,
+      "existingPartId": null,
+      "children": []
+     }
+    ]
+   }
+  ]
+ }
+]

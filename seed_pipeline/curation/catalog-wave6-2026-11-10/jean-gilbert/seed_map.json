@@ -1,0 +1,74 @@
+[
+ {
+  "pieceId": 23230,
+  "title": "Durch Berlin fließt immer noch die Spree",
+  "mbids": [
+   "03ef792b-4c03-4316-978d-366ca25b2044"
+  ],
+  "mapping": "work",
+  "key": "jean-gilbert-03ef792b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23631,
+  "title": "오페레타 <Die Kinokönigin>",
+  "mbids": [
+   "270a07ad-a95f-4b92-abae-539da0837d2e"
+  ],
+  "mapping": "work",
+  "key": "jean-gilbert-270a07ad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23790,
+  "title": "오페레타 <Katja, die Tänzerin>",
+  "mbids": [
+   "37096426-804a-4c93-b8b0-99f81a7273df"
+  ],
+  "mapping": "work",
+  "key": "jean-gilbert-37096426",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23936,
+  "title": "가곡 <Mein Justav>",
+  "mbids": [
+   "449e6a60-0c41-4af8-8487-d078a5c3bab4"
+  ],
+  "mapping": "work",
+  "key": "jean-gilbert-449e6a60",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23981,
+  "title": "가곡 <Puppchen, du bist mein Augenstern>",
+  "mbids": [
+   "493b7258-83c9-4ad6-a446-f1d347a6c44c"
+  ],
+  "mapping": "work",
+  "key": "jean-gilbert-493b7258",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24099,
+  "title": "The Queen of the Movies (medley)",
+  "mbids": [
+   "54dbefc5-5977-41d6-ab5f-234b4d808157"
+  ],
+  "mapping": "work",
+  "key": "jean-gilbert-54dbefc5",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

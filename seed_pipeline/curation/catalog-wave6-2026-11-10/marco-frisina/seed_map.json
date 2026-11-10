@@ -1,0 +1,230 @@
+[
+ {
+  "pieceId": 24053,
+  "title": "Anima Christi",
+  "mbids": [
+   "506eb7ce-3fa2-462a-9f0a-2b99ea604f7a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23103,
+  "title": "Alto e glorioso Dio",
+  "mbids": [
+   "a469a9f0-0dbf-4e4e-b809-083fe7ff6440"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-a469a9f0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23112,
+  "title": "Ave, o Vergine Sposa",
+  "mbids": [
+   "20c03b39-1398-4e23-a5bd-001b5ef7b13c"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-20c03b39",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23113,
+  "title": "Dove la carità è vera",
+  "mbids": [
+   "df3c01ab-2c31-4dfb-be49-e27b0bf74729"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-df3c01ab",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23114,
+  "title": "Accogli nel tuo grembo",
+  "mbids": [
+   "8e44370f-539b-483c-830f-8095386a979e"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-8e44370f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23115,
+  "title": "Ascende",
+  "mbids": [
+   "f84ac849-8a53-48d2-b076-8849217c27b3"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-f84ac849",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23116,
+  "title": "Alla cena dell'Agnello",
+  "mbids": [
+   "f05e9a7c-8336-459b-9246-3390c6c7269d"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-f05e9a7c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23117,
+  "title": "Andate in tutto il mondo",
+  "mbids": [
+   "ebda11d1-8309-4d00-bf26-f96ac32ff90c"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-ebda11d1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23178,
+  "title": "Al cospetto del sultano",
+  "mbids": [
+   "759ed7fe-5227-42e4-9189-82a07efc68e5"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-759ed7fe",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23179,
+  "title": "Assedio",
+  "mbids": [
+   "975beca1-7e83-416c-91e8-e5c5cc8761d6"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-975beca1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23180,
+  "title": "Ascolta Creatore pietoso",
+  "mbids": [
+   "ecb22c64-8f22-4020-89a2-4164bb62c159"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-ecb22c64",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23181,
+  "title": "Aprite le porte a Cristo",
+  "mbids": [
+   "897d758d-e717-4166-b212-b0d6d003123b"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-897d758d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23182,
+  "title": "Alleluia, io sono il Buon Pastore",
+  "mbids": [
+   "1a7911eb-019d-4588-8023-bc5feb212174"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-1a7911eb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23183,
+  "title": "Atto d'amore",
+  "mbids": [
+   "d6a3f6a1-f595-49c5-9ceb-205a826cf02d"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-d6a3f6a1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23184,
+  "title": "Ave Madre di Dio",
+  "mbids": [
+   "80dcfcd5-1c06-4be6-afd7-4c6db808f1aa"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-80dcfcd5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23185,
+  "title": "Adoro Te devote",
+  "mbids": [
+   "ae30bbbd-863d-41a4-9a7b-8cc51157ecaf"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-ae30bbbd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23186,
+  "title": "Agnus Dei",
+  "mbids": [
+   "c9ff4fe1-a5b8-4ce2-ac5a-0ff5986edc31"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-c9ff4fe1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23189,
+  "title": "Alleluia, le tue parole",
+  "mbids": [
+   "6cd61ead-6022-48af-8d00-d374ed7a223b"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-6cd61ead",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24352,
+  "title": "Creo en ti, Señor",
+  "mbids": [
+   "6c9c7714-6456-4f7c-a280-016f019e15de"
+  ],
+  "mapping": "work",
+  "key": "marco-frisina-6c9c7714",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

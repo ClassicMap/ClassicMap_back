@@ -1,0 +1,79 @@
+[
+ {
+  "key": "paule-maurice-6bc69803",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Tableaux de Provence",
+  "titleEn": "Tableaux de Provence",
+  "year": null,
+  "yearText": null,
+  "genre": "suite",
+  "authenticity": "authentic",
+  "mbid": "6bc69803-5112-49e0-b4df-ad455fe5daa8",
+  "mbTitle": "Tableaux de Provence",
+  "existingPieceId": 17782,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "b2ed7990-f49d-4e47-ab69-bd077edf6265",
+    "mbTitle": "Tableaux de Provence: I. Farandole des jeunes filles",
+    "nameKo": "Farandole des jeunes filles",
+    "nameEn": "Tableaux de Provence: I. Farandole des jeunes filles",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "8d40fea0-5fc9-4707-93ad-cb17f742f546",
+    "mbTitle": "Tableaux de Provence: II. Chanson pour ma mie",
+    "nameKo": "Chanson pour ma mie",
+    "nameEn": "Tableaux de Provence: II. Chanson pour ma mie",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "3c3e7a92-be49-4458-b160-cc1fba900811",
+    "mbTitle": "Tableaux de Provence: III. La Bohémienne",
+    "nameKo": "La Bohémienne",
+    "nameEn": "Tableaux de Provence: III. La Bohémienne",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "153d68b2-8a17-49fe-ad28-c479e0b2ce57",
+    "mbTitle": "Tableaux de Provence: IV. Des Alyscamps l'âme soupire",
+    "nameKo": "Des Alyscamps l'âme soupire",
+    "nameEn": "Tableaux de Provence: IV. Des Alyscamps l'âme soupire",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 5,
+    "mbid": "12875413-7538-4f0c-92a5-bfebed43c01d",
+    "mbTitle": "Tableaux de Provence: V. Le Cabridan",
+    "nameKo": "Le Cabridan",
+    "nameEn": "Tableaux de Provence: V. Le Cabridan",
+    "movementNumber": "V",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

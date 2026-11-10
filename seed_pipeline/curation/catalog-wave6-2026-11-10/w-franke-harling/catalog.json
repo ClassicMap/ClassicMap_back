@@ -1,0 +1,50 @@
+[
+ {
+  "key": "w-franke-harling-7dec35dc",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "가곡 <Sing, You Sinners>",
+  "titleEn": "Sing, You Sinners",
+  "year": null,
+  "yearText": null,
+  "genre": "song",
+  "authenticity": "authentic",
+  "mbid": "7dec35dc-5f51-4ef4-876e-ae7df0d9678c",
+  "mbTitle": "Sing, You Sinners",
+  "existingPieceId": 18086,
+  "parts": []
+ },
+ {
+  "key": "w-franke-harling-8f42023b",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "The Corps",
+  "titleEn": "The Corps",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "8f42023b-5fa2-41fe-aad3-ef09001ce8ea",
+  "mbTitle": "The Corps",
+  "existingPieceId": 18342,
+  "parts": []
+ },
+ {
+  "key": "w-franke-harling-a2dfd8a1",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "가곡 <Where was I?>",
+  "titleEn": "Where was I?",
+  "year": null,
+  "yearText": null,
+  "genre": "song",
+  "authenticity": "authentic",
+  "mbid": "a2dfd8a1-255e-4e54-8a9a-f7298a220b97",
+  "mbTitle": "Where was I?",
+  "existingPieceId": 15917,
+  "parts": []
+ }
+]

@@ -1,0 +1,123 @@
+[
+ {
+  "key": "marcial-del-adalid-y-gurrea-f42edc41",
+  "kind": "single",
+  "catalogue": "Op. 9",
+  "catalogueAlt": null,
+  "titleKo": "El lamento",
+  "titleEn": "El lamento, op. 9",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "f42edc41-1d0d-4814-a79e-b1a8eb4108d9",
+  "mbTitle": "El lamento, op. 9",
+  "existingPieceId": 19897,
+  "parts": []
+ },
+ {
+  "key": "marcial-del-adalid-y-gurrea-5a67ff97",
+  "kind": "single",
+  "catalogue": "Op. 10",
+  "catalogueAlt": null,
+  "titleKo": "El último adiós",
+  "titleEn": "El último adiós, op. 10",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "5a67ff97-e02a-4c1d-965b-a76d0131c894",
+  "mbTitle": "El último adiós, op. 10",
+  "existingPieceId": 17498,
+  "parts": []
+ },
+ {
+  "key": "marcial-del-adalid-y-gurrea-a487c336",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Petits riens (6 valses à la tudesque)",
+  "titleEn": "Petits riens (6 valses à la tudesque)",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "a487c336-bfb8-49e7-b0b3-43166443f36e",
+  "mbTitle": "Petits riens (6 valses à la tudesque)",
+  "existingPieceId": 18684,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "5b86169b-0909-4260-bcac-29ba8f9203f7",
+    "mbTitle": "Petits riens (6 valses à la tudesque): I",
+    "nameKo": "I",
+    "nameEn": "Petits riens (6 valses à la tudesque): I",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "2a115efa-78b4-4546-88be-ac8ca55f8473",
+    "mbTitle": "Petits riens (6 valses à la tudesque): II",
+    "nameKo": "II",
+    "nameEn": "Petits riens (6 valses à la tudesque): II",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "91fbfc35-b372-4aee-93e2-1c95388723df",
+    "mbTitle": "Petits riens (6 valses à la tudesque): III",
+    "nameKo": "III",
+    "nameEn": "Petits riens (6 valses à la tudesque): III",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "873b5d2d-3e90-49f9-b204-ebcea843a81b",
+    "mbTitle": "Petits riens (6 valses à la tudesque): IV",
+    "nameKo": "IV",
+    "nameEn": "Petits riens (6 valses à la tudesque): IV",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 5,
+    "mbid": "62433cf3-b3db-49f5-9e70-72818989a794",
+    "mbTitle": "Petits riens (6 valses à la tudesque): V",
+    "nameKo": "V",
+    "nameEn": "Petits riens (6 valses à la tudesque): V",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 6,
+    "mbid": "a7ae582f-4133-4016-9481-ec3f77b151b2",
+    "mbTitle": "Petits riens (6 valses à la tudesque): VI",
+    "nameKo": "VI",
+    "nameEn": "Petits riens (6 valses à la tudesque): VI",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

@@ -1,0 +1,26 @@
+[
+ {
+  "pieceId": 16585,
+  "title": "タバコやの娘",
+  "mbids": [
+   "23240432-511f-4596-b55d-61acc878cc9a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19843,
+  "title": "賣煙姑娘",
+  "mbids": [
+   "f13162e2-5577-42bf-b752-566918a2b6e8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ }
+]

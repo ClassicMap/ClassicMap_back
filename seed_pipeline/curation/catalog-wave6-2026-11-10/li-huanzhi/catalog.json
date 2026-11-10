@@ -1,0 +1,67 @@
+[
+ {
+  "key": "li-huanzhi-b2a5c2b5",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "春節組曲",
+  "titleEn": "春節組曲",
+  "year": null,
+  "yearText": null,
+  "genre": "suite",
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "春節組曲",
+  "existingPieceId": 23086,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "b56f1247-28e2-4f4c-a763-03ff5008f5a2",
+    "mbTitle": "春節組曲: I. 序曲—大秧歌",
+    "nameKo": "序曲—大秧歌",
+    "nameEn": "春節組曲: I. 序曲—大秧歌",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "d59c7ce4-a493-4221-91ac-591a58d9e416",
+    "mbTitle": "春節組曲: II. Andante cantabile",
+    "nameKo": "Andante cantabile",
+    "nameEn": "春節組曲: II. Andante cantabile",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "b2d55947-0707-458d-bb7d-bf63f4266796",
+    "mbTitle": "春節組曲: III. Rondo",
+    "nameKo": "Rondo",
+    "nameEn": "春節組曲: III. Rondo",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "63496c6f-1515-4379-9d3b-7f35a9de2c26",
+    "mbTitle": "春節組曲: IV. Moderato",
+    "nameKo": "Moderato",
+    "nameEn": "春節組曲: IV. Moderato",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "pieceId": 18459,
+  "title": "Study for Voice and Tape",
+  "mbids": [
+   "96467b9c-d1bf-486c-b761-4025cd0c7bb2"
+  ],
+  "mapping": "work",
+  "key": "alice-shields-96467b9c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17137,
+  "title": "The Transformation of Ani",
+  "mbids": [
+   "44d1e69c-3e61-47ca-a6fd-e892ee7d6705"
+  ],
+  "mapping": "work",
+  "key": "alice-shields-44d1e69c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18504,
+  "title": "전자 오페라 <Apocalypse>",
+  "mbids": [
+   "98c3a038-d9a7-4e79-b221-1624eb4c7024"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19287,
+  "title": "무용 소품 3번",
+  "mbids": [
+   "caaea086-63d0-483a-bbcd-57771c2f1051"
+  ],
+  "mapping": "work",
+  "key": "alice-shields-caaea086",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

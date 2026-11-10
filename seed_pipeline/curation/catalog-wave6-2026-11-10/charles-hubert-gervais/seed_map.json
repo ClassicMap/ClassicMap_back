@@ -1,0 +1,62 @@
+[
+ {
+  "pieceId": 15841,
+  "title": "모테트 <Super flumina Babilonis>",
+  "mbids": [
+   "ee007188-81b3-470d-a0da-173f4ec44459"
+  ],
+  "mapping": "work",
+  "key": "charles-hubert-gervais-ee007188",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16751,
+  "title": "모테트 <Jubilate Deo omnis terra>",
+  "mbids": [
+   "2dda8506-5576-44c3-9b84-c322a1fd64d4"
+  ],
+  "mapping": "work",
+  "key": "charles-hubert-gervais-2dda8506",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16976,
+  "title": "오페라 <메두사>",
+  "mbids": [
+   "3b17a97d-21a4-424f-a231-a4ba06cc2f02"
+  ],
+  "mapping": "work",
+  "key": "charles-hubert-gervais-3b17a97d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17861,
+  "title": "모테트 <미제레레>",
+  "mbids": [
+   "7025cd94-2927-443a-82da-c21e11f685f7"
+  ],
+  "mapping": "work",
+  "key": "charles-hubert-gervais-7025cd94",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19226,
+  "title": "오페라 <Hypermnestre>",
+  "mbids": [
+   "c6c1b056-2b09-4275-845e-65f312bedb0a"
+  ],
+  "mapping": "work",
+  "key": "charles-hubert-gervais-c6c1b056",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

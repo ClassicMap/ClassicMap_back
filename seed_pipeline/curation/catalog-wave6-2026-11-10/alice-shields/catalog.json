@@ -1,0 +1,50 @@
+[
+ {
+  "key": "alice-shields-caaea086",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Dance Piece No. 3",
+  "titleEn": "Dance Piece No. 3",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "caaea086-63d0-483a-bbcd-57771c2f1051",
+  "mbTitle": "Dance Piece No. 3",
+  "existingPieceId": 19287,
+  "parts": []
+ },
+ {
+  "key": "alice-shields-96467b9c",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Study for Voice and Tape",
+  "titleEn": "Study for Voice and Tape",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "96467b9c-d1bf-486c-b761-4025cd0c7bb2",
+  "mbTitle": "Study for Voice and Tape",
+  "existingPieceId": 18459,
+  "parts": []
+ },
+ {
+  "key": "alice-shields-44d1e69c",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "The Transformation of Ani",
+  "titleEn": "The Transformation of Ani",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "44d1e69c-3e61-47ca-a6fd-e892ee7d6705",
+  "mbTitle": "The Transformation of Ani",
+  "existingPieceId": 17137,
+  "parts": []
+ }
+]

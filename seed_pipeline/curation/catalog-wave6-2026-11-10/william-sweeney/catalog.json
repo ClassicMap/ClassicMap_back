@@ -1,0 +1,50 @@
+[
+ {
+  "key": "william-sweeney-11a3692b",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "An Òg-Mhadainn",
+  "titleEn": "An Òg-Mhadainn",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "11a3692b-f7d0-36e5-a7c9-8302dcf45b6e",
+  "mbTitle": "An Òg-Mhadainn",
+  "existingPieceId": 16296,
+  "parts": []
+ },
+ {
+  "key": "william-sweeney-a05da0eb",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Eòlas nan Ribheid",
+  "titleEn": "Eòlas nan Ribheid",
+  "year": null,
+  "yearText": null,
+  "genre": "concerto",
+  "authenticity": "authentic",
+  "mbid": "a05da0eb-fb1c-4087-8348-244b2799b904",
+  "mbTitle": "Eòlas nan Ribheid",
+  "existingPieceId": 15803,
+  "parts": []
+ },
+ {
+  "key": "william-sweeney-4c4e179b",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Hallaig",
+  "titleEn": "Hallaig",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "4c4e179b-5fff-4cfd-aa91-a5e55a3dd02d",
+  "mbTitle": "Hallaig",
+  "existingPieceId": 17279,
+  "parts": []
+ }
+]

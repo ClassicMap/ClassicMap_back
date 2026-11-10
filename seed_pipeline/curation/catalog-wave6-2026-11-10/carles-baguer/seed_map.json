@@ -1,0 +1,62 @@
+[
+ {
+  "pieceId": 16238,
+  "title": "교향곡 2번 C단조",
+  "mbids": [
+   "0e89bdec-e3f3-49f5-b5d6-31907e4b545a"
+  ],
+  "mapping": "work",
+  "key": "carles-baguer-0e89bdec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16235,
+  "title": "교향곡 16번 G장조",
+  "mbids": [
+   "0e6fb715-246c-45a0-93b4-d6ed7ef24fc6"
+  ],
+  "mapping": "work",
+  "key": "carles-baguer-0e6fb715",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17083,
+  "title": "교향곡 13번 E♭장조",
+  "mbids": [
+   "4156f499-7a2d-4088-998d-4ad7ceb4609b"
+  ],
+  "mapping": "work",
+  "key": "carles-baguer-4156f499",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17642,
+  "title": "교향곡 12번 E♭장조",
+  "mbids": [
+   "63323cbf-0abb-455c-828a-b65d515f41e1"
+  ],
+  "mapping": "work",
+  "key": "carles-baguer-63323cbf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18236,
+  "title": "교향곡 18번 B♭장조",
+  "mbids": [
+   "8970d10f-4032-423b-8499-0db3fb6fb692"
+  ],
+  "mapping": "work",
+  "key": "carles-baguer-8970d10f",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

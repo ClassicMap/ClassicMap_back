@@ -1,0 +1,47 @@
+[
+ {
+  "key": "julius-weismann-9eb482e8",
+  "kind": "single",
+  "catalogue": "Op. 39 No. 4",
+  "catalogueAlt": null,
+  "titleKo": "Variation for Oboe and Piano",
+  "titleEn": "Variation for Oboe and Piano, Op. 39 No. 4",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "9eb482e8-36b0-4d40-b705-22c727ef304f",
+  "mbTitle": "Variation for Oboe and Piano, Op. 39 No. 4",
+  "existingPieceId": 18589,
+  "parts": []
+ },
+ {
+  "key": "julius-weismann-e30e0288",
+  "kind": "multi_movement",
+  "catalogue": "Op. 39",
+  "catalogueAlt": null,
+  "titleKo": "Variationen für Oboe und Klavier",
+  "titleEn": "Variationen für Oboe und Klavier, op. 39",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "e30e0288-e081-41e8-b7c7-3a34f52663dd",
+  "mbTitle": "Variationen für Oboe und Klavier, op. 39",
+  "existingPieceId": 19651,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "af4f3c70-e276-475b-80b1-05c1c13890e4",
+    "mbTitle": "Variationen für Oboe und Klavier, op. 39: IV. Lento, molto tranquillo",
+    "nameKo": "Lento, molto tranquillo",
+    "nameEn": "Variationen für Oboe und Klavier, op. 39: IV. Lento, molto tranquillo",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

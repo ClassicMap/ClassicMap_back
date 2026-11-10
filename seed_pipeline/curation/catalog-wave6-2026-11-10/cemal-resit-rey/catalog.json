@@ -1,0 +1,75 @@
+[
+ {
+  "key": "cemal-resit-rey-92a6587d",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "10. Yıl Marşı",
+  "titleEn": "10. Yıl Marşı",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "92a6587d-fa72-4590-a81e-1bbb03d669c6",
+  "mbTitle": "10. Yıl Marşı",
+  "existingPieceId": 18401,
+  "parts": []
+ },
+ {
+  "key": "cemal-resit-rey-7dd79d4c",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Andante and Allegro for Violin and Strings",
+  "titleEn": "Andante and Allegro for Violin and Strings",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "7dd79d4c-8f28-487c-90af-e54596cc3bfe",
+  "mbTitle": "Andante and Allegro for Violin and Strings",
+  "existingPieceId": 18081,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "edd09065-b816-48a4-85de-f5f77b383284",
+    "mbTitle": "Andante and Allegro for Violin and Strings: Andante",
+    "nameKo": "Andante",
+    "nameEn": "Andante and Allegro for Violin and Strings: Andante",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "699c83f9-6d42-469e-b3ce-c52dcb7fa782",
+    "mbTitle": "Andante and Allegro for Violin and Strings: Allegro. Vivo",
+    "nameKo": "Allegro. Vivo",
+    "nameEn": "Andante and Allegro for Violin and Strings: Allegro. Vivo",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "cemal-resit-rey-dc316a17",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "연가곡집 <On Halk Türküsü>",
+  "titleEn": "On Halk Türküsü",
+  "year": null,
+  "yearText": null,
+  "genre": "song-cycle",
+  "authenticity": "authentic",
+  "mbid": "dc316a17-4e8d-49bf-bb73-7ec906a34d35",
+  "mbTitle": "On Halk Türküsü",
+  "existingPieceId": 19543,
+  "parts": []
+ }
+]

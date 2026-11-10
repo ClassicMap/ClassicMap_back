@@ -1,0 +1,98 @@
+[
+ {
+  "pieceId": 23616,
+  "title": "폴란드 미사 중 \"키리에 (3중창)\"",
+  "mbids": [
+   "25d03810-f48c-4a27-beb5-ff5f16dd9d80"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 23927,
+  "title": "Offertorium z Mszy Polskiej",
+  "mbids": [
+   "43d92fb1-f133-4741-af68-088968039d6b"
+  ],
+  "mapping": "work",
+  "key": "jan-maklakiewicz-43d92fb1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23965,
+  "title": "Witaj gwiazdko złota",
+  "mbids": [
+   "4730a4db-33b9-43d4-aebf-6297e9db7f90"
+  ],
+  "mapping": "work",
+  "key": "jan-maklakiewicz-4730a4db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23988,
+  "title": "폴란드 미사 중 \"키리에 (합창)\"",
+  "mbids": [
+   "49b3a678-70b3-4224-9ee1-c15aeee28612"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24139,
+  "title": "폴란드 미사 중 \"크레도 (3중창)\"",
+  "mbids": [
+   "588152d3-3057-4f91-9d37-da14fb3f72f9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24291,
+  "title": "폴란드 미사 중 \"키리에 (독창)\"",
+  "mbids": [
+   "672127d6-3917-4e93-8da7-8361cee20906"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24856,
+  "title": "발레 <바르샤바의 칼리오스트로>",
+  "mbids": [
+   "97dca15c-4921-4234-9726-b558737d5953"
+  ],
+  "mapping": "work",
+  "key": "jan-maklakiewicz-97dca15c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25237,
+  "title": "Śliczna Panienka",
+  "mbids": [
+   "ba2239e7-a20a-4981-b3c7-abcd993952a5"
+  ],
+  "mapping": "work",
+  "key": "jan-maklakiewicz-ba2239e7",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

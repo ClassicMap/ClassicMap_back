@@ -1,0 +1,34 @@
+[
+ {
+  "key": "waldemar-kazanecki-ebf08768",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "영화음악 <Cygańska jesień>",
+  "titleEn": "Cygańska jesień",
+  "year": null,
+  "yearText": null,
+  "genre": "soundtrack",
+  "authenticity": "authentic",
+  "mbid": "ebf08768-ae41-4313-afc1-7ff4afd2eae4",
+  "mbTitle": "Cygańska jesień",
+  "existingPieceId": 25777,
+  "parts": []
+ },
+ {
+  "key": "waldemar-kazanecki-feb36ab4",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "For One String",
+  "titleEn": "For One String",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "feb36ab4-a6bf-44b2-8ade-7ee728d5b3c8",
+  "mbTitle": "For One String",
+  "existingPieceId": 26000,
+  "parts": []
+ }
+]

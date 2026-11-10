@@ -1,0 +1,74 @@
+[
+ {
+  "pieceId": 23387,
+  "title": "오라토리오 <Amor und Psyche>",
+  "mbids": [
+   "1122c16a-7526-468f-8c9b-bf4703fd3ced"
+  ],
+  "mapping": "work",
+  "key": "georg-schumann-1122c16a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24758,
+  "title": "Und ob ich schon wanderte im finstren Tal, op. 31 no. 1",
+  "mbids": [
+   "8fa71871-9d69-4b93-a10f-9a12a4f2fbb3"
+  ],
+  "mapping": "work",
+  "key": "georg-schumann-8fa71871",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25440,
+  "title": "How Great Are Thy Wonders",
+  "mbids": [
+   "ceca6273-dc3a-3279-b14b-af79783dcbbb"
+  ],
+  "mapping": "work",
+  "key": "georg-schumann-ceca6273",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25494,
+  "title": "서곡 <Liebesfrühling>",
+  "mbids": [
+   "d3b7e634-9f7b-488a-94f1-350b4669e794"
+  ],
+  "mapping": "work",
+  "key": "georg-schumann-d3b7e634",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25689,
+  "title": "Yeah, Though I Wander",
+  "mbids": [
+   "e4b798a3-8032-49d4-982e-e3dbfe9335b9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 25698,
+  "title": "코랄 \"Wer nur den lieben Gott läßt walten\"에 의한 교향적 변주곡 Op. 24",
+  "mbids": [
+   "e559c285-8c88-46be-9f56-172a589f991d"
+  ],
+  "mapping": "work",
+  "key": "georg-schumann-e559c285",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

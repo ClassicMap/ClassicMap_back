@@ -1,0 +1,62 @@
+[
+ {
+  "pieceId": 15759,
+  "title": "Broadcasting",
+  "mbids": [
+   "4dc59ad8-f9f9-4248-88fa-221399faa9e2"
+  ],
+  "mapping": "work",
+  "key": "makoto-shinohara-4dc59ad8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16135,
+  "title": "Passage",
+  "mbids": [
+   "0863762d-14df-4f70-a942-8ddf424ffba3"
+  ],
+  "mapping": "work",
+  "key": "makoto-shinohara-0863762d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16949,
+  "title": "Fragmente",
+  "mbids": [
+   "38efd6a1-f7ab-45e1-ab59-13255150b99b"
+  ],
+  "mapping": "work",
+  "key": "makoto-shinohara-38efd6a1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17935,
+  "title": "Alternances",
+  "mbids": [
+   "743c5956-99c2-4790-b37b-99f10360b170"
+  ],
+  "mapping": "work",
+  "key": "makoto-shinohara-743c5956",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18313,
+  "title": "Kassouga",
+  "mbids": [
+   "8da05f04-a49f-46e1-af5f-36344a996cb7"
+  ],
+  "mapping": "work",
+  "key": "makoto-shinohara-8da05f04",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

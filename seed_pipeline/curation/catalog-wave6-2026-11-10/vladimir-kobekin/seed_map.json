@@ -1,0 +1,50 @@
+[
+ {
+  "pieceId": 17155,
+  "title": "아리아드네의 탄식 (몬테베르디의 주제에 의한 변주곡)",
+  "mbids": [
+   "4571eec3-335d-4713-a1cf-e871b8cf5c07"
+  ],
+  "mapping": "work",
+  "key": "vladimir-kobekin-4571eec3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19043,
+  "title": "Bacchants for Cello & Orchestra",
+  "mbids": [
+   "bbb770f7-e71a-44f3-8e41-3a5c4feeb278"
+  ],
+  "mapping": "work",
+  "key": "vladimir-kobekin-bbb770f7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19098,
+  "title": "바이올린과 서스펜디드 심벌즈를 위한 이중 변주곡",
+  "mbids": [
+   "bf06f2ef-dfa1-4efc-a7df-c025253b9944"
+  ],
+  "mapping": "work",
+  "key": "vladimir-kobekin-bf06f2ef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19413,
+  "title": "Gallardo",
+  "mbids": [
+   "d32ede1e-699e-4db9-b97c-a17715859553"
+  ],
+  "mapping": "work",
+  "key": "vladimir-kobekin-d32ede1e",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

@@ -1,0 +1,34 @@
+[
+ {
+  "key": "arthur-bruhns-d771a16b",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "가곡 <S' ist Mai!>",
+  "titleEn": "S' ist Mai!",
+  "year": null,
+  "yearText": null,
+  "genre": "song",
+  "authenticity": "authentic",
+  "mbid": "d771a16b-6e3c-4706-860d-d5ea93c7c605",
+  "mbTitle": "S' ist Mai!",
+  "existingPieceId": 25542,
+  "parts": []
+ },
+ {
+  "key": "arthur-bruhns-a1aab8b0",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "가곡 <Tis May!>",
+  "titleEn": "Tis May!",
+  "year": null,
+  "yearText": null,
+  "genre": "song",
+  "authenticity": "authentic",
+  "mbid": "a1aab8b0-28b9-4331-9f78-1751e426b028",
+  "mbTitle": "Tis May!",
+  "existingPieceId": 24980,
+  "parts": []
+ }
+]

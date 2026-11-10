@@ -1,0 +1,146 @@
+[
+ {
+  "pieceId": 23999,
+  "title": "아제르바이잔 카프리치오",
+  "mbids": [
+   "4b0a9fca-0c93-4ed4-a0f6-16e160bb84ba"
+  ],
+  "mapping": "work",
+  "key": "fikret-amirov-4b0a9fca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24162,
+  "title": "천일야화 모음곡",
+  "mbids": [
+   "5a8fdcbc-056b-40d0-ae01-5c2c664f3cf6"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 24266,
+  "title": "아제르바이잔 교향 모음곡",
+  "mbids": [
+   "64be5e5f-c722-4097-b1ae-ec4472966005"
+  ],
+  "mapping": "work",
+  "key": "fikret-amirov-64be5e5f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25807,
+  "title": "현악 합주를 위한 교향곡",
+  "mbids": [
+   "ef2aa5c3-2113-4834-a2bd-e965f4666e48"
+  ],
+  "mapping": "work",
+  "key": "fikret-amirov-ef2aa5c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23673,
+  "title": "Kor Arab",
+  "mbids": [
+   "2a7b62e5-97c5-450d-8ab6-8342b3101832"
+  ],
+  "mapping": "work",
+  "key": "fikret-amirov-2a7b62e5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23701,
+  "title": "Gülistan Bayaty Shiraz",
+  "mbids": [
+   "2e4c71af-4ea0-4a00-b095-a9166388b18e"
+  ],
+  "mapping": "work",
+  "key": "fikret-amirov-2e4c71af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24238,
+  "title": "플루트와 피아노를 위한 6개의 소품",
+  "mbids": [
+   "60da3fec-dcb7-4bd1-a6c2-9366b103e0c7"
+  ],
+  "mapping": "work",
+  "key": "fikret-amirov-60da3fec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24571,
+  "title": "오페라 <Sevil>",
+  "mbids": [
+   "7ed5f29d-012d-4dce-9821-794cce0d64cb"
+  ],
+  "mapping": "work",
+  "key": "fikret-amirov-7ed5f29d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24948,
+  "title": "발레 <아라비안 나이트>",
+  "mbids": [
+   "9f449df3-ba86-4917-8b36-b39ee5d3c472"
+  ],
+  "mapping": "work",
+  "key": "fikret-amirov-9f449df3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25188,
+  "title": "Shur, Symphonic Mugam",
+  "mbids": [
+   "b5921502-4354-4f59-8ac6-a38b4bdb0d6e"
+  ],
+  "mapping": "work",
+  "key": "fikret-amirov-b5921502",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25230,
+  "title": "A Tale of Nasimi",
+  "mbids": [
+   "b99a2dca-4941-40e3-9b93-d34b8402a96c"
+  ],
+  "mapping": "work",
+  "key": "fikret-amirov-b99a2dca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25614,
+  "title": "Kürd ovşarı",
+  "mbids": [
+   "ddb006d7-0faa-4948-96bc-1618d468f602"
+  ],
+  "mapping": "work",
+  "key": "fikret-amirov-ddb006d7",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

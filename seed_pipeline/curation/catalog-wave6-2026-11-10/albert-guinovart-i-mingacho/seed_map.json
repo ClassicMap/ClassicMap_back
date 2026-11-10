@@ -1,0 +1,50 @@
+[
+ {
+  "pieceId": 17300,
+  "title": "칸타타 <Arion i el dofí>",
+  "mbids": [
+   "4e0d76a6-f6a3-4244-a019-1f2149238e32"
+  ],
+  "mapping": "work",
+  "key": "albert-guinovart-i-mingacho-4e0d76a6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17834,
+  "title": "Nissaga de poder",
+  "mbids": [
+   "6ea8f966-ef3a-4db5-a964-8b02b19b9f0f"
+  ],
+  "mapping": "work",
+  "key": "albert-guinovart-i-mingacho-6ea8f966",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18259,
+  "title": "뮤지컬 <Mar i cel>",
+  "mbids": [
+   "8abc1f21-f857-4c98-9135-d505e3247a6e"
+  ],
+  "mapping": "work",
+  "key": "albert-guinovart-i-mingacho-8abc1f21",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19870,
+  "title": "Els somnis",
+  "mbids": [
+   "f2c27fdf-1f3f-4293-8eb9-ae8801d207be"
+  ],
+  "mapping": "work",
+  "key": "albert-guinovart-i-mingacho-f2c27fdf",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]
