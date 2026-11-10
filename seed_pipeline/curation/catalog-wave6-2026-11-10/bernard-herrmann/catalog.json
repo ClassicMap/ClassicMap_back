@@ -8287,15 +8287,15 @@
   "kind": "collection",
   "catalogue": null,
   "catalogueAlt": null,
-  "titleKo": "Psycho (음반)",
-  "titleEn": "Psycho",
+  "titleKo": "영화 <사이코> 사운드트랙",
+  "titleEn": "Psycho Soundtrack",
   "year": null,
   "yearText": null,
   "genre": "soundtrack",
   "authenticity": "authentic",
   "mbid": null,
   "mbTitle": "Psycho",
-  "existingPieceId": null,
+  "existingPieceId": 419,
   "parts": [
    {
     "seq": 1,
