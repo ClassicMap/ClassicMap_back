@@ -4,14 +4,14 @@
 133 ilse-fromm-michaels
 134 eugeniusz-knapik
 136 albert-huybrechts
-138 joji-yuasa
+138 joji-yuasa ja
 140 louis-emmanuel-jadin
 141 catharinus-elling
 143 vsevolod-zaderatsky
 145 jose-de-nebra
 147 eugeniusz-morawski-dabrowa
 150 cesare-sodero
-153 teizo-matsumura
+153 teizo-matsumura ja
 155 guillaume-connesson
 158 nancy-van-de-vate
 159 kazimierz-serocki
@@ -28,7 +28,7 @@
 176 frank-van-der-stucken
 177 william-sweeney
 178 violet-archer
-179 yuzo-toyama
+179 yuzo-toyama ja
 187 marc-andre-dalbavie
 188 james-wilson
 192 paul-ladmirault
@@ -38,7 +38,6 @@
 199 francois-francoeur
 201 edouard-batiste
 202 thomas-pasatieri
-203 j-a-c-redford
 205 lodewijk-mortelmans
 208 marcial-del-adalid-y-gurrea
 210 henry-fevrier
@@ -67,7 +66,6 @@
 249 jan-blockx
 251 albert-guinovart-i-mingacho
 253 marcel-delannoy
-255 martin-o-donnell
 256 ruth-watson-henderson
 257 john-alden-carpenter
 259 juan-crisostomo-de-arriaga
@@ -78,18 +76,18 @@
 279 ernesto-elorduy
 284 heinrich-esser
 288 dan-welcher
-289 megumi-onaka
-292 tadashi-hattori
+289 megumi-onaka ja
+292 tadashi-hattori ja
 295 henry-brant
 299 franck-bedrossian
 300 adrien-talexy
 302 bruno-ducol
 312 zygmunt-konieczny
 313 meinrad-schutter
-314 makoto-shinohara
+314 makoto-shinohara ja
 315 nikolai-golovanov
 318 robert-turner
-321 kazuo-fukushima
+321 kazuo-fukushima ja
 322 evencio-castellanos
 324 edgar-tinel
 325 carles-baguer
@@ -100,7 +98,7 @@
 334 valborg-aulin
 337 vasco-mendonca
 338 hermann-zilcher
-339 seiichi-suzuki
+339 seiichi-suzuki ja
 344 jose-pablo-moncayo-garcia
 346 donald-tovey
 347 li-huanzhi
@@ -127,7 +125,7 @@
 395 pierre-certon
 398 gustave-doret
 400 francois-bazin
-401 hisato-ohzawa
+401 hisato-ohzawa ja
 404 arthur-berger
 406 murray-boren
 408 waldemar-kazanecki
@@ -138,7 +136,7 @@
 422 jose-luis-turina
 423 jean-francois-le-sueur
 425 jaroslav-krcek
-428 mieko-shiomi
+428 mieko-shiomi ja
 429 michael-waller
 434 bernhard-crusell
 435 erling-brene
@@ -146,7 +144,7 @@
 440 joaquin-valverde-sanjuan
 442 friedrich-wilhelm-marpurg
 444 joseph-touchemoulin
-446 tamezo-narita
+446 tamezo-narita ja
 447 arthur-bruhns
 448 siegmund-von-hausegger
 449 miguel-llobet
@@ -164,7 +162,7 @@
 481 mark-bucci
 482 robert-fuchs
 483 eric-gross
-488 shiro-fukai
+488 shiro-fukai ja
 489 fran-lhotka
 492 rolf-riehm
 493 herbert-windt

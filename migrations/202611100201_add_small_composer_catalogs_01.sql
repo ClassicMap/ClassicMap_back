@@ -1,5 +1,5 @@
 -- 작곡가 20명의 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동, 1/9).
--- 작품 118개(새 9개), seed 122개 중 잇기 109·숨김 12·그대로 1.
+-- 작품 124개(새 9개), seed 122개 중 잇기 115·숨김 6·그대로 1.
 --
 -- 6차는 4차 규칙(사람·에이전트 판단 없음)을 그대로 썼다. 규칙은
 -- seed_pipeline/curation/catalog-wave4-2026-10-12/auto/auto_catalog.py, 작곡가별 자료는
@@ -2106,9 +2106,9 @@ AND NOT EXISTS (
 -- 숨길 seed 작품 없음
 
 -- ===== Joji Yuasa (composer_id 138) =====
--- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 12개(묶음 0, 다악장 1, 낱곡 11),
+-- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 17개(묶음 0, 다악장 1, 낱곡 16),
 -- 새 작품 0개, part 2개, 그 아래 0개.
--- seed 18개 중 12개를 작품·part 에 잇고, 6개를 숨기고, 0개는 그대로 둔다.
+-- seed 18개 중 17개를 작품·part 에 잇고, 1개를 숨기고, 0개는 그대로 둔다.
 
 -- None <ICON> on the Source of White Noise
 
@@ -2282,6 +2282,42 @@ WHERE piece.id = 15786 AND piece.composer_id = 138
   AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
 
+-- None インター・ポジ・プレイ・ション
+
+UPDATE pieces piece
+SET piece.title = 'インター・ポジ・プレイ・ション', piece.title_en = 'インター・ポジ・プレイ・ション',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 17436 AND piece.composer_id = 138
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None オン・ザ・キーボード
+
+UPDATE pieces piece
+SET piece.title = 'オン・ザ・キーボード', piece.title_en = 'オン・ザ・キーボード',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 15767 AND piece.composer_id = 138
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None プロジェクション・エセンプラスティック フォー・ピアノス
+
+UPDATE pieces piece
+SET piece.title = 'プロジェクション・エセンプラスティック フォー・ピアノス', piece.title_en = 'プロジェクション・エセンプラスティック フォー・ピアノス',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 18763 AND piece.composer_id = 138
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
 -- None 内触覚的宇宙
 
 UPDATE pieces piece
@@ -2293,12 +2329,36 @@ SET piece.title = '内触覚的宇宙', piece.title_en = '内触覚的宇宙',
 WHERE piece.id = 15848 AND piece.composer_id = 138
   AND piece.origin = 'seed' AND piece.editor_locked = 0;
 
--- 카탈로그에 대응이 없는 seed 작품 6개를 목록에서 숨긴다(지우지 않음).
+
+-- None 演奏詩呼びかわし
+
+UPDATE pieces piece
+SET piece.title = '演奏詩呼びかわし', piece.title_en = '演奏詩呼びかわし',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 17954 AND piece.composer_id = 138
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None 가곡 <耳をすましてごらん>
+
+UPDATE pieces piece
+SET piece.title = '가곡 <耳をすましてごらん>', piece.title_en = '耳をすましてごらん',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 15731 AND piece.composer_id = 138
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+-- 카탈로그에 대응이 없는 seed 작품 1개를 목록에서 숨긴다(지우지 않음).
 UPDATE pieces piece
 SET piece.hidden_reason = 'catalog_unmatched'
 WHERE piece.composer_id = 138 AND piece.origin = 'seed' AND piece.hidden_reason IS NULL
   AND piece.id IN (
-    15731, 15767, 17436, 17678, 17954, 18763
+    17678
   )
   AND NOT EXISTS (SELECT 1 FROM performance_sectors sector WHERE sector.piece_id = piece.id)
   AND NOT EXISTS (SELECT 1 FROM piece_parts linking WHERE linking.linked_piece_id = piece.id);
@@ -4236,18 +4296,9 @@ WHERE piece.id = 18180 AND piece.composer_id = 150
 -- 숨길 seed 작품 없음
 
 -- ===== Teizo Matsumura (composer_id 153) =====
--- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 5개(묶음 1, 다악장 2, 낱곡 2),
+-- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 6개(묶음 1, 다악장 2, 낱곡 3),
 -- 새 작품 3개, part 8개, 그 아래 16개.
--- seed 3개 중 2개를 작품·part 에 잇고, 1개를 숨기고, 0개는 그대로 둔다.
-
--- 숨길 seed 가 쥔 카탈로그 제목을 비운다
-UPDATE pieces piece
-SET piece.title = '祈祷歌 (중복 19671)'
-WHERE piece.id = 19671 AND piece.composer_id = 153 AND piece.title = '祈祷歌'
-  AND piece.origin = 'seed' AND piece.editor_locked = 0
-  AND NOT EXISTS (SELECT 1 FROM performance_sectors sector WHERE sector.piece_id = piece.id)
-  AND NOT EXISTS (SELECT 1 FROM piece_parts linking WHERE linking.linked_piece_id = piece.id);
-
+-- seed 3개 중 3개를 작품·part 에 잇고, 0개를 숨기고, 0개는 그대로 둔다.
 
 -- None To the Night of Gethsemane
 
@@ -4265,6 +4316,18 @@ WHERE piece.id = 19336 AND piece.composer_id = 153
 
 UPDATE pieces piece
 SET piece.title = '祈祷歌', piece.title_en = '祈祷歌',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 19671 AND piece.composer_id = 153
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None 詩曲一番
+
+UPDATE pieces piece
+SET piece.title = '詩曲一番', piece.title_en = '詩曲一番',
     piece.type = 'song', piece.opus_number = NULL,
     piece.catalogue_system = NULL, piece.catalogue_number = NULL,
     piece.composition_year = COALESCE(NULL, piece.composition_year),
@@ -4622,15 +4685,7 @@ AND NOT EXISTS (
     WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d3aaab25-c93d-4143-9c9d-1484138ec865'
 );
 
--- 카탈로그에 대응이 없는 seed 작품 1개를 목록에서 숨긴다(지우지 않음).
-UPDATE pieces piece
-SET piece.hidden_reason = 'catalog_unmatched'
-WHERE piece.composer_id = 153 AND piece.origin = 'seed' AND piece.hidden_reason IS NULL
-  AND piece.id IN (
-    19671
-  )
-  AND NOT EXISTS (SELECT 1 FROM performance_sectors sector WHERE sector.piece_id = piece.id)
-  AND NOT EXISTS (SELECT 1 FROM piece_parts linking WHERE linking.linked_piece_id = piece.id);
+-- 숨길 seed 작품 없음
 
 -- ===== Guillaume Connesson (composer_id 155) =====
 -- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 13개(묶음 1, 다악장 5, 낱곡 7),

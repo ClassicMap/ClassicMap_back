@@ -14,5 +14,21 @@
   "mbTitle": "Sheep in the fields",
   "existingPieceId": 16754,
   "parts": []
+ },
+ {
+  "key": "tadashi-hattori-27ed3416",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "ラジオ体操第一",
+  "titleEn": "ラジオ体操第一",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "27ed3416-7d72-45d8-8ff6-61cfb5d2499a",
+  "mbTitle": "ラジオ体操第一",
+  "existingPieceId": 15944,
+  "parts": []
  }
 ]

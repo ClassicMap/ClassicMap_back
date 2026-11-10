@@ -1,5 +1,5 @@
 -- 작곡가 20명의 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동, 7/9).
--- 작품 93개(새 7개), seed 96개 중 잇기 86·숨김 4·그대로 6.
+-- 작품 82개(새 7개), seed 84개 중 잇기 75·숨김 3·그대로 6.
 --
 -- 6차는 4차 규칙(사람·에이전트 판단 없음)을 그대로 썼다. 규칙은
 -- seed_pipeline/curation/catalog-wave4-2026-10-12/auto/auto_catalog.py, 작곡가별 자료는
@@ -16,1940 +16,6 @@
 --     (제목이 전혀 다름) 잇지 않고, MBID 가 없으면 영어 제목이 같은 작품에 잇는다
 --     (식별자는 더하지 않음).
 --   비교 구간이 있거나 part 가 가리키는 작품은 숨기지 않는다. 두 번 돌려도 같다.
-
--- ===== Mark O'Connor (composer_id 385) =====
--- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 18개(묶음 0, 다악장 7, 낱곡 11),
--- 새 작품 0개, part 39개, 그 아래 0개.
--- seed 19개 중 18개를 작품·part 에 잇고, 1개를 숨기고, 0개는 그대로 둔다.
-
--- None Americana Symphony
-
-UPDATE pieces piece
-SET piece.title = 'Americana Symphony', piece.title_en = 'Americana Symphony',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 24424 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 1, part.movement_number = 'I',
-    part.name_ko = 'Brass Fanfare: Wide Open Spaces', part.name_en = 'Americana Symphony: I. Brass Fanfare: Wide Open Spaces',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24424 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:8cfddefc-ffec-47c2-8048-adb5910e2e5e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:8cfddefc-ffec-47c2-8048-adb5910e2e5e', 1, 'I', 'Brass Fanfare: Wide Open Spaces', 'Americana Symphony: I. Brass Fanfare: Wide Open Spaces', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24424 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8cfddefc-ffec-47c2-8048-adb5910e2e5e'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = 'II',
-    part.name_ko = 'New World Fanciful Dance', part.name_en = 'Americana Symphony: II. New World Fanciful Dance',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24424 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:8134e929-bebd-4183-aba1-3d33e81bbfa7' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:8134e929-bebd-4183-aba1-3d33e81bbfa7', 2, 'II', 'New World Fanciful Dance', 'Americana Symphony: II. New World Fanciful Dance', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24424 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8134e929-bebd-4183-aba1-3d33e81bbfa7'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 3, part.movement_number = 'III',
-    part.name_ko = 'Different Paths Towards Home', part.name_en = 'Americana Symphony: III. Different Paths Towards Home',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24424 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:3900925a-fcec-4544-883a-b6f3c7072a26' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:3900925a-fcec-4544-883a-b6f3c7072a26', 3, 'III', 'Different Paths Towards Home', 'Americana Symphony: III. Different Paths Towards Home', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24424 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3900925a-fcec-4544-883a-b6f3c7072a26'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 4, part.movement_number = 'IV',
-    part.name_ko = 'Open Plains Hoedown', part.name_en = 'Americana Symphony: IV. Open Plains Hoedown',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24424 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:6aa32430-6cfc-4874-a565-97a3d9d27901' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:6aa32430-6cfc-4874-a565-97a3d9d27901', 4, 'IV', 'Open Plains Hoedown', 'Americana Symphony: IV. Open Plains Hoedown', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24424 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6aa32430-6cfc-4874-a565-97a3d9d27901'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 5, part.movement_number = 'V',
-    part.name_ko = 'Soaring Eagle, Setting Sun', part.name_en = 'Americana Symphony: V. Soaring Eagle, Setting Sun',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24424 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:8d3c32f6-2021-4c1a-9096-769a4b9cfdf2' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:8d3c32f6-2021-4c1a-9096-769a4b9cfdf2', 5, 'V', 'Soaring Eagle, Setting Sun', 'Americana Symphony: V. Soaring Eagle, Setting Sun', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24424 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8d3c32f6-2021-4c1a-9096-769a4b9cfdf2'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 6, part.movement_number = 'VI',
-    part.name_ko = 'Theme: Splendid Horizons', part.name_en = 'Americana Symphony: VI. Theme: Splendid Horizons',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24424 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:89c69a83-545c-43fd-bccb-803c24b7c80c' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:89c69a83-545c-43fd-bccb-803c24b7c80c', 6, 'VI', 'Theme: Splendid Horizons', 'Americana Symphony: VI. Theme: Splendid Horizons', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24424 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:89c69a83-545c-43fd-bccb-803c24b7c80c'
-);
-
-
--- None Appalachia Waltz
-
-UPDATE pieces piece
-SET piece.title = 'Appalachia Waltz', piece.title_en = 'Appalachia Waltz',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 25288 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None Caprice for Three
-
-UPDATE pieces piece
-SET piece.title = 'Caprice for Three', piece.title_en = 'Caprice for Three',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 24439 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None 카프리스 1번
-
-UPDATE pieces piece
-SET piece.title = '카프리스 1번', piece.title_en = 'Caprice no. 1',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 24936 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None 협주곡 6번 "Old Brass"
-
-UPDATE pieces piece
-SET piece.title = '협주곡 6번 "Old Brass"', piece.title_en = 'Concerto no. 6 "Old Brass"',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 24076 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 1, part.movement_number = 'I',
-    part.name_ko = 'The Road Is Smooth', part.name_en = 'Concerto no. 6 "Old Brass": I. The Road Is Smooth',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24076 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:fc138a24-49be-4e64-9cd1-941bb19bdbd5' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:fc138a24-49be-4e64-9cd1-941bb19bdbd5', 1, 'I', 'The Road Is Smooth', 'Concerto no. 6 "Old Brass": I. The Road Is Smooth', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24076 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fc138a24-49be-4e64-9cd1-941bb19bdbd5'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = 'II',
-    part.name_ko = 'Spanish Moss, Black Water', part.name_en = 'Concerto no. 6 "Old Brass": II. Spanish Moss, Black Water',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24076 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:416fb622-7707-462d-bfcb-50024cd7a034' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:416fb622-7707-462d-bfcb-50024cd7a034', 2, 'II', 'Spanish Moss, Black Water', 'Concerto no. 6 "Old Brass": II. Spanish Moss, Black Water', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24076 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:416fb622-7707-462d-bfcb-50024cd7a034'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 3, part.movement_number = 'III',
-    part.name_ko = 'Fugue in Six Parts: "Graceand Charm"', part.name_en = 'Concerto no. 6 "Old Brass": III. Fugue in Six Parts: "Graceand Charm"',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24076 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:c71ce493-8573-46e1-bc08-800cab0f1d63' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:c71ce493-8573-46e1-bc08-800cab0f1d63', 3, 'III', 'Fugue in Six Parts: "Graceand Charm"', 'Concerto no. 6 "Old Brass": III. Fugue in Six Parts: "Graceand Charm"', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24076 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c71ce493-8573-46e1-bc08-800cab0f1d63'
-);
-
-
--- None Folk Mass
-
-UPDATE pieces piece
-SET piece.title = 'Folk Mass', piece.title_en = 'Folk Mass',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 23265 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 1, part.movement_number = 'VII',
-    part.name_ko = 'Affirmation', part.name_en = 'Folk Mass: VII. Affirmation',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23265 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:229623ff-c676-40e3-af98-7bbc3e87250d' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:229623ff-c676-40e3-af98-7bbc3e87250d', 1, 'VII', 'Affirmation', 'Folk Mass: VII. Affirmation', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23265 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:229623ff-c676-40e3-af98-7bbc3e87250d'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = 'III',
-    part.name_ko = 'Land of Canaan', part.name_en = 'Folk Mass: III. Land of Canaan',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23265 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:2587a85f-36a4-4076-a6a7-6148f97003d5' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:2587a85f-36a4-4076-a6a7-6148f97003d5', 2, 'III', 'Land of Canaan', 'Folk Mass: III. Land of Canaan', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23265 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2587a85f-36a4-4076-a6a7-6148f97003d5'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 3, part.movement_number = 'IV',
-    part.name_ko = 'Edification', part.name_en = 'Folk Mass: IV. Edification',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23265 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:97e58a1a-2da2-4d82-97a9-6f3ccffb8f16' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:97e58a1a-2da2-4d82-97a9-6f3ccffb8f16', 3, 'IV', 'Edification', 'Folk Mass: IV. Edification', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23265 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:97e58a1a-2da2-4d82-97a9-6f3ccffb8f16'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 4, part.movement_number = 'V',
-    part.name_ko = 'Battle', part.name_en = 'Folk Mass: V. Battle',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23265 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:a683c424-aa87-4cb0-ba32-f9ce2bb1393b' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:a683c424-aa87-4cb0-ba32-f9ce2bb1393b', 4, 'V', 'Battle', 'Folk Mass: V. Battle', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23265 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a683c424-aa87-4cb0-ba32-f9ce2bb1393b'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 5, part.movement_number = 'I',
-    part.name_ko = 'Introduction', part.name_en = 'Folk Mass: I. Introduction',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23265 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:a9ad4757-6bab-441d-a212-828031c2991b' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:a9ad4757-6bab-441d-a212-828031c2991b', 5, 'I', 'Introduction', 'Folk Mass: I. Introduction', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23265 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a9ad4757-6bab-441d-a212-828031c2991b'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 6, part.movement_number = 'VI',
-    part.name_ko = 'Recompence', part.name_en = 'Folk Mass: VI. Recompence',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23265 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:b2a4dae6-4b86-478f-a91c-d95e4e18e884' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:b2a4dae6-4b86-478f-a91c-d95e4e18e884', 6, 'VI', 'Recompence', 'Folk Mass: VI. Recompence', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23265 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b2a4dae6-4b86-478f-a91c-d95e4e18e884'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 7, part.movement_number = 'II',
-    part.name_ko = 'for You a People Holy to the Lord', part.name_en = 'Folk Mass: II. for You a People Holy to the Lord',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23265 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:b2b6b717-69cd-4fae-b6f8-774382240eaf' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:b2b6b717-69cd-4fae-b6f8-774382240eaf', 7, 'II', 'for You a People Holy to the Lord', 'Folk Mass: II. for You a People Holy to the Lord', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23265 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b2b6b717-69cd-4fae-b6f8-774382240eaf'
-);
-
-
--- None Let Us Move
-
-UPDATE pieces piece
-SET piece.title = 'Let Us Move', piece.title_en = 'Let Us Move',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 23771 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None March of the Gypsy Fiddler
-
-UPDATE pieces piece
-SET piece.title = 'March of the Gypsy Fiddler', piece.title_en = 'March of the Gypsy Fiddler',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 24487 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 1, part.movement_number = 'I',
-    part.name_ko = 'Movement I', part.name_en = 'Triple Concerto for Violin, Cello, Piano and Symphony Orchestra "March of the Gypsy Fiddler": I. Movement I',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24487 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:3399bc8c-7962-4ebe-85fb-86d373fc98af' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:3399bc8c-7962-4ebe-85fb-86d373fc98af', 1, 'I', 'Movement I', 'Triple Concerto for Violin, Cello, Piano and Symphony Orchestra "March of the Gypsy Fiddler": I. Movement I', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24487 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3399bc8c-7962-4ebe-85fb-86d373fc98af'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = 'II',
-    part.name_ko = 'Movement II', part.name_en = 'Triple Concerto for Violin, Cello, Piano and Symphony Orchestra "March of the Gypsy Fiddler": II. Movement II',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24487 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:36f71c75-0784-4fa4-b4be-660acf9b526e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:36f71c75-0784-4fa4-b4be-660acf9b526e', 2, 'II', 'Movement II', 'Triple Concerto for Violin, Cello, Piano and Symphony Orchestra "March of the Gypsy Fiddler": II. Movement II', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24487 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:36f71c75-0784-4fa4-b4be-660acf9b526e'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 3, part.movement_number = 'II',
-    part.name_ko = 'Movement II', part.name_en = 'Triple Concerto for Violin, Cello, Piano and Symphony Orchestra "March of the Gypsy Fiddler": II. Movement II',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24487 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:4690dee6-4e70-409e-bdb9-e9c78da2d58b' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:4690dee6-4e70-409e-bdb9-e9c78da2d58b', 3, 'II', 'Movement II', 'Triple Concerto for Violin, Cello, Piano and Symphony Orchestra "March of the Gypsy Fiddler": II. Movement II', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24487 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4690dee6-4e70-409e-bdb9-e9c78da2d58b'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 4, part.movement_number = 'I',
-    part.name_ko = 'Movement I', part.name_en = 'Triple Concerto for Violin, Cello, Piano and Symphony Orchestra "March of the Gypsy Fiddler": I. Movement I',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24487 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:69e8f71e-707a-4860-b3ec-1d63133ff004' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:69e8f71e-707a-4860-b3ec-1d63133ff004', 4, 'I', 'Movement I', 'Triple Concerto for Violin, Cello, Piano and Symphony Orchestra "March of the Gypsy Fiddler": I. Movement I', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24487 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:69e8f71e-707a-4860-b3ec-1d63133ff004'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 5, part.movement_number = 'III',
-    part.name_ko = 'Movement III', part.name_en = 'Triple Concerto for Violin, Cello, Piano and Symphony Orchestra "March of the Gypsy Fiddler": III. Movement III',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24487 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:86458ae2-57a0-402d-b41a-2e1f1c4bc632' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:86458ae2-57a0-402d-b41a-2e1f1c4bc632', 5, 'III', 'Movement III', 'Triple Concerto for Violin, Cello, Piano and Symphony Orchestra "March of the Gypsy Fiddler": III. Movement III', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24487 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:86458ae2-57a0-402d-b41a-2e1f1c4bc632'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 6, part.movement_number = 'III',
-    part.name_ko = 'Movement III', part.name_en = 'Triple Concerto for Violin, Cello, Piano and Symphony Orchestra "March of the Gypsy Fiddler": III. Movement III',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24487 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:b0194686-485d-4edb-b161-5b4bc7cb1145' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:b0194686-485d-4edb-b161-5b4bc7cb1145', 6, 'III', 'Movement III', 'Triple Concerto for Violin, Cello, Piano and Symphony Orchestra "March of the Gypsy Fiddler": III. Movement III', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24487 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b0194686-485d-4edb-b161-5b4bc7cb1145'
-);
-
-
--- None Misty Moonlight Waltz
-
-UPDATE pieces piece
-SET piece.title = 'Misty Moonlight Waltz', piece.title_en = 'Misty Moonlight Waltz',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 24515 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None Olympic Reel
-
-UPDATE pieces piece
-SET piece.title = 'Olympic Reel', piece.title_en = 'Olympic Reel',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 25848 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None One Winter's Night
-
-UPDATE pieces piece
-SET piece.title = 'One Winter''s Night', piece.title_en = 'One Winter''s Night',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 25362 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None Poem for Carlita
-
-UPDATE pieces piece
-SET piece.title = 'Poem for Carlita', piece.title_en = 'Poem for Carlita',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 23832 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None Song of the Liberty Bell
-
-UPDATE pieces piece
-SET piece.title = 'Song of the Liberty Bell', piece.title_en = 'Song of the Liberty Bell',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 23880 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None The Cricket Dance
-
-UPDATE pieces piece
-SET piece.title = 'The Cricket Dance', piece.title_en = 'The Cricket Dance',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 23884 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None The Fallen
-
-UPDATE pieces piece
-SET piece.title = 'The Fallen', piece.title_en = 'The Fallen',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 25644 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 1, part.movement_number = NULL,
-    part.name_ko = 'I', part.name_en = 'The Fallen: I',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 25644 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:88506344-2046-4989-8f04-d034eaa77df0' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:88506344-2046-4989-8f04-d034eaa77df0', 1, NULL, 'I', 'The Fallen: I', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 25644 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:88506344-2046-4989-8f04-d034eaa77df0'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = NULL,
-    part.name_ko = 'II', part.name_en = 'The Fallen: II',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 25644 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:95da3e57-1b41-4450-9e42-7a7784d9bc34' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:95da3e57-1b41-4450-9e42-7a7784d9bc34', 2, NULL, 'II', 'The Fallen: II', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 25644 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:95da3e57-1b41-4450-9e42-7a7784d9bc34'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 3, part.movement_number = NULL,
-    part.name_ko = 'III', part.name_en = 'The Fallen: III',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 25644 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:fc88ef6c-1295-45a9-a13a-d8174c7f881b' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:fc88ef6c-1295-45a9-a13a-d8174c7f881b', 3, NULL, 'III', 'The Fallen: III', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 25644 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fc88ef6c-1295-45a9-a13a-d8174c7f881b'
-);
-
-
--- None The Improvised Violin Concerto
-
-UPDATE pieces piece
-SET piece.title = 'The Improvised Violin Concerto', piece.title_en = 'The Improvised Violin Concerto',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 24723 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 1, part.movement_number = 'IV',
-    part.name_ko = 'Earth', part.name_en = 'The Improvised Violin Concerto: IV. Earth',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24723 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:2b948538-1cd6-48cd-bea3-7690389a1321' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:2b948538-1cd6-48cd-bea3-7690389a1321', 1, 'IV', 'Earth', 'The Improvised Violin Concerto: IV. Earth', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24723 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2b948538-1cd6-48cd-bea3-7690389a1321'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = 'V',
-    part.name_ko = 'Faith', part.name_en = 'The Improvised Violin Concerto: V. Faith',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24723 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:5547e075-23a3-4039-bf52-1284ed012a39' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:5547e075-23a3-4039-bf52-1284ed012a39', 2, 'V', 'Faith', 'The Improvised Violin Concerto: V. Faith', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24723 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5547e075-23a3-4039-bf52-1284ed012a39'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 3, part.movement_number = 'I',
-    part.name_ko = 'Fire', part.name_en = 'The Improvised Violin Concerto: I. Fire',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24723 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:6a5e72c2-31ba-4d7f-a21c-d877fbdecd57' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:6a5e72c2-31ba-4d7f-a21c-d877fbdecd57', 3, 'I', 'Fire', 'The Improvised Violin Concerto: I. Fire', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24723 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6a5e72c2-31ba-4d7f-a21c-d877fbdecd57'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 4, part.movement_number = 'II',
-    part.name_ko = 'Air', part.name_en = 'The Improvised Violin Concerto: II. Air',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24723 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:6a95678b-b4d5-4a14-8668-296007d399ee' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:6a95678b-b4d5-4a14-8668-296007d399ee', 4, 'II', 'Air', 'The Improvised Violin Concerto: II. Air', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24723 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6a95678b-b4d5-4a14-8668-296007d399ee'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 5, part.movement_number = 'V',
-    part.name_ko = 'Faith', part.name_en = 'The Improvised Violin Concerto: V. Faith',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24723 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:7ef26169-7d0e-42f8-a898-14863ae3fb65' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:7ef26169-7d0e-42f8-a898-14863ae3fb65', 5, 'V', 'Faith', 'The Improvised Violin Concerto: V. Faith', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24723 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7ef26169-7d0e-42f8-a898-14863ae3fb65'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 6, part.movement_number = 'III',
-    part.name_ko = 'Water', part.name_en = 'The Improvised Violin Concerto: III. Water',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24723 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:86c9ce95-1938-4cce-be37-2a70f5955d2a' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:86c9ce95-1938-4cce-be37-2a70f5955d2a', 6, 'III', 'Water', 'The Improvised Violin Concerto: III. Water', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24723 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:86c9ce95-1938-4cce-be37-2a70f5955d2a'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 7, part.movement_number = 'III',
-    part.name_ko = 'Water', part.name_en = 'The Improvised Violin Concerto: III. Water',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24723 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:8defc1ed-b01f-41cb-986c-1ee965518589' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:8defc1ed-b01f-41cb-986c-1ee965518589', 7, 'III', 'Water', 'The Improvised Violin Concerto: III. Water', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24723 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8defc1ed-b01f-41cb-986c-1ee965518589'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 8, part.movement_number = 'I',
-    part.name_ko = 'Fire', part.name_en = 'The Improvised Violin Concerto: I. Fire',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24723 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:908e2d89-8420-4d0b-82cc-09dd04ce851b' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:908e2d89-8420-4d0b-82cc-09dd04ce851b', 8, 'I', 'Fire', 'The Improvised Violin Concerto: I. Fire', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24723 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:908e2d89-8420-4d0b-82cc-09dd04ce851b'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 9, part.movement_number = 'IV',
-    part.name_ko = 'Earth', part.name_en = 'The Improvised Violin Concerto: IV. Earth',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24723 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:ae4b2594-5730-4df9-9102-7e1e43924fb7' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:ae4b2594-5730-4df9-9102-7e1e43924fb7', 9, 'IV', 'Earth', 'The Improvised Violin Concerto: IV. Earth', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24723 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ae4b2594-5730-4df9-9102-7e1e43924fb7'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 10, part.movement_number = 'II',
-    part.name_ko = 'Air', part.name_en = 'The Improvised Violin Concerto: II. Air',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24723 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:c0b6144b-0252-4782-9546-b0df8692bd80' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:c0b6144b-0252-4782-9546-b0df8692bd80', 10, 'II', 'Air', 'The Improvised Violin Concerto: II. Air', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24723 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c0b6144b-0252-4782-9546-b0df8692bd80'
-);
-
-
--- None Trio no. 1, Poets and Prophets
-
-UPDATE pieces piece
-SET piece.title = 'Trio no. 1, Poets and Prophets', piece.title_en = 'Trio no. 1, Poets and Prophets',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 25451 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 1, part.movement_number = 'I',
-    part.name_ko = 'Man in Black', part.name_en = 'Trio no. 1, Poets and Prophets: I. Man in Black',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 25451 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:099d4b09-7e4b-48fb-838b-18b8ff37cf3e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:099d4b09-7e4b-48fb-838b-18b8ff37cf3e', 1, 'I', 'Man in Black', 'Trio no. 1, Poets and Prophets: I. Man in Black', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 25451 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:099d4b09-7e4b-48fb-838b-18b8ff37cf3e'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = 'III',
-    part.name_ko = 'My June', part.name_en = 'Trio no. 1, Poets and Prophets: III. My June',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 25451 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:26abc09b-436f-4f08-a472-f2413115c19f' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:26abc09b-436f-4f08-a472-f2413115c19f', 2, 'III', 'My June', 'Trio no. 1, Poets and Prophets: III. My June', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 25451 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:26abc09b-436f-4f08-a472-f2413115c19f'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 3, part.movement_number = 'II',
-    part.name_ko = 'The Tennessee Two', part.name_en = 'Trio no. 1, Poets and Prophets: II. The Tennessee Two',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 25451 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:44cca122-da81-4db9-9fab-441ed8dfd91a' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:44cca122-da81-4db9-9fab-441ed8dfd91a', 3, 'II', 'The Tennessee Two', 'Trio no. 1, Poets and Prophets: II. The Tennessee Two', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 25451 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:44cca122-da81-4db9-9fab-441ed8dfd91a'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 4, part.movement_number = 'IV',
-    part.name_ko = 'Hello, I''m Johnny Cash', part.name_en = 'Trio no. 1, Poets and Prophets: IV. Hello, I''m Johnny Cash',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 25451 AND p.composer_id = 385 AND part.part_key = 'musicbrainz:ebdef347-33af-4cc6-9518-6e17cea7b7c0' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:ebdef347-33af-4cc6-9518-6e17cea7b7c0', 4, 'IV', 'Hello, I''m Johnny Cash', 'Trio no. 1, Poets and Prophets: IV. Hello, I''m Johnny Cash', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 25451 AND p.composer_id = 385
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ebdef347-33af-4cc6-9518-6e17cea7b7c0'
-);
-
-
--- None Vistas
-
-UPDATE pieces piece
-SET piece.title = 'Vistas', piece.title_en = 'Vistas',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 24475 AND piece.composer_id = 385
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
--- 카탈로그에 대응이 없는 seed 작품 1개를 목록에서 숨긴다(지우지 않음).
-UPDATE pieces piece
-SET piece.hidden_reason = 'catalog_unmatched'
-WHERE piece.composer_id = 385 AND piece.origin = 'seed' AND piece.hidden_reason IS NULL
-  AND piece.id IN (
-    23411
-  )
-  AND NOT EXISTS (SELECT 1 FROM performance_sectors sector WHERE sector.piece_id = piece.id)
-  AND NOT EXISTS (SELECT 1 FROM piece_parts linking WHERE linking.linked_piece_id = piece.id);
-
--- ===== Bruno Bettinelli (composer_id 386) =====
--- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 7개(묶음 1, 다악장 4, 낱곡 2),
--- 새 작품 1개, part 41개, 그 아래 0개.
--- seed 6개 중 6개를 작품·part 에 잇고, 0개를 숨기고, 0개는 그대로 둔다.
-
--- None Cinque preludi
-
-UPDATE pieces piece
-SET piece.title = 'Cinque preludi', piece.title_en = 'Cinque preludi',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 24844 AND piece.composer_id = 386
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 1, part.movement_number = NULL,
-    part.name_ko = 'Tranquillo', part.name_en = 'Cinque preludi: No. 1. Tranquillo',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24844 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:2e2b1f2a-a987-49f6-817c-a304d02301fb' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:2e2b1f2a-a987-49f6-817c-a304d02301fb', 1, NULL, 'Tranquillo', 'Cinque preludi: No. 1. Tranquillo', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24844 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2e2b1f2a-a987-49f6-817c-a304d02301fb'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = NULL,
-    part.name_ko = 'Deciso e ritmato', part.name_en = 'Cinque preludi: No. 2. Deciso e ritmato',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24844 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:cace3966-ff4e-4697-8747-c766575cc1ad' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:cace3966-ff4e-4697-8747-c766575cc1ad', 2, NULL, 'Deciso e ritmato', 'Cinque preludi: No. 2. Deciso e ritmato', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24844 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cace3966-ff4e-4697-8747-c766575cc1ad'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 3, part.movement_number = NULL,
-    part.name_ko = 'Lento', part.name_en = 'Cinque preludi: No. 3. Lento',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24844 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:33ed253a-91d7-466a-aae2-c0700e1d1893' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:33ed253a-91d7-466a-aae2-c0700e1d1893', 3, NULL, 'Lento', 'Cinque preludi: No. 3. Lento', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24844 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:33ed253a-91d7-466a-aae2-c0700e1d1893'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 4, part.movement_number = NULL,
-    part.name_ko = 'Veloce', part.name_en = 'Cinque preludi: No. 4. Veloce',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24844 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:57f76399-42e3-4e23-94e3-0b1ca82d7ca3' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:57f76399-42e3-4e23-94e3-0b1ca82d7ca3', 4, NULL, 'Veloce', 'Cinque preludi: No. 4. Veloce', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24844 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:57f76399-42e3-4e23-94e3-0b1ca82d7ca3'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 5, part.movement_number = NULL,
-    part.name_ko = 'Allegro', part.name_en = 'Cinque preludi: No. 5. Allegro',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24844 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:8d21addd-b326-4433-b28d-098e445c3a70' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:8d21addd-b326-4433-b28d-098e445c3a70', 5, NULL, 'Allegro', 'Cinque preludi: No. 5. Allegro', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24844 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8d21addd-b326-4433-b28d-098e445c3a70'
-);
-
-
--- None 피아노 환상곡
-
-UPDATE pieces piece
-SET piece.title = '피아노 환상곡', piece.title_en = 'Fantasia per pianoforte',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 23971 AND piece.composer_id = 386
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 1, part.movement_number = 'I',
-    part.name_ko = 'Preambolo', part.name_en = 'Fantasia per pianoforte: I. Preambolo',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23971 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:ca1bb0f6-8377-46fe-b154-b83924ad4c6c' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:ca1bb0f6-8377-46fe-b154-b83924ad4c6c', 1, 'I', 'Preambolo', 'Fantasia per pianoforte: I. Preambolo', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23971 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ca1bb0f6-8377-46fe-b154-b83924ad4c6c'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = 'II',
-    part.name_ko = 'Ritmico', part.name_en = 'Fantasia per pianoforte: II. Ritmico',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23971 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:99fd2721-bd35-49da-94de-2e90e96717cb' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:99fd2721-bd35-49da-94de-2e90e96717cb', 2, 'II', 'Ritmico', 'Fantasia per pianoforte: II. Ritmico', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23971 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:99fd2721-bd35-49da-94de-2e90e96717cb'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 3, part.movement_number = 'III',
-    part.name_ko = 'Notturno', part.name_en = 'Fantasia per pianoforte: III. Notturno',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23971 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:3f4a4a72-e842-481e-8f49-a991ac280f59' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:3f4a4a72-e842-481e-8f49-a991ac280f59', 3, 'III', 'Notturno', 'Fantasia per pianoforte: III. Notturno', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23971 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3f4a4a72-e842-481e-8f49-a991ac280f59'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 4, part.movement_number = 'IV',
-    part.name_ko = 'Intermezzo', part.name_en = 'Fantasia per pianoforte: IV. Intermezzo',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23971 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:5a87dc71-8ac6-4924-b659-4f2f71ca5eb3' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:5a87dc71-8ac6-4924-b659-4f2f71ca5eb3', 4, 'IV', 'Intermezzo', 'Fantasia per pianoforte: IV. Intermezzo', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23971 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5a87dc71-8ac6-4924-b659-4f2f71ca5eb3'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 5, part.movement_number = 'V',
-    part.name_ko = 'Fugato', part.name_en = 'Fantasia per pianoforte: V. Fugato',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23971 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:45eeafae-50b3-4214-8718-034e5e44f74d' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:45eeafae-50b3-4214-8718-034e5e44f74d', 5, 'V', 'Fugato', 'Fantasia per pianoforte: V. Fugato', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23971 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:45eeafae-50b3-4214-8718-034e5e44f74d'
-);
-
-
--- None Piccoli pezzi per pianoforte
-
-UPDATE pieces piece
-SET piece.title = 'Piccoli pezzi per pianoforte', piece.title_en = 'Piccoli pezzi per pianoforte',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 24285 AND piece.composer_id = 386
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 1, part.movement_number = 'I',
-    part.name_ko = 'Preludietto', part.name_en = 'Piccoli pezzi per pianoforte: I. Preludietto',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:2b6df304-24be-41c8-bffc-b588f43a39ea' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:2b6df304-24be-41c8-bffc-b588f43a39ea', 1, 'I', 'Preludietto', 'Piccoli pezzi per pianoforte: I. Preludietto', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2b6df304-24be-41c8-bffc-b588f43a39ea'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = 'II',
-    part.name_ko = 'Movimento di valzer', part.name_en = 'Piccoli pezzi per pianoforte: II. Movimento di valzer',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:a5e9c26d-3041-41b7-8064-6fb608d50ff5' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:a5e9c26d-3041-41b7-8064-6fb608d50ff5', 2, 'II', 'Movimento di valzer', 'Piccoli pezzi per pianoforte: II. Movimento di valzer', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a5e9c26d-3041-41b7-8064-6fb608d50ff5'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 3, part.movement_number = 'III',
-    part.name_ko = 'Piccola marcia', part.name_en = 'Piccoli pezzi per pianoforte: III. Piccola marcia',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:c1152710-8f5c-42d4-84f5-778f49d5bd2a' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:c1152710-8f5c-42d4-84f5-778f49d5bd2a', 3, 'III', 'Piccola marcia', 'Piccoli pezzi per pianoforte: III. Piccola marcia', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c1152710-8f5c-42d4-84f5-778f49d5bd2a'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 4, part.movement_number = 'IV',
-    part.name_ko = 'Canto breve', part.name_en = 'Piccoli pezzi per pianoforte: IV. Canto breve',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:917f35a3-6680-42b1-8c1e-ba0bc3419446' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:917f35a3-6680-42b1-8c1e-ba0bc3419446', 4, 'IV', 'Canto breve', 'Piccoli pezzi per pianoforte: IV. Canto breve', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:917f35a3-6680-42b1-8c1e-ba0bc3419446'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 5, part.movement_number = 'V',
-    part.name_ko = 'Barcarola', part.name_en = 'Piccoli pezzi per pianoforte: V. Barcarola',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:3b7fa71f-81f9-46ac-955a-2d739bc60ea8' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:3b7fa71f-81f9-46ac-955a-2d739bc60ea8', 5, 'V', 'Barcarola', 'Piccoli pezzi per pianoforte: V. Barcarola', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3b7fa71f-81f9-46ac-955a-2d739bc60ea8'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 6, part.movement_number = 'VI',
-    part.name_ko = 'Romanza', part.name_en = 'Piccoli pezzi per pianoforte: VI. Romanza',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:7f8e2478-72d5-4836-ae38-c91d5b3b25b6' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:7f8e2478-72d5-4836-ae38-c91d5b3b25b6', 6, 'VI', 'Romanza', 'Piccoli pezzi per pianoforte: VI. Romanza', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7f8e2478-72d5-4836-ae38-c91d5b3b25b6'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 7, part.movement_number = 'VII',
-    part.name_ko = 'Pensierino', part.name_en = 'Piccoli pezzi per pianoforte: VII. Pensierino',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:83da4021-5656-4b97-97be-d451514bf4d8' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:83da4021-5656-4b97-97be-d451514bf4d8', 7, 'VII', 'Pensierino', 'Piccoli pezzi per pianoforte: VII. Pensierino', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:83da4021-5656-4b97-97be-d451514bf4d8'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 8, part.movement_number = 'VIII',
-    part.name_ko = 'Preludietto', part.name_en = 'Piccoli pezzi per pianoforte: VIII. Preludietto',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:7f66ed35-e518-4116-a8ef-8c177ca0d2d4' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:7f66ed35-e518-4116-a8ef-8c177ca0d2d4', 8, 'VIII', 'Preludietto', 'Piccoli pezzi per pianoforte: VIII. Preludietto', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7f66ed35-e518-4116-a8ef-8c177ca0d2d4'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 9, part.movement_number = 'IX',
-    part.name_ko = 'Cornamusa', part.name_en = 'Piccoli pezzi per pianoforte: IX. Cornamusa',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:6ba1c142-2211-4d85-a6d7-8adc569a71b7' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:6ba1c142-2211-4d85-a6d7-8adc569a71b7', 9, 'IX', 'Cornamusa', 'Piccoli pezzi per pianoforte: IX. Cornamusa', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6ba1c142-2211-4d85-a6d7-8adc569a71b7'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 10, part.movement_number = 'X',
-    part.name_ko = 'Eco', part.name_en = 'Piccoli pezzi per pianoforte: X. Eco',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:f0100d8b-ea20-447f-8eb6-651f06fdca53' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:f0100d8b-ea20-447f-8eb6-651f06fdca53', 10, 'X', 'Eco', 'Piccoli pezzi per pianoforte: X. Eco', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f0100d8b-ea20-447f-8eb6-651f06fdca53'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 11, part.movement_number = 'XI',
-    part.name_ko = 'Canzoncina', part.name_en = 'Piccoli pezzi per pianoforte: XI. Canzoncina',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:de775992-18dc-45bf-a12a-1b55c55c771b' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:de775992-18dc-45bf-a12a-1b55c55c771b', 11, 'XI', 'Canzoncina', 'Piccoli pezzi per pianoforte: XI. Canzoncina', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:de775992-18dc-45bf-a12a-1b55c55c771b'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 12, part.movement_number = 'XII',
-    part.name_ko = 'Canone', part.name_en = 'Piccoli pezzi per pianoforte: XII. Canone',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:9f5ca916-28b2-4c98-bbcd-7f413227727e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:9f5ca916-28b2-4c98-bbcd-7f413227727e', 12, 'XII', 'Canone', 'Piccoli pezzi per pianoforte: XII. Canone', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9f5ca916-28b2-4c98-bbcd-7f413227727e'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 13, part.movement_number = 'XIII',
-    part.name_ko = 'Improvviso', part.name_en = 'Piccoli pezzi per pianoforte: XIII. Improvviso',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:05625db9-69ec-4518-aa33-9fe6d106db04' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:05625db9-69ec-4518-aa33-9fe6d106db04', 13, 'XIII', 'Improvviso', 'Piccoli pezzi per pianoforte: XIII. Improvviso', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:05625db9-69ec-4518-aa33-9fe6d106db04'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 14, part.movement_number = 'XIV',
-    part.name_ko = 'Ninna nanna', part.name_en = 'Piccoli pezzi per pianoforte: XIV. Ninna nanna',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:259e13eb-1838-4140-814a-7907131dc6b0' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:259e13eb-1838-4140-814a-7907131dc6b0', 14, 'XIV', 'Ninna nanna', 'Piccoli pezzi per pianoforte: XIV. Ninna nanna', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:259e13eb-1838-4140-814a-7907131dc6b0'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 15, part.movement_number = 'XV',
-    part.name_ko = 'Marcia', part.name_en = 'Piccoli pezzi per pianoforte: XV. Marcia',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:e7088e7f-67bf-4111-bffc-8523ce692931' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:e7088e7f-67bf-4111-bffc-8523ce692931', 15, 'XV', 'Marcia', 'Piccoli pezzi per pianoforte: XV. Marcia', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e7088e7f-67bf-4111-bffc-8523ce692931'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 16, part.movement_number = 'XVI',
-    part.name_ko = 'Notturnino', part.name_en = 'Piccoli pezzi per pianoforte: XVI. Notturnino',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:95b3b342-579a-4000-9773-c328bf26156a' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:95b3b342-579a-4000-9773-c328bf26156a', 16, 'XVI', 'Notturnino', 'Piccoli pezzi per pianoforte: XVI. Notturnino', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:95b3b342-579a-4000-9773-c328bf26156a'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 17, part.movement_number = 'XVII',
-    part.name_ko = 'Preludietto', part.name_en = 'Piccoli pezzi per pianoforte: XVII. Preludietto',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:d478db54-1761-4e91-a856-4638c90611ef' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:d478db54-1761-4e91-a856-4638c90611ef', 17, 'XVII', 'Preludietto', 'Piccoli pezzi per pianoforte: XVII. Preludietto', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d478db54-1761-4e91-a856-4638c90611ef'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 18, part.movement_number = 'XVIII',
-    part.name_ko = 'Toccata', part.name_en = 'Piccoli pezzi per pianoforte: XVIII. Toccata',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 24285 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:030d1aa8-8cca-4664-b517-373fc7a7dd76' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:030d1aa8-8cca-4664-b517-373fc7a7dd76', 18, 'XVIII', 'Toccata', 'Piccoli pezzi per pianoforte: XVIII. Toccata', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 24285 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:030d1aa8-8cca-4664-b517-373fc7a7dd76'
-);
-
-
--- None 전주곡
-
-UPDATE pieces piece
-SET piece.title = '전주곡', piece.title_en = 'Preludio',
-    piece.type = 'song', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 25891 AND piece.composer_id = 386
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-
--- None Sintesi
-
-UPDATE pieces piece
-SET piece.title = 'Sintesi', piece.title_en = 'Sintesi',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 23922 AND piece.composer_id = 386
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 1, part.movement_number = 'I',
-    part.name_ko = 'Preludio', part.name_en = 'Sintesi: I. Preludio',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23922 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:1c0af70e-85f0-4bc8-be47-ee2b08ac5798' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:1c0af70e-85f0-4bc8-be47-ee2b08ac5798', 1, 'I', 'Preludio', 'Sintesi: I. Preludio', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23922 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1c0af70e-85f0-4bc8-be47-ee2b08ac5798'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = 'II',
-    part.name_ko = 'Monodia', part.name_en = 'Sintesi: II. Monodia',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23922 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:156b2463-605e-4068-b0a8-48f2d0a2a12c' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:156b2463-605e-4068-b0a8-48f2d0a2a12c', 2, 'II', 'Monodia', 'Sintesi: II. Monodia', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23922 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:156b2463-605e-4068-b0a8-48f2d0a2a12c'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 3, part.movement_number = 'III',
-    part.name_ko = 'Armonia', part.name_en = 'Sintesi: III. Armonia',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23922 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:03e0f09f-4e07-4872-8100-1c5c4e68f015' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:03e0f09f-4e07-4872-8100-1c5c4e68f015', 3, 'III', 'Armonia', 'Sintesi: III. Armonia', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23922 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:03e0f09f-4e07-4872-8100-1c5c4e68f015'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 4, part.movement_number = 'IV',
-    part.name_ko = 'Polifonia', part.name_en = 'Sintesi: IV. Polifonia',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23922 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:3fca5882-1dbf-4e9b-931d-8e3199f6a87e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:3fca5882-1dbf-4e9b-931d-8e3199f6a87e', 4, 'IV', 'Polifonia', 'Sintesi: IV. Polifonia', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23922 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3fca5882-1dbf-4e9b-931d-8e3199f6a87e'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 5, part.movement_number = 'V',
-    part.name_ko = 'Notturno', part.name_en = 'Sintesi: V. Notturno',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23922 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:845e2641-1a82-45b2-b2e2-e2130164b617' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:845e2641-1a82-45b2-b2e2-e2130164b617', 5, 'V', 'Notturno', 'Sintesi: V. Notturno', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23922 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:845e2641-1a82-45b2-b2e2-e2130164b617'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 6, part.movement_number = 'VI',
-    part.name_ko = 'Capriccio', part.name_en = 'Sintesi: VI. Capriccio',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23922 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:422c00f3-afda-478f-9552-fa10adab6566' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:422c00f3-afda-478f-9552-fa10adab6566', 6, 'VI', 'Capriccio', 'Sintesi: VI. Capriccio', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23922 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:422c00f3-afda-478f-9552-fa10adab6566'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 7, part.movement_number = 'VII',
-    part.name_ko = 'Omaggio a Dallapiccola', part.name_en = 'Sintesi: VII. Omaggio a Dallapiccola',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23922 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:d92136f6-4ba7-48db-a0a5-7a79eace536d' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:d92136f6-4ba7-48db-a0a5-7a79eace536d', 7, 'VII', 'Omaggio a Dallapiccola', 'Sintesi: VII. Omaggio a Dallapiccola', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23922 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d92136f6-4ba7-48db-a0a5-7a79eace536d'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 8, part.movement_number = 'VIII',
-    part.name_ko = 'Omaggio a Petrassi', part.name_en = 'Sintesi: VIII. Omaggio a Petrassi',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23922 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:ae9a2e16-774a-4e88-a31d-a241d52453b0' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:ae9a2e16-774a-4e88-a31d-a241d52453b0', 8, 'VIII', 'Omaggio a Petrassi', 'Sintesi: VIII. Omaggio a Petrassi', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23922 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ae9a2e16-774a-4e88-a31d-a241d52453b0'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 9, part.movement_number = 'IX',
-    part.name_ko = 'Ostinato', part.name_en = 'Sintesi: IX. Ostinato',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23922 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:0de45242-1e17-49ee-8333-eaf1732e2426' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:0de45242-1e17-49ee-8333-eaf1732e2426', 9, 'IX', 'Ostinato', 'Sintesi: IX. Ostinato', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23922 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0de45242-1e17-49ee-8333-eaf1732e2426'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 10, part.movement_number = 'X',
-    part.name_ko = 'Toccata', part.name_en = 'Sintesi: X. Toccata',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 23922 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:23b04608-a1ba-4c0b-b8dd-6d3714d83285' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:23b04608-a1ba-4c0b-b8dd-6d3714d83285', 10, 'X', 'Toccata', 'Sintesi: X. Toccata', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 23922 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:23b04608-a1ba-4c0b-b8dd-6d3714d83285'
-);
-
-
--- None Suite agreste
-
-UPDATE pieces piece
-SET piece.title = 'Suite agreste', piece.title_en = 'Suite agreste',
-    piece.type = 'album', piece.opus_number = NULL,
-    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
-    piece.composition_year = COALESCE(NULL, piece.composition_year),
-    piece.editor_locked = 1
-WHERE piece.id = 25183 AND piece.composer_id = 386
-  AND piece.origin = 'seed' AND piece.editor_locked = 0;
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 1, part.movement_number = 'I',
-    part.name_ko = 'Passeggiata nel bosco', part.name_en = 'Suite agreste: I. Passeggiata nel bosco',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 25183 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:cec29378-ec47-4b5f-8263-b1df1e5eefae' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:cec29378-ec47-4b5f-8263-b1df1e5eefae', 1, 'I', 'Passeggiata nel bosco', 'Suite agreste: I. Passeggiata nel bosco', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 25183 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cec29378-ec47-4b5f-8263-b1df1e5eefae'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 2, part.movement_number = 'II',
-    part.name_ko = 'Danza di contadini', part.name_en = 'Suite agreste: II. Danza di contadini',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 25183 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:05adecda-4449-41f3-a66e-567c7c46ce4e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:05adecda-4449-41f3-a66e-567c7c46ce4e', 2, 'II', 'Danza di contadini', 'Suite agreste: II. Danza di contadini', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 25183 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:05adecda-4449-41f3-a66e-567c7c46ce4e'
-);
-
-UPDATE piece_parts part
-JOIN pieces p ON p.id = part.piece_id
-
-SET part.parent_part_id = NULL,
-    part.linked_piece_id = NULL,
-    part.sequence_number = 3, part.movement_number = 'III',
-    part.name_ko = 'Corse sui prati', part.name_en = 'Suite agreste: III. Corse sui prati',
-    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
-WHERE p.id = 25183 AND p.composer_id = 386 AND part.part_key = 'musicbrainz:3ae9c65e-8284-4e74-a9a6-879bf536387c' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
-
-INSERT INTO piece_parts
-    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
-SELECT p.id, NULL, NULL, 'musicbrainz:3ae9c65e-8284-4e74-a9a6-879bf536387c', 3, 'III', 'Corse sui prati', 'Suite agreste: III. Corse sui prati', 'EDITOR_REVIEWED', 'manual', 1
-FROM pieces p
-WHERE p.id = 25183 AND p.composer_id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM piece_parts existing
-    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3ae9c65e-8284-4e74-a9a6-879bf536387c'
-);
-
-
--- None Studio da concerto
-
-INSERT INTO pieces
-    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, 'Studio da concerto', 'Studio da concerto', 'song', NULL, NULL, NULL, NULL, 'manual', 1
-FROM composers c
-WHERE c.id = 386
-AND NOT EXISTS (
-    SELECT 1 FROM pieces existing
-    WHERE existing.composer_id = c.id AND existing.title = 'Studio da concerto'
-)
-AND NOT EXISTS (
-    SELECT 1 FROM piece_identifiers taken
-    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '7950dfbe-04ad-42ca-8cc5-06a53864948e'
-);
-
-INSERT INTO piece_identifiers (piece_id, namespace, external_id)
-SELECT p.id, 'musicbrainz_work', '7950dfbe-04ad-42ca-8cc5-06a53864948e'
-FROM pieces p
-WHERE p.composer_id = 386 AND p.title = 'Studio da concerto' AND p.origin = 'manual'
-AND NOT EXISTS (
-    SELECT 1 FROM piece_identifiers taken
-    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '7950dfbe-04ad-42ca-8cc5-06a53864948e'
-);
-
--- 숨길 seed 작품 없음
 
 -- ===== Geoffrey Bush (composer_id 387) =====
 -- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 15개(묶음 5, 다악장 3, 낱곡 7),
@@ -6128,6 +4194,1960 @@ WHERE p.id = 25103 AND p.composer_id = 425
 AND NOT EXISTS (
     SELECT 1 FROM piece_parts existing
     WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:64fcf069-9d23-4850-bea4-94333a3db486'
+);
+
+-- 숨길 seed 작품 없음
+
+-- ===== Mieko Shiomi (composer_id 428) =====
+-- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 3개(묶음 1, 다악장 0, 낱곡 2),
+-- 새 작품 0개, part 80개, 그 아래 0개.
+-- seed 3개 중 3개를 작품·part 에 잇고, 0개를 숨기고, 0개는 그대로 둔다.
+
+-- None A Celestial Tune by 108 Glass Marbles
+
+UPDATE pieces piece
+SET piece.title = 'A Celestial Tune by 108 Glass Marbles', piece.title_en = 'A Celestial Tune by 108 Glass Marbles',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 25571 AND piece.composer_id = 428
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None Boundary Music
+
+UPDATE pieces piece
+SET piece.title = 'Boundary Music', piece.title_en = 'Boundary Music',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 24554 AND piece.composer_id = 428
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None Fluxus Suite
+
+UPDATE pieces piece
+SET piece.title = 'Fluxus Suite', piece.title_en = 'Fluxus Suite',
+    piece.type = 'album', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 24261 AND piece.composer_id = 428
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 1, part.movement_number = NULL,
+    part.name_ko = 'Ludwig Gosewitz', part.name_en = 'Fluxus Suite: Ludwig Gosewitz',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:06aed801-0f6b-4538-8df4-9d648c1f8c7b' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:06aed801-0f6b-4538-8df4-9d648c1f8c7b', 1, NULL, 'Ludwig Gosewitz', 'Fluxus Suite: Ludwig Gosewitz', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:06aed801-0f6b-4538-8df4-9d648c1f8c7b'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 2, part.movement_number = NULL,
+    part.name_ko = 'Pauline Oliveros', part.name_en = 'Fluxus Suite: Pauline Oliveros',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:09bce5b3-2406-4f34-84dd-6f9573a1f6d9' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:09bce5b3-2406-4f34-84dd-6f9573a1f6d9', 2, NULL, 'Pauline Oliveros', 'Fluxus Suite: Pauline Oliveros', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:09bce5b3-2406-4f34-84dd-6f9573a1f6d9'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 3, part.movement_number = NULL,
+    part.name_ko = 'Mieko Shiomi', part.name_en = 'Fluxus Suite: Mieko Shiomi',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:18874eb7-5736-46e8-8975-540ceffe56a2' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:18874eb7-5736-46e8-8975-540ceffe56a2', 3, NULL, 'Mieko Shiomi', 'Fluxus Suite: Mieko Shiomi', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:18874eb7-5736-46e8-8975-540ceffe56a2'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 4, part.movement_number = NULL,
+    part.name_ko = 'Tomas Schmit', part.name_en = 'Fluxus Suite: Tomas Schmit',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:19f0e1c7-2f18-438b-87fb-698cbfb21219' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:19f0e1c7-2f18-438b-87fb-698cbfb21219', 4, NULL, 'Tomas Schmit', 'Fluxus Suite: Tomas Schmit', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:19f0e1c7-2f18-438b-87fb-698cbfb21219'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 5, part.movement_number = NULL,
+    part.name_ko = 'Giuseppe Chiari', part.name_en = 'Fluxus Suite: Giuseppe Chiari',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:1f1bd3bc-7884-439a-8857-7a219e4642a6' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:1f1bd3bc-7884-439a-8857-7a219e4642a6', 5, NULL, 'Giuseppe Chiari', 'Fluxus Suite: Giuseppe Chiari', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:1f1bd3bc-7884-439a-8857-7a219e4642a6'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 6, part.movement_number = NULL,
+    part.name_ko = 'Armin Hundertmark', part.name_en = 'Fluxus Suite: Armin Hundertmark',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:277e81c6-0b49-4736-869f-0153efb0c782' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:277e81c6-0b49-4736-869f-0153efb0c782', 6, NULL, 'Armin Hundertmark', 'Fluxus Suite: Armin Hundertmark', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:277e81c6-0b49-4736-869f-0153efb0c782'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 7, part.movement_number = NULL,
+    part.name_ko = 'Robert Watts', part.name_en = 'Fluxus Suite: Robert Watts',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:2aaf9438-e88d-4df5-98e0-f4a4ec572af2' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:2aaf9438-e88d-4df5-98e0-f4a4ec572af2', 7, NULL, 'Robert Watts', 'Fluxus Suite: Robert Watts', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2aaf9438-e88d-4df5-98e0-f4a4ec572af2'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 8, part.movement_number = NULL,
+    part.name_ko = 'Gilbert Silverman', part.name_en = 'Fluxus Suite: Gilbert Silverman',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:2d4dbe42-88d1-4d65-865d-c69b803973d2' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:2d4dbe42-88d1-4d65-865d-c69b803973d2', 8, NULL, 'Gilbert Silverman', 'Fluxus Suite: Gilbert Silverman', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:2d4dbe42-88d1-4d65-865d-c69b803973d2'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 9, part.movement_number = NULL,
+    part.name_ko = 'Hermann Nitsch', part.name_en = 'Fluxus Suite: Hermann Nitsch',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:337dbc8e-8dc7-4b7f-944c-4d221f7d56b2' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:337dbc8e-8dc7-4b7f-944c-4d221f7d56b2', 9, NULL, 'Hermann Nitsch', 'Fluxus Suite: Hermann Nitsch', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:337dbc8e-8dc7-4b7f-944c-4d221f7d56b2'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 10, part.movement_number = NULL,
+    part.name_ko = 'Harry Ruhé', part.name_en = 'Fluxus Suite: Harry Ruhé',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:352157ba-407f-47fa-b0dd-317bac7e1108' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:352157ba-407f-47fa-b0dd-317bac7e1108', 10, NULL, 'Harry Ruhé', 'Fluxus Suite: Harry Ruhé', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:352157ba-407f-47fa-b0dd-317bac7e1108'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 11, part.movement_number = NULL,
+    part.name_ko = 'Serge Oldenbourg', part.name_en = 'Fluxus Suite: Serge Oldenbourg',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:397d9bd9-d523-4938-a442-d256459efc26' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:397d9bd9-d523-4938-a442-d256459efc26', 11, NULL, 'Serge Oldenbourg', 'Fluxus Suite: Serge Oldenbourg', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:397d9bd9-d523-4938-a442-d256459efc26'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 12, part.movement_number = NULL,
+    part.name_ko = 'Shigeko Kubota', part.name_en = 'Fluxus Suite: Shigeko Kubota',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:3b6f2ac7-4414-43c3-8fd1-dea7376adeb4' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:3b6f2ac7-4414-43c3-8fd1-dea7376adeb4', 12, NULL, 'Shigeko Kubota', 'Fluxus Suite: Shigeko Kubota', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3b6f2ac7-4414-43c3-8fd1-dea7376adeb4'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 13, part.movement_number = NULL,
+    part.name_ko = 'Dietrich Albrecht', part.name_en = 'Fluxus Suite: Dietrich Albrecht',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:3c043eb0-51c6-4163-a25a-eea63f940723' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:3c043eb0-51c6-4163-a25a-eea63f940723', 13, NULL, 'Dietrich Albrecht', 'Fluxus Suite: Dietrich Albrecht', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3c043eb0-51c6-4163-a25a-eea63f940723'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 14, part.movement_number = NULL,
+    part.name_ko = 'Jackson Mac Low', part.name_en = 'Fluxus Suite: Jackson Mac Low',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:3fea42fd-fe1d-4b0f-85bf-eef947e4a788' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:3fea42fd-fe1d-4b0f-85bf-eef947e4a788', 14, NULL, 'Jackson Mac Low', 'Fluxus Suite: Jackson Mac Low', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:3fea42fd-fe1d-4b0f-85bf-eef947e4a788'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 15, part.movement_number = NULL,
+    part.name_ko = 'Juan Hidalgo', part.name_en = 'Fluxus Suite: Juan Hidalgo',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:42b0488b-bbdb-41bb-a864-41f6df2344ac' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:42b0488b-bbdb-41bb-a864-41f6df2344ac', 15, NULL, 'Juan Hidalgo', 'Fluxus Suite: Juan Hidalgo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:42b0488b-bbdb-41bb-a864-41f6df2344ac'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 16, part.movement_number = NULL,
+    part.name_ko = 'Daniel Spoerri', part.name_en = 'Fluxus Suite: Daniel Spoerri',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:470d2260-a0f5-4962-84cf-744143245d05' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:470d2260-a0f5-4962-84cf-744143245d05', 16, NULL, 'Daniel Spoerri', 'Fluxus Suite: Daniel Spoerri', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:470d2260-a0f5-4962-84cf-744143245d05'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 17, part.movement_number = NULL,
+    part.name_ko = 'Henry Flynt', part.name_en = 'Fluxus Suite: Henry Flynt',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:49445619-6d11-4422-a844-88518b7bc1c5' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:49445619-6d11-4422-a844-88518b7bc1c5', 17, NULL, 'Henry Flynt', 'Fluxus Suite: Henry Flynt', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:49445619-6d11-4422-a844-88518b7bc1c5'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 18, part.movement_number = NULL,
+    part.name_ko = 'Stanley Brouwn', part.name_en = 'Fluxus Suite: Stanley Brouwn',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:4a10edc4-952e-4db9-a85d-f8334d75f946' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4a10edc4-952e-4db9-a85d-f8334d75f946', 18, NULL, 'Stanley Brouwn', 'Fluxus Suite: Stanley Brouwn', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4a10edc4-952e-4db9-a85d-f8334d75f946'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 19, part.movement_number = NULL,
+    part.name_ko = 'John Cage', part.name_en = 'Fluxus Suite: John Cage',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:52c30738-d696-4227-acd6-7fccc0ba31f8' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:52c30738-d696-4227-acd6-7fccc0ba31f8', 19, NULL, 'John Cage', 'Fluxus Suite: John Cage', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:52c30738-d696-4227-acd6-7fccc0ba31f8'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 20, part.movement_number = NULL,
+    part.name_ko = 'Luigi Bonotto', part.name_en = 'Fluxus Suite: Luigi Bonotto',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:5454e0cc-c6d5-40c4-9895-1560dc7e5295' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5454e0cc-c6d5-40c4-9895-1560dc7e5295', 20, NULL, 'Luigi Bonotto', 'Fluxus Suite: Luigi Bonotto', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5454e0cc-c6d5-40c4-9895-1560dc7e5295'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 21, part.movement_number = NULL,
+    part.name_ko = 'Yasunao Tone', part.name_en = 'Fluxus Suite: Yasunao Tone',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:5a306d2c-4514-4485-92ab-11a16d209b0e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5a306d2c-4514-4485-92ab-11a16d209b0e', 21, NULL, 'Yasunao Tone', 'Fluxus Suite: Yasunao Tone', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5a306d2c-4514-4485-92ab-11a16d209b0e'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 22, part.movement_number = NULL,
+    part.name_ko = 'Emmett Williams', part.name_en = 'Fluxus Suite: Emmett Williams',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:5ac89cb5-3d6b-4f50-97bd-8a7d27c28eaf' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:5ac89cb5-3d6b-4f50-97bd-8a7d27c28eaf', 22, NULL, 'Emmett Williams', 'Fluxus Suite: Emmett Williams', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:5ac89cb5-3d6b-4f50-97bd-8a7d27c28eaf'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 23, part.movement_number = NULL,
+    part.name_ko = 'Dick Higgins', part.name_en = 'Fluxus Suite: Dick Higgins',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:60d067cb-0a95-4597-8a30-a6b423e65e60' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:60d067cb-0a95-4597-8a30-a6b423e65e60', 23, NULL, 'Dick Higgins', 'Fluxus Suite: Dick Higgins', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:60d067cb-0a95-4597-8a30-a6b423e65e60'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 24, part.movement_number = NULL,
+    part.name_ko = 'Gianni Sassi', part.name_en = 'Fluxus Suite: Gianni Sassi',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:6300ae18-1960-4171-92ff-667f30c03f2e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6300ae18-1960-4171-92ff-667f30c03f2e', 24, NULL, 'Gianni Sassi', 'Fluxus Suite: Gianni Sassi', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6300ae18-1960-4171-92ff-667f30c03f2e'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 25, part.movement_number = NULL,
+    part.name_ko = 'Davi Det Hompson', part.name_en = 'Fluxus Suite: Davi Det Hompson',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:64f3542e-7f4f-4d15-8a41-238985fdb4d0' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:64f3542e-7f4f-4d15-8a41-238985fdb4d0', 25, NULL, 'Davi Det Hompson', 'Fluxus Suite: Davi Det Hompson', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:64f3542e-7f4f-4d15-8a41-238985fdb4d0'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 26, part.movement_number = NULL,
+    part.name_ko = 'Yoshimasa Wada', part.name_en = 'Fluxus Suite: Yoshimasa Wada',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:666947ee-2644-4e4e-9f9f-08ff33d73784' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:666947ee-2644-4e4e-9f9f-08ff33d73784', 26, NULL, 'Yoshimasa Wada', 'Fluxus Suite: Yoshimasa Wada', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:666947ee-2644-4e4e-9f9f-08ff33d73784'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 27, part.movement_number = NULL,
+    part.name_ko = 'Gianni-Emilio Simonetti', part.name_en = 'Fluxus Suite: Gianni-Emilio Simonetti',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:6855ba2f-ae5a-4835-849d-4dd52a9dd4be' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6855ba2f-ae5a-4835-849d-4dd52a9dd4be', 27, NULL, 'Gianni-Emilio Simonetti', 'Fluxus Suite: Gianni-Emilio Simonetti', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6855ba2f-ae5a-4835-849d-4dd52a9dd4be'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 28, part.movement_number = NULL,
+    part.name_ko = 'Geoffrey Hendricks', part.name_en = 'Fluxus Suite: Geoffrey Hendricks',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:6a3cb9b9-49b1-4e8e-9abb-1bb7e644b24b' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6a3cb9b9-49b1-4e8e-9abb-1bb7e644b24b', 28, NULL, 'Geoffrey Hendricks', 'Fluxus Suite: Geoffrey Hendricks', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6a3cb9b9-49b1-4e8e-9abb-1bb7e644b24b'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 29, part.movement_number = NULL,
+    part.name_ko = 'Joseph Beuys', part.name_en = 'Fluxus Suite: Joseph Beuys',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:6f5cc1dc-80a1-40a7-aa5a-969347d2b941' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:6f5cc1dc-80a1-40a7-aa5a-969347d2b941', 29, NULL, 'Joseph Beuys', 'Fluxus Suite: Joseph Beuys', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:6f5cc1dc-80a1-40a7-aa5a-969347d2b941'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 30, part.movement_number = NULL,
+    part.name_ko = 'George Maciunas (A) (B)', part.name_en = 'Fluxus Suite: George Maciunas (A) (B)',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:710ed1c4-f16c-4105-bc30-9cf94b88ba81' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:710ed1c4-f16c-4105-bc30-9cf94b88ba81', 30, NULL, 'George Maciunas (A) (B)', 'Fluxus Suite: George Maciunas (A) (B)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:710ed1c4-f16c-4105-bc30-9cf94b88ba81'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 31, part.movement_number = NULL,
+    part.name_ko = 'Marian Zazeela', part.name_en = 'Fluxus Suite: Marian Zazeela',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:737f5587-5b02-47bf-816a-eb9b6ddb036c' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:737f5587-5b02-47bf-816a-eb9b6ddb036c', 31, NULL, 'Marian Zazeela', 'Fluxus Suite: Marian Zazeela', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:737f5587-5b02-47bf-816a-eb9b6ddb036c'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 32, part.movement_number = NULL,
+    part.name_ko = 'Philip Corner', part.name_en = 'Fluxus Suite: Philip Corner',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:74778ec2-9a7b-456c-a567-ebb09be4f8dd' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:74778ec2-9a7b-456c-a567-ebb09be4f8dd', 32, NULL, 'Philip Corner', 'Fluxus Suite: Philip Corner', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:74778ec2-9a7b-456c-a567-ebb09be4f8dd'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 33, part.movement_number = NULL,
+    part.name_ko = 'Alice Hutchins', part.name_en = 'Fluxus Suite: Alice Hutchins',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:7c276230-94bf-4fa8-a808-3ea20005c1c0' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7c276230-94bf-4fa8-a808-3ea20005c1c0', 33, NULL, 'Alice Hutchins', 'Fluxus Suite: Alice Hutchins', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7c276230-94bf-4fa8-a808-3ea20005c1c0'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 34, part.movement_number = NULL,
+    part.name_ko = 'Walter Marchetti', part.name_en = 'Fluxus Suite: Walter Marchetti',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:7d546ff3-aae5-4c4a-9bdd-2ef79b743c90' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7d546ff3-aae5-4c4a-9bdd-2ef79b743c90', 34, NULL, 'Walter Marchetti', 'Fluxus Suite: Walter Marchetti', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7d546ff3-aae5-4c4a-9bdd-2ef79b743c90'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 35, part.movement_number = NULL,
+    part.name_ko = 'Henri Chopin', part.name_en = 'Fluxus Suite: Henri Chopin',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:7fe5d3bc-9a1d-487f-a933-8660275ef230' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:7fe5d3bc-9a1d-487f-a933-8660275ef230', 35, NULL, 'Henri Chopin', 'Fluxus Suite: Henri Chopin', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:7fe5d3bc-9a1d-487f-a933-8660275ef230'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 36, part.movement_number = NULL,
+    part.name_ko = 'Willem de Ridder', part.name_en = 'Fluxus Suite: Willem de Ridder',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:81e71cce-b6a7-42cc-ad0a-557f02b43792' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:81e71cce-b6a7-42cc-ad0a-557f02b43792', 36, NULL, 'Willem de Ridder', 'Fluxus Suite: Willem de Ridder', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:81e71cce-b6a7-42cc-ad0a-557f02b43792'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 37, part.movement_number = NULL,
+    part.name_ko = 'Vytautas Landsbergis', part.name_en = 'Fluxus Suite: Vytautas Landsbergis',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:834ddee5-4be7-4058-85dd-ec27799c1f02' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:834ddee5-4be7-4058-85dd-ec27799c1f02', 37, NULL, 'Vytautas Landsbergis', 'Fluxus Suite: Vytautas Landsbergis', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:834ddee5-4be7-4058-85dd-ec27799c1f02'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 38, part.movement_number = NULL,
+    part.name_ko = 'Charlotte Moorman', part.name_en = 'Fluxus Suite: Charlotte Moorman',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:85ca5245-4cf5-4bd7-8e62-46ca92947427' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:85ca5245-4cf5-4bd7-8e62-46ca92947427', 38, NULL, 'Charlotte Moorman', 'Fluxus Suite: Charlotte Moorman', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:85ca5245-4cf5-4bd7-8e62-46ca92947427'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 39, part.movement_number = NULL,
+    part.name_ko = 'Robert Filliou', part.name_en = 'Fluxus Suite: Robert Filliou',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:892980a7-cc2b-4754-a56c-e8ede1df7f87' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:892980a7-cc2b-4754-a56c-e8ede1df7f87', 39, NULL, 'Robert Filliou', 'Fluxus Suite: Robert Filliou', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:892980a7-cc2b-4754-a56c-e8ede1df7f87'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 40, part.movement_number = NULL,
+    part.name_ko = 'George Brecht', part.name_en = 'Fluxus Suite: George Brecht',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:8c90e852-3dad-4559-8164-32256eb3bd2a' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8c90e852-3dad-4559-8164-32256eb3bd2a', 40, NULL, 'George Brecht', 'Fluxus Suite: George Brecht', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8c90e852-3dad-4559-8164-32256eb3bd2a'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 41, part.movement_number = NULL,
+    part.name_ko = 'Jacques Donguy', part.name_en = 'Fluxus Suite: Jacques Donguy',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:8efe0da1-a4a9-4067-a444-2780c7880af3' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:8efe0da1-a4a9-4067-a444-2780c7880af3', 41, NULL, 'Jacques Donguy', 'Fluxus Suite: Jacques Donguy', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:8efe0da1-a4a9-4067-a444-2780c7880af3'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 42, part.movement_number = NULL,
+    part.name_ko = 'René Block', part.name_en = 'Fluxus Suite: René Block',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:90c896a5-a682-4271-b6aa-7f91f768b5bc' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:90c896a5-a682-4271-b6aa-7f91f768b5bc', 42, NULL, 'René Block', 'Fluxus Suite: René Block', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:90c896a5-a682-4271-b6aa-7f91f768b5bc'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 43, part.movement_number = NULL,
+    part.name_ko = 'Bengt af Klintberg', part.name_en = 'Fluxus Suite: Bengt af Klintberg',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:9294b4a6-9b0f-466b-bdff-34284793f7c6' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9294b4a6-9b0f-466b-bdff-34284793f7c6', 43, NULL, 'Bengt af Klintberg', 'Fluxus Suite: Bengt af Klintberg', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9294b4a6-9b0f-466b-bdff-34284793f7c6'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 44, part.movement_number = NULL,
+    part.name_ko = 'Jonas Mekas', part.name_en = 'Fluxus Suite: Jonas Mekas',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:937258aa-a446-4c96-93a0-623bcea9edb0' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:937258aa-a446-4c96-93a0-623bcea9edb0', 44, NULL, 'Jonas Mekas', 'Fluxus Suite: Jonas Mekas', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:937258aa-a446-4c96-93a0-623bcea9edb0'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 45, part.movement_number = NULL,
+    part.name_ko = 'Ben Patterson', part.name_en = 'Fluxus Suite: Ben Patterson',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:947c6cb5-e9e9-4a96-97aa-a23e3427ee80' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:947c6cb5-e9e9-4a96-97aa-a23e3427ee80', 45, NULL, 'Ben Patterson', 'Fluxus Suite: Ben Patterson', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:947c6cb5-e9e9-4a96-97aa-a23e3427ee80'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 46, part.movement_number = NULL,
+    part.name_ko = 'Milan Knizak', part.name_en = 'Fluxus Suite: Milan Knizak',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:94ffc680-4923-415f-ae5c-2219164a21e9' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:94ffc680-4923-415f-ae5c-2219164a21e9', 46, NULL, 'Milan Knizak', 'Fluxus Suite: Milan Knizak', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:94ffc680-4923-415f-ae5c-2219164a21e9'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 47, part.movement_number = NULL,
+    part.name_ko = 'Allen Ginsberg', part.name_en = 'Fluxus Suite: Allen Ginsberg',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:9601b5ea-9d5c-412f-8c08-c14a14724b95' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9601b5ea-9d5c-412f-8c08-c14a14724b95', 47, NULL, 'Allen Ginsberg', 'Fluxus Suite: Allen Ginsberg', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9601b5ea-9d5c-412f-8c08-c14a14724b95'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 48, part.movement_number = NULL,
+    part.name_ko = 'Takako Saito', part.name_en = 'Fluxus Suite: Takako Saito',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:9a991035-c13e-41c7-88e9-baf7b768d367' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9a991035-c13e-41c7-88e9-baf7b768d367', 48, NULL, 'Takako Saito', 'Fluxus Suite: Takako Saito', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9a991035-c13e-41c7-88e9-baf7b768d367'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 49, part.movement_number = NULL,
+    part.name_ko = 'Ben Vautier', part.name_en = 'Fluxus Suite: Ben Vautier',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:9b0ef7fd-7957-4c06-ac1f-4a2b64fd01b5' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9b0ef7fd-7957-4c06-ac1f-4a2b64fd01b5', 49, NULL, 'Ben Vautier', 'Fluxus Suite: Ben Vautier', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9b0ef7fd-7957-4c06-ac1f-4a2b64fd01b5'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 50, part.movement_number = NULL,
+    part.name_ko = 'Carolee Schneemann', part.name_en = 'Fluxus Suite: Carolee Schneemann',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:9b2e8c4c-618d-4ddf-a716-00d32f45772f' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9b2e8c4c-618d-4ddf-a716-00d32f45772f', 50, NULL, 'Carolee Schneemann', 'Fluxus Suite: Carolee Schneemann', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9b2e8c4c-618d-4ddf-a716-00d32f45772f'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 51, part.movement_number = NULL,
+    part.name_ko = 'Jon Hendricks', part.name_en = 'Fluxus Suite: Jon Hendricks',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:9d797acd-e9ba-4e0b-a6fd-d4416426f149' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9d797acd-e9ba-4e0b-a6fd-d4416426f149', 51, NULL, 'Jon Hendricks', 'Fluxus Suite: Jon Hendricks', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9d797acd-e9ba-4e0b-a6fd-d4416426f149'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 52, part.movement_number = NULL,
+    part.name_ko = 'Arthur Koepcke', part.name_en = 'Fluxus Suite: Arthur Koepcke',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:9eae5778-c184-4a49-9d3b-eff031805e36' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9eae5778-c184-4a49-9d3b-eff031805e36', 52, NULL, 'Arthur Koepcke', 'Fluxus Suite: Arthur Koepcke', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9eae5778-c184-4a49-9d3b-eff031805e36'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 53, part.movement_number = NULL,
+    part.name_ko = 'Gerhard Rühm', part.name_en = 'Fluxus Suite: Gerhard Rühm',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:9f3e1c43-80dc-4bde-aa12-551d93ea95ad' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9f3e1c43-80dc-4bde-aa12-551d93ea95ad', 53, NULL, 'Gerhard Rühm', 'Fluxus Suite: Gerhard Rühm', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9f3e1c43-80dc-4bde-aa12-551d93ea95ad'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 54, part.movement_number = NULL,
+    part.name_ko = 'Yoko Ono (Silence)', part.name_en = 'Fluxus Suite: Yoko Ono (Silence)',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:a11a8f5b-30b9-4ac0-a9de-e856ae37fbca' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a11a8f5b-30b9-4ac0-a9de-e856ae37fbca', 54, NULL, 'Yoko Ono (Silence)', 'Fluxus Suite: Yoko Ono (Silence)', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a11a8f5b-30b9-4ac0-a9de-e856ae37fbca'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 55, part.movement_number = NULL,
+    part.name_ko = 'Jean Dupuy', part.name_en = 'Fluxus Suite: Jean Dupuy',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:ac185772-e6c7-4a40-a7ef-baf67f44f75f' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ac185772-e6c7-4a40-a7ef-baf67f44f75f', 55, NULL, 'Jean Dupuy', 'Fluxus Suite: Jean Dupuy', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ac185772-e6c7-4a40-a7ef-baf67f44f75f'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 56, part.movement_number = NULL,
+    part.name_ko = 'Barbara Moore', part.name_en = 'Fluxus Suite: Barbara Moore',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:b7c9f222-8807-47de-a929-c5bc95b96480' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b7c9f222-8807-47de-a929-c5bc95b96480', 56, NULL, 'Barbara Moore', 'Fluxus Suite: Barbara Moore', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b7c9f222-8807-47de-a929-c5bc95b96480'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 57, part.movement_number = NULL,
+    part.name_ko = 'Wolf Vostell', part.name_en = 'Fluxus Suite: Wolf Vostell',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:b8d8dabe-8d66-4d6c-a243-84dc0dca2839' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b8d8dabe-8d66-4d6c-a243-84dc0dca2839', 57, NULL, 'Wolf Vostell', 'Fluxus Suite: Wolf Vostell', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b8d8dabe-8d66-4d6c-a243-84dc0dca2839'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 58, part.movement_number = NULL,
+    part.name_ko = 'Alison Knowles', part.name_en = 'Fluxus Suite: Alison Knowles',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:b98e6275-b133-4fc9-8499-83267e5bc3f8' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:b98e6275-b133-4fc9-8499-83267e5bc3f8', 58, NULL, 'Alison Knowles', 'Fluxus Suite: Alison Knowles', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:b98e6275-b133-4fc9-8499-83267e5bc3f8'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 59, part.movement_number = NULL,
+    part.name_ko = 'Al Hansen', part.name_en = 'Fluxus Suite: Al Hansen',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:bc59aba7-1f63-4d26-9a49-c77a7acf22ee' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:bc59aba7-1f63-4d26-9a49-c77a7acf22ee', 59, NULL, 'Al Hansen', 'Fluxus Suite: Al Hansen', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bc59aba7-1f63-4d26-9a49-c77a7acf22ee'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 60, part.movement_number = NULL,
+    part.name_ko = 'La Monte Young', part.name_en = 'Fluxus Suite: La Monte Young',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:c22850c0-39ff-493d-b596-12a95c5bde6b' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c22850c0-39ff-493d-b596-12a95c5bde6b', 60, NULL, 'La Monte Young', 'Fluxus Suite: La Monte Young', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c22850c0-39ff-493d-b596-12a95c5bde6b'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 61, part.movement_number = NULL,
+    part.name_ko = 'Henning Christiansen', part.name_en = 'Fluxus Suite: Henning Christiansen',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:c2d52909-0302-4ba1-bd81-db14a26a5630' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c2d52909-0302-4ba1-bd81-db14a26a5630', 61, NULL, 'Henning Christiansen', 'Fluxus Suite: Henning Christiansen', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c2d52909-0302-4ba1-bd81-db14a26a5630'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 62, part.movement_number = NULL,
+    part.name_ko = 'Esther Ferrer', part.name_en = 'Fluxus Suite: Esther Ferrer',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:c334e3f4-2207-461b-907a-47a657af85f8' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c334e3f4-2207-461b-907a-47a657af85f8', 62, NULL, 'Esther Ferrer', 'Fluxus Suite: Esther Ferrer', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c334e3f4-2207-461b-907a-47a657af85f8'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 63, part.movement_number = NULL,
+    part.name_ko = 'Jean Jacques Lebel', part.name_en = 'Fluxus Suite: Jean Jacques Lebel',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:c6cda82f-982d-4ee0-a55b-92ed2e607b08' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:c6cda82f-982d-4ee0-a55b-92ed2e607b08', 63, NULL, 'Jean Jacques Lebel', 'Fluxus Suite: Jean Jacques Lebel', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:c6cda82f-982d-4ee0-a55b-92ed2e607b08'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 64, part.movement_number = NULL,
+    part.name_ko = 'Endre Tót', part.name_en = 'Fluxus Suite: Endre Tót',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:ca0b1f90-a71f-4de7-9353-1691b5552728' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ca0b1f90-a71f-4de7-9353-1691b5552728', 64, NULL, 'Endre Tót', 'Fluxus Suite: Endre Tót', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ca0b1f90-a71f-4de7-9353-1691b5552728'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 65, part.movement_number = NULL,
+    part.name_ko = 'Ken Friedman', part.name_en = 'Fluxus Suite: Ken Friedman',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:cb9a0acb-fd9e-4730-b3ba-4b4fa9fa8811' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:cb9a0acb-fd9e-4730-b3ba-4b4fa9fa8811', 65, NULL, 'Ken Friedman', 'Fluxus Suite: Ken Friedman', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:cb9a0acb-fd9e-4730-b3ba-4b4fa9fa8811'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 66, part.movement_number = NULL,
+    part.name_ko = 'Hanns Sohm', part.name_en = 'Fluxus Suite: Hanns Sohm',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:ce12354a-09fd-49cc-bce0-0d6b16f67e12' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ce12354a-09fd-49cc-bce0-0d6b16f67e12', 66, NULL, 'Hanns Sohm', 'Fluxus Suite: Hanns Sohm', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ce12354a-09fd-49cc-bce0-0d6b16f67e12'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 67, part.movement_number = NULL,
+    part.name_ko = 'Joe Jones', part.name_en = 'Fluxus Suite: Joe Jones',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:d5680dbf-4ffc-46c9-acd3-224ef3e0088c' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d5680dbf-4ffc-46c9-acd3-224ef3e0088c', 67, NULL, 'Joe Jones', 'Fluxus Suite: Joe Jones', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d5680dbf-4ffc-46c9-acd3-224ef3e0088c'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 68, part.movement_number = NULL,
+    part.name_ko = 'Takehisa Kosugi', part.name_en = 'Fluxus Suite: Takehisa Kosugi',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:d8de6f10-aaf1-484e-bf21-9290e0f47a16' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d8de6f10-aaf1-484e-bf21-9290e0f47a16', 68, NULL, 'Takehisa Kosugi', 'Fluxus Suite: Takehisa Kosugi', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d8de6f10-aaf1-484e-bf21-9290e0f47a16'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 69, part.movement_number = NULL,
+    part.name_ko = 'Christo', part.name_en = 'Fluxus Suite: Christo',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:d9326ff3-b09a-4397-914e-024736d7886c' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d9326ff3-b09a-4397-914e-024736d7886c', 69, NULL, 'Christo', 'Fluxus Suite: Christo', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d9326ff3-b09a-4397-914e-024736d7886c'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 70, part.movement_number = NULL,
+    part.name_ko = 'Jean Brown', part.name_en = 'Fluxus Suite: Jean Brown',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:daae62ff-a622-455a-8688-131be52571ce' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:daae62ff-a622-455a-8688-131be52571ce', 70, NULL, 'Jean Brown', 'Fluxus Suite: Jean Brown', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:daae62ff-a622-455a-8688-131be52571ce'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 71, part.movement_number = NULL,
+    part.name_ko = 'Francesco Conz', part.name_en = 'Fluxus Suite: Francesco Conz',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:dce723ee-961a-41a1-b759-3cc437a63d8c' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:dce723ee-961a-41a1-b759-3cc437a63d8c', 71, NULL, 'Francesco Conz', 'Fluxus Suite: Francesco Conz', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:dce723ee-961a-41a1-b759-3cc437a63d8c'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 72, part.movement_number = NULL,
+    part.name_ko = 'Eric Andersen', part.name_en = 'Fluxus Suite: Eric Andersen',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:ddf13fd4-c9df-4768-ac50-5bab8dafcc48' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ddf13fd4-c9df-4768-ac50-5bab8dafcc48', 72, NULL, 'Eric Andersen', 'Fluxus Suite: Eric Andersen', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ddf13fd4-c9df-4768-ac50-5bab8dafcc48'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 73, part.movement_number = NULL,
+    part.name_ko = 'Gino Di Maggio', part.name_en = 'Fluxus Suite: Gino Di Maggio',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:e3769caf-589e-4909-8d33-853788f46efc' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e3769caf-589e-4909-8d33-853788f46efc', 73, NULL, 'Gino Di Maggio', 'Fluxus Suite: Gino Di Maggio', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e3769caf-589e-4909-8d33-853788f46efc'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 74, part.movement_number = NULL,
+    part.name_ko = 'Dieter Roth', part.name_en = 'Fluxus Suite: Dieter Roth',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:e3b1e2a5-f9bc-4c55-a416-4af96a781b85' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:e3b1e2a5-f9bc-4c55-a416-4af96a781b85', 74, NULL, 'Dieter Roth', 'Fluxus Suite: Dieter Roth', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:e3b1e2a5-f9bc-4c55-a416-4af96a781b85'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 75, part.movement_number = NULL,
+    part.name_ko = 'Nam June Paik', part.name_en = 'Fluxus Suite: Nam June Paik',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:ec8cb96b-2e38-4ee8-b80d-403c9169cacd' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:ec8cb96b-2e38-4ee8-b80d-403c9169cacd', 75, NULL, 'Nam June Paik', 'Fluxus Suite: Nam June Paik', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:ec8cb96b-2e38-4ee8-b80d-403c9169cacd'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 76, part.movement_number = NULL,
+    part.name_ko = 'Larry Miller', part.name_en = 'Fluxus Suite: Larry Miller',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:f3b56e49-e54d-4ae0-9378-2f60e6198c48' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:f3b56e49-e54d-4ae0-9378-2f60e6198c48', 76, NULL, 'Larry Miller', 'Fluxus Suite: Larry Miller', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:f3b56e49-e54d-4ae0-9378-2f60e6198c48'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 77, part.movement_number = NULL,
+    part.name_ko = 'Peter Moore', part.name_en = 'Fluxus Suite: Peter Moore',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:fa8712c5-8de6-4244-b500-7a7fababec9f' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:fa8712c5-8de6-4244-b500-7a7fababec9f', 77, NULL, 'Peter Moore', 'Fluxus Suite: Peter Moore', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fa8712c5-8de6-4244-b500-7a7fababec9f'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 78, part.movement_number = NULL,
+    part.name_ko = 'Michael Berger', part.name_en = 'Fluxus Suite: Michael Berger',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:fad44297-0673-4c92-b5d0-3378297c1221' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:fad44297-0673-4c92-b5d0-3378297c1221', 78, NULL, 'Michael Berger', 'Fluxus Suite: Michael Berger', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fad44297-0673-4c92-b5d0-3378297c1221'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 79, part.movement_number = NULL,
+    part.name_ko = 'Allan Kaprow', part.name_en = 'Fluxus Suite: Allan Kaprow',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:fbc1160e-4a5a-4fbd-a54f-49878fde6fba' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:fbc1160e-4a5a-4fbd-a54f-49878fde6fba', 79, NULL, 'Allan Kaprow', 'Fluxus Suite: Allan Kaprow', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fbc1160e-4a5a-4fbd-a54f-49878fde6fba'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 80, part.movement_number = NULL,
+    part.name_ko = 'Ay-O', part.name_en = 'Fluxus Suite: Ay-O',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24261 AND p.composer_id = 428 AND part.part_key = 'musicbrainz:fbdfdd76-e9ff-4994-9d97-7d4a6c8ff908' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:fbdfdd76-e9ff-4994-9d97-7d4a6c8ff908', 80, NULL, 'Ay-O', 'Fluxus Suite: Ay-O', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24261 AND p.composer_id = 428
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:fbdfdd76-e9ff-4994-9d97-7d4a6c8ff908'
+);
+
+-- 숨길 seed 작품 없음
+
+-- ===== Michael Waller (composer_id 429) =====
+-- 작품을 MusicBrainz 작품 구조로 다시 짠다(6차 자동). 작품 11개(묶음 2, 다악장 1, 낱곡 8),
+-- 새 작품 1개, part 10개, 그 아래 0개.
+-- seed 10개 중 10개를 작품·part 에 잇고, 0개를 숨기고, 0개는 그대로 둔다.
+
+-- None Bounding
+
+UPDATE pieces piece
+SET piece.title = 'Bounding', piece.title_en = 'Bounding',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 24729 AND piece.composer_id = 429
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None 디베르티멘토
+
+UPDATE pieces piece
+SET piece.title = '디베르티멘토', piece.title_en = 'Divertimento',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 23781 AND piece.composer_id = 429
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None For Papa
+
+UPDATE pieces piece
+SET piece.title = 'For Papa', piece.title_en = 'For Papa',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 23968 AND piece.composer_id = 429
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None For Pauline
+
+UPDATE pieces piece
+SET piece.title = 'For Pauline', piece.title_en = 'For Pauline',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 25284 AND piece.composer_id = 429
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None Jennifer
+
+UPDATE pieces piece
+SET piece.title = 'Jennifer', piece.title_en = 'Jennifer',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 23422 AND piece.composer_id = 429
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None 녹턴
+
+UPDATE pieces piece
+SET piece.title = '녹턴', piece.title_en = 'Nocturnes',
+    piece.type = 'album', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 23800 AND piece.composer_id = 429
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 1, part.movement_number = NULL,
+    part.name_ko = 'No. 1', part.name_en = 'Nocturnes: No. 1',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 23800 AND p.composer_id = 429 AND part.part_key = 'musicbrainz:9b057fd2-2052-499e-9e63-cd4b5b2feed2' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:9b057fd2-2052-499e-9e63-cd4b5b2feed2', 1, NULL, 'No. 1', 'Nocturnes: No. 1', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 23800 AND p.composer_id = 429
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:9b057fd2-2052-499e-9e63-cd4b5b2feed2'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 2, part.movement_number = NULL,
+    part.name_ko = 'No. 4', part.name_en = 'Nocturnes: No. 4',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 23800 AND p.composer_id = 429 AND part.part_key = 'musicbrainz:a555ce6e-1487-4438-af81-03c05c02d41c' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:a555ce6e-1487-4438-af81-03c05c02d41c', 2, NULL, 'No. 4', 'Nocturnes: No. 4', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 23800 AND p.composer_id = 429
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:a555ce6e-1487-4438-af81-03c05c02d41c'
+);
+
+
+-- None Return From L.A.
+
+UPDATE pieces piece
+SET piece.title = 'Return From L.A.', piece.title_en = 'Return From L.A.',
+    piece.type = 'album', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 24782 AND piece.composer_id = 429
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 1, part.movement_number = NULL,
+    part.name_ko = 'I', part.name_en = 'Return From L.A.: I',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24782 AND p.composer_id = 429 AND part.part_key = 'musicbrainz:26af6521-2050-47c3-a093-00725c89ebf8' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:26af6521-2050-47c3-a093-00725c89ebf8', 1, NULL, 'I', 'Return From L.A.: I', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24782 AND p.composer_id = 429
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:26af6521-2050-47c3-a093-00725c89ebf8'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 2, part.movement_number = NULL,
+    part.name_ko = 'II', part.name_en = 'Return From L.A.: II',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24782 AND p.composer_id = 429 AND part.part_key = 'musicbrainz:0d6bda47-590a-4a5e-9459-648f906c766e' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:0d6bda47-590a-4a5e-9459-648f906c766e', 2, NULL, 'II', 'Return From L.A.: II', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24782 AND p.composer_id = 429
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:0d6bda47-590a-4a5e-9459-648f906c766e'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 3, part.movement_number = NULL,
+    part.name_ko = 'III', part.name_en = 'Return From L.A.: III',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24782 AND p.composer_id = 429 AND part.part_key = 'musicbrainz:514b74b4-2f2c-4245-8dad-c57e9e3fcb94' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:514b74b4-2f2c-4245-8dad-c57e9e3fcb94', 3, NULL, 'III', 'Return From L.A.: III', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24782 AND p.composer_id = 429
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:514b74b4-2f2c-4245-8dad-c57e9e3fcb94'
+);
+
+UPDATE piece_parts part
+JOIN pieces p ON p.id = part.piece_id
+
+SET part.parent_part_id = NULL,
+    part.linked_piece_id = NULL,
+    part.sequence_number = 4, part.movement_number = NULL,
+    part.name_ko = 'IV', part.name_en = 'Return From L.A.: IV',
+    part.editorial_status = 'EDITOR_REVIEWED', part.editor_locked = 1
+WHERE p.id = 24782 AND p.composer_id = 429 AND part.part_key = 'musicbrainz:49414d47-fd24-44ff-8629-b460b5fa5ab4' AND (part.editor_locked = 0 OR (part.origin = 'manual' AND part.editorial_status = 'FACTS_VERIFIED'));
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:49414d47-fd24-44ff-8629-b460b5fa5ab4', 4, NULL, 'IV', 'Return From L.A.: IV', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.id = 24782 AND p.composer_id = 429
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:49414d47-fd24-44ff-8629-b460b5fa5ab4'
+);
+
+
+-- None Roman
+
+UPDATE pieces piece
+SET piece.title = 'Roman', piece.title_en = 'Roman',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 24707 AND piece.composer_id = 429
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None Stolen Moments
+
+UPDATE pieces piece
+SET piece.title = 'Stolen Moments', piece.title_en = 'Stolen Moments',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 25014 AND piece.composer_id = 429
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None Vibrafono Studio
+
+UPDATE pieces piece
+SET piece.title = 'Vibrafono Studio', piece.title_en = 'Vibrafono Studio',
+    piece.type = 'song', piece.opus_number = NULL,
+    piece.catalogue_system = NULL, piece.catalogue_number = NULL,
+    piece.composition_year = COALESCE(NULL, piece.composition_year),
+    piece.editor_locked = 1
+WHERE piece.id = 24157 AND piece.composer_id = 429
+  AND piece.origin = 'seed' AND piece.editor_locked = 0;
+
+
+-- None Love
+
+INSERT INTO pieces
+    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
+SELECT c.id, 'Love', 'Love', 'album', NULL, NULL, NULL, NULL, 'manual', 1
+FROM composers c
+WHERE c.id = 429
+AND NOT EXISTS (
+    SELECT 1 FROM pieces existing
+    WHERE existing.composer_id = c.id AND existing.title = 'Love'
+)
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5e17532f-5b4c-4f21-9886-c7df3a1eb040'
+);
+
+INSERT INTO piece_identifiers (piece_id, namespace, external_id)
+SELECT p.id, 'musicbrainz_work', '5e17532f-5b4c-4f21-9886-c7df3a1eb040'
+FROM pieces p
+WHERE p.composer_id = 429 AND p.title = 'Love' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_identifiers taken
+    WHERE taken.namespace = 'musicbrainz_work' AND taken.external_id = '5e17532f-5b4c-4f21-9886-c7df3a1eb040'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d080f381-01f3-42ed-a95f-8507347b6a2e', 1, 'I', 'Valentine', 'Love: I. Valentine', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 429 AND p.title = 'Love' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d080f381-01f3-42ed-a95f-8507347b6a2e'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:d182f9f6-6778-4b28-a126-9b83477369cc', 2, 'II', 'Baby’s Return', 'Love: II. Baby’s Return', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 429 AND p.title = 'Love' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:d182f9f6-6778-4b28-a126-9b83477369cc'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:4a26bda1-60e7-4242-87eb-1ba8dae2aafb', 3, 'III', 'Images', 'Love: III. Images', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 429 AND p.title = 'Love' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:4a26bda1-60e7-4242-87eb-1ba8dae2aafb'
+);
+
+INSERT INTO piece_parts
+    (piece_id, parent_part_id, linked_piece_id, part_key, sequence_number, movement_number, name_ko, name_en, editorial_status, origin, editor_locked)
+SELECT p.id, NULL, NULL, 'musicbrainz:bb175adb-fc90-49b8-a543-411379a360d3', 4, 'IV', 'Sizing', 'Love: IV. Sizing', 'EDITOR_REVIEWED', 'manual', 1
+FROM pieces p
+WHERE p.composer_id = 429 AND p.title = 'Love' AND p.origin = 'manual'
+AND NOT EXISTS (
+    SELECT 1 FROM piece_parts existing
+    WHERE existing.piece_id = p.id AND existing.part_key = 'musicbrainz:bb175adb-fc90-49b8-a543-411379a360d3'
 );
 
 -- 숨길 seed 작품 없음

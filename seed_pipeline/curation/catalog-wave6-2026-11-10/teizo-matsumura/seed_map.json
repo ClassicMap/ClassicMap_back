@@ -18,7 +18,7 @@
    "26257d80-cbe3-4488-b900-56db6eaf0713"
   ],
   "mapping": "work",
-  "key": "teizo-matsumura-e4da10fb",
+  "key": "teizo-matsumura-26257d80",
   "path": null,
   "reason": null,
   "note": null
@@ -29,10 +29,10 @@
   "mbids": [
    "e4da10fb-13ee-4c3e-a7ef-16ce06df9e24"
   ],
-  "mapping": "unmatched",
-  "key": null,
+  "mapping": "work",
+  "key": "teizo-matsumura-e4da10fb",
   "path": null,
-  "reason": "duplicate",
-  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+  "reason": null,
+  "note": null
  }
 ]
