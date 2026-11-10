@@ -1,0 +1,99 @@
+[
+ {
+  "key": "valborg-aulin-7b1c4e2a",
+  "kind": "single",
+  "catalogue": "Op. 29",
+  "catalogueAlt": null,
+  "titleKo": "Feuille d'album",
+  "titleEn": "Feuille d'album, op. 29",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "7b1c4e2a-1e2f-4622-bcdd-c617cebffd46",
+  "mbTitle": "Feuille d'album, op. 29",
+  "existingPieceId": 18036,
+  "parts": []
+ },
+ {
+  "key": "valborg-aulin-beee2d73",
+  "kind": "multi_movement",
+  "catalogue": "Op. 15",
+  "catalogueAlt": null,
+  "titleKo": "Tableaux Parisiens",
+  "titleEn": "Tableaux Parisiens, op. 15",
+  "year": null,
+  "yearText": null,
+  "genre": "suite",
+  "authenticity": "authentic",
+  "mbid": "beee2d73-1acd-47e0-8c60-574f663c41e7",
+  "mbTitle": "Tableaux Parisiens, op. 15",
+  "existingPieceId": 19095,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "3349eeb2-3309-4913-b6bb-0e2d00883d6c",
+    "mbTitle": "Tableaux Parisiens, op. 15: I. Vie bruyante dans le lointain ou entend sonner les carillons qui se mêlent avec les sons d'un orgue",
+    "nameKo": "Vie bruyante dans le lointain ou entend sonner les carillons qui se mêlent avec les sons d'un orgue",
+    "nameEn": "Tableaux Parisiens, op. 15: I. Vie bruyante dans le lointain ou entend sonner les carillons qui se mêlent avec les sons d'un orgue",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "21af19b9-7130-41c8-84b5-4c148a56a51e",
+    "mbTitle": "Tableaux Parisiens, op. 15: II. Dans la calme de nuit",
+    "nameKo": "Dans la calme de nuit",
+    "nameEn": "Tableaux Parisiens, op. 15: II. Dans la calme de nuit",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "38378e0f-b5cd-4687-809e-f4ad8dc58312",
+    "mbTitle": "Tableaux Parisiens, op. 15: III. Scène de bal",
+    "nameKo": "Scène de bal",
+    "nameEn": "Tableaux Parisiens, op. 15: III. Scène de bal",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "f5938f59-c583-43f0-a42b-ca790c2d6d8c",
+    "mbTitle": "Tableaux Parisiens, op. 15: IV. Un soir de fête à Trocadero",
+    "nameKo": "Un soir de fête à Trocadero",
+    "nameEn": "Tableaux Parisiens, op. 15: IV. Un soir de fête à Trocadero",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "valborg-aulin-4fc4ed9c",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Valse élégiaque",
+  "titleEn": "Valse élégiaque",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "4fc4ed9c-ea34-4383-95c7-672a14eb2b68",
+  "mbTitle": "Valse élégiaque",
+  "existingPieceId": 17314,
+  "parts": []
+ }
+]

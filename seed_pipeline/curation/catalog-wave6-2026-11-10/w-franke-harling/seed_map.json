@@ -1,0 +1,38 @@
+[
+ {
+  "pieceId": 15917,
+  "title": "Where was I?",
+  "mbids": [
+   "a2dfd8a1-255e-4e54-8a9a-f7298a220b97"
+  ],
+  "mapping": "work",
+  "key": "w-franke-harling-a2dfd8a1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18086,
+  "title": "Sing, You Sinners",
+  "mbids": [
+   "7dec35dc-5f51-4ef4-876e-ae7df0d9678c"
+  ],
+  "mapping": "work",
+  "key": "w-franke-harling-7dec35dc",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18342,
+  "title": "The Corps",
+  "mbids": [
+   "8f42023b-5fa2-41fe-aad3-ef09001ce8ea"
+  ],
+  "mapping": "work",
+  "key": "w-franke-harling-8f42023b",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

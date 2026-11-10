@@ -1,0 +1,55 @@
+[
+ {
+  "key": "erling-brene-3db35237",
+  "kind": "multi_movement",
+  "catalogue": "Op. 20",
+  "catalogueAlt": null,
+  "titleKo": "Concerto senza solennità",
+  "titleEn": "Concerto senza solennità, op. 20",
+  "year": null,
+  "yearText": null,
+  "genre": "concerto",
+  "authenticity": "authentic",
+  "mbid": "3db35237-3155-4852-8f15-247bcfaa5254",
+  "mbTitle": "Concerto senza solennità, op. 20",
+  "existingPieceId": 23865,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "9759b109-1a51-4af1-9aba-362e1c5c4e9b",
+    "mbTitle": "Concerto senza solennità, op. 20: I. Allegro vivo",
+    "nameKo": "Allegro vivo",
+    "nameEn": "Concerto senza solennità, op. 20: I. Allegro vivo",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "465b5e20-0c8e-4958-b7bf-74de8b0a747e",
+    "mbTitle": "Concerto senza solennità, op. 20: II. Andante",
+    "nameKo": "Andante",
+    "nameEn": "Concerto senza solennità, op. 20: II. Andante",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "3f161b66-ad8e-4a0e-9241-bc82c0fd1774",
+    "mbTitle": "Concerto senza solennità, op. 20: III. Frettoloso",
+    "nameKo": "Frettoloso",
+    "nameEn": "Concerto senza solennità, op. 20: III. Frettoloso",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

@@ -1,0 +1,170 @@
+[
+ {
+  "pieceId": 16659,
+  "title": "바이올린과 피아노를 위한 소나타 D장조",
+  "mbids": [
+   "27cc8318-74e3-4548-a046-e0c06136a299"
+  ],
+  "mapping": "work",
+  "key": "pau-casals-27cc8318",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 26022,
+  "title": "모테트 <Nigra sum>",
+  "mbids": [
+   "c072e3be-bacc-42fb-a08f-4de385d3638a"
+  ],
+  "mapping": "work",
+  "key": "pau-casals-c072e3be",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16079,
+  "title": "Cançó a la Verge",
+  "mbids": [
+   "052d028f-3a1d-433e-a9f7-7f6332c07d43"
+  ],
+  "mapping": "work",
+  "key": "pau-casals-052d028f",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17055,
+  "title": "Eucarística",
+  "mbids": [
+   "3f7a2b65-27c9-40e1-a806-9f6fc3f36d89"
+  ],
+  "mapping": "work",
+  "key": "pau-casals-3f7a2b65",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17232,
+  "title": "Sant Martí del Canigó",
+  "mbids": [
+   "498928ca-53a8-41cf-b70f-99c2e5e2c272"
+  ],
+  "mapping": "work",
+  "key": "pau-casals-498928ca",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17413,
+  "title": "Sardana",
+  "mbids": [
+   "55441f14-9390-40da-acd4-61225a92fa6f"
+  ],
+  "mapping": "work",
+  "key": "pau-casals-55441f14",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17786,
+  "title": "오라토리오 <El pesebre>",
+  "mbids": [
+   "6becb76e-d2de-4f46-809f-005fd1df45ff"
+  ],
+  "mapping": "work",
+  "key": "pau-casals-6becb76e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18187,
+  "title": "Oració a la Verge de Montserrat",
+  "mbids": [
+   "85808321-c44a-4658-8413-ba118bfe9831"
+  ],
+  "mapping": "work",
+  "key": "pau-casals-85808321",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19217,
+  "title": "Rosarium Beatae Virginis Mariae",
+  "mbids": [
+   "c619ada9-4ed5-43ee-ad90-362e042afeb1"
+  ],
+  "mapping": "work",
+  "key": "pau-casals-c619ada9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19256,
+  "title": "Festivola",
+  "mbids": [
+   "c91ea71a-4313-4045-b589-9375a036d01d"
+  ],
+  "mapping": "work",
+  "key": "pau-casals-c91ea71a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19306,
+  "title": "보케리니 첼로 협주곡 9번을 위한 카덴차 중 \"Rondo\"",
+  "mbids": [
+   "cc117c0b-a9a5-4ae6-b8b1-e5a956b04303"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19918,
+  "title": "Salve Montserratina",
+  "mbids": [
+   "f5631743-3d0e-48bf-83d2-2af04fd4cc91"
+  ],
+  "mapping": "work",
+  "key": "pau-casals-f5631743",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20073,
+  "title": "Recordare, Virgo Mater",
+  "mbids": [
+   "fe731df6-7f3f-4c52-9cec-da5fa0608f0d"
+  ],
+  "mapping": "work",
+  "key": "pau-casals-fe731df6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20080,
+  "title": "Tota Pulchra",
+  "mbids": [
+   "fede9be1-b1ca-4b90-a0a2-bb10fe812a3e"
+  ],
+  "mapping": "work",
+  "key": "pau-casals-fede9be1",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

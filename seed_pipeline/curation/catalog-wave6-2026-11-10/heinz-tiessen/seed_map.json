@@ -1,0 +1,62 @@
+[
+ {
+  "pieceId": 24340,
+  "title": "3개의 피아노 소품 Op. 31",
+  "mbids": [
+   "6b956543-0f12-4fcd-8d1b-304b4f8b0f6d"
+  ],
+  "mapping": "work",
+  "key": "heinz-tiessen-6b956543",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24561,
+  "title": "햄릿 모음곡 Op. 30",
+  "mbids": [
+   "7dd6ae58-f842-47d3-9a3c-a5a702d2a2e6"
+  ],
+  "mapping": "work",
+  "key": "heinz-tiessen-7dd6ae58",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25201,
+  "title": "Vorspiel zu einem Revolutionsdrama, op. 33",
+  "mbids": [
+   "b6a9b3bf-c1d1-4d36-a4da-38436b145daf"
+  ],
+  "mapping": "work",
+  "key": "heinz-tiessen-b6a9b3bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25578,
+  "title": "교향곡 2번 Op. 17 \"Stirb und Werde\"",
+  "mbids": [
+   "dab34878-d43d-443d-95dc-ab46bc6ae4e6"
+  ],
+  "mapping": "work",
+  "key": "heinz-tiessen-dab34878",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25857,
+  "title": "듀오 소나타 Op. 35",
+  "mbids": [
+   "f3324a5c-cdb6-4ba1-a4f8-6f35fbb81075"
+  ],
+  "mapping": "work",
+  "key": "heinz-tiessen-f3324a5c",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

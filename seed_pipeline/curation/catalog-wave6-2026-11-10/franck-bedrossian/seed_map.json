@@ -1,0 +1,146 @@
+[
+ {
+  "pieceId": 17136,
+  "title": "Epigram: I.",
+  "mbids": [
+   "44d1d0d5-5608-4cb0-9638-46eab5cbafb7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18211,
+  "title": "Epigram: II.",
+  "mbids": [
+   "87558e73-b2d9-4f90-b2b0-5729ea3d288d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19411,
+  "title": "Epigram: III.",
+  "mbids": [
+   "d3113e6e-452a-4a5d-a318-72362755fb76"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 16104,
+  "title": "Twist",
+  "mbids": [
+   "0697445b-b546-4f55-9500-63d0d4028961"
+  ],
+  "mapping": "work",
+  "key": "franck-bedrossian-0697445b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16427,
+  "title": "Edges",
+  "mbids": [
+   "18f97d5a-9595-4d97-9e4d-1a902c930ca7"
+  ],
+  "mapping": "work",
+  "key": "franck-bedrossian-18f97d5a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16925,
+  "title": "Transmission",
+  "mbids": [
+   "37b9a87e-7065-4ec6-8a70-1a3a7ea28a4f"
+  ],
+  "mapping": "work",
+  "key": "franck-bedrossian-37b9a87e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17372,
+  "title": "Charleston",
+  "mbids": [
+   "534f2f47-43ee-4847-9401-bed5c66c2882"
+  ],
+  "mapping": "work",
+  "key": "franck-bedrossian-534f2f47",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18190,
+  "title": "Digital",
+  "mbids": [
+   "85a890ae-d665-4ea8-a964-88dfd4a2131d"
+  ],
+  "mapping": "work",
+  "key": "franck-bedrossian-85a890ae",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18562,
+  "title": "La Solitude du coureur de fond",
+  "mbids": [
+   "9c64afe2-fc99-4228-92e9-dcce16ca9905"
+  ],
+  "mapping": "work",
+  "key": "franck-bedrossian-9c64afe2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19307,
+  "title": "L'Usage de la parole",
+  "mbids": [
+   "cc271cd5-bf47-41e4-a057-f1c98110e29a"
+  ],
+  "mapping": "work",
+  "key": "franck-bedrossian-cc271cd5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19481,
+  "title": "Swing",
+  "mbids": [
+   "d7cf2936-3ebf-4489-b567-98fcad073e58"
+  ],
+  "mapping": "work",
+  "key": "franck-bedrossian-d7cf2936",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20057,
+  "title": "La Conspiration du silence",
+  "mbids": [
+   "fd6239d2-2df8-448b-a92c-ed560c8a147c"
+  ],
+  "mapping": "work",
+  "key": "franck-bedrossian-fd6239d2",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

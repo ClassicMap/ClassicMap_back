@@ -1,0 +1,62 @@
+[
+ {
+  "pieceId": 16695,
+  "title": "Violente Vie",
+  "mbids": [
+   "2a32adef-06c6-4e53-85cf-838f682508a4"
+  ],
+  "mapping": "work",
+  "key": "alain-bancquart-2a32adef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17081,
+  "title": "2중주",
+  "mbids": [
+   "415197ba-a4cf-4b00-af3e-7adf37970a45"
+  ],
+  "mapping": "work",
+  "key": "alain-bancquart-415197ba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17240,
+  "title": "D'une fougère bleue les veines",
+  "mbids": [
+   "4a276cdd-988e-45f4-9331-d47bcb4601c1"
+  ],
+  "mapping": "work",
+  "key": "alain-bancquart-4a276cdd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17482,
+  "title": "La mort viendra et elle aura tes yeux",
+  "mbids": [
+   "59537e42-7b07-49f7-b39b-a444b470e608"
+  ],
+  "mapping": "work",
+  "key": "alain-bancquart-59537e42",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19506,
+  "title": "교향곡 1번",
+  "mbids": [
+   "d9e3501a-48a1-48e4-8de9-f3ec2ff04c34"
+  ],
+  "mapping": "work",
+  "key": "alain-bancquart-d9e3501a",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

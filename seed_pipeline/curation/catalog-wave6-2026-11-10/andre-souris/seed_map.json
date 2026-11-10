@@ -1,0 +1,38 @@
+[
+ {
+  "pieceId": 16797,
+  "title": "Symphonies",
+  "mbids": [
+   "30a8b03a-559a-418e-a48c-5bf93bc5c435"
+  ],
+  "mapping": "work",
+  "key": "andre-souris-30a8b03a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18442,
+  "title": "칸타타 <Le Marchand d'images>",
+  "mbids": [
+   "94fdfd0b-9f1e-4fe5-9e3b-c6c2422ddad2"
+  ],
+  "mapping": "work",
+  "key": "andre-souris-94fdfd0b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18932,
+  "title": "Danceries de la Renaissance française",
+  "mbids": [
+   "b43d578f-31cc-4061-a6b4-87ef4e9aff55"
+  ],
+  "mapping": "work",
+  "key": "andre-souris-b43d578f",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

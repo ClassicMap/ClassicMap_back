@@ -1,0 +1,31 @@
+[
+ {
+  "key": "julius-eichberg-eba6774d",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "오페라 <The Doctor of Alcantara>",
+  "titleEn": "The Doctor of Alcantara",
+  "year": null,
+  "yearText": null,
+  "genre": "opera",
+  "authenticity": "authentic",
+  "mbid": "eba6774d-c88b-4623-adb5-e3cdd9069dd5",
+  "mbTitle": "The Doctor of Alcantara",
+  "existingPieceId": 25775,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "2b24ec5e-fba1-4edc-8053-5742c099f597",
+    "mbTitle": "The Doctor of Alcantara: Overture",
+    "nameKo": "Overture",
+    "nameEn": "The Doctor of Alcantara: Overture",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

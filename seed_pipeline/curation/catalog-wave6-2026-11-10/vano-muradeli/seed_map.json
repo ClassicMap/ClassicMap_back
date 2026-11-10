@@ -1,0 +1,218 @@
+[
+ {
+  "pieceId": 15855,
+  "title": "מסתובב בחור צעיר",
+  "mbids": [
+   "b49c113b-d219-4056-8874-407dc98809f3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16106,
+  "title": "Он и она",
+  "mbids": [
+   "06bb9e4a-de9d-49be-9dc5-599e897c2536"
+  ],
+  "mapping": "work",
+  "key": "vano-muradeli-06bb9e4a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16107,
+  "title": "И на Марсе будут яблони цвести",
+  "mbids": [
+   "06ccdab5-852d-44b6-84d6-f48d67ee3b0b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 16112,
+  "title": "У калитки",
+  "mbids": [
+   "0733e226-4bc6-4b42-9d12-92f8fb778d2a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 16230,
+  "title": "Песня журналистов",
+  "mbids": [
+   "0e31d556-d5b0-4cc2-9212-f1c796dd087d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 16308,
+  "title": "Слава тебе, комсомол!",
+  "mbids": [
+   "12510edb-8278-4455-87e0-13c0095adad7"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 16844,
+  "title": "Марш пограничников",
+  "mbids": [
+   "33349108-ea1a-4e6d-a459-4a421a6dc46d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 16906,
+  "title": "И опять я в строю",
+  "mbids": [
+   "365267e9-aa98-4a35-8023-4028cd5122ef"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 17029,
+  "title": "Я - Земля",
+  "mbids": [
+   "3dd1670d-2c3f-479d-9351-39044d673f1a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 17415,
+  "title": "Песня дзержинцев",
+  "mbids": [
+   "5552029d-f142-45ad-b9e1-ab347f0e0b87"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 17613,
+  "title": "Песня пограничника",
+  "mbids": [
+   "615e7c52-1903-40cb-ac16-58dd25f3e2ed"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 17864,
+  "title": "Воспоминание об Алжире",
+  "mbids": [
+   "703a33f8-eabe-4eed-9144-25bca6d66c48"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 18133,
+  "title": "Бухенвальдский набат",
+  "mbids": [
+   "81a49936-1786-477d-a5f9-70ac6fe6c910"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 18136,
+  "title": "Марш пограничных войск",
+  "mbids": [
+   "81d9aa79-acb4-42f9-9804-bde6e88c105c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 18669,
+  "title": "Здравствуй, будущее!",
+  "mbids": [
+   "a41ac70e-a12e-47d6-98f2-efb69c7b1aad"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 19276,
+  "title": "Посидим, помолчим",
+  "mbids": [
+   "ca38d12d-9550-43d8-8ee7-f0e92f7bf6c1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 19924,
+  "title": "Эта летняя ночь",
+  "mbids": [
+   "f5a7ed17-f53c-476a-9bf2-c664423f470b"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 20040,
+  "title": "Стой, кто идет",
+  "mbids": [
+   "fbff021f-80c1-4dbb-b5b0-7389ced4ada4"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ }
+]

@@ -1,0 +1,158 @@
+[
+ {
+  "pieceId": 17078,
+  "title": "Pour sortir au jour",
+  "mbids": [
+   "41022d2c-e9e4-4467-bb72-374886237c92"
+  ],
+  "mapping": "work",
+  "key": "guillaume-connesson-41022d2c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18574,
+  "title": "The Shining One",
+  "mbids": [
+   "9d500859-d701-4e85-98a4-59e8794c703d"
+  ],
+  "mapping": "work",
+  "key": "guillaume-connesson-9d500859",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19526,
+  "title": "Cosmic Trilogy",
+  "mbids": [
+   "db274b03-2402-4578-b0a0-f687d66649c6"
+  ],
+  "mapping": "work",
+  "key": "guillaume-connesson-db274b03",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16212,
+  "title": "Flammenschrift",
+  "mbids": [
+   "0d038568-a028-411b-b9b4-e1766b86a2e8"
+  ],
+  "mapping": "work",
+  "key": "guillaume-connesson-0d038568",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16544,
+  "title": "Sextuor",
+  "mbids": [
+   "203979d8-a830-4859-a4b3-97553871199f"
+  ],
+  "mapping": "work",
+  "key": "guillaume-connesson-203979d8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16848,
+  "title": "첼로와 관현악을 위한 협주곡",
+  "mbids": [
+   "336948a1-4d3e-4ce8-9a71-095e54675f4c"
+  ],
+  "mapping": "work",
+  "key": "guillaume-connesson-336948a1",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17015,
+  "title": "Maslenitsa",
+  "mbids": [
+   "3d36de83-22a5-4bfb-a74d-210fe7bca0aa"
+  ],
+  "mapping": "work",
+  "key": "guillaume-connesson-3d36de83",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17048,
+  "title": "Les Chants de l'Agartha",
+  "mbids": [
+   "3f07a133-bf53-4408-a69f-13aa9a76d29b"
+  ],
+  "mapping": "work",
+  "key": "guillaume-connesson-3f07a133",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17621,
+  "title": "Techno-Parade",
+  "mbids": [
+   "61f22b0e-e74d-4bfd-b374-c952558eecf9"
+  ],
+  "mapping": "work",
+  "key": "guillaume-connesson-61f22b0e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18306,
+  "title": "E chiaro nella valle il fiume appare",
+  "mbids": [
+   "8d60cadb-5b7e-4d9e-9a8a-9646eb3b16db"
+  ],
+  "mapping": "work",
+  "key": "guillaume-connesson-8d60cadb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18308,
+  "title": "토카타-녹턴",
+  "mbids": [
+   "8d711ff2-1fb4-4322-aa04-c2da10148a83"
+  ],
+  "mapping": "work",
+  "key": "guillaume-connesson-8d711ff2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19310,
+  "title": "Timouk, l'Enfant aux deux royaumes : La Balançoire",
+  "mbids": [
+   "cc9af211-e3cd-4df0-be62-e2d4fd0c5364"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 19575,
+  "title": "Lucifer",
+  "mbids": [
+   "dea5eea8-364b-4580-95a6-853314280cee"
+  ],
+  "mapping": "work",
+  "key": "guillaume-connesson-dea5eea8",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

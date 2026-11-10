@@ -1,0 +1,87 @@
+[
+ {
+  "key": "kang-suk-hi-b62a7c01",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Inventio - Musicae clavichordii et sonorum",
+  "titleEn": "Inventio - Musicae clavichordii et sonorum",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "b62a7c01-0c5b-48ce-86f3-88f57fa8e077",
+  "mbTitle": "Inventio - Musicae clavichordii et sonorum",
+  "existingPieceId": 2358,
+  "parts": []
+ },
+ {
+  "key": "kang-suk-hi-436cb0a2",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Piano Sketches",
+  "titleEn": "Piano Sketches",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "436cb0a2-d4a9-498b-824a-d0d15b96159d",
+  "mbTitle": "Piano Sketches",
+  "existingPieceId": 1407,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "ac77cf7b-d87b-4d63-a1bd-b4db8b18caf8",
+    "mbTitle": "Piano Sketches: I. Quarter note = ca. 42",
+    "nameKo": "Quarter note = ca. 42",
+    "nameEn": "Piano Sketches: I. Quarter note = ca. 42",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "c33dd4e5-29b8-4acb-94e1-bb3216387fe9",
+    "mbTitle": "Piano Sketches: II. Dotted quarter note = ca. 80",
+    "nameKo": "Dotted quarter note = ca. 80",
+    "nameEn": "Piano Sketches: II. Dotted quarter note = ca. 80",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "8c1301b0-e450-44ef-92da-23df47f27e1a",
+    "mbTitle": "Piano Sketches: III. Quarter note = ca. 120",
+    "nameKo": "Quarter note = ca. 120",
+    "nameEn": "Piano Sketches: III. Quarter note = ca. 120",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "kang-suk-hi-088a9ba9",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Sonate Bach",
+  "titleEn": "Sonate Bach",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "088a9ba9-e30f-4ee4-b95a-d0a16b229eac",
+  "mbTitle": "Sonate Bach",
+  "existingPieceId": 920,
+  "parts": []
+ }
+]

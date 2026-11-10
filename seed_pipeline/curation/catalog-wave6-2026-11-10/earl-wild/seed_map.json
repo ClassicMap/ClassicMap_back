@@ -1,0 +1,62 @@
+[
+ {
+  "pieceId": 23576,
+  "title": "Hommage à Poulenc",
+  "mbids": [
+   "21868d9a-2db4-43da-9b75-62d8d27eacfc"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23066,
+  "title": "7개의 비르투오소 연습곡",
+  "mbids": [
+   "33dad96d-b5a4-48c1-80eb-dfc1d04ff346"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23930,
+  "title": "Grand Fantasy on Porgy and Bess",
+  "mbids": [
+   "43f81f3d-61c9-48a5-ac43-f19f6e586be3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 25467,
+  "title": "\"Someone to watch over me\"에 의한 주제와 3개의 변주 형식의 즉흥곡",
+  "mbids": [
+   "d14ac626-5e22-4753-a3e4-a6adbc270b59"
+  ],
+  "mapping": "work",
+  "key": "earl-wild-d14ac626",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 26014,
+  "title": "피아노 소나타",
+  "mbids": [
+   "ffd68ce5-cfc0-404d-a559-fe124cc7a784"
+  ],
+  "mapping": "work",
+  "key": "earl-wild-ffd68ce5",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

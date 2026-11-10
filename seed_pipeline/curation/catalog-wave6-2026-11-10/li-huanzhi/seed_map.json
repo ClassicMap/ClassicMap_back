@@ -1,0 +1,26 @@
+[
+ {
+  "pieceId": 23086,
+  "title": "社会主义好",
+  "mbids": [
+   "8d44378b-ccd1-4ef3-a2af-cbf00e9a8fa2"
+  ],
+  "mapping": "work",
+  "key": "li-huanzhi-b2a5c2b5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23091,
+  "title": "춘절 모음곡",
+  "mbids": [
+   "b2a5c2b5-6d80-4e51-a39b-6bfc3da75d08"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ }
+]

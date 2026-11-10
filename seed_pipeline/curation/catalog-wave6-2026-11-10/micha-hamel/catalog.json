@@ -1,0 +1,34 @@
+[
+ {
+  "key": "micha-hamel-687ad7a3",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Femke d’r Solo",
+  "titleEn": "Femke d’r Solo",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "687ad7a3-c1fe-480d-be74-1befaed2db10",
+  "mbTitle": "Femke d’r Solo",
+  "existingPieceId": 17727,
+  "parts": []
+ },
+ {
+  "key": "micha-hamel-0ce4a8ff",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "There Was Nothing Nobody Could Say",
+  "titleEn": "There Was Nothing Nobody Could Say",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "0ce4a8ff-1abf-436f-a743-488d600b0261",
+  "mbTitle": "There Was Nothing Nobody Could Say",
+  "existingPieceId": 16208,
+  "parts": []
+ }
+]

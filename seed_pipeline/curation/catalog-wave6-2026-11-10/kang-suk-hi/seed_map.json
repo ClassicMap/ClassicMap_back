@@ -1,0 +1,38 @@
+[
+ {
+  "pieceId": 920,
+  "title": "Sonate Bach",
+  "mbids": [
+   "088a9ba9-e30f-4ee4-b95a-d0a16b229eac"
+  ],
+  "mapping": "work",
+  "key": "kang-suk-hi-088a9ba9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 1407,
+  "title": "Piano Sketches",
+  "mbids": [
+   "436cb0a2-d4a9-498b-824a-d0d15b96159d"
+  ],
+  "mapping": "work",
+  "key": "kang-suk-hi-436cb0a2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 2358,
+  "title": "Inventio - Musicae clavichordii et sonorum",
+  "mbids": [
+   "b62a7c01-0c5b-48ce-86f3-88f57fa8e077"
+  ],
+  "mapping": "work",
+  "key": "kang-suk-hi-b62a7c01",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "pieceId": 15726,
+  "title": "Sobre las olas",
+  "mbids": [
+   "0e71888a-3e07-3262-9820-824299484a47"
+  ],
+  "mapping": "work",
+  "key": "juventino-rosas-0e71888a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16522,
+  "title": "Over the Waves Carousel",
+  "mbids": [
+   "1ef1a340-742b-4fd0-a405-a1069004c4c4"
+  ],
+  "mapping": "work",
+  "key": "juventino-rosas-1ef1a340",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16543,
+  "title": "Carmen",
+  "mbids": [
+   "202b72d4-1044-4de6-9c76-d40344d9ca9c"
+  ],
+  "mapping": "work",
+  "key": "juventino-rosas-202b72d4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19174,
+  "title": "Ensueño seductor",
+  "mbids": [
+   "c3a55518-faf5-4dd7-9bbf-7d69ea57e241"
+  ],
+  "mapping": "work",
+  "key": "juventino-rosas-c3a55518",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

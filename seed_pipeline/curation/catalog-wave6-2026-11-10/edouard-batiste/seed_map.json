@@ -1,0 +1,98 @@
+[
+ {
+  "pieceId": 16305,
+  "title": "Élévation",
+  "mbids": [
+   "12024afa-0c60-462a-a18a-c9c937d3baa8"
+  ],
+  "mapping": "work",
+  "key": "edouard-batiste-12024afa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16872,
+  "title": "Offertoire in G major",
+  "mbids": [
+   "3491db71-6a83-45c3-86dd-62579b5ec81b"
+  ],
+  "mapping": "work",
+  "key": "edouard-batiste-3491db71",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17352,
+  "title": "봉헌송 - 환상곡 - 폭풍우 Op. 23",
+  "mbids": [
+   "526de321-8d2a-441d-9c14-2d42c7baf9e6"
+  ],
+  "mapping": "work",
+  "key": "edouard-batiste-526de321",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18294,
+  "title": "Grand Offertoire in D",
+  "mbids": [
+   "8c9b6820-a8f8-4f4f-aec2-153ef3356c01"
+  ],
+  "mapping": "work",
+  "key": "edouard-batiste-8c9b6820",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18723,
+  "title": "Elévation en la bémol majeur, op. 23",
+  "mbids": [
+   "a6799fc0-ae29-4941-bffb-854c46559c54"
+  ],
+  "mapping": "work",
+  "key": "edouard-batiste-a6799fc0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19167,
+  "title": "Offertoire in D minor",
+  "mbids": [
+   "c3474590-bb8d-419e-a859-e64aefacd9f2"
+  ],
+  "mapping": "work",
+  "key": "edouard-batiste-c3474590",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19658,
+  "title": "Communion en mi majeur, op. 29",
+  "mbids": [
+   "e3acc0aa-8f07-4dcb-a23f-1ae59d560731"
+  ],
+  "mapping": "work",
+  "key": "edouard-batiste-e3acc0aa",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19665,
+  "title": "March in E-flat major",
+  "mbids": [
+   "e48db03b-728e-4443-8342-b492a3500690"
+  ],
+  "mapping": "work",
+  "key": "edouard-batiste-e48db03b",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

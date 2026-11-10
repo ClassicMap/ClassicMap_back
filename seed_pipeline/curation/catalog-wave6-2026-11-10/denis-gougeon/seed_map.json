@@ -1,0 +1,74 @@
+[
+ {
+  "pieceId": 19737,
+  "title": "Clere Vénus",
+  "mbids": [
+   "ea3f697a-0fbc-45bf-9bbc-8fe6cb31e01b"
+  ],
+  "mapping": "work",
+  "key": "denis-gougeon-ea3f697a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16214,
+  "title": "Mutation",
+  "mbids": [
+   "0d0d9c60-9317-44b3-a7cf-dc4020d235a7"
+  ],
+  "mapping": "work",
+  "key": "denis-gougeon-0d0d9c60",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16546,
+  "title": "Lamento - Scherzo",
+  "mbids": [
+   "2056aec8-c3b0-4437-9ca1-8a0744f9dcc4"
+  ],
+  "mapping": "work",
+  "key": "denis-gougeon-2056aec8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16606,
+  "title": "Une petite musique de nuit d'été",
+  "mbids": [
+   "24c12301-2ffd-4445-9180-b5a4bfd44da5"
+  ],
+  "mapping": "work",
+  "key": "denis-gougeon-24c12301",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17097,
+  "title": "Six thèmes-solaires",
+  "mbids": [
+   "427c6c33-d9ff-4d2b-b4ba-32c39ba00145"
+  ],
+  "mapping": "work",
+  "key": "denis-gougeon-427c6c33",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20085,
+  "title": "Alto Neptune",
+  "mbids": [
+   "ff084fd9-04da-4ad7-a1e1-af3a32c02aee"
+  ],
+  "mapping": "work",
+  "key": "denis-gougeon-ff084fd9",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

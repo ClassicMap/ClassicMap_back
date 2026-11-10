@@ -1,0 +1,86 @@
+[
+ {
+  "pieceId": 16295,
+  "title": "In stilo fantastico",
+  "mbids": [
+   "11975f9c-21b7-4965-8e48-2b3d444cf48f"
+  ],
+  "mapping": "work",
+  "key": "brice-pauset-11975f9c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17371,
+  "title": "교향곡 5번 \"Die Tänzerin\"",
+  "mbids": [
+   "534eadad-a2c7-47d5-8f4e-98e9b1c80d56"
+  ],
+  "mapping": "work",
+  "key": "brice-pauset-534eadad",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18114,
+  "title": "Entrée",
+  "mbids": [
+   "7fc96bd8-82b7-4695-ab9b-9eca5b1acaeb"
+  ],
+  "mapping": "work",
+  "key": "brice-pauset-7fc96bd8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18592,
+  "title": "Eurydice",
+  "mbids": [
+   "9ecb7e57-d460-4c3c-8e57-e6abd04b2791"
+  ],
+  "mapping": "work",
+  "key": "brice-pauset-9ecb7e57",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18874,
+  "title": "Wahrheitsverfahren (I: Wissenschaft)",
+  "mbids": [
+   "b0ce1841-eeb3-47e6-96f9-2bb74190ce56"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 18958,
+  "title": "In nomine II - In modo algoritmico",
+  "mbids": [
+   "b5b76db6-7799-40d9-a671-bc8dd813c679"
+  ],
+  "mapping": "work",
+  "key": "brice-pauset-b5b76db6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19267,
+  "title": "Perspectivae Sintagma I (canons)",
+  "mbids": [
+   "c9a8d00c-45d9-4020-9e4c-35083cf7888b"
+  ],
+  "mapping": "work",
+  "key": "brice-pauset-c9a8d00c",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

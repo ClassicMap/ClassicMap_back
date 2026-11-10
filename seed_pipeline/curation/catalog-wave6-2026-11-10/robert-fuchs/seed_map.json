@@ -1,0 +1,158 @@
+[
+ {
+  "pieceId": 24284,
+  "title": "세레나데 1번 D장조 Op. 9",
+  "mbids": [
+   "66812ee6-49c5-4f91-86de-83290f13de85"
+  ],
+  "mapping": "work",
+  "key": "robert-fuchs-66812ee6",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24773,
+  "title": "안단테 그라치오소와 카프리치오 Op. 63",
+  "mbids": [
+   "914ef1c7-4702-4acd-8660-9524273397be"
+  ],
+  "mapping": "work",
+  "key": "robert-fuchs-914ef1c7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25530,
+  "title": "교향곡 3번 Op. 79",
+  "mbids": [
+   "d6932244-7d50-4948-af9d-6d488d102a68"
+  ],
+  "mapping": "work",
+  "key": "robert-fuchs-d6932244",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23584,
+  "title": "클라리넷 5중주 E♭장조 Op. 102",
+  "mbids": [
+   "227217c3-cad4-47e7-aeba-7adc67325451"
+  ],
+  "mapping": "work",
+  "key": "robert-fuchs-227217c3",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24039,
+  "title": "세레나데 2번 C장조 Op. 14",
+  "mbids": [
+   "4f4042c4-cd9d-4fea-a7f0-22bf699d710f"
+  ],
+  "mapping": "work",
+  "key": "robert-fuchs-4f4042c4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24573,
+  "title": "비올라 소나타 D단조 Op. 86",
+  "mbids": [
+   "7ef448a7-fd2d-49dd-8d89-1c79e1cee474"
+  ],
+  "mapping": "work",
+  "key": "robert-fuchs-7ef448a7",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24790,
+  "title": "피아노 3중주 1번 C장조 Op. 22",
+  "mbids": [
+   "92aa9e5e-3f05-4040-8388-09a4b0a7011d"
+  ],
+  "mapping": "work",
+  "key": "robert-fuchs-92aa9e5e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25181,
+  "title": "Jugendklange, op. 32",
+  "mbids": [
+   "b4f9876b-16be-43ed-ab64-f4a9c641eb59"
+  ],
+  "mapping": "work",
+  "key": "robert-fuchs-b4f9876b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25242,
+  "title": "Jugendalbum, op. 47",
+  "mbids": [
+   "ba70637d-b0e4-475c-91d4-fae116372672"
+  ],
+  "mapping": "work",
+  "key": "robert-fuchs-ba70637d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25444,
+  "title": "Schlaf, mein Kindelein",
+  "mbids": [
+   "cefa84cd-e42f-404d-a10b-8c1e26eaa28a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 25549,
+  "title": "6 Phantasiestücke, op. 117",
+  "mbids": [
+   "d7ccbbeb-7274-475f-88b2-9670d550baed"
+  ],
+  "mapping": "work",
+  "key": "robert-fuchs-d7ccbbeb",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25684,
+  "title": "피아노 협주곡 B♭단조 Op. 27",
+  "mbids": [
+   "e467b612-217a-4297-9647-825a82ca60d6"
+  ],
+  "mapping": "work",
+  "key": "robert-fuchs-e467b612",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25725,
+  "title": "O freudenreicher Tag",
+  "mbids": [
+   "e766aee4-c351-4f0f-9200-184f226717f7"
+  ],
+  "mapping": "work",
+  "key": "robert-fuchs-e766aee4",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

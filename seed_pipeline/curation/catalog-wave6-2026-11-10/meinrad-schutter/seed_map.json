@@ -1,0 +1,26 @@
+[
+ {
+  "pieceId": 16535,
+  "title": "파르티타 \"Mit meinem Gott geh ich zur Ruh\"",
+  "mbids": [
+   "1fc7da2b-187f-4b4a-86a4-a61b8fbfb554"
+  ],
+  "mapping": "work",
+  "key": "meinrad-schutter-1fc7da2b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19198,
+  "title": "Adorazione dei Pastori",
+  "mbids": [
+   "c533689d-c7fb-44e8-8495-d633b7014fbf"
+  ],
+  "mapping": "work",
+  "key": "meinrad-schutter-c533689d",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

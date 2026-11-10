@@ -1,0 +1,222 @@
+[
+ {
+  "key": "edgar-tinel-9dff20e8",
+  "kind": "collection",
+  "catalogue": "Op. 44",
+  "catalogueAlt": null,
+  "titleKo": "오페라 <Catharina> Op. 44",
+  "titleEn": "Catharina, op. 44",
+  "year": null,
+  "yearText": null,
+  "genre": "opera",
+  "authenticity": "authentic",
+  "mbid": "9dff20e8-9e81-4673-9b4a-8dd75e973cd5",
+  "mbTitle": "Catharina, op. 44",
+  "existingPieceId": 18583,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "ce4019ae-044a-4dcd-be69-004b67385ae7",
+    "mbTitle": "Catharina, op. 44: Overture",
+    "nameKo": "Overture",
+    "nameEn": "Catharina, op. 44: Overture",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "edgar-tinel-5e7afc53",
+  "kind": "collection",
+  "catalogue": "Op. 36",
+  "catalogueAlt": null,
+  "titleKo": "오라토리오 <Franciscus> Op. 36",
+  "titleEn": "Franciscus, op. 36",
+  "year": null,
+  "yearText": null,
+  "genre": "oratorio",
+  "authenticity": "authentic",
+  "mbid": "5e7afc53-3666-47bb-bd70-55a18665c7a2",
+  "mbTitle": "Franciscus, op. 36",
+  "existingPieceId": 17560,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "c1c7981c-96a6-4a3b-a1d5-1c3316a6e517",
+    "mbTitle": "Franciscus, op. 36: Trauermarsch",
+    "nameKo": "Trauermarsch",
+    "nameEn": "Franciscus, op. 36: Trauermarsch",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "edgar-tinel-1959be4d",
+  "kind": "single",
+  "catalogue": "Op. 43",
+  "catalogueAlt": null,
+  "titleKo": "오페라 <Godelieve>",
+  "titleEn": "Godelieve, op. 43",
+  "year": null,
+  "yearText": null,
+  "genre": "opera",
+  "authenticity": "authentic",
+  "mbid": "1959be4d-ab53-4f5d-bc66-aa55c73a2c7c",
+  "mbTitle": "Godelieve, op. 43",
+  "existingPieceId": 16431,
+  "parts": []
+ },
+ {
+  "key": "edgar-tinel-1f4bb0ac",
+  "kind": "multi_movement",
+  "catalogue": "Op. 41",
+  "catalogueAlt": null,
+  "titleKo": "Missa in honorem Beatae Mariae Virginis de Lourdes",
+  "titleEn": "Missa in honorem Beatae Mariae Virginis de Lourdes, op. 41",
+  "year": null,
+  "yearText": null,
+  "genre": "mass",
+  "authenticity": "authentic",
+  "mbid": "1f4bb0ac-d8eb-42fd-a99d-2e0fa255afa5",
+  "mbTitle": "Missa in honorem Beatae Mariae Virginis de Lourdes, op. 41",
+  "existingPieceId": 16526,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "b02c1546-b376-4957-9cad-2047e4907fbd",
+    "mbTitle": "Missa in honorem Beatae Mariae Virginis de Lourdes, op. 41: I. Kyrie",
+    "nameKo": "Kyrie",
+    "nameEn": "Missa in honorem Beatae Mariae Virginis de Lourdes, op. 41: I. Kyrie",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "9cc6eb0b-5f03-46bc-9515-8b3c395ca5ad",
+    "mbTitle": "Missa in honorem Beatae Mariae Virginis de Lourdes, op. 41: II. Gloria",
+    "nameKo": "Gloria",
+    "nameEn": "Missa in honorem Beatae Mariae Virginis de Lourdes, op. 41: II. Gloria",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "8dcefecf-ff9c-4b41-ae04-b81f37f93664",
+    "mbTitle": "Missa in honorem Beatae Mariae Virginis de Lourdes, op. 41: III. Credo",
+    "nameKo": "Credo",
+    "nameEn": "Missa in honorem Beatae Mariae Virginis de Lourdes, op. 41: III. Credo",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "5c6f213a-9549-4142-af2f-d71dd7a1246a",
+    "mbTitle": "Missa in honorem Beatae Mariae Virginis de Lourdes, op. 41: IV. Sanctus",
+    "nameKo": "Sanctus",
+    "nameEn": "Missa in honorem Beatae Mariae Virginis de Lourdes, op. 41: IV. Sanctus",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 5,
+    "mbid": "321dc81f-ea8b-49d6-8ece-f24fca3be8c9",
+    "mbTitle": "Missa in honorem Beatae Mariae Virginis de Lourdes, op. 41: V. Agnus Dei",
+    "nameKo": "Agnus Dei",
+    "nameEn": "Missa in honorem Beatae Mariae Virginis de Lourdes, op. 41: V. Agnus Dei",
+    "movementNumber": "V",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "edgar-tinel-958e4194",
+  "kind": "single",
+  "catalogue": "Op. 26",
+  "catalogueAlt": null,
+  "titleKo": "Te Deum laudamus",
+  "titleEn": "Te Deum laudamus, op. 26",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "958e4194-467d-4406-a842-2ba758f5d17c",
+  "mbTitle": "Te Deum laudamus, op. 26",
+  "existingPieceId": 18452,
+  "parts": []
+ },
+ {
+  "key": "edgar-tinel-48e02423",
+  "kind": "collection",
+  "catalogue": "Op. 31",
+  "catalogueAlt": null,
+  "titleKo": "Trois motets à la Sainte Vierge Op. 31",
+  "titleEn": "Trois motets à la Sainte Vierge, op. 31",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "48e02423-fec6-43ea-92e6-472674004890",
+  "mbTitle": "Trois motets à la Sainte Vierge, op. 31",
+  "existingPieceId": 17218,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "461a2f1a-8edc-4b08-97a3-e636b321638f",
+    "mbTitle": "Trois motets à la Sainte Vierge, op. 31: Ave Regina coelorum",
+    "nameKo": "Ave Regina coelorum",
+    "nameEn": "Trois motets à la Sainte Vierge, op. 31: Ave Regina coelorum",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "ccf32913-2db8-49c7-b568-ae00dcf51ecf",
+    "mbTitle": "Trois motets à la Sainte Vierge, op. 31: Regina coeli",
+    "nameKo": "Regina coeli",
+    "nameEn": "Trois motets à la Sainte Vierge, op. 31: Regina coeli",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "ddb9bdcf-d061-44d2-add9-5984545e4184",
+    "mbTitle": "Trois motets à la Sainte Vierge, op. 31: Ave Maria",
+    "nameKo": "Ave Maria",
+    "nameEn": "Trois motets à la Sainte Vierge, op. 31: Ave Maria",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

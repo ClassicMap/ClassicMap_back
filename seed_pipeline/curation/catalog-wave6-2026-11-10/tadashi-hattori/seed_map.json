@@ -1,0 +1,26 @@
+[
+ {
+  "pieceId": 15944,
+  "title": "ラジオ体操第一",
+  "mbids": [
+   "27ed3416-7d72-45d8-8ff6-61cfb5d2499a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16754,
+  "title": "Sheep in the fields",
+  "mbids": [
+   "2e0aa633-7f57-4c9f-90bf-7ea38cbc79c8"
+  ],
+  "mapping": "work",
+  "key": "tadashi-hattori-2e0aa633",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

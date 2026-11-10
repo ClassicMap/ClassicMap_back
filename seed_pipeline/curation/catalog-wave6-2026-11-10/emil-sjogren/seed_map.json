@@ -1,0 +1,170 @@
+[
+ {
+  "pieceId": 23427,
+  "title": "전주곡과 푸가 C장조 Op. posth.",
+  "mbids": [
+   "14e4d316-a75e-4e93-b6ab-0d8f35878c3e"
+  ],
+  "mapping": "work",
+  "key": "emil-sjogren-14e4d316",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23657,
+  "title": "Kontrabandieren",
+  "mbids": [
+   "289be85f-95ca-4670-9573-a7b27be574c1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 23966,
+  "title": "가곡 <Vårluft>",
+  "mbids": [
+   "47433ea5-4947-4715-96ed-f36cd509f507"
+  ],
+  "mapping": "work",
+  "key": "emil-sjogren-47433ea5",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23987,
+  "title": "가곡 <I drömmen du är mig nära>",
+  "mbids": [
+   "49b2dfc8-2b7e-4bfb-b19f-64ce4ff57c2b"
+  ],
+  "mapping": "work",
+  "key": "emil-sjogren-49b2dfc8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24593,
+  "title": "율리우스 볼프의 <탄호이저>에 의한 6개의 가곡 Op. 12",
+  "mbids": [
+   "803093af-db95-4174-9e4d-06a12d4f31d3"
+  ],
+  "mapping": "work",
+  "key": "emil-sjogren-803093af",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24868,
+  "title": "바이올린과 피아노를 위한 2개의 서정 소품 Op. 29",
+  "mbids": [
+   "98cd3729-c465-4f11-af65-67bd6e950d9d"
+  ],
+  "mapping": "work",
+  "key": "emil-sjogren-98cd3729",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24924,
+  "title": "4 Poems of Ibsen and Björnson, op. 1",
+  "mbids": [
+   "9d7a4f3e-7cdd-4c85-9d18-81db1879ca07"
+  ],
+  "mapping": "work",
+  "key": "emil-sjogren-9d7a4f3e",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24966,
+  "title": "가곡 <Kontrabandieren> Op. 9",
+  "mbids": [
+   "a0fd207d-ba8d-44f7-9852-8027545d1a57"
+  ],
+  "mapping": "work",
+  "key": "emil-sjogren-a0fd207d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24994,
+  "title": "Tag emot Kranser",
+  "mbids": [
+   "a2d13861-59f1-4176-8ee6-0e35ba87cb16"
+  ],
+  "mapping": "work",
+  "key": "emil-sjogren-a2d13861",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25305,
+  "title": "7개의 스페인 가곡 Op. 6",
+  "mbids": [
+   "c120d069-df9d-48da-9b51-b4afe6bd7e81"
+  ],
+  "mapping": "work",
+  "key": "emil-sjogren-c120d069",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25389,
+  "title": "7 Sånger ur Tannhäuser, op. 3",
+  "mbids": [
+   "c940c63c-5abd-4562-8d25-bfd05de4c1a6"
+  ],
+  "mapping": "work",
+  "key": "emil-sjogren-c940c63c",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25555,
+  "title": "Legends for Organ, op. 46",
+  "mbids": [
+   "d81c8212-e0c6-4ae3-8f5c-8b45d78fa069"
+  ],
+  "mapping": "work",
+  "key": "emil-sjogren-d81c8212",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25833,
+  "title": "가곡 <I Seraljens lustgård> Op. 22 No. 1",
+  "mbids": [
+   "f1434964-9b50-4b1a-902a-bf125afffbab"
+  ],
+  "mapping": "work",
+  "key": "emil-sjogren-f1434964",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25853,
+  "title": "I Seraljens lustgård",
+  "mbids": [
+   "f2c0758c-8efd-4bc0-86c3-bf5e541ae1d9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ }
+]

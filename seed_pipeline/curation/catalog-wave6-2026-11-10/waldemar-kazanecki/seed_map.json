@@ -1,0 +1,26 @@
+[
+ {
+  "pieceId": 25777,
+  "title": "Cygańska jesień",
+  "mbids": [
+   "ebf08768-ae41-4313-afc1-7ff4afd2eae4"
+  ],
+  "mapping": "work",
+  "key": "waldemar-kazanecki-ebf08768",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 26000,
+  "title": "For One String",
+  "mbids": [
+   "feb36ab4-a6bf-44b2-8ade-7ee728d5b3c8"
+  ],
+  "mapping": "work",
+  "key": "waldemar-kazanecki-feb36ab4",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

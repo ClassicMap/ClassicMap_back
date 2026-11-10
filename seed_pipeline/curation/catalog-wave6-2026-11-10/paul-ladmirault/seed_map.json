@@ -1,0 +1,98 @@
+[
+ {
+  "pieceId": 16119,
+  "title": "트레고르 지방의 비니우 선율에 의한 변주곡",
+  "mbids": [
+   "077a85db-1919-47ee-8cda-f06af2dd23e1"
+  ],
+  "mapping": "work",
+  "key": "paul-ladmirault-077a85db",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16643,
+  "title": "피아노와 관현악을 위한 슬픈 왈츠",
+  "mbids": [
+   "2709f1e7-a787-40c8-81b5-a22051f76aec"
+  ],
+  "mapping": "work",
+  "key": "paul-ladmirault-4177af2b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17085,
+  "title": "슬픈 왈츠",
+  "mbids": [
+   "4177af2b-18ee-453a-8a12-6fb26ff878a3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 18411,
+  "title": "교향시 <La Brière>",
+  "mbids": [
+   "933b5c37-a058-4569-8941-300413ccd9e8"
+  ],
+  "mapping": "work",
+  "key": "paul-ladmirault-933b5c37",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18426,
+  "title": "Les Mémoires d'un âne",
+  "mbids": [
+   "93f801bf-348f-4af0-be95-63f1681153d4"
+  ],
+  "mapping": "work",
+  "key": "paul-ladmirault-93f801bf",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19377,
+  "title": "Brocéliande au matin",
+  "mbids": [
+   "d0ff2cef-639d-4c53-a891-419c0e910042"
+  ],
+  "mapping": "work",
+  "key": "paul-ladmirault-d0ff2cef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19703,
+  "title": "Hommage à Gabriel Fauré",
+  "mbids": [
+   "e774ace0-0e2f-4766-8726-b31fe51d4ab6"
+  ],
+  "mapping": "work",
+  "key": "paul-ladmirault-e774ace0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19844,
+  "title": "교향시 <En Forêt>",
+  "mbids": [
+   "f139f4f8-6e16-4ef9-b46e-ede06a94043f"
+  ],
+  "mapping": "work",
+  "key": "paul-ladmirault-f139f4f8",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

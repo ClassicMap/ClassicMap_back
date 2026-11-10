@@ -1,0 +1,74 @@
+[
+ {
+  "pieceId": 24606,
+  "title": "Oratorios pour le couronnement des princes souverains de la chrétienté",
+  "mbids": [
+   "819bf014-dbdc-41a0-9583-6b830d51ec4f"
+  ],
+  "mapping": "work",
+  "key": "jean-francois-le-sueur-819bf014",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23060,
+  "title": "나폴레옹 1세 대관식 행진곡",
+  "mbids": [
+   "23e9f7a2-5aff-42ab-b27f-f05c1ec4a661"
+  ],
+  "mapping": "work",
+  "key": "jean-francois-le-sueur-23e9f7a2",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23649,
+  "title": "모테트 <Unxerunt Salomonem>",
+  "mbids": [
+   "27edbe5a-f492-4b5a-abad-919de3e41f59"
+  ],
+  "mapping": "work",
+  "key": "jean-francois-le-sueur-27edbe5a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23860,
+  "title": "아우스터리츠의 깃발 서곡",
+  "mbids": [
+   "3d1ac462-4746-4bca-a6e0-4e75b81ec379"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 24321,
+  "title": "Hymne pour l’inauguration d’un temple de la Liberté",
+  "mbids": [
+   "69ed2f0d-e8da-480d-acd8-30c9edd93512"
+  ],
+  "mapping": "work",
+  "key": "jean-francois-le-sueur-69ed2f0d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24978,
+  "title": "모테트 <Tu es Petrus>",
+  "mbids": [
+   "a193facb-7108-4221-9509-a85ad378422c"
+  ],
+  "mapping": "work",
+  "key": "jean-francois-le-sueur-a193facb",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

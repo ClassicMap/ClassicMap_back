@@ -1,0 +1,31 @@
+[
+ {
+  "key": "heinrich-kaspar-schmid-311b66ad",
+  "kind": "collection",
+  "catalogue": "Op. 34",
+  "catalogueAlt": null,
+  "titleKo": "5개의 교향시 Op. 34",
+  "titleEn": "5 Tone Poems, op. 34",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "311b66ad-bebb-4f89-9f8c-ed57db5b5a21",
+  "mbTitle": "5 Tone Poems, op. 34",
+  "existingPieceId": 16804,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "49cec0da-f73f-4aa2-8094-998ac26c4244",
+    "mbTitle": "Im Tiefsten Walde, op. 34 no. 4",
+    "nameKo": "Im Tiefsten Walde, op. 34 no. 4",
+    "nameEn": "Im Tiefsten Walde, op. 34 no. 4",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

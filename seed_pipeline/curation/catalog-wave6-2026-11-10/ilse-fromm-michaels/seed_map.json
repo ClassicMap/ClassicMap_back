@@ -1,0 +1,98 @@
+[
+ {
+  "pieceId": 16124,
+  "title": "자작 주제에 의한 변주곡 Op. 8",
+  "mbids": [
+   "07c84710-371f-4d52-b45b-345c4d9c853d"
+  ],
+  "mapping": "work",
+  "key": "ilse-fromm-michaels-07c84710",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16576,
+  "title": "피아노 소나타 Op. 6",
+  "mbids": [
+   "229c8972-d723-42fe-98a6-56aa5666b01c"
+  ],
+  "mapping": "work",
+  "key": "ilse-fromm-michaels-229c8972",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17304,
+  "title": "파사칼리아 Op. 16",
+  "mbids": [
+   "4ea9a869-970f-4d72-9d30-933f61ebf49c"
+  ],
+  "mapping": "work",
+  "key": "ilse-fromm-michaels-4ea9a869",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17513,
+  "title": "느린 왈츠",
+  "mbids": [
+   "5b33861b-d03d-48be-8f93-8f7ca126221b"
+  ],
+  "mapping": "work",
+  "key": "ilse-fromm-michaels-5b33861b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18200,
+  "title": "Acht Skizzen, op. 5",
+  "mbids": [
+   "86a92150-035f-4020-8aa5-3e49677270ab"
+  ],
+  "mapping": "work",
+  "key": "ilse-fromm-michaels-86a92150",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18323,
+  "title": "Walzerreigen, op. 7",
+  "mbids": [
+   "8e4e3367-226f-4db7-9bdd-168352a21884"
+  ],
+  "mapping": "work",
+  "key": "ilse-fromm-michaels-8e4e3367",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 18718,
+  "title": "Stimmungen eines Fauns für Klarinette solo, op. 11",
+  "mbids": [
+   "a64508cd-ff15-4277-873b-b4e6a1bcf745"
+  ],
+  "mapping": "work",
+  "key": "ilse-fromm-michaels-a64508cd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19901,
+  "title": "Vier Puppen, op. 4",
+  "mbids": [
+   "f46ab9d5-944f-49ab-a46d-34d33f71e4cf"
+  ],
+  "mapping": "work",
+  "key": "ilse-fromm-michaels-f46ab9d5",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

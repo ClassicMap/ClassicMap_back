@@ -1,0 +1,206 @@
+[
+ {
+  "pieceId": 23690,
+  "title": "협주 교향곡 B♭장조 Op. 3",
+  "mbids": [
+   "2cd5ad93-9434-4cd7-8725-93d350e41949"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-2cd5ad93",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24181,
+  "title": "클라리넷 4중주 D장조 Op. 7",
+  "mbids": [
+   "5c61c62a-729d-44ce-98fe-17558c8f9309"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-5c61c62a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24227,
+  "title": "클라리넷 4중주 C단조 Op. 4",
+  "mbids": [
+   "6013e3c9-98d4-4c41-a87a-daa190ec0735"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-6013e3c9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24351,
+  "title": "바순 콘체르티노",
+  "mbids": [
+   "6c9484ea-d784-4fc2-bce5-0d1b5f7404ca"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-6c9484ea",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25363,
+  "title": "클라리넷 4중주 E♭장조 Op. 2",
+  "mbids": [
+   "c6d56f40-9201-4d8f-a2e4-4fd5b90965eb"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-c6d56f40",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23068,
+  "title": "오페라 <Den lilla slafvinnan>",
+  "mbids": [
+   "40223826-bda0-4158-b147-35656bc5e287"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-40223826",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23074,
+  "title": "Introduction et air suédois varié, op. 12 (pour clarinette et orchestre d´harmonie)",
+  "mbids": [
+   "5a9a06b4-34f7-4c67-9662-04e498968190"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-5a9a06b4",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23208,
+  "title": "두 대의 클라리넷과 피아노를 위한 론도",
+  "mbids": [
+   "011114bd-37bf-4a84-995e-39a535405fbd"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-011114bd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23445,
+  "title": "두 대의 클라리넷을 위한 2중주 2번 C장조 Op. 6/2",
+  "mbids": [
+   "162d4031-d76f-4458-aa20-459a190b58f0"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-162d4031",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24337,
+  "title": "오페라 <Den Iilla slavinnan> 중 \"아리아\"",
+  "mbids": [
+   "6b73a0f5-ad4d-41b3-bec9-7fe876f77335"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "unreviewed",
+  "note": "MB 작곡가 작품 구조에서 찾지 못함, 숨기지 않음"
+ },
+ {
+  "pieceId": 24715,
+  "title": "Coronation March",
+  "mbids": [
+   "8bef1bec-01ce-4103-8d91-dac9c7e94485"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-8bef1bec",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24720,
+  "title": "클라리넷 협주곡 3번 B♭장조 Op. 11",
+  "mbids": [
+   "8c643268-6bcd-4831-8901-0d6d7e10a89c"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-8c643268",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25012,
+  "title": "클라리넷 협주곡 1번 E♭장조 Op. 1",
+  "mbids": [
+   "a44f4c63-85ae-48dd-8ea3-50bcf259b466"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-a44f4c63",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25516,
+  "title": "March no. 9 (Kenthorn)",
+  "mbids": [
+   "d5d6430b-9f45-45fa-9de8-5ac753fd2dc9"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-d5d6430b",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25532,
+  "title": "디베르티멘토 C장조 Op. 9",
+  "mbids": [
+   "d6b09690-bd8e-4b1c-a282-362bf6f1e53c"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-d6b09690",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25534,
+  "title": "Potpourri (Concert Trio)",
+  "mbids": [
+   "d6bf802d-1f50-4710-b831-57d2bafbbf89"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-d6bf802d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25925,
+  "title": "클라리넷과 관현악을 위한 협주곡 2번 F단조 Op. 5 \"Grand\"",
+  "mbids": [
+   "f8f07db6-6dd6-4ccb-bcd0-92d82db6f6b4"
+  ],
+  "mapping": "work",
+  "key": "bernhard-crusell-f8f07db6",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

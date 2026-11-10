@@ -1,0 +1,136 @@
+[
+ {
+  "key": "peter-wishart-f192704d",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Jesu, dulcis memoria",
+  "titleEn": "Jesu, dulcis memoria",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "f192704d-e04d-4ea9-92f4-30055c45d46c",
+  "mbTitle": "Jesu, dulcis memoria",
+  "existingPieceId": 25835,
+  "parts": []
+ },
+ {
+  "key": "peter-wishart-aff370cc",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Serenata Concertante for Clarinet and Small Orchestra",
+  "titleEn": "Serenata Concertante for Clarinet and Small Orchestra",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "aff370cc-6348-467d-b875-e6f7a09052f3",
+  "mbTitle": "Serenata Concertante for Clarinet and Small Orchestra",
+  "existingPieceId": 25138,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "696ab935-1734-4c76-8807-32b383d2ecc7",
+    "mbTitle": "Serenata Concertante for Clarinet and Small Orchestra: I. Prelude. Allegro molto",
+    "nameKo": "Prelude. Allegro molto",
+    "nameEn": "Serenata Concertante for Clarinet and Small Orchestra: I. Prelude. Allegro molto",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "abba934c-8550-4496-8110-d9cb86ee89f5",
+    "mbTitle": "Serenata Concertante for Clarinet and Small Orchestra: II. March. Risoluto alla marcia",
+    "nameKo": "March. Risoluto alla marcia",
+    "nameEn": "Serenata Concertante for Clarinet and Small Orchestra: II. March. Risoluto alla marcia",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "3171693d-ee8b-4aa2-a916-76bffa699a52",
+    "mbTitle": "Serenata Concertante for Clarinet and Small Orchestra: III. Choral. Prelude, semplice e con ammore \"Josef lieber, Josef mein\"",
+    "nameKo": "Choral. Prelude, semplice e con ammore \"Josef lieber, Josef mein\"",
+    "nameEn": "Serenata Concertante for Clarinet and Small Orchestra: III. Choral. Prelude, semplice e con ammore \"Josef lieber, Josef mein\"",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "b16ade0e-e73a-4dc8-a31a-b38455c8233f",
+    "mbTitle": "Serenata Concertante for Clarinet and Small Orchestra: IV. Waltz. Tempo di valse",
+    "nameKo": "Waltz. Tempo di valse",
+    "nameEn": "Serenata Concertante for Clarinet and Small Orchestra: IV. Waltz. Tempo di valse",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 5,
+    "mbid": "7dcad760-f0be-4980-b9e7-d7ac565ae27d",
+    "mbTitle": "Serenata Concertante for Clarinet and Small Orchestra: V. Habanera. Moderato tempo di habanera ma molto flessible",
+    "nameKo": "Habanera. Moderato tempo di habanera ma molto flessible",
+    "nameEn": "Serenata Concertante for Clarinet and Small Orchestra: V. Habanera. Moderato tempo di habanera ma molto flessible",
+    "movementNumber": "V",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 6,
+    "mbid": "51257738-0a83-4e36-9581-7f04c88be919",
+    "mbTitle": "Serenata Concertante for Clarinet and Small Orchestra: VI. Finale. Rondino, molto allegro",
+    "nameKo": "Finale. Rondino, molto allegro",
+    "nameEn": "Serenata Concertante for Clarinet and Small Orchestra: VI. Finale. Rondino, molto allegro",
+    "movementNumber": "VI",
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "peter-wishart-cac7e6d9",
+  "kind": "collection",
+  "catalogue": "Op. 17",
+  "catalogueAlt": null,
+  "titleKo": "Three Carols Op. 17",
+  "titleEn": "Three Carols, op. 17",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "cac7e6d9-4285-4b63-9195-abc064acbde7",
+  "mbTitle": "Three Carols, op. 17",
+  "existingPieceId": 25403,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "3865a4f6-1a6f-4cd1-a94b-d519f2753d89",
+    "mbTitle": "Alleluya, a new Work is come on Hand, op. 17 no. 3",
+    "nameKo": "Alleluya, a new Work is come on Hand, op. 17 no. 3",
+    "nameEn": "Alleluya, a new Work is come on Hand, op. 17 no. 3",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": null,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

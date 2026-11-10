@@ -1,0 +1,26 @@
+[
+ {
+  "pieceId": 23214,
+  "title": "Rondino Tranquillo",
+  "mbids": [
+   "017adb31-0cd2-4382-b639-af370efe2e91"
+  ],
+  "mapping": "work",
+  "key": "eric-gross-017adb31",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24418,
+  "title": "Cadenza II, op. 153 no. 2",
+  "mbids": [
+   "71de0ffb-dd9c-4c00-ab43-7e0bc31ca971"
+  ],
+  "mapping": "work",
+  "key": "eric-gross-71de0ffb",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

@@ -1,0 +1,122 @@
+[
+ {
+  "pieceId": 24644,
+  "title": "Music to Hear",
+  "mbids": [
+   "84e45330-3f33-48e0-ac10-cdf4b8d12a04"
+  ],
+  "mapping": "work",
+  "key": "hans-zender-84e45330",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25116,
+  "title": "Canto VI",
+  "mbids": [
+   "ae42d508-8a22-4b94-ad9e-c248e2d4f9e9"
+  ],
+  "mapping": "work",
+  "key": "hans-zender-ae42d508",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25180,
+  "title": "Canto II",
+  "mbids": [
+   "b4ec9c00-5e0e-4776-a1c4-fbc182d2f45b"
+  ],
+  "mapping": "work",
+  "key": "hans-zender-b4ec9c00",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23490,
+  "title": "Fragmente (Canto V)",
+  "mbids": [
+   "195c6797-4924-4324-bbeb-716a4ad8019c"
+  ],
+  "mapping": "work",
+  "key": "hans-zender-195c6797",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23728,
+  "title": "Kalligraphie I",
+  "mbids": [
+   "313da6ef-0ed5-4f0f-ab48-eb9216f3c073"
+  ],
+  "mapping": "work",
+  "key": "hans-zender-313da6ef",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24024,
+  "title": "Litanei",
+  "mbids": [
+   "4e247125-975a-493b-ae9f-fa6798549eee"
+  ],
+  "mapping": "work",
+  "key": "hans-zender-4e247125",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24074,
+  "title": "Introitus mit Fanfaren",
+  "mbids": [
+   "528b8e8a-ce44-4652-be78-a2fca859367d"
+  ],
+  "mapping": "work",
+  "key": "hans-zender-528b8e8a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24445,
+  "title": "Muji no kyō",
+  "mbids": [
+   "740afc04-14a9-404a-a217-851c09bbaf55"
+  ],
+  "mapping": "work",
+  "key": "hans-zender-740afc04",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24905,
+  "title": "슈베르트의 <겨울 나그네>: 작곡된 해석",
+  "mbids": [
+   "9c8a345c-c734-4165-8a9f-42ee47ac17ce"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "arrangement",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 25282,
+  "title": "Fūrin no kyō",
+  "mbids": [
+   "befb0798-fae7-4e5c-adae-aab20366514e"
+  ],
+  "mapping": "work",
+  "key": "hans-zender-befb0798",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

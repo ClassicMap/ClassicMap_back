@@ -1,0 +1,74 @@
+[
+ {
+  "pieceId": 23506,
+  "title": "Ach, Königin",
+  "mbids": [
+   "1b566671-2446-4c76-870c-5bc5fd523f6b"
+  ],
+  "mapping": "work",
+  "key": "rolf-riehm-1b566671",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25597,
+  "title": "O Daddy",
+  "mbids": [
+   "dbf893d0-173a-4d87-b883-9b35d4916fba"
+  ],
+  "mapping": "work",
+  "key": "rolf-riehm-dbf893d0",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23392,
+  "title": "Harryzehn (In nomine actualiter)",
+  "mbids": [
+   "11ccc9b8-604b-43d7-a869-acc8c64e38ba"
+  ],
+  "mapping": "work",
+  "key": "rolf-riehm-11ccc9b8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 23852,
+  "title": "Schlaf, schlaf John Donne, schlaf tief und quäl dich nicht",
+  "mbids": [
+   "3c8b1765-4492-421a-bc2d-ff279a5f6d73"
+  ],
+  "mapping": "work",
+  "key": "rolf-riehm-3c8b1765",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 24495,
+  "title": "aprikosenbäume gibt es, aprikosenbäume gibt es",
+  "mbids": [
+   "784a7074-fd0f-4fba-b4bd-d9f5502c45ee"
+  ],
+  "mapping": "work",
+  "key": "rolf-riehm-784a7074",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 25479,
+  "title": "Ahi bocca, ahi lingua",
+  "mbids": [
+   "d21c618c-a838-4f33-9a43-a3183814d325"
+  ],
+  "mapping": "work",
+  "key": "rolf-riehm-d21c618c",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]

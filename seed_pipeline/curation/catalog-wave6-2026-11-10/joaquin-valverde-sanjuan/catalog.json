@@ -1,0 +1,34 @@
+[
+ {
+  "key": "joaquin-valverde-sanjuan-7ce8419f",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Gente menuda",
+  "titleEn": "Gente menuda",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": "7ce8419f-10c3-462e-9bea-cbe61dd7e69e",
+  "mbTitle": "Gente menuda",
+  "existingPieceId": 24550,
+  "parts": []
+ },
+ {
+  "key": "joaquin-valverde-sanjuan-2b3bd99f",
+  "kind": "single",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "가곡 <Clavelitos>",
+  "titleEn": "Clavelitos",
+  "year": null,
+  "yearText": null,
+  "genre": "song",
+  "authenticity": "authentic",
+  "mbid": "2b3bd99f-c813-3c62-acc5-7b0ffb40b76d",
+  "mbTitle": "Clavelitos",
+  "existingPieceId": null,
+  "parts": []
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "pieceId": 16050,
+  "title": "2대의 바이올린을 위한 소나티네",
+  "mbids": [
+   "03d55af9-b8de-4e5e-aa81-c4f85cd8e8da"
+  ],
+  "mapping": "work",
+  "key": "jerzy-fitelberg-03d55af9",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 16341,
+  "title": "첼로 소나타",
+  "mbids": [
+   "1453bfba-21df-46b6-94ed-97eba366dfff"
+  ],
+  "mapping": "work",
+  "key": "jerzy-fitelberg-1453bfba",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17450,
+  "title": "비올라와 피아노를 위한 세레나데",
+  "mbids": [
+   "57dd1e9d-26c5-4252-94b4-2f5ae8f911df"
+  ],
+  "mapping": "work",
+  "key": "jerzy-fitelberg-57dd1e9d",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17766,
+  "title": "Nachtmusik, op. 9",
+  "mbids": [
+   "6a6d5b06-c6d5-4ba9-a67b-2176e160aca9"
+  ],
+  "mapping": "work",
+  "key": "jerzy-fitelberg-6a6d5b06",
+  "path": null,
+  "reason": null,
+  "note": null
+ }
+]
