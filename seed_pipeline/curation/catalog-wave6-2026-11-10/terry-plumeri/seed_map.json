@@ -1,0 +1,2604 @@
+[
+ {
+  "pieceId": 23202,
+  "title": "Beyond Thoughts of Darkness",
+  "mbids": [
+   "007a2a20-badf-40eb-bd28-16a630f39f3b"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 23203,
+  "title": "Bird Feather and the Colonel",
+  "mbids": [
+   "00d2c38a-71de-48a5-8f48-95b856c6456d"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 23215,
+  "title": "The General’s Orders",
+  "mbids": [
+   "01a9f036-eea0-4cff-bb1a-8176c6704ae6"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 23222,
+  "title": "The Death of Grandma Ruth",
+  "mbids": [
+   "02b8e058-042b-4b56-9969-3e8f5c6961ca"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 23227,
+  "title": "The Meeting Without One Then Another",
+  "mbids": [
+   "0368bed3-f1cd-4bf5-a1ff-a06894a1c081"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   27
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 23234,
+  "title": "Daydream",
+  "mbids": [
+   "047dfb0e-e4d2-4e1c-9c83-16f69ce033af"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d29c6f56",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Final Judgement> 트랙"
+ },
+ {
+  "pieceId": 23242,
+  "title": "Tommy in Pursuit",
+  "mbids": [
+   "057d5e15-f64a-409c-8bc5-894aac356f6a"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   22
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 23262,
+  "title": "Getting Ready",
+  "mbids": [
+   "074a53c6-1b53-430c-aed4-98b5f8d13742"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d29c6f56",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Final Judgement> 트랙"
+ },
+ {
+  "pieceId": 23264,
+  "title": "Fun In The Park",
+  "mbids": [
+   "079ec059-5d86-4fd5-83a9-93ff01d6e7ac"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 23274,
+  "title": "Ariel and David / The Burial",
+  "mbids": [
+   "0896207a-8470-4e05-94ab-b061509d365a"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d29c6f56",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Final Judgement> 트랙"
+ },
+ {
+  "pieceId": 23282,
+  "title": "Ten Million or Death",
+  "mbids": [
+   "095142fa-f78d-4c97-9eed-608d4a02774f"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 23294,
+  "title": "A New Land... An Old Friendship",
+  "mbids": [
+   "0aaecd69-b5f3-41d6-8c2a-e23b38922715"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 23309,
+  "title": "We’re Getting Out of Here",
+  "mbids": [
+   "0b97909d-cb07-4fc3-91b7-7e0e65ef65a7"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 23316,
+  "title": "Evil Watches Through a Glass",
+  "mbids": [
+   "0c06df87-cbb4-492e-9a82-3d5fd8ebdbd3"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 23338,
+  "title": "Paul's Package",
+  "mbids": [
+   "0d4383fc-6d77-4724-ab71-06483b4b1da2"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 23365,
+  "title": "Blackfoot Attack",
+  "mbids": [
+   "0f790b91-5eb3-4909-b788-a2ff08641e0c"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 23368,
+  "title": "Running for Your Life",
+  "mbids": [
+   "0fac4e26-bbac-41bc-be51-37541a8707d2"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 23381,
+  "title": "Following Rob",
+  "mbids": [
+   "10cbb788-c002-4c9e-a19f-6472d366c803"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d29c6f56",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Final Judgement> 트랙"
+ },
+ {
+  "pieceId": 23388,
+  "title": "Love in the Night Drifts Softly",
+  "mbids": [
+   "112d7d5d-d12f-416b-8345-59baa08ab125"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 23394,
+  "title": "The Old Fort",
+  "mbids": [
+   "11d2f3a8-9bc6-4c93-9438-633c16042d5d"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 23399,
+  "title": "The Lesson of Another Era",
+  "mbids": [
+   "126c606d-8ffa-448c-896a-4a67584643dd"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 23415,
+  "title": "The Abduction",
+  "mbids": [
+   "139e58cc-d701-4dcb-85ed-022b62e9f7de"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 23425,
+  "title": "Flight and Escape",
+  "mbids": [
+   "14ae2412-fc8b-414a-aaf9-f296dd2ed872"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 23474,
+  "title": "The Tear That Gives Life",
+  "mbids": [
+   "180d4ff3-09f2-4b0a-8077-5639e50d9411"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   21
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 23477,
+  "title": "When Darkness Enters the Room",
+  "mbids": [
+   "185dc2fa-d071-4c08-ae95-7e1aa61f5893"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 23481,
+  "title": "The Hidden Missile",
+  "mbids": [
+   "18961d6f-0621-4bd8-b5ec-e830f3f94657"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 23496,
+  "title": "A Tale of Another Time",
+  "mbids": [
+   "1a189db3-ae81-4a36-be82-3c69f6e54c1f"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 23504,
+  "title": "The Return",
+  "mbids": [
+   "1b2529db-eaf6-48b7-98f9-86eb39fa17cb"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 23515,
+  "title": "The Innocence of a Child’s Smile",
+  "mbids": [
+   "1bd10035-2373-4b77-96ff-bb6d7b6d7e27"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 23543,
+  "title": "The Ride Home",
+  "mbids": [
+   "1e1754b6-0ec1-4f9e-86b6-248e62f682bd"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 23549,
+  "title": "Chris and Lila",
+  "mbids": [
+   "1e98b6dc-9368-4733-8faa-96454ca19fa3"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 23560,
+  "title": "Russian Tanks in Pursuit",
+  "mbids": [
+   "2008c1ad-0b2f-4513-9208-ec3e1f9aa53a"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 23570,
+  "title": "Rick’s Greeting",
+  "mbids": [
+   "212ebcab-105e-452f-8ad7-cc668a09ab5b"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 23583,
+  "title": "I'll Bet It's The Way He Smells",
+  "mbids": [
+   "225f04a5-947b-4905-9d07-e59d57c826b0"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 23615,
+  "title": "Search for a Past",
+  "mbids": [
+   "25c523c6-a52a-468c-b11c-d687bce8a3b5"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 23671,
+  "title": "Tommy's Bath",
+  "mbids": [
+   "2a06d3fe-a3d1-4900-9682-0381ca333df5"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 23678,
+  "title": "Narrow Escape",
+  "mbids": [
+   "2b1ac40d-e6d1-4775-b180-15ee27f9dd67"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d29c6f56",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Final Judgement> 트랙"
+ },
+ {
+  "pieceId": 23686,
+  "title": "Colin Reveals the Way to Lila",
+  "mbids": [
+   "2c67ff4f-fe13-4740-bc9c-0e31f25dd298"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 23766,
+  "title": "The Rescue",
+  "mbids": [
+   "34f74dbc-eb4d-4799-8e79-d660dfbdbf03"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 23783,
+  "title": "Final Resolution / End Titles",
+  "mbids": [
+   "36acf705-ee39-4437-96bf-bce0b96041c3"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 23799,
+  "title": "Entrance to the Old Farm House",
+  "mbids": [
+   "37b55512-d09e-49d4-8778-487f223980bb"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 23806,
+  "title": "Death of the Colonel's Wife and Moving West",
+  "mbids": [
+   "384e72d6-0ff8-456e-93a1-7dcbd0d60684"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 23808,
+  "title": "Retribution and the Final Battle",
+  "mbids": [
+   "388b4649-1e23-4e35-ae73-ffd17b156274"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 23811,
+  "title": "Looking For Horses",
+  "mbids": [
+   "38a32a45-d337-40ed-8ec1-928013b0317f"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 23829,
+  "title": "Death on a Plane",
+  "mbids": [
+   "3a484ef9-a1ef-4dae-b4a7-3c48bddeb05c"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 23838,
+  "title": "The Man Stuffed with Money",
+  "mbids": [
+   "3b5fcf2f-9266-42d0-8a70-3e83609af835"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 23854,
+  "title": "Underwater",
+  "mbids": [
+   "3cbc6770-1b6c-48b2-8220-c1cf4951d3ae"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 23859,
+  "title": "At the Gate",
+  "mbids": [
+   "3d0f3e02-abb6-4e15-847f-42aaf1cfb254"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 23866,
+  "title": "A Child's Interest",
+  "mbids": [
+   "3dc6fcf0-133b-4c78-9a14-c446d07342f9"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 23889,
+  "title": "Ken and Andre in Battle",
+  "mbids": [
+   "40c82e2f-f3a1-46ca-8227-28e7e0d3b29a"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 23894,
+  "title": "Spy Talk",
+  "mbids": [
+   "415ffb96-f411-457e-852d-05fb116871d3"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 23901,
+  "title": "The Road to the Farm",
+  "mbids": [
+   "4234c6a6-c900-4dc9-a9aa-a68020d9e22c"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 23903,
+  "title": "Suspect",
+  "mbids": [
+   "424dfe12-d83b-4631-bfb2-f861451b211e"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d29c6f56",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Final Judgement> 트랙"
+ },
+ {
+  "pieceId": 23929,
+  "title": "Sal Searches",
+  "mbids": [
+   "43e1371b-6124-4a64-bb7b-17486207b9a7"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 23931,
+  "title": "Mr. Atlas To The Rescue",
+  "mbids": [
+   "43f9f376-91e6-4d00-8579-2090a9df181e"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 23937,
+  "title": "The Fight / End Titles",
+  "mbids": [
+   "44a79800-55c6-45f0-9c59-8f7b17139642"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d29c6f56",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Final Judgement> 트랙"
+ },
+ {
+  "pieceId": 23957,
+  "title": "Dusk",
+  "mbids": [
+   "4605f41b-34d9-4134-9a7c-e90afdbb4368"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   23
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 23959,
+  "title": "Betrayed",
+  "mbids": [
+   "465f0e2a-3822-4a1d-bd70-7849479aeb9e"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 23982,
+  "title": "The Cleaning of Bert's Head",
+  "mbids": [
+   "494037b8-0197-4cd1-98f2-ae05052ce7b9"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 23985,
+  "title": "Sharons Discovery / Lusus in Persuit",
+  "mbids": [
+   "4996122e-d0b5-4e89-ac05-e32881335a87"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d29c6f56",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Final Judgement> 트랙"
+ },
+ {
+  "pieceId": 24005,
+  "title": "Sal's Death",
+  "mbids": [
+   "4bbf27ef-9d4d-4ae0-b95c-688b3b6d9cc8"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   21
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 24065,
+  "title": "Dinner for Another Reason",
+  "mbids": [
+   "51be693a-de6c-4f6e-8155-6dd0713069ae"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 24096,
+  "title": "Rescue Bird Feather",
+  "mbids": [
+   "54bdc76f-d1f7-4668-a476-d29c37cd05c2"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 24106,
+  "title": "Theft of a Nuclear Warhead",
+  "mbids": [
+   "5580ece5-3a1e-4fd5-b779-8712186792e0"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 24113,
+  "title": "Reaching for Tomorrow's Love",
+  "mbids": [
+   "5611fcac-5aae-4c65-bb80-0c0f6dedbb69"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   28
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 24144,
+  "title": "Death of the Evil One",
+  "mbids": [
+   "59165285-d8fb-41e1-8bea-bbcccaad86ee"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 24149,
+  "title": "The Reflection of a Misty Image",
+  "mbids": [
+   "594fd4b6-cdf3-4d47-9b2d-557da32e0a97"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 24150,
+  "title": "Molech Greets Sister Kate",
+  "mbids": [
+   "595fa586-be93-4ff7-b535-c1cb78dfe60a"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 24163,
+  "title": "The Installation",
+  "mbids": [
+   "5aa87f35-d836-41e7-85a3-6a23e65ce67e"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 24173,
+  "title": "The Conference",
+  "mbids": [
+   "5bacb62a-2bea-4049-a4f2-720d890e343e"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 24178,
+  "title": "Ken Boards Ship",
+  "mbids": [
+   "5bf5a0f8-0e0a-4350-a682-cec96901584d"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 24208,
+  "title": "Arrival in Malta / Rooftop Chase",
+  "mbids": [
+   "5f398002-e046-41e0-912b-99fda6329777"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 24215,
+  "title": "A Prayer for My People",
+  "mbids": [
+   "5f9019c4-8b35-4a1a-a88d-5982dee5ceba"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 24217,
+  "title": "The Rescue of Natalia Porofsky",
+  "mbids": [
+   "5f991b68-49af-4a72-b698-ab49158836f8"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 24219,
+  "title": "Lucius in Pursuit",
+  "mbids": [
+   "5fb27b92-beee-47e9-ad7b-c2c4cf029838"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 24224,
+  "title": "Natalia’s Love",
+  "mbids": [
+   "60068aec-e692-4012-92aa-106c9dd6c68a"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   20
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 24241,
+  "title": "Barbed Wire Daddy",
+  "mbids": [
+   "61b51c48-c8b4-4768-a9a2-e2c6e842c20d"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 24330,
+  "title": "Chris's Meeting",
+  "mbids": [
+   "6a893982-a2d5-4a1a-bd5a-65836acdce4e"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 24348,
+  "title": "Looking for Mister Right",
+  "mbids": [
+   "6c73d617-461c-40f7-b7d2-395fde64c140"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   24
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 24358,
+  "title": "Fanfare And Opening",
+  "mbids": [
+   "6ced3895-652c-4871-ab58-aac31b05c114"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 24365,
+  "title": "Love In The Afternoon",
+  "mbids": [
+   "6d7ac749-f91c-4853-8a4a-4b8c367c91a4"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 24369,
+  "title": "To Exorcise the Demonic Need",
+  "mbids": [
+   "6dbadd91-7e4c-476c-991e-758b055b9fbe"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 24397,
+  "title": "An Inner Tornado Brings Voices",
+  "mbids": [
+   "70486f71-1d29-4b58-8315-9f92aa8b3a4a"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 24398,
+  "title": "This Wounded Land (vocal)",
+  "mbids": [
+   "70487328-9390-406d-aa4c-c2916a0ccf37"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   20
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 24410,
+  "title": "A Daughter’s Wish",
+  "mbids": [
+   "71269be5-56b8-464b-8730-51b400954883"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 24416,
+  "title": "Early Morning Intruder / Shattered Glass at Midnight",
+  "mbids": [
+   "71d07a08-1715-4ce5-91dd-0b0f784ec206"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 24422,
+  "title": "Entrance to the Institution",
+  "mbids": [
+   "727d817b-a7c0-451f-95b7-c9748e0368f5"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 24481,
+  "title": "Tommy's Place",
+  "mbids": [
+   "774652e4-df2e-4692-b911-83fd00b221a9"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 24492,
+  "title": "Reaching Into the Darkness",
+  "mbids": [
+   "7814c8c9-a104-4a2b-aee1-1a5966caffe2"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   22
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 24517,
+  "title": "The Trip Home",
+  "mbids": [
+   "79cf88b6-1c14-4679-8af3-f10c7bdb2521"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 24604,
+  "title": "Escape From the Mental Institution",
+  "mbids": [
+   "817cd2ec-656d-4cc8-a2cc-dd33ea44d76a"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 24650,
+  "title": "Just Say, \"Hey Dude, And I'll Be Back\"",
+  "mbids": [
+   "8579b4e0-97bb-4269-bf6d-95e5cedd2fa4"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   22
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 24661,
+  "title": "Father and Son / Andre's Death",
+  "mbids": [
+   "865f1ffd-c43b-4a98-855a-270b0dfc7e29"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 24699,
+  "title": "Cara's Death",
+  "mbids": [
+   "8a6352ae-47b8-416a-a6da-5a752089c428"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 24700,
+  "title": "Legend Has It A Giant Sleeps There",
+  "mbids": [
+   "8a82c0e1-8dd5-41b4-91bc-015a16dc6256"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 24719,
+  "title": "A Clouded Mind Only Shadows The Heart",
+  "mbids": [
+   "8c42e05f-1802-41fb-85ab-764051d4d7b0"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 24737,
+  "title": "The Wedding and Skinner's Death",
+  "mbids": [
+   "8da736f8-7407-4d96-af5b-d4c1c0c4f745"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 24762,
+  "title": "The Trip to the Village",
+  "mbids": [
+   "8fd9f3f3-7b91-41ba-b333-37ee828d8a4f"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 24768,
+  "title": "Love in the Evening",
+  "mbids": [
+   "90b4641e-1149-4f2e-a58e-32be39115b36"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 24769,
+  "title": "Goodnight Mom",
+  "mbids": [
+   "90de5b33-1387-4bda-b715-45595e05cef1"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d29c6f56",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Final Judgement> 트랙"
+ },
+ {
+  "pieceId": 24781,
+  "title": "Wilshire And Phil Discover The Gold",
+  "mbids": [
+   "92300e73-590a-49af-84d4-6622052de44d"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 24799,
+  "title": "The Flame of Love’s Betrayal",
+  "mbids": [
+   "930c1292-9f92-43a5-9332-a7e49ccb6282"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 24810,
+  "title": "A View From Above",
+  "mbids": [
+   "947da513-eac9-4e2d-94fc-b26f47ff3f1e"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 24827,
+  "title": "We're Here",
+  "mbids": [
+   "95dd508d-3f66-4edd-9d62-e9b42c5749b3"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 24858,
+  "title": "The Truck with No Engine",
+  "mbids": [
+   "98037d2a-b237-40fb-bb8e-13fa95600eb8"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 24871,
+  "title": "How Are We Gonna Live in Mexico… If We’re Dead?",
+  "mbids": [
+   "9936a94d-38c4-4d5d-bf99-6ac87ca80ccb"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 24882,
+  "title": "Wicked's Hood",
+  "mbids": [
+   "9a91f9ee-04d8-4b92-ae38-b7b2cc6fafd5"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 24892,
+  "title": "Molecules",
+  "mbids": [
+   "9b8fbf98-47b9-4efb-90e1-1d155ae339eb"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   26
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 24901,
+  "title": "The Sleepless",
+  "mbids": [
+   "9c336ffc-f2c5-445d-b51d-eb7811b9101b"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   20
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 24909,
+  "title": "Three Crosses",
+  "mbids": [
+   "9caadac9-b0b0-41ee-9fd5-5f97d18722a3"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 24940,
+  "title": "Through the Woods",
+  "mbids": [
+   "9ed93ff6-801a-49df-a86a-e7b02d9ebfab"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 24946,
+  "title": "Ken Parachutes / Overlooking Malta",
+  "mbids": [
+   "9f2eb73e-0421-44c6-a507-402e15816200"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 24962,
+  "title": "Burial at Sea",
+  "mbids": [
+   "a0678246-478e-4a34-a3b8-017c34a098ee"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 24963,
+  "title": "Mr. Atlas Main Title Theme",
+  "mbids": [
+   "a0ce419f-5e1e-49c6-bb54-e2b18b1719df"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 24982,
+  "title": "Freddie Meets Olivia",
+  "mbids": [
+   "a1ba8b0b-6499-467d-adcb-9a518914373c"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 25005,
+  "title": "David and Ariel / David's Fight",
+  "mbids": [
+   "a3932eac-2d14-426e-bc23-73b1b63e2e69"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d29c6f56",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <Final Judgement> 트랙"
+ },
+ {
+  "pieceId": 25011,
+  "title": "Patricia's Capture / On a Cliff",
+  "mbids": [
+   "a442862d-4543-4930-992c-f3025d7cec7d"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 25023,
+  "title": "Reggie's Pressing",
+  "mbids": [
+   "a52d7d52-a2a8-4c17-9e67-6db45a10a539"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 25030,
+  "title": "The Clan",
+  "mbids": [
+   "a5b98e00-4a21-40b1-906b-d5ee7317561a"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 25036,
+  "title": "The Inevitable Fall",
+  "mbids": [
+   "a633a496-3bc5-49a8-9555-78b26f81488c"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 25040,
+  "title": "The Man Who Could Drive Anything",
+  "mbids": [
+   "a68f3dee-0b89-494f-9b1f-41100cca0c2f"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 25041,
+  "title": "The Dripping of Time",
+  "mbids": [
+   "a713d993-465e-4b66-a29f-511ec5ddf7cb"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 25043,
+  "title": "Reinforcements",
+  "mbids": [
+   "a751b680-822b-4b50-baa5-0faa10ab8e3d"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d29c6f56",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Final Judgement> 트랙"
+ },
+ {
+  "pieceId": 25059,
+  "title": "Kiss Your Ass Goodbye",
+  "mbids": [
+   "a8cf7cd1-cbf9-4442-b462-f6faddf279fa"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   21
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 25073,
+  "title": "Paul's Decision",
+  "mbids": [
+   "aa163301-e67a-46bf-bae2-2bbf491b9d8e"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 25080,
+  "title": "I Will Make The Blue Coats My Enemy",
+  "mbids": [
+   "aa77518c-b32d-4168-8ecf-11c643e05afd"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 25087,
+  "title": "Sister Kate Asks for Help",
+  "mbids": [
+   "ab345077-2bb5-4c1a-897b-0e0b47e8aaf9"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 25099,
+  "title": "Chikie's Last Canoli",
+  "mbids": [
+   "ac26f730-45f0-4dc3-97a6-c0bc4efa1fe6"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 25114,
+  "title": "Waking Up",
+  "mbids": [
+   "ae23c34d-6e2b-48fa-951c-84e390294b11"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 25117,
+  "title": "The New Neighbors",
+  "mbids": [
+   "ae6c9b05-b096-452e-8054-170a442cd7c7"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 25120,
+  "title": "Your Chariot Moves Without Horses",
+  "mbids": [
+   "aea9205d-0c7f-440b-912e-7592fbaf57b4"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 25122,
+  "title": "The Wounded Bear Goes Down",
+  "mbids": [
+   "aeafbb00-4b8f-4a48-a4a6-bd748e5a5138"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 25128,
+  "title": "The Final Battle and Massacre",
+  "mbids": [
+   "aef60ca0-11fb-4b17-8d11-2003a6ee76b3"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 25146,
+  "title": "Ship Him to Jersey",
+  "mbids": [
+   "b07bb1be-ee03-4594-9c00-66e9d6030c84"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 25149,
+  "title": "Home Life",
+  "mbids": [
+   "b109f2f7-9f4d-43fc-935b-3d13765d0221"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 25156,
+  "title": "This Wounded Land (instrumental)",
+  "mbids": [
+   "b2380b29-8891-4d7a-adf3-463f7cba4e9c"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 25159,
+  "title": "The Forklift",
+  "mbids": [
+   "b24acb32-a63b-4de3-9409-4897ab8653f6"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 25198,
+  "title": "Falling Tires, Blazing Bullets",
+  "mbids": [
+   "b64c6852-24a0-49e6-a178-0c4e11b9f8a3"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 25244,
+  "title": "Stalking Sal",
+  "mbids": [
+   "baf14ce7-5ffc-4563-91b6-94d3fffe05ab"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   20
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 25245,
+  "title": "I Am Atlas, Son Of Iapetus",
+  "mbids": [
+   "bb14f5b0-388e-4893-a08d-a78a45086681"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   20
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 25249,
+  "title": "The Crimean Coast",
+  "mbids": [
+   "bb95da21-8ad5-4ddf-b5dc-0c041093a94b"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 25262,
+  "title": "Running for the Plane",
+  "mbids": [
+   "bd4a91e8-48e3-43ac-94d6-422fe3fc7d8f"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 25267,
+  "title": "Molech's Revenge",
+  "mbids": [
+   "bd91f745-1149-429b-b6a1-3101ef9dfa54"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 25294,
+  "title": "Venomous Strike of the Intruder",
+  "mbids": [
+   "bfb10fa1-167f-4152-a78c-229cbb44a296"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 25303,
+  "title": "Lusus Attacks / Ariel's Rape",
+  "mbids": [
+   "c0c2811e-dce6-463c-8736-1f4a4a872965"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d29c6f56",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Final Judgement> 트랙"
+ },
+ {
+  "pieceId": 25312,
+  "title": "The Chase",
+  "mbids": [
+   "c1b552b4-0d5d-4c85-a08e-5fa8436101b0"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d29c6f56",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Final Judgement> 트랙"
+ },
+ {
+  "pieceId": 25313,
+  "title": "The Bath of Another Angle",
+  "mbids": [
+   "c1bb60e3-b000-461e-8a96-14f370cdba00"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 25340,
+  "title": "Ken's Ritual",
+  "mbids": [
+   "c46bee94-42b1-4ef1-b050-b76c0fc5ec56"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 25349,
+  "title": "Sister Kate Reaches for Chris",
+  "mbids": [
+   "c544117f-5303-4d4e-8995-97994ceb41a8"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 25350,
+  "title": "Sweet Memories",
+  "mbids": [
+   "c546880e-2bf1-481e-8d1e-2f6deb169368"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   23
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 25355,
+  "title": "The Dance of Darkness",
+  "mbids": [
+   "c5918277-d41d-4537-841a-07162a39a060"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 25361,
+  "title": "A Distant Reach for a Lost Touch",
+  "mbids": [
+   "c67c1636-6983-45c9-9409-da8f7c078505"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 25388,
+  "title": "Love in the Night",
+  "mbids": [
+   "c9404814-5325-473d-b632-b132d3fb9e72"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 25399,
+  "title": "The Drift of a Late Night Dream",
+  "mbids": [
+   "ca7dd987-09af-4811-9f99-3abdf15ba47e"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 25402,
+  "title": "Rebel Attack and Goodbye to War",
+  "mbids": [
+   "cac40e68-39e3-4685-a4fb-a1deb0940640"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 25406,
+  "title": "The Russian Trawler / Brian's Disappointment",
+  "mbids": [
+   "cb2b6df6-4545-4cc9-b622-3bee74c5c478"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-8bf0bfb1",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Black Eagle> 트랙"
+ },
+ {
+  "pieceId": 25428,
+  "title": "A Fast Jeep And A Rough Road",
+  "mbids": [
+   "cd115c3d-e7b9-4ab1-b56c-57dfa91192ed"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 25445,
+  "title": "The Vision of Death",
+  "mbids": [
+   "cf04654c-2092-4639-a04f-fdc26940d938"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 25474,
+  "title": "Running Scared Before Sunrise",
+  "mbids": [
+   "d1ab9da4-eb0f-43f3-8e0d-02a87240d576"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 25475,
+  "title": "Stalking the Elusive Shadow",
+  "mbids": [
+   "d1abe190-9c97-4b9b-a5d2-568cf1893ed3"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 25478,
+  "title": "You Want the Money?",
+  "mbids": [
+   "d2082b43-39c1-4274-b804-4d945ac96492"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 25482,
+  "title": "The Getaway",
+  "mbids": [
+   "d23c2c9f-2f90-40ba-8d35-7f1d5c4fb544"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 25491,
+  "title": "Danny's Discovery In The Cave",
+  "mbids": [
+   "d3765470-063a-4093-9b34-5130afc3be4f"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 25512,
+  "title": "Lee's Deadline",
+  "mbids": [
+   "d585b7f5-ef7f-4775-8f94-f38f15e32c50"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 25518,
+  "title": "Union Trash",
+  "mbids": [
+   "d5dd47de-e3f3-415c-ac08-3e9ad5ffefab"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 25522,
+  "title": "A Day In Town",
+  "mbids": [
+   "d6076a65-ce18-4d33-a3e8-58b9235baeb4"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 25537,
+  "title": "Danny And Gus In The Barn",
+  "mbids": [
+   "d720c4ea-3153-4c53-ab47-6da423c3bd8e"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 25548,
+  "title": "Running Out of Time",
+  "mbids": [
+   "d7c5b216-15d7-4ce3-8de6-4f65181fb5e9"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 25560,
+  "title": "Death in the Afternoon",
+  "mbids": [
+   "d866f455-7332-4a84-b437-1680faed7050"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 25564,
+  "title": "A Season For Everything",
+  "mbids": [
+   "d989a874-a9a2-404c-b290-0b0bd0f8af82"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 25570,
+  "title": "The Last Phone Call",
+  "mbids": [
+   "d9d546e9-0905-4649-88cb-3ee048785ee9"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 25580,
+  "title": "Chris's Question",
+  "mbids": [
+   "dac85505-5cfc-473b-afae-7c915449e806"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-fa74eee4",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Raging Angels> 트랙"
+ },
+ {
+  "pieceId": 25619,
+  "title": "Olivia's Death",
+  "mbids": [
+   "de3cdcdf-dc66-4b8b-8d2e-5bff1a98c12e"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 25662,
+  "title": "A Soldier’s Suspicion",
+  "mbids": [
+   "e21c58c5-dcdb-4bdc-a289-420afe8bde03"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c5d415b7",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Black Sea Raid> 트랙"
+ },
+ {
+  "pieceId": 25675,
+  "title": "Death Enters Without Knocking",
+  "mbids": [
+   "e34a691f-3999-47f2-9ed7-395f9b169413"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 25772,
+  "title": "The Joy Of Being Followed",
+  "mbids": [
+   "eb60efde-200c-47d6-ae4e-cec0837ec470"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-ca8692e8",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Mr. Atlas> 트랙"
+ },
+ {
+  "pieceId": 25782,
+  "title": "The Captain Fires Once",
+  "mbids": [
+   "ec90c473-c5a2-48e6-a581-a2ff864ff67a"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-6627331b",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <Nate and the Colonel> 트랙"
+ },
+ {
+  "pieceId": 25810,
+  "title": "The Desire of a Woman Gone Mad",
+  "mbids": [
+   "ef5c9ec5-0a75-49b9-9e67-5d5be6378429"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   25
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 25824,
+  "title": "The First Day Out of Prison",
+  "mbids": [
+   "f0d5adfe-7938-4ffa-916e-bb7c63d8c882"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 25839,
+  "title": "Search for a Past Beyond Tomorrow",
+  "mbids": [
+   "f1a6b7cb-3434-4e80-bd69-c873ee238001"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-88ba9f95",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <Night Eyes 3> 트랙"
+ },
+ {
+  "pieceId": 25844,
+  "title": "Roxanne's Dilemma",
+  "mbids": [
+   "f21ef844-6686-4b53-8699-bb46e198039f"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-c6f7dbcc",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Scarecrows> 트랙"
+ },
+ {
+  "pieceId": 25883,
+  "title": "A Thought for Tomorrow",
+  "mbids": [
+   "f54aea7d-b3e8-4726-a912-b3686a5080c6"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   21
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 25943,
+  "title": "The Drift of an Afternoon Dream",
+  "mbids": [
+   "fadc40d1-5912-42d5-a03e-329ba8232fd0"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   24
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 25974,
+  "title": "Freddie Catches the Ball",
+  "mbids": [
+   "fd65c179-f25c-4722-9d42-5a691c283487"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-eb5e3fe4",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Death Wish V: The Face of Death> 트랙"
+ },
+ {
+  "pieceId": 25978,
+  "title": "Love for a Grandson",
+  "mbids": [
+   "fd8cd38c-43c0-425e-b8fe-fc6aa9c3d0ac"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ },
+ {
+  "pieceId": 26011,
+  "title": "Love Waits",
+  "mbids": [
+   "ffb1da4d-a6f3-42c7-a6a7-906126bd8432"
+  ],
+  "mapping": "part",
+  "key": "terry-plumeri-rg-d317dd8b",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <Zero Option> 트랙"
+ }
+]

@@ -1,0 +1,598 @@
+[
+ {
+  "pieceId": 15735,
+  "title": "クリスマス・ケロル",
+  "mbids": [
+   "2573989d-8790-4539-8b4a-47271d9bcc24"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15743,
+  "title": "スピラーレ",
+  "mbids": [
+   "2e051020-e713-4d5e-9ebf-6c3b196d1d02"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15796,
+  "title": "ユーフォリア",
+  "mbids": [
+   "943765c8-c7bc-41a8-ac74-5f3c367413c9"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-20c186e1",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <ARIA 〜ピアノ・コレクション〜 スタジオーネ -季節-> 트랙"
+ },
+ {
+  "pieceId": 15948,
+  "title": "ウンディーネ",
+  "mbids": [
+   "883da580-c8ac-4106-8bed-ab5805f66a88"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-20c186e1",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <ARIA 〜ピアノ・コレクション〜 スタジオーネ -季節-> 트랙"
+ },
+ {
+  "pieceId": 15949,
+  "title": "バルカローレ",
+  "mbids": [
+   "e569402a-7ef6-4100-9d13-b27863b9ca7e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15950,
+  "title": "ケローリー・ナイト",
+  "mbids": [
+   "017503e5-2c43-4565-9ed2-96d8b9e5fe52"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15951,
+  "title": "コッコロ",
+  "mbids": [
+   "30f12f7b-b7e8-4cec-9924-9f5d42f6aa84"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15952,
+  "title": "恋の呪文はケロロスキー",
+  "mbids": [
+   "cd946cb7-7925-462d-aa2f-2ff870f60088"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15953,
+  "title": "ルーミス エテルネ",
+  "mbids": [
+   "8de01e53-babb-42ca-978f-4581260beb59"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15954,
+  "title": "Vento",
+  "mbids": [
+   "17ac9bdd-6da7-3cc7-941d-6b2bdd5ea51e"
+  ],
+  "mapping": "work",
+  "key": "mina-kubota-17ac9bdd",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15955,
+  "title": "悲しいほど青く",
+  "mbids": [
+   "8f877554-cfd6-34ab-b2cc-cabd8b5ced49"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15956,
+  "title": "フェリチータ",
+  "mbids": [
+   "2feb2138-95d5-43c1-acb1-bb1fc49bba58"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15971,
+  "title": "すぐそこにみえるもの",
+  "mbids": [
+   "d7293f68-4058-36ae-9533-239fc3a747b1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15972,
+  "title": "ナイショのはなし",
+  "mbids": [
+   "decdf79a-bc3d-3e4d-9e0b-59134449d3d9"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15973,
+  "title": "心 アシンメトリー",
+  "mbids": [
+   "85343073-49d2-44c7-833f-3b842da3790a"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 16187,
+  "title": "リボン",
+  "mbids": [
+   "0bd2fc88-ea96-4237-b4a9-779d832e768a"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 16328,
+  "title": "エスペーロ",
+  "mbids": [
+   "13793715-e5a1-4b56-b732-7e153b24fff5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 16651,
+  "title": "ライズボール",
+  "mbids": [
+   "278887c9-502a-4cea-ae33-cc23bc486e12"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 16814,
+  "title": "君を探して",
+  "mbids": [
+   "31d242fb-c067-4bb6-af08-f79e21d47448"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   27
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 16847,
+  "title": "ファニー・スパイ",
+  "mbids": [
+   "33675d03-af6e-49b2-bbc7-0b7b98045c85"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   22
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 17039,
+  "title": "プリズム",
+  "mbids": [
+   "3e6d1212-5abe-4fd7-b0ca-dee14301a025"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 17129,
+  "title": "ブルー",
+  "mbids": [
+   "445fb703-4672-46b6-b59e-18373015b932"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   21
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 17447,
+  "title": "タンポポとこんぺいとう",
+  "mbids": [
+   "57777eb0-f479-4ab5-a24d-d2bff35d6b8b"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 17466,
+  "title": "メインテーマ",
+  "mbids": [
+   "5838d70f-0f77-469e-80e3-450cf94ed1fd"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 17476,
+  "title": "秋桜",
+  "mbids": [
+   "58db8dad-12eb-4070-b127-4dfc45e5b2e6"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 17521,
+  "title": "ミッション",
+  "mbids": [
+   "5bc063ef-3316-431f-9988-b9b1b85d7653"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 17645,
+  "title": "嘘と鏡",
+  "mbids": [
+   "63663c95-c6c8-4bc6-af12-fd0c416736a2"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   23
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 17773,
+  "title": "星の見える丘",
+  "mbids": [
+   "6b3636d3-d072-4056-a424-450c137b72b0"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 18010,
+  "title": "フォトセッション",
+  "mbids": [
+   "79da09c7-f499-4fb8-9243-2bb24e17f87b"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   26
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 18270,
+  "title": "あかね色",
+  "mbids": [
+   "8b401f00-23fa-4e50-baf5-42fe0a9bf820"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 18350,
+  "title": "メッセージ",
+  "mbids": [
+   "8fb11750-8968-4a61-92d2-29f68673bc31"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 18526,
+  "title": "約束",
+  "mbids": [
+   "9a44c211-56dc-4432-8860-39633131f759"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 18554,
+  "title": "想いの向こう",
+  "mbids": [
+   "9c03deb5-202d-447b-b192-1ad517e6635b"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 18611,
+  "title": "もの想う午後",
+  "mbids": [
+   "a020b363-36a0-4c55-afad-db21138d83ea"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   25
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 18674,
+  "title": "フォトグラフ",
+  "mbids": [
+   "a42bfa8a-2a75-4261-9f48-e0fd7f7ef146"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   28
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 18732,
+  "title": "十九色",
+  "mbids": [
+   "a6f98ae6-3504-40e0-b9c4-1a740a2e96e1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 18742,
+  "title": "風のダンス",
+  "mbids": [
+   "a7a48396-dc66-4352-8ccb-048e49509366"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 18863,
+  "title": "17ステップス",
+  "mbids": [
+   "afbde1cc-57da-4021-86f4-b8f43b12b361"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   24
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 19066,
+  "title": "極秘会議",
+  "mbids": [
+   "bd265ab3-6c7b-461f-b399-d766a9ec5593"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 19170,
+  "title": "ピクニック",
+  "mbids": [
+   "c37075a6-1f59-4ecc-b757-77b7d1f6d131"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 19322,
+  "title": "ガールズ",
+  "mbids": [
+   "cd7f55bb-8f06-4601-8a39-de2c9ef340a6"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 19555,
+  "title": "ハートビート",
+  "mbids": [
+   "dc9e9ae9-4c61-4cb6-95cb-fe6e9318f098"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   20
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 19559,
+  "title": "恋のはじまり",
+  "mbids": [
+   "dd19910f-5718-4fc5-a190-5764e6f24704"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 19586,
+  "title": "写真部のテーマ",
+  "mbids": [
+   "df61ac51-fb3a-4425-bad1-3516716995d3"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 19927,
+  "title": "スイートピー",
+  "mbids": [
+   "f5c13c14-c878-4956-94bf-1ca26ad08f14"
+  ],
+  "mapping": "part",
+  "key": "mina-kubota-rg-ab9ac062",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <TVアニメ「フォトカノ」オリジナルサウンドトラック> 트랙"
+ }
+]

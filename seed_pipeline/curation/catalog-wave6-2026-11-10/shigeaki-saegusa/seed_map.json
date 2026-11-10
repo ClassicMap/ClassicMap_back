@@ -1,0 +1,418 @@
+[
+ {
+  "pieceId": 15935,
+  "title": "ν GUNDAM (ニュー・ガンダム)",
+  "mbids": [
+   "0bdb990c-fde7-4e5c-a514-a8bf19d25248"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15724,
+  "title": "∞⋂n=1 Vₙ(Pₙ)ᵃ ∋ P₀",
+  "mbids": [
+   "09ee7faf-d510-4730-9778-eb5851d1ba1f"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15778,
+  "title": "機動戦士ZガンダムBGM",
+  "mbids": [
+   "759481f4-6e44-49fb-bf7e-d1a729f1190d"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15926,
+  "title": "ウマウマラーメン",
+  "mbids": [
+   "697f47c1-a1ee-4a6a-a353-c9f2b0722d38"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15928,
+  "title": "風のTAKE A CHANCE",
+  "mbids": [
+   "6f72d7b1-08ed-49da-84db-1b936c3b28fd"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15930,
+  "title": "QUESS PARAYA (クェス・パラヤ)",
+  "mbids": [
+   "92d1b100-c77c-4d15-8891-3ea16bc87b35"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15931,
+  "title": "NEO ZION (ネオ・ジオン軍)",
+  "mbids": [
+   "db11dc7f-6f7b-4728-b4dd-e52760fbbe4c"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15932,
+  "title": "SALLY (出撃)",
+  "mbids": [
+   "39504e25-52e9-4ac6-b46a-b6fb35693fb5"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15933,
+  "title": "RONDO BELL (ロンド・ベル隊)",
+  "mbids": [
+   "1317b7c1-25ac-4ed9-8f14-8cc723b628c5"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15934,
+  "title": "SWAN (白鳥)",
+  "mbids": [
+   "b815dd0a-f332-45d7-a884-c01869ce8b42"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15936,
+  "title": "ANXIETY (不安)",
+  "mbids": [
+   "07a57cff-f800-4b0b-8cbd-a94735f427f2"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15937,
+  "title": "MISSION (使命)",
+  "mbids": [
+   "8b9f5037-abe6-4c98-99c3-7dbc2664c458"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15938,
+  "title": "AXCIS (惑星アクシズ)",
+  "mbids": [
+   "9dce0502-89d5-4023-9d3b-1087da75ae5b"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15939,
+  "title": "SACRIFICE (犠牲)",
+  "mbids": [
+   "bb7a6cf8-a295-4f03-9758-23d5f2386b4d"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15940,
+  "title": "COMBAT (格闘)",
+  "mbids": [
+   "fac04b75-b2c9-4aac-a27e-fdb45e2261a5"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15941,
+  "title": "DESTINY (宿命)",
+  "mbids": [
+   "dd2ecf7a-4687-4fe7-b999-5d834dfcc92a"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15942,
+  "title": "AURORA (オーロラ)",
+  "mbids": [
+   "984021d4-03be-478a-ae2b-68e7739c30bd"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15943,
+  "title": "MAIN TITLE (メイン・タイトル)",
+  "mbids": [
+   "37c24856-6371-475b-88f5-b731dfd64f48"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-4a23be92",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック> 트랙"
+ },
+ {
+  "pieceId": 15945,
+  "title": "我等が願い",
+  "mbids": [
+   "95909b77-292d-4782-b08d-8783e242622e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 15946,
+  "title": "BLUE ENDLESS WAY",
+  "mbids": [
+   "7004e9d8-cec3-4851-b72c-864a946afa70"
+  ],
+  "mapping": "work",
+  "key": "shigeaki-saegusa-7004e9d8",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 15947,
+  "title": "Introduction (Farewell Morning)",
+  "mbids": [
+   "d69c4ec4-3a17-4184-b1b1-56f3bf52bdd8"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 16893,
+  "title": "Startrek = スタートレック",
+  "mbids": [
+   "35d86d79-335a-44ed-90af-335fc546ca35"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-42276678",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <30億光年の宇宙 〜星たちの軌跡〜> 트랙"
+ },
+ {
+  "pieceId": 17018,
+  "title": "Globular Cluster = 球状星团",
+  "mbids": [
+   "3d454865-219e-4704-98c9-de9d8f6ee078"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-42276678",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <30億光年の宇宙 〜星たちの軌跡〜> 트랙"
+ },
+ {
+  "pieceId": 17273,
+  "title": "Ring Nebula M57 = リング星雲",
+  "mbids": [
+   "4bfb7470-cc05-4ab5-bd0d-bcf3a0cbf23e"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-42276678",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <30億光年の宇宙 〜星たちの軌跡〜> 트랙"
+ },
+ {
+  "pieceId": 17292,
+  "title": "Quasar 3C273 = クェーサー",
+  "mbids": [
+   "4d91bed2-1243-40d7-ac2d-d83992272830"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-42276678",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <30億光年の宇宙 〜星たちの軌跡〜> 트랙"
+ },
+ {
+  "pieceId": 17296,
+  "title": "Startrek (Reprise) = スタートレック(リプライズ)",
+  "mbids": [
+   "4dee2483-12f9-4ac4-a860-ff64966fa949"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-42276678",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <30億光年の宇宙 〜星たちの軌跡〜> 트랙"
+ },
+ {
+  "pieceId": 17363,
+  "title": "Ragtime",
+  "mbids": [
+   "53043e1b-924e-462a-acbd-cfa3395c6d57"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 17892,
+  "title": "Radio Galaxy M87 = 電波銀河",
+  "mbids": [
+   "71a95ec3-8d2a-455b-ae3c-97dfbca5d899"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-42276678",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <30億光年の宇宙 〜星たちの軌跡〜> 트랙"
+ },
+ {
+  "pieceId": 18056,
+  "title": "Orion Nebula = オリオン大星雲",
+  "mbids": [
+   "7c2da95d-5926-40b6-8cf6-30f6f8ac67d8"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-42276678",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <30億光年の宇宙 〜星たちの軌跡〜> 트랙"
+ },
+ {
+  "pieceId": 18876,
+  "title": "Duo '87",
+  "mbids": [
+   "b0e22245-d485-4813-a85b-a3b1eebd05f7"
+  ],
+  "mapping": "work",
+  "key": "shigeaki-saegusa-b0e22245",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20048,
+  "title": "Pulser = バルサー",
+  "mbids": [
+   "fca4cc10-fb3f-43b6-b928-2db66b00e8f9"
+  ],
+  "mapping": "part",
+  "key": "shigeaki-saegusa-rg-42276678",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <30億光年の宇宙 〜星たちの軌跡〜> 트랙"
+ }
+]

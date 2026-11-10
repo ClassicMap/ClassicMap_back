@@ -1,0 +1,283 @@
+[
+ {
+  "releaseGroup": "19217994-e8fc-3ac9-9f2c-6e59bd62a3ff",
+  "release": "05e51812-844b-4884-a18f-2cc9469f0476",
+  "rgTitle": "The Twilight Zone",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "1999-11-08",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "The Twilight Zone",
+  "tracks": 93,
+  "linked": 76
+ },
+ {
+  "releaseGroup": "3a0d6732-7d80-4ab5-b0d6-f86aefdb47cb",
+  "release": "68339ac7-2e35-45cd-b627-80ceed3d77e5",
+  "rgTitle": "The 7th Voyage of Sinbad",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "1998",
+  "film": true,
+  "wikidata": "Q1545331",
+  "screenKind": "film",
+  "kowiki": "신밧드의 7번째 모험",
+  "koTitle": "신밧드의 7번째 모험",
+  "title": "영화 <신밧드의 7번째 모험> 사운드트랙",
+  "tracks": 37,
+  "linked": 31
+ },
+ {
+  "releaseGroup": "16ba1184-3071-48bb-8c0d-61845309f0d7",
+  "release": "8a113348-c96c-4bab-8e64-913f4f66dc83",
+  "rgTitle": "The 3 Worlds of Gulliver",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "2001-03-01",
+  "film": true,
+  "wikidata": "Q491989",
+  "screenKind": "film",
+  "kowiki": "",
+  "koTitle": null,
+  "title": "영화 <The 3 Worlds of Gulliver> 사운드트랙",
+  "tracks": 37,
+  "linked": 22
+ },
+ {
+  "releaseGroup": "f002eae6-729a-3f60-a9cc-892418b744d9",
+  "release": "76035e67-79fb-46f6-bcde-df7d877ddb68",
+  "rgTitle": "Torn Curtain (The Unused Score)",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "1998",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Torn Curtain (The Unused Score)",
+  "tracks": 31,
+  "linked": 20
+ },
+ {
+  "releaseGroup": "ccf9402e-dc39-3461-96ea-24386c3ec00c",
+  "release": "816d3676-ca60-4e33-b26d-2fef409e7762",
+  "rgTitle": "Fahrenheit 451",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "1995-05-09",
+  "film": true,
+  "wikidata": "Q261546",
+  "screenKind": "film",
+  "kowiki": "화씨 451 (1966년 영화)",
+  "koTitle": "화씨 451",
+  "title": "영화 <화씨 451> 사운드트랙",
+  "tracks": 17,
+  "linked": 17
+ },
+ {
+  "releaseGroup": "9de7bf3e-bb5f-3959-92b6-83279e087ddd",
+  "release": "71e3b140-8427-4319-ba36-63b65c4f020f",
+  "rgTitle": "The Film Scores",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "1996-10-08",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "The Film Scores",
+  "tracks": 37,
+  "linked": 17
+ },
+ {
+  "releaseGroup": "ad7bdc4a-5076-3ed3-af85-035566fee019",
+  "release": "0a8695f5-70de-4378-a554-900b7f8aa5b8",
+  "rgTitle": "Cape Fear",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1991-12-10",
+  "film": true,
+  "wikidata": "Q529106",
+  "screenKind": "film",
+  "kowiki": "케이프 피어 (1962년 영화)",
+  "koTitle": "케이프 피어",
+  "title": "영화 <케이프 피어> 사운드트랙",
+  "tracks": 15,
+  "linked": 14
+ },
+ {
+  "releaseGroup": "4ec7b30d-eb48-3cd1-acee-2763ee111c16",
+  "release": "ed2762c9-56d1-4ece-8c72-be50cad8d416",
+  "rgTitle": "Citizen Kane: Music From the 1941 Motion Picture Score",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1994-02-01",
+  "film": true,
+  "wikidata": "Q24815",
+  "screenKind": "film",
+  "kowiki": "시민 케인",
+  "koTitle": "시민 케인",
+  "title": "영화 <시민 케인> 사운드트랙",
+  "tracks": 21,
+  "linked": 13
+ },
+ {
+  "releaseGroup": "6639f6f5-214d-391c-b564-d7d457d97b23",
+  "release": "0897bb5e-f8df-4702-a8fa-ae269d7ce3ff",
+  "rgTitle": "The Ghost and Mrs. Muir",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1985",
+  "film": true,
+  "wikidata": "Q1304578",
+  "screenKind": "film",
+  "kowiki": "유령과 뮤어 부인",
+  "koTitle": "유령과 뮤어 부인",
+  "title": "영화 <유령과 뮤어 부인> 사운드트랙",
+  "tracks": 12,
+  "linked": 11
+ },
+ {
+  "releaseGroup": "5a88d2f5-ced8-4567-b426-3d13c523b4b4",
+  "release": "8d5f71b8-3c06-4bc2-b8e6-d146011e561e",
+  "rgTitle": "Psycho",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1998",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Psycho (음반)",
+  "tracks": 22,
+  "linked": 7
+ },
+ {
+  "releaseGroup": "9df3ff8f-7e72-4a62-9487-b83a5622599a",
+  "release": "6aa9824a-0e55-4780-a40e-870575a7ed60",
+  "rgTitle": "A Child Is Born",
+  "types": [
+   null,
+   "Soundtrack"
+  ],
+  "firstRelease": "1955",
+  "film": false,
+  "wikidata": "Q54995681",
+  "screenKind": "other",
+  "kowiki": "",
+  "koTitle": null,
+  "title": "A Child Is Born (음반)",
+  "tracks": 2,
+  "linked": 2
+ },
+ {
+  "releaseGroup": "d9569b58-f673-43ac-83a0-4327df75e6f4",
+  "release": "d7827725-cc39-4ff5-b97a-7b5c4f95759b",
+  "rgTitle": "Psycho Suite for String Quartet / Souvenirs de voyage / Echoes",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "2010-11-01",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Psycho Suite for String Quartet / Souvenirs de voyage / Echoes",
+  "tracks": 5,
+  "linked": 2
+ },
+ {
+  "releaseGroup": "0d4aa80e-0ed7-4e3a-a0cc-fdc608e70f67",
+  "release": "e0321fce-651f-4d34-bdbc-1440f5a35b86",
+  "rgTitle": "Citizen Kane: The Essential Bernard Herrmann Film Music Collection",
+  "types": [
+   "Album",
+   "Compilation"
+  ],
+  "firstRelease": "1999",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Citizen Kane: The Essential Bernard Herrmann Film Music Collection",
+  "tracks": 28,
+  "linked": 2
+ },
+ {
+  "releaseGroup": "18287fe2-d729-3c41-8cee-5a2b6437a7f7",
+  "release": "c9b5a8bb-419f-4fd6-8101-74c947c9de3b",
+  "rgTitle": "Bernard Herrmann Film Scores: From Citizen Kane to Taxi Driver",
+  "types": [
+   "Album",
+   "Compilation"
+  ],
+  "firstRelease": "1993-07-27",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Bernard Herrmann Film Scores: From Citizen Kane to Taxi Driver",
+  "tracks": 12,
+  "linked": 4
+ },
+ {
+  "releaseGroup": "98412eae-c63a-4d60-bcd6-bfc22a3b6c96",
+  "release": "cd365175-290a-3d09-a6ae-b201148c5460",
+  "rgTitle": "Music From Hitchcock Films",
+  "types": [
+   "Album",
+   "Compilation"
+  ],
+  "firstRelease": "1969",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Music From Hitchcock Films",
+  "tracks": 7,
+  "linked": 2
+ },
+ {
+  "releaseGroup": "944b8454-a5aa-4bca-ae80-733abb3c80d5",
+  "release": "b3b2f55b-41a1-41dc-a837-9d5989e8f6f0",
+  "rgTitle": "Citizen Kane",
+  "types": [
+   "Album",
+   "Compilation"
+  ],
+  "firstRelease": "1991-03-25",
+  "film": false,
+  "wikidata": "Q24815",
+  "screenKind": "film",
+  "kowiki": "시민 케인",
+  "koTitle": null,
+  "title": "Citizen Kane (음반)",
+  "tracks": 9,
+  "linked": 3
+ }
+]

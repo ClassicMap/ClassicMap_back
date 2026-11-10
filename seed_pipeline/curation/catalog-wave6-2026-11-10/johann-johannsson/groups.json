@@ -1,0 +1,213 @@
+[
+ {
+  "releaseGroup": "74cbd57a-43aa-4cd9-8894-228375a3d69e",
+  "release": "6c85938b-2092-4955-b5c4-796e59d83e9c",
+  "rgTitle": "The Theory of Everything: Original Motion Picture Soundtrack",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2014-11-04",
+  "film": true,
+  "wikidata": "Q15079318",
+  "screenKind": "film",
+  "kowiki": "사랑에 대한 모든 것",
+  "koTitle": "사랑에 대한 모든 것",
+  "title": "영화 <사랑에 대한 모든 것> 사운드트랙",
+  "tracks": 27,
+  "linked": 24
+ },
+ {
+  "releaseGroup": "63c7807b-3a9e-4f44-9abe-af62f756aec9",
+  "release": "5e6282e7-eb71-4016-bd84-fb08d219b902",
+  "rgTitle": "Arrival: Original Motion Picture Soundtrack",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2016-11-11",
+  "film": true,
+  "wikidata": "Q20382729",
+  "screenKind": "film",
+  "kowiki": "컨택트 (영화)",
+  "koTitle": "컨택트",
+  "title": "영화 <컨택트> 사운드트랙",
+  "tracks": 20,
+  "linked": 19
+ },
+ {
+  "releaseGroup": "1eaada4d-61fd-48f8-8464-2dbb313b0deb",
+  "release": "00e7ef0c-1d60-49ec-8516-2506f8f71f50",
+  "rgTitle": "Free the Mind: Original Motion Picture Soundtrack",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2012-08-09",
+  "film": true,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "영화 <Free the Mind> 사운드트랙",
+  "tracks": 17,
+  "linked": 17
+ },
+ {
+  "releaseGroup": "86c912e1-65c0-4bb6-b2de-b9eb54dc6d41",
+  "release": "57926b72-fe2e-47d2-8737-abd0dff9c4b0",
+  "rgTitle": "Englabörn & Variations",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "2018-03-23",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Englabörn & Variations",
+  "tracks": 27,
+  "linked": 17
+ },
+ {
+  "releaseGroup": "771042e4-5d18-4f47-a2bf-51bc51b37c2c",
+  "release": "1a57a247-da85-48ff-aa38-374fcaa20e3f",
+  "rgTitle": "Sicario: Original Motion Picture Soundtrack",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2015-09-18",
+  "film": true,
+  "wikidata": "Q17337292",
+  "screenKind": "film",
+  "kowiki": "시카리오: 암살자의 도시",
+  "koTitle": "시카리오: 암살자의 도시",
+  "title": "영화 <시카리오: 암살자의 도시> 사운드트랙",
+  "tracks": 18,
+  "linked": 15
+ },
+ {
+  "releaseGroup": "5a35595d-05c5-48df-bbd1-777aac538ae2",
+  "release": "e2250b22-73ba-4b0f-abf1-d2b0d456be23",
+  "rgTitle": "Orphée",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "2016-09-16",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Orphée",
+  "tracks": 15,
+  "linked": 14
+ },
+ {
+  "releaseGroup": "b51fd0b6-70aa-4e63-aa18-9ff3780952ca",
+  "release": "260f37e7-81c5-4630-9f1d-805779af766b",
+  "rgTitle": "White Black Boy: Original Soundtrack",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2019-04-19",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "White Black Boy: Original Soundtrack",
+  "tracks": 13,
+  "linked": 10
+ },
+ {
+  "releaseGroup": "4730b7bc-5816-4509-b91a-6fd614a3f9a0",
+  "release": "77c58297-638a-4ea7-acbb-bd4a6455eee2",
+  "rgTitle": "And in the Endless Pause There Came the Sound of Bees",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2009",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "And in the Endless Pause There Came the Sound of Bees",
+  "tracks": 13,
+  "linked": 9
+ },
+ {
+  "releaseGroup": "c5b8edfe-86fc-34de-9e86-e820356d0e95",
+  "release": "4c1020d5-b346-44cd-aeaf-e38b68b7125a",
+  "rgTitle": "Fordlândia",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "2008-11-03",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Fordlândia (음반)",
+  "tracks": 11,
+  "linked": 7
+ },
+ {
+  "releaseGroup": "666f5296-002e-30fa-b057-5551a09e534b",
+  "release": "31d17dcc-56ec-4955-9033-9218e5e7a56f",
+  "rgTitle": "IBM 1401, A User’s Manual",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "2006-10-30",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "IBM 1401, A User’s Manual",
+  "tracks": 5,
+  "linked": 5
+ },
+ {
+  "releaseGroup": "d290e61c-7206-3ba9-a8d1-d1ac2ff52983",
+  "release": "ac5674a3-6604-4987-b772-b7136a686a6f",
+  "rgTitle": "Virðulegu Forsetar",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "2004-11-22",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Virðulegu Forsetar",
+  "tracks": 4,
+  "linked": 4
+ },
+ {
+  "releaseGroup": "ea5416a5-e8a2-486a-88c4-819c2fcca12e",
+  "release": "71646413-6c1a-41d6-a9e7-2a86cb72d5be",
+  "rgTitle": "2012-05-15: De Duif, Amsterdam, Netherlands",
+  "types": [
+   "Album",
+   "Live"
+  ],
+  "firstRelease": "",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "2012-05-15: De Duif, Amsterdam, Netherlands",
+  "tracks": 7,
+  "linked": 2
+ }
+]

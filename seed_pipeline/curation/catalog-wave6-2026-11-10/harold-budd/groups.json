@@ -1,0 +1,139 @@
+[
+ {
+  "releaseGroup": "7cc2bb44-8424-3243-a644-386e8af61751",
+  "release": "03ea9992-b824-3576-a910-410204f42ce3",
+  "rgTitle": "Luxa",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "1996-09-24",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Luxa",
+  "tracks": 14,
+  "linked": 14
+ },
+ {
+  "releaseGroup": "b654466a-d7fc-3f41-8452-9d645664a6b6",
+  "release": "d5d34999-a067-3174-8a9d-1359e4a1e1ba",
+  "rgTitle": "By the Dawn’s Early Light",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "1991-08",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "By the Dawn’s Early Light",
+  "tracks": 14,
+  "linked": 13
+ },
+ {
+  "releaseGroup": "7d5143cf-e755-454a-84e0-95e7766b79ca",
+  "release": "0e971365-ac70-46de-baf3-546251ec3c6e",
+  "rgTitle": "In the Mist",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "2011-09-27",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "In the Mist",
+  "tracks": 13,
+  "linked": 13
+ },
+ {
+  "releaseGroup": "5932c332-2121-44c4-9f63-14d14596daad",
+  "release": "5e2f550d-02e0-4dfa-b916-0c65b5f8157b",
+  "rgTitle": "I Know This Much Is True (Music From The HBO Series)",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2020-06-13",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "I Know This Much Is True (Music From The HBO Series)",
+  "tracks": 14,
+  "linked": 11
+ },
+ {
+  "releaseGroup": "c5fe0b85-fbc8-3dec-9ea0-3d3aa70ba8a3",
+  "release": "5b771134-09fd-487a-8efe-8b893b54b91f",
+  "rgTitle": "Avalon Sutra",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "2005-01-05",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Avalon Sutra",
+  "tracks": 14,
+  "linked": 10
+ },
+ {
+  "releaseGroup": "fc47be7b-635f-304c-a656-d4c18f2d350e",
+  "release": "2a70b465-c734-4be4-9bfd-955ec7c8d01f",
+  "rgTitle": "The White Arcades",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "1988",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "The White Arcades (음반)",
+  "tracks": 9,
+  "linked": 7
+ },
+ {
+  "releaseGroup": "63ae8d41-f76f-309d-8a3d-1dc340923792",
+  "release": "a7ee8c52-1fbd-4ed8-93d8-f954d256a7f3",
+  "rgTitle": "The Pavilion of Dreams",
+  "types": [
+   "Album"
+  ],
+  "firstRelease": "1978",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "The Pavilion of Dreams",
+  "tracks": 5,
+  "linked": 5
+ },
+ {
+  "releaseGroup": "bbea6257-57de-4754-a9f0-658166ac02d8",
+  "release": "bb2b288c-118f-43ef-abb0-b3437f7e911e",
+  "rgTitle": "The Serpent (In Quicksilver)",
+  "types": [
+   "EP"
+  ],
+  "firstRelease": "1981",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "The Serpent (In Quicksilver) (음반)",
+  "tracks": 3,
+  "linked": 2
+ }
+]
