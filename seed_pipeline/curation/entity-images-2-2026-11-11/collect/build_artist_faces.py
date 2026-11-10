@@ -10,6 +10,10 @@ from typing import Any
 
 BASE = Path(__file__).resolve().parent
 NO_IMAGE = "위키데이터 대표 그림·애플 뮤직·스포티파이·웹에서 쓸 그림 없음"
+FACE_URL = {
+    729: "https://www.koelner-kammerorchester.de/wp-content/uploads/2023/10/"
+    "230319_koelner_kammerorchester_001_5577_diesner-1030x544.jpg",
+}
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -69,6 +73,8 @@ web_path = BASE / "picks_web.jsonl"
 for row in read_jsonl(web_path) if web_path.exists() else []:
     # cso.org 는 chicagosymphony.org 로 301 넘긴다: 최종 주소를 넣는다
     row["url"] = row["url"].replace("https://cso.org/media/", "https://chicagosymphony.org/media/")
+    # 같은 그림을 배너로도 쓰면 entity_images (authority, file_url) 가 겹친다: 얼굴은 작은 판을 쓴다
+    row["url"] = FACE_URL.get(row["id"], row["url"])
     # 영어 위키백과 지역 파일(PD-RU)은 커먼스 자유 라이선스 칸 대신 출처 이름으로 남긴다
     if row["kind"] == "wikimedia" and row.get("license") == "PD-RU":
         row.update(kind="web", creditLine="Wikipedia (en)", license=None, licenseUrl=None)

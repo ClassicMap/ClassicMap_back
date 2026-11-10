@@ -1311,12 +1311,12 @@ SELECT entity.authority_entity_id, 'profile', 'https://open.spotify.com/artist/4
 FROM artists entity WHERE entity.id = 728 AND entity.authority_entity_id IS NOT NULL AND entity.image_url = 'https://i.scdn.co/image/b7ff9a1af84c6093798b4c7bb8227e6a2d06e5e0'
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = entity.authority_entity_id AND existing.file_url = 'https://i.scdn.co/image/b7ff9a1af84c6093798b4c7bb8227e6a2d06e5e0');
 -- artist 729 쾰른 실내관현악단 (Kölner Kammerorchester (official site; photo Diesner))
-UPDATE artists SET image_url = 'https://www.koelner-kammerorchester.de/wp-content/uploads/2023/10/230319_koelner_kammerorchester_001_5577_diesner.jpg'
+UPDATE artists SET image_url = 'https://www.koelner-kammerorchester.de/wp-content/uploads/2023/10/230319_koelner_kammerorchester_001_5577_diesner-1030x544.jpg'
 WHERE id = 729 AND english_name = 'Cologne Chamber Orchestra' AND (image_url IS NULL OR image_url = '');
 INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, author, license, license_url, credit_line, is_primary, editorial_status)
-SELECT entity.authority_entity_id, 'profile', 'https://www.koelner-kammerorchester.de/', 'https://www.koelner-kammerorchester.de/wp-content/uploads/2023/10/230319_koelner_kammerorchester_001_5577_diesner.jpg', NULL, NULL, NULL, 'Kölner Kammerorchester (official site; photo Diesner)', TRUE, 'PUBLISHED'
-FROM artists entity WHERE entity.id = 729 AND entity.authority_entity_id IS NOT NULL AND entity.image_url = 'https://www.koelner-kammerorchester.de/wp-content/uploads/2023/10/230319_koelner_kammerorchester_001_5577_diesner.jpg'
-  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = entity.authority_entity_id AND existing.file_url = 'https://www.koelner-kammerorchester.de/wp-content/uploads/2023/10/230319_koelner_kammerorchester_001_5577_diesner.jpg');
+SELECT entity.authority_entity_id, 'profile', 'https://www.koelner-kammerorchester.de/', 'https://www.koelner-kammerorchester.de/wp-content/uploads/2023/10/230319_koelner_kammerorchester_001_5577_diesner-1030x544.jpg', NULL, NULL, NULL, 'Kölner Kammerorchester (official site; photo Diesner)', TRUE, 'PUBLISHED'
+FROM artists entity WHERE entity.id = 729 AND entity.authority_entity_id IS NOT NULL AND entity.image_url = 'https://www.koelner-kammerorchester.de/wp-content/uploads/2023/10/230319_koelner_kammerorchester_001_5577_diesner-1030x544.jpg'
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = entity.authority_entity_id AND existing.file_url = 'https://www.koelner-kammerorchester.de/wp-content/uploads/2023/10/230319_koelner_kammerorchester_001_5577_diesner-1030x544.jpg');
 -- artist 730 프라하 실내관현악단 (Discogs)
 UPDATE artists SET image_url = 'https://i.discogs.com/ygCZR6VbsEznWF1NCGGVO2tW2lOKifxqUibEt3N7tY0/rs:fit/g:sm/q:90/h:457/w:427/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgzMjk1/Mi0xMjk4MzYzOTM2/LmpwZWc.jpeg'
 WHERE id = 730 AND english_name = 'Prague Chamber Orchestra' AND (image_url IS NULL OR image_url = '');
