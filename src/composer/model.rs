@@ -60,6 +60,9 @@ pub struct ComposerWithMajorPieces {
     /// 화면 머리 배너용 가로 그림. 공개된 배너 기록이 있을 때만 낸다
     #[sqlx(skip)]
     pub banner: Option<crate::artist::model::ArtistBanner>,
+    /// 지금 얼굴 그림(avatar_url)과 같은 파일의 공개된 출처 기록. 배너가 없을 때 화면이 이 그림을 쓴다
+    #[sqlx(skip)]
+    pub avatar_credit: Option<crate::artist::model::ImageCredit>,
 }
 
 #[derive(Debug, Serialize, Deserialize, FromRow)]
