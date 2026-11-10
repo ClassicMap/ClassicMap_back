@@ -37,7 +37,9 @@ SPOTIFY_IMAGE = re.compile(
     r"^https://(i\d?o?\.scdn\.co|image-cdn-[a-z]{2}\.spotifycdn\.com)/image/[0-9a-f]{40}$"
 )
 SPOTIFY_PAGE = re.compile(r"^https://open\.spotify\.com/artist/[0-9A-Za-z]{22}$")
-FREE_LICENSE = re.compile(r"^(Public domain|CC0|No restrictions|CC BY(-SA)? \d\.\d( [a-z]{2})?)$")
+FREE_LICENSE = re.compile(
+    r"^(Public domain|CC0|No restrictions|Attribution|CC BY(-SA)? \d\.\d( [a-z]{2})?)$"
+)
 # composers.avatar_url·cover_image_url 이 VARCHAR(500) 이다
 AVATAR_MAX = 500
 
@@ -131,7 +133,8 @@ def service_portraits(rows: list[dict[str, Any]]) -> list[str]:
 
 def artist_banners(rows: list[dict[str, Any]]) -> list[str]:
     out = [
-        "-- 공개 배너가 없던 S·A 연주자의 화면 머리 배너(스포티파이·애플 뮤직 아티스트 머리 그림).",
+        "-- 공개 배너가 없던 S·A 연주자의 화면 머리 배너"
+        "(스포티파이·애플 뮤직 아티스트 머리 그림, 위키미디어 공용).",
         "-- 원본: seed_pipeline/curation/entity-images-2026-11-10/ (gen_sql.py 로 만든다).",
         "-- 공개 배너가 하나도 없을 때만 넣는다. 출처 페이지를 함께 밝히고, "
         "권리자가 요청하면 그 줄을 RETIRED 로 내린다.",
@@ -139,15 +142,28 @@ def artist_banners(rows: list[dict[str, Any]]) -> list[str]:
     credits = {"spotify": "Spotify", "apple_music": "Apple Music"}
     for row in rows:
         url = row["url"]
-        check_service(row)
+        author = license_name = license_url = None
+        if row["source"] == "wikimedia":
+            assert WIKIMEDIA_FILE.match(url), row
+            assert WIKIMEDIA_PAGE.match(row["sourceUrl"]), row
+            assert FREE_LICENSE.match(row["license"]), row
+            author = (row.get("author") or "").strip()[:250] or None
+            license_name, license_url = row["license"], row.get("licenseUrl")
+            # 지은이를 모르는 공유 저작물은 출처 이름이라도 보이게 한다
+            credit = None if author else "Wikimedia Commons"
+        else:
+            check_service(row)
+            credit = credits[row["source"]]
         assert FOCAL.match(row["focal"]), row
         artist_id = int(row["id"])
         out.append(f"-- artist {artist_id} {row['name']} ({row['source']})")
         out.append(
             "INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, "
-            "credit_line, focal_point, is_primary, editorial_status)\n"
+            "credit_line, author, license, license_url, focal_point, is_primary, "
+            "editorial_status)\n"
             f"SELECT artist.authority_entity_id, 'banner', {sql(row['sourceUrl'])}, {sql(url)}, "
-            f"{sql(credits[row['source']])}, {sql(row['focal'])}, TRUE, 'PUBLISHED'\n"
+            f"{sql(credit)}, {sql(author)}, {sql(license_name)}, {sql(license_url)}, "
+            f"{sql(row['focal'])}, TRUE, 'PUBLISHED'\n"
             f"FROM artists artist WHERE artist.id = {artist_id} "
             f"AND artist.english_name = {sql(row['englishName'])} "
             "AND artist.authority_entity_id IS NOT NULL\n"

@@ -596,16 +596,115 @@
   "a871": {
    "source": "spotify",
    "focal": "40% 81%"
+  },
+  "a345": {
+   "source": "wikimedia",
+   "file": "File:San Petesburgo+Perianes 24.jpg",
+   "focal": "50% 30%"
+  },
+  "a658": {
+   "source": "wikimedia",
+   "file": "File:La Scala orchestra LCCN2014711809.jpg",
+   "focal": "50% 52%"
+  },
+  "a686": {
+   "source": "wikimedia",
+   "file": "File:Cheryl Studer 1988 Prinzregententheater-19880109-RM-040233.jpg",
+   "focal": "42% 20%"
+  },
+  "a188": {
+   "source": "wikimedia",
+   "file": "File:Pianist Sunwook Kim.jpg",
+   "focal": "41% 60%"
+  },
+  "a329": {
+   "source": "wikimedia",
+   "file": "File:KBS Rudolfinum.jpg",
+   "focal": "50% 75%"
+  },
+  "a339": {
+   "source": "wikimedia",
+   "file": "File:BBCSO rehearsing for the last night of the Proms.jpg",
+   "focal": "50% 42%"
+  },
+  "a350": {
+   "source": "wikimedia",
+   "file": "File:Kornilios Michailidis with NHK Symphony Orchestra (2025-07-12) (02).jpg",
+   "focal": "50% 20%"
+  },
+  "a662": {
+   "source": "wikimedia",
+   "file": "File:Miklósa Erika 2011 (1).jpg",
+   "focal": "45% 40%"
+  },
+  "a670": {
+   "source": "wikimedia",
+   "file": "File:Carlo Rizzi (2013).jpg",
+   "focal": "65% 6%"
+  },
+  "a671": {
+   "source": "wikimedia",
+   "file": "File:Orchestra Sinfonica di Milano nella Nona Sinfonia di Gustav Mahler , 2023, © Orchestra Sinfonica di Milano.jpg",
+   "focal": "50% 80%"
+  },
+  "a767": {
+   "source": "wikimedia",
+   "file": "File:Beaux Arts Trio, Concertgebouw, 1978 - 35.jpg",
+   "focal": "22% 11%"
+  },
+  "a787": {
+   "source": "wikimedia",
+   "file": "File:SWR Sinfonieorchester Baden-Baden und Freiburg, Chefdirigent François-Xavier Roth.jpg",
+   "focal": "50% 80%"
+  },
+  "a789": {
+   "source": "wikimedia",
+   "file": "File:Dallas Symphony Chorus 20180612 Örebro.jpg",
+   "focal": "50% 60%"
+  },
+  "a800": {
+   "source": "wikimedia",
+   "file": "File:Donaueschingen- Donaueschinger Musiktage; Hans Rosbaud dirigiert, von oben - LABW - Staatsarchiv Freiburg W 134 Nr. 039525b.jpeg",
+   "focal": "0% 12%"
+  },
+  "a806": {
+   "source": "wikimedia",
+   "file": "File:Loriod Caen.jpg",
+   "focal": "21% 51%"
+  },
+  "a808": {
+   "source": "wikimedia",
+   "file": "File:Orchestree de L´opéra National de Paris001 (54749885169).jpg",
+   "focal": "50% 60%"
+  },
+  "a811": {
+   "source": "wikimedia",
+   "file": "File:Eduard-Topchyan.jpg",
+   "focal": "50% 50%"
+  },
+  "a834": {
+   "source": "wikimedia",
+   "file": "File:NJ-Konzert 2017.jpg",
+   "focal": "50% 35%"
+  },
+  "a720": {
+   "source": "wikimedia",
+   "file": "File:Vessi OffenbachKonzert07 5.JPG",
+   "focal": "56% 6%"
+  },
+  "a895": {
+   "source": "wikimedia",
+   "file": "File:Péter Eötvös by Istvan Huszti.jpg",
+   "focal": "38% 45%"
   }
  },
  "bannerReject": {
-  "a264": "스포티파이 그림이 어두워 얼굴이 보이지 않음. 애플 뮤직 가로 그림 없음",
+  "a264": "스포티파이 그림이 어두워 얼굴이 보이지 않음. 애플 뮤직 가로 그림 없음. 위키미디어는 지휘자와 같은 크기로 나오거나 악단 속에 작게 나옴",
   "a613": "애플 뮤직 그림이 얼굴 위가 잘려 턱만 보임",
   "a813": "스포티파이 그림이 광고 글자(WE-ARE-ON-AIR)",
   "a263": "스포티파이 그림에 사람이 없음(여행 가방)",
   "a303": "스포티파이 그림이 얼굴 반이 그림자에 가려 눈이 안 보임",
-  "a669": "스포티파이 그림에 70주년 글자 로고가 크게 있음",
-  "a671": "스포티파이 그림이 악단 로고",
+  "a669": "스포티파이 그림에 70주년 글자 로고가 크게 있고, 위키미디어 사진은 방송 진행자(폴커 하이스만) 중심",
   "a710": "스포티파이 그림에 얼굴이 없음(손과 하프시코드 건반)",
   "a878": "스포티파이 그림이 구름 풍경이라 사람이 없음"
  },
@@ -623,6 +722,7 @@
   "a762": "애플 뮤직 그림은 지휘자 한 사람이고 머리가 잘림",
   "a792": "스포티파이 그림은 불꽃 그림이라 애플 뮤직을 씀",
   "a802": "스포티파이 그림은 모바일에서 글자(JUILLIARD STRING QUARTET)가 보여 애플 뮤직을 씀",
-  "a858": "스포티파이 그림은 지휘자(바렌보임) 중심이라 악단 전체가 나온 애플 뮤직을 씀"
+  "a858": "스포티파이 그림은 지휘자(바렌보임) 중심이라 악단 전체가 나온 애플 뮤직을 씀",
+  "a671": "스포티파이 그림이 악단 로고라 위키미디어 공연 사진을 씀"
  }
 }
