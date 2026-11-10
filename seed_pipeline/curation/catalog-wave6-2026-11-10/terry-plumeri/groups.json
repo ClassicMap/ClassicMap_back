@@ -1,0 +1,183 @@
+[
+ {
+  "releaseGroup": "c5d415b7-61cc-45f7-8764-52e25b60707e",
+  "release": "70f5c854-b8d2-43b9-afcb-d81ef049c283",
+  "rgTitle": "Black Sea Raid",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2010-11-23",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Black Sea Raid",
+  "tracks": 23,
+  "linked": 22
+ },
+ {
+  "releaseGroup": "ca8692e8-fbb2-4754-9642-5df5b9ca2a5f",
+  "release": "3f3833dd-ebce-4768-94dd-5ab07d22efb2",
+  "rgTitle": "Mr. Atlas",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2010-06-09",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Mr. Atlas",
+  "tracks": 22,
+  "linked": 21
+ },
+ {
+  "releaseGroup": "88ba9f95-d2d8-4786-8fe8-1ea8193797e9",
+  "release": "f1d2826c-caf4-4d99-9d37-7cd0546b3643",
+  "rgTitle": "Night Eyes 3",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2012",
+  "film": true,
+  "wikidata": "Q4327752",
+  "screenKind": "film",
+  "kowiki": "",
+  "koTitle": null,
+  "title": "영화 <Night Eyes 3> 사운드트랙",
+  "tracks": 19,
+  "linked": 19
+ },
+ {
+  "releaseGroup": "eb5e3fe4-cd38-4fc5-a755-3e50d1a46952",
+  "release": "404538e1-5547-4661-b8cc-d35ed88dfae7",
+  "rgTitle": "Death Wish V: The Face of Death",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1993",
+  "film": true,
+  "wikidata": "Q848297",
+  "screenKind": "film",
+  "kowiki": "데스 위시 5",
+  "koTitle": "데스 위시 5",
+  "title": "영화 <데스 위시 5> 사운드트랙",
+  "tracks": 24,
+  "linked": 18
+ },
+ {
+  "releaseGroup": "c6f7dbcc-9af9-4718-9373-b0d3649a7881",
+  "release": "36f115e0-6ca3-4a47-b8a3-1003f9401f83",
+  "rgTitle": "Scarecrows",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2009-09-28",
+  "film": true,
+  "wikidata": "Q4383261",
+  "screenKind": "film",
+  "kowiki": "",
+  "koTitle": null,
+  "title": "영화 <Scarecrows> 사운드트랙",
+  "tracks": 19,
+  "linked": 18
+ },
+ {
+  "releaseGroup": "6627331b-ea83-4243-87c3-83975871662b",
+  "release": "44b87ea0-b291-4da4-96a2-2a1affc0f0b7",
+  "rgTitle": "Nate and the Colonel",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2004",
+  "film": true,
+  "wikidata": "Q6968746",
+  "screenKind": "film",
+  "kowiki": "",
+  "koTitle": null,
+  "title": "영화 <Nate and the Colonel> 사운드트랙",
+  "tracks": 20,
+  "linked": 17
+ },
+ {
+  "releaseGroup": "fa74eee4-065b-4815-83ad-ddc12c725df1",
+  "release": "2612fab5-4e68-4c3d-a63f-6f918466cfe3",
+  "rgTitle": "Raging Angels",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "2013-09-17",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Raging Angels",
+  "tracks": 18,
+  "linked": 16
+ },
+ {
+  "releaseGroup": "8bf0bfb1-086a-337d-8764-a8c5004798dd",
+  "release": "355e4725-2b4c-4fe9-855c-2464efec8923",
+  "rgTitle": "Black Eagle",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1994",
+  "film": true,
+  "wikidata": "Q2416283",
+  "screenKind": "film",
+  "kowiki": "블랙 이글 (1988년 영화)",
+  "koTitle": "블랙 이글",
+  "title": "영화 <블랙 이글> 사운드트랙",
+  "tracks": 17,
+  "linked": 15
+ },
+ {
+  "releaseGroup": "d29c6f56-2680-473c-92a0-0784ad279654",
+  "release": "a8bbeaee-9fe9-4f69-9be2-6289d674e406",
+  "rgTitle": "Final Judgement",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1994-11",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Final Judgement",
+  "tracks": 18,
+  "linked": 13
+ },
+ {
+  "releaseGroup": "d317dd8b-b9e5-4010-9216-76edef1819dc",
+  "release": "edc10c3a-a30f-482c-b778-4b04d7cd9b21",
+  "rgTitle": "Zero Option",
+  "types": [
+   "Album",
+   "Compilation",
+   "Soundtrack"
+  ],
+  "firstRelease": "2014",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "Zero Option",
+  "tracks": 28,
+  "linked": 26
+ }
+]

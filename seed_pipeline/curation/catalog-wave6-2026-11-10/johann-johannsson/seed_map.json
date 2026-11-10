@@ -1,0 +1,2268 @@
+[
+ {
+  "pieceId": 15727,
+  "title": "They Being Dead Yet Speaketh",
+  "mbids": [
+   "0ec7e18c-b79a-4121-ade6-b9f348f4429a"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-ea5416a5",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <2012-05-15: De Duif, Amsterdam, Netherlands> 트랙"
+ },
+ {
+  "pieceId": 16584,
+  "title": "Englabörn",
+  "mbids": [
+   "2315dd32-0de4-4218-921a-2a4b9de022a7"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 16617,
+  "title": "The Theory of Everything",
+  "mbids": [
+   "256e75ca-f643-41cc-8c4f-c0bf3b4f0d7c"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   24
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16810,
+  "title": "Sálfræðingur",
+  "mbids": [
+   "3185eb23-5475-4c31-adb7-3db73f9b6593"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 17095,
+  "title": "Virðulegu Forsetar: Part 2",
+  "mbids": [
+   "422800c1-d34d-48bc-82db-faaae87b338b"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-d290e61c",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Virðulegu Forsetar> 트랙"
+ },
+ {
+  "pieceId": 17248,
+  "title": "Virðulegu Forsetar: Part 4",
+  "mbids": [
+   "4a5b1d26-d0f9-4a8d-a54e-413ef7718434"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-d290e61c",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Virðulegu Forsetar> 트랙"
+ },
+ {
+  "pieceId": 17264,
+  "title": "Meditation (From „free the Mind” Soundtrack)",
+  "mbids": [
+   "4bacefc6-84c6-4138-8086-33d1383311a9"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17549,
+  "title": "Fordlândia",
+  "mbids": [
+   "5ddf0ee0-1e2a-45ad-9b8f-74b0a9aa6270"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-c5b8edfe",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Fordlândia> 트랙"
+ },
+ {
+  "pieceId": 17718,
+  "title": "Virðulegu Forsetar: Part 3",
+  "mbids": [
+   "680670a3-6977-4545-a8fb-a06e6ed15fd8"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-d290e61c",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Virðulegu Forsetar> 트랙"
+ },
+ {
+  "pieceId": 17731,
+  "title": "Drone Mass",
+  "mbids": [
+   "68a18735-1349-426e-a104-e2a307db1798"
+  ],
+  "mapping": "work",
+  "key": "johann-johannsson-68a18735",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17755,
+  "title": "Last and First Men",
+  "mbids": [
+   "69e11f36-cba3-4bdb-95ee-62495cfe56f5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 17899,
+  "title": "Arrival",
+  "mbids": [
+   "7275eaa1-bb91-47a4-a570-f15e34877219"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18072,
+  "title": "By the Roes, and by the Hinds of the Field",
+  "mbids": [
+   "7cebcab3-60d8-412f-b19c-3cbff473b604"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ },
+ {
+  "pieceId": 18727,
+  "title": "The Radiant City",
+  "mbids": [
+   "a6be4f99-16ea-44ee-9b69-a0b50ed34a64"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ },
+ {
+  "pieceId": 18830,
+  "title": "A Model of the Universe",
+  "mbids": [
+   "adb2af23-e3e0-4fe4-bf8d-85acd2dfc9f1"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   23
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18910,
+  "title": "Virðulegu Forsetar: Part 1",
+  "mbids": [
+   "b2a7baad-5510-46ce-91a7-d024477a038d"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-d290e61c",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Virðulegu Forsetar> 트랙"
+ },
+ {
+  "pieceId": 18962,
+  "title": "How We Left Fordlândia",
+  "mbids": [
+   "b62bb221-7115-412a-87e4-62a1de7c8231"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-c5b8edfe",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Fordlândia> 트랙"
+ },
+ {
+  "pieceId": 19212,
+  "title": "Copenhagen Dreams",
+  "mbids": [
+   "c5edc7ce-71e4-4790-9ce6-3607f7ccab95"
+  ],
+  "mapping": "work",
+  "key": "johann-johannsson-c5edc7ce",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19326,
+  "title": "The Beast",
+  "mbids": [
+   "cdbeaf51-c491-4c28-afb1-236071d75ee9"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19400,
+  "title": "A Prayer to the Dynamo",
+  "mbids": [
+   "d2919a52-ea1e-4d25-846b-7fc48b5896ea"
+  ],
+  "mapping": "work",
+  "key": "johann-johannsson-d2919a52",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 19701,
+  "title": "Sálfræðingur deyr",
+  "mbids": [
+   "e76a709e-8896-4ce5-a908-bc4d8a047e45"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 19810,
+  "title": "Part 5: The Sun's Gone Dim and the Sky's Turned Black",
+  "mbids": [
+   "ef5176e6-3ec5-3685-81ac-e4b7de286d38"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-666f5296",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <IBM 1401, A User’s Manual> 트랙"
+ },
+ {
+  "pieceId": 20007,
+  "title": "Free the Mind",
+  "mbids": [
+   "fa0282b9-244a-4761-bad1-0437150503e7"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 20023,
+  "title": "12 Conversations with Thilo Heinzmann",
+  "mbids": [
+   "fac98cda-bec8-42aa-8da8-ebcff3cfa576"
+  ],
+  "mapping": "work",
+  "key": "johann-johannsson-fac98cda",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 20058,
+  "title": "Flight From the City",
+  "mbids": [
+   "fd68ed9f-6fbb-4d98-b18a-51f86d8cc528"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ },
+ {
+  "pieceId": 16007,
+  "title": "Breathe",
+  "mbids": [
+   "017327f7-e5c3-4f9f-bc5b-53bb1c1b2686"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16047,
+  "title": "Desert Music",
+  "mbids": [
+   "0386c79b-5d7b-402d-a700-d822e62d8b86"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16075,
+  "title": "Will's Story 2",
+  "mbids": [
+   "0518e5ce-3db6-4cc9-9b4d-fa6ee9196882"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16127,
+  "title": "Part 2: IBM 1403 Printer",
+  "mbids": [
+   "07f86561-2b17-3998-a63b-738ef0d1b8a0"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-666f5296",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <IBM 1401, A User’s Manual> 트랙"
+ },
+ {
+  "pieceId": 16153,
+  "title": "Jói & Karen (Ryuichi Sakamoto rework)",
+  "mbids": [
+   "0996f945-010d-47f2-882e-5e07545829ae"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16173,
+  "title": "Melodia (III)",
+  "mbids": [
+   "0ad1aced-ead5-4504-a893-ba4888787cf4"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-c5b8edfe",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Fordlândia> 트랙"
+ },
+ {
+  "pieceId": 16177,
+  "title": "Melodia (II)",
+  "mbids": [
+   "0b03cb1e-0acd-4add-a551-6b8e2c8d63f3"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 16181,
+  "title": "The Dreams That Stuff Is Made Of",
+  "mbids": [
+   "0b594dfa-71c8-4712-955e-fec24bb818cb"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16193,
+  "title": "Odi et Amo – bis",
+  "mbids": [
+   "0c3e804d-e4e2-495e-9556-1aeecae2f858"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 16215,
+  "title": "Rowing (alternative version)",
+  "mbids": [
+   "0d272385-c294-4b75-8999-ce1c90fd93f2"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16234,
+  "title": "Englabörn (Víkingur Ólafsson piano version)",
+  "mbids": [
+   "0e6f56d9-11db-4c87-885f-e508daa04049"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 16275,
+  "title": "Dying Bird",
+  "mbids": [
+   "109a8031-965f-4e5d-a5cd-ece39f5213c7"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-b51fd0b6",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <White Black Boy: Original Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16277,
+  "title": "Sálfræðingur deyr (Hildur Guðnadóttir rework)",
+  "mbids": [
+   "10a35eca-654a-4bfd-b34f-7a952b157347"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16314,
+  "title": "A Sparrow Alighted Upon Our Shoulder",
+  "mbids": [
+   "129807c6-3b83-4813-a1db-91abe6d3e06a"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ },
+ {
+  "pieceId": 16321,
+  "title": "First Attempts",
+  "mbids": [
+   "130ec245-ae1a-4331-8d79-c17dbdd56f27"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16342,
+  "title": "Night Montage",
+  "mbids": [
+   "1459b3b3-9ed0-4583-b650-cf80ea8bc647"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16348,
+  "title": "Hammers and Nails",
+  "mbids": [
+   "14bd6f29-bcb1-40b5-b2ef-851522f84015"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16353,
+  "title": "Separation",
+  "mbids": [
+   "14e8d166-d326-412c-b525-eebb258e2920"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16360,
+  "title": "Properties of Explosive Materials",
+  "mbids": [
+   "1556cb2d-6543-4beb-95b3-a47911595b06"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16425,
+  "title": "Part 4: IBM 729 II Magnetic Tape Unit",
+  "mbids": [
+   "18cbc99c-3899-3c93-9b3d-0407e8155f02"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-666f5296",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <IBM 1401, A User’s Manual> 트랙"
+ },
+ {
+  "pieceId": 16439,
+  "title": "Time To Say Goodbye",
+  "mbids": [
+   "19a97b39-85cb-4690-af17-06ed4d1084e5"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-b51fd0b6",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <White Black Boy: Original Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16442,
+  "title": "Good Morning, Midnight",
+  "mbids": [
+   "19c6db39-987f-4dc4-9f65-66178858d1fa"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ },
+ {
+  "pieceId": 16451,
+  "title": "Camping",
+  "mbids": [
+   "1a1a4333-a9bc-4ae2-8274-dfbab213ef46"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16467,
+  "title": "Around the Clock News",
+  "mbids": [
+   "1aff25a4-900c-4d13-adea-d29f2c863be8"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16548,
+  "title": "Odi et Amo (Jóhannson/Donadello rework)",
+  "mbids": [
+   "209a283e-b4d4-405f-a754-f02b2837ec88"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 16598,
+  "title": "…eins og venjulegt fólk",
+  "mbids": [
+   "24429771-d4a0-43e2-830f-26e4b290d975"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 16599,
+  "title": "Feather",
+  "mbids": [
+   "245a5800-66bc-4633-a92d-ec5c76b26156"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-b51fd0b6",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <White Black Boy: Original Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16667,
+  "title": "London, 1988",
+  "mbids": [
+   "2843b241-2528-409c-9e26-75a7a3f67980"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   25
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16686,
+  "title": "Fordlândia – Aerial View",
+  "mbids": [
+   "29ac562e-9fe2-49cb-baf1-6426da144f8c"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-c5b8edfe",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Fordlândia> 트랙"
+ },
+ {
+  "pieceId": 16730,
+  "title": "Exam Results",
+  "mbids": [
+   "2c2b6c99-fe64-476e-bb72-dcca105f8f65"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-b51fd0b6",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <White Black Boy: Original Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16741,
+  "title": "Automobile",
+  "mbids": [
+   "2d2ab3cf-c47b-45ff-a11a-dff58ff00964"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-b51fd0b6",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <White Black Boy: Original Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16778,
+  "title": "The Border",
+  "mbids": [
+   "2fbfb02a-fe5d-453e-8164-9ec81a8c04eb"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16826,
+  "title": "Drywall",
+  "mbids": [
+   "3257f126-5eeb-43c8-b2ff-dbb0eb18213a"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 16885,
+  "title": "Odi et Amo (Theatre of Voices version)",
+  "mbids": [
+   "352e79bc-bd59-4e7c-9e99-48d4668d314d"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   27
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 16920,
+  "title": "“Ég sleppi þér aldrei”",
+  "mbids": [
+   "377cdfe9-4341-4ed3-8e5f-28d1e2980b0b"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 16988,
+  "title": "Melodia (IV)",
+  "mbids": [
+   "3bf22b32-25ff-4958-b180-2defe3c58c13"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 17041,
+  "title": "Forces of Attraction",
+  "mbids": [
+   "3ea18d01-7645-4d99-ae20-02bf43652e3d"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17043,
+  "title": "De Luce et Umbra",
+  "mbids": [
+   "3eafc1ba-146d-4545-aa09-3704e81ff294"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ },
+ {
+  "pieceId": 17072,
+  "title": "First Encounter",
+  "mbids": [
+   "40790b3f-2842-4a5a-aeac-8130a8aa510d"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17118,
+  "title": "The Whirling Ways of Stars That Pass",
+  "mbids": [
+   "43becfe6-d634-4383-8bdc-29ecdc7fc4b7"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   27
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17150,
+  "title": "Melancholia",
+  "mbids": [
+   "453264aa-30b6-4c87-94d8-06b4d33d2574"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17163,
+  "title": "Xenoanthropology",
+  "mbids": [
+   "45b4a3f4-8704-4638-9df1-48e8c8e715c1"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17195,
+  "title": "Þetta gerist á bestu bæjum",
+  "mbids": [
+   "4778f1f1-31b3-42d7-9ead-1f9982f64a6c"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 17214,
+  "title": "Part 3: IBM 1402 Card Read-Punch",
+  "mbids": [
+   "48a67c13-1df9-3f15-b07a-e11e2237bc91"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-666f5296",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <IBM 1401, A User’s Manual> 트랙"
+ },
+ {
+  "pieceId": 17244,
+  "title": "Lab",
+  "mbids": [
+   "4a384440-420f-497c-9888-ee2c8a2bff17"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17247,
+  "title": "Bað",
+  "mbids": [
+   "4a58cbeb-008b-4c57-ba54-02ab707fd3e5"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 17251,
+  "title": "Nightmare II",
+  "mbids": [
+   "4aaf40cc-5e0b-4222-9052-68e3816d2615"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-b51fd0b6",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <White Black Boy: Original Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17288,
+  "title": "Principle of Least Time",
+  "mbids": [
+   "4d6262a6-23c6-4f6a-8cda-923f5ad96b0a"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17311,
+  "title": "Elevator II",
+  "mbids": [
+   "4f8fe575-b3da-4d2f-8f44-68e1936c8769"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17344,
+  "title": "The Gift",
+  "mbids": [
+   "517183b0-2b77-4b20-a235-c7b2d764cf6d"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-4730b7bc",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <And in the Endless Pause There Came the Sound of Bees> 트랙"
+ },
+ {
+  "pieceId": 17385,
+  "title": "A Song for Europa",
+  "mbids": [
+   "53e67255-3719-4fbc-9bde-d6949303c58c"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ },
+ {
+  "pieceId": 17404,
+  "title": "City Building",
+  "mbids": [
+   "54d06fd5-8ed5-4499-90d3-3c1c192d4943"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-4730b7bc",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <And in the Endless Pause There Came the Sound of Bees> 트랙"
+ },
+ {
+  "pieceId": 17430,
+  "title": "Chalkboard",
+  "mbids": [
+   "5661d58a-1f97-408f-bbec-953285d33857"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17442,
+  "title": "The Origins of Time",
+  "mbids": [
+   "5710b2a9-d43f-49f6-8630-85161e3a5b30"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17481,
+  "title": "Bad Results",
+  "mbids": [
+   "593a9924-5863-4748-9dcc-4de321a2003a"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-b51fd0b6",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <White Black Boy: Original Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17526,
+  "title": "Escalation",
+  "mbids": [
+   "5c0c0f58-c4a6-41df-99f5-6c46c6de1848"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17532,
+  "title": "Sparkles",
+  "mbids": [
+   "5c69643f-589c-476c-bb18-7e50156b8bda"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17539,
+  "title": "A Normal Family",
+  "mbids": [
+   "5cc18a8a-b9a3-4f64-9b02-0e4092b77877"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17559,
+  "title": "Love After Love",
+  "mbids": [
+   "5e794f73-35b4-4aad-a218-45bab7e568ef"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17569,
+  "title": "Neurons",
+  "mbids": [
+   "5efd6a2b-a8f0-4ad6-858b-3cec25d74377"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17575,
+  "title": "Transmutation at a Distance",
+  "mbids": [
+   "5f761ef6-5ff0-4317-b379-1c2f8c60e305"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17620,
+  "title": "Emotional Intelligence",
+  "mbids": [
+   "61d7cb3f-ed9d-47e5-a2dc-9b6ea2430ba0"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17625,
+  "title": "Cambridge, 1963",
+  "mbids": [
+   "622cf84c-7f48-4d05-9176-5235dba668bd"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17699,
+  "title": "Playing With Ball",
+  "mbids": [
+   "66dc7bda-0ee2-4aa2-8792-6a0f91d64ec7"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-b51fd0b6",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <White Black Boy: Original Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17767,
+  "title": "The Voice Box",
+  "mbids": [
+   "6a702208-dca2-4a61-9661-da4f2d3db794"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   20
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17816,
+  "title": "Tu non mi perderai mai",
+  "mbids": [
+   "6dcf892a-4226-43a5-9bce-34cebc607da6"
+  ],
+  "mapping": "work",
+  "key": "johann-johannsson-6dcf892a",
+  "path": null,
+  "reason": null,
+  "note": null
+ },
+ {
+  "pieceId": 17826,
+  "title": "“Ef ég hefði aldrei…”",
+  "mbids": [
+   "6e64382b-1148-4fb9-8cbf-0e33c03e195d"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 17827,
+  "title": "Krókódíll",
+  "mbids": [
+   "6e77af43-f4fc-49dc-b518-b3713891bb32"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 17866,
+  "title": "Alejandro’s Song",
+  "mbids": [
+   "703d9249-3d07-4dc3-8aa9-f67eb7d2d227"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 17869,
+  "title": "Pods",
+  "mbids": [
+   "7062a265-bbf7-499f-8517-0bacca9434c4"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-4730b7bc",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <And in the Endless Pause There Came the Sound of Bees> 트랙"
+ },
+ {
+  "pieceId": 17914,
+  "title": "Good Night, Day",
+  "mbids": [
+   "7307f005-126a-4f0a-817c-51ba3ca20353"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ },
+ {
+  "pieceId": 17942,
+  "title": "Balcony",
+  "mbids": [
+   "74b473b9-e477-4153-af8f-41a72c4eca45"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   16
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18028,
+  "title": "Innocence (From „free the Mind” Soundtrack)",
+  "mbids": [
+   "7acbeed1-b989-473a-b1bc-c9be2c2c1c91"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18040,
+  "title": "Rainwater",
+  "mbids": [
+   "7b684f13-3640-4c2a-b214-ea4e68bd8886"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-4730b7bc",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <And in the Endless Pause There Came the Sound of Bees> 트랙"
+ },
+ {
+  "pieceId": 18132,
+  "title": "Sapir‐Whorf",
+  "mbids": [
+   "81790154-7f67-44b4-a5c0-19153966c352"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18163,
+  "title": "Daisy, Daisy",
+  "mbids": [
+   "840a8cb6-baa4-47c1-ba33-197d1e6a023a"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   22
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18188,
+  "title": "A Spacetime Singularity",
+  "mbids": [
+   "858397b2-020b-4af0-a7ed-32f5431488c4"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18195,
+  "title": "Englabörn (Viktor Orri Árnason rework)",
+  "mbids": [
+   "8636e994-0205-445c-819d-08ad60188fb5"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18220,
+  "title": "The Bank",
+  "mbids": [
+   "8831065e-8819-41ee-9742-599289a61b64"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18225,
+  "title": "Will's Story 1",
+  "mbids": [
+   "888af112-3439-49b1-8794-5670498cdf1a"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18233,
+  "title": "“Ég heyrði allt án þess að hlusta”",
+  "mbids": [
+   "89538f73-d656-4ecc-91d6-7c4a73fdf426"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 18255,
+  "title": "Domestic Pressures",
+  "mbids": [
+   "8a800673-96ed-4744-b031-31020eb23e1a"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18269,
+  "title": "The Spelling Board",
+  "mbids": [
+   "8b3fe345-6340-483e-956b-17cee688c6a5"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18276,
+  "title": "The Flat",
+  "mbids": [
+   "8bb9735d-1f2e-49a9-9054-f188ba3304df"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-4730b7bc",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <And in the Endless Pause There Came the Sound of Bees> 트랙"
+ },
+ {
+  "pieceId": 18284,
+  "title": "Siren Song",
+  "mbids": [
+   "8c3df0fe-596d-4965-af3c-29eabb8c2019"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-4730b7bc",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <And in the Endless Pause There Came the Sound of Bees> 트랙"
+ },
+ {
+  "pieceId": 18330,
+  "title": "The Rocket Builder (Io Pan!)",
+  "mbids": [
+   "8e7e68ad-8e9f-4571-998d-e104fd0c8378"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-c5b8edfe",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Fordlândia> 트랙"
+ },
+ {
+  "pieceId": 18345,
+  "title": "Holy Thursday (“Ég heyrði allt án þess að hlusta”) (Theatre of Voices version)",
+  "mbids": [
+   "8f606df3-1e3b-4d7e-a9cc-a181da163596"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   21
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 18346,
+  "title": "Fragment II",
+  "mbids": [
+   "8f62ff65-2511-40a2-8b50-ee3da7bac96c"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ },
+ {
+  "pieceId": 18370,
+  "title": "Target",
+  "mbids": [
+   "90c6061b-6c66-4230-86fd-132b6876db53"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18397,
+  "title": "Armoured Vehicle",
+  "mbids": [
+   "923b1d31-15ba-4f21-882a-dc0add3ea102"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18408,
+  "title": "The Drowned World",
+  "mbids": [
+   "930bcc59-0773-4170-b238-c31df297073f"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ },
+ {
+  "pieceId": 18421,
+  "title": "Dying City",
+  "mbids": [
+   "93b8bb44-b1f2-4235-abd2-2b7f49a829ee"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-4730b7bc",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <And in the Endless Pause There Came the Sound of Bees> 트랙"
+ },
+ {
+  "pieceId": 18450,
+  "title": "Collapsing Inwards",
+  "mbids": [
+   "957570f9-5a72-4aac-a461-9dc16a3a1735"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18461,
+  "title": "Elevator I",
+  "mbids": [
+   "965bd08f-d8b6-4387-a118-9867551bc541"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18470,
+  "title": "Convoy",
+  "mbids": [
+   "970557b0-6e20-4b64-ab0e-5196dfbe41d8"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18517,
+  "title": "Odi et Amo – bis (Alex Somers rework)",
+  "mbids": [
+   "99a22f2a-58ea-4534-bb22-43a4b4391225"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 18595,
+  "title": "Fragment I",
+  "mbids": [
+   "9edc90c3-7ead-4ff6-9ffe-ca8e4ecd69ae"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ },
+ {
+  "pieceId": 18605,
+  "title": "Cavendish Lab",
+  "mbids": [
+   "9fc46e05-0e4c-43c6-9b6d-57e1473f1e1c"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18628,
+  "title": "Viva Voce",
+  "mbids": [
+   "a10e14d2-185c-4229-8c38-0a6ed7434b4f"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18716,
+  "title": "Hydraulic Lift",
+  "mbids": [
+   "a639fc98-c0ea-425c-b60e-1de6de609131"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18733,
+  "title": "Soccer Game",
+  "mbids": [
+   "a70901b5-7f5d-42e5-87ef-74b1142f1c74"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18745,
+  "title": "Tunnel Music",
+  "mbids": [
+   "a7e01f74-f7f6-4af0-bffe-7d486f336130"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18848,
+  "title": "Part 1: IBM 1401 Processing Unit",
+  "mbids": [
+   "aea9def6-f27d-3d63-b2a0-941867c9b5d8"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-666f5296",
+  "path": [
+   1
+  ],
+  "reason": null,
+  "note": "음반 <IBM 1401, A User’s Manual> 트랙"
+ },
+ {
+  "pieceId": 18859,
+  "title": "The Stairs",
+  "mbids": [
+   "af73c5b7-64f1-460e-9993-e8b75ad369a8"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   13
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18967,
+  "title": "Ultimatum",
+  "mbids": [
+   "b67c81d1-1a2c-4423-8efd-00198f377b0d"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 18971,
+  "title": "Coma",
+  "mbids": [
+   "b6a6e9c8-04b8-48b9-a6d0-9e793eb1c8d0"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19005,
+  "title": "Karen býr til engil",
+  "mbids": [
+   "b8e4bfb7-5572-4bc0-afd4-1de3f0d29834"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 19009,
+  "title": "“Ég átti gráa æsku”",
+  "mbids": [
+   "b9412194-92fc-4313-92c9-c3ec9006a120"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 19018,
+  "title": "Entering the City",
+  "mbids": [
+   "ba665fb1-5e48-4d61-ad9f-9a3e597b8422"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-4730b7bc",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <And in the Endless Pause There Came the Sound of Bees> 트랙"
+ },
+ {
+  "pieceId": 19022,
+  "title": "Non‐Zero‐Sum Game",
+  "mbids": [
+   "bab6c597-16ae-456f-aa3c-714dcc3e70a5"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   14
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19062,
+  "title": "Jói & Karen",
+  "mbids": [
+   "bcf996b1-7241-4592-b869-76af6a3754be"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   3
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 19109,
+  "title": "Kangaru",
+  "mbids": [
+   "bfaeb4ca-4b75-4aef-a24e-a9594f630b10"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   20
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19124,
+  "title": "The Burning Mountain",
+  "mbids": [
+   "c09803f1-0a5d-4670-8f9e-7d3c9d6ee828"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ },
+ {
+  "pieceId": 19143,
+  "title": "…eins og venjulegt fólk (Paul Corley rework)",
+  "mbids": [
+   "c1f90ebb-207a-42d2-94e8-1b4f3ce47f61"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19186,
+  "title": "The Great God Pan Is Dead",
+  "mbids": [
+   "c4a7df08-83f0-44d9-8b6c-3ff7a9463385"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-c5b8edfe",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <Fordlândia> 트랙"
+ },
+ {
+  "pieceId": 19208,
+  "title": "A Game of Croquet",
+  "mbids": [
+   "c5c483c5-a4a7-4765-8071-4131a233ccdd"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19282,
+  "title": "One of Twelve",
+  "mbids": [
+   "ca86316c-71b4-4dfa-a5bf-bffc105fd30c"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   18
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19286,
+  "title": "Melodia (I)",
+  "mbids": [
+   "caab94dc-1ce5-4d42-aa9c-6b0c7652417e"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 19290,
+  "title": "Englabörn – tilbrigði",
+  "mbids": [
+   "cb056a90-183e-49f2-b700-1401b478d712"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-86c912e1",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Englabörn & Variations> 트랙"
+ },
+ {
+  "pieceId": 19335,
+  "title": "Exam",
+  "mbids": [
+   "ce49b9a1-5a97-4308-addb-c0cf745f9c76"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-b51fd0b6",
+  "path": [
+   9
+  ],
+  "reason": null,
+  "note": "음반 <White Black Boy: Original Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19339,
+  "title": "Surveillance",
+  "mbids": [
+   "ce8e1996-4f21-4982-9f50-135ef7625318"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19451,
+  "title": "Hazmat",
+  "mbids": [
+   "d5acdd7e-3b9a-4d5a-b05a-de6210341484"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   11
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19464,
+  "title": "A Brief History of Time",
+  "mbids": [
+   "d6c14708-fa39-4f66-bd0d-839fadc292d7"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-74cbd57a",
+  "path": [
+   21
+  ],
+  "reason": null,
+  "note": "음반 <The Theory of Everything: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19472,
+  "title": "Rowing",
+  "mbids": [
+   "d77568ba-6067-418e-ab6b-b54a725cdf13"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 19528,
+  "title": "City Building (alternate version)",
+  "mbids": [
+   "db34c109-8e03-47f2-80dd-42e1edbbde31"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 19541,
+  "title": "Chimaerica",
+  "mbids": [
+   "dbed3422-a41c-47c1-a84d-0cf2da187c18"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-c5b8edfe",
+  "path": [
+   7
+  ],
+  "reason": null,
+  "note": "음반 <Fordlândia> 트랙"
+ },
+ {
+  "pieceId": 19595,
+  "title": "Explosion",
+  "mbids": [
+   "dfef4d42-e8ff-4a08-8b4d-f004bb54aa9c"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-771042e4",
+  "path": [
+   5
+  ],
+  "reason": null,
+  "note": "음반 <Sicario: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19648,
+  "title": "Orphic Hymn",
+  "mbids": [
+   "e2b6ce77-632c-454b-85e4-0e808c12710f"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   15
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ },
+ {
+  "pieceId": 19660,
+  "title": "Hz",
+  "mbids": [
+   "e3b7a915-86a8-4e48-b7fd-441338eb2501"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "film_cue",
+  "note": "어느 음반에도 실리지 않은 큐"
+ },
+ {
+  "pieceId": 19725,
+  "title": "Rise",
+  "mbids": [
+   "e9cba0fb-487e-4a40-91d5-3bac1d154797"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   19
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19739,
+  "title": "Nightmare",
+  "mbids": [
+   "ea43f828-9cd2-4bcf-a268-537bc52af8e4"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-b51fd0b6",
+  "path": [
+   10
+  ],
+  "reason": null,
+  "note": "음반 <White Black Boy: Original Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19749,
+  "title": "“Ég heyrði allt án þess að hlusta” (A Winged Victory for the Sullen rework)",
+  "mbids": [
+   "eb181126-b6be-4eb4-8ae6-a23d359efbba"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19820,
+  "title": "The Cause of Labour Is the Hope of the World",
+  "mbids": [
+   "effa922f-dc55-4686-9c65-dc5dede4fbaf"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-ea5416a5",
+  "path": [
+   6
+  ],
+  "reason": null,
+  "note": "음반 <2012-05-15: De Duif, Amsterdam, Netherlands> 트랙"
+ },
+ {
+  "pieceId": 19911,
+  "title": "Odi et Amo – bis (Jóhannson/Donadello rework)",
+  "mbids": [
+   "f523a6a0-9fb1-41a7-afcd-292a32d2ebbb"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "popular",
+  "note": "MB 에서 편곡·다른 판·발췌로 표시된 work"
+ },
+ {
+  "pieceId": 19935,
+  "title": "Xenolinguistics",
+  "mbids": [
+   "f6276eb1-b483-43fb-85e3-bc4270c53c45"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   8
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 19968,
+  "title": "Decyphering",
+  "mbids": [
+   "f7a37d3a-aa83-4fe4-a1f6-66ef7a70a08e"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-63c7807b",
+  "path": [
+   17
+  ],
+  "reason": null,
+  "note": "음반 <Arrival: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 20020,
+  "title": "Inside the Pods",
+  "mbids": [
+   "faa87df1-b140-471d-be70-1c95f7cda6a5"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-4730b7bc",
+  "path": [
+   12
+  ],
+  "reason": null,
+  "note": "음반 <And in the Endless Pause There Came the Sound of Bees> 트랙"
+ },
+ {
+  "pieceId": 20049,
+  "title": "Radio",
+  "mbids": [
+   "fca5766e-5231-42b2-bb46-d5f65283cfa7"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-1eaada4d",
+  "path": [
+   2
+  ],
+  "reason": null,
+  "note": "음반 <Free the Mind: Original Motion Picture Soundtrack> 트랙"
+ },
+ {
+  "pieceId": 20092,
+  "title": "Melodia (Guidelines for a Space Propulsion Device Based on Heim’s Quantum Theory)",
+  "mbids": [
+   "ffc1199e-dd90-43df-b664-539a680920a1"
+  ],
+  "mapping": "unmatched",
+  "key": null,
+  "path": null,
+  "reason": "duplicate",
+  "note": "같은 MB work 를 먼저 쓴 작품이 있음"
+ },
+ {
+  "pieceId": 20094,
+  "title": "A Deal With Chaos",
+  "mbids": [
+   "ffc90f00-1b5c-4545-b459-fcef0c187d94"
+  ],
+  "mapping": "part",
+  "key": "johann-johannsson-rg-5a35595d",
+  "path": [
+   4
+  ],
+  "reason": null,
+  "note": "음반 <Orphée> 트랙"
+ }
+]

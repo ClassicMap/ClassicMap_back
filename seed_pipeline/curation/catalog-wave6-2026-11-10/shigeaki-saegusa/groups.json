@@ -1,0 +1,38 @@
+[
+ {
+  "releaseGroup": "4a23be92-d84c-41df-ad48-d5ccf0f987a4",
+  "release": "9410e74f-8834-4e54-af69-8c64ff17f3c4",
+  "rgTitle": "機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1988-03-13",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "機動戦士ガンダム 逆襲のシャア オリジナル・サウンドトラック",
+  "tracks": 14,
+  "linked": 14
+ },
+ {
+  "releaseGroup": "42276678-6b80-4590-9730-8edacec57fda",
+  "release": "96ba6722-a8ef-455a-984f-51a0b4c42c15",
+  "rgTitle": "30億光年の宇宙 〜星たちの軌跡〜",
+  "types": [
+   "Album",
+   "Soundtrack"
+  ],
+  "firstRelease": "1978",
+  "film": false,
+  "wikidata": null,
+  "screenKind": null,
+  "kowiki": null,
+  "koTitle": null,
+  "title": "30億光年の宇宙 〜星たちの軌跡〜",
+  "tracks": 8,
+  "linked": 8
+ }
+]
