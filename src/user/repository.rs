@@ -15,6 +15,13 @@ impl UserRepository {
             .await
     }
 
+    /// Clerk 대조용 (users.id, clerk_id). 이메일 등 다른 칸은 읽지 않는다
+    pub async fn find_clerk_ids(pool: &DbPool) -> Result<Vec<(i32, String)>, Error> {
+        sqlx::query_as::<_, (i32, String)>("SELECT id, clerk_id FROM users ORDER BY id")
+            .fetch_all(pool)
+            .await
+    }
+
     pub async fn find_by_id(pool: &DbPool, id: i32) -> Result<Option<User>, Error> {
         sqlx::query_as::<_, User>("SELECT * FROM users WHERE id = ?")
             .bind(id)
