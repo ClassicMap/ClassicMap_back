@@ -26,6 +26,12 @@ SELECT artist.authority_entity_id, 'banner', 'https://slippedisc.com/2016/12/tra
 FROM artists artist WHERE artist.id = 646 AND artist.english_name = 'Heinrich Schiff' AND artist.authority_entity_id IS NOT NULL
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://slippedisc.com/wp-content/uploads/2016/12/heinrich-schiff.jpg');
+-- artist 650 제럴드 무어 (한국경제 · Ellinger)
+INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, focal_point, is_primary, editorial_status)
+SELECT artist.authority_entity_id, 'banner', 'https://www.hankyung.com/article/202602279290i', 'https://img.hankyung.com/photo/202602/01.43433851.1.jpg', '한국경제 · Ellinger', '85% 25%', TRUE, 'PUBLISHED'
+FROM artists artist WHERE artist.id = 650 AND artist.english_name = 'Gerald Moore' AND artist.authority_entity_id IS NOT NULL
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://img.hankyung.com/photo/202602/01.43433851.1.jpg');
 -- artist 655 라파엘 프뤼베크 데 부르고스 (Eloquence Classics)
 INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, focal_point, is_primary, editorial_status)
 SELECT artist.authority_entity_id, 'banner', 'https://www.eloquenceclassics.com/celebrating-the-legacy-of-rafael-fruhbeck-de-burgos/', 'https://www.eloquenceclassics.com/wp-content/uploads/sites/1141/2025/05/Features-1-compressed.jpg', 'Eloquence Classics', '85% 10%', TRUE, 'PUBLISHED'
