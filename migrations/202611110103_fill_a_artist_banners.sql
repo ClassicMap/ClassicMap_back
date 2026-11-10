@@ -163,6 +163,12 @@ SELECT artist.authority_entity_id, 'banner', 'https://sylviamcnair.com/photos--2
 FROM artists artist WHERE artist.id = 687 AND artist.english_name = 'Sylvia McNair' AND artist.authority_entity_id IS NOT NULL
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://images.zoogletools.com/s:bzglfiles/u/207762/a37ce1dd772d538e04130c847ae770e99eb82f15/original/sylvia-singing.jpg/!!/b%3AW1sicmVzaXplIiwxODAwXSxbIm1heCJdLFsid2UiXV0%3D/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.jpg');
+-- artist 688 샤를로테 마르히오노 (NRC)
+INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, author, license, license_url, focal_point, is_primary, editorial_status)
+SELECT artist.authority_entity_id, 'banner', 'https://www.nrc.nl/nieuws/2007/07/05/charlotte-margiono-11353579-a526129', 'https://images.nrc.nl/hVADLr2hll_2l9XD5ZwCbgJck44=/1280x/filters:no_upscale()/s3/tark/images/NH/200707/05/678338.jpg', 'NRC', NULL, NULL, NULL, '20% 10%', TRUE, 'PUBLISHED'
+FROM artists artist WHERE artist.id = 688 AND artist.english_name = 'Charlotte Margiono' AND artist.authority_entity_id IS NOT NULL
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://images.nrc.nl/hVADLr2hll_2l9XD5ZwCbgJck44=/1280x/filters:no_upscale()/s3/tark/images/NH/200707/05/678338.jpg');
 -- artist 690 마이클 알렉산더 윌런스 (koelnerakademie.de)
 INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, author, license, license_url, focal_point, is_primary, editorial_status)
 SELECT artist.authority_entity_id, 'banner', 'https://koelnerakademie.de/brautigam_dka_maw/', 'https://koelnerakademie.de/wp-content/uploads/2021/04/Brautigam_DKA_MAW-scaled.jpg', 'koelnerakademie.de', NULL, NULL, NULL, '59% 33%', TRUE, 'PUBLISHED'
@@ -211,18 +217,24 @@ SELECT artist.authority_entity_id, 'banner', 'https://askonasholt.com/artist/tre
 FROM artists artist WHERE artist.id = 710 AND artist.english_name = 'Trevor Pinnock' AND artist.authority_entity_id IS NOT NULL
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://cdn.sanity.io/images/ssnxcmsx/prod/17c6ac52a3c91cdb3b418e98d72be87a52918ffa-5000x3332.jpg?w=2048&q=75');
+-- artist 711 외르크 페르버 (Heilbronner Stimme)
+INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, author, license, license_url, focal_point, is_primary, editorial_status)
+SELECT artist.authority_entity_id, 'banner', 'https://www.stimme.de/freizeit/kultur/kultur/wko-gruender-joerg-faerber-im-alter-von-93-jahren-gestorben-art-4673701', 'https://www.stimme.de/storage/image/3/2/9/0/3680923_twitter-card_1AAldH_j4n0XS.jpg', 'Heilbronner Stimme', NULL, NULL, NULL, '50% 28%', TRUE, 'PUBLISHED'
+FROM artists artist WHERE artist.id = 711 AND artist.english_name = 'Jörg Faerber' AND artist.authority_entity_id IS NOT NULL
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://www.stimme.de/storage/image/3/2/9/0/3680923_twitter-card_1AAldH_j4n0XS.jpg');
 -- artist 717 존 매케이브 (Interlude)
 INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, author, license, license_url, focal_point, is_primary, editorial_status)
 SELECT artist.authority_entity_id, 'banner', 'https://interlude.hk/interview-with-monica-mccabe-remembering-piano-music-of-john-mccabe/', 'https://interlude-cdn-blob-prod.azureedge.net/interlude-blob-storage-prod/2021/08/john-mccabe.jpg', 'Interlude', NULL, NULL, NULL, '0% 27%', TRUE, 'PUBLISHED'
 FROM artists artist WHERE artist.id = 717 AND artist.english_name = 'John McCabe' AND artist.authority_entity_id IS NOT NULL
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://interlude-cdn-blob-prod.azureedge.net/interlude-blob-storage-prod/2021/08/john-mccabe.jpg');
--- artist 718 산드로 데 팔마 (StageBuddy)
+-- artist 718 산드로 데 팔마 (langhe.net)
 INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, author, license, license_url, focal_point, is_primary, editorial_status)
-SELECT artist.authority_entity_id, 'banner', 'https://stagebuddy.com/?p=188265', 'https://stagebuddy.com/wp-content/uploads/2017/10/Photo-for-Carnegie-Hall-website.jpg', 'StageBuddy', NULL, NULL, NULL, '80% 22%', TRUE, 'PUBLISHED'
+SELECT artist.authority_entity_id, 'banner', 'https://langhe.net/en/event/alba-music-festival-ombre-sogni-e-fantasmi-nella-belle-epoque-31-05-2025/', 'https://langhe.net/wp-content/uploads/2025/05/Sandro-DePalma.jpg', 'langhe.net', NULL, NULL, NULL, '44% 21%', TRUE, 'PUBLISHED'
 FROM artists artist WHERE artist.id = 718 AND artist.english_name = 'Sandro De Palma' AND artist.authority_entity_id IS NOT NULL
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
-  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://stagebuddy.com/wp-content/uploads/2017/10/Photo-for-Carnegie-Hall-website.jpg');
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://langhe.net/wp-content/uploads/2025/05/Sandro-DePalma.jpg');
 -- artist 721 프레데리카 폰 슈타데 (KUSC)
 INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, author, license, license_url, focal_point, is_primary, editorial_status)
 SELECT artist.authority_entity_id, 'banner', 'https://kusc.org/articles/classical-californians-frederica-von-stade', 'https://assets.classicalcalifornia.org/contentful/2OCA1T2EHLxbQYlbdDHyS0/49a6dc81db1825d3eff4d46266e07af7/Frederica-von-Stade-16x9.webp', 'KUSC', NULL, NULL, NULL, '53% 12%', TRUE, 'PUBLISHED'
@@ -265,6 +277,12 @@ SELECT artist.authority_entity_id, 'banner', 'https://www.steinway.com/artists/r
 FROM artists artist WHERE artist.id = 739 AND artist.english_name = 'Rudolf Firkušný' AND artist.authority_entity_id IS NOT NULL
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://www.steinway.com/.imaging/mte/steinway-us-theme/XL-Rectangle/dam/artists/usable-artist-images/Rudolf-Firkusny_photo_Steve-J.-Sherman_Carnegie_Hall_1987_fma.jpg/jcr:content/Rudolf-Firkusny_photo_Steve-J.-Sherman_Carnegie_Hall_1987_fma.jpg');
+-- artist 740 모라 림파니 (karnaval.com)
+INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, author, license, license_url, focal_point, is_primary, editorial_status)
+SELECT artist.authority_entity_id, 'banner', 'https://karnaval.com/sanatcilar/moura-lympany-4491', 'https://mediacdns.karnaval.com/media/artist_media/4491/biography_1280x720/photo_4491_0.jpg?v=150413035405', 'karnaval.com', NULL, NULL, NULL, '0% 18%', TRUE, 'PUBLISHED'
+FROM artists artist WHERE artist.id = 740 AND artist.english_name = 'Moura Lympany' AND artist.authority_entity_id IS NOT NULL
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://mediacdns.karnaval.com/media/artist_media/4491/biography_1280x720/photo_4491_0.jpg?v=150413035405');
 -- artist 744 스티븐 레이턴 (stephenlayton.com)
 INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, author, license, license_url, focal_point, is_primary, editorial_status)
 SELECT artist.authority_entity_id, 'banner', 'https://stephenlayton.com/', 'https://stephenlayton.com/assets/img/sl-4w-2560.webp', 'stephenlayton.com', NULL, NULL, NULL, '65% 11%', TRUE, 'PUBLISHED'
@@ -307,6 +325,12 @@ SELECT artist.authority_entity_id, 'banner', 'https://www.southbankcentre.co.uk/
 FROM artists artist WHERE artist.id = 763 AND artist.english_name = 'BBC Concert Orchestra' AND artist.authority_entity_id IS NOT NULL
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://bynder.southbankcentre.co.uk/transform/217a8c4f-5c45-4777-9aef-545981f2e1c5/260508_BBC-CO_Brahms_QEH?io=transform%3Afill%2Cwidth%3A1600%2Cheight%3A1000');
+-- artist 765 이시도어 코언 (valerieaimard.fr)
+INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, author, license, license_url, focal_point, is_primary, editorial_status)
+SELECT artist.authority_entity_id, 'banner', 'https://valerieaimard.fr/concerts-memorables-2/', 'https://valerieaimard.fr/wp-content/uploads/2015/06/Isidore-Cohen-Marlboro-Green-Room.jpg', 'valerieaimard.fr', NULL, NULL, NULL, '100% 43%', TRUE, 'PUBLISHED'
+FROM artists artist WHERE artist.id = 765 AND artist.english_name = 'Isidore Cohen' AND artist.authority_entity_id IS NOT NULL
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://valerieaimard.fr/wp-content/uploads/2015/06/Isidore-Cohen-Marlboro-Green-Room.jpg');
 -- artist 766 버나드 그린하우스 (Fotopersbureau De Boer)
 INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, author, license, license_url, focal_point, is_primary, editorial_status)
 SELECT artist.authority_entity_id, 'banner', 'https://commons.wikimedia.org/wiki/File:Beaux_Arts_Trio,_Concertgebouw,_1978_-_35.jpg', 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Beaux_Arts_Trio%2C_Concertgebouw%2C_1978_-_35.jpg', NULL, 'Fotopersbureau De Boer', 'CC0', 'http://creativecommons.org/publicdomain/zero/1.0/deed.en', '90% 15%', TRUE, 'PUBLISHED'
