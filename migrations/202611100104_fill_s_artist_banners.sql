@@ -14,12 +14,24 @@ SELECT artist.authority_entity_id, 'banner', 'https://intermusica.com/internatio
 FROM artists artist WHERE artist.id = 346 AND artist.english_name = 'Mariinsky Theatre Orchestra' AND artist.authority_entity_id IS NOT NULL
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://www.intermusica.co.uk/assets/images/1440/10000/marnisky_header.jpg');
--- artist 361 메트로폴리탄 오페라 오케스트라 (MET Orchestra Musicians)
+-- artist 361 메트로폴리탄 오페라 오케스트라 (Askonas Holt)
 INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, focal_point, is_primary, editorial_status)
-SELECT artist.authority_entity_id, 'banner', 'https://metorchestramusicians.org/', 'https://www.metorchestramusicians.org/wp-content/uploads/2023/09/Met-Old-group-headshot-website-size.png', 'MET Orchestra Musicians', '47% 31%', TRUE, 'PUBLISHED'
+SELECT artist.authority_entity_id, 'banner', 'https://askonasholt.com/tour/the-met-orchestra', 'https://cdn.sanity.io/images/ssnxcmsx/prod/8ed1dbebabcd6993e778f5ceab02ef72097dc5e3-7296x4866.jpg?w=2560&q=80', 'Askonas Holt', '50% 45%', TRUE, 'PUBLISHED'
 FROM artists artist WHERE artist.id = 361 AND artist.english_name = 'Metropolitan Opera Orchestra' AND artist.authority_entity_id IS NOT NULL
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
-  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://www.metorchestramusicians.org/wp-content/uploads/2023/09/Met-Old-group-headshot-website-size.png');
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://cdn.sanity.io/images/ssnxcmsx/prod/8ed1dbebabcd6993e778f5ceab02ef72097dc5e3-7296x4866.jpg?w=2560&q=80');
+-- artist 646 하인리히 시프 (Slippedisc)
+INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, focal_point, is_primary, editorial_status)
+SELECT artist.authority_entity_id, 'banner', 'https://slippedisc.com/2016/12/tragic-news-a-great-cellist-has-died-at-65/', 'https://slippedisc.com/wp-content/uploads/2016/12/heinrich-schiff.jpg', 'Slippedisc', '47% 14%', TRUE, 'PUBLISHED'
+FROM artists artist WHERE artist.id = 646 AND artist.english_name = 'Heinrich Schiff' AND artist.authority_entity_id IS NOT NULL
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://slippedisc.com/wp-content/uploads/2016/12/heinrich-schiff.jpg');
+-- artist 655 라파엘 프뤼베크 데 부르고스 (Eloquence Classics)
+INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, focal_point, is_primary, editorial_status)
+SELECT artist.authority_entity_id, 'banner', 'https://www.eloquenceclassics.com/celebrating-the-legacy-of-rafael-fruhbeck-de-burgos/', 'https://www.eloquenceclassics.com/wp-content/uploads/sites/1141/2025/05/Features-1-compressed.jpg', 'Eloquence Classics', '85% 10%', TRUE, 'PUBLISHED'
+FROM artists artist WHERE artist.id = 655 AND artist.english_name = 'Rafael Frühbeck de Burgos' AND artist.authority_entity_id IS NOT NULL
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://www.eloquenceclassics.com/wp-content/uploads/sites/1141/2025/05/Features-1-compressed.jpg');
 -- artist 657 라 스칼라 극장 합창단 (Teatro alla Scala · Brescia e Amisano)
 INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, focal_point, is_primary, editorial_status)
 SELECT artist.authority_entity_id, 'banner', 'https://www.teatroallascala.org/en/the-theater/chorus/chorus.html', 'https://www.teatroallascala.org/static/upload/724/724574badg-ph-brescia-e-amisano--teatro-alla-scala.preset-.jpg', 'Teatro alla Scala · Brescia e Amisano', '50% 90%', TRUE, 'PUBLISHED'
@@ -32,12 +44,6 @@ SELECT artist.authority_entity_id, 'banner', 'https://www.bayreuther-festspiele.
 FROM artists artist WHERE artist.id = 660 AND artist.english_name = 'Bayreuther Festspielorchester' AND artist.authority_entity_id IS NOT NULL
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://www.bayreuther-festspiele.de/wp-content/uploads/2025/08/orchester-sw.webp');
--- artist 663 에디타 그루베로바 (Wiener Staatsoper · Michael Pöhn)
-INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, focal_point, is_primary, editorial_status)
-SELECT artist.authority_entity_id, 'banner', 'https://www.wiener-staatsoper.at/en/ensemble/detail/-30', 'https://www.wiener-staatsoper.at/fileadmin/Kuenstler/Saengerinnen/Edita_GRUBEROVA__Foto_Michael_Poehn_Wiener_Staatsoper-web.jpg', 'Wiener Staatsoper · Michael Pöhn', '50% 45%', TRUE, 'PUBLISHED'
-FROM artists artist WHERE artist.id = 663 AND artist.english_name = 'Edita Gruberová' AND artist.authority_entity_id IS NOT NULL
-  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
-  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://www.wiener-staatsoper.at/fileadmin/Kuenstler/Saengerinnen/Edita_GRUBEROVA__Foto_Michael_Poehn_Wiener_Staatsoper-web.jpg');
 -- artist 673 일레아나 코트루바슈 (Bucharest National Opera (Bachtrack))
 INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, focal_point, is_primary, editorial_status)
 SELECT artist.authority_entity_id, 'banner', 'https://bachtrack.com/news-ileana-cotrubas-obituary-august-2026', 'https://cdn.bachtrack.com/wfiles/502776-ileana-cotrubas-c-bucharest-national-opera.webp', 'Bucharest National Opera (Bachtrack)', '40% 68%', TRUE, 'PUBLISHED'
@@ -56,6 +62,12 @@ SELECT artist.authority_entity_id, 'banner', 'https://santacecilia.it/orchestra-
 FROM artists artist WHERE artist.id = 680 AND artist.english_name = 'Orchestra dell''Accademia Nazionale di Santa Cecilia' AND artist.authority_entity_id IS NOT NULL
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
   AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://santacecilia.it/wp-content/uploads/2024/10/Orchestra-1920.jpg');
+-- artist 683 그레이엄 존슨 (Podularity)
+INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, focal_point, is_primary, editorial_status)
+SELECT artist.authority_entity_id, 'banner', 'https://podularity.com/2014/10/30/1985/', 'https://podularity.com/wp-content/uploads/2014/10/Graham-Johnson-b-and-wh-002.jpg', 'Podularity', '46% 31%', TRUE, 'PUBLISHED'
+FROM artists artist WHERE artist.id = 683 AND artist.english_name = 'Graham Johnson' AND artist.authority_entity_id IS NOT NULL
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.image_kind = 'banner' AND existing.editorial_status = 'PUBLISHED')
+  AND NOT EXISTS (SELECT 1 FROM entity_images existing WHERE existing.authority_entity_id = artist.authority_entity_id AND existing.file_url = 'https://podularity.com/wp-content/uploads/2014/10/Graham-Johnson-b-and-wh-002.jpg');
 -- artist 685 마거릿 프라이스 (Warner Classics)
 INSERT INTO entity_images (authority_entity_id, image_kind, source_url, file_url, credit_line, focal_point, is_primary, editorial_status)
 SELECT artist.authority_entity_id, 'banner', 'https://www.warnerclassics.com/artist/margaret-price', 'https://www.warnerclassics.com/sites/default/files/H553380.jpg', 'Warner Classics', '62% 37%', TRUE, 'PUBLISHED'
