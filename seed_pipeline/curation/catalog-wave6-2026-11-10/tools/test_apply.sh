@@ -17,7 +17,9 @@ snap() {
       sequence_number,COALESCE(name_ko,''),editorial_status) ORDER BY id SEPARATOR ';')) FROM piece_parts;
     SELECT COUNT(*) FROM piece_identifiers"
 }
-s=$(date +%s); run "$@"; echo "round1 $(( $(date +%s) - s ))s"; a=$(snap)
-s=$(date +%s); run "$@"; echo "round2 $(( $(date +%s) - s ))s"; b=$(snap)
+now() { perl -MTime::HiRes=time -e 'printf "%.3f", time'; }
+took() { awk -v a="$1" -v b="$(now)" 'BEGIN { printf "%.2f", b - a }'; }
+s=$(now); run "$@"; echo "round1 $(took "$s")s"; a=$(snap)
+s=$(now); run "$@"; echo "round2 $(took "$s")s"; b=$(snap)
 [ "$a" = "$b" ] && echo idempotent || echo "CHANGED on round2"
 M -N -e "SELECT COUNT(*), SUM(hidden_reason IS NOT NULL) FROM pieces; SELECT COUNT(*) FROM piece_parts"
