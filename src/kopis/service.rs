@@ -845,6 +845,13 @@ async fn import_concert(
                         .parse_end_date()
                         .map(|d| d.format("%Y-%m-%d").to_string());
 
+                    // 넣기 전에 봐야 새 공연인지 안다(넣은 뒤에 보면 늘 '갱신'으로 셌다)
+                    let existed = ConcertRepository::get_by_kopis_id(pool, &detail.performance_id)
+                        .await
+                        .ok()
+                        .flatten()
+                        .is_some();
+
                     match ConcertRepository::upsert_kopis_concert(
                         pool,
                         &detail.performance_id,
@@ -960,13 +967,7 @@ async fn import_concert(
                                 ),
                             }
 
-                            // 기존 공연 여부 확인
-                            if ConcertRepository::get_by_kopis_id(pool, &detail.performance_id)
-                                .await
-                                .ok()
-                                .flatten()
-                                .is_some()
-                            {
+                            if existed {
                                 updated_count += 1;
                                 Logger::debug(
                                     "KOPIS",
