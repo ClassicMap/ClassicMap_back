@@ -81,6 +81,10 @@ ARRANGED = re.compile(
     r"\b(arr|arranged|arrangements?|arrangiert|transcri\w*|bearb\w*|version for|for guitar|for marimba|"
     r"guitar version|piano version|music box|karaoke|8[- ]?bit|cover|remix|lo-?fi|jazz|reali[sz]\w*)\b|편곡|태교|오르골|자장가|힐링"
 )
+BACKGROUND = re.compile(
+    r"\bfor (study|studying|work|working|reading|focus|concentration|relaxation|sleep|meditation)\b|"
+    r"\b(homework|study music|studying|meditation|yoga|massage|spa music)\b"
+)
 TWV = re.compile(r"TWV\s*(\d+)\s*:\s*([A-Za-z]+)\s*(\d+)")
 # 안 곡이 없어도 여러 트랙인 큰 작품. 낱곡·아리아 트랙을 붙이지 않는다
 BIG = re.compile(
@@ -146,6 +150,9 @@ def usable(row: dict[str, str], track: dict[str, Any]) -> bool:
     if ARRANGED.search(name.lower()) or ARRANGED.search(
         str(track.get("collectionName", "")).lower()
     ):
+        return False
+    # 공부·명상용 배경음악 모음(「100 Harmonious Classics for Study and Homework」)은 원곡 음반으로 보지 않는다
+    if BACKGROUND.search(plain(str(track.get("collectionName", ""))).lower()):
         return False
     if not twv_ok(name, row["catalogue"]):
         return False
@@ -714,6 +721,7 @@ def judge(
         "workTracks": len(work_tracks),
         "status": found["status"],
         "dedicated": dedicated,
+        "albumTracks": len(tracks),
         "tracks": [str(t.get("trackName", ""))[:100] for t in work_tracks[:2]],
     }
     if nparts:
@@ -742,6 +750,13 @@ def judge(
     # 오페라는 앨범 이름이 그 작품인 전곡 음반만(아리아 모음 음반의 넷을 전곡으로 보지 않는다)
     if row["genre"] == "stage" and not dedicated:
         return dict(base, link="rejected-big", url="")
+    # 무대 작품의 모음곡 음반(「Suite from Schlagobers」)은 전곡이 아니다
+    if (
+        row["genre"] == "stage"
+        and "suite" not in row["title_en"].lower()
+        and any("suite" in str(t.get("trackName", "")).lower() for t in work_tracks)
+    ):
+        return dict(base, link="rejected-suite", url="")
     return dict(base, link="album", url=album_url(first))
 
 
@@ -883,6 +898,32 @@ def later_section(part: dict[str, str], hit: tuple[str, str, str]) -> bool:
     return bool(suffix) and not match.same_lead(match.original_name(part), track)
 
 
+def cross_check(out: list[dict[str, Any]], rows: dict[str, dict[str, str]]) -> list[dict[str, Any]]:
+    """안 곡이 없는 여러 트랙 작품: 한 서비스 앨범의 작품 트랙이 다른 서비스 앨범의 절반도 안 되면 발췌로 보고 뺀다
+    (퍼셀 「Bonduca」 Spotify 두 곡 음반 ↔ Apple 「Theatre Music」 열한 곡). Spotify 임베드는 앞 100곡만 보여
+    100곡이 찬 앨범은 견주지 않는다."""
+    fills = {
+        (i["pieceId"], i["service"]): i
+        for i in out
+        if i["kind"] == "piece" and i["decision"] == "fill" and i.get("link") == "album"
+    }
+    for (piece_id, service), item in fills.items():
+        if int(rows[str(piece_id)]["nparts"] or 0):
+            continue
+        other = fills.get((piece_id, "apple" if service == "spotify" else "spotify"))
+        if not other:
+            continue
+        truncated = any(
+            i["service"] == "spotify" and int(i.get("albumTracks") or 0) >= 100
+            for i in (item, other)
+        )
+        mine, theirs = int(item.get("workTracks") or 0), int(other.get("workTracks") or 0)
+        # 앨범 이름이 그 작품인 전곡 음반(「Strauss: Ariadne auf Naxos」)은 트랙 나눔만 달라 보지 않는다
+        if not truncated and not item.get("dedicated") and theirs >= 4 and mine * 2 < theirs:
+            item.update(decision="not-found", link="rejected-partial-cross", new=None)
+    return out
+
+
 def decide(work: str) -> None:
     rows = load_rows(work)
     parts_of: dict[str, list[dict[str, str]]] = defaultdict(list)
@@ -953,6 +994,7 @@ def decide(work: str) -> None:
                         "albumSource": source,
                     }
                 )
+    out = cross_check(out, {r["piece_id"]: r for r in rows})
     with open(os.path.join(work, "decisions.jsonl"), "w", encoding="utf-8") as handle:
         for item in out:
             handle.write(json.dumps(item, ensure_ascii=False) + "\n")
