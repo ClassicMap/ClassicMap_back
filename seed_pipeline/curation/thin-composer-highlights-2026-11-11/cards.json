@@ -1,0 +1,93 @@
+{
+ "note": "2장 이하였던 작곡가(백남준·R. 슈트라우스·J.C. 바흐·안익태) 카드. piece 는 id(기존) 또는 title(이번에 넣는 슈트라우스 작품). 근거는 README.",
+ "cards": [
+  {
+   "composer": 102,
+   "piece": 385,
+   "order": 1,
+   "status_from": "DRAFT",
+   "ko": "1959년 뒤셀도르프에서 백남준이 처음 무대에 올린 작품이에요. 테이프 소리와 피아노 연주 끝에 피아노를 넘어뜨려요",
+   "en": "The piece Paik first staged, in Düsseldorf in 1959. After taped sounds and piano playing, the piano is toppled over"
+  },
+  {
+   "composer": 102,
+   "piece": 387,
+   "order": 2,
+   "status_from": "DRAFT",
+   "ko": "1960년 쾰른의 작업실에서 선보인 행위 음악이에요. 피아노를 치다 객석의 존 케이지에게 가서 옷을 자르고 샴푸를 부어요",
+   "en": "Action music first shown in a Cologne studio in 1960. Paik leaves the piano for John Cage in the audience, cuts his clothes and pours shampoo"
+  },
+  {
+   "composer": 102,
+   "piece": 386,
+   "order": 3,
+   "status_from": "PUBLISHED",
+   "ko": "1962년 뒤셀도르프 <음악 속의 네오다다>에서 처음 선보였어요. 바이올린을 천천히 들어 올렸다가 탁자에 내리쳐 부숴요",
+   "en": "First shown at the 1962 Neo-Dada in der Musik event in Düsseldorf. The violin is slowly raised, then smashed on a table"
+  },
+  {
+   "composer": 23,
+   "piece": 29433,
+   "order": 3,
+   "status_from": "DRAFT",
+   "ko": "모차르트가 2·3·4번을 협주곡 K. 107로 고쳐 쓴 소나타집이에요. 하프시코드나 피아노용으로 나와 음반마다 악기가 달라요",
+   "en": "Mozart turned Nos. 2–4 into his concertos K. 107. Printed for harpsichord or piano, so recordings use either"
+  },
+  {
+   "composer": 23,
+   "piece": 29442,
+   "order": 4,
+   "status_from": null,
+   "ko": "4번 끝 악장에 스코틀랜드 민요 '노란 머리 소년'을 넣은 건반 협주곡집이에요. 1777년 초판 표지부터 그 민요를 앞세웠어요",
+   "en": "No. 4 ends on the Scottish tune 'The Yellow-Haired Laddie'. The 1777 first edition advertised the tune on its title page"
+  },
+  {
+   "composer": 23,
+   "piece": 29441,
+   "order": 5,
+   "status_from": null,
+   "ko": "만하임 오페라 두 편을 의뢰받고 선제후 카를 테오도르에게 바친 5중주곡집이에요. 플루트·오보에·바이올린·비올라·첼로가 함께해요",
+   "en": "Dedicated to Elector Karl Theodor after two Mannheim opera commissions. Flute, oboe, violin, viola and cello share the lines"
+  },
+  {
+   "composer": 498,
+   "title": "연가곡집 <네 개의 마지막 노래>",
+   "order": 2,
+   "status_from": null,
+   "ko": "여든네 살에 쓰고 세상을 떠난 뒤 1950년 런던에서 초연됐어요. 마지막 곡 끝에서 60년 전 교향시 <죽음과 변용>이 들려요",
+   "en": "Written at 84 and premiered in London in 1950, after his death. The last song ends quoting his tone poem Death and Transfiguration"
+  },
+  {
+   "composer": 498,
+   "title": "교향시 <돈 후안>",
+   "order": 3,
+   "status_from": null,
+   "ko": "스물네 살에 쓰고 이듬해 바이마르에서 직접 지휘해 이름을 알린 교향시예요. 첫 소절부터 관현악이 단숨에 박차고 나가요",
+   "en": "Written at 24 and conducted by Strauss in Weimar the next year, it made his name. The orchestra bursts out from the first bar"
+  },
+  {
+   "composer": 498,
+   "title": "교향시 <틸 오일렌슈피겔의 유쾌한 장난>",
+   "order": 4,
+   "status_from": null,
+   "ko": "장난꾼 틸이 끝내 교수형을 당하는 이야기를 그린 교향시예요. 호른이 틸의 주제를 열고, 끝에서 D 클라리넷이 비명을 질러요",
+   "en": "A tone poem about the prankster Till, who ends on the gallows. A horn opens his theme; at the end the D clarinet screams"
+  },
+  {
+   "composer": 498,
+   "title": "오페라 <장미의 기사>",
+   "order": 5,
+   "status_from": null,
+   "ko": "1911년 드레스덴 초연 표가 곧바로 매진된 오페라예요. 이야기는 18세기인데 그 뒤에야 빈에서 유행한 왈츠가 흘러요",
+   "en": "Tickets for the 1911 Dresden premiere sold out at once. The story is set in the 1740s, yet waltzes from a later Vienna run through it"
+  },
+  {
+   "composer": 498,
+   "title": "오페라 <살로메>",
+   "order": 6,
+   "status_from": null,
+   "ko": "1907년 뉴욕 메트가 한 번 올리고 27년 동안 다시 안 올린 오페라예요. <일곱 베일의 춤>은 동방풍 관현악으로 그려요",
+   "en": "The Met staged it once in 1907, then not again for 27 years. The Dance of the Seven Veils is scored in an oriental style"
+  }
+ ]
+}
