@@ -31,10 +31,15 @@ fn featured_order() -> String {
     )
 }
 
+/// 목록·검색에 내놓는 연주자: 숨김 까닭(`artists.hidden_reason`)이 없다. 상세(find_by_id)는 거르지 않는다.
+/// v_artists_full 은 hidden_reason 을 담지 않아서 원본 표를 본다.
+const VISIBLE_ARTIST: &str =
+    "id NOT IN (SELECT hidden.id FROM artists hidden WHERE hidden.hidden_reason IS NOT NULL)";
+
 impl ArtistRepository {
     pub async fn find_all(pool: &DbPool, offset: i64, limit: i64) -> Result<Vec<Artist>, Error> {
         let query = format!(
-            "SELECT *, {} FROM v_artists_full ORDER BY {} LIMIT ? OFFSET ?",
+            "SELECT *, {} FROM v_artists_full WHERE {VISIBLE_ARTIST} ORDER BY {} LIMIT ? OFFSET ?",
             featured_seq_column(),
             featured_order()
         );
@@ -263,7 +268,7 @@ impl ArtistRepository {
             .unwrap_or_default();
 
         let mut query = format!(
-            "SELECT *, {} FROM v_artists_full WHERE 1=1",
+            "SELECT *, {} FROM v_artists_full WHERE {VISIBLE_ARTIST}",
             featured_seq_column()
         );
 
