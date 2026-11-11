@@ -1,0 +1,102 @@
+{
+ "note": "S·A 작곡가 중 카드가 5장 미만이던 14명(목록은 있고 카드만 모자람)의 카드(2026-11-12). 근거는 README.",
+ "links": [
+  {
+   "composer": 21,
+   "title": "오페라 <파리데와 엘레나>",
+   "apple": "https://music.apple.com/us/album/gluck-paride-et-elena/1452180286"
+  },
+  {
+   "composer": 35,
+   "title": "<모세> 환상곡",
+   "apple": "https://music.apple.com/us/album/david-oistrakh-concertos-and-encores/1452201536"
+  },
+  {
+   "composer": 38,
+   "title": "관현악 환상곡 <카마린스카야>",
+   "apple": "https://music.apple.com/us/album/glinka-orchestral-works/1761677764"
+  },
+  {
+   "composer": 39,
+   "title": "로베르트 슈만 주제에 의한 변주곡 F#단조",
+   "apple": "https://music.apple.com/us/album/clara-schumann-piano-music-vol-1/1784717778"
+  },
+  {
+   "composer": 98,
+   "title": "Central Park in the Dark",
+   "apple": "https://music.apple.com/us/album/ives-central-park-in-the-dark/1452679965"
+  }
+ ],
+ "cards": [
+  {
+   "composer": 21,
+   "title": "오페라 <파리데와 엘레나>",
+   "order": 5,
+   "ko": "<오르페오>·<알체스테>에 이어 칼차비지와 만든 세 번째 개혁 오페라예요. 1막에서 파리스가 단조 아리아로 사랑을 고백해요",
+   "en": "Gluck's third Vienna reform opera with Calzabigi, after Orfeo and Alceste. In Act 1 Paris declares his love in a minor-key aria"
+  },
+  {
+   "composer": 35,
+   "title": "<모세> 환상곡",
+   "order": 4,
+   "ko": "바이올린 맨 아래 G현 하나로만 연주하는 변주곡이에요. 로시니 오페라 <이집트의 모세>의 선율이 낮은 현에서 노래해요",
+   "en": "Variations played entirely on the violin's lowest string, the G. A tune from Rossini's Moses in Egypt sings on that single string"
+  },
+  {
+   "composer": 38,
+   "title": "관현악 환상곡 <카마린스카야>",
+   "order": 5,
+   "ko": "차이콥스키가 '도토리 속 참나무처럼 러시아 교향악이 다 들었다'고 한 곡이에요. 민요 두 곡이 되풀이되며 반주만 바뀌어요",
+   "en": "Tchaikovsky said Russian symphonic music lay in it like an oak in an acorn. Two folk tunes repeat while the accompaniment keeps changing"
+  },
+  {
+   "composer": 39,
+   "title": "로베르트 슈만 주제에 의한 변주곡 F#단조",
+   "order": 5,
+   "ko": "로베르트의 마흔세 번째 생일 선물로 쓴 변주곡이에요. 이듬해 브람스가 같은 주제로 변주곡을 써 클라라에게 바쳤어요",
+   "en": "Written as a gift for Robert's 43rd birthday. The next year Brahms wrote variations on the same theme and dedicated them to Clara"
+  },
+  {
+   "composer": 44,
+   "title": "모음곡 <어린이의 놀이>",
+   "order": 5,
+   "ko": "피아노 연탄 12곡 가운데 다섯 곡을 비제가 관현악 <작은 모음곡>으로 옮겼어요. '팽이'는 빙글빙글 도는 팽이를 그려요",
+   "en": "Bizet orchestrated five of these twelve piano-duet miniatures as his Petite Suite. 'La toupie' pictures a spinning top"
+  },
+  {
+   "composer": 92,
+   "title": "ASLSP",
+   "order": 3,
+   "ko": "독일 할버슈타트 교회에서 2001년 시작한 오르간 연주가 2640년까지 이어지는 곡이에요. 몇 해에 한 번씩 화음이 바뀌어요",
+   "en": "An organ performance of it in Halberstadt, Germany, began in 2001 and is set to end in 2640. The chord changes only every few years"
+  },
+  {
+   "composer": 92,
+   "title": "Music of Changes",
+   "order": 4,
+   "ko": "<주역>으로 점을 쳐 음·길이·셈여림을 정한 1951년 피아노곡이에요. 데이비드 튜더를 위해 네 권으로 썼어요",
+   "en": "A 1951 piano work whose pitches, durations and dynamics were chosen by consulting the I Ching. Written in four books for David Tudor"
+  },
+  {
+   "composer": 93,
+   "title": "Glassworks",
+   "order": 5,
+   "ko": "더 많은 사람에게 들려주려고 1981년 음반사 의뢰로 쓴 소품 모음이에요. 첫 곡 'Opening'은 피아노 독주로 시작해요",
+   "en": "Short pieces written in 1981 at his label's request to reach a wider audience. The first, 'Opening', is for solo piano"
+  },
+  {
+   "composer": 98,
+   "title": "Central Park in the Dark",
+   "order": 5,
+   "ko": "<대답 없는 질문>과 짝을 이루는 1906년 곡이에요. 밤을 그리는 조용한 현 위로 래그타임 피아노와 거리 악대가 끼어들어요",
+   "en": "A 1906 companion piece to The Unanswered Question. Quiet strings paint the night while ragtime pianos and a street band break in"
+  },
+  {
+   "composer": 101,
+   "title": "피아노 협주곡 D♭장조",
+   "order": 5,
+   "ko": "하차투리안을 처음 서방에 알린 1936년 협주곡이에요. 2악장에는 악보에 '플렉사톤'으로 적힌 뮤지컬 소가 나와요",
+   "en": "The 1936 concerto that first made Khachaturian known in the West. Its slow movement calls for a 'flexatone', usually a musical saw"
+  }
+ ]
+}
