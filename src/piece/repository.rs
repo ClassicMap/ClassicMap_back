@@ -1,6 +1,7 @@
 use super::model::{
     order_part_tree, CatalogRow, ComposerPieceQuery, ComposerPieceRow, ComposerPieceSort,
-    CreatePiece, GenreFilter, Piece, PiecePart, PiecePartRow, PieceSearchResult, UpdatePiece,
+    CreatePiece, GenreFilter, HighlightRow, Piece, PiecePart, PiecePartRow, PieceSearchResult,
+    UpdatePiece,
 };
 use crate::db::DbPool;
 use crate::search::SearchText;
@@ -9,6 +10,9 @@ use sqlx::Error;
 use ClassicMap_back::comparison::repository::PUBLIC_COMPARISON_CTE;
 
 pub struct PieceRepository;
+
+/// 「처음 듣는다면」에 싣는 최대 곡 수. 화면은 5곡을 보이고 '더 보기'로 10곡까지 편다.
+pub const MAX_HIGHLIGHTS: i64 = 10;
 
 /// 화면에 내놓는 part. 편집자가 확인한 part 만 쓴다.
 ///
@@ -462,6 +466,67 @@ impl PieceRepository {
             statement = statement.bind(value);
         }
         statement.fetch_all(pool).await
+    }
+
+    /// 「처음 듣는다면」: 공개한(PUBLISHED) 줄을 순서대로 `MAX_HIGHLIGHTS` 곡까지 준다.
+    /// 숨긴 작품과 다른 작곡가 작품을 가리키는 줄은 뺀다. 대표 곡은 그 작품의 보이는 최상위 part 일 때만 싣는다.
+    /// 비교할 작품은 비교 화면과 같은 공개 기준(`PUBLIC_COMPARISON_CTE`)으로 작품 자체 → 대표 곡이 가리키는 작품
+    /// 순으로 고른다.
+    pub async fn composer_highlights(
+        pool: &DbPool,
+        composer_id: i32,
+    ) -> Result<Vec<HighlightRow>, Error> {
+        let sql = format!(
+            "{PUBLIC_COMPARISON_CTE},
+             public_piece AS (
+                 SELECT DISTINCT sector.piece_id
+                 FROM public_sector
+                 JOIN performance_sectors sector ON sector.id = public_sector.sector_id
+             )
+             SELECT piece.id AS piece_id,
+                    piece.title,
+                    piece.title_en,
+                    piece.genre,
+                    piece.form_key,
+                    piece.opus_number,
+                    piece.catalogue_system,
+                    piece.catalogue_number,
+                    piece.composition_year,
+                    {part_summary},
+                    part.sequence_number AS part_number,
+                    part.name_ko AS part_name_ko,
+                    part.name_en AS part_name_en,
+                    linked.title AS part_linked_title,
+                    CASE
+                        WHEN own_public.piece_id IS NOT NULL THEN piece.id
+                        WHEN linked_public.piece_id IS NOT NULL THEN linked.id
+                    END AS compare_piece_id,
+                    highlight.reason,
+                    highlight.reason_en
+             FROM composer_highlights highlight
+             JOIN pieces piece
+               ON piece.id = highlight.piece_id
+              AND piece.composer_id = highlight.composer_id
+             LEFT JOIN piece_parts part
+               ON part.id = highlight.part_id
+              AND part.piece_id = highlight.piece_id
+              AND part.parent_part_id IS NULL
+              AND {VISIBLE_PART}
+             LEFT JOIN pieces linked ON linked.id = part.linked_piece_id
+             LEFT JOIN public_piece own_public ON own_public.piece_id = piece.id
+             LEFT JOIN public_piece linked_public ON linked_public.piece_id = linked.id
+             WHERE highlight.composer_id = ?
+               AND highlight.status = 'PUBLISHED'
+               AND {listed}
+             ORDER BY highlight.sort_order ASC, highlight.id ASC
+             LIMIT {MAX_HIGHLIGHTS}",
+            part_summary = part_summary_columns(),
+            listed = listed_condition("piece"),
+        );
+        sqlx::query_as::<_, HighlightRow>(&sql)
+            .bind(composer_id)
+            .fetch_all(pool)
+            .await
     }
 
     /// 작품의 보이는 part 를 화면 순서로 준다. 없는 작품이면 다른 `/pieces/<id>/…` 목록처럼 빈 목록이다.

@@ -1,6 +1,6 @@
 use super::model::{
-    ComposerCatalog, ComposerPiece, ComposerPieceQuery, ComposerPieceSort, CreatePiece,
-    GenreFilter, Piece, PiecePart, PieceSearchResult, UpdatePiece, GENRE_ORDER,
+    ComposerCatalog, ComposerHighlight, ComposerPiece, ComposerPieceQuery, ComposerPieceSort,
+    CreatePiece, GenreFilter, Piece, PiecePart, PieceSearchResult, UpdatePiece, GENRE_ORDER,
 };
 use super::repository::PieceRepository;
 use crate::db::DbPool;
@@ -114,15 +114,25 @@ impl PieceService {
             .map_err(|e| e.to_string())
     }
 
+    /// 갈래·형식별 개수와 「처음 듣는다면」. 검색어로 세는 호출(검색 중 갈래 칩)에는 「처음 듣는다면」을 싣지 않는다.
     pub async fn get_composer_catalog(
         pool: &DbPool,
         composer_id: i32,
         query: &ComposerPieceQuery,
     ) -> Result<ComposerCatalog, String> {
-        PieceRepository::composer_catalog(pool, composer_id, query)
+        let rows = PieceRepository::composer_catalog(pool, composer_id, query)
             .await
-            .map(ComposerCatalog::from_rows)
-            .map_err(|e| e.to_string())
+            .map_err(|e| e.to_string())?;
+        let mut catalog = ComposerCatalog::from_rows(rows);
+        if query.search_tokens.is_empty() {
+            catalog.highlights = PieceRepository::composer_highlights(pool, composer_id)
+                .await
+                .map_err(|e| e.to_string())?
+                .into_iter()
+                .map(ComposerHighlight::from)
+                .collect();
+        }
+        Ok(catalog)
     }
 
     pub async fn get_piece_parts(pool: &DbPool, piece_id: i32) -> Result<Vec<PiecePart>, String> {
