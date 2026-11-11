@@ -1,0 +1,347 @@
+{
+ "4": {
+  "name": "바흐",
+  "candidates": 507,
+  "picked": 10
+ },
+ "5": {
+  "name": "몬테베르디",
+  "candidates": 4,
+  "picked": 4
+ },
+ "6": {
+  "name": "헨델",
+  "candidates": 381,
+  "picked": 10
+ },
+ "7": {
+  "name": "비발디",
+  "candidates": 595,
+  "picked": 10
+ },
+ "8": {
+  "name": "헨리 퍼셀",
+  "candidates": 5,
+  "picked": 5
+ },
+ "9": {
+  "name": "도메니코 스카를라티",
+  "candidates": 7,
+  "picked": 7
+ },
+ "10": {
+  "name": "라모",
+  "candidates": 54,
+  "picked": 5
+ },
+ "11": {
+  "name": "텔레만",
+  "candidates": 5,
+  "picked": 5
+ },
+ "12": {
+  "name": "코렐리",
+  "candidates": 9,
+  "picked": 5
+ },
+ "14": {
+  "name": "모차르트",
+  "candidates": 529,
+  "picked": 10
+ },
+ "15": {
+  "name": "베토벤",
+  "candidates": 353,
+  "picked": 10
+ },
+ "16": {
+  "name": "하이든",
+  "candidates": 500,
+  "picked": 10
+ },
+ "21": {
+  "name": "글루크",
+  "candidates": 49,
+  "picked": 5
+ },
+ "22": {
+  "name": "C.P.E. 바흐",
+  "candidates": 319,
+  "picked": 5
+ },
+ "23": {
+  "name": "J.C. 바흐",
+  "candidates": 184,
+  "picked": 5
+ },
+ "24": {
+  "name": "요한 슈타미츠",
+  "candidates": 3,
+  "picked": 3
+ },
+ "25": {
+  "name": "무치오 클레멘티",
+  "candidates": 3,
+  "picked": 3
+ },
+ "26": {
+  "name": "슈베르트",
+  "candidates": 884,
+  "picked": 10
+ },
+ "27": {
+  "name": "멘델스존",
+  "candidates": 201,
+  "picked": 10
+ },
+ "28": {
+  "name": "쇼팽",
+  "candidates": 112,
+  "picked": 10
+ },
+ "29": {
+  "name": "슈만",
+  "candidates": 173,
+  "picked": 10
+ },
+ "30": {
+  "name": "리스트",
+  "candidates": 365,
+  "picked": 10
+ },
+ "31": {
+  "name": "바그너",
+  "candidates": 64,
+  "picked": 10
+ },
+ "32": {
+  "name": "베르디",
+  "candidates": 56,
+  "picked": 5
+ },
+ "33": {
+  "name": "브람스",
+  "candidates": 168,
+  "picked": 10
+ },
+ "34": {
+  "name": "차이콥스키",
+  "candidates": 138,
+  "picked": 10
+ },
+ "35": {
+  "name": "파가니니",
+  "candidates": 121,
+  "picked": 5
+ },
+ "36": {
+  "name": "로시니",
+  "candidates": 129,
+  "picked": 5
+ },
+ "37": {
+  "name": "베를리오즈",
+  "candidates": 106,
+  "picked": 8
+ },
+ "38": {
+  "name": "글린카",
+  "candidates": 150,
+  "picked": 5
+ },
+ "39": {
+  "name": "클라라 슈만",
+  "candidates": 43,
+  "picked": 5
+ },
+ "40": {
+  "name": "프랑크",
+  "candidates": 107,
+  "picked": 5
+ },
+ "41": {
+  "name": "브루크너",
+  "candidates": 126,
+  "picked": 5
+ },
+ "42": {
+  "name": "요한 슈트라우스 2세",
+  "candidates": 496,
+  "picked": 8
+ },
+ "43": {
+  "name": "무소르크스키",
+  "candidates": 76,
+  "picked": 7
+ },
+ "44": {
+  "name": "비제",
+  "candidates": 186,
+  "picked": 6
+ },
+ "45": {
+  "name": "드보르자크",
+  "candidates": 174,
+  "picked": 10
+ },
+ "46": {
+  "name": "림스키코르사코프",
+  "candidates": 96,
+  "picked": 7
+ },
+ "47": {
+  "name": "포레",
+  "candidates": 136,
+  "picked": 6
+ },
+ "48": {
+  "name": "푸치니",
+  "candidates": 46,
+  "picked": 6
+ },
+ "49": {
+  "name": "말러",
+  "candidates": 20,
+  "picked": 8
+ },
+ "50": {
+  "name": "드뷔시",
+  "candidates": 140,
+  "picked": 10
+ },
+ "51": {
+  "name": "라흐마니노프",
+  "candidates": 83,
+  "picked": 10
+ },
+ "52": {
+  "name": "라벨",
+  "candidates": 102,
+  "picked": 10
+ },
+ "81": {
+  "name": "스트라빈스키",
+  "candidates": 124,
+  "picked": 10
+ },
+ "82": {
+  "name": "쇤베르크",
+  "candidates": 4,
+  "picked": 4
+ },
+ "83": {
+  "name": "쇼스타코비치",
+  "candidates": 216,
+  "picked": 10
+ },
+ "84": {
+  "name": "프로코피예프",
+  "candidates": 166,
+  "picked": 10
+ },
+ "85": {
+  "name": "버르토크",
+  "candidates": 99,
+  "picked": 10
+ },
+ "86": {
+  "name": "거슈윈",
+  "candidates": 120,
+  "picked": 10
+ },
+ "87": {
+  "name": "번스타인",
+  "candidates": 92,
+  "picked": 8
+ },
+ "88": {
+  "name": "안익태",
+  "candidates": 2,
+  "picked": 2
+ },
+ "89": {
+  "name": "홍난파",
+  "candidates": 3,
+  "picked": 3
+ },
+ "90": {
+  "name": "윤이상",
+  "candidates": 4,
+  "picked": 4
+ },
+ "91": {
+  "name": "오르프",
+  "candidates": 50,
+  "picked": 5
+ },
+ "92": {
+  "name": "케이지",
+  "candidates": 210,
+  "picked": 5
+ },
+ "93": {
+  "name": "필립 글래스",
+  "candidates": 385,
+  "picked": 5
+ },
+ "94": {
+  "name": "브리튼",
+  "candidates": 217,
+  "picked": 9
+ },
+ "95": {
+  "name": "메시앙",
+  "candidates": 77,
+  "picked": 5
+ },
+ "96": {
+  "name": "베르크",
+  "candidates": 76,
+  "picked": 5
+ },
+ "97": {
+  "name": "베베른",
+  "candidates": 76,
+  "picked": 5
+ },
+ "98": {
+  "name": "아이브스",
+  "candidates": 249,
+  "picked": 5
+ },
+ "99": {
+  "name": "피아졸라",
+  "candidates": 260,
+  "picked": 5
+ },
+ "100": {
+  "name": "사티",
+  "candidates": 135,
+  "picked": 5
+ },
+ "101": {
+  "name": "하차투리안",
+  "candidates": 128,
+  "picked": 5
+ },
+ "102": {
+  "name": "백남준",
+  "candidates": 3,
+  "picked": 3
+ },
+ "103": {
+  "name": "김동진",
+  "candidates": 5,
+  "picked": 5
+ },
+ "498": {
+  "name": "리하르트 슈트라우스",
+  "candidates": 1,
+  "picked": 1
+ },
+ "499": {
+  "name": "리게티",
+  "candidates": 3,
+  "picked": 3
+ }
+}
