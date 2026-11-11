@@ -1,0 +1,33 @@
+piece_id	service	url	album	why
+342	spotify	https://open.spotify.com/track/1YKBNtZtJX0GAZszCmXZnD	유성기로 듣던 여명의 한국 가곡사	트랙 「홍난파: 봉선화」, 김천애 노래(유성기 원반)
+34399	spotify	https://open.spotify.com/track/1C99EySIPwEW6mUjVt6BFf	한국 애창가곡 1집	아티스트에 홍난파, 이인영 노래
+34400	spotify	https://open.spotify.com/track/70tYwB3Wq6h86v2DpwTVjq	한국 가곡 선집 5	다른 곡에 없는 제목, 가곡 선집의 김금환 노래
+34401	spotify	https://open.spotify.com/track/4UalVRxn6vXXrGEAK13IKF	한국 애창가곡 3집	아티스트에 홍난파, 이경숙 노래
+34402	spotify	https://open.spotify.com/track/6CvrRmcwtOHU9ROrNBq97r	한국 애창가곡 6집	아티스트에 홍난파, 김원경 노래
+34404	spotify	https://open.spotify.com/track/2Dz6I4nOYLaGHcLpj3YQT4	한국 애창가곡 4집	아티스트에 홍난파, 윤치호 노래
+34405	spotify	https://open.spotify.com/track/2ukg3CeFmSKo3x8iVjRk84	한국 애창가곡 2집	아티스트에 홍난파, 홍춘선 노래(같은 음반 1집의 「그리움」은 김희조 곡이라 뺌)
+34406	spotify	https://open.spotify.com/track/3ABMvauiiIUHLPmEJ1WvZJ	한국 애창가곡 2집	아티스트에 홍난파, 정영자 노래
+34409	spotify	https://open.spotify.com/track/4ZvawQivVeX5n8hMjLOAKD	우리들의 동요 1집	다른 곡에 없는 제목, 한국소년소녀합창단
+388	spotify	https://open.spotify.com/track/3dHu3fNjArf6nw6w9cvzTb	한국 애창가곡 4집	아티스트에 김동진, 엄정행 노래
+389	spotify	https://open.spotify.com/track/4KrqHdDdGgytu8fM5aiTKg	한국 애창가곡 4집	아티스트에 김동진, 엄정행 노래
+390	spotify	https://open.spotify.com/track/6cCE8tqmv2y4qg4NsShr8L	한국애창가곡3	아티스트에 김동진, 김영자 노래
+460	spotify	https://open.spotify.com/track/5rPhTETWJtwm759rA7TnFa	Soprano Cho Kyung-hwa Solo Recital Live	트랙 「신아리랑 (김동진 1913-2009)」, 조경화 독창회 실황
+34423	spotify	https://open.spotify.com/track/62yzf4X4vNu0xbNS3ab31x	한국가곡 바리톤 유승공	아티스트에 김동진, 유승공 노래·한정희 피아노
+34424	spotify	https://open.spotify.com/track/3cMym63Apdg2WSKr3z4vkc	김동진 예술가곡집(가고파/목련화)	트랙 「가고파(전편후편)」, 전편과 후편을 이어 부른 녹음
+34425	spotify	https://open.spotify.com/track/2VPPTtRr3S2i8MAPoVIbF4	한국 애창가곡 3집	아티스트에 김동진, 국영순 노래
+34426	spotify	https://open.spotify.com/track/2Ca54hph7EpDq265zXpRQJ	김동진 예술가곡집(가고파/목련화)	김동진 가곡집 음반(같은 제목 대중가요·정희갑 곡이 있어 작곡가 음반만)
+34428	spotify	https://open.spotify.com/track/234dGA5BPDZOiYlL3XA1lP	김동진 예술가곡집(가고파/목련화)	김동진 가곡집 음반
+342	apple	https://music.apple.com/us/album/balsam-flower/1602146830?i=1602146838	The Collection of Immortal Korean Classical Songs	김천애 노래(이 곡을 처음 불러 알린 가수)
+34401	apple	https://music.apple.com/us/album/%EB%B4%84%EC%B2%98%EB%85%80/1495035187?i=1495035199	한국 가곡 베스트	다른 곡에 없는 제목, 가곡 음반의 오현명 노래
+34402	apple	https://music.apple.com/us/album/%EC%9E%A5%EC%95%88%EC%82%AC/1495035187?i=1495035263	한국 가곡 베스트	다른 곡에 없는 제목, 김원경 노래(Spotify 에서 홍난파 크레디트로 확인한 가수)
+34403	apple	https://music.apple.com/us/album/%EA%B8%88%EA%B0%95%EC%97%90-%EC%82%B4%EC%9C%BC%EB%A6%AC%EB%9E%8F%EB%8B%A4/1495035187?i=1495035212	한국 가곡 베스트	다른 곡에 없는 제목, 가곡 음반의 김호성 노래
+34404	apple	https://music.apple.com/us/album/%EC%82%AC%EA%B3%B5%EC%9D%98-%EB%85%B8%EB%9E%98/1495035187?i=1495035257	한국 가곡 베스트	다른 곡에 없는 제목, 가곡 음반의 김부열 노래
+34405	apple	https://music.apple.com/us/album/%EA%B7%B8%EB%A6%AC%EC%9B%80/1495035187?i=1495035266	한국 가곡 베스트	홍춘선 노래(Spotify 「한국 애창가곡 2집」에서 홍난파 크레디트로 확인한 가수·곡)
+34406	apple	https://music.apple.com/us/album/%EC%82%AC%EB%9E%91-%ED%99%8D%EB%82%9C%ED%8C%8C/1695511066?i=1695511073	한국의 애창가곡집	트랙 「사랑 (홍난파)」, 손정우 노래
+388	apple	https://music.apple.com/us/album/%EA%B0%80%EA%B3%A0%ED%8C%8C/1633857731?i=1633857834	한국가곡집 제3집 골든애창곡	다른 곡에 없는 제목, 엄정행 노래
+389	apple	https://music.apple.com/us/album/%EB%AA%A9%EB%A0%A8%ED%99%94/1746922365?i=1746922641	김동진 예술가곡집 (가고파 / 목련화)	김동진 가곡집 음반, 엄정행 노래
+390	apple	https://music.apple.com/us/album/%EB%82%B4-%EB%A7%88%EC%9D%8C/1746922365?i=1746922639	김동진 예술가곡집 (가고파 / 목련화)	김동진 가곡집 음반(같은 제목 다른 곡이 있어 작곡가 음반만)
+460	apple	https://music.apple.com/us/album/new-arirang/1592912640?i=1592912642	Korean Lyric Song Vol. 3	가곡 선집의 임만섭 노래·KBS 교향악단 반주
+34424	apple	https://music.apple.com/us/album/%EA%B0%80%EA%B3%A0%ED%8C%8C-%EC%A0%84%ED%8E%B8-%ED%9B%84%ED%8E%B8/1746922365?i=1746922367	김동진 예술가곡집 (가고파 / 목련화)	트랙 「가고파 (전편, 후편)」, 전편과 후편을 이어 부른 녹음
+34426	apple	https://music.apple.com/us/album/%EC%A7%84%EB%8B%AC%EB%9E%98%EA%BD%83/1746922365?i=1746922640	김동진 예술가곡집 (가고파 / 목련화)	김동진 가곡집 음반(같은 제목 대중가요·다른 작곡가 곡이 있어 작곡가 음반만)
+34428	apple	https://music.apple.com/us/album/%EC%A0%80-%EA%B5%AC%EB%A6%84-%ED%9D%98%EB%9F%AC%EA%B0%80%EB%8A%94-%EA%B3%B3/1746922365?i=1746922368	김동진 예술가곡집 (가고파 / 목련화)	김동진 가곡집 음반
