@@ -343,7 +343,7 @@ pub struct ComparisonSector {
 }
 
 /// 작품 장르 키. `pieces.genre` 의 CHECK 제약과 같은 목록이다
-pub const PIECE_GENRES: [&str; 7] = [
+pub const PIECE_GENRES: [&str; 8] = [
     "symphony",
     "concerto",
     "piano",
@@ -351,6 +351,7 @@ pub const PIECE_GENRES: [&str; 7] = [
     "orchestral",
     "stage",
     "vocal",
+    "screen",
 ];
 
 pub fn is_piece_genre(value: &str) -> bool {
@@ -710,7 +711,7 @@ mod tests {
 
     #[test]
     fn piece_genres_match_migration_check() {
-        let migration = include_str!("../../migrations/202611072001_add_piece_genre.sql");
+        let migration = include_str!("../../migrations/202611110901_add_soundtrack_genre.sql");
         let check = migration
             .split("genre IN (")
             .nth(1)

@@ -47,7 +47,8 @@ impl ComposerPieceQuery {
     ) -> Result<Self, String> {
         let genre = match genre.map(str::trim).filter(|value| !value.is_empty()) {
             None => GenreFilter::Any,
-            Some("other") => GenreFilter::Unclassified,
+            Some("unclassified") => GenreFilter::Unclassified,
+            Some("other") => GenreFilter::UnclassifiedOrScreen,
             Some(value) if GENRE_ORDER.contains(&value) => GenreFilter::Genre(value.to_string()),
             Some(value) => return Err(format!("모르는 갈래예요: {value}")),
         };
@@ -212,7 +213,13 @@ mod tests {
 
         let other =
             ComposerPieceQuery::parse(Some("other"), None, None, Some("op10"), None).expect("기타");
-        assert_eq!(other.genre, GenreFilter::Unclassified);
+        assert_eq!(other.genre, GenreFilter::UnclassifiedOrScreen);
+        let unclassified = ComposerPieceQuery::parse(Some("unclassified"), None, None, None, None)
+            .expect("장르 없음");
+        assert_eq!(unclassified.genre, GenreFilter::Unclassified);
+        let screen =
+            ComposerPieceQuery::parse(Some("screen"), None, None, None, None).expect("사운드트랙");
+        assert_eq!(screen.genre, GenreFilter::Genre("screen".to_string()));
         assert_eq!(other.search_patterns, vec!["%op10%", "%Op. 10%"]);
     }
 

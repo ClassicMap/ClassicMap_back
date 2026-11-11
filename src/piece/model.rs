@@ -70,8 +70,10 @@ pub enum ComposerPieceSort {
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum GenreFilter {
     Any,
-    /// 장르를 못 정한 작품(화면의 '기타')
+    /// 장르를 못 정한 작품(화면의 '기타', 쿼리 `unclassified`)
     Unclassified,
+    /// 옛 앱(1.3.2 이하)의 '기타'(쿼리 `other`). 그 앱은 사운드트랙을 몰라 '기타'로 보이므로 함께 준다
+    UnclassifiedOrScreen,
     Genre(String),
 }
 
@@ -156,9 +158,9 @@ impl From<ComposerPieceRow> for ComposerPiece {
     }
 }
 
-/// 장르 7종의 화면 순서. 작곡가 화면은 대표곡이 많은 갈래부터, 같으면 작품 수가 많은 갈래부터,
+/// 장르(7종 + 사운드트랙)의 화면 순서. 작곡가 화면은 대표곡이 많은 갈래부터, 같으면 작품 수가 많은 갈래부터,
 /// 그것도 같으면 이 순서로 보인다.
-pub const GENRE_ORDER: [&str; 7] = [
+pub const GENRE_ORDER: [&str; 8] = [
     "symphony",
     "concerto",
     "piano",
@@ -166,6 +168,7 @@ pub const GENRE_ORDER: [&str; 7] = [
     "orchestral",
     "stage",
     "vocal",
+    "screen",
 ];
 
 #[derive(Debug, FromRow)]
