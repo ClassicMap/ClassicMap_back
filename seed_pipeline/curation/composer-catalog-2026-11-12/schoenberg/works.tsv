@@ -1,0 +1,60 @@
+# MBID 앞 8자(없으면 -)	제목(우리말)	작품번호	연도	genre	form_key	곡(n|y|y:4-6|<MBID>:1-6)	기존 작품 id	영어 제목(MBID 없을 때)
+47ac23fb	정화된 밤	Op. 4	1899	orchestral	orchestral_other	y	313
+b1d77e7d	달에 홀린 피에로	Op. 21	1912	vocal	song	y	314
+e46f1364	바르샤바의 생존자	Op. 46	1947	vocal	vocal_other	n	315
+cfd0d254	5개의 피아노 소품	Op. 23	1923	piano	character	y	316
+4f8a5dd9	현과 하프를 위한 녹턴		1896	orchestral	orchestral_other	n
+011ba175	피아노 연탄을 위한 6개의 소품		1896	piano	four_hands	y
+5d42018d	현악 4중주 D장조		1897	chamber	string_quartet	y
+3c352492	2개의 가곡 Op. 1	Op. 1	1898	vocal	song	y
+73e56e4d	4개의 가곡 Op. 2	Op. 2	1900	vocal	song	y
+8b519735	카바레 가곡 <브레틀 리더>		1901	vocal	song	n
+03e1444e	6개의 가곡 Op. 3	Op. 3	1903	vocal	song	y
+2b651906	교향시 <펠레아스와 멜리장드>	Op. 5	1903	orchestral	symphonic_poem	y
+128f5e35	8개의 가곡 Op. 6	Op. 6	1905	vocal	song	y
+2d7243d8	현악 4중주 1번 D단조	Op. 7	1905	chamber	string_quartet	y
+0320b43f	목소리와 관현악을 위한 6개의 가곡	Op. 8	1905	vocal	song	y
+82de56f7	실내 교향곡 1번 E장조	Op. 9	1906	symphony	symphony_other	y
+e4065bab	2개의 발라드 Op. 12	Op. 12	1906	vocal	song	y
+1ea27ffb	혼성 합창을 위한 <지상의 평화>	Op. 13	1907	vocal	choral	n
+8498c8d4	현악 4중주 2번 F#단조	Op. 10	1908	chamber	string_quartet	y
+8f0d6ce3	2개의 가곡 Op. 14	Op. 14	1908	vocal	song	y
+f3a3e945	3개의 피아노 소품 Op. 11	Op. 11	1909	piano	character	y
+092e9f6a	연가곡 <공중정원의 책>	Op. 15	1909	vocal	song	y
+dd73e95f	관현악을 위한 5개의 소품	Op. 16	1909	orchestral	orchestral_other	y
+715e5987	모노드라마 <기대>	Op. 17	1909	stage	opera	n
+bc41b8d5	실내 관현악을 위한 3개의 소품		1910	orchestral	orchestral_other	y
+10f1db34	6개의 작은 피아노 소품	Op. 19	1911	piano	character	y
+1fa28dc6	가곡 <Herzgewächse>	Op. 20	1911	vocal	song	n
+47c43fbc	<구레의 노래>		1911	vocal	cantata	n
+d676f2a7	음악극 <행복한 손>	Op. 18	1913	stage	opera	n
+24d24b9c	목소리와 관현악을 위한 4개의 가곡	Op. 22	1916	vocal	song	y
+d2ecf3d8	오라토리오 <야곱의 사다리>			vocal	oratorio_passion	n
+18b615f6	세레나데	Op. 24	1923	chamber	chamber_other	y
+0051727f	피아노 모음곡	Op. 25	1923	piano	keyboard_suite	y
+349cf6a4	목관 5중주	Op. 26	1924	chamber	wind_chamber	y
+5d8ff4cd	혼성 합창을 위한 4개의 소품	Op. 27	1925	vocal	choral	y
+de614d53	혼성 합창을 위한 3개의 풍자곡	Op. 28	1926	vocal	choral	y
+99a4da4f	7중주를 위한 모음곡	Op. 29	1926	chamber	chamber_other	y
+bb6f0929	현악 4중주 3번	Op. 30	1927	chamber	string_quartet	y
+43706668	관현악을 위한 변주곡	Op. 31	1928	orchestral	orchestral_other	y
+efb07e92	오페라 <오늘부터 내일까지>	Op. 32	1929	stage	opera	n
+3b07be9d	영화의 한 장면을 위한 반주 음악	Op. 34	1930	orchestral	orchestral_other	n
+ad160b3e	남성 합창을 위한 6개의 소품	Op. 35	1930	vocal	choral	y
+47926a7d	2개의 피아노 소품 Op. 33	Op. 33	1931	piano	character	y
+1663fcb1	오페라 <모세와 아론>		1932	stage	opera	n
+503b6cba	3개의 가곡 Op. 48	Op. 48	1933	vocal	song	y
+9326c0e5	현악 합주를 위한 모음곡 G장조		1934	orchestral	orch_suite	y
+001c53e9	바이올린 협주곡	Op. 36	1936	concerto	violin_concerto	y
+c6a3731f	현악 4중주 4번	Op. 37	1936	chamber	string_quartet	y
+4e77dec7	합창과 관현악을 위한 <콜 니드레>	Op. 39	1938	vocal	choral	n
+e4b82176	실내 교향곡 2번 E♭단조	Op. 38	1939	symphony	symphony_other	y
+2178e909	오르간을 위한 레치타티보 변주곡	Op. 40	1941	piano	organ	n
+9fe43d22	<나폴레옹 보나파르트에게 바치는 송가>	Op. 41	1942	vocal	vocal_other	n
+d22273d1	피아노 협주곡	Op. 42	1942	concerto	piano_concerto	y
+ec59460a	취주악을 위한 주제와 변주	Op. 43a	1943	orchestral	orchestral_other	y
+dff810c7	<창세기 모음곡> 전주곡	Op. 44	1945	vocal	choral	n
+9458ed35	현악 3중주	Op. 45	1946	chamber	string_ensemble	n
+ba561d1c	바이올린과 피아노를 위한 환상곡	Op. 47	1949	chamber	chamber_other	n
+d81c565e	합창곡 <Dreimal tausend Jahre>	Op. 50a	1949	vocal	choral	n
+8c287d99	시편 130편 <데 프로푼디스>	Op. 50b	1950	vocal	choral	n
