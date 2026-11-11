@@ -1,0 +1,77 @@
+# MBID 앞 8자(MB 작품이 없으면 이름)	제목(우리말)	작품번호	연도	genre	form_key	kind(single·multi·coll)	운영 작품 id	parts(-·mb·file)	영어 제목(MB 작품이 없을 때)
+# 운영에 있던 7곡(K. 1·9·27·141·159·380·466)은 제목이 옛 꼴(「소나타 D단조」)이지만 손대지 않고 MBID 만 잇는다.
+# 소나타 555곡 중 널리 연주·녹음되는 곡을 K. 번호 낱곡으로 골랐다(1738 「Essercizi」 묶음은 만들지 않음: 운영 K. 1·9·27 이 최상위에서 빠지므로).
+# 운영에 있던 7곡: 제목·설명·링크는 두고 MBID 만 잇는다
+4dad1f72	소나타 D단조	Kk. 1 (L. 366)		piano	sonata	single	45	-
+442d428d	소나타 D단조 파스토랄레	Kk. 9 (L. 413)		piano	sonata	single	44	-
+1de803cd	소나타 B단조	Kk. 27 (L. 449)		piano	sonata	single	41	-
+08d2472b	소나타 D단조	Kk. 141 (L. 422)		piano	sonata	single	42	-
+52b0d1a1	소나타 C장조 사냥	Kk. 159 (L. 104)		piano	sonata	single	40	-
+0ee7e99f	소나타 E장조 행렬	Kk. 380 (L. 23)		piano	sonata	single	39	-
+afc3fc5f	소나타 F단조	Kk. 466 (L. 118)		piano	sonata	single	43	-
+# 새 소나타
+c8066208	건반 소나타 A단조 K. 3	K. 3		piano	sonata	single	-	-
+e3758ba8	건반 소나타 G단조 K. 8	K. 8		piano	sonata	single	-	-
+bd777698	건반 소나타 C단조 K. 11	K. 11		piano	sonata	single	-	-
+7d2ae68d	건반 소나타 G장조 K. 13	K. 13		piano	sonata	single	-	-
+830a4b99	건반 소나타 E장조 K. 20	K. 20		piano	sonata	single	-	-
+bac641c4	건반 소나타 A장조 K. 24	K. 24		piano	sonata	single	-	-
+214bc87e	건반 소나타 F#단조 K. 25	K. 25		piano	sonata	single	-	-
+71358543	건반 소나타 D장조 K. 29	K. 29		piano	sonata	single	-	-
+3f06e4b4	건반 소나타 G단조 "고양이 푸가" K. 30	K. 30		piano	sonata	single	-	-
+c466c92f	건반 소나타 D단조 K. 32	K. 32		piano	sonata	single	-	-
+b4b7a0b1	건반 소나타 E장조 K. 46	K. 46		piano	sonata	single	-	-
+df067c04	건반 소나타 A단조 K. 54	K. 54		piano	sonata	single	-	-
+636d58d8	건반 소나타 F단조 K. 69	K. 69		piano	sonata	single	-	-
+7d39f190	건반 소나타 B단조 K. 87	K. 87		piano	sonata	single	-	-
+be495691	건반 소나타 D장조 K. 96	K. 96		piano	sonata	single	-	-
+25ef15dd	건반 소나타 A장조 K. 113	K. 113		piano	sonata	single	-	-
+b56beea7	건반 소나타 D장조 K. 119	K. 119		piano	sonata	single	-	-
+7885df19	건반 소나타 G장조 K. 125	K. 125		piano	sonata	single	-	-
+efdb22d2	건반 소나타 C장조 K. 132	K. 132		piano	sonata	single	-	-
+e591a886	건반 소나타 E장조 K. 135	K. 135		piano	sonata	single	-	-
+a37be9ed	건반 소나타 G장조 K. 146	K. 146		piano	sonata	single	-	-
+35af2202	건반 소나타 E장조 K. 162	K. 162		piano	sonata	single	-	-
+603b5b8d	건반 소나타 A단조 K. 175	K. 175		piano	sonata	single	-	-
+c46a74f1	건반 소나타 G장조 K. 180	K. 180		piano	sonata	single	-	-
+cdd5482b	건반 소나타 B단조 K. 197	K. 197		piano	sonata	single	-	-
+879cea08	건반 소나타 E단조 K. 198	K. 198		piano	sonata	single	-	-
+8055b9d4	건반 소나타 G장조 K. 201	K. 201		piano	sonata	single	-	-
+232644a4	건반 소나타 A장조 K. 208	K. 208		piano	sonata	single	-	-
+488ba0e7	건반 소나타 A장조 K. 209	K. 209		piano	sonata	single	-	-
+f3b17217	건반 소나타 D단조 K. 213	K. 213		piano	sonata	single	-	-
+e6e108b2	건반 소나타 E장조 K. 216	K. 216		piano	sonata	single	-	-
+02c0ef25	건반 소나타 F단조 K. 239	K. 239		piano	sonata	single	-	-
+79c51268	건반 소나타 G장조 K. 260	K. 260		piano	sonata	single	-	-
+c9418902	건반 소나타 E단조 K. 263	K. 263		piano	sonata	single	-	-
+a0755342	건반 소나타 D장조 K. 278	K. 278		piano	sonata	single	-	-
+1caf85da	건반 소나타 A장조 K. 322	K. 322		piano	sonata	single	-	-
+4cb15c70	건반 소나타 A장조 K. 323	K. 323		piano	sonata	single	-	-
+b5e4977c	건반 소나타 F단조 K. 386	K. 386		piano	sonata	single	-	-
+c85d457e	건반 소나타 E단조 K. 394	K. 394		piano	sonata	single	-	-
+20cab382	건반 소나타 C장조 K. 420	K. 420		piano	sonata	single	-	-
+c9f01eb8	건반 소나타 G장조 K. 425	K. 425		piano	sonata	single	-	-
+ceea9c73	건반 소나타 G장조 K. 427	K. 427		piano	sonata	single	-	-
+e150bc7c	건반 소나타 D장조 K. 430	K. 430		piano	sonata	single	-	-
+00f702e2	건반 소나타 D장조 K. 435	K. 435		piano	sonata	single	-	-
+bacbd4f7	건반 소나타 G단조 K. 450	K. 450		piano	sonata	single	-	-
+a3deaf9d	건반 소나타 G장조 K. 455	K. 455		piano	sonata	single	-	-
+9267f71b	건반 소나타 F단조 K. 462	K. 462		piano	sonata	single	-	-
+f5825b2c	건반 소나타 E♭장조 K. 474	K. 474		piano	sonata	single	-	-
+55e85420	건반 소나타 F단조 K. 481	K. 481		piano	sonata	single	-	-
+169aa056	건반 소나타 D장조 K. 490	K. 490		piano	sonata	single	-	-
+733a2e83	건반 소나타 D장조 K. 491	K. 491		piano	sonata	single	-	-
+6873c268	건반 소나타 D장조 K. 492	K. 492		piano	sonata	single	-	-
+d7381a00	건반 소나타 C장조 K. 513	K. 513		piano	sonata	single	-	-
+c50be5ef	건반 소나타 F단조 K. 519	K. 519		piano	sonata	single	-	-
+afb4f9ec	건반 소나타 F장조 K. 525	K. 525		piano	sonata	single	-	-
+3311130a	건반 소나타 E장조 K. 531	K. 531		piano	sonata	single	-	-
+a0b8c4c1	건반 소나타 A단조 K. 532	K. 532		piano	sonata	single	-	-
+e92798fd	건반 소나타 A장조 K. 533	K. 533		piano	sonata	single	-	-
+da0919ed	건반 소나타 B♭장조 K. 544	K. 544		piano	sonata	single	-	-
+# 성악
+289cc29b	스타바트 마테르			vocal	sacred	multi	-	mb
+salve-a	살베 레지나 A장조			vocal	sacred	single	-	-	Salve Regina in A major
+f0df08cf	미사 브레비스 "라 스텔라"			vocal	mass_requiem	single	-	-
+a8727503	4성부 미사 "마드리드"			vocal	mass_requiem	single	-	-
+b346590c	테 데움			vocal	sacred	multi	-	mb
