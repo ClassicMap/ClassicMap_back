@@ -1,0 +1,69 @@
+# MBID 앞 8자(손으로 엮은 묶음은 이름)	제목(우리말)	작품번호	연도	genre	form_key	kind(single·multi·coll)	운영 작품 id	parts(-·mb·file)	영어 제목(MB 작품이 없을 때)
+# 운영에 있던 5곡: 제목은 그대로 두고 MBID 와 곡을 잇는다
+0043a9b7	오페라 <디도와 아이네이아스>	Z 626		stage	opera	single	34	-
+e6a5bb32	세미 오페라 <요정 여왕>	Z 629		stage	opera	single	36	-
+0f07e744	메리 여왕의 장례식 음악	Z 860		vocal	sacred	multi	37	file
+d8fa953a	<압델라자르> 모음곡	Z 570		orchestral	orch_suite	multi	38	mb
+# 세미 오페라·부수음악
+bb0c2505	세미 오페라 <디오클레시안>	Z 627	1690	stage	opera	single	-	-
+a5528d03	세미 오페라 <아서 왕>	Z 628	1691	stage	opera	single	-	-
+7df68bbd	세미 오페라 <인도의 여왕>	Z 630	1695	stage	opera	single	-	-
+7aa8abcd	가면극 <아테네의 타이먼>	Z 632	1695	stage	stage_other	single	-	-
+65320756	부수음악 <암피트리온>	Z 572	1690	orchestral	incidental	multi	-	file
+61a43678	부수음악 <Distressed Innocence>	Z 577	1690	orchestral	incidental	multi	-	mb
+ec08f227	부수음악 <The Gordian Knot Unty'd>	Z 597	1691	orchestral	incidental	multi	-	mb
+9c8666e4	부수음악 <The Libertine>	Z 600	1692	orchestral	incidental	multi	-	mb
+f667a29a	부수음악 <오이디푸스>	Z 583	1692	orchestral	incidental	multi	-	file
+27c40aed	부수음악 <The Old Bachelor>	Z 607	1693	orchestral	incidental	multi	-	mb
+91499999	부수음악 <The Married Beau>	Z 603	1694	orchestral	incidental	multi	-	mb
+59ad74ee	부수음악 <The Virtuous Wife>	Z 611	1694	orchestral	incidental	multi	-	mb
+40e16d19	부수음악 <본두카>	Z 574	1695	orchestral	incidental	single	-	-
+2e5a678a	부수음악 <파우사니아스>	Z 585	1695	orchestral	incidental	multi	-	mb
+0c017a91	부수음악 <돈키호테>	Z 578	1695	orchestral	incidental	single	-	-
+# 송가·환영가
+c60ec72c	송가 <From those serene and rapturous joys>	Z 326	1684	vocal	cantata	single	-	-
+e279d01c	송가 <Why, why are all the Muses mute?>	Z 343	1685	vocal	cantata	multi	-	mb
+916174b9	송가 <Ye tuneful Muses>	Z 344	1686	vocal	cantata	single	-	-
+9a6be6b3	송가 <Sound the trumpet, beat the drum>	Z 335	1687	vocal	cantata	single	-	-
+04c42de0	송가 <Now does the glorious day appear>	Z 332	1689	vocal	cantata	single	-	-
+d3f61add	송가 <Of old when heroes thought it base>	Z 333	1690	vocal	cantata	single	-	-
+548b1630	송가 <Welcome, welcome, glorious morn>	Z 338	1691	vocal	cantata	multi	-	mb
+fe52dcc8	송가 <Love's goddess sure was blind>	Z 331	1692	vocal	cantata	single	-	-
+ef4a952e	송가 <Celebrate this festival>	Z 321	1693	vocal	cantata	single	-	-
+31c4ff6c	송가 <오라, 너희 예술의 아들들아>	Z 323	1694	vocal	cantata	multi	-	mb
+8af63f53	송가 <Who can from joy refrain?>	Z 342	1695	vocal	cantata	single	-	-
+5635da71	성 체칠리아의 날을 위한 송가 <Welcome to all the pleasures>	Z 339	1683	vocal	cantata	single	-	-
+9d740bfa	성 체칠리아의 날을 위한 송가 <Raise, raise the voice>	Z 334		vocal	cantata	multi	-	mb
+ad1c0dfb	성 체칠리아의 날을 위한 송가 <Hail, bright Cecilia>	Z 328	1692	vocal	cantata	multi	-	mb
+# 찬가·예배 음악
+3c55e424	찬가 <Hear my prayer, O Lord>	Z 15		vocal	sacred	single	-	-
+670cdde1	대관식 찬가 <I was glad>	Z 19	1685	vocal	sacred	single	-	-
+92449fad	대관식 찬가 <My heart is inditing>	Z 30	1685	vocal	sacred	multi	-	mb
+dba28577	찬가 <My beloved spake>	Z 28		vocal	sacred	multi	-	mb
+f7c8e0cf	찬가 <O God, thou art my God>	Z 35		vocal	sacred	single	-	-
+de87a82a	찬가 <O sing unto the Lord a new song>	Z 44	1688	vocal	sacred	multi	-	mb
+9bfee663	찬가 <Rejoice in the Lord alway>	Z 49		vocal	sacred	single	-	-
+c253f6bc	찬가 <Remember not, Lord, our offences>	Z 50		vocal	sacred	single	-	-
+df07dcd3	찬가 <They that go down to the sea in ships>	Z 57	1685	vocal	sacred	single	-	-
+2b3c2321	찬가 <Thy word is a lantern unto my feet>	Z 61		vocal	sacred	single	-	-
+5c149922	모테트 <Jehova, quam multi sunt hostes mei>	Z 135		vocal	sacred	single	-	-
+d5ae0951	예배곡 B♭장조	Z 230		vocal	sacred	single	-	-
+7b34a9b6	마니피카트와 눙크 디미티스 G단조	Z 231		vocal	sacred	multi	-	mb
+7ec167a6	테 데움과 유빌라테 D장조	Z 232	1694	vocal	sacred	multi	-	mb
+# 노래
+a198f704	저녁 찬송 <Now that the sun hath veiled his light>	Z 193	1688	vocal	sacred	single	-	-
+38c43919	종교 가곡 <Lord, what is man?>	Z 192	1693	vocal	sacred	single	-	-
+f567ac96	종교 가곡 <The Blessed Virgin's Expostulation>	Z 196	1693	vocal	sacred	single	-	-
+0f2dee0a	가곡 <From silent shades> "미친 베스"	Z 370	1682	vocal	song	single	-	-
+25673227	가곡 <O Solitude>	Z 406	1687	vocal	song	single	-	-
+5901d9b5	가곡 <If music be the food of love>	Z 379	1692	vocal	song	single	-	-
+c9ba237f	여왕의 비가 <Incassum, Lesbia, rogas>	Z 383	1695	vocal	song	single	-	-
+# 기악
+4e13dc5f	샤코니 G단조	Z 730		chamber	string_ensemble	single	-	-
+735a94d2	그라운드에 의한 3성부 판타지아	Z 731		chamber	string_ensemble	single	-	-
+z732	비올 판타지아와 인 노미네	Z 732–747	1680	chamber	string_ensemble	coll	-	file	Fantazias and In Nomines, Z. 732–747
+69a0de34	바이올린 소나타 G단조	Z 780		chamber	duo_sonata	multi	-	mb
+z790	3성부 소나타 Z 790–801	Z 790–801	1683	chamber	chamber_other	coll	-	file	Sonnata's of III Parts, Z. 790–801
+z802	4성부 소나타 Z 802–811	Z 802–811	1697	chamber	chamber_other	coll	-	file	Ten Sonata's in Four Parts, Z. 802–811
+2b877e34	트럼펫 소나타 D장조	Z 850		concerto	wind_concerto	multi	-	mb
+z660	하프시코드 모음곡 Z 660–669	Z 660–669	1696	piano	keyboard_suite	coll	-	file	A Choice of Lessons for the Harpsichord or Spinnet, Z. 660–669

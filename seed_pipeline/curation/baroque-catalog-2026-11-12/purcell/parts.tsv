@@ -1,0 +1,71 @@
+# 묶음 key	곡 MBID 앞 8자(-: 이름만)	이름	이어 붙일 운영 작품 id(-)	악장(mb: MB parts·-)
+# 메리 여왕의 장례식 음악: MB 에 「Thou knowest, Lord」가 옛 판(Z 58b)·장례판(Z 58c) 두 벌이라 장례판만 쓴다
+0f07e744	d96aa317	행진곡	-	-
+0f07e744	d92b7b2c	찬가 <Man that is born of a woman>	-	-
+0f07e744	be87eefb	칸초나	-	-
+0f07e744	6227dd3e	찬가 <In the midst of life>	-	-
+0f07e744	668e3b8a	칸초나	-	-
+0f07e744	a28e5059	찬가 <Thou knowest, Lord>	-	-
+0f07e744	92f28f68	행진곡	-	-
+# 오이디푸스: MB 에서 첫 곡이 묶음 밖에 따로 있다
+f667a29a	7921ad25	Hear, ye sullen pow'rs below	-	-
+f667a29a	8f511ef8	Music for a while	-	-
+f667a29a	1f656805	Come away, do not stay	-	-
+# 비올 판타지아(1680 자필보). Z 744(미완성)는 뺀다
+z732	5ba4551f	판타지아 D단조 (3성부)	-	-
+z732	b1838ee6	판타지아 F장조 (3성부)	-	-
+z732	529bfa63	판타지아 G단조 (3성부)	-	-
+z732	32ec4b1e	판타지아 G단조 (4성부)	-	-
+z732	fc9658d9	판타지아 B♭장조 (4성부)	-	-
+z732	7f6635a4	판타지아 F장조 (4성부)	-	-
+z732	7765904a	판타지아 C단조 (4성부)	-	-
+z732	4649f1b9	판타지아 D단조 (4성부)	-	-
+z732	7b3de139	판타지아 A단조 (4성부)	-	-
+z732	7f69f2d0	판타지아 E단조 (4성부)	-	-
+z732	b2d9fa15	판타지아 G장조 (4성부)	-	-
+z732	c636e9f6	판타지아 D단조 (4성부)	-	-
+z732	00607609	한 음에 의한 판타지아 F장조 (5성부)	-	-
+z732	05d31875	인 노미네 G단조 (6성부)	-	-
+z732	ce9f3e0e	인 노미네 G단조 (7성부)	-	-
+# 3성부 소나타(1683)
+z790	3305e213	소나타 G단조	-	mb
+z790	1077ec37	소나타 B♭장조	-	mb
+z790	feedf292	소나타 D단조	-	mb
+z790	f49ef788	소나타 F장조	-	mb
+z790	6fa6fe63	소나타 A단조	-	mb
+z790	89842f90	소나타 C장조	-	mb
+z790	f4af1591	소나타 E단조	-	mb
+z790	4315e9c8	소나타 G장조	-	mb
+z790	f3156d30	소나타 C단조	-	mb
+z790	a84d0e66	소나타 A장조	-	mb
+z790	522a54fa	소나타 F단조	-	mb
+z790	6c54b1a6	소나타 D장조	-	mb
+# 4성부 소나타(1697). 6번은 샤콘 한 악장
+z802	2abf2d69	소나타 B단조	-	mb
+z802	afe1c48f	소나타 E♭장조	-	mb
+z802	86aae24b	소나타 A단조	-	mb
+z802	2a49bc71	소나타 D단조	-	mb
+z802	8f95ced5	소나타 G단조	-	mb
+z802	e263f6a4	소나타 G단조 "샤콘"	-	-
+z802	60a49267	소나타 C장조	-	mb
+z802	6ef8ea01	소나타 G단조	-	mb
+z802	39fb2e9e	소나타 F장조	-	mb
+z802	7cb94fe7	소나타 D장조	-	mb
+# 하프시코드 모음곡(1696 「A Choice of Lessons」 8곡)
+z660	5c826514	모음곡 G장조	-	mb
+z660	9e5cb70c	모음곡 G단조	-	mb
+z660	6e5dcc6b	모음곡 G장조	-	mb
+z660	2478a9d4	모음곡 A단조	-	mb
+z660	33e8b34e	모음곡 C장조	-	mb
+z660	4d271601	모음곡 D장조	-	mb
+z660	445271b0	모음곡 D단조	-	mb
+z660	a42a127a	모음곡 F장조	-	mb
+# 암피트리온: 기악 8곡만(노래는 MB 에 순서가 없다)
+65320756	24014c2f	Overture	-	-
+65320756	f5aeae9a	Saraband	-	-
+65320756	8577e889	Hornpipe	-	-
+65320756	58c274da	Scotch Tune	-	-
+65320756	1ea12df3	Air	-	-
+65320756	17e2b640	Minuet	-	-
+65320756	b671e529	Hornpipe	-	-
+65320756	3f2b6fc4	Borree	-	-
