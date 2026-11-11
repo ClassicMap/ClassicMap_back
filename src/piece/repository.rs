@@ -272,6 +272,9 @@ fn composer_piece_filters(query: &ComposerPieceQuery) -> (String, Vec<String>) {
     match &query.genre {
         GenreFilter::Any => {}
         GenreFilter::Unclassified => sql.push_str(" AND piece.genre IS NULL"),
+        GenreFilter::UnclassifiedOrScreen => {
+            sql.push_str(" AND (piece.genre IS NULL OR piece.genre = 'screen')")
+        }
         GenreFilter::Genre(genre) => {
             sql.push_str(" AND piece.genre = ?");
             binds.push(genre.clone());
