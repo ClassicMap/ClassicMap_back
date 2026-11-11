@@ -1,0 +1,319 @@
+# 묶음 key	곡 MBID 앞 8자(-: 이름만)	이름	이어 붙일 운영 작품 id(-)	악장(mb: MB parts·-)
+# 묶음 곡 순서·SV 번호는 영어 위키백과 「List of compositions by Claudio Monteverdi」 세부 표(Stattkus 목록)를 따르고,
+# MB 곡은 SV 번호로 찾았다. 곡 이름은 MB 원제(없으면 위키백과 원제). 마지막 칸 주석은 SV 번호.
+# 마드리갈 8권 「님프의 탄식」(SV 163)은 운영 작품 19 로 잇는다.
+# 18 성모 마리아의 저녁 기도(1610): MB parts 에 마니피카트 조각이 섞여 있어 손으로 14곡을 고른다.
+c05338ae	563fd005	Domine ad adiuvandum	-	-
+c05338ae	03e4976b	Dixit Dominus	-	-
+c05338ae	6405b815	Nigra sum	-	-
+c05338ae	301997ad	Laudate pueri Dominum	-	-
+c05338ae	3a10da61	Pulchra es	-	-
+c05338ae	6461799b	Laetatus sum	-	-
+c05338ae	26578ed9	Duo Seraphim	-	-
+c05338ae	64218544	Nisi Dominus	-	-
+c05338ae	f0f6ea9b	Audi coelum	-	-
+c05338ae	684793f6	Lauda Jerusalem	-	-
+c05338ae	8e91a915	Sonata sopra "Sancta Maria"	-	-
+c05338ae	99e40f69	Ave maris stella	-	-
+c05338ae	8b97d827	Magnificat (7성부)	-	-
+c05338ae	a63cde36	Magnificat (6성부)	-	-
+# 거룩한 칸티운쿨라(1582)
+sv207	354b1565	Lapidabant Stephanum	-	-	# SV 207
+sv207	-	Veni sponsa Christi	-	-	# SV 208
+sv207	c3a6eadb	Ego sum pastor bonus	-	-	# SV 209
+sv207	c4ad08fb	Surge propera amica mea	-	-	# SV 210
+sv207	-	Ubi duo vel tres congregati fuerint	-	-	# SV 211
+sv207	-	Quam pulchra es et quam decora amica mea	-	-	# SV 212
+sv207	3a055f3d	Ave Maria	-	-	# SV 213
+sv207	-	Domine pater et deus	-	-	# SV 214
+sv207	-	Tu es pastor ovium	-	-	# SV 215
+sv207	-	O magnum pietatis	-	-	# SV 216
+sv207	-	O crux benedicta	-	-	# SV 217
+sv207	55e2a07d	Hodie Christus natus est	-	-	# SV 218
+sv207	-	O domine Jesu Christe adoro te	-	-	# SV 219
+sv207	-	Pater venit hora clarifica filium tuum	-	-	# SV 220
+sv207	-	In tua patientia possedisti animam tuam	-	-	# SV 221
+sv207	-	Angelus ad pastores ait	-	-	# SV 222
+sv207	-	Salve crux pretiosa	-	-	# SV 223
+sv207	-	Quia vidisti me Thoma credidisti	-	-	# SV 224
+sv207	-	Lauda Syon salvatorem	-	-	# SV 225
+sv207	55425202	O bone Iesu illumina oculos meos	-	-	# SV 226
+sv207	e2a8ee3f	Surgens Jesus Dominus noster	-	-	# SV 227
+sv207	-	Qui vult venire post me abneget se	-	-	# SV 228
+sv207	5e13c6f7	Iusti tulerunt spolia impiorum	-	-	# SV 229
+# 3성부 칸초네타(1584)
+1ce3b56b	-	Qual si può dir maggiore	-	-	# SV 1
+1ce3b56b	-	Canzonette d'amore che m'uscite del cuore	-	-	# SV 2
+1ce3b56b	7bac2868	La fiera vista	-	-	# SV 3
+1ce3b56b	-	Raggi, dov'è il mio bene	-	-	# SV 4
+1ce3b56b	-	Vita de l'alma mia	-	-	# SV 5
+1ce3b56b	-	Il mio martir tengo celat al cuore	-	-	# SV 6
+1ce3b56b	-	Son questi i crespi crini e questo il viso	-	-	# SV 7
+1ce3b56b	-	Io mi vivea com' Aquila mirando	-	-	# SV 8
+1ce3b56b	-	Su su su che'l giorno è fore	-	-	# SV 9
+1ce3b56b	9165ba81	Quando sperai del mio servir mercede	-	-	# SV 10
+1ce3b56b	181227ca	Come farò cuor mio quando mi parto	-	-	# SV 11
+1ce3b56b	-	Corse a la morte il povero Narciso	-	-	# SV 12
+1ce3b56b	-	Tu ridi sempre mai per darmi pene	-	-	# SV 13
+1ce3b56b	-	Chi vuol veder d'inverno un dolc' aprile	-	-	# SV 14
+1ce3b56b	-	Già mi credev' un sol esser in cielo	-	-	# SV 15
+1ce3b56b	-	Godi pur del bel sen felice pulce	-	-	# SV 16
+1ce3b56b	-	Giulia quel petto giace un bel giardino	-	-	# SV 17
+1ce3b56b	-	Sì come crescon alla terra i fiori	-	-	# SV 18
+1ce3b56b	-	Io son Fenice e voi sete la fiamma	-	-	# SV 19
+1ce3b56b	-	Chi vuol veder un bosco folto e spesso	-	-	# SV 20
+1ce3b56b	-	Hor care canzonette sicuramente andrete	-	-	# SV 21
+# 마드리갈 1권(1587)
+07b2e6ed	ac400255	Ch'ami la vita mia nel tuo bel nome	-	-	# SV 23
+07b2e6ed	17e9048c	Se per avervi, ohime, donato il core	-	-	# SV 24
+07b2e6ed	fd210f09	A che tormi il ben mio	-	-	# SV 25
+07b2e6ed	180fd772	Amor, per tua merce vattene a quella	-	-	# SV 26
+07b2e6ed	26cb80f4	Baci soavi e cari	-	-	# SV 27
+07b2e6ed	16686e54	Se pur non mi consenti	-	-	# SV 28
+07b2e6ed	e6810f50	Filli cara ed amata	-	-	# SV 29
+07b2e6ed	66f8a8b6	Poiché del mio dolore	-	-	# SV 30
+07b2e6ed	7ad9dbcc	Fumia la pastorella	-	-	# SV 31
+07b2e6ed	fb40da18	Se nel partir da voi	-	-	# SV 32
+07b2e6ed	07540113	Tra mille fiamme e tra mille catene	-	-	# SV 33
+07b2e6ed	78cf70a4	Usciam, ninfe, omai fuor di questi boschi	-	-	# SV 34
+07b2e6ed	88983486	Questa ordì il laccio	-	-	# SV 35
+07b2e6ed	0f86743b	La vaga pastorella	-	-	# SV 36
+07b2e6ed	840d43ce	Amor s'il tuo ferire	-	-	# SV 37
+07b2e6ed	8ceac746	Donna s'io miro voi, giaccio divengo	-	-	# SV 38
+07b2e6ed	a287f85a	Ardo, sì, ma non t'amo	-	-	# SV 39
+# 마드리갈 2권(1590)
+e99c451f	9d0c116a	Non si levav'ancor l'alba novella	-	-	# SV 40
+e99c451f	c85fc445	Bevea Fillide mia e nel ber dolcemente	-	-	# SV 41
+e99c451f	0a457825	Dolcissimi legami di parole amorose	-	-	# SV 42
+e99c451f	418da298	Non giacinti o narcisi	-	-	# SV 43
+e99c451f	f8f5c8a9	Intorno a due vermiglie e vaghe labbra	-	-	# SV 44
+e99c451f	00aece23	Non sono in queste rive fiori così vermigli	-	-	# SV 45
+e99c451f	7c07990a	Tutte le bocche belle in questo nero volto	-	-	# SV 46
+e99c451f	564c97c0	Donna, nel mio ritorno	-	-	# SV 47
+e99c451f	9753dc4a	Quell'ombra esser vorrei	-	-	# SV 48
+e99c451f	ed38c503	S'andasse Amor a caccia	-	-	# SV 49
+e99c451f	41b076f8	Mentre io miravo fiso de la mia donna	-	-	# SV 50
+e99c451f	dc9e4bd6	Ecco mormorar l'onde e tremolar le fronde	-	-	# SV 51
+e99c451f	37daf927	Dolcemente dormiva la mia Clori	-	-	# SV 52
+e99c451f	1f7eb1f2	Se tu mi lassi, perfida	-	-	# SV 53
+e99c451f	dc9f90ee	La bocc'onde l'asprissime parole solean uscir	-	-	# SV 54
+e99c451f	7e8d0d92	Crudel!, perchè mi fuggi?	-	-	# SV 55
+e99c451f	63259859	Questo specchio ti dono, Rosa tu dami	-	-	# SV 56
+e99c451f	94e3eb18	Non m'è grave'l morire	-	-	# SV 57
+e99c451f	3f5ac6a0	Ti spontò l'ali amor, la donna mia	-	-	# SV 58
+e99c451f	c47d4aaa	Cantai un tempo, e se fu dolc'il canto	-	-	# SV 59
+# 마드리갈 3권(1592)
+927319c7	8df524ef	La giovinetta pianta	-	-	# SV 60
+927319c7	0611a530	O come è gran martire	-	-	# SV 61
+927319c7	2024a7de	Sovra tenere erbette e bianchi fiori	-	-	# SV 62
+927319c7	4d104d3a	O dolce anima mia	-	-	# SV 63
+927319c7	b40efb8a	Stracciami pur il core	-	-	# SV 64
+927319c7	c7b7dc0f	O rossignuol ch'in queste verdi fronde	-	-	# SV 65
+927319c7	4bc0b146	Se per estremo ardore morir potesse un core	-	-	# SV 66
+927319c7	a2551502	Vattene pur, crudel, con quella pace	-	-	# SV 67
+927319c7	dd6ef6f0	O Primavera	-	-	# SV 68
+927319c7	49a16b81	Perfidissimo volto ben lusata bellezza	-	-	# SV 69
+927319c7	9ce7baff	Ch'io non t'ami, cor mio	-	-	# SV 70
+927319c7	e4fbe187	Occhi un tempo mia vita	-	-	# SV 71
+927319c7	7a42e31b	Vivrò fra i miei tormenti	-	-	# SV 72
+927319c7	82a0ed99	Lumi miei, cari lumi'	-	-	# SV 73
+927319c7	4553a8bd	Rimanti in pace a la dolente e bella Fillida	-	-	# SV 74
+# 마드리갈 4권(1603)
+ac8c341d	f39ca297	Ah dolente partita, ah fin de la mia vita	-	-	# SV 75
+ac8c341d	e2c90499	Cor mio, mentre vi miro	-	-	# SV 76
+ac8c341d	000e8e0b	Cor mio, non mori?	-	-	# SV 77
+ac8c341d	f0930cb6	Sfogava con le stelle	-	-	# SV 78
+ac8c341d	18bd1531	Volgea l'anima mia soavemente	-	-	# SV 79
+ac8c341d	b9933191	Anima mia, perdona	-	-	# SV 80
+ac8c341d	bb162c39	Luci serene e chiare	-	-	# SV 81
+ac8c341d	5095658d	La piaga c'ho nel core	-	-	# SV 82
+ac8c341d	b33089ed	Voi pur da me partite, anima dura	-	-	# SV 83
+ac8c341d	1a29da30	A un giro sol de' belli occhi lucenti	-	-	# SV 84
+ac8c341d	96685787	Ohimè, se tanto amate	-	-	# SV 85
+ac8c341d	b0127f8c	Io mi son giovinetta	-	-	# SV 86
+ac8c341d	8cfdc219	Quel augellin che canta si dolcemente	-	-	# SV 87
+ac8c341d	b2ec6a16	Non più guerra, pietate	-	-	# SV 88
+ac8c341d	2ab23330	Sì, ch' io vorrei morire	-	-	# SV 89
+ac8c341d	e64155e1	Anima dolorosa	-	-	# SV 90
+ac8c341d	0b7eb98c	Anima del cor mio poi che da me misera me	-	-	# SV 91
+ac8c341d	dcf3f5f5	Longe da te, cor mio	-	-	# SV 92
+ac8c341d	e664e8fb	Piagn'e sospira	-	-	# SV 93
+# 마드리갈 5권(1605)
+547f8bb7	50892264	Cruda Amarilli	-	-	# SV 94
+547f8bb7	abfdeb03	O Mirtillo, Mirtill'anima mia	-	-	# SV 95
+547f8bb7	b64970ac	Era l'anima mia già presso a l'ultim' hore	-	-	# SV 96
+547f8bb7	27062146	Ecco Silvio	-	-	# SV 97
+547f8bb7	93b5a5c1	Ch'io t'ami	-	-	# SV 98
+547f8bb7	fdafc48a	Che dar più vi poss'io?	-	-	# SV 99
+547f8bb7	8bbc3dba	M'è più dolce il penar per Amarilli	-	-	# SV 100
+547f8bb7	b8940caa	Ahi come a un vago sol cortese giro	-	-	# SV 101
+547f8bb7	702156b6	Troppo ben può questo tiranno Amore	-	-	# SV 102
+547f8bb7	8eb7b00a	Amor, se giusto sei	-	-	# SV 103
+547f8bb7	2d782816	T'amo mia vita, la mia cara vita	-	-	# SV 104
+547f8bb7	30ab552a	E così a poco a poco torno farfalla	-	-	# SV 105
+547f8bb7	69e110fe	Questi vaghi concenti	-	-	# SV 106
+# 음악의 농담(1607)
+aeb09725	6d067333	I bei legami che stami intorno	-	-	# SV 230
+aeb09725	08f3023b	Amarilli onde m'assale	-	-	# SV 231
+aeb09725	04570c84	Fugge il verno dei dolori	-	-	# SV 232
+aeb09725	c4c4f4ae	Quando l'alba in oriente	-	-	# SV 233
+aeb09725	2759c955	Non così tosto io miro	-	-	# SV 234
+aeb09725	8dfdf5a6	Damigella tutta bella	-	-	# SV 235
+aeb09725	-	La pastorella mia spietata e rigida	-	-	# SV 236
+aeb09725	72926898	O rosetta, che rosetta	-	-	# SV 237
+aeb09725	1436a7d3	Amorosa pupilletta che saetta	-	-	# SV 238
+aeb09725	12ea8d9b	Vaghi rai di cigli ardenti	-	-	# SV 239
+aeb09725	32f2b6ae	La violetta ch'en su l'herbetta	-	-	# SV 240
+aeb09725	-	Giovinetta ritrosetta	-	-	# SV 241
+aeb09725	78e95b27	Dolci miei sospiri	-	-	# SV 242
+aeb09725	949610cb	Clori amorosa d'amor rubella	-	-	# SV 243
+aeb09725	f76fb11f	Lidia spina del mio core	-	-	# SV 244
+aeb09725	-	Balletto: De la bellezza le dovute lodi	-	-	# SV 245
+# 마드리갈 6권(1614)
+91e3534a	85926888	Lamento d'Arianna (5성부)	-	-	# SV 107
+91e3534a	e9840c38	Zefiro torna e'l bel tempo rimena	-	-	# SV 108
+91e3534a	5118d6b1	Una donna fra l'altre	-	-	# SV 109
+91e3534a	-	A dio Florida bella il cor piagato	-	-	# SV 110
+91e3534a	d8fa3849	Sestina: Lagrime d'amante al sepolcro dell'amata	-	-	# SV 111
+91e3534a	f707070d	Ohimè il bel viso	-	-	# SV 112
+91e3534a	-	Qui rise o Tirsi e qui ver me rivolse	-	-	# SV 113
+91e3534a	-	Misero Alceo, dal caro albergo fore	-	-	# SV 114
+91e3534a	a1a8f091	Batto, qui pianse Ergasto	-	-	# SV 115
+91e3534a	-	Presso un fiume tranquillo	-	-	# SV 116
+# 마드리갈 7권(1619)
+02bd33ef	7f6d69ea	Tempro la cetra	-	-	# SV 117
+02bd33ef	cab51568	Non è di gentil core chi non arde d'amore	-	-	# SV 118
+02bd33ef	37dd7d51	A quest'olmo, a quest'ombre ed a quest'onde	-	-	# SV 119
+02bd33ef	8583af4d	O come sei gentile	-	-	# SV 120
+02bd33ef	943c3780	Io son pur vezzosetta pastorella	-	-	# SV 121
+02bd33ef	743e47dd	O viva fiamma, o miei sospiri ardenti	-	-	# SV 122
+02bd33ef	8293a859	Vorrei baciarti, o Filli	-	-	# SV 123
+02bd33ef	217ac54d	Dice la mia bellissima Licori	-	-	# SV 124
+02bd33ef	d8032dea	Ah, che non si conviene	-	-	# SV 125
+02bd33ef	-	Non vedrò mai le stelle	-	-	# SV 126
+02bd33ef	418929ba	Ecco vicine, o bella tigre	-	-	# SV 127
+02bd33ef	1adad291	Perché fuggi tra salci	-	-	# SV 128
+02bd33ef	bcad66e5	Tornate, o cari baci	-	-	# SV 129
+02bd33ef	5ce17200	Soave libertate già per si lunga etate	-	-	# SV 130
+02bd33ef	3689bf76	S'el vostro cor, madonna	-	-	# SV 131
+02bd33ef	fbdc5aed	Interrotte speranze	-	-	# SV 132
+02bd33ef	fc8769bc	Augellin che la voce al canto spieghi	-	-	# SV 133
+02bd33ef	8ad809e7	Vaga su spina ascosa	-	-	# SV 134
+02bd33ef	b09ba5fa	Eccomi pronta ai baci	-	-	# SV 135
+02bd33ef	ab6a0f56	Parlo, miser'o taccio?	-	-	# SV 136
+02bd33ef	878241c9	Tu dormi, ah crudo core	-	-	# SV 137
+02bd33ef	a0f069a2	Al lume de le stelle	-	-	# SV 138
+02bd33ef	21a36cdf	Con che soavità, labbra odorate	-	-	# SV 139
+02bd33ef	24084f73	Ohimè, dov'è il mio ben	-	-	# SV 140
+02bd33ef	5938e9ff	Se i languidi miei sguardi	-	-	# SV 141
+02bd33ef	a23fa041	Se pur destina e vole	-	-	# SV 142
+02bd33ef	b52325eb	Chiome d'oro, bel tesoro	-	-	# SV 143
+02bd33ef	87f418e5	Amor, che deggio far	-	-	# SV 144
+02bd33ef	45684d45	Tirsi e Clori	-	-	# SV 145
+# 음악의 농담(1632)
+eda19c2a	f931b7aa	Maledetto sia l'aspetto	-	-	# SV 246
+eda19c2a	194e1695	Quel sguardo sdegnosetto	-	-	# SV 247
+eda19c2a	e4837a35	Eri già tutta mia	-	-	# SV 248
+eda19c2a	1f2a4b04	Ecco di dolci raggi	-	-	# SV 249
+eda19c2a	876a977a	Io ch'armato sin hor	-	-	# SV 249a
+eda19c2a	2cbe5d00	Et pur dunque vero	-	-	# SV 250
+eda19c2a	0ad5352e	Zefiro torna e di soavi accenti	-	-	# SV 251
+# 마드리갈 8권(1638)
+3e05147a	3f890fbf	Altri canti d'Amor, tenero arciero	-	-	# SV 146
+3e05147a	5c78339d	Hor che'l ciel e la terra e'l vento tace	-	mb	# SV 147
+3e05147a	6632b7e1	Gira il nemico insidioso Amore	-	-	# SV 148
+3e05147a	497fb4dc	Se vittorie sì belle	-	-	# SV 149
+3e05147a	d47c3c61	Armato il cor d'adamantina fede	-	-	# SV 150
+3e05147a	0e9ce319	Ogni amante è guerrier	-	mb	# SV 151
+3e05147a	5714492d	Ardo, avvampo, mi struggo, ardo: accorrete	-	-	# SV 152
+3e05147a	1f66471e	Il combattimento di Tancredi e Clorinda	-	mb	# SV 153
+3e05147a	e2e483f9	Volgendo il ciel per l'immortal sentiero	-	-	# SV 154
+3e05147a	318b795f	Altri canti di Marte	-	mb	# SV 155
+3e05147a	c392a951	Vago augelletto che cantando vai	-	-	# SV 156
+3e05147a	8eab5133	Mentre vaga angioletta	-	-	# SV 157
+3e05147a	c74fafad	Ardo e scoprir, ahi lasso, io non ardisco	-	-	# SV 158
+3e05147a	cb6ac4c9	O sia tranquillo il mare o pien d'orgoglio	-	-	# SV 159
+3e05147a	df37abdc	Ninfa che, scalza il piede e sciolto il crine	-	-	# SV 160
+3e05147a	cf59a7d1	Dolcissimo uscignolo	-	-	# SV 161
+3e05147a	45d9ed72	Chi vol haver felice e lieto il core	-	-	# SV 162
+3e05147a	bc9eb6a9	Lamento della ninfa	19	-	# SV 163
+3e05147a	ce99bdaf	Perchè t'en fuggi, o Fillide?	-	-	# SV 164
+3e05147a	707dd6ea	Non partir, ritrosetta	-	-	# SV 165
+3e05147a	254d561f	Sù, sù, sù pastorelli vezzosi	-	-	# SV 166
+3e05147a	f0b27525	Il ballo delle ingrate	-	-	# SV 167
+# 도덕적·영적 숲(1641)
+4c47f7bc	27e42cc2	O ciechi, il tanto affaticar che giova	-	-	# SV 252
+4c47f7bc	72c61a62	Voi ch'ascoltate	-	-	# SV 253
+4c47f7bc	9eed4969	È questa vita un lampo	-	-	# SV 254
+4c47f7bc	3f7cf565	Spuntava il dì	-	-	# SV 255
+4c47f7bc	7ecfef56	Chi vol che m'innamori	-	-	# SV 256
+4c47f7bc	384a3e95	Messa a 4 da capella	-	-	# SV 257
+4c47f7bc	94cd5388	Gloria a 7	-	-	# SV 258
+4c47f7bc	3c860177	Crucifixus	-	-	# SV 259
+4c47f7bc	1c4b5350	Et resurrexit	-	-	# SV 260
+4c47f7bc	6e02d351	Et iterum venturus est	-	-	# SV 261
+4c47f7bc	786d1119	Ab aeterno ordinata sum	-	-	# SV 262
+4c47f7bc	24faccd0	Dixit Dominus I	-	-	# SV 263
+4c47f7bc	dcb6d7ad	Dixit Dominus II	-	-	# SV 264
+4c47f7bc	79e28e80	Confitebor tibi Domine I	-	-	# SV 265
+4c47f7bc	95601897	Confitebor tibi Domine II	-	-	# SV 266
+4c47f7bc	35850198	Confitebor tibi Domine III	-	-	# SV 267
+4c47f7bc	-	Confitebor tibi Domine IIIa	-	-	# SV 267a
+4c47f7bc	39aaac95	Beatus vir I	-	-	# SV 268
+4c47f7bc	d7c9c103	Beatus vir II	-	-	# SV 269
+4c47f7bc	281120c8	Laudate pueri Dominum I	-	-	# SV 270
+4c47f7bc	fcd3a526	Laudate pueri Dominum II	-	-	# SV 271
+4c47f7bc	8dafc53e	Laudate Dominum omnes gentes I	-	-	# SV 272
+4c47f7bc	-	Laudate Dominum omnes gentes Ia	-	-	# SV 272a
+4c47f7bc	14bd89d2	Laudate Dominum omnes gentes II	-	-	# SV 273
+4c47f7bc	e892cc2c	Laudate Dominum omnes gentes III	-	-	# SV 274
+4c47f7bc	f8202966	Credidi propter quod locutus sum	-	-	# SV 275
+4c47f7bc	852f30aa	Memento domine David	-	-	# SV 276
+4c47f7bc	2e376c0e	Sanctorum meritis I	-	-	# SV 277
+4c47f7bc	961fc323	Sanctorum meritis II	-	-	# SV 278
+4c47f7bc	-	Deus tuorum militum I	-	-	# SV 278a
+4c47f7bc	-	Iste confessor I	-	-	# SV 278b
+4c47f7bc	638b6171	Iste confessor II	-	-	# SV 279
+4c47f7bc	-	Ut queant laxis	-	-	# SV 279a
+4c47f7bc	af72137d	Deus tuorum militum II	-	-	# SV 280
+4c47f7bc	8c7b62a1	Magnificat I	-	-	# SV 281
+4c47f7bc	b3417eba	Magnificat II	-	-	# SV 282
+4c47f7bc	b24e9d7d	Salve Regina I	-	-	# SV 283
+4c47f7bc	7f280126	Salve Regina II	-	-	# SV 284
+4c47f7bc	ace859db	Salve Regina III	-	-	# SV 285
+4c47f7bc	67916d6a	Jubilet tota civitas	-	-	# SV 286
+4c47f7bc	4350cbfb	Laudate Dominum in sanctis eius	-	-	# SV 287
+4c47f7bc	1101c1a0	Pianto della Madonna	-	-	# SV 288
+# 미사와 시편(1650)
+sv190	a0219027	Messa a 4 voci da cappella	-	-	# SV 190
+sv190	c1e0def2	Dixit Dominus I	-	-	# SV 191
+sv190	4e9b3350	Dixit Dominus II	-	-	# SV 192
+sv190	-	Confitebor tibi Domine I	-	-	# SV 193
+sv190	-	Confitebor tibi Domine II	-	-	# SV 194
+sv190	077fc94f	Beatus vir	-	-	# SV 195
+sv190	b83893cb	Laudate pueri Dominum	-	-	# SV 196
+sv190	bd0130b7	Laudate Dominum omnes gentes	-	-	# SV 197
+sv190	d37ec492	Laetatus sum I	-	-	# SV 198
+sv190	a5a113c2	Laetatus sum II	-	-	# SV 199
+sv190	9046123b	Nisi Dominus I	-	-	# SV 200
+sv190	4253a0bd	Nisi Dominus II	-	-	# SV 201
+sv190	8575b20b	Lauda Jerusalem I	-	-	# SV 202
+sv190	f7e3a0f3	Lauda Jerusalem II	-	-	# SV 203
+sv190	b17ad8c5	Letanie della Beata Vergine	-	-	# SV 204
+# 마드리갈 9권(1651)
+ae036080	497fb4dc	Se vittorie sì belle	-	-	# SV 149
+ae036080	d47c3c61	Armato il cor d'adamantina fede	-	-	# SV 150
+ae036080	c74fafad	Ardo e scoprir, ahi lasso, io non ardisco	-	-	# SV 158
+ae036080	cb6ac4c9	O sia tranquillo il mare o pien d'orgoglio	-	-	# SV 159
+ae036080	dc133f33	Bel pastor dal cui bel guardo	-	-	# SV 168
+ae036080	a01a1a35	Alcun non mi consigli	-	-	# SV 169
+ae036080	45c9a2c4	Di far sempre gioire	-	-	# SV 170
+ae036080	a257edc1	Quando dentro al tuo seno	-	-	# SV 171
+ae036080	c586cfed	Non voglio amare	-	-	# SV 172
+ae036080	020a9ea5	Come dolce hoggi l'auretta	-	-	# SV 173
+ae036080	2a37c459	Alle danze, alle gioie, ai diletti	-	-	# SV 174
+ae036080	dbe4dcf7	Perché se m'odiavi	-	-	# SV 175
+ae036080	ccce2aeb	Sì ch'io vamo, occhi vaghi, occhi belli	-	-	# SV 176
+ae036080	2dabbeb9	Sù, sù, sù augelletti canori	-	-	# SV 177
+ae036080	88976a68	O mio bene, o mia vita	-	-	# SV 178
+ae036080	7e52db41	Zefiro torna	-	-	# SV 251
