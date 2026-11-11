@@ -1,0 +1,22 @@
+# 키	MBID 앞 8자	기존 piece id	제목(우리말)	영어 제목	연도	genre	form_key	곡(n·mb·tsv)
+bomi-omyeon			가곡 <봄이 오면>	Gagok <When Spring Comes (Bomi Omyeon)>	1931	vocal	song	n
+gagopa-hupyeon			가곡 <가고파 (후편)>	Gagok <Gagopa, Part 2 (Gagopa Hupyeon)>	1973	vocal	song	n
+suseonhwa			가곡 <수선화>	Gagok <Narcissus (Suseonhwa)>	1941	vocal	song	n
+jindallaekkot			가곡 <진달래꽃>	Gagok <Azaleas (Jindallaekkot)>		vocal	song	n
+monnijeo			가곡 <못잊어>	Gagok <Unforgettable (Monnijeo)>		vocal	song	n
+jeo-gureum			가곡 <저 구름 흘러가는 곳>	Gagok <Where the Clouds Drift (Jeo Gureum Heulleoganeun Got)>		vocal	song	n
+simcheongjeon			오페라 <심청전>	Opera <Simcheongjeon>	1977	stage	opera	n
+chunhyangjeon			오페라 <춘향전>	Opera <Chunhyangjeon>	1993	stage	opera	n
+gukgun			칸타타 <국군은 죽어서 말한다>	Cantata <The Fallen Soldiers Speak (Gukguneun Jugeoseo Malhanda)>	1958	vocal	cantata	n
+seungniui-gil			칸타타 <승리의 길>	Cantata <The Road to Victory (Seungniui Gil)>	1958	vocal	cantata	n
+joguk			칸타타 <조국>	Cantata <Fatherland (Joguk)>	1961	vocal	cantata	tsv
+minjogui-chugwon			칸타타 <민족의 축원>	Cantata <A Nation's Blessing (Minjogui Chugwon)>	1967	vocal	cantata	n
+daehak-changa			칸타타 <대학찬가>	Cantata <University Hymn (Daehak Changa)>	1969	vocal	cantata	n
+minjogui-haengjin			칸타타 <민족의 행진>	Cantata <March of the Nation (Minjogui Haengjin)>	1971	vocal	cantata	n
+daehak-songga			칸타타 <대학송가>	Cantata <University Ode (Daehak Songga)>	1974	vocal	cantata	n
+violin-concerto-yangsando			양산도를 주제로 한 바이올린 협주곡	Violin Concerto on "Yangsando"	1938	concerto	violin_concerto	n
+manga			교향시 <만가>	Symphonic Poem <Dirge (Manga)>	1942	orchestral	symphonic_poem	n
+jeryeak			관현악을 위한 <제례악>	Jeryeak for Orchestra	1943	orchestral	orchestral_other	n
+yangsanga			서곡 <양산가>	Overture <Yangsanga>	1943	orchestral	overture	n
+dongyangjeok-jogok			관현악을 위한 <동양적 조곡>	Oriental Suite for Orchestra	1957	orchestral	orch_suite	n
+gayageum-concerto			가야금 협주곡	Gayageum Concerto	1959	concerto	other_concerto	n
