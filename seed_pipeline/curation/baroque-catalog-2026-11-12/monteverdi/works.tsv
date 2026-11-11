@@ -1,0 +1,45 @@
+# MBID 앞 8자(MB 묶음이 없으면 이름)	제목(우리말)	작품번호	연도	genre	form_key	kind(single·multi·coll)	운영 작품 id	parts(-·mb·file)	영어 제목(MB 작품이 없을 때)
+# 운영에 있던 4곡 중 3곡은 제목(옛 꼴)을 두고 MBID·곡만 잇는다. 「님프의 탄식」(19)은 마드리갈 8권 안 곡으로 잇는다(parts.tsv).
+20d389f8	오르페오	SV 318		stage	opera	single	17	-
+c05338ae	성모 마리아의 저녁기도	SV 206		vocal	sacred	multi	18	file
+04da0699	포페아의 대관	SV 308		stage	opera	single	20	-
+# 오페라
+6ab3e6a0	오페라 <울리세의 귀환>	SV 325	1640	stage	opera	single	-	-
+e3794c42	오페라 <아리안나> 중 "아리안나의 탄식"	SV 22	1608	stage	stage_excerpt	single	-	-
+# 마드리갈집·칸초네타집(출판 묶음)
+1ce3b56b	3성부 칸초네타집	SV 1–21	1584	vocal	choral	coll	-	file
+07b2e6ed	마드리갈 1권	SV 23–39	1587	vocal	choral	coll	-	file
+e99c451f	마드리갈 2권	SV 40–59	1590	vocal	choral	coll	-	file
+927319c7	마드리갈 3권	SV 60–74	1592	vocal	choral	coll	-	file
+ac8c341d	마드리갈 4권	SV 75–93	1603	vocal	choral	coll	-	file
+547f8bb7	마드리갈 5권	SV 94–106	1605	vocal	choral	coll	-	file
+91e3534a	마드리갈 6권	SV 107–116	1614	vocal	choral	coll	-	file
+02bd33ef	마드리갈 7권 <콘체르토>	SV 117–145	1619	vocal	choral	coll	-	file
+3e05147a	마드리갈 8권 <전쟁과 사랑의 마드리갈>	SV 146–167	1638	vocal	choral	coll	-	file
+ae036080	마드리갈 9권	SV 168–178	1651	vocal	choral	coll	-	file
+aeb09725	스케르치 무지칼리 (1607)	SV 230–245	1607	vocal	choral	coll	-	file
+eda19c2a	스케르치 무지칼리 (1632)	SV 246–251	1632	vocal	song	coll	-	file
+# 종교곡집
+sv207	모테트집 <Sacrae cantiunculae>	SV 207–229	1582	vocal	sacred	coll	-	file	Sacrae cantiunculae, SV 207–229
+be0b62ed	6성부 미사 "인 일로 템포레"	SV 205	1610	vocal	mass_requiem	multi	-	mb
+4c47f7bc	종교곡집 <도덕적이고 영적인 숲>	SV 252–288	1641	vocal	sacred	coll	-	file
+sv190	종교곡집 <미사와 시편>	SV 190–204	1650	vocal	sacred	coll	-	file	Messa a quattro voci et salmi, SV 190–204
+# 따로 나온 모테트·노래
+8a0f17d7	모테트 <Adoramus te, Christe>	SV 289	1620	vocal	sacred	single	-	-
+93e27388	모테트 <Cantate Domino>	SV 293	1615	vocal	sacred	single	-	-
+ca834ac2	모테트 <Christe, adoramus te>	SV 294	1620	vocal	sacred	single	-	-
+69acb2f8	모테트 <Domine, ne in furore tuo>	SV 298	1620	vocal	sacred	single	-	-
+3ae98a07	모테트 <Ego flos campi>	SV 301	1624	vocal	sacred	single	-	-
+90e0736e	모테트 <Venite sitientes ad aquas>	SV 335	1624	vocal	sacred	single	-	-
+25cfdfcf	모테트 <Salve, o Regina>	SV 326	1624	vocal	sacred	single	-	-
+e7eff4a9	모테트 <Ego dormio et cor meum vigilat>	SV 300	1625	vocal	sacred	single	-	-
+7cf13b18	모테트 <O quam pulchra es>	SV 317	1625	vocal	sacred	single	-	-
+d878f9aa	모테트 <Currite populi, psallite timpanis>	SV 297	1625	vocal	sacred	single	-	-
+87ece3e0	모테트 <Salve Regina>	SV 327	1625	vocal	sacred	single	-	-
+cdf1534f	모테트 <Exulta filia Sion>	SV 303	1629	vocal	sacred	single	-	-
+f45d4c30	모테트 <Sancta Maria, succurre miseris>	SV 328	1618	vocal	sacred	single	-	-
+b368883b	모테트 <Venite videte martyrem>	SV 336	1645	vocal	sacred	single	-	-
+430594f3	가곡 <Ohimè ch'io cado>	SV 316	1624	vocal	song	single	-	-
+d29a1e6e	가곡 <La mia Turca>	SV 310	1624	vocal	song	single	-	-
+74e8c80a	가곡 <Sì dolce è 'l tormento>	SV 332	1624	vocal	song	single	-	-
+f8f0d11b	가곡 <Voglio di vita uscir>	SV 337		vocal	song	single	-	-
