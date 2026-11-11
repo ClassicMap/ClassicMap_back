@@ -1,5 +1,5 @@
 -- 김동진(composer_id 103) 작품 목록. 지금은 「가고파」·「목련화」·「내 마음은」·신포니에타·「신아리랑」 다섯 곡뿐이다.
--- 작품 21개(가곡 6, 신창악 가극 2, 칸타타 7, 관현악 4, 협주곡 2)를 더한다. 기존 작품은 건드리지 않는다.
+-- 작품 20개(가곡 6, 신창악 가극 2, 칸타타 6, 관현악 4, 협주곡 2)를 더한다. 기존 작품은 건드리지 않는다.
 --
 -- 근거는 한국민족문화대백과사전 곡 항목과 예술로(한국문화예술위원회) 김동진 소개 보관본의 약력·작품 목록, 언론 기사.
 -- 연도는 근거가 작곡 연도로 적은 것만 넣었다. 영화 주제가가 된 해일 수 있거나 여러 곡을 묶어 적은 연도는 비웠다.
@@ -121,19 +121,6 @@ WHERE c.id = 103
 AND NOT EXISTS (
     SELECT 1 FROM pieces existing
     WHERE existing.composer_id = c.id AND existing.title = '칸타타 <국군은 죽어서 말한다>'
-);
-
-
--- 칸타타 <승리의 길>
-
-INSERT INTO pieces
-    (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '칸타타 <승리의 길>', 'Cantata <The Road to Victory (Seungniui Gil)>', 'song', NULL, NULL, NULL, 1958, 'manual', 1
-FROM composers c
-WHERE c.id = 103
-AND NOT EXISTS (
-    SELECT 1 FROM pieces existing
-    WHERE existing.composer_id = c.id AND existing.title = '칸타타 <승리의 길>'
 );
 
 
@@ -329,8 +316,6 @@ UPDATE pieces SET genre = 'stage', form_key = 'opera'
 WHERE composer_id = 103 AND title = '오페라 <춘향전>' AND origin = 'manual' AND genre IS NULL AND form_key IS NULL;
 UPDATE pieces SET genre = 'vocal', form_key = 'cantata'
 WHERE composer_id = 103 AND title = '칸타타 <국군은 죽어서 말한다>' AND origin = 'manual' AND genre IS NULL AND form_key IS NULL;
-UPDATE pieces SET genre = 'vocal', form_key = 'cantata'
-WHERE composer_id = 103 AND title = '칸타타 <승리의 길>' AND origin = 'manual' AND genre IS NULL AND form_key IS NULL;
 UPDATE pieces SET genre = 'vocal', form_key = 'cantata'
 WHERE composer_id = 103 AND title = '칸타타 <조국>' AND origin = 'manual' AND genre IS NULL AND form_key IS NULL;
 UPDATE pieces SET genre = 'vocal', form_key = 'cantata'
