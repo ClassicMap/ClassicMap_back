@@ -2,7 +2,7 @@
 -- 작품 링크로 고른 앨범(또는 이미 있던 앨범 링크)의 전체 트랙에서 곡 이름·번호·작품번호가 맞는 트랙만 붙였다
 -- (../part-apple-links-2026-11-08/match.py 의 match_set·match_children).
 -- 자료: seed_pipeline/curation/new-catalog-links-2026-11-12/(decisions.jsonl). 비어 있을 때만 채운다. 두 번 돌려도 같다.
--- apple 1414, spotify 1406
+-- apple 1414, spotify 1404
 
 UPDATE piece_parts SET apple_music_url = 'https://music.apple.com/us/album/quatuor-in-g-major-twv-43-g2-i-largo-allegro-largo/692814679?i=692814720' WHERE id = 61041 AND piece_id = 52 AND (apple_music_url IS NULL OR apple_music_url = '');
 UPDATE piece_parts SET apple_music_url = 'https://music.apple.com/us/album/quatuor-in-g-major-twv-43-g2-i-largo-allegro-largo/692814679?i=692814720' WHERE id = 61042 AND piece_id = 52 AND (apple_music_url IS NULL OR apple_music_url = '');
@@ -913,11 +913,9 @@ UPDATE piece_parts SET spotify_url = 'https://open.spotify.com/track/1RfZxzGNiFS
 UPDATE piece_parts SET apple_music_url = 'https://music.apple.com/us/album/capriccio-in-a-major-op-34-no-3/748245964?i=748246184' WHERE id = 60465 AND piece_id = 33940 AND (apple_music_url IS NULL OR apple_music_url = '');
 UPDATE piece_parts SET apple_music_url = 'https://music.apple.com/us/album/capriccio-in-f-major-op-34-no-4/748245964?i=748246187' WHERE id = 60466 AND piece_id = 33940 AND (apple_music_url IS NULL OR apple_music_url = '');
 UPDATE piece_parts SET apple_music_url = 'https://music.apple.com/us/album/concerto-in-c-major-for-piano-and-orchestra-woo-12-i/504848669?i=504848675' WHERE id = 60467 AND piece_id = 33941 AND (apple_music_url IS NULL OR apple_music_url = '');
-UPDATE piece_parts SET spotify_url = 'https://open.spotify.com/track/21R7EkRajliXzxypPIwutg' WHERE id = 60467 AND piece_id = 33941 AND (spotify_url IS NULL OR spotify_url = '');
+UPDATE piece_parts SET spotify_url = 'https://open.spotify.com/track/0wTmS8z6eavJtaTmOsHXlF' WHERE id = 60467 AND piece_id = 33941 AND (spotify_url IS NULL OR spotify_url = '');
 UPDATE piece_parts SET apple_music_url = 'https://music.apple.com/us/album/concerto-in-c-major-for-piano-and-orchestra-woo-12-ii/504848669?i=504848676' WHERE id = 60468 AND piece_id = 33941 AND (apple_music_url IS NULL OR apple_music_url = '');
-UPDATE piece_parts SET spotify_url = 'https://open.spotify.com/track/192xrwRdf7gzLf2XLF8jmq' WHERE id = 60468 AND piece_id = 33941 AND (spotify_url IS NULL OR spotify_url = '');
 UPDATE piece_parts SET apple_music_url = 'https://music.apple.com/us/album/concerto-in-c-major-for-piano-and-orchestra-woo-12-iii-presto/504848669?i=504848677' WHERE id = 60469 AND piece_id = 33941 AND (apple_music_url IS NULL OR apple_music_url = '');
-UPDATE piece_parts SET spotify_url = 'https://open.spotify.com/track/2W4KsdoMGAzVD0jR566UV9' WHERE id = 60469 AND piece_id = 33941 AND (spotify_url IS NULL OR spotify_url = '');
 UPDATE piece_parts SET apple_music_url = 'https://music.apple.com/us/album/piano-sonata-in-c-major-op-37-no-1-i-allegro-di-molto/1721142182?i=1721144032' WHERE id = 60470 AND piece_id = 33942 AND (apple_music_url IS NULL OR apple_music_url = '');
 UPDATE piece_parts SET spotify_url = 'https://open.spotify.com/track/6McVcQPfDpdUfVnObboQ48' WHERE id = 60470 AND piece_id = 33942 AND (spotify_url IS NULL OR spotify_url = '');
 UPDATE piece_parts SET apple_music_url = 'https://music.apple.com/us/album/piano-sonata-in-c-major-op-37-no-1-i-allegro-di-molto/1721142182?i=1721144032' WHERE id = 60471 AND piece_id = 33942 AND (apple_music_url IS NULL OR apple_music_url = '');

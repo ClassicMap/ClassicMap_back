@@ -3,7 +3,7 @@
 -- 작품 트랙이 하나면 그 트랙·여러 트랙(오페라 전곡 등)이면 앨범. 한국 가곡은 원곡 녹음만 눈으로 골랐다.
 -- 자료·규칙: seed_pipeline/curation/new-catalog-links-2026-11-12/(README, pick.py, korean.py, decisions.jsonl).
 -- 비어 있을 때만 채우고 있는 링크는 건드리지 않는다. 두 번 돌려도 같다.
--- apple album 306, apple track 182, spotify album 299, spotify track 194
+-- apple album 305, apple track 182, spotify album 294, spotify track 194
 
 -- 34268 Il ritorno d'Ulisse in patria, SV 325 (apple: Monteverdi: Il ritorno d'Ulisse in patria)
 UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/monteverdi-il-ritorno-d-ulisse-in-patria/1730883858' WHERE id = 34268 AND composer_id = 5 AND (apple_music_url IS NULL OR apple_music_url = '');
@@ -147,16 +147,12 @@ UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/purcell-h-
 UPDATE pieces SET spotify_url = 'https://open.spotify.com/album/2p5O7Q6U8HPCGgrmjOHiRi' WHERE id = 34157 AND composer_id = 8 AND (spotify_url IS NULL OR spotify_url = '');
 -- 34158 Bonduca, or the British Heroine, Z. 574 (apple: Purcell: Theatre Music)
 UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/purcell-theatre-music/1452696368' WHERE id = 34158 AND composer_id = 8 AND (apple_music_url IS NULL OR apple_music_url = '');
--- 34158 Bonduca, or the British Heroine, Z. 574 (spotify: Henry Purcell: Love's Madness)
-UPDATE pieces SET spotify_url = 'https://open.spotify.com/album/2ffJiRGKGDnhxPZwuITLpk' WHERE id = 34158 AND composer_id = 8 AND (spotify_url IS NULL OR spotify_url = '');
 -- 34159 Pausanias, the Betrayer of his Country, Z. 585 (apple: Purcell: Theatre Music)
 UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/purcell-theatre-music/1452696368' WHERE id = 34159 AND composer_id = 8 AND (apple_music_url IS NULL OR apple_music_url = '');
 -- 34159 Pausanias, the Betrayer of his Country, Z. 585 (spotify: Purcell / Locke / Blow / Gibbons - Wigmore Hall Live)
 UPDATE pieces SET spotify_url = 'https://open.spotify.com/album/641SlMHcC0rrUGlq8gIK14' WHERE id = 34159 AND composer_id = 8 AND (spotify_url IS NULL OR spotify_url = '');
 -- 34160 The Comical History of Don Quixote, Z. 578 (apple: Purcell: Theatre Music)
 UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/purcell-theatre-music/1452696368' WHERE id = 34160 AND composer_id = 8 AND (apple_music_url IS NULL OR apple_music_url = '');
--- 34160 The Comical History of Don Quixote, Z. 578 (spotify: Music of Henry Purcell)
-UPDATE pieces SET spotify_url = 'https://open.spotify.com/album/24OuKMAZDYAwLZHDlXh27T' WHERE id = 34160 AND composer_id = 8 AND (spotify_url IS NULL OR spotify_url = '');
 -- 34161 Welcome Song - From Those Serene and Rapturous Joys, Z. 326 (apple: Purcell: Royal Odes)
 UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/purcell-royal-odes/1612255051' WHERE id = 34161 AND composer_id = 8 AND (apple_music_url IS NULL OR apple_music_url = '');
 -- 34161 Welcome Song - From Those Serene and Rapturous Joys, Z. 326 (spotify: Purcell: Royal Odes)
@@ -179,8 +175,6 @@ UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/purcell-od
 UPDATE pieces SET spotify_url = 'https://open.spotify.com/album/7srYdGJS721lnewRvAiiJu' WHERE id = 34165 AND composer_id = 8 AND (spotify_url IS NULL OR spotify_url = '');
 -- 34166 Of old when heroes thought it base, Z. 333 (apple: Purcell: The Complete Odes & Welcome Songs)
 UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/purcell-the-complete-odes-welcome-songs/1727386272' WHERE id = 34166 AND composer_id = 8 AND (apple_music_url IS NULL OR apple_music_url = '');
--- 34166 Of old when heroes thought it base, Z. 333 (spotify: Beauteous Softness)
-UPDATE pieces SET spotify_url = 'https://open.spotify.com/album/2PssvjRwd16F94A2YW4LRZ' WHERE id = 34166 AND composer_id = 8 AND (spotify_url IS NULL OR spotify_url = '');
 -- 34167 Ode, Z 338 "Welcome, welcome, glorious morn" (apple: Purcell: The Complete Odes & Welcome Songs)
 UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/purcell-the-complete-odes-welcome-songs/1727386272' WHERE id = 34167 AND composer_id = 8 AND (apple_music_url IS NULL OR apple_music_url = '');
 -- 34168 Birthday Ode for Queen Mary "Love's Goddess Sure Was Blind", Z. 331 (apple: Choir of King's College Sings Purcell)
@@ -957,8 +951,6 @@ UPDATE pieces SET spotify_url = 'https://open.spotify.com/album/2QaVQ0xNA6MlWhJn
 UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/clementi-complete-sonatas-for-fortepiano-vol-3/748245964' WHERE id = 33940 AND composer_id = 25 AND (apple_music_url IS NULL OR apple_music_url = '');
 -- 33941 Piano Concerto in C major (apple: Clementi - Complete Piano Works Vol. 1)
 UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/clementi-complete-piano-works-vol-1/504848669' WHERE id = 33941 AND composer_id = 25 AND (apple_music_url IS NULL OR apple_music_url = '');
--- 33941 Piano Concerto in C major (spotify: 100 Harmonious Classics for Study and Homework)
-UPDATE pieces SET spotify_url = 'https://open.spotify.com/album/1mbiFXD1dHztEnU8UEDBjz' WHERE id = 33941 AND composer_id = 25 AND (spotify_url IS NULL OR spotify_url = '');
 -- 33942 3 Piano Sonatas, op. 37 (apple: Clementi: Complete Piano Sonatas, Vol. 5)
 UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/clementi-complete-piano-sonatas-vol-5/1721142182' WHERE id = 33942 AND composer_id = 25 AND (apple_music_url IS NULL OR apple_music_url = '');
 -- 33942 3 Piano Sonatas, op. 37 (spotify: Clementi: Complete Sonatas, Vol. 5)
@@ -1711,10 +1703,6 @@ UPDATE pieces SET spotify_url = 'https://open.spotify.com/album/5mVWYt3yU4MXvz87
 UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/r-strauss-josephs-legende-op-63-trv-231/1729700422' WHERE id = 33805 AND composer_id = 498 AND (apple_music_url IS NULL OR apple_music_url = '');
 -- 33805 Josephslegende, op. 63 (spotify: R. Strauss: Josephs-Legende, Op. 63, TrV 231)
 UPDATE pieces SET spotify_url = 'https://open.spotify.com/album/3EyoiG9Icf70PRGX2swovT' WHERE id = 33805 AND composer_id = 498 AND (spotify_url IS NULL OR spotify_url = '');
--- 33806 Schlagobers (apple: Richard Strauss: Suite from Schlagobers & München)
-UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/richard-strauss-suite-from-schlagobers-munchen/1761608264' WHERE id = 33806 AND composer_id = 498 AND (apple_music_url IS NULL OR apple_music_url = '');
--- 33806 Schlagobers (spotify: Richard Strauss: Suite from Schlagobers & München)
-UPDATE pieces SET spotify_url = 'https://open.spotify.com/album/5UmJdEslCdXyUWzMuYvPrB' WHERE id = 33806 AND composer_id = 498 AND (spotify_url IS NULL OR spotify_url = '');
 -- 33807 Enoch Arden (apple: Strauss: Enoch Arden)
 UPDATE pieces SET apple_music_url = 'https://music.apple.com/us/album/strauss-enoch-arden/258634353' WHERE id = 33807 AND composer_id = 498 AND (apple_music_url IS NULL OR apple_music_url = '');
 -- 33807 Enoch Arden (spotify: Richard Strauss: Enoch Arden)
