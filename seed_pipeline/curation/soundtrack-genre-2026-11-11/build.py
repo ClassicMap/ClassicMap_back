@@ -87,8 +87,8 @@ def main() -> None:
             picked[row["id"]] = "bundle"
     for parent in list(picked):
         for child in children.get(parent, []):
-            row = rows.get(child)
-            if row and empty(row) and child not in picked:
+            child_row = rows.get(child)
+            if child_row and empty(child_row) and child not in picked:
                 picked[child] = "part"
     counts = Counter(picked.values())
     by_composer = Counter(rows[pid]["english_name"] for pid, why in picked.items() if why != "part")
