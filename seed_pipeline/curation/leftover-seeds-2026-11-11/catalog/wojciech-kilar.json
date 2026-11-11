@@ -1,0 +1,43 @@
+[
+ {
+  "key": "wojciech-kilar-p-ccad10be",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Dracula Toolbox",
+  "titleEn": "Dracula Toolbox",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Dracula Toolbox",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "64c37425-b215-434f-a5cc-e9cd4b9b8e39",
+    "mbTitle": "Dracula Toolbox: Lucy’s Lullaby",
+    "nameKo": "Lucy’s Lullaby",
+    "nameEn": "Lucy’s Lullaby",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 17664,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "0be5e299-e0fb-4646-b327-0414f852c841",
+    "mbTitle": "Dracula Toolbox: Tears to Diamonds",
+    "nameKo": "Tears to Diamonds",
+    "nameEn": "Tears to Diamonds",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 16189,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

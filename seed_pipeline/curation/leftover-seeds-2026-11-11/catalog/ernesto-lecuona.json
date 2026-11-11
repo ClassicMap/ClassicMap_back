@@ -1,0 +1,55 @@
+[
+ {
+  "key": "ernesto-lecuona-p-ef2f2946",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Three Miniatures",
+  "titleEn": "Three Miniatures",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Three Miniatures",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "87941085-f158-4929-b365-9682607c48d9",
+    "mbTitle": "Three Miniatures: Bellflower",
+    "nameKo": "Bellflower",
+    "nameEn": "Bellflower",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 18212,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "6448c6db-3c4e-4789-b5fb-3fcf20952b6a",
+    "mbTitle": "Three Miniatures: Music Box",
+    "nameKo": "Music Box",
+    "nameEn": "Music Box",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 17656,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "edcda4e2-d37c-4c53-b420-44ae0911af99",
+    "mbTitle": "Three Miniatures: Polchinella",
+    "nameKo": "Polchinella",
+    "nameEn": "Polchinella",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 19782,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

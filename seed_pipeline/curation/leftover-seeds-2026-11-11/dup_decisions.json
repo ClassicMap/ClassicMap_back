@@ -1,0 +1,354 @@
+[
+ {
+  "composer_id": 20,
+  "composer": "보케리니",
+  "keep": {
+   "id": 8841,
+   "title": "플루트와 현악을 위한 5중주 D장조 G 430 \"Las Parejas\" 중 \"Entrada - Marcia\""
+  },
+  "hide": [
+   {
+    "id": 8145,
+    "title": "플루트와 현악을 위한 5중주 D장조 G 430 \"Las Parejas\" 중 \"Entrada - Marcia\""
+   }
+  ],
+  "move_parts": false,
+  "evidence": "보케리니 G 430 「Las Parejas」의 같은 곡 Entrada - Marcia 를 MB 가 두 work(III·I 번호만 다름)로 둔 seed. 제목이 완전히 같다. 중복 정리 작업(duplicate-pieces-2026-11-11)이 넘긴 짝"
+ },
+ {
+  "composer_id": 22,
+  "composer": "C.P.E. 바흐",
+  "keep": {
+   "id": 106,
+   "title": "마니피카트 D장조"
+  },
+  "hide": [
+   {
+    "id": 12125,
+    "title": "마니피카트 Wq. 215, H. 772"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Magnificat, Wq. 215, H. 772」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/00f1b8fc-b0f9-4f87-aaad-145c2806d6d9 「Magnificat, Wq. 215, H. 772」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 22,
+  "composer": "C.P.E. 바흐",
+  "keep": {
+   "id": 104,
+   "title": "첼로 협주곡 A단조"
+  },
+  "hide": [
+   {
+    "id": 13512,
+    "title": "첼로 협주곡 A단조 Wq. 170, H. 432"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Cello Concerto in A minor, Wq. 170, H. 432」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/ddebfc59-04e3-46a0-b4aa-80b17e4522dd 「Cello Concerto in A minor, Wq. 170, H. 432」). 남길 쪽은 손 작품(비교 구간 0개)"
+ },
+ {
+  "composer_id": 22,
+  "composer": "C.P.E. 바흐",
+  "keep": {
+   "id": 105,
+   "title": "플루트 협주곡 D단조"
+  },
+  "hide": [
+   {
+    "id": 13697,
+    "title": "플루트 협주곡 D단조 H. 484.1"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Flute Concerto in D minor, H. 484.1」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/fcac157c-a205-43e6-ae87-5a4e1b419422 「Flute Concerto in D minor, H. 484.1」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 37,
+  "composer": "베를리오즈",
+  "keep": {
+   "id": 170,
+   "title": "환상 교향곡"
+  },
+  "hide": [
+   {
+    "id": 507,
+    "title": "환상 교향곡 Op. 14 \"한 예술가의 생애의 에피소드\""
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Symphonie fantastique, op. 14 : Épisode de la vie d’un artiste … en cinq parties」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/312510a8-a429-39a0-9a33-8d5f914872dd 「Symphonie fantastique, op. 14 : Épisode de la vie d’un artiste … en cinq parties」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 44,
+  "composer": "비제",
+  "keep": {
+   "id": 196,
+   "title": "교향곡 C장조"
+  },
+  "hide": [
+   {
+    "id": 11307,
+    "title": "교향곡 1번 C장조"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Symphonie no. 1 en ut majeur」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/37b35e9f-3c6f-4204-9c2f-0745af4267a6 「Symphonie no. 1 en ut majeur」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 66,
+  "composer": "알베니스",
+  "keep": {
+   "id": 10393,
+   "title": "España, seis hojas de álbum"
+  },
+  "hide": [
+   {
+    "id": 10216,
+    "title": "에스파냐: 6개의 앨범 낱장 Op. 165"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "알베니스 「España, seis hojas de álbum, op. 165」 같은 작품(작품번호 Op. 165·제목 같음). 10393 은 이미 잠긴 seed 라 남기고 원어 seed 10216 을 숨긴다. 중복 정리 작업이 넘긴 짝"
+ },
+ {
+  "composer_id": 87,
+  "composer": "번스타인",
+  "keep": {
+   "id": 337,
+   "title": "<웨스트 사이드 스토리> 중 \"심포닉 댄스\""
+  },
+  "hide": [
+   {
+    "id": 761,
+    "title": "<웨스트 사이드 스토리>의 교향적 무곡"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Symphonic Dances from West Side Story」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/67cb661e-8c40-32f7-8687-11a06a450738 「Symphonic Dances from West Side Story」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 94,
+  "composer": "브리튼",
+  "keep": {
+   "id": 358,
+   "title": "전쟁 레퀴엠"
+  },
+  "hide": [
+   {
+    "id": 1024,
+    "title": "전쟁 레퀴엠 Op. 66"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「War Requiem, op. 66」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/145fc3a0-b3a1-4bcc-ac4e-adb7a3eed972 「War Requiem, op. 66」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 94,
+  "composer": "브리튼",
+  "keep": {
+   "id": 359,
+   "title": "첼로 모음곡 1번"
+  },
+  "hide": [
+   {
+    "id": 1418,
+    "title": "첼로 모음곡 1번 Op. 72"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Cello Suite no. 1, op. 72」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/44506c7a-871f-4c7c-918f-00990699b8b6 「Cello Suite no. 1, op. 72」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 94,
+  "composer": "브리튼",
+  "keep": {
+   "id": 356,
+   "title": "청소년을 위한 관현악 입문"
+  },
+  "hide": [
+   {
+    "id": 2274,
+    "title": "The Young Person’s Guide to the Orchestra, op. 34"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「The Young Person’s Guide to the Orchestra, op. 34」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/ace72a0f-a21f-4ebd-a994-3957aaf14d9f 「The Young Person’s Guide to the Orchestra, op. 34」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 95,
+  "composer": "메시앙",
+  "keep": {
+   "id": 360,
+   "title": "시간의 종말을 위한 4중주"
+  },
+  "hide": [
+   {
+    "id": 593,
+    "title": "시간의 종말을 위한 4중주"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Quatuor pour la fin du Temps」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/92eab622-10fb-4613-8b95-e7ef4e76d99b 「Quatuor pour la fin du Temps」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 95,
+  "composer": "메시앙",
+  "keep": {
+   "id": 362,
+   "title": "투랑갈릴라 교향곡"
+  },
+  "hide": [
+   {
+    "id": 705,
+    "title": "투랑갈릴라 교향곡 I/29"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Turangalîla-Symphonie, I/29」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/ec48e2cb-8e50-4648-89ba-ec86fb914304 「Turangalîla-Symphonie, I/29」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 96,
+  "composer": "베르크",
+  "keep": {
+   "id": 365,
+   "title": "바이올린 협주곡 \"어느 천사를 추억하며\""
+  },
+  "hide": [
+   {
+    "id": 7581,
+    "title": "바이올린 협주곡 \"Dem Andenken eines Engels\""
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Violinkonzert „Dem Andenken eines Engels“」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/baca1b94-4041-49c4-8b61-32a99d46524d 「Violinkonzert „Dem Andenken eines Engels“」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 97,
+  "composer": "베베른",
+  "keep": {
+   "id": 369,
+   "title": "오케스트라를 위한 6개의 소품"
+  },
+  "hide": [
+   {
+    "id": 7586,
+    "title": "관현악을 위한 6개의 소품 Op. 6"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Sechs Stücke für Orchester, op. 6」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/c13f2347-8145-41a6-9f7a-b4ef2a4bddd0 「Sechs Stücke für Orchester, op. 6」). 남길 쪽은 손 작품(비교 구간 0개)"
+ },
+ {
+  "composer_id": 97,
+  "composer": "베베른",
+  "keep": {
+   "id": 367,
+   "title": "교향곡"
+  },
+  "hide": [
+   {
+    "id": 8216,
+    "title": "교향곡 Op. 21"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Symphony, op. 21」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/2195c606-ddb5-44c6-8993-4c5ea1cbb1ef 「Symphony, op. 21」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 97,
+  "composer": "베베른",
+  "keep": {
+   "id": 368,
+   "title": "현악 4중주를 위한 5개의 악장"
+  },
+  "hide": [
+   {
+    "id": 11213,
+    "title": "현악 4중주를 위한 5개의 악장 Op. 5"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Five Movements for String Quartet, op. 5」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/fafa518d-4f22-45b7-b784-d744f8072240 「Five Movements for String Quartet, op. 5」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 98,
+  "composer": "아이브스",
+  "keep": {
+   "id": 372,
+   "title": "피아노 소나타 2번 \"콩코드\""
+  },
+  "hide": [
+   {
+    "id": 8076,
+    "title": "피아노 소나타 2번 S. 88 \"Concord, Mass., 1840–60\""
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Piano Sonata no. 2, S. 88 “Concord, Mass., 1840–60”」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/172d92e8-3033-40be-9830-4884a91df532 「Piano Sonata no. 2, S. 88 “Concord, Mass., 1840–60”」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 98,
+  "composer": "아이브스",
+  "keep": {
+   "id": 373,
+   "title": "<뉴잉글랜드의 세 장소>"
+  },
+  "hide": [
+   {
+    "id": 9507,
+    "title": "관현악 모음곡 1번 S. 7 \"Three Places in New England\""
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Orchestral Set No. 1, S. 7 \"Three Places in New England\"」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/7d77c078-c85f-4306-84fa-0054c91f402a 「Orchestral Set No. 1, S. 7 \"Three Places in New England\"」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 98,
+  "composer": "아이브스",
+  "keep": {
+   "id": 371,
+   "title": "교향곡 4번"
+  },
+  "hide": [
+   {
+    "id": 10392,
+    "title": "교향곡 4번 S. 4"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Symphony no. 4, S. 4」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/be10e23b-a4d0-497d-add0-d42a9be01551 「Symphony no. 4, S. 4」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 101,
+  "composer": "하차투리안",
+  "keep": {
+   "id": 384,
+   "title": "가면무도회 모음곡"
+  },
+  "hide": [
+   {
+    "id": 1332,
+    "title": "가면무도회 모음곡 Op. 48a"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Masquerade Suite, op. 48a」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/3abf8cb1-f308-4acf-bbef-02206b801f9b 「Masquerade Suite, op. 48a」). 남길 쪽은 손 작품(비교 구간 1개)"
+ },
+ {
+  "composer_id": 101,
+  "composer": "하차투리안",
+  "keep": {
+   "id": 383,
+   "title": "바이올린 협주곡 D단조"
+  },
+  "hide": [
+   {
+    "id": 2253,
+    "title": "바이올린 협주곡 D단조 Op. 46"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "MB 식별자가 없는 seed 의 원제 「Violin Concerto in D minor, op. 46」가 남길 작품의 MB work 제목과 같다(https://musicbrainz.org/work/aa1c1ce0-5d39-4e59-bf38-3b9b32347b6f 「Violin Concerto in D minor, op. 46」). 남길 쪽은 손 작품(비교 구간 1개)"
+ }
+]

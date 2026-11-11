@@ -1,0 +1,250 @@
+[
+ {
+  "key": "gian-francesco-malipiero-p-b2573891",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "교향곡 11번 \"della cornamuse\"",
+  "titleEn": "Symphony no. 11 \"della cornamuse\"",
+  "year": null,
+  "yearText": null,
+  "genre": "symphony",
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Symphony no. 11 \"della cornamuse\"",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "339257c3-7e21-48fa-9d46-6c4f1f0695b9",
+    "mbTitle": "Symphony no. 11 \"della cornamuse\": I. Energico ma mosso, non troppo però",
+    "nameKo": "Energico ma mosso, non troppo però",
+    "nameEn": "Energico ma mosso, non troppo però",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": 16853,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "b768aba5-e1c0-4511-a629-9cbc2f3371b7",
+    "mbTitle": "Symphony no. 11 \"della cornamuse\": II. Lento",
+    "nameKo": "Lento",
+    "nameEn": "Lento",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": 18981,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "90eebebd-7326-4516-9515-c8862891647b",
+    "mbTitle": "Symphony no. 11 \"della cornamuse\": III. Gaio",
+    "nameKo": "Gaio",
+    "nameEn": "Gaio",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": 18373,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "dc7e96a9-e58b-457a-a586-ace8e395e996",
+    "mbTitle": "Symphony no. 11 \"della cornamuse\": IV. Molto mosso ma marcando il tempo - Quasi lento - Molto mosso",
+    "nameKo": "Molto mosso ma marcando il tempo - Quasi lento - Molto mosso",
+    "nameEn": "Molto mosso ma marcando il tempo - Quasi lento - Molto mosso",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": 19552,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "gian-francesco-malipiero-p-d5e02f68",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "교향곡 5번 \"concertante in eco\"",
+  "titleEn": "Symphony no. 5 \"concertante in eco\"",
+  "year": null,
+  "yearText": null,
+  "genre": "symphony",
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Symphony no. 5 \"concertante in eco\"",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "56641ede-bb58-4d50-9247-d55c7c308114",
+    "mbTitle": "Symphony no. 5 \"concertante in eco\": I. Allegro agitato ma moderatamente",
+    "nameKo": "Allegro agitato ma moderatamente",
+    "nameEn": "Allegro agitato ma moderatamente",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": 17431,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "6c630f69-5fd7-4fa7-9f22-7a00f5770c2e",
+    "mbTitle": "Symphony no. 5 \"concertante in eco\": II. Lento",
+    "nameKo": "Lento",
+    "nameEn": "Lento",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": 17793,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "4bc0a141-6e90-4bf3-824b-23b1e5b65599",
+    "mbTitle": "Symphony no. 5 \"concertante in eco\": III. Allegro vivace ma ritmato",
+    "nameKo": "Allegro vivace ma ritmato",
+    "nameEn": "Allegro vivace ma ritmato",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": 17267,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "b8ab0cba-2b14-475d-92a6-08478efcafd8",
+    "mbTitle": "Symphony no. 5 \"concertante in eco\": IV. Lento ma non troppo - Mosso (agitato) - Ritenuto (quasi funebre)",
+    "nameKo": "Lento ma non troppo - Mosso (agitato) - Ritenuto (quasi funebre)",
+    "nameEn": "Lento ma non troppo - Mosso (agitato) - Ritenuto (quasi funebre)",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": 19000,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "gian-francesco-malipiero-p-30a8981d",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "교향곡 6번 \"degli archi\"",
+  "titleEn": "Symphony no. 6 \"degli archi\"",
+  "year": null,
+  "yearText": null,
+  "genre": "symphony",
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Symphony no. 6 \"degli archi\"",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "4504c080-c98d-4c62-bc11-6d2b44d12559",
+    "mbTitle": "Symphony no. 6 \"degli archi\": I. Allegro",
+    "nameKo": "Allegro",
+    "nameEn": "Allegro",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": 17141,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "0f213408-cbd9-4a6e-9b6d-c43d6379f585",
+    "mbTitle": "Symphony no. 6 \"degli archi\": II. Piuttosto lento",
+    "nameKo": "Piuttosto lento",
+    "nameEn": "Piuttosto lento",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": 16249,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "f96add04-1ed6-40c7-bed5-9e06e0b30e1b",
+    "mbTitle": "Symphony no. 6 \"degli archi\": III. Allegro vivo",
+    "nameKo": "Allegro vivo",
+    "nameEn": "Allegro vivo",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": 20001,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "3c577c12-78ee-4a5f-81e1-ff1b67e341a4",
+    "mbTitle": "Symphony no. 6 \"degli archi\": IV. Lento ma non troppo - Allegro - Lento - Allegro - Molto triste",
+    "nameKo": "Lento ma non troppo - Allegro - Lento - Allegro - Molto triste",
+    "nameEn": "Lento ma non troppo - Allegro - Lento - Allegro - Molto triste",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": 16998,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "gian-francesco-malipiero-p-f59edd7b",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "교향곡 8번 \"Symphonia brevis\"",
+  "titleEn": "Symphony no. 8 \"Symphonia brevis\"",
+  "year": null,
+  "yearText": null,
+  "genre": "symphony",
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Symphony no. 8 \"Symphonia brevis\"",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "99d533bd-23a3-4df2-9ea4-f944120e9191",
+    "mbTitle": "Symphony no. 8 \"Symphonia brevis\": I. Piuttusto lento - Un poco più mosso",
+    "nameKo": "Piuttusto lento - Un poco più mosso",
+    "nameEn": "Piuttusto lento - Un poco più mosso",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": 18518,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "e76aff43-c2dd-47ef-936b-9c975654bba9",
+    "mbTitle": "Symphony no. 8 \"Symphonia brevis\": II. Allegro",
+    "nameKo": "Allegro",
+    "nameEn": "Allegro",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": 19702,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "d578751e-b557-40bb-95ed-af9ccbdc4ad1",
+    "mbTitle": "Symphony no. 8 \"Symphonia brevis\": III. Non troppo lento - Più mosso - Allegramente - Tranquillo - Mosso - Lento - Meno lento, non trascinare - Più mosso, gaio - Meno mosso - Agitato Lento (quasi funebre)",
+    "nameKo": "Non troppo lento - Più mosso - Allegramente - Tranquillo - Mosso - Lento - Meno lento, non trascinare - Più mosso, gaio - Meno mosso - Agitato Lento (quasi funebre)",
+    "nameEn": "Non troppo lento - Più mosso - Allegramente - Tranquillo - Mosso - Lento - Meno lento, non trascinare - Più mosso, gaio - Meno mosso - Agitato Lento (quasi funebre)",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": 19449,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]
