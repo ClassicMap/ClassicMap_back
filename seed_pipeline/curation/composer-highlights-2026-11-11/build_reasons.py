@@ -1,12 +1,12 @@
 # ruff: noqa: E501 — SQL 머리 주석과 값 줄은 한 줄로 둔다.
-"""reasons_v3.json 으로 「처음 듣는다면」 카드 이유를 다시 쓰는 마이그레이션을 만든다.
+"""reasons_v4.json 으로 「처음 듣는다면」 카드 이유를 다시 쓰는 마이그레이션을 만든다.
 
-- 이유는 곡 설명(곡 화면에 이미 있다)이 아니라 '왜 인기가 많은지'를 해요체 한두 문장으로 말한다.
-- 카드는 두 줄까지 보이므로 한국어는 45자 안쪽으로 쓴다.
+- 이유는 곡 설명(곡 화면에 이미 있다)이 아니라 '왜 대표작인지(처음 한 일·누가 뒤따랐는지·어떤 사건이 있었는지)'와 '들을 지점'을 해요체 두 문장으로 말한다. '~의 대표작이에요' 같은 빈말은 쓰지 않는다.
+- 카드는 세 줄까지 보이므로 한국어는 70자 안쪽으로 쓴다.
 - 자동 초안 줄(source auto)만 고친다. 사람이 고른 줄(source editor)은 건드리지 않는다.
 - 작품 id 로 찾고, 같은 작품이 두 작곡가에게 걸리면 멈춘다.
 
-사용: python3 build_reasons.py --drafts drafts.jsonl --reasons reasons_v3.json --out <마이그레이션 파일>
+사용: python3 build_reasons.py --drafts drafts.jsonl --reasons reasons_v4.json --out <마이그레이션 파일>
 """
 
 import argparse
@@ -60,9 +60,9 @@ def main() -> None:
 
     lines = [
         "-- 「처음 듣는다면」 카드 이유를 다시 쓴다(공개 435곡 전부).",
-        "-- 무슨 곡인지 풀이하던 문장을, 왜 인기가 많은지(어디서 들어 봤는지·누가 알렸는지·어떤 일화가 있는지) 말하는 해요체 문장으로 바꾼다.",
+        "-- 무슨 곡인지 풀이하던 문장을, 왜 대표작인지와 들을 지점을 짚는 해요체 두 문장으로 바꾼다.",
         "-- 'N곡 가운데 가장 많이 녹음된 곡'(MusicBrainz 녹음 수) 문구도 이걸로 없어진다.",
-        "-- 원본은 seed_pipeline/curation/composer-highlights-2026-11-11/reasons_v3.json, 만든 스크립트는 build_reasons.py.",
+        "-- 원본은 seed_pipeline/curation/composer-highlights-2026-11-11/reasons_v4.json, 만든 스크립트는 build_reasons.py.",
         "-- 자동 초안 줄(source auto)만 고친다. 사람이 고른 줄은 건드리지 않는다.",
         "",
         *statements,
