@@ -178,13 +178,114 @@ pub struct CatalogRow {
     pub notable_count: i64,
 }
 
-/// `/composers/<id>/catalog`: 작곡가 작품의 갈래·형식별 개수. 작품 목록 없이 개수만 준다.
+/// `/composers/<id>/catalog`: 작곡가 작품의 갈래·형식별 개수와 「처음 듣는다면」. 작품 목록 없이 준다.
 #[derive(Debug, Serialize, PartialEq, Eq)]
 #[serde(rename_all = "camelCase")]
 pub struct ComposerCatalog {
     pub total: i64,
     pub notable_total: i64,
     pub genres: Vec<CatalogGenre>,
+    /// 「처음 듣는다면」: 사람이 확인해 공개한(PUBLISHED) 작품을 순서대로 최대 10곡.
+    /// 숨긴 작품은 빼고, 검색어(q)로 센 응답에는 싣지 않아 빈 목록이다
+    pub highlights: Vec<ComposerHighlight>,
+}
+
+/// 「처음 듣는다면」 한 곡. 작곡가 화면 작품 목록 한 줄(최상위 작품)을 가리킨다.
+#[derive(Debug, Serialize, PartialEq, Eq)]
+#[serde(rename_all = "camelCase")]
+pub struct ComposerHighlight {
+    pub piece_id: i32,
+    pub title: String,
+    pub title_en: Option<String>,
+    /// 장르 7종. 못 정한 작품은 None
+    pub genre: Option<String>,
+    pub form_key: Option<String>,
+    pub opus_number: Option<String>,
+    pub catalogue_system: Option<String>,
+    pub catalogue_number: Option<String>,
+    pub composition_year: Option<i32>,
+    /// 보이는 최상위 part 수와 종류(`Piece.part_count`·`part_kind` 와 같다)
+    pub part_count: i64,
+    pub part_kind: Option<String>,
+    /// 세트면 대표 곡(최상위 part, 예: 녹턴 Op. 9 의 2번). 없거나 확인 전 곡이면 None
+    pub part: Option<HighlightPart>,
+    /// 비교 화면에 공개 구간이 뜨는지. 작품 자체나 대표 곡으로 이어진 작품 중 하나라도 뜨면 true
+    pub comparable: bool,
+    /// 비교 화면으로 열 작품. 작품 자체가 비교되면 그 작품, 아니면 대표 곡으로 이어진 작품
+    pub compare_piece_id: Option<i32>,
+    /// 한 줄 이유(사실 한 줄). 근거가 없어 비워 둔 곡은 None
+    pub reason: Option<String>,
+    pub reason_en: Option<String>,
+}
+
+#[derive(Debug, Serialize, PartialEq, Eq)]
+#[serde(rename_all = "camelCase")]
+pub struct HighlightPart {
+    pub sequence_number: i32,
+    /// 화면 이름. 한국어 이름 → 영어 이름 → 이어진 작품 제목 순(`PiecePart.name` 과 같다)
+    pub name: String,
+    pub name_en: Option<String>,
+}
+
+/// `composer_highlights` 를 작품·대표 곡과 이은 행.
+#[derive(Debug, FromRow)]
+pub struct HighlightRow {
+    pub piece_id: i32,
+    pub title: String,
+    pub title_en: Option<String>,
+    pub genre: Option<String>,
+    pub form_key: Option<String>,
+    pub opus_number: Option<String>,
+    pub catalogue_system: Option<String>,
+    pub catalogue_number: Option<String>,
+    pub composition_year: Option<i32>,
+    pub part_count: i64,
+    pub part_kind: Option<String>,
+    pub part_number: Option<i32>,
+    pub part_name_ko: Option<String>,
+    pub part_name_en: Option<String>,
+    pub part_linked_title: Option<String>,
+    pub compare_piece_id: Option<i32>,
+    pub reason: Option<String>,
+    pub reason_en: Option<String>,
+}
+
+fn non_blank(value: Option<String>) -> Option<String> {
+    value
+        .map(|text| text.trim().to_string())
+        .filter(|text| !text.is_empty())
+}
+
+impl From<HighlightRow> for ComposerHighlight {
+    fn from(row: HighlightRow) -> Self {
+        let name_en = non_blank(row.part_name_en);
+        let part = row.part_number.map(|sequence_number| HighlightPart {
+            sequence_number,
+            name: non_blank(row.part_name_ko)
+                .or_else(|| name_en.clone())
+                .or_else(|| non_blank(row.part_linked_title))
+                .unwrap_or_default(),
+            name_en,
+        });
+        Self {
+            piece_id: row.piece_id,
+            title: row.title,
+            title_en: row.title_en,
+            genre: row.genre,
+            form_key: row.form_key,
+            opus_number: row.opus_number,
+            catalogue_system: row.catalogue_system,
+            catalogue_number: row.catalogue_number,
+            composition_year: row.composition_year,
+            part_count: row.part_count,
+            part_kind: row.part_kind,
+            part,
+            comparable: row.compare_piece_id.is_some(),
+            compare_piece_id: row.compare_piece_id,
+            reason: non_blank(row.reason),
+            reason_en: non_blank(row.reason_en),
+        }
+    }
 }
 
 #[derive(Debug, Serialize, PartialEq, Eq)]
@@ -260,6 +361,7 @@ impl ComposerCatalog {
             total: genres.iter().map(|genre| genre.count).sum(),
             notable_total: genres.iter().map(|genre| genre.notable_count).sum(),
             genres,
+            highlights: Vec::new(),
         }
     }
 }
@@ -432,7 +534,107 @@ pub struct UpdatePiece {
 
 #[cfg(test)]
 mod tests {
-    use super::{order_part_tree, LinkedPiece, PiecePart, PiecePartRow};
+    use super::{
+        order_part_tree, ComposerCatalog, ComposerHighlight, HighlightPart, HighlightRow,
+        LinkedPiece, PiecePart, PiecePartRow,
+    };
+
+    fn highlight_row(piece_id: i32) -> HighlightRow {
+        HighlightRow {
+            piece_id,
+            title: "녹턴 Op. 9".to_string(),
+            title_en: Some("Nocturnes, Op. 9".to_string()),
+            genre: Some("piano".to_string()),
+            form_key: Some("nocturne".to_string()),
+            opus_number: None,
+            catalogue_system: Some("Op.".to_string()),
+            catalogue_number: Some("9".to_string()),
+            composition_year: Some(1832),
+            part_count: 3,
+            part_kind: Some("work".to_string()),
+            part_number: None,
+            part_name_ko: None,
+            part_name_en: None,
+            part_linked_title: None,
+            compare_piece_id: None,
+            reason: None,
+            reason_en: None,
+        }
+    }
+
+    #[test]
+    fn highlight_keeps_representative_part_and_compare_target() {
+        let mut row = highlight_row(26068);
+        row.part_number = Some(2);
+        row.part_name_ko = Some("  ".to_string());
+        row.part_name_en = Some("No. 2 in E-flat major".to_string());
+        row.part_linked_title = Some("녹턴 E♭장조".to_string());
+        row.compare_piece_id = Some(131);
+        row.reason = Some("세 곡 가운데 가장 많이 녹음된 곡".to_string());
+        row.reason_en = Some("   ".to_string());
+
+        let highlight = ComposerHighlight::from(row);
+        assert_eq!(
+            highlight.part,
+            Some(HighlightPart {
+                sequence_number: 2,
+                name: "No. 2 in E-flat major".to_string(),
+                name_en: Some("No. 2 in E-flat major".to_string()),
+            })
+        );
+        assert!(highlight.comparable);
+        assert_eq!(highlight.compare_piece_id, Some(131));
+        assert_eq!(
+            highlight.reason.as_deref(),
+            Some("세 곡 가운데 가장 많이 녹음된 곡")
+        );
+        assert_eq!(highlight.reason_en, None, "빈 이유는 비운다");
+    }
+
+    #[test]
+    fn highlight_part_name_falls_back_to_linked_title() {
+        let mut row = highlight_row(26069);
+        row.part_number = Some(3);
+        row.part_linked_title = Some("연습곡 Op. 10, No. 3 \"이별의 곡\"".to_string());
+        let part = ComposerHighlight::from(row).part.expect("대표 곡");
+        assert_eq!(part.name, "연습곡 Op. 10, No. 3 \"이별의 곡\"");
+        assert_eq!(part.name_en, None);
+    }
+
+    #[test]
+    fn highlight_serializes_with_camel_case_contract() {
+        let json =
+            serde_json::to_value(ComposerHighlight::from(highlight_row(26068))).expect("직렬화");
+        assert_eq!(
+            json,
+            serde_json::json!({
+                "pieceId": 26068,
+                "title": "녹턴 Op. 9",
+                "titleEn": "Nocturnes, Op. 9",
+                "genre": "piano",
+                "formKey": "nocturne",
+                "opusNumber": null,
+                "catalogueSystem": "Op.",
+                "catalogueNumber": "9",
+                "compositionYear": 1832,
+                "partCount": 3,
+                "partKind": "work",
+                "part": null,
+                "comparable": false,
+                "comparePieceId": null,
+                "reason": null,
+                "reasonEn": null
+            })
+        );
+    }
+
+    #[test]
+    fn catalog_starts_without_highlights() {
+        let catalog = ComposerCatalog::from_rows(Vec::new());
+        assert!(catalog.highlights.is_empty());
+        let json = serde_json::to_value(&catalog).expect("직렬화");
+        assert_eq!(json["highlights"], serde_json::json!([]));
+    }
 
     fn row(id: u64, parent: Option<u64>, sequence: i32) -> PiecePartRow {
         PiecePartRow {

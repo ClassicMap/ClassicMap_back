@@ -105,8 +105,9 @@ pub async fn get_pieces_by_composer(
     }
 }
 
-/// 작곡가 작품의 갈래·형식별 개수. 작곡가 화면의 갈래 칩과 형식 머리를 그린다.
-/// q 가 있으면 `/composers/<id>/pieces?q=` 와 같은 검색에 걸린 작품만 센다(갈래와 상관없이).
+/// 작곡가 작품의 갈래·형식별 개수와 「처음 듣는다면」(`highlights`). 작곡가 화면의 갈래 칩, 형식 머리,
+/// 머리 아래 고른 작품 칸을 그린다.
+/// q 가 있으면 `/composers/<id>/pieces?q=` 와 같은 검색에 걸린 작품만 세고(갈래와 상관없이) `highlights` 는 비운다.
 #[get("/composers/<composer_id>/catalog?<q>")]
 pub async fn get_composer_catalog(
     pool: &State<DbPool>,
