@@ -1,0 +1,65 @@
+# 묶음 key	곡 MBID 앞 8자(-: 이름만)	이름	이어 붙일 운영 작품 id(-)	악장(mb: MB parts·-)
+# 타펠무지크(1733): MB 는 3부 → 6곡 → 악장 세 겹이라 두 겹(곡 18 → 악장)으로 편다
+bfbcacb0	8c85384d	서곡 E단조 (1부)	-	mb
+bfbcacb0	7194f438	4중주 G장조 (1부)	-	mb
+bfbcacb0	1b09dd72	플루트·바이올린·첼로를 위한 협주곡 A장조 (1부)	-	mb
+bfbcacb0	392cb65f	트리오 E♭장조 (1부)	-	mb
+bfbcacb0	76d0c28a	플루트 소나타 B단조 (1부)	-	mb
+bfbcacb0	8b00b026	결말 E단조 (1부)	-	-
+bfbcacb0	18d3248b	서곡 D장조 (2부)	-	mb
+bfbcacb0	756cc368	4중주 D단조 (2부)	-	mb
+bfbcacb0	a369d561	세 대의 바이올린을 위한 협주곡 F장조 (2부)	-	mb
+bfbcacb0	bdda3b72	트리오 E단조 (2부)	-	mb
+bfbcacb0	63c28d7a	바이올린 소나타 A장조 (2부)	-	mb
+bfbcacb0	a5e6a766	결말 D장조 (2부)	-	-
+bfbcacb0	a0131d32	서곡 B♭장조 (3부)	-	mb
+bfbcacb0	7d6ad9e3	4중주 E단조 (3부)	-	mb
+bfbcacb0	bae5ae48	두 대의 호른을 위한 협주곡 E♭장조 (3부)	-	mb
+bfbcacb0	24285591	트리오 D장조 (3부)	-	mb
+bfbcacb0	93050754	오보에 소나타 G단조 (3부)	-	mb
+bfbcacb0	7223cebc	결말 B♭장조 (3부)	-	-
+# 파리 4중주: 「콰드리」(1730) 6곡 + 「새 4중주」(1738) 6곡. MB 에는 두 묶음이 따로 있다
+paris	1dccd1a6	협주곡 1번 G장조 (콰드리)	-	mb
+paris	a0f0c052	협주곡 2번 D장조 (콰드리)	-	mb
+paris	01502e2d	소나타 1번 A장조 (콰드리)	-	mb
+paris	49cf37f6	소나타 2번 G단조 (콰드리)	-	mb
+paris	d025cdd5	모음곡 1번 E단조 (콰드리)	-	mb
+paris	9af30eb4	모음곡 2번 B단조 (콰드리)	-	mb
+paris	adceb012	4중주 1번 D장조 (새 4중주)	-	mb
+paris	6961abed	4중주 2번 A단조 (새 4중주)	-	mb
+paris	55a43a10	4중주 3번 G장조 (새 4중주)	-	mb
+paris	fd58c809	4중주 4번 B단조 (새 4중주)	-	mb
+paris	d734c95d	4중주 5번 A장조 (새 4중주)	-	mb
+paris	bf411a3d	4중주 6번 E단조 (새 4중주)	-	mb
+# 카논풍 소나타(1738). 5번(TWV 40:122)은 MB 에 없어 이름만
+canon	77cb0fee	G장조	-	mb
+canon	5126db47	G단조	-	mb
+canon	93917ba0	D장조	-	mb
+canon	5a468fce	D단조	-	mb
+canon	-	A장조	-	-
+canon	5dc9c985	A단조	-	mb
+# 음악 연습(1739–40): 솔로 12곡과 트리오 12곡이 번갈아 실렸다
+edd9053e	270c844c	바이올린 솔로 F장조	-	mb
+edd9053e	3302bcc7	리코더·오보에 트리오 C단조	-	mb
+edd9053e	ef9cb566	플루트 솔로 D장조	-	mb
+edd9053e	2b197529	비올라 다 감바·하프시코드 트리오 G장조	-	mb
+edd9053e	87b8fd0f	비올라 다 감바 솔로 A단조	-	mb
+edd9053e	dcfcee96	바이올린·오보에 트리오 G단조	-	mb
+edd9053e	a79a96f3	리코더 솔로 D단조	-	mb
+edd9053e	0a06dc0e	플루트·하프시코드 트리오 A장조	-	mb
+edd9053e	ac4f9aae	오보에 솔로 B♭장조	-	mb
+edd9053e	ea9314eb	리코더·바이올린 트리오 A단조	-	mb
+edd9053e	055195f3	하프시코드 솔로 C장조	-	mb
+edd9053e	18a63d3f	플루트·비올라 다 감바 트리오 B단조	-	mb
+edd9053e	6217485b	바이올린 솔로 A장조	-	mb
+edd9053e	55948273	리코더·비올라 다 감바 트리오 F장조	-	mb
+edd9053e	7365fe88	플루트 솔로 G장조	-	mb
+edd9053e	276e43a7	리코더·하프시코드 트리오 B♭장조	-	mb
+edd9053e	a06672fb	비올라 다 감바 솔로 E단조	-	mb
+edd9053e	1d87e606	플루트·바이올린 트리오 E장조	-	mb
+edd9053e	691dbe3b	리코더 솔로 C장조	-	mb
+edd9053e	d8e79a9e	바이올린·비올라 다 감바 트리오 D장조	-	mb
+edd9053e	0a23ddd3	오보에 솔로 E단조	-	mb
+edd9053e	ad1ecaed	플루트·오보에 트리오 D단조	-	mb
+edd9053e	3a3bbec0	하프시코드 솔로 F장조	-	mb
+edd9053e	78b5cb9d	오보에·하프시코드 트리오 E♭장조	-	mb

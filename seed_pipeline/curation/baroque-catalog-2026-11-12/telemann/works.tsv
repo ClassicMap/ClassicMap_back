@@ -1,0 +1,85 @@
+# MBID 앞 8자(MB 묶음이 없으면 이름)	제목(우리말)	작품번호	연도	genre	form_key	kind(single·multi·coll)	운영 작품 id	parts(-·mb·file)	영어 제목(MB 작품이 없을 때)
+# 운영에 있던 5곡: 제목·설명·링크는 두고 MBID 와 곡을 잇는다
+bfbcacb0	타펠무지크	TWV 50-55		orchestral	orch_suite	coll	52	file
+50cb3abf	비올라 협주곡 G장조	TWV 51:G9		concerto	other_concerto	multi	53	mb
+569af4af	리코더와 현을 위한 모음곡 A단조	TWV 55:a2		concerto	concertante	multi	54	mb
+b00b63ef	돈키호테 풍자극	TWV 55:G10		orchestral	orch_suite	multi	55	mb
+paris	파리 4중주	TWV 43		chamber	chamber_other	coll	56	file	Paris Quartets
+# 관현악 모음곡(서곡)
+7c8359bd	관현악 모음곡 C장조 "수상 음악" TWV 55:C3	TWV 55:C3	1723	orchestral	orch_suite	multi	-	mb
+30443f4e	관현악 모음곡 G장조 "고대와 현대의 민족들" TWV 55:G4	TWV 55:G4		orchestral	orch_suite	multi	-	mb
+7729ae6d	관현악 모음곡 B♭장조 "민족들" TWV 55:B5	TWV 55:B5		orchestral	orch_suite	single	-	-
+444c2661	관현악 모음곡 F장조 "알스터 강의 메아리" TWV 55:F11	TWV 55:F11		orchestral	orch_suite	multi	-	mb
+5b76597e	관현악 모음곡 B♭장조 "부를레스크" TWV 55:B8	TWV 55:B8		orchestral	orch_suite	multi	-	mb
+d4760eb0	관현악 모음곡 G장조 "라 비자르" TWV 55:G2	TWV 55:G2		orchestral	orch_suite	multi	-	mb
+c802de86	관현악 모음곡 G단조 "라 샹장트" TWV 55:g2	TWV 55:g2		orchestral	orch_suite	multi	-	mb
+ca9ace65	관현악 모음곡 C장조 "라 부퐁" TWV 55:C5	TWV 55:C5		orchestral	orch_suite	multi	-	mb
+ebb7c851	관현악 모음곡 B♭장조 "라 부르스" TWV 55:B11	TWV 55:B11	1720	orchestral	orch_suite	multi	-	mb
+dc67b621	관현악 모음곡 G단조 TWV 55:g4	TWV 55:g4		orchestral	orch_suite	multi	-	mb
+bcf7c1fe	비올라 다 감바와 현을 위한 모음곡 D장조 TWV 55:D6	TWV 55:D6		concerto	concertante	multi	-	mb
+6b7e36dd	<귀뚜라미 교향곡> TWV 50:1	TWV 50:1		symphony	sinfonia	multi	-	mb
+cfd1817b	신포니아 스피리투오사 D장조 TWV 44:1	TWV 44:1		symphony	sinfonia	multi	-	mb
+# 협주곡
+601f5c2c	트럼펫 협주곡 D장조 TWV 51:D7	TWV 51:D7		concerto	wind_concerto	multi	-	mb
+547b820e	호른 협주곡 D장조 TWV 51:D8	TWV 51:D8		concerto	wind_concerto	multi	-	mb
+72c846b9	플루트 협주곡 D장조 TWV 51:D2	TWV 51:D2		concerto	wind_concerto	multi	-	mb
+2e7611aa	플루트 협주곡 E장조 TWV 51:E1	TWV 51:E1		concerto	wind_concerto	multi	-	mb
+8006e927	플루트 협주곡 B단조 TWV 51:h1	TWV 51:h1		concerto	wind_concerto	multi	-	mb
+a2580410	리코더 협주곡 C장조 TWV 51:C1	TWV 51:C1		concerto	wind_concerto	multi	-	mb
+72129bb2	리코더 협주곡 F장조 TWV 51:F1	TWV 51:F1		concerto	wind_concerto	multi	-	mb
+17a326e1	오보에 협주곡 C단조 TWV 51:c1	TWV 51:c1		concerto	wind_concerto	multi	-	mb
+f14c8993	오보에 협주곡 D단조 TWV 51:d1	TWV 51:d1		concerto	wind_concerto	multi	-	mb
+b5bd26c9	오보에 협주곡 E단조 TWV 51:e1	TWV 51:e1		concerto	wind_concerto	multi	-	mb
+53c2400c	오보에 협주곡 F단조 TWV 51:f1	TWV 51:f1		concerto	wind_concerto	multi	-	mb
+98d5958d	오보에 다모레 협주곡 A장조 TWV 51:A2	TWV 51:A2		concerto	wind_concerto	multi	-	mb
+4efd7d14	오보에 다모레 협주곡 G장조 TWV 51:G3	TWV 51:G3		concerto	wind_concerto	multi	-	mb
+8aa3b878	바이올린 협주곡 A장조 "개구리" TWV 51:A4	TWV 51:A4		concerto	violin_concerto	multi	-	mb
+4ba65654	바이올린 협주곡 A단조 TWV 51:a1	TWV 51:a1		concerto	violin_concerto	multi	-	mb
+917b5b12	바이올린 협주곡 F#단조 TWV 51:fis1	TWV 51:fis1		concerto	violin_concerto	multi	-	mb
+c66461d2	리코더와 플루트를 위한 협주곡 E단조 TWV 52:e1	TWV 52:e1		concerto	other_concerto	multi	-	mb
+ec0bdf7d	리코더와 비올라 다 감바를 위한 협주곡 A단조 TWV 52:a1	TWV 52:a1		concerto	other_concerto	multi	-	mb
+bab79b7f	리코더와 바순을 위한 협주곡 F장조 TWV 52:F1	TWV 52:F1		concerto	other_concerto	multi	-	mb
+e34540d0	두 대의 리코더를 위한 협주곡 A단조 TWV 52:a2	TWV 52:a2		concerto	other_concerto	multi	-	mb
+a8545b7f	두 대의 비올라를 위한 협주곡 G장조 TWV 52:G3	TWV 52:G3		concerto	other_concerto	multi	-	mb
+5bb19e51	두 대의 호른을 위한 협주곡 D장조 TWV 52:D1	TWV 52:D1		concerto	other_concerto	multi	-	mb
+db4d725f	두 대의 호른을 위한 협주곡 E♭장조 TWV 52:Es1	TWV 52:Es1		concerto	other_concerto	multi	-	mb
+daa5db34	두 대의 샬뤼모를 위한 협주곡 D단조 TWV 52:d1	TWV 52:d1		concerto	other_concerto	multi	-	mb
+9d1a4545	트럼펫과 두 대의 오보에를 위한 협주곡 D장조 TWV 53:D2	TWV 53:D2		concerto	other_concerto	multi	-	mb
+7bc3b04c	세 대의 트럼펫과 팀파니를 위한 협주곡 D장조 TWV 54:D3	TWV 54:D3		concerto	other_concerto	multi	-	mb
+19119709	세 대의 호른과 바이올린을 위한 협주곡 D장조 TWV 54:D2	TWV 54:D2		concerto	other_concerto	multi	-	mb
+bc9e2e4e	폴란드풍 협주곡 G장조 TWV 43:G7	TWV 43:G7		concerto	other_concerto	multi	-	mb
+# 실내악·건반(출판 묶음)
+e90a37af	<작은 실내 음악>		1716	chamber	duo_sonata	coll	-	mb
+50385464	바이올린과 하프시코드를 위한 6개의 소나타 (1715)		1715	chamber	duo_sonata	coll	-	mb
+d5a1965d	베이스 없는 6개의 소나타	TWV 40:101–106	1727	chamber	wind_chamber	coll	-	mb
+38b77958	무반주 플루트를 위한 12개의 환상곡	TWV 40:2–13	1733	chamber	solo	coll	-	mb
+2fb90abe	무반주 바이올린을 위한 12개의 환상곡	TWV 40:14–25	1735	chamber	solo	coll	-	mb
+ffe5b9fd	하프시코드를 위한 36개의 환상곡	TWV 33:1–36	1733	piano	fantasia	coll	-	mb
+94f156d5	6개의 협주곡과 6개의 모음곡		1734	chamber	chamber_other	coll	-	mb
+canon	6개의 카논풍 소나타	TWV 40:118–123	1738	chamber	chamber_other	coll	-	file	6 Canonic Sonatas, TWV 40:118–123
+edd9053e	<음악 연습>		1740	chamber	chamber_other	coll	-	file
+6ef1298a	바순 소나타 F단조 TWV 41:f1	TWV 41:f1	1728	chamber	duo_sonata	multi	-	mb
+b8cd0321	네 대의 바이올린을 위한 협주곡 G장조 TWV 40:201	TWV 40:201		chamber	chamber_other	multi	-	mb
+# 오페라
+00bc4fc1	오페라 <인내심 많은 소크라테스>	TWV 21:9	1721	stage	opera	single	-	-
+548833a0	오페라 <핌피노네>	TWV 21:15	1725	stage	opera	single	-	-
+b721c5fc	오페라 <오르페우스>	TWV 21:18	1726	stage	opera	single	-	-
+9aa32afd	오페라 <미리바이스>	TWV 21:24	1728	stage	opera	single	-	-
+08f1b5a3	오페라 <에마와 에긴하르트>	TWV 21:25	1728	stage	opera	single	-	-
+72af1ef7	오페라 <플라비우스 베르타리두스>	TWV 21:27	1729	stage	opera	single	-	-
+1f174678	오페라 <카마초의 결혼식에 간 돈키호테>	TWV 21:32	1761	stage	opera	single	-	-
+# 수난곡·오라토리오·칸타타
+c98524a6	브로케스 수난곡	TWV 5:1	1716	vocal	oratorio_passion	single	-	-
+00dfc1fc	누가 수난곡 (1728)	TWV 5:13	1728	vocal	oratorio_passion	single	-	-
+13bcf4a3	요한 수난곡 (1745)	TWV 5:30	1745	vocal	oratorio_passion	single	-	-
+8bc69e5e	마태 수난곡 (1746)	TWV 5:31	1746	vocal	oratorio_passion	single	-	-
+5375dd2e	마가 수난곡 (1759)	TWV 5:44	1759	vocal	oratorio_passion	single	-	-
+d0a580bb	오라토리오 <예수의 죽음>	TWV 5:6	1755	vocal	oratorio_passion	single	-	-
+7dd52d76	오라토리오 <메시아>	TWV 6:4	1759	vocal	oratorio_passion	single	-	-
+626ec15d	오라토리오 <부활>	TWV 6:7		vocal	oratorio_passion	single	-	-
+d985bca3	오라토리오 <심판의 날>	TWV 6:8	1762	vocal	oratorio_passion	single	-	-
+c5aed7d9	칸타타 <하루의 때>	TWV 20:39	1757	vocal	cantata	single	-	-
+98a45924	칸타타 <카나리아를 위한 장송 음악>	TWV 20:37	1737	vocal	cantata	single	-	-
+5412f8be	칸타타 <이노>	TWV 20:41	1765	vocal	cantata	single	-	-
+a0b0e63a	칸타타 <Gott, man lobet dich in der Stille>	TWV 14:12	1763	vocal	cantata	single	-	-
+fabe2126	마니피카트 C장조	TWV 9:17		vocal	sacred	single	-	-
