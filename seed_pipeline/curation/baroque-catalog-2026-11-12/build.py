@@ -314,6 +314,10 @@ def forward_parts(work: dict[str, Any]) -> list[dict[str, Any]]:
 def ordered_parts(ctx: Ctx, work: dict[str, Any]) -> list[dict[str, Any]]:
     """같은 자리에 두 벌 걸린 곡(같은 ordering-key 또는 같은 번호)은 제목이 긴 것 하나만 쓰고 적어 둔다."""
     rels = sorted(forward_parts(work), key=lambda rel: position(rel, work["title"]))
+    sources = {position(rel, work["title"])[0] for rel in rels}
+    if len(sources) > 1:
+        # ordering-key 가 있는 곡과 제목 번호만 있는 곡이 섞이면 출처 순으로 갈려 번호 순서가 깨진다.
+        ctx.errors.append(f"순서 출처가 섞인 part: {work['title']} — {sorted(sources)}")
     unordered = [rel for rel in rels if position(rel, work["title"])[0] == 3]
     if unordered:
         # 순서를 알 수 없는 곡을 제목 순으로 늘어놓지 않는다. 그런 작품은 parts.tsv 로 손으로 정하거나 낱곡으로 둔다.

@@ -10,11 +10,11 @@ a5528d03	세미 오페라 <아서 왕>	Z 628	1691	stage	opera	single	-	-
 7df68bbd	세미 오페라 <인도의 여왕>	Z 630	1695	stage	opera	single	-	-
 7aa8abcd	가면극 <아테네의 타이먼>	Z 632	1695	stage	stage_other	single	-	-
 65320756	부수음악 <암피트리온>	Z 572	1690	orchestral	incidental	multi	-	file
-61a43678	부수음악 <Distressed Innocence>	Z 577	1690	orchestral	incidental	multi	-	mb
+61a43678	부수음악 <Distressed Innocence>	Z 577		orchestral	incidental	multi	-	mb
 ec08f227	부수음악 <The Gordian Knot Unty'd>	Z 597	1691	orchestral	incidental	multi	-	mb
 9c8666e4	부수음악 <The Libertine>	Z 600	1692	orchestral	incidental	multi	-	mb
 f667a29a	부수음악 <오이디푸스>	Z 583	1692	orchestral	incidental	multi	-	file
-27c40aed	부수음악 <The Old Bachelor>	Z 607	1693	orchestral	incidental	multi	-	mb
+27c40aed	부수음악 <The Old Bachelor>	Z 607		orchestral	incidental	multi	-	mb
 91499999	부수음악 <The Married Beau>	Z 603	1694	orchestral	incidental	multi	-	mb
 59ad74ee	부수음악 <The Virtuous Wife>	Z 611	1694	orchestral	incidental	multi	-	mb
 40e16d19	부수음악 <본두카>	Z 574	1695	orchestral	incidental	single	-	-
@@ -24,7 +24,7 @@ f667a29a	부수음악 <오이디푸스>	Z 583	1692	orchestral	incidental	multi	-
 c60ec72c	송가 <From those serene and rapturous joys>	Z 326	1684	vocal	cantata	single	-	-
 e279d01c	송가 <Why, why are all the Muses mute?>	Z 343	1685	vocal	cantata	multi	-	mb
 916174b9	송가 <Ye tuneful Muses>	Z 344	1686	vocal	cantata	single	-	-
-9a6be6b3	송가 <Sound the trumpet, beat the drum>	Z 335	1687	vocal	cantata	single	-	-
+9a6be6b3	송가 <Sound the trumpet, beat the drum>	Z 335		vocal	cantata	single	-	-
 04c42de0	송가 <Now does the glorious day appear>	Z 332	1689	vocal	cantata	single	-	-
 d3f61add	송가 <Of old when heroes thought it base>	Z 333	1690	vocal	cantata	single	-	-
 548b1630	송가 <Welcome, welcome, glorious morn>	Z 338	1691	vocal	cantata	multi	-	mb
@@ -37,7 +37,7 @@ ef4a952e	송가 <Celebrate this festival>	Z 321	1693	vocal	cantata	single	-	-
 ad1c0dfb	성 체칠리아의 날을 위한 송가 <Hail, bright Cecilia>	Z 328	1692	vocal	cantata	multi	-	mb
 # 찬가·예배 음악
 3c55e424	찬가 <Hear my prayer, O Lord>	Z 15		vocal	sacred	single	-	-
-670cdde1	대관식 찬가 <I was glad>	Z 19	1685	vocal	sacred	single	-	-
+670cdde1	대관식 찬가 <I was glad>	Z 19		vocal	sacred	single	-	-
 92449fad	대관식 찬가 <My heart is inditing>	Z 30	1685	vocal	sacred	multi	-	mb
 dba28577	찬가 <My beloved spake>	Z 28		vocal	sacred	multi	-	mb
 f7c8e0cf	찬가 <O God, thou art my God>	Z 35		vocal	sacred	single	-	-
@@ -54,9 +54,9 @@ d5ae0951	예배곡 B♭장조	Z 230		vocal	sacred	single	-	-
 a198f704	저녁 찬송 <Now that the sun hath veiled his light>	Z 193	1688	vocal	sacred	single	-	-
 38c43919	종교 가곡 <Lord, what is man?>	Z 192	1693	vocal	sacred	single	-	-
 f567ac96	종교 가곡 <The Blessed Virgin's Expostulation>	Z 196	1693	vocal	sacred	single	-	-
-0f2dee0a	가곡 <From silent shades> "미친 베스"	Z 370	1682	vocal	song	single	-	-
+0f2dee0a	가곡 <From silent shades> "미친 베스"	Z 370		vocal	song	single	-	-
 25673227	가곡 <O Solitude>	Z 406	1687	vocal	song	single	-	-
-5901d9b5	가곡 <If music be the food of love>	Z 379	1692	vocal	song	single	-	-
+5901d9b5	가곡 <If music be the food of love>	Z 379		vocal	song	single	-	-
 c9ba237f	여왕의 비가 <Incassum, Lesbia, rogas>	Z 383	1695	vocal	song	single	-	-
 # 기악
 4e13dc5f	샤코니 G단조	Z 730		chamber	string_ensemble	single	-	-
