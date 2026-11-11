@@ -1,0 +1,67 @@
+[
+ {
+  "key": "jan-maklakiewicz-p-74e835ba",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "폴란드 미사",
+  "titleEn": "Polish Mass",
+  "year": null,
+  "yearText": null,
+  "genre": "vocal",
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Polish Mass",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "49b3a678-70b3-4224-9ee1-c15aeee28612",
+    "mbTitle": "Polish Mass: Kyrie (Choir)",
+    "nameKo": "키리에 (합창)",
+    "nameEn": "Kyrie (Choir)",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 23988,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "672127d6-3917-4e93-8da7-8361cee20906",
+    "mbTitle": "Polish Mass: Kyrie (Soloist)",
+    "nameKo": "키리에 (독창)",
+    "nameEn": "Kyrie (Soloist)",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 24291,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "588152d3-3057-4f91-9d37-da14fb3f72f9",
+    "mbTitle": "Polish Mass: Credo (Trio)",
+    "nameKo": "크레도 (3중창)",
+    "nameEn": "Credo (Trio)",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 24139,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "25d03810-f48c-4a27-beb5-ff5f16dd9d80",
+    "mbTitle": "Polish Mass: Kyrie (Trio)",
+    "nameKo": "키리에 (3중창)",
+    "nameEn": "Kyrie (Trio)",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 23616,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

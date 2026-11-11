@@ -1,0 +1,197 @@
+[
+ {
+  "key": "leonard-bernstein-p-7b1b7271",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "금관 음악",
+  "titleEn": "Brass Music",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Brass Music",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "4205c010-2f20-4691-9008-ca94ce7a4274",
+    "mbTitle": "Brass Music: Elegy for Mippy II",
+    "nameKo": "Elegy for Mippy II",
+    "nameEn": "Elegy for Mippy II",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 1399,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "54d1e619-2f20-4c54-9177-647a5bd33658",
+    "mbTitle": "Brass Music: Waltz for Mippy III",
+    "nameKo": "Waltz for Mippy III",
+    "nameEn": "Waltz for Mippy III",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 1540,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "leonard-bernstein-p-48c765c1",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "<Dybbuk> 모음곡 1번",
+  "titleEn": "Dybbuk Suite no. 1",
+  "year": null,
+  "yearText": null,
+  "genre": "orchestral",
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Dybbuk Suite no. 1",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "6b0eeab5-55c0-43a9-bf16-562f2c9d94c3",
+    "mbTitle": "Dybbuk Suite no. 1: I. Invocation and Trance",
+    "nameKo": "Invocation and Trance",
+    "nameEn": "Invocation and Trance",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": 1699,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "bad28b9e-5cd2-4485-acaa-4260605409ad",
+    "mbTitle": "Dybbuk Suite no. 1: II. The Pledge",
+    "nameKo": "The Pledge",
+    "nameEn": "The Pledge",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": 2395,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "0cfd2e64-bbb9-4f09-9aa0-379e3c033351",
+    "mbTitle": "Dybbuk Suite no. 1: III. Kabbalah",
+    "nameKo": "Kabbalah",
+    "nameEn": "Kabbalah",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": 951,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "bc9780d2-97c6-4e1b-84e8-f84496677017",
+    "mbTitle": "Dybbuk Suite no. 1: IV. Possession",
+    "nameKo": "Possession",
+    "nameEn": "Possession",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": 2418,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 5,
+    "mbid": "e7d98a79-7ecf-4087-b61d-2d4485eb4950",
+    "mbTitle": "Dybbuk Suite no. 1: V. Pas de deux",
+    "nameKo": "Pas de deux",
+    "nameEn": "Pas de deux",
+    "movementNumber": "V",
+    "catalogueAlt": null,
+    "existingPieceId": 2807,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 6,
+    "mbid": "69c48ee1-80e0-4b3d-9633-7092ce097d96",
+    "mbTitle": "Dybbuk Suite no. 1: VI. Exorcism",
+    "nameKo": "Exorcism",
+    "nameEn": "Exorcism",
+    "movementNumber": "VI",
+    "catalogueAlt": null,
+    "existingPieceId": 1691,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "leonard-bernstein-p-87aecc4c",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "<Dybbuk> 모음곡 2번",
+  "titleEn": "Dybbuk Suite no. 2",
+  "year": null,
+  "yearText": null,
+  "genre": "orchestral",
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Dybbuk Suite no. 2",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "53a8e4aa-b9d1-4f8c-99d3-c58fc538661d",
+    "mbTitle": "Dybbuk Suite no. 2: I. The Messengers",
+    "nameKo": "The Messengers",
+    "nameEn": "The Messengers",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": 1531,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "c9bcfe53-dba5-4c8b-9116-1b0c1b5f4488",
+    "mbTitle": "Dybbuk Suite no. 2: II. Leah",
+    "nameKo": "Leah",
+    "nameEn": "Leah",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": 2532,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "be09d699-38a7-4ba5-a999-d84748826ce9",
+    "mbTitle": "Dybbuk Suite no. 2: III. Five Kabbalah Variations",
+    "nameKo": "Five Kabbalah Variations",
+    "nameEn": "Five Kabbalah Variations",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": 2437,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "c38659da-7ff6-43e4-9b3a-570dbdd8e50a",
+    "mbTitle": "Dybbuk Suite no. 2: IV. Dream",
+    "nameKo": "Dream",
+    "nameEn": "Dream",
+    "movementNumber": "IV",
+    "catalogueAlt": null,
+    "existingPieceId": 2477,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

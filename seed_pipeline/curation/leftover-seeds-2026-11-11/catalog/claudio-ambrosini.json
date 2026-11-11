@@ -1,0 +1,108 @@
+[
+ {
+  "key": "claudio-ambrosini-p-21d8fea4",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "Three Holograms",
+  "titleEn": "Three Holograms",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Three Holograms",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "bc3ed89d-2adc-407c-a600-8dd06c2de530",
+    "mbTitle": "Three Holograms: I. Janus ipse, dixit",
+    "nameKo": "Janus ipse, dixit",
+    "nameEn": "Janus ipse, dixit",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": 19049,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "7f9e18ea-e0b8-4b30-854e-a7d696135deb",
+    "mbTitle": "Three Holograms: II. Rabdomante (Mosè?)",
+    "nameKo": "Rabdomante (Mosè?)",
+    "nameEn": "Rabdomante (Mosè?)",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": 18110,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "541e3e48-b650-4e4b-95cd-fc2fdde04882",
+    "mbTitle": "Three Holograms: III. Arcimboldo docet",
+    "nameKo": "Arcimboldo docet",
+    "nameEn": "Arcimboldo docet",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": 17391,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ },
+ {
+  "key": "claudio-ambrosini-p-5ae6aab5",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "3개의 연습곡 \"en plein air\"",
+  "titleEn": "Tre Studi “en plein air”",
+  "year": null,
+  "yearText": null,
+  "genre": "piano",
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Tre Studi “en plein air”",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "f167d1ae-fded-484c-bdf2-9a873fc78344",
+    "mbTitle": "Tre Studi “en plein air”: I. Notturno",
+    "nameKo": "Notturno",
+    "nameEn": "Notturno",
+    "movementNumber": "I",
+    "catalogueAlt": null,
+    "existingPieceId": 19845,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "d5e96d0b-3d55-4935-a54e-d6aab86bd981",
+    "mbTitle": "Tre Studi “en plein air”: II. Aube",
+    "nameKo": "Aube",
+    "nameEn": "Aube",
+    "movementNumber": "II",
+    "catalogueAlt": null,
+    "existingPieceId": 19454,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "49bdffe1-25fd-4c79-a665-96fbcaaa28d5",
+    "mbTitle": "Tre Studi “en plein air”: III. Bus Stop",
+    "nameKo": "Bus Stop",
+    "nameEn": "Bus Stop",
+    "movementNumber": "III",
+    "catalogueAlt": null,
+    "existingPieceId": 17236,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

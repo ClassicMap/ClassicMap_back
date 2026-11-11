@@ -1,0 +1,91 @@
+[
+ {
+  "key": "sir-edward-elgar-p-8c1a1276",
+  "kind": "multi_movement",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "King Arthur",
+  "titleEn": "King Arthur",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "King Arthur",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "8318a997-8992-41c7-9358-b00f27aeeaaf",
+    "mbTitle": "King Arthur: 1. The King and Sir Bedivere",
+    "nameKo": "The King and Sir Bedivere",
+    "nameEn": "The King and Sir Bedivere",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 1917,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "ea44d362-4f5f-4b8b-9fb4-ec4c31a56680",
+    "mbTitle": "King Arthur: 2. Elaine Asleep",
+    "nameKo": "Elaine Asleep",
+    "nameEn": "Elaine Asleep",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 2828,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "dd75d6b6-16dc-4623-817d-81d45b03c9ef",
+    "mbTitle": "King Arthur: 3. The Banqueting Hall at Westminster",
+    "nameKo": "The Banqueting Hall at Westminster",
+    "nameEn": "The Banqueting Hall at Westminster",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 2700,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 4,
+    "mbid": "560dce51-a6a9-43b5-a3cc-2843628808c0",
+    "mbTitle": "King Arthur: 4. The Queen's Tower at Night",
+    "nameKo": "The Queen's Tower at Night",
+    "nameEn": "The Queen's Tower at Night",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 1552,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 5,
+    "mbid": "ac275f0f-ded2-4b52-9d84-97f4c486d352",
+    "mbTitle": "King Arthur: 5. Battle Scene",
+    "nameKo": "Battle Scene",
+    "nameEn": "Battle Scene",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 2268,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 6,
+    "mbid": "3aab31e9-4229-4c62-a380-eeff8d37d56d",
+    "mbTitle": "King Arthur: 6. Arthur's Passage to Avalon",
+    "nameKo": "Arthur's Passage to Avalon",
+    "nameEn": "Arthur's Passage to Avalon",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 1328,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]

@@ -1,0 +1,55 @@
+[
+ {
+  "key": "nicolas-gombert-p-5850de5b",
+  "kind": "collection",
+  "catalogue": null,
+  "catalogueAlt": null,
+  "titleKo": "3개의 모테트",
+  "titleEn": "Three Motets",
+  "year": null,
+  "yearText": null,
+  "genre": null,
+  "authenticity": "authentic",
+  "mbid": null,
+  "mbTitle": "Three Motets",
+  "existingPieceId": null,
+  "parts": [
+   {
+    "seq": 1,
+    "mbid": "0688c4cb-fce3-4777-affb-07fcf7ea5677",
+    "mbTitle": "Three Motets: Ave Maria",
+    "nameKo": "Ave Maria",
+    "nameEn": "Ave Maria",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 23255,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 2,
+    "mbid": "f89f75bf-f6c8-4e6e-bc06-81ed93c75895",
+    "mbTitle": "Three Motets: Ave Sanctissima Maria",
+    "nameKo": "Ave Sanctissima Maria",
+    "nameEn": "Ave Sanctissima Maria",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 25923,
+    "existingPartId": null,
+    "children": []
+   },
+   {
+    "seq": 3,
+    "mbid": "5ac95e36-6004-425e-9300-2ad15477db78",
+    "mbTitle": "Three Motets: Pater Noster",
+    "nameKo": "Pater Noster",
+    "nameEn": "Pater Noster",
+    "movementNumber": null,
+    "catalogueAlt": null,
+    "existingPieceId": 24166,
+    "existingPartId": null,
+    "children": []
+   }
+  ]
+ }
+]
