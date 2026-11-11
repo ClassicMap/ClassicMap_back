@@ -1,0 +1,42 @@
+# MBID 앞 8자(없으면 -)	제목(우리말)	작품번호	연도(출판 연도)	genre	form_key	곡(n|y|y:4-6|<MBID>:1-6)	기존 작품 id	영어 제목(MBID 없을 때)
+8277788d	소나티네 Op. 36 (1~6번)	Op. 36	1797	piano	sonata	y	113
+e2c66253	그라두스 아드 파르나숨	Op. 44	1817	piano	etude	n	114
+5c17f763	피아노 소나타 A♭장조 WoO 13	WoO 13	1765	piano	sonata	y
+f3de36f0	피아노 소나타 G장조 WoO 14	WoO 14	1768	piano	sonata	y
+af0a9289	피아노 소나타 Op. 1	Op. 1	1771	piano	sonata	y
+8379cb63	피아노 소나타 Op. 1a	Op. 1a		piano	sonata	y:1-4
+860303cb	피아노 소나타 Op. 2	Op. 2	1779	piano	sonata	y
+d8c97053	피아노 소나타 Op. 7	Op. 7	1782	piano	sonata	y
+bf956d69	피아노 소나타 Op. 8	Op. 8	1782	piano	sonata	y
+2f28f6a8	피아노 소나타 Op. 9	Op. 9	1783	piano	sonata	y
+e589a942	피아노 소나타 Op. 10	Op. 10	1783	piano	sonata	y
+3c01c622	피아노 소나타 E♭장조 Op. 11, No. 1	Op. 11, No. 1		piano	sonata	y
+3a5e9906	토카타 B♭장조	Op. 11, No. 2		piano	prelude_fugue	n
+8544e329	피아노 소나타 Op. 12	Op. 12	1784	piano	sonata	y
+a0c03618	피아노 소나타 Op. 13	Op. 13	1785	piano	sonata	y
+67ae8db2	피아노 소나타 D장조 "사냥"	Op. 16	1786	piano	sonata	y
+bbcddea7	카프리치오 B♭장조	Op. 17	1787	piano	fantasia	n
+efaaab97	교향곡 Op. 18	Op. 18	1787	symphony	symphony	y
+dc3a768b	<음악적 특성>	Op. 19	1787	piano	prelude_fugue	y
+fe2a8d92	피아노 소나타 C장조 Op. 20	Op. 20	1787	piano	sonata	y
+ea49850d	피아노 소나타 F장조 WoO 3	WoO 3	1789	piano	sonata	y
+dd1b7254	피아노 소나타 Op. 23	Op. 23	1790	piano	sonata	y
+d0a31fd2	피아노 소나타 Op. 24	Op. 24		piano	sonata	y
+2d7fde80	피아노 소나타 Op. 25	Op. 25	1790	piano	sonata	y
+835b634d	피아노 소나타 F장조 Op. 26	Op. 26	1791	piano	sonata	y
+6799800a	피아노 소나타 Op. 33	Op. 33	1794	piano	sonata	y
+939ce3da	피아노 소나타와 카프리치오 Op. 34	Op. 34	1795	piano	sonata	y
+92e90947	피아노 협주곡 C장조	WoO 12	1796	concerto	piano_concerto	y
+948ede86	피아노 소나타 Op. 37	Op. 37	1798	piano	sonata	y
+eda9d9d8	피아노 소나타 Op. 40	Op. 40	1802	piano	sonata	y
+ebf6562d	피아노 소나타 E♭장조 Op. 41	Op. 41	1803	piano	sonata	y
+47b7c74d	피아노 소나타 B♭장조 Op. 46	Op. 46	1820	piano	sonata	y
+1a2d1310	<돈 조반니>의 "Batti, batti"에 의한 변주곡	WoO 10	1820	piano	variations	n
+901e0432	2개의 카프리치오 Op. 47	Op. 47	1821	piano	fantasia	y
+fc40405e	<달빛 아래서>에 의한 환상곡과 변주곡	Op. 48	1821	piano	variations	n
+2849240c	12개의 몬페리나 Op. 49	Op. 49	1821	piano	dance	y
+d7a9a139	피아노 소나타 Op. 50	Op. 50	1821	piano	sonata	y
+0f182217	교향곡 1번 C장조	WoO 32		symphony	symphony	y
+bb1b02a0	교향곡 2번 D장조	WoO 33		symphony	symphony	y
+bdb90bb9	교향곡 3번 G장조 "그레이트 내셔널"	WoO 34		symphony	symphony	y
+d50d20f2	교향곡 4번 D장조	WoO 35		symphony	symphony	y
