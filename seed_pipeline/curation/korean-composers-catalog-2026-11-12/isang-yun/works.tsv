@@ -1,0 +1,97 @@
+# 키	MBID 앞 8자	기존 piece id	제목(우리말)	영어 제목	연도	genre	form_key	곡(n·mb·tsv)
+cello-concerto	4a21ddfa	346	첼로 협주곡	Cello Concerto				n
+liu-tung			오페라 <류퉁의 꿈>	Opera <Der Traum des Liu-Tung>	1965	stage	opera	n
+butterfly-widow			오페라 <나비의 미망인>	Opera <Die Witwe des Schmetterlings>	1968	stage	opera	n
+geisterliebe			오페라 <요정의 사랑>	Opera <Geisterliebe>	1970	stage	opera	n
+om-mani-padme-hum			독창, 합창과 관현악을 위한 <오 연꽃 속의 진주여>	Om mani padme hum	1964	vocal	cantata	tsv
+schmetterlingstraum			혼성 합창과 타악기를 위한 <나비의 꿈>	Ein Schmetterlingstraum	1969	vocal	choral	n
+vom-tao			혼성 합창, 오르간과 타악기를 위한 <도에서>	Vom Tao	1982	vocal	choral	n
+an-der-schwelle			바리톤, 여성 합창, 오르간과 악기를 위한 <An der Schwelle>	An der Schwelle	1975	vocal	cantata	n
+der-weise-mann			칸타타 <Der weise Mann>	Cantata <Der weise Mann>	1977	vocal	cantata	n
+o-licht			합창, 바이올린과 타악기를 위한 <O Licht>	O Licht	1981	vocal	choral	n
+der-herr-ist-mein-hirte			합창과 트롬본을 위한 <Der Herr ist mein Hirte>	Der Herr ist mein Hirte	1981	vocal	sacred	n
+my-land-my-people	c9c465b8		칸타타 <나의 땅, 나의 민족이여>	Cantata <My Land, My People!>	1987	vocal	cantata	mb
+fuenf-lieder			5개의 가곡	Five Songs for High Voice and Piano	1948	vocal	song	tsv
+namo			세 명의 소프라노와 관현악을 위한 <나모>	Namo	1971	vocal	vocal_other	n
+gagok			목소리, 기타와 타악기를 위한 <가곡>	Gagok	1972	vocal	vocal_other	n
+memory			세 목소리와 타악기를 위한 <추억>	Memory	1974	vocal	vocal_other	n
+teile-dich-nacht	406a613b		소프라노와 실내 앙상블을 위한 <Teile dich Nacht>	Teile dich Nacht	1980	vocal	song	n
+bara			관현악을 위한 <바라>	Bara	1960	orchestral	orchestral_other	n
+symphonische-szene			대관현악을 위한 <교향악적 정경>	Symphonische Szene	1961	orchestral	orchestral_other	n
+colloides-sonores			현악 합주를 위한 <교착적 음향>	Colloïdes sonores	1961	orchestral	orchestral_other	n
+fluktuationen	6b3b9292		관현악을 위한 <유동>	Fluktuationen	1964	orchestral	orchestral_other	n
+dimensionen			대관현악과 오르간을 위한 <차원>	Dimensionen	1971	orchestral	orchestral_other	n
+konzertante-figuren			소관현악을 위한 <협주적 음형들>	Konzertante Figuren	1972	orchestral	orchestral_other	n
+ouverture			대관현악을 위한 <서곡>	Ouverture	1973	orchestral	overture	n
+harmonia			관악기, 하프와 타악기를 위한 <조화>	Harmonia	1974	orchestral	orchestral_other	n
+muak			대관현악을 위한 <무악>	Muak	1978	orchestral	orchestral_other	n
+fanfare-memorial			관현악을 위한 <서주와 추상>	Fanfare & Memorial	1979	orchestral	orchestral_other	n
+exemplum-kwangju	38b69d1a		교향시 <광주여 영원히>	Exemplum in memoriam Kwangju	1981	orchestral	symphonic_poem	n
+symphony-1			교향곡 1번	Symphony No. 1	1983	symphony	symphony	n
+symphony-2	67f3fed5		교향곡 2번	Symphony No. 2	1984	symphony	symphony	n
+symphony-3			교향곡 3번	Symphony No. 3	1985	symphony	symphony	n
+symphony-4	8dda6ae4		교향곡 4번 "어둠 속에서 노래하다"	Symphony No. 4 "Im Dunkeln singen"	1986	symphony	symphony	n
+symphony-5			교향곡 5번	Symphony No. 5	1987	symphony	symphony	tsv
+mugung-dong			관악기, 타악기와 콘트라베이스를 위한 <무궁동>	Mugung-Dong	1986	orchestral	orchestral_other	n
+tapis	b847a230		현을 위한 <Tapis>	Tapis pour cordes	1987	chamber	string_ensemble	n
+chamber-symphony-1	b97dc3e5		실내 교향곡 1번	Chamber Symphony No. 1	1987	symphony	symphony	n
+chamber-symphony-2			실내 교향곡 2번 "Den Opfern der Freiheit"	Chamber Symphony No. 2 "Den Opfern der Freiheit"	1989	symphony	symphony	n
+konturen			대관현악을 위한 <윤곽>	Konturen	1989	orchestral	orchestral_other	n
+silla	dd780a73		관현악을 위한 전설 <신라>	Silla	1992	orchestral	symphonic_poem	n
+engel-in-flammen			관현악을 위한 메멘토 <화염에 휩싸인 천사>	Engel in Flammen	1994	orchestral	orchestral_other	n
+flute-concerto			플루트 협주곡	Flute Concerto	1977	concerto	wind_concerto	n
+double-concerto			오보에와 하프를 위한 이중 협주곡	Double Concerto for Oboe and Harp	1977	concerto	other_concerto	n
+violin-concerto-1			바이올린 협주곡 1번	Violin Concerto No. 1	1981	concerto	violin_concerto	n
+clarinet-concerto			클라리넷 협주곡	Clarinet Concerto	1981	concerto	wind_concerto	n
+gong-hu			하프와 현을 위한 <공후>	Gong-Hu	1984	concerto	concertante	n
+violin-concerto-2			바이올린 협주곡 2번	Violin Concerto No. 2	1986	concerto	violin_concerto	n
+duetto-concertante			오보에, 첼로와 현을 위한 <Duetto concertante>	Duetto concertante	1987	concerto	other_concerto	n
+oboe-concerto			오보에 협주곡	Oboe Concerto	1990	concerto	wind_concerto	n
+violin-concerto-3	e7ea8bc8		바이올린 협주곡 3번	Violin Concerto No. 3	1992	concerto	violin_concerto	n
+musik-sieben			일곱 개의 악기를 위한 음악	Music for Seven Instruments	1959	chamber	chamber_other	n
+loyang			실내 앙상블을 위한 <로양>	Loyang	1962	chamber	chamber_other	n
+piece-concertante	c6eac0ab		실내 앙상블을 위한 <협주적 단편>	Pièce concertante	1976	chamber	chamber_other	n
+octet			8중주	Octet	1978	chamber	chamber_other	n
+distanzen	05fe4ca4		관악 5중주와 현악 5중주를 위한 <거리>	Distanzen	1988	chamber	chamber_other	n
+kammerkonzert-1	7b3f4eb8		실내 협주곡 1번	Chamber Concerto No. 1	1990	chamber	chamber_other	n
+kammerkonzert-2			실내 협주곡 2번	Chamber Concerto No. 2	1990	chamber	chamber_other	n
+concertino			아코디언과 현악 4중주를 위한 콘체르티노	Concertino for Accordion and String Quartet	1983	chamber	chamber_other	n
+clarinet-quintet-1	09cc9ce5		클라리넷 5중주 1번	Clarinet Quintet No. 1	1984	chamber	wind_chamber	n
+flute-quintet			플루트 5중주	Flute Quintet	1986	chamber	wind_chamber	n
+clarinet-quintet-2	9f49fb4c		클라리넷 5중주 2번	Clarinet Quintet No. 2	1994	chamber	wind_chamber	n
+string-quartet-1	df2dd3d3		현악 4중주 1번	String Quartet No. 1	1955	chamber	string_quartet	mb
+string-quartet-3			현악 4중주 3번	String Quartet No. 3	1961	chamber	string_quartet	n
+images	21f28b1b		플루트, 오보에, 바이올린과 첼로를 위한 <영상>	Images	1968	chamber	chamber_other	n
+novellette			플루트와 하프를 위한 <Novellette>	Novellette	1980	chamber	chamber_other	n
+quartet-flute			플루트, 바이올린, 첼로와 피아노를 위한 4중주	Quartet for Flute, Violin, Cello and Piano	1988	chamber	chamber_other	n
+string-quartet-4			현악 4중주 4번	String Quartet No. 4	1988	chamber	string_quartet	n
+string-quartet-5	b3d7f5dc		현악 4중주 5번	String Quartet No. 5	1990	chamber	string_quartet	n
+string-quartet-6	850f058e		현악 4중주 6번	String Quartet No. 6	1992	chamber	string_quartet	mb
+oboe-quartet			오보에 4중주	Oboe Quartet	1994	chamber	chamber_other	n
+trio-flute-oboe-violin			플루트, 오보에와 바이올린을 위한 3중주	Trio for Flute, Oboe and Violin	1973	chamber	chamber_other	n
+piano-trio			피아노 3중주	Piano Trio	1975	chamber	piano_chamber	n
+rondell			오보에, 클라리넷과 바순을 위한 <론델>	Rondell	1975	chamber	wind_chamber	n
+sonata-oboe-harp-viola	be9d2b5b		오보에, 하프와 비올라를 위한 소나타	Sonata for Oboe, Harp and Viola	1979	chamber	chamber_other	n
+rencontre			클라리넷, 하프와 첼로를 위한 <Rencontre>	Rencontre	1986	chamber	chamber_other	n
+gasa	d9207062		바이올린과 피아노를 위한 <가사>	Gasa for Violin and Piano	1963	chamber	chamber_other	n
+garak			플루트와 피아노를 위한 <가락>	Garak for Flute and Piano	1963	chamber	chamber_other	n
+nore			첼로와 피아노를 위한 <노래>	Nore for Cello and Piano	1964	chamber	chamber_other	n
+riul			클라리넷과 피아노를 위한 <율>	Riul for Clarinet and Piano	1968	chamber	chamber_other	n
+duo-viola			비올라와 피아노를 위한 이중주	Duo for Viola and Piano	1976	chamber	chamber_other	n
+contemplation			두 대의 비올라를 위한 <Contemplation>	Contemplation	1988	chamber	chamber_other	n
+violin-sonata			바이올린 소나타	Violin Sonata	1991	chamber	duo_sonata	n
+espace-1	65f85a16		첼로와 피아노를 위한 <Espace I>	Espace I	1992	chamber	chamber_other	n
+fuenf-stuecke	a1efde39		피아노를 위한 <다섯 개의 소품>	Five Pieces for Piano	1958	piano	character	mb
+shao-yang-yin			쳄발로를 위한 <소양음>	Shao Yang Yin	1966	piano	piano_other	n
+tuyaux-sonores			오르간을 위한 <음관들>	Tuyaux sonores	1967	piano	organ	n
+glissees	ae7cc57d		첼로를 위한 <활주>	Glissées	1970	chamber	solo	n
+piri	4a082117		오보에를 위한 <피리>	Piri	1971	chamber	solo	n
+koenigliches-thema	b11a282b		바이올린을 위한 <대왕의 주제>	Königliches Thema	1976	chamber	solo	n
+salomo			플루트를 위한 <살로모>	Salomo	1978	chamber	solo	n
+interludium-a	8de2ce60		피아노를 위한 <Interludium A>	Interludium A	1982	piano	piano_other	n
+li-na-im-garten			바이올린을 위한 <Li-Na im Garten>	Li-Na im Garten	1985	chamber	solo	n
+in-balance	4dd1c3c2		하프를 위한 <균형을 위하여>	In Balance	1987	chamber	solo	n
+kontraste			바이올린을 위한 <Kontraste>	Kontraste	1987	chamber	solo	n
+sori			플루트를 위한 <소리>	Sori	1988	chamber	solo	n
+sieben-etueden	a4c07c49		첼로를 위한 7개의 연습곡	Seven Etudes for Cello	1993	chamber	solo	mb
+chinesische-bilder	0b2819fc		리코더를 위한 <중국의 그림>	Chinesische Bilder	1993	chamber	solo	mb
