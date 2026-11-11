@@ -1,0 +1,25 @@
+# MBID 앞 8자(없으면 -)	제목(우리말)	작품번호	연도	genre	form_key	곡(n|y|y:4-6|<MBID>:1-6)	기존 작품 id	영어 제목(MBID 없을 때)
+73a26450	클라리넷 협주곡 B♭장조	KaiS 55	1754	concerto	wind_concerto	y	110
+8d31184a	신포니아 D장조 "만하임"	Op. 3, No. 2	1750	symphony	symphony	y	111
+3c67b597	트럼펫 협주곡 D장조	KaiS 49	1750	concerto	wind_concerto	y	112
+8bd550c8	관현악 3중주 Op. 1	Op. 1		orchestral	orchestral_other	y
+b1f33766	관현악 3중주 C단조 Op. 4, No. 3	Op. 4, No. 3		orchestral	orchestral_other	y
+b2213bd5	관현악 3중주 E장조 Op. 5, No. 3	Op. 5, No. 3		orchestral	orchestral_other	y
+59f013aa	교향곡 G장조 Op. 3, No. 1	Op. 3, No. 1		symphony	symphony	y
+5bf793a7	교향곡 G장조 Op. 3, No. 3	Op. 3, No. 3		symphony	symphony	y
+e061f85a	교향곡 E♭장조 Op. 3, No. 4	Op. 3, No. 4		symphony	symphony	y
+59a4d8a1	교향곡 F장조 Op. 3, No. 6	Op. 3, No. 6		symphony	symphony	y
+1fa62bcd	교향곡 F장조 Op. 4, No. 1	Op. 4, No. 1		symphony	symphony	y
+f9b2970e	신포니아 파스토랄레 D장조 Op. 4, No. 2	Op. 4, No. 2		symphony	symphony	y
+9c7b484f	교향곡 E♭장조 Op. 4, No. 4	Op. 4, No. 4		symphony	symphony	y
+0223b299	교향곡 E♭장조 Op. 4, No. 6	Op. 4, No. 6		symphony	symphony	y
+7d7c67e8	교향곡 E♭장조 Op. 11, No. 3	Op. 11, No. 3		symphony	symphony	y
+ee64050d	교향곡 A장조 "만하임 2번"			symphony	symphony	y
+f7162152	교향곡 B♭장조 "만하임 3번"			symphony	symphony	y
+81af196a	4성부 신포니아 D장조			symphony	sinfonia	y
+082c8660	플루트 협주곡 C장조			concerto	wind_concerto	y
+c3f660c4	플루트 협주곡 G장조			concerto	wind_concerto	y
+6800232d	비올라 협주곡 G장조			concerto	other_concerto	y
+195c9c95	바이올린 협주곡 C장조			concerto	violin_concerto	y
+e24127c6	바이올린 소나타 Op. 6	Op. 6		chamber	duo_sonata	y
+153404bc	무반주 바이올린을 위한 2개의 디베르티멘토			chamber	solo	n
