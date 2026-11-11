@@ -1,0 +1,586 @@
+[
+ {
+  "composer_id": 20,
+  "composer": "보케리니",
+  "keep": {
+   "id": 100,
+   "title": "현악 5중주 E장조 중 \"미뉴에트\""
+  },
+  "hide": [
+   {
+    "id": 442,
+    "title": "현악 5중주 E장조 중 \"미뉴에트\""
+   }
+  ],
+  "move_parts": false,
+  "evidence": "같은 곡(Op. 11 No. 5 미뉴에트)을 손으로 두 번 넣었다. 제목·작품번호·연도 같음. 먼저 넣은 100 을 남긴다"
+ },
+ {
+  "composer_id": 20,
+  "composer": "보케리니",
+  "keep": {
+   "id": 101,
+   "title": "첼로 협주곡 9번 B♭장조"
+  },
+  "hide": [
+   {
+    "id": 7810,
+    "title": "첼로 협주곡 9번 B♭장조 G. 482"
+   }
+  ],
+  "move_parts": true,
+  "evidence": "G. 482 첼로 협주곡 9번. 7810 은 MusicBrainz work(original 판). 손 작품 101 에 설명·링크가 있어 남기고 악장 3개·MBID 를 옮긴다"
+ },
+ {
+  "composer_id": 20,
+  "composer": "보케리니",
+  "keep": {
+   "id": 102,
+   "title": "기타 5중주 4번 D장조 \"판당고\""
+  },
+  "hide": [
+   {
+    "id": 9400,
+    "title": "기타 5중주 4번 D장조 \"Fandango\""
+   }
+  ],
+  "move_parts": true,
+  "evidence": "G. 448 기타 5중주 4번 \"판당고\". 손 작품 102 를 남기고 악장 2개·MBID 를 옮긴다"
+ },
+ {
+  "composer_id": 20,
+  "composer": "보케리니",
+  "keep": {
+   "id": 32874,
+   "title": "소나타 6번 C장조"
+  },
+  "hide": [
+   {
+    "id": 9536,
+    "title": "소나타 6번 C장조 G 6"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "G. 6 첼로 소나타 6번(MusicBrainz 에 work 가 둘). 32874 의 악장이 낱곡 7754·8195·9633 을 품고 있어 32874 를 남긴다(9536 을 남기면 그 낱곡이 목록 맨 위로 튀어나온다). 9536 의 MBID·편곡 관계와 갈래(실내악·이중주 소나타)를 옮긴다",
+  "set": {
+   "genre": "chamber",
+   "form_key": "duo_sonata",
+   "when": {
+    "genre": "piano",
+    "form_key": "sonata"
+   }
+  }
+ },
+ {
+  "composer_id": 22,
+  "composer": "C.P.E. 바흐",
+  "keep": {
+   "id": 12256,
+   "title": "2중창 E단조"
+  },
+  "hide": [
+   {
+    "id": 12337,
+    "title": "Duetto in E minor"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "Wq. 140, H. 598 플루트·바이올린 2중주(MusicBrainz 에 work 가 둘). 링크가 더 많은 12256 을 남기고, 성악으로 잘못 옮긴 제목 「2중창」을 「2중주」로, 갈래를 실내악으로 고친다",
+  "set": {
+   "title": "플루트와 바이올린을 위한 2중주 E단조",
+   "genre": "chamber",
+   "form_key": "chamber_other",
+   "when": {
+    "title": "2중창 E단조"
+   }
+  }
+ },
+ {
+  "composer_id": 22,
+  "composer": "C.P.E. 바흐",
+  "keep": {
+   "id": 13536,
+   "title": "비올라 다 감바 소나타 G단조"
+  },
+  "hide": [
+   {
+    "id": 13224,
+    "title": "소나타 G단조"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "Wq. 88, H. 510 비올라 다 감바 소나타(MusicBrainz 에 work 가 둘). 제목이 더 정확한 13536 을 남긴다"
+ },
+ {
+  "composer_id": 29,
+  "composer": "슈만",
+  "keep": {
+   "id": 464,
+   "title": "어린이의 정경 Op. 15"
+  },
+  "hide": [
+   {
+    "id": 135,
+    "title": "피아노 모음곡 <어린이의 정경>"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "어린이의 정경 Op. 15. 비교 구간·카드·영화 큐가 붙은 seed 464 를 남기고(골드베르크 461 선례), 손 작품 135 의 설명·Spotify 링크를 옮긴다"
+ },
+ {
+  "composer_id": 37,
+  "composer": "베를리오즈",
+  "keep": {
+   "id": 171,
+   "title": "<파우스트의 겁벌> 중 \"헝가리 행진곡\""
+  },
+  "hide": [
+   {
+    "id": 1600,
+    "title": "오페라 <La Damnation De Faust - Hungarian March>"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "파우스트의 겁벌 중 헝가리 행진곡. 비교 구간·카드가 있는 171 을 남긴다"
+ },
+ {
+  "composer_id": 44,
+  "composer": "비제",
+  "keep": {
+   "id": 193,
+   "title": "오페라 <카르멘>"
+  },
+  "hide": [
+   {
+    "id": 11318,
+    "title": "오페라 <Carmen, WD 31>"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "카르멘 WD 31. 카드·설명이 있는 193 을 남기고 11318 의 MBID·별칭·관계 12개(카르멘 환상곡 등 based_on)·대표곡 표시를 옮긴다. 193 은 이미 part 68개가 있어 part 는 옮기지 않는다"
+ },
+ {
+  "composer_id": 44,
+  "composer": "비제",
+  "keep": {
+   "id": 11795,
+   "title": "가곡 <La Rose et l’Abeille, WD 70>"
+  },
+  "hide": [
+   {
+    "id": 11598,
+    "title": "가곡 <La Rose et l’Abeille>"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "비제 가곡 La Rose et l'Abeille WD 70(MusicBrainz 에 work 가 둘). WD 번호가 있는 11795 를 남긴다"
+ },
+ {
+  "composer_id": 61,
+  "composer": "브루흐",
+  "keep": {
+   "id": 258,
+   "title": "스코틀랜드 환상곡"
+  },
+  "hide": [
+   {
+    "id": 863,
+    "title": "Scottish Fantasy in E-flat major"
+   }
+  ],
+  "move_parts": true,
+  "evidence": "브루흐 스코틀랜드 환상곡 Op. 46. 손 작품 258 을 남기고 악장 4개·MBID·대표곡 표시를 옮긴다"
+ },
+ {
+  "composer_id": 63,
+  "composer": "사라사테",
+  "keep": {
+   "id": 264,
+   "title": "서주와 타란텔라"
+  },
+  "hide": [
+   {
+    "id": 8680,
+    "title": "Introduction et tarantelle"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "사라사테 서주와 타란텔라 Op. 43. 손 작품 264 를 남기고 MBID·편곡 관계를 옮긴다"
+ },
+ {
+  "composer_id": 64,
+  "composer": "엘가",
+  "keep": {
+   "id": 267,
+   "title": "수수께끼 변주곡"
+  },
+  "hide": [
+   {
+    "id": 550,
+    "title": "독창적 주제에 의한 변주곡 \"에니그마\""
+   }
+  ],
+  "move_parts": true,
+  "evidence": "엘가 수수께끼 변주곡 Op. 36. 손 작품 267 을 남기고 변주 15개·MBID·ISWC·별칭 4개·편곡 관계·대표곡 표시를 옮긴다"
+ },
+ {
+  "composer_id": 64,
+  "composer": "엘가",
+  "keep": {
+   "id": 268,
+   "title": "사랑의 인사"
+  },
+  "hide": [
+   {
+    "id": 33052,
+    "title": "Salut d’amour"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "엘가 사랑의 인사 Op. 12(바이올린·피아노 원곡). 손 작품 268 을 남기고 MBID·대표곡 표시를 옮긴다. 1964(네덜란드어 노래판)는 다른 작품이라 그대로 둔다"
+ },
+ {
+  "composer_id": 64,
+  "composer": "엘가",
+  "keep": {
+   "id": 459,
+   "title": "현을 위한 세레나데 E단조"
+  },
+  "hide": [
+   {
+    "id": 33054,
+    "title": "현악 세레나데 E단조"
+   }
+  ],
+  "move_parts": true,
+  "evidence": "엘가 현을 위한 세레나데 Op. 20. 손 작품 459 를 남기고 악장 3개·MBID 를 옮긴다"
+ },
+ {
+  "composer_id": 70,
+  "composer": "홀스트",
+  "keep": {
+   "id": 284,
+   "title": "모음곡 <행성>"
+  },
+  "hide": [
+   {
+    "id": 33066,
+    "title": "The Planets Op. 32"
+   },
+   {
+    "id": 10490,
+    "title": "The Planets"
+   },
+   {
+    "id": 10408,
+    "title": "Die Planeten"
+   }
+  ],
+  "move_parts": true,
+  "evidence": "홀스트 행성 Op. 32. 손 작품 284 를 남긴다. 33066 은 4차 카탈로그가 만든 같은 작품(악장 7개·MBID 를 옮김), 10490(「VIENNA performance」 MusicBrainz work)·10408(「Die Planeten」)은 같은 곡의 중복 work"
+ },
+ {
+  "composer_id": 70,
+  "composer": "홀스트",
+  "keep": {
+   "id": 285,
+   "title": "세인트 폴 모음곡"
+  },
+  "hide": [
+   {
+    "id": 10837,
+    "title": "현악 합주를 위한 세인트 폴 모음곡"
+   }
+  ],
+  "move_parts": true,
+  "evidence": "홀스트 세인트 폴 모음곡 Op. 29 No. 2. 손 작품 285 를 남기고 악장 4개·MBID·대표곡 표시를 옮긴다"
+ },
+ {
+  "composer_id": 72,
+  "composer": "부르크뮐러",
+  "keep": {
+   "id": 289,
+   "title": "25개의 점진적인 연습곡"
+  },
+  "hide": [
+   {
+    "id": 11658,
+    "title": "25 Études faciles et progressives Op. 100"
+   }
+  ],
+  "move_parts": true,
+  "evidence": "부르크뮐러 25개의 연습곡 Op. 100(6차 README 의 한계). 손 작품 289 를 남기고 25곡·MBID 를 옮긴다"
+ },
+ {
+  "composer_id": 72,
+  "composer": "부르크뮐러",
+  "keep": {
+   "id": 290,
+   "title": "18개의 성격 연습곡"
+  },
+  "hide": [
+   {
+    "id": 11781,
+    "title": "18개의 연습곡 Op. 109"
+   }
+  ],
+  "move_parts": true,
+  "evidence": "부르크뮐러 18개의 연습곡 Op. 109. 손 작품 290 을 남기고 18곡·MBID 를 옮긴다"
+ },
+ {
+  "composer_id": 77,
+  "composer": "닐센",
+  "keep": {
+   "id": 300,
+   "title": "교향곡 4번 \"불멸\""
+  },
+  "hide": [
+   {
+    "id": 10796,
+    "title": "교향곡 4번 \"The Inextinguishable\""
+   }
+  ],
+  "move_parts": true,
+  "evidence": "닐센 교향곡 4번 Op. 29, FS 76. 손 작품 300 을 남기고 악장 4개·MBID·대표곡 표시를 옮긴다"
+ },
+ {
+  "composer_id": 80,
+  "composer": "파야",
+  "keep": {
+   "id": 306,
+   "title": "발레 <사랑은 마술사>"
+  },
+  "hide": [
+   {
+    "id": 33412,
+    "title": "발레 <El amor brujo>"
+   }
+  ],
+  "move_parts": true,
+  "evidence": "파야 사랑은 마술사(1915 원판). 손 작품 306 을 남기고 16곡·MBID·대표곡 표시를 옮긴다. 8087(G. 69 피아노 모음곡)은 다른 판이라 그대로 둔다"
+ },
+ {
+  "composer_id": 88,
+  "composer": "안익태",
+  "keep": {
+   "id": 340,
+   "title": "애국가"
+  },
+  "hide": [
+   {
+    "id": 11348,
+    "title": "애국가 (South Korea)"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "안익태 애국가. 카드가 있는 340 을 남기고 MBID·별칭(Aegukga·愛國歌)·대표곡 표시를 옮긴다"
+ },
+ {
+  "composer_id": 92,
+  "composer": "케이지",
+  "keep": {
+   "id": 351,
+   "title": "4분 33초"
+  },
+  "hide": [
+   {
+    "id": 767,
+    "title": "4′33″"
+   }
+  ],
+  "move_parts": true,
+  "evidence": "케이지 4분 33초. 카드가 있는 351 을 남기고 악장 3개·MBID·ISWC·대표곡 표시를 옮긴다"
+ },
+ {
+  "composer_id": 93,
+  "composer": "필립 글래스",
+  "keep": {
+   "id": 355,
+   "title": "영화 <디 아워스> 사운드트랙"
+  },
+  "hide": [
+   {
+    "id": 32829,
+    "title": "영화음악 <The Hours>"
+   }
+  ],
+  "move_parts": true,
+  "evidence": "필립 글래스 영화 <디 아워스> 음악. 카드가 있는 355 를 남기고 12곡·MBID 를 옮긴다"
+ },
+ {
+  "composer_id": 95,
+  "composer": "메시앙",
+  "keep": {
+   "id": 361,
+   "title": "20개의 시선으로 아기 예수를 바라보다"
+  },
+  "hide": [
+   {
+    "id": 656,
+    "title": "아기 예수를 바라보는 20개의 시선"
+   }
+  ],
+  "move_parts": true,
+  "evidence": "메시앙 아기 예수를 바라보는 20개의 시선. 카드가 있는 361 을 남기고 20곡·MBID·ISWC·별칭·대표곡 표시를 옮긴다"
+ },
+ {
+  "composer_id": 95,
+  "composer": "메시앙",
+  "keep": {
+   "id": 363,
+   "title": "새의 카탈로그"
+  },
+  "hide": [
+   {
+    "id": 683,
+    "title": "Catalogue d’oiseaux, I/42"
+   }
+  ],
+  "move_parts": true,
+  "evidence": "메시앙 새의 카탈로그. 카드가 있는 363 을 남기고 13곡·MBID·ISWC 를 옮긴다"
+ },
+ {
+  "composer_id": 96,
+  "composer": "베르크",
+  "keep": {
+   "id": 33352,
+   "title": "4개의 가곡"
+  },
+  "hide": [
+   {
+    "id": 12557,
+    "title": "4 Gesänge Op. 2"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "베르크 4개의 가곡 Op. 2. 네 곡이 다 있는 33352 를 남긴다(12557 은 첫 곡 하나만 가진 같은 work)"
+ },
+ {
+  "composer_id": 104,
+  "composer": "야나체크",
+  "keep": {
+   "id": 8542,
+   "title": "Pochod modráčků JW 7/9"
+  },
+  "hide": [
+   {
+    "id": 7526,
+    "title": "Pochod modráčků"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "야나체크 Pochod modráčků JW 7/9(피콜로·피아노). JW 번호가 있는 8542 를 남기고 MBID·영어 별칭을 옮긴다"
+ },
+ {
+  "composer_id": 107,
+  "composer": "풀랑크",
+  "keep": {
+   "id": 405,
+   "title": "3개의 무궁동"
+  },
+  "hide": [
+   {
+    "id": 10712,
+    "title": "Trois mouvements perpétuels, FP 14a"
+   }
+  ],
+  "move_parts": true,
+  "evidence": "풀랑크 3개의 무궁동 FP 14(a). 손 작품 405 를 남기고 3곡·MBID·편곡 관계 3개를 옮긴다"
+ },
+ {
+  "composer_id": 108,
+  "composer": "슈토크하우젠",
+  "keep": {
+   "id": 407,
+   "title": "소년의 노래"
+  },
+  "hide": [
+   {
+    "id": 1256,
+    "title": "Gesang der Jünglinge, Nr. 8"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "슈토크하우젠 소년의 노래 Nr. 8. 손 작품 407 을 남기고 MBID 를 옮긴다"
+ },
+ {
+  "composer_id": 109,
+  "composer": "베리오",
+  "keep": {
+   "id": 411,
+   "title": "세쿠엔차 III (여성 솔로를 위한)"
+  },
+  "hide": [
+   {
+    "id": 8525,
+    "title": "Sequenza III for Woman's Voice"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "베리오 세쿠엔차 III. 손 작품 411 을 남기고 MBID 를 옮긴다"
+ },
+ {
+  "composer_id": 110,
+  "composer": "루토스와프스키",
+  "keep": {
+   "id": 33433,
+   "title": "춤곡 전주곡"
+  },
+  "hide": [
+   {
+    "id": 906,
+    "title": "춤곡 전주곡"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "루토스와프스키 춤곡 전주곡(같은 우리말 제목, 다섯 곡 같음). 5차 카탈로그 자리인 33433 을 남긴다"
+ },
+ {
+  "composer_id": 207,
+  "composer": "요제프 수크",
+  "keep": {
+   "id": 18402,
+   "title": "발라드와 세레나데 Op. 3"
+  },
+  "hide": [
+   {
+    "id": 16682,
+    "title": "2 Skladby Op. 3"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "수크 발라드와 세레나데 Op. 3(= 2 Skladby). 우리말 제목이 있는 18402 를 남긴다"
+ },
+ {
+  "composer_id": 278,
+  "composer": "이시이 마키",
+  "keep": {
+   "id": 19444,
+   "title": "Monochrome Op. 28"
+  },
+  "hide": [
+   {
+    "id": 16222,
+    "title": "Monochrome"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "이시이 마키 Monochrome Op. 28. 작품번호가 있는 19444 를 남긴다"
+ },
+ {
+  "composer_id": 283,
+  "composer": "크리스티안 신딩",
+  "keep": {
+   "id": 19530,
+   "title": "로망스 E단조 Op. 30"
+  },
+  "hide": [
+   {
+    "id": 19104,
+    "title": "로망스 E단조"
+   }
+  ],
+  "move_parts": false,
+  "evidence": "신딩 로망스 E단조 Op. 30. 작품번호 칸이 채워진 19530 을 남긴다"
+ }
+]
