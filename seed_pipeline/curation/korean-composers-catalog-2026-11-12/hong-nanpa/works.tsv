@@ -1,0 +1,26 @@
+# 키	MBID 앞 8자	기존 piece id	제목(우리말)	영어 제목	연도	genre	form_key	곡(n·mb·tsv)
+bongseonhwa	5980d2f3	342	가곡 <봉선화>					n
+seongbulsa			가곡 <성불사의 밤>	Gagok <Night at Seongbulsa Temple (Seongbulsaui Bam)>	1932	vocal	song	n
+yet-dongsan			가곡 <옛 동산에 올라>	Gagok <Climbing the Old Hill (Yet Dongsane Olla)>	1932	vocal	song	n
+bomcheonyeo			가곡 <봄처녀>	Gagok <Spring Maiden (Bomcheonyeo)>	1932	vocal	song	n
+jangansa			가곡 <장안사>	Gagok <Jangansa Temple (Jangansa)>		vocal	song	n
+geumgang			가곡 <금강에 살으리랏다>	Gagok <I Would Live in Geumgang (Geumgange Sareuriratda)>	1933	vocal	song	n
+sagong			가곡 <사공의 노래>	Gagok <The Boatman's Song (Sagongui Norae)>		vocal	song	n
+geurium			가곡 <그리움>	Gagok <Longing (Geurium)>		vocal	song	n
+sarang			가곡 <사랑>	Gagok <Love (Sarang)>		vocal	song	n
+gohyang-saenggak			가곡 <고향 생각>	Gagok <Thinking of Home (Gohyang Saenggak)>		vocal	song	n
+pongdang			동요 <퐁당퐁당>	Children's Song <Plop, Plop (Pongdang Pongdang)>		vocal	song	n
+naje-naon-bandal			동요 <낮에 나온 반달>	Children's Song <Half Moon in the Daytime (Naje Naon Bandal)>		vocal	song	n
+dalmajung			동요 <달마중>	Children's Song <Going Out to Meet the Moon (Dalmajung)>		vocal	song	n
+hwiparam			동요 <휘파람>	Children's Song <Whistle (Hwiparam)>		vocal	song	n
+kkuldwaeji			동요 <꿀돼지>	Children's Song <Greedy Piggy (Kkuldwaeji)>		vocal	song	n
+jongibae			동요 <종이배>	Children's Song <Paper Boat (Jongibae)>		vocal	song	n
+namunnip			동요 <나뭇잎>	Children's Song <Leaves (Namunnip)>		vocal	song	n
+haetbyeot			동요 <햇볕은 쨍쨍>	Children's Song <Bright Sunshine (Haetbyeoteun Jjaengjjaeng)>		vocal	song	n
+gaeguri			동요 <개구리>	Children's Song <Frogs (Gaeguri)>		vocal	song	n
+mujigae			동요 <무지개>	Children's Song <Rainbow (Mujigae)>		vocal	song	n
+aesuui-joseon			바이올린 소품 <애수의 조선>	Violin Piece <Melancholy of Joseon (Aesuui Joseon)>		chamber	chamber_other	n
+romance			바이올린 소품 <로만스>	Violin Piece <Romance (Romanseu)>		chamber	chamber_other	n
+dongyangpung-mugok			바이올린 소품 <동양풍의 무곡>	Violin Piece <Dance in Oriental Style (Dongyangpungui Mugok)>		chamber	chamber_other	n
+hayaui-seonggun			바이올린 소품 <하야의 성군>	Violin Piece <Stars on a Summer Night (Hayaui Seonggun)>		chamber	chamber_other	n
+orchestral-suite			관현악 조곡	Orchestral Suite		orchestral	orch_suite	tsv
