@@ -610,7 +610,7 @@ AND NOT EXISTS (
 
 INSERT INTO pieces
     (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '부수음악 <Distressed Innocence>', 'Distressed Innocence, Z. 577', 'album', 'Z 577', NULL, NULL, 1690, 'manual', 1
+SELECT c.id, '부수음악 <Distressed Innocence>', 'Distressed Innocence, Z. 577', 'album', 'Z 577', NULL, NULL, NULL, 'manual', 1
 FROM composers c
 WHERE c.id = 8
 AND NOT EXISTS (
@@ -934,7 +934,7 @@ AND NOT EXISTS (
 
 INSERT INTO pieces
     (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '부수음악 <The Old Bachelor>', 'The Old Bachelor, Z. 607', 'album', 'Z 607', NULL, NULL, 1693, 'manual', 1
+SELECT c.id, '부수음악 <The Old Bachelor>', 'The Old Bachelor, Z. 607', 'album', 'Z 607', NULL, NULL, NULL, 'manual', 1
 FROM composers c
 WHERE c.id = 8
 AND NOT EXISTS (
@@ -1558,7 +1558,7 @@ AND NOT EXISTS (
 
 INSERT INTO pieces
     (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '송가 <Sound the trumpet, beat the drum>', 'Sound the trumpet, beat the drum (Welcome Ode for James II), for 2 altos, tenors, basses, chorus, strings & continuo, Z. 335', 'song', 'Z 335', NULL, NULL, 1687, 'manual', 1
+SELECT c.id, '송가 <Sound the trumpet, beat the drum>', 'Sound the trumpet, beat the drum (Welcome Ode for James II), for 2 altos, tenors, basses, chorus, strings & continuo, Z. 335', 'song', 'Z 335', NULL, NULL, NULL, 'manual', 1
 FROM composers c
 WHERE c.id = 8
 AND NOT EXISTS (
@@ -2240,7 +2240,7 @@ AND NOT EXISTS (
 
 INSERT INTO pieces
     (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '대관식 찬가 <I was glad>', 'I was glad when they said unto me, Z. 19', 'song', 'Z 19', NULL, NULL, 1685, 'manual', 1
+SELECT c.id, '대관식 찬가 <I was glad>', 'I was glad when they said unto me, Z. 19', 'song', 'Z 19', NULL, NULL, NULL, 'manual', 1
 FROM composers c
 WHERE c.id = 8
 AND NOT EXISTS (
@@ -2846,7 +2846,7 @@ AND NOT EXISTS (
 
 INSERT INTO pieces
     (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '가곡 <From silent shades> "미친 베스"', 'Mad Bess of Bedlam, Z. 370 "From Silent Shades and the Elysian Groves"', 'song', 'Z 370', NULL, NULL, 1682, 'manual', 1
+SELECT c.id, '가곡 <From silent shades> "미친 베스"', 'Mad Bess of Bedlam, Z. 370 "From Silent Shades and the Elysian Groves"', 'song', 'Z 370', NULL, NULL, NULL, 'manual', 1
 FROM composers c
 WHERE c.id = 8
 AND NOT EXISTS (
@@ -2898,7 +2898,7 @@ AND NOT EXISTS (
 
 INSERT INTO pieces
     (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '가곡 <If music be the food of love>', 'If Music Be the Food of Love, Z. 379', 'song', 'Z 379', NULL, NULL, 1692, 'manual', 1
+SELECT c.id, '가곡 <If music be the food of love>', 'If Music Be the Food of Love, Z. 379', 'song', 'Z 379', NULL, NULL, NULL, 'manual', 1
 FROM composers c
 WHERE c.id = 8
 AND NOT EXISTS (

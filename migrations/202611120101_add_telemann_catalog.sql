@@ -4838,7 +4838,7 @@ AND NOT EXISTS (
 
 INSERT INTO pieces
     (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '관현악 모음곡 B♭장조 "라 부르스" TWV 55:B11', 'Ouverture-Suite, TWV 55:B11 "La Bourse"', 'album', NULL, 'TWV', '55:B11', 1720, 'manual', 1
+SELECT c.id, '관현악 모음곡 B♭장조 "라 부르스" TWV 55:B11', 'Ouverture-Suite, TWV 55:B11 "La Bourse"', 'album', NULL, 'TWV', '55:B11', NULL, 'manual', 1
 FROM composers c
 WHERE c.id = 11
 AND NOT EXISTS (
@@ -13441,7 +13441,7 @@ AND NOT EXISTS (
 
 INSERT INTO pieces
     (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '바순 소나타 F단조 TWV 41:f1', 'Recorder Sonata in F minor, TWV 41:f1', 'album', NULL, 'TWV', '41:f1', 1728, 'manual', 1
+SELECT c.id, '바순 소나타 F단조 TWV 41:f1', 'Sonata in F minor for bassoon, TWV 41:f1', 'album', NULL, 'TWV', '41:f1', 1728, 'manual', 1
 FROM composers c
 WHERE c.id = 11
 AND NOT EXISTS (

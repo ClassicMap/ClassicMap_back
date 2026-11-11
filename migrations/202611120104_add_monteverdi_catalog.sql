@@ -3922,7 +3922,7 @@ AND NOT EXISTS (
 
 INSERT INTO pieces
     (composer_id, title, title_en, type, opus_number, catalogue_system, catalogue_number, composition_year, origin, editor_locked)
-SELECT c.id, '모테트 <Cantate Domino>', 'Cantate domino canticum novum a 6, SV 293', 'song', 'SV 293', NULL, NULL, 1615, 'manual', 1
+SELECT c.id, '모테트 <Cantate Domino>', 'Cantate domino canticum novum a 6, SV 293', 'song', 'SV 293', NULL, NULL, 1620, 'manual', 1
 FROM composers c
 WHERE c.id = 5
 AND NOT EXISTS (
