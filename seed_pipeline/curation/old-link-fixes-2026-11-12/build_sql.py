@@ -5,6 +5,7 @@
 - replace: 지금 값이 decisions 의 old 와 같을 때만 바꾼다(그사이 사람이 고쳤으면 그대로 둔다).
 
 사용: uv run python build_sql.py decisions.jsonl --pieces <작품 SQL> --parts <안 곡 SQL>
+      uv run python build_sql.py decisions-0603.jsonl --combined <0603 SQL>
 """
 
 from __future__ import annotations
@@ -28,12 +29,53 @@ def guard(item: dict[str, Any], col: str) -> str:
     return f"{col} = {q(item['old'])}"
 
 
+def combined(decisions: str, path: str) -> None:
+    """두 번째 묶음(fixes-0603.tsv): 작품 링크와 그 안 곡 링크를 한 마이그레이션에."""
+    with open(decisions, encoding="utf-8") as handle:
+        items: list[dict[str, Any]] = [json.loads(line) for line in handle if line.strip()]
+    pieces = [i for i in items if i["kind"] == "piece"]
+    parts = [i for i in items if i["kind"] == "part"]
+    assert len({(i["pieceId"], i["service"]) for i in pieces}) == len(pieces)
+    assert len({(i["partId"], i["service"]) for i in parts}) == len(parts)
+    counts = Counter(f"{i['kind']} {i['service']} {i['decision']}" for i in pieces + parts)
+    out = [
+        "-- 0601·0602 를 하다 새로 본 틀린 작품 링크를 바꾸고, 새 앨범에서 그 작품의 빈 안 곡 링크를 채운다.",
+        "-- 몬테베르디 「저녁 기도」(18) Spotify(한 곡짜리 앨범), 텔레만 리코더 모음곡(54) Spotify(다섯 곡짜리 모음 EP),",
+        "-- 텔레만 「돈키호테 풍자극」(55) Apple(이 작품이 없는 음반)·Spotify(다른 모음곡 한 악장).",
+        "-- 바꾸는 것은 지금 값이 그때 본 값과 같을 때만, 채우는 것은 비어 있을 때만. 안 곡은 작품을 다 담은 앨범에서만 붙였다.",
+        f"-- 자료·까닭: {SOURCE}(README, fixes-0603.tsv, decisions-0603.jsonl). 두 번 돌려도 같다.",
+        "-- " + ", ".join(f"{k} {v}" for k, v in sorted(counts.items())),
+        "",
+    ]
+    for item in sorted(pieces, key=lambda i: (i["pieceId"], i["service"])):
+        col = COLUMN[item["service"]]
+        out.append(
+            f"-- {item['pieceId']} {item['title']} ({item['service']} {item['decision']}: {item['albumName']})"
+        )
+        out.append(
+            f"UPDATE pieces SET {col} = {q(item['new'])} WHERE id = {item['pieceId']} AND composer_id = {item['composerId']} AND {guard(item, col)};"
+        )
+    out.append("")
+    for item in sorted(parts, key=lambda i: (i["pieceId"], i["partId"], i["service"])):
+        col = COLUMN[item["service"]]
+        out.append(
+            f"UPDATE piece_parts SET {col} = {q(item['new'])} WHERE id = {item['partId']} AND piece_id = {item['pieceId']} AND {guard(item, col)};"
+        )
+    with open(path, "w", encoding="utf-8") as handle:
+        handle.write("\n".join(out) + "\n")
+    print(json.dumps(dict(counts), ensure_ascii=False))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("decisions")
-    parser.add_argument("--pieces", required=True)
-    parser.add_argument("--parts", required=True)
+    parser.add_argument("--pieces", help="작품 링크 마이그레이션(0601)")
+    parser.add_argument("--parts", help="안 곡 링크 마이그레이션(0602)")
+    parser.add_argument("--combined", help="두 번째 묶음(0603): 작품·안 곡을 한 파일에")
     args = parser.parse_args()
+    if args.combined:
+        combined(args.decisions, args.combined)
+        return
     with open(args.decisions, encoding="utf-8") as handle:
         items: list[dict[str, Any]] = [json.loads(line) for line in handle if line.strip()]
     pieces = [i for i in items if i["kind"] == "piece"]

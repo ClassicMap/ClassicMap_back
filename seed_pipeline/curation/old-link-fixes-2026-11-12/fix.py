@@ -12,6 +12,7 @@
 결과: <작업 폴더>/decisions.jsonl
 
 사용: uv run python fix.py <작업 폴더>(top.tsv, parts.tsv, apple_albums/, spotify_albums/)
+      uv run python fix.py <작업 폴더> fixes-0603.tsv decisions-0603.jsonl   (두 번째 묶음: 그 파일의 작품·서비스만)
 """
 
 from __future__ import annotations
@@ -231,17 +232,23 @@ def complete(row: dict[str, str], tracks: list[dict[str, Any]]) -> tuple[bool, s
 
 def main() -> None:
     work = sys.argv[1]
+    # 두 번째 묶음(0603): fix.py <작업 폴더> fixes-0603.tsv decisions-0603.jsonl — 그 파일에 적은 작품·서비스만 본다
+    fixes_file = sys.argv[2] if len(sys.argv) > 2 else "fixes.tsv"
+    out_name = sys.argv[3] if len(sys.argv) > 3 else "decisions.jsonl"
+    only = fixes_file != "fixes.tsv"
     rows = {r["piece_id"]: r for r in pick.load_rows(work)}
     parts_of: dict[str, list[dict[str, str]]] = defaultdict(list)
     for part in read_tsv(os.path.join(work, "parts.tsv")):
         parts_of[part["piece_id"]].append(part)
-    fixes = {(f["piece_id"], f["service"]): f for f in read_tsv(os.path.join(HERE, "fixes.tsv"))}
+    fixes = {(f["piece_id"], f["service"]): f for f in read_tsv(os.path.join(HERE, fixes_file))}
     out: list[dict[str, Any]] = []
     for piece_id, row in rows.items():
         for service in ("apple", "spotify"):
             col = COLUMN[service]
             old = row[col]
             fix = fixes.get((piece_id, service))
+            if only and not fix:
+                continue
             old_album = album_id_of(old, service) if old else None
             if fix:
                 new, tracks = fixed_url(work, fix)
@@ -343,7 +350,7 @@ def main() -> None:
                         "albumCheck": why,
                     }
                 )
-    with open(os.path.join(work, "decisions.jsonl"), "w", encoding="utf-8") as handle:
+    with open(os.path.join(work, out_name), "w", encoding="utf-8") as handle:
         for item in out:
             handle.write(json.dumps(item, ensure_ascii=False) + "\n")
     counts: dict[str, int] = defaultdict(int)

@@ -2,7 +2,8 @@
 
 `../new-catalog-links-2026-11-12/` 를 하다가 본 틀린 옛 작품 링크를 바꾸고, 작품 링크는 둘 다 있는데 안 곡 링크가 빈 작품의 안 곡을 채웠어요.
 
-- 마이그레이션: `migrations/202611120601_fix_old_piece_links.sql`(작품), `202611120602_fill_old_piece_part_links.sql`(안 곡).
+- 마이그레이션: `migrations/202611120601_fix_old_piece_links.sql`(작품), `202611120602_fill_old_piece_part_links.sql`(안 곡),
+  `202611120603_fix_more_old_piece_links.sql`(0601·0602 를 하다 새로 본 틀린 링크와 그 안 곡, 아래 3).
 - 바꾸는 칸은 지금 값이 그때 본 값과 같을 때만 바꾸고, 채우는 칸은 비어 있을 때만 채워요.
 
 ## 1. 틀린 작품 링크 (`fixes.tsv`)
@@ -73,12 +74,23 @@
 - 쇤베르크 「정화된 밤」(313): 우리 다섯 대목 이름(Sehr langsam 등)과 앨범 이름(Grave, Adagio 등)이 달라 순서로만 붙었어요(1·4·5번).
 - 클레멘티 교향곡 3번(33953) Spotify, 리게티 「무지카 리체르카타」(34035) 일부: 트랙에 작품번호가 없어 본제목 구절과 순서로 붙었어요.
 
-### 보고만 한 지금 링크 (바꾸지 않음, 틀려 보임)
+## 3. 새로 본 틀린 링크 (`fixes-0603.tsv`, 0603)
 
-- 몬테베르디 「저녁 기도」(18) Spotify: 「Ave maris stella」 한 곡짜리 앨범
-- 텔레만 「파리 사중주」(56) Spotify: 「Sonata in A Minor, TWV 43:a5」 한 악장짜리 앨범
-- 텔레만 「돈키호테 풍자극」(55) Apple: 리코더 모음곡·비올라 협주곡 음반(이 작품이 없음), Spotify: TWV 55:B10 한 악장짜리 앨범
-- 텔레만 리코더 모음곡(54) Spotify: 다섯 곡짜리 모음 EP(이 작품은 5악장 하나)
+0601·0602 를 하다가 본 틀린 지금 링크예요. 같은 방식(지금 값이 그대로일 때만 바꾸고, 작품을 다 담은 새 앨범에서만 빈 안 곡을 채움)으로 고쳤어요.
+
+| 작품 | 서비스 | 지금 링크 | 바꾼 링크 | 안 곡 |
+|---|---|---|---|---:|
+| 몬테베르디 「저녁 기도」(18) | Spotify | 「Ave maris stella」 한 곡짜리 앨범 | Apple 과 같은 코르보즈·로잔 전곡(39곡) | 7 |
+| 텔레만 리코더 모음곡(54) | Spotify | 5악장 하나만 든 다섯 곡짜리 모음 EP | Apple 과 같은 반 헤르덴·로르페오 바로크 음반 | 7 |
+| 텔레만 「돈키호테 풍자극」(55) | Apple | 리코더 모음곡·비올라 협주곡 음반(이 작품 없음) | 아폴로스 파이어 「Don Quixote and Other Suites & Concertos」 | 6 |
+| 텔레만 「돈키호테 풍자극」(55) | Spotify | TWV 55:B10 한 악장짜리 앨범 | Apple 과 같은 아폴로스 파이어 음반 | 6 |
+
+- 54 Spotify 음반은 트랙에 「TWV 55:A2」(대문자)로 잘못 적혀 있어요. 「Suite in A Minor」라 이 작품(55:a2)이 맞고, 같은 음반 Apple 판은 「55:a2」예요.
+- 55 는 아폴로스 파이어 일곱 곡이 우리 안 곡 일곱과 같아요. III(풍차 공격)은 이름이 영어·프랑스어로 달라 빠졌어요.
+- **못 고친 것:** 텔레만 「파리 사중주」(56) Spotify 는 「Sonata in A Minor, TWV 43:a5」 한 악장짜리 앨범이에요. 열두 곡이 한 앨범에 다 든 Spotify 음반을 찾지 못해 그대로 뒀어요.
+  - 브뤼헨·트리오 소네리 판은 「Nouveaux quatuors」 여섯 곡뿐이에요.
+  - 런던 헨델 플레이어스 판은 Vol. 1·2 로 나뉘어 있어요.
+  - Apple 링크도 런던 헨델 플레이어스 Vol. 1(절반)이에요.
 
 ## 다시 만들기
 
@@ -93,13 +105,15 @@ uv run python fix.py $W && cp $W/decisions.jsonl .
 uv run python build_sql.py decisions.jsonl \
   --pieces ../../../migrations/202611120601_fix_old_piece_links.sql \
   --parts ../../../migrations/202611120602_fill_old_piece_part_links.sql
+uv run python fix.py $W fixes-0603.tsv decisions-0603.jsonl && cp $W/decisions-0603.jsonl .
+uv run python build_sql.py decisions-0603.jsonl --combined ../../../migrations/202611120603_fix_more_old_piece_links.sql
 ```
 
 ## 시험
 
-운영 덤프(지금 시점, 마이그레이션 0502 까지)를 시험 DB(cm-linkfix-mysql)에 올려 두 파일을 트랜잭션으로 두 번 넣었어요.
+운영 덤프(지금 시점, 마이그레이션 0502 까지)를 시험 DB(cm-linkfix-mysql)에 올려 0601~0603 세 파일을 트랜잭션으로 두 번 넣었어요.
 
 - 작품·안 곡의 링크 칸을 넣기 전·1회 뒤·2회 뒤로 떠서 견줬어요. 1회 뒤와 2회 뒤가 같았어요(0.1초).
-- 바뀐 칸 277개(작품 8, 안 곡 269)가 decisions 와 하나하나 같았어요. 그 밖의 칸은 바뀌지 않았어요.
-- 값이 있던 칸은 바꿈 10곳만 바뀌었어요(작품 7, 안 곡 3).
+- 바뀐 칸 307개(0601·0602 의 작품 8·안 곡 269, 0603 의 작품 4·안 곡 26)가 decisions 와 하나하나 같았어요. 그 밖의 칸은 바뀌지 않았어요.
+- 값이 있던 칸은 바꿈 14곳만 바뀌었어요(0601 작품 7, 0602 안 곡 3, 0603 작품 4).
 - `test_apply.sh` 도 두 번째에 그대로였어요.
