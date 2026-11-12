@@ -117,3 +117,9 @@ uv run python build_sql.py decisions-0603.jsonl --combined ../../../migrations/2
 - 바뀐 칸 307개(0601·0602 의 작품 8·안 곡 269, 0603 의 작품 4·안 곡 26)가 decisions 와 하나하나 같았어요. 그 밖의 칸은 바뀌지 않았어요.
 - 값이 있던 칸은 바꿈 14곳만 바뀌었어요(0601 작품 7, 0602 안 곡 3, 0603 작품 4).
 - `test_apply.sh` 도 두 번째에 그대로였어요.
+
+## 0701 파리 사중주 Spotify
+
+- 텔레만 「파리 사중주」(56) Spotify 는 「Sonata in A Minor, TWV 43:a5」 한 악장짜리 앨범(2msX4mNyfqw0bFgZ6De4sM)이라 다른 곡이었어요.
+- Apple 링크와 같은 런던 헨델 플레이어스 「Telemann: Paris Quartets, Vol. 1」(392k5ogevZNVqHsoqNsA0R)로 바꿨어요. 임베드 트랙에 TWV 43:G1·D1·A1·g1·e1·h1 여섯 곡이 다 있어요.
+- 12곡이 한 앨범에 다 든 음반은 두 서비스 다 없어서 절반짜리예요. 안 곡 링크는 채우지 않았어요.
