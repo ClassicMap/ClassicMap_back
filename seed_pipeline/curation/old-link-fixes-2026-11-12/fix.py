@@ -154,6 +154,54 @@ def match_all(
     return found
 
 
+def in_order(
+    parts: list[dict[str, str]],
+    found: dict[int, tuple[str, str, str]],
+    tracks: list[dict[str, Any]],
+) -> dict[int, tuple[str, str, str]]:
+    """같은 곡 안의 악장(같은 부모 아래, 맨 위 곡이 악장이면 맨 위 곡끼리)은 앨범에서도 차례로 놓여야 한다.
+    앞 악장보다 앞 트랙을 가리키는 짝은 버린다. 괴벨판 타펠무지크 Spotify 에서 플루트 소나타 IV. Allegro 가
+    「TWV 41:h4」로 잘못 적힌 트리오 IV. Allegro(앞 트랙)에 붙던 일을 막는다.
+    서로 다른 곡(부모와 그 첫 곡은 빼고)이 같은 트랙을 가리키면 둘 다 버린다."""
+    position = {pick.match.track_url(t): i for i, t in enumerate(tracks)}
+    groups: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for p in parts:
+        groups[p["parent_part_id"]].append(p)
+    tops = groups.get("", [])
+    movement_tops = bool(tops) and all(
+        p["movement"].strip() or re.match(r"^\s*[IVXL]+\.\s", p["name_en"].rsplit(": ", 1)[-1])
+        for p in tops
+    )
+    drop: set[int] = set()
+    for parent, members in groups.items():
+        if parent == "" and not movement_tops:
+            continue
+        last = -1
+        for p in sorted(members, key=lambda m: int(m["seq"])):
+            hit = found.get(int(p["part_id"]))
+            where = position.get(hit[0]) if hit else None
+            if where is None:
+                continue
+            if where <= last:
+                drop.add(int(p["part_id"]))
+                continue
+            last = where
+    parent_of = {int(p["part_id"]): p["parent_part_id"] for p in parts}
+    by_url: dict[str, list[int]] = defaultdict(list)
+    for pid, hit in found.items():
+        by_url[hit[0]].append(pid)
+    for pids in by_url.values():
+        family = {pid for pid in pids if parent_of.get(pid) and int(parent_of[pid]) in pids}
+        rest = [
+            pid
+            for pid in pids
+            if pid not in family and not any(parent_of.get(o) == str(pid) for o in pids)
+        ]
+        if len(rest) > 1:
+            drop.update(rest)
+    return {pid: hit for pid, hit in found.items() if pid not in drop}
+
+
 def linked(
     part: dict[str, str], found: dict[int, tuple[str, str, str]], album: str, service: str
 ) -> bool:
@@ -233,7 +281,7 @@ def main() -> None:
             row = dict(row, trusted=pick.match.norm(album_name))
             replace_ok = bool(fix and old_album)
             base = [dict(p, **{PART_COLUMN[service]: ""}) for p in parts] if replace_ok else parts
-            found = match_all(row, base, tracks, service)
+            found = in_order(base, match_all(row, base, tracks, service), tracks)
             ok, why = complete(row, tracks)
             # 트랙 이름으로 작품 트랙을 다 못 세는 앨범(타펠무지크처럼 곡마다 번호가 다른 묶음, 악장 이름만 적힌 앨범)은
             # 맨 위 곡의 8할 이상(그 곡이나 그 안 곡)이 맞으면 다 든 것으로 본다. 반만 든 「Vol. 1」은 여기서 걸린다
