@@ -2,7 +2,7 @@
 -- 작품 앨범이 그 작품을 다 담았는지 먼저 보고(트랙 수·작품번호·맨 위 곡 8할), 담은 앨범에서만 곡 이름·번호가 맞는 트랙을 붙였다.
 -- 작품 링크를 바꾼 서비스에서 옛 앨범 트랙을 가리키던 곡은 새 앨범 트랙으로 바꾼다(지금 값이 옛 값과 같을 때만).
 -- 자료: seed_pipeline/curation/old-link-fixes-2026-11-12/(fix.py, decisions.jsonl). 두 번 돌려도 같다.
--- apple fill 135, apple replace 3, spotify fill 132
+-- apple fill 135, apple replace 3, spotify fill 131
 
 UPDATE piece_parts SET apple_music_url = 'https://music.apple.com/us/album/vespro-della-beata-vergine-sv-206-psalmus-dixit-dominus/1652944683?i=1652944691' WHERE id = 62277 AND piece_id = 18 AND (apple_music_url IS NULL OR apple_music_url = '');
 UPDATE piece_parts SET apple_music_url = 'https://music.apple.com/us/album/vespro-della-beata-vergine-sv-206-concerto-nigra-sum/1652944683?i=1652944694' WHERE id = 62278 AND piece_id = 18 AND (apple_music_url IS NULL OR apple_music_url = '');
@@ -70,7 +70,6 @@ UPDATE piece_parts SET spotify_url = 'https://open.spotify.com/track/1WTk86Sc656
 UPDATE piece_parts SET spotify_url = 'https://open.spotify.com/track/1WTk86Sc656CODI46F2GvF' WHERE id = 61057 AND piece_id = 52 AND (spotify_url IS NULL OR spotify_url = '');
 UPDATE piece_parts SET spotify_url = 'https://open.spotify.com/track/0b5KYwEzYfA0CCsZllFYTG' WHERE id = 61058 AND piece_id = 52 AND (spotify_url IS NULL OR spotify_url = '');
 UPDATE piece_parts SET spotify_url = 'https://open.spotify.com/track/488nrq1op9E6ysZfjJheGO' WHERE id = 61059 AND piece_id = 52 AND (spotify_url IS NULL OR spotify_url = '');
-UPDATE piece_parts SET spotify_url = 'https://open.spotify.com/track/3xVaI7vuJDuFy28DAbtjCI' WHERE id = 61060 AND piece_id = 52 AND (spotify_url IS NULL OR spotify_url = '');
 UPDATE piece_parts SET spotify_url = 'https://open.spotify.com/track/5KVhfjXLc77OcyNYwOICFL' WHERE id = 61061 AND piece_id = 52 AND (spotify_url IS NULL OR spotify_url = '');
 UPDATE piece_parts SET apple_music_url = 'https://music.apple.com/us/album/ouverture-suite-in-d-major-twv-55-d1-i-ouverture-lentement/692814679?i=692815102' WHERE id = 61063 AND piece_id = 52 AND (apple_music_url IS NULL OR apple_music_url = '');
 UPDATE piece_parts SET spotify_url = 'https://open.spotify.com/track/3c4TM7XfrGMBwjvkl8EcSJ' WHERE id = 61063 AND piece_id = 52 AND (spotify_url IS NULL OR spotify_url = '');
