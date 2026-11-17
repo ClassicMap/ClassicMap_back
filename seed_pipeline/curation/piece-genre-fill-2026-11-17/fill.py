@@ -701,11 +701,16 @@ MIGRATIONS: dict[str, tuple[str, str]] = {
     ),
     "mb": (
         "202611170004_fill_genre_from_musicbrainz.sql",
-        "MusicBrainz work(유형·편성 설명·부모 작품·작사가)",
+        "MusicBrainz work(유형·편성 설명·부모 작품)",
     ),
     "composer": (
         "202611170005_fill_genre_by_single_medium_composer.sql",
         "한 가지 매체만 쓴 작곡가(손 목록)",
+    ),
+    # 작사가 관계만 보고 성악으로 붙인 곡: 무대·낭독 작품이 섞일 수 있어 따로 빼 볼 수 있게 파일을 나눈다
+    "mb-lyricist": (
+        "202611170006_fill_genre_from_musicbrainz_lyricist.sql",
+        "MusicBrainz 작사가 관계(대본 작가 없음)",
     ),
 }
 
@@ -802,7 +807,9 @@ def main() -> None:
                 best.form = FORM_OVERRIDES[piece.piece_id]
             stats[f"채움:{best.source}"] += 1
             stats[f"규칙:{best.rule.split(':')[0]}:{best.rule.split(':')[1]}"] += 1
-            chosen[best.source].append((piece, best))
+            chosen["mb-lyricist" if best.rule == "mb:lyricist" else best.source].append(
+                (piece, best)
+            )
             out.write(
                 json.dumps(
                     {
@@ -845,6 +852,20 @@ REJECT: dict[int, str] = {
     2382: "거슈윈 「George White's Scandals of 1924」: 레뷔(무대)",
     1647: "브리튼 「The Golden Vanity」: 소년 합창을 위한 보드빌(무대로 올리는 곡), 갈래 확인 못 함",
     2064: "거슈윈 「Tip-Toes」: 뮤지컬",
+    8278: "본 윌리엄스 「The Bridal Day」: 무용수·가수·낭독자의 가면극(무대)",
+    9323: "풀랑크 「Le Gendarme incompris」: 코메디 부프(무대)",
+    10454: "본 윌리엄스 「The Pilgrim's Progress - A Bunyan Sequence」: 라디오극 음악(낭독)",
+    18729: "샤리노 「Infinito nero」: 한 막의 음악극(무대)",
+    9110: "본 윌리엄스 「An Oxford Elegy」: 낭독자·합창·관현악(낭독이 중심, 멜로드라마 정책)",
+    2552: "브리튼 「The Heart of the Matter」: 낭독자·테너·호른·피아노(낭독, 멜로드라마 정책)",
+    16989: "마데르나 「Studi per Il processo」: 낭독자·소프라노·관현악(낭독, 멜로드라마 정책)",
+    18101: "배빗 「Vision and Prayer」: 소프라노와 합성 테이프(전자, 범위 밖)",
+    9897: "베리오 「Altra voce」: 알토 플루트·메조소프라노·라이브 일렉트로닉스(전자, 범위 밖)",
+    17505: "맥스웰 데이비스 「Revelation and Fall」: 무대로 올리는 모노드라마(17956 과 같은 부류)",
+    33343: "니콜라 렌스: 무대·성악 음반 트랙이라 갈래 확인 못 함(작곡가 기본값에서도 뺌)",
+    24027: "망토바니 「Monde évanoui」: 성악인지 무대 발췌인지 확인 못 함",
+    18973: "암브로시니 「Tutti parlano」: 성악인지 무대인지 확인 못 함",
+    19035: "달바비 「Ligne de fuite」: 편성 확인 못 함",
     17956: "맥스웰 데이비스 「Miss Donnithorne's Maggot」: 음악극(모노드라마), 성악·무대 확인 못 함",
     17366: "딘 「The World's Wife」: MB 는 관현악이라 하지만 메조소프라노와 관현악(성악)",
 }
