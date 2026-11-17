@@ -13,33 +13,34 @@ MusicBrainz 가 가사 유무로 반대하면 비워 둬요.
 | `opera_excerpts.py` · `opera_excerpts.json` | 비제·마스네 대본 대목 118줄 판정 → `202611170001` |
 | `fetch_mb.py` | '기타' 작품 MBID 4,787개의 MusicBrainz work 받기(6차 `fetch.py` 의 간격·User-Agent·캐시) · 묶기 |
 | `mb_works.jsonl.gz` | 받은 응답 원문(`inc=artist-rels+work-rels+tags+genres`). 다시 받지 않고 이것만 읽어요 |
-| `fill.py` | 출처별 신호 → 판정 → `fills.jsonl` · 마이그레이션 `202611170002`~`0005` |
+| `fill.py` | 출처별 신호 → 판정 → `fills.jsonl` · 마이그레이션 `202611170002`~`0006` |
 | `fills.jsonl` | 채운 작품마다 갈래·형식·규칙·근거·같은 답을 낸 다른 규칙 |
 
 ## 결과
 
-시험 DB(운영 마이그레이션 202611120701 까지와 pieces·piece_parts 가 덤프와 차이 0)에서 브랜치 백엔드가 sqlx 로 다섯 파일을 넣은 뒤 잰 값이에요.
+시험 DB(운영 마이그레이션 202611120701 까지와 pieces·piece_parts 가 덤프와 차이 0)에서 브랜치 백엔드가 sqlx 로 여섯 파일을 넣은 뒤 잰 값이에요.
 API `/composers/<id>/catalog` 402명 합계와 SQL 값이 같아요.
 
 | | 보이는 최상위 작품 | '기타' 전 | '기타' 뒤 |
 |---|---:|---:|---:|
-| 전체 | 19,043 → 18,925 | 4,982 (26.2%) | **3,739 (19.8%)** |
+| 전체 | 19,043 → 18,925 | 4,982 (26.2%) | **3,753 (19.8%)** |
 | S | 6,028 | 394 (6.5%) | 122 (2.0%) |
-| A | 5,177 → 5,091 | 1,258 (24.3%) | 943 (18.5%) |
-| B | 7,603 → 7,571 | 3,263 (42.9%) | 2,644 (34.9%) |
+| A | 5,177 → 5,091 | 1,258 (24.3%) | 944 (18.5%) |
+| B | 7,603 → 7,571 | 3,263 (42.9%) | 2,657 (35.1%) |
 | C | 235 | 67 (28.5%) | 30 (12.8%) |
 
-줄어든 1,243곡 = 숨김 118 + 채움 1,125.
+줄어든 1,229곡 = 숨김 118 + 채움 1,111.
 
 | 마이그레이션 | 줄 | 내용 |
 |---|---:|---|
 | `202611170001_hide_opera_libretto_excerpt_rows` | 118 | 대본 대목 숨김(duplicate 90, catalog_unmatched 28) |
 | `202611170002_fill_genre_from_catalog_marks` | 455 | 1~3차 손 카탈로그 갈래 표시 |
 | `202611170003_fill_genre_from_title_words` | 161 | 제목 낱말 |
-| `202611170004_fill_genre_from_musicbrainz` | 357 | MusicBrainz |
+| `202611170004_fill_genre_from_musicbrainz` | 136 | MusicBrainz 편성 설명·유형 |
 | `202611170005_fill_genre_by_single_medium_composer` | 152 | 한 가지 매체 작곡가 |
+| `202611170006_fill_genre_from_musicbrainz_lyricist` | 207 | MusicBrainz 작사가 관계(따로 빼 볼 수 있게 나눔) |
 
-다섯 파일을 sqlx 가 넣는 데 0.67초(0.42·0.12·0.05·0.05·0.03초)예요. 한 트랜잭션으로 한 번 더 넣어도 pieces 해시가 같아요(멱등).
+여섯 파일을 sqlx 가 넣는 데 0.61초(0.36·0.07·0.04·0.04·0.05·0.06초)예요. 한 트랜잭션으로 한 번 더 넣어도 pieces 해시가 같아요(멱등).
 갈래와 형식이 어긋나거나 한쪽만 찬 작품은 전후 모두 0이에요.
 
 ## 판정 순서 (`fill.py`)
@@ -50,7 +51,7 @@ API `/composers/<id>/catalog` 402명 합계와 SQL 값이 같아요.
 2. 같으면 앞 출처(catalog → words → mb → composer)의 형식을 써요.
 3. MusicBrainz 가 가사가 있다고 하면(언어가 zxx 가 아니거나 작사가 관계) 기악 갈래를 막고(3곡),
    가사가 없다고 하면(zxx, 목소리가 적힌 설명·성악 유형 없음) 성악 갈래를 막아요(2곡). 무대는 서곡·발레가 있어 막지 않아요.
-4. `REJECT`(손으로 본 오탐 15곡)와 classify.py 의 `UNDECIDED`(20곡)는 비워요.
+4. `REJECT`(손으로 본 오탐·확인 못 한 곡 29곡)와 classify.py 의 `UNDECIDED`(20곡)는 비워요.
 
 ### catalog — 1~3차 손 카탈로그 표시 (455곡)
 
@@ -63,19 +64,19 @@ chamber·violin_piano·violin_orchestra·guitar·orchestral 등). 한 작품에 
 (드보르자크 「프라하 왈츠」처럼 관현악인 왈츠가 있어서예요. 이 중 일부는 MB 가 편성을 알려 채워졌어요.)
 형식 고침 1곡: 멘델스존 리더슈필 「타향에서의 귀향」은 표시가 opera 지만 형식은 오페레타·징슈필.
 
-전수 확인: 455곡을 모두 봤고 틀린 갈래를 못 찾았어요.
+확인: 455곡의 제목을 모두 읽고 아는 범위에서 판정했어요(출처 조회는 안 함). 틀린 갈래는 못 찾았어요.
 
 ### words — 제목 낱말 (161곡)
 
 | 규칙 | 채움 | 확인 |
 |---|---:|---|
-| 막·발췌(`Carmen: Act II.`, `오페라 <…> 중`, `zur Oper`) | 14 | 전수 15개 확인, 오탐 0. 1곡(브루흐 「Loreley」 서주)은 MB 가 피아노 편곡판이라 어긋나 비움 |
-| 무대 작품(`뮤지컬 <`, `발레 음악 <`, `…발레 <`) | 4 | 전수, 오탐 0 |
-| 영화(`Music to the Film`, `film scores`, `love theme`, `soundtrack`) | 21 | 전수, 오탐 0 |
-| 종교 전례문(`Tantum ergo`·`O salutaris`·`Ave verum`·`Laudate pueri`·`Dixit Dominus`·모테트·시편 …) | 59 | 전수, 오탐 0 |
-| 종교 낱말 + MB 가사(`hymn`·`carol`·`canticle`·`credo`·`gloria`·`litany`·`lux aeterna` …) | 23 | 전수, 오탐 0 |
-| 노래 묶음(`Lieder`·`Gesänge`·`chansons`·`mélodies`·`folksongs`·`canzonette`·`n중창`·`합창`·`가곡`) | 26 | 전수, 오탐 0. 야나체크 「15 Moravian Folksongs」(피아노)·쾨클랭 「Chansons Bretonnes」(첼로)는 MB zxx 로 막힘 |
-| 노래 낱말 + MB 가사(`song`·`lied`·`chant`·`aria`·`voice`·`ode`·`노래` …) | 14 | 전수, 오탐 0 |
+| 막·발췌(`Carmen: Act II.`, `오페라 <…> 중`, `zur Oper`) | 14 | 15개 다 읽음, 오탐 못 찾음. 1곡(브루흐 「Loreley」 서주)은 MB 가 피아노 편곡판이라 어긋나 비움 |
+| 무대 작품(`뮤지컬 <`, `발레 음악 <`, `…발레 <`) | 4 | 다 읽음, 오탐 못 찾음 |
+| 영화(`Music to the Film`, `film scores`, `love theme`, `soundtrack`) | 21 | 다 읽음, 오탐 못 찾음 |
+| 종교 전례문(`Tantum ergo`·`O salutaris`·`Ave verum`·`Laudate pueri`·`Dixit Dominus`·모테트·시편 …) | 59 | 다 읽음, 오탐 못 찾음 |
+| 종교 낱말 + MB 가사(`hymn`·`carol`·`canticle`·`credo`·`gloria`·`litany`·`lux aeterna` …) | 23 | 다 읽음, 오탐 못 찾음 |
+| 노래 묶음(`Lieder`·`Gesänge`·`chansons`·`mélodies`·`folksongs`·`canzonette`·`n중창`·`합창`·`가곡`) | 26 | 다 읽음, 오탐 못 찾음. 야나체크 「15 Moravian Folksongs」(피아노)·쾨클랭 「Chansons Bretonnes」(첼로)는 MB zxx 로 막힘 |
+| 노래 낱말 + MB 가사(`song`·`lied`·`chant`·`aria`·`voice`·`ode`·`노래` …) | 14 | 다 읽음, 오탐 못 찾음 |
 
 버리거나 좁힌 것(처음 넓게 걸었을 때 나온 오탐):
 - 영어 `ballet`·`musical`·`prologue`: 베를리오즈 「Le Ballet des ombres」(합창), 파가니니 「Balletto campestre」 변주곡, 로드리고 「Air de ballet」(피아노),
@@ -87,18 +88,18 @@ chamber·violin_piano·violin_orchestra·guitar·orchestral 등). 한 작품에 
 - 노래 낱말을 모두 성악으로 보면: 「Gondellied」·「Wiegenlied」(피아노), 사라사테 「Canciones rusas」·「치고이너바이젠」, 생상스 「Chant saphique」(첼로),
   암브로시니 「Canzone」(기악 칸초나), 메시앙 「Chant dans le style de Mozart」, 스트라빈스키 「러시아 민요에 의한 카논」, 「Voices」(현악 4중주) 등 → 애매한 낱말은 MB 가사가 있을 때만.
 
-### mb — MusicBrainz (357곡)
+### mb — MusicBrainz (136곡 + 작사가 207곡)
 
 '기타' 작품 MBID 4,787개를 다시 받았어요(`fetch_mb.py`, 1.1초 간격·시드 도구 공용 연락처 User-Agent, 두 프로세스가 잠금 하나로 간격을 나눔, 약 2시간 10분).
 
 | 규칙 | 채움 | 확인 |
 |---|---:|---|
-| `disambiguation` 의 편성(「for piano」「for voice and piano」「for orchestra」 …, classify.py 의 편성 관문으로 읽음) | 130 | 전수. 오탐 2(슈토크하우젠 「Mixtur」 링 모듈레이터, 딘 「The World's Wife」 메조소프라노) → REJECT |
-| 작사가 관계(대본 작가 없음, 제목에 악기 없음) → 성악 | 221 | 전수. 무대·전자·멜로드라마로 본 12곡은 REJECT, 울만 「기수 릴케」 4줄은 멜로드라마(범위 밖) |
-| 작품 유형(Symphonic poem·Song·Symphony·Concerto·Soundtrack) | 6 | 전수, 오탐 0 |
-| 부모 작품의 갈래 | 0 | 부모 work 가 우리 DB 의 갈래 있는 작품인 경우가 없었음 |
+| `disambiguation` 의 편성(「for piano」「for voice and piano」「for orchestra」 …, classify.py 의 편성 관문으로 읽음) | 130 | 다 읽음. 오탐 2(슈토크하우젠 「Mixtur」 링 모듈레이터, 딘 「The World's Wife」 메조소프라노) → REJECT |
+| 작사가 관계(대본 작가 없음, 제목에 악기 없음) → 성악 (`0006`) | 207 | 무대·낭독·전자·확인 못 함 26곡은 REJECT, 울만 「기수 릴케」 4줄은 멜로드라마(범위 밖) |
+| 작품 유형(Symphonic poem·Song·Symphony·Concerto·Soundtrack) | 6 | 다 읽음, 오탐 못 찾음 |
+| 부모 작품의 갈래 | 0 | 신호는 10곡(그리그 서정 소곡집 각 권 → 「서정 소품집」 피아노)에서 났지만 모두 catalog 표시와 같아 catalog 로 셈. 부모가 part 수준 MBID 인 90곡은 숨긴 대본 대목 |
 
-가사 언어만으로는 성악과 무대를 못 가려요. 작사가 규칙에서 나온 무대 작품(거슈윈 「La La Lucille」·「Tip-Toes」·「Scandals of 1924」,
+**머지 전에 볼 곳**: 작사가 규칙(`0006`)이 가장 약해요. 가사 언어·작사가만으로는 성악과 무대·낭독을 못 가려요. 작사가 규칙에서 나온 무대 작품(거슈윈 「La La Lucille」·「Tip-Toes」·「Scandals of 1924」,
 본 윌리엄스 「The Shepherds of the Delectable Mountains」, 브리튼 「This Way to the Tomb」·「The Golden Vanity」 등)은 손으로 보고 비웠어요.
 그래서 이 규칙의 형식은 대개 '그 밖의 성악'이에요(제목에 노래·합창·종교 낱말이 있으면 그 형식).
 
@@ -139,14 +140,14 @@ chamber·violin_piano·violin_orchestra·guitar·orchestral 등). 한 작품에 
   식별자는 part 수준 work 라 오페라 작품으로 옮기지 않아요. SQL 도 이 표들이 비어 있을 때만 숨겨요.
 - 9/10 시드 줄 11443 「Carmen: Act II. Entr'acte…」(낱말 규칙이 무대·발췌로 채움)과 이미 갈래가 있는 33206 「상드리용 4막 중 Marche des Princesses」는 손대지 않았어요.
 
-## 범위 밖으로 남긴 것 (건수만, 3,739곡 안)
+## 범위 밖으로 남긴 것 (건수만, 3,753곡 안)
 
 | 묶음 | 곡 |
 |---|---:|
 | 글래스·나이먼·멀리·킬라르 낱개 영화 큐(음반 묶음 여부 미정) | 795 (266·231·169·129) |
 | 피아졸라 탱고 | 142 |
-| 멜로드라마(낭독+피아노·관현악: 시벨리우스·리스트·그리그·스트라빈스키 「페르세포네」·울만 「기수 릴케」·풀랑크 「바바」 등) | 29 + REJECT 1 |
-| 전자·테이프(설명·제목에 tape·electronic) | 6 + REJECT 3 |
+| 멜로드라마(낭독+피아노·관현악: 시벨리우스·리스트·그리그·스트라빈스키 「페르세포네」·울만 「기수 릴케」 등) | 29 + REJECT 4(풀랑크 「바바」, 본 윌리엄스 「An Oxford Elegy」, 브리튼 「The Heart of the Matter」, 마데르나 「Il processo」) |
+| 전자·테이프(설명·제목에 tape·electronic) | 6 + REJECT 5 |
 | 1~3차 표시가 정책 필요(canon·dance·variations) | 43 (일부는 다른 출처로 채워짐) |
 | LLM 분류, 생애 시기 | 하지 않음 |
 
