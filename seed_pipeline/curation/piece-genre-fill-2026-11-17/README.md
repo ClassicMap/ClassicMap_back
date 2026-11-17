@@ -23,20 +23,20 @@ API `/composers/<id>/catalog` 402명 합계와 SQL 값이 같아요.
 
 | | 보이는 최상위 작품 | '기타' 전 | '기타' 뒤 |
 |---|---:|---:|---:|
-| 전체 | 19,043 → 18,925 | 4,982 (26.2%) | **3,753 (19.8%)** |
+| 전체 | 19,043 → 18,925 | 4,982 (26.2%) | **3,754 (19.8%)** |
 | S | 6,028 | 394 (6.5%) | 122 (2.0%) |
 | A | 5,177 → 5,091 | 1,258 (24.3%) | 944 (18.5%) |
-| B | 7,603 → 7,571 | 3,263 (42.9%) | 2,657 (35.1%) |
+| B | 7,603 → 7,571 | 3,263 (42.9%) | 2,658 (35.1%) |
 | C | 235 | 67 (28.5%) | 30 (12.8%) |
 
-줄어든 1,229곡 = 숨김 118 + 채움 1,111.
+줄어든 1,228곡 = 숨김 118 + 채움 1,110.
 
 | 마이그레이션 | 줄 | 내용 |
 |---|---:|---|
 | `202611170001_hide_opera_libretto_excerpt_rows` | 118 | 대본 대목 숨김(duplicate 90, catalog_unmatched 28) |
 | `202611170002_fill_genre_from_catalog_marks` | 455 | 1~3차 손 카탈로그 갈래 표시 |
 | `202611170003_fill_genre_from_title_words` | 161 | 제목 낱말 |
-| `202611170004_fill_genre_from_musicbrainz` | 136 | MusicBrainz 편성 설명·유형 |
+| `202611170004_fill_genre_from_musicbrainz` | 135 | MusicBrainz 편성 설명·유형 |
 | `202611170005_fill_genre_by_single_medium_composer` | 152 | 한 가지 매체 작곡가 |
 | `202611170006_fill_genre_from_musicbrainz_lyricist` | 207 | MusicBrainz 작사가 관계(따로 빼 볼 수 있게 나눔) |
 
@@ -51,7 +51,7 @@ API `/composers/<id>/catalog` 402명 합계와 SQL 값이 같아요.
 2. 같으면 앞 출처(catalog → words → mb → composer)의 형식을 써요.
 3. MusicBrainz 가 가사가 있다고 하면(언어가 zxx 가 아니거나 작사가 관계) 기악 갈래를 막고(3곡),
    가사가 없다고 하면(zxx, 목소리가 적힌 설명·성악 유형 없음) 성악 갈래를 막아요(2곡). 무대는 서곡·발레가 있어 막지 않아요.
-4. `REJECT`(손으로 본 오탐·확인 못 한 곡 29곡)와 classify.py 의 `UNDECIDED`(20곡)는 비워요.
+4. `REJECT`(손으로 본 오탐·확인 못 한 곡 30곡)와 classify.py 의 `UNDECIDED`(20곡)는 비워요.
 
 ### catalog — 1~3차 손 카탈로그 표시 (455곡)
 
@@ -88,13 +88,13 @@ chamber·violin_piano·violin_orchestra·guitar·orchestral 등). 한 작품에 
 - 노래 낱말을 모두 성악으로 보면: 「Gondellied」·「Wiegenlied」(피아노), 사라사테 「Canciones rusas」·「치고이너바이젠」, 생상스 「Chant saphique」(첼로),
   암브로시니 「Canzone」(기악 칸초나), 메시앙 「Chant dans le style de Mozart」, 스트라빈스키 「러시아 민요에 의한 카논」, 「Voices」(현악 4중주) 등 → 애매한 낱말은 MB 가사가 있을 때만.
 
-### mb — MusicBrainz (136곡 + 작사가 207곡)
+### mb — MusicBrainz (135곡 + 작사가 207곡)
 
 '기타' 작품 MBID 4,787개를 다시 받았어요(`fetch_mb.py`, 1.1초 간격·시드 도구 공용 연락처 User-Agent, 두 프로세스가 잠금 하나로 간격을 나눔, 약 2시간 10분).
 
 | 규칙 | 채움 | 확인 |
 |---|---:|---|
-| `disambiguation` 의 편성(「for piano」「for voice and piano」「for orchestra」 …, classify.py 의 편성 관문으로 읽음) | 130 | 다 읽음. 오탐 2(슈토크하우젠 「Mixtur」 링 모듈레이터, 딘 「The World's Wife」 메조소프라노) → REJECT |
+| `disambiguation` 의 편성(「for piano」「for voice and piano」「for orchestra」 …, classify.py 의 편성 관문으로 읽음) | 129 | 다 읽음. 오탐 3(슈토크하우젠 「Mixtur」 링 모듈레이터, 딘 「The World's Wife」 메조소프라노, 허먼 「Vertigo Suite」 첼로·피아노 편곡판 work) → REJECT |
 | 작사가 관계(대본 작가 없음, 제목에 악기 없음) → 성악 (`0006`) | 207 | 무대·낭독·전자·확인 못 함 26곡은 REJECT, 울만 「기수 릴케」 4줄은 멜로드라마(범위 밖) |
 | 작품 유형(Symphonic poem·Song·Symphony·Concerto·Soundtrack) | 6 | 다 읽음, 오탐 못 찾음 |
 | 부모 작품의 갈래 | 0 | 신호는 10곡(그리그 서정 소곡집 각 권 → 「서정 소품집」 피아노)에서 났지만 모두 catalog 표시와 같아 catalog 로 셈. 부모가 part 수준 MBID 인 90곡은 숨긴 대본 대목 |
@@ -140,7 +140,7 @@ chamber·violin_piano·violin_orchestra·guitar·orchestral 등). 한 작품에 
   식별자는 part 수준 work 라 오페라 작품으로 옮기지 않아요. SQL 도 이 표들이 비어 있을 때만 숨겨요.
 - 9/10 시드 줄 11443 「Carmen: Act II. Entr'acte…」(낱말 규칙이 무대·발췌로 채움)과 이미 갈래가 있는 33206 「상드리용 4막 중 Marche des Princesses」는 손대지 않았어요.
 
-## 범위 밖으로 남긴 것 (건수만, 3,753곡 안)
+## 범위 밖으로 남긴 것 (건수만, 3,754곡 안)
 
 | 묶음 | 곡 |
 |---|---:|

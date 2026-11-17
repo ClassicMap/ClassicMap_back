@@ -1,8 +1,8 @@
 -- 작곡가 화면 '기타'(갈래 없음) 줄이기 2026-11-17: MusicBrainz work(유형·편성 설명·부모 작품)로 빈 갈래·형식을 채운다.
 -- 근거와 생성기: seed_pipeline/curation/piece-genre-fill-2026-11-17/(README.md, fill.py, fills.jsonl).
 -- 갈래·형식이 둘 다 비어 있고 제목이 덤프 때와 같을 때만 바꾼다(이미 있는 값은 그대로, 두 번 넣어도 같다).
--- 작품 136곡. 규칙별: mb:disambiguation 130, mb:type:Symphonic poem 2, mb:type:Song 1, mb:type:Symphony 1, mb:type:Concerto 1, mb:type:Soundtrack 1
--- 갈래/형식별: piano/piano_other 30, chamber/chamber_other 28, vocal/song 21, orchestral/orchestral_other 16, vocal/choral 13, piano/organ 7, vocal/vocal_other 6, chamber/solo 6, piano/four_hands 3, orchestral/symphonic_poem 2, orchestral/dance_march 1, symphony/symphony 1, concerto/piano_concerto 1, screen/soundtrack 1
+-- 작품 135곡. 규칙별: mb:disambiguation 129, mb:type:Symphonic poem 2, mb:type:Song 1, mb:type:Symphony 1, mb:type:Concerto 1, mb:type:Soundtrack 1
+-- 갈래/형식별: piano/piano_other 30, chamber/chamber_other 27, vocal/song 21, orchestral/orchestral_other 16, vocal/choral 13, piano/organ 7, vocal/vocal_other 6, chamber/solo 6, piano/four_hands 3, orchestral/symphonic_poem 2, orchestral/dance_march 1, symphony/symphony 1, concerto/piano_concerto 1, screen/soundtrack 1
 
 UPDATE pieces SET genre = 'chamber', form_key = 'chamber_other'
 WHERE id = 268 AND composer_id = 64 AND title = '사랑의 인사'
@@ -408,7 +408,4 @@ WHERE id = 33656 AND composer_id = 111 AND title = '피아노 협주곡 C장조'
   AND genre IS NULL AND form_key IS NULL;
 UPDATE pieces SET genre = 'screen', form_key = 'soundtrack'
 WHERE id = 33687 AND composer_id = 112 AND title = '서곡'
-  AND genre IS NULL AND form_key IS NULL;
-UPDATE pieces SET genre = 'chamber', form_key = 'chamber_other'
-WHERE id = 33690 AND composer_id = 112 AND title = 'Vertigo Suite'
   AND genre IS NULL AND form_key IS NULL;
